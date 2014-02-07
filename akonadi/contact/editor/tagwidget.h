@@ -24,31 +24,37 @@
 
 #include <QWidget>
 
-#include <nepomuk2/tag.h>
+#include <akonadi/tag.h>
+
+namespace Akonadi
+{
+class TagModel;
+}
 
 class QHBoxLayout;
 class QLabel;
 
 class TagWidget : public QWidget
 {
-    Q_OBJECT
+  Q_OBJECT
 
-public:
-    explicit TagWidget(QWidget *parent = 0);
+  public:
+    explicit TagWidget( QWidget *parent = 0 );
     ~TagWidget();
 
-    void setTags(const QVector<Nepomuk2::Tag> &tags);
-    QVector<Nepomuk2::Tag> tags() const;
+    void setTags( const Akonadi::Tag::List &tags );
+    Akonadi::Tag::List tags() const;
 
-private Q_SLOTS:
+  private Q_SLOTS:
     void editTags();
 
-private:
+  private:
     void updateView();
 
     QLabel *mTagLabel;
 
-    QVector<Nepomuk2::Tag> mTags;
+    Akonadi::TagModel *mModel;
+    Akonadi::Tag::List mTags;
 };
 
 #endif
