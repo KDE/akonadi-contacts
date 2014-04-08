@@ -1,12 +1,7 @@
+# Turn exceptions on
+kde_enable_exceptions()
 
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${Boost_INCLUDE_DIR}
-    ${CMAKE_BINARY_DIR}/kabc
-    ${CMAKE_SOURCE_DIR}/kabc
-    ${kcalcore_BINARY_DIR}
-)
+remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 
 find_package(Prison QUIET)
 set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
@@ -18,11 +13,8 @@ endif()
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
 set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
 
-add_subdirectory(tests)
 add_subdirectory(kcm)
 add_subdirectory(editor/im)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII ${KDE4_ENABLE_EXCEPTIONS}")
 
 ########### next target ###############
 
@@ -130,12 +122,24 @@ include_directories(
   ${CMAKE_BINARY_DIR}/akonadi
 )
 
-add_library(akonadi-contact ${LIBRARY_TYPE} ${akonadicontact_LIB_SRC})
+add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
 
-generate_export_header(akonadi-contact
-  BASE_NAME akonadi_contact
-  EXPORT_FILE_NAME akonadi-contact_export.h
+generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
+
+add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
+
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/AkonadiContact;${Boost_INCLUDE_DIR}>")
+
+target_link_libraries(KF5AkonadiContact
+    KF5::AkonadiCore
+    KF5::AkonadiWidgets
+    KF5::KIOCore
+                                      kabc
+                                      kcalcore
+                                      kmime
+                                      kpimutils
 )
+
 
 if (KDE4_BUILD_TESTS)
    set(AKONADI_CONTACT_TESTS_EXPORT AKONADI_CONTACT_EXPORT)
@@ -151,32 +155,21 @@ configure_file(akonadi-contactprivate_export.h.in
   "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contactprivate_export.h"
 )
 
-target_link_libraries(akonadi-contact akonadi-kde
-                                      kabc
-                                      kcalcore
-                                      kmime
-                                      kpimutils
-                                      ${KDE4_KDEUI_LIBS}
-				      ${KDE4_KIO_LIBS} 
-                                      ${KDE4_PHONON_LIBS})
-
 if(PRISON_FOUND) 
-target_link_libraries(akonadi-contact ${PRISON_LIBRARIES})
+target_link_libraries(KF5AkonadiContact ${PRISON_LIBRARIES})
 endif()
 
-target_link_libraries(akonadi-contact LINK_INTERFACE_LIBRARIES
-                                      akonadi-kde
-                                      kabc
-                                      kcalcore
-                                      kmime
-                                      kpimutils
-                                      ${KDE4_KDEUI_LIBS}
-                                      ${KDE4_KIO_LIBS}
-                                      ${KDE4_PHONON_LIBS})
+set_target_properties(KF5AkonadiContact PROPERTIES
+    VERSION ${AKONADICONTACT_VERSION_STRING}
+    SOVERSION ${AKONADICONTACT_SOVERSION}
+    EXPORT_NAME AkonadiContact
+)
 
-set_target_properties(akonadi-contact PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION})
+install(TARGETS
+    KF5AkonadiContact
+    EXPORT KF5AkonadiContactTargets ${INSTALL_TARGETS_DEFAULT_ARGS}
+)
 
-install(TARGETS akonadi-contact EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES editor/pics/world.jpg DESTINATION ${DATA_INSTALL_DIR}/akonadi/contact/pics)
 install(FILES editor/data/zone.tab DESTINATION ${DATA_INSTALL_DIR}/akonadi/contact/data)
 install(FILES recentcontactscollections.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
