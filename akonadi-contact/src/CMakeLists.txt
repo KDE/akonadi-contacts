@@ -2,6 +2,7 @@
 kde_enable_exceptions()
 
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
+remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
 find_package(Prison QUIET)
 set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
@@ -13,8 +14,8 @@ endif()
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
 set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
 
-add_subdirectory(kcm)
-add_subdirectory(editor/im)
+#add_subdirectory(kcm)
+#add_subdirectory(editor/im)
 
 ########### next target ###############
 
@@ -111,16 +112,9 @@ else()
 add_definitions(-DDISABLE_EDITOR_WIDGETS)
 endif()
 
-qt4_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
+qt5_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
 kconfig_add_kcfg_files(akonadicontact_LIB_SRC recentcontactscollectionssettings.kcfgc )
 
-include_directories(
-  ${CMAKE_BINARY_DIR}/kpimutils
-  ${CMAKE_BINARY_DIR}/kmime
-  ${CMAKE_BINARY_DIR}/kabc
-  ${CMAKE_BINARY_DIR}/kcalcore
-  ${CMAKE_BINARY_DIR}/akonadi
-)
 
 add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
 
@@ -174,7 +168,47 @@ install(FILES editor/pics/world.jpg DESTINATION ${DATA_INSTALL_DIR}/akonadi/cont
 install(FILES editor/data/zone.tab DESTINATION ${DATA_INSTALL_DIR}/akonadi/contact/data)
 install(FILES recentcontactscollections.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
 
+
+ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
+  HEADER_NAMES
+  AbstractContactFormatter
+  AbstractContactGroupFormatter
+  ContactDefaultActions
+  ContactEditor
+  ContactEditorDialog
+  ContactGroupEditor
+  ContactGroupEditorDialog
+  ContactGroupExpandJob
+  ContactGroupSearchJob
+  ContactGroupViewer
+  ContactGroupViewerDialog
+  ContactSearchJob
+  ContactsFilterProxyModel
+  ContactsTreeModel
+  ContactViewer
+  ContactViewerDialog
+  EmailAddressSelection
+  EmailAddressSelectionDialog
+  EmailAddressSelectionWidget
+  RecentContactsCollectionRequestJob
+  StandardContactActionManager
+  StandardContactFormatter
+  StandardContactGroupFormatter
+
+  REQUIRED_HEADERS AkonadiContact_HEADERS
+  PREFIX Akonadi/Contact
+)
+
+install(FILES
+    ${KLdap_CamelCase_HEADERS}
+    DESTINATION ${INCLUDE_INSTALL_DIR}/akonadi/contact
+    COMPONENT Devel
+)
+
+
+
 install( FILES
+  ${AkonadiContact_HEADERS}
   abstractcontactformatter.h
   abstractcontactgroupformatter.h
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
@@ -202,4 +236,4 @@ install( FILES
   standardcontactgroupformatter.h
   editor/im/improtocols.h
   DESTINATION ${INCLUDE_INSTALL_DIR}/akonadi/contact COMPONENT Devel
-)
+
