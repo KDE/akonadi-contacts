@@ -24,7 +24,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <akonadi/standardactionmanager.h>
+#include <AkonadiCore/standardactionmanager.h>
 
 #include <QtCore/QObject>
 

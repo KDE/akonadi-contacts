@@ -22,7 +22,7 @@
 #include "standardcontactgroupformatter.h"
 
 #include <akonadi/contact/contactgroupexpandjob.h>
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 #include <kabc/addressee.h>
 #include <kcolorscheme.h>
 #include <klocalizedstring.h>

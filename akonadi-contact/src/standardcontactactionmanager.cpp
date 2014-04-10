@@ -24,8 +24,8 @@
 #include "contacteditordialog.h"
 #include "contactgroupeditordialog.h"
 
-#include <akonadi/entitytreemodel.h>
-#include <akonadi/mimetypechecker.h>
+#include <AkonadiCore/entitytreemodel.h>
+#include <AkonadiCore/mimetypechecker.h>
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 #include <kicon.h>

@@ -23,7 +23,7 @@
 #include "contactviewer.h"
 #include "contactdefaultactions.h"
 
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 using namespace Akonadi;
 
 #include <KConfig>

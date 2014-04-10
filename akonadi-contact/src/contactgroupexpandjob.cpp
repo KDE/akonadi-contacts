@@ -22,8 +22,8 @@
 #include "contactgroupexpandjob.h"
 
 #include <akonadi/contact/contactgroupsearchjob.h>
-#include <akonadi/itemfetchjob.h>
-#include <akonadi/itemfetchscope.h>
+#include <AkonadiCore/itemfetchjob.h>
+#include <AkonadiCore/itemfetchscope.h>
 #include <akonadi/itemsearchjob.h>
 
 using namespace Akonadi;

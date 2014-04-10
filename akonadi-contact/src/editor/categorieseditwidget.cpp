@@ -21,7 +21,7 @@
 
 #include "categorieseditwidget.h"
 
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 #include <akonadi/tag.h>
 #include <akonadi/tagwidget.h>
 #include <kabc/addressee.h>

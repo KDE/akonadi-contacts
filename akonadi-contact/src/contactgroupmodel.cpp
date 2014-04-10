@@ -21,8 +21,8 @@
 
 #include "contactgroupmodel_p.h"
 
-#include <akonadi/itemfetchjob.h>
-#include <akonadi/itemfetchscope.h>
+#include <AkonadiCore/itemfetchjob.h>
+#include <AkonadiCore/itemfetchscope.h>
 #include <kabc/addressee.h>
 #include <kicon.h>
 #include <kiconloader.h>

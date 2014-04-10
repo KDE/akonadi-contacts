@@ -27,6 +27,9 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX AKONADICONTACT
 ########### Find packages ###########
 find_package(KF5KDE4Support ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Abc ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5CalendarCore ${KF5_VERSION} CONFIG REQUIRED)
+
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Contact_SOURCE_DIR})
   find_package(KF5Akonadi CONFIG REQUIRED)
@@ -35,8 +38,8 @@ endif()
 ########### Targets ###########
 
 add_subdirectory(src)
-# TODO: Port tests
-#add_subdirectory(tests)
+# TODO: Port autotests
+#add_subdirectory(autotests)
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5AkonadiContact")

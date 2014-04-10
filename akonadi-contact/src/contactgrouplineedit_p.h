@@ -22,7 +22,7 @@
 #ifndef AKONADI_CONTACTGROUPLINEEDIT_P_H
 #define AKONADI_CONTACTGROUPLINEEDIT_P_H
 
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 #include <klineedit.h>

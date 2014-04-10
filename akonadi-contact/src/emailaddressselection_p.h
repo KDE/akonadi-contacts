@@ -26,7 +26,7 @@
 #include <QtCore/QSharedData>
 #include <QtCore/QString>
 
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 
 namespace Akonadi {
 

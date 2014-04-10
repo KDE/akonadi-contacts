@@ -21,7 +21,7 @@
 
 #include "contactmetadataattribute_p.h"
 
-#include <akonadi/attributefactory.h>
+#include <AkonadiCore/attributefactory.h>
 
 namespace {
 

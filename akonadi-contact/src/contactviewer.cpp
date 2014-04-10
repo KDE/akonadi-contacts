@@ -29,11 +29,11 @@
 
 #include "editor/im/improtocols.h"
 
-#include <akonadi/collection.h>
-#include <akonadi/collectionfetchjob.h>
-#include <akonadi/entitydisplayattribute.h>
-#include <akonadi/item.h>
-#include <akonadi/itemfetchscope.h>
+#include <AkonadiCore/collection.h>
+#include <AkonadiCore/collectionfetchjob.h>
+#include <AkonadiCore/entitydisplayattribute.h>
+#include <AkonadiCore/item.h>
+#include <AkonadiCore/itemfetchscope.h>
 #include <kabc/addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>

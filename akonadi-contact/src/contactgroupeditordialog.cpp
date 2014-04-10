@@ -25,7 +25,7 @@
 #include "contactgroupeditor_p.h"
 
 #include <akonadi/collectioncombobox.h>
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 #include <kabc/contactgroup.h>
 #include <klocale.h>
 #include <klocalizedstring.h>

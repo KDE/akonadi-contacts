@@ -128,10 +128,10 @@ target_link_libraries(KF5AkonadiContact
     KF5::AkonadiCore
     KF5::AkonadiWidgets
     KF5::KIOCore
-                                      kabc
-                                      kcalcore
-                                      kmime
-                                      kpimutils
+    KF5::KMime
+    KF5::CalendarCore
+    KF5::KPimUtils
+    KF5::KAbc
 )
 
 
@@ -236,4 +236,4 @@ install( FILES
   standardcontactgroupformatter.h
   editor/im/improtocols.h
   DESTINATION ${INCLUDE_INSTALL_DIR}/akonadi/contact COMPONENT Devel
-
+)

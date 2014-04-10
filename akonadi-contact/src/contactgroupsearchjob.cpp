@@ -22,7 +22,7 @@
 #include "contactgroupsearchjob.h"
 
 #include <searchquery.h>
-#include <akonadi/itemfetchscope.h>
+#include <AkonadiCore/itemfetchscope.h>
 #include <QStringList>
 
 using namespace Akonadi;

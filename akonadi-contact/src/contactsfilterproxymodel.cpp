@@ -23,7 +23,7 @@
 
 #include "contactstreemodel.h"
 
-#include <akonadi/entitytreemodel.h>
+#include <AkonadiCore/entitytreemodel.h>
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 

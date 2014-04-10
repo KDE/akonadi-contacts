@@ -23,8 +23,8 @@
 
 #include "contacteditor.h"
 
-#include <akonadi/collectioncombobox.h>
-#include <akonadi/item.h>
+#include <AkonadiWidgets/collectioncombobox.h>
+#include <AkonadiCore/item.h>
 
 #include <kabc/addressee.h>
 

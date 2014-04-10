@@ -24,7 +24,7 @@
 #include "contactcompletionmodel_p.h"
 #include "contactgroupmodel_p.h"
 
-#include <akonadi/entitytreemodel.h>
+#include <AkonadiCore/entitytreemodel.h>
 #include <kcombobox.h>
 #include <kicon.h>
 #include <klocalizedstring.h>
