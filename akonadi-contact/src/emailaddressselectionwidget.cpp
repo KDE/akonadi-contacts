@@ -99,7 +99,8 @@ class EmailAddressSelectionWidget::Private
 
 void EmailAddressSelectionWidget::Private::init()
 {
-  KLocalizedString::insertCatalog( QLatin1String( "akonadicontact" ) );
+  #warning "port insertCatalog";
+  //KLocalizedString::insertCatalog( QLatin1String( "akonadicontact" ) );
   // setup internal model if needed
   if ( !mModel ) {
     Akonadi::Session *session = new Akonadi::Session( "InternalEmailAddressSelectionWidgetModel", q );
