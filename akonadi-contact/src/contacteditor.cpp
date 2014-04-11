@@ -27,14 +27,14 @@
 #include "contactmetadataattribute_p.h"
 #include "editor/contacteditorwidget.h"
 
-#include <AkonadiWidgets/collectiondialog.h>
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/itemcreatejob.h>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemfetchscope.h>
-#include <AkonadiCore/itemmodifyjob.h>
-#include <AkonadiCore/monitor.h>
-#include <AkonadiCore/session.h>
+#include <collectiondialog.h>
+#include <collectionfetchjob.h>
+#include <itemcreatejob.h>
+#include <itemfetchjob.h>
+#include <itemfetchscope.h>
+#include <itemmodifyjob.h>
+#include <monitor.h>
+#include <session.h>
 #include <kabc/addressee.h>
 #include <klocalizedstring.h>
 

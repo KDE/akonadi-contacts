@@ -4,11 +4,11 @@ kde_enable_exceptions()
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
-find_package(Prison QUIET)
-set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
+#REACTIVATE
+#find_package(Prison QUIET)
+#set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
 if (PRISON_FOUND)
     add_definitions(-DHAVE_PRISON)
-    include_directories(${PRISON_INCLUDE_DIR})
 endif()
 
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
@@ -123,36 +123,39 @@ generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 
 target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/AkonadiContact;${Boost_INCLUDE_DIR}>")
+target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiContact
+    KF5::KDELibs4Support
     KF5::AkonadiCore
     KF5::AkonadiWidgets
     KF5::KIOCore
-    KF5::KDELibs4Support
     KF5::KMime
     KF5::CalendarCore
     KF5::PimUtils
-    
+    KF5::Completion    
     KF5::Abc
+    #Phonon::phonon4qt5
 )
 
 
-if (KDE4_BUILD_TESTS)
-   set(AKONADI_CONTACT_TESTS_EXPORT AKONADI_CONTACT_EXPORT)
-endif()
+#REACTIVE
+#if (KDE4_BUILD_TESTS)
+#   set(AKONADI_CONTACT_TESTS_EXPORT AKONADI_CONTACT_EXPORT)
+#endif()
 configure_file(akonadi-contactprivate_export.h.in "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contactprivate_export.h")
 
 
-
-if (KDE4_BUILD_TESTS)
-   set(AKONADI_CONTACT_TESTS_EXPORT AKONADI_CONTACT_EXPORT)
-endif()
+#REACTIVATE
+#if (KDE4_BUILD_TESTS)
+#   set(AKONADI_CONTACT_TESTS_EXPORT AKONADI_CONTACT_EXPORT)
+#endif()
 configure_file(akonadi-contactprivate_export.h.in
   "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contactprivate_export.h"
 )
 
 if(PRISON_FOUND) 
-target_link_libraries(KF5AkonadiContact ${PRISON_LIBRARIES})
+#target_link_libraries(KF5AkonadiContact ${PRISON_LIBRARIES})
 endif()
 
 set_target_properties(KF5AkonadiContact PROPERTIES
@@ -239,3 +242,4 @@ install( FILES
   editor/im/improtocols.h
   DESTINATION ${INCLUDE_INSTALL_DIR}/akonadi/contact COMPONENT Devel
 )
+

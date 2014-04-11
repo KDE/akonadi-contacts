@@ -21,7 +21,7 @@
 
 #include "standardcontactformatter.h"
 
-#include <AkonadiCore/item.h>
+#include <item.h>
 #include <kabc/addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>

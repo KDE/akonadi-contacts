@@ -23,7 +23,7 @@
 
 #include "contactmetadataattribute_p.h"
 
-#include <AkonadiCore/item.h>
+#include <item.h>
 
 using namespace Akonadi;
 

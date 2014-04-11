@@ -24,7 +24,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <akonadi/itemmonitor.h>
+#include <itemmonitor.h>
 
 #include <QWidget>
 

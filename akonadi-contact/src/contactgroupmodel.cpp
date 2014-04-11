@@ -21,8 +21,8 @@
 
 #include "contactgroupmodel_p.h"
 
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemfetchscope.h>
+#include <itemfetchjob.h>
+#include <itemfetchscope.h>
 #include <kabc/addressee.h>
 #include <kicon.h>
 #include <kiconloader.h>
@@ -294,8 +294,13 @@ QVariant ContactGroupModel::data( const QModelIndex &index, int role ) const
     }
 
     if ( member.isReference ) {
+//QT5 port
+#if 0
       return QIcon::fromTheme( QLatin1String( "x-office-contact" ), KIconLoader::global(),
                     QStringList() << QLatin1String( "emblem-symbolic-link" ) );
+#else
+      return QString();
+#endif
     } else {
       return QIcon::fromTheme( QLatin1String( "x-office-contact" ) );
     }

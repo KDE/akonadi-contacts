@@ -24,7 +24,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <akonadi/specialcollectionsrequestjob.h>
+#include <specialcollectionsrequestjob.h>
 
 namespace Akonadi {
 

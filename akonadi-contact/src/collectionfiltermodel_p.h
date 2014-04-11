@@ -24,7 +24,7 @@
 
 #include <QSortFilterProxyModel>
 
-#include <AkonadiCore/collection.h>
+#include <collection.h>
 
 /**
  * @short A filter model for Akonadi collections.

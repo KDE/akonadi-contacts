@@ -23,7 +23,7 @@
 
 #include "contactgroupviewer.h"
 
-#include <AkonadiCore/item.h>
+#include <item.h>
 #include <klocalizedstring.h>
 
 #include <QVBoxLayout>

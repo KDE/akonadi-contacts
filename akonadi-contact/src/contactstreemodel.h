@@ -25,7 +25,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <AkonadiCore/entitytreemodel.h>
+#include <entitytreemodel.h>
 
 namespace Akonadi {
 

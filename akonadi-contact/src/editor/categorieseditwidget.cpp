@@ -21,9 +21,9 @@
 
 #include "categorieseditwidget.h"
 
-#include <AkonadiCore/item.h>
-#include <akonadi/tag.h>
-#include <akonadi/tagwidget.h>
+#include <item.h>
+#include <tag.h>
+#include <tagwidget.h>
 #include <kabc/addressee.h>
 #include <kdialog.h>
 

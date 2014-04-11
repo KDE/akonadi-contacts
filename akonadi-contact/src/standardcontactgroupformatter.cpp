@@ -21,8 +21,8 @@
 
 #include "standardcontactgroupformatter.h"
 
-#include <akonadi/contact/contactgroupexpandjob.h>
-#include <AkonadiCore/item.h>
+#include <contactgroupexpandjob.h>
+#include <item.h>
 #include <kabc/addressee.h>
 #include <kcolorscheme.h>
 #include <klocalizedstring.h>

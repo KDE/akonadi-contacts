@@ -24,8 +24,8 @@
 
 #include "akonadi-contact_export.h"
 
-#include <AkonadiCore/item.h>
-#include <akonadi/itemsearchjob.h>
+#include <item.h>
+#include <itemsearchjob.h>
 #include <kabc/contactgroup.h>
 
 namespace Akonadi {

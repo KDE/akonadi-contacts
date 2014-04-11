@@ -25,14 +25,14 @@
 #include "emailaddressselection_p.h"
 #include "emailaddressselectionproxymodel_p.h"
 
-#include <AkonadiCore/changerecorder.h>
-#include <akonadi/contact/contactsfilterproxymodel.h>
-#include <akonadi/contact/contactstreemodel.h>
-#include <akonadi/control.h>
-#include <AkonadiCore/entitydisplayattribute.h>
-#include <akonadi/entitytreeview.h>
-#include <AkonadiCore/itemfetchscope.h>
-#include <AkonadiCore/session.h>
+#include <changerecorder.h>
+#include <contactsfilterproxymodel.h>
+#include <contactstreemodel.h>
+#include <control.h>
+#include <entitydisplayattribute.h>
+#include <entitytreeview.h>
+#include <itemfetchscope.h>
+#include <session.h>
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 #include <klineedit.h>

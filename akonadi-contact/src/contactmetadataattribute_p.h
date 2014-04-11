@@ -24,7 +24,7 @@
 
 #include "akonadi-contactprivate_export.h"
 
-#include <AkonadiCore/attribute.h>
+#include <attribute.h>
 
 #include <QtCore/QVariant>
 

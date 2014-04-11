@@ -27,14 +27,14 @@
 #include "contactgroupeditordelegate_p.h"
 #include "waitingoverlay_p.h"
 
-#include <AkonadiCore/collectiondialog.h>
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/itemcreatejob.h>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemfetchscope.h>
-#include <AkonadiCore/itemmodifyjob.h>
-#include <akonadi/monitor.h>
-#include <AkonadiCore/session.h>
+#include <collectiondialog.h>
+#include <collectionfetchjob.h>
+#include <itemcreatejob.h>
+#include <itemfetchjob.h>
+#include <itemfetchscope.h>
+#include <itemmodifyjob.h>
+#include <monitor.h>
+#include <session.h>
 #include <kabc/contactgroup.h>
 #include <klocalizedstring.h>
 #include <klineedit.h>

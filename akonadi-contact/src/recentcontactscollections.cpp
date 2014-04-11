@@ -25,8 +25,8 @@
 
 #include <KGlobal>
 
-#include "akonadi/agentinstance.h"
-#include "akonadi/servermanager.h"
+#include "agentinstance.h"
+#include "servermanager.h"
 
 using namespace Akonadi;
 

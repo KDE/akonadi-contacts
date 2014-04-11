@@ -22,7 +22,7 @@
 #include "contactsearchjob.h"
 #include <searchquery.h>
 
-#include <AkonadiCore/itemfetchscope.h>
+#include <itemfetchscope.h>
 
 using namespace Akonadi;
 

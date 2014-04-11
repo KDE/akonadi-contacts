@@ -21,10 +21,10 @@
 
 #include "contactcompletionmodel_p.h"
 
-#include <AkonadiCore/changerecorder.h>
-#include <AkonadiCore/entitymimetypefiltermodel.h>
-#include <AkonadiCore/itemfetchscope.h>
-#include <AkonadiCore/session.h>
+#include <changerecorder.h>
+#include <entitymimetypefiltermodel.h>
+#include <itemfetchscope.h>
+#include <session.h>
 
 #include <kabc/addressee.h>
 

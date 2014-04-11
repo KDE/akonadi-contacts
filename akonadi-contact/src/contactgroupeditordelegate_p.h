@@ -26,7 +26,7 @@
 
 #include <QStyledItemDelegate>
 
-#include <AkonadiCore/item.h>
+#include <item.h>
 
 namespace Akonadi
 {

@@ -36,7 +36,8 @@
 #include <KListWidget>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <kpimutils/email.h>
+#include <email.h>
+#include <KSharedConfig>
 
 class EmailAddressExtracter : public QObject
 {

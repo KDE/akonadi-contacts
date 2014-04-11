@@ -21,7 +21,7 @@
 
 #include "collectionfiltermodel_p.h"
 
-#include <AkonadiCore/entitytreemodel.h>
+#include <entitytreemodel.h>
 
 CollectionFilterModel::CollectionFilterModel( QObject *parent )
   : QSortFilterProxyModel( parent ), mRights( Akonadi::Collection::ReadOnly )

@@ -27,7 +27,7 @@
 
 #include "emailaddressselection.h"
 
-#include <AkonadiCore/item.h>
+#include <item.h>
 
 #include <QAbstractItemView>
 #include <QWidget>

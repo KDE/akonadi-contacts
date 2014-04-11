@@ -560,7 +560,7 @@ void ContactEditorWidget::loadContact( const KABC::Addressee &contact, const Ako
 
   // Internet group
   d->mEmailWidget->loadContact( contact );
-  d->mHomepageWidget->setUrl( contact.url() );
+  d->mHomepageWidget->setText( contact.url().toString() );
   d->mBlogWidget->setText( d->loadCustom( contact, QLatin1String( "BlogFeed" ) ) );
   d->mIMWidget->loadContact( contact );
 

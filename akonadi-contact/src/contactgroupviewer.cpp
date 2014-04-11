@@ -25,11 +25,11 @@
 #include "standardcontactgroupformatter.h"
 #include "textbrowser_p.h"
 
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/entitydisplayattribute.h>
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemfetchscope.h>
+#include <collectionfetchjob.h>
+#include <entitydisplayattribute.h>
+#include <item.h>
+#include <itemfetchjob.h>
+#include <itemfetchscope.h>
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 #include <kcolorscheme.h>

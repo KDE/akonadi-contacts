@@ -23,9 +23,9 @@
 
 #include "contactcompletionmodel_p.h"
 
-#include <AkonadiCore/entitytreemodel.h>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemfetchscope.h>
+#include <entitytreemodel.h>
+#include <itemfetchjob.h>
+#include <itemfetchscope.h>
 #include <klocalizedstring.h>
 
 #include <QtCore/QAbstractItemModel>

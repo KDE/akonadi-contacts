@@ -22,7 +22,7 @@
 
 #include "emailaddressselectionproxymodel_p.h"
 
-#include <AkonadiCore/item.h>
+#include <item.h>
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 #include <klocalizedstring.h>

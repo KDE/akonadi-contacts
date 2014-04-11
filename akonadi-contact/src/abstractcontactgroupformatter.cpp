@@ -21,7 +21,7 @@
 
 #include "abstractcontactgroupformatter.h"
 
-#include <AkonadiCore/item.h>
+#include <item.h>
 #include <kabc/contactgroup.h>
 
 using namespace Akonadi;
