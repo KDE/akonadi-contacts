@@ -128,10 +128,12 @@ target_link_libraries(KF5AkonadiContact
     KF5::AkonadiCore
     KF5::AkonadiWidgets
     KF5::KIOCore
+    KF5::KDELibs4Support
     KF5::KMime
     KF5::CalendarCore
-    KF5::KPimUtils
-    KF5::KAbc
+    KF5::PimUtils
+    
+    KF5::Abc
 )
 
 
