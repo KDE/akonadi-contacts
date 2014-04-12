@@ -133,7 +133,6 @@ target_link_libraries(KF5AkonadiContact
     KF5::KMime
     KF5::CalendarCore
     KF5::PimUtils
-    KF5::Completion    
     KF5::Abc
     #Phonon::phonon4qt5
 )
@@ -173,6 +172,12 @@ install(FILES editor/pics/world.jpg DESTINATION ${DATA_INSTALL_DIR}/akonadi/cont
 install(FILES editor/data/zone.tab DESTINATION ${DATA_INSTALL_DIR}/akonadi/contact/data)
 install(FILES recentcontactscollections.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
 
+ecm_generate_pri_file(BASE_NAME AkonadiContact
+    LIB_NAME KF5AkonadiContact
+    DEPS "KDELibs4Support AkonadiCore KIOCore KMime CalendarCore PimUtils Abc" FILENAME_VAR PRI_FILENAME
+)
+
+install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   HEADER_NAMES
