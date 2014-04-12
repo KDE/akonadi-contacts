@@ -520,7 +520,7 @@ class StandardContactActionManager::Private
     StandardActionManager *mGenericManager;
     QItemSelectionModel *mCollectionSelectionModel;
     QItemSelectionModel *mItemSelectionModel;
-    QHash<StandardContactActionManager::Type, KAction*> mActions;
+    QHash<StandardContactActionManager::Type, QAction *> mActions;
     QSet<StandardContactActionManager::Type> mInterceptedActions;
     StandardContactActionManager *mParent;
 };
@@ -561,17 +561,17 @@ void StandardContactActionManager::setItemSelectionModel( QItemSelectionModel* s
   d->updateActions();
 }
 
-KAction* StandardContactActionManager::createAction( Type type )
+QAction * StandardContactActionManager::createAction( Type type )
 {
   if ( d->mActions.contains( type ) ) {
     return d->mActions.value( type );
   }
 
-  KAction *action = 0;
+  QAction *action = 0;
 
   switch ( type ) {
     case CreateContact:
-      action = new KAction( d->mParentWidget );
+      action = new QAction( d->mParentWidget );
       action->setIcon( QIcon::fromTheme( QLatin1String( "contact-new" ) ) );
       action->setText( i18n( "New &Contact..." ) );
       action->setShortcut( QKeySequence( Qt::CTRL + Qt::Key_N ) );
@@ -581,7 +581,7 @@ KAction* StandardContactActionManager::createAction( Type type )
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContact()) );
       break;
     case CreateContactGroup:
-      action = new KAction( d->mParentWidget );
+      action = new QAction( d->mParentWidget );
       action->setIcon( QIcon::fromTheme( QLatin1String( "user-group-new" ) ) );
       action->setText( i18n( "New &Group..." ) );
       action->setShortcut( QKeySequence( Qt::CTRL + Qt::Key_G ) );
@@ -591,7 +591,7 @@ KAction* StandardContactActionManager::createAction( Type type )
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContactGroup()) );
       break;
     case EditItem:
-      action = new KAction( d->mParentWidget );
+      action = new QAction( d->mParentWidget );
       action->setIcon( QIcon::fromTheme( QLatin1String( "document-edit" ) ) );
       action->setText( i18n( "Edit Contact..." ) );
       action->setWhatsThis( i18n( "Edit the selected contact<p>You will be presented with a dialog where you can edit the data stored about a person, including addresses and phone numbers.</p>" ) );
@@ -608,9 +608,9 @@ KAction* StandardContactActionManager::createAction( Type type )
   return action;
 }
 
-KAction* StandardContactActionManager::createAction( StandardActionManager::Type type )
+QAction * StandardContactActionManager::createAction( StandardActionManager::Type type )
 {
-  KAction *act = d->mGenericManager->action(type);
+  QAction *act = d->mGenericManager->action(type);
   if (!act )
     act = d->mGenericManager->createAction( type );
   d->updateGenericAction(type);
@@ -629,7 +629,7 @@ void StandardContactActionManager::createAllActions()
   d->updateActions();
 }
 
-KAction* StandardContactActionManager::action( Type type ) const
+QAction * StandardContactActionManager::action( Type type ) const
 {
   if ( d->mActions.contains( type ) ) {
     return d->mActions.value( type );
@@ -638,7 +638,7 @@ KAction* StandardContactActionManager::action( Type type ) const
   return 0;
 }
 
-KAction* StandardContactActionManager::action( StandardActionManager::Type type ) const
+QAction * StandardContactActionManager::action( StandardActionManager::Type type ) const
 {
   return d->mGenericManager->action( type );
 }

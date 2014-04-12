@@ -23,7 +23,7 @@
 #include <ktextbrowser.h>
 #include <klocalizedstring.h>
 #include <KUrl>
-#include <KAction>
+#include <QAction>
 #include <KStandardAction>
 
 #include <kmime/kmime_util.h>
@@ -70,7 +70,7 @@ void TextBrowser::contextMenuEvent( QContextMenuEvent *event )
   popup.addAction( act );
 
   // Create a new action to correspond with what is under the click
-  act = new KAction( i18nc( "@action:inmenu Copy the text of a general item", "Copy Item" ), this );
+  act = new QAction( i18nc( "@action:inmenu Copy the text of a general item", "Copy Item" ), this );
 
   mDataToCopy.clear();					// nothing found to copy yet
 

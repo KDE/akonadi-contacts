@@ -28,7 +28,7 @@
 
 #include <QtCore/QObject>
 
-class KAction;
+class QAction;
 class KActionCollection;
 class QItemSelectionModel;
 class QWidget;
@@ -92,7 +92,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * connected to its default implementation provided by this class.
      * @param type the type of action to create
      */
-    KAction* createAction( Type type );
+    QAction * createAction( Type type );
 
     /**
      * Creates the action of the given type and adds it to the action collection
@@ -100,7 +100,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * connected to its default implementation provided by this class.
      * @param type the type of action to create
      */
-    KAction* createAction( StandardActionManager::Type type );
+    QAction * createAction( StandardActionManager::Type type );
 
     /**
      * Convenience method to create all standard actions.
@@ -111,13 +111,13 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
     /**
      * Returns the action of the given type, 0 if it has not been created (yet).
      */
-    KAction* action( Type type ) const;
+    QAction * action( Type type ) const;
 
     /**
      * Returns the action of the given type, 0 if it has not been created (yet).
      * @param type the type of action to return
      */
-    KAction* action( StandardActionManager::Type type ) const;
+    QAction * action( StandardActionManager::Type type ) const;
 
     /**
      * Sets the label of the action @p type to @p text, which is used during
