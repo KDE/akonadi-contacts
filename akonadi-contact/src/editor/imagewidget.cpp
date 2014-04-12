@@ -29,7 +29,7 @@
 #include <kio/netaccess.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-//#include <kpixmapregionselectordialog.h>
+#include <kpixmapregionselectordialog.h>
 
 #include <QtCore/QMimeData>
 #include <QDrag>
@@ -86,8 +86,7 @@ QImage ImageLoader::loadImage(const KUrl &url, bool *ok)
 
     QPixmap pixmap = QPixmap::fromImage(image);
 
-    //QT5 port
-    //image = KPixmapRegionSelectorDialog::getSelectedImage(pixmap, 1, 1, mParent);
+    image = KPixmapRegionSelectorDialog::getSelectedImage(pixmap, 1, 1, mParent);
     if (image.isNull()) {
         (*ok) = false;
         return image;
