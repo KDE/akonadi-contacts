@@ -21,7 +21,7 @@
 
 #include "qskypedialer.h"
 
-#include "../dbusconnectionpool.h"
+#include <AkonadiCore/dbusconnectionpool.h>
 
 #include <QtCore/QProcess>
 #include <QtDBus/QDBusConnection>
