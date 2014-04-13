@@ -133,7 +133,7 @@ target_link_libraries(KF5AkonadiContact
     KF5::KMime
     KF5::CalendarCore
     KF5::PimUtils
-    KF5::Abc
+    KF5::KAbc
     #Phonon::phonon4qt5
 )
 
