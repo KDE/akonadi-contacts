@@ -122,7 +122,7 @@ generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
 add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/AkonadiContact;${Boost_INCLUDE_DIR}>")
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/akonadi/contact;${Boost_INCLUDE_DIR}>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiContact
