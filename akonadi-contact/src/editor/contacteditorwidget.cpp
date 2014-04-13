@@ -42,7 +42,7 @@
 #include <klineedit.h>
 #include <klocalizedstring.h>
 #include <kstandarddirs.h>
-#include <ktabwidget.h>
+#include <qtabwidget.h>
 #include <ktextedit.h>
 
 #include <QtCore/QDirIterator>
@@ -75,7 +75,7 @@ class ContactEditorWidget::Private
 
     ContactEditorWidget::DisplayMode mDisplayMode;
     ContactEditorWidget *mParent;
-    KTabWidget *mTabWidget;
+    QTabWidget *mTabWidget;
 
     // widgets from name group
     NameEditWidget *mNameWidget;
@@ -139,7 +139,7 @@ void ContactEditorWidget::Private::initGui()
   QVBoxLayout *layout = new QVBoxLayout( mParent );
   layout->setMargin( 0 );
 
-  mTabWidget = new KTabWidget( mParent );
+  mTabWidget = new QTabWidget( mParent );
   layout->addWidget( mTabWidget );
 
   initGuiContactTab();
