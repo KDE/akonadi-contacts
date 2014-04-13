@@ -206,12 +206,12 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   StandardContactGroupFormatter
 
   REQUIRED_HEADERS AkonadiContact_HEADERS
-  PREFIX Akonadi/Contact
+  PREFIX akonadi/contact
 )
 
 install(FILES
     ${AkonadiContact_CamelCase_HEADERS}
-    DESTINATION ${INCLUDE_INSTALL_DIR}/akonadi/contact
+    DESTINATION ${INCLUDE_INSTALL_DIR}/AkonadiContact
     COMPONENT Devel
 )
 
