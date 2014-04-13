@@ -26,7 +26,7 @@
 #include <QAction>
 #include <KStandardAction>
 
-#include <kmime/kmime_util.h>
+#include <kmime_util.h>
 
 #include <QApplication>
 #include <QContextMenuEvent>

@@ -20,7 +20,7 @@
 
 #include "qekigadialer.h"
 
-#include <AkonadiCore/dbusconnectionpool.h>
+#include <dbusconnectionpool.h>
 
 #include <KLocalizedString>
 
