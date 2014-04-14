@@ -1,4 +1,7 @@
-set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
+include(ECMMarkAsTest)
+
+find_package(Qt5Test CONFIG REQUIRED)
+
 
 # convenience macro to add akonadi demo application
 macro(add_akonadi_contact_demo _source)
