@@ -30,9 +30,9 @@
 #include <klocale.h>
 #include <klocalizedstring.h>
 #include <kglobal.h>
-#include <kpushbutton.h>
 #include <klineedit.h>
 
+#include <QPushButton>
 #include <QGridLayout>
 #include <QLabel>
 
