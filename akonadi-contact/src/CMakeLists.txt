@@ -211,7 +211,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
 
 install(FILES
     ${AkonadiContact_CamelCase_HEADERS}
-    DESTINATION ${INCLUDE_INSTALL_DIR}/AkonadiContact
+    DESTINATION ${INCLUDE_INSTALL_DIR}/Akonadi/Contact
     COMPONENT Devel
 )
 
