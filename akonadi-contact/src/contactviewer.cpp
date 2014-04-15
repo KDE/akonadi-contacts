@@ -37,12 +37,11 @@
 #include <kabc/addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
-#include <kicon.h>
 #include <klocalizedstring.h>
 #include <kstringhandler.h>
 
 #include <QVBoxLayout>
-
+#include <QIcon>
 #ifdef HAVE_PRISON
 #include <prison/QRCodeBarcode>
 #include <prison/DataMatrixBarcode>

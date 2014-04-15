@@ -33,11 +33,12 @@
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 #include <kcolorscheme.h>
-#include <kicon.h>
+
 #include <klocalizedstring.h>
 #include <kstringhandler.h>
 
 #include <QVBoxLayout>
+#include <QIcon>
 
 using namespace Akonadi;
 

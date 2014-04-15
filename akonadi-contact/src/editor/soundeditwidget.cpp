@@ -23,7 +23,7 @@
 
 #include <kabc/addressee.h>
 #include <kfiledialog.h>
-#include <kicon.h>
+
 #include <kio/netaccess.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>

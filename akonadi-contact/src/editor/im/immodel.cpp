@@ -23,8 +23,9 @@
 
 #include "improtocols.h"
 
-#include <kicon.h>
 #include <klocalizedstring.h>
+
+#include <QIcon>
 
 IMAddress::IMAddress()
     : mProtocol(QStringLiteral("messaging/aim"))

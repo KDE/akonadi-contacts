@@ -24,9 +24,10 @@
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 #include <kabc/addressee.h>
-#include <kicon.h>
+
 #include <kiconloader.h>
 #include <klocalizedstring.h>
+#include <QIcon>
 
 using namespace Akonadi;
 

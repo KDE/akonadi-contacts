@@ -24,7 +24,7 @@
 #include <kabc/addressee.h>
 #include <kfiledialog.h>
 #include <kglobalsettings.h>
-#include <kicon.h>
+
 #include <kimageio.h>
 #include <kio/netaccess.h>
 #include <klocalizedstring.h>

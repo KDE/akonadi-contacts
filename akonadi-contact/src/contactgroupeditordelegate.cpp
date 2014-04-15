@@ -26,10 +26,11 @@
 
 #include <entitytreemodel.h>
 #include <kcombobox.h>
-#include <kicon.h>
+
 #include <klocalizedstring.h>
 
 #include <QtCore/QTimer>
+#include <KIcon>
 #include <QAbstractItemView>
 #include <QCompleter>
 #include <QMouseEvent>
