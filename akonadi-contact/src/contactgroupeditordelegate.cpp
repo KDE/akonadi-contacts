@@ -30,7 +30,7 @@
 #include <klocalizedstring.h>
 
 #include <QtCore/QTimer>
-#include <KIcon>
+#include <QIcon>
 #include <QAbstractItemView>
 #include <QCompleter>
 #include <QMouseEvent>
@@ -114,12 +114,12 @@ class ContactGroupEditorDelegate::Private
 {
   public:
     Private()
-      : mButtonSize( 16, 16 ), mIcon( QLatin1String( "list-remove" ) ), mItemView( 0 )
+      : mButtonSize( 16, 16 ), mIcon( QIcon::fromTheme(QLatin1String( "list-remove" ) )), mItemView( 0 )
     {
     }
 
     QSize mButtonSize;
-    const KIcon mIcon;
+    const QIcon mIcon;
     QAbstractItemView *mItemView;
 };
 
