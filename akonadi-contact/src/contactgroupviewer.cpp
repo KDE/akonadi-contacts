@@ -91,12 +91,12 @@ class ContactGroupViewer::Private
       mBrowser->setHtml( mContactGroupFormatter->toHtml() );
     }
 
-    void slotMailClicked( const QString&, const QString &email )
+    void slotMailClicked( const QUrl&email )
     {
       QString name, address;
 
       // remove the 'mailto:' and split into name and email address
-      KABC::Addressee::parseEmailAddress( email.mid( 7 ), name, address );
+      KABC::Addressee::parseEmailAddress( email.path(), name, address );
 
       emit mParent->emailClicked( name, address );
     }
@@ -155,10 +155,8 @@ ContactGroupViewer::ContactGroupViewer( QWidget *parent )
   QVBoxLayout *layout = new QVBoxLayout( this );
   layout->setMargin( 0 );
 
-  d->mBrowser->setNotifyClick( true );
-
-  connect( d->mBrowser, SIGNAL(mailClick(QString,QString)),
-           this, SLOT(slotMailClicked(QString,QString)) );
+  connect( d->mBrowser, SIGNAL(anchorClicked(QUrl)),
+           this, SLOT(slotMailClicked(QUrl)) );
 
   layout->addWidget( d->mBrowser );
 

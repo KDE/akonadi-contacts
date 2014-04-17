@@ -22,7 +22,7 @@
 #include "soundeditwidget.h"
 
 #include <kabc/addressee.h>
-#include <kfiledialog.h>
+//#include <kfiledialog.h>
 
 #include <kio/netaccess.h>
 #include <klocalizedstring.h>
@@ -30,6 +30,8 @@
 
 //QT5 port
 //#include <phonon/mediaobject.h>
+
+#include <QFileDialog>
 
 #include <QtCore/QBuffer>
 #include <QContextMenuEvent>
@@ -185,7 +187,7 @@ void SoundEditWidget::playSound()
 
 void SoundEditWidget::changeSound()
 {
-    const KUrl url = KFileDialog::getOpenUrl(QUrl(), QStringLiteral("*.wav"), this);
+    const QUrl url = QFileDialog::getOpenFileUrl(this, QString(), QUrl(), QStringLiteral("*.wav"));
     if (url.isValid()) {
         bool ok = false;
         const QByteArray sound = soundLoader()->loadSound(url, &ok);
@@ -199,7 +201,7 @@ void SoundEditWidget::changeSound()
 
 void SoundEditWidget::saveSound()
 {
-    const QString fileName = KFileDialog::getSaveFileName(KUrl(), QStringLiteral("*.wav"), this);
+    const QString fileName = QFileDialog::getSaveFileName(this, QString(), QString(), QStringLiteral("*.wav"));
     if (!fileName.isEmpty()) {
         QFile file(fileName);
         if (file.open(QIODevice::WriteOnly)) {

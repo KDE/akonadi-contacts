@@ -38,7 +38,6 @@
 #include <kacceleratormanager.h>
 #include <kcombobox.h>
 #include <qdebug.h>
-#include <khbox.h>
 #include <kinputdialog.h>
 #include <klineedit.h>
 #include <klocale.h>
@@ -474,9 +473,9 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), page);
     topLayout->addWidget(mPreferredCheckBox, 8, 0, 1, 2);
 
-    KHBox *buttonBox = new KHBox(page);
-    buttonBox->setSpacing(spacingHint());
-    topLayout->addWidget(buttonBox, 9, 0, 1, 2);
+    QHBoxLayout *hbox = new QHBoxLayout(page);
+    hbox->setSpacing(spacingHint());
+    topLayout->addLayout(hbox, 9, 0, 1, 2);
 
     KAcceleratorManager::manage(this);
 }

@@ -20,7 +20,6 @@
 
 #include "textbrowser_p.h"
 #include <kicontheme.h>
-#include <ktextbrowser.h>
 #include <klocalizedstring.h>
 #include <KUrl>
 #include <QAction>
@@ -37,7 +36,7 @@
 using namespace Akonadi;
 
 TextBrowser::TextBrowser( QWidget *parent )
-  : KTextBrowser( parent )
+  : QTextBrowser( parent )
 {
 }
 

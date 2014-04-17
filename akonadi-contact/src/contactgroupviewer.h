@@ -118,7 +118,7 @@ class AKONADI_CONTACT_EXPORT ContactGroupViewer : public QWidget, public Akonadi
     class Private;
     Private* const d;
 
-    Q_PRIVATE_SLOT( d, void slotMailClicked( const QString&, const QString& ) )
+    Q_PRIVATE_SLOT( d, void slotMailClicked( const QUrl& ) )
     Q_PRIVATE_SLOT( d, void _k_expandResult( KJob* ) )
     Q_PRIVATE_SLOT( d, void slotParentCollectionFetched( KJob* ) )
     //@endcond

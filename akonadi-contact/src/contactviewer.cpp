@@ -159,9 +159,8 @@ class ContactViewer::Private
       emit mParent->emailClicked( name, address );
     }
 
-    void slotUrlClicked( const QString &urlString )
+    void slotUrlClicked( const QUrl &url )
     {
-      KUrl url( urlString );
       const QString urlScheme( url.scheme() );
       if ( urlScheme == QLatin1String( "http" ) ||
            urlScheme == QLatin1String( "https" ) ) {
@@ -187,6 +186,13 @@ class ContactViewer::Private
         if ( pos < addresses.count() ) {
           emit mParent->addressClicked( addresses.at( pos ) );
         }
+      } else if (urlScheme == QLatin1String( "mailto" ) ) {
+        QString name, address;
+
+        // remove the 'mailto:' and split into name and email address
+        KABC::Addressee::parseEmailAddress( url.path(), name, address );
+
+        emit mParent->emailClicked( name, address );
       }
     }
 
@@ -231,12 +237,9 @@ ContactViewer::ContactViewer( QWidget *parent )
   layout->setMargin( 0 );
 
   d->mBrowser = new TextBrowser;
-  d->mBrowser->setNotifyClick( true );
 
-  connect( d->mBrowser, SIGNAL(mailClick(QString,QString)),
-           this, SLOT(slotMailClicked(QString,QString)) );
-  connect( d->mBrowser, SIGNAL(urlClick(QString)),
-           this, SLOT(slotUrlClicked(QString)) );
+  connect( d->mBrowser, SIGNAL(anchorClicked(QUrl)),
+          this, SLOT(slotUrlClicked(QUrl)) );
 
   layout->addWidget( d->mBrowser );
 

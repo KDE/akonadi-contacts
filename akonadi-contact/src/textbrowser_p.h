@@ -23,15 +23,15 @@
 #ifndef TEXTBROWSER_H
 #define TEXTBROWSER_H
 
-#include <ktextbrowser.h>
+#include <qtextbrowser.h>
 
 namespace Akonadi {
 
 /**
  * A convenience class to remove the 'Copy Link Location' action
- * from the context menu of KTextBrowser.
+ * from the context menu of QTextBrowser.
  */
-class TextBrowser : public KTextBrowser
+class TextBrowser : public QTextBrowser
 {
 Q_OBJECT
 public:
