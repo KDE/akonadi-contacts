@@ -9,9 +9,9 @@ qt5_wrap_ui(kcm_akonadicontact_actions_SRCS akonadicontactactions.ui)
 configure_file( ../actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
 kconfig_add_kcfg_files(kcm_akonadicontact_actions_SRCS ../actions/contactactionssettings.kcfgc)
 
-add_plugin(kcm_akonadicontact_actions MODULE ${kcm_akonadicontact_actions_SRCS})
+add_library(kcm_akonadicontact_actions MODULE ${kcm_akonadicontact_actions_SRCS})
 
-target_link_libraries(kcm_akonadicontact_actions KF5::ConfigWidgets )
+target_link_libraries(kcm_akonadicontact_actions KF5::ConfigWidgets KF5::KDELibs4Support)
 
 install(TARGETS kcm_akonadicontact_actions DESTINATION ${PLUGIN_INSTALL_DIR})
 

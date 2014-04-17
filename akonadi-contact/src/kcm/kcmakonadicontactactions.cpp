@@ -38,8 +38,10 @@ K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiConta
 K_EXPORT_PLUGIN(KCMAkonadiContactActionsFactory("kcm_akonadicontact_actions"))
 
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
-    : KCModule(KCMAkonadiContactActionsFactory::componentData(), parent)
+    : KCModule(parent)
 {
+//PORT Qt5
+#if 0
     KAboutData *about = new KAboutData(I18N_NOOP("kcmakonadicontactactions"), 0,
                                        ki18n("Contact Actions Settings"),
                                        0, KLocalizedString(), KAboutData::License_LGPL,
@@ -48,7 +50,7 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     about->addAuthor(ki18n("Tobias Koenig"), KLocalizedString(), "tokoe@kde.org");
 
     setAboutData(about);
-
+#endif
     QVBoxLayout *layout = new QVBoxLayout(this);
     QWidget *wdg = new QWidget;
     layout->addWidget(wdg);
@@ -155,3 +157,4 @@ void KCMAkonadiContactActions::defaults()
     ui.ShowAddressAction->setCurrentIndex(ContactActionsSettings::self()->showAddressAction());
     ContactActionsSettings::self()->useDefaults(bUseDefaults);
 }
+
