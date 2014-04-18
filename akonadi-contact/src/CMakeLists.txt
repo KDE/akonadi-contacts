@@ -137,22 +137,6 @@ target_link_libraries(KF5AkonadiContact
     #Phonon::phonon4qt5
 )
 
-
-#REACTIVE
-#if (KDE4_BUILD_TESTS)
-#   set(AKONADI_CONTACT_TESTS_EXPORT AKONADI_CONTACT_EXPORT)
-#endif()
-configure_file(akonadi-contactprivate_export.h.in "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contactprivate_export.h")
-
-
-#REACTIVATE
-#if (KDE4_BUILD_TESTS)
-#   set(AKONADI_CONTACT_TESTS_EXPORT AKONADI_CONTACT_EXPORT)
-#endif()
-configure_file(akonadi-contactprivate_export.h.in
-  "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contactprivate_export.h"
-)
-
 if(PRISON_FOUND) 
 #target_link_libraries(KF5AkonadiContact ${PRISON_LIBRARIES})
 endif()

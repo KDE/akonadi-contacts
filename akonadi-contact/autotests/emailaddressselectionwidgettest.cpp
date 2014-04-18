@@ -20,7 +20,7 @@
 
 #include "emailaddressselectionwidgettest.h"
 
-#include <kaboutdata.h>
+#include <k4aboutdata.h>
 #include <kapplication.h>
 #include <kcombobox.h>
 #include <kcmdlineargs.h>
@@ -70,7 +70,7 @@ void MainWidget::showSelection()
 
 int main(int argc, char **argv)
 {
-    KAboutData aboutData("emailaddressselectionwidgettest", 0, ki18n("Test EmailAddressSelectionWidget"), "0.1");
+    K4AboutData aboutData("emailaddressselectionwidgettest", 0, ki18n("Test EmailAddressSelectionWidget"), "0.1");
     KCmdLineArgs::init(argc, argv, &aboutData);
 
     KApplication app;

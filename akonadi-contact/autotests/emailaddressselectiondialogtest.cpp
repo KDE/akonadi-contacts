@@ -20,14 +20,14 @@
 
 #include "emailaddressselectiondialog.h"
 
-#include <kaboutdata.h>
+#include <k4aboutdata.h>
 #include <kapplication.h>
 #include <kcmdlineargs.h>
 #include <klocalizedstring.h>
 
 int main(int argc, char **argv)
 {
-    KAboutData aboutData("emailaddressselectiondialogtest", 0, ki18n("Test EmailAddressSelectionDialog"), "0.1");
+    K4AboutData aboutData("emailaddressselectiondialogtest", 0, ki18n("Test EmailAddressSelectionDialog"), "0.1");
     KCmdLineArgs::init(argc, argv, &aboutData);
 
     KApplication app;
