@@ -4,9 +4,9 @@ kde_enable_exceptions()
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
-#REACTIVATE
-#find_package(Prison QUIET)
-#set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
+set(Prison_MIN_VERSION "0.2.0")
+find_package(Prison ${Prison_MIN_VERSION})
+set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
 if (PRISON_FOUND)
     add_definitions(-DHAVE_PRISON)
 endif()
@@ -138,8 +138,9 @@ target_link_libraries(KF5AkonadiContact
 )
 
 if(PRISON_FOUND) 
-#target_link_libraries(KF5AkonadiContact ${PRISON_LIBRARIES})
+   target_link_libraries(KF5AkonadiContact ${PRISON_LIBRARIES})
 endif()
+
 
 set_target_properties(KF5AkonadiContact PROPERTIES
     VERSION ${AKONADICONTACT_VERSION_STRING}
