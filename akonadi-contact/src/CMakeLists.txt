@@ -2,7 +2,6 @@
 kde_enable_exceptions()
 
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
-remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
 set(Prison_MIN_VERSION "0.2.0")
 find_package(Prison ${Prison_MIN_VERSION})
