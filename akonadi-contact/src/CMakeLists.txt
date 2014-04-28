@@ -121,7 +121,7 @@ generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
 add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/contact;${Boost_INCLUDE_DIR}>")
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact;${Boost_INCLUDE_DIR}>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiContact
@@ -190,7 +190,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   StandardContactGroupFormatter
 
   REQUIRED_HEADERS AkonadiContact_HEADERS
-  PREFIX Akonadi/contact
+  PREFIX Akonadi/Contact
 )
 
 install( FILES
@@ -222,6 +222,6 @@ install( FILES
   standardcontactformatter.h
   standardcontactgroupformatter.h
   editor/im/improtocols.h
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/contact COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact COMPONENT Devel
 )
 
