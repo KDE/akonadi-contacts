@@ -190,7 +190,6 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   StandardContactGroupFormatter
 
   REQUIRED_HEADERS AkonadiContact_HEADERS
-  PREFIX Akonadi/Contact
 )
 
 install( FILES
