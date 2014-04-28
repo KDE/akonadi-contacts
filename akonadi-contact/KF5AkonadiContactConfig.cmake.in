@@ -3,7 +3,7 @@
 find_dependency(KF5Akonadi "@KF5_VERSION@")
 find_dependency(KF5Abc "@KF5_VERSION@")
 find_dependency(KF5CalendarCore "@KF5_VERSION@")
-find_dependency(KF5KMime "@KF5_VERSION@")
+find_dependency(KF5Mime "@KF5_VERSION@")
 find_dependency(KF5PimUtils "@KF5_VERSION@")
 find_dependency(KF5KDELibs4Support "@KF5_VERSION@")
 find_dependency(KF5KIO "@KF5_VERSION@")

@@ -129,7 +129,7 @@ target_link_libraries(KF5AkonadiContact
     KF5::AkonadiCore
     KF5::AkonadiWidgets
     KF5::KIOCore
-    KF5::KMime
+    KF5::Mime
     KF5::CalendarCore
     KF5::PimUtils
     KF5::Abc
