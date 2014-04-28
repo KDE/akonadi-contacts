@@ -190,18 +190,11 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   StandardContactGroupFormatter
 
   REQUIRED_HEADERS AkonadiContact_HEADERS
-  PREFIX akonadi/contact
+  PREFIX Akonadi/contact
 )
-
-install(FILES
-    ${AkonadiContact_CamelCase_HEADERS}
-    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact
-    COMPONENT Devel
-)
-
-
 
 install( FILES
+  ${AkonadiContact_CamelCase_HEADERS}
   ${AkonadiContact_HEADERS}
   abstractcontactformatter.h
   abstractcontactgroupformatter.h
@@ -229,6 +222,6 @@ install( FILES
   standardcontactformatter.h
   standardcontactgroupformatter.h
   editor/im/improtocols.h
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/akonadi/contact COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/contact COMPONENT Devel
 )
 
