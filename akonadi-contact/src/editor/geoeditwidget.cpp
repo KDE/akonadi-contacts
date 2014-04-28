@@ -23,8 +23,8 @@
 
 #include "autoqpointer_p.h"
 
-#include <kabc/addressee.h>
-#include <kabc/geo.h>
+#include <addressee.h>
+#include <geo.h>
 #include <kcombobox.h>
 #include <klocale.h>
 #include <klocalizedstring.h>

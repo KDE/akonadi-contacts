@@ -23,8 +23,8 @@
 
 #include <QVBoxLayout>
 
-#include <kabc/addressee.h>
-#include <kabc/secrecy.h>
+#include <addressee.h>
+#include <secrecy.h>
 #include <kcombobox.h>
 
 SecrecyEditWidget::SecrecyEditWidget(QWidget *parent)

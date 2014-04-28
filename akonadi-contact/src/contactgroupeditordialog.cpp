@@ -26,7 +26,7 @@
 
 #include <collectioncombobox.h>
 #include <item.h>
-#include <kabc/contactgroup.h>
+#include <contactgroup.h>
 #include <klocale.h>
 #include <klocalizedstring.h>
 #include <kglobal.h>

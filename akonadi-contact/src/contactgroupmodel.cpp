@@ -23,7 +23,7 @@
 
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <kabc/addressee.h>
+#include <addressee.h>
 
 #include <kiconloader.h>
 #include <klocalizedstring.h>

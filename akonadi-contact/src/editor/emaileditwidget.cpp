@@ -29,7 +29,7 @@
 #include <QPushButton>
 #include <QToolButton>
 
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <kacceleratormanager.h>
 #include <kinputdialog.h>
 #include <klineedit.h>

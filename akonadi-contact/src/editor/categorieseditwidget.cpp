@@ -24,7 +24,7 @@
 #include <item.h>
 #include <tag.h>
 #include <tagwidget.h>
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <kdialog.h>
 
 #include <QHBoxLayout>

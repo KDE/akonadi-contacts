@@ -23,7 +23,7 @@
 
 #include <QHBoxLayout>
 
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <kcalcore/freebusyurlstore.h>
 #include <kurlrequester.h>
 

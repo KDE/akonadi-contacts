@@ -26,7 +26,7 @@
 
 #include <item.h>
 #include <itemsearchjob.h>
-#include <kabc/contactgroup.h>
+#include <contactgroup.h>
 
 namespace Akonadi {
 

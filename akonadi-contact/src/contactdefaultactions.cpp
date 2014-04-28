@@ -25,9 +25,9 @@
 #include "actions/sendsmsaction.h"
 #include "actions/showaddressaction.h"
 
-#include <kabc/address.h>
-#include <kabc/addressee.h>
-#include <kabc/phonenumber.h>
+#include <address.h>
+#include <addressee.h>
+#include <phonenumber.h>
 #include <kpimutils/email.h>
 #include <ktoolinvocation.h>
 

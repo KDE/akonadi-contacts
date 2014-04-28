@@ -26,7 +26,7 @@
 #include "customfieldsdelegate.h"
 #include "customfieldsmodel.h"
 
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 

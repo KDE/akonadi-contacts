@@ -23,8 +23,8 @@
 #define AKONADI_CONTACTGROUPLINEEDIT_P_H
 
 #include <item.h>
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <addressee.h>
+#include <contactgroup.h>
 #include <klineedit.h>
 
 class QAbstractItemModel;

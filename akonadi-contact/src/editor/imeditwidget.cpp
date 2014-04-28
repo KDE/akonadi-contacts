@@ -29,7 +29,7 @@
 #include <QHBoxLayout>
 #include <QToolButton>
 
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
 

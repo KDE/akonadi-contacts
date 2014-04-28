@@ -22,7 +22,7 @@
 #include "standardcontactformatter.h"
 
 #include <item.h>
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
 #include <kglobal.h>

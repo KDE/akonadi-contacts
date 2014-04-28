@@ -34,7 +34,7 @@
 #include <entitydisplayattribute.h>
 #include <item.h>
 #include <itemfetchscope.h>
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
 #include <klocalizedstring.h>
@@ -45,7 +45,7 @@
 #ifdef HAVE_PRISON
 #include <prison/QRCodeBarcode>
 #include <prison/DataMatrixBarcode>
-#include <kabc/vcardconverter.h>
+#include <vcardconverter.h>
 #endif // HAVE_PRISON
 
 using namespace Akonadi;

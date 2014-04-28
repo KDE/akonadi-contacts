@@ -30,8 +30,8 @@
 #include <item.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <addressee.h>
+#include <contactgroup.h>
 #include <kcolorscheme.h>
 
 #include <klocalizedstring.h>

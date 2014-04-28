@@ -27,7 +27,7 @@
 #include "qskypedialer.h"
 #include "qekigadialer.h"
 
-#include <kabc/phonenumber.h>
+#include <phonenumber.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <krun.h>

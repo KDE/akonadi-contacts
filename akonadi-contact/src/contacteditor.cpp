@@ -35,7 +35,7 @@
 #include <itemmodifyjob.h>
 #include <monitor.h>
 #include <session.h>
-#include <kabc/addressee.h>
+#include <addressee.h>
 #include <klocalizedstring.h>
 
 #include <QtCore/QPointer>

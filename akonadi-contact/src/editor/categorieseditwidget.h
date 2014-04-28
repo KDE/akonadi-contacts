@@ -24,7 +24,7 @@
 
 #include <QWidget>
 
-#include <kabc/addressee.h>
+#include <addressee.h>
 
 namespace Akonadi {
     class TagWidget;
