@@ -149,7 +149,7 @@ set_target_properties(KF5AkonadiContact PROPERTIES
 
 install(TARGETS
     KF5AkonadiContact
-    EXPORT KF5AkonadiContactTargets ${INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KF5AkonadiContactTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 install(FILES editor/pics/world.jpg DESTINATION ${DATA_INSTALL_DIR}/akonadi/contact/pics)
