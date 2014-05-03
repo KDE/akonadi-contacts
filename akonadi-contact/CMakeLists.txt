@@ -15,7 +15,7 @@ include(FeatureSummary)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
-
+include(ECMInstallIcons)
 set(KF5_VERSION "4.98.0")
 
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX AKONADICONTACT
