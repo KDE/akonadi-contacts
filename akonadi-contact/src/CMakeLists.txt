@@ -152,8 +152,8 @@ install(TARGETS
     EXPORT KF5AkonadiContactTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
-install(FILES editor/pics/world.jpg DESTINATION ${DATA_INSTALL_DIR}/akonadi/contact/pics)
-install(FILES editor/data/zone.tab DESTINATION ${DATA_INSTALL_DIR}/akonadi/contact/data)
+install(FILES editor/pics/world.jpg DESTINATION ${KF5_DATA_INSTALL_DIR}/akonadi/contact/pics)
+install(FILES editor/data/zone.tab DESTINATION ${KF5_DATA_INSTALL_DIR}/akonadi/contact/data)
 install(FILES recentcontactscollections.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
