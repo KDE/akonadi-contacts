@@ -28,7 +28,7 @@
 #include <address.h>
 #include <addressee.h>
 #include <phonenumber.h>
-#include <kpimutils/email.h>
+#include <email.h>
 #include <ktoolinvocation.h>
 
 #include <QtCore/QUrl>
