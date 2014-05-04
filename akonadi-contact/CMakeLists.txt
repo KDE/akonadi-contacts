@@ -31,6 +31,8 @@ find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
 #find_package(Phonon4Qt5 CONFIG REQUIRED)
 
 if(${CMAKE_SOURCE_DIR} STREQUAL "${Akonadi-Contact_SOURCE_DIR}")
+  set(AkonadiServer_MIN_VERSION "1.72.43")
+  find_package(Akonadi ${AkonadiServer_MIN_VERSION} CONFIG REQUIRED)
   find_package(KF5Abc ${KF5_VERSION} CONFIG REQUIRED)
   find_package(KF5Akonadi CONFIG REQUIRED)
   find_package(KF5AkonadiMime CONFIG REQUIRED)
