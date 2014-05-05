@@ -26,7 +26,7 @@
 
 #include <item.h>
 #include <itemsearchjob.h>
-#include <addressee.h>
+#include <kabc/addressee.h>
 
 namespace Akonadi {
 
