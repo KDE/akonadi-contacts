@@ -22,7 +22,7 @@
 #ifndef GEOEDITWIDGET_H
 #define GEOEDITWIDGET_H
 
-#include <geo.h>
+#include <kabc/geo.h>
 #include <kdialog.h>
 
 #include <QWidget>

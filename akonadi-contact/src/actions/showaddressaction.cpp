@@ -23,7 +23,7 @@
 
 #include "contactactionssettings.h"
 
-#include <address.h>
+#include <kabc/address.h>
 #include <krun.h>
 #include <ktoolinvocation.h>
 

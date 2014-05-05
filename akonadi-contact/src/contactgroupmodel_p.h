@@ -24,7 +24,7 @@
 
 #include <QtCore/QAbstractItemModel>
 
-#include <contactgroup.h>
+#include <kabc/contactgroup.h>
 
 namespace Akonadi
 {

@@ -24,7 +24,7 @@
 
 #include <QtCore/QList>
 
-#include <addressee.h>
+#include <kabc/addressee.h>
 #include <kcombobox.h>
 #include <kdialog.h>
 

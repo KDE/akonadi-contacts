@@ -35,7 +35,7 @@
 #include <QScrollBar>
 #include <QVBoxLayout>
 
-#include <phonenumber.h>
+#include <kabc/phonenumber.h>
 #include <kcombobox.h>
 #include <qdebug.h>
 #include <klineedit.h>

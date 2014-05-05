@@ -24,8 +24,8 @@
 
 #include "akonadi-contact_export.h"
 
-#include <addressee.h>
-#include <contactgroup.h>
+#include <kabc/addressee.h>
+#include <kabc/contactgroup.h>
 #include <kjob.h>
 
 namespace Akonadi {

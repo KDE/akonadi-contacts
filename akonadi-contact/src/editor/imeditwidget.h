@@ -24,7 +24,7 @@
 
 #include <QWidget>
 
-#include <addressee.h>
+#include <kabc/addressee.h>
 
 #include "im/immodel.h"
 

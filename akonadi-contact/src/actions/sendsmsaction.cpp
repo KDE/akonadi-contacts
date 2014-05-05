@@ -25,7 +25,7 @@
 #include "qskypedialer.h"
 #include "smsdialog.h"
 
-#include <phonenumber.h>
+#include <kabc/phonenumber.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <krun.h>

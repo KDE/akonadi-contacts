@@ -33,8 +33,8 @@
 #include <entitytreeview.h>
 #include <itemfetchscope.h>
 #include <session.h>
-#include <addressee.h>
-#include <contactgroup.h>
+#include <kabc/addressee.h>
+#include <kabc/contactgroup.h>
 #include <klineedit.h>
 #include <klocale.h>
 #include <klocalizedstring.h>

@@ -22,7 +22,7 @@
 #ifndef IMAGEWIDGET_H
 #define IMAGEWIDGET_H
 
-#include "picture.h"
+#include "kabc/picture.h"
 
 #include <QtCore/QPoint>
 #include <QPushButton>

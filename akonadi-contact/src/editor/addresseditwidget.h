@@ -24,8 +24,8 @@
 
 #include <QWidget>
 
-#include <address.h>
-#include <addressee.h>
+#include <kabc/address.h>
+#include <kabc/addressee.h>
 #include <kcombobox.h>
 #include <kdialog.h>
 

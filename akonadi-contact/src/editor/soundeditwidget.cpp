@@ -21,7 +21,7 @@
 
 #include "soundeditwidget.h"
 
-#include <addressee.h>
+#include <kabc/addressee.h>
 //#include <kfiledialog.h>
 
 #include <kio/netaccess.h>

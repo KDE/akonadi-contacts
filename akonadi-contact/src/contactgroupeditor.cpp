@@ -35,7 +35,7 @@
 #include <itemmodifyjob.h>
 #include <monitor.h>
 #include <session.h>
-#include <contactgroup.h>
+#include <kabc/contactgroup.h>
 #include <klocalizedstring.h>
 #include <klineedit.h>
 #include <kmessagebox.h>

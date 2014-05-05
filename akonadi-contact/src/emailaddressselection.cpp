@@ -23,8 +23,8 @@
 #include "emailaddressselection.h"
 #include "emailaddressselection_p.h"
 
-#include <contactgroup.h>
-#include <kmime_header_parsing.h>
+#include <kabc/contactgroup.h>
+#include <kmime/kmime_header_parsing.h>
 
 using namespace Akonadi;
 

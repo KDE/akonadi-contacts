@@ -29,14 +29,14 @@
 #include <QPushButton>
 #include <QToolButton>
 
-#include <addressee.h>
+#include <kabc/addressee.h>
 #include <kacceleratormanager.h>
 #include <kinputdialog.h>
 #include <klineedit.h>
 #include <KListWidget>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <email.h>
+#include <kpimutils/email.h>
 #include <KSharedConfig>
 
 class EmailAddressExtracter : public QObject

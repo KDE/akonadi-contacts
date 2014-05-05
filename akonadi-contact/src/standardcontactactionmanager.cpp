@@ -26,8 +26,8 @@
 
 #include <entitytreemodel.h>
 #include <mimetypechecker.h>
-#include <addressee.h>
-#include <contactgroup.h>
+#include <kabc/addressee.h>
+#include <kabc/contactgroup.h>
 
 #include <kaction.h>
 #include <kactioncollection.h>

@@ -23,7 +23,7 @@
 
 #include <contactgroupexpandjob.h>
 #include <item.h>
-#include <addressee.h>
+#include <kabc/addressee.h>
 #include <kcolorscheme.h>
 #include <klocalizedstring.h>
 #include <kstringhandler.h>

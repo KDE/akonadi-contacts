@@ -22,7 +22,7 @@
 #include "abstractcontactformatter.h"
 
 #include <item.h>
-#include <addressee.h>
+#include <kabc/addressee.h>
 
 using namespace Akonadi;
 

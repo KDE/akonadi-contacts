@@ -24,8 +24,8 @@
 #include "contactstreemodel.h"
 
 #include <entitytreemodel.h>
-#include <addressee.h>
-#include <contactgroup.h>
+#include <kabc/addressee.h>
+#include <kabc/contactgroup.h>
 
 static bool contactMatchesFilter( const KABC::Addressee &contact, const QString &filterString );
 static bool contactGroupMatchesFilter( const KABC::ContactGroup &group, const QString &filterString );
