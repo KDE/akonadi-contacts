@@ -195,31 +195,8 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
 install( FILES
   ${AkonadiContact_CamelCase_HEADERS}
   ${AkonadiContact_HEADERS}
-  abstractcontactformatter.h
-  abstractcontactgroupformatter.h
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-  contactdefaultactions.h
-  contacteditor.h
-  contacteditordialog.h
   contacteditorpageplugin.h
-  contactgroupeditor.h
-  contactgroupeditordialog.h
-  contactgroupexpandjob.h
-  contactgroupsearchjob.h
-  contactgroupviewer.h
-  contactgroupviewerdialog.h
-  contactsearchjob.h
-  contactsfilterproxymodel.h
-  contactstreemodel.h
-  contactviewer.h
-  contactviewerdialog.h
-  emailaddressselection.h
-  emailaddressselectiondialog.h
-  emailaddressselectionwidget.h
-  recentcontactscollectionrequestjob.h
-  standardcontactactionmanager.h
-  standardcontactformatter.h
-  standardcontactgroupformatter.h
   editor/im/improtocols.h
   DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact COMPONENT Devel
 )
