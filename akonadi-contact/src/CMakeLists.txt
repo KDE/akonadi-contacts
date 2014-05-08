@@ -13,7 +13,7 @@ endif()
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
 set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
 
-#add_subdirectory(kcm)
+add_subdirectory(kcm)
 add_subdirectory(editor/im)
 
 ########### next target ###############
