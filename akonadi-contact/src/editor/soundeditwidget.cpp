@@ -29,7 +29,7 @@
 #include <kmessagebox.h>
 
 //QT5 port
-//#include <phonon/mediaobject.h>
+#include <phonon/mediaobject.h>
 
 #include <QFileDialog>
 
@@ -173,8 +173,6 @@ void SoundEditWidget::playSound()
     if (!mHasSound) {
         return;
     }
-//QT5 port
-#if 0
     Phonon::MediaObject *player = Phonon::createPlayer(Phonon::NotificationCategory);
     QBuffer *soundData = new QBuffer(player);
     soundData->setData(mSound);
@@ -182,7 +180,6 @@ void SoundEditWidget::playSound()
     player->setParent(this);
     connect(player, SIGNAL(finished()), player, SLOT(deleteLater()));
     player->play();
-#endif
 }
 
 void SoundEditWidget::changeSound()
