@@ -124,7 +124,8 @@ add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact;${Boost_INCLUDE_DIR};${PHONON_INCLUDES}>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src;${Boost_INCLUDE_DIR};${PHONON_INCLUDES}>")
 
-target_link_libraries(KF5AkonadiContact
+target_link_libraries(KF5AkonadiContact 
+PUBLIC
     KF5::KDELibs4Support
     KF5::AkonadiCore
     KF5::AkonadiWidgets
@@ -133,11 +134,12 @@ target_link_libraries(KF5AkonadiContact
     KF5::CalendarCore
     KF5::PimUtils
     KF5::Abc
+PRIVATE
     Phonon::phonon4qt5
 )
 
 if(PRISON_FOUND)
-   target_link_libraries(KF5AkonadiContact ${PRISON_LIBRARIES})
+   target_link_libraries(KF5AkonadiContact PRIVATE ${PRISON_LIBRARIES})
 endif()
 
 
