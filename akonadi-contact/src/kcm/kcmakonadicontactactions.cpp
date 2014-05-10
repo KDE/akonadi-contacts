@@ -145,7 +145,7 @@ void KCMAkonadiContactActions::save()
 
     ContactActionsSettings::EnumSendSmsAction enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ui.SendSmsAction->itemData(ui.SendSmsAction->currentIndex()).toInt());
     ContactActionsSettings::self()->setSendSmsAction(enumValueSms);
-    ContactActionsSettings::self()->writeConfig();
+    ContactActionsSettings::self()->save();
 }
 
 void KCMAkonadiContactActions::defaults()
