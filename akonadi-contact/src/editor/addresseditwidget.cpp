@@ -511,7 +511,7 @@ void AddressEditDialog::setAddress(const KABC::Address &address)
 
     if (mAddress.isEmpty()) {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(),
-                                   KLocale::global()->countryCodeToName(KGlobal::locale()->country()));
+                                   KLocale::global()->countryCodeToName(KLocale::global()->country()));
     } else {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(), mAddress.country());
     }
@@ -556,7 +556,7 @@ void AddressEditDialog::fillCountryCombo()
     mCountryCombo->completionObject()->setItems(countries);
     mCountryCombo->completionObject()->setIgnoreCase(true);
 
-    const QString currentCountry = KLocale::global()->countryCodeToName(KGlobal::locale()->country());
+    const QString currentCountry = KLocale::global()->countryCodeToName(KLocale::global()->country());
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
 }
 
