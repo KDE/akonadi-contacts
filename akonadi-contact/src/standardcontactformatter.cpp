@@ -32,6 +32,7 @@
 
 #include <QtCore/QSet>
 #include <QTextDocument>
+#include <KLocale>
 
 using namespace Akonadi;
 
@@ -116,7 +117,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
   if ( date.isValid() ) {
     dynamicPart += rowFmtStr1
       .arg( KABC::Addressee::birthdayLabel() )
-      .arg( KGlobal::locale()->formatDate( date ) +
+      .arg( KLocale::global()->formatDate( date ) +
             QLatin1String( "&nbsp;&nbsp;" ) + i18np( "(One year old)", "(%1 years old)", years ) );
   }
 
@@ -241,7 +242,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
         // convert anniversary correctly
         if ( key == QLatin1String( "Anniversary" ) || key == QLatin1String( "ANNIVERSARY" ) ) {
           const QDateTime dateTime = QDateTime::fromString( value, Qt::ISODate );
-          value = KGlobal::locale()->formatDate( dateTime.date() );
+          value = KLocale::global()->formatDate( dateTime.date() );
         } else if ( key == QLatin1String( "BlogFeed" ) ) {  // blog is handled separated
           continue;
         } else if ( blacklistedKeys.contains( key ) ) {
@@ -267,13 +268,13 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
                 }
               } else if ( descriptionType == QLatin1String( "date" ) ) {
                 const QDate date = QDate::fromString( value, Qt::ISODate );
-                value = KGlobal::locale()->formatDate( date, KLocale::ShortDate );
+                value = KLocale::global()->formatDate( date, KLocale::ShortDate );
               } else if ( descriptionType == QLatin1String( "time" ) ) {
                 const QTime time = QTime::fromString( value, Qt::ISODate );
-                value = KGlobal::locale()->formatTime( time );
+                value = KLocale::global()->formatTime( time );
               } else if ( descriptionType == QLatin1String( "datetime" ) ) {
                 const QDateTime dateTime = QDateTime::fromString( value, Qt::ISODate );
-                value = KGlobal::locale()->formatDateTime( dateTime, KLocale::ShortDate );
+                value = KLocale::global()->formatDateTime( dateTime, KLocale::ShortDate );
               } else if ( descriptionType == QLatin1String("url") ) {
                 value = KStringHandler::tagUrls( Qt::escape(value) );
                 needToEscape = false;

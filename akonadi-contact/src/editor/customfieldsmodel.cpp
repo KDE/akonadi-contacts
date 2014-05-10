@@ -27,6 +27,7 @@
 #include <klocalizedstring.h>
 
 #include <QtCore/QDateTime>
+#include <KLocale>
 
 Q_DECLARE_METATYPE(Qt::CheckState)
 
@@ -96,17 +97,17 @@ QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
                 break;
             case CustomField::DateType: {
                 const QDate value = QDate::fromString(customField.value(), Qt::ISODate);
-                return KGlobal::locale()->formatDate(value, KLocale::ShortDate);
+                return KLocale::global()->formatDate(value, KLocale::ShortDate);
                 break;
             }
             case CustomField::TimeType: {
                 const QTime value = QTime::fromString(customField.value(), Qt::ISODate);
-                return KGlobal::locale()->formatTime(value);
+                return KLocale::global()->formatTime(value);
                 break;
             }
             case CustomField::DateTimeType: {
                 const QDateTime value = QDateTime::fromString(customField.value(), Qt::ISODate);
-                return KGlobal::locale()->formatDateTime(value);
+                return KLocale::global()->formatDateTime(value);
                 break;
             }
             }

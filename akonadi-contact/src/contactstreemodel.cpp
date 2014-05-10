@@ -31,6 +31,7 @@
 #include <klocalizedstring.h>
 
 #include <QIcon>
+#include <KLocale>
 
 using namespace Akonadi;
 
@@ -110,7 +111,7 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
           return contact.givenName();
         case Birthday:
           if ( contact.birthday().date().isValid() ) {
-            return KGlobal::locale()->formatDate( contact.birthday().date(), KLocale::ShortDate );
+            return KLocale::global()->formatDate( contact.birthday().date(), KLocale::ShortDate );
           }
           break;
         case HomeAddress:

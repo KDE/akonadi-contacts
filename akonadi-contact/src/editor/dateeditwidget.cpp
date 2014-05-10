@@ -32,6 +32,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QToolButton>
+#include <KLocale>
 
 DateView::DateView(QWidget *parent)
     : QLabel(parent)
@@ -143,7 +144,7 @@ void DateEditWidget::resetDate()
 void DateEditWidget::updateView()
 {
     if (mDate.isValid()) {
-        mView->setText(KGlobal::locale()->formatDate(mDate));
+        mView->setText(KLocale::global()->formatDate(mDate));
         mClearButton->show();
     } else {
         mView->setText(QString());

@@ -48,6 +48,7 @@
 #include <ktextedit.h>
 
 #include <functional>
+#include <KLocale>
 
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
     bool operator()(const QString &s1, const QString &s2) const
@@ -510,7 +511,7 @@ void AddressEditDialog::setAddress(const KABC::Address &address)
 
     if (mAddress.isEmpty()) {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(),
-                                   KGlobal::locale()->countryCodeToName(KGlobal::locale()->country()));
+                                   KLocale::global()->countryCodeToName(KGlobal::locale()->country()));
     } else {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(), mAddress.country());
     }
@@ -544,8 +545,8 @@ void AddressEditDialog::fillCountryCombo()
 {
     QStringList countries;
 
-    foreach (const QString &cc, KGlobal::locale()->allCountriesList()) {
-        countries.append(KGlobal::locale()->countryCodeToName(cc));
+    foreach (const QString &cc, KLocale::global()->allCountriesList()) {
+        countries.append(KLocale::global()->countryCodeToName(cc));
     }
 
     qSort(countries.begin(), countries.end(), LocaleAwareLessThan());
@@ -555,7 +556,7 @@ void AddressEditDialog::fillCountryCombo()
     mCountryCombo->completionObject()->setItems(countries);
     mCountryCombo->completionObject()->setIgnoreCase(true);
 
-    const QString currentCountry = KGlobal::locale()->countryCodeToName(KGlobal::locale()->country());
+    const QString currentCountry = KLocale::global()->countryCodeToName(KGlobal::locale()->country());
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
 }
 
