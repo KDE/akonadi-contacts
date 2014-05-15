@@ -51,7 +51,7 @@ static QString strippedDialNumber(const QString &number)
 void DialPhoneNumberAction::dialNumber(const KABC::PhoneNumber &number)
 {
     // synchronize
-    ContactActionsSettings::self()->readConfig();
+    ContactActionsSettings::self()->load();
 
     QDialer *dialer = NULL;
     // we handle skype separated

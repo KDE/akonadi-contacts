@@ -42,7 +42,7 @@ static void replaceArguments(QString &templateStr, const KABC::Address &address)
 void ShowAddressAction::showAddress(const KABC::Address &address)
 {
     // synchronize
-    ContactActionsSettings::self()->readConfig();
+    ContactActionsSettings::self()->load();
 
     if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseBrowser) {
         QString urlTemplate = ContactActionsSettings::self()->addressUrl();

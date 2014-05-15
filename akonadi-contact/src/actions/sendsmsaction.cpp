@@ -51,7 +51,7 @@ void SendSmsAction::sendSms(const KABC::PhoneNumber &phoneNumber)
     const QString number = phoneNumber.number().trimmed();
 
     // synchronize
-    ContactActionsSettings::self()->readConfig();
+    ContactActionsSettings::self()->load();
 
     QString command = ContactActionsSettings::self()->smsCommand();
 
