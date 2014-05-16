@@ -51,11 +51,6 @@ ContactSearchJob::~ContactSearchJob()
   delete d;
 }
 
-void ContactSearchJob::setQuery( Criterion criterion, const QString &value )
-{
-  setQuery( criterion, value, ExactMatch );
-}
-
 static Akonadi::SearchTerm::Condition matchType( ContactSearchJob::Match match )
 {
   switch ( match ) {
