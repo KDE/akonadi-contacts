@@ -111,7 +111,7 @@ else()
 add_definitions(-DDISABLE_EDITOR_WIDGETS)
 endif()
 
-qt5_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
+ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
 kconfig_add_kcfg_files(akonadicontact_LIB_SRC recentcontactscollectionssettings.kcfgc )
 
 

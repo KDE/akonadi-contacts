@@ -4,7 +4,7 @@
 set(kcm_akonadicontact_actions_SRCS
     kcmakonadicontactactions.cpp)
 
-qt5_wrap_ui(kcm_akonadicontact_actions_SRCS akonadicontactactions.ui)
+ki18n_wrap_ui(kcm_akonadicontact_actions_SRCS akonadicontactactions.ui)
 
 configure_file( ../actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
 kconfig_add_kcfg_files(kcm_akonadicontact_actions_SRCS ../actions/contactactionssettings.kcfgc)
