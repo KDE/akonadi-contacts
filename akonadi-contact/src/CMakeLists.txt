@@ -181,6 +181,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   ContactSearchJob
   ContactsFilterProxyModel
   ContactsTreeModel
+  ContactEditorPagePlugin
   ContactViewer
   ContactViewerDialog
   EmailAddressSelection
@@ -203,7 +204,6 @@ install( FILES
 install( FILES
   ${AkonadiContact_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-  contacteditorpageplugin.h
   editor/im/improtocols.h
   DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/akonadi/contact COMPONENT Devel
 )
