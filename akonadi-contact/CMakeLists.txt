@@ -43,7 +43,7 @@ endif()
 
 ########### Targets ###########
 
-add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact\")
+add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
 
 add_subdirectory(src)
 add_subdirectory(autotests)
