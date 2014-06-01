@@ -197,10 +197,14 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
 
 install( FILES
   ${AkonadiContact_CamelCase_HEADERS}
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact COMPONENT Devel
+)
+
+install( FILES
   ${AkonadiContact_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
   contacteditorpageplugin.h
   editor/im/improtocols.h
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/akonadi/contact COMPONENT Devel
 )
 
