@@ -153,13 +153,6 @@ class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
     void loadContact( const Akonadi::Item &contact );
 
     /**
-     * Saves the contact from the editor back to the storage.
-     * @deprecated use saveContactInAddressBook. We can't get contactStored and error infos.
-     * Remove it for KDE SC5
-     */
-    AKONADI_CONTACT_DEPRECATED bool saveContact();
-
-    /**
      * Save the contact from the editor back to the storage. And return error.
      * Need to connect to finished() signal, to keep time to emit signal.
      * @since 4.11

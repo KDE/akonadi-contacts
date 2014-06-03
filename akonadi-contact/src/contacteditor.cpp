@@ -293,59 +293,6 @@ void ContactEditor::saveContactInAddressBook()
     }
 }
 
-bool ContactEditor::saveContact()
-{
-  if ( d->mMode == EditMode ) {
-    if ( !d->mItem.isValid() ) {
-      return true;
-    }
-
-    if ( d->mReadOnly ) {
-      return true;
-    }
-
-    KABC::Addressee addr = d->mItem.payload<KABC::Addressee>();
-
-    d->storeContact( addr, d->mContactMetaData );
-
-    d->mContactMetaData.store( d->mItem );
-
-    d->mItem.setPayload<KABC::Addressee>( addr );
-
-    Akonadi::ItemModifyJob *job = new Akonadi::ItemModifyJob( d->mItem );
-    connect( job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)) );
-  } else if ( d->mMode == CreateMode ) {
-    if ( !d->mDefaultCollection.isValid() ) {
-      const QStringList mimeTypeFilter( KABC::Addressee::mimeType() );
-
-      AutoQPointer<CollectionDialog> dlg = new CollectionDialog( this );
-      dlg->setMimeTypeFilter( mimeTypeFilter );
-      dlg->setAccessRightsFilter( Collection::CanCreateItem );
-      dlg->setCaption( i18n( "Select Address Book" ) );
-      dlg->setDescription( i18n( "Select the address book the new contact shall be saved in:" ) );
-      if ( dlg->exec() == KDialog::Accepted ) {
-        setDefaultAddressBook( dlg->selectedCollection() );
-      } else {
-        return false;
-      }
-    }
-
-    KABC::Addressee addr;
-    d->storeContact( addr, d->mContactMetaData );
-
-    Akonadi::Item item;
-    item.setPayload<KABC::Addressee>( addr );
-    item.setMimeType( KABC::Addressee::mimeType() );
-
-    d->mContactMetaData.store( item );
-
-    Akonadi::ItemCreateJob *job = new Akonadi::ItemCreateJob( item, d->mDefaultCollection );
-    connect( job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)) );
-  }
-
-  return true;
-}
-
 void ContactEditor::setContactTemplate( const KABC::Addressee &contact )
 {
   d->loadContact( contact, d->mContactMetaData );
