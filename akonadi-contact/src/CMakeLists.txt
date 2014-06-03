@@ -126,15 +126,15 @@ target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi
 
 target_link_libraries(KF5AkonadiContact 
 PUBLIC
-    KF5::KDELibs4Support
     KF5::AkonadiCore
-    KF5::AkonadiWidgets
-    KF5::KIOCore
-    KF5::Mime
-    KF5::CalendarCore
-    KF5::PimUtils
     KF5::Abc
 PRIVATE
+    KF5::AkonadiWidgets
+    KF5::CalendarCore
+    KF5::KIOCore
+    KF5::Mime
+    KF5::PimUtils
+    KF5::KDELibs4Support
     Phonon::phonon4qt5
 )
 
@@ -160,7 +160,7 @@ install(FILES recentcontactscollections.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
     LIB_NAME KF5AkonadiContact
-    DEPS "KDELibs4Support AkonadiCore KIOCore Mime CalendarCore PimUtils Abc" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact
+    DEPS "AkonadiCore Abc" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact
 )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
