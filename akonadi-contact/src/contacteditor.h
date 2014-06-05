@@ -52,7 +52,7 @@ class Item;
  *
  * ...
  *
- * if ( !editor->saveContact() ) {
+ * if ( !editor->saveContactInAddressBook() ) {
  *   qDebug() << "Unable to save new contact to storage";
  *   return;
  * }
