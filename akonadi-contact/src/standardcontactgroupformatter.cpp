@@ -93,7 +93,7 @@ QString StandardContactGroupFormatter::toHtml( HtmlForm form ) const
       contact.setFormattedName( data.name() );
       contact.insertEmail( data.email() );
 
-      const QString fullEmail = QLatin1String( "<a href=\"mailto:" ) + QString::fromLatin1( KUrl::toPercentEncoding( contact.fullEmail() ) ) + QString::fromLatin1( "\">%1</a>" ).arg( contact.preferredEmail() );
+      const QString fullEmail = QLatin1String( "<a href=\"mailto:" ) + QString::fromLatin1( QUrl::toPercentEncoding( contact.fullEmail() ) ) + QString::fromLatin1( "\">%1</a>" ).arg( contact.preferredEmail() );
 
       strGroup.append( QString::fromLatin1( "<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
                                             "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>&lt;%2&gt;</font></td></tr>" )

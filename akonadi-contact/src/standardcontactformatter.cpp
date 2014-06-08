@@ -148,7 +148,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
   foreach ( const QString &email, rawContact.emails() ) {
     const QString type = i18nc( "a contact's email address", "Email" );
 
-    const QString fullEmail = QString::fromLatin1( KUrl::toPercentEncoding( rawContact.fullEmail( email ) ) );
+    const QString fullEmail = QString::fromLatin1( QUrl::toPercentEncoding( rawContact.fullEmail( email ) ) );
 
     dynamicPart += rowFmtStr1.arg( type )
       .arg( QString::fromLatin1( "<a href=\"mailto:%1\">%2</a>" )
