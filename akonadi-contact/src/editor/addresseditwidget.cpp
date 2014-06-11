@@ -42,7 +42,7 @@
 #include <klineedit.h>
 #include <klocale.h>
 #include <klocalizedstring.h>
-#include <kglobal.h>
+
 #include <kmessagebox.h>
 #include <kseparator.h>
 #include <ktextedit.h>

@@ -23,7 +23,7 @@
 
 #include "recentcontactscollections_p.h"
 
-#include <kglobal.h>
+
 #include <klocalizedstring.h>
 #include <QStandardPaths>
 

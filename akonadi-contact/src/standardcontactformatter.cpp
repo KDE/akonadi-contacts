@@ -25,7 +25,7 @@
 #include <kabc/addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
-#include <kglobal.h>
+
 #include <klocale.h>
 #include <klocalizedstring.h>
 #include <kstringhandler.h>

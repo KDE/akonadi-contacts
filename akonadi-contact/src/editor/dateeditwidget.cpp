@@ -24,7 +24,7 @@
 #include "kdatepickerpopup_p.h"
 
 #include <kdatepicker.h>
-#include <kglobal.h>
+
 
 #include <klocalizedstring.h>
 

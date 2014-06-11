@@ -24,7 +24,7 @@
 
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
-#include <kglobal.h>
+
 
 #include <kiconloader.h>
 #include <klocale.h>

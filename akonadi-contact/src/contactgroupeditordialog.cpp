@@ -29,7 +29,7 @@
 #include <kabc/contactgroup.h>
 #include <klocale.h>
 #include <klocalizedstring.h>
-#include <kglobal.h>
+
 #include <klineedit.h>
 
 #include <QPushButton>
