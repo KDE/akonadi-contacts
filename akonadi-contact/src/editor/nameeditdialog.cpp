@@ -27,29 +27,31 @@
 #include <klineedit.h>
 #include <klocalizedstring.h>
 
+#include <QDialogButtonBox>
+#include <QPushButton>
+
 NameEditDialog::NameEditDialog(QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setCaption(i18n("Edit Contact Name"));
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
+    setWindowTitle(i18n("Edit Contact Name"));
 
-    QWidget *page = new QWidget(this);
-    setMainWidget(page);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
 
-    QFormLayout *layout = new QFormLayout(page);
+    QFormLayout *layout = new QFormLayout;
+    mainLayout->addLayout(layout);
 
-    mPrefixCombo = new KComboBox(page);
+    mPrefixCombo = new KComboBox(this);
     mPrefixCombo->setDuplicatesEnabled(false);
     mPrefixCombo->setEditable(true);
 
-    mGivenNameEdit = new QLineEdit(page);
+    mGivenNameEdit = new QLineEdit(this);
 
-    mAdditionalNameEdit = new QLineEdit(page);
+    mAdditionalNameEdit = new QLineEdit(this);
 
-    mFamilyNameEdit = new QLineEdit(page);
+    mFamilyNameEdit = new QLineEdit(this);
 
-    mSuffixCombo = new KComboBox(page);
+    mSuffixCombo = new KComboBox(this);
     mSuffixCombo->setDuplicatesEnabled(false);
     mSuffixCombo->setEditable(true);
 
@@ -82,6 +84,9 @@ NameEditDialog::NameEditDialog(QWidget *parent)
     mSuffixCombo->addItems(suffixList);
 
     mPrefixCombo->lineEdit()->setFocus();
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
+    mainLayout->addWidget(buttonBox);
 }
 
 void NameEditDialog::setFamilyName(const QString &name)
