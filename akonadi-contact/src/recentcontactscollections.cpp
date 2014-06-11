@@ -23,7 +23,7 @@
 
 #include "recentcontactscollectionssettings.h"
 
-#include <KGlobal>
+
 
 #include "agentinstance.h"
 #include "servermanager.h"

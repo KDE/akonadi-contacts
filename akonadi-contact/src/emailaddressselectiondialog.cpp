@@ -23,7 +23,7 @@
 #include "emailaddressselectiondialog.h"
 
 #include <KConfigGroup>
-#include <KGlobal>
+
 #include <KSharedConfig>
 
 using namespace Akonadi;
