@@ -28,6 +28,8 @@
 
 #include <QLabel>
 #include <QVBoxLayout>
+#include <QDialogButtonBox>
+#include <QPushButton>
 
 SmsDialog::SmsDialog(const KABC::PhoneNumber &number)
     : mNumber(number.number())
@@ -46,34 +48,32 @@ QString SmsDialog::message() const
 
 void SmsDialog::initUI()
 {
-    setCaption(i18n("SMS text"));
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
-    showButtonSeparator(true);
+    setWindowTitle(i18n("SMS text"));
 
-    QWidget *page = new QWidget(this);
-    setMainWidget(page);
-    page->setFixedWidth(300);
+    //setFixedWidth(300);
 
-    QVBoxLayout *topLayout = new QVBoxLayout(page);
-    topLayout->setSpacing(spacingHint());
+    QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setMargin(0);
 
-    QLabel *label = new QLabel(i18n("Please insert SMS text for an SMS to the following number: %1", mNumber), page);
+    QLabel *label = new QLabel(i18n("Please insert SMS text for an SMS to the following number: %1", mNumber), this);
     topLayout->addWidget(label);
     label->setWordWrap(true);
 
-    mSmsTextEdit = new KTextEdit(page);
+    mSmsTextEdit = new KTextEdit(this);
     mSmsTextEdit->setAcceptRichText(false);
     label->setBuddy(mSmsTextEdit);
     topLayout->addWidget(mSmsTextEdit);
 
     connect(mSmsTextEdit, SIGNAL(textChanged()), SLOT(updateCounter()));
 
-    mLengthLabel = new QLabel(QStringLiteral("-") , page);
+    mLengthLabel = new QLabel(QStringLiteral("-") , this);
     topLayout->addWidget(mLengthLabel);
 
     mSmsTextEdit->setFocus();
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
+    topLayout->addWidget(buttonBox);
+
     updateCounter();
 }
 

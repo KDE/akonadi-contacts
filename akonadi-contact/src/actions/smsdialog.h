@@ -22,7 +22,7 @@
 #ifndef SMSDIALOG_H
 #define SMSDIALOG_H
 
-#include <kdialog.h>
+#include <QDialog>
 
 class QLabel;
 
@@ -32,7 +32,7 @@ namespace KABC {
 class PhoneNumber;
 }
 
-class SmsDialog : public KDialog
+class SmsDialog : public QDialog
 {
     Q_OBJECT
 
