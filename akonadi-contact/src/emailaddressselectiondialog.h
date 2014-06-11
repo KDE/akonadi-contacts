@@ -27,7 +27,7 @@
 
 #include "emailaddressselectionwidget.h"
 
-#include <kdialog.h>
+#include <QDialog>
 
 namespace Akonadi {
 
@@ -56,7 +56,7 @@ namespace Akonadi {
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.5
  */
-class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public KDialog
+class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public QDialog
 {
   Q_OBJECT
 

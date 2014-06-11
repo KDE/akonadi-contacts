@@ -25,7 +25,8 @@
 #include <KConfigGroup>
 
 #include <KSharedConfig>
-
+#include <QVBoxLayout>
+#include <QDialogButtonBox>
 using namespace Akonadi;
 
 class EmailAddressSelectionDialog::Private
@@ -34,14 +35,16 @@ class EmailAddressSelectionDialog::Private
     Private( EmailAddressSelectionDialog *qq, QAbstractItemModel *model )
       : q( qq )
     {
+        QVBoxLayout *mainLayout = new QVBoxLayout(q);
       if ( model ) {
         mView = new EmailAddressSelectionWidget( model, q );
       } else {
         mView = new EmailAddressSelectionWidget( q );
       }
+      mainLayout->addWidget(mView);
       q->connect( mView, SIGNAL(doubleClicked()), q, SLOT(accept()));
-      q->setButtons( Ok | Cancel );
-      q->setMainWidget( mView );
+
+      mainLayout->addWidget(new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel));
       readConfig();
     }
 
@@ -67,12 +70,12 @@ class EmailAddressSelectionDialog::Private
 };
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog( QWidget *parent )
-  : KDialog( parent ), d( new Private( this, 0 ) )
+  : QDialog( parent ), d( new Private( this, 0 ) )
 {
 }
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog( QAbstractItemModel *model, QWidget *parent )
-  : KDialog( parent ), d( new Private( this, model ) )
+  : QDialog( parent ), d( new Private( this, model ) )
 {
 }
 
