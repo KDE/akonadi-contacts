@@ -21,7 +21,6 @@
 
 #include "waitingoverlay_p.h"
 
-#include <QDebug>
 #include <KJob>
 #include <KLocalizedString>
 
