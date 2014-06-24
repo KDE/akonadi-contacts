@@ -35,7 +35,7 @@ class EmailAddressSelectionDialog::Private
     Private( EmailAddressSelectionDialog *qq, QAbstractItemModel *model )
       : q( qq )
     {
-        QVBoxLayout *mainLayout = new QVBoxLayout(q);
+      QVBoxLayout *mainLayout = new QVBoxLayout(q);
       if ( model ) {
         mView = new EmailAddressSelectionWidget( model, q );
       } else {

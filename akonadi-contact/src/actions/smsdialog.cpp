@@ -71,7 +71,9 @@ void SmsDialog::initUI()
 
     mSmsTextEdit->setFocus();
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
-    buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     topLayout->addWidget(buttonBox);
 
     updateCounter();
