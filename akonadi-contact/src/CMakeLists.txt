@@ -123,8 +123,10 @@ add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 
 target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact;${Boost_INCLUDE_DIR};${PHONON_INCLUDES}>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src;${Boost_INCLUDE_DIR};${PHONON_INCLUDES}>")
+# TODO: Remove when kdepimlibs is split (and fix the broken includes in eg. akonadi-calendar)
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/akonadi/contact>")
 
-target_link_libraries(KF5AkonadiContact 
+target_link_libraries(KF5AkonadiContact
 PUBLIC
     KF5::AkonadiCore
     KF5::Abc
