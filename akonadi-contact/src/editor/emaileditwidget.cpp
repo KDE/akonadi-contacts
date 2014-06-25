@@ -31,7 +31,7 @@
 
 #include <kabc/addressee.h>
 #include <kacceleratormanager.h>
-#include <kinputdialog.h>
+#include <qinputdialog.h>
 #include <klineedit.h>
 #include <KListWidget>
 #include <klocalizedstring.h>
@@ -287,8 +287,8 @@ void EmailEditDialog::add()
 {
     bool ok = false;
 
-    QString email = KInputDialog::getText(i18n("Add Email"), i18n("New Email:"),
-                                          QString(), &ok, this);
+    QString email = QInputDialog::getText(this, i18n("Add Email"), i18n("New Email:"), QLineEdit::Normal,
+                                          QString(), &ok);
 
     if (!ok) {
         return;
@@ -314,9 +314,9 @@ void EmailEditDialog::edit()
 
     QListWidgetItem *item = mEmailListBox->currentItem();
 
-    QString email = KInputDialog::getText(i18n("Edit Email"),
-                                          i18nc("@label:textbox Inputfield for an email address", "Email:"),
-                                          item->text(), &ok, this);
+    QString email = QInputDialog::getText(this, i18n("Edit Email"),
+                                          i18nc("@label:textbox Inputfield for an email address", "Email:"), QLineEdit::Normal,
+                                          item->text(), &ok);
 
     if (!ok) {
         return;

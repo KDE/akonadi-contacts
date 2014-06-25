@@ -38,7 +38,7 @@
 #include <kacceleratormanager.h>
 #include <kcombobox.h>
 #include <qdebug.h>
-#include <kinputdialog.h>
+#include <qinputdialog.h>
 #include <klineedit.h>
 #include <klocale.h>
 #include <klocalizedstring.h>
@@ -488,9 +488,9 @@ AddressEditDialog::~AddressEditDialog()
 void AddressEditDialog::editLabel()
 {
     bool ok = false;
-    QString result = KInputDialog::getMultiLineText(KABC::Address::labelLabel(),
+    QString result = QInputDialog::getMultiLineText(this, KABC::Address::labelLabel(),
                                                     KABC::Address::labelLabel(),
-                                                    mLabel, &ok, this);
+                                                    mLabel, &ok);
     if (ok) {
         mLabel = result;
     }
