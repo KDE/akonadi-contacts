@@ -19,7 +19,7 @@ include(ECMInstallIcons)
 set(KF5_VERSION "5.0.0")
 set(KDEPIMLIBS_VERSION "4.70.0")
 
-ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX AKONADICONTACT
+ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
                         SOVERSION 5
