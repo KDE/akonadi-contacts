@@ -29,7 +29,7 @@
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 
-#include <kaction.h>
+#include <QAction>
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
