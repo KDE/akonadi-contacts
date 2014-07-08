@@ -27,6 +27,8 @@
 #include <KSharedConfig>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QPushButton>
+
 using namespace Akonadi;
 
 class EmailAddressSelectionDialog::Private
@@ -43,8 +45,14 @@ class EmailAddressSelectionDialog::Private
       }
       mainLayout->addWidget(mView);
       q->connect( mView, SIGNAL(doubleClicked()), q, SLOT(accept()));
+      QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+      QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+      okButton->setDefault(true);
+      okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+      connect(buttonBox, SIGNAL(accepted()), q, SLOT(accept()));
+      connect(buttonBox, SIGNAL(rejected()), q, SLOT(reject()));
 
-      mainLayout->addWidget(new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel));
+      mainLayout->addWidget(buttonBox);
       readConfig();
     }
 
