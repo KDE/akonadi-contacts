@@ -40,17 +40,14 @@ K_EXPORT_PLUGIN(KCMAkonadiContactActionsFactory("kcm_akonadicontact_actions"))
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
     : KCModule(parent)
 {
-//PORT Qt5
-#if 0
-    KAboutData *about = new KAboutData(I18N_NOOP("kcmakonadicontactactions"), 0,
-                                       ki18n("Contact Actions Settings"),
-                                       0, KLocalizedString(), KAboutData::License_LGPL,
-                                       ki18n("(c) 2009 Tobias Koenig"));
+    KAboutData *about = new KAboutData(QLatin1String("kcmakonadicontactactions"),
+                                       i18n("Contact Actions Settings"),
+                                       QString(), QString(), KAboutLicense::LGPL,
+                                       i18n("(c) 2009 Tobias Koenig"));
 
-    about->addAuthor(ki18n("Tobias Koenig"), KLocalizedString(), "tokoe@kde.org");
+    about->addAuthor(i18n("Tobias Koenig"), QString(), QLatin1String("tokoe@kde.org"));
 
     setAboutData(about);
-#endif
     QVBoxLayout *layout = new QVBoxLayout(this);
     QWidget *wdg = new QWidget;
     layout->addWidget(wdg);
