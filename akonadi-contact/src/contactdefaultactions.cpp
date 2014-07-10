@@ -73,7 +73,7 @@ void ContactDefaultActions::connectToView( QObject *view )
   }
 }
 
-void ContactDefaultActions::showUrl( const KUrl &url )
+void ContactDefaultActions::showUrl( const QUrl &url )
 {
   KToolInvocation::invokeBrowser( url.url() );
 }
@@ -83,8 +83,8 @@ void ContactDefaultActions::sendEmail( const QString &name, const QString &addre
   KABC::Addressee contact;
   contact.setNameFromString( name );
 
-  KUrl url;
-  url.setProtocol( QLatin1String( "mailto" ) );
+  QUrl url;
+  url.setScheme( QLatin1String( "mailto" ) );
   url.setPath( contact.fullEmail( address ) );
   KToolInvocation::invokeMailer( url );
 }

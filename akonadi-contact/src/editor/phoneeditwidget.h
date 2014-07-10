@@ -26,7 +26,7 @@
 
 #include <kabc/addressee.h>
 #include <kcombobox.h>
-#include <kdialog.h>
+#include <qdialog.h>
 
 class QLineEdit;
 
@@ -235,7 +235,7 @@ private:
 /**
  * A dialog for editing phone number types.
  */
-class PhoneTypeDialog : public KDialog
+class PhoneTypeDialog : public QDialog
 {
 public:
     /**

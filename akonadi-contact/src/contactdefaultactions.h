@@ -26,7 +26,7 @@
 
 #include <QtCore/QObject>
 
-class KUrl;
+class QUrl;
 
 namespace KABC {
 class Address;
@@ -110,7 +110,7 @@ class AKONADI_CONTACT_EXPORT ContactDefaultActions : public QObject
     /**
      * Shows the given @p url in the users preferred webbrowser.
      */
-    void showUrl( const KUrl &url );
+    void showUrl( const QUrl &url );
 
     /**
      * Opens the users preferred mail composer and does the setup

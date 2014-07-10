@@ -30,6 +30,7 @@
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kpixmapregionselectordialog.h>
+#include <KUrlMimeData>
 
 #include <QtCore/QMimeData>
 #include <QDrag>
@@ -37,7 +38,7 @@
 #include <QDropEvent>
 #include <QMenu>
 #include <QApplication>
-#include <KUrl>
+#include <QUrl>
 /**
  * @short Small helper class to load image from network
  */
@@ -46,7 +47,7 @@ class ImageLoader
 public:
     ImageLoader(QWidget *parent = 0);
 
-    QImage loadImage(const KUrl &url, bool *ok);
+    QImage loadImage(const QUrl &url, bool *ok);
 
 private:
     QWidget *mParent;
@@ -57,7 +58,7 @@ ImageLoader::ImageLoader(QWidget *parent)
 {
 }
 
-QImage ImageLoader::loadImage(const KUrl &url, bool *ok)
+QImage ImageLoader::loadImage(const QUrl &url, bool *ok)
 {
     QImage image;
     QString tempFile;
@@ -190,7 +191,7 @@ void ImageWidget::dropEvent(QDropEvent *event)
         updateView();
     }
 
-    const KUrl::List urls = KUrl::List::fromMimeData(mimeData);
+    const QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(mimeData);
     if (urls.isEmpty()) {   // oops, no data
         event->setAccepted(false);
     } else {
@@ -263,7 +264,7 @@ void ImageWidget::changeImage()
         return;
     }
 
-    const KUrl url = KFileDialog::getOpenUrl(QUrl(), KImageIO::pattern(), this);
+    const QUrl url = KFileDialog::getOpenUrl(QUrl(), KImageIO::pattern(), this);
     if (url.isValid()) {
         bool ok = false;
         const QImage image = imageLoader()->loadImage(url, &ok);
@@ -277,7 +278,7 @@ void ImageWidget::changeImage()
 
 void ImageWidget::saveImage()
 {
-    const QString fileName = KFileDialog::getSaveFileName(KUrl(), KImageIO::pattern(), this);
+    const QString fileName = KFileDialog::getSaveFileName(QUrl(), KImageIO::pattern(), this);
     if (!fileName.isEmpty()) {
         mPicture.data().save(fileName);
     }

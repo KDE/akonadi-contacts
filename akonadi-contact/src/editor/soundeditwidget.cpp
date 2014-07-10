@@ -27,7 +27,7 @@
 #include <kio/netaccess.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <KUrl>
+#include <QUrl>
 
 #include <phonon/mediaobject.h>
 
@@ -45,7 +45,7 @@ class SoundLoader
 public:
     SoundLoader(QWidget *parent = 0);
 
-    QByteArray loadSound(const KUrl &url, bool *ok);
+    QByteArray loadSound(const QUrl &url, bool *ok);
 
 private:
     QByteArray mSound;
@@ -57,7 +57,7 @@ SoundLoader::SoundLoader(QWidget *parent)
 {
 }
 
-QByteArray SoundLoader::loadSound(const KUrl &url, bool *ok)
+QByteArray SoundLoader::loadSound(const QUrl &url, bool *ok)
 {
     QByteArray sound;
     QString tempFile;

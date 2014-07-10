@@ -40,6 +40,7 @@
 #include <qdebug.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
+#include <QDialogButtonBox>
 
 PhoneTypeCombo::PhoneTypeCombo(QWidget *parent)
     : KComboBox(parent)
@@ -277,7 +278,6 @@ PhoneEditWidget::PhoneEditWidget(QWidget *parent)
     , mReadOnly(false)
 {
     QGridLayout *layout = new QGridLayout(this);
-    layout->setSpacing(KDialog::spacingHint());
 
     mListScrollArea = new QScrollArea(this);
     mPhoneNumberListWidget = new PhoneNumberListWidget;
@@ -344,25 +344,17 @@ void PhoneEditWidget::storeContact(KABC::Addressee &contact) const
 ///////////////////////////////////////////
 // PhoneTypeDialog
 PhoneTypeDialog::PhoneTypeDialog(KABC::PhoneNumber::Type type, QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
     , mType(type)
 {
-    setCaption(i18n("Edit Phone Number"));
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
-    showButtonSeparator(true);
+    setWindowTitle(i18n("Edit Phone Number"));
 
-    QWidget *page = new QWidget(this);
-    setMainWidget(page);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
-    QVBoxLayout *layout = new QVBoxLayout(page);
-    layout->setSpacing(spacingHint());
-    layout->setMargin(0);
-
-    mPreferredBox = new QCheckBox(i18n("This is the preferred phone number"), page);
+    mPreferredBox = new QCheckBox(i18n("This is the preferred phone number"), this);
     layout->addWidget(mPreferredBox);
 
-    QGroupBox *box  = new QGroupBox(i18n("Types"), page);
+    QGroupBox *box  = new QGroupBox(i18n("Types"), this);
     layout->addWidget(box);
 
     QGridLayout *buttonLayout = new QGridLayout(box);
@@ -390,6 +382,14 @@ PhoneTypeDialog::PhoneTypeDialog(KABC::PhoneNumber::Type type, QWidget *parent)
     }
 
     mPreferredBox->setChecked(mType & KABC::PhoneNumber::Pref);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    layout->addWidget( buttonBox );
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
 }
 
 KABC::PhoneNumber::Type PhoneTypeDialog::type() const

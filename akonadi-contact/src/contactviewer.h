@@ -135,7 +135,7 @@ class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::Ite
      *
      * @param url The url that has been clicked.
      */
-    void urlClicked( const KUrl &url );
+    void urlClicked( const QUrl &url );
 
     /**
      * This signal is emitted whenever the user has clicked on

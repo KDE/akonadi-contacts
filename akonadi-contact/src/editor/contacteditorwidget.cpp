@@ -44,7 +44,7 @@
 #include <kstandarddirs.h>
 #include <qtabwidget.h>
 #include <ktextedit.h>
-#include <KUrl>
+#include <QUrl>
 
 #include <QtCore/QDirIterator>
 #include <QtCore/QPluginLoader>
@@ -640,7 +640,7 @@ void ContactEditorWidget::storeContact( KABC::Addressee &contact, Akonadi::Conta
 
   // Internet group
   d->mEmailWidget->storeContact( contact );
-  contact.setUrl( KUrl( d->mHomepageWidget->text().trimmed() ) );
+  contact.setUrl( QUrl( d->mHomepageWidget->text().trimmed() ) );
   d->storeCustom( contact, QLatin1String( "BlogFeed" ), d->mBlogWidget->text().trimmed() );
   d->mIMWidget->storeContact( contact );
 
