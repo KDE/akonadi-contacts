@@ -44,6 +44,7 @@
 #include <kstandarddirs.h>
 #include <qtabwidget.h>
 #include <ktextedit.h>
+#include <KUrl>
 
 #include <QtCore/QDirIterator>
 #include <QtCore/QPluginLoader>

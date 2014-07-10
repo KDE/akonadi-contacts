@@ -27,8 +27,8 @@
 #include <kio/netaccess.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
+#include <KUrl>
 
-//QT5 port
 #include <phonon/mediaobject.h>
 
 #include <QFileDialog>

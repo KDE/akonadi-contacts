@@ -37,7 +37,7 @@
 #include <QDropEvent>
 #include <QMenu>
 #include <QApplication>
-
+#include <KUrl>
 /**
  * @short Small helper class to load image from network
  */

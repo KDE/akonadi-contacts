@@ -30,7 +30,7 @@
 #include <kabc/phonenumber.h>
 #include <kpimutils/email.h>
 #include <ktoolinvocation.h>
-
+#include <KUrl>
 #include <QtCore/QUrl>
 
 using namespace Akonadi;
