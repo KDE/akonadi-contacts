@@ -27,19 +27,21 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QFormLayout>
 
+#include <QDialogButtonBox>
+#include <QPushButton>
 #include <kcombobox.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
 
 
 IMItemDialog::IMItemDialog(QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
 
     QWidget *widget = new QWidget(this);
-    setMainWidget(widget);
+    mainLayout->addWidget(widget);
 
     QFormLayout *layout = new QFormLayout(widget);
 
@@ -60,6 +62,14 @@ IMItemDialog::IMItemDialog(QWidget *parent)
 
     connect(mProtocolCombo, SIGNAL(currentIndexChanged(int)), SLOT(slotUpdateButtons()));
     connect(mNameEdit, SIGNAL(textChanged(QString)), SLOT(slotUpdateButtons()));
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+
+    mOkButton->setDefault(true);
+    mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    mainLayout->addWidget(buttonBox);
 
     slotUpdateButtons();
 }
@@ -81,5 +91,5 @@ IMAddress IMItemDialog::address() const
 
 void IMItemDialog::slotUpdateButtons()
 {
-    enableButtonOk(mProtocolCombo->currentIndex() > 0 && !mNameEdit->text().isEmpty());
+    mOkButton->setEnabled(mProtocolCombo->currentIndex() > 0 && !mNameEdit->text().isEmpty());
 }

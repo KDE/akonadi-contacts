@@ -33,18 +33,21 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <KSharedConfig>
+#include <KConfigGroup>
 
 IMEditorDialog::IMEditorDialog(QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setCaption(i18nc("@title:window", "Edit Instant Messaging Addresses"));
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
+    setWindowTitle(i18nc("@title:window", "Edit Instant Messaging Addresses"));
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+
 
     QWidget *widget = new QWidget(this);
-    setMainWidget(widget);
+    mainLayout->addWidget(widget);
 
     QGridLayout *layout = new QGridLayout(widget);
+    layout->setMargin(0);
 
     mAddButton = new QPushButton(i18nc("@action:button", "Add..."));
     mEditButton = new QPushButton(i18nc("@action:button", "Edit..."));
@@ -75,6 +78,14 @@ IMEditorDialog::IMEditorDialog(QWidget *parent)
             this, SLOT(slotUpdateButtons()));
     connect(mView, SIGNAL(doubleClicked(QModelIndex)),
             this, SLOT(slotEdit()));
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    mainLayout->addWidget(buttonBox);
+
     slotUpdateButtons();
     readConfig();
 }
@@ -112,7 +123,7 @@ IMAddress::List IMEditorDialog::addresses() const
 void IMEditorDialog::slotAdd()
 {
     QPointer<IMItemDialog> d(new IMItemDialog(this));
-    d->setCaption(i18nc("@title:window", "Add IM Address"));
+    d->setWindowTitle(i18nc("@title:window", "Add IM Address"));
     if (d->exec() == QDialog::Accepted && d != 0) {
         IMAddress newAddress = d->address();
         int addedRow = mModel->rowCount();
@@ -132,7 +143,7 @@ void IMEditorDialog::slotEdit()
     }
 
     QPointer<IMItemDialog> d(new IMItemDialog(this));
-    d->setCaption(i18nc("@title:window", "Edit IM Address"));
+    d->setWindowTitle(i18nc("@title:window", "Edit IM Address"));
     d->setAddress(mModel->addresses().at(currentRow));
 
     if (d->exec() == QDialog::Accepted && d != 0) {

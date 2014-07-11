@@ -23,14 +23,14 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef AKONADI_CONTACT_IMEDITORDIALOG_H
 #define AKONADI_CONTACT_IMEDITORDIALOG_H
 
-#include <kdialog.h>
+#include <qdialog.h>
 
 #include "immodel.h"
 
 class QPushButton;
 class QTreeView;
 
-class IMEditorDialog : public KDialog
+class IMEditorDialog : public QDialog
 {
     Q_OBJECT
 
