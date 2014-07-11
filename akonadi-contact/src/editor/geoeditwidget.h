@@ -23,9 +23,10 @@
 #define GEOEDITWIDGET_H
 
 #include <kabc/geo.h>
-#include <kdialog.h>
+#include <qdialog.h>
 
 #include <QWidget>
+#include <QMap>
 
 namespace KABC
 {
@@ -67,7 +68,7 @@ private:
     KABC::Geo mCoordinates;
 };
 
-class GeoDialog : public KDialog
+class GeoDialog : public QDialog
 {
     Q_OBJECT
 

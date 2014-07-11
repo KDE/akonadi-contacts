@@ -31,6 +31,7 @@
 
 #include <QtCore/QFile>
 #include <QtCore/QTextStream>
+#include <QDialogButtonBox>
 #include <QDoubleSpinBox>
 #include <QGridLayout>
 #include <QGroupBox>
@@ -204,21 +205,20 @@ static double calculateCoordinate(const QString &coordinate)
 }
 
 GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
     , mCoordinates(coordinates)
 {
-    #warning "port insertCatalog"
-    //KLocalizedString::insertCatalog(QStringLiteral("timezones4"));
-    setCaption(i18nc("@title:window", "Coordinate Selection"));
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
-    showButtonSeparator(true);
+    setWindowTitle(i18nc("@title:window", "Coordinate Selection"));
     setModal(true);
 
+    QVBoxLayout *vbox = new QVBoxLayout;
+    setLayout(vbox);
+
     QFrame *page = new QFrame(this);
-    setMainWidget(page);
+    vbox->addWidget(page);
 
     QVBoxLayout *layout = new QVBoxLayout(page);
+    layout->setMargin(0);
 
     mCityCombo = new KComboBox(page);
     layout->addWidget(mCityCombo);
@@ -226,7 +226,7 @@ GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
     QGroupBox *decimalGroup = new QGroupBox(i18nc("@title:group Decimal representation of coordinates", "Decimal"), page);
     QGridLayout *decimalLayout = new QGridLayout();
     decimalGroup->setLayout(decimalLayout);
-    decimalLayout->setSpacing(spacingHint());
+    //decimalLayout->setSpacing(spacingHint());
 
     QLabel *label = new QLabel(i18nc("@label:spinbox", "Latitude:"), decimalGroup);
     decimalLayout->addWidget(label, 0, 0);
@@ -255,7 +255,7 @@ GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
     QGroupBox *sexagesimalGroup = new QGroupBox(i18nc("@title:group", "Sexagesimal"), page);
     QGridLayout *sexagesimalLayout = new QGridLayout();
     sexagesimalGroup->setLayout(sexagesimalLayout);
-    sexagesimalLayout->setSpacing(spacingHint());
+    //sexagesimalLayout->setSpacing(spacingHint());
 
     label = new QLabel(i18nc("@label:spinbox", "Latitude:"), sexagesimalGroup);
     sexagesimalLayout->addWidget(label, 0, 0);
@@ -346,6 +346,15 @@ GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
             SLOT(sexagesimalInputChanged()));
     connect(mLongDirection, SIGNAL(activated(int)),
             SLOT(sexagesimalInputChanged()));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    vbox->addWidget(buttonBox);
 
     updateInputs();
 }
