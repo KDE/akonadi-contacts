@@ -5,6 +5,9 @@ find_package(Prison ${Prison_MIN_VERSION})
 set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
 if (PRISON_FOUND)
     add_definitions(-DHAVE_PRISON)
+    include_directories(
+       ${PRISON_INCLUDE_DIR}
+    )
 endif()
 
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
