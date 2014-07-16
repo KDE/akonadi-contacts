@@ -165,7 +165,7 @@ void IMEditorDialog::slotRemove()
 
     if (KMessageBox::warningContinueCancel(
             this,
-            i18nc("@info Instant messaging",
+            xi18nc("@info Instant messaging",
                   "Do you really want to delete the selected <resource>%1</resource> address?",
                   mModel->data(mModel->index(currentRow, 0), Qt::DisplayRole).toString()),
             i18nc("@title:window", "Confirm Delete Resource"),
