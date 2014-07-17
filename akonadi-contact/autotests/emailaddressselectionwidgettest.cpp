@@ -20,8 +20,8 @@
 
 #include "emailaddressselectionwidgettest.h"
 
-#include <k4aboutdata.h>
-#include <kapplication.h>
+#include <kaboutdata.h>
+#include <qapplication.h>
 #include <kcombobox.h>
 #include <kcmdlineargs.h>
 #include <ktextbrowser.h>
@@ -70,10 +70,11 @@ void MainWidget::showSelection()
 
 int main(int argc, char **argv)
 {
-    K4AboutData aboutData("emailaddressselectionwidgettest", 0, ki18n("Test EmailAddressSelectionWidget"), "0.1");
-    KCmdLineArgs::init(argc, argv, &aboutData);
 
-    KApplication app;
+    KAboutData aboutData(QLatin1String("emailaddressselectionwidgettest"), i18n("Test EmailAddressSelectionWidget"), QLatin1String("0.1"));
+    KAboutData::setApplicationData(aboutData);
+
+    QApplication app(argc, argv);
 
     MainWidget wdg;
     wdg.show();
