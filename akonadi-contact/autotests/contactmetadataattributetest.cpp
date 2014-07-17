@@ -23,9 +23,9 @@
 
 #include "contactmetadataattribute_p.h"
 
-#include <qtest_kde.h>
+#include <qtest.h>
 
-QTEST_KDEMAIN(ContactMetaDataAttributeTest, NoGUI)
+QTEST_MAIN(ContactMetaDataAttributeTest)
 
 static QVariantMap testData()
 {
