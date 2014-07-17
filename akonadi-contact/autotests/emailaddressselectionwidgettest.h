@@ -25,7 +25,7 @@
 
 #include <QWidget>
 
-class KTextBrowser;
+class QTextBrowser;
 
 class MainWidget : public QWidget
 {
@@ -40,7 +40,7 @@ private Q_SLOTS:
 
 private:
     Akonadi::EmailAddressSelectionWidget *mAddressesWidget;
-    KTextBrowser *mInfo;
+    QTextBrowser *mInfo;
 };
 
 #endif

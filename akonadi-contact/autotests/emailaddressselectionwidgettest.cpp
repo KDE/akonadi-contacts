@@ -24,7 +24,7 @@
 #include <qapplication.h>
 #include <kcombobox.h>
 #include <kcmdlineargs.h>
-#include <ktextbrowser.h>
+#include <qtextbrowser.h>
 #include <klocale.h>
 
 #include <QGridLayout>
@@ -39,7 +39,7 @@ MainWidget::MainWidget()
     mAddressesWidget = new Akonadi::EmailAddressSelectionWidget;
     layout->addWidget(mAddressesWidget, 0, 0);
 
-    mInfo = new KTextBrowser;
+    mInfo = new QTextBrowser;
     layout->addWidget(mInfo, 0, 1);
 
     KComboBox *box = new KComboBox;
