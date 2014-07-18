@@ -38,6 +38,8 @@
 #include <kmessagebox.h>
 #include <kpimutils/email.h>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <KConfigGroup>
 
 class EmailAddressExtracter : public QObject
 {
@@ -101,7 +103,7 @@ EmailEditWidget::EmailEditWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    layout->setSpacing(KDialog::spacingHint());
+//TODO PORT QT5     layout->setSpacing(QDialog::spacingHint());
 
     mEmailEdit = new QLineEdit;
     new EmailAddressExtracter(mEmailEdit);
@@ -181,20 +183,22 @@ void EmailEditWidget::textChanged(const QString &text)
 }
 
 EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setCaption(i18n("Edit Email Addresses"));
-    setButtons(KDialog::Ok | KDialog::Cancel);
-    setDefaultButton(KDialog::Cancel);
+    setWindowTitle(i18n("Edit Email Addresses"));
 
     QWidget *page = new QWidget(this);
-    setMainWidget(page);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    mainLayout->addWidget(page);
 
     QGridLayout *topLayout = new QGridLayout(page);
-    topLayout->setSpacing(spacingHint());
+    mainLayout->addLayout(topLayout);
+    //PORT QT5 topLayout->setSpacing(spacingHint());
     topLayout->setMargin(0);
 
     mEmailListBox = new KListWidget(page);
+    mainLayout->addWidget(mEmailListBox);
     mEmailListBox->setSelectionMode(QAbstractItemView::SingleSelection);
 
     // Make sure there is room for the scrollbar
@@ -206,20 +210,24 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
     topLayout->addWidget(mEmailListBox, 0, 0, 5, 2);
 
     mAddButton = new QPushButton(i18n("Add..."), page);
+    mainLayout->addWidget(mAddButton);
     connect(mAddButton, SIGNAL(clicked()), SLOT(add()));
     topLayout->addWidget(mAddButton, 0, 2);
 
     mEditButton = new QPushButton(i18n("Edit..."), page);
+    mainLayout->addWidget(mEditButton);
     mEditButton->setEnabled(false);
     connect(mEditButton, SIGNAL(clicked()), SLOT(edit()));
     topLayout->addWidget(mEditButton, 1, 2);
 
     mRemoveButton = new QPushButton(i18n("Remove"), page);
+    mainLayout->addWidget(mRemoveButton);
     mRemoveButton->setEnabled(false);
     connect(mRemoveButton, SIGNAL(clicked()), SLOT(remove()));
     topLayout->addWidget(mRemoveButton, 2, 2);
 
     mStandardButton = new QPushButton(i18n("Set as Standard"), page);
+    mainLayout->addWidget(mStandardButton);
     mStandardButton->setEnabled(false);
     connect(mStandardButton, SIGNAL(clicked()), SLOT(standard()));
     topLayout->addWidget(mStandardButton, 3, 2);
@@ -243,6 +251,14 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
 
     // set default state
     KAcceleratorManager::manage(this);
+    
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    mainLayout->addWidget(buttonBox);
 
     readConfig();
 }

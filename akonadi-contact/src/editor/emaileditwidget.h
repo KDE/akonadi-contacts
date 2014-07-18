@@ -22,7 +22,7 @@
 #ifndef EMAILEDITWIDGET_H
 #define EMAILEDITWIDGET_H
 
-#include <kdialog.h>
+#include <QDialog>
 
 namespace KABC
 {
@@ -62,7 +62,7 @@ private:
     QStringList mEmailList;
 };
 
-class EmailEditDialog : public KDialog
+class EmailEditDialog : public QDialog
 {
     Q_OBJECT
 
