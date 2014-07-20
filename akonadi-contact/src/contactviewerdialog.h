@@ -24,7 +24,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <kdialog.h>
+#include <QDialog>
 
 class QUrl;
 
@@ -62,7 +62,7 @@ class ContactViewer;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactViewerDialog : public KDialog
+class AKONADI_CONTACT_EXPORT ContactViewerDialog : public QDialog
 {
   Q_OBJECT
 

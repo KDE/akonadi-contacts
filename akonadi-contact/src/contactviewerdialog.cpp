@@ -30,6 +30,9 @@ using namespace Akonadi;
 #include <KLocalizedString>
 
 #include <QVBoxLayout>
+#include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <QPushButton>
 
 class ContactViewerDialog::Private
 {
@@ -62,13 +65,20 @@ class ContactViewerDialog::Private
 };
 
 ContactViewerDialog::ContactViewerDialog( QWidget *parent )
-  : KDialog( parent ), d( new Private( this ) )
+  : QDialog( parent ), d( new Private( this ) )
 {
-  setCaption( i18n( "Show Contact" ) );
-  setButtons( Ok );
-
-  QWidget *mainWidget = new QWidget( this );
-  setMainWidget( mainWidget );
+  setWindowTitle( i18n( "Show Contact" ) );
+  
+  QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
+  QWidget *mainWidget = new QWidget(this);
+  QVBoxLayout *mainLayout = new QVBoxLayout;
+  setLayout(mainLayout);
+  mainLayout->addWidget(mainWidget);
+  QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+  okButton->setDefault(true);
+  okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+  connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+  connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
 
   QVBoxLayout *layout = new QVBoxLayout( mainWidget );
 
@@ -77,6 +87,9 @@ ContactViewerDialog::ContactViewerDialog( QWidget *parent )
 
   ContactDefaultActions *actions = new ContactDefaultActions( this );
   actions->connectToView( d->mViewer );
+
+  mainLayout->addWidget(buttonBox);
+
 
   d->readConfig();
 }
