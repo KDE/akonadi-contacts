@@ -33,7 +33,7 @@
 #include <kacceleratormanager.h>
 #include <qinputdialog.h>
 #include <klineedit.h>
-#include <KListWidget>
+#include <QListWidget>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kpimutils/email.h>
@@ -197,7 +197,7 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
     //PORT QT5 topLayout->setSpacing(spacingHint());
     topLayout->setMargin(0);
 
-    mEmailListBox = new KListWidget(page);
+    mEmailListBox = new QListWidget(page);
     mainLayout->addWidget(mEmailListBox);
     mEmailListBox->setSelectionMode(QAbstractItemView::SingleSelection);
 

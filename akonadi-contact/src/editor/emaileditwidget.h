@@ -30,7 +30,7 @@ class Addressee;
 }
 
 class QLineEdit;
-class KListWidget;
+class QListWidget;
 class QToolButton;
 
 /**
@@ -83,7 +83,7 @@ protected Q_SLOTS:
 private:
     void readConfig();
     void writeConfig();
-    KListWidget *mEmailListBox;
+    QListWidget *mEmailListBox;
     QPushButton *mAddButton;
     QPushButton *mRemoveButton;
     QPushButton *mEditButton;
