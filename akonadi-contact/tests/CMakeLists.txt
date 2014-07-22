@@ -17,4 +17,5 @@ endmacro()
 
 ########### next target ###############
 
-add_akonadi_contact_demo(contactmetadataattributetest.cpp)
+add_akonadi_contact_demo(emailaddressselectionwidgettest.cpp)
+add_akonadi_contact_demo(emailaddressselectiondialogtest.cpp)
