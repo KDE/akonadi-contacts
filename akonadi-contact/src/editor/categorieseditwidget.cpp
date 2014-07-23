@@ -34,7 +34,7 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    layout->setSpacing(KDialog::spacingHint());
+    //PORT QT5 layout->setSpacing(KDialog::spacingHint());
 
     mTagWidget = new Akonadi::TagWidget(this);
     layout->addWidget(mTagWidget);

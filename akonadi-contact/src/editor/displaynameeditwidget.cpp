@@ -29,7 +29,6 @@
 
 #include <kabc/addressee.h>
 #include <kcombobox.h>
-#include <kdialog.h>
 #include <klocalizedstring.h>
 
 // Tries to guess the display type that is used for the passed contact
@@ -115,7 +114,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    layout->setSpacing(KDialog::spacingHint());
+    //PORT QT5 layout->setSpacing(KDialog::spacingHint());
 
     mView = new KComboBox(this);
     mView->addItems(QStringList() << QString() << QString() << QString()
