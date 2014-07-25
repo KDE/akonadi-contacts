@@ -81,8 +81,8 @@ class SearchLineEdit : public QLineEdit
 class EmailAddressSelectionWidget::Private
 {
   public:
-    Private( EmailAddressSelectionWidget *qq, QAbstractItemModel *model )
-      : q( qq ), mModel( model )
+    Private( bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model )
+      : q( qq ), mModel( model ), mShowOnlyContactWithEmail(showOnlyContactWithEmail)
     {
       init();
     }
@@ -95,6 +95,7 @@ class EmailAddressSelectionWidget::Private
     SearchLineEdit *mSearchLine;
     Akonadi::EntityTreeView *mView;
     EmailAddressSelectionProxyModel *mSelectionModel;
+    bool mShowOnlyContactWithEmail;
 };
 
 void EmailAddressSelectionWidget::Private::init()
@@ -147,7 +148,8 @@ void EmailAddressSelectionWidget::Private::init()
   layout->addWidget( mView );
 
   Akonadi::ContactsFilterProxyModel *filter = new Akonadi::ContactsFilterProxyModel( q );
-  filter->setFilterFlags( ContactsFilterProxyModel::HasEmail );
+  if (mShowOnlyContactWithEmail)
+      filter->setFilterFlags( ContactsFilterProxyModel::HasEmail );
   filter->setExcludeVirtualCollections( true );
   filter->setSourceModel( mModel );
 
@@ -171,13 +173,19 @@ void EmailAddressSelectionWidget::Private::init()
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget( QWidget * parent )
   : QWidget( parent ),
-    d( new Private( this, 0 ) )
+    d( new Private( true, this, 0 ) )
 {
 }
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget( QAbstractItemModel *model, QWidget * parent )
   : QWidget( parent ),
-    d( new Private( this, model ) )
+    d( new Private( true, this, model ) )
+{
+}
+
+EmailAddressSelectionWidget::EmailAddressSelectionWidget( bool showOnlyContactWithEmail, QAbstractItemModel *model, QWidget * parent )
+  : QWidget( parent ),
+    d( new Private( showOnlyContactWithEmail ,this, model ) )
 {
 }
 
@@ -201,8 +209,12 @@ EmailAddressSelection::List EmailAddressSelectionWidget::selectedAddresses() con
     selection.d->mEmailAddress = index.data( EmailAddressSelectionProxyModel::EmailAddressRole ).toString();
     selection.d->mItem = index.data( ContactsTreeModel::ItemRole ).value<Akonadi::Item>();
 
-    if ( !selection.d->mEmailAddress.isEmpty() ) {
-      selections << selection;
+    if ( d->mShowOnlyContactWithEmail ) {
+        if ( !selection.d->mEmailAddress.isEmpty() ) {
+            selections << selection;
+        }
+    } else {
+        selections << selection;
     }
   }
 
