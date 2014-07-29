@@ -24,7 +24,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <kdialog.h>
+#include <QDialog>
 
 namespace Akonadi {
 
@@ -55,7 +55,7 @@ class ContactGroupViewer;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactGroupViewerDialog : public KDialog
+class AKONADI_CONTACT_EXPORT ContactGroupViewerDialog : public QDialog
 {
   Q_OBJECT
 

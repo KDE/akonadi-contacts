@@ -27,6 +27,9 @@
 #include <klocalizedstring.h>
 
 #include <QVBoxLayout>
+#include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <QPushButton>
 
 using namespace Akonadi;
 
@@ -37,20 +40,22 @@ class ContactGroupViewerDialog::Private
 };
 
 ContactGroupViewerDialog::ContactGroupViewerDialog( QWidget *parent )
-  : KDialog( parent ), d( new Private )
+  : QDialog( parent ), d( new Private )
 {
-  setCaption( i18n( "Show Contact Group" ) );
-  setButtons( Ok );
+  setWindowTitle( i18n( "Show Contact Group" ) );
+  QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
+  QVBoxLayout *mainLayout = new QVBoxLayout;
+  setLayout(mainLayout);
+  QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+  okButton->setDefault(true);
+  okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+  connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+  connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
 
-  QWidget *mainWidget = new QWidget( this );
-  setMainWidget( mainWidget );
+  mainLayout->addWidget(d->mViewer);
+  mainLayout->addWidget(buttonBox);
 
-  QVBoxLayout *layout = new QVBoxLayout( mainWidget );
-
-  d->mViewer = new ContactGroupViewer;
-  layout->addWidget( d->mViewer );
-
-  setInitialSize( QSize( 500, 600 ) );
+  resize( QSize( 500, 600 ) );
 }
 
 ContactGroupViewerDialog::~ContactGroupViewerDialog()
