@@ -33,7 +33,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <klineedit.h>
 #include <klocalizedstring.h>
 
-
 IMItemDialog::IMItemDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -52,7 +51,7 @@ IMItemDialog::IMItemDialog(QWidget *parent)
 
     const QStringList protocols = IMProtocols::self()->protocols();
     foreach (const QString &protocol, protocols) {
-        mProtocolCombo->addItem(QIcon::fromTheme(IMProtocols::self()->icon(protocol)),
+        mProtocolCombo->addItem(QIcon::fromTheme(IMProtocols::self()->icon(protocol + QLatin1String(".png"))),
                                 IMProtocols::self()->name(protocol),
                                 protocol);
     }
