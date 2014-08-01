@@ -47,7 +47,7 @@ public:
     GeoMapWidget(QWidget *parent = 0)
         : QWidget(parent)
     {
-        mWorld = QPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/contact/pics/world.jpg")));
+        mWorld = QPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/akonadi/contact/pics/world.jpg")));
 
         setAttribute(Qt::WA_NoSystemBackground, true);
         setFixedSize(400, 200);
@@ -476,7 +476,7 @@ void GeoDialog::loadCityList()
     mCityCombo->clear();
     mGeoDataMap.clear();
 
-    QFile file(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/contact/data/zone.tab")));
+    QFile file(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/akonadi/contact/data/zone.tab")));
 
     if (file.open(QIODevice::ReadOnly)) {
         QTextStream s(&file);
