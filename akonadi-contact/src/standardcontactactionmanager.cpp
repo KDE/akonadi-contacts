@@ -574,20 +574,20 @@ QAction * StandardContactActionManager::createAction( Type type )
       action = new QAction( d->mParentWidget );
       action->setIcon( QIcon::fromTheme( QLatin1String( "contact-new" ) ) );
       action->setText( i18n( "New &Contact..." ) );
-      action->setShortcut( QKeySequence( Qt::CTRL + Qt::Key_N ) );
       action->setWhatsThis( i18n( "Create a new contact<p>You will be presented with a dialog where you can add data about a person, including addresses and phone numbers.</p>" ) );
       d->mActions.insert( CreateContact, action );
       d->mActionCollection->addAction( QString::fromLatin1( "akonadi_contact_create" ), action );
+      d->mActionCollection->setDefaultShortcut(action,  QKeySequence( Qt::CTRL + Qt::Key_N ) );
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContact()) );
       break;
     case CreateContactGroup:
       action = new QAction( d->mParentWidget );
       action->setIcon( QIcon::fromTheme( QLatin1String( "user-group-new" ) ) );
       action->setText( i18n( "New &Group..." ) );
-      action->setShortcut( QKeySequence( Qt::CTRL + Qt::Key_G ) );
       action->setWhatsThis( i18n( "Create a new group<p>You will be presented with a dialog where you can add a new group of contacts.</p>" ) );
       d->mActions.insert( CreateContactGroup, action );
       d->mActionCollection->addAction( QString::fromLatin1( "akonadi_contact_group_create" ), action );
+      d->mActionCollection->setDefaultShortcut(action, QKeySequence( Qt::CTRL + Qt::Key_G ) );
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContactGroup()) );
       break;
     case EditItem:
@@ -598,6 +598,7 @@ QAction * StandardContactActionManager::createAction( Type type )
       action->setEnabled( false );
       d->mActions.insert( EditItem, action );
       d->mActionCollection->addAction( QString::fromLatin1( "akonadi_contact_item_edit" ), action );
+     
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotEditItem()) );
       break;
     default:
