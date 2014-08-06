@@ -82,9 +82,9 @@ CustomFieldsEditWidget::CustomFieldsEditWidget(QWidget *parent)
 
     connect(mView->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)),
             this, SLOT(slotUpdateButtons()));
-    connect(mAddButton, SIGNAL(clicked()), this, SLOT(slotAdd()));
-    connect(mEditButton, SIGNAL(clicked()), this, SLOT(slotEdit()));
-    connect(mRemoveButton, SIGNAL(clicked()), this, SLOT(slotRemove()));
+    connect(mAddButton, &QPushButton::clicked, this, &CustomFieldsEditWidget::slotAdd);
+    connect(mEditButton, &QPushButton::clicked, this, &CustomFieldsEditWidget::slotEdit);
+    connect(mRemoveButton, &QPushButton::clicked, this, &CustomFieldsEditWidget::slotRemove);
     slotUpdateButtons();
 }
 

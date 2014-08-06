@@ -98,9 +98,9 @@ DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     mMenu = new KDatePickerPopup(KDatePickerPopup::DatePicker, QDate(), this);
     mSelectButton->setMenu(mMenu);
 
-    connect(mClearButton, SIGNAL(clicked()), SLOT(resetDate()));
-    connect(mMenu, SIGNAL(dateChanged(QDate)), SLOT(dateSelected(QDate)));
-    connect(mView, SIGNAL(resetDate()), SLOT(resetDate()));
+    connect(mClearButton, &QToolButton::clicked, this, &DateEditWidget::resetDate);
+    connect(mMenu, &KDatePickerPopup::dateChanged, this, &DateEditWidget::dateSelected);
+    connect(mView, &DateView::resetDate, this, &DateEditWidget::resetDate);
 
     updateView();
 }

@@ -49,8 +49,8 @@ NameEditWidget::NameEditWidget(QWidget *parent)
     layout->addWidget(mButtonEdit);
 
 
-    connect( mNameEdit, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)) );
-    connect( mButtonEdit, SIGNAL(clicked()), this, SLOT(openNameEditDialog()) );
+    connect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
+    connect(mButtonEdit, &QToolButton::clicked, this, &NameEditWidget::openNameEditDialog);
 }
 
 NameEditWidget::~NameEditWidget()
@@ -69,7 +69,7 @@ void NameEditWidget::loadContact(const KABC::Addressee &contact)
 
     disconnect(mNameEdit, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)));
     mNameEdit->setText(contact.assembledName());
-    connect(mNameEdit, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)));
+    connect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
 }
 
 void NameEditWidget::storeContact(KABC::Addressee &contact) const
@@ -107,7 +107,7 @@ void NameEditWidget::openNameEditDialog()
 
         disconnect(mNameEdit, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)));
         mNameEdit->setText(mContact.assembledName());
-        connect(mNameEdit, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)));
+        connect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
 
         emit nameChanged(mContact);
     }

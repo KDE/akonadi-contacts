@@ -48,7 +48,7 @@ IMEditWidget::IMEditWidget(QWidget *parent)
     setFocusProxy(mEditButton);
     setFocusPolicy(Qt::StrongFocus);
 
-    connect(mEditButton, SIGNAL(clicked()), SLOT(edit()));
+    connect(mEditButton, &QToolButton::clicked, this, &IMEditWidget::edit);
 }
 
 IMEditWidget::~IMEditWidget()
