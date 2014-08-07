@@ -23,7 +23,6 @@
 #include <kaboutdata.h>
 #include <qapplication.h>
 #include <kcombobox.h>
-#include <kcmdlineargs.h>
 #include <qtextbrowser.h>
 #include <klocale.h>
 
