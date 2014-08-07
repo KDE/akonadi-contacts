@@ -144,7 +144,7 @@ void TextBrowser::contextMenuEvent( QContextMenuEvent *event )
   }
 
   if ( mDataToCopy.isValid() ) {
-    connect( act, SIGNAL(triggered(bool)), SLOT(slotCopyData()) );
+    connect(act, &QAction::triggered, this, &TextBrowser::slotCopyData);
   } else {
     act->setEnabled( false );
   }

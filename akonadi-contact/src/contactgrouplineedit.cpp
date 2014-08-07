@@ -131,7 +131,7 @@ void ContactGroupLineEdit::updateView( const KABC::ContactGroup::ContactReferenc
   Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob( item );
   job->fetchScope().fetchFullPayload();
   job->setProperty( "preferredEmail", reference.preferredEmail() );
-  connect( job, SIGNAL(result(KJob*)), SLOT(fetchDone(KJob*)) );
+  connect(job, &Akonadi::ItemFetchJob::result, this, &ContactGroupLineEdit::fetchDone);
 }
 
 void ContactGroupLineEdit::fetchDone( KJob *job )

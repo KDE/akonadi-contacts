@@ -64,10 +64,10 @@ IMEditorDialog::IMEditorDialog(QWidget *parent)
     layout->addWidget(mStandardButton, 3, 1);
     layout->setRowStretch(4, 1);
 
-    connect(mAddButton, SIGNAL(clicked()), SLOT(slotAdd()));
-    connect(mEditButton, SIGNAL(clicked()), SLOT(slotEdit()));
-    connect(mRemoveButton, SIGNAL(clicked()), SLOT(slotRemove()));
-    connect(mStandardButton, SIGNAL(clicked()), SLOT(slotSetStandard()));
+    connect(mAddButton, &QPushButton::clicked, this, &IMEditorDialog::slotAdd);
+    connect(mEditButton, &QPushButton::clicked, this, &IMEditorDialog::slotEdit);
+    connect(mRemoveButton, &QPushButton::clicked, this, &IMEditorDialog::slotRemove);
+    connect(mStandardButton, &QPushButton::clicked, this, &IMEditorDialog::slotSetStandard);
 
     mModel = new IMModel(this);
 
@@ -82,8 +82,8 @@ IMEditorDialog::IMEditorDialog(QWidget *parent)
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &IMEditorDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &IMEditorDialog::reject);
     mainLayout->addWidget(buttonBox);
 
     slotUpdateButtons();
