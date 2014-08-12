@@ -28,8 +28,6 @@
 
 #include <QWidget>
 
-class KUrl;
-
 namespace KABC {
 class Address;
 class Addressee;
