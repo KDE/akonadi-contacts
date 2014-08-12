@@ -55,7 +55,7 @@ void CategoriesEditWidget::loadContact(const KABC::Addressee &contact)
 
     const QStringList categories = contact.categories();
     foreach (const QString &category, categories) {
-        tags.append(Akonadi::Tag::fromUrl(category));
+        tags.append(Akonadi::Tag::fromUrl(QUrl(category)));
     }
 
     mTagWidget->setSelection(tags);
