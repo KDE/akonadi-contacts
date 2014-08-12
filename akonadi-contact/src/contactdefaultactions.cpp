@@ -30,7 +30,6 @@
 #include <kabc/phonenumber.h>
 #include <kpimutils/email.h>
 #include <ktoolinvocation.h>
-#include <KUrl>
 #include <QtCore/QUrl>
 
 using namespace Akonadi;
@@ -48,8 +47,8 @@ void ContactDefaultActions::connectToView( QObject *view )
 {
   const QMetaObject *metaObject = view->metaObject();
 
-  if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "urlClicked( const KUrl& )" ) ) != -1 ) {
-    connect( view, SIGNAL(urlClicked(KUrl)), SLOT(showUrl(KUrl)) );
+  if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "urlClicked( const QUrl& )" ) ) != -1 ) {
+    connect( view, SIGNAL(urlClicked(QUrl)), SLOT(showUrl(QUrl)) );
   }
 
   if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "emailClicked( const QString&, const QString& )" ) ) != -1 ) {
