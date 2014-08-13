@@ -49,6 +49,9 @@
 
 #include <functional>
 #include <KLocale>
+#include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <QVBoxLayout>
 
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
     bool operator()(const QString &s1, const QString &s2) const
@@ -88,7 +91,7 @@ protected:
  *
  * @note This dialog is only used by AddressTypeCombo.
  */
-class AddressTypeDialog : public KDialog
+class AddressTypeDialog : public QDialog
 {
 public:
     AddressTypeDialog(KABC::Address::Type type, QWidget *parent);
@@ -234,7 +237,7 @@ AddressEditWidget::AddressEditWidget(QWidget *parent)
     , mReadOnly(false)
 {
     QGridLayout *layout = new QGridLayout;
-    layout->setSpacing(KDialog::spacingHint());
+//TODO PORT QT5     layout->setSpacing(QDialog::spacingHint());
     layout->setMargin(0);
 
     QHBoxLayout *hboxLayout = new QHBoxLayout;
@@ -401,31 +404,41 @@ void AddressEditWidget::storeContact(KABC::Addressee &contact) const
 }
 
 AddressEditDialog::AddressEditDialog(QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setCaption(i18nc("street/postal", "Edit Address"));
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
-    showButtonSeparator(true);
+    setWindowTitle(i18nc("street/postal", "Edit Address"));
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    okButton->setDefault(true);
 
     QWidget *page = new QWidget(this);
-    setMainWidget(page);
+    mainLayout->addWidget(page);
+    mainLayout->addWidget(buttonBox);
 
     QGridLayout *topLayout = new QGridLayout(page);
-    topLayout->setSpacing(spacingHint());
+    //PORT QT5 topLayout->setSpacing(spacingHint());
     topLayout->setMargin(0);
 
     QLabel *label = new QLabel(i18nc("@label:listbox type of address", "Address type:"), this);
     topLayout->addWidget(label, 0, 0);
 
     mTypeCombo = new AddressTypeCombo(page);
+    mainLayout->addWidget(mTypeCombo);
     label->setBuddy(mTypeCombo);
     topLayout->addWidget(mTypeCombo, 0, 1);
 
     label = new QLabel(i18nc("<streetLabel>:", "%1:", KABC::Address::streetLabel()), page);
+    mainLayout->addWidget(label);
     label->setAlignment(Qt::AlignTop | Qt::AlignLeft);
     topLayout->addWidget(label, 1, 0);
     mStreetTextEdit = new KTextEdit(page);
+    mainLayout->addWidget(mStreetTextEdit);
     mStreetTextEdit->setAcceptRichText(false);
     label->setBuddy(mStreetTextEdit);
     topLayout->addWidget(mStreetTextEdit, 1, 1);
@@ -434,36 +447,47 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     mStreetTextEdit->installEventFilter(eater);
 
     label = new QLabel(i18nc("<postOfficeBoxLabel>:", "%1:", KABC::Address::postOfficeBoxLabel()), page);
+    mainLayout->addWidget(label);
     topLayout->addWidget(label, 2 , 0);
     mPOBoxEdit = new QLineEdit(page);
+    mainLayout->addWidget(mPOBoxEdit);
     label->setBuddy(mPOBoxEdit);
     topLayout->addWidget(mPOBoxEdit, 2, 1);
 
     label = new QLabel(i18nc("<localityLabel>:", "%1:", KABC::Address::localityLabel()), page);
+    mainLayout->addWidget(label);
     topLayout->addWidget(label, 3, 0);
     mLocalityEdit = new QLineEdit(page);
+    mainLayout->addWidget(mLocalityEdit);
     label->setBuddy(mLocalityEdit);
     topLayout->addWidget(mLocalityEdit, 3, 1);
 
     label = new QLabel(i18nc("<regionLabel>:", "%1:", KABC::Address::regionLabel()), page);
+    mainLayout->addWidget(label);
     topLayout->addWidget(label, 4, 0);
     mRegionEdit = new QLineEdit(page);
+    mainLayout->addWidget(mRegionEdit);
     label->setBuddy(mRegionEdit);
     topLayout->addWidget(mRegionEdit, 4, 1);
 
     label = new QLabel(i18nc("<postalCodeLabel>:", "%1:", KABC::Address::postalCodeLabel()), page);
+    mainLayout->addWidget(label);
     topLayout->addWidget(label, 5, 0);
     mPostalCodeEdit = new QLineEdit(page);
+    mainLayout->addWidget(mPostalCodeEdit);
     label->setBuddy(mPostalCodeEdit);
     topLayout->addWidget(mPostalCodeEdit, 5, 1);
 
     label = new QLabel(i18nc("<countryLabel>:", "%1:", KABC::Address::countryLabel()), page);
+    mainLayout->addWidget(label);
     topLayout->addWidget(label, 6, 0);
     mCountryCombo = new KComboBox(page);
+    mainLayout->addWidget(mCountryCombo);
     mCountryCombo->setEditable(true);
     mCountryCombo->setDuplicatesEnabled(false);
 
     QPushButton *labelButton = new QPushButton(i18n("Edit Label..."), page);
+    mainLayout->addWidget(labelButton);
     topLayout->addWidget(labelButton, 7, 0, 1, 2);
     connect(labelButton, SIGNAL(clicked()), SLOT(editLabel()));
 
@@ -472,10 +496,11 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     topLayout->addWidget(mCountryCombo, 6, 1);
 
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), page);
+    mainLayout->addWidget(mPreferredCheckBox);
     topLayout->addWidget(mPreferredCheckBox, 8, 0, 1, 2);
 
     QHBoxLayout *hbox = new QHBoxLayout(page);
-    hbox->setSpacing(spacingHint());
+    //PORT QT5 hbox->setSpacing(spacingHint());
     topLayout->addLayout(hbox, 9, 0, 1, 2);
 
     KAcceleratorManager::manage(this);
@@ -561,19 +586,28 @@ void AddressEditDialog::fillCountryCombo()
 }
 
 AddressTypeDialog::AddressTypeDialog(KABC::Address::Type type, QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setCaption(i18nc("street/postal", "Edit Address Type"));
-    setButtons(Ok | Cancel);
-    setDefaultButton(Ok);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    setWindowTitle(i18nc("street/postal", "Edit Address Type"));
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    okButton->setDefault(true);
 
     QWidget *page = new QWidget(this);
-    setMainWidget(page);
+    mainLayout->addWidget(page);
+    mainLayout->addWidget(buttonBox);
     QVBoxLayout *layout = new QVBoxLayout(page);
-    layout->setSpacing(KDialog::spacingHint());
+//TODO PORT QT5     layout->setSpacing(QDialog::spacingHint());
     layout->setMargin(0);
 
     QGroupBox *box  = new QGroupBox(i18nc("street/postal", "Address Types"), page);
+    mainLayout->addWidget(box);
     layout->addWidget(box);
     mGroup = new QButtonGroup(box);
     mGroup->setExclusive(false);

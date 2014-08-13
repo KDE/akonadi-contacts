@@ -28,7 +28,6 @@
 #include <QToolButton>
 
 #include <kabc/addressee.h>
-//#include <kdialog.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
 
@@ -37,7 +36,6 @@ NameEditWidget::NameEditWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    //layout->setSpacing(KDialog::spacingHint());
 
     mNameEdit = new QLineEdit;
     layout->addWidget(mNameEdit);

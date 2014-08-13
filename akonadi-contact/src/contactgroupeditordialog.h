@@ -24,7 +24,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <kdialog.h>
+#include <QDialog>
 
 class QAbstractItemModel;
 
@@ -72,7 +72,7 @@ class ContactGroupEditor;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactGroupEditorDialog : public KDialog
+class AKONADI_CONTACT_EXPORT ContactGroupEditorDialog : public QDialog
 {
   Q_OBJECT
 
@@ -122,8 +122,8 @@ class AKONADI_CONTACT_EXPORT ContactGroupEditorDialog : public KDialog
      */
     void contactGroupStored( const Akonadi::Item &group );
 
-  protected Q_SLOTS:
-    virtual void slotButtonClicked( int button );
+  private Q_SLOTS:
+    void slotAccepted();
 
   private:
     //@cond PRIVATE

@@ -35,6 +35,9 @@
 #include <QPushButton>
 #include <QGridLayout>
 #include <QLabel>
+#include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <QVBoxLayout>
 
 using namespace Akonadi;
 
@@ -49,7 +52,7 @@ class ContactGroupEditorDialog::Private
     void slotGroupNameChanged( const QString& name )
     {
       bool isValid = !( name.contains( QLatin1Char( '@' ) ) || name.contains( QLatin1Char( '.' ) ) );
-      q->button( Ok )->setEnabled( !name.isEmpty() && isValid );
+      okButton->setEnabled( !name.isEmpty() && isValid );
       mEditor->groupNameIsValid( isValid );
     }
 
@@ -73,21 +76,29 @@ class ContactGroupEditorDialog::Private
     CollectionComboBox *mAddressBookBox;
     ContactGroupEditor *mEditor;
     ContactGroupEditorDialog::Mode mMode;
+    QPushButton *okButton;
 };
 
 ContactGroupEditorDialog::ContactGroupEditorDialog( Mode mode, QWidget *parent )
-  : KDialog( parent ), d( new Private( this, mode ) )
+  : QDialog( parent ), d( new Private( this, mode ) )
 {
-  setCaption( mode == CreateMode ? i18n( "New Contact Group" ) : i18n( "Edit Contact Group" ) );
-  setButtons( Ok | Cancel );
+  setWindowTitle( mode == CreateMode ? i18n( "New Contact Group" ) : i18n( "Edit Contact Group" ) );
+  QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+  QVBoxLayout *mainLayout = new QVBoxLayout;
+  setLayout(mainLayout);
+  d->okButton = buttonBox->button(QDialogButtonBox::Ok);
+  d->okButton->setDefault(true);
+  d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+  connect(buttonBox, SIGNAL(accepted()), this, SLOT(slotAccepted()));
+  connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+  mainLayout->addWidget(buttonBox);
 
   // Disable default button, so that finish editing of
   // a member with the Enter key does not close the dialog
-  button( Ok )->setAutoDefault( false );
-  button( Cancel )->setAutoDefault( false );
+  d->okButton->setAutoDefault( false );
+  buttonBox->button(QDialogButtonBox::Cancel)->setAutoDefault( false );
 
   QWidget *mainWidget = new QWidget( this );
-  setMainWidget( mainWidget );
 
   QGridLayout *layout = new QGridLayout( mainWidget );
 
@@ -114,8 +125,9 @@ ContactGroupEditorDialog::ContactGroupEditorDialog( Mode mode, QWidget *parent )
   connect( d->mEditor->d->mGui.groupName, SIGNAL(textChanged(QString)),
            this, SLOT(slotGroupNameChanged(QString)) );
 
-  button( Ok )->setEnabled( !d->mEditor->d->mGui.groupName->text().isEmpty() );
-
+  d->okButton->setEnabled( !d->mEditor->d->mGui.groupName->text().isEmpty() );
+  mainLayout->addWidget(mainWidget);
+  mainLayout->addWidget(buttonBox);
   d->readConfig();
 }
 
@@ -144,9 +156,8 @@ ContactGroupEditor* ContactGroupEditorDialog::editor() const
   return d->mEditor;
 }
 
-void ContactGroupEditorDialog::slotButtonClicked( int button )
+void ContactGroupEditorDialog::slotAccepted()
 {
-  if ( button == KDialog::Ok ) {
     if ( d->mAddressBookBox ) {
       d->mEditor->setDefaultAddressBook( d->mAddressBookBox->currentCollection() );
     }
@@ -154,9 +165,6 @@ void ContactGroupEditorDialog::slotButtonClicked( int button )
     if ( d->mEditor->saveContactGroup() ) {
       accept();
     }
-  } else if ( button == KDialog::Cancel ) {
-    reject();
-  }
 }
 
 #include "moc_contactgroupeditordialog.cpp"

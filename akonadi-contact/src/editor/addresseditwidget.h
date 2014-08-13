@@ -27,7 +27,7 @@
 #include <kabc/address.h>
 #include <kabc/addressee.h>
 #include <kcombobox.h>
-#include <kdialog.h>
+#include <QDialog>
 
 class QCheckBox;
 class QLabel;
@@ -177,7 +177,7 @@ private:
 /**
   Dialog for editing address details.
  */
-class AddressEditDialog : public KDialog
+class AddressEditDialog : public QDialog
 {
     Q_OBJECT
 
