@@ -30,9 +30,7 @@
 
 using namespace Akonadi;
 
-#ifndef KDE_USE_FINAL
 static const QByteArray sRecentContactsType = "recent-contacts";
-#endif
 
 RecentContactsCollectionRequestJob::RecentContactsCollectionRequestJob( QObject *parent )
   : SpecialCollectionsRequestJob( RecentContactsCollections::self(), parent ),
