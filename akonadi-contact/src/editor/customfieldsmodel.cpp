@@ -23,7 +23,6 @@
 
 
 
-#include <klocale.h>
 #include <klocalizedstring.h>
 
 #include <QtCore/QDateTime>

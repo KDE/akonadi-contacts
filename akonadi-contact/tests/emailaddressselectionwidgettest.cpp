@@ -24,7 +24,7 @@
 #include <qapplication.h>
 #include <kcombobox.h>
 #include <qtextbrowser.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QGridLayout>
 #include <QPushButton>

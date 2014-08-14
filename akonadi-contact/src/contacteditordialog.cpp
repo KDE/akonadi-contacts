@@ -28,9 +28,8 @@
 
 #include <kabc/addressee.h>
 
-#include <klocale.h>
 #include <klocalizedstring.h>
-
+#include <KConfig>
 
 #include <QGridLayout>
 #include <QLabel>
