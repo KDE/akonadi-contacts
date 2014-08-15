@@ -26,7 +26,6 @@
 
 #include <kdialog.h>
 
-class QAbstractItemModel;
 
 namespace Akonadi {
 

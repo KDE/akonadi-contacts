@@ -26,11 +26,8 @@
 
 #include <QDialog>
 
-class QUrl;
 
 namespace KABC {
-class Address;
-class PhoneNumber;
 }
 
 namespace Akonadi {
