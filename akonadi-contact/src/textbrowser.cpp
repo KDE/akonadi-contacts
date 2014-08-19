@@ -21,7 +21,7 @@
 #include "textbrowser_p.h"
 #include <kicontheme.h>
 #include <klocalizedstring.h>
-#include <KUrl>
+#include <QUrl>
 #include <QAction>
 #include <KStandardAction>
 
@@ -76,7 +76,7 @@ void TextBrowser::contextMenuEvent( QContextMenuEvent *event )
   QString link = anchorAt( event->pos() );
   if ( !link.isEmpty() ) {
     if ( link.startsWith( QLatin1String( "mailto:" ) ) ) {
-      mDataToCopy = KMime::decodeRFC2047String( KUrl( link ).path().toUtf8() );
+      mDataToCopy = KMime::decodeRFC2047String( QUrl( link ).path().toUtf8() );
       // Action text matches that used in KMail
       act->setText( i18nc( "@action:inmenu Copy a displayed email address", "Copy Email Address" ) );
     } else {
