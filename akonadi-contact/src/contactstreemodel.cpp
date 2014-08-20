@@ -32,6 +32,7 @@
 
 #include <QIcon>
 #include <KLocale>
+#include <QLocale>
 
 using namespace Akonadi;
 
@@ -111,7 +112,7 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
           return contact.givenName();
         case Birthday:
           if ( contact.birthday().date().isValid() ) {
-            return KLocale::global()->formatDate( contact.birthday().date(), KLocale::ShortDate );
+            return QLocale().toString( contact.birthday().date(), QLocale::ShortFormat );
           }
           break;
         case HomeAddress:

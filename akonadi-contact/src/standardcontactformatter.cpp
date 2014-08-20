@@ -33,6 +33,7 @@
 #include <QtCore/QSet>
 #include <QTextDocument>
 #include <KLocale>
+#include <QLocale>
 
 using namespace Akonadi;
 
@@ -117,7 +118,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
   if ( date.isValid() ) {
     dynamicPart += rowFmtStr1
       .arg( KABC::Addressee::birthdayLabel() )
-      .arg( KLocale::global()->formatDate( date ) +
+      .arg( QLocale().toString( date ) +
             QLatin1String( "&nbsp;&nbsp;" ) + i18np( "(One year old)", "(%1 years old)", years ) );
   }
 
@@ -242,7 +243,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
         // convert anniversary correctly
         if ( key == QLatin1String( "Anniversary" ) || key == QLatin1String( "ANNIVERSARY" ) ) {
           const QDateTime dateTime = QDateTime::fromString( value, Qt::ISODate );
-          value = KLocale::global()->formatDate( dateTime.date() );
+          value = QLocale().toString( dateTime.date() );
         } else if ( key == QLatin1String( "BlogFeed" ) ) {  // blog is handled separated
           continue;
         } else if ( blacklistedKeys.contains( key ) ) {
@@ -268,7 +269,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
                 }
               } else if ( descriptionType == QLatin1String( "date" ) ) {
                 const QDate date = QDate::fromString( value, Qt::ISODate );
-                value = KLocale::global()->formatDate( date, KLocale::ShortDate );
+                value = QLocale().toString( date, QLocale::ShortFormat );
               } else if ( descriptionType == QLatin1String( "time" ) ) {
                 const QTime time = QTime::fromString( value, Qt::ISODate );
                 value = KLocale::global()->formatTime( time );
