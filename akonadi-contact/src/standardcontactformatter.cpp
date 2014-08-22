@@ -31,7 +31,6 @@
 #include <kstringhandler.h>
 
 #include <QtCore/QSet>
-#include <QTextDocument>
 #include <KLocale>
 #include <QLocale>
 

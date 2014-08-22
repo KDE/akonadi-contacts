@@ -28,7 +28,6 @@
 
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
-#include <KConfigGroup>
 #include <QPushButton>
 
 using namespace Akonadi;

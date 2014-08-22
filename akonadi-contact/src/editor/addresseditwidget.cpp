@@ -49,7 +49,6 @@
 #include <functional>
 #include <KLocale>
 #include <QDialogButtonBox>
-#include <KConfigGroup>
 #include <QVBoxLayout>
 
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
