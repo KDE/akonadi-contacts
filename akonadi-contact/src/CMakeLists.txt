@@ -1,13 +1,11 @@
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 
+
 set(Prison_MIN_VERSION "1.2.0")
-find_package(Prison ${Prison_MIN_VERSION})
+find_package(KF5Prison ${Prison_MIN_VERSION})
 set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL PURPOSE "Needed to show mobile barcodes of your contacts")
-if (PRISON_FOUND)
+if (KF5Prison_FOUND)
     add_definitions(-DHAVE_PRISON)
-    include_directories(
-       ${PRISON_INCLUDE_DIR}
-    )
 endif()
 
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
@@ -140,8 +138,8 @@ PRIVATE
     Phonon::phonon4qt5
 )
 
-if(PRISON_FOUND)
-   target_link_libraries(KF5AkonadiContact PRIVATE ${PRISON_LIBRARIES})
+if(KF5Prison_FOUND)
+   target_link_libraries(KF5AkonadiContact PRIVATE KF5::Prison)
 endif()
 
 
