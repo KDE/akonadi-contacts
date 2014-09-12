@@ -11,7 +11,6 @@ macro(add_akonadi_contact_demo _source)
       KF5::AkonadiMime
      KF5::AkonadiContact
      Qt5::Test)
-  add_test(${_test} ${_test})
   ecm_mark_as_test(${_test})
 endmacro()
 
