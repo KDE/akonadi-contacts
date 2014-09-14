@@ -123,7 +123,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     layout->addWidget(mView);
     setFocusProxy(mView);
     setFocusPolicy(Qt::StrongFocus);
-    connect(mView, SIGNAL(activated(int)), SLOT(displayTypeChanged(int)));
+    connect(mView, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &DisplayNameEditWidget::displayTypeChanged);
 
     DisplayNameDelegate *delegate = new DisplayNameDelegate(mView->view());
     mView->view()->setItemDelegate(delegate);

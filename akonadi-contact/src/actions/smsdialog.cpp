@@ -64,7 +64,7 @@ void SmsDialog::initUI()
     label->setBuddy(mSmsTextEdit);
     topLayout->addWidget(mSmsTextEdit);
 
-    connect(mSmsTextEdit, SIGNAL(textChanged()), SLOT(updateCounter()));
+    connect(mSmsTextEdit, &KTextEdit::textChanged, this, &SmsDialog::updateCounter);
 
     mLengthLabel = new QLabel(QStringLiteral("-") , this);
     topLayout->addWidget(mLengthLabel);
@@ -75,8 +75,8 @@ void SmsDialog::initUI()
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     topLayout->addWidget(buttonBox);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &SmsDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &SmsDialog::reject);
 
     updateCounter();
 }

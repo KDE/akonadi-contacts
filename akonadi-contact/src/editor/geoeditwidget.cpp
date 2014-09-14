@@ -119,7 +119,7 @@ GeoEditWidget::GeoEditWidget(QWidget *parent)
 
     layout->setRowStretch(3, 1);
 
-    connect(mChangeButton, SIGNAL(clicked()), SLOT(changeClicked()));
+    connect(mChangeButton, &QPushButton::clicked, this, &GeoEditWidget::changeClicked);
 
     updateView();
 }
@@ -352,8 +352,8 @@ GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
 
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &GeoDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &GeoDialog::reject);
     vbox->addWidget(buttonBox);
 
     updateInputs();

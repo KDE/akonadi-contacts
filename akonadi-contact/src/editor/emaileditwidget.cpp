@@ -113,7 +113,7 @@ EmailEditWidget::EmailEditWidget(QWidget *parent)
 
     mEditButton = new QToolButton;
     mEditButton->setText(QStringLiteral("..."));
-    connect(mEditButton, SIGNAL(clicked()), SLOT(edit()));
+    connect(mEditButton, &QPushButton::clicked, this, &EmailEditWidget::edit);
     layout->addWidget(mEditButton);
     setFocusProxy(mEditButton);
     setFocusPolicy(Qt::StrongFocus);
@@ -211,25 +211,25 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
 
     mAddButton = new QPushButton(i18n("Add..."), page);
     mainLayout->addWidget(mAddButton);
-    connect(mAddButton, SIGNAL(clicked()), SLOT(add()));
+    connect(mAddButton, &QPushButton::clicked, this, &EmailEditDialog::add);
     topLayout->addWidget(mAddButton, 0, 2);
 
     mEditButton = new QPushButton(i18n("Edit..."), page);
     mainLayout->addWidget(mEditButton);
     mEditButton->setEnabled(false);
-    connect(mEditButton, SIGNAL(clicked()), SLOT(edit()));
+    connect(mEditButton, &QPushButton::clicked, this, &EmailEditDialog::edit);
     topLayout->addWidget(mEditButton, 1, 2);
 
     mRemoveButton = new QPushButton(i18n("Remove"), page);
     mainLayout->addWidget(mRemoveButton);
     mRemoveButton->setEnabled(false);
-    connect(mRemoveButton, SIGNAL(clicked()), SLOT(remove()));
+    connect(mRemoveButton, &QPushButton::clicked, this, &EmailEditDialog::remove);
     topLayout->addWidget(mRemoveButton, 2, 2);
 
     mStandardButton = new QPushButton(i18n("Set as Standard"), page);
     mainLayout->addWidget(mStandardButton);
     mStandardButton->setEnabled(false);
-    connect(mStandardButton, SIGNAL(clicked()), SLOT(standard()));
+    connect(mStandardButton, &QPushButton::clicked, this, &EmailEditDialog::standard);
     topLayout->addWidget(mStandardButton, 3, 2);
 
     topLayout->setRowStretch(4, 1);
@@ -256,8 +256,8 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &EmailEditDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &EmailEditDialog::reject);
     mainLayout->addWidget(buttonBox);
 
     readConfig();

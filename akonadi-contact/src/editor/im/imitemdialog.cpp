@@ -59,15 +59,15 @@ IMItemDialog::IMItemDialog(QWidget *parent)
     mNameEdit = new QLineEdit;
     layout->addRow(i18nc("@label:textbox IM address", "Address:"), mNameEdit);
 
-    connect(mProtocolCombo, SIGNAL(currentIndexChanged(int)), SLOT(slotUpdateButtons()));
-    connect(mNameEdit, SIGNAL(textChanged(QString)), SLOT(slotUpdateButtons()));
+    connect(mProtocolCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &IMItemDialog::slotUpdateButtons);
+    connect(mNameEdit, &QLineEdit::textChanged, this, &IMItemDialog::slotUpdateButtons);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
 
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &IMItemDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &IMItemDialog::reject);
     mainLayout->addWidget(buttonBox);
 
     slotUpdateButtons();

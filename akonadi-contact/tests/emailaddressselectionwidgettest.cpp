@@ -44,11 +44,11 @@ MainWidget::MainWidget()
     KComboBox *box = new KComboBox;
     box->addItem(QStringLiteral("Single Selection"));
     box->addItem(QStringLiteral("Multi Selection"));
-    connect(box, SIGNAL(activated(int)), SLOT(selectionModeChanged(int)));
+    connect(box, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &MainWidget::selectionModeChanged);
     layout->addWidget(box, 1, 0);
 
     QPushButton *button = new QPushButton(QStringLiteral("Show Selection"));
-    connect(button, SIGNAL(clicked()), SLOT(showSelection()));
+    connect(button, &QPushButton::clicked, this, &MainWidget::showSelection);
     layout->addWidget(button, 1, 1);
 }
 

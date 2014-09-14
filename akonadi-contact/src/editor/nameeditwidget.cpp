@@ -65,7 +65,7 @@ void NameEditWidget::loadContact(const KABC::Addressee &contact)
 {
     mContact = contact;
 
-    disconnect(mNameEdit, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)));
+    disconnect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
     mNameEdit->setText(contact.assembledName());
     connect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
 }
@@ -103,7 +103,7 @@ void NameEditWidget::openNameEditDialog()
         mContact.setFamilyName(dlg->familyName());
         mContact.setSuffix(dlg->suffix());
 
-        disconnect(mNameEdit, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)));
+        disconnect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
         mNameEdit->setText(mContact.assembledName());
         connect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
 

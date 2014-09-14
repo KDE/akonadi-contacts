@@ -119,7 +119,7 @@ ImageWidget::ImageWidget(Type type, QWidget *parent)
     setIconSize(QSize(100, 100));
     setFixedSize(QSize(120, 120));
 
-    connect(this, SIGNAL(clicked()), SLOT(changeImage()));
+    connect(this, &ImageWidget::clicked, this, &ImageWidget::changeImage);
 
     if (mType == Photo) {
         setToolTip(i18n("The photo of the contact (click to change)"));

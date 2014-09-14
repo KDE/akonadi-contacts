@@ -101,7 +101,7 @@ SoundEditWidget::SoundEditWidget(QWidget *parent)
     , mReadOnly(false)
     , mSoundLoader(0)
 {
-    connect(this, SIGNAL(clicked()), SLOT(playSound()));
+    connect(this, &SoundEditWidget::clicked, this, &SoundEditWidget::playSound);
 
     updateView();
 }
@@ -178,7 +178,7 @@ void SoundEditWidget::playSound()
     soundData->setData(mSound);
     player->setCurrentSource(soundData);
     player->setParent(this);
-    connect(player, SIGNAL(finished()), player, SLOT(deleteLater()));
+    connect(player, &Phonon::MediaObject::finished, player, &Phonon::MediaObject::deleteLater);
     player->play();
 }
 

@@ -85,7 +85,7 @@ void ContactGroupLineEdit::setContactReference( const KABC::ContactGroup::Contac
   mContactReference = reference;
   mContainsReference = true;
 
-  disconnect( this, SIGNAL(textChanged(QString)), this, SLOT(invalidateReference()) );
+  disconnect(this, &ContactGroupLineEdit::textChanged, this, &ContactGroupLineEdit::invalidateReference);
 
   updateView( reference );
 }
@@ -106,17 +106,17 @@ void ContactGroupLineEdit::autoCompleted( const QModelIndex &index )
     return;
   }
 
-  disconnect( this, SIGNAL(textChanged(QString)), this, SLOT(invalidateReference()) );
+  disconnect(this, &ContactGroupLineEdit::textChanged, this, &ContactGroupLineEdit::invalidateReference);
   mContainsReference = true;
 
   updateView( item );
 
-  connect( this, SIGNAL(textChanged(QString)), SLOT(invalidateReference()) );
+  connect(this, &ContactGroupLineEdit::textChanged, this, &ContactGroupLineEdit::invalidateReference);
 }
 
 void ContactGroupLineEdit::invalidateReference()
 {
-  disconnect( this, SIGNAL(textChanged(QString)), this, SLOT(invalidateReference()) );
+  disconnect(this, &ContactGroupLineEdit::textChanged, this, &ContactGroupLineEdit::invalidateReference);
   mContainsReference = false;
 }
 
@@ -143,7 +143,7 @@ void ContactGroupLineEdit::fetchDone( KJob *job )
     updateView( item, fetchJob->property( "preferredEmail" ).toString() );
   }
 
-  connect( this, SIGNAL(textChanged(QString)), SLOT(invalidateReference()) );
+  connect(this, &ContactGroupLineEdit::textChanged, this, &ContactGroupLineEdit::invalidateReference);
 }
 
 void ContactGroupLineEdit::updateView( const Akonadi::Item &item, const QString &preferredEmail )

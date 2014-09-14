@@ -89,8 +89,8 @@ ContactGroupEditorDialog::ContactGroupEditorDialog( Mode mode, QWidget *parent )
   d->okButton = buttonBox->button(QDialogButtonBox::Ok);
   d->okButton->setDefault(true);
   d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-  connect(buttonBox, SIGNAL(accepted()), this, SLOT(slotAccepted()));
-  connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+  connect(buttonBox, &QDialogButtonBox::accepted, this, &ContactGroupEditorDialog::slotAccepted);
+  connect(buttonBox, &QDialogButtonBox::rejected, this, &ContactGroupEditorDialog::reject);
   mainLayout->addWidget(buttonBox);
 
   // Disable default button, so that finish editing of
