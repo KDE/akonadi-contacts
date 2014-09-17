@@ -36,7 +36,9 @@ class IMItemDialog : public QDialog
 
 public:
     explicit IMItemDialog(QWidget *parent);
-    ~IMItemDialog() {}
+    ~IMItemDialog()
+    {
+    }
 
     void setAddress(const IMAddress &address);
     IMAddress address() const;

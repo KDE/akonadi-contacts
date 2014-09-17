@@ -42,7 +42,6 @@ IMEditorDialog::IMEditorDialog(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
-
     QWidget *widget = new QWidget(this);
     mainLayout->addWidget(widget);
 
@@ -78,7 +77,7 @@ IMEditorDialog::IMEditorDialog(QWidget *parent)
             this, SLOT(slotUpdateButtons()));
     connect(mView, SIGNAL(doubleClicked(QModelIndex)),
             this, SLOT(slotEdit()));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -166,8 +165,8 @@ void IMEditorDialog::slotRemove()
     if (KMessageBox::warningContinueCancel(
             this,
             xi18nc("@info Instant messaging",
-                  "Do you really want to delete the selected <resource>%1</resource> address?",
-                  mModel->data(mModel->index(currentRow, 0), Qt::DisplayRole).toString()),
+                   "Do you really want to delete the selected <resource>%1</resource> address?",
+                   mModel->data(mModel->index(currentRow, 0), Qt::DisplayRole).toString()),
             i18nc("@title:window", "Confirm Delete Resource"),
             KStandardGuiItem::del()) != KMessageBox::Continue) {
         return;
