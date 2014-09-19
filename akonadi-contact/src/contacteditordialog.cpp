@@ -33,6 +33,10 @@
 
 #include <QGridLayout>
 #include <QLabel>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace Akonadi;
 
@@ -43,11 +47,16 @@ class ContactEditorDialog::Private
              ContactEditorDialog *parent )
       : q( parent ), mAddressBookBox( 0 ), mMode( mode )
     {
-      q->setCaption( mode == ContactEditorDialog::CreateMode ? i18n( "New Contact" ) : i18n( "Edit Contact" ) );
-      q->setButtons( ContactEditorDialog::Ok | ContactEditorDialog::Cancel );
+      q->setWindowTitle( mode == ContactEditorDialog::CreateMode ? i18n( "New Contact" ) : i18n( "Edit Contact" ) );
+      QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+      QVBoxLayout *mainLayout = new QVBoxLayout;
+      q->setLayout(mainLayout);
+      q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(accept()));
+      q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(reject()));
 
       QWidget *mainWidget = new QWidget( q );
-      q->setMainWidget( mainWidget );
+      mainLayout->addWidget(mainWidget);
+      mainLayout->addWidget(buttonBox);
 
       QGridLayout *layout = new QGridLayout( mainWidget );
 
@@ -77,8 +86,8 @@ class ContactEditorDialog::Private
       connect( mEditor, SIGNAL(error(QString)),
                q, SIGNAL(error(QString)) );
 
-      connect( q, SIGNAL(okClicked()), q, SLOT(slotOkClicked()) );
-      connect( q, SIGNAL(cancelClicked()), q, SLOT(slotCancelClicked()) );
+      connect( q, SIGNAL(clicked()), q, SLOT(slotOkClicked()) );
+      connect( q, SIGNAL(clicked()), q, SLOT(slotCancelClicked()) );
       connect( mEditor, SIGNAL(finished()), q, SLOT(slotFinish()) );
 
       readConfig();
@@ -94,7 +103,7 @@ class ContactEditorDialog::Private
 
     void slotFinish()
     {
-        q->KDialog::accept();
+        q->QDialog::accept();
     }
 
     void slotCancelClicked()
@@ -127,17 +136,17 @@ class ContactEditorDialog::Private
 };
 
 ContactEditorDialog::ContactEditorDialog( Mode mode, QWidget *parent )
-  : KDialog( parent ), d( new Private( mode, FullMode, 0, this ) )
+  : QDialog( parent ), d( new Private( mode, FullMode, 0, this ) )
 {
 }
 
 ContactEditorDialog::ContactEditorDialog( Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent )
-  : KDialog( parent ), d( new Private( mode, FullMode, editorWidget, this ) )
+  : QDialog( parent ), d( new Private( mode, FullMode, editorWidget, this ) )
 {
 }
 
 ContactEditorDialog::ContactEditorDialog( Mode mode, DisplayMode displayMode, QWidget *parent )
-  : KDialog( parent ), d( new Private( mode, displayMode, 0, this ) )
+  : QDialog( parent ), d( new Private( mode, displayMode, 0, this ) )
 {
 }
 
