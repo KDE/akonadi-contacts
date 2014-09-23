@@ -28,57 +28,56 @@
 
 #include <item.h>
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class ContactLineEdit : public QLineEdit
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    explicit ContactLineEdit( bool isReference, QWidget *parent = 0 );
+public:
+    explicit ContactLineEdit(bool isReference, QWidget *parent = 0);
 
     bool isReference() const;
     Akonadi::Item completedItem() const;
 
-  Q_SIGNALS:
-    void completed( QWidget* );
+Q_SIGNALS:
+    void completed(QWidget *widget);
 
-  private Q_SLOTS:
-    void completed( const QModelIndex& );
+private Q_SLOTS:
+    void completed(const QModelIndex &index);
     void slotTextEdited();
 
-  private:
+private:
     bool mIsReference;
     Item mItem;
 };
 
 class ContactGroupEditorDelegate : public QStyledItemDelegate
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    explicit ContactGroupEditorDelegate( QAbstractItemView *view, QObject *parent = 0 );
+public:
+    explicit ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent = 0);
     ~ContactGroupEditorDelegate();
 
-    virtual QWidget* createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
+    virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
-    virtual void setEditorData( QWidget *editor, const QModelIndex &index ) const;
-    virtual void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const;
+    virtual void setEditorData(QWidget *editor, const QModelIndex &index) const;
+    virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const;
 
-    virtual void paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
+    virtual void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
-    QSize sizeHint( const QStyleOptionViewItem& option, const QModelIndex& index ) const;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
-    virtual bool editorEvent( QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index );
+    virtual bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index);
 
-  private Q_SLOTS:
-    void completed( QWidget* );
+private Q_SLOTS:
+    void completed(QWidget *widget);
     void setFirstColumnAsCurrent();
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 }

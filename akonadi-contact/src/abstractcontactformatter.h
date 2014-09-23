@@ -45,14 +45,14 @@ class Item;
  */
 class AKONADI_CONTACT_EXPORT AbstractContactFormatter
 {
-  public:
+public:
     /**
      * Describes the form of the HTML that is created.
      */
     enum HtmlForm {
-      SelfcontainedForm,                ///< Creates a complete HTML document
-      EmbeddableForm,                   ///< Creates a div HTML element that can be embedded.
-      UserForm = SelfcontainedForm + 42 ///< Point for extension
+        SelfcontainedForm,                ///< Creates a complete HTML document
+        EmbeddableForm,                   ///< Creates a div HTML element that can be embedded.
+        UserForm = SelfcontainedForm + 42 ///< Point for extension
     };
 
     /**
@@ -69,7 +69,7 @@ class AKONADI_CONTACT_EXPORT AbstractContactFormatter
      * Sets the @p contact that will be formatted.
      * @param contact contact to be formatted
      */
-    void setContact( const KABC::Addressee &contact );
+    void setContact(const KABC::Addressee &contact);
 
     /**
      * Returns the contact that will be formatted.
@@ -82,7 +82,7 @@ class AKONADI_CONTACT_EXPORT AbstractContactFormatter
      * @note The payload must be a valid KABC::Addressee object.
      * @param item item, who's payload will be formatted.
      */
-    void setItem( const Akonadi::Item &item );
+    void setItem(const Akonadi::Item &item);
 
     /**
      * Returns the item who's payload will be formatted.
@@ -107,7 +107,7 @@ class AKONADI_CONTACT_EXPORT AbstractContactFormatter
      *
      * @param descriptions list with field descriptions
      */
-    void setCustomFieldDescriptions( const QList<QVariantMap> &descriptions );
+    void setCustomFieldDescriptions(const QList<QVariantMap> &descriptions);
 
     /**
      * Returns the custom field descriptions that will be used.
@@ -119,14 +119,14 @@ class AKONADI_CONTACT_EXPORT AbstractContactFormatter
      * according to the requested @p form.
      * @param form how to render the contact into HTML
      */
-    virtual QString toHtml( HtmlForm form = SelfcontainedForm ) const = 0;
+    virtual QString toHtml(HtmlForm form = SelfcontainedForm) const = 0;
 
-  private:
+private:
     //@cond PRIVATE
-    Q_DISABLE_COPY( AbstractContactFormatter )
+    Q_DISABLE_COPY(AbstractContactFormatter)
 
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

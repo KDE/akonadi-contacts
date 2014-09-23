@@ -66,11 +66,11 @@ void SmsDialog::initUI()
 
     connect(mSmsTextEdit, &KTextEdit::textChanged, this, &SmsDialog::updateCounter);
 
-    mLengthLabel = new QLabel(QStringLiteral("-") , this);
+    mLengthLabel = new QLabel(QStringLiteral("-"), this);
     topLayout->addWidget(mLengthLabel);
 
     mSmsTextEdit->setFocus();
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

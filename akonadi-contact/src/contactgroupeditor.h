@@ -81,15 +81,15 @@ class Item;
  */
 class AKONADI_CONTACT_EXPORT ContactGroupEditor : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Describes the mode of the contact group editor.
      */
     enum Mode {
-      CreateMode, ///< Creates a new contact group
-      EditMode    ///< Edits an existing contact group
+        CreateMode, ///< Creates a new contact group
+        EditMode    ///< Edits an existing contact group
     };
 
     /**
@@ -98,7 +98,7 @@ class AKONADI_CONTACT_EXPORT ContactGroupEditor : public QWidget
      * @param mode The mode of the editor.
      * @param parent The parent widget of the editor.
      */
-    explicit ContactGroupEditor( Mode mode, QWidget *parent = 0 );
+    explicit ContactGroupEditor(Mode mode, QWidget *parent = 0);
 
     /**
      * Destroys the contact group editor.
@@ -110,21 +110,21 @@ class AKONADI_CONTACT_EXPORT ContactGroupEditor : public QWidget
      * The fields of the editor will be prefilled with the content of the group.
      * @param group the group to use as template content
      */
-    void setContactGroupTemplate( const KABC::ContactGroup &group );
+    void setContactGroupTemplate(const KABC::ContactGroup &group);
 
     /**
      * Sets the @p addressbook which shall be used to store new
      * contact groups.
      */
-    void setDefaultAddressBook( const Akonadi::Collection &addressbook );
+    void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
     void groupNameIsValid(bool isValid);
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Loads the contact @p group into the editor.
      */
-    void loadContactGroup( const Akonadi::Item &group );
+    void loadContactGroup(const Akonadi::Item &group);
 
     /**
      * Saves the contact group from the editor back to the storage.
@@ -133,33 +133,33 @@ class AKONADI_CONTACT_EXPORT ContactGroupEditor : public QWidget
      */
     bool saveContactGroup();
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted when the contact @p group has been saved back
      * to the storage.
      */
-    void contactGroupStored( const Akonadi::Item &group );
+    void contactGroupStored(const Akonadi::Item &group);
 
     /**
      * This signal is emitted when an error occurred during the save.
      * @param errorMsg The error message.
      */
-    void error( const QString &errorMsg );
+    void error(const QString &errorMsg);
 
-  private:
+private:
     //@cond PRIVATE
     friend class ContactGroupEditorDialog;
 
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_DISABLE_COPY( ContactGroupEditor )
+    Q_DISABLE_COPY(ContactGroupEditor)
 
-    Q_PRIVATE_SLOT( d, void itemFetchDone( KJob* ) )
-    Q_PRIVATE_SLOT( d, void parentCollectionFetchDone( KJob* ) )
-    Q_PRIVATE_SLOT( d, void storeDone( KJob* ) )
-    Q_PRIVATE_SLOT( d, void itemChanged( const Akonadi::Item&, const QSet<QByteArray>& ) )
-    Q_PRIVATE_SLOT( d, void adaptHeaderSizes() )
+    Q_PRIVATE_SLOT(d, void itemFetchDone(KJob *))
+    Q_PRIVATE_SLOT(d, void parentCollectionFetchDone(KJob *))
+    Q_PRIVATE_SLOT(d, void storeDone(KJob *))
+    Q_PRIVATE_SLOT(d, void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &))
+    Q_PRIVATE_SLOT(d, void adaptHeaderSizes())
     //@endcond
 };
 

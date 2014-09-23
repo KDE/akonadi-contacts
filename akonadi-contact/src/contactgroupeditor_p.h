@@ -31,29 +31,28 @@
 
 class KJob;
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class ContactGroupModel;
 class Monitor;
 
 class ContactGroupEditor::Private
 {
-  public:
-    Private( ContactGroupEditor *parent );
+public:
+    Private(ContactGroupEditor *parent);
     ~Private();
 
-    void itemFetchDone( KJob* );
-    void parentCollectionFetchDone( KJob* );
-    void storeDone( KJob* );
-    void itemChanged( const Akonadi::Item &item, const QSet<QByteArray>& );
+    void itemFetchDone(KJob *);
+    void parentCollectionFetchDone(KJob *);
+    void storeDone(KJob *);
+    void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &);
     void memberChanged();
-    void setReadOnly( bool );
+    void setReadOnly(bool);
 
     void adaptHeaderSizes();
 
-    void loadContactGroup( const KABC::ContactGroup &group );
-    bool storeContactGroup( KABC::ContactGroup &group );
+    void loadContactGroup(const KABC::ContactGroup &group);
+    bool storeContactGroup(KABC::ContactGroup &group);
     void setupMonitor();
 
     ContactGroupEditor *mParent;

@@ -79,20 +79,20 @@ class Item;
  */
 class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Describes the mode of the editor.
      */
     enum Mode {
-      CreateMode, ///< Creates a new contact
-      EditMode    ///< Edits an existing contact
+        CreateMode, ///< Creates a new contact
+        EditMode    ///< Edits an existing contact
     };
 
     enum DisplayMode {
-      FullMode, ///< Show all pages
-      VCardMode ///< Show just pages with elements stored in vcard.
+        FullMode, ///< Show all pages
+        VCardMode ///< Show just pages with elements stored in vcard.
     };
 
     /**
@@ -101,7 +101,7 @@ class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
      * @param mode The mode of the editor.
      * @param parent The parent widget of the editor.
      */
-    explicit ContactEditor( Mode mode, QWidget *parent = 0 );
+    explicit ContactEditor(Mode mode, QWidget *parent = 0);
 
     /**
      * Creates a new contact editor with a custom editor widget.
@@ -110,7 +110,7 @@ class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
      * @param editorWidget The contact editor widget that shall be used for editing.
      * @param parent The parent widget of the editor.
      */
-    ContactEditor( Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = 0 );
+    ContactEditor(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = 0);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -120,7 +120,7 @@ class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
      * @param parent The parent widget of the dialog.
      * @since 4.10
      */
-    ContactEditor( Mode mode, DisplayMode displayMode, QWidget *parent = 0 );
+    ContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent = 0);
 
     /**
      * Destroys the contact editor.
@@ -132,13 +132,13 @@ class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
      * The fields of the editor will be prefilled with the content of the contact.
      * @param contact the contact to use as template content
      */
-    void setContactTemplate( const KABC::Addressee &contact );
+    void setContactTemplate(const KABC::Addressee &contact);
 
     /**
      * Sets the @p addressbook which shall be used to store new
      * contacts.
      */
-    void setDefaultAddressBook( const Akonadi::Collection &addressbook );
+    void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
     /**
      * @since 4.10
@@ -146,11 +146,11 @@ class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
      * @return
      */
     KABC::Addressee contact();
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Loads the @p contact into the editor.
      */
-    void loadContact( const Akonadi::Item &contact );
+    void loadContact(const Akonadi::Item &contact);
 
     /**
      * Save the contact from the editor back to the storage. And return error.
@@ -159,34 +159,34 @@ class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
      */
     void saveContactInAddressBook();
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted when the @p contact has been saved back
      * to the storage.
      */
-    void contactStored( const Akonadi::Item &contact );
+    void contactStored(const Akonadi::Item &contact);
 
     /**
      * This signal is emitted when an error occurred during the save.
      * @param errorMsg The error message.
      * @since 4.11
      */
-    void error( const QString &errorMsg );
+    void error(const QString &errorMsg);
 
     /**
      * @brief finished
      * @since 4.11
      */
     void finished();
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void itemFetchDone( KJob* ) )
-    Q_PRIVATE_SLOT( d, void parentCollectionFetchDone( KJob* ) )
-    Q_PRIVATE_SLOT( d, void storeDone( KJob* ) )
-    Q_PRIVATE_SLOT( d, void itemChanged( const Akonadi::Item&, const QSet<QByteArray>& ) )
+    Q_PRIVATE_SLOT(d, void itemFetchDone(KJob *))
+    Q_PRIVATE_SLOT(d, void parentCollectionFetchDone(KJob *))
+    Q_PRIVATE_SLOT(d, void storeDone(KJob *))
+    Q_PRIVATE_SLOT(d, void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &))
     //@endcond
 };
 

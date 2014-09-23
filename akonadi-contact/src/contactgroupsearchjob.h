@@ -40,7 +40,7 @@ namespace Akonadi {
  *
  * Akonadi::ContactGroupSearchJob *job = new Akonadi::ContactGroupSearchJob();
  * job->setQuery( Akonadi::ContactGroupSearchJob::Name, "Family Members" );
- * connect( job, SIGNAL( result( KJob* ) ), this, SLOT( searchResult( KJob* ) ) );
+ * connect( job, SIGNAL(result(KJob*)), this, SLOT(searchResult(KJob*)) );
  *
  * ...
  *
@@ -58,15 +58,15 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT ContactGroupSearchJob : public ItemSearchJob
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact group search job.
      *
      * @param parent The parent object.
      */
-    explicit ContactGroupSearchJob( QObject *parent = 0 );
+    explicit ContactGroupSearchJob(QObject *parent = 0);
 
     /**
      * Destroys the contact group search job.
@@ -77,7 +77,7 @@ class AKONADI_CONTACT_EXPORT ContactGroupSearchJob : public ItemSearchJob
      * Describes the criteria that can be searched for.
      */
     enum Criterion {
-      Name ///< The name of the contact group.
+        Name ///< The name of the contact group.
     };
 
     /**
@@ -86,15 +86,15 @@ class AKONADI_CONTACT_EXPORT ContactGroupSearchJob : public ItemSearchJob
      * @since 4.5
      */
     enum Match {
-      ExactMatch,      ///< The result must match exactly the pattern (case sensitive).
-      StartsWithMatch, ///< The result must start with the pattern (case insensitive).
-      ContainsMatch    ///< The result must contain the pattern (case insensitive).
+        ExactMatch,      ///< The result must match exactly the pattern (case sensitive).
+        StartsWithMatch, ///< The result must start with the pattern (case insensitive).
+        ContainsMatch    ///< The result must contain the pattern (case insensitive).
     };
 
     /**
      * Sets the @p criterion and @p value for the search.
      */
-    void setQuery( Criterion criterion, const QString &value );
+    void setQuery(Criterion criterion, const QString &value);
 
     /**
      * Sets the @p criterion and @p value for the search with @p match.
@@ -103,7 +103,7 @@ class AKONADI_CONTACT_EXPORT ContactGroupSearchJob : public ItemSearchJob
      * @param match how to match the given value
      * @since 4.5
      */
-    void setQuery( Criterion criterion, const QString &value, Match match );
+    void setQuery(Criterion criterion, const QString &value, Match match);
 
     /**
      * Sets a @p limit on how many results will be returned by this search job.
@@ -116,17 +116,17 @@ class AKONADI_CONTACT_EXPORT ContactGroupSearchJob : public ItemSearchJob
      *
      * @since 4.4.3
      */
-    void setLimit( int limit );
+    void setLimit(int limit);
 
     /**
      * Returns the contact groups that matched the search criteria.
      */
     KABC::ContactGroup::List contactGroups() const;
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

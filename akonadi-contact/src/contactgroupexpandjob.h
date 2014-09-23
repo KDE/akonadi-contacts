@@ -44,7 +44,7 @@ namespace Akonadi {
  * const KABC::ContactGroup group = ...;
  *
  * Akonadi::ContactGroupExpandJob *job = new Akonadi::ContactGroupExpandJob( group );
- * connect( job, SIGNAL( result( KJob* ) ), this, SLOT( expandResult( KJob* ) ) );
+ * connect( job, SIGNAL(result(KJob*)), this, SLOT(expandResult(KJob*)) );
  * job->start();
  *
  * ...
@@ -63,16 +63,16 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT ContactGroupExpandJob : public KJob
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact group expand job.
      *
      * @param group The contact group to expand.
      * @param parent The parent object.
      */
-    explicit ContactGroupExpandJob( const KABC::ContactGroup &group, QObject *parent = 0 );
+    explicit ContactGroupExpandJob(const KABC::ContactGroup &group, QObject *parent = 0);
 
     /**
      * Creates a new contact group expand job.
@@ -82,7 +82,7 @@ class AKONADI_CONTACT_EXPORT ContactGroupExpandJob : public KJob
      *
      * @since 4.5
      */
-    explicit ContactGroupExpandJob( const QString &name, QObject *parent = 0 );
+    explicit ContactGroupExpandJob(const QString &name, QObject *parent = 0);
 
     /**
      * Destroys the contact group expand job.
@@ -99,13 +99,13 @@ class AKONADI_CONTACT_EXPORT ContactGroupExpandJob : public KJob
      */
     virtual void start();
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void fetchResult( KJob* ) )
-    Q_PRIVATE_SLOT( d, void searchResult( KJob* ) )
+    Q_PRIVATE_SLOT(d, void fetchResult(KJob *))
+    Q_PRIVATE_SLOT(d, void searchResult(KJob *))
     //@endcond
 };
 

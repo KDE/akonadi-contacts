@@ -28,8 +28,7 @@ namespace KABC {
 class Addressee;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 /**
  * @short The base class for custom ContactEditor page plugins.
@@ -39,7 +38,7 @@ namespace Akonadi
  */
 class ContactEditorPagePlugin : public QWidget
 {
-  public:
+public:
     /**
      * Returns the i18n'd page title.
      */
@@ -48,21 +47,21 @@ class ContactEditorPagePlugin : public QWidget
     /**
      * This method is called to fill the editor widget with the data from @p contact.
      */
-    virtual void loadContact( const KABC::Addressee &contact ) = 0;
+    virtual void loadContact(const KABC::Addressee &contact) = 0;
 
     /**
      * This method is called to store the data from the editor widget into @p contact.
      */
-    virtual void storeContact( KABC::Addressee &contact ) const = 0;
+    virtual void storeContact(KABC::Addressee &contact) const = 0;
 
     /**
      * This method is called to set the editor widget @p readOnly.
      */
-    virtual void setReadOnly( bool readOnly ) = 0;
+    virtual void setReadOnly(bool readOnly) = 0;
 };
 
 }
 
-Q_DECLARE_INTERFACE( Akonadi::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0" )
+Q_DECLARE_INTERFACE(Akonadi::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")
 
 #endif

@@ -26,43 +26,42 @@
 
 #include <kabc/contactgroup.h>
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class ContactGroupModel : public QAbstractItemModel
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     enum Role {
-      IsReferenceRole = Qt::UserRole,
-      AllEmailsRole
+        IsReferenceRole = Qt::UserRole,
+        AllEmailsRole
     };
 
-    explicit ContactGroupModel( QObject *parent = 0 );
+    explicit ContactGroupModel(QObject *parent = 0);
     ~ContactGroupModel();
 
-    void loadContactGroup( const KABC::ContactGroup &contactGroup );
-    bool storeContactGroup( KABC::ContactGroup &contactGroup ) const;
+    void loadContactGroup(const KABC::ContactGroup &contactGroup);
+    bool storeContactGroup(KABC::ContactGroup &contactGroup) const;
 
     QString lastErrorMessage() const;
 
-    virtual QModelIndex index( int row, int col, const QModelIndex &parent = QModelIndex() ) const;
-    virtual QModelIndex parent( const QModelIndex &child ) const;
-    virtual QVariant data( const QModelIndex &index, int role ) const;
-    virtual bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole );
-    virtual QVariant headerData( int section, Qt::Orientation orientation, int role ) const;
-    virtual Qt::ItemFlags flags( const QModelIndex &index ) const;
-    virtual int columnCount( const QModelIndex &parent = QModelIndex() ) const;
-    virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const;
+    virtual QModelIndex index(int row, int col, const QModelIndex &parent = QModelIndex()) const;
+    virtual QModelIndex parent(const QModelIndex &child) const;
+    virtual QVariant data(const QModelIndex &index, int role) const;
+    virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
+    virtual QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+    virtual Qt::ItemFlags flags(const QModelIndex &index) const;
+    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
-    virtual bool removeRows( int row, int count, const QModelIndex &parent = QModelIndex() );
+    virtual bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void itemFetched( KJob* ) )
+    Q_PRIVATE_SLOT(d, void itemFetched(KJob *))
 };
 
 }

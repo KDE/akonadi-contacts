@@ -38,15 +38,15 @@
  */
 class CollectionFilterModel : public QSortFilterProxyModel
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new collection filter model.
      *
      * @param parent The parent object.
      */
-    explicit CollectionFilterModel( QObject *parent );
+    explicit CollectionFilterModel(QObject *parent);
 
     /**
      * Adds a mime type to the content mime type filter list.
@@ -57,7 +57,7 @@ class CollectionFilterModel : public QSortFilterProxyModel
      *
      * @param mimeType mime type content filter
      */
-    void addContentMimeTypeFilter( const QString &mimeType );
+    void addContentMimeTypeFilter(const QString &mimeType);
 
     /**
      * Sets the collection @p rights filter.
@@ -67,12 +67,12 @@ class CollectionFilterModel : public QSortFilterProxyModel
      *
      * @param rights collection rights filter
      */
-    void setRightsFilter( Akonadi::Collection::Rights rights );
+    void setRightsFilter(Akonadi::Collection::Rights rights);
 
-  protected:
-    virtual bool filterAcceptsRow( int row, const QModelIndex &parent ) const;
+protected:
+    virtual bool filterAcceptsRow(int row, const QModelIndex &parent) const;
 
-  private:
+private:
     QSet<QString> mContentMimeTypes;
     Akonadi::Collection::Rights mRights;
 };

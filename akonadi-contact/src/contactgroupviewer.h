@@ -56,15 +56,15 @@ class AbstractContactGroupFormatter;
  */
 class AKONADI_CONTACT_EXPORT ContactGroupViewer : public QWidget, public Akonadi::ItemMonitor
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact group viewer.
      *
      * @param parent The parent widget.
      */
-    ContactGroupViewer( QWidget *parent = 0 );
+    ContactGroupViewer(QWidget *parent = 0);
 
     /**
      * Destroys the contact group viewer.
@@ -83,15 +83,15 @@ class AKONADI_CONTACT_EXPORT ContactGroupViewer : public QWidget, public Akonadi
      * @note The contact viewer won't take ownership of the formatter.
      * @since 4.6
      */
-    void setContactGroupFormatter( AbstractContactGroupFormatter *formatter );
+    void setContactGroupFormatter(AbstractContactGroupFormatter *formatter);
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Sets the contact @p group that shall be displayed in the viewer.
      */
-    void setContactGroup( const Akonadi::Item &group );
+    void setContactGroup(const Akonadi::Item &group);
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever the user has clicked on
      * an email address in the viewer.
@@ -99,13 +99,13 @@ class AKONADI_CONTACT_EXPORT ContactGroupViewer : public QWidget, public Akonadi
      * @param name The name of the contact.
      * @param email The plain email address of the contact.
      */
-    void emailClicked( const QString &name, const QString &email );
+    void emailClicked(const QString &name, const QString &email);
 
-  private:
+private:
     /**
      * This method is called whenever the displayed contact @p group has been changed.
      */
-    virtual void itemChanged( const Item &group );
+    virtual void itemChanged(const Item &group);
 
     /**
      * This method is called whenever the displayed contact group has been
@@ -113,14 +113,14 @@ class AKONADI_CONTACT_EXPORT ContactGroupViewer : public QWidget, public Akonadi
      */
     virtual void itemRemoved();
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void slotMailClicked( const QUrl& ) )
-    Q_PRIVATE_SLOT( d, void _k_expandResult( KJob* ) )
-    Q_PRIVATE_SLOT( d, void slotParentCollectionFetched( KJob* ) )
+    Q_PRIVATE_SLOT(d, void slotMailClicked(const QUrl &))
+    Q_PRIVATE_SLOT(d, void _k_expandResult(KJob *))
+    Q_PRIVATE_SLOT(d, void slotParentCollectionFetched(KJob *))
     //@endcond
 };
 

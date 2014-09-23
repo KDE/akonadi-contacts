@@ -24,13 +24,11 @@
 
 #include <QWidget>
 
-namespace KABC
-{
+namespace KABC {
 class Addressee;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class ContactMetaData;
 
@@ -50,7 +48,9 @@ public:
     /**
      * Destroys the abstract contact editor widget.
      */
-    ~AbstractContactEditorWidget() { }
+    ~AbstractContactEditorWidget()
+    {
+    }
 
     /**
      * @param contact loads the given contact into the editor widget

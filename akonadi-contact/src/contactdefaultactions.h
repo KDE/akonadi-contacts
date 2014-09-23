@@ -71,12 +71,12 @@ namespace Akonadi {
  * actions->connectToView( viewer );
  *
  * // then remove the signle/slot connection you want to overwrite
- * disconnect( viewer, SIGNAL( emailClicked( const QString&, const QString& ) ),
- *             actions, SLOT( sendEmail( const QString&, const QString& ) ) );
+ * disconnect( viewer, SIGNAL(emailClicked(QString,QString)),
+ *             actions, SLOT(sendEmail(QString,QString)) );
  *
  * // connect to your custom implementation
- * connect( viewer, SIGNAL( emailClicked( const QString&, const QString& ) ),
- *          this, SLOT( handleSpecial( const QString&, const QString& ) ) );
+ * connect( viewer, SIGNAL(emailClicked(QString,QString)),
+ *          this, SLOT(handleSpecial(QString,QString)) );
  *
  * @endcode
  *
@@ -85,15 +85,15 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT ContactDefaultActions : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact default actions object.
      *
      * @param parent The parent object.
      */
-    ContactDefaultActions( QObject *parent = 0 );
+    ContactDefaultActions(QObject *parent = 0);
 
     /**
      * Destroys the contact default actions object.
@@ -104,43 +104,43 @@ class AKONADI_CONTACT_EXPORT ContactDefaultActions : public QObject
      * Tries to connect the well known signals of the @p view
      * to the well known slots of this object.
      */
-    void connectToView( QObject *view );
+    void connectToView(QObject *view);
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Shows the given @p url in the users preferred webbrowser.
      */
-    void showUrl( const QUrl &url );
+    void showUrl(const QUrl &url);
 
     /**
      * Opens the users preferred mail composer and does the setup
      * to send a mail to the contact with the given @p name and
      * email @p address.
      */
-    void sendEmail( const QString &name, const QString &address );
+    void sendEmail(const QString &name, const QString &address);
 
     /**
      * Dials the given phone @p number with the application as
      * configured by the user in the general settings dialog.
      */
-    void dialPhoneNumber( const KABC::PhoneNumber &number );
+    void dialPhoneNumber(const KABC::PhoneNumber &number);
 
     /**
      * Sends a sms to @p number with the application as
      * configured by the user in the general settings dialog.
      */
-    void sendSms( const KABC::PhoneNumber &number );
+    void sendSms(const KABC::PhoneNumber &number);
 
     /**
      * Shows the @p address of a contact in a webbrowser or application
      * as configured by the user in the general settings dialog.
      */
-    void showAddress( const KABC::Address &address );
+    void showAddress(const KABC::Address &address);
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond PRIVATE
 };
 

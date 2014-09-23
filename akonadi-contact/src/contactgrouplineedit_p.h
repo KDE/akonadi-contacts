@@ -35,32 +35,32 @@ class KJob;
 
 class ContactGroupLineEdit : public QLineEdit
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    explicit ContactGroupLineEdit( QWidget *parent = 0 );
+public:
+    explicit ContactGroupLineEdit(QWidget *parent = 0);
 
-    void setCompletionModel( QAbstractItemModel *model );
+    void setCompletionModel(QAbstractItemModel *model);
 
     bool containsReference() const;
 
-    void setContactData( const KABC::ContactGroup::Data &data );
+    void setContactData(const KABC::ContactGroup::Data &data);
 
     KABC::ContactGroup::Data contactData() const;
 
-    void setContactReference( const KABC::ContactGroup::ContactReference &reference );
+    void setContactReference(const KABC::ContactGroup::ContactReference &reference);
 
     KABC::ContactGroup::ContactReference contactReference() const;
 
-  private Q_SLOTS:
-    void autoCompleted( const QModelIndex& );
-    void fetchDone( KJob* );
+private Q_SLOTS:
+    void autoCompleted(const QModelIndex &index);
+    void fetchDone(KJob *job);
     void invalidateReference();
 
-  private:
-    void updateView( const KABC::ContactGroup::ContactReference &referrence );
-    void updateView( const Akonadi::Item &item, const QString &preferredEmail = QString() );
-    QString requestPreferredEmail( const KABC::Addressee &contact ) const;
+private:
+    void updateView(const KABC::ContactGroup::ContactReference &referrence);
+    void updateView(const Akonadi::Item &item, const QString &preferredEmail = QString());
+    QString requestPreferredEmail(const KABC::Addressee &contact) const;
 
     QCompleter *mCompleter;
     bool mContainsReference;

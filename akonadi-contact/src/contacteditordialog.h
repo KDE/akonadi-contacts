@@ -26,7 +26,6 @@
 
 #include <QDialog>
 
-
 namespace Akonadi {
 
 class AbstractContactEditorWidget;
@@ -47,8 +46,8 @@ class Item;
  * using namespace Akonadi;
  *
  * ContactEditorDialog *dlg = new ContactEditorDialog( ContactEditorDialog::CreateMode, this );
- * connect( dlg, SIGNAL( contactStored( const Akonadi::Item& ) ),
- *          this, SLOT( contactStored( const Akonadi::Item& ) ) );
+ * connect( dlg, SIGNAL(contactStored(Akonadi::Item)),
+ *          this, SLOT(contactStored(Akonadi::Item)) );
  * dlg->show();
  *
  *
@@ -63,8 +62,8 @@ class Item;
  * const Item contact = ...;
  *
  * ContactEditorDialog *dlg = new ContactEditorDialog( ContactEditorDialog::EditMode, this );
- * connect( dlg, SIGNAL( contactStored( const Akonadi::Item& ) ),
- *          this, SLOT( contactStored( const Akonadi::Item& ) ) );
+ * connect( dlg, SIGNAL(contactStored(Akonadi::Item)),
+ *          this, SLOT(contactStored(Akonadi::Item)) );
  * dlg->setContact( contact );
  * dlg->show();
  *
@@ -75,20 +74,20 @@ class Item;
  */
 class AKONADI_CONTACT_EXPORT ContactEditorDialog : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Describes the mode of the editor dialog.
      */
     enum Mode {
-      CreateMode, ///< Creates a new contact
-      EditMode    ///< Edits an existing contact
+        CreateMode, ///< Creates a new contact
+        EditMode    ///< Edits an existing contact
     };
 
     enum DisplayMode {
-      FullMode, //Show all pages
-      VCardMode //Show just pages with elements stored in vcard.
+        FullMode, //Show all pages
+        VCardMode //Show just pages with elements stored in vcard.
     };
 
     /**
@@ -97,7 +96,7 @@ class AKONADI_CONTACT_EXPORT ContactEditorDialog : public QDialog
      * @param mode The mode of the dialog.
      * @param parent The parent widget of the dialog.
      */
-    explicit ContactEditorDialog( Mode mode, QWidget *parent = 0 );
+    explicit ContactEditorDialog(Mode mode, QWidget *parent = 0);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -106,7 +105,7 @@ class AKONADI_CONTACT_EXPORT ContactEditorDialog : public QDialog
      * @param editorWidget The contact editor widget that shall be used for editing.
      * @param parent The parent widget of the dialog.
      */
-    ContactEditorDialog( Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = 0 );
+    ContactEditorDialog(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = 0);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -116,7 +115,7 @@ class AKONADI_CONTACT_EXPORT ContactEditorDialog : public QDialog
      * @param parent The parent widget of the dialog.
      * @since 4.10
      */
-    ContactEditorDialog( Mode mode, DisplayMode displayMode, QWidget *parent = 0 );
+    ContactEditorDialog(Mode mode, DisplayMode displayMode, QWidget *parent = 0);
 
     /**
      * Destroys the contact editor dialog.
@@ -129,44 +128,44 @@ class AKONADI_CONTACT_EXPORT ContactEditorDialog : public QDialog
      * @note The contact item just must have a uid set, all
      * other data are fetched by the dialog automatically.
      */
-    void setContact( const Akonadi::Item &contact );
+    void setContact(const Akonadi::Item &contact);
 
     /**
      * Sets the @p addressbook that shall be selected as default in create mode.
      */
-    void setDefaultAddressBook( const Akonadi::Collection &addressbook );
+    void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
     /**
      * Returns the ContactEditor that is used by this dialog.
      */
-    ContactEditor* editor() const;
+    ContactEditor *editor() const;
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever a contact was updated or stored.
      *
      * @param contact The data reference of the contact.
      */
-    void contactStored( const Akonadi::Item &contact );
+    void contactStored(const Akonadi::Item &contact);
 
     /**
      * This signal is emitted whenever a contact is not updated or stored.
      *
      * @param errMsg The error during updating or storing contact.
      */
-    void error(const QString& errMsg);
+    void error(const QString &errMsg);
 
-  public Q_SLOTS:
+public Q_SLOTS:
     void accept();
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void slotOkClicked() )
-    Q_PRIVATE_SLOT( d, void slotCancelClicked() )
-    Q_PRIVATE_SLOT( d, void slotFinish() )
+    Q_PRIVATE_SLOT(d, void slotOkClicked())
+    Q_PRIVATE_SLOT(d, void slotCancelClicked())
+    Q_PRIVATE_SLOT(d, void slotFinish())
     //@endcond
 };
 

@@ -45,14 +45,14 @@ class Item;
  */
 class AKONADI_CONTACT_EXPORT AbstractContactGroupFormatter
 {
-  public:
+public:
     /**
      * Describes the form of the HTML that is created.
      */
     enum HtmlForm {
-      SelfcontainedForm,                ///< Creates a complete HTML document
-      EmbeddableForm,                   ///< Creates a div HTML element that can be embedded.
-      UserForm = SelfcontainedForm + 42 ///< Point for extension
+        SelfcontainedForm,                ///< Creates a complete HTML document
+        EmbeddableForm,                   ///< Creates a div HTML element that can be embedded.
+        UserForm = SelfcontainedForm + 42 ///< Point for extension
     };
 
     /**
@@ -68,7 +68,7 @@ class AKONADI_CONTACT_EXPORT AbstractContactGroupFormatter
     /**
      * Sets the contact @p group that will be formatted.
      */
-    void setContactGroup( const KABC::ContactGroup &group );
+    void setContactGroup(const KABC::ContactGroup &group);
 
     /**
      * Returns the contact group that will be formatted.
@@ -82,7 +82,7 @@ class AKONADI_CONTACT_EXPORT AbstractContactGroupFormatter
      *
      * @param item item, who's payload will be formatted.
      */
-    void setItem( const Akonadi::Item &item );
+    void setItem(const Akonadi::Item &item);
 
     /**
      * Returns the item who's payload will be formatted.
@@ -100,7 +100,7 @@ class AKONADI_CONTACT_EXPORT AbstractContactGroupFormatter
      *
      * @param fields additional fields that will be shown
      */
-    void setAdditionalFields( const QList<QVariantMap> &fields );
+    void setAdditionalFields(const QList<QVariantMap> &fields);
 
     /**
      * Returns the additional fields that will be shown.
@@ -111,14 +111,14 @@ class AKONADI_CONTACT_EXPORT AbstractContactGroupFormatter
      * This method must be reimplemented to return the contact group formatted as HTML
      * according to the requested @p form.
      */
-    virtual QString toHtml( HtmlForm form = SelfcontainedForm ) const = 0;
+    virtual QString toHtml(HtmlForm form = SelfcontainedForm) const = 0;
 
-  private:
+private:
     //@cond PRIVATE
-    Q_DISABLE_COPY( AbstractContactGroupFormatter )
+    Q_DISABLE_COPY(AbstractContactGroupFormatter)
 
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

@@ -26,7 +26,6 @@
 
 #include <QDialog>
 
-
 namespace Akonadi {
 
 class Item;
@@ -46,8 +45,8 @@ class ContactGroupEditor;
  * using namespace Akonadi;
  *
  * ContactGroupEditorDialog *dlg = new ContactGroupEditorDialog( ContactGroupEditorDialog::CreateMode, this );
- * connect( dlg, SIGNAL( contactGroupStored( const Akonadi::Item& ) ),
- *          this, SLOT( contactGroupStored( const Akonadi::Item& ) ) );
+ * connect( dlg, SIGNAL(contactGroupStored(Akonadi::Item)),
+ *          this, SLOT(contactGroupStored(Akonadi::Item)) );
  * dlg->show();
  *
  * @endcode
@@ -61,8 +60,8 @@ class ContactGroupEditor;
  * const Item contactGroup = ...;
  *
  * ContactGroupEditorDialog *dlg = new ContactGroupEditorDialog( ContactGroupEditorDialog::EditMode, this );
- * connect( dlg, SIGNAL( contactGroupStored( const Akonadi::Item& ) ),
- *          this, SLOT( contactGroupStored( const Akonadi::Item& ) ) );
+ * connect( dlg, SIGNAL(contactGroupStored(Akonadi::Item)),
+ *          this, SLOT(contactGroupStored(Akonadi::Item)) );
  * dlg->setContactGroup( contactGroup );
  * dlg->show();
  *
@@ -73,15 +72,15 @@ class ContactGroupEditor;
  */
 class AKONADI_CONTACT_EXPORT ContactGroupEditorDialog : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Describes the mode of the contact group editor.
      */
     enum Mode {
-      CreateMode, ///< Creates a new contact group
-      EditMode    ///< Edits an existing contact group
+        CreateMode, ///< Creates a new contact group
+        EditMode    ///< Edits an existing contact group
     };
 
     /**
@@ -90,7 +89,7 @@ class AKONADI_CONTACT_EXPORT ContactGroupEditorDialog : public QDialog
      * @param mode The mode of the dialog.
      * @param parent The parent widget of the dialog.
      */
-    explicit ContactGroupEditorDialog( Mode mode, QWidget *parent = 0 );
+    explicit ContactGroupEditorDialog(Mode mode, QWidget *parent = 0);
 
     /**
      * Destroys the contact group editor dialog.
@@ -100,36 +99,36 @@ class AKONADI_CONTACT_EXPORT ContactGroupEditorDialog : public QDialog
     /**
      * Sets the contact @p group to edit when in EditMode.
      */
-    void setContactGroup( const Akonadi::Item &group );
+    void setContactGroup(const Akonadi::Item &group);
 
     /**
      * Sets the @p addressbook that shall be selected as default
      * for storage in create mode.
      */
-    void setDefaultAddressBook( const Akonadi::Collection &addressbook );
+    void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
     /**
      * Returns the ContactGroupEditor that is used by the dialog.
      */
-    ContactGroupEditor* editor() const;
+    ContactGroupEditor *editor() const;
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever a contact group was updated or stored.
      *
      * @param group The contact group.
      */
-    void contactGroupStored( const Akonadi::Item &group );
+    void contactGroupStored(const Akonadi::Item &group);
 
-  private Q_SLOTS:
+private Q_SLOTS:
     void slotAccepted();
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void slotGroupNameChanged( const QString& ) )
+    Q_PRIVATE_SLOT(d, void slotGroupNameChanged(const QString &))
     //@endcond
 };
 
