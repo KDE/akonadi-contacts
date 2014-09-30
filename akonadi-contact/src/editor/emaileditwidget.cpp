@@ -107,8 +107,7 @@ EmailEditWidget::EmailEditWidget(QWidget *parent)
 
     mEmailEdit = new QLineEdit;
     new EmailAddressExtracter(mEmailEdit);
-    connect(mEmailEdit, SIGNAL(textChanged(QString)),
-            SLOT(textChanged(QString)));
+    connect(mEmailEdit, &QLineEdit::textChanged, this, &EmailEditWidget::textChanged);
     layout->addWidget(mEmailEdit);
 
     mEditButton = new QToolButton;
@@ -203,10 +202,8 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
 
     // Make sure there is room for the scrollbar
     mEmailListBox->setMinimumHeight(mEmailListBox->sizeHint().height() + 30);
-    connect(mEmailListBox, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),
-            SLOT(selectionChanged()));
-    connect(mEmailListBox, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-            SLOT(edit()));
+    connect(mEmailListBox, &QListWidget::currentItemChanged, this, &EmailEditDialog::selectionChanged);
+    connect(mEmailListBox, &QListWidget::itemDoubleClicked, this, &EmailEditDialog::edit);
     topLayout->addWidget(mEmailListBox, 0, 0, 5, 2);
 
     mAddButton = new QPushButton(i18n("Add..."), page);

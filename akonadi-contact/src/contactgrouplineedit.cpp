@@ -45,8 +45,7 @@ void ContactGroupLineEdit::setCompletionModel( QAbstractItemModel *model )
 {
   mCompleter = new QCompleter( model, this );
   mCompleter->setCompletionColumn( Akonadi::ContactCompletionModel::NameAndEmailColumn );
-  connect( mCompleter, SIGNAL(activated(QModelIndex)),
-           this, SLOT(autoCompleted(QModelIndex)) );
+  connect(mCompleter, static_cast<void (QCompleter::*)(const QModelIndex &)>(&QCompleter::activated), this, &ContactGroupLineEdit::autoCompleted);
 
   setCompleter( mCompleter );
 }

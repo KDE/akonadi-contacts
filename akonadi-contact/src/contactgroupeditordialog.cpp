@@ -120,8 +120,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog( Mode mode, QWidget *parent )
   layout->addWidget( d->mEditor, 1, 0, 1, 2 );
   layout->setColumnStretch( 1, 1 );
 
-  connect( d->mEditor, SIGNAL(contactGroupStored(Akonadi::Item)),
-           this, SIGNAL(contactGroupStored(Akonadi::Item)) );
+  connect(d->mEditor, &ContactGroupEditor::contactGroupStored, this, &ContactGroupEditorDialog::contactGroupStored);
   connect( d->mEditor->d->mGui.groupName, SIGNAL(textChanged(QString)),
            this, SLOT(slotGroupNameChanged(QString)) );
 
