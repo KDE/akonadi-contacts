@@ -16,7 +16,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
 include(ECMInstallIcons)
-set(KF5_VERSION "5.2.0")
+set(KF5_VERSION "5.3.0")
 set(KDEPIMLIBS_VERSION "4.71.0")
 
 ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
