@@ -51,8 +51,8 @@ class ContactEditorDialog::Private
       QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
       QVBoxLayout *mainLayout = new QVBoxLayout;
       q->setLayout(mainLayout);
-      q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(accept()));
-      q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(reject()));
+      q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(slotOkClicked()));
+      q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(slotCancelClicked()));
 
       QWidget *mainWidget = new QWidget( q );
       mainLayout->addWidget(mainWidget);
@@ -86,8 +86,6 @@ class ContactEditorDialog::Private
       connect( mEditor, SIGNAL(error(QString)),
                q, SIGNAL(error(QString)) );
 
-      connect( q, SIGNAL(clicked()), q, SLOT(slotOkClicked()) );
-      connect( q, SIGNAL(clicked()), q, SLOT(slotCancelClicked()) );
       connect( mEditor, SIGNAL(finished()), q, SLOT(slotFinish()) );
 
       readConfig();
