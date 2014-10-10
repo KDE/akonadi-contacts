@@ -33,22 +33,22 @@ class KJob;
  */
 class WaitingOverlay : public QWidget
 {
-  public:
+public:
     /**
      * Create an overlay widget on @p baseWidget for @p job.
      * @param baseWidget must not be null.
      * @param parent must not be equal to baseWidget
      */
-    explicit WaitingOverlay( KJob *job, QWidget *baseWidget, QWidget *parent = 0 );
+    explicit WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent = 0);
     ~WaitingOverlay();
 
-  protected:
-    bool eventFilter( QObject *object, QEvent *event );
+protected:
+    bool eventFilter(QObject *object, QEvent *event);
 
-  private:
+private:
     void reposition();
 
-  private:
+private:
     QPointer<QWidget> mBaseWidget;
     bool mPreviousState;
 };

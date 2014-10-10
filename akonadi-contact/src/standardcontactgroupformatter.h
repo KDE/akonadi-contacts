@@ -52,7 +52,7 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT StandardContactGroupFormatter : public AbstractContactGroupFormatter
 {
-  public:
+public:
     /**
      * Creates a new standard contact group formatter.
      */
@@ -66,12 +66,12 @@ class AKONADI_CONTACT_EXPORT StandardContactGroupFormatter : public AbstractCont
     /**
      * Returns the contact group formatted as HTML.
      */
-    virtual QString toHtml( HtmlForm form = SelfcontainedForm ) const;
+    virtual QString toHtml(HtmlForm form = SelfcontainedForm) const;
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

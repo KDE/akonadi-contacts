@@ -45,17 +45,17 @@ class Item;
  */
 class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Describes the supported actions.
      */
     enum Type {
-      CreateContact = StandardActionManager::LastType + 1, ///< Creates a new contact
-      CreateContactGroup,                                  ///< Creates a new contact group
-      EditItem,                                            ///< Edits the selected contact resp. contact group
-      LastType                                             ///< Marks last action
+        CreateContact = StandardActionManager::LastType + 1, ///< Creates a new contact
+        CreateContactGroup,                                  ///< Creates a new contact group
+        EditItem,                                            ///< Edits the selected contact resp. contact group
+        LastType                                             ///< Marks last action
     };
 
     /**
@@ -64,7 +64,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * @param actionCollection The action collection to operate on.
      * @param parent The parent widget.
      */
-    explicit StandardContactActionManager( KActionCollection *actionCollection, QWidget *parent = 0 );
+    explicit StandardContactActionManager(KActionCollection *actionCollection, QWidget *parent = 0);
 
     /**
      * Destroys the standard contact action manager.
@@ -77,14 +77,14 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * will be disabled.
      * @param selectionModel the selection model for collections
      */
-    void setCollectionSelectionModel( QItemSelectionModel *selectionModel );
+    void setCollectionSelectionModel(QItemSelectionModel *selectionModel);
 
     /**
      * Sets the item selection model based on which the item related actions
      * should operate. If none is set, all item actions will be disabled.
      * @param selectionModel the selection model for items
      */
-    void setItemSelectionModel( QItemSelectionModel* selectionModel );
+    void setItemSelectionModel(QItemSelectionModel *selectionModel);
 
     /**
      * Creates the action of the given type and adds it to the action collection
@@ -92,7 +92,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * connected to its default implementation provided by this class.
      * @param type the type of action to create
      */
-    QAction * createAction( Type type );
+    QAction *createAction(Type type);
 
     /**
      * Creates the action of the given type and adds it to the action collection
@@ -100,7 +100,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * connected to its default implementation provided by this class.
      * @param type the type of action to create
      */
-    QAction * createAction( StandardActionManager::Type type );
+    QAction *createAction(StandardActionManager::Type type);
 
     /**
      * Convenience method to create all standard actions.
@@ -111,13 +111,13 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
     /**
      * Returns the action of the given type, 0 if it has not been created (yet).
      */
-    QAction * action( Type type ) const;
+    QAction *action(Type type) const;
 
     /**
      * Returns the action of the given type, 0 if it has not been created (yet).
      * @param type the type of action to return
      */
-    QAction * action( StandardActionManager::Type type ) const;
+    QAction *action(StandardActionManager::Type type) const;
 
     /**
      * Sets the label of the action @p type to @p text, which is used during
@@ -131,7 +131,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      *                         ki18np( "Copy Item", "Copy %1 Items" ) );
      * @endcode
      */
-    void setActionText( StandardActionManager::Type type, const KLocalizedString &text );
+    void setActionText(StandardActionManager::Type type, const KLocalizedString &text);
 
     /**
      * Sets whether the default implementation for the given action @p type
@@ -140,7 +140,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * @param intercept If @c false, the default implementation will be executed,
      *                  if @c true no action is taken.
      */
-    void interceptAction( Type type, bool intercept = true );
+    void interceptAction(Type type, bool intercept = true);
 
     /**
      * Sets whether the default implementation for the given action @p type
@@ -149,7 +149,7 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      * @param intercept If @c false, the default implementation will be executed,
      *                  if @c true no action is taken.
      */
-    void interceptAction( StandardActionManager::Type type, bool intercept = true );
+    void interceptAction(StandardActionManager::Type type, bool intercept = true);
 
     /**
      * Returns the list of collections that are currently selected.
@@ -163,13 +163,13 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      */
     Akonadi::Item::List selectedItems() const;
 
-  /**
-   * @param names the list of names to set as collection properties page names
-   * @since 4.8.2
-   */
-    void setCollectionPropertiesPageNames( const QStringList &names );
+    /**
+     * @param names the list of names to set as collection properties page names
+     * @since 4.8.2
+     */
+    void setCollectionPropertiesPageNames(const QStringList &names);
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever the action state has been updated.
      * In case you have special needs for changing the state of some actions,
@@ -177,16 +177,16 @@ class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
      */
     void actionStateUpdated();
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void updateActions() )
-    Q_PRIVATE_SLOT( d, void slotCreateContact() )
-    Q_PRIVATE_SLOT( d, void slotCreateContactGroup() )
-    Q_PRIVATE_SLOT( d, void slotEditItem() )
-    Q_PRIVATE_SLOT( d, void slotContactEditorError(const QString&) )
+    Q_PRIVATE_SLOT(d, void updateActions())
+    Q_PRIVATE_SLOT(d, void slotCreateContact())
+    Q_PRIVATE_SLOT(d, void slotCreateContactGroup())
+    Q_PRIVATE_SLOT(d, void slotEditItem())
+    Q_PRIVATE_SLOT(d, void slotContactEditorError(const QString &))
     //@endcond
 };
 

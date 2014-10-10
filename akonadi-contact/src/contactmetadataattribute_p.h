@@ -37,7 +37,7 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT ContactMetaDataAttribute : public Akonadi::Attribute
 {
-  public:
+public:
     /**
      * Creates a new contact meta data attribute.
      */
@@ -51,7 +51,7 @@ class AKONADI_CONTACT_EXPORT ContactMetaDataAttribute : public Akonadi::Attribut
     /**
      * Sets the meta @p data.
      */
-    void setMetaData( const QVariantMap &data );
+    void setMetaData(const QVariantMap &data);
 
     /**
      * Returns the meta data.
@@ -59,14 +59,14 @@ class AKONADI_CONTACT_EXPORT ContactMetaDataAttribute : public Akonadi::Attribut
     QVariantMap metaData() const;
 
     virtual QByteArray type() const;
-    virtual Attribute* clone() const;
+    virtual Attribute *clone() const;
     virtual QByteArray serialized() const;
-    virtual void deserialize( const QByteArray &data );
+    virtual void deserialize(const QByteArray &data);
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

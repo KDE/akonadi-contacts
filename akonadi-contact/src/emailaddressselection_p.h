@@ -32,9 +32,9 @@ namespace Akonadi {
 
 class EmailAddressSelection::Private : public QSharedData
 {
-  public:
+public:
     Private();
-    Private( const Private &other );
+    Private(const Private &other);
 
     QString mName;
     QString mEmailAddress;

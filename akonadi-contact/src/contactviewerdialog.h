@@ -26,7 +26,6 @@
 
 #include <QDialog>
 
-
 namespace KABC {
 }
 
@@ -61,15 +60,15 @@ class ContactViewer;
  */
 class AKONADI_CONTACT_EXPORT ContactViewerDialog : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact viewer dialog.
      *
      * @param parent The parent widget of the dialog.
      */
-    explicit ContactViewerDialog( QWidget *parent = 0 );
+    explicit ContactViewerDialog(QWidget *parent = 0);
 
     /**
      * Destroys the contact viewer dialog.
@@ -86,16 +85,16 @@ class AKONADI_CONTACT_EXPORT ContactViewerDialog : public QDialog
      */
     ContactViewer *viewer() const;
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Sets the @p contact that shall be displayed in the dialog.
      */
-    void setContact( const Akonadi::Item &contact );
+    void setContact(const Akonadi::Item &contact);
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

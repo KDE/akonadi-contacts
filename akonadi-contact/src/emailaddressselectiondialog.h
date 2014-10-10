@@ -58,15 +58,15 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new email address selection dialog.
      *
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionDialog( QWidget *parent = 0 );
+    explicit EmailAddressSelectionDialog(QWidget *parent = 0);
 
     /**
      * Creates a new email address selection dialog.
@@ -74,7 +74,7 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public QDialog
      * @param model A custom, ContactsTreeModel based model to use.
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionDialog( QAbstractItemModel *model, QWidget *parent = 0 );
+    explicit EmailAddressSelectionDialog(QAbstractItemModel *model, QWidget *parent = 0);
 
     /**
      * Destroys the email address selection dialog.
@@ -91,10 +91,10 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public QDialog
      */
     EmailAddressSelectionWidget *view() const;
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private * const d;
+    Private *const d;
     //@endcond
 };
 

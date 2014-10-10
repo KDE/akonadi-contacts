@@ -49,8 +49,8 @@ namespace Akonadi {
  * view->setModel( filter );
  *
  * QLineEdit *filterEdit = new QLineEdit;
- * connect( filterEdit, SIGNAL( textChanged( const QString& ) ),
- *          filter, SLOT( setFilterString( const QString& ) ) );
+ * connect( filterEdit, SIGNAL(textChanged(QString)),
+ *          filter, SLOT(setFilterString(QString)) );
  *
  * @endcode
  *
@@ -59,36 +59,36 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT ContactsFilterProxyModel : public QSortFilterProxyModel
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
 
     enum FilterFlag {
-      HasEmail = 0x01 /// Filters out contacts without any email address set.
+        HasEmail = 0x01 /// Filters out contacts without any email address set.
     };
-    Q_DECLARE_FLAGS( FilterFlags, FilterFlag )
+    Q_DECLARE_FLAGS(FilterFlags, FilterFlag)
 
     /**
      * Creates a new contacts filter proxy model.
      *
      * @param parent The parent object.
      */
-    explicit ContactsFilterProxyModel( QObject *parent = 0 );
+    explicit ContactsFilterProxyModel(QObject *parent = 0);
 
     /**
      * Destroys the contacts filter proxy model.
      */
     virtual ~ContactsFilterProxyModel();
 
-     /**
-     * Sets the filter @p flags. By default
-     * ContactsFilterProxyModel::FilterString is set.
-     * @param flags the filter flags to set
-     * @since 4.8
-     */
-     void setFilterFlags( ContactsFilterProxyModel::FilterFlags flags );
+    /**
+    * Sets the filter @p flags. By default
+    * ContactsFilterProxyModel::FilterString is set.
+    * @param flags the filter flags to set
+    * @since 4.8
+    */
+    void setFilterFlags(ContactsFilterProxyModel::FilterFlags flags);
 
-     virtual Qt::ItemFlags flags( const QModelIndex& index ) const;
+    virtual Qt::ItemFlags flags(const QModelIndex &index) const;
 
     /**
      * Sets whether we want virtual collections to be filtered or not.
@@ -98,29 +98,29 @@ class AKONADI_CONTACT_EXPORT ContactsFilterProxyModel : public QSortFilterProxyM
      *
      * @since 4.8
      */
-     void setExcludeVirtualCollections( bool exclude );
+    void setExcludeVirtualCollections(bool exclude);
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Sets the @p filter that is used to filter for matching contacts
      * and contact groups.
      */
-    void setFilterString( const QString &filter );
+    void setFilterString(const QString &filter);
 
-  protected:
+protected:
     //@cond PRIVATE
-    virtual bool filterAcceptsRow( int row, const QModelIndex &parent ) const;
-    virtual bool lessThan( const QModelIndex &left, const QModelIndex &right ) const;
+    virtual bool filterAcceptsRow(int row, const QModelIndex &parent) const;
+    virtual bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
     //@endcond
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS ( ContactsFilterProxyModel::FilterFlags )
+Q_DECLARE_OPERATORS_FOR_FLAGS(ContactsFilterProxyModel::FilterFlags)
 
 }
 

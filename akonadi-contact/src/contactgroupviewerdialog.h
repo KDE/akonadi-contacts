@@ -57,15 +57,15 @@ class ContactGroupViewer;
  */
 class AKONADI_CONTACT_EXPORT ContactGroupViewerDialog : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact group viewer dialog.
      *
      * @param parent The parent widget of the dialog.
      */
-    ContactGroupViewerDialog( QWidget *parent = 0 );
+    ContactGroupViewerDialog(QWidget *parent = 0);
 
     /**
      * Destroys the contact group viewer dialog.
@@ -82,16 +82,16 @@ class AKONADI_CONTACT_EXPORT ContactGroupViewerDialog : public QDialog
      */
     ContactGroupViewer *viewer() const;
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Sets the contact @p group that shall be displayed in the dialog.
      */
-    void setContactGroup( const Akonadi::Item &group );
+    void setContactGroup(const Akonadi::Item &group);
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

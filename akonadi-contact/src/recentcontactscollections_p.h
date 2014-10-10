@@ -38,9 +38,9 @@ class RecentContactsCollectionsPrivate;
  */
 class AKONADI_CONTACT_EXPORT RecentContactsCollections : public SpecialCollections
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Returns the global RecentContactsCollections instance.
      */
@@ -49,20 +49,20 @@ class AKONADI_CONTACT_EXPORT RecentContactsCollections : public SpecialCollectio
     /**
      * Returns whether the given agent @p instance has a recent contacts collection.
      */
-    bool hasCollection( const AgentInstance &instance ) const;
+    bool hasCollection(const AgentInstance &instance) const;
 
     /**
      * Returns the recent contacts collection in the given agent
      * @p instance, or an invalid collection if such a collection is unknown.
      */
-    Akonadi::Collection collection( const AgentInstance &instance ) const;
+    Akonadi::Collection collection(const AgentInstance &instance) const;
 
     /**
      * Registers the given @p collection as a recent contacts collection.
      * @param collection the contacts collection to register
      * The collection must be owned by a valid resource.
      */
-    bool registerCollection( const Akonadi::Collection &collection );
+    bool registerCollection(const Akonadi::Collection &collection);
 
     /**
      * Returns whether the default resource has a recent contacts collection.
@@ -75,11 +75,11 @@ class AKONADI_CONTACT_EXPORT RecentContactsCollections : public SpecialCollectio
      */
     Akonadi::Collection defaultCollection() const;
 
-  private:
+private:
     //@cond PRIVATE
     friend class RecentContactsCollectionsPrivate;
 
-    RecentContactsCollections( RecentContactsCollectionsPrivate *dd );
+    RecentContactsCollections(RecentContactsCollectionsPrivate *dd);
 
     RecentContactsCollectionsPrivate *const d;
     //@endcond

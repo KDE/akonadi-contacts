@@ -52,7 +52,7 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT StandardContactFormatter : public AbstractContactFormatter
 {
-  public:
+public:
     /**
      * Creates a new standard contact formatter.
      */
@@ -66,21 +66,21 @@ class AKONADI_CONTACT_EXPORT StandardContactFormatter : public AbstractContactFo
     /**
      * Returns the contact formatted as HTML.
      */
-    virtual QString toHtml( HtmlForm form = SelfcontainedForm ) const;
+    virtual QString toHtml(HtmlForm form = SelfcontainedForm) const;
 
     /*
      * @since 4.9.1
      */
-    void setDisplayQRCode( bool show );
+    void setDisplayQRCode(bool show);
     /*
      * @since 4.9.1
      */
     bool displayQRCode() const;
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

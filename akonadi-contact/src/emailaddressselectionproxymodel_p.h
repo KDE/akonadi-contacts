@@ -31,37 +31,37 @@ namespace Akonadi {
 
 class EmailAddressSelectionProxyModel : public Akonadi::LeafExtensionProxyModel
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     enum Role {
-      NameRole = ContactsTreeModel::DateRole + 1,
-      EmailAddressRole
+        NameRole = ContactsTreeModel::DateRole + 1,
+        EmailAddressRole
     };
 
-    explicit EmailAddressSelectionProxyModel( QObject *parent = 0 );
+    explicit EmailAddressSelectionProxyModel(QObject *parent = 0);
     ~EmailAddressSelectionProxyModel();
 
-    QVariant data( const QModelIndex &proxyIndex, int role = Qt::DisplayRole ) const;
+    QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const;
 
-  protected:
+protected:
     /**
      * This method is called to retrieve the row count for the given leaf @p index.
      */
-    int leafRowCount( const QModelIndex &index ) const;
+    int leafRowCount(const QModelIndex &index) const;
 
     /**
      * This methid is called to retrieve the column count for the given leaf @p index.
      */
-    int leafColumnCount( const QModelIndex &index ) const;
+    int leafColumnCount(const QModelIndex &index) const;
 
     /**
      * This methid is called to retrieve the data of the child of the given leaf @p index
      * at @p row and @p column with the given @p role.
      */
-    QVariant leafData( const QModelIndex &index, int row, int column, int role = Qt::DisplayRole ) const;
+    QVariant leafData(const QModelIndex &index, int row, int column, int role = Qt::DisplayRole) const;
 
-  private:
+private:
 };
 
 }

@@ -73,15 +73,15 @@ class AbstractContactFormatter;
  */
 class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::ItemMonitor
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact viewer.
      *
      * @param parent The parent widget.
      */
-    ContactViewer( QWidget *parent = 0 );
+    ContactViewer(QWidget *parent = 0);
 
     /**
      * Destroys the contact viewer.
@@ -111,29 +111,29 @@ class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::Ite
      *
      * @since 4.6
      */
-    void setContactFormatter( AbstractContactFormatter *formatter );
+    void setContactFormatter(AbstractContactFormatter *formatter);
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Sets the @p contact that shall be displayed in the viewer.
      */
-    void setContact( const Akonadi::Item &contact );
+    void setContact(const Akonadi::Item &contact);
 
     /**
      * Sets the raw @p contact object that shall be displayed in the viewer.
      * @param contact the contact object to set
      * @since 4.5
      */
-    void setRawContact( const KABC::Addressee &contact );
+    void setRawContact(const KABC::Addressee &contact);
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever the user has clicked on
      * a url (e.g. homepage or blog url) in the viewer.
      *
      * @param url The url that has been clicked.
      */
-    void urlClicked( const QUrl &url );
+    void urlClicked(const QUrl &url);
 
     /**
      * This signal is emitted whenever the user has clicked on
@@ -142,7 +142,7 @@ class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::Ite
      * @param name The name of the contact.
      * @param email The plain email address of the contact.
      */
-    void emailClicked( const QString &name, const QString &email );
+    void emailClicked(const QString &name, const QString &email);
 
     /**
      * This signal is emitted whenever the user has clicked on a
@@ -150,7 +150,7 @@ class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::Ite
      *
      * @param number The corresponding phone number.
      */
-    void phoneNumberClicked( const KABC::PhoneNumber &number );
+    void phoneNumberClicked(const KABC::PhoneNumber &number);
 
     /**
      * This signal is emitted whenever the user has clicked on a SMS link of a
@@ -158,7 +158,7 @@ class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::Ite
      *
      * @param number The corresponding phone number.
      */
-    void smsClicked( const KABC::PhoneNumber &number );
+    void smsClicked(const KABC::PhoneNumber &number);
 
     /**
      * This signal is emitted whenever the user has clicked on an
@@ -166,13 +166,13 @@ class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::Ite
      *
      * @param address The corresponding address.
      */
-    void addressClicked( const KABC::Address &address );
+    void addressClicked(const KABC::Address &address);
 
-  private:
+private:
     /**
      * This method is called whenever the displayed contact has been changed.
      */
-    virtual void itemChanged( const Item &contact );
+    virtual void itemChanged(const Item &contact);
 
     /**
      * This method is called whenever the displayed contact has been
@@ -180,13 +180,13 @@ class AKONADI_CONTACT_EXPORT ContactViewer : public QWidget, public Akonadi::Ite
      */
     virtual void itemRemoved();
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void slotUrlClicked( const QUrl& ) )
-    Q_PRIVATE_SLOT( d, void slotParentCollectionFetched( KJob* ) )
+    Q_PRIVATE_SLOT(d, void slotUrlClicked(const QUrl &))
+    Q_PRIVATE_SLOT(d, void slotParentCollectionFetched(KJob *))
     //@endcond
 };
 

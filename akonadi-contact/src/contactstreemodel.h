@@ -77,77 +77,77 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT ContactsTreeModel : public EntityTreeModel
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Describes the columns that can be shown by the model.
      */
     enum Column {
-      /**
-       * Shows the formatted name or, if empty, the assembled name.
-       */
-      FullName,
+        /**
+         * Shows the formatted name or, if empty, the assembled name.
+         */
+        FullName,
 
-      /**
-       * Shows the family name.
-       */
-      FamilyName,
+        /**
+         * Shows the family name.
+         */
+        FamilyName,
 
-      /**
-       * Shows the given name.
-       */
-      GivenName,
+        /**
+         * Shows the given name.
+         */
+        GivenName,
 
-      /**
-       * Shows the birthday.
-       */
-      Birthday,
+        /**
+         * Shows the birthday.
+         */
+        Birthday,
 
-      /**
-       * Shows the formatted home address.
-       */
-      HomeAddress,
+        /**
+         * Shows the formatted home address.
+         */
+        HomeAddress,
 
-      /**
-       * Shows the formatted business address.
-       */
-      BusinessAddress,
+        /**
+         * Shows the formatted business address.
+         */
+        BusinessAddress,
 
-      /**
-       * Shows the phone numbers.
-       */
-      PhoneNumbers,
+        /**
+         * Shows the phone numbers.
+         */
+        PhoneNumbers,
 
-      /**
-       * Shows the preferred email address.
-       */
-      PreferredEmail,
+        /**
+         * Shows the preferred email address.
+         */
+        PreferredEmail,
 
-      /**
-       * Shows all email address.
-       */
-      AllEmails,
+        /**
+         * Shows all email address.
+         */
+        AllEmails,
 
-      /**
-       * Shows organization name.
-       */
-      Organization,
+        /**
+         * Shows organization name.
+         */
+        Organization,
 
-      /**
-       * Shows the role of a contact.
-       */
-      Role,
+        /**
+         * Shows the role of a contact.
+         */
+        Role,
 
-      /**
-       * Shows homepage url.
-       */
-      Homepage,
+        /**
+         * Shows homepage url.
+         */
+        Homepage,
 
-      /**
-       * Shows the note.
-       */
-      Note
+        /**
+         * Shows the note.
+         */
+        Note
     };
 
     /**
@@ -159,8 +159,8 @@ class AKONADI_CONTACT_EXPORT ContactsTreeModel : public EntityTreeModel
      * Describes the role for contacts and contact groups.
      */
     enum Roles {
-      DateRole = EntityTreeModel::UserRole + 1,   ///< The QDate object for the current index.
-      UserRole = DateRole + 42
+        DateRole = EntityTreeModel::UserRole + 1,   ///< The QDate object for the current index.
+        UserRole = DateRole + 42
     };
 
     /**
@@ -169,7 +169,7 @@ class AKONADI_CONTACT_EXPORT ContactsTreeModel : public EntityTreeModel
      * @param monitor The ChangeRecorder whose entities should be represented in the model.
      * @param parent The parent object.
      */
-    explicit ContactsTreeModel( ChangeRecorder *monitor, QObject *parent = 0 );
+    explicit ContactsTreeModel(ChangeRecorder *monitor, QObject *parent = 0);
 
     /**
      * Destroys the contacts tree model.
@@ -179,7 +179,7 @@ class AKONADI_CONTACT_EXPORT ContactsTreeModel : public EntityTreeModel
     /**
      * Sets the @p columns that the model should show.
      */
-    void setColumns( const Columns &columns );
+    void setColumns(const Columns &columns);
 
     /**
      * Returns the columns that the model currently shows.
@@ -187,16 +187,16 @@ class AKONADI_CONTACT_EXPORT ContactsTreeModel : public EntityTreeModel
     Columns columns() const;
 
     //@cond PRIVATE
-    virtual QVariant entityData( const Item &item, int column, int role = Qt::DisplayRole ) const;
-    virtual QVariant entityData( const Collection &collection, int column, int role = Qt::DisplayRole ) const;
-    virtual QVariant entityHeaderData( int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup ) const;
-    virtual int entityColumnCount( HeaderGroup headerGroup ) const;
+    virtual QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const;
+    virtual QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const;
+    virtual QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const;
+    virtual int entityColumnCount(HeaderGroup headerGroup) const;
     //@endcond
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

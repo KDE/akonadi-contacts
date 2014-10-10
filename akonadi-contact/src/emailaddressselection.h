@@ -48,7 +48,7 @@ class Item;
  */
 class AKONADI_CONTACT_EXPORT EmailAddressSelection
 {
-  public:
+public:
     /**
      * A list of email address selection objects.
      */
@@ -62,12 +62,12 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelection
     /**
      * Creates a new email address selection from an @p other selection.
      */
-    EmailAddressSelection( const EmailAddressSelection &other );
+    EmailAddressSelection(const EmailAddressSelection &other);
 
     /**
      * Replaces this email address selection with the @p other selection.
      */
-    EmailAddressSelection &operator=( const EmailAddressSelection &other );
+    EmailAddressSelection &operator=(const EmailAddressSelection &other);
 
     /**
      * Destroys the email address selection.
@@ -105,7 +105,7 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelection
      */
     Akonadi::Item item() const;
 
-  private:
+private:
     //@cond PRIVATE
     friend class EmailAddressSelectionWidget;
 
@@ -116,6 +116,6 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelection
 
 }
 
-Q_DECLARE_TYPEINFO( Akonadi::EmailAddressSelection, Q_MOVABLE_TYPE );
+Q_DECLARE_TYPEINFO(Akonadi::EmailAddressSelection, Q_MOVABLE_TYPE);
 
 #endif

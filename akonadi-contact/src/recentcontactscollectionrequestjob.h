@@ -42,7 +42,7 @@ class RecentContactsCollectionRequestJobPrivate;
  *
  * RecentContactsCollectionRequestJob *job = new RecentContactsCollectionRequestJob( this );
  * job->requestDefaultCollection();
- * connect( job, SIGNAL( result( KJob* ) ), this, SLOT( requestDone( KJob* ) ) );
+ * connect( job, SIGNAL(result(KJob*)), this, SLOT(requestDone(KJob*)) );
  *
  * ...
  *
@@ -64,13 +64,13 @@ class RecentContactsCollectionRequestJobPrivate;
 */
 class AKONADI_CONTACT_EXPORT RecentContactsCollectionRequestJob : public SpecialCollectionsRequestJob
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new recent contacts collection request job.
      */
-    explicit RecentContactsCollectionRequestJob( QObject *parent = 0 );
+    explicit RecentContactsCollectionRequestJob(QObject *parent = 0);
 
     /**
      * Destroys the recent contacts collection request job.
@@ -85,9 +85,9 @@ class AKONADI_CONTACT_EXPORT RecentContactsCollectionRequestJob : public Special
     /**
      * Requests the recent contacts collection in the given resource @p instance.
      */
-    void requestCollection( const AgentInstance &instance );
+    void requestCollection(const AgentInstance &instance);
 
-  private:
+private:
     //@cond PRIVATE
     friend class RecentContactsCollectionRequestJobPrivate;
 

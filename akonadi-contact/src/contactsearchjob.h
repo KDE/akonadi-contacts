@@ -43,7 +43,7 @@ namespace Akonadi {
  * // Search all contacts with email address tokoe@kde.org
  * Akonadi::ContactSearchJob *job = new Akonadi::ContactSearchJob();
  * job->setQuery( Akonadi::ContactSearchJob::Email, "tokoe@kde.org" );
- * connect( job, SIGNAL( result( KJob* ) ), this, SLOT( searchResult( KJob* ) ) );
+ * connect( job, SIGNAL(result(KJob*)), this, SLOT(searchResult(KJob*)) );
  *
  * ...
  *
@@ -60,7 +60,7 @@ namespace Akonadi {
  *
  * // Search for all existing contacts
  * Akonadi::ContactSearchJob *job = new Akonadi::ContactSearchJob();
- * connect( job, SIGNAL( result( KJob* ) ), this, SLOT( searchResult( KJob* ) ) );
+ * connect( job, SIGNAL(result(KJob*)), this, SLOT(searchResult(KJob*)) );
  *
  * ...
  *
@@ -78,15 +78,15 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT ContactSearchJob : public ItemSearchJob
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new contact search job.
      *
      * @param parent The parent object.
      */
-    explicit ContactSearchJob( QObject *parent = 0 );
+    explicit ContactSearchJob(QObject *parent = 0);
 
     /**
      * Destroys the contact search job.
@@ -97,11 +97,11 @@ class AKONADI_CONTACT_EXPORT ContactSearchJob : public ItemSearchJob
      * Describes the criteria that can be searched for.
      */
     enum Criterion {
-      Name,       ///< The name of the contact.
-      Email,      ///< The email address of the contact.
-      NickName,   ///< The nickname of the contact.
-      NameOrEmail, ///< The name or email address of the contact. @since 4.5
-      ContactUid   ///< The global unique identifier of the contact. @since 4.5
+        Name,       ///< The name of the contact.
+        Email,      ///< The email address of the contact.
+        NickName,   ///< The nickname of the contact.
+        NameOrEmail, ///< The name or email address of the contact. @since 4.5
+        ContactUid   ///< The global unique identifier of the contact. @since 4.5
     };
 
     /**
@@ -110,10 +110,10 @@ class AKONADI_CONTACT_EXPORT ContactSearchJob : public ItemSearchJob
      * @since 4.5
      */
     enum Match {
-      ExactMatch,      ///< The result must match exactly the pattern (case sensitive).
-      StartsWithMatch, ///< The result must start with the pattern (case insensitive).
-      ContainsMatch,    ///< The result must contain the pattern (case insensitive).
-      ContainsWordBoundaryMatch ///< The result must contain a word starting with the pattern (case insensitive).
+        ExactMatch,      ///< The result must match exactly the pattern (case sensitive).
+        StartsWithMatch, ///< The result must start with the pattern (case insensitive).
+        ContainsMatch,    ///< The result must contain the pattern (case insensitive).
+        ContainsWordBoundaryMatch ///< The result must contain a word starting with the pattern (case insensitive).
     };
 
     /**
@@ -123,7 +123,7 @@ class AKONADI_CONTACT_EXPORT ContactSearchJob : public ItemSearchJob
      * @param match how to match the given value
      * @since 4.5
      */
-    void setQuery( Criterion criterion, const QString &value, Match match = ExactMatch );
+    void setQuery(Criterion criterion, const QString &value, Match match = ExactMatch);
 
     /**
      * Sets a @p limit on how many results will be returned by this search job.
@@ -135,17 +135,17 @@ class AKONADI_CONTACT_EXPORT ContactSearchJob : public ItemSearchJob
      * By default, the number of results is unlimited.
      * @param limit the upper limit for number of search results
      */
-    void setLimit( int limit );
+    void setLimit(int limit);
 
     /**
      * Returns the contacts that matched the search criteria.
      */
     KABC::Addressee::List contacts() const;
 
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

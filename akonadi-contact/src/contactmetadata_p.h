@@ -25,8 +25,7 @@
 #include <QtCore/QStringList>
 #include <QtCore/QVariant>
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class Item;
 
@@ -35,7 +34,7 @@ class Item;
  */
 class ContactMetaData
 {
-  public:
+public:
     /**
      * Creates a contact meta data object.
      */
@@ -49,18 +48,18 @@ class ContactMetaData
     /**
      * Loads the meta data for the given @p contact.
      */
-    void load( const Akonadi::Item &contact );
+    void load(const Akonadi::Item &contact);
 
     /**
      * Stores the meta data to the given @p contact.
      */
-    void store( Akonadi::Item &contact );
+    void store(Akonadi::Item &contact);
 
     /**
      * Sets the mode that is used for the display
      * name of that contact.
      */
-    void setDisplayNameMode( int mode );
+    void setDisplayNameMode(int mode);
 
     /**
      * Returns the mode that is used for the display
@@ -84,19 +83,19 @@ class ContactMetaData
      *       - time
      *       - datetime
      */
-    void setCustomFieldDescriptions( const QVariantList &descriptions );
+    void setCustomFieldDescriptions(const QVariantList &descriptions);
 
     /**
      * Returns the descriptions of the custom fields of the contact.
      */
     QVariantList customFieldDescriptions() const;
 
-  private:
+private:
     //@cond PRIVATE
-    Q_DISABLE_COPY( ContactMetaData )
+    Q_DISABLE_COPY(ContactMetaData)
 
     class Private;
-    Private* const d;
+    Private *const d;
     //@endcond
 };
 

@@ -33,14 +33,14 @@ namespace Akonadi {
  */
 class TextBrowser : public QTextBrowser
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    explicit TextBrowser( QWidget *parent = 0 );
+    explicit TextBrowser(QWidget *parent = 0);
 private Q_SLOTS:
     void slotCopyData();
 protected:
 #ifndef QT_NO_CONTEXTMENU
-    virtual void contextMenuEvent( QContextMenuEvent *event );
+    virtual void contextMenuEvent(QContextMenuEvent *event);
 #endif
 private:
     QVariant mDataToCopy;

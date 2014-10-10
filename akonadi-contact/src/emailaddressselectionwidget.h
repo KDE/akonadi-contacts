@@ -65,15 +65,15 @@ namespace Akonadi {
  */
 class AKONADI_CONTACT_EXPORT EmailAddressSelectionWidget : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new email address selection widget.
      *
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionWidget( QWidget *parent = 0 );
+    explicit EmailAddressSelectionWidget(QWidget *parent = 0);
 
     /**
      * Creates a new email address selection widget.
@@ -81,7 +81,7 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelectionWidget : public QWidget
      * @param model A custom, ContactsTreeModel based model to use.
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionWidget( QAbstractItemModel *model, QWidget *parent = 0 );
+    explicit EmailAddressSelectionWidget(QAbstractItemModel *model, QWidget *parent = 0);
 
     /**
      * @brief Creates a new email address selection widget.
@@ -89,7 +89,7 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelectionWidget : public QWidget
      * @param model A custom ContactsTreeModel based model to use.
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionWidget( bool showOnlyContactWithEmail, QAbstractItemModel *model = 0, QWidget *parent = 0 );
+    explicit EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model = 0, QWidget *parent = 0);
 
     /**
      * Destroys the email address selection widget.
@@ -111,15 +111,15 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelectionWidget : public QWidget
      */
     QTreeView *view() const;
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * @since 4.10.1
      */
     void doubleClicked();
-  private:
+private:
     //@cond PRIVATE
     class Private;
-    Private * const d;
+    Private *const d;
     //@endcond
 };
 
