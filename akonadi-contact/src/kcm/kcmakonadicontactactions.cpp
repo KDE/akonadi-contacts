@@ -27,7 +27,6 @@
 #include <QVBoxLayout>
 
 #include <kaboutdata.h>
-#include <kcomponentdata.h>
 #include <kconfigdialogmanager.h>
 #include <kpluginfactory.h>
 #include <klocalizedstring.h>

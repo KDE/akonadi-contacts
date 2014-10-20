@@ -32,7 +32,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QToolButton>
-#include <KLocale>
+#include <KLocalizedString>
 #include <QLocale>
 
 DateView::DateView(QWidget *parent)

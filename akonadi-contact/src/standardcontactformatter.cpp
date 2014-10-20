@@ -26,7 +26,7 @@
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <klocalizedstring.h>
 #include <kstringhandler.h>
 

@@ -27,11 +27,11 @@
 
 
 #include <kiconloader.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <klocalizedstring.h>
 
 #include <QIcon>
-#include <KLocale>
+#include <KLocalizedString>
 #include <QLocale>
 
 using namespace Akonadi;

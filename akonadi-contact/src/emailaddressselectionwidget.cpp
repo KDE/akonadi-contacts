@@ -36,7 +36,7 @@
 #include <kabc/addressee.h>
 #include <kabc/contactgroup.h>
 #include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <klocalizedstring.h>
 
 

@@ -27,10 +27,11 @@
 #include <collectioncombobox.h>
 #include <item.h>
 #include <kabc/contactgroup.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <klocalizedstring.h>
 
 #include <klineedit.h>
+#include <KConfig>
 
 #include <QPushButton>
 #include <QGridLayout>
