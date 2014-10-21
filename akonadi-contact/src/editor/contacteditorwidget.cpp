@@ -20,6 +20,7 @@
 */
 
 #include "contacteditorwidget.h"
+#include "config-akonadi-contact.h"
 
 #include "addresseditwidget.h"
 #include "categorieseditwidget.h"
@@ -41,7 +42,6 @@
 #include <kconfiggroup.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
-#include <kstandarddirs.h>
 #include <qtabwidget.h>
 #include <ktextedit.h>
 #include <QUrl>
@@ -488,7 +488,7 @@ void ContactEditorWidget::Private::loadCustomPages()
   qDeleteAll( mCustomPages );
   mCustomPages.clear();
 
-  const QString pluginDirectory = KStandardDirs::locate( "lib", QLatin1String( "akonadi/contact/editorpageplugins/" ) );
+  const QString pluginDirectory = QString::fromLatin1("%1/%2/akonadi/contact/editorpageplugins/").arg(QLatin1String(AKONADI_CONTACT_LIB)).arg(QLatin1String(AKONADI_CONTACT_PREFIX));
   QDirIterator it( pluginDirectory, QDir::Files );
   while ( it.hasNext() ) {
     QPluginLoader loader( it.next() );
