@@ -28,48 +28,48 @@ using namespace Akonadi;
 
 class AbstractContactGroupFormatter::Private
 {
-  public:
+public:
     KABC::ContactGroup mContactGroup;
     Akonadi::Item mItem;
     QList<QVariantMap> mAdditionalFields;
 };
 
 AbstractContactGroupFormatter::AbstractContactGroupFormatter()
-  : d( new Private )
+    : d(new Private)
 {
 }
 
 AbstractContactGroupFormatter::~AbstractContactGroupFormatter()
 {
-  delete d;
+    delete d;
 }
 
-void AbstractContactGroupFormatter::setContactGroup( const KABC::ContactGroup &group )
+void AbstractContactGroupFormatter::setContactGroup(const KABC::ContactGroup &group)
 {
-  d->mContactGroup = group;
+    d->mContactGroup = group;
 }
 
 KABC::ContactGroup AbstractContactGroupFormatter::contactGroup() const
 {
-  return d->mContactGroup;
+    return d->mContactGroup;
 }
 
-void AbstractContactGroupFormatter::setItem( const Akonadi::Item &item )
+void AbstractContactGroupFormatter::setItem(const Akonadi::Item &item)
 {
-  d->mItem = item;
+    d->mItem = item;
 }
 
 Akonadi::Item AbstractContactGroupFormatter::item() const
 {
-  return d->mItem;
+    return d->mItem;
 }
 
-void AbstractContactGroupFormatter::setAdditionalFields( const QList<QVariantMap> &fields )
+void AbstractContactGroupFormatter::setAdditionalFields(const QList<QVariantMap> &fields)
 {
-  d->mAdditionalFields = fields;
+    d->mAdditionalFields = fields;
 }
 
 QList<QVariantMap> AbstractContactGroupFormatter::additionalFields() const
 {
-  return d->mAdditionalFields;
+    return d->mAdditionalFields;
 }

@@ -23,43 +23,44 @@
 
 #include <entitytreemodel.h>
 
-CollectionFilterModel::CollectionFilterModel( QObject *parent )
-  : QSortFilterProxyModel( parent ), mRights( Akonadi::Collection::ReadOnly )
+CollectionFilterModel::CollectionFilterModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
+    , mRights(Akonadi::Collection::ReadOnly)
 {
 }
 
-void CollectionFilterModel::addContentMimeTypeFilter( const QString &mimeType )
+void CollectionFilterModel::addContentMimeTypeFilter(const QString &mimeType)
 {
-  mContentMimeTypes.insert( mimeType );
-  invalidateFilter();
+    mContentMimeTypes.insert(mimeType);
+    invalidateFilter();
 }
 
-void CollectionFilterModel::setRightsFilter( Akonadi::Collection::Rights rights )
+void CollectionFilterModel::setRightsFilter(Akonadi::Collection::Rights rights)
 {
-  mRights = rights;
-  invalidateFilter();
+    mRights = rights;
+    invalidateFilter();
 }
 
-bool CollectionFilterModel::filterAcceptsRow( int row, const QModelIndex &parent ) const
+bool CollectionFilterModel::filterAcceptsRow(int row, const QModelIndex &parent) const
 {
-  bool accepted = true;
+    bool accepted = true;
 
-  const QModelIndex index = sourceModel()->index( row, 0, parent );
-  const Akonadi::Collection collection = index.data( Akonadi::EntityTreeModel::CollectionRole ).value<Akonadi::Collection>();
-  if ( !collection.isValid() ) {
-    return false;
-  }
+    const QModelIndex index = sourceModel()->index(row, 0, parent);
+    const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+    if (!collection.isValid()) {
+        return false;
+    }
 
-  if ( !mContentMimeTypes.isEmpty() ) {
-    QSet<QString> contentMimeTypes = collection.contentMimeTypes().toSet();
-    accepted = accepted && !( contentMimeTypes.intersect( mContentMimeTypes ).isEmpty() );
-  }
+    if (!mContentMimeTypes.isEmpty()) {
+        QSet<QString> contentMimeTypes = collection.contentMimeTypes().toSet();
+        accepted = accepted && !(contentMimeTypes.intersect(mContentMimeTypes).isEmpty());
+    }
 
-  if ( mRights != Akonadi::Collection::ReadOnly ) {
-    accepted = accepted && ( collection.rights() & mRights );
-  }
+    if (mRights != Akonadi::Collection::ReadOnly) {
+        accepted = accepted && (collection.rights() & mRights);
+    }
 
-  return accepted;
+    return accepted;
 }
 
 #include "moc_collectionfiltermodel_p.cpp"

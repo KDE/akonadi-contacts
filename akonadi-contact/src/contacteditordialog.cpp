@@ -42,61 +42,63 @@ using namespace Akonadi;
 
 class ContactEditorDialog::Private
 {
-  public:
-    Private( ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, AbstractContactEditorWidget *editorWidget,
-             ContactEditorDialog *parent )
-      : q( parent ), mAddressBookBox( 0 ), mMode( mode )
+public:
+    Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, AbstractContactEditorWidget *editorWidget,
+            ContactEditorDialog *parent)
+        : q(parent)
+        , mAddressBookBox(0)
+        , mMode(mode)
     {
-      q->setWindowTitle( mode == ContactEditorDialog::CreateMode ? i18n( "New Contact" ) : i18n( "Edit Contact" ) );
-      QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-      QVBoxLayout *mainLayout = new QVBoxLayout;
-      q->setLayout(mainLayout);
-      q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(slotOkClicked()));
-      q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(slotCancelClicked()));
+        q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18n("New Contact") : i18n("Edit Contact"));
+        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+        QVBoxLayout *mainLayout = new QVBoxLayout;
+        q->setLayout(mainLayout);
+        q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(slotOkClicked()));
+        q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(slotCancelClicked()));
 
-      QWidget *mainWidget = new QWidget( q );
-      mainLayout->addWidget(mainWidget);
-      mainLayout->addWidget(buttonBox);
+        QWidget *mainWidget = new QWidget(q);
+        mainLayout->addWidget(mainWidget);
+        mainLayout->addWidget(buttonBox);
 
-      QGridLayout *layout = new QGridLayout( mainWidget );
+        QGridLayout *layout = new QGridLayout(mainWidget);
 
-      if ( editorWidget ) {
-        mEditor = new ContactEditor( mode == ContactEditorDialog::CreateMode ? ContactEditor::CreateMode : ContactEditor::EditMode, editorWidget, q );
-      } else {
-        mEditor = new ContactEditor( mode == ContactEditorDialog::CreateMode ? ContactEditor::CreateMode : ContactEditor::EditMode, displaymode == ContactEditorDialog::FullMode ? ContactEditor::FullMode : ContactEditor::VCardMode, q );
-      }
+        if (editorWidget) {
+            mEditor = new ContactEditor(mode == ContactEditorDialog::CreateMode ? ContactEditor::CreateMode : ContactEditor::EditMode, editorWidget, q);
+        } else {
+            mEditor = new ContactEditor(mode == ContactEditorDialog::CreateMode ? ContactEditor::CreateMode : ContactEditor::EditMode, displaymode == ContactEditorDialog::FullMode ? ContactEditor::FullMode : ContactEditor::VCardMode, q);
+        }
 
-      if ( mode == ContactEditorDialog::CreateMode ) {
-        QLabel *label = new QLabel( i18n( "Add to:" ), mainWidget );
+        if (mode == ContactEditorDialog::CreateMode) {
+            QLabel *label = new QLabel(i18n("Add to:"), mainWidget);
 
-        mAddressBookBox = new CollectionComboBox( mainWidget );
-        mAddressBookBox->setMimeTypeFilter( QStringList() << KABC::Addressee::mimeType() );
-        mAddressBookBox->setAccessRightsFilter( Collection::CanCreateItem );
+            mAddressBookBox = new CollectionComboBox(mainWidget);
+            mAddressBookBox->setMimeTypeFilter(QStringList() << KABC::Addressee::mimeType());
+            mAddressBookBox->setAccessRightsFilter(Collection::CanCreateItem);
 
-        layout->addWidget( label, 0, 0 );
-        layout->addWidget( mAddressBookBox, 0, 1 );
-      }
+            layout->addWidget(label, 0, 0);
+            layout->addWidget(mAddressBookBox, 0, 1);
+        }
 
-      layout->addWidget( mEditor, 1, 0, 1, 2 );
-      layout->setColumnStretch( 1, 1 );
+        layout->addWidget(mEditor, 1, 0, 1, 2);
+        layout->setColumnStretch(1, 1);
 
-      connect( mEditor, SIGNAL(contactStored(Akonadi::Item)),
-               q, SIGNAL(contactStored(Akonadi::Item)) );
+        connect(mEditor, SIGNAL(contactStored(Akonadi::Item)),
+                q, SIGNAL(contactStored(Akonadi::Item)));
 
-      connect( mEditor, SIGNAL(error(QString)),
-               q, SIGNAL(error(QString)) );
+        connect(mEditor, SIGNAL(error(QString)),
+                q, SIGNAL(error(QString)));
 
-      connect( mEditor, SIGNAL(finished()), q, SLOT(slotFinish()) );
+        connect(mEditor, SIGNAL(finished()), q, SLOT(slotFinish()));
 
-      readConfig();
+        readConfig();
     }
 
     void slotOkClicked()
     {
-      if ( mAddressBookBox ) {
-        mEditor->setDefaultAddressBook( mAddressBookBox->currentCollection() );
-      }
-      mEditor->saveContactInAddressBook();
+        if (mAddressBookBox) {
+            mEditor->setDefaultAddressBook(mAddressBookBox->currentCollection());
+        }
+        mEditor->saveContactInAddressBook();
     }
 
     void slotFinish()
@@ -106,25 +108,25 @@ class ContactEditorDialog::Private
 
     void slotCancelClicked()
     {
-      q->reject();
+        q->reject();
     }
 
     void readConfig()
     {
-      KConfig config( QLatin1String( "akonadi_contactrc" ) );
-      KConfigGroup group( &config, QLatin1String( "ContactEditor" ) );
-      const QSize size = group.readEntry( "Size", QSize(800,  500) );
-      if ( size.isValid() ) {
-        q->resize( size );
-      }
+        KConfig config(QLatin1String("akonadi_contactrc"));
+        KConfigGroup group(&config, QLatin1String("ContactEditor"));
+        const QSize size = group.readEntry("Size", QSize(800,  500));
+        if (size.isValid()) {
+            q->resize(size);
+        }
     }
 
     void writeConfig()
     {
-      KConfig config( QLatin1String( "akonadi_contactrc" ) );
-      KConfigGroup group( &config, QLatin1String( "ContactEditor" ) );
-      group.writeEntry( "Size", q->size() );
-      group.sync();
+        KConfig config(QLatin1String("akonadi_contactrc"));
+        KConfigGroup group(&config, QLatin1String("ContactEditor"));
+        group.writeEntry("Size", q->size());
+        group.sync();
     }
 
     ContactEditorDialog *q;
@@ -133,44 +135,47 @@ class ContactEditorDialog::Private
     ContactEditor *mEditor;
 };
 
-ContactEditorDialog::ContactEditorDialog( Mode mode, QWidget *parent )
-  : QDialog( parent ), d( new Private( mode, FullMode, 0, this ) )
+ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
+    : QDialog(parent)
+    , d(new Private(mode, FullMode, 0, this))
 {
 }
 
-ContactEditorDialog::ContactEditorDialog( Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent )
-  : QDialog( parent ), d( new Private( mode, FullMode, editorWidget, this ) )
+ContactEditorDialog::ContactEditorDialog(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent)
+    : QDialog(parent)
+    , d(new Private(mode, FullMode, editorWidget, this))
 {
 }
 
-ContactEditorDialog::ContactEditorDialog( Mode mode, DisplayMode displayMode, QWidget *parent )
-  : QDialog( parent ), d( new Private( mode, displayMode, 0, this ) )
+ContactEditorDialog::ContactEditorDialog(Mode mode, DisplayMode displayMode, QWidget *parent)
+    : QDialog(parent)
+    , d(new Private(mode, displayMode, 0, this))
 {
 }
 
 ContactEditorDialog::~ContactEditorDialog()
 {
-  d->writeConfig();
-  delete d;
+    d->writeConfig();
+    delete d;
 }
 
-void ContactEditorDialog::setContact( const Akonadi::Item &contact )
+void ContactEditorDialog::setContact(const Akonadi::Item &contact)
 {
-  d->mEditor->loadContact( contact );
+    d->mEditor->loadContact(contact);
 }
 
-void ContactEditorDialog::setDefaultAddressBook( const Akonadi::Collection &addressbook )
+void ContactEditorDialog::setDefaultAddressBook(const Akonadi::Collection &addressbook)
 {
-  if ( d->mMode == EditMode ) {
-    return;
-  }
+    if (d->mMode == EditMode) {
+        return;
+    }
 
-  d->mAddressBookBox->setDefaultCollection( addressbook );
+    d->mAddressBookBox->setDefaultCollection(addressbook);
 }
 
-ContactEditor* ContactEditorDialog::editor() const
+ContactEditor *ContactEditorDialog::editor() const
 {
-  return d->mEditor;
+    return d->mEditor;
 }
 
 void ContactEditorDialog::accept()

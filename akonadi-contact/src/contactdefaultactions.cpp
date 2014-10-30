@@ -34,8 +34,9 @@
 
 using namespace Akonadi;
 
-ContactDefaultActions::ContactDefaultActions( QObject *parent )
-  : QObject( parent ), d( 0 )
+ContactDefaultActions::ContactDefaultActions(QObject *parent)
+    : QObject(parent)
+    , d(0)
 {
 }
 
@@ -43,66 +44,65 @@ ContactDefaultActions::~ContactDefaultActions()
 {
 }
 
-void ContactDefaultActions::connectToView( QObject *view )
+void ContactDefaultActions::connectToView(QObject *view)
 {
-  const QMetaObject *metaObject = view->metaObject();
+    const QMetaObject *metaObject = view->metaObject();
 
-  if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "urlClicked( const QUrl& )" ) ) != -1 ) {
-    connect( view, SIGNAL(urlClicked(QUrl)), SLOT(showUrl(QUrl)) );
-  }
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("urlClicked(const QUrl&)")) != -1) {
+        connect(view, SIGNAL(urlClicked(QUrl)), SLOT(showUrl(QUrl)));
+    }
 
-  if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "emailClicked( const QString&, const QString& )" ) ) != -1 ) {
-    connect( view, SIGNAL(emailClicked(QString,QString)),
-             this, SLOT(sendEmail(QString,QString)) );
-  }
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("emailClicked(const QString&, const QString&)")) != -1) {
+        connect(view, SIGNAL(emailClicked(QString,QString)),
+                this, SLOT(sendEmail(QString,QString)));
+    }
 
-  if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "phoneNumberClicked( const KABC::PhoneNumber& )" ) ) != -1 ) {
-    connect( view, SIGNAL(phoneNumberClicked(KABC::PhoneNumber)),
-             this, SLOT(dialPhoneNumber(KABC::PhoneNumber)) );
-  }
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KABC::PhoneNumber&)")) != -1) {
+        connect(view, SIGNAL(phoneNumberClicked(KABC::PhoneNumber)),
+                this, SLOT(dialPhoneNumber(KABC::PhoneNumber)));
+    }
 
-  if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "smsClicked( const KABC::PhoneNumber& )" ) ) != -1 ) {
-    connect( view, SIGNAL(smsClicked(KABC::PhoneNumber)),
-             this, SLOT(sendSms(KABC::PhoneNumber)) );
-  }
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("smsClicked(const KABC::PhoneNumber&)")) != -1) {
+        connect(view, SIGNAL(smsClicked(KABC::PhoneNumber)),
+                this, SLOT(sendSms(KABC::PhoneNumber)));
+    }
 
-  if ( metaObject->indexOfSignal( QMetaObject::normalizedSignature( "addressClicked( const KABC::Address& )" ) ) != -1 ) {
-    connect( view, SIGNAL(addressClicked(KABC::Address)),
-             this, SLOT(showAddress(KABC::Address)) );
-  }
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("addressClicked(const KABC::Address&)")) != -1) {
+        connect(view, SIGNAL(addressClicked(KABC::Address)),
+                this, SLOT(showAddress(KABC::Address)));
+    }
 }
 
-void ContactDefaultActions::showUrl( const QUrl &url )
+void ContactDefaultActions::showUrl(const QUrl &url)
 {
-  KToolInvocation::invokeBrowser( url.url() );
+    KToolInvocation::invokeBrowser(url.url());
 }
 
-void ContactDefaultActions::sendEmail( const QString &name, const QString &address )
+void ContactDefaultActions::sendEmail(const QString &name, const QString &address)
 {
-  KABC::Addressee contact;
-  contact.setNameFromString( name );
+    KABC::Addressee contact;
+    contact.setNameFromString(name);
 
-  QUrl url;
-  url.setScheme( QLatin1String( "mailto" ) );
-  url.setPath( contact.fullEmail( address ) );
-  KToolInvocation::invokeMailer( url );
+    QUrl url;
+    url.setScheme(QLatin1String("mailto"));
+    url.setPath(contact.fullEmail(address));
+    KToolInvocation::invokeMailer(url);
 }
 
-void ContactDefaultActions::dialPhoneNumber( const KABC::PhoneNumber &number )
+void ContactDefaultActions::dialPhoneNumber(const KABC::PhoneNumber &number)
 {
-  DialPhoneNumberAction action;
-  action.dialNumber( number );
+    DialPhoneNumberAction action;
+    action.dialNumber(number);
 }
 
-void ContactDefaultActions::sendSms( const KABC::PhoneNumber &number )
+void ContactDefaultActions::sendSms(const KABC::PhoneNumber &number)
 {
-  SendSmsAction action;
-  action.sendSms( number );
+    SendSmsAction action;
+    action.sendSms(number);
 }
 
-void ContactDefaultActions::showAddress( const KABC::Address &address )
+void ContactDefaultActions::showAddress(const KABC::Address &address)
 {
-  ShowAddressAction action;
-  action.showAddress( address );
+    ShowAddressAction action;
+    action.showAddress(address);
 }
-

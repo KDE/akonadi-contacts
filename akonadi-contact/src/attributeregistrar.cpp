@@ -23,14 +23,15 @@
 
 #include <attributefactory.h>
 
-namespace {
+namespace
+{
 
 // Anonymous namespace; function is invisible outside this file.
 bool dummy()
 {
-  using namespace Akonadi;
-  AttributeFactory::registerAttribute<ContactMetaDataAttribute>();
-  return true;
+    using namespace Akonadi;
+    AttributeFactory::registerAttribute<ContactMetaDataAttribute>();
+    return true;
 }
 
 // Called when this library is loaded.
