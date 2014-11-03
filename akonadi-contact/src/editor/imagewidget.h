@@ -27,8 +27,7 @@
 #include <QtCore/QPoint>
 #include <QPushButton>
 
-namespace KABC
-{
+namespace KABC {
 class Addressee;
 }
 

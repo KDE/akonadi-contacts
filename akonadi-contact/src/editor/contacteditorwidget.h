@@ -24,8 +24,7 @@
 
 #include "abstractcontacteditorwidget_p.h"
 
-namespace KABC
-{
+namespace KABC {
 class Addressee;
 }
 

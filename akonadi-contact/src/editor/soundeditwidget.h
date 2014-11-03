@@ -24,8 +24,7 @@
 
 #include <QToolButton>
 
-namespace KABC
-{
+namespace KABC {
 class Addressee;
 }
 

@@ -118,7 +118,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
 
     mView = new KComboBox(this);
     mView->addItems(QStringList() << QString() << QString() << QString()
-                                  << QString() << QString() << QString());
+                    << QString() << QString() << QString());
 
     layout->addWidget(mView);
     setFocusProxy(mView);

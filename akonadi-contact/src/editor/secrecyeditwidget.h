@@ -24,8 +24,7 @@
 
 #include <QWidget>
 
-namespace KABC
-{
+namespace KABC {
 class Addressee;
 }
 

@@ -46,7 +46,6 @@ NameEditWidget::NameEditWidget(QWidget *parent)
     mButtonEdit->setText(i18n("..."));
     layout->addWidget(mButtonEdit);
 
-
     connect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
     connect(mButtonEdit, &QToolButton::clicked, this, &NameEditWidget::openNameEditDialog);
 }

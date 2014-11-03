@@ -248,8 +248,8 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
 
     // set default state
     KAcceleratorManager::manage(this);
-    
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

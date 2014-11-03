@@ -84,7 +84,7 @@ NameEditDialog::NameEditDialog(QWidget *parent)
     mSuffixCombo->addItems(suffixList);
 
     mPrefixCombo->lineEdit()->setFocus();
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

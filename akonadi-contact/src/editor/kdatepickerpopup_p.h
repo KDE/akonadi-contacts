@@ -84,7 +84,8 @@ public:
     void setItems(int items = 1);
 #endif
     /** @return Returns the bitwise result of the active items in the popup. */
-    int items() const {
+    int items() const
+    {
         return mItems;
     }
 

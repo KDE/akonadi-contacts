@@ -27,7 +27,7 @@
 #include <kabc/addressee.h>
 
 namespace Akonadi {
-    class TagWidget;
+class TagWidget;
 }
 
 /**

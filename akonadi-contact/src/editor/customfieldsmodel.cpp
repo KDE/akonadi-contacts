@@ -21,8 +21,6 @@
 
 #include "customfieldsmodel.h"
 
-
-
 #include <klocalizedstring.h>
 
 #include <QtCore/QDateTime>
@@ -179,7 +177,7 @@ bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value,
         if (index.column() == 1) {
             if (customField.type() == CustomField::BooleanType) {
                 customField.setValue(static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked ?
-                                         QStringLiteral("true") : QStringLiteral("false"));
+                                     QStringLiteral("true") : QStringLiteral("false"));
                 emit dataChanged(index, index);
                 return true;
             }

@@ -25,7 +25,6 @@
 
 #include <kdatepicker.h>
 
-
 #include <klocalizedstring.h>
 
 #include <QContextMenuEvent>

@@ -37,21 +37,21 @@ class QToolButton;
  */
 class IMEditWidget : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    explicit IMEditWidget( QWidget *parent = 0 );
+public:
+    explicit IMEditWidget(QWidget *parent = 0);
     ~IMEditWidget();
 
-    void loadContact( const KABC::Addressee &contact );
-    void storeContact( KABC::Addressee &contact ) const;
+    void loadContact(const KABC::Addressee &contact);
+    void storeContact(KABC::Addressee &contact) const;
 
-    void setReadOnly( bool readOnly );
+    void setReadOnly(bool readOnly);
 
-  private Q_SLOTS:
+private Q_SLOTS:
     void edit();
 
-  private:
+private:
     QLineEdit *mIMEdit;
     QToolButton *mEditButton;
     IMAddress::List mIMAddresses;

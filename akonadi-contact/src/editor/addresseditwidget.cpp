@@ -51,7 +51,8 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
-struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
+struct LocaleAwareLessThan : std::binary_function<QString, QString, bool>
+{
     bool operator()(const QString &s1, const QString &s2) const
     {
         return QString::localeAwareCompare(s1, s2) < 0 ;
@@ -342,7 +343,7 @@ void AddressEditWidget::fixPreferredAddress(const KABC::Address &preferredAddres
     if (preferredAddress.type() &KABC::Address::Pref) {
         for (int i = 0; i < mAddressList.count(); ++i) {
             KABC::Address &address = mAddressList[i];
-            address.setType(address.type() &~KABC::Address::Pref);
+            address.setType(address.type() & ~KABC::Address::Pref);
         }
     }
 }
@@ -405,7 +406,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("street/postal", "Edit Address"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -446,7 +447,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
 
     label = new QLabel(i18nc("<postOfficeBoxLabel>:", "%1:", KABC::Address::postOfficeBoxLabel()), page);
     mainLayout->addWidget(label);
-    topLayout->addWidget(label, 2 , 0);
+    topLayout->addWidget(label, 2, 0);
     mPOBoxEdit = new QLineEdit(page);
     mainLayout->addWidget(mPOBoxEdit);
     label->setBuddy(mPOBoxEdit);
@@ -558,7 +559,7 @@ KABC::Address AddressEditDialog::address() const
     if (mPreferredCheckBox->isChecked()) {
         address.setType(address.type() | KABC::Address::Pref);
     } else {
-        address.setType(address.type() &~(KABC::Address::Pref));
+        address.setType(address.type() & ~(KABC::Address::Pref));
     }
 
     return address;
@@ -589,7 +590,7 @@ AddressTypeDialog::AddressTypeDialog(KABC::Address::Type type, QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
     setWindowTitle(i18nc("street/postal", "Edit Address Type"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -620,7 +621,7 @@ AddressTypeDialog::AddressTypeDialog(KABC::Address::Type type, QWidget *parent)
     int row = 0;
     for (it = mTypeList.constBegin(); it != mTypeList.constEnd(); ++it, ++i) {
         QCheckBox *cb = new QCheckBox(KABC::Address::typeLabel(*it), box);
-        cb->setChecked(type &mTypeList[i]);
+        cb->setChecked(type & mTypeList[i]);
         buttonLayout->addWidget(cb, row, i % 3);
 
         if (i % 3 == 2) {

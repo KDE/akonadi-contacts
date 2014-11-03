@@ -28,7 +28,6 @@
 #include <klocale.h>
 #include <klocalizedstring.h>
 
-
 #include <QtCore/QFile>
 #include <QtCore/QTextStream>
 #include <QDialogButtonBox>
@@ -347,7 +346,7 @@ GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
     connect(mLongDirection, SIGNAL(activated(int)),
             SLOT(sexagesimalInputChanged()));
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
 
     okButton->setDefault(true);
@@ -416,12 +415,12 @@ void GeoDialog::updateInputs(ExceptType type)
     mLongSeconds->blockSignals(true);
     mLongDirection->blockSignals(true);
 
-    if (!(type &ExceptDecimal)) {
+    if (!(type & ExceptDecimal)) {
         mLatitude->setValue(mCoordinates.latitude());
         mLongitude->setValue(mCoordinates.longitude());
     }
 
-    if (!(type &ExceptSexagesimal)) {
+    if (!(type & ExceptSexagesimal)) {
         int degrees, minutes, seconds;
         double latitude = mCoordinates.latitude();
         double longitude = mCoordinates.longitude();
@@ -449,7 +448,7 @@ void GeoDialog::updateInputs(ExceptType type)
         mLongDirection->setCurrentIndex(mLongitude->value() < 0 ? 1 : 0);
     }
 
-    if (!(type &ExceptCity)) {
+    if (!(type & ExceptCity)) {
         const int index = nearestCity(mCoordinates.longitude(), mCoordinates.latitude());
         if (index != -1) {
             mCityCombo->setCurrentIndex(index + 1);

@@ -24,8 +24,7 @@
 
 #include <QDialog>
 
-namespace KABC
-{
+namespace KABC {
 class Addressee;
 }
 
