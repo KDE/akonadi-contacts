@@ -20,7 +20,7 @@
 
 #include "qekigadialer.h"
 
-#include <dbusconnectionpool.h>
+#include <KDBusConnectionPool>
 
 #include <KLocalizedString>
 
@@ -43,7 +43,7 @@ static bool isEkigaServiceRegistered()
         return true;
     }
 
-    interface = Akonadi::DBusConnectionPool::threadConnection().interface();
+    interface = KDBusConnectionPool::threadConnection().interface();
     if (interface->isServiceRegistered(service)) {
         return true;
     }
@@ -58,7 +58,7 @@ static QDBusInterface *searchEkigaDBusInterface()
     QDBusInterface *interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     if (!interface->isValid()) {
         delete interface;
-        interface = new QDBusInterface(service, path, QString(), Akonadi::DBusConnectionPool::threadConnection());
+        interface = new QDBusInterface(service, path, QString(), KDBusConnectionPool::threadConnection());
     }
 
     return interface;

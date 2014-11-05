@@ -20,7 +20,7 @@
 
 #include "qsflphonedialer.h"
 
-#include <dbusconnectionpool.h>
+#include <KDBusConnectionPool>
 
 #include <KLocalizedString>
 
@@ -43,7 +43,7 @@ static bool isSflPhoneServiceRegistered()
         return true;
     }
 
-    interface = Akonadi::DBusConnectionPool::threadConnection().interface();
+    interface = KDBusConnectionPool::threadConnection().interface();
     if (interface->isServiceRegistered(service)) {
         return true;
     }
