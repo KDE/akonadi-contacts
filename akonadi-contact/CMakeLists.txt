@@ -32,14 +32,16 @@ find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
 find_package(Phonon4Qt5 CONFIG REQUIRED)
 
 if(${CMAKE_SOURCE_DIR} STREQUAL "${Akonadi-Contact_SOURCE_DIR}")
-  set(KF5AkonadiServer_MIN_VERSION "5.0.40")
-  find_package(KF5AkonadiServer ${KF5AkonadiServer_MIN_VERSION} CONFIG REQUIRED)
   find_package(KF5Contacts ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5Akonadi ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5CalendarCore ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5Mime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5PimUtils ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+else()
+  # IMPORTED targets are scoped, so KF5::AkonadiPrivate found in ../akonadi
+  # won't work here, and it is a PUBLIC dependency of KF5::Akonadi
+  find_package(KF5AkonadiServer ${KF5AkonadiServer_MIN_VERSION} CONFIG REQUIRED)
 endif()
 
 ########### Targets ###########
