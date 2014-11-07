@@ -51,8 +51,8 @@ public:
 
     void adaptHeaderSizes();
 
-    void loadContactGroup(const KABC::ContactGroup &group);
-    bool storeContactGroup(KABC::ContactGroup &group);
+    void loadContactGroup(const KContacts::ContactGroup &group);
+    bool storeContactGroup(KContacts::ContactGroup &group);
     void setupMonitor();
 
     ContactGroupEditor *mParent;

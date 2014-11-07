@@ -24,7 +24,7 @@
 
 #include <QWidget>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 namespace Akonadi {
 class TagWidget;
@@ -41,8 +41,8 @@ public:
     explicit CategoriesEditWidget(QWidget *parent = 0);
     ~CategoriesEditWidget();
 
-    void loadContact(const KABC::Addressee &contact);
-    void storeContact(KABC::Addressee &contact) const;
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
 

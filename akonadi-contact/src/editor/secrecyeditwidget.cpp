@@ -23,8 +23,8 @@
 
 #include <QVBoxLayout>
 
-#include <kabc/addressee.h>
-#include <kabc/secrecy.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/secrecy.h>
 #include <kcombobox.h>
 
 SecrecyEditWidget::SecrecyEditWidget(QWidget *parent)
@@ -36,13 +36,13 @@ SecrecyEditWidget::SecrecyEditWidget(QWidget *parent)
     mSecrecyCombo = new KComboBox(this);
     layout->addWidget(mSecrecyCombo);
 
-    const KABC::Secrecy::TypeList list = KABC::Secrecy::typeList();
-    KABC::Secrecy::TypeList::ConstIterator it;
+    const KContacts::Secrecy::TypeList list = KContacts::Secrecy::typeList();
+    KContacts::Secrecy::TypeList::ConstIterator it;
 
     // (*it) is the type enum, which is also used as the index in the combo
-    KABC::Secrecy::TypeList::ConstIterator end(list.constEnd());
+    KContacts::Secrecy::TypeList::ConstIterator end(list.constEnd());
     for (it = list.constBegin(); it != end; ++it) {
-        mSecrecyCombo->insertItem(*it, KABC::Secrecy::typeLabel(*it));
+        mSecrecyCombo->insertItem(*it, KContacts::Secrecy::typeLabel(*it));
     }
 }
 
@@ -55,17 +55,17 @@ void SecrecyEditWidget::setReadOnly(bool readOnly)
     mSecrecyCombo->setEnabled(!readOnly);
 }
 
-void SecrecyEditWidget::loadContact(const KABC::Addressee &contact)
+void SecrecyEditWidget::loadContact(const KContacts::Addressee &contact)
 {
-    if (contact.secrecy().type() != KABC::Secrecy::Invalid) {
+    if (contact.secrecy().type() != KContacts::Secrecy::Invalid) {
         mSecrecyCombo->setCurrentIndex(contact.secrecy().type());
     }
 }
 
-void SecrecyEditWidget::storeContact(KABC::Addressee &contact) const
+void SecrecyEditWidget::storeContact(KContacts::Addressee &contact) const
 {
-    KABC::Secrecy secrecy;
-    secrecy.setType((KABC::Secrecy::Type)mSecrecyCombo->currentIndex());
+    KContacts::Secrecy secrecy;
+    secrecy.setType((KContacts::Secrecy::Type)mSecrecyCombo->currentIndex());
 
     contact.setSecrecy(secrecy);
 }

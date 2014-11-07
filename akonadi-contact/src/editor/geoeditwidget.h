@@ -22,13 +22,13 @@
 #ifndef GEOEDITWIDGET_H
 #define GEOEDITWIDGET_H
 
-#include <kabc/geo.h>
+#include <kcontacts/geo.h>
 #include <qdialog.h>
 
 #include <QWidget>
 #include <QMap>
 
-namespace KABC {
+namespace KContacts {
 class Addressee;
 }
 
@@ -49,8 +49,8 @@ public:
     explicit GeoEditWidget(QWidget *parent = 0);
     ~GeoEditWidget();
 
-    void loadContact(const KABC::Addressee &contact);
-    void storeContact(KABC::Addressee &contact) const;
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
 
@@ -64,7 +64,7 @@ private:
     QLabel *mLatitudeLabel;
     QLabel *mLongitudeLabel;
     QPushButton *mChangeButton;
-    KABC::Geo mCoordinates;
+    KContacts::Geo mCoordinates;
 };
 
 class GeoDialog : public QDialog
@@ -72,9 +72,9 @@ class GeoDialog : public QDialog
     Q_OBJECT
 
 public:
-    GeoDialog(const KABC::Geo &coordinates, QWidget *parent);
+    GeoDialog(const KContacts::Geo &coordinates, QWidget *parent);
 
-    KABC::Geo coordinates() const;
+    KContacts::Geo coordinates() const;
 
 private:
     enum ExceptType {
@@ -117,7 +117,7 @@ private:
     QSpinBox *mLongSeconds;
     KComboBox *mLongDirection;
 
-    KABC::Geo mCoordinates;
+    KContacts::Geo mCoordinates;
     QMap<QString, GeoData> mGeoDataMap;
 };
 

@@ -26,7 +26,7 @@
 #include <collectioncombobox.h>
 #include <item.h>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 #include <klocalizedstring.h>
 #include <KConfig>
@@ -72,7 +72,7 @@ public:
             QLabel *label = new QLabel(i18n("Add to:"), mainWidget);
 
             mAddressBookBox = new CollectionComboBox(mainWidget);
-            mAddressBookBox->setMimeTypeFilter(QStringList() << KABC::Addressee::mimeType());
+            mAddressBookBox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
             mAddressBookBox->setAccessRightsFilter(Collection::CanCreateItem);
 
             layout->addWidget(label, 0, 0);

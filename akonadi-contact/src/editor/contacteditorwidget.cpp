@@ -73,8 +73,8 @@ public:
 
     void loadCustomPages();
 
-    QString loadCustom(const KABC::Addressee &contact, const QString &key) const;
-    void storeCustom(KABC::Addressee &contact, const QString &key, const QString &value) const;
+    QString loadCustom(const KContacts::Addressee &contact, const QString &key) const;
+    void storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const;
 
     ContactEditorWidget::DisplayMode mDisplayMode;
     ContactEditorWidget *mParent;
@@ -510,12 +510,12 @@ void ContactEditorWidget::Private::loadCustomPages()
     }
 }
 
-QString ContactEditorWidget::Private::loadCustom(const KABC::Addressee &contact, const QString &key) const
+QString ContactEditorWidget::Private::loadCustom(const KContacts::Addressee &contact, const QString &key) const
 {
     return contact.custom(QLatin1String("KADDRESSBOOK"), key);
 }
 
-void ContactEditorWidget::Private::storeCustom(KABC::Addressee &contact, const QString &key, const QString &value) const
+void ContactEditorWidget::Private::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const
 {
     if (value.isEmpty()) {
         contact.removeCustom(QLatin1String("KADDRESSBOOK"), key);
@@ -530,8 +530,8 @@ ContactEditorWidget::ContactEditorWidget(QWidget *parent)
     Q_UNUSED(parent)
     d->initGui();
 
-    connect(d->mNameWidget, SIGNAL(nameChanged(KABC::Addressee)),
-            d->mDisplayNameWidget, SLOT(changeName(KABC::Addressee)));
+    connect(d->mNameWidget, SIGNAL(nameChanged(KContacts::Addressee)),
+            d->mDisplayNameWidget, SLOT(changeName(KContacts::Addressee)));
     connect(d->mOrganizationWidget, SIGNAL(textChanged(QString)),
             d->mDisplayNameWidget, SLOT(changeOrganization(QString)));
 }
@@ -542,8 +542,8 @@ ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displa
     Q_UNUSED(parent)
     d->initGui();
 
-    connect(d->mNameWidget, SIGNAL(nameChanged(KABC::Addressee)),
-            d->mDisplayNameWidget, SLOT(changeName(KABC::Addressee)));
+    connect(d->mNameWidget, SIGNAL(nameChanged(KContacts::Addressee)),
+            d->mDisplayNameWidget, SLOT(changeName(KContacts::Addressee)));
     connect(d->mOrganizationWidget, SIGNAL(textChanged(QString)),
             d->mDisplayNameWidget, SLOT(changeOrganization(QString)));
 }
@@ -553,7 +553,7 @@ ContactEditorWidget::~ContactEditorWidget()
     delete d;
 }
 
-void ContactEditorWidget::loadContact(const KABC::Addressee &contact, const Akonadi::ContactMetaData &metaData)
+void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData)
 {
     // name group
     d->mPhotoWidget->loadContact(contact);
@@ -632,7 +632,7 @@ void ContactEditorWidget::loadContact(const KABC::Addressee &contact, const Akon
     }
 }
 
-void ContactEditorWidget::storeContact(KABC::Addressee &contact, Akonadi::ContactMetaData &metaData) const
+void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaData &metaData) const
 {
     // name group
     d->mPhotoWidget->storeContact(contact);

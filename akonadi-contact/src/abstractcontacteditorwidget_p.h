@@ -24,7 +24,7 @@
 
 #include <QWidget>
 
-namespace KABC {
+namespace KContacts {
 class Addressee;
 }
 
@@ -55,12 +55,12 @@ public:
     /**
      * @param contact loads the given contact into the editor widget
      */
-    virtual void loadContact(const KABC::Addressee &contact, const Akonadi::ContactMetaData &metaData) = 0;
+    virtual void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData) = 0;
 
     /**
      * @param contact store the given contact into the editor widget
      */
-    virtual void storeContact(KABC::Addressee &contact, Akonadi::ContactMetaData &metaData) const = 0;
+    virtual void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaData &metaData) const = 0;
 
     /**
      * @param readOnly set read-only mode

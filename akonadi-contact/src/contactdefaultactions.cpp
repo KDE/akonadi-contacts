@@ -25,9 +25,9 @@
 #include "actions/sendsmsaction.h"
 #include "actions/showaddressaction.h"
 
-#include <kabc/address.h>
-#include <kabc/addressee.h>
-#include <kabc/phonenumber.h>
+#include <kcontacts/address.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/phonenumber.h>
 #include <kpimutils/email.h>
 #include <ktoolinvocation.h>
 #include <QtCore/QUrl>
@@ -57,19 +57,19 @@ void ContactDefaultActions::connectToView(QObject *view)
                 this, SLOT(sendEmail(QString,QString)));
     }
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KABC::PhoneNumber&)")) != -1) {
-        connect(view, SIGNAL(phoneNumberClicked(KABC::PhoneNumber)),
-                this, SLOT(dialPhoneNumber(KABC::PhoneNumber)));
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KContacts::PhoneNumber&)")) != -1) {
+        connect(view, SIGNAL(phoneNumberClicked(KContacts::PhoneNumber)),
+                this, SLOT(dialPhoneNumber(KContacts::PhoneNumber)));
     }
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("smsClicked(const KABC::PhoneNumber&)")) != -1) {
-        connect(view, SIGNAL(smsClicked(KABC::PhoneNumber)),
-                this, SLOT(sendSms(KABC::PhoneNumber)));
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("smsClicked(const KContacts::PhoneNumber&)")) != -1) {
+        connect(view, SIGNAL(smsClicked(KContacts::PhoneNumber)),
+                this, SLOT(sendSms(KContacts::PhoneNumber)));
     }
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("addressClicked(const KABC::Address&)")) != -1) {
-        connect(view, SIGNAL(addressClicked(KABC::Address)),
-                this, SLOT(showAddress(KABC::Address)));
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("addressClicked(const KContacts::Address&)")) != -1) {
+        connect(view, SIGNAL(addressClicked(KContacts::Address)),
+                this, SLOT(showAddress(KContacts::Address)));
     }
 }
 
@@ -80,7 +80,7 @@ void ContactDefaultActions::showUrl(const QUrl &url)
 
 void ContactDefaultActions::sendEmail(const QString &name, const QString &address)
 {
-    KABC::Addressee contact;
+    KContacts::Addressee contact;
     contact.setNameFromString(name);
 
     QUrl url;
@@ -89,19 +89,19 @@ void ContactDefaultActions::sendEmail(const QString &name, const QString &addres
     KToolInvocation::invokeMailer(url);
 }
 
-void ContactDefaultActions::dialPhoneNumber(const KABC::PhoneNumber &number)
+void ContactDefaultActions::dialPhoneNumber(const KContacts::PhoneNumber &number)
 {
     DialPhoneNumberAction action;
     action.dialNumber(number);
 }
 
-void ContactDefaultActions::sendSms(const KABC::PhoneNumber &number)
+void ContactDefaultActions::sendSms(const KContacts::PhoneNumber &number)
 {
     SendSmsAction action;
     action.sendSms(number);
 }
 
-void ContactDefaultActions::showAddress(const KABC::Address &address)
+void ContactDefaultActions::showAddress(const KContacts::Address &address)
 {
     ShowAddressAction action;
     action.showAddress(address);

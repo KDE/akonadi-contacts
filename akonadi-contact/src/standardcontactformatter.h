@@ -37,7 +37,7 @@ namespace Akonadi {
  *
  * using namespace Akonadi;
  *
- * const KABC::Addressee contact = ...
+ * const KContacts::Addressee contact = ...
  *
  * StandardContactFormatter formatter;
  * formatter.setContact( contact );

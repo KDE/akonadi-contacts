@@ -27,12 +27,12 @@
 #include <QPainter>
 #include <QStyledItemDelegate>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kcombobox.h>
 #include <klocalizedstring.h>
 
 // Tries to guess the display type that is used for the passed contact
-static DisplayNameEditWidget::DisplayType guessedDisplayType(const KABC::Addressee &contact)
+static DisplayNameEditWidget::DisplayType guessedDisplayType(const KContacts::Addressee &contact)
 {
     if (contact.formattedName() == (contact.givenName() + QLatin1Char(' ') + contact.familyName())) {
         return DisplayNameEditWidget::SimpleName;
@@ -160,7 +160,7 @@ DisplayNameEditWidget::DisplayType DisplayNameEditWidget::displayType() const
     return mDisplayType;
 }
 
-void DisplayNameEditWidget::loadContact(const KABC::Addressee &contact)
+void DisplayNameEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mContact = contact;
 
@@ -169,12 +169,12 @@ void DisplayNameEditWidget::loadContact(const KABC::Addressee &contact)
     updateView();
 }
 
-void DisplayNameEditWidget::storeContact(KABC::Addressee &contact) const
+void DisplayNameEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     contact.setFormattedName(mView->currentText());
 }
 
-void DisplayNameEditWidget::changeName(const KABC::Addressee &contact)
+void DisplayNameEditWidget::changeName(const KContacts::Addressee &contact)
 {
     const QString organization = mContact.organization();
     mContact = contact;

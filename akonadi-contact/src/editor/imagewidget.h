@@ -22,12 +22,12 @@
 #ifndef IMAGEWIDGET_H
 #define IMAGEWIDGET_H
 
-#include "kabc/picture.h"
+#include <kcontacts/picture.h>
 
 #include <QtCore/QPoint>
 #include <QPushButton>
 
-namespace KABC {
+namespace KContacts {
 class Addressee;
 }
 
@@ -46,8 +46,8 @@ public:
     explicit ImageWidget(Type type, QWidget *parent = 0);
     ~ImageWidget();
 
-    void loadContact(const KABC::Addressee &contact);
-    void storeContact(KABC::Addressee &contact) const;
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
 
@@ -74,7 +74,7 @@ private:
     ImageLoader *imageLoader();
 
     Type mType;
-    KABC::Picture mPicture;
+    KContacts::Picture mPicture;
     bool mHasImage;
     bool mReadOnly;
 

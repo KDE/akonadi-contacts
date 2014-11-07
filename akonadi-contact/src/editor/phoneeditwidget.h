@@ -24,7 +24,7 @@
 
 #include <QtCore/QList>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kcombobox.h>
 #include <qdialog.h>
 
@@ -59,12 +59,12 @@ public:
     /**
      * Sets the phone number @p type that shall be selected.
      */
-    void setType(KABC::PhoneNumber::Type type);
+    void setType(KContacts::PhoneNumber::Type type);
 
     /**
      * Returns the selected phone number type.
      */
-    KABC::PhoneNumber::Type type() const;
+    KContacts::PhoneNumber::Type type() const;
 
 private Q_SLOTS:
     void selected(int);
@@ -73,7 +73,7 @@ private Q_SLOTS:
 private:
     void update();
 
-    KABC::PhoneNumber::Type mType;
+    KContacts::PhoneNumber::Type mType;
     int mLastSelected;
     QList<int> mTypeList;
 };
@@ -97,12 +97,12 @@ public:
     /**
      * Sets the phone @p number of the widget.
      */
-    void setNumber(const KABC::PhoneNumber &number);
+    void setNumber(const KContacts::PhoneNumber &number);
 
     /**
      * Returns the phone number of the widget.
      */
-    KABC::PhoneNumber number() const;
+    KContacts::PhoneNumber number() const;
 
     /**
      * Sets the widget to @p readOnly mode.
@@ -115,7 +115,7 @@ Q_SIGNALS:
 private:
     PhoneTypeCombo *mTypeCombo;
     QLineEdit *mNumberEdit;
-    KABC::PhoneNumber mNumber;
+    KContacts::PhoneNumber mNumber;
 };
 
 /**
@@ -141,12 +141,12 @@ public:
     /**
      * Sets the @p list of phone numbers the widget shall show.
      */
-    void setPhoneNumbers(const KABC::PhoneNumber::List &list);
+    void setPhoneNumbers(const KContacts::PhoneNumber::List &list);
 
     /**
      * Returns the list of phone numbers.
      */
-    KABC::PhoneNumber::List phoneNumbers() const;
+    KContacts::PhoneNumber::List phoneNumbers() const;
 
     /**
      * Sets the widget to @p readOnly mode.
@@ -175,7 +175,7 @@ private Q_SLOTS:
 private:
     void recreateNumberWidgets();
 
-    KABC::PhoneNumber::List mPhoneNumberList;
+    KContacts::PhoneNumber::List mPhoneNumberList;
     QList<PhoneNumberWidget *> mWidgets;
 
     QVBoxLayout *mWidgetLayout;
@@ -207,12 +207,12 @@ public:
     /**
      * Loads the data from @p contact to the widget.
      */
-    void loadContact(const KABC::Addressee &contact);
+    void loadContact(const KContacts::Addressee &contact);
 
     /**
      * Stores the data from the widget to the @p contact.
      */
-    void storeContact(KABC::Addressee &contact) const;
+    void storeContact(KContacts::Addressee &contact) const;
 
     /**
      * Sets the widget to @p readOnly mode.
@@ -244,16 +244,16 @@ public:
      * @param type The initial type of the phone number.
      * @param parent The parent widget.
      */
-    explicit PhoneTypeDialog(KABC::PhoneNumber::Type type, QWidget *parent = 0);
+    explicit PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent = 0);
 
     /**
      * Returns the selected type.
      */
-    KABC::PhoneNumber::Type type() const;
+    KContacts::PhoneNumber::Type type() const;
 
 private:
-    KABC::PhoneNumber::Type mType;
-    KABC::PhoneNumber::TypeList mTypeList;
+    KContacts::PhoneNumber::Type mType;
+    KContacts::PhoneNumber::TypeList mTypeList;
 
     QButtonGroup *mGroup;
     QCheckBox *mPreferredBox;

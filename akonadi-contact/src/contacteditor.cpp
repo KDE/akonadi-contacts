@@ -35,7 +35,7 @@
 #include <itemmodifyjob.h>
 #include <monitor.h>
 #include <session.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <klocalizedstring.h>
 
 #include <QtCore/QPointer>
@@ -77,8 +77,8 @@ public:
     void storeDone(KJob *job);
     void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &);
 
-    void loadContact(const KABC::Addressee &addr, const ContactMetaData &metaData);
-    void storeContact(KABC::Addressee &addr, ContactMetaData &metaData);
+    void loadContact(const KContacts::Addressee &addr, const ContactMetaData &metaData);
+    void storeContact(KContacts::Addressee &addr, ContactMetaData &metaData);
     void setupMonitor();
 
     ContactEditor *mParent;
@@ -118,7 +118,7 @@ void ContactEditor::Private::itemFetchDone(KJob *job)
         mParent->connect(collectionFetchJob, SIGNAL(result(KJob*)),
                          SLOT(parentCollectionFetchDone(KJob*)));
     } else {
-        const KABC::Addressee addr = mItem.payload<KABC::Addressee>();
+        const KContacts::Addressee addr = mItem.payload<KContacts::Addressee>();
         mContactMetaData.load(mItem);
         loadContact(addr, mContactMetaData);
         mEditorWidget->setReadOnly(mReadOnly);
@@ -143,7 +143,7 @@ void ContactEditor::Private::parentCollectionFetchDone(KJob *job)
 
     mEditorWidget->setReadOnly(mReadOnly);
 
-    const KABC::Addressee addr = mItem.payload<KABC::Addressee>();
+    const KContacts::Addressee addr = mItem.payload<KContacts::Addressee>();
     mContactMetaData.load(mItem);
     loadContact(addr, mContactMetaData);
 }
@@ -184,12 +184,12 @@ void ContactEditor::Private::itemChanged(const Akonadi::Item &item, const QSet<Q
     delete dlg;
 }
 
-void ContactEditor::Private::loadContact(const KABC::Addressee &addr, const ContactMetaData &metaData)
+void ContactEditor::Private::loadContact(const KContacts::Addressee &addr, const ContactMetaData &metaData)
 {
     mEditorWidget->loadContact(addr, metaData);
 }
 
-void ContactEditor::Private::storeContact(KABC::Addressee &addr, ContactMetaData &metaData)
+void ContactEditor::Private::storeContact(KContacts::Addressee &addr, ContactMetaData &metaData)
 {
     mEditorWidget->storeContact(addr, metaData);
 }
@@ -244,9 +244,9 @@ void ContactEditor::loadContact(const Akonadi::Item &item)
     d->mMonitor->setItemMonitored(item);
 }
 
-KABC::Addressee ContactEditor::contact()
+KContacts::Addressee ContactEditor::contact()
 {
-    KABC::Addressee addr;
+    KContacts::Addressee addr;
     d->storeContact(addr, d->mContactMetaData);
     return addr;
 }
@@ -259,19 +259,19 @@ void ContactEditor::saveContactInAddressBook()
             return;
         }
 
-        KABC::Addressee addr = d->mItem.payload<KABC::Addressee>();
+        KContacts::Addressee addr = d->mItem.payload<KContacts::Addressee>();
 
         d->storeContact(addr, d->mContactMetaData);
 
         d->mContactMetaData.store(d->mItem);
 
-        d->mItem.setPayload<KABC::Addressee>(addr);
+        d->mItem.setPayload<KContacts::Addressee>(addr);
 
         Akonadi::ItemModifyJob *job = new Akonadi::ItemModifyJob(d->mItem);
         connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
-            const QStringList mimeTypeFilter(KABC::Addressee::mimeType());
+            const QStringList mimeTypeFilter(KContacts::Addressee::mimeType());
 
             AutoQPointer<CollectionDialog> dlg = new CollectionDialog(this);
             dlg->setMimeTypeFilter(mimeTypeFilter);
@@ -285,12 +285,12 @@ void ContactEditor::saveContactInAddressBook()
             }
         }
 
-        KABC::Addressee addr;
+        KContacts::Addressee addr;
         d->storeContact(addr, d->mContactMetaData);
 
         Akonadi::Item item;
-        item.setPayload<KABC::Addressee>(addr);
-        item.setMimeType(KABC::Addressee::mimeType());
+        item.setPayload<KContacts::Addressee>(addr);
+        item.setMimeType(KContacts::Addressee::mimeType());
 
         d->mContactMetaData.store(item);
 
@@ -299,7 +299,7 @@ void ContactEditor::saveContactInAddressBook()
     }
 }
 
-void ContactEditor::setContactTemplate(const KABC::Addressee &contact)
+void ContactEditor::setContactTemplate(const KContacts::Addressee &contact)
 {
     d->loadContact(contact, d->mContactMetaData);
 }

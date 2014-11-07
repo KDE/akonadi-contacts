@@ -22,14 +22,14 @@
 #ifndef SENDSMSACTION_H
 #define SENDSMSACTION_H
 
-namespace KABC {
+namespace KContacts {
 class PhoneNumber;
 }
 
 class SendSmsAction
 {
 public:
-    void sendSms(const KABC::PhoneNumber &number);
+    void sendSms(const KContacts::PhoneNumber &number);
 };
 
 #endif

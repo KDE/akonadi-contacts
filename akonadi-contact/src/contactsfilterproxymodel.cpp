@@ -24,11 +24,11 @@
 #include "contactstreemodel.h"
 
 #include <entitytreemodel.h>
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/contactgroup.h>
 
-static bool contactMatchesFilter( const KABC::Addressee &contact, const QString &filterString );
-static bool contactGroupMatchesFilter( const KABC::ContactGroup &group, const QString &filterString );
+static bool contactMatchesFilter( const KContacts::Addressee &contact, const QString &filterString );
+static bool contactGroupMatchesFilter( const KContacts::ContactGroup &group, const QString &filterString );
 
 using namespace Akonadi;
 
@@ -80,8 +80,8 @@ bool ContactsFilterProxyModel::filterAcceptsRow( int row, const QModelIndex &par
 
   const Akonadi::Item item = index.data( Akonadi::EntityTreeModel::ItemRole ).value<Akonadi::Item>();
 
-  if ( item.hasPayload<KABC::Addressee>() ) {
-    const KABC::Addressee contact = item.payload<KABC::Addressee>();
+  if ( item.hasPayload<KContacts::Addressee>() ) {
+    const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
     if ( d->flags & ContactsFilterProxyModel::HasEmail ) {
       if ( contact.emails().isEmpty() ) {
         return false;
@@ -92,8 +92,8 @@ bool ContactsFilterProxyModel::filterAcceptsRow( int row, const QModelIndex &par
     }
   } else {
     if ( !d->mFilter.isEmpty() ) {
-      if ( item.hasPayload<KABC::ContactGroup>() ) {
-      const KABC::ContactGroup group = item.payload<KABC::ContactGroup>();
+      if ( item.hasPayload<KContacts::ContactGroup>() ) {
+      const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
       return contactGroupMatchesFilter( group, d->mFilter );
       }
     }
@@ -147,7 +147,7 @@ Qt::ItemFlags ContactsFilterProxyModel::flags( const QModelIndex& index ) const
   return QSortFilterProxyModel::flags( index );
 }
 
-static bool addressMatchesFilter( const KABC::Address &address, const QString &filterString )
+static bool addressMatchesFilter( const KContacts::Address &address, const QString &filterString )
 {
   if ( address.street().contains( filterString, Qt::CaseInsensitive ) ) {
     return true;
@@ -180,7 +180,7 @@ static bool addressMatchesFilter( const KABC::Address &address, const QString &f
   return false;
 }
 
-static bool contactMatchesFilter( const KABC::Addressee &contact, const QString &filterString )
+static bool contactMatchesFilter( const KContacts::Addressee &contact, const QString &filterString )
 {
   if ( contact.assembledName().contains( filterString, Qt::CaseInsensitive ) ) {
     return true;
@@ -198,7 +198,7 @@ static bool contactMatchesFilter( const KABC::Addressee &contact, const QString 
     return true;
   }
 
-  const KABC::Address::List addresses = contact.addresses();
+  const KContacts::Address::List addresses = contact.addresses();
   int count = addresses.count();
   for ( int i = 0; i < count; ++i ) {
     if ( addressMatchesFilter( addresses.at( i ), filterString ) ) {
@@ -206,7 +206,7 @@ static bool contactMatchesFilter( const KABC::Addressee &contact, const QString 
     }
   }
 
-  const KABC::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
+  const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
   count = phoneNumbers.count();
   for ( int i = 0; i < count; ++i ) {
     if ( phoneNumbers.at( i ).number().contains( filterString, Qt::CaseInsensitive ) ) {
@@ -269,7 +269,7 @@ static bool contactMatchesFilter( const KABC::Addressee &contact, const QString 
   return false;
 }
 
-bool contactGroupMatchesFilter( const KABC::ContactGroup &group, const QString &filterString )
+bool contactGroupMatchesFilter( const KContacts::ContactGroup &group, const QString &filterString )
 {
   if ( group.name().contains( filterString, Qt::CaseInsensitive ) ) {
     return true;

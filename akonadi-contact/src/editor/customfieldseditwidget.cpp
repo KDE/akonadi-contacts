@@ -26,7 +26,7 @@
 #include "customfieldsdelegate.h"
 #include "customfieldsmodel.h"
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 
@@ -92,7 +92,7 @@ CustomFieldsEditWidget::~CustomFieldsEditWidget()
 {
 }
 
-void CustomFieldsEditWidget::loadContact(const KABC::Addressee &contact)
+void CustomFieldsEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     CustomField::List externalCustomFields;
 
@@ -179,7 +179,7 @@ void CustomFieldsEditWidget::loadContact(const KABC::Addressee &contact)
     mModel->setCustomFields(CustomField::List() << mLocalCustomFields << globalCustomFields << externalCustomFields);
 }
 
-void CustomFieldsEditWidget::storeContact(KABC::Addressee &contact) const
+void CustomFieldsEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     const CustomField::List customFields = mModel->customFields();
     foreach (const CustomField &customField, customFields) {

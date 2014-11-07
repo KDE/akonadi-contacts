@@ -26,7 +26,7 @@
 
 #include <QWidget>
 
-namespace KABC {
+namespace KContacts {
 class Addressee;
 }
 
@@ -132,7 +132,7 @@ public:
      * The fields of the editor will be prefilled with the content of the contact.
      * @param contact the contact to use as template content
      */
-    void setContactTemplate(const KABC::Addressee &contact);
+    void setContactTemplate(const KContacts::Addressee &contact);
 
     /**
      * Sets the @p addressbook which shall be used to store new
@@ -145,7 +145,7 @@ public:
      * @brief ContactEditor::contact
      * @return
      */
-    KABC::Addressee contact();
+    KContacts::Addressee contact();
 public Q_SLOTS:
     /**
      * Loads the @p contact into the editor.

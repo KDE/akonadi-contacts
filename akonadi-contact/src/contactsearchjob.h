@@ -26,7 +26,7 @@
 
 #include <item.h>
 #include <itemsearchjob.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 namespace Akonadi {
 
@@ -50,7 +50,7 @@ namespace Akonadi {
  * MyClass::searchResult( KJob *job )
  * {
  *   Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob*>( job );
- *   const KABC::Addressee::List contacts = searchJob->contacts();
+ *   const KContacts::Addressee::List contacts = searchJob->contacts();
  *   // do something with the contacts
  * }
  *
@@ -67,7 +67,7 @@ namespace Akonadi {
  * MyClass::searchResult( KJob *job )
  * {
  *   Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob*>( job );
- *   const KABC::Addressee::List contacts = searchJob->contacts();
+ *   const KContacts::Addressee::List contacts = searchJob->contacts();
  *   // do something with the contacts
  * }
  *
@@ -140,7 +140,7 @@ public:
     /**
      * Returns the contacts that matched the search criteria.
      */
-    KABC::Addressee::List contacts() const;
+    KContacts::Addressee::List contacts() const;
 
 private:
     //@cond PRIVATE

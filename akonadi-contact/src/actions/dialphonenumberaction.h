@@ -22,7 +22,7 @@
 #ifndef AKONADI_DIALPHONENUMBERACTION_H
 #define AKONADI_DIALPHONENUMBERACTION_H
 
-namespace KABC {
+namespace KContacts {
 class PhoneNumber;
 }
 
@@ -36,7 +36,7 @@ namespace Akonadi {
 class DialPhoneNumberAction
 {
 public:
-    void dialNumber(const KABC::PhoneNumber &number);
+    void dialNumber(const KContacts::PhoneNumber &number);
 };
 
 }

@@ -21,7 +21,7 @@
 
 #include "soundeditwidget.h"
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 //#include <kfiledialog.h>
 
 #include <kio/netaccess.h>
@@ -111,9 +111,9 @@ SoundEditWidget::~SoundEditWidget()
     delete mSoundLoader;
 }
 
-void SoundEditWidget::loadContact(const KABC::Addressee &contact)
+void SoundEditWidget::loadContact(const KContacts::Addressee &contact)
 {
-    const KABC::Sound sound = contact.sound();
+    const KContacts::Sound sound = contact.sound();
     if (sound.isIntern() && !sound.data().isEmpty()) {
         mHasSound = true;
         mSound = sound.data();
@@ -122,9 +122,9 @@ void SoundEditWidget::loadContact(const KABC::Addressee &contact)
     updateView();
 }
 
-void SoundEditWidget::storeContact(KABC::Addressee &contact) const
+void SoundEditWidget::storeContact(KContacts::Addressee &contact) const
 {
-    KABC::Sound sound(contact.sound());
+    KContacts::Sound sound(contact.sound());
     sound.setData(mSound);
     contact.setSound(sound);
 }

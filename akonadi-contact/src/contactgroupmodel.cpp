@@ -23,7 +23,7 @@
 
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 #include <kiconloader.h>
 #include <klocalizedstring.h>
@@ -39,9 +39,9 @@ struct GroupMember
   }
 
   bool isReference;
-  KABC::ContactGroup::ContactReference reference;
-  KABC::ContactGroup::Data data;
-  KABC::Addressee referencedContact;
+  KContacts::ContactGroup::ContactReference reference;
+  KContacts::ContactGroup::Data data;
+  KContacts::Addressee referencedContact;
   bool loadingError;
 };
 
@@ -53,7 +53,7 @@ class ContactGroupModel::Private
     {
     }
 
-    void resolveContactReference( const KABC::ContactGroup::ContactReference &reference, int row )
+    void resolveContactReference( const KContacts::ContactGroup::ContactReference &reference, int row )
     {
       Item item;
       if ( !reference.gid().isEmpty() ) {
@@ -87,7 +87,7 @@ class ContactGroupModel::Private
       }
 
       const Item item = fetchJob->items().first();
-      const KABC::Addressee contact = item.payload<KABC::Addressee>();
+      const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
 
       GroupMember &member = mMembers[ row ];
       member.referencedContact = contact;
@@ -151,7 +151,7 @@ class ContactGroupModel::Private
 
     ContactGroupModel *mParent;
     QVector<GroupMember> mMembers;
-    KABC::ContactGroup mGroup;
+    KContacts::ContactGroup mGroup;
     QString mLastErrorMessage;
 };
 
@@ -165,7 +165,7 @@ ContactGroupModel::~ContactGroupModel()
   delete d;
 }
 
-void ContactGroupModel::loadContactGroup( const KABC::ContactGroup &contactGroup )
+void ContactGroupModel::loadContactGroup( const KContacts::ContactGroup &contactGroup )
 {
   emit layoutAboutToBeChanged();
 
@@ -173,7 +173,7 @@ void ContactGroupModel::loadContactGroup( const KABC::ContactGroup &contactGroup
   d->mGroup = contactGroup;
 
   for ( uint i = 0; i < d->mGroup.dataCount(); ++i ) {
-    const KABC::ContactGroup::Data data = d->mGroup.data( i );
+    const KContacts::ContactGroup::Data data = d->mGroup.data( i );
     GroupMember member;
     member.isReference = false;
     member.data = data;
@@ -182,7 +182,7 @@ void ContactGroupModel::loadContactGroup( const KABC::ContactGroup &contactGroup
   }
 
   for ( uint i = 0; i < d->mGroup.contactReferenceCount(); ++i ) {
-    const KABC::ContactGroup::ContactReference reference = d->mGroup.contactReference( i );
+    const KContacts::ContactGroup::ContactReference reference = d->mGroup.contactReference( i );
     GroupMember member;
     member.isReference = true;
     member.reference = reference;
@@ -197,7 +197,7 @@ void ContactGroupModel::loadContactGroup( const KABC::ContactGroup &contactGroup
   emit layoutChanged();
 }
 
-bool ContactGroupModel::storeContactGroup( KABC::ContactGroup &group ) const
+bool ContactGroupModel::storeContactGroup( KContacts::ContactGroup &group ) const
 {
   group.removeAllContactReferences();
   group.removeAllContactData();

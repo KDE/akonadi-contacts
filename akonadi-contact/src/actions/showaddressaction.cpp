@@ -23,13 +23,13 @@
 
 #include "contactactionssettings.h"
 
-#include <kabc/address.h>
+#include <kcontacts/address.h>
 #include <krun.h>
 #include <ktoolinvocation.h>
 
 using namespace Akonadi;
 
-static void replaceArguments(QString &templateStr, const KABC::Address &address)
+static void replaceArguments(QString &templateStr, const KContacts::Address &address)
 {
     templateStr.replace(QStringLiteral("%s"), address.street()).
     replace(QStringLiteral("%r"), address.region()).
@@ -39,7 +39,7 @@ static void replaceArguments(QString &templateStr, const KABC::Address &address)
     replace(QStringLiteral("%c"), address.countryToISO(address.country()));
 }
 
-void ShowAddressAction::showAddress(const KABC::Address &address)
+void ShowAddressAction::showAddress(const KContacts::Address &address)
 {
     // synchronize
     ContactActionsSettings::self()->load();

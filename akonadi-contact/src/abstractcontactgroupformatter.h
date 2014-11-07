@@ -26,7 +26,7 @@
 
 #include <QtCore/QVariant>
 
-namespace KABC {
+namespace KContacts {
 class ContactGroup;
 }
 
@@ -68,17 +68,17 @@ public:
     /**
      * Sets the contact @p group that will be formatted.
      */
-    void setContactGroup(const KABC::ContactGroup &group);
+    void setContactGroup(const KContacts::ContactGroup &group);
 
     /**
      * Returns the contact group that will be formatted.
      */
-    KABC::ContactGroup contactGroup() const;
+    KContacts::ContactGroup contactGroup() const;
 
     /**
      * Sets the @p item who's payload will be formatted.
      *
-     * @note The payload must be a valid KABC::ContactGroup object.
+     * @note The payload must be a valid KContacts::ContactGroup object.
      *
      * @param item item, who's payload will be formatted.
      */

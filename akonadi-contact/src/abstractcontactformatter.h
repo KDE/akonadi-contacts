@@ -26,7 +26,7 @@
 
 #include <QtCore/QVariantMap>
 
-namespace KABC {
+namespace KContacts {
 class Addressee;
 }
 
@@ -69,17 +69,17 @@ public:
      * Sets the @p contact that will be formatted.
      * @param contact contact to be formatted
      */
-    void setContact(const KABC::Addressee &contact);
+    void setContact(const KContacts::Addressee &contact);
 
     /**
      * Returns the contact that will be formatted.
      */
-    KABC::Addressee contact() const;
+    KContacts::Addressee contact() const;
 
     /**
      * Sets the @p item who's payload will be formatted.
      *
-     * @note The payload must be a valid KABC::Addressee object.
+     * @note The payload must be a valid KContacts::Addressee object.
      * @param item item, who's payload will be formatted.
      */
     void setItem(const Akonadi::Item &item);

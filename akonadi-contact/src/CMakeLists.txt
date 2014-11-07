@@ -129,7 +129,7 @@ target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF
 target_link_libraries(KF5AkonadiContact
 PUBLIC
     KF5::AkonadiCore
-    KF5::Abc
+    KF5::Contacts
 PRIVATE
     KF5::AkonadiWidgets
     KF5::CalendarCore

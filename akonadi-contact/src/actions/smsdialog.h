@@ -28,7 +28,7 @@ class QLabel;
 
 class KTextEdit;
 
-namespace KABC {
+namespace KContacts {
 class PhoneNumber;
 }
 
@@ -37,7 +37,7 @@ class SmsDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit SmsDialog(const KABC::PhoneNumber &number);
+    explicit SmsDialog(const KContacts::PhoneNumber &number);
     ~SmsDialog();
 
     QString message() const;

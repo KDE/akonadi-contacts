@@ -23,7 +23,7 @@
 #include "emailaddressselection.h"
 #include "emailaddressselection_p.h"
 
-#include <kabc/contactgroup.h>
+#include <kcontacts/contactgroup.h>
 #include <kmime/kmime_header_parsing.h>
 
 using namespace Akonadi;
@@ -81,7 +81,7 @@ QString EmailAddressSelection::email() const
 
 QString EmailAddressSelection::quotedEmail() const
 {
-  if ( d->mItem.hasPayload<KABC::ContactGroup>() ) {
+  if ( d->mItem.hasPayload<KContacts::ContactGroup>() ) {
     if ( d->mEmailAddress == d->mName ) {
       return d->mName;
     }

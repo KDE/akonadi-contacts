@@ -22,8 +22,8 @@
 
 #include "contactstreemodel.h"
 
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/contactgroup.h>
 
 
 #include <kiconloader.h>
@@ -73,8 +73,8 @@ ContactsTreeModel::Columns ContactsTreeModel::columns() const
 
 QVariant ContactsTreeModel::entityData( const Item &item, int column, int role ) const
 {
-  if ( item.mimeType() == KABC::Addressee::mimeType() ) {
-    if ( !item.hasPayload<KABC::Addressee>() ) {
+  if ( item.mimeType() == KContacts::Addressee::mimeType() ) {
+    if ( !item.hasPayload<KContacts::Addressee>() ) {
 
       // Pass modeltest
       if ( role == Qt::DisplayRole ) {
@@ -84,11 +84,11 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
       return QVariant();
     }
 
-    const KABC::Addressee contact = item.payload<KABC::Addressee>();
+    const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
 
     if ( role == Qt::DecorationRole ) {
       if ( column == 0 ) {
-        const KABC::Picture picture = contact.photo();
+        const KContacts::Picture picture = contact.photo();
         if ( picture.isIntern() ) {
           return picture.data().scaled( QSize( d->mIconSize, d->mIconSize ), Qt::KeepAspectRatio );
         } else {
@@ -117,7 +117,7 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
           break;
         case HomeAddress:
           {
-            const KABC::Address address = contact.address( KABC::Address::Home );
+            const KContacts::Address address = contact.address( KContacts::Address::Home );
             if ( !address.isEmpty() ) {
               return address.formattedAddress();
             }
@@ -125,7 +125,7 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
           break;
         case BusinessAddress:
           {
-            const KABC::Address address = contact.address( KABC::Address::Work );
+            const KContacts::Address address = contact.address( KContacts::Address::Work );
             if ( !address.isEmpty() ) {
               return address.formattedAddress();
             }
@@ -135,8 +135,8 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
           {
             QStringList values;
 
-            const KABC::PhoneNumber::List numbers = contact.phoneNumbers();
-            foreach ( const KABC::PhoneNumber &number, numbers ) {
+            const KContacts::PhoneNumber::List numbers = contact.phoneNumbers();
+            foreach ( const KContacts::PhoneNumber &number, numbers ) {
               values += number.number();
             }
 
@@ -163,8 +163,8 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
         return QDate();
       }
     }
-  } else if ( item.mimeType() == KABC::ContactGroup::mimeType() ) {
-    if ( !item.hasPayload<KABC::ContactGroup>() ) {
+  } else if ( item.mimeType() == KContacts::ContactGroup::mimeType() ) {
+    if ( !item.hasPayload<KContacts::ContactGroup>() ) {
 
       // Pass modeltest
       if ( role == Qt::DisplayRole ) {
@@ -184,7 +184,7 @@ QVariant ContactsTreeModel::entityData( const Item &item, int column, int role )
       switch ( d->mColumns.at( column ) ) {
         case FullName:
           {
-            const KABC::ContactGroup group = item.payload<KABC::ContactGroup>();
+            const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
             return group.name();
           }
           break;
@@ -251,7 +251,7 @@ QVariant ContactsTreeModel::entityHeaderData( int section, Qt::Orientation orien
           case GivenName:
             return i18nc( "@title:column given name of a person", "Given Name" );
           case Birthday:
-            return KABC::Addressee::birthdayLabel();
+            return KContacts::Addressee::birthdayLabel();
           case HomeAddress:
             return i18nc( "@title:column home address of a person", "Home" );
           case BusinessAddress:
@@ -263,13 +263,13 @@ QVariant ContactsTreeModel::entityHeaderData( int section, Qt::Orientation orien
           case AllEmails:
             return i18nc( "@title:column all email addresses of a person", "All EMails" );
           case Organization:
-            return KABC::Addressee::organizationLabel();
+            return KContacts::Addressee::organizationLabel();
           case Role:
-            return KABC::Addressee::roleLabel();
+            return KContacts::Addressee::roleLabel();
           case Homepage:
-            return KABC::Addressee::urlLabel();
+            return KContacts::Addressee::urlLabel();
           case Note:
-            return KABC::Addressee::noteLabel();
+            return KContacts::Addressee::noteLabel();
         }
       }
     }

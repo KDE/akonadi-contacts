@@ -24,8 +24,8 @@
 
 #include <QWidget>
 
-#include <kabc/address.h>
-#include <kabc/addressee.h>
+#include <kcontacts/address.h>
+#include <kcontacts/addressee.h>
 #include <kcombobox.h>
 #include <QDialog>
 
@@ -59,18 +59,18 @@ public:
      * Sets the list of @p addresses that can be chosen from.
      * @param addresses list of addresses that can be chosen from
      */
-    void setAddresses(const KABC::Address::List &addresses);
+    void setAddresses(const KContacts::Address::List &addresses);
 
     /**
      * Sets the current @p address.
      * @param address new current address
      */
-    void setCurrentAddress(const KABC::Address &address);
+    void setCurrentAddress(const KContacts::Address &address);
 
     /**
      * Returns the current selected address.
      */
-    KABC::Address currentAddress() const;
+    KContacts::Address currentAddress() const;
 
 Q_SIGNALS:
     /**
@@ -79,7 +79,7 @@ Q_SIGNALS:
      *
      * @param address The new selected address.
      */
-    void selectionChanged(const KABC::Address &address);
+    void selectionChanged(const KContacts::Address &address);
 
 private Q_SLOTS:
     void selected(int);
@@ -87,7 +87,7 @@ private Q_SLOTS:
 private:
     void updateView();
 
-    KABC::Address::List mAddresses;
+    KContacts::Address::List mAddresses;
 };
 
 /**
@@ -114,12 +114,12 @@ public:
      * Sets the type that shall be selected in the combobox.
      * @param type KABC address type to set.
      */
-    void setType(KABC::Address::Type type);
+    void setType(KContacts::Address::Type type);
 
     /**
      * Returns the type that is currently selected.
      */
-    KABC::Address::Type type() const;
+    KContacts::Address::Type type() const;
 
 private Q_SLOTS:
     void selected(int);
@@ -128,7 +128,7 @@ private Q_SLOTS:
 private:
     void update();
 
-    KABC::Address::Type mType;
+    KContacts::Address::Type mType;
     int mLastSelected;
     QList<int> mTypeList;
 };
@@ -144,8 +144,8 @@ public:
     explicit AddressEditWidget(QWidget *parent = 0);
     ~AddressEditWidget();
 
-    void loadContact(const KABC::Addressee &contact);
-    void storeContact(KABC::Addressee &contact) const;
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
 
@@ -160,7 +160,7 @@ private Q_SLOTS:
 
 private:
     void updateButtons();
-    void fixPreferredAddress(const KABC::Address &preferredAddress);
+    void fixPreferredAddress(const KContacts::Address &preferredAddress);
 
     AddressSelectionWidget *mAddressSelectionWidget;
 
@@ -169,7 +169,7 @@ private:
     QPushButton *mEditButton;
     QPushButton *mDeleteButton;
 
-    KABC::Address::List mAddressList;
+    KContacts::Address::List mAddressList;
     QString mName;
     bool mReadOnly;
 };
@@ -185,8 +185,8 @@ public:
     explicit AddressEditDialog(QWidget *parent = 0);
     ~AddressEditDialog();
 
-    void setAddress(const KABC::Address &address);
-    KABC::Address address() const;
+    void setAddress(const KContacts::Address &address);
+    KContacts::Address address() const;
 
 private Q_SLOTS:
     void editLabel();
@@ -203,7 +203,7 @@ private:
     QLineEdit *mPOBoxEdit;
     QCheckBox *mPreferredCheckBox;
 
-    KABC::Address mAddress;
+    KContacts::Address mAddress;
     QString mLabel;
 };
 

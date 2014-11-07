@@ -26,7 +26,7 @@
 
 #include <item.h>
 #include <itemsearchjob.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/contactgroup.h>
 
 namespace Akonadi {
 
@@ -47,7 +47,7 @@ namespace Akonadi {
  * MyClass::searchResult( KJob *job )
  * {
  *   Akonadi::ContactGroupSearchJob *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob*>( job );
- *   const KABC::ContactGroup::List contactGroups = searchJob->contactGroups();
+ *   const KContacts::ContactGroup::List contactGroups = searchJob->contactGroups();
  *   // do something with the contact groups
  * }
  *
@@ -121,7 +121,7 @@ public:
     /**
      * Returns the contact groups that matched the search criteria.
      */
-    KABC::ContactGroup::List contactGroups() const;
+    KContacts::ContactGroup::List contactGroups() const;
 
 private:
     //@cond PRIVATE

@@ -24,7 +24,7 @@
 
 #include <QtCore/QAbstractItemModel>
 
-#include <kabc/contactgroup.h>
+#include <kcontacts/contactgroup.h>
 
 namespace Akonadi {
 
@@ -41,8 +41,8 @@ public:
     explicit ContactGroupModel(QObject *parent = 0);
     ~ContactGroupModel();
 
-    void loadContactGroup(const KABC::ContactGroup &contactGroup);
-    bool storeContactGroup(KABC::ContactGroup &contactGroup) const;
+    void loadContactGroup(const KContacts::ContactGroup &contactGroup);
+    bool storeContactGroup(KContacts::ContactGroup &contactGroup) const;
 
     QString lastErrorMessage() const;
 

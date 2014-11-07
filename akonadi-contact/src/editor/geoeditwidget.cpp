@@ -23,7 +23,7 @@
 
 #include "autoqpointer_p.h"
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kcombobox.h>
 #include <klocale.h>
 #include <klocalizedstring.h>
@@ -54,7 +54,7 @@ public:
         update();
     }
 
-    void setCoordinates(const KABC::Geo &coordinates)
+    void setCoordinates(const KContacts::Geo &coordinates)
     {
         mCoordinates = coordinates;
 
@@ -87,7 +87,7 @@ protected:
 
 private:
     QPixmap mWorld;
-    KABC::Geo mCoordinates;
+    KContacts::Geo mCoordinates;
 };
 
 GeoEditWidget::GeoEditWidget(QWidget *parent)
@@ -127,13 +127,13 @@ GeoEditWidget::~GeoEditWidget()
 {
 }
 
-void GeoEditWidget::loadContact(const KABC::Addressee &contact)
+void GeoEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mCoordinates = contact.geo();
     updateView();
 }
 
-void GeoEditWidget::storeContact(KABC::Addressee &contact) const
+void GeoEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     contact.setGeo(mCoordinates);
 }
@@ -203,7 +203,7 @@ static double calculateCoordinate(const QString &coordinate)
     }
 }
 
-GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
+GeoDialog::GeoDialog(const KContacts::Geo &coordinates, QWidget *parent)
     : QDialog(parent)
     , mCoordinates(coordinates)
 {
@@ -358,7 +358,7 @@ GeoDialog::GeoDialog(const KABC::Geo &coordinates, QWidget *parent)
     updateInputs();
 }
 
-KABC::Geo GeoDialog::coordinates() const
+KContacts::Geo GeoDialog::coordinates() const
 {
     return mCoordinates;
 }

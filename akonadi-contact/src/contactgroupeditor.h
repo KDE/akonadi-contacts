@@ -26,7 +26,7 @@
 
 #include <QWidget>
 
-namespace KABC {
+namespace KContacts {
 class ContactGroup;
 }
 
@@ -110,7 +110,7 @@ public:
      * The fields of the editor will be prefilled with the content of the group.
      * @param group the group to use as template content
      */
-    void setContactGroupTemplate(const KABC::ContactGroup &group);
+    void setContactGroupTemplate(const KContacts::ContactGroup &group);
 
     /**
      * Sets the @p addressbook which shall be used to store new

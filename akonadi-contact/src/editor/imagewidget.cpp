@@ -21,7 +21,7 @@
 
 #include "imagewidget.h"
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kfiledialog.h>
 
 #include <kimageio.h>
@@ -134,7 +134,7 @@ ImageWidget::~ImageWidget()
     delete mImageLoader;
 }
 
-void ImageWidget::loadContact(const KABC::Addressee &contact)
+void ImageWidget::loadContact(const KContacts::Addressee &contact)
 {
     mPicture = (mType == Photo ? contact.photo() : contact.logo());
     if (mPicture.isIntern() && !mPicture.data().isNull()) {
@@ -144,7 +144,7 @@ void ImageWidget::loadContact(const KABC::Addressee &contact)
     updateView();
 }
 
-void ImageWidget::storeContact(KABC::Addressee &contact) const
+void ImageWidget::storeContact(KContacts::Addressee &contact) const
 {
     if (mType == Photo) {
         contact.setPhoto(mPicture);

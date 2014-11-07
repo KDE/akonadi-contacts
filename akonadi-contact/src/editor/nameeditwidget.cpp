@@ -27,7 +27,7 @@
 #include <QHBoxLayout>
 #include <QToolButton>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
 
@@ -60,7 +60,7 @@ void NameEditWidget::setReadOnly(bool readOnly)
     mButtonEdit->setEnabled(!readOnly);
 }
 
-void NameEditWidget::loadContact(const KABC::Addressee &contact)
+void NameEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mContact = contact;
 
@@ -69,7 +69,7 @@ void NameEditWidget::loadContact(const KABC::Addressee &contact)
     connect(mNameEdit, &QLineEdit::textChanged, this, &NameEditWidget::textChanged);
 }
 
-void NameEditWidget::storeContact(KABC::Addressee &contact) const
+void NameEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     contact.setPrefix(mContact.prefix());
     contact.setGivenName(mContact.givenName());

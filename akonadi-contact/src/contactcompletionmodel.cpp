@@ -26,7 +26,7 @@
 #include <itemfetchscope.h>
 #include <session.h>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 using namespace Akonadi;
 
@@ -42,7 +42,7 @@ QAbstractItemModel *ContactCompletionModel::self()
     monitor->fetchCollection(true);
     monitor->itemFetchScope().fetchFullPayload();
     monitor->setCollectionMonitored(Akonadi::Collection::root());
-    monitor->setMimeTypeMonitored(KABC::Addressee::mimeType());
+    monitor->setMimeTypeMonitored(KContacts::Addressee::mimeType());
 
     ContactCompletionModel *model = new ContactCompletionModel(monitor);
 
@@ -69,7 +69,7 @@ ContactCompletionModel::~ContactCompletionModel()
 
 QVariant ContactCompletionModel::entityData(const Item &item, int column, int role) const
 {
-    if (!item.hasPayload<KABC::Addressee>()) {
+    if (!item.hasPayload<KContacts::Addressee>()) {
         // Pass modeltest
         if (role == Qt::DisplayRole) {
             return item.remoteId();
@@ -79,7 +79,7 @@ QVariant ContactCompletionModel::entityData(const Item &item, int column, int ro
     }
 
     if (role == Qt::DisplayRole || role == Qt::EditRole) {
-        const KABC::Addressee contact = item.payload<KABC::Addressee>();
+        const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
 
         switch (column) {
         case NameColumn:

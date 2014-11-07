@@ -35,7 +35,7 @@
 #include <itemmodifyjob.h>
 #include <monitor.h>
 #include <session.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/contactgroup.h>
 #include <klocalizedstring.h>
 #include <klineedit.h>
 #include <kmessagebox.h>
@@ -89,7 +89,7 @@ void ContactGroupEditor::Private::itemFetchDone( KJob *job )
     mParent->connect( collectionFetchJob, SIGNAL(result(KJob*)),
                       SLOT(parentCollectionFetchDone(KJob*)) );
   } else {
-    const KABC::ContactGroup group = mItem.payload<KABC::ContactGroup>();
+    const KContacts::ContactGroup group = mItem.payload<KContacts::ContactGroup>();
     loadContactGroup( group );
 
     setReadOnly( mReadOnly );
@@ -114,7 +114,7 @@ void ContactGroupEditor::Private::parentCollectionFetchDone( KJob *job )
     mReadOnly = !( parentCollection.rights() & Collection::CanChangeItem );
   }
 
-  const KABC::ContactGroup group = mItem.payload<KABC::ContactGroup>();
+  const KContacts::ContactGroup group = mItem.payload<KContacts::ContactGroup>();
   loadContactGroup( group );
 
   setReadOnly( mReadOnly );
@@ -154,7 +154,7 @@ void ContactGroupEditor::Private::itemChanged( const Item&, const QSet<QByteArra
   }
 }
 
-void ContactGroupEditor::Private::loadContactGroup( const KABC::ContactGroup &group )
+void ContactGroupEditor::Private::loadContactGroup( const KContacts::ContactGroup &group )
 {
   mGui.groupName->setText( group.name() );
 
@@ -170,7 +170,7 @@ void ContactGroupEditor::Private::loadContactGroup( const KABC::ContactGroup &gr
   mGui.membersView->header()->resizeSections( QHeaderView::Stretch );
 }
 
-bool ContactGroupEditor::Private::storeContactGroup( KABC::ContactGroup &group )
+bool ContactGroupEditor::Private::storeContactGroup( KContacts::ContactGroup &group )
 {
   if ( mGui.groupName->text().isEmpty() ) {
     KMessageBox::error( mParent, i18n( "The name of the contact group must not be empty." ) );
@@ -216,7 +216,7 @@ ContactGroupEditor::ContactGroupEditor( Mode mode, QWidget *parent )
   d->mGui.membersView->setItemDelegate( new ContactGroupEditorDelegate( d->mGui.membersView, this ) );
 
   if ( mode == CreateMode ) {
-    KABC::ContactGroup dummyGroup;
+    KContacts::ContactGroup dummyGroup;
     d->mGroupModel->loadContactGroup( dummyGroup );
 
     QTimer::singleShot( 0, this, SLOT(adaptHeaderSizes()) );
@@ -260,19 +260,19 @@ bool ContactGroupEditor::saveContactGroup()
       return true;
     }
 
-    KABC::ContactGroup group = d->mItem.payload<KABC::ContactGroup>();
+    KContacts::ContactGroup group = d->mItem.payload<KContacts::ContactGroup>();
 
     if ( !d->storeContactGroup( group ) ) {
       return false;
     }
 
-    d->mItem.setPayload<KABC::ContactGroup>( group );
+    d->mItem.setPayload<KContacts::ContactGroup>( group );
 
     ItemModifyJob *job = new ItemModifyJob( d->mItem );
     connect( job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)) );
   } else if ( d->mMode == CreateMode ) {
     if ( !d->mDefaultCollection.isValid() ) {
-      const QStringList mimeTypeFilter( KABC::ContactGroup::mimeType() );
+      const QStringList mimeTypeFilter( KContacts::ContactGroup::mimeType() );
 
       AutoQPointer<CollectionDialog> dlg = new CollectionDialog( this );
       dlg->setMimeTypeFilter( mimeTypeFilter );
@@ -287,14 +287,14 @@ bool ContactGroupEditor::saveContactGroup()
       }
     }
 
-    KABC::ContactGroup group;
+    KContacts::ContactGroup group;
     if ( !d->storeContactGroup( group ) ) {
       return false;
     }
 
     Item item;
-    item.setPayload<KABC::ContactGroup>( group );
-    item.setMimeType( KABC::ContactGroup::mimeType() );
+    item.setPayload<KContacts::ContactGroup>( group );
+    item.setMimeType( KContacts::ContactGroup::mimeType() );
 
     ItemCreateJob *job = new ItemCreateJob( item, d->mDefaultCollection );
     connect( job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)) );
@@ -303,7 +303,7 @@ bool ContactGroupEditor::saveContactGroup()
   return true;
 }
 
-void ContactGroupEditor::setContactGroupTemplate( const KABC::ContactGroup &group )
+void ContactGroupEditor::setContactGroupTemplate( const KContacts::ContactGroup &group )
 {
   d->mGroupModel->loadContactGroup( group );
   d->mGui.membersView->header()->setDefaultSectionSize( d->mGui.membersView->header()->width() / 2 );

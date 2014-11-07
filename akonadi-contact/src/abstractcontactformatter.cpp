@@ -22,14 +22,14 @@
 #include "abstractcontactformatter.h"
 
 #include <item.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 using namespace Akonadi;
 
 class AbstractContactFormatter::Private
 {
 public:
-    KABC::Addressee mContact;
+    KContacts::Addressee mContact;
     Akonadi::Item mItem;
     QList<QVariantMap> mCustomFieldDescriptions;
 };
@@ -44,12 +44,12 @@ AbstractContactFormatter::~AbstractContactFormatter()
     delete d;
 }
 
-void AbstractContactFormatter::setContact(const KABC::Addressee &contact)
+void AbstractContactFormatter::setContact(const KContacts::Addressee &contact)
 {
     d->mContact = contact;
 }
 
-KABC::Addressee AbstractContactFormatter::contact() const
+KContacts::Addressee AbstractContactFormatter::contact() const
 {
     return d->mContact;
 }

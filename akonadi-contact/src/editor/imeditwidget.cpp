@@ -29,7 +29,7 @@
 #include <QHBoxLayout>
 #include <QToolButton>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
 
@@ -55,7 +55,7 @@ IMEditWidget::~IMEditWidget()
 {
 }
 
-void IMEditWidget::loadContact(const KABC::Addressee &contact)
+void IMEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mIMEdit->setText(contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-IMAddress")));
 
@@ -78,7 +78,7 @@ void IMEditWidget::loadContact(const KABC::Addressee &contact)
     }
 }
 
-void IMEditWidget::storeContact(KABC::Addressee &contact) const
+void IMEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     if (!mIMEdit->text().isEmpty()) {
         contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-IMAddress"), mIMEdit->text());

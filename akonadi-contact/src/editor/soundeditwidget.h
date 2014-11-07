@@ -24,7 +24,7 @@
 
 #include <QToolButton>
 
-namespace KABC {
+namespace KContacts {
 class Addressee;
 }
 
@@ -38,8 +38,8 @@ public:
     explicit SoundEditWidget(QWidget *parent = 0);
     ~SoundEditWidget();
 
-    void loadContact(const KABC::Addressee &contact);
-    void storeContact(KABC::Addressee &contact) const;
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
 

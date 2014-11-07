@@ -25,7 +25,7 @@
 #include "qskypedialer.h"
 #include "smsdialog.h"
 
-#include <kabc/phonenumber.h>
+#include <kcontacts/phonenumber.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <krun.h>
@@ -46,7 +46,7 @@ static QString strippedSmsNumber(const QString &number)
     return result;
 }
 
-void SendSmsAction::sendSms(const KABC::PhoneNumber &phoneNumber)
+void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
 {
     const QString number = phoneNumber.number().trimmed();
 

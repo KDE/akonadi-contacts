@@ -30,8 +30,8 @@
 #include <item.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/contactgroup.h>
 #include <kcolorscheme.h>
 
 #include <klocalizedstring.h>
@@ -68,10 +68,10 @@ class ContactGroupViewer::Private
     {
       mParent->setWindowTitle( i18n( "Contact Group %1", mCurrentGroupName ) );
 
-      KABC::ContactGroup group;
+      KContacts::ContactGroup group;
       group.setName( mCurrentGroupName );
-      foreach ( const KABC::Addressee &contact, mCurrentContacts ) {
-        group.append( KABC::ContactGroup::Data( contact.realName(), contact.preferredEmail() ) );
+      foreach ( const KContacts::Addressee &contact, mCurrentContacts ) {
+        group.append( KContacts::ContactGroup::Data( contact.realName(), contact.preferredEmail() ) );
       }
 
       mContactGroupFormatter->setContactGroup( group );
@@ -96,7 +96,7 @@ class ContactGroupViewer::Private
       QString name, address;
 
       // remove the 'mailto:' and split into name and email address
-      KABC::Addressee::parseEmailAddress( email.path(), name, address );
+      KContacts::Addressee::parseEmailAddress( email.path(), name, address );
 
       emit mParent->emailClicked( name, address );
     }
@@ -140,7 +140,7 @@ class ContactGroupViewer::Private
     ContactGroupViewer *mParent;
     TextBrowser *mBrowser;
     QString mCurrentGroupName;
-    KABC::Addressee::List mCurrentContacts;
+    KContacts::Addressee::List mCurrentContacts;
     QString mCurrentAddressBookName;
     Item mCurrentItem;
     ContactGroupExpandJob *mExpandJob;
@@ -191,11 +191,11 @@ void ContactGroupViewer::setContactGroupFormatter( AbstractContactGroupFormatter
 
 void ContactGroupViewer::itemChanged( const Item &item )
 {
-  if ( !item.hasPayload<KABC::ContactGroup>() ) {
+  if ( !item.hasPayload<KContacts::ContactGroup>() ) {
     return;
   }
 
-  const KABC::ContactGroup group = item.payload<KABC::ContactGroup>();
+  const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
   d->mCurrentGroupName = group.name();
   d->mCurrentItem = item;
 

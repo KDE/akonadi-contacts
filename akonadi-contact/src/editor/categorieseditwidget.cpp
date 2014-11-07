@@ -24,7 +24,7 @@
 #include <item.h>
 #include <tag.h>
 #include <tagwidget.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kdialog.h>
 
 #include <QHBoxLayout>
@@ -49,7 +49,7 @@ void CategoriesEditWidget::setReadOnly(bool readOnly)
     mTagWidget->setEnabled(!readOnly);
 }
 
-void CategoriesEditWidget::loadContact(const KABC::Addressee &contact)
+void CategoriesEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     Akonadi::Tag::List tags;
 
@@ -61,7 +61,7 @@ void CategoriesEditWidget::loadContact(const KABC::Addressee &contact)
     mTagWidget->setSelection(tags);
 }
 
-void CategoriesEditWidget::storeContact(KABC::Addressee &contact) const
+void CategoriesEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     QStringList categories;
 

@@ -57,8 +57,8 @@ namespace Akonadi {
  * // monitor all collections below the root collection for changes
  * changeRecorder->setCollectionMonitored( Akonadi::Collection::root() );
  * // list only contacts and contact groups
- * changeRecorder->setMimeTypeMonitored( KABC::Addressee::mimeType(), true );
- * changeRecorder->setMimeTypeMonitored( KABC::ContactGroup::mimeType(), true );
+ * changeRecorder->setMimeTypeMonitored( KContacts::Addressee::mimeType(), true );
+ * changeRecorder->setMimeTypeMonitored( KContacts::ContactGroup::mimeType(), true );
  *
  * Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel( changeRecorder );
  *

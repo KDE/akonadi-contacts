@@ -29,7 +29,7 @@
 #include <QPushButton>
 #include <QToolButton>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kacceleratormanager.h>
 #include <qinputdialog.h>
 #include <klineedit.h>
@@ -128,7 +128,7 @@ void EmailEditWidget::setReadOnly(bool readOnly)
     mEditButton->setEnabled(!readOnly);
 }
 
-void EmailEditWidget::loadContact(const KABC::Addressee &contact)
+void EmailEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mEmailList = contact.emails();
 
@@ -139,7 +139,7 @@ void EmailEditWidget::loadContact(const KABC::Addressee &contact)
     }
 }
 
-void EmailEditWidget::storeContact(KABC::Addressee &contact) const
+void EmailEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     QStringList emails(mEmailList);
 

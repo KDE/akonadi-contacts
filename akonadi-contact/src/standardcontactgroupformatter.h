@@ -37,7 +37,7 @@ namespace Akonadi {
  *
  * using namespace Akonadi;
  *
- * const KABC::ContactGroup group = ...
+ * const KContacts::ContactGroup group = ...
  *
  * StandardContactGroupFormatter formatter;
  * formatter.setContactGroup( group );

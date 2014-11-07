@@ -22,7 +22,7 @@
 #ifndef AKONADI_SHOWADDRESSACTION_H
 #define AKONADI_SHOWADDRESSACTION_H
 
-namespace KABC {
+namespace KContacts {
 class Address;
 }
 
@@ -38,9 +38,9 @@ namespace Akonadi {
  *
  * @code
  *
- * const KABC::Addressee contact = ...
+ * const KContacts::Addressee contact = ...
  *
- * const KABC::Address::List addresses = contact.addresses();
+ * const KContacts::Address::List addresses = contact.addresses();
  * if ( !addresses.isEmpty() ) {
  *   Akonadi::ShowAddressAction action;
  *   action.showAddress( addresses.first() );
@@ -53,7 +53,7 @@ namespace Akonadi {
 class ShowAddressAction
 {
 public:
-    void showAddress(const KABC::Address &address);
+    void showAddress(const KContacts::Address &address);
 };
 
 }

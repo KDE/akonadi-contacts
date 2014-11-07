@@ -28,7 +28,7 @@
 
 class QUrl;
 
-namespace KABC {
+namespace KContacts {
 class Address;
 class PhoneNumber;
 }
@@ -123,19 +123,19 @@ public Q_SLOTS:
      * Dials the given phone @p number with the application as
      * configured by the user in the general settings dialog.
      */
-    void dialPhoneNumber(const KABC::PhoneNumber &number);
+    void dialPhoneNumber(const KContacts::PhoneNumber &number);
 
     /**
      * Sends a sms to @p number with the application as
      * configured by the user in the general settings dialog.
      */
-    void sendSms(const KABC::PhoneNumber &number);
+    void sendSms(const KContacts::PhoneNumber &number);
 
     /**
      * Shows the @p address of a contact in a webbrowser or application
      * as configured by the user in the general settings dialog.
      */
-    void showAddress(const KABC::Address &address);
+    void showAddress(const KContacts::Address &address);
 
 private:
     //@cond PRIVATE

@@ -28,7 +28,7 @@
 
 #include <QWidget>
 
-namespace KABC {
+namespace KContacts {
 class Address;
 class Addressee;
 class PhoneNumber;
@@ -61,7 +61,7 @@ class AbstractContactFormatter;
  *
  * using namespace Akonadi;
  *
- * const KABC::Addressee contact = ...
+ * const KContacts::Addressee contact = ...
  *
  * ContactViewer *viewer = new ContactViewer( this );
  * viewer->setContact( contact );
@@ -101,7 +101,7 @@ public:
      *
      * @since 4.5
      */
-    KABC::Addressee rawContact() const;
+    KContacts::Addressee rawContact() const;
 
     /**
      * Sets the contact @p formatter that should be used for formatting the
@@ -124,7 +124,7 @@ public Q_SLOTS:
      * @param contact the contact object to set
      * @since 4.5
      */
-    void setRawContact(const KABC::Addressee &contact);
+    void setRawContact(const KContacts::Addressee &contact);
 
 Q_SIGNALS:
     /**
@@ -150,7 +150,7 @@ Q_SIGNALS:
      *
      * @param number The corresponding phone number.
      */
-    void phoneNumberClicked(const KABC::PhoneNumber &number);
+    void phoneNumberClicked(const KContacts::PhoneNumber &number);
 
     /**
      * This signal is emitted whenever the user has clicked on a SMS link of a
@@ -158,7 +158,7 @@ Q_SIGNALS:
      *
      * @param number The corresponding phone number.
      */
-    void smsClicked(const KABC::PhoneNumber &number);
+    void smsClicked(const KContacts::PhoneNumber &number);
 
     /**
      * This signal is emitted whenever the user has clicked on an
@@ -166,7 +166,7 @@ Q_SIGNALS:
      *
      * @param address The corresponding address.
      */
-    void addressClicked(const KABC::Address &address);
+    void addressClicked(const KContacts::Address &address);
 
 private:
     /**

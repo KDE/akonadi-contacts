@@ -27,7 +27,7 @@
 #include "qskypedialer.h"
 #include "qekigadialer.h"
 
-#include <kabc/phonenumber.h>
+#include <kcontacts/phonenumber.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <krun.h>
@@ -48,7 +48,7 @@ static QString strippedDialNumber(const QString &number)
     return result;
 }
 
-void DialPhoneNumberAction::dialNumber(const KABC::PhoneNumber &number)
+void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
 {
     // synchronize
     ContactActionsSettings::self()->load();

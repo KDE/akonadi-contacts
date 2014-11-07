@@ -39,7 +39,7 @@ ContactGroupSearchJob::ContactGroupSearchJob( QObject * parent )
   fetchScope().fetchFullPayload();
   d->mLimit = -1;
 
-  setMimeTypes( QStringList() << KABC::ContactGroup::mimeType() );
+  setMimeTypes( QStringList() << KContacts::ContactGroup::mimeType() );
 
   // by default search for all contact groups
   Akonadi::SearchQuery query;
@@ -88,13 +88,13 @@ void ContactGroupSearchJob::setLimit( int limit )
   d->mLimit = limit;
 }
 
-KABC::ContactGroup::List ContactGroupSearchJob::contactGroups() const
+KContacts::ContactGroup::List ContactGroupSearchJob::contactGroups() const
 {
-  KABC::ContactGroup::List contactGroups;
+  KContacts::ContactGroup::List contactGroups;
 
   foreach ( const Item &item, items() ) {
-    if ( item.hasPayload<KABC::ContactGroup>() ) {
-      contactGroups.append( item.payload<KABC::ContactGroup>() );
+    if ( item.hasPayload<KContacts::ContactGroup>() ) {
+      contactGroups.append( item.payload<KContacts::ContactGroup>() );
     }
   }
 

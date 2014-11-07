@@ -23,7 +23,7 @@
 
 #include <QHBoxLayout>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kcalcore/freebusyurlstore.h>
 #include <kurlrequester.h>
 
@@ -44,7 +44,7 @@ FreeBusyEditWidget::~FreeBusyEditWidget()
 {
 }
 
-void FreeBusyEditWidget::loadContact(const KABC::Addressee &contact)
+void FreeBusyEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     if (contact.preferredEmail().isEmpty()) {
         return;
@@ -53,7 +53,7 @@ void FreeBusyEditWidget::loadContact(const KABC::Addressee &contact)
     mURL->setUrl(QUrl(KCalCore::FreeBusyUrlStore::self()->readUrl(contact.preferredEmail())));
 }
 
-void FreeBusyEditWidget::storeContact(KABC::Addressee &contact) const
+void FreeBusyEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     if (contact.preferredEmail().isEmpty()) {
         return;

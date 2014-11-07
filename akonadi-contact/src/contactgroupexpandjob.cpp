@@ -31,7 +31,7 @@ using namespace Akonadi;
 class ContactGroupExpandJob::Private
 {
   public:
-    Private( const KABC::ContactGroup &group, ContactGroupExpandJob *parent )
+    Private( const KContacts::ContactGroup &group, ContactGroupExpandJob *parent )
       : mParent( parent ), mGroup( group ), mFetchCount( 0 )
     {
     }
@@ -44,9 +44,9 @@ class ContactGroupExpandJob::Private
     void resolveGroup()
     {
       for ( unsigned int i = 0; i < mGroup.dataCount(); ++i ) {
-        const KABC::ContactGroup::Data data = mGroup.data( i );
+        const KContacts::ContactGroup::Data data = mGroup.data( i );
 
-        KABC::Addressee contact;
+        KContacts::Addressee contact;
         contact.setNameFromString( data.name() );
         contact.insertEmail( data.email(), true );
 
@@ -54,7 +54,7 @@ class ContactGroupExpandJob::Private
       }
 
       for ( unsigned int i = 0; i < mGroup.contactReferenceCount(); ++i ) {
-        const KABC::ContactGroup::ContactReference reference = mGroup.contactReference( i );
+        const KContacts::ContactGroup::ContactReference reference = mGroup.contactReference( i );
 
         Item item;
         if ( !reference.gid().isEmpty() ) {
@@ -105,8 +105,8 @@ class ContactGroupExpandJob::Private
         const QString email = fetchJob->property( "preferredEmail" ).toString();
 
         const Item item = items.first();
-        if ( item.hasPayload<KABC::Addressee>() ) {
-          KABC::Addressee contact = item.payload<KABC::Addressee>();
+        if ( item.hasPayload<KContacts::Addressee>() ) {
+          KContacts::Addressee contact = item.payload<KContacts::Addressee>();
           if ( !email.isEmpty() ) {
             contact.insertEmail( email, true );
           }
@@ -124,14 +124,14 @@ class ContactGroupExpandJob::Private
     }
 
     ContactGroupExpandJob *mParent;
-    KABC::ContactGroup mGroup;
+    KContacts::ContactGroup mGroup;
     QString mName;
-    KABC::Addressee::List mContacts;
+    KContacts::Addressee::List mContacts;
 
     int mFetchCount;
 };
 
-ContactGroupExpandJob::ContactGroupExpandJob( const KABC::ContactGroup &group, QObject * parent )
+ContactGroupExpandJob::ContactGroupExpandJob( const KContacts::ContactGroup &group, QObject * parent )
   : KJob( parent ), d( new Private( group, this ) )
 {
 }
@@ -159,7 +159,7 @@ void ContactGroupExpandJob::start()
   }
 }
 
-KABC::Addressee::List ContactGroupExpandJob::contacts() const
+KContacts::Addressee::List ContactGroupExpandJob::contacts() const
 {
   return d->mContacts;
 }

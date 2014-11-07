@@ -38,7 +38,7 @@ ContactSearchJob::ContactSearchJob( QObject * parent )
   fetchScope().fetchFullPayload();
   d->mLimit = -1;
 
-  setMimeTypes( QStringList() << KABC::Addressee::mimeType() );
+  setMimeTypes( QStringList() << KContacts::Addressee::mimeType() );
 
   // by default search for all contacts
   Akonadi::SearchQuery query;
@@ -91,13 +91,13 @@ void ContactSearchJob::setLimit( int limit )
   d->mLimit = limit;
 }
 
-KABC::Addressee::List ContactSearchJob::contacts() const
+KContacts::Addressee::List ContactSearchJob::contacts() const
 {
-  KABC::Addressee::List contacts;
+  KContacts::Addressee::List contacts;
 
   foreach ( const Item &item, items() ) {
-    if ( item.hasPayload<KABC::Addressee>() ) {
-      contacts.append( item.payload<KABC::Addressee>() );
+    if ( item.hasPayload<KContacts::Addressee>() ) {
+      contacts.append( item.payload<KContacts::Addressee>() );
     }
   }
 

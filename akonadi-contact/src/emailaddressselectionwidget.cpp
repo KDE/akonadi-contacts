@@ -33,8 +33,8 @@
 #include <entitytreeview.h>
 #include <itemfetchscope.h>
 #include <session.h>
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/contactgroup.h>
 #include <klineedit.h>
 #include <KLocalizedString>
 #include <klocalizedstring.h>
@@ -115,8 +115,8 @@ void EmailAddressSelectionWidget::Private::init()
     changeRecorder->fetchCollection( true );
     changeRecorder->setItemFetchScope( scope );
     changeRecorder->setCollectionMonitored( Akonadi::Collection::root() );
-    changeRecorder->setMimeTypeMonitored( KABC::Addressee::mimeType(), true );
-    changeRecorder->setMimeTypeMonitored( KABC::ContactGroup::mimeType(), true );
+    changeRecorder->setMimeTypeMonitored( KContacts::Addressee::mimeType(), true );
+    changeRecorder->setMimeTypeMonitored( KContacts::ContactGroup::mimeType(), true );
 
     Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel( changeRecorder, q );
 //    model->setCollectionFetchStrategy( Akonadi::ContactsTreeModel::InvisibleFetch );

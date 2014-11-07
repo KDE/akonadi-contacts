@@ -22,7 +22,7 @@
 #include "standardcontactformatter.h"
 
 #include <item.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
 
@@ -70,10 +70,10 @@ static int contactAge( const QDate &date )
 
 QString StandardContactFormatter::toHtml( HtmlForm form ) const
 {
-  KABC::Addressee rawContact;
+  KContacts::Addressee rawContact;
   const Akonadi::Item localItem = item();
-  if ( localItem.isValid() && localItem.hasPayload<KABC::Addressee>() ) {
-    rawContact = localItem.payload<KABC::Addressee>();
+  if ( localItem.isValid() && localItem.hasPayload<KContacts::Addressee>() ) {
+    rawContact = localItem.payload<KContacts::Addressee>();
   } else {
     rawContact = contact();
   }
@@ -116,18 +116,18 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
 
   if ( date.isValid() ) {
     dynamicPart += rowFmtStr1
-      .arg( KABC::Addressee::birthdayLabel() )
+      .arg( KContacts::Addressee::birthdayLabel() )
       .arg( QLocale().toString( date ) +
             QLatin1String( "&nbsp;&nbsp;" ) + i18np( "(One year old)", "(%1 years old)", years ) );
   }
 
   // Phone Numbers
   int counter = 0;
-  foreach ( const KABC::PhoneNumber &number, rawContact.phoneNumbers() ) {
+  foreach ( const KContacts::PhoneNumber &number, rawContact.phoneNumbers() ) {
 
     QString dispLabel = number.typeLabel().replace( QLatin1String( " " ), QLatin1String( "&nbsp;" ) );
     QString dispValue = QString::fromLatin1( "<a href=\"phone:?index=%1\">%2</a>" ).arg( counter ).arg( number.number().toHtmlEscaped() );
-    if ( number.type() & KABC::PhoneNumber::Cell ) {
+    if ( number.type() & KContacts::PhoneNumber::Cell ) {
       QString dispIcon = QString::fromLatin1( "<a href=\"sms:?index=%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
         .arg( counter )
         .arg( i18nc( "@info:tooltip", "Send SMS" ) );
@@ -174,7 +174,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
 
   // Addresses
   counter = 0;
-  foreach ( const KABC::Address &address, rawContact.addresses() ) {
+  foreach ( const KContacts::Address &address, rawContact.addresses() ) {
     QString formattedAddress;
 
     if ( address.label().isEmpty() ) {
@@ -191,7 +191,7 @@ QString StandardContactFormatter::toHtml( HtmlForm form ) const
     counter++;
 
     dynamicPart += rowFmtStr2
-      .arg( KABC::Address::typeLabel( address.type() ) )
+      .arg( KContacts::Address::typeLabel( address.type() ) )
       .arg( formattedAddress )
       .arg( url );
   }

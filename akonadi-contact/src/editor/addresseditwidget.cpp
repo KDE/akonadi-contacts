@@ -93,15 +93,15 @@ protected:
 class AddressTypeDialog : public QDialog
 {
 public:
-    AddressTypeDialog(KABC::Address::Type type, QWidget *parent);
+    AddressTypeDialog(KContacts::Address::Type type, QWidget *parent);
     ~AddressTypeDialog();
 
-    KABC::Address::Type type() const;
+    KContacts::Address::Type type() const;
 
 private:
     QButtonGroup *mGroup;
 
-    KABC::Address::TypeList mTypeList;
+    KContacts::Address::TypeList mTypeList;
 };
 
 AddressSelectionWidget::AddressSelectionWidget(QWidget *parent)
@@ -114,13 +114,13 @@ AddressSelectionWidget::~AddressSelectionWidget()
 {
 }
 
-void AddressSelectionWidget::setAddresses(const KABC::Address::List &addresses)
+void AddressSelectionWidget::setAddresses(const KContacts::Address::List &addresses)
 {
     mAddresses = addresses;
     updateView();
 }
 
-void AddressSelectionWidget::setCurrentAddress(const KABC::Address &address)
+void AddressSelectionWidget::setCurrentAddress(const KContacts::Address &address)
 {
     const int index = mAddresses.indexOf(address);
     if (index != -1) {
@@ -128,12 +128,12 @@ void AddressSelectionWidget::setCurrentAddress(const KABC::Address &address)
     }
 }
 
-KABC::Address AddressSelectionWidget::currentAddress() const
+KContacts::Address AddressSelectionWidget::currentAddress() const
 {
     if (currentIndex() != -1 && currentIndex() < mAddresses.count()) {
         return mAddresses.at(currentIndex());
     } else {
-        return KABC::Address();
+        return KContacts::Address();
     }
 }
 
@@ -147,17 +147,17 @@ void AddressSelectionWidget::updateView()
 {
     clear();
     for (int i = 0; i < mAddresses.count(); ++i) {
-        addItem(KABC::Address::typeLabel(mAddresses.at(i).type()));
+        addItem(KContacts::Address::typeLabel(mAddresses.at(i).type()));
     }
 }
 
 AddressTypeCombo::AddressTypeCombo(QWidget *parent)
     : KComboBox(parent)
-    , mType(KABC::Address::Home)
+    , mType(KContacts::Address::Home)
     , mLastSelected(0)
 {
-    for (int i = 0; i < KABC::Address::typeList().count(); ++i) {
-        mTypeList.append(KABC::Address::typeList().at(i));
+    for (int i = 0; i < KContacts::Address::typeList().count(); ++i) {
+        mTypeList.append(KContacts::Address::typeList().at(i));
     }
     mTypeList.append(-1);   // Others...
 
@@ -171,7 +171,7 @@ AddressTypeCombo::~AddressTypeCombo()
 {
 }
 
-void AddressTypeCombo::setType(KABC::Address::Type type)
+void AddressTypeCombo::setType(KContacts::Address::Type type)
 {
     if (!mTypeList.contains((int)type)) {
         // insert at the end, but before the 'Others...' entry
@@ -182,7 +182,7 @@ void AddressTypeCombo::setType(KABC::Address::Type type)
     update();
 }
 
-KABC::Address::Type AddressTypeCombo::type() const
+KContacts::Address::Type AddressTypeCombo::type() const
 {
     return mType;
 }
@@ -197,7 +197,7 @@ void AddressTypeCombo::update()
         if (mTypeList.at(i) == -1) {     // "Other..." entry
             addItem(i18nc("@item:inlistbox Category of contact info field", "Other..."));
         } else {
-            addItem(KABC::Address::typeLabel(KABC::Address::Type(mTypeList.at(i))));
+            addItem(KContacts::Address::typeLabel(KContacts::Address::Type(mTypeList.at(i))));
         }
     }
 
@@ -211,7 +211,7 @@ void AddressTypeCombo::selected(int pos)
     if (mTypeList.at(pos) == -1) {
         otherSelected();
     } else {
-        mType = KABC::Address::Type(mTypeList.at(pos));
+        mType = KContacts::Address::Type(mTypeList.at(pos));
         mLastSelected = pos;
     }
 }
@@ -225,7 +225,7 @@ void AddressTypeCombo::otherSelected()
             mTypeList.insert(mTypeList.at(mTypeList.count() - 1), mType);
         }
     } else {
-        setType(KABC::Address::Type(mTypeList.at(mLastSelected)));
+        setType(KContacts::Address::Type(mTypeList.at(mLastSelected)));
     }
 
     update();
@@ -244,7 +244,7 @@ AddressEditWidget::AddressEditWidget(QWidget *parent)
     hboxLayout->addWidget(label);
 
     mAddressSelectionWidget = new AddressSelectionWidget(this);
-    connect(mAddressSelectionWidget, SIGNAL(selectionChanged(KABC::Address)),
+    connect(mAddressSelectionWidget, SIGNAL(selectionChanged(KContacts::Address)),
             SLOT(updateAddressView()));
     label->setBuddy(mAddressSelectionWidget);
     hboxLayout->addWidget(mAddressSelectionWidget, 1);
@@ -296,7 +296,7 @@ void AddressEditWidget::createAddress()
 {
     AutoQPointer<AddressEditDialog> dialog = new AddressEditDialog(this);
     if (dialog->exec()) {
-        const KABC::Address address = dialog->address();
+        const KContacts::Address address = dialog->address();
         fixPreferredAddress(address);
         mAddressList.append(address);
         mAddressSelectionWidget->setAddresses(mAddressList);
@@ -312,7 +312,7 @@ void AddressEditWidget::editAddress()
     AutoQPointer<AddressEditDialog> dialog = new AddressEditDialog(this);
     dialog->setAddress(mAddressSelectionWidget->currentAddress());
     if (dialog->exec()) {
-        const KABC::Address address = dialog->address();
+        const KContacts::Address address = dialog->address();
         fixPreferredAddress(address);
         mAddressList[mAddressSelectionWidget->currentIndex()] = address;
         mAddressSelectionWidget->setAddresses(mAddressList);
@@ -336,21 +336,21 @@ void AddressEditWidget::deleteAddress()
     updateButtons();
 }
 
-void AddressEditWidget::fixPreferredAddress(const KABC::Address &preferredAddress)
+void AddressEditWidget::fixPreferredAddress(const KContacts::Address &preferredAddress)
 {
     // as the preferred address is mutual exclusive, we have to
     // remove the flag from all other addresses
-    if (preferredAddress.type() &KABC::Address::Pref) {
+    if (preferredAddress.type() &KContacts::Address::Pref) {
         for (int i = 0; i < mAddressList.count(); ++i) {
-            KABC::Address &address = mAddressList[i];
-            address.setType(address.type() & ~KABC::Address::Pref);
+            KContacts::Address &address = mAddressList[i];
+            address.setType(address.type() & ~KContacts::Address::Pref);
         }
     }
 }
 
 void AddressEditWidget::updateAddressView()
 {
-    const KABC::Address address = mAddressSelectionWidget->currentAddress();
+    const KContacts::Address address = mAddressSelectionWidget->currentAddress();
 
     if (address.isEmpty()) {
         mAddressView->setText(QString());
@@ -366,7 +366,7 @@ void AddressEditWidget::updateButtons()
     mDeleteButton->setEnabled(!mReadOnly && (mAddressList.count() > 0));
 }
 
-void AddressEditWidget::loadContact(const KABC::Addressee &contact)
+void AddressEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mName = contact.realName();
     mAddressList = contact.addresses();
@@ -375,7 +375,7 @@ void AddressEditWidget::loadContact(const KABC::Addressee &contact)
 
     // set the preferred address as the visible one
     for (int i = 0; i < mAddressList.count(); ++i) {
-        if (mAddressList.at(i).type() &KABC::Address::Pref) {
+        if (mAddressList.at(i).type() &KContacts::Address::Pref) {
             mAddressSelectionWidget->setCurrentAddress(mAddressList.at(i));
             break;
         }
@@ -385,17 +385,17 @@ void AddressEditWidget::loadContact(const KABC::Addressee &contact)
     updateButtons();
 }
 
-void AddressEditWidget::storeContact(KABC::Addressee &contact) const
+void AddressEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     // delete all previous addresses
-    const KABC::Address::List oldAddresses = contact.addresses();
+    const KContacts::Address::List oldAddresses = contact.addresses();
     for (int i = 0; i < oldAddresses.count(); ++i) {
         contact.removeAddress(oldAddresses.at(i));
     }
 
     // insert the new ones
     for (int i = 0; i < mAddressList.count(); ++i) {
-        const KABC::Address address(mAddressList.at(i));
+        const KContacts::Address address(mAddressList.at(i));
         if (!address.isEmpty()) {
             contact.insertAddress(address);
         }
@@ -432,7 +432,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     label->setBuddy(mTypeCombo);
     topLayout->addWidget(mTypeCombo, 0, 1);
 
-    label = new QLabel(i18nc("<streetLabel>:", "%1:", KABC::Address::streetLabel()), page);
+    label = new QLabel(i18nc("<streetLabel>:", "%1:", KContacts::Address::streetLabel()), page);
     mainLayout->addWidget(label);
     label->setAlignment(Qt::AlignTop | Qt::AlignLeft);
     topLayout->addWidget(label, 1, 0);
@@ -445,7 +445,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     TabPressEater *eater = new TabPressEater(this);
     mStreetTextEdit->installEventFilter(eater);
 
-    label = new QLabel(i18nc("<postOfficeBoxLabel>:", "%1:", KABC::Address::postOfficeBoxLabel()), page);
+    label = new QLabel(i18nc("<postOfficeBoxLabel>:", "%1:", KContacts::Address::postOfficeBoxLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 2, 0);
     mPOBoxEdit = new QLineEdit(page);
@@ -453,7 +453,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     label->setBuddy(mPOBoxEdit);
     topLayout->addWidget(mPOBoxEdit, 2, 1);
 
-    label = new QLabel(i18nc("<localityLabel>:", "%1:", KABC::Address::localityLabel()), page);
+    label = new QLabel(i18nc("<localityLabel>:", "%1:", KContacts::Address::localityLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 3, 0);
     mLocalityEdit = new QLineEdit(page);
@@ -461,7 +461,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     label->setBuddy(mLocalityEdit);
     topLayout->addWidget(mLocalityEdit, 3, 1);
 
-    label = new QLabel(i18nc("<regionLabel>:", "%1:", KABC::Address::regionLabel()), page);
+    label = new QLabel(i18nc("<regionLabel>:", "%1:", KContacts::Address::regionLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 4, 0);
     mRegionEdit = new QLineEdit(page);
@@ -469,7 +469,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     label->setBuddy(mRegionEdit);
     topLayout->addWidget(mRegionEdit, 4, 1);
 
-    label = new QLabel(i18nc("<postalCodeLabel>:", "%1:", KABC::Address::postalCodeLabel()), page);
+    label = new QLabel(i18nc("<postalCodeLabel>:", "%1:", KContacts::Address::postalCodeLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 5, 0);
     mPostalCodeEdit = new QLineEdit(page);
@@ -477,7 +477,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     label->setBuddy(mPostalCodeEdit);
     topLayout->addWidget(mPostalCodeEdit, 5, 1);
 
-    label = new QLabel(i18nc("<countryLabel>:", "%1:", KABC::Address::countryLabel()), page);
+    label = new QLabel(i18nc("<countryLabel>:", "%1:", KContacts::Address::countryLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 6, 0);
     mCountryCombo = new KComboBox(page);
@@ -512,15 +512,15 @@ AddressEditDialog::~AddressEditDialog()
 void AddressEditDialog::editLabel()
 {
     bool ok = false;
-    QString result = QInputDialog::getMultiLineText(this, KABC::Address::labelLabel(),
-                                                    KABC::Address::labelLabel(),
+    QString result = QInputDialog::getMultiLineText(this, KContacts::Address::labelLabel(),
+                                                    KContacts::Address::labelLabel(),
                                                     mLabel, &ok);
     if (ok) {
         mLabel = result;
     }
 }
 
-void AddressEditDialog::setAddress(const KABC::Address &address)
+void AddressEditDialog::setAddress(const KContacts::Address &address)
 {
     mAddress = address;
 
@@ -531,7 +531,7 @@ void AddressEditDialog::setAddress(const KABC::Address &address)
     mPostalCodeEdit->setText(mAddress.postalCode());
     mPOBoxEdit->setText(mAddress.postOfficeBox());
     mLabel = mAddress.label();
-    mPreferredCheckBox->setChecked(mAddress.type() &KABC::Address::Pref);
+    mPreferredCheckBox->setChecked(mAddress.type() &KContacts::Address::Pref);
 
     if (mAddress.isEmpty()) {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(),
@@ -543,9 +543,9 @@ void AddressEditDialog::setAddress(const KABC::Address &address)
     mStreetTextEdit->setFocus();
 }
 
-KABC::Address AddressEditDialog::address() const
+KContacts::Address AddressEditDialog::address() const
 {
-    KABC::Address address(mAddress);
+    KContacts::Address address(mAddress);
 
     address.setType(mTypeCombo->type());
     address.setLocality(mLocalityEdit->text());
@@ -557,9 +557,9 @@ KABC::Address AddressEditDialog::address() const
     address.setLabel(mLabel);
 
     if (mPreferredCheckBox->isChecked()) {
-        address.setType(address.type() | KABC::Address::Pref);
+        address.setType(address.type() | KContacts::Address::Pref);
     } else {
-        address.setType(address.type() & ~(KABC::Address::Pref));
+        address.setType(address.type() & ~(KContacts::Address::Pref));
     }
 
     return address;
@@ -584,7 +584,7 @@ void AddressEditDialog::fillCountryCombo()
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
 }
 
-AddressTypeDialog::AddressTypeDialog(KABC::Address::Type type, QWidget *parent)
+AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *parent)
     : QDialog(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -613,14 +613,14 @@ AddressTypeDialog::AddressTypeDialog(KABC::Address::Type type, QWidget *parent)
 
     QGridLayout *buttonLayout = new QGridLayout(box);
 
-    mTypeList = KABC::Address::typeList();
-    mTypeList.removeAll(KABC::Address::Pref);
+    mTypeList = KContacts::Address::typeList();
+    mTypeList.removeAll(KContacts::Address::Pref);
 
-    KABC::Address::TypeList::ConstIterator it;
+    KContacts::Address::TypeList::ConstIterator it;
     int i = 0;
     int row = 0;
     for (it = mTypeList.constBegin(); it != mTypeList.constEnd(); ++it, ++i) {
-        QCheckBox *cb = new QCheckBox(KABC::Address::typeLabel(*it), box);
+        QCheckBox *cb = new QCheckBox(KContacts::Address::typeLabel(*it), box);
         cb->setChecked(type & mTypeList[i]);
         buttonLayout->addWidget(cb, row, i % 3);
 
@@ -635,9 +635,9 @@ AddressTypeDialog::~AddressTypeDialog()
 {
 }
 
-KABC::Address::Type AddressTypeDialog::type() const
+KContacts::Address::Type AddressTypeDialog::type() const
 {
-    KABC::Address::Type type;
+    KContacts::Address::Type type;
     for (int i = 0; i < mGroup->buttons().count(); ++i) {
         QCheckBox *box = dynamic_cast<QCheckBox *>(mGroup->buttons().at(i));
         if (box && box->isChecked()) {

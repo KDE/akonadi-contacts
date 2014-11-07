@@ -23,7 +23,7 @@
 
 #include <contactgroupexpandjob.h>
 #include <item.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kcolorscheme.h>
 #include <klocalizedstring.h>
 #include <kstringhandler.h>
@@ -41,10 +41,10 @@ StandardContactGroupFormatter::~StandardContactGroupFormatter()
 
 QString StandardContactGroupFormatter::toHtml( HtmlForm form ) const
 {
-  KABC::ContactGroup group;
+  KContacts::ContactGroup group;
   const Akonadi::Item localItem = item();
-  if ( localItem.isValid() && localItem.hasPayload<KABC::ContactGroup>() ) {
-    group = localItem.payload<KABC::ContactGroup>();
+  if ( localItem.isValid() && localItem.hasPayload<KContacts::ContactGroup>() ) {
+    group = localItem.payload<KContacts::ContactGroup>();
   } else {
     group = contactGroup();
   }
@@ -60,8 +60,8 @@ QString StandardContactGroupFormatter::toHtml( HtmlForm form ) const
     ContactGroupExpandJob *job = new ContactGroupExpandJob( group );
     if ( job->exec() ) {
       group.removeAllContactData();
-      foreach ( const KABC::Addressee &contact, job->contacts() ) {
-        group.append( KABC::ContactGroup::Data( contact.realName(), contact.preferredEmail() ) );
+      foreach ( const KContacts::Addressee &contact, job->contacts() ) {
+        group.append( KContacts::ContactGroup::Data( contact.realName(), contact.preferredEmail() ) );
       }
     }
   }
@@ -82,14 +82,14 @@ QString StandardContactGroupFormatter::toHtml( HtmlForm form ) const
   strGroup += QLatin1String( "<table width=\"100%\">" );
 
   for ( uint i = 0; i < group.dataCount(); ++i ) {
-    const KABC::ContactGroup::Data data = group.data( i );
+    const KContacts::ContactGroup::Data data = group.data( i );
 
     if ( data.email().isEmpty() ) {
       strGroup.append( QString::fromLatin1( "<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
                                             "<td width=\"50%\"></td></tr>" )
                      .arg( data.name() ) );
     } else {
-      KABC::Addressee contact;
+      KContacts::Addressee contact;
       contact.setFormattedName( data.name() );
       contact.insertEmail( data.email() );
 

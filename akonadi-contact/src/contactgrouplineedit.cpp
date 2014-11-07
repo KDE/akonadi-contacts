@@ -55,7 +55,7 @@ bool ContactGroupLineEdit::containsReference() const
   return mContainsReference;
 }
 
-void ContactGroupLineEdit::setContactData( const KABC::ContactGroup::Data &groupData )
+void ContactGroupLineEdit::setContactData( const KContacts::ContactGroup::Data &groupData )
 {
   mContactData = groupData;
   mContainsReference = false;
@@ -63,23 +63,23 @@ void ContactGroupLineEdit::setContactData( const KABC::ContactGroup::Data &group
   setText( QString::fromLatin1( "%1 <%2>" ).arg( groupData.name() ).arg( groupData.email() ) );
 }
 
-KABC::ContactGroup::Data ContactGroupLineEdit::contactData() const
+KContacts::ContactGroup::Data ContactGroupLineEdit::contactData() const
 {
   QString fullName, email;
-  KABC::Addressee::parseEmailAddress( text(), fullName, email );
+  KContacts::Addressee::parseEmailAddress( text(), fullName, email );
 
   if ( fullName.isEmpty() || email.isEmpty() ) {
-    return KABC::ContactGroup::Data();
+    return KContacts::ContactGroup::Data();
   }
 
-  KABC::ContactGroup::Data groupData( mContactData );
+  KContacts::ContactGroup::Data groupData( mContactData );
   groupData.setName( fullName );
   groupData.setEmail( email );
 
   return groupData;
 }
 
-void ContactGroupLineEdit::setContactReference( const KABC::ContactGroup::ContactReference &reference )
+void ContactGroupLineEdit::setContactReference( const KContacts::ContactGroup::ContactReference &reference )
 {
   mContactReference = reference;
   mContainsReference = true;
@@ -89,7 +89,7 @@ void ContactGroupLineEdit::setContactReference( const KABC::ContactGroup::Contac
   updateView( reference );
 }
 
-KABC::ContactGroup::ContactReference ContactGroupLineEdit::contactReference() const
+KContacts::ContactGroup::ContactReference ContactGroupLineEdit::contactReference() const
 {
   return mContactReference;
 }
@@ -119,7 +119,7 @@ void ContactGroupLineEdit::invalidateReference()
   mContainsReference = false;
 }
 
-void ContactGroupLineEdit::updateView( const KABC::ContactGroup::ContactReference &reference )
+void ContactGroupLineEdit::updateView( const KContacts::ContactGroup::ContactReference &reference )
 {
   Akonadi::Item item;
   if ( !reference.gid().isEmpty() ) {
@@ -147,11 +147,11 @@ void ContactGroupLineEdit::fetchDone( KJob *job )
 
 void ContactGroupLineEdit::updateView( const Akonadi::Item &item, const QString &preferredEmail )
 {
-  if ( !item.hasPayload<KABC::Addressee>() ) {
+  if ( !item.hasPayload<KContacts::Addressee>() ) {
     return;
   }
 
-  const KABC::Addressee contact = item.payload<KABC::Addressee>();
+  const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
 
   QString email( preferredEmail );
   if ( email.isEmpty() ) {
@@ -177,7 +177,7 @@ void ContactGroupLineEdit::updateView( const Akonadi::Item &item, const QString 
   }
 }
 
-QString ContactGroupLineEdit::requestPreferredEmail( const KABC::Addressee &contact ) const
+QString ContactGroupLineEdit::requestPreferredEmail( const KContacts::Addressee &contact ) const
 {
   const QStringList emails = contact.emails();
 

@@ -23,8 +23,8 @@
 #define AKONADI_CONTACTGROUPLINEEDIT_P_H
 
 #include <item.h>
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/contactgroup.h>
 #include <klineedit.h>
 
 class QAbstractItemModel;
@@ -44,13 +44,13 @@ public:
 
     bool containsReference() const;
 
-    void setContactData(const KABC::ContactGroup::Data &data);
+    void setContactData(const KContacts::ContactGroup::Data &data);
 
-    KABC::ContactGroup::Data contactData() const;
+    KContacts::ContactGroup::Data contactData() const;
 
-    void setContactReference(const KABC::ContactGroup::ContactReference &reference);
+    void setContactReference(const KContacts::ContactGroup::ContactReference &reference);
 
-    KABC::ContactGroup::ContactReference contactReference() const;
+    KContacts::ContactGroup::ContactReference contactReference() const;
 
 private Q_SLOTS:
     void autoCompleted(const QModelIndex &index);
@@ -58,14 +58,14 @@ private Q_SLOTS:
     void invalidateReference();
 
 private:
-    void updateView(const KABC::ContactGroup::ContactReference &referrence);
+    void updateView(const KContacts::ContactGroup::ContactReference &referrence);
     void updateView(const Akonadi::Item &item, const QString &preferredEmail = QString());
-    QString requestPreferredEmail(const KABC::Addressee &contact) const;
+    QString requestPreferredEmail(const KContacts::Addressee &contact) const;
 
     QCompleter *mCompleter;
     bool mContainsReference;
-    KABC::ContactGroup::Data mContactData;
-    KABC::ContactGroup::ContactReference mContactReference;
+    KContacts::ContactGroup::Data mContactData;
+    KContacts::ContactGroup::ContactReference mContactReference;
 };
 
 #endif

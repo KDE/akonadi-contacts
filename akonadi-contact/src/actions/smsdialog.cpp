@@ -21,7 +21,7 @@
 
 #include "smsdialog.h"
 
-#include <kabc/phonenumber.h>
+#include <kcontacts/phonenumber.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <ktextedit.h>
@@ -31,7 +31,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 
-SmsDialog::SmsDialog(const KABC::PhoneNumber &number)
+SmsDialog::SmsDialog(const KContacts::PhoneNumber &number)
     : mNumber(number.number())
 {
     initUI();

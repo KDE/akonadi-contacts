@@ -24,7 +24,7 @@
 
 #include "abstractcontacteditorwidget_p.h"
 
-namespace KABC {
+namespace KContacts {
 class Addressee;
 }
 
@@ -59,13 +59,13 @@ public:
      * Initializes the fields of the contact editor
      * with the values from a @p contact.
      */
-    void loadContact(const KABC::Addressee &contact, const Akonadi::ContactMetaData &metaData);
+    void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData);
 
     /**
      * Stores back the fields of the contact editor
      * into the given @p contact.
      */
-    void storeContact(KABC::Addressee &contact, Akonadi::ContactMetaData &metaData) const;
+    void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaData &metaData) const;
 
     /**
      * Sets whether the contact in the editor allows

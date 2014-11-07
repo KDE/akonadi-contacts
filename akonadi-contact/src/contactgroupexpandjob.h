@@ -24,8 +24,8 @@
 
 #include "akonadi-contact_export.h"
 
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/contactgroup.h>
 #include <kjob.h>
 
 namespace Akonadi {
@@ -33,15 +33,15 @@ namespace Akonadi {
 /**
  * @short Job that expands a ContactGroup to a list of contacts.
  *
- * This job takes a KABC::ContactGroup object or a name of a contact group and
- * expands it to a list of KABC::Addressee objects by creating temporary KABC::Addressee objects
- * for the KABC::ContactGroup::Data objects of the group and fetching the
+ * This job takes a KContacts::ContactGroup object or a name of a contact group and
+ * expands it to a list of KContacts::Addressee objects by creating temporary KContacts::Addressee objects
+ * for the KContacts::ContactGroup::Data objects of the group and fetching the
  * complete contacts from the Akonadi storage for the
- * KABC::ContactGroup::ContactReferences of the group.
+ * KContacts::ContactGroup::ContactReferences of the group.
  *
  * @code
  *
- * const KABC::ContactGroup group = ...;
+ * const KContacts::ContactGroup group = ...;
  *
  * Akonadi::ContactGroupExpandJob *job = new Akonadi::ContactGroupExpandJob( group );
  * connect( job, SIGNAL(result(KJob*)), this, SLOT(expandResult(KJob*)) );
@@ -52,7 +52,7 @@ namespace Akonadi {
  * MyClass::expandResult( KJob *job )
  * {
  *   Akonadi::ContactGroupExpandJob *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob*>( job );
- *   const KABC::Addressee::List contacts = expandJob->contacts();
+ *   const KContacts::Addressee::List contacts = expandJob->contacts();
  *   // do something with the contacts
  * }
  *
@@ -72,7 +72,7 @@ public:
      * @param group The contact group to expand.
      * @param parent The parent object.
      */
-    explicit ContactGroupExpandJob(const KABC::ContactGroup &group, QObject *parent = 0);
+    explicit ContactGroupExpandJob(const KContacts::ContactGroup &group, QObject *parent = 0);
 
     /**
      * Creates a new contact group expand job.
@@ -92,7 +92,7 @@ public:
     /**
      * Returns the list of contacts.
      */
-    KABC::Addressee::List contacts() const;
+    KContacts::Addressee::List contacts() const;
 
     /**
      * Starts the expand job.

@@ -26,7 +26,7 @@
 
 #include <QDialog>
 
-namespace KABC {
+namespace KContacts {
 }
 
 namespace Akonadi {

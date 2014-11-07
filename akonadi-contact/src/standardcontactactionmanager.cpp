@@ -26,8 +26,8 @@
 
 #include <entitytreemodel.h>
 #include <mimetypechecker.h>
-#include <kabc/addressee.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/addressee.h>
+#include <kcontacts/contactgroup.h>
 
 #include <QAction>
 #include <kactioncollection.h>
@@ -51,7 +51,7 @@ class StandardContactActionManager::Private
                         mParent, SIGNAL(actionStateUpdated()) );
 
       mGenericManager->setMimeTypeFilter(
-        QStringList() << KABC::Addressee::mimeType() << KABC::ContactGroup::mimeType() );
+        QStringList() << KContacts::Addressee::mimeType() << KContacts::ContactGroup::mimeType() );
 
       mGenericManager->setCapabilityFilter( QStringList() << QLatin1String( "Resource" ) );
     }
@@ -331,7 +331,7 @@ class StandardContactActionManager::Private
           const QModelIndex index = mItemSelectionModel->selectedRows().first();
           if ( index.isValid() ) {
             const QString mimeType = index.data( EntityTreeModel::MimeTypeRole ).toString();
-            if ( mimeType == KABC::Addressee::mimeType() ) {
+            if ( mimeType == KContacts::Addressee::mimeType() ) {
               if (mGenericManager->action( Akonadi::StandardActionManager::CopyItems )) {
                 mGenericManager->setActionText( Akonadi::StandardActionManager::CopyItems,
                                                 ki18np( "Copy Contact", "Copy %1 Contacts" ) );
@@ -359,7 +359,7 @@ class StandardContactActionManager::Private
               if ( mActions.contains( StandardContactActionManager::EditItem ) ) {
                 mActions.value( StandardContactActionManager::EditItem )->setText( i18n( "Edit Contact..." ) );
               }
-            } else if ( mimeType == KABC::ContactGroup::mimeType() ) {
+            } else if ( mimeType == KContacts::ContactGroup::mimeType() ) {
               if (mGenericManager->action( Akonadi::StandardActionManager::CopyItems )) {
                 mGenericManager->setActionText( Akonadi::StandardActionManager::CopyItems,
                                                 ki18np( "Copy Group", "Copy %1 Groups" ) );
@@ -393,10 +393,10 @@ class StandardContactActionManager::Private
       }
 
       if ( mActions.contains( StandardContactActionManager::CreateContact ) ) {
-        mActions[ StandardContactActionManager::CreateContact ]->setEnabled( hasWritableCollection( KABC::Addressee::mimeType() ) );
+        mActions[ StandardContactActionManager::CreateContact ]->setEnabled( hasWritableCollection( KContacts::Addressee::mimeType() ) );
       }
       if ( mActions.contains( StandardContactActionManager::CreateContactGroup ) ) {
-        mActions[ StandardContactActionManager::CreateContactGroup ]->setEnabled( hasWritableCollection( KABC::ContactGroup::mimeType() ) );
+        mActions[ StandardContactActionManager::CreateContactGroup ]->setEnabled( hasWritableCollection( KContacts::ContactGroup::mimeType() ) );
       }
 
       if ( mActions.contains( StandardContactActionManager::EditItem ) ) {
@@ -491,7 +491,7 @@ class StandardContactActionManager::Private
         return;
       }
 
-      if ( Akonadi::MimeTypeChecker::isWantedItem( item, KABC::Addressee::mimeType() ) ) {
+      if ( Akonadi::MimeTypeChecker::isWantedItem( item, KContacts::Addressee::mimeType() ) ) {
         QPointer<Akonadi::ContactEditorDialog> dlg =
           new Akonadi::ContactEditorDialog(
             Akonadi::ContactEditorDialog::EditMode, mParentWidget );
@@ -500,7 +500,7 @@ class StandardContactActionManager::Private
         dlg->setContact( item );
         dlg->exec();
         delete dlg;
-      } else if ( Akonadi::MimeTypeChecker::isWantedItem( item, KABC::ContactGroup::mimeType() ) ) {
+      } else if ( Akonadi::MimeTypeChecker::isWantedItem( item, KContacts::ContactGroup::mimeType() ) ) {
         QPointer<Akonadi::ContactGroupEditorDialog> dlg =
           new Akonadi::ContactGroupEditorDialog(
             Akonadi::ContactGroupEditorDialog::EditMode, mParentWidget );

@@ -24,7 +24,7 @@
 
 #include <QWidget>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 class QLineEdit;
 class QToolButton;
@@ -46,11 +46,11 @@ public:
     /**
      * @param contact KABC contact's addressee to load
      */
-    void loadContact(const KABC::Addressee &contact);
+    void loadContact(const KContacts::Addressee &contact);
     /**
      * @param contact KABC contact's addressee to store
      */
-    void storeContact(KABC::Addressee &contact) const;
+    void storeContact(KContacts::Addressee &contact) const;
     /**
      * @param readOnly sets readonly mode
      */
@@ -62,7 +62,7 @@ Q_SIGNALS:
      *
      * @param contact A dummy contact that contains only the name components.
      */
-    void nameChanged(const KABC::Addressee &contact);
+    void nameChanged(const KContacts::Addressee &contact);
 
 private Q_SLOTS:
     void textChanged(const QString &text);
@@ -70,7 +70,7 @@ private Q_SLOTS:
 
 private:
     QLineEdit *mNameEdit;
-    KABC::Addressee mContact;
+    KContacts::Addressee mContact;
     QToolButton *mButtonEdit;
 };
 

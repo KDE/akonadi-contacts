@@ -34,7 +34,7 @@
 #include <entitydisplayattribute.h>
 #include <item.h>
 #include <itemfetchscope.h>
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
 #include <klocalizedstring.h>
@@ -45,7 +45,7 @@
 #ifdef HAVE_PRISON
 #include <prison/QRCodeBarcode>
 #include <prison/DataMatrixBarcode>
-#include <kabc/vcardconverter.h>
+#include <kcontacts/vcardconverter.h>
 #endif // HAVE_PRISON
 
 using namespace Akonadi;
@@ -107,10 +107,10 @@ class ContactViewer::Private
       KConfig config( QLatin1String( "akonadi_contactrc" ) );
       KConfigGroup group( &config, QLatin1String( "View" ) );
       if ( group.readEntry( "QRCodes", true ) ) {
-        KABC::VCardConverter converter;
-        KABC::Addressee addr( mCurrentContact );
-        addr.setPhoto( KABC::Picture() );
-        addr.setLogo( KABC::Picture() );
+        KContacts::VCardConverter converter;
+        KContacts::Addressee addr( mCurrentContact );
+        addr.setPhoto( KContacts::Picture() );
+        addr.setLogo( KContacts::Picture() );
         const QString data = QString::fromUtf8( converter.createVCard( addr ) );
         mQRCode->setData( data );
         mDataMatrix->setData( data );
@@ -138,7 +138,7 @@ class ContactViewer::Private
         customFieldDescriptions << description;
       }
 
-      KABC::Addressee contact( mCurrentContact );
+      KContacts::Addressee contact( mCurrentContact );
       if ( !addressBookName.isEmpty() ) {
         contact.insertCustom( QLatin1String( "KADDRESSBOOK" ), QLatin1String( "AddressBook" ), addressBookName );
       }
@@ -154,7 +154,7 @@ class ContactViewer::Private
       QString name, address;
 
       // remove the 'mailto:' and split into name and email address
-      KABC::Addressee::parseEmailAddress( email.mid( 7 ), name, address );
+      KContacts::Addressee::parseEmailAddress( email.mid( 7 ), name, address );
 
       emit mParent->emailClicked( name, address );
     }
@@ -168,21 +168,21 @@ class ContactViewer::Private
       } else if ( urlScheme == QLatin1String( "phone" ) ) {
         const int pos = url.queryItemValue( QLatin1String( "index" ) ).toInt();
 
-        const KABC::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
+        const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
         if ( pos < numbers.count() ) {
           emit mParent->phoneNumberClicked( numbers.at( pos ) );
         }
       } else if ( urlScheme == QLatin1String( "sms" ) ) {
         const int pos = url.queryItemValue( QLatin1String( "index" ) ).toInt();
 
-        const KABC::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
+        const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
         if ( pos < numbers.count() ) {
           emit mParent->smsClicked( numbers.at( pos ) );
         }
       } else if ( urlScheme == QLatin1String( "address" ) ) {
         const int pos = url.queryItemValue( QLatin1String( "index" ) ).toInt();
 
-        const KABC::Address::List addresses = mCurrentContact.addresses();
+        const KContacts::Address::List addresses = mCurrentContact.addresses();
         if ( pos < addresses.count() ) {
           emit mParent->addressClicked( addresses.at( pos ) );
         }
@@ -190,7 +190,7 @@ class ContactViewer::Private
         QString name, address;
 
         // remove the 'mailto:' and split into name and email address
-        KABC::Addressee::parseEmailAddress( url.path(), name, address );
+        KContacts::Addressee::parseEmailAddress( url.path(), name, address );
 
         emit mParent->emailClicked( name, address );
       }
@@ -219,7 +219,7 @@ class ContactViewer::Private
 
     ContactViewer *mParent;
     TextBrowser *mBrowser;
-    KABC::Addressee mCurrentContact;
+    KContacts::Addressee mCurrentContact;
     Item mCurrentItem;
     AbstractContactFormatter *mContactFormatter;
     AbstractContactFormatter *mStandardContactFormatter;
@@ -259,7 +259,7 @@ Akonadi::Item ContactViewer::contact() const
   return ItemMonitor::item();
 }
 
-KABC::Addressee ContactViewer::rawContact() const
+KContacts::Addressee ContactViewer::rawContact() const
 {
   return d->mCurrentContact;
 }
@@ -278,7 +278,7 @@ void ContactViewer::setContact( const Akonadi::Item &contact )
   ItemMonitor::setItem( contact );
 }
 
-void ContactViewer::setRawContact( const KABC::Addressee &contact )
+void ContactViewer::setRawContact( const KContacts::Addressee &contact )
 {
   d->mCurrentContact = contact;
 
@@ -287,12 +287,12 @@ void ContactViewer::setRawContact( const KABC::Addressee &contact )
 
 void ContactViewer::itemChanged( const Item &contactItem )
 {
-  if ( !contactItem.hasPayload<KABC::Addressee>() ) {
+  if ( !contactItem.hasPayload<KContacts::Addressee>() ) {
     return;
   }
 
   d->mCurrentItem = contactItem;
-  d->mCurrentContact = contactItem.payload<KABC::Addressee>();
+  d->mCurrentContact = contactItem.payload<KContacts::Addressee>();
 
   // stop any running fetch job
   if ( d->mParentCollectionFetchJob ) {

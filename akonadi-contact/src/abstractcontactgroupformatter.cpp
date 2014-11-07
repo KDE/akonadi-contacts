@@ -22,14 +22,14 @@
 #include "abstractcontactgroupformatter.h"
 
 #include <item.h>
-#include <kabc/contactgroup.h>
+#include <kcontacts/contactgroup.h>
 
 using namespace Akonadi;
 
 class AbstractContactGroupFormatter::Private
 {
 public:
-    KABC::ContactGroup mContactGroup;
+    KContacts::ContactGroup mContactGroup;
     Akonadi::Item mItem;
     QList<QVariantMap> mAdditionalFields;
 };
@@ -44,12 +44,12 @@ AbstractContactGroupFormatter::~AbstractContactGroupFormatter()
     delete d;
 }
 
-void AbstractContactGroupFormatter::setContactGroup(const KABC::ContactGroup &group)
+void AbstractContactGroupFormatter::setContactGroup(const KContacts::ContactGroup &group)
 {
     d->mContactGroup = group;
 }
 
-KABC::ContactGroup AbstractContactGroupFormatter::contactGroup() const
+KContacts::ContactGroup AbstractContactGroupFormatter::contactGroup() const
 {
     return d->mContactGroup;
 }

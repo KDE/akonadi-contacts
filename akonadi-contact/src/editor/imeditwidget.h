@@ -24,7 +24,7 @@
 
 #include <QWidget>
 
-#include <kabc/addressee.h>
+#include <kcontacts/addressee.h>
 
 #include "im/immodel.h"
 
@@ -43,8 +43,8 @@ public:
     explicit IMEditWidget(QWidget *parent = 0);
     ~IMEditWidget();
 
-    void loadContact(const KABC::Addressee &contact);
-    void storeContact(KABC::Addressee &contact) const;
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
 
