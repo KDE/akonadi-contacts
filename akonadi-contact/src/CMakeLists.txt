@@ -80,6 +80,7 @@ set(akonadicontact_LIB_SRC
   contactgroupviewerdialog.cpp
   contactmetadata.cpp
   contactmetadataattribute.cpp
+  contactparts.cpp
   contactsearchjob.cpp
   contactsfilterproxymodel.cpp
   contactstreemodel.cpp
@@ -184,6 +185,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   ContactsFilterProxyModel
   ContactsTreeModel
   ContactEditorPagePlugin
+  ContactParts
   ContactViewer
   ContactViewerDialog
   EmailAddressSelection
