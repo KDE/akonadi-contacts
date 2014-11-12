@@ -42,10 +42,10 @@ public:
     Private(ContactGroupEditor *parent);
     ~Private();
 
-    void itemFetchDone(KJob *);
-    void parentCollectionFetchDone(KJob *);
-    void storeDone(KJob *);
-    void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &);
+    void itemFetchDone(KJob *job);
+    void parentCollectionFetchDone(KJob *job);
+    void storeDone(KJob *job);
+    void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &notUsed);
     void memberChanged();
     void setReadOnly(bool);
 

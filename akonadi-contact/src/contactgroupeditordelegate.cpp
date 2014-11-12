@@ -43,78 +43,78 @@ using namespace Akonadi;
  */
 class ContactsWithEmailFilterModel : public QSortFilterProxyModel
 {
-  public:
-    ContactsWithEmailFilterModel( QObject *parent )
-      : QSortFilterProxyModel( parent )
+public:
+    ContactsWithEmailFilterModel(QObject *parent)
+        : QSortFilterProxyModel(parent)
     {
-      // contact names should be sorted correctly
-      setSortLocaleAware( true );
+        // contact names should be sorted correctly
+        setSortLocaleAware(true);
     }
 
-  protected:
-    virtual bool filterAcceptsRow( int row, const QModelIndex &parent ) const
+protected:
+    virtual bool filterAcceptsRow(int row, const QModelIndex &parent) const
     {
-      const QModelIndex index = sourceModel()->index( row, Akonadi::ContactCompletionModel::EmailColumn, parent );
-      if ( !index.isValid() ) {
-        return false;
-      }
+        const QModelIndex index = sourceModel()->index(row, Akonadi::ContactCompletionModel::EmailColumn, parent);
+        if (!index.isValid()) {
+            return false;
+        }
 
-      return !index.data().toString().isEmpty();
+        return !index.data().toString().isEmpty();
     }
 };
 
-ContactLineEdit::ContactLineEdit( bool isReference, QWidget *parent )
-  : QLineEdit( parent ), mIsReference( isReference )
+ContactLineEdit::ContactLineEdit(bool isReference, QWidget *parent)
+    : QLineEdit(parent), mIsReference(isReference)
 {
-  setFrame( false );
+    setFrame(false);
 
-  ContactsWithEmailFilterModel *filter = new ContactsWithEmailFilterModel( this );
-  filter->setSourceModel( Akonadi::ContactCompletionModel::self() );
+    ContactsWithEmailFilterModel *filter = new ContactsWithEmailFilterModel(this);
+    filter->setSourceModel(Akonadi::ContactCompletionModel::self());
 
-  QCompleter *completer = new QCompleter( filter, this );
-  completer->setCompletionColumn( Akonadi::ContactCompletionModel::NameColumn );
-  completer->setCaseSensitivity( Qt::CaseInsensitive );
-  connect( completer, SIGNAL(activated(QModelIndex)), SLOT(completed(QModelIndex)) );
+    QCompleter *completer = new QCompleter(filter, this);
+    completer->setCompletionColumn(Akonadi::ContactCompletionModel::NameColumn);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    connect(completer, SIGNAL(activated(QModelIndex)), SLOT(completed(QModelIndex)));
 
-  setCompleter( completer );
+    setCompleter(completer);
 
-  connect( this, SIGNAL(textEdited(QString)), SLOT(slotTextEdited()) );
+    connect(this, SIGNAL(textEdited(QString)), SLOT(slotTextEdited()));
 }
 
 bool ContactLineEdit::isReference() const
 {
-  return mIsReference;
+    return mIsReference;
 }
 
 Akonadi::Item ContactLineEdit::completedItem() const
 {
-  return mItem;
+    return mItem;
 }
 
-void ContactLineEdit::completed( const QModelIndex &index )
+void ContactLineEdit::completed(const QModelIndex &index)
 {
-  if ( index.isValid() ) {
-    mItem = index.data( Akonadi::EntityTreeModel::ItemRole ).value<Akonadi::Item>();
-    mIsReference = true;
-  } else {
-    mItem = Item();
-    mIsReference = false;
-  }
+    if (index.isValid()) {
+        mItem = index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+        mIsReference = true;
+    } else {
+        mItem = Item();
+        mIsReference = false;
+    }
 
-  emit completed( this );
+    emit completed(this);
 }
 
 void ContactLineEdit::slotTextEdited()
 {
-  // if the user has edited the text, we break up the reference
-  mIsReference = false;
+    // if the user has edited the text, we break up the reference
+    mIsReference = false;
 }
 
 class ContactGroupEditorDelegate::Private
 {
-  public:
+public:
     Private()
-      : mButtonSize( 16, 16 ), mIcon( QIcon::fromTheme(QLatin1String( "list-remove" ) )), mItemView( 0 )
+        : mButtonSize(16, 16), mIcon(QIcon::fromTheme(QLatin1String("list-remove"))), mItemView(0)
     {
     }
 
@@ -123,183 +123,185 @@ class ContactGroupEditorDelegate::Private
     QAbstractItemView *mItemView;
 };
 
-ContactGroupEditorDelegate::ContactGroupEditorDelegate( QAbstractItemView *view, QObject *parent )
-  : QStyledItemDelegate( parent ), d( new Private )
+ContactGroupEditorDelegate::ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent)
+    : QStyledItemDelegate(parent), d(new Private)
 {
-  d->mItemView = view;
+    d->mItemView = view;
 }
 
 ContactGroupEditorDelegate::~ContactGroupEditorDelegate()
 {
-  delete d;
+    delete d;
 }
 
-QWidget* ContactGroupEditorDelegate::createEditor( QWidget *parent, const QStyleOptionViewItem&,
-                                                   const QModelIndex &index ) const
+QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                                                  const QModelIndex &index) const
 {
-  if ( index.column() == 0 ) {
-    ContactLineEdit *edit = 0;
-    if ( index.data( ContactGroupModel::IsReferenceRole ).toBool() ) {
-      edit = new ContactLineEdit( true, parent );
-    } else {
-      edit = new ContactLineEdit( false, parent );
-    }
-
-    connect( edit, SIGNAL(completed(QWidget*)), SLOT(completed(QWidget*)) );
-
-    return edit;
-  } else {
-    if ( index.data( ContactGroupModel::IsReferenceRole ).toBool() ) {
-      KComboBox *comboBox = new KComboBox( parent );
-      comboBox->setFrame( false );
-      comboBox->setAutoFillBackground( true );
-      return comboBox;
-    } else {
-      QLineEdit *lineEdit = new QLineEdit( parent );
-      lineEdit->setFrame( false );
-      return lineEdit;
-    }
-  }
-}
-
-void ContactGroupEditorDelegate::setEditorData( QWidget *editor, const QModelIndex &index ) const
-{
-  if ( index.data( ContactGroupModel::IsReferenceRole ).toBool() ) {
-    if ( index.column() == 0 ) {
-      QLineEdit *lineEdit = qobject_cast<QLineEdit*>( editor );
-      if ( !lineEdit ) {
-        return;
-      }
-
-      lineEdit->setText( index.data( Qt::EditRole ).toString() );
-    } else {
-      KComboBox *comboBox = qobject_cast<KComboBox*>( editor );
-      if ( !comboBox ) {
-        return;
-      }
-
-      const QStringList emails = index.data( ContactGroupModel::AllEmailsRole ).toStringList();
-      comboBox->clear();
-      comboBox->addItems( emails );
-      comboBox->setCurrentIndex( comboBox->findText( index.data( Qt::EditRole ).toString() ) );
-    }
-  } else {
-      QLineEdit *lineEdit = qobject_cast<QLineEdit*>( editor );
-      if ( !lineEdit ) {
-        return;
-      }
-
-      lineEdit->setText( index.data( Qt::EditRole ).toString() );
-  }
-}
-
-void ContactGroupEditorDelegate::setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const
-{
-  if ( index.data( ContactGroupModel::IsReferenceRole ).toBool() ) {
-    if ( index.column() == 0 ) {
-      ContactLineEdit *lineEdit = static_cast<ContactLineEdit*>( editor );
-
-      const bool isReference = lineEdit->isReference();
-      const Item item = lineEdit->completedItem();
-      model->setData( index, isReference, ContactGroupModel::IsReferenceRole );
-      if ( isReference ) {
-        if ( item.isValid() ) {
-          model->setData( index, item.id(), Qt::EditRole );
+    Q_UNUSED(option)
+    if (index.column() == 0) {
+        ContactLineEdit *edit = 0;
+        if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
+            edit = new ContactLineEdit(true, parent);
+        } else {
+            edit = new ContactLineEdit(false, parent);
         }
-      } else {
-        model->setData( index, lineEdit->text(), Qt::EditRole );
-      }
-    }
 
-    if ( index.column() == 1 ) {
-      KComboBox *comboBox = qobject_cast<KComboBox*>( editor );
-      if ( !comboBox ) {
-        return;
-      }
+        connect(edit, SIGNAL(completed(QWidget*)), SLOT(completed(QWidget*)));
 
-      model->setData( index, comboBox->currentText(), Qt::EditRole );
-    }
-  } else {
-    if ( index.column() == 0 ) {
-      ContactLineEdit *lineEdit = static_cast<ContactLineEdit*>( editor );
-
-      const bool isReference = lineEdit->isReference();
-      const Item item = lineEdit->completedItem();
-      model->setData( index, isReference, ContactGroupModel::IsReferenceRole );
-      if ( isReference ) {
-        if ( item.isValid() ) {
-          model->setData( index, item.id(), Qt::EditRole );
+        return edit;
+    } else {
+        if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
+            KComboBox *comboBox = new KComboBox(parent);
+            comboBox->setFrame(false);
+            comboBox->setAutoFillBackground(true);
+            return comboBox;
+        } else {
+            QLineEdit *lineEdit = new QLineEdit(parent);
+            lineEdit->setFrame(false);
+            return lineEdit;
         }
-      } else
-        model->setData( index, lineEdit->text(), Qt::EditRole );
+    }
+}
+
+void ContactGroupEditorDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
+{
+    if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
+        if (index.column() == 0) {
+            QLineEdit *lineEdit = qobject_cast<QLineEdit *>(editor);
+            if (!lineEdit) {
+                return;
+            }
+
+            lineEdit->setText(index.data(Qt::EditRole).toString());
+        } else {
+            KComboBox *comboBox = qobject_cast<KComboBox *>(editor);
+            if (!comboBox) {
+                return;
+            }
+
+            const QStringList emails = index.data(ContactGroupModel::AllEmailsRole).toStringList();
+            comboBox->clear();
+            comboBox->addItems(emails);
+            comboBox->setCurrentIndex(comboBox->findText(index.data(Qt::EditRole).toString()));
+        }
+    } else {
+        QLineEdit *lineEdit = qobject_cast<QLineEdit *>(editor);
+        if (!lineEdit) {
+            return;
+        }
+
+        lineEdit->setText(index.data(Qt::EditRole).toString());
+    }
+}
+
+void ContactGroupEditorDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+{
+    if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
+        if (index.column() == 0) {
+            ContactLineEdit *lineEdit = static_cast<ContactLineEdit *>(editor);
+
+            const bool isReference = lineEdit->isReference();
+            const Item item = lineEdit->completedItem();
+            model->setData(index, isReference, ContactGroupModel::IsReferenceRole);
+            if (isReference) {
+                if (item.isValid()) {
+                    model->setData(index, item.id(), Qt::EditRole);
+                }
+            } else {
+                model->setData(index, lineEdit->text(), Qt::EditRole);
+            }
+        }
+
+        if (index.column() == 1) {
+            KComboBox *comboBox = qobject_cast<KComboBox *>(editor);
+            if (!comboBox) {
+                return;
+            }
+
+            model->setData(index, comboBox->currentText(), Qt::EditRole);
+        }
+    } else {
+        if (index.column() == 0) {
+            ContactLineEdit *lineEdit = static_cast<ContactLineEdit *>(editor);
+
+            const bool isReference = lineEdit->isReference();
+            const Item item = lineEdit->completedItem();
+            model->setData(index, isReference, ContactGroupModel::IsReferenceRole);
+            if (isReference) {
+                if (item.isValid()) {
+                    model->setData(index, item.id(), Qt::EditRole);
+                }
+            } else {
+                model->setData(index, lineEdit->text(), Qt::EditRole);
+            }
+        }
+
+        if (index.column() == 1) {
+            QLineEdit *lineEdit = qobject_cast<QLineEdit *>(editor);
+            if (!lineEdit) {
+                return;
+            }
+
+            model->setData(index, lineEdit->text(), Qt::EditRole);
+        }
+    }
+}
+
+static bool isLastRow(const QModelIndex &index)
+{
+    return (index.row() == (index.model()->rowCount() - 1));
+}
+
+void ContactGroupEditorDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    QStyledItemDelegate::paint(painter, option, index);
+
+    if (index.column() == 1 && !isLastRow(index)) {
+        d->mIcon.paint(painter, option.rect, Qt::AlignRight);
+    }
+}
+
+QSize ContactGroupEditorDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    Q_UNUSED(option)
+
+    QSize hint = QStyledItemDelegate::sizeHint(option, index);
+    hint.setHeight(qMax(hint.height(), d->mButtonSize.height()));
+
+    if (index.column() == 1) {
+        hint.setWidth(hint.width() + d->mButtonSize.width());
     }
 
-    if ( index.column() == 1 ) {
-      QLineEdit *lineEdit = qobject_cast<QLineEdit*>( editor );
-      if ( !lineEdit ) {
-        return;
-      }
+    return hint;
+}
 
-      model->setData( index, lineEdit->text(), Qt::EditRole );
+bool ContactGroupEditorDelegate::editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index)
+{
+    if (index.column() == 1 && !isLastRow(index)) {
+        if (event->type() == QEvent::MouseButtonRelease) {
+            const QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+            QRect buttonRect = d->mItemView->visualRect(index);
+            buttonRect.setLeft(buttonRect.right() - d->mButtonSize.width());
+
+            if (buttonRect.contains(mouseEvent->pos())) {
+                model->removeRows(index.row(), 1);
+                QTimer::singleShot(0, this, SLOT(setFirstColumnAsCurrent()));
+                return true;
+            }
+        }
     }
-  }
+    return QStyledItemDelegate::editorEvent(event, model, option, index);
 }
 
-static bool isLastRow( const QModelIndex &index )
+void ContactGroupEditorDelegate::completed(QWidget *widget)
 {
-  return ( index.row() == ( index.model()->rowCount() - 1 ) );
-}
-
-void ContactGroupEditorDelegate::paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
-{
-  QStyledItemDelegate::paint( painter, option, index );
-
-  if ( index.column() == 1 && !isLastRow( index ) ) {
-    d->mIcon.paint( painter, option.rect, Qt::AlignRight );
-  }
-}
-
-QSize ContactGroupEditorDelegate::sizeHint( const QStyleOptionViewItem& option, const QModelIndex& index ) const
-{
-  Q_UNUSED( option );
-
-  QSize hint = QStyledItemDelegate::sizeHint( option, index );
-  hint.setHeight( qMax( hint.height(), d->mButtonSize.height() ) );
-
-  if ( index.column() == 1 ) {
-    hint.setWidth( hint.width() + d->mButtonSize.width() );
-  }
-
-  return hint;
-}
-
-bool ContactGroupEditorDelegate::editorEvent( QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index )
-{
-  if ( index.column() == 1 && !isLastRow( index ) ) {
-    if ( event->type() == QEvent::MouseButtonRelease ) {
-      const QMouseEvent *mouseEvent = static_cast<QMouseEvent*>( event );
-      QRect buttonRect = d->mItemView->visualRect( index );
-      buttonRect.setLeft( buttonRect.right() - d->mButtonSize.width() );
-
-      if ( buttonRect.contains( mouseEvent->pos() ) ) {
-        model->removeRows( index.row(), 1 );
-        QTimer::singleShot( 0, this, SLOT(setFirstColumnAsCurrent()) );
-        return true;
-      }
-    }
-  }
-  return QStyledItemDelegate::editorEvent( event, model, option, index );
-}
-
-void ContactGroupEditorDelegate::completed( QWidget *widget )
-{
-  emit commitData( widget );
-  emit closeEditor( widget );
+    emit commitData(widget);
+    emit closeEditor(widget);
 }
 
 void ContactGroupEditorDelegate::setFirstColumnAsCurrent()
 {
-  d->mItemView->setCurrentIndex( d->mItemView->model()->index( d->mItemView->currentIndex().row(), 0 ) );
+    d->mItemView->setCurrentIndex(d->mItemView->model()->index(d->mItemView->currentIndex().row(), 0));
 }
 
 #include "moc_contactgroupeditordelegate_p.cpp"
