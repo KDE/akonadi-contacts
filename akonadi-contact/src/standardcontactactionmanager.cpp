@@ -576,7 +576,7 @@ QAction * StandardContactActionManager::createAction( Type type )
       action->setText( i18n( "New &Contact..." ) );
       action->setWhatsThis( i18n( "Create a new contact<p>You will be presented with a dialog where you can add data about a person, including addresses and phone numbers.</p>" ) );
       d->mActions.insert( CreateContact, action );
-      d->mActionCollection->addAction( QString::fromLatin1( "akonadi_contact_create" ), action );
+      d->mActionCollection->addAction( QStringLiteral( "akonadi_contact_create" ), action );
       d->mActionCollection->setDefaultShortcut(action,  QKeySequence( Qt::CTRL + Qt::Key_N ) );
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContact()) );
       break;
@@ -586,7 +586,7 @@ QAction * StandardContactActionManager::createAction( Type type )
       action->setText( i18n( "New &Group..." ) );
       action->setWhatsThis( i18n( "Create a new group<p>You will be presented with a dialog where you can add a new group of contacts.</p>" ) );
       d->mActions.insert( CreateContactGroup, action );
-      d->mActionCollection->addAction( QString::fromLatin1( "akonadi_contact_group_create" ), action );
+      d->mActionCollection->addAction( QStringLiteral( "akonadi_contact_group_create" ), action );
       d->mActionCollection->setDefaultShortcut(action, QKeySequence( Qt::CTRL + Qt::Key_G ) );
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContactGroup()) );
       break;
@@ -597,7 +597,7 @@ QAction * StandardContactActionManager::createAction( Type type )
       action->setWhatsThis( i18n( "Edit the selected contact<p>You will be presented with a dialog where you can edit the data stored about a person, including addresses and phone numbers.</p>" ) );
       action->setEnabled( false );
       d->mActions.insert( EditItem, action );
-      d->mActionCollection->addAction( QString::fromLatin1( "akonadi_contact_item_edit" ), action );
+      d->mActionCollection->addAction( QStringLiteral( "akonadi_contact_item_edit" ), action );
      
       connect( action, SIGNAL(triggered(bool)), this, SLOT(slotEditItem()) );
       break;

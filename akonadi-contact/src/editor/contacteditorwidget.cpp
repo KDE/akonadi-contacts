@@ -489,7 +489,7 @@ void ContactEditorWidget::Private::loadCustomPages()
     qDeleteAll(mCustomPages);
     mCustomPages.clear();
 
-    const QString pluginDirectory = QString::fromLatin1("%1/%2/akonadi/contact/editorpageplugins/").arg(QLatin1String(AKONADI_CONTACT_LIB)).arg(QLatin1String(AKONADI_CONTACT_PREFIX));
+    const QString pluginDirectory = QStringLiteral("%1/%2/akonadi/contact/editorpageplugins/").arg(QLatin1String(AKONADI_CONTACT_LIB)).arg(QLatin1String(AKONADI_CONTACT_PREFIX));
     QDirIterator it(pluginDirectory, QDir::Files);
     while (it.hasNext()) {
         QPluginLoader loader(it.next());

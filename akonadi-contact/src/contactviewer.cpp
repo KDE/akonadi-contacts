@@ -101,7 +101,7 @@ class ContactViewer::Private
 
       mBrowser->document()->addResource( QTextDocument::ImageResource,
                                          QUrl( QLatin1String( "sms_icon" ) ),
-                                         QIcon::fromTheme( IMProtocols::self()->icon( QString::fromLatin1( "messaging/sms" ) ) ).pixmap( QSize( 16, 16 ) ) );
+                                         QIcon::fromTheme( IMProtocols::self()->icon( QStringLiteral( "messaging/sms" ) ) ).pixmap( QSize( 16, 16 ) ) );
 
 #ifdef HAVE_PRISON
       KConfig config( QLatin1String( "akonadi_contactrc" ) );

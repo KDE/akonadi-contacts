@@ -109,7 +109,7 @@ bool QSkypeDialer::initializeSkype()
         return false;
     }
 
-    QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QString::fromLatin1("NAME %1").arg(mApplicationName));
+    QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("NAME %1").arg(mApplicationName));
     if (reply.value() != QLatin1String("OK")) {
         delete mInterface;
         mInterface = 0;
@@ -136,7 +136,7 @@ bool QSkypeDialer::dialNumber(const QString &number)
         return false;
     }
 
-    QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QString::fromLatin1("CALL %1").arg(number));
+    QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("CALL %1").arg(number));
 
     return true;
 }
@@ -148,18 +148,18 @@ bool QSkypeDialer::sendSms(const QString &number, const QString &text)
     }
 
     // First we create a new SMS object that gets an ID. We need that ID later...
-    QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QString::fromLatin1("CREATE SMS OUTGOING %1").arg(number));
+    QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("CREATE SMS OUTGOING %1").arg(number));
     const QString messageId = reply.value().section(QStringLiteral(" "), 1, 1);
 
     // Set the SMS text
-    reply = mInterface->call(QStringLiteral("Invoke"), QString::fromLatin1("SET SMS %1 BODY %2").arg(messageId, text));
+    reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("SET SMS %1 BODY %2").arg(messageId, text));
 
     // Send the SMS
-    reply = mInterface->call(QStringLiteral("Invoke"), QString::fromLatin1("ALTER SMS %1 SEND").arg(messageId));
+    reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("ALTER SMS %1 SEND").arg(messageId));
     if (reply.value().contains(QStringLiteral("ERROR"))) {
         mErrorMessage = reply.value();
         // As sending the message failed (not enough Skype credit), lets delete the message
-        reply = mInterface->call(QStringLiteral("Invoke"), QString::fromLatin1("DELETE SMS %1").arg(messageId));
+        reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("DELETE SMS %1").arg(messageId));
         return false;
     }
 

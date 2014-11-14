@@ -325,7 +325,7 @@ void ContactGroupEditor::groupNameIsValid(bool isValid)
     if (!isValid) {
         const KColorScheme::BackgroundRole bgColorScheme(KColorScheme::NegativeBackground);
         KStatefulBrush bgBrush(KColorScheme::View, bgColorScheme);
-        styleSheet = QString::fromLatin1("QLineEdit{ background-color:%1 }").
+        styleSheet = QStringLiteral("QLineEdit{ background-color:%1 }").
                      arg(bgBrush.brush(this).color().name());
     }
     d->mGui.groupName->setStyleSheet(styleSheet);

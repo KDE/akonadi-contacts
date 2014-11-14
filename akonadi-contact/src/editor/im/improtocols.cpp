@@ -30,7 +30,7 @@ IMProtocols::IMProtocols()
 {
     KIconLoader::global()->addAppDir(QStringLiteral("akonadi/contact"));
 
-    const QList<KPluginInfo> list = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QString::fromLatin1("KABC/IMProtocol")));
+    const QList<KPluginInfo> list = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KABC/IMProtocol")));
 
     // sort the protocol information by user visible name
     QMap<QString, KPluginInfo> sortingMap;
