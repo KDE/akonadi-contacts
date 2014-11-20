@@ -25,7 +25,6 @@
 #include <tag.h>
 #include <tagwidget.h>
 #include <kcontacts/addressee.h>
-#include <kdialog.h>
 
 #include <QHBoxLayout>
 
@@ -34,8 +33,6 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    //PORT QT5 layout->setSpacing(KDialog::spacingHint());
-
     mTagWidget = new Akonadi::TagWidget(this);
     layout->addWidget(mTagWidget);
 }

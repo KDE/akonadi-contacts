@@ -283,7 +283,7 @@ bool ContactGroupEditor::saveContactGroup()
             dlg->setCaption(i18n("Select Address Book"));
             dlg->setDescription(i18n("Select the address book the new contact group shall be saved in:"));
 
-            if (dlg->exec() == KDialog::Accepted) {
+            if (dlg->exec() == QDialog::Accepted) {
                 setDefaultAddressBook(dlg->selectedCollection());
             } else {
                 return false;

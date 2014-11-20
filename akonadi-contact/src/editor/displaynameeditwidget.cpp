@@ -114,7 +114,6 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    //PORT QT5 layout->setSpacing(KDialog::spacingHint());
 
     mView = new KComboBox(this);
     mView->addItems(QStringList() << QString() << QString() << QString()
