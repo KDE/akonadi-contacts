@@ -25,7 +25,6 @@
 
 #include <kcontacts/addressee.h>
 #include <kcombobox.h>
-#include <klocale.h>
 #include <klocalizedstring.h>
 
 #include <QtCore/QFile>
