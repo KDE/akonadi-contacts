@@ -139,8 +139,9 @@ void ContactGroupEditor::Private::storeDone(KJob *job)
     }
 }
 
-void ContactGroupEditor::Private::itemChanged(const Item &, const QSet<QByteArray> &)
+void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByteArray> &)
 {
+    Q_UNUSED(item)
     AutoQPointer<QMessageBox> dlg = new QMessageBox(mParent);   //krazy:exclude=qclasses
 
     dlg->setInformativeText(i18n("The contact group has been changed by someone else.\nWhat should be done?"));
@@ -207,7 +208,8 @@ void ContactGroupEditor::Private::setReadOnly(bool readOnly)
 }
 
 ContactGroupEditor::ContactGroupEditor(Mode mode, QWidget *parent)
-    : QWidget(parent), d(new Private(this))
+    : QWidget(parent)
+    , d(new Private(this))
 {
     d->mMode = mode;
     d->mGui.setupUi(this);

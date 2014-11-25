@@ -64,7 +64,8 @@ protected:
 };
 
 ContactLineEdit::ContactLineEdit(bool isReference, QWidget *parent)
-    : QLineEdit(parent), mIsReference(isReference)
+    : QLineEdit(parent)
+    , mIsReference(isReference)
 {
     setFrame(false);
 
@@ -114,7 +115,9 @@ class ContactGroupEditorDelegate::Private
 {
 public:
     Private()
-        : mButtonSize(16, 16), mIcon(QIcon::fromTheme(QLatin1String("list-remove"))), mItemView(0)
+        : mButtonSize(16, 16)
+        , mIcon(QIcon::fromTheme(QLatin1String("list-remove")))
+        , mItemView(0)
     {
     }
 
@@ -124,7 +127,8 @@ public:
 };
 
 ContactGroupEditorDelegate::ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent)
-    : QStyledItemDelegate(parent), d(new Private)
+    : QStyledItemDelegate(parent)
+    , d(new Private)
 {
     d->mItemView = view;
 }
