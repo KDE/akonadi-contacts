@@ -105,13 +105,13 @@ private:
     /**
      * This method is called whenever the displayed contact @p group has been changed.
      */
-    virtual void itemChanged(const Item &group);
+    void itemChanged(const Item &group) Q_DECL_OVERRIDE;
 
     /**
      * This method is called whenever the displayed contact group has been
      * removed from Akonadi.
      */
-    virtual void itemRemoved();
+    void itemRemoved() Q_DECL_OVERRIDE;
 
 private:
     //@cond PRIVATE

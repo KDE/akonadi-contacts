@@ -59,19 +59,19 @@ public:
      * Initializes the fields of the contact editor
      * with the values from a @p contact.
      */
-    void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData);
+    void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData) Q_DECL_OVERRIDE;
 
     /**
      * Stores back the fields of the contact editor
      * into the given @p contact.
      */
-    void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaData &metaData) const;
+    void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaData &metaData) const Q_DECL_OVERRIDE;
 
     /**
      * Sets whether the contact in the editor allows
      * the user to edit the contact or not.
      */
-    void setReadOnly(bool readOnly);
+    void setReadOnly(bool readOnly) Q_DECL_OVERRIDE;
 
 private:
     class Private;

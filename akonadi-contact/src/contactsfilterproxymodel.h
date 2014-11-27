@@ -88,7 +88,7 @@ public:
     */
     void setFilterFlags(ContactsFilterProxyModel::FilterFlags flags);
 
-    virtual Qt::ItemFlags flags(const QModelIndex &index) const;
+    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
 
     /**
      * Sets whether we want virtual collections to be filtered or not.
@@ -109,8 +109,8 @@ public Q_SLOTS:
 
 protected:
     //@cond PRIVATE
-    virtual bool filterAcceptsRow(int row, const QModelIndex &parent) const;
-    virtual bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+    bool filterAcceptsRow(int row, const QModelIndex &parent) const Q_DECL_OVERRIDE;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
     //@endcond
 
 private:
