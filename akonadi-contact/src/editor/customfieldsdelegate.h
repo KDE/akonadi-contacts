@@ -27,7 +27,7 @@
 class CustomFieldsDelegate : public QStyledItemDelegate
 {
 public:
-    explicit CustomFieldsDelegate(QObject *parent = 0);
+    explicit CustomFieldsDelegate(QObject *parent = Q_NULLPTR);
     ~CustomFieldsDelegate();
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;

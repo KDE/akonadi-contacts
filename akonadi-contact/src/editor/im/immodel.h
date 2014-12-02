@@ -56,7 +56,7 @@ public:
         IsPreferredRole
     };
 
-    explicit IMModel(QObject *parent = 0);
+    explicit IMModel(QObject *parent = Q_NULLPTR);
     ~IMModel();
 
     void setAddresses(const IMAddress::List &addresses);

@@ -70,7 +70,7 @@ public:
     /**
      * Creates a new recent contacts collection request job.
      */
-    explicit RecentContactsCollectionRequestJob(QObject *parent = 0);
+    explicit RecentContactsCollectionRequestJob(QObject *parent = Q_NULLPTR);
 
     /**
      * Destroys the recent contacts collection request job.

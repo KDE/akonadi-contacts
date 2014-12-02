@@ -73,7 +73,7 @@ public:
      *
      * @param parent The parent object.
      */
-    explicit ContactsFilterProxyModel(QObject *parent = 0);
+    explicit ContactsFilterProxyModel(QObject *parent = Q_NULLPTR);
 
     /**
      * Destroys the contacts filter proxy model.

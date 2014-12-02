@@ -169,7 +169,7 @@ public:
      * @param monitor The ChangeRecorder whose entities should be represented in the model.
      * @param parent The parent object.
      */
-    explicit ContactsTreeModel(ChangeRecorder *monitor, QObject *parent = 0);
+    explicit ContactsTreeModel(ChangeRecorder *monitor, QObject *parent = Q_NULLPTR);
 
     /**
      * Destroys the contacts tree model.

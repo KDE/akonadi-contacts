@@ -27,7 +27,7 @@
 class IMDelegate : public QStyledItemDelegate
 {
 public:
-    explicit IMDelegate(QObject *parent = 0);
+    explicit IMDelegate(QObject *parent = Q_NULLPTR);
     ~IMDelegate();
 
     virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,

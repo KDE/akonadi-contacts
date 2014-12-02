@@ -86,7 +86,7 @@ public:
      *
      * @param parent The parent object.
      */
-    explicit ContactSearchJob(QObject *parent = 0);
+    explicit ContactSearchJob(QObject *parent = Q_NULLPTR);
 
     /**
      * Destroys the contact search job.
