@@ -49,7 +49,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit PhoneTypeCombo(QWidget *parent = 0);
+    explicit PhoneTypeCombo(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the phone type combo.
@@ -92,7 +92,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit PhoneNumberWidget(QWidget *parent = 0);
+    explicit PhoneNumberWidget(QWidget *parent = Q_NULLPTR);
 
     /**
      * Sets the phone @p number of the widget.
@@ -131,7 +131,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit PhoneNumberListWidget(QWidget *parent = 0);
+    explicit PhoneNumberListWidget(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the phone number list widget.
@@ -197,7 +197,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit PhoneEditWidget(QWidget *parent = 0);
+    explicit PhoneEditWidget(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the phone edit widget.
@@ -244,7 +244,7 @@ public:
      * @param type The initial type of the phone number.
      * @param parent The parent widget.
      */
-    explicit PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent = 0);
+    explicit PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent = Q_NULLPTR);
 
     /**
      * Returns the selected type.

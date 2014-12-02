@@ -66,7 +66,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionDialog(QWidget *parent = 0);
+    explicit EmailAddressSelectionDialog(QWidget *parent = Q_NULLPTR);
 
     /**
      * Creates a new email address selection dialog.
@@ -74,7 +74,7 @@ public:
      * @param model A custom, ContactsTreeModel based model to use.
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionDialog(QAbstractItemModel *model, QWidget *parent = 0);
+    explicit EmailAddressSelectionDialog(QAbstractItemModel *model, QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the email address selection dialog.

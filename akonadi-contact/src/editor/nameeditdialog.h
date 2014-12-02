@@ -30,7 +30,7 @@ class KComboBox;
 class NameEditDialog : public QDialog
 {
 public:
-    explicit NameEditDialog(QWidget *parent = 0);
+    explicit NameEditDialog(QWidget *parent = Q_NULLPTR);
 
     void setFamilyName(const QString &name);
     QString familyName() const;

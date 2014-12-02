@@ -40,7 +40,7 @@ class NameEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit NameEditWidget(QWidget *parent = 0);
+    explicit NameEditWidget(QWidget *parent = Q_NULLPTR);
     ~NameEditWidget();
 
     /**

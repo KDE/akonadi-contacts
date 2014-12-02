@@ -35,7 +35,7 @@ class SecrecyEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit SecrecyEditWidget(QWidget *parent = 0);
+    explicit SecrecyEditWidget(QWidget *parent = Q_NULLPTR);
     ~SecrecyEditWidget();
 
     void loadContact(const KContacts::Addressee &contact);

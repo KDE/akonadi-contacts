@@ -51,7 +51,7 @@ public:
         CustomName            ///< Let the user input a display name
     };
 
-    explicit DisplayNameEditWidget(QWidget *parent = 0);
+    explicit DisplayNameEditWidget(QWidget *parent = Q_NULLPTR);
     ~DisplayNameEditWidget();
 
     void loadContact(const KContacts::Addressee &contact);

@@ -64,7 +64,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    ContactGroupViewer(QWidget *parent = 0);
+    ContactGroupViewer(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the contact group viewer.

@@ -43,7 +43,7 @@ public:
         Logo
     };
 
-    explicit ImageWidget(Type type, QWidget *parent = 0);
+    explicit ImageWidget(Type type, QWidget *parent = Q_NULLPTR);
     ~ImageWidget();
 
     void loadContact(const KContacts::Addressee &contact);

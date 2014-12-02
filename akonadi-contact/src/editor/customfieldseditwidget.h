@@ -40,7 +40,7 @@ class CustomFieldsEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit CustomFieldsEditWidget(QWidget *parent = 0);
+    explicit CustomFieldsEditWidget(QWidget *parent = Q_NULLPTR);
     ~CustomFieldsEditWidget();
 
     void loadContact(const KContacts::Addressee &contact);

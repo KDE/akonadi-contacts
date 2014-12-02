@@ -64,7 +64,7 @@ public:
      * @param actionCollection The action collection to operate on.
      * @param parent The parent widget.
      */
-    explicit StandardContactActionManager(KActionCollection *actionCollection, QWidget *parent = 0);
+    explicit StandardContactActionManager(KActionCollection *actionCollection, QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the standard contact action manager.

@@ -48,7 +48,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit AddressSelectionWidget(QWidget *parent = 0);
+    explicit AddressSelectionWidget(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the address selection widget.
@@ -103,7 +103,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit AddressTypeCombo(QWidget *parent = 0);
+    explicit AddressTypeCombo(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the address type combo.
@@ -141,7 +141,7 @@ class AddressEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit AddressEditWidget(QWidget *parent = 0);
+    explicit AddressEditWidget(QWidget *parent = Q_NULLPTR);
     ~AddressEditWidget();
 
     void loadContact(const KContacts::Addressee &contact);
@@ -182,7 +182,7 @@ class AddressEditDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddressEditDialog(QWidget *parent = 0);
+    explicit AddressEditDialog(QWidget *parent = Q_NULLPTR);
     ~AddressEditDialog();
 
     void setAddress(const KContacts::Address &address);

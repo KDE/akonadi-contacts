@@ -36,7 +36,7 @@ class DateView : public QLabel
     Q_OBJECT
 
 public:
-    explicit DateView(QWidget *parent = 0);
+    explicit DateView(QWidget *parent = Q_NULLPTR);
 
 Q_SIGNALS:
     void resetDate();
@@ -59,7 +59,7 @@ public:
         Anniversary
     };
 
-    explicit DateEditWidget(Type type = General, QWidget *parent = 0);
+    explicit DateEditWidget(Type type = General, QWidget *parent = Q_NULLPTR);
     ~DateEditWidget();
 
     void setDate(const QDate &date);

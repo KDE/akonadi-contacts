@@ -89,7 +89,7 @@ public:
      * @param mode The mode of the dialog.
      * @param parent The parent widget of the dialog.
      */
-    explicit ContactGroupEditorDialog(Mode mode, QWidget *parent = 0);
+    explicit ContactGroupEditorDialog(Mode mode, QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the contact group editor dialog.

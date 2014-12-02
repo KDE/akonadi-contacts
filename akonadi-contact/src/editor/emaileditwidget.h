@@ -43,7 +43,7 @@ class EmailEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit EmailEditWidget(QWidget *parent = 0);
+    explicit EmailEditWidget(QWidget *parent = Q_NULLPTR);
     ~EmailEditWidget();
 
     void loadContact(const KContacts::Addressee &contact);
@@ -66,7 +66,7 @@ class EmailEditDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit EmailEditDialog(const QStringList &list, QWidget *parent = 0);
+    explicit EmailEditDialog(const QStringList &list, QWidget *parent = Q_NULLPTR);
     ~EmailEditDialog();
 
     QStringList emails() const;

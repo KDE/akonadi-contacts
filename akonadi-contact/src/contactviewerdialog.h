@@ -68,7 +68,7 @@ public:
      *
      * @param parent The parent widget of the dialog.
      */
-    explicit ContactViewerDialog(QWidget *parent = 0);
+    explicit ContactViewerDialog(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the contact viewer dialog.
