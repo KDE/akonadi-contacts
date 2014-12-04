@@ -36,10 +36,10 @@
 #include <QListWidget>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <kpimutils/email.h>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <KConfigGroup>
+#include <KEmailAddress>
 
 class EmailAddressExtracter : public QObject
 {
@@ -55,7 +55,7 @@ public:
     {
         if (watched == mLineEdit && event->type() == QEvent::FocusOut) {
             const QString fullEmailAddress = mLineEdit->text();
-            const QString extractedEmailAddress = KPIMUtils::extractEmailAddress(fullEmailAddress);
+            const QString extractedEmailAddress = KEmailAddress::extractEmailAddress(fullEmailAddress);
             mLineEdit->setText(extractedEmailAddress);
         }
 
@@ -307,7 +307,7 @@ void EmailEditDialog::add()
         return;
     }
 
-    email = KPIMUtils::extractEmailAddress(email.toLower());
+    email = KEmailAddress::extractEmailAddress(email.toLower());
 
     // check if item already available, ignore if so...
     for (int i = 0; i < mEmailListBox->count(); ++i) {
@@ -335,7 +335,7 @@ void EmailEditDialog::edit()
         return;
     }
 
-    email = KPIMUtils::extractEmailAddress(email.toLower());
+    email = KEmailAddress::extractEmailAddress(email.toLower());
 
     // check if item already available, ignore if so...
     for (int i = 0; i < mEmailListBox->count(); ++i) {

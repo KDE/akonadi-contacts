@@ -136,7 +136,7 @@ PRIVATE
     KF5::CalendarCore
     KF5::KIOCore
     KF5::Mime
-    KF5::PimUtils
+    KF5::Codecs
     KF5::KDELibs4Support
     Phonon::phonon4qt5
 )

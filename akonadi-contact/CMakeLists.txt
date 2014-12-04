@@ -29,6 +29,7 @@ ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
 find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
 find_package(Phonon4Qt5 CONFIG REQUIRED)
 
 if(${CMAKE_SOURCE_DIR} STREQUAL "${Akonadi-Contact_SOURCE_DIR}")
@@ -37,7 +38,6 @@ if(${CMAKE_SOURCE_DIR} STREQUAL "${Akonadi-Contact_SOURCE_DIR}")
   find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5CalendarCore ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5Mime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-  find_package(KF5PimUtils ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 else()
   # IMPORTED targets are scoped, so KF5::AkonadiPrivate found in ../akonadi
   # won't work here, and it is a PUBLIC dependency of KF5::Akonadi

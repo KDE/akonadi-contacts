@@ -28,7 +28,6 @@
 #include <kcontacts/address.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/phonenumber.h>
-#include <kpimutils/email.h>
 #include <ktoolinvocation.h>
 #include <QtCore/QUrl>
 
