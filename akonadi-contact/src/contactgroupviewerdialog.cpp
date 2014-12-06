@@ -34,46 +34,46 @@ using namespace Akonadi;
 
 class ContactGroupViewerDialog::Private
 {
-  public:
+public:
     ContactGroupViewer *mViewer;
 };
 
-ContactGroupViewerDialog::ContactGroupViewerDialog( QWidget *parent )
-  : QDialog( parent ), d( new Private )
+ContactGroupViewerDialog::ContactGroupViewerDialog(QWidget *parent)
+    : QDialog(parent)
+    , d(new Private)
 {
-  setWindowTitle( i18n( "Show Contact Group" ) );
-  QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
-  QVBoxLayout *mainLayout = new QVBoxLayout;
-  setLayout(mainLayout);
-  QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-  okButton->setDefault(true);
-  okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-  connect(buttonBox, &QDialogButtonBox::accepted, this, &ContactGroupViewerDialog::accept);
-  connect(buttonBox, &QDialogButtonBox::rejected, this, &ContactGroupViewerDialog::reject);
+    setWindowTitle(i18n("Show Contact Group"));
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ContactGroupViewerDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &ContactGroupViewerDialog::reject);
 
-  mainLayout->addWidget(d->mViewer);
-  mainLayout->addWidget(buttonBox);
+    mainLayout->addWidget(d->mViewer);
+    mainLayout->addWidget(buttonBox);
 
-  resize( QSize( 500, 600 ) );
+    resize(QSize(500, 600));
 }
 
 ContactGroupViewerDialog::~ContactGroupViewerDialog()
 {
-  delete d;
+    delete d;
 }
 
 Akonadi::Item ContactGroupViewerDialog::contactGroup() const
 {
-  return d->mViewer->contactGroup();
+    return d->mViewer->contactGroup();
 }
 
-ContactGroupViewer* ContactGroupViewerDialog::viewer() const
+ContactGroupViewer *ContactGroupViewerDialog::viewer() const
 {
-  return d->mViewer;
+    return d->mViewer;
 }
 
-void ContactGroupViewerDialog::setContactGroup( const Akonadi::Item &group )
+void ContactGroupViewerDialog::setContactGroup(const Akonadi::Item &group)
 {
-  d->mViewer->setContactGroup( group );
+    d->mViewer->setContactGroup(group);
 }
-

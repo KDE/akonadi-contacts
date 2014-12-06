@@ -44,97 +44,99 @@ using namespace Akonadi;
 
 class ContactGroupViewer::Private
 {
-  public:
-    Private( ContactGroupViewer *parent )
-      : mParent( parent ), mExpandJob( 0 ), mParentCollectionFetchJob( 0 )
+public:
+    Private(ContactGroupViewer *parent)
+        : mParent(parent)
+        , mExpandJob(0)
+        , mParentCollectionFetchJob(0)
     {
-      mBrowser = new TextBrowser;
+        mBrowser = new TextBrowser;
 
-      static QPixmap groupPixmap = QIcon::fromTheme( QLatin1String( "x-mail-distribution-list" ) ).pixmap( QSize( 100, 100 ) );
-      mBrowser->document()->addResource( QTextDocument::ImageResource,
-                                         QUrl( QLatin1String( "group_photo" ) ),
-                                         groupPixmap );
+        static QPixmap groupPixmap = QIcon::fromTheme(QLatin1String("x-mail-distribution-list")).pixmap(QSize(100, 100));
+        mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                          QUrl(QLatin1String("group_photo")),
+                                          groupPixmap);
 
-      mStandardContactGroupFormatter = new StandardContactGroupFormatter;
-      mContactGroupFormatter = mStandardContactGroupFormatter;
+        mStandardContactGroupFormatter = new StandardContactGroupFormatter;
+        mContactGroupFormatter = mStandardContactGroupFormatter;
     }
 
     ~Private()
     {
-      delete mStandardContactGroupFormatter;
+        delete mStandardContactGroupFormatter;
     }
 
     void updateView()
     {
-      mParent->setWindowTitle( i18n( "Contact Group %1", mCurrentGroupName ) );
+        mParent->setWindowTitle(i18n("Contact Group %1", mCurrentGroupName));
 
-      KContacts::ContactGroup group;
-      group.setName( mCurrentGroupName );
-      foreach ( const KContacts::Addressee &contact, mCurrentContacts ) {
-        group.append( KContacts::ContactGroup::Data( contact.realName(), contact.preferredEmail() ) );
-      }
-
-      mContactGroupFormatter->setContactGroup( group );
-
-      QList<QVariantMap> additionalFields;
-
-      if ( !mCurrentAddressBookName.isEmpty() ) {
-        QVariantMap addressBookName;
-        addressBookName.insert( QLatin1String( "title" ), i18n( "Address Book" ) );
-        addressBookName.insert( QLatin1String( "value" ), mCurrentAddressBookName );
-
-        additionalFields << addressBookName;
-      }
-
-      mContactGroupFormatter->setAdditionalFields( additionalFields );
-
-      mBrowser->setHtml( mContactGroupFormatter->toHtml() );
-    }
-
-    void slotMailClicked( const QUrl&email )
-    {
-      QString name, address;
-
-      // remove the 'mailto:' and split into name and email address
-      KContacts::Addressee::parseEmailAddress( email.path(), name, address );
-
-      emit mParent->emailClicked( name, address );
-    }
-
-    void _k_expandResult( KJob *job )
-    {
-      mExpandJob = 0;
-
-      if ( !job->error() ) {
-        ContactGroupExpandJob *expandJob = qobject_cast<ContactGroupExpandJob*>( job );
-        mCurrentContacts = expandJob->contacts();
-      }
-
-      // stop any running fetch job
-      if ( mParentCollectionFetchJob ) {
-        mParent->disconnect( mParentCollectionFetchJob, SIGNAL(result(KJob*)), mParent, SLOT(slotParentCollectionFetched(KJob*)) );
-        delete mParentCollectionFetchJob;
-        mParentCollectionFetchJob = 0;
-      }
-
-      mParentCollectionFetchJob = new CollectionFetchJob( mCurrentItem.parentCollection(), CollectionFetchJob::Base, mParent );
-      mParent->connect( mParentCollectionFetchJob, SIGNAL(result(KJob*)), SLOT(slotParentCollectionFetched(KJob*)) );
-    }
-
-    void slotParentCollectionFetched( KJob *job )
-    {
-      mParentCollectionFetchJob = 0;
-      mCurrentAddressBookName.clear();
-
-      if ( !job->error() ) {
-        CollectionFetchJob *fetchJob = qobject_cast<CollectionFetchJob*>( job );
-        if ( !fetchJob->collections().isEmpty() ) {
-          const Collection collection = fetchJob->collections().first();
-          mCurrentAddressBookName = collection.displayName();
+        KContacts::ContactGroup group;
+        group.setName(mCurrentGroupName);
+        foreach (const KContacts::Addressee &contact, mCurrentContacts) {
+            group.append(KContacts::ContactGroup::Data(contact.realName(), contact.preferredEmail()));
         }
-      }
 
-      updateView();
+        mContactGroupFormatter->setContactGroup(group);
+
+        QList<QVariantMap> additionalFields;
+
+        if (!mCurrentAddressBookName.isEmpty()) {
+            QVariantMap addressBookName;
+            addressBookName.insert(QLatin1String("title"), i18n("Address Book"));
+            addressBookName.insert(QLatin1String("value"), mCurrentAddressBookName);
+
+            additionalFields << addressBookName;
+        }
+
+        mContactGroupFormatter->setAdditionalFields(additionalFields);
+
+        mBrowser->setHtml(mContactGroupFormatter->toHtml());
+    }
+
+    void slotMailClicked(const QUrl &email)
+    {
+        QString name, address;
+
+        // remove the 'mailto:' and split into name and email address
+        KContacts::Addressee::parseEmailAddress(email.path(), name, address);
+
+        emit mParent->emailClicked(name, address);
+    }
+
+    void _k_expandResult(KJob *job)
+    {
+        mExpandJob = 0;
+
+        if (!job->error()) {
+            ContactGroupExpandJob *expandJob = qobject_cast<ContactGroupExpandJob *>(job);
+            mCurrentContacts = expandJob->contacts();
+        }
+
+        // stop any running fetch job
+        if (mParentCollectionFetchJob) {
+            mParent->disconnect(mParentCollectionFetchJob, SIGNAL(result(KJob*)), mParent, SLOT(slotParentCollectionFetched(KJob*)));
+            delete mParentCollectionFetchJob;
+            mParentCollectionFetchJob = 0;
+        }
+
+        mParentCollectionFetchJob = new CollectionFetchJob(mCurrentItem.parentCollection(), CollectionFetchJob::Base, mParent);
+        mParent->connect(mParentCollectionFetchJob, SIGNAL(result(KJob*)), SLOT(slotParentCollectionFetched(KJob*)));
+    }
+
+    void slotParentCollectionFetched(KJob *job)
+    {
+        mParentCollectionFetchJob = 0;
+        mCurrentAddressBookName.clear();
+
+        if (!job->error()) {
+            CollectionFetchJob *fetchJob = qobject_cast<CollectionFetchJob *>(job);
+            if (!fetchJob->collections().isEmpty()) {
+                const Collection collection = fetchJob->collections().first();
+                mCurrentAddressBookName = collection.displayName();
+            }
+        }
+
+        updateView();
     }
 
     ContactGroupViewer *mParent;
@@ -149,69 +151,70 @@ class ContactGroupViewer::Private
     AbstractContactGroupFormatter *mContactGroupFormatter;
 };
 
-ContactGroupViewer::ContactGroupViewer( QWidget *parent )
-  : QWidget( parent ), d( new Private( this ) )
+ContactGroupViewer::ContactGroupViewer(QWidget *parent)
+    : QWidget(parent)
+    , d(new Private(this))
 {
-  QVBoxLayout *layout = new QVBoxLayout( this );
-  layout->setMargin( 0 );
+    QVBoxLayout *layout = new QVBoxLayout(this);
+    layout->setMargin(0);
 
-  connect( d->mBrowser, SIGNAL(anchorClicked(QUrl)),
-           this, SLOT(slotMailClicked(QUrl)) );
+    connect(d->mBrowser, SIGNAL(anchorClicked(QUrl)),
+            this, SLOT(slotMailClicked(QUrl)));
 
-  layout->addWidget( d->mBrowser );
+    layout->addWidget(d->mBrowser);
 
-  // always fetch full payload for contact groups
-  fetchScope().fetchFullPayload();
-  fetchScope().setAncestorRetrieval( ItemFetchScope::Parent );
+    // always fetch full payload for contact groups
+    fetchScope().fetchFullPayload();
+    fetchScope().setAncestorRetrieval(ItemFetchScope::Parent);
 }
 
 ContactGroupViewer::~ContactGroupViewer()
 {
-  delete d;
+    delete d;
 }
 
 Akonadi::Item ContactGroupViewer::contactGroup() const
 {
-  return ItemMonitor::item();
+    return ItemMonitor::item();
 }
 
-void ContactGroupViewer::setContactGroup( const Akonadi::Item &group )
+void ContactGroupViewer::setContactGroup(const Akonadi::Item &group)
 {
-  ItemMonitor::setItem( group );
+    ItemMonitor::setItem(group);
 }
 
-void ContactGroupViewer::setContactGroupFormatter( AbstractContactGroupFormatter *formatter )
+void ContactGroupViewer::setContactGroupFormatter(AbstractContactGroupFormatter *formatter)
 {
-  if ( formatter == 0 ) {
-    d->mContactGroupFormatter = d->mStandardContactGroupFormatter;
-  } else {
-    d->mContactGroupFormatter = formatter;
-  }
+    if (formatter == 0) {
+        d->mContactGroupFormatter = d->mStandardContactGroupFormatter;
+    } else {
+        d->mContactGroupFormatter = formatter;
+    }
 }
 
-void ContactGroupViewer::itemChanged( const Item &item )
+void ContactGroupViewer::itemChanged(const Item &item)
 {
-  if ( !item.hasPayload<KContacts::ContactGroup>() ) {
-    return;
-  }
+    if (!item.hasPayload<KContacts::ContactGroup>()) {
+        return;
+    }
 
-  const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
-  d->mCurrentGroupName = group.name();
-  d->mCurrentItem = item;
+    const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+    d->mCurrentGroupName = group.name();
+    d->mCurrentItem = item;
 
-  if ( d->mExpandJob ) {
-    disconnect( d->mExpandJob, SIGNAL(result(KJob*)), this, SLOT(_k_expandResult(KJob*)) );
-    d->mExpandJob->kill();
-  }
+    if (d->mExpandJob) {
+        disconnect(d->mExpandJob, SIGNAL(result(KJob*)), this, SLOT(_k_expandResult(KJob*)));
+        d->mExpandJob->kill();
+    }
 
-  d->mExpandJob = new ContactGroupExpandJob( group );
-  connect( d->mExpandJob, SIGNAL(result(KJob*)), SLOT(_k_expandResult(KJob*)) );
-  d->mExpandJob->start();
+    d->mExpandJob = new ContactGroupExpandJob(group);
+    connect(d->mExpandJob, SIGNAL(result(KJob*)), SLOT(_k_expandResult(KJob*)));
+    d->mExpandJob->start();
 }
 
 void ContactGroupViewer::itemRemoved()
 {
-  d->mBrowser->clear();
+    d->mBrowser->clear();
 }
 
 #include "moc_contactgroupviewer.cpp"

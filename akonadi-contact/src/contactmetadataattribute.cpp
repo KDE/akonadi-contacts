@@ -27,56 +27,56 @@ using namespace Akonadi;
 
 class ContactMetaDataAttribute::Private
 {
-  public:
+public:
     QVariantMap mData;
 };
 
 ContactMetaDataAttribute::ContactMetaDataAttribute()
-  : d( new Private )
+    : d(new Private)
 {
 }
 
 ContactMetaDataAttribute::~ContactMetaDataAttribute()
 {
-  delete d;
+    delete d;
 }
 
-void ContactMetaDataAttribute::setMetaData( const QVariantMap &data )
+void ContactMetaDataAttribute::setMetaData(const QVariantMap &data)
 {
-  d->mData = data;
+    d->mData = data;
 }
 
 QVariantMap ContactMetaDataAttribute::metaData() const
 {
-  return d->mData;
+    return d->mData;
 }
 
 QByteArray ContactMetaDataAttribute::type() const
 {
-  return "contactmetadata";
+    return "contactmetadata";
 }
 
-Attribute* ContactMetaDataAttribute::clone() const
+Attribute *ContactMetaDataAttribute::clone() const
 {
-  ContactMetaDataAttribute *copy = new ContactMetaDataAttribute;
-  copy->setMetaData( d->mData );
+    ContactMetaDataAttribute *copy = new ContactMetaDataAttribute;
+    copy->setMetaData(d->mData);
 
-  return copy;
+    return copy;
 }
 
 QByteArray ContactMetaDataAttribute::serialized() const
 {
-  QByteArray data;
-  QDataStream s( &data, QIODevice::WriteOnly );
-  s.setVersion( QDataStream::Qt_4_5 );
-  s << d->mData;
+    QByteArray data;
+    QDataStream s(&data, QIODevice::WriteOnly);
+    s.setVersion(QDataStream::Qt_4_5);
+    s << d->mData;
 
-  return data;
+    return data;
 }
 
-void ContactMetaDataAttribute::deserialize( const QByteArray &data )
+void ContactMetaDataAttribute::deserialize(const QByteArray &data)
 {
-  QDataStream s( data );
-  s.setVersion( QDataStream::Qt_4_5 );
-  s >> d->mData;
+    QDataStream s(data);
+    s.setVersion(QDataStream::Qt_4_5);
+    s >> d->mData;
 }

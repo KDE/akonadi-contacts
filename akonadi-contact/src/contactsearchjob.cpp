@@ -28,79 +28,79 @@ using namespace Akonadi;
 
 class ContactSearchJob::Private
 {
-  public:
+public:
     int mLimit;
 };
 
-ContactSearchJob::ContactSearchJob( QObject * parent )
-  : ItemSearchJob( QString(), parent ), d( new Private() )
+ContactSearchJob::ContactSearchJob(QObject *parent)
+    : ItemSearchJob(QString(), parent)
+    , d(new Private())
 {
-  fetchScope().fetchFullPayload();
-  d->mLimit = -1;
+    fetchScope().fetchFullPayload();
+    d->mLimit = -1;
 
-  setMimeTypes( QStringList() << KContacts::Addressee::mimeType() );
+    setMimeTypes(QStringList() << KContacts::Addressee::mimeType());
 
-  // by default search for all contacts
-  Akonadi::SearchQuery query;
-  query.addTerm( ContactSearchTerm(ContactSearchTerm::All, QVariant(), SearchTerm::CondEqual) );
-  ItemSearchJob::setQuery( query );
+    // by default search for all contacts
+    Akonadi::SearchQuery query;
+    query.addTerm(ContactSearchTerm(ContactSearchTerm::All, QVariant(), SearchTerm::CondEqual));
+    ItemSearchJob::setQuery(query);
 }
 
 ContactSearchJob::~ContactSearchJob()
 {
-  delete d;
+    delete d;
 }
 
-static Akonadi::SearchTerm::Condition matchType( ContactSearchJob::Match match )
+static Akonadi::SearchTerm::Condition matchType(ContactSearchJob::Match match)
 {
-  switch ( match ) {
+    switch (match) {
     case ContactSearchJob::ExactMatch:
-      return Akonadi::SearchTerm::CondEqual;
+        return Akonadi::SearchTerm::CondEqual;
     case ContactSearchJob::StartsWithMatch:
     case ContactSearchJob::ContainsWordBoundaryMatch:
     case ContactSearchJob::ContainsMatch:
-      return Akonadi::SearchTerm::CondContains;
-  }
-  return Akonadi::SearchTerm::CondEqual;
+        return Akonadi::SearchTerm::CondContains;
+    }
+    return Akonadi::SearchTerm::CondEqual;
 }
 
-void ContactSearchJob::setQuery( Criterion criterion, const QString &value, Match match )
+void ContactSearchJob::setQuery(Criterion criterion, const QString &value, Match match)
 {
- Akonadi::SearchQuery query( SearchTerm::RelOr) ;
+    Akonadi::SearchQuery query(SearchTerm::RelOr) ;
 
-  if ( criterion == Name ) {
-    query.addTerm( ContactSearchTerm( ContactSearchTerm::Name, value, matchType( match ) ) );
-  } else if ( criterion == Email ) {
-    query.addTerm( ContactSearchTerm( ContactSearchTerm::Email, value, matchType( match ) ) );
-  } else if ( criterion == NickName ) {
-    query.addTerm( ContactSearchTerm( ContactSearchTerm::Nickname, value, matchType( match ) ) );
-  } else if ( criterion == NameOrEmail ) {
-    query.addTerm( ContactSearchTerm( ContactSearchTerm::Name, value, matchType( match ) ) );
-    query.addTerm( ContactSearchTerm(ContactSearchTerm::Email, value, matchType( match ) ) );
-  } else if ( criterion == ContactUid ) {
-    query.addTerm( ContactSearchTerm( ContactSearchTerm::Uid, value, matchType( match ) ) );
-  }
+    if (criterion == Name) {
+        query.addTerm(ContactSearchTerm(ContactSearchTerm::Name, value, matchType(match)));
+    } else if (criterion == Email) {
+        query.addTerm(ContactSearchTerm(ContactSearchTerm::Email, value, matchType(match)));
+    } else if (criterion == NickName) {
+        query.addTerm(ContactSearchTerm(ContactSearchTerm::Nickname, value, matchType(match)));
+    } else if (criterion == NameOrEmail) {
+        query.addTerm(ContactSearchTerm(ContactSearchTerm::Name, value, matchType(match)));
+        query.addTerm(ContactSearchTerm(ContactSearchTerm::Email, value, matchType(match)));
+    } else if (criterion == ContactUid) {
+        query.addTerm(ContactSearchTerm(ContactSearchTerm::Uid, value, matchType(match)));
+    }
 
-  query.setLimit( d->mLimit );
+    query.setLimit(d->mLimit);
 
-  ItemSearchJob::setQuery( query );
+    ItemSearchJob::setQuery(query);
 }
 
-void ContactSearchJob::setLimit( int limit )
+void ContactSearchJob::setLimit(int limit)
 {
-  d->mLimit = limit;
+    d->mLimit = limit;
 }
 
 KContacts::Addressee::List ContactSearchJob::contacts() const
 {
-  KContacts::Addressee::List contacts;
+    KContacts::Addressee::List contacts;
 
-  foreach ( const Item &item, items() ) {
-    if ( item.hasPayload<KContacts::Addressee>() ) {
-      contacts.append( item.payload<KContacts::Addressee>() );
+    foreach (const Item &item, items()) {
+        if (item.hasPayload<KContacts::Addressee>()) {
+            contacts.append(item.payload<KContacts::Addressee>());
+        }
     }
-  }
 
-  return contacts;
+    return contacts;
 }
-
