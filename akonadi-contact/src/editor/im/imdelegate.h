@@ -30,11 +30,11 @@ public:
     explicit IMDelegate(QObject *parent = Q_NULLPTR);
     ~IMDelegate();
 
-    virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
-                                  const QModelIndex &index) const;
+    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                                  const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    virtual void paint(QPainter *painter, const QStyleOptionViewItem &option,
-                       const QModelIndex &index) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+                       const QModelIndex &index) const Q_DECL_OVERRIDE;
 };
 
 #endif

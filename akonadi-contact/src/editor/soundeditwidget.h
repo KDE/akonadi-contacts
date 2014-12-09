@@ -45,7 +45,7 @@ public:
 
 protected:
     // context menu handling
-    virtual void contextMenuEvent(QContextMenuEvent *event);
+    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void playSound();

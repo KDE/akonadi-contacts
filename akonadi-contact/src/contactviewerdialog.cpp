@@ -44,8 +44,8 @@ class ContactViewerDialog::Private
 
     void readConfig()
     {
-      KConfig config( QLatin1String( "akonadi_contactrc" ) );
-      KConfigGroup group( &config, QLatin1String( "ContactViewer" ) );
+      KConfig config( QStringLiteral( "akonadi_contactrc" ) );
+      KConfigGroup group( &config, QStringLiteral( "ContactViewer" ) );
       const QSize size = group.readEntry( "Size", QSize(500, 600) );
       if ( size.isValid() ) {
         q->resize( size );
@@ -54,8 +54,8 @@ class ContactViewerDialog::Private
 
     void writeConfig()
     {
-      KConfig config( QLatin1String( "akonadi_contactrc" ) );
-      KConfigGroup group( &config, QLatin1String( "ContactViewer" ) );
+      KConfig config( QStringLiteral( "akonadi_contactrc" ) );
+      KConfigGroup group( &config, QStringLiteral( "ContactViewer" ) );
       group.writeEntry( "Size", q->size() );
       group.sync();
     }
