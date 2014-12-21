@@ -361,8 +361,9 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
 
     // fill widgets
     mTypeList = KContacts::PhoneNumber::typeList();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     mTypeList.removeAll(KContacts::PhoneNumber::Pref);
-
+#endif
     KContacts::PhoneNumber::TypeList::ConstIterator it;
     mGroup = new QButtonGroup(box);
     mGroup->setExclusive(false);
