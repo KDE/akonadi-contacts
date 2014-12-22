@@ -23,8 +23,6 @@
 
 #include "recentcontactscollectionssettings.h"
 
-
-
 #include "agentinstance.h"
 #include "servermanager.h"
 
@@ -32,7 +30,7 @@ using namespace Akonadi;
 
 class Akonadi::RecentContactsCollectionsPrivate
 {
-  public:
+public:
     RecentContactsCollectionsPrivate();
     ~RecentContactsCollectionsPrivate();
 
@@ -41,61 +39,61 @@ class Akonadi::RecentContactsCollectionsPrivate
 
 typedef RecentContactsCollectionsSettings Settings;
 
-Q_GLOBAL_STATIC( RecentContactsCollectionsPrivate, sInstance )
+Q_GLOBAL_STATIC(RecentContactsCollectionsPrivate, sInstance)
 
 static const QByteArray sRecentContactsType = "recent-contacts";
 
 RecentContactsCollectionsPrivate::RecentContactsCollectionsPrivate()
-  : mInstance( new RecentContactsCollections( this ) )
+    : mInstance(new RecentContactsCollections(this))
 {
 }
 
 RecentContactsCollectionsPrivate::~RecentContactsCollectionsPrivate()
 {
-  delete mInstance;
+    delete mInstance;
 }
 
-static KCoreConfigSkeleton *getConfig( const QString &filename)
+static KCoreConfigSkeleton *getConfig(const QString &filename)
 {
-  Settings::instance( ServerManager::addNamespace( filename ) );
-  return Settings::self();
+    Settings::instance(ServerManager::addNamespace(filename));
+    return Settings::self();
 }
 
-RecentContactsCollections::RecentContactsCollections( RecentContactsCollectionsPrivate *dd )
-  : SpecialCollections( getConfig(QStringLiteral("recentcontactscollectionsrc")) ),
-    d( dd )
+RecentContactsCollections::RecentContactsCollections(RecentContactsCollectionsPrivate *dd)
+    : SpecialCollections(getConfig(QStringLiteral("recentcontactscollectionsrc")))
+    , d(dd)
 {
-  Q_UNUSED(d); // d isn't used yet
+    Q_UNUSED(d); // d isn't used yet
 }
 
 RecentContactsCollections *RecentContactsCollections::self()
 {
-  return sInstance->mInstance;
+    return sInstance->mInstance;
 }
 
-bool RecentContactsCollections::hasCollection( const AgentInstance &instance ) const
+bool RecentContactsCollections::hasCollection(const AgentInstance &instance) const
 {
-  return SpecialCollections::hasCollection( sRecentContactsType, instance );
+    return SpecialCollections::hasCollection(sRecentContactsType, instance);
 }
 
-Collection RecentContactsCollections::collection( const AgentInstance &instance ) const
+Collection RecentContactsCollections::collection(const AgentInstance &instance) const
 {
-  return SpecialCollections::collection( sRecentContactsType, instance );
+    return SpecialCollections::collection(sRecentContactsType, instance);
 }
 
-bool RecentContactsCollections::registerCollection( const Collection &collection )
+bool RecentContactsCollections::registerCollection(const Collection &collection)
 {
-  return SpecialCollections::registerCollection( sRecentContactsType, collection );
+    return SpecialCollections::registerCollection(sRecentContactsType, collection);
 }
 
 bool RecentContactsCollections::hasDefaultCollection() const
 {
-  return SpecialCollections::hasDefaultCollection( sRecentContactsType );
+    return SpecialCollections::hasDefaultCollection(sRecentContactsType);
 }
 
 Collection RecentContactsCollections::defaultCollection() const
 {
-  return SpecialCollections::defaultCollection( sRecentContactsType );
+    return SpecialCollections::defaultCollection(sRecentContactsType);
 }
 
 #include "moc_recentcontactscollections_p.cpp"

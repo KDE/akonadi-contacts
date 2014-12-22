@@ -23,35 +23,33 @@
 
 #include "recentcontactscollections_p.h"
 
-
 #include <klocalizedstring.h>
 #include <QStandardPaths>
-
 
 using namespace Akonadi;
 
 static const QByteArray sRecentContactsType = "recent-contacts";
 
-RecentContactsCollectionRequestJob::RecentContactsCollectionRequestJob( QObject *parent )
-  : SpecialCollectionsRequestJob( RecentContactsCollections::self(), parent ),
-    d( 0 )
+RecentContactsCollectionRequestJob::RecentContactsCollectionRequestJob(QObject *parent)
+    : SpecialCollectionsRequestJob(RecentContactsCollections::self(), parent)
+    , d(0)
 {
-  static QMap<QByteArray, QString> displayNameMap;
-  displayNameMap.insert( "recent-contacts", i18nc( "recent contacts folder", "Recent Contacts" ) );
+    static QMap<QByteArray, QString> displayNameMap;
+    displayNameMap.insert("recent-contacts", i18nc("recent contacts folder", "Recent Contacts"));
 
-  static QMap<QByteArray, QString> iconNameMap;
-  iconNameMap.insert( "recent-contacts", QLatin1String( "folder" ) );
+    static QMap<QByteArray, QString> iconNameMap;
+    iconNameMap.insert("recent-contacts", QLatin1String("folder"));
 
-  QVariantMap options;
-  options.insert( QLatin1String( "Name" ), displayNameMap.value( "recent-contacts" ) );
-  options.insert( QLatin1String( "Path" ), QString( QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QLatin1String( "recent-contacts" ) ) );
+    QVariantMap options;
+    options.insert(QLatin1String("Name"), displayNameMap.value("recent-contacts"));
+    options.insert(QLatin1String("Path"), QString(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QLatin1String("recent-contacts")));
 
-  setDefaultResourceType( QLatin1String( "akonadi_contacts_resource" ) );
-  setDefaultResourceOptions( options );
+    setDefaultResourceType(QLatin1String("akonadi_contacts_resource"));
+    setDefaultResourceOptions(options);
 
-  setTypes( displayNameMap.keys() );
-  setNameForTypeMap( displayNameMap );
-  setIconForTypeMap( iconNameMap );
+    setTypes(displayNameMap.keys());
+    setNameForTypeMap(displayNameMap);
+    setIconForTypeMap(iconNameMap);
 }
 
 RecentContactsCollectionRequestJob::~RecentContactsCollectionRequestJob()
@@ -60,11 +58,10 @@ RecentContactsCollectionRequestJob::~RecentContactsCollectionRequestJob()
 
 void RecentContactsCollectionRequestJob::requestDefaultCollection()
 {
-  SpecialCollectionsRequestJob::requestDefaultCollection( sRecentContactsType );
+    SpecialCollectionsRequestJob::requestDefaultCollection(sRecentContactsType);
 }
 
-void RecentContactsCollectionRequestJob::requestCollection( const AgentInstance &instance )
+void RecentContactsCollectionRequestJob::requestCollection(const AgentInstance &instance)
 {
-  SpecialCollectionsRequestJob::requestCollection( sRecentContactsType, instance );
+    SpecialCollectionsRequestJob::requestCollection(sRecentContactsType, instance);
 }
-

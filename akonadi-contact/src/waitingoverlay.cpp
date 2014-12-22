@@ -32,81 +32,81 @@
 
 //@cond PRIVATE
 
-WaitingOverlay::WaitingOverlay( KJob *job, QWidget *baseWidget, QWidget * parent )
-  : QWidget( parent ? parent : baseWidget->window() ),
-    mBaseWidget( baseWidget )
+WaitingOverlay::WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent)
+    : QWidget(parent ? parent : baseWidget->window())
+    , mBaseWidget(baseWidget)
 {
-  Q_ASSERT( baseWidget );
-  Q_ASSERT( parentWidget() != baseWidget );
+    Q_ASSERT(baseWidget);
+    Q_ASSERT(parentWidget() != baseWidget);
 
-  connect( baseWidget, SIGNAL(destroyed()), SLOT(deleteLater()) );
-  connect( job, SIGNAL(result(KJob*)), SLOT(deleteLater()) );
-  mPreviousState = mBaseWidget->isEnabled();
+    connect(baseWidget, SIGNAL(destroyed()), SLOT(deleteLater()));
+    connect(job, SIGNAL(result(KJob*)), SLOT(deleteLater()));
+    mPreviousState = mBaseWidget->isEnabled();
 
-  QBoxLayout *topLayout = new QVBoxLayout( this );
-  topLayout->addStretch();
-  QLabel *description = new QLabel( this );
-  description->setText( i18n( "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>" ) );
-  description->setAlignment( Qt::AlignHCenter | Qt::AlignVCenter );
-  topLayout->addWidget( description );
-  topLayout->addStretch();
+    QBoxLayout *topLayout = new QVBoxLayout(this);
+    topLayout->addStretch();
+    QLabel *description = new QLabel(this);
+    description->setText(i18n("<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"));
+    description->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    topLayout->addWidget(description);
+    topLayout->addStretch();
 
-  QPalette p = palette();
-  p.setColor( backgroundRole(), QColor( 0, 0, 0, 128 ) );
-  setPalette( p );
-  setAutoFillBackground( true );
+    QPalette p = palette();
+    p.setColor(backgroundRole(), QColor(0, 0, 0, 128));
+    setPalette(p);
+    setAutoFillBackground(true);
 
-  mBaseWidget->installEventFilter( this );
+    mBaseWidget->installEventFilter(this);
 
-  reposition();
+    reposition();
 }
 
 WaitingOverlay::~ WaitingOverlay()
 {
-  if ( mBaseWidget ) {
-    mBaseWidget->setEnabled( mPreviousState );
-  }
+    if (mBaseWidget) {
+        mBaseWidget->setEnabled(mPreviousState);
+    }
 }
 
 void WaitingOverlay::reposition()
 {
-  if ( !mBaseWidget ) {
-    return;
-  }
+    if (!mBaseWidget) {
+        return;
+    }
 
-  // reparent to the current top level widget of the base widget if needed
-  // needed eg. in dock widgets
-  if ( parentWidget() != mBaseWidget->window() ) {
-    setParent( mBaseWidget->window() );
-  }
+    // reparent to the current top level widget of the base widget if needed
+    // needed eg. in dock widgets
+    if (parentWidget() != mBaseWidget->window()) {
+        setParent(mBaseWidget->window());
+    }
 
-  // follow base widget visibility
-  // needed eg. in tab widgets
-  if ( !mBaseWidget->isVisible() ) {
-    hide();
-    return;
-  }
-  show();
+    // follow base widget visibility
+    // needed eg. in tab widgets
+    if (!mBaseWidget->isVisible()) {
+        hide();
+        return;
+    }
+    show();
 
-  // follow position changes
-  const QPoint topLevelPos = mBaseWidget->mapTo( window(), QPoint( 0, 0 ) );
-  const QPoint parentPos = parentWidget()->mapFrom( window(), topLevelPos );
-  move( parentPos );
+    // follow position changes
+    const QPoint topLevelPos = mBaseWidget->mapTo(window(), QPoint(0, 0));
+    const QPoint parentPos = parentWidget()->mapFrom(window(), topLevelPos);
+    move(parentPos);
 
-  // follow size changes
-  // TODO: hide/scale icon if we don't have enough space
-  resize( mBaseWidget->size() );
+    // follow size changes
+    // TODO: hide/scale icon if we don't have enough space
+    resize(mBaseWidget->size());
 }
 
-bool WaitingOverlay::eventFilter(QObject * object, QEvent * event)
+bool WaitingOverlay::eventFilter(QObject *object, QEvent *event)
 {
-  if ( object == mBaseWidget &&
-      ( event->type() == QEvent::Move || event->type() == QEvent::Resize ||
-        event->type() == QEvent::Show || event->type() == QEvent::Hide ||
-        event->type() == QEvent::ParentChange ) ) {
-    reposition();
-  }
-  return QWidget::eventFilter( object, event );
+    if (object == mBaseWidget &&
+        (event->type() == QEvent::Move || event->type() == QEvent::Resize ||
+         event->type() == QEvent::Show || event->type() == QEvent::Hide ||
+         event->type() == QEvent::ParentChange)) {
+        reposition();
+    }
+    return QWidget::eventFilter(object, event);
 }
 
 //@endcond

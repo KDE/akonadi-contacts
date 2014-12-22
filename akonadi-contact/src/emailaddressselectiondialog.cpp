@@ -33,73 +33,74 @@ using namespace Akonadi;
 
 class EmailAddressSelectionDialog::Private
 {
-  public:
-    Private( EmailAddressSelectionDialog *qq, QAbstractItemModel *model )
-      : q( qq )
+public:
+    Private(EmailAddressSelectionDialog *qq, QAbstractItemModel *model)
+        : q(qq)
     {
-      QVBoxLayout *mainLayout = new QVBoxLayout(q);
-      if ( model ) {
-        mView = new EmailAddressSelectionWidget( model, q );
-      } else {
-        mView = new EmailAddressSelectionWidget( q );
-      }
-      mainLayout->addWidget(mView);
-      q->connect( mView, SIGNAL(doubleClicked()), q, SLOT(accept()));
-      QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
-      QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-      okButton->setDefault(true);
-      okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-      connect(buttonBox, SIGNAL(accepted()), q, SLOT(accept()));
-      connect(buttonBox, SIGNAL(rejected()), q, SLOT(reject()));
+        QVBoxLayout *mainLayout = new QVBoxLayout(q);
+        if (model) {
+            mView = new EmailAddressSelectionWidget(model, q);
+        } else {
+            mView = new EmailAddressSelectionWidget(q);
+        }
+        mainLayout->addWidget(mView);
+        q->connect(mView, SIGNAL(doubleClicked()), q, SLOT(accept()));
+        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+        QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+        okButton->setDefault(true);
+        okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+        connect(buttonBox, SIGNAL(accepted()), q, SLOT(accept()));
+        connect(buttonBox, SIGNAL(rejected()), q, SLOT(reject()));
 
-      mainLayout->addWidget(buttonBox);
-      readConfig();
+        mainLayout->addWidget(buttonBox);
+        readConfig();
     }
 
     void readConfig()
     {
-       KConfigGroup group( KSharedConfig::openConfig(), QLatin1String( "EmailAddressSelectionDialog" ) );
-       const QSize size = group.readEntry( "Size", QSize() );
-       if ( size.isValid() ) {
-          q->resize( size );
-       } else {
-          q->resize( q->sizeHint().width(), q->sizeHint().height() );
-       }
+        KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("EmailAddressSelectionDialog"));
+        const QSize size = group.readEntry("Size", QSize());
+        if (size.isValid()) {
+            q->resize(size);
+        } else {
+            q->resize(q->sizeHint().width(), q->sizeHint().height());
+        }
     }
 
     void writeConfig()
     {
-        KConfigGroup group( KSharedConfig::openConfig(), QLatin1String( "EmailAddressSelectionDialog" ) );
-        group.writeEntry( "Size", q->size() );
+        KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("EmailAddressSelectionDialog"));
+        group.writeEntry("Size", q->size());
     }
 
     EmailAddressSelectionDialog *q;
     EmailAddressSelectionWidget *mView;
 };
 
-EmailAddressSelectionDialog::EmailAddressSelectionDialog( QWidget *parent )
-  : QDialog( parent ), d( new Private( this, 0 ) )
+EmailAddressSelectionDialog::EmailAddressSelectionDialog(QWidget *parent)
+    : QDialog(parent)
+    , d(new Private(this, 0))
 {
 }
 
-EmailAddressSelectionDialog::EmailAddressSelectionDialog( QAbstractItemModel *model, QWidget *parent )
-  : QDialog( parent ), d( new Private( this, model ) )
+EmailAddressSelectionDialog::EmailAddressSelectionDialog(QAbstractItemModel *model, QWidget *parent)
+    : QDialog(parent)
+    , d(new Private(this, model))
 {
 }
 
 EmailAddressSelectionDialog::~EmailAddressSelectionDialog()
 {
-  d->writeConfig();
-  delete d;
+    d->writeConfig();
+    delete d;
 }
 
 EmailAddressSelection::List EmailAddressSelectionDialog::selectedAddresses() const
 {
-  return d->mView->selectedAddresses();
+    return d->mView->selectedAddresses();
 }
 
-EmailAddressSelectionWidget* EmailAddressSelectionDialog::view() const
+EmailAddressSelectionWidget *EmailAddressSelectionDialog::view() const
 {
-  return d->mView;
+    return d->mView;
 }
-
