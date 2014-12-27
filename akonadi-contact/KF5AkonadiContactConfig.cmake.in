@@ -1,8 +1,8 @@
 @PACKAGE_INIT@
 
 find_dependency(KF5Akonadi "@KDEPIMLIBS_VERSION@")
-find_dependency(KF5Contacts "@KDEPIMLIBS_VERSION@")
-find_dependency(KF5CalendarCore "@KDEPIMLIBS_VERSION@")
+find_dependency(KF5Contacts "@KCONTACTS_VERSION@")
+find_dependency(KF5CalendarCore "@CALENDARCORE_VERSION@")
 
 
 include("${CMAKE_CURRENT_LIST_DIR}/KF5AkonadiContactTargets.cmake")

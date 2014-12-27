@@ -18,6 +18,9 @@ include(KDEFrameworkCompilerSettings)
 include(ECMInstallIcons)
 set(KF5_VERSION "5.5.0")
 set(KDEPIMLIBS_VERSION "4.79.0")
+set(KCONTACTS_VERSION "4.79.0")
+set(CALENDARCORE_VERSION "4.79.0")
+set(KMIMELIB_VERSION "4.79.0")
 
 ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
@@ -31,9 +34,12 @@ find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
 find_package(Phonon4Qt5 CONFIG REQUIRED)
-find_package(KF5Contacts ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-find_package(KF5CalendarCore ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-find_package(KF5Mime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+
+
+
+find_package(KF5Contacts ${KCONTACTS_VERSION} CONFIG REQUIRED)
+find_package(KF5CalendarCore ${CALENDARCORE_VERSION} CONFIG REQUIRED)
+find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Contact_SOURCE_DIR})
   find_package(KF5Akonadi CONFIG REQUIRED)
