@@ -103,7 +103,6 @@ EmailEditWidget::EmailEditWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-//TODO PORT QT5     layout->setSpacing(QDialog::spacingHint());
 
     mEmailEdit = new QLineEdit;
     new EmailAddressExtracter(mEmailEdit);

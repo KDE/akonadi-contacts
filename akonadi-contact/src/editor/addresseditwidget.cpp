@@ -236,7 +236,6 @@ AddressEditWidget::AddressEditWidget(QWidget *parent)
     , mReadOnly(false)
 {
     QGridLayout *layout = new QGridLayout;
-//TODO PORT QT5     layout->setSpacing(QDialog::spacingHint());
     layout->setMargin(0);
 
     QHBoxLayout *hboxLayout = new QHBoxLayout;
@@ -421,7 +420,6 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
 
     QGridLayout *topLayout = new QGridLayout(page);
-    //PORT QT5 topLayout->setSpacing(spacingHint());
     topLayout->setMargin(0);
 
     QLabel *label = new QLabel(i18nc("@label:listbox type of address", "Address type:"), this);
@@ -499,7 +497,6 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     topLayout->addWidget(mPreferredCheckBox, 8, 0, 1, 2);
 
     QHBoxLayout *hbox = new QHBoxLayout(page);
-    //PORT QT5 hbox->setSpacing(spacingHint());
     topLayout->addLayout(hbox, 9, 0, 1, 2);
 
     KAcceleratorManager::manage(this);
@@ -602,7 +599,6 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
     QVBoxLayout *layout = new QVBoxLayout(page);
-//TODO PORT QT5     layout->setSpacing(QDialog::spacingHint());
     layout->setMargin(0);
 
     QGroupBox *box  = new QGroupBox(i18nc("street/postal", "Address Types"), page);
