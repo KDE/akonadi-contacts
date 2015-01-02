@@ -567,7 +567,7 @@ QAction * StandardContactActionManager::createAction( Type type )
     return d->mActions.value( type );
   }
 
-  QAction *action = 0;
+  QAction *action = Q_NULLPTR;
 
   switch ( type ) {
     case CreateContact:

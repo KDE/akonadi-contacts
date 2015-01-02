@@ -43,7 +43,7 @@
 class SoundLoader
 {
 public:
-    SoundLoader(QWidget *parent = 0);
+    SoundLoader(QWidget *parent = Q_NULLPTR);
 
     QByteArray loadSound(const QUrl &url, bool *ok);
 

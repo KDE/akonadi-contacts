@@ -30,7 +30,7 @@
 
 using namespace Akonadi;
 
-QAbstractItemModel *ContactCompletionModel::mSelf = 0;
+QAbstractItemModel *ContactCompletionModel::mSelf = Q_NULLPTR;
 
 QAbstractItemModel *ContactCompletionModel::self()
 {

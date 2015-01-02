@@ -42,7 +42,7 @@
 class GeoMapWidget : public QWidget
 {
 public:
-    GeoMapWidget(QWidget *parent = 0)
+    GeoMapWidget(QWidget *parent = Q_NULLPTR)
         : QWidget(parent)
     {
         mWorld = QPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/akonadi/contact/pics/world.jpg")));

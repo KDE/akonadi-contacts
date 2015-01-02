@@ -176,10 +176,9 @@ void ContactEditorWidget::Private::initGuiContactTab()
     QGridLayout *internetLayout = new QGridLayout(internetGroupBox);
     QGridLayout *phonesLayout = new QGridLayout(phonesGroupBox);
 
-    QLabel *label = 0;
 
     // setup name group box
-    label = new QLabel(i18nc("@label The name of a contact", "Name:"));
+    QLabel *label = new QLabel(i18nc("@label The name of a contact", "Name:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     nameLayout->addWidget(label, 0, 0);
 
@@ -338,13 +337,11 @@ void ContactEditorWidget::Private::initGuiBusinessTab()
     QGridLayout *generalLayout = new QGridLayout(generalGroupBox);
     QGridLayout *groupwareLayout = new QGridLayout(groupwareGroupBox);
 
-    QLabel *label = 0;
-
     // setup general group box
     mLogoWidget = new ImageWidget(ImageWidget::Logo);
     generalLayout->addWidget(mLogoWidget, 0, 2, 6, 1, Qt::AlignTop);
 
-    label = new QLabel(i18nc("@label The organization of a contact", "Organization:"));
+    QLabel *label = new QLabel(i18nc("@label The organization of a contact", "Organization:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     generalLayout->addWidget(label, 0, 0);
 
@@ -427,10 +424,8 @@ void ContactEditorWidget::Private::initGuiPersonalTab()
     QGridLayout *datesLayout = new QGridLayout(datesGroupBox);
     QGridLayout *familyLayout = new QGridLayout(familyGroupBox);
 
-    QLabel *label = 0;
-
     // setup dates group box
-    label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
+    QLabel *label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     datesLayout->addWidget(label, 0, 0);
 

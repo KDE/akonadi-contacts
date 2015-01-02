@@ -89,7 +89,7 @@ public:
      * @param model A custom ContactsTreeModel based model to use.
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model = 0, QWidget *parent = Q_NULLPTR);
+    explicit EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model = Q_NULLPTR, QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the email address selection widget.

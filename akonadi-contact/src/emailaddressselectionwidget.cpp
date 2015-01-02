@@ -55,7 +55,7 @@ using namespace Akonadi;
 class SearchLineEdit : public QLineEdit
 {
   public:
-    SearchLineEdit( QWidget *receiver, QWidget *parent = 0 )
+    SearchLineEdit( QWidget *receiver, QWidget *parent = Q_NULLPTR )
       : QLineEdit( parent ), mReceiver( receiver )
     {
         setClearButtonEnabled( true );
