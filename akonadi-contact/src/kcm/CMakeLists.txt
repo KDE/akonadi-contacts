@@ -13,8 +13,8 @@ add_library(kcm_akonadicontact_actions MODULE ${kcm_akonadicontact_actions_SRCS}
 
 target_link_libraries(kcm_akonadicontact_actions KF5::ConfigWidgets KF5::KDELibs4Support)
 
-install(TARGETS kcm_akonadicontact_actions DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_akonadicontact_actions DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 ########### install files ###############
 
-install(FILES akonadicontact_actions.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES akonadicontact_actions.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

@@ -122,10 +122,10 @@ generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
 add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact;${Boost_INCLUDE_DIR};${PHONON_INCLUDES}>")
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact;${Boost_INCLUDE_DIR};${PHONON_INCLUDES}>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src;${Boost_INCLUDE_DIR};${PHONON_INCLUDES}>")
 # TODO: Remove when kdepimlibs is split (and fix the broken includes in eg. akonadi-calendar)
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/akonadi/contact>")
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact>")
 
 target_link_libraries(KF5AkonadiContact
 PUBLIC
@@ -157,13 +157,13 @@ install(TARGETS
     EXPORT KF5AkonadiContactTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
-install(FILES editor/pics/world.jpg DESTINATION ${KF5_DATA_INSTALL_DIR}/akonadi/contact/pics)
-install(FILES editor/data/zone.tab DESTINATION ${KF5_DATA_INSTALL_DIR}/akonadi/contact/data)
-install(FILES recentcontactscollections.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
+install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
+install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
+install(FILES recentcontactscollections.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} )
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
     LIB_NAME KF5AkonadiContact
-    DEPS "AkonadiCore Abc" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact
+    DEPS "AkonadiCore Abc" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact
 )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
@@ -202,13 +202,13 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
 
 install( FILES
   ${AkonadiContact_CamelCase_HEADERS}
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Contact COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact COMPONENT Devel
 )
 
 install( FILES
   ${AkonadiContact_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
   editor/im/improtocols.h
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/akonadi/contact COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
 )
 
