@@ -80,6 +80,7 @@ install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
+# REACTIVATE add_subdirectory(src/editor/autotests)
 
 if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
   feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

@@ -196,6 +196,7 @@ EmailEditDialog::EmailEditDialog(QWidget *parent)
     topLayout->setMargin(0);
 
     mEmailListBox = new QListWidget(page);
+    mEmailListBox->setObjectName(QLatin1String("emailListBox"));
     mainLayout->addWidget(mEmailListBox);
     mEmailListBox->setSelectionMode(QAbstractItemView::SingleSelection);
 
@@ -374,9 +375,13 @@ void EmailEditDialog::setEmailList(const QStringList &list)
     QStringList::ConstIterator it;
     bool preferred = true;
     QStringList::ConstIterator end(items.constEnd());
+    QStringList emails;
     for (it = items.constBegin(); it != end; ++it) {
-        new EmailItem(*it, mEmailListBox, preferred);
-        preferred = false;
+        if (!emails.contains(*it)) {
+            new EmailItem(*it, mEmailListBox, preferred);
+            emails << *it;
+            preferred = false;
+        }
     }
 
 }
