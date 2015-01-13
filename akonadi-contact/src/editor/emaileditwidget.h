@@ -66,12 +66,13 @@ class EmailEditDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit EmailEditDialog(const QStringList &list, QWidget *parent = Q_NULLPTR);
+    explicit EmailEditDialog(QWidget *parent = Q_NULLPTR);
     ~EmailEditDialog();
 
     QStringList emails() const;
     bool changed() const;
 
+    void setEmailList(const QStringList &list);
 protected Q_SLOTS:
     void add();
     void edit();

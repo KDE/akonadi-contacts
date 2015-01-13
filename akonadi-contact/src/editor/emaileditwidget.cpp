@@ -157,8 +157,8 @@ void EmailEditWidget::storeContact(KContacts::Addressee &contact) const
 
 void EmailEditWidget::edit()
 {
-    AutoQPointer<EmailEditDialog> dlg = new EmailEditDialog(mEmailList, this);
-
+    AutoQPointer<EmailEditDialog> dlg = new EmailEditDialog(this);
+    dlg->setEmailList(mEmailList);
     if (dlg->exec()) {
         if (dlg->changed()) {
             mEmailList = dlg->emails();
@@ -180,7 +180,7 @@ void EmailEditWidget::textChanged(const QString &text)
     mEmailList.prepend(text);
 }
 
-EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
+EmailEditDialog::EmailEditDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18n("Edit Email Addresses"));
@@ -229,21 +229,6 @@ EmailEditDialog::EmailEditDialog(const QStringList &list, QWidget *parent)
     topLayout->addWidget(mStandardButton, 3, 2);
 
     topLayout->setRowStretch(4, 1);
-
-    QStringList items = list;
-    if (items.removeAll(QStringLiteral("")) > 0) {
-        mChanged = true;
-    } else {
-        mChanged = false;
-    }
-
-    QStringList::ConstIterator it;
-    bool preferred = true;
-    QStringList::ConstIterator end(items.constEnd());
-    for (it = items.constBegin(); it != end; ++it) {
-        new EmailItem(*it, mEmailListBox, preferred);
-        preferred = false;
-    }
 
     // set default state
     KAcceleratorManager::manage(this);
@@ -377,6 +362,25 @@ bool EmailEditDialog::changed() const
     return mChanged;
 }
 
+void EmailEditDialog::setEmailList(const QStringList &list)
+{
+    QStringList items = list;
+    if (items.removeAll(QLatin1String("")) > 0) {
+        mChanged = true;
+    } else {
+        mChanged = false;
+    }
+
+    QStringList::ConstIterator it;
+    bool preferred = true;
+    QStringList::ConstIterator end(items.constEnd());
+    for (it = items.constBegin(); it != end; ++it) {
+        new EmailItem(*it, mEmailListBox, preferred);
+        preferred = false;
+    }
+
+}
+
 void EmailEditDialog::standard()
 {
     for (int i = 0; i < mEmailListBox->count(); ++i) {
@@ -393,8 +397,8 @@ void EmailEditDialog::standard()
 
 void EmailEditDialog::selectionChanged()
 {
-    int index = mEmailListBox->currentRow();
-    bool value = (index >= 0);   // An item is selected
+    const int index = mEmailListBox->currentRow();
+    const bool value = (index >= 0);   // An item is selected
 
     mRemoveButton->setEnabled(value);
     mEditButton->setEnabled(value);
