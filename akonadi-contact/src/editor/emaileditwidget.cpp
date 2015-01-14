@@ -207,24 +207,28 @@ EmailEditDialog::EmailEditDialog(QWidget *parent)
     topLayout->addWidget(mEmailListBox, 0, 0, 5, 2);
 
     mAddButton = new QPushButton(i18n("Add..."), page);
+    mAddButton->setObjectName(QLatin1String("add"));
     mainLayout->addWidget(mAddButton);
     connect(mAddButton, &QPushButton::clicked, this, &EmailEditDialog::add);
     topLayout->addWidget(mAddButton, 0, 2);
 
     mEditButton = new QPushButton(i18n("Edit..."), page);
     mainLayout->addWidget(mEditButton);
+    mEditButton->setObjectName(QLatin1String("edit"));
     mEditButton->setEnabled(false);
     connect(mEditButton, &QPushButton::clicked, this, &EmailEditDialog::edit);
     topLayout->addWidget(mEditButton, 1, 2);
 
     mRemoveButton = new QPushButton(i18n("Remove"), page);
     mainLayout->addWidget(mRemoveButton);
+    mRemoveButton->setObjectName(QLatin1String("remove"));
     mRemoveButton->setEnabled(false);
     connect(mRemoveButton, &QPushButton::clicked, this, &EmailEditDialog::remove);
     topLayout->addWidget(mRemoveButton, 2, 2);
 
     mStandardButton = new QPushButton(i18n("Set as Standard"), page);
     mainLayout->addWidget(mStandardButton);
+    mStandardButton->setObjectName(QLatin1String("standard"));
     mStandardButton->setEnabled(false);
     connect(mStandardButton, &QPushButton::clicked, this, &EmailEditDialog::standard);
     topLayout->addWidget(mStandardButton, 3, 2);
