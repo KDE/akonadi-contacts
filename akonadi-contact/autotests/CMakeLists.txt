@@ -6,13 +6,14 @@ find_package(Qt5Test CONFIG REQUIRED)
 # convenience macro to add akonadi demo application
 macro(add_akonadi_contact_demo _source)
   set(_test ${_source})
-  add_executable(${_test} ${_test})
-  target_link_libraries(${_test}
+  get_filename_component( _name ${_source} NAME_WE )
+  add_executable( ${_name} ${_test} )
+  add_test( ${_name} ${_name} )
+  target_link_libraries(${_name}
       KF5::AkonadiMime
      KF5::AkonadiContact
      Qt5::Test)
-  add_test(${_test} ${_test})
-  ecm_mark_as_test(${_test})
+  ecm_mark_as_test(${_name})
 endmacro()
 
 ########### next target ###############
