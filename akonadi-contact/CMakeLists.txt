@@ -55,9 +55,10 @@ endif()
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_subdirectory(src)
-add_subdirectory(autotests)
-add_subdirectory(tests)
-
+if (BUILD_TESTING)
+  add_subdirectory(autotests)
+  add_subdirectory(tests)
+endif()
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
 
@@ -80,8 +81,9 @@ install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
-add_subdirectory(src/editor/autotests)
-
+if (BUILD_TESTING)
+   add_subdirectory(src/editor/autotests)
+endif()
 if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
   feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 endif()
