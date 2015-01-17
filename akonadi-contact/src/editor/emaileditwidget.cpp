@@ -292,7 +292,7 @@ void EmailEditDialog::add()
     QString email = QInputDialog::getText(this, i18n("Add Email"), i18n("New Email:"), QLineEdit::Normal,
                                           QString(), &ok);
 
-    if (!ok) {
+    if (!ok || email.trimmed().isEmpty()) {
         return;
     }
 
