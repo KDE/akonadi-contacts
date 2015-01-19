@@ -76,6 +76,16 @@ public:
         format();
     }
 
+    void setEmail(const KContacts::Email &email)
+    {
+        mEmail = email;
+    }
+
+    KContacts::Email email() const
+    {
+        return mEmail;
+    }
+
     void setPreferred(bool preferred)
     {
         mPreferred = preferred;
@@ -95,6 +105,7 @@ private:
     }
 
 private:
+    KContacts::Email mEmail;
     bool mPreferred;
 };
 
@@ -105,6 +116,7 @@ EmailEditWidget::EmailEditWidget(QWidget *parent)
     layout->setMargin(0);
 
     mEmailEdit = new QLineEdit;
+    mEmailEdit->setObjectName(QLatin1String("emailedit"));
     new EmailAddressExtracter(mEmailEdit);
     connect(mEmailEdit, &QLineEdit::textChanged, this, &EmailEditWidget::textChanged);
     layout->addWidget(mEmailEdit);
@@ -112,6 +124,7 @@ EmailEditWidget::EmailEditWidget(QWidget *parent)
     mEditButton = new QToolButton;
     mEditButton->setText(QStringLiteral("..."));
     connect(mEditButton, &QPushButton::clicked, this, &EmailEditWidget::edit);
+    mEditButton->setObjectName(QLatin1String("editbutton"));
     layout->addWidget(mEditButton);
     setFocusProxy(mEditButton);
     setFocusPolicy(Qt::StrongFocus);
@@ -129,41 +142,29 @@ void EmailEditWidget::setReadOnly(bool readOnly)
 
 void EmailEditWidget::loadContact(const KContacts::Addressee &contact)
 {
-    mEmailList = contact.emails();
+    mList = contact.emailList();
 
-    if (!mEmailList.isEmpty()) {
-        mEmailEdit->setText(mEmailList.first());
-    } else {
+    if (mList.isEmpty()) {
         mEmailEdit->setText(QString());
+    } else {
+        mEmailEdit->setText(mList.first().mail());
     }
 }
 
 void EmailEditWidget::storeContact(KContacts::Addressee &contact) const
 {
-    QStringList emails(mEmailList);
-
-    // the preferred address is always the first one, remove it...
-    if (!emails.isEmpty()) {
-        emails.removeFirst();
-    }
-
-    // ... and prepend the one from the line edit
-    if (!mEmailEdit->text().isEmpty()) {
-        emails.prepend(mEmailEdit->text().toLower());
-    }
-
-    contact.setEmails(emails);
+    contact.setEmailList(mList);
 }
 
 void EmailEditWidget::edit()
 {
     AutoQPointer<EmailEditDialog> dlg = new EmailEditDialog(this);
-    dlg->setEmailList(mEmailList);
+    dlg->setEmailList(mList);
     if (dlg->exec()) {
         if (dlg->changed()) {
-            mEmailList = dlg->emails();
-            if (!mEmailList.isEmpty()) {
-                mEmailEdit->setText(mEmailList.first());
+            mList = dlg->emailList();
+            if (!mList.isEmpty()) {
+                mEmailEdit->setText(mList.first().mail());
             } else {
                 mEmailEdit->setText(QString());
             }
@@ -173,11 +174,11 @@ void EmailEditWidget::edit()
 
 void EmailEditWidget::textChanged(const QString &text)
 {
-    if (!mEmailList.isEmpty()) {
-        mEmailList.removeFirst();
+    if (mList.isEmpty()) {
+        mList.append(KContacts::Email(text));
+    } else {
+        mList.first().setEmail(text);
     }
-
-    mEmailList.prepend(text);
 }
 
 EmailEditDialog::EmailEditDialog(QWidget *parent)
@@ -269,21 +270,25 @@ void EmailEditDialog::writeConfig()
     group.writeEntry("Size", size());
 }
 
-QStringList EmailEditDialog::emails() const
+KContacts::Email::List EmailEditDialog::emailList() const
 {
-    QStringList emails;
+    KContacts::Email::List lst;
 
     for (int i = 0; i < mEmailListBox->count(); ++i) {
         EmailItem *item = static_cast<EmailItem *>(mEmailListBox->item(i));
+        KContacts::Email email = item->email();
+        email.setEmail(item->text());
         if (item->preferred()) {
-            emails.prepend(item->text());
+            lst.prepend(email);
         } else {
-            emails.append(item->text());
+            lst.append(email);
         }
     }
 
-    return emails;
+    return lst;
+
 }
+
 
 void EmailEditDialog::add()
 {
@@ -367,27 +372,18 @@ bool EmailEditDialog::changed() const
     return mChanged;
 }
 
-void EmailEditDialog::setEmailList(const QStringList &list)
+void EmailEditDialog::setEmailList(const KContacts::Email::List &list)
 {
-    QStringList items = list;
-    if (items.removeAll(QLatin1String("")) > 0) {
-        mChanged = true;
-    } else {
-        mChanged = false;
-    }
-
-    QStringList::ConstIterator it;
-    bool preferred = true;
-    QStringList::ConstIterator end(items.constEnd());
     QStringList emails;
-    for (it = items.constBegin(); it != end; ++it) {
-        if (!emails.contains(*it)) {
-            new EmailItem(*it, mEmailListBox, preferred);
-            emails << *it;
+    bool preferred = true;
+    Q_FOREACH(const KContacts::Email &email, list) {
+        if (!emails.contains(email.mail())) {
+            EmailItem *emailItem = new EmailItem(email.mail(), mEmailListBox, preferred);
+            emailItem->setEmail(email);
+            emails << email.mail();
             preferred = false;
         }
     }
-
 }
 
 void EmailEditDialog::standard()

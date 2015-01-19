@@ -21,6 +21,7 @@
 #include "../emaileditwidget.h"
 #include <qtest.h>
 #include <QListWidget>
+#include <KContacts/Email>
 #include <qpushbutton.h>
 EmailEditDialogTest::EmailEditDialogTest(QObject *parent)
     : QObject(parent)
@@ -54,7 +55,10 @@ void EmailEditDialogTest::shouldAddItems()
 {
     EmailEditDialog dlg;
     QListWidget *listwidget = qFindChild<QListWidget *>(&dlg, QLatin1String("emailListBox"));
-    const QStringList lst = QStringList() << QLatin1String("foo") << QLatin1String("bla") << QLatin1String("bli");
+    KContacts::Email::List lst;
+    lst << KContacts::Email(QLatin1String("foo"));
+    lst << KContacts::Email(QLatin1String("bla"));
+    lst << KContacts::Email(QLatin1String("bli"));
     dlg.setEmailList(lst);
     QCOMPARE(listwidget->count(), lst.count());
 }
@@ -63,7 +67,11 @@ void EmailEditDialogTest::shouldDontAddTwiceItem()
 {
     EmailEditDialog dlg;
     QListWidget *listwidget = qFindChild<QListWidget *>(&dlg, QLatin1String("emailListBox"));
-    const QStringList lst = QStringList() << QLatin1String("foo") << QLatin1String("bla") << QLatin1String("bli") << QLatin1String("bli");
+    KContacts::Email::List lst;
+    lst << KContacts::Email(QLatin1String("foo"));
+    lst << KContacts::Email(QLatin1String("bla"));
+    lst << KContacts::Email(QLatin1String("bli"));
+    lst << KContacts::Email(QLatin1String("bli"));
     dlg.setEmailList(lst);
     QCOMPARE(listwidget->count(), (lst.count()-1));
 }

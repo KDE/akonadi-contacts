@@ -23,6 +23,7 @@
 #define EMAILEDITWIDGET_H
 
 #include <QDialog>
+#include <KContacts/Email>
 
 namespace KContacts {
 class Addressee;
@@ -58,7 +59,7 @@ private Q_SLOTS:
 private:
     QLineEdit *mEmailEdit;
     QToolButton *mEditButton;
-    QStringList mEmailList;
+    KContacts::Email::List mList;
 };
 
 class EmailEditDialog : public QDialog
@@ -69,10 +70,11 @@ public:
     explicit EmailEditDialog(QWidget *parent = Q_NULLPTR);
     ~EmailEditDialog();
 
-    QStringList emails() const;
     bool changed() const;
 
-    void setEmailList(const QStringList &list);
+
+    KContacts::Email::List emailList() const;
+    void setEmailList(const KContacts::Email::List &list);
 protected Q_SLOTS:
     void add();
     void edit();
