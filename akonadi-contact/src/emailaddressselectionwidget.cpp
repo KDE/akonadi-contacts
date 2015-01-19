@@ -39,7 +39,6 @@
 #include <KLocalizedString>
 #include <klocalizedstring.h>
 
-
 #include <QtCore/QTimer>
 #include <QHBoxLayout>
 #include <QHeaderView>
@@ -54,24 +53,25 @@ using namespace Akonadi;
  */
 class SearchLineEdit : public QLineEdit
 {
-  public:
-    SearchLineEdit( QWidget *receiver, QWidget *parent = Q_NULLPTR )
-      : QLineEdit( parent ), mReceiver( receiver )
+public:
+    SearchLineEdit(QWidget *receiver, QWidget *parent = Q_NULLPTR)
+        : QLineEdit(parent)
+        , mReceiver(receiver)
     {
-        setClearButtonEnabled( true );
+        setClearButtonEnabled(true);
     }
 
-  protected:
-    virtual void keyPressEvent( QKeyEvent *event )
+protected:
+    virtual void keyPressEvent(QKeyEvent *event)
     {
-      if ( event->key() == Qt::Key_Down ) {
-        QMetaObject::invokeMethod( mReceiver, "setFocus" );
-      }
+        if (event->key() == Qt::Key_Down) {
+            QMetaObject::invokeMethod(mReceiver, "setFocus");
+        }
 
-      QLineEdit::keyPressEvent( event );
+        QLineEdit::keyPressEvent(event);
     }
 
-  private:
+private:
     QWidget *mReceiver;
 };
 
@@ -80,11 +80,13 @@ class SearchLineEdit : public QLineEdit
  */
 class EmailAddressSelectionWidget::Private
 {
-  public:
-    Private( bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model )
-      : q( qq ), mModel( model ), mShowOnlyContactWithEmail(showOnlyContactWithEmail)
+public:
+    Private(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)
+        : q(qq)
+        , mModel(model)
+        , mShowOnlyContactWithEmail(showOnlyContactWithEmail)
     {
-      init();
+        init();
     }
 
     void init();
@@ -100,134 +102,134 @@ class EmailAddressSelectionWidget::Private
 
 void EmailAddressSelectionWidget::Private::init()
 {
-  #warning "port insertCatalog";
-  //KLocalizedString::insertCatalog( QLatin1String( "akonadicontact" ) );
-  // setup internal model if needed
-  if ( !mModel ) {
-    Akonadi::Session *session = new Akonadi::Session( "InternalEmailAddressSelectionWidgetModel", q );
+#warning "port insertCatalog";
+    //KLocalizedString::insertCatalog( QLatin1String( "akonadicontact" ) );
+    // setup internal model if needed
+    if (!mModel) {
+        Akonadi::Session *session = new Akonadi::Session("InternalEmailAddressSelectionWidgetModel", q);
 
-    Akonadi::ItemFetchScope scope;
-    scope.fetchFullPayload( true );
-    scope.fetchAttribute<Akonadi::EntityDisplayAttribute>();
+        Akonadi::ItemFetchScope scope;
+        scope.fetchFullPayload(true);
+        scope.fetchAttribute<Akonadi::EntityDisplayAttribute>();
 
-    Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder( q );
-    changeRecorder->setSession( session );
-    changeRecorder->fetchCollection( true );
-    changeRecorder->setItemFetchScope( scope );
-    changeRecorder->setCollectionMonitored( Akonadi::Collection::root() );
-    changeRecorder->setMimeTypeMonitored( KContacts::Addressee::mimeType(), true );
-    changeRecorder->setMimeTypeMonitored( KContacts::ContactGroup::mimeType(), true );
+        Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder(q);
+        changeRecorder->setSession(session);
+        changeRecorder->fetchCollection(true);
+        changeRecorder->setItemFetchScope(scope);
+        changeRecorder->setCollectionMonitored(Akonadi::Collection::root());
+        changeRecorder->setMimeTypeMonitored(KContacts::Addressee::mimeType(), true);
+        changeRecorder->setMimeTypeMonitored(KContacts::ContactGroup::mimeType(), true);
 
-    Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel( changeRecorder, q );
+        Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel(changeRecorder, q);
 //    model->setCollectionFetchStrategy( Akonadi::ContactsTreeModel::InvisibleFetch );
 
-    mModel = model;
-  }
+        mModel = model;
+    }
 
-  // setup ui
-  QVBoxLayout *layout = new QVBoxLayout( q );
+    // setup ui
+    QVBoxLayout *layout = new QVBoxLayout(q);
 
-  mDescriptionLabel = new QLabel;
-  mDescriptionLabel->hide();
-  layout->addWidget( mDescriptionLabel );
+    mDescriptionLabel = new QLabel;
+    mDescriptionLabel->hide();
+    layout->addWidget(mDescriptionLabel);
 
-  QHBoxLayout *searchLayout = new QHBoxLayout;
-  layout->addLayout( searchLayout );
+    QHBoxLayout *searchLayout = new QHBoxLayout;
+    layout->addLayout(searchLayout);
 
-  mView = new Akonadi::EntityTreeView;
+    mView = new Akonadi::EntityTreeView;
 
-  QLabel *label = new QLabel( i18nc( "@label Search in a list of contacts", "Search:" ) );
-  mSearchLine = new SearchLineEdit( mView );
-  label->setBuddy( mSearchLine );
-  searchLayout->addWidget( label );
-  searchLayout->addWidget( mSearchLine );
+    QLabel *label = new QLabel(i18nc("@label Search in a list of contacts", "Search:"));
+    mSearchLine = new SearchLineEdit(mView);
+    label->setBuddy(mSearchLine);
+    searchLayout->addWidget(label);
+    searchLayout->addWidget(mSearchLine);
 
 #ifndef QT_NO_DRAGANDDROP
-  mView->setDragDropMode( QAbstractItemView::NoDragDrop );
+    mView->setDragDropMode(QAbstractItemView::NoDragDrop);
 #endif
-  layout->addWidget( mView );
+    layout->addWidget(mView);
 
-  Akonadi::ContactsFilterProxyModel *filter = new Akonadi::ContactsFilterProxyModel( q );
-  if (mShowOnlyContactWithEmail)
-      filter->setFilterFlags( ContactsFilterProxyModel::HasEmail );
-  filter->setExcludeVirtualCollections( true );
-  filter->setSourceModel( mModel );
+    Akonadi::ContactsFilterProxyModel *filter = new Akonadi::ContactsFilterProxyModel(q);
+    if (mShowOnlyContactWithEmail) {
+        filter->setFilterFlags(ContactsFilterProxyModel::HasEmail);
+    }
+    filter->setExcludeVirtualCollections(true);
+    filter->setSourceModel(mModel);
 
-  mSelectionModel = new EmailAddressSelectionProxyModel( q );
-  mSelectionModel->setSourceModel( filter );
+    mSelectionModel = new EmailAddressSelectionProxyModel(q);
+    mSelectionModel->setSourceModel(filter);
 
-  mView->setModel( mSelectionModel );
-  mView->header()->hide();
+    mView->setModel(mSelectionModel);
+    mView->header()->hide();
 
-  q->connect( mSearchLine, SIGNAL(textChanged(QString)),
-              filter, SLOT(setFilterString(QString)) );
+    q->connect(mSearchLine, SIGNAL(textChanged(QString)),
+               filter, SLOT(setFilterString(QString)));
 
-  q->connect( mView, SIGNAL(doubleClicked(Akonadi::Item)),
-              q, SIGNAL(doubleClicked()));
-  Control::widgetNeedsAkonadi( q );
+    q->connect(mView, SIGNAL(doubleClicked(Akonadi::Item)),
+               q, SIGNAL(doubleClicked()));
+    Control::widgetNeedsAkonadi(q);
 
-  mSearchLine->setFocus();
+    mSearchLine->setFocus();
 
-  QTimer::singleShot( 1000, mView, SLOT(expandAll()) );
+    QTimer::singleShot(1000, mView, SLOT(expandAll()));
 }
 
-EmailAddressSelectionWidget::EmailAddressSelectionWidget( QWidget * parent )
-  : QWidget( parent ),
-    d( new Private( true, this, 0 ) )
+EmailAddressSelectionWidget::EmailAddressSelectionWidget(QWidget *parent)
+    : QWidget(parent)
+    , d(new Private(true, this, 0))
 {
 }
 
-EmailAddressSelectionWidget::EmailAddressSelectionWidget( QAbstractItemModel *model, QWidget * parent )
-  : QWidget( parent ),
-    d( new Private( true, this, model ) )
+EmailAddressSelectionWidget::EmailAddressSelectionWidget(QAbstractItemModel *model, QWidget *parent)
+    : QWidget(parent)
+    , d(new Private(true, this, model))
 {
 }
 
-EmailAddressSelectionWidget::EmailAddressSelectionWidget( bool showOnlyContactWithEmail, QAbstractItemModel *model, QWidget * parent )
-  : QWidget( parent ),
-    d( new Private( showOnlyContactWithEmail ,this, model ) )
+EmailAddressSelectionWidget::EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model, QWidget *parent)
+    : QWidget(parent)
+    , d(new Private(showOnlyContactWithEmail , this, model))
 {
 }
 
 EmailAddressSelectionWidget::~EmailAddressSelectionWidget()
 {
-  delete d;
+    delete d;
 }
 
 EmailAddressSelection::List EmailAddressSelectionWidget::selectedAddresses() const
 {
-  EmailAddressSelection::List selections;
+    EmailAddressSelection::List selections;
 
-  if ( !d->mView->selectionModel() ) {
-    return selections;
-  }
+    if (!d->mView->selectionModel()) {
+        return selections;
+    }
 
-  const QModelIndexList selectedRows = d->mView->selectionModel()->selectedRows( 0 );
-  foreach ( const QModelIndex &index, selectedRows ) {
-    EmailAddressSelection selection;
-    selection.d->mName = index.data( EmailAddressSelectionProxyModel::NameRole ).toString();
-    selection.d->mEmailAddress = index.data( EmailAddressSelectionProxyModel::EmailAddressRole ).toString();
-    selection.d->mItem = index.data( ContactsTreeModel::ItemRole ).value<Akonadi::Item>();
+    const QModelIndexList selectedRows = d->mView->selectionModel()->selectedRows(0);
+    foreach (const QModelIndex &index, selectedRows) {
+        EmailAddressSelection selection;
+        selection.d->mName = index.data(EmailAddressSelectionProxyModel::NameRole).toString();
+        selection.d->mEmailAddress = index.data(EmailAddressSelectionProxyModel::EmailAddressRole).toString();
+        selection.d->mItem = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
 
-    if ( d->mShowOnlyContactWithEmail ) {
-        if ( !selection.d->mEmailAddress.isEmpty() ) {
+        if (d->mShowOnlyContactWithEmail) {
+            if (!selection.d->mEmailAddress.isEmpty()) {
+                selections << selection;
+            }
+        } else {
             selections << selection;
         }
-    } else {
-        selections << selection;
     }
-  }
 
-  return selections;
+    return selections;
 }
 
-QLineEdit* EmailAddressSelectionWidget::searchLineEdit() const
+QLineEdit *EmailAddressSelectionWidget::searchLineEdit() const
 {
-  return d->mSearchLine;
+    return d->mSearchLine;
 }
 
-QTreeView* EmailAddressSelectionWidget::view() const
+QTreeView *EmailAddressSelectionWidget::view() const
 {
-  return d->mView;
+    return d->mView;
 }
-

@@ -35,8 +35,8 @@ public:
     {
     }
 
-    void sourceRowsInserted(const QModelIndex &, int, int);
-    void sourceRowsRemoved(const QModelIndex &, int, int);
+    void sourceRowsInserted(const QModelIndex &parentIndex, int start, int end);
+    void sourceRowsRemoved(const QModelIndex &parentIndex, int start, int end);
 
     LeafExtensionProxyModel *q;
     QMap<qint64, QModelIndex> mParentIndexes;
