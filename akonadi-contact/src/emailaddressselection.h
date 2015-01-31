@@ -25,7 +25,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <QtCore/QList>
+#include <QtCore/QVector>
 #include <QtCore/QSharedDataPointer>
 #include <QtCore/QString>
 
@@ -52,7 +52,7 @@ public:
     /**
      * A list of email address selection objects.
      */
-    typedef QList<EmailAddressSelection> List;
+    typedef QVector<EmailAddressSelection> List;
 
     /**
      * Creates a new email address selection.
