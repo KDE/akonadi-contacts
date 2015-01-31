@@ -51,7 +51,7 @@ public:
         lineEdit->installEventFilter(this);
     }
 
-    virtual bool eventFilter(QObject *watched, QEvent *event)
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE
     {
         if (watched == mLineEdit && event->type() == QEvent::FocusOut) {
             const QString fullEmailAddress = mLineEdit->text();

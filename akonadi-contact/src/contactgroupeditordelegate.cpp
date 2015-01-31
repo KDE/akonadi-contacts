@@ -52,7 +52,7 @@ public:
     }
 
 protected:
-    virtual bool filterAcceptsRow(int row, const QModelIndex &parent) const
+    bool filterAcceptsRow(int row, const QModelIndex &parent) const Q_DECL_OVERRIDE
     {
         const QModelIndex index = sourceModel()->index(row, Akonadi::ContactCompletionModel::EmailColumn, parent);
         if (!index.isValid()) {

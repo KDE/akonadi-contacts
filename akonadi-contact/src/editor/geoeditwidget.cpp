@@ -61,7 +61,7 @@ public:
     }
 
 protected:
-    virtual void paintEvent(QPaintEvent *)
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE
     {
         QPainter p;
         p.begin(this);
