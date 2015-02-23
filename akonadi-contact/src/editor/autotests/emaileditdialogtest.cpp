@@ -37,24 +37,24 @@ EmailEditDialogTest::~EmailEditDialogTest()
 void EmailEditDialogTest::shouldHaveDefaultValue()
 {
     EmailEditDialog dlg;
-    QListWidget *listwidget = qFindChild<QListWidget *>(&dlg, QLatin1String("emailListBox"));
+    QListWidget *listwidget = dlg.findChild<QListWidget *>(QLatin1String("emailListBox"));
     QVERIFY(listwidget);
     QCOMPARE(listwidget->count(), 0);
 
-    QPushButton *button = qFindChild<QPushButton *>(&dlg, QLatin1String("add"));
+    QPushButton *button = dlg.findChild<QPushButton *>(QLatin1String("add"));
     QVERIFY(button);
-    button = qFindChild<QPushButton *>(&dlg, QLatin1String("remove"));
+    button = dlg.findChild<QPushButton *>(QLatin1String("remove"));
     QVERIFY(button);
-    button = qFindChild<QPushButton *>(&dlg, QLatin1String("edit"));
+    button = dlg.findChild<QPushButton *>(QLatin1String("edit"));
     QVERIFY(button);
-    button = qFindChild<QPushButton *>(&dlg, QLatin1String("standard"));
+    button = dlg.findChild<QPushButton *>(QLatin1String("standard"));
     QVERIFY(button);
 }
 
 void EmailEditDialogTest::shouldAddItems()
 {
     EmailEditDialog dlg;
-    QListWidget *listwidget = qFindChild<QListWidget *>(&dlg, QLatin1String("emailListBox"));
+    QListWidget *listwidget = dlg.findChild<QListWidget *>(QLatin1String("emailListBox"));
     KContacts::Email::List lst;
     lst << KContacts::Email(QLatin1String("foo"));
     lst << KContacts::Email(QLatin1String("bla"));
@@ -66,7 +66,7 @@ void EmailEditDialogTest::shouldAddItems()
 void EmailEditDialogTest::shouldDontAddTwiceItem()
 {
     EmailEditDialog dlg;
-    QListWidget *listwidget = qFindChild<QListWidget *>(&dlg, QLatin1String("emailListBox"));
+    QListWidget *listwidget = dlg.findChild<QListWidget *>(QLatin1String("emailListBox"));
     KContacts::Email::List lst;
     lst << KContacts::Email(QLatin1String("foo"));
     lst << KContacts::Email(QLatin1String("bla"));

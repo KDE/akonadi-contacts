@@ -38,11 +38,11 @@ EmailEditWidgetTest::~EmailEditWidgetTest()
 void EmailEditWidgetTest::shouldHaveDefaultValue()
 {
     EmailEditWidget widget;
-    QLineEdit *lineedit = qFindChild<QLineEdit *>(&widget, QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
     QVERIFY(lineedit);
     QVERIFY(lineedit->text().isEmpty());
 
-    QToolButton *toolButton = qFindChild<QToolButton *>(&widget, QLatin1String("editbutton"));
+    QToolButton *toolButton = widget.findChild<QToolButton *>(QLatin1String("editbutton"));
     QVERIFY(toolButton);
 }
 
@@ -50,9 +50,9 @@ void EmailEditWidgetTest::shouldReadOnly()
 {
     EmailEditWidget widget;
     widget.setReadOnly(true);
-    QLineEdit *lineedit = qFindChild<QLineEdit *>(&widget, QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
 
-    QToolButton *toolButton = qFindChild<QToolButton *>(&widget, QLatin1String("editbutton"));
+    QToolButton *toolButton = widget.findChild<QToolButton *>(QLatin1String("editbutton"));
     QVERIFY(lineedit->isReadOnly());
     QVERIFY(!toolButton->isEnabled());
 }
@@ -60,7 +60,7 @@ void EmailEditWidgetTest::shouldReadOnly()
 void EmailEditWidgetTest::shouldSelectFirstEmail()
 {
     EmailEditWidget widget;
-    QLineEdit *lineedit = qFindChild<QLineEdit *>(&widget, QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
     KContacts::Addressee addr;
     KContacts::Email::List lst;
     const QString firstEmail(QLatin1String("foo@kde.org"));
@@ -74,7 +74,7 @@ void EmailEditWidgetTest::shouldSelectFirstEmail()
 void EmailEditWidgetTest::shouldChangeEmail()
 {
     EmailEditWidget widget;
-    QLineEdit *lineedit = qFindChild<QLineEdit *>(&widget, QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
     KContacts::Addressee addr;
     KContacts::Email::List lst;
     const QString firstEmail(QLatin1String("foo@kde.org"));
