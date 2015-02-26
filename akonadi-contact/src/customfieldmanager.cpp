@@ -28,8 +28,8 @@
 
 void CustomFieldManager::setGlobalCustomFieldDescriptions(const CustomField::List &customFields)
 {
-    KConfig config(QLatin1String("akonadi_contactrc"));
-    KConfigGroup group(&config, QLatin1String("GlobalCustomFields"));
+    KConfig config(QStringLiteral("akonadi_contactrc"));
+    KConfigGroup group(&config, QStringLiteral("GlobalCustomFields"));
 
     group.deleteGroup();
     foreach (const CustomField &field, customFields) {
@@ -42,8 +42,8 @@ void CustomFieldManager::setGlobalCustomFieldDescriptions(const CustomField::Lis
 
 CustomField::List CustomFieldManager::globalCustomFieldDescriptions()
 {
-    KConfig config(QLatin1String("akonadi_contactrc"));
-    const KConfigGroup group(&config, QLatin1String("GlobalCustomFields"));
+    KConfig config(QStringLiteral("akonadi_contactrc"));
+    const KConfigGroup group(&config, QStringLiteral("GlobalCustomFields"));
 
     CustomField::List customFields;
 

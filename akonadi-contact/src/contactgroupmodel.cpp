@@ -291,23 +291,23 @@ QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
         }
 
         if (member.loadingError) {
-            return QIcon::fromTheme(QLatin1String("emblem-important"));
+            return QIcon::fromTheme(QStringLiteral("emblem-important"));
         }
 
         if (index.row() == (d->mMembers.count() - 1)) {
-            return QIcon::fromTheme(QLatin1String("contact-new"));
+            return QIcon::fromTheme(QStringLiteral("contact-new"));
         }
 
         if (member.isReference) {
 //QT5 port
 #if 0
-            return QIcon::fromTheme(QLatin1String("x-office-contact"), KIconLoader::global(),
-                                    QStringList() << QLatin1String("emblem-symbolic-link"));
+            return QIcon::fromTheme(QStringLiteral("x-office-contact"), KIconLoader::global(),
+                                    QStringList() << QStringLiteral("emblem-symbolic-link"));
 #else
             return QString();
 #endif
         } else {
-            return QIcon::fromTheme(QLatin1String("x-office-contact"));
+            return QIcon::fromTheme(QStringLiteral("x-office-contact"));
         }
     }
 

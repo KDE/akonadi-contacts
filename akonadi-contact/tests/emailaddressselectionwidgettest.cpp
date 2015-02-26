@@ -70,7 +70,7 @@ void MainWidget::showSelection()
 int main(int argc, char **argv)
 {
 
-    KAboutData aboutData(QLatin1String("emailaddressselectionwidgettest"), i18n("Test EmailAddressSelectionWidget"), QLatin1String("0.1"));
+    KAboutData aboutData(QStringLiteral("emailaddressselectionwidgettest"), i18n("Test EmailAddressSelectionWidget"), QStringLiteral("0.1"));
     KAboutData::setApplicationData(aboutData);
 
     QApplication app(argc, argv);

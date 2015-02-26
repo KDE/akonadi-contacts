@@ -27,7 +27,7 @@
 int main(int argc, char **argv)
 {
 
-    KAboutData aboutData(QLatin1String("emailaddressselectiondialogtest"), i18n("Test EmailAddressSelectionDialog"), QLatin1String("0.1"));
+    KAboutData aboutData(QStringLiteral("emailaddressselectiondialogtest"), i18n("Test EmailAddressSelectionDialog"), QStringLiteral("0.1"));
     KAboutData::setApplicationData(aboutData);
 
     QApplication app(argc, argv);

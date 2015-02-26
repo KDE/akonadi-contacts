@@ -37,28 +37,28 @@ EmailEditDialogTest::~EmailEditDialogTest()
 void EmailEditDialogTest::shouldHaveDefaultValue()
 {
     EmailEditDialog dlg;
-    QListWidget *listwidget = dlg.findChild<QListWidget *>(QLatin1String("emailListBox"));
+    QListWidget *listwidget = dlg.findChild<QListWidget *>(QStringLiteral("emailListBox"));
     QVERIFY(listwidget);
     QCOMPARE(listwidget->count(), 0);
 
-    QPushButton *button = dlg.findChild<QPushButton *>(QLatin1String("add"));
+    QPushButton *button = dlg.findChild<QPushButton *>(QStringLiteral("add"));
     QVERIFY(button);
-    button = dlg.findChild<QPushButton *>(QLatin1String("remove"));
+    button = dlg.findChild<QPushButton *>(QStringLiteral("remove"));
     QVERIFY(button);
-    button = dlg.findChild<QPushButton *>(QLatin1String("edit"));
+    button = dlg.findChild<QPushButton *>(QStringLiteral("edit"));
     QVERIFY(button);
-    button = dlg.findChild<QPushButton *>(QLatin1String("standard"));
+    button = dlg.findChild<QPushButton *>(QStringLiteral("standard"));
     QVERIFY(button);
 }
 
 void EmailEditDialogTest::shouldAddItems()
 {
     EmailEditDialog dlg;
-    QListWidget *listwidget = dlg.findChild<QListWidget *>(QLatin1String("emailListBox"));
+    QListWidget *listwidget = dlg.findChild<QListWidget *>(QStringLiteral("emailListBox"));
     KContacts::Email::List lst;
-    lst << KContacts::Email(QLatin1String("foo"));
-    lst << KContacts::Email(QLatin1String("bla"));
-    lst << KContacts::Email(QLatin1String("bli"));
+    lst << KContacts::Email(QStringLiteral("foo"));
+    lst << KContacts::Email(QStringLiteral("bla"));
+    lst << KContacts::Email(QStringLiteral("bli"));
     dlg.setEmailList(lst);
     QCOMPARE(listwidget->count(), lst.count());
 }
@@ -66,12 +66,12 @@ void EmailEditDialogTest::shouldAddItems()
 void EmailEditDialogTest::shouldDontAddTwiceItem()
 {
     EmailEditDialog dlg;
-    QListWidget *listwidget = dlg.findChild<QListWidget *>(QLatin1String("emailListBox"));
+    QListWidget *listwidget = dlg.findChild<QListWidget *>(QStringLiteral("emailListBox"));
     KContacts::Email::List lst;
-    lst << KContacts::Email(QLatin1String("foo"));
-    lst << KContacts::Email(QLatin1String("bla"));
-    lst << KContacts::Email(QLatin1String("bli"));
-    lst << KContacts::Email(QLatin1String("bli"));
+    lst << KContacts::Email(QStringLiteral("foo"));
+    lst << KContacts::Email(QStringLiteral("bla"));
+    lst << KContacts::Email(QStringLiteral("bli"));
+    lst << KContacts::Email(QStringLiteral("bli"));
     dlg.setEmailList(lst);
     QCOMPARE(listwidget->count(), (lst.count()-1));
 }

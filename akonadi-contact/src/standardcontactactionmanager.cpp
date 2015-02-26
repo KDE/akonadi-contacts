@@ -56,7 +56,7 @@ public:
         mGenericManager->setMimeTypeFilter(
             QStringList() << KContacts::Addressee::mimeType() << KContacts::ContactGroup::mimeType());
 
-        mGenericManager->setCapabilityFilter(QStringList() << QLatin1String("Resource"));
+        mGenericManager->setCapabilityFilter(QStringList() << QStringLiteral("Resource"));
     }
 
     ~Private()
@@ -127,9 +127,9 @@ public:
                 StandardActionManager::CreateCollection, StandardActionManager::ErrorMessageTitle,
                 i18n("Address book folder creation failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setProperty("ContentMimeTypes", QStringList() <<
-                                                                                                   QLatin1String("application/x-vnd.kde.contactgroup") <<
-                                                                                                   QLatin1String("text/directory") <<
-                                                                                                   QLatin1String("application/x-vnd.kde.contactgroup"));
+                                                                                                   QStringLiteral("application/x-vnd.kde.contactgroup") <<
+                                                                                                   QStringLiteral("text/directory") <<
+                                                                                                   QStringLiteral("application/x-vnd.kde.contactgroup"));
 
             break;
         case Akonadi::StandardActionManager::CopyCollections:
@@ -576,7 +576,7 @@ QAction *StandardContactActionManager::createAction(Type type)
     switch (type) {
     case CreateContact:
         action = new QAction(d->mParentWidget);
-        action->setIcon(QIcon::fromTheme(QLatin1String("contact-new")));
+        action->setIcon(QIcon::fromTheme(QStringLiteral("contact-new")));
         action->setText(i18n("New &Contact..."));
         action->setWhatsThis(i18n("Create a new contact<p>You will be presented with a dialog where you can add data about a person, including addresses and phone numbers.</p>"));
         d->mActions.insert(CreateContact, action);
@@ -586,7 +586,7 @@ QAction *StandardContactActionManager::createAction(Type type)
         break;
     case CreateContactGroup:
         action = new QAction(d->mParentWidget);
-        action->setIcon(QIcon::fromTheme(QLatin1String("user-group-new")));
+        action->setIcon(QIcon::fromTheme(QStringLiteral("user-group-new")));
         action->setText(i18n("New &Group..."));
         action->setWhatsThis(i18n("Create a new group<p>You will be presented with a dialog where you can add a new group of contacts.</p>"));
         d->mActions.insert(CreateContactGroup, action);
@@ -596,7 +596,7 @@ QAction *StandardContactActionManager::createAction(Type type)
         break;
     case EditItem:
         action = new QAction(d->mParentWidget);
-        action->setIcon(QIcon::fromTheme(QLatin1String("document-edit")));
+        action->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
         action->setText(i18n("Edit Contact..."));
         action->setWhatsThis(i18n("Edit the selected contact<p>You will be presented with a dialog where you can edit the data stored about a person, including addresses and phone numbers.</p>"));
         action->setEnabled(false);

@@ -38,11 +38,11 @@ EmailEditWidgetTest::~EmailEditWidgetTest()
 void EmailEditWidgetTest::shouldHaveDefaultValue()
 {
     EmailEditWidget widget;
-    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QStringLiteral("emailedit"));
     QVERIFY(lineedit);
     QVERIFY(lineedit->text().isEmpty());
 
-    QToolButton *toolButton = widget.findChild<QToolButton *>(QLatin1String("editbutton"));
+    QToolButton *toolButton = widget.findChild<QToolButton *>(QStringLiteral("editbutton"));
     QVERIFY(toolButton);
 }
 
@@ -50,9 +50,9 @@ void EmailEditWidgetTest::shouldReadOnly()
 {
     EmailEditWidget widget;
     widget.setReadOnly(true);
-    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QStringLiteral("emailedit"));
 
-    QToolButton *toolButton = widget.findChild<QToolButton *>(QLatin1String("editbutton"));
+    QToolButton *toolButton = widget.findChild<QToolButton *>(QStringLiteral("editbutton"));
     QVERIFY(lineedit->isReadOnly());
     QVERIFY(!toolButton->isEnabled());
 }
@@ -60,12 +60,12 @@ void EmailEditWidgetTest::shouldReadOnly()
 void EmailEditWidgetTest::shouldSelectFirstEmail()
 {
     EmailEditWidget widget;
-    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QStringLiteral("emailedit"));
     KContacts::Addressee addr;
     KContacts::Email::List lst;
-    const QString firstEmail(QLatin1String("foo@kde.org"));
+    const QString firstEmail(QStringLiteral("foo@kde.org"));
     lst << KContacts::Email(firstEmail);
-    lst << KContacts::Email(QLatin1String("foo2@kde.org"));
+    lst << KContacts::Email(QStringLiteral("foo2@kde.org"));
     addr.setEmailList(lst);
     widget.loadContact(addr);
     QCOMPARE(lineedit->text(), firstEmail);
@@ -74,15 +74,15 @@ void EmailEditWidgetTest::shouldSelectFirstEmail()
 void EmailEditWidgetTest::shouldChangeEmail()
 {
     EmailEditWidget widget;
-    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QLatin1String("emailedit"));
+    QLineEdit *lineedit = widget.findChild<QLineEdit *>(QStringLiteral("emailedit"));
     KContacts::Addressee addr;
     KContacts::Email::List lst;
-    const QString firstEmail(QLatin1String("foo@kde.org"));
+    const QString firstEmail(QStringLiteral("foo@kde.org"));
     lst << KContacts::Email(firstEmail);
-    lst << KContacts::Email(QLatin1String("foo2@kde.org"));
+    lst << KContacts::Email(QStringLiteral("foo2@kde.org"));
     addr.setEmailList(lst);
     widget.loadContact(addr);
-    const QString changedEmail(QLatin1String("foo3@kde.org"));
+    const QString changedEmail(QStringLiteral("foo3@kde.org"));
     lineedit->setText(changedEmail);
     KContacts::Addressee result;
     widget.storeContact(result);

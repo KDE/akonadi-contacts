@@ -113,8 +113,8 @@ public:
 
     void readConfig()
     {
-        KConfig config(QLatin1String("akonadi_contactrc"));
-        KConfigGroup group(&config, QLatin1String("ContactEditor"));
+        KConfig config(QStringLiteral("akonadi_contactrc"));
+        KConfigGroup group(&config, QStringLiteral("ContactEditor"));
         const QSize size = group.readEntry("Size", QSize(800,  500));
         if (size.isValid()) {
             q->resize(size);
@@ -123,8 +123,8 @@ public:
 
     void writeConfig()
     {
-        KConfig config(QLatin1String("akonadi_contactrc"));
-        KConfigGroup group(&config, QLatin1String("ContactEditor"));
+        KConfig config(QStringLiteral("akonadi_contactrc"));
+        KConfigGroup group(&config, QStringLiteral("ContactEditor"));
         group.writeEntry("Size", q->size());
         group.sync();
     }
