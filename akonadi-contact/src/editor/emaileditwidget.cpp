@@ -115,8 +115,9 @@ EmailEditWidget::EmailEditWidget(QWidget *parent)
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
 
-    mEmailEdit = new QLineEdit;
+    mEmailEdit = new KLineEdit;
     mEmailEdit->setObjectName(QStringLiteral("emailedit"));
+    mEmailEdit->setTrapReturnKey(true);
     new EmailAddressExtracter(mEmailEdit);
     connect(mEmailEdit, &QLineEdit::textChanged, this, &EmailEditWidget::textChanged);
     layout->addWidget(mEmailEdit);

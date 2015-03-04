@@ -39,7 +39,8 @@ IMEditWidget::IMEditWidget(QWidget *parent)
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
 
-    mIMEdit = new QLineEdit;
+    mIMEdit = new KLineEdit;
+    mIMEdit->setTrapReturnKey(true);
     layout->addWidget(mIMEdit);
 
     mEditButton = new QToolButton;

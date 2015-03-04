@@ -29,7 +29,7 @@ namespace KContacts {
 class Addressee;
 }
 
-class QLineEdit;
+class KLineEdit;
 class QListWidget;
 class QToolButton;
 
@@ -57,7 +57,7 @@ private Q_SLOTS:
     void textChanged(const QString &text);
 
 private:
-    QLineEdit *mEmailEdit;
+    KLineEdit *mEmailEdit;
     QToolButton *mEditButton;
     KContacts::Email::List mList;
 };

@@ -126,7 +126,8 @@ PhoneNumberWidget::PhoneNumberWidget(QWidget *parent)
     layout->setMargin(0);
 
     mTypeCombo = new PhoneTypeCombo(this);
-    mNumberEdit = new QLineEdit(this);
+    mNumberEdit = new KLineEdit(this);
+    mNumberEdit->setTrapReturnKey(true);
     QFontMetrics fm(font());
     mNumberEdit->setMinimumWidth(fm.width(QStringLiteral("MMMMMMMMMM")));
 

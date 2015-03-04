@@ -24,7 +24,7 @@
 
 #include <QDialog>
 
-class QLineEdit;
+class KLineEdit;
 class KComboBox;
 
 class NameEditDialog : public QDialog
@@ -50,9 +50,9 @@ public:
 private:
     KComboBox *mSuffixCombo;
     KComboBox *mPrefixCombo;
-    QLineEdit *mFamilyNameEdit;
-    QLineEdit *mGivenNameEdit;
-    QLineEdit *mAdditionalNameEdit;
+    KLineEdit *mFamilyNameEdit;
+    KLineEdit *mGivenNameEdit;
+    KLineEdit *mAdditionalNameEdit;
 };
 
 #endif

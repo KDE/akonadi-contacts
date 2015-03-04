@@ -28,7 +28,7 @@
 #include <kcombobox.h>
 #include <qdialog.h>
 
-class QLineEdit;
+class KLineEdit;
 
 class QButtonGroup;
 class QCheckBox;
@@ -114,7 +114,7 @@ Q_SIGNALS:
 
 private:
     PhoneTypeCombo *mTypeCombo;
-    QLineEdit *mNumberEdit;
+    KLineEdit *mNumberEdit;
     KContacts::PhoneNumber mNumber;
 };
 
