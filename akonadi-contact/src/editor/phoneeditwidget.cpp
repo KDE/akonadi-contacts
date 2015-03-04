@@ -37,7 +37,6 @@
 
 #include <kcontacts/phonenumber.h>
 #include <kcombobox.h>
-#include <qdebug.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
 #include <QDialogButtonBox>

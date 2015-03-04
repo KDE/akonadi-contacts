@@ -37,7 +37,6 @@
 
 #include <kacceleratormanager.h>
 #include <kcombobox.h>
-#include <qdebug.h>
 #include <qinputdialog.h>
 #include <klineedit.h>
 #include <klocalizedstring.h>
