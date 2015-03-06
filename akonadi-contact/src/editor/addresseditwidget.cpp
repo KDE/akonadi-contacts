@@ -257,11 +257,11 @@ AddressEditWidget::AddressEditWidget(QWidget *parent)
     layout->addWidget(mAddressView, 1, 0, 1, 3);
 
     mCreateButton = new QPushButton(i18nc("@action:button street/postal", "New..."), this);
-    connect(mCreateButton, SIGNAL(clicked()), this, SLOT(createAddress()));
+    connect(mCreateButton, &QAbstractButton::clicked, this, &AddressEditWidget::createAddress);
     mEditButton = new QPushButton(i18nc("@action:button street/postal", "Edit..."), this);
-    connect(mEditButton, SIGNAL(clicked()), this, SLOT(editAddress()));
+    connect(mEditButton, &QAbstractButton::clicked, this, &AddressEditWidget::editAddress);
     mDeleteButton = new QPushButton(i18nc("@action:button street/postal", "Delete"), this);
-    connect(mDeleteButton, SIGNAL(clicked()), this, SLOT(deleteAddress()));
+    connect(mDeleteButton, &QAbstractButton::clicked, this, &AddressEditWidget::deleteAddress);
 
     layout->addWidget(mCreateButton, 2, 0);
     layout->addWidget(mEditButton, 2, 1);
@@ -410,8 +410,8 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     okButton->setDefault(true);
 
     QWidget *page = new QWidget(this);
@@ -485,7 +485,7 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     QPushButton *labelButton = new QPushButton(i18n("Edit Label..."), page);
     mainLayout->addWidget(labelButton);
     topLayout->addWidget(labelButton, 7, 0, 1, 2);
-    connect(labelButton, SIGNAL(clicked()), SLOT(editLabel()));
+    connect(labelButton, &QAbstractButton::clicked, this, &AddressEditDialog::editLabel);
 
     fillCountryCombo();
     label->setBuddy(mCountryCombo);
@@ -590,8 +590,8 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     okButton->setDefault(true);
 
     QWidget *page = new QWidget(this);

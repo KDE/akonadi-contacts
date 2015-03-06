@@ -39,8 +39,8 @@ WaitingOverlay::WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent)
     Q_ASSERT(baseWidget);
     Q_ASSERT(parentWidget() != baseWidget);
 
-    connect(baseWidget, SIGNAL(destroyed()), SLOT(deleteLater()));
-    connect(job, SIGNAL(result(KJob*)), SLOT(deleteLater()));
+    connect(baseWidget, &QObject::destroyed, this, &QObject::deleteLater);
+    connect(job, &KJob::result, this, &QObject::deleteLater);
     mPreviousState = mBaseWidget->isEnabled();
 
     QBoxLayout *topLayout = new QVBoxLayout(this);
