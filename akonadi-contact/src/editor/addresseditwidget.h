@@ -197,10 +197,10 @@ private:
     AddressTypeCombo *mTypeCombo;
     KTextEdit *mStreetTextEdit;
     KComboBox *mCountryCombo;
-    QLineEdit *mRegionEdit;
-    QLineEdit *mLocalityEdit;
-    QLineEdit *mPostalCodeEdit;
-    QLineEdit *mPOBoxEdit;
+    KLineEdit *mRegionEdit;
+    KLineEdit *mLocalityEdit;
+    KLineEdit *mPostalCodeEdit;
+    KLineEdit *mPOBoxEdit;
     QCheckBox *mPreferredCheckBox;
 
     KContacts::Address mAddress;

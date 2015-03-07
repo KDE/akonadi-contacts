@@ -445,7 +445,8 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     label = new QLabel(i18nc("<postOfficeBoxLabel>:", "%1:", KContacts::Address::postOfficeBoxLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 2, 0);
-    mPOBoxEdit = new QLineEdit(page);
+    mPOBoxEdit = new KLineEdit(page);
+    mPOBoxEdit->setTrapReturnKey(true);
     mainLayout->addWidget(mPOBoxEdit);
     label->setBuddy(mPOBoxEdit);
     topLayout->addWidget(mPOBoxEdit, 2, 1);
@@ -453,24 +454,27 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     label = new QLabel(i18nc("<localityLabel>:", "%1:", KContacts::Address::localityLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 3, 0);
-    mLocalityEdit = new QLineEdit(page);
+    mLocalityEdit = new KLineEdit(page);
     mainLayout->addWidget(mLocalityEdit);
+    mLocalityEdit->setTrapReturnKey(true);
     label->setBuddy(mLocalityEdit);
     topLayout->addWidget(mLocalityEdit, 3, 1);
 
     label = new QLabel(i18nc("<regionLabel>:", "%1:", KContacts::Address::regionLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 4, 0);
-    mRegionEdit = new QLineEdit(page);
+    mRegionEdit = new KLineEdit(page);
     mainLayout->addWidget(mRegionEdit);
+    mRegionEdit->setTrapReturnKey(true);
     label->setBuddy(mRegionEdit);
     topLayout->addWidget(mRegionEdit, 4, 1);
 
     label = new QLabel(i18nc("<postalCodeLabel>:", "%1:", KContacts::Address::postalCodeLabel()), page);
     mainLayout->addWidget(label);
     topLayout->addWidget(label, 5, 0);
-    mPostalCodeEdit = new QLineEdit(page);
+    mPostalCodeEdit = new KLineEdit(page);
     mainLayout->addWidget(mPostalCodeEdit);
+    mPostalCodeEdit->setTrapReturnKey(true);
     label->setBuddy(mPostalCodeEdit);
     topLayout->addWidget(mPostalCodeEdit, 5, 1);
 
