@@ -32,7 +32,7 @@
 class QCheckBox;
 class QLabel;
 
-class QLineEdit;
+class KLineEdit;
 class KTextEdit;
 
 /**
