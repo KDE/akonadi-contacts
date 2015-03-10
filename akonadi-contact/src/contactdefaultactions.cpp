@@ -83,7 +83,7 @@ void ContactDefaultActions::sendEmail(const QString &name, const QString &addres
     contact.setNameFromString(name);
 
     QUrl url;
-    url.setScheme(QLatin1String("mailto"));
+    url.setScheme(QStringLiteral("mailto"));
     url.setPath(contact.fullEmail(address));
     KToolInvocation::invokeMailer(url);
 }

@@ -34,7 +34,7 @@
 
 static bool isSkypeServiceRegistered()
 {
-    const QLatin1String service("com.Skype.API");
+    const QString service(QStringLiteral("com.Skype.API"));
 
     QDBusConnectionInterface *interface = QDBusConnection::sessionBus().interface();
     if (interface->isServiceRegistered(service)) {
@@ -51,8 +51,8 @@ static bool isSkypeServiceRegistered()
 
 static QDBusInterface *searchSkypeDBusInterface()
 {
-    const QLatin1String service("com.Skype.API");
-    const QLatin1String path("/com/Skype");
+    const QString service(QStringLiteral("com.Skype.API"));
+    const QString path(QStringLiteral("/com/Skype"));
 
     QDBusInterface *interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     if (!interface->isValid()) {

@@ -58,7 +58,7 @@ public:
 
     void readConfig()
     {
-        KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("EmailAddressSelectionDialog"));
+        KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("EmailAddressSelectionDialog"));
         const QSize size = group.readEntry("Size", QSize());
         if (size.isValid()) {
             q->resize(size);
@@ -69,7 +69,7 @@ public:
 
     void writeConfig()
     {
-        KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("EmailAddressSelectionDialog"));
+        KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("EmailAddressSelectionDialog"));
         group.writeEntry("Size", q->size());
     }
 

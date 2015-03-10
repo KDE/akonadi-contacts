@@ -36,7 +36,7 @@
 
 static bool isSflPhoneServiceRegistered()
 {
-    const QLatin1String service("org.sflphone.SFLphone");
+    const QString service(QStringLiteral("org.sflphone.SFLphone"));
 
     QDBusConnectionInterface *interface = QDBusConnection::sessionBus().interface();
     if (interface->isServiceRegistered(service)) {

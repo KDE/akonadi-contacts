@@ -38,12 +38,12 @@ K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiConta
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
     : KCModule(parent)
 {
-    KAboutData *about = new KAboutData(QLatin1String("kcmakonadicontactactions"),
+    KAboutData *about = new KAboutData(QStringLiteral("kcmakonadicontactactions"),
                                        i18n("Contact Actions Settings"),
                                        QString(), QString(), KAboutLicense::LGPL,
                                        i18n("(c) 2009 Tobias Koenig"));
 
-    about->addAuthor(i18n("Tobias Koenig"), QString(), QLatin1String("tokoe@kde.org"));
+    about->addAuthor(i18n("Tobias Koenig"), QString(), QStringLiteral("tokoe@kde.org"));
 
     setAboutData(about);
     QVBoxLayout *layout = new QVBoxLayout(this);

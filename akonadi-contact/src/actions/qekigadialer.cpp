@@ -33,10 +33,11 @@
 #include <QtDBus/QDBusReply>
 
 #include <unistd.h>
+#include <QString>
 
 static bool isEkigaServiceRegistered()
 {
-    const QLatin1String service("org.ekiga.Ekiga");
+    const QString service(QStringLiteral("org.ekiga.Ekiga"));
 
     QDBusConnectionInterface *interface = QDBusConnection::sessionBus().interface();
     if (interface->isServiceRegistered(service)) {
@@ -52,8 +53,8 @@ static bool isEkigaServiceRegistered()
 
 static QDBusInterface *searchEkigaDBusInterface()
 {
-    const QLatin1String service("org.ekiga.Ekiga");
-    const QLatin1String path("/org/ekiga/Ekiga");
+    const QString service(QStringLiteral("org.ekiga.Ekiga"));
+    const QString path(QStringLiteral("/org/ekiga/Ekiga"));
 
     QDBusInterface *interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     if (!interface->isValid()) {

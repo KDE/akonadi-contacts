@@ -33,7 +33,7 @@ static QString createToolTip(const KContacts::ContactGroup &group)
 {
     QString txt = QLatin1String("<qt>");
 
-    txt += QString::fromLatin1("<b>%1</b>").arg(i18n("Distribution List %1", group.name()));
+    txt += QStringLiteral("<b>%1</b>").arg(i18n("Distribution List %1", group.name()));
     txt += QLatin1String("<ul>");
     const uint groupDataCount(group.dataCount());
     for (uint i = 0; i < groupDataCount; ++i) {
@@ -51,7 +51,7 @@ static QString createToolTip(const KContacts::ContactGroup &group)
 
 static QString createToolTip(const QString &name, const QString &email)
 {
-    return QString::fromLatin1("<qt>%1<b>%2</b></qt>")
+    return QStringLiteral("<qt>%1<b>%2</b></qt>")
            .arg(name.isEmpty() ? QString() : name + QLatin1String("<br/>"))
            .arg(email);
 }
