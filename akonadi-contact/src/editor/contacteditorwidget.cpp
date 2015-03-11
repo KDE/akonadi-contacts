@@ -84,7 +84,7 @@ public:
     NameEditWidget *mNameWidget;
     ImageWidget *mPhotoWidget;
     DisplayNameEditWidget *mDisplayNameWidget;
-    QLineEdit *mNickNameWidget;
+    KLineEdit *mNickNameWidget;
     SoundEditWidget *mPronunciationWidget;
 
     // widgets from Internet group
@@ -201,7 +201,8 @@ void ContactEditorWidget::Private::initGuiContactTab()
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     nameLayout->addWidget(label, 2, 0);
 
-    mNickNameWidget = new QLineEdit;
+    mNickNameWidget = new KLineEdit;
+    mNickNameWidget->setTrapReturnKey(true);
     label->setBuddy(mNickNameWidget);
     nameLayout->addWidget(mNickNameWidget, 2, 1);
 

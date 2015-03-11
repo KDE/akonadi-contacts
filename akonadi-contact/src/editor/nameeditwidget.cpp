@@ -37,7 +37,8 @@ NameEditWidget::NameEditWidget(QWidget *parent)
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
 
-    mNameEdit = new QLineEdit;
+    mNameEdit = new KLineEdit;
+    mNameEdit->setTrapReturnKey(true);
     layout->addWidget(mNameEdit);
     setFocusProxy(mNameEdit);
     setFocusPolicy(Qt::StrongFocus);
