@@ -36,7 +36,7 @@ Q_DECLARE_METATYPE(ContactActionsSettings::EnumDialPhoneNumberAction)
 K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiContactActions>();)
 
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
-    : KCModule(parent)
+    : KCModule(parent, args)
 {
     KAboutData *about = new KAboutData(QStringLiteral("kcmakonadicontactactions"),
                                        i18n("Contact Actions Settings"),
