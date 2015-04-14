@@ -53,7 +53,7 @@ class Item;
  * ...
  *
  * if ( !editor->saveContactInAddressBook() ) {
- *   qDebug() << "Unable to save new contact to storage";
+ *   qCDebug(AKONADICONTACT_LOG) << "Unable to save new contact to storage";
  *   return;
  * }
  *

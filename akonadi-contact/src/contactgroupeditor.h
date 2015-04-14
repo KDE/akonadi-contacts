@@ -52,7 +52,7 @@ class Item;
  * ...
  *
  * if ( !editor->saveContactGroup() ) {
- *   qDebug() << "Unable to save new contact group to storage";
+ *   qCDebug(AKONADICONTACT_LOG) << "Unable to save new contact group to storage";
  *   return;
  * }
  *
@@ -70,7 +70,7 @@ class Item;
  * ...
  *
  * if ( !editor->saveContactGroup() ) {
- *   qDebug() << "Unable to save changed contact group to storage";
+ *   qCDebug(AKONADICONTACT_LOG) << "Unable to save changed contact group to storage";
  *   return;
  * }
  *

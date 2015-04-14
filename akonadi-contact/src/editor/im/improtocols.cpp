@@ -23,15 +23,12 @@
 
 #include <kiconloader.h>
 #include <kservicetypetrader.h>
-
 IMProtocols *IMProtocols::mSelf = Q_NULLPTR;
 
 IMProtocols::IMProtocols()
 {
     KIconLoader::global()->addAppDir(QStringLiteral("akonadi/contact"));
-
     const QList<KPluginInfo> list = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KABC/IMProtocol")));
-
     // sort the protocol information by user visible name
     QMap<QString, KPluginInfo> sortingMap;
     foreach (const KPluginInfo &info, list) {

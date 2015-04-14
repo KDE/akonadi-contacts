@@ -61,6 +61,7 @@ set(akonadicontact_editor_SRCS
 )
 
 set(akonadicontact_LIB_SRC
+  akonadi_contact_debug.cpp
   abstractcontactformatter.cpp
   abstractcontactgroupformatter.cpp
   attributeregistrar.cpp

@@ -20,7 +20,7 @@
 */
 
 #include "contactgroupexpandjob.h"
-
+#include "akonadi_contact_debug.h"
 #include <contactgroupsearchjob.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
@@ -117,7 +117,7 @@ public:
 
                 mContacts.append(contact);
             } else {
-                qWarning() << "Contact for Akonadi item" << item.id() << "does not exist anymore!";
+                qCWarning(AKONADICONTACT_LOG) << "Contact for Akonadi item" << item.id() << "does not exist anymore!";
             }
         }
 

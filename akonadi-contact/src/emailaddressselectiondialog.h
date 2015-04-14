@@ -47,7 +47,7 @@ namespace Akonadi {
  * if ( dlg.exec() ) {
  *   const Akonadi::EmailAddressSelectionWidget::Selection::List selections = dlg.selectedAddresses();
  *   foreach ( const Akonadi::EmailAddressSelectionWidget::Selection &selection, selections ) {
- *     qDebug() << "Name:" << selection.name() << "Email:" << selection.email();
+ *     qCDebug(AKONADICONTACT_LOG) << "Name:" << selection.name() << "Email:" << selection.email();
  *   }
  * }
  *

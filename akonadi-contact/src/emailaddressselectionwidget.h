@@ -55,7 +55,7 @@ namespace Akonadi {
  * ...
  *
  * foreach ( const Akonadi::EmailAddressSelection &selection, widget->selectedAddresses() ) {
- *   qDebug() << "Name:" << selection.name() << "Email:" << selection.email();
+ *   qCDebug(AKONADICONTACT_LOG) << "Name:" << selection.name() << "Email:" << selection.email();
  * }
  *
  * @endcode
