@@ -194,7 +194,6 @@ EmailEditDialog::EmailEditDialog(QWidget *parent)
 
     QGridLayout *topLayout = new QGridLayout(page);
     mainLayout->addLayout(topLayout);
-    //PORT QT5 topLayout->setSpacing(spacingHint());
     topLayout->setMargin(0);
 
     mEmailListBox = new QListWidget(page);
