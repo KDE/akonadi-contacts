@@ -27,6 +27,7 @@
 
 #include <kiconloader.h>
 #include <klocalizedstring.h>
+#include <KIconEngine>
 #include <QIcon>
 
 using namespace Akonadi;
@@ -299,13 +300,7 @@ QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
         }
 
         if (member.isReference) {
-//QT5 port
-#if 0
-            return QIcon::fromTheme(QStringLiteral("x-office-contact"), KIconLoader::global(),
-                                    QStringList() << QStringLiteral("emblem-symbolic-link"));
-#else
-            return QString();
-#endif
+            return QIcon(new KIconEngine(QStringLiteral("x-office-contact"), KIconLoader::global(), QStringList() << QStringLiteral("emblem-symbolic-link")));
         } else {
             return QIcon::fromTheme(QStringLiteral("x-office-contact"));
         }
