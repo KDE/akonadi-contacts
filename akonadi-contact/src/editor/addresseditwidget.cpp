@@ -499,9 +499,6 @@ AddressEditDialog::AddressEditDialog(QWidget *parent)
     mainLayout->addWidget(mPreferredCheckBox);
     topLayout->addWidget(mPreferredCheckBox, 8, 0, 1, 2);
 
-    QHBoxLayout *hbox = new QHBoxLayout(page);
-    topLayout->addLayout(hbox, 9, 0, 1, 2);
-
     KAcceleratorManager::manage(this);
 }
 
