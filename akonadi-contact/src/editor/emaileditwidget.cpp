@@ -192,7 +192,7 @@ EmailEditDialog::EmailEditDialog(QWidget *parent)
     setLayout(mainLayout);
     mainLayout->addWidget(page);
 
-    QGridLayout *topLayout = new QGridLayout(page);
+    QGridLayout *topLayout = new QGridLayout;
     mainLayout->addLayout(topLayout);
     topLayout->setMargin(0);
 
