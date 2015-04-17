@@ -77,9 +77,9 @@ private:
     void updateView();
 
     KComboBox *mView;
-    DisplayType mDisplayType;
     KContacts::Addressee mContact;
     QWidget *mViewport;
+    DisplayType mDisplayType;
     int mAdditionalPopupWidth;
 };
 

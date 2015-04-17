@@ -108,10 +108,10 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok)
 
 ImageWidget::ImageWidget(Type type, QWidget *parent)
     : QPushButton(parent)
+    , mImageLoader(0)
     , mType(type)
     , mHasImage(false)
     , mReadOnly(false)
-    , mImageLoader(0)
 {
     setAcceptDrops(true);
 

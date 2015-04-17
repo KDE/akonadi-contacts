@@ -40,10 +40,10 @@ struct GroupMember
     {
     }
 
-    bool isReference;
     KContacts::ContactGroup::ContactReference reference;
     KContacts::ContactGroup::Data data;
     KContacts::Addressee referencedContact;
+    bool isReference;
     bool loadingError;
 };
 
