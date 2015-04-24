@@ -30,7 +30,6 @@
 #include <klocalizedstring.h>
 
 #include <QIcon>
-#include <KLocalizedString>
 #include <QLocale>
 
 using namespace Akonadi;
