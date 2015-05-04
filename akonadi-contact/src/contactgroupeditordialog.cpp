@@ -96,7 +96,6 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ContactGroupEditorDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ContactGroupEditorDialog::reject);
-    mainLayout->addWidget(buttonBox);
 
     // Disable default button, so that finish editing of
     // a member with the Enter key does not close the dialog
