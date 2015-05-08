@@ -46,16 +46,16 @@ public:
 
     QString lastErrorMessage() const;
 
-    virtual QModelIndex index(int row, int col, const QModelIndex &parent = QModelIndex()) const;
-    virtual QModelIndex parent(const QModelIndex &child) const;
-    virtual QVariant data(const QModelIndex &index, int role) const;
-    virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
-    virtual QVariant headerData(int section, Qt::Orientation orientation, int role) const;
-    virtual Qt::ItemFlags flags(const QModelIndex &index) const;
-    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const;
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    QModelIndex index(int row, int col, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    QModelIndex parent(const QModelIndex &child) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) Q_DECL_OVERRIDE;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const Q_DECL_OVERRIDE;
+    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
-    virtual bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
+    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) Q_DECL_OVERRIDE;
 
 private:
     class Private;

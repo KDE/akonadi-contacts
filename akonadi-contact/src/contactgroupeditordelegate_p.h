@@ -60,16 +60,16 @@ public:
     explicit ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent = 0);
     ~ContactGroupEditorDelegate();
 
-    virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    virtual void setEditorData(QWidget *editor, const QModelIndex &index) const;
-    virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const;
+    void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE;
+    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    virtual void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    virtual bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index);
+    bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void completed(QWidget *widget);

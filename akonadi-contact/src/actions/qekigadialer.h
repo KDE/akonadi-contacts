@@ -30,8 +30,8 @@ public:
     explicit QEkigaDialer(const QString &applicationName);
     ~QEkigaDialer();
 
-    bool dialNumber(const QString &number);
-    bool sendSms(const QString &number, const QString &text);
+    bool dialNumber(const QString &number) Q_DECL_OVERRIDE;
+    bool sendSms(const QString &number, const QString &text) Q_DECL_OVERRIDE;
 private:
     bool initializeEkiga();
     QDBusInterface *mInterface;

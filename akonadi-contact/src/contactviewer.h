@@ -172,13 +172,13 @@ private:
     /**
      * This method is called whenever the displayed contact has been changed.
      */
-    virtual void itemChanged(const Item &contact);
+    void itemChanged(const Item &contact) Q_DECL_OVERRIDE;
 
     /**
      * This method is called whenever the displayed contact has been
      * removed from Akonadi.
      */
-    virtual void itemRemoved();
+    void itemRemoved() Q_DECL_OVERRIDE;
 
 private:
     //@cond PRIVATE

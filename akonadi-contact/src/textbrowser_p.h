@@ -40,7 +40,7 @@ private Q_SLOTS:
     void slotCopyData();
 protected:
 #ifndef QT_NO_CONTEXTMENU
-    virtual void contextMenuEvent(QContextMenuEvent *event);
+    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
 #endif
 private:
     QVariant mDataToCopy;

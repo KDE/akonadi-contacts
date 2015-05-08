@@ -68,7 +68,7 @@ public:
     }
 
 protected:
-    bool eventFilter(QObject *, QEvent *event)
+    bool eventFilter(QObject *, QEvent *event) Q_DECL_OVERRIDE
     {
         if (event->type() == QEvent::KeyPress) {
             QKeyEvent *keyEvent = (QKeyEvent *)event;

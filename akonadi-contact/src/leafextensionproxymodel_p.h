@@ -35,19 +35,19 @@ public:
     explicit LeafExtensionProxyModel(QObject *parent = 0);
     ~LeafExtensionProxyModel();
 
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
-    QModelIndex parent(const QModelIndex &index) const;
-    int rowCount(const QModelIndex &index) const;
-    int columnCount(const QModelIndex &index) const;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    QModelIndex parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    int columnCount(const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const;
-    Qt::ItemFlags flags(const QModelIndex &index) const;
-    bool setData(const QModelIndex &index, const QVariant &data, int role = Qt::EditRole);
-    bool hasChildren(const QModelIndex &parent = QModelIndex()) const;
-    QModelIndex buddy(const QModelIndex &index) const;
-    void fetchMore(const QModelIndex &index);
+    QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    bool setData(const QModelIndex &index, const QVariant &data, int role = Qt::EditRole) Q_DECL_OVERRIDE;
+    bool hasChildren(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    QModelIndex buddy(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    void fetchMore(const QModelIndex &index) Q_DECL_OVERRIDE;
 
-    void setSourceModel(QAbstractItemModel *sourceModel);
+    void setSourceModel(QAbstractItemModel *sourceModel) Q_DECL_OVERRIDE;
 
 protected:
     /**
