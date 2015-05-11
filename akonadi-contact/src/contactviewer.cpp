@@ -77,6 +77,9 @@ public:
     void updateView(const QVariantList &localCustomFieldDescriptions = QVariantList(), const QString &addressBookName = QString())
     {
         static QPixmap defaultPixmap = QIcon::fromTheme(QLatin1String("user-identity")).pixmap(QSize(100, 100));
+        static QPixmap defaultMapPixmap = QIcon::fromTheme( QLatin1String( "document-open-remote" ) ).pixmap( QSize( 16, 16 ) );
+        static QPixmap defaultSmsPixmap = QIcon::fromTheme( IMProtocols::self()->icon( QString::fromLatin1( "messaging/sms" ) ) ).pixmap( QSize( 16, 16 ) );
+
 
         mParent->setWindowTitle(i18n("Contact %1", mCurrentContact.assembledName()));
 
@@ -98,11 +101,11 @@ public:
 
         mBrowser->document()->addResource(QTextDocument::ImageResource,
                                           QUrl(QLatin1String("map_icon")),
-                                          QIcon::fromTheme(QLatin1String("document-open-remote")).pixmap(QSize(16, 16)));
+                                          defaultMapPixmap);
 
         mBrowser->document()->addResource(QTextDocument::ImageResource,
                                           QUrl(QLatin1String("sms_icon")),
-                                          QIcon::fromTheme(IMProtocols::self()->icon(QStringLiteral("messaging/sms"))).pixmap(QSize(16, 16)));
+                                          defaultSmsPixmap);
 
 #ifdef HAVE_PRISON
         KConfig config(QLatin1String("akonadi_contactrc"));
