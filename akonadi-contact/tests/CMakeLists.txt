@@ -11,6 +11,9 @@ macro(add_akonadi_contact_demo _source)
   target_link_libraries(${_name}
       KF5::AkonadiMime
      KF5::AkonadiContact
+     KF5::Completion
+     KF5::I18n
+     KF5::WidgetsAddons
      Qt5::Test)
   ecm_mark_as_test(${_name})
 endmacro()

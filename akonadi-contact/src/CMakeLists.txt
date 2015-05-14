@@ -132,13 +132,17 @@ target_link_libraries(KF5AkonadiContact
 PUBLIC
     KF5::AkonadiCore
     KF5::Contacts
+    Qt5::Widgets
 PRIVATE
     KF5::AkonadiWidgets
     KF5::CalendarCore
     KF5::KIOCore
     KF5::Mime
     KF5::Codecs
+    KF5::DBusAddons
+    KF5::I18n
     KF5::KDELibs4Support
+    KF5::WidgetsAddons
     Phonon::phonon4qt5
 )
 
