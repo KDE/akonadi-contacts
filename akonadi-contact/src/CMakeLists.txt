@@ -136,7 +136,6 @@ PUBLIC
 PRIVATE
     KF5::AkonadiWidgets
     KF5::CalendarCore
-    KF5::KIOCore
     KF5::Mime
     KF5::Codecs
     KF5::DBusAddons
