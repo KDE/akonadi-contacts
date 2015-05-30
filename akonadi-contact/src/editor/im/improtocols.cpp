@@ -27,6 +27,8 @@ IMProtocols *IMProtocols::mSelf = Q_NULLPTR;
 
 IMProtocols::IMProtocols()
 {
+//FIXME KF5
+#if 0
     KIconLoader::global()->addAppDir(QStringLiteral("akonadi/contact"));
     const QList<KPluginInfo> list = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KABC/IMProtocol")));
     // sort the protocol information by user visible name
@@ -42,6 +44,7 @@ IMProtocols::IMProtocols()
         it.next();
         mSortedProtocols.append(it.value().property(QStringLiteral("X-KDE-InstantMessagingKABCField")).toString());
     }
+#endif
 }
 
 IMProtocols::~IMProtocols()
