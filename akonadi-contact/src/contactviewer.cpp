@@ -87,6 +87,10 @@ public:
             mBrowser->document()->addResource(QTextDocument::ImageResource,
                                               QUrl(QLatin1String("contact_photo")),
                                               mCurrentContact.photo().data());
+        } else if (!mCurrentContact.photo().url().isEmpty()) {
+            mBrowser->document()->addResource( QTextDocument::ImageResource,
+                                           QUrl( QLatin1String( "contact_photo" ) ),
+                                           defaultPixmap );
         } else {
             mBrowser->document()->addResource(QTextDocument::ImageResource,
                                               QUrl(QLatin1String("contact_photo")),
@@ -97,7 +101,10 @@ public:
             mBrowser->document()->addResource(QTextDocument::ImageResource,
                                               QUrl(QLatin1String("contact_logo")),
                                               mCurrentContact.logo().data());
+        } else if (!mCurrentContact.logo().url().isEmpty()) {
+            //TODO
         }
+
 
         mBrowser->document()->addResource(QTextDocument::ImageResource,
                                           QUrl(QLatin1String("map_icon")),
