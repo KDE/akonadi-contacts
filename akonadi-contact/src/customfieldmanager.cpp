@@ -48,6 +48,7 @@ CustomField::List CustomFieldManager::globalCustomFieldDescriptions()
     CustomField::List customFields;
 
     const QStringList keys = group.keyList();
+    customFields.reserve(keys.count());
     foreach (const QString &key, keys) {
         CustomField field;
         field.setKey(key);

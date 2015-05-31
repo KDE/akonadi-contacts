@@ -238,7 +238,7 @@ void CustomFieldsEditWidget::setReadOnly(bool readOnly)
 void CustomFieldsEditWidget::setLocalCustomFieldDescriptions(const QVariantList &descriptions)
 {
     mLocalCustomFields.clear();
-
+    mLocalCustomFields.reserve(descriptions.count());
     foreach (const QVariant &description, descriptions) {
         mLocalCustomFields.append(CustomField::fromVariantMap(description.toMap(), CustomField::LocalScope));
     }
