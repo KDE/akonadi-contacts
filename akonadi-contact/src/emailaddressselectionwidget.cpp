@@ -28,7 +28,7 @@
 #include <changerecorder.h>
 #include <contactsfilterproxymodel.h>
 #include <contactstreemodel.h>
-#include <control.h>
+#include <controlgui.h>
 #include <entitydisplayattribute.h>
 #include <entitytreeview.h>
 #include <itemfetchscope.h>
@@ -165,7 +165,7 @@ void EmailAddressSelectionWidget::Private::init()
 
     q->connect(mView, SIGNAL(doubleClicked(Akonadi::Item)),
                q, SIGNAL(doubleClicked()));
-    Control::widgetNeedsAkonadi(q);
+    ControlGui::widgetNeedsAkonadi(q);
 
     mSearchLine->setFocus();
 
