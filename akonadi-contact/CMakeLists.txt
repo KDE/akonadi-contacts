@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(Akonadi-Contact)
 
 # ECM setup
-find_package(ECM 5.10.0 CONFIG REQUIRED)
+find_package(ECM 5.11.0 CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(GenerateExportHeader)
@@ -16,7 +16,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
 include(ECMInstallIcons)
-set(KF5_VERSION "5.10.0")
+set(KF5_VERSION "5.11.0")
 set(KDEPIMLIBS_VERSION "4.83.0")
 set(KCONTACTS_VERSION "4.80.0")
 set(CALENDARCORE_VERSION "4.79.0")

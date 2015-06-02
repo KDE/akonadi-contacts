@@ -301,8 +301,10 @@ void EmailEditDialog::add()
         return;
     }
 
-    email = KEmailAddress::extractEmailAddress(email.toLower());
+    QString errorMessage;
+    email = KEmailAddress::extractEmailAddress(email.toLower(), errorMessage);
     if (email.trimmed().isEmpty()) {
+        KMessageBox::error(this, errorMessage, i18n("Add Email"));
         return;
     }
 
@@ -332,7 +334,12 @@ void EmailEditDialog::edit()
         return;
     }
 
-    email = KEmailAddress::extractEmailAddress(email.toLower());
+    QString messageError;
+    email = KEmailAddress::extractEmailAddress(email.toLower(), messageError);
+    if (email.trimmed().isEmpty()) {
+        KMessageBox::error(this, messageError, i18n("Edit Email"));
+        return;
+    }
 
     // check if item already available, ignore if so...
     for (int i = 0; i < mEmailListBox->count(); ++i) {
