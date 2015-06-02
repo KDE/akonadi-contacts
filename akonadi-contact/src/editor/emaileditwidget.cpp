@@ -302,6 +302,9 @@ void EmailEditDialog::add()
     }
 
     email = KEmailAddress::extractEmailAddress(email.toLower());
+    if (email.trimmed().isEmpty()) {
+        return;
+    }
 
     // check if item already available, ignore if so...
     for (int i = 0; i < mEmailListBox->count(); ++i) {
