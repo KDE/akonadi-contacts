@@ -71,7 +71,6 @@ void IMEditWidget::loadContact(const KContacts::Addressee &contact)
                 const QString protocol = app;
                 const QStringList names = value.split(QChar(0xE000), QString::SkipEmptyParts);
 
-                mIMAddresses.reserve(mIMAddresses.count() + names.count());
                 foreach (const QString &name, names) {
                     mIMAddresses << IMAddress(protocol, name, (name == mIMEdit->text()));
                 }
