@@ -23,28 +23,30 @@
 
 #include <kiconloader.h>
 #include <kservicetypetrader.h>
+#include <QDebug>
+#include <KService>
 IMProtocols *IMProtocols::mSelf = Q_NULLPTR;
 
 IMProtocols::IMProtocols()
 {
-//FIXME KF5
-#if 0
-    KIconLoader::global()->addAppDir(QStringLiteral("akonadi/contact"));
-    const QList<KPluginInfo> list = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KABC/IMProtocol")));
-    // sort the protocol information by user visible name
-    QMap<QString, KPluginInfo> sortingMap;
-    foreach (const KPluginInfo &info, list) {
-        sortingMap.insert(info.name(), info);
-
-        mPluginInfos.insert(info.property(QStringLiteral("X-KDE-InstantMessagingKABCField")).toString(), info);
+    const KService::List list = KServiceTypeTrader::self()->query(QStringLiteral("KABC/IMProtocol"));
+    KService::List::ConstIterator it = list.constBegin();
+    KService::List::ConstIterator lastItem = list.constEnd();
+    QMap<QString, QString> sortingMap;
+    for ( ; it != lastItem; ++it )
+    {
+        IMProtocolInfo info((*it)->name(), (*it)->icon());
+        qDebug()<<" (*it)->icon()"<<(*it)->icon();
+        const QString propertyName = (*it)->property(QStringLiteral("X-KDE-InstantMessagingKABCField")).toString();
+        mPluginInfos.insert(propertyName, info);
+        sortingMap.insert((*it)->name(), propertyName);
     }
 
-    QMapIterator<QString, KPluginInfo> it(sortingMap);
-    while (it.hasNext()) {
-        it.next();
-        mSortedProtocols.append(it.value().property(QStringLiteral("X-KDE-InstantMessagingKABCField")).toString());
+    QMapIterator<QString, QString> sortedIt(sortingMap);
+    while (sortedIt.hasNext()) {
+        sortedIt.next();
+        mSortedProtocols.append(sortedIt.value());
     }
-#endif
 }
 
 IMProtocols::~IMProtocols()
@@ -81,4 +83,37 @@ QString IMProtocols::icon(const QString &protocol) const
     }
 
     return mPluginInfos.value(protocol).icon();
+}
+
+
+IMProtocolInfo::IMProtocolInfo()
+{
+
+}
+
+IMProtocolInfo::IMProtocolInfo(const QString &name, const QString &icon)
+    : mName(name),
+      mIcon(icon)
+{
+
+}
+
+QString IMProtocolInfo::name() const
+{
+    return mName;
+}
+
+void IMProtocolInfo::setName(const QString &name)
+{
+    mName = name;
+}
+
+QString IMProtocolInfo::icon() const
+{
+    return mIcon;
+}
+
+void IMProtocolInfo::setIcon(const QString &icon)
+{
+    mIcon = icon;
 }

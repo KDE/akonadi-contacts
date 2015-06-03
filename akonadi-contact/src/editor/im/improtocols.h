@@ -26,6 +26,22 @@
 
 #include "akonadi-contact_export.h"
 
+class IMProtocolInfo
+{
+public:
+    IMProtocolInfo();
+
+    IMProtocolInfo(const QString &name, const QString &icon);
+
+    QString icon() const;
+    void setIcon(const QString &icon);
+    QString name() const;
+    void setName(const QString &name);
+private:
+    QString mName;
+    QString mIcon;
+};
+
 class AKONADI_CONTACT_EXPORT IMProtocols
 {
 public:
@@ -46,7 +62,7 @@ private:
 
     static IMProtocols *mSelf;
 
-    QMap<QString, KPluginInfo> mPluginInfos;
+    QMap<QString, IMProtocolInfo> mPluginInfos;
     QStringList mSortedProtocols;
 };
 
