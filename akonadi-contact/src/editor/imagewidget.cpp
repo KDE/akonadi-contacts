@@ -30,7 +30,8 @@
 #include <kmessagebox.h>
 #include <kpixmapregionselectordialog.h>
 #include <KUrlMimeData>
-
+#include <QImageReader>
+#include <QFileDialog>
 #include <QtCore/QMimeData>
 #include <QDrag>
 #include <QDragEnterEvent>
@@ -263,7 +264,16 @@ void ImageWidget::changeImage()
         return;
     }
 
-    const QUrl url = KFileDialog::getOpenUrl(QUrl(), KImageIO::pattern(), this);
+    const QList<QByteArray> supportedImage = QImageReader::supportedImageFormats();
+    QString filter;
+    Q_FOREACH(const QByteArray &ba, supportedImage) {
+        if (!filter.isEmpty()) {
+            filter += QLatin1Char(' ');
+        }
+        filter += QLatin1String("*.") + QString::fromLatin1(ba);
+    }
+
+    const QUrl url = QFileDialog::getOpenFileUrl(this, QString(), QUrl(), i18n("Images (%1)", filter));
     if (url.isValid()) {
         bool ok = false;
         const QImage image = imageLoader()->loadImage(url, &ok);
