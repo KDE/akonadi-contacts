@@ -565,8 +565,9 @@ KContacts::Address AddressEditDialog::address() const
 void AddressEditDialog::fillCountryCombo()
 {
     QStringList countries;
-
-    foreach (const QString &cc, KLocale::global()->allCountriesList()) {
+    const QStringList countryList = KLocale::global()->allCountriesList();
+    countries.reserve(countryList.count());
+    foreach (const QString &cc, countryList) {
         countries.append(KLocale::global()->countryCodeToName(cc));
     }
 

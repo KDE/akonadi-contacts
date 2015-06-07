@@ -136,11 +136,12 @@ public:
 
         // merge local and global custom field descriptions
         QList<QVariantMap> customFieldDescriptions;
+        const CustomField::List globalCustomFields = CustomFieldManager::globalCustomFieldDescriptions();
+        customFieldDescriptions.reserve(localCustomFieldDescriptions.count() + globalCustomFields.count());
         foreach (const QVariant &entry, localCustomFieldDescriptions) {
             customFieldDescriptions << entry.toMap();
         }
 
-        const CustomField::List globalCustomFields = CustomFieldManager::globalCustomFieldDescriptions();
         foreach (const CustomField &field, globalCustomFields) {
             QVariantMap description;
             description.insert(QLatin1String("key"), field.key());
