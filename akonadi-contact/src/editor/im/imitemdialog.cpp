@@ -90,5 +90,5 @@ IMAddress IMItemDialog::address() const
 
 void IMItemDialog::slotUpdateButtons()
 {
-    mOkButton->setEnabled(mProtocolCombo->currentIndex() > 0 && !mNameEdit->text().isEmpty());
+    mOkButton->setEnabled(mProtocolCombo->currentIndex() > 0 && !mNameEdit->text().trimmed().isEmpty());
 }
