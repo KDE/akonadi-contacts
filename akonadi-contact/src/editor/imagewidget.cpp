@@ -22,7 +22,6 @@
 #include "imagewidget.h"
 
 #include <kcontacts/addressee.h>
-#include <kfiledialog.h>
 
 #include <kimageio.h>
 #include <kio/netaccess.h>
@@ -34,6 +33,7 @@
 #include <QFileDialog>
 #include <QtCore/QMimeData>
 #include <QDrag>
+#include <QImageWriter>
 #include <QDragEnterEvent>
 #include <QDropEvent>
 #include <QMenu>
@@ -287,7 +287,16 @@ void ImageWidget::changeImage()
 
 void ImageWidget::saveImage()
 {
-    const QString fileName = KFileDialog::getSaveFileName(QUrl(), KImageIO::pattern(), this, QString(), KFileDialog::ConfirmOverwrite);
+    const QList<QByteArray> supportedImage = QImageWriter::supportedImageFormats();
+    QString filter;
+    Q_FOREACH(const QByteArray &ba, supportedImage) {
+        if (!filter.isEmpty()) {
+            filter += QLatin1Char(' ');
+        }
+        filter += QLatin1String("*.") + QString::fromLatin1(ba);
+    }
+
+    const QString fileName = QFileDialog::getSaveFileName(this, QString(), QString(), i18n("Images (%1)", filter));
     if (!fileName.isEmpty()) {
         mPicture.data().save(fileName);
     }
