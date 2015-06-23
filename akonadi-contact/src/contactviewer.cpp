@@ -76,7 +76,7 @@ public:
 
     void updateView(const QVariantList &localCustomFieldDescriptions = QVariantList(), const QString &addressBookName = QString())
     {
-        static QPixmap defaultPixmap = QIcon::fromTheme(QLatin1String("user-identity")).pixmap(QSize(100, 100));
+        static QPixmap defaultPixmap = QIcon::fromTheme(QStringLiteral("user-identity")).pixmap(QSize(100, 100));
         static QPixmap defaultMapPixmap = QIcon::fromTheme( QLatin1String( "document-open-remote" ) ).pixmap( QSize( 16, 16 ) );
         static QPixmap defaultSmsPixmap = QIcon::fromTheme( IMProtocols::self()->icon( QString::fromLatin1( "messaging/sms" ) ) ).pixmap( QSize( 16, 16 ) );
 
