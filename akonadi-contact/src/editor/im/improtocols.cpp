@@ -36,7 +36,6 @@ IMProtocols::IMProtocols()
     for ( ; it != lastItem; ++it )
     {
         IMProtocolInfo info((*it)->name(), (*it)->icon());
-        qDebug()<<" (*it)->icon()"<<(*it)->icon();
         const QString propertyName = (*it)->property(QStringLiteral("X-KDE-InstantMessagingKABCField")).toString();
         mPluginInfos.insert(propertyName, info);
         sortingMap.insert((*it)->name(), propertyName);
