@@ -78,7 +78,7 @@ public:
 
         mContactGroupFormatter->setContactGroup(group);
 
-        QList<QVariantMap> additionalFields;
+        QVector<QVariantMap> additionalFields;
 
         if (!mCurrentAddressBookName.isEmpty()) {
             QVariantMap addressBookName;

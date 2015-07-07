@@ -31,7 +31,7 @@ class AbstractContactGroupFormatter::Private
 public:
     KContacts::ContactGroup mContactGroup;
     Akonadi::Item mItem;
-    QList<QVariantMap> mAdditionalFields;
+    QVector<QVariantMap> mAdditionalFields;
 };
 
 AbstractContactGroupFormatter::AbstractContactGroupFormatter()
@@ -64,12 +64,12 @@ Akonadi::Item AbstractContactGroupFormatter::item() const
     return d->mItem;
 }
 
-void AbstractContactGroupFormatter::setAdditionalFields(const QList<QVariantMap> &fields)
+void AbstractContactGroupFormatter::setAdditionalFields(const QVector<QVariantMap> &fields)
 {
     d->mAdditionalFields = fields;
 }
 
-QList<QVariantMap> AbstractContactGroupFormatter::additionalFields() const
+QVector<QVariantMap> AbstractContactGroupFormatter::additionalFields() const
 {
     return d->mAdditionalFields;
 }

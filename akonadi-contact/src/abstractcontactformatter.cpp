@@ -31,7 +31,7 @@ class AbstractContactFormatter::Private
 public:
     KContacts::Addressee mContact;
     Akonadi::Item mItem;
-    QList<QVariantMap> mCustomFieldDescriptions;
+    QVector<QVariantMap> mCustomFieldDescriptions;
 };
 
 AbstractContactFormatter::AbstractContactFormatter()
@@ -64,12 +64,12 @@ Akonadi::Item AbstractContactFormatter::item() const
     return d->mItem;
 }
 
-void AbstractContactFormatter::setCustomFieldDescriptions(const QList<QVariantMap> &descriptions)
+void AbstractContactFormatter::setCustomFieldDescriptions(const QVector<QVariantMap> &descriptions)
 {
     d->mCustomFieldDescriptions = descriptions;
 }
 
-QList<QVariantMap> AbstractContactFormatter::customFieldDescriptions() const
+QVector<QVariantMap> AbstractContactFormatter::customFieldDescriptions() const
 {
     return d->mCustomFieldDescriptions;
 }

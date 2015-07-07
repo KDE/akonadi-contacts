@@ -135,7 +135,7 @@ public:
 #endif // HAVE_PRISON
 
         // merge local and global custom field descriptions
-        QList<QVariantMap> customFieldDescriptions;
+        QVector<QVariantMap> customFieldDescriptions;
         const CustomField::List globalCustomFields = CustomFieldManager::globalCustomFieldDescriptions();
         customFieldDescriptions.reserve(localCustomFieldDescriptions.count() + globalCustomFields.count());
         foreach (const QVariant &entry, localCustomFieldDescriptions) {
