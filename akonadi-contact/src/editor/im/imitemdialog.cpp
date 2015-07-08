@@ -29,9 +29,9 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <kcombobox.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KComboBox>
+#include <KLineEdit>
+#include <KLocalizedString>
 
 IMItemDialog::IMItemDialog(QWidget *parent)
     : QDialog(parent)
@@ -56,7 +56,8 @@ IMItemDialog::IMItemDialog(QWidget *parent)
                                 protocol);
     }
 
-    mNameEdit = new QLineEdit;
+    mNameEdit = new KLineEdit;
+    mNameEdit->setTrapReturnKey(true);
     layout->addRow(i18nc("@label:textbox IM address", "Address:"), mNameEdit);
 
     connect(mProtocolCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &IMItemDialog::slotUpdateButtons);
