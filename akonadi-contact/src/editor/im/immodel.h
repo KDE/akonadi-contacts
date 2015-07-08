@@ -24,29 +24,7 @@
 
 #include <QtCore/QAbstractItemModel>
 #include <QtCore/QVector>
-
-class IMAddress
-{
-public:
-    typedef QVector<IMAddress> List;
-
-    IMAddress();
-    IMAddress(const QString &protocol, const QString &name, bool preferred);
-
-    void setProtocol(const QString &protocol);
-    QString protocol() const;
-
-    void setName(const QString &name);
-    QString name() const;
-
-    void setPreferred(bool preferred);
-    bool preferred() const;
-
-private:
-    QString mProtocol;
-    QString mName;
-    bool mPreferred;
-};
+#include "imaddress.h"
 
 class IMModel : public QAbstractItemModel
 {

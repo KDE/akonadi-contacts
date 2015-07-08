@@ -23,52 +23,9 @@
 
 #include "improtocols.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QIcon>
-
-IMAddress::IMAddress()
-    : mProtocol(QStringLiteral("messaging/aim"))
-    , mPreferred(false)
-{
-}
-
-IMAddress::IMAddress(const QString &protocol, const QString &name, bool preferred)
-    : mProtocol(protocol)
-    , mName(name)
-    , mPreferred(preferred)
-{
-}
-
-void IMAddress::setProtocol(const QString &protocol)
-{
-    mProtocol = protocol;
-}
-
-QString IMAddress::protocol() const
-{
-    return mProtocol;
-}
-
-void IMAddress::setName(const QString &name)
-{
-    mName = name;
-}
-
-QString IMAddress::name() const
-{
-    return mName;
-}
-
-void IMAddress::setPreferred(bool preferred)
-{
-    mPreferred = preferred;
-}
-
-bool IMAddress::preferred() const
-{
-    return mPreferred;
-}
 
 IMModel::IMModel(QObject *parent)
     : QAbstractItemModel(parent)

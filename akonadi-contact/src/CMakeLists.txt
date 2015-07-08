@@ -47,6 +47,7 @@ set(akonadicontact_editor_SRCS
   editor/geoeditwidget.cpp
   editor/im/imdelegate.cpp
   editor/im/imeditordialog.cpp
+  editor/im/imaddress.cpp
   editor/im/immodel.cpp
   editor/im/improtocols.cpp
   editor/im/imitemdialog.cpp
