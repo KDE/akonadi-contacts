@@ -24,7 +24,7 @@
 #include "contactgroupviewer.h"
 
 #include <item.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QVBoxLayout>
 #include <QDialogButtonBox>

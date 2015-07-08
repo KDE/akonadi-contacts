@@ -28,7 +28,7 @@
 #include <QtDBus/QDBusConnectionInterface>
 #include <QtDBus/QDBusInterface>
 #include <QtDBus/QDBusReply>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <unistd.h>
 

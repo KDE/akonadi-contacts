@@ -27,7 +27,7 @@
 #include <kconfiggroup.h>
 
 #include <KLocalizedString>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <kstringhandler.h>
 
 #include <QtCore/QSet>

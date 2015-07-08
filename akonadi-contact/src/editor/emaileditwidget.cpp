@@ -32,10 +32,10 @@
 #include <kcontacts/addressee.h>
 #include <kacceleratormanager.h>
 #include <qinputdialog.h>
-#include <klineedit.h>
+#include <KLineEdit>
 #include <QListWidget>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <KConfigGroup>

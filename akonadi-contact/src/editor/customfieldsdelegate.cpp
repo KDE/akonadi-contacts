@@ -23,7 +23,7 @@
 
 #include "customfieldsmodel.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QDateEdit>
 #include <QDateTimeEdit>

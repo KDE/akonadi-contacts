@@ -25,7 +25,7 @@
 #include <item.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 using namespace Akonadi;
 

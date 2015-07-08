@@ -36,9 +36,9 @@
 #include <monitor.h>
 #include <session.h>
 #include <kcontacts/contactgroup.h>
-#include <klocalizedstring.h>
-#include <klineedit.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KLineEdit>
+#include <KMessageBox>
 #include <KColorScheme>
 
 #include <QtCore/QTimer>

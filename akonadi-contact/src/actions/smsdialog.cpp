@@ -22,8 +22,8 @@
 #include "smsdialog.h"
 
 #include <kcontacts/phonenumber.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <ktextedit.h>
 
 #include <QLabel>

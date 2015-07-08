@@ -28,8 +28,8 @@
 #include <QToolButton>
 
 #include <kcontacts/addressee.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KLineEdit>
+#include <KLocalizedString>
 
 NameEditWidget::NameEditWidget(QWidget *parent)
     : QWidget(parent)

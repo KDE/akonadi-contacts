@@ -36,12 +36,12 @@
 #include <QPushButton>
 
 #include <kacceleratormanager.h>
-#include <kcombobox.h>
+#include <KComboBox>
 #include <qinputdialog.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KLineEdit>
+#include <KLocalizedString>
 
-#include <kmessagebox.h>
+#include <KMessageBox>
 #include <kseparator.h>
 #include <ktextedit.h>
 

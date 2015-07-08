@@ -28,7 +28,7 @@
 
 #include <kcontacts/addressee.h>
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <KConfig>
 
 #include <QGridLayout>

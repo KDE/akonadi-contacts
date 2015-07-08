@@ -35,9 +35,9 @@
 #include <session.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <klineedit.h>
+#include <KLineEdit>
 #include <KLocalizedString>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QtCore/QTimer>
 #include <QHBoxLayout>

@@ -36,9 +36,9 @@
 #include <QVBoxLayout>
 
 #include <kcontacts/phonenumber.h>
-#include <kcombobox.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KComboBox>
+#include <KLineEdit>
+#include <KLocalizedString>
 #include <QDialogButtonBox>
 
 PhoneTypeCombo::PhoneTypeCombo(QWidget *parent)
@@ -46,7 +46,8 @@ PhoneTypeCombo::PhoneTypeCombo(QWidget *parent)
     , mType(KContacts::PhoneNumber::Home)
     , mLastSelected(0)
 {
-    for (int i = 0; i < KContacts::PhoneNumber::typeList().count(); ++i) {
+    const int nbMax = KContacts::PhoneNumber::typeList().count();
+    for (int i = 0; i < nbMax; ++i) {
         mTypeList.append(KContacts::PhoneNumber::typeList().at(i));
     }
 

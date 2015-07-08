@@ -28,9 +28,9 @@
 #include <item.h>
 #include <kcontacts/contactgroup.h>
 #include <KLocalizedString>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
-#include <klineedit.h>
+#include <KLineEdit>
 #include <KConfig>
 
 #include <QPushButton>

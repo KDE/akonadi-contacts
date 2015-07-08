@@ -40,8 +40,8 @@
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KLineEdit>
+#include <KLocalizedString>
 #include <qtabwidget.h>
 #include <ktextedit.h>
 #include <QUrl>

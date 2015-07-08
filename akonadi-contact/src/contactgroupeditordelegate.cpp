@@ -25,9 +25,9 @@
 #include "contactgroupmodel_p.h"
 
 #include <entitytreemodel.h>
-#include <kcombobox.h>
+#include <KComboBox>
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QtCore/QTimer>
 #include <QIcon>

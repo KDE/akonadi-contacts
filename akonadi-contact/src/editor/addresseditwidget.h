@@ -26,7 +26,7 @@
 
 #include <kcontacts/address.h>
 #include <kcontacts/addressee.h>
-#include <kcombobox.h>
+#include <KComboBox>
 #include <QDialog>
 
 class QCheckBox;

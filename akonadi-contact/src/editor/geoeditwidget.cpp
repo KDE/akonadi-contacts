@@ -24,8 +24,8 @@
 #include "autoqpointer_p.h"
 
 #include <kcontacts/addressee.h>
-#include <kcombobox.h>
-#include <klocalizedstring.h>
+#include <KComboBox>
+#include <KLocalizedString>
 
 #include <QtCore/QFile>
 #include <QtCore/QTextStream>

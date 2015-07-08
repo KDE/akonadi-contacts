@@ -27,8 +27,8 @@
 #include "customfieldsmodel.h"
 
 #include <kcontacts/addressee.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 #include <QtCore/QPointer>
 #include <QtCore/QUuid>

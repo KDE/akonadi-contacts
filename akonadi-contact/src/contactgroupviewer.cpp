@@ -34,7 +34,7 @@
 #include <kcontacts/contactgroup.h>
 #include <kcolorscheme.h>
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <kstringhandler.h>
 
 #include <QVBoxLayout>

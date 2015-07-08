@@ -23,9 +23,9 @@
 
 #include <QFormLayout>
 
-#include <kcombobox.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KComboBox>
+#include <KLineEdit>
+#include <KLocalizedString>
 
 #include <QDialogButtonBox>
 #include <QPushButton>

@@ -21,9 +21,9 @@
 
 #include "customfieldeditordialog.h"
 
-#include <kcombobox.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KComboBox>
+#include <KLineEdit>
+#include <KLocalizedString>
 
 #include <QCheckBox>
 #include <QFormLayout>

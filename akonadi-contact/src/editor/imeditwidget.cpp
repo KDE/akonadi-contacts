@@ -30,8 +30,8 @@
 #include <QToolButton>
 
 #include <kcontacts/addressee.h>
-#include <klineedit.h>
-#include <klocalizedstring.h>
+#include <KLineEdit>
+#include <KLocalizedString>
 
 IMEditWidget::IMEditWidget(QWidget *parent)
     : QWidget(parent)

@@ -37,7 +37,7 @@
 #include <kcontacts/addressee.h>
 #include <kcolorscheme.h>
 #include <kconfiggroup.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <kstringhandler.h>
 
 #include <QVBoxLayout>

@@ -36,7 +36,7 @@
 #include <monitor.h>
 #include <session.h>
 #include <kcontacts/addressee.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QtCore/QPointer>
 #include <QVBoxLayout>

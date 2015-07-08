@@ -22,7 +22,7 @@
 
 #include <kaboutdata.h>
 #include <qapplication.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 int main(int argc, char **argv)
 {

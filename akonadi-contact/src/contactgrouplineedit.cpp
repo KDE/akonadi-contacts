@@ -26,7 +26,7 @@
 #include <entitytreemodel.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QtCore/QAbstractItemModel>
 #include <QAction>

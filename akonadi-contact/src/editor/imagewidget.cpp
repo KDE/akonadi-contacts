@@ -25,8 +25,8 @@
 
 #include <kimageio.h>
 #include <kio/netaccess.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <kpixmapregionselectordialog.h>
 #include <KUrlMimeData>
 #include <QImageReader>

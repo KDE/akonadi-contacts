@@ -25,7 +25,7 @@
 
 #include <kcontacts/addressee.h>
 #include <kcontacts/secrecy.h>
-#include <kcombobox.h>
+#include <KComboBox>
 
 SecrecyEditWidget::SecrecyEditWidget(QWidget *parent)
     : QWidget(parent)

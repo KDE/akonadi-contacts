@@ -25,7 +25,7 @@
 #include <QtCore/QList>
 
 #include <kcontacts/addressee.h>
-#include <kcombobox.h>
+#include <KComboBox>
 #include <qdialog.h>
 
 class KLineEdit;

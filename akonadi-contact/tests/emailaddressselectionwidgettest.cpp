@@ -22,7 +22,7 @@
 
 #include <kaboutdata.h>
 #include <qapplication.h>
-#include <kcombobox.h>
+#include <KComboBox>
 #include <qtextbrowser.h>
 #include <KLocalizedString>
 

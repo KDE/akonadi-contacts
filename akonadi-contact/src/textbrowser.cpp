@@ -20,7 +20,7 @@
 
 #include "textbrowser_p.h"
 #include <kicontheme.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <QUrl>
 #include <QAction>
 #include <KStandardAction>

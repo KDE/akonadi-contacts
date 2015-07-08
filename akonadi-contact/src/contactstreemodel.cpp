@@ -27,7 +27,7 @@
 
 #include <kiconloader.h>
 #include <KLocalizedString>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QIcon>
 #include <QLocale>

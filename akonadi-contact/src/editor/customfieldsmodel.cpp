@@ -21,7 +21,7 @@
 
 #include "customfieldsmodel.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QtCore/QDateTime>
 #include <KLocale>

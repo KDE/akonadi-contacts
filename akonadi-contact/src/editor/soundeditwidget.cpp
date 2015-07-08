@@ -25,8 +25,8 @@
 //#include <kfiledialog.h>
 
 #include <kio/netaccess.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QUrl>
 
 #include <phonon/mediaobject.h>

@@ -23,7 +23,7 @@
 
 #include "recentcontactscollections_p.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <QStandardPaths>
 
 using namespace Akonadi;
