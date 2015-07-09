@@ -251,8 +251,9 @@ void PhoneNumberListWidget::recreateNumberWidgets()
     mWidgets.clear();
 
     KContacts::PhoneNumber::List::ConstIterator it;
+    KContacts::PhoneNumber::List::ConstIterator end(mPhoneNumberList.constEnd());
     int counter = 0;
-    for (it = mPhoneNumberList.constBegin(); it != mPhoneNumberList.constEnd(); ++it) {
+    for (it = mPhoneNumberList.constBegin(); it != end; ++it) {
         PhoneNumberWidget *wdg = new PhoneNumberWidget(this);
         wdg->setNumber(*it);
 
@@ -362,9 +363,7 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
 
     // fill widgets
     mTypeList = KContacts::PhoneNumber::typeList();
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     mTypeList.removeAll(KContacts::PhoneNumber::Pref);
-#endif
     KContacts::PhoneNumber::TypeList::ConstIterator it;
     mGroup = new QButtonGroup(box);
     mGroup->setExclusive(false);
