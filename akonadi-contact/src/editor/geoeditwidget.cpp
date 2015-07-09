@@ -322,28 +322,17 @@ GeoDialog::GeoDialog(const KContacts::Geo &coordinates, QWidget *parent)
 
     loadCityList();
 
-    connect(mCityCombo, SIGNAL(activated(int)),
-            SLOT(cityInputChanged()));
-    connect(mLatitude, SIGNAL(valueChanged(double)),
-            SLOT(decimalInputChanged()));
-    connect(mLongitude, SIGNAL(valueChanged(double)),
-            SLOT(decimalInputChanged()));
-    connect(mLatDegrees, SIGNAL(valueChanged(int)),
-            SLOT(sexagesimalInputChanged()));
-    connect(mLatMinutes, SIGNAL(valueChanged(int)),
-            SLOT(sexagesimalInputChanged()));
-    connect(mLatSeconds, SIGNAL(valueChanged(int)),
-            SLOT(sexagesimalInputChanged()));
-    connect(mLatDirection, SIGNAL(activated(int)),
-            SLOT(sexagesimalInputChanged()));
-    connect(mLongDegrees, SIGNAL(valueChanged(int)),
-            SLOT(sexagesimalInputChanged()));
-    connect(mLongMinutes, SIGNAL(valueChanged(int)),
-            SLOT(sexagesimalInputChanged()));
-    connect(mLongSeconds, SIGNAL(valueChanged(int)),
-            SLOT(sexagesimalInputChanged()));
-    connect(mLongDirection, SIGNAL(activated(int)),
-            SLOT(sexagesimalInputChanged()));
+    connect(mCityCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &GeoDialog::cityInputChanged);
+    connect(mLatitude, static_cast<void (QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), this, &GeoDialog::decimalInputChanged);
+    connect(mLongitude, static_cast<void (QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), this, &GeoDialog::decimalInputChanged);
+    connect(mLatDegrees, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &GeoDialog::sexagesimalInputChanged);
+    connect(mLatMinutes, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &GeoDialog::sexagesimalInputChanged);
+    connect(mLatSeconds, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &GeoDialog::sexagesimalInputChanged);
+    connect(mLatDirection, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &GeoDialog::sexagesimalInputChanged);
+    connect(mLongDegrees, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &GeoDialog::sexagesimalInputChanged);
+    connect(mLongMinutes, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &GeoDialog::sexagesimalInputChanged);
+    connect(mLongSeconds, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &GeoDialog::sexagesimalInputChanged);
+    connect(mLongDirection, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &GeoDialog::sexagesimalInputChanged);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);

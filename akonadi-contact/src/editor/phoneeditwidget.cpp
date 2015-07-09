@@ -55,8 +55,7 @@ PhoneTypeCombo::PhoneTypeCombo(QWidget *parent)
 
     update();
 
-    connect(this, SIGNAL(activated(int)),
-            this, SLOT(selected(int)));
+    connect(this, static_cast<void (PhoneTypeCombo::*)(int)>(&PhoneTypeCombo::activated), this, &PhoneTypeCombo::selected);
 }
 
 PhoneTypeCombo::~PhoneTypeCombo()
@@ -134,17 +133,17 @@ PhoneNumberWidget::PhoneNumberWidget(QWidget *parent)
     layout->addWidget(mTypeCombo);
     layout->addWidget(mNumberEdit);
 
-    connect(mTypeCombo, SIGNAL(activated(int)), SIGNAL(modified()));
-    connect(mNumberEdit, SIGNAL(textChanged(QString)), SIGNAL(modified()));
+    connect(mTypeCombo, static_cast<void (PhoneTypeCombo::*)(int)>(&PhoneTypeCombo::activated), this, &PhoneNumberWidget::modified);
+    connect(mNumberEdit, &KLineEdit::textChanged, this, &PhoneNumberWidget::modified);
 }
 
 void PhoneNumberWidget::setNumber(const KContacts::PhoneNumber &number)
 {
     mNumber = number;
 
-    disconnect(mTypeCombo, SIGNAL(activated(int)), this, SIGNAL(modified()));
+    disconnect(mTypeCombo, static_cast<void (PhoneTypeCombo::*)(int)>(&PhoneTypeCombo::activated), this, &PhoneNumberWidget::modified);
     mTypeCombo->setType(number.type());
-    connect(mTypeCombo, SIGNAL(activated(int)), SIGNAL(modified()));
+    connect(mTypeCombo, static_cast<void (PhoneTypeCombo::*)(int)>(&PhoneTypeCombo::activated), this, &PhoneNumberWidget::modified);
 
     mNumberEdit->setText(number.number());
 }
@@ -172,7 +171,7 @@ PhoneNumberListWidget::PhoneNumberListWidget(QWidget *parent)
     mWidgetLayout = new QVBoxLayout(this);
 
     mMapper = new QSignalMapper(this);
-    connect(mMapper, SIGNAL(mapped(int)), SLOT(changed(int)));
+    connect(mMapper, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), this, &PhoneNumberListWidget::changed);
 
     setPhoneNumbers(KContacts::PhoneNumber::List());
 }
@@ -300,10 +299,10 @@ PhoneEditWidget::PhoneEditWidget(QWidget *parent)
     mRemoveButton->setMaximumSize(mRemoveButton->sizeHint());
     layout->addWidget(mRemoveButton, 1, 1);
 
-    connect(mAddButton, SIGNAL(clicked()), mPhoneNumberListWidget, SLOT(add()));
-    connect(mRemoveButton, SIGNAL(clicked()), mPhoneNumberListWidget, SLOT(remove()));
-    connect(mAddButton, SIGNAL(clicked()), SLOT(changed()));
-    connect(mRemoveButton, SIGNAL(clicked()), SLOT(changed()));
+    connect(mAddButton, &QPushButton::clicked, mPhoneNumberListWidget, &PhoneNumberListWidget::add);
+    connect(mRemoveButton, &QPushButton::clicked, mPhoneNumberListWidget, &PhoneNumberListWidget::remove);
+    connect(mAddButton, &QPushButton::clicked, this, &PhoneEditWidget::changed);
+    connect(mRemoveButton, &QPushButton::clicked, this, &PhoneEditWidget::changed);
 }
 
 PhoneEditWidget::~PhoneEditWidget()
@@ -388,8 +387,8 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     layout->addWidget(buttonBox);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &PhoneTypeDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &PhoneTypeDialog::reject);
 
 }
 

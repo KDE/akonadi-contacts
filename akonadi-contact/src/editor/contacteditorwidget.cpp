@@ -537,10 +537,8 @@ ContactEditorWidget::ContactEditorWidget(QWidget *parent)
     Q_UNUSED(parent)
     d->initGui();
 
-    connect(d->mNameWidget, &NameEditWidget::nameChanged,
-            d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
-    connect(d->mOrganizationWidget, &QLineEdit::textChanged,
-            d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
+    connect(d->mNameWidget, &NameEditWidget::nameChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
+    connect(d->mOrganizationWidget, &QLineEdit::textChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
 }
 
 ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displayMode, QWidget *parent)
@@ -549,10 +547,8 @@ ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displa
     Q_UNUSED(parent)
     d->initGui();
 
-    connect(d->mNameWidget, &NameEditWidget::nameChanged,
-            d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
-    connect(d->mOrganizationWidget, &QLineEdit::textChanged,
-            d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
+    connect(d->mNameWidget, &NameEditWidget::nameChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
+    connect(d->mOrganizationWidget, &QLineEdit::textChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
 }
 
 ContactEditorWidget::~ContactEditorWidget()
