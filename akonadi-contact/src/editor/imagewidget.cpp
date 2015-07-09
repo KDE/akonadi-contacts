@@ -23,7 +23,6 @@
 
 #include <kcontacts/addressee.h>
 
-#include <kimageio.h>
 #include <kio/netaccess.h>
 #include <KLocalizedString>
 #include <KMessageBox>
