@@ -28,7 +28,8 @@
 
 #include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class ContactLineEdit : public QLineEdit
 {

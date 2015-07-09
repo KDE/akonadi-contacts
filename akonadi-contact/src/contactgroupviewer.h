@@ -28,7 +28,8 @@
 
 #include <QWidget>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class AbstractContactGroupFormatter;
 

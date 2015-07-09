@@ -27,7 +27,8 @@
 
 #include "contactstreemodel.h"
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class EmailAddressSelectionProxyModel : public Akonadi::LeafExtensionProxyModel
 {

@@ -26,11 +26,13 @@
 
 #include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class AbstractContactEditorWidget;
 class Collection;

@@ -77,9 +77,8 @@ public:
     void updateView(const QVariantList &localCustomFieldDescriptions = QVariantList(), const QString &addressBookName = QString())
     {
         static QPixmap defaultPixmap = QIcon::fromTheme(QStringLiteral("user-identity")).pixmap(QSize(100, 100));
-        static QPixmap defaultMapPixmap = QIcon::fromTheme( QLatin1String( "document-open-remote" ) ).pixmap( QSize( 16, 16 ) );
-        static QPixmap defaultSmsPixmap = QIcon::fromTheme( IMProtocols::self()->icon( QString::fromLatin1( "messaging/sms" ) ) ).pixmap( QSize( 16, 16 ) );
-
+        static QPixmap defaultMapPixmap = QIcon::fromTheme(QLatin1String("document-open-remote")).pixmap(QSize(16, 16));
+        static QPixmap defaultSmsPixmap = QIcon::fromTheme(IMProtocols::self()->icon(QString::fromLatin1("messaging/sms"))).pixmap(QSize(16, 16));
 
         mParent->setWindowTitle(i18n("Contact %1", mCurrentContact.assembledName()));
 
@@ -88,9 +87,9 @@ public:
                                               QUrl(QLatin1String("contact_photo")),
                                               mCurrentContact.photo().data());
         } else if (!mCurrentContact.photo().url().isEmpty()) {
-            mBrowser->document()->addResource( QTextDocument::ImageResource,
-                                           QUrl( QLatin1String( "contact_photo" ) ),
-                                           defaultPixmap );
+            mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                              QUrl(QLatin1String("contact_photo")),
+                                              defaultPixmap);
         } else {
             mBrowser->document()->addResource(QTextDocument::ImageResource,
                                               QUrl(QLatin1String("contact_photo")),
@@ -104,7 +103,6 @@ public:
         } else if (!mCurrentContact.logo().url().isEmpty()) {
             //TODO
         }
-
 
         mBrowser->document()->addResource(QTextDocument::ImageResource,
                                           QUrl(QLatin1String("map_icon")),
@@ -175,7 +173,7 @@ public:
     {
         const QString urlScheme(url.scheme());
         if (urlScheme == QLatin1String("http") ||
-            urlScheme == QLatin1String("https")) {
+                urlScheme == QLatin1String("https")) {
             emit mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
             const int pos = url.queryItemValue(QLatin1String("index")).toInt();

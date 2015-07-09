@@ -101,9 +101,9 @@ void WaitingOverlay::reposition()
 bool WaitingOverlay::eventFilter(QObject *object, QEvent *event)
 {
     if (object == mBaseWidget &&
-        (event->type() == QEvent::Move || event->type() == QEvent::Resize ||
-         event->type() == QEvent::Show || event->type() == QEvent::Hide ||
-         event->type() == QEvent::ParentChange)) {
+            (event->type() == QEvent::Move || event->type() == QEvent::Resize ||
+             event->type() == QEvent::Show || event->type() == QEvent::Hide ||
+             event->type() == QEvent::ParentChange)) {
         reposition();
     }
     return QWidget::eventFilter(object, event);

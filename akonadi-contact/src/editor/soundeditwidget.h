@@ -24,7 +24,8 @@
 
 #include <QToolButton>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 

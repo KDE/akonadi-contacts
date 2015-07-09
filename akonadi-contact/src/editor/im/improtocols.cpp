@@ -33,8 +33,7 @@ IMProtocols::IMProtocols()
     KService::List::ConstIterator it = list.constBegin();
     KService::List::ConstIterator lastItem = list.constEnd();
     QMap<QString, QString> sortingMap;
-    for ( ; it != lastItem; ++it )
-    {
+    for (; it != lastItem; ++it) {
         IMProtocolInfo info((*it)->name(), (*it)->icon());
         const QString propertyName = (*it)->property(QStringLiteral("X-KDE-InstantMessagingKABCField")).toString();
         mPluginInfos.insert(propertyName, info);
@@ -83,7 +82,6 @@ QString IMProtocols::icon(const QString &protocol) const
 
     return mPluginInfos.value(protocol).icon();
 }
-
 
 IMProtocolInfo::IMProtocolInfo()
 {

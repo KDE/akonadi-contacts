@@ -26,7 +26,8 @@
 
 #include "customfieldsmodel.h"
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 

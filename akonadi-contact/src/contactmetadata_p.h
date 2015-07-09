@@ -25,7 +25,8 @@
 #include <QtCore/QStringList>
 #include <QtCore/QVariant>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class Item;
 

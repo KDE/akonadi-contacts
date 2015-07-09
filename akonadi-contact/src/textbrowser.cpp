@@ -106,7 +106,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                     QTextImageFormat imageFormat = charFormat.toImageFormat();
                     QString imageName = imageFormat.name();
                     QVariant imageResource = document()->resource(QTextDocument::ImageResource,
-                                                                  QUrl(imageName));
+                                             QUrl(imageName));
 
                     QPixmap pix = imageResource.value<QPixmap>();
                     if (!pix.isNull()) {

@@ -29,7 +29,8 @@
 #include <QtCore/QSharedDataPointer>
 #include <QtCore/QString>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class Item;
 

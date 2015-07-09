@@ -61,8 +61,7 @@ public:
     }
 
 protected:
-    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE
-    {
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE {
         QPainter p;
         p.begin(this);
         p.setPen(QColor(255, 0, 0));
@@ -70,7 +69,8 @@ protected:
 
         p.drawPixmap(0, 0, mWorld);
 
-        if (mCoordinates.isValid()) {
+        if (mCoordinates.isValid())
+        {
             const double latMid = height() / 2;
             const double longMid = width() / 2;
             const double latOffset = (mCoordinates.latitude() * latMid) / 90;

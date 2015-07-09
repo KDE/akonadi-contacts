@@ -73,7 +73,7 @@ void EmailEditDialogTest::shouldDontAddTwiceItem()
     lst << KContacts::Email(QStringLiteral("bli"));
     lst << KContacts::Email(QStringLiteral("bli"));
     dlg.setEmailList(lst);
-    QCOMPARE(listwidget->count(), (lst.count()-1));
+    QCOMPARE(listwidget->count(), (lst.count() - 1));
 }
 
 QTEST_MAIN(EmailEditDialogTest)

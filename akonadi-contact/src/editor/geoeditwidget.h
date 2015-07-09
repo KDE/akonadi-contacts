@@ -28,7 +28,8 @@
 #include <QWidget>
 #include <QMap>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
@@ -95,8 +96,7 @@ private:
     void loadCityList();
     int nearestCity(double, double) const;
 
-    typedef struct
-    {
+    typedef struct {
         double latitude;
         double longitude;
         QString country;

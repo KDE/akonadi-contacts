@@ -26,10 +26,12 @@
 
 #include <QDialog>
 
-namespace KContacts {
+namespace KContacts
+{
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class Item;
 

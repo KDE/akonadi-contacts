@@ -22,11 +22,13 @@
 #ifndef AKONADI_SHOWADDRESSACTION_H
 #define AKONADI_SHOWADDRESSACTION_H
 
-namespace KContacts {
+namespace KContacts
+{
 class Address;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @short A contact action to show the address of a contact on a map.

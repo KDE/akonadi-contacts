@@ -20,4 +20,3 @@
 #include "akonadi_contact_debug.h"
 Q_LOGGING_CATEGORY(AKONADICONTACT_LOG, "log_akonadi_contact")
 
-

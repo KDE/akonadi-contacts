@@ -22,14 +22,16 @@
 
 #include "akonadi-contact_export.h"
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short Contains predefined part identifiers.
  *
  * This namespace contains identifiers of item parts that are used for
  * handling contact items.
  */
-namespace ContactPart {
+namespace ContactPart
+{
 /**
  * The part identifier for a small contact version,
  * that contains only name and email addresses.

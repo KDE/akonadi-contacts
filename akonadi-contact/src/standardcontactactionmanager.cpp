@@ -127,9 +127,9 @@ public:
                 StandardActionManager::CreateCollection, StandardActionManager::ErrorMessageTitle,
                 i18n("Address book folder creation failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setProperty("ContentMimeTypes", QStringList() <<
-                                                                                                   QStringLiteral("application/x-vnd.kde.contactgroup") <<
-                                                                                                   QStringLiteral("text/directory") <<
-                                                                                                   QStringLiteral("application/x-vnd.kde.contactgroup"));
+                    QStringLiteral("application/x-vnd.kde.contactgroup") <<
+                    QStringLiteral("text/directory") <<
+                    QStringLiteral("application/x-vnd.kde.contactgroup"));
 
             break;
         case Akonadi::StandardActionManager::CopyCollections:
@@ -294,7 +294,7 @@ public:
             index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
         if (collection.isValid()) {
             if (collection.contentMimeTypes().contains(mimeType) &&
-                (collection.rights() & Akonadi::Collection::CanCreateItem)) {
+                    (collection.rights() & Akonadi::Collection::CanCreateItem)) {
                 return true;
             }
         }

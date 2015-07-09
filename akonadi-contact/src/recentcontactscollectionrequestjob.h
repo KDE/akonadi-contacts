@@ -26,7 +26,8 @@
 
 #include <specialcollectionsrequestjob.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class RecentContactsCollectionRequestJobPrivate;
 

@@ -26,7 +26,8 @@
 
 #include <kcontacts/addressee.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class TagWidget;
 }
 

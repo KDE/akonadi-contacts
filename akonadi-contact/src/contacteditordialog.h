@@ -26,7 +26,8 @@
 
 #include <QDialog>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class AbstractContactEditorWidget;
 class ContactEditor;

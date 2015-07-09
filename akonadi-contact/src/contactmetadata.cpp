@@ -29,9 +29,9 @@ using namespace Akonadi;
 
 class ContactMetaData::Private
 {
-  public:
+public:
     Private()
-      : mDisplayNameMode( -1 )
+        : mDisplayNameMode(-1)
     {
     }
 
@@ -40,65 +40,65 @@ class ContactMetaData::Private
 };
 
 ContactMetaData::ContactMetaData()
-  : d( new Private )
+    : d(new Private)
 {
 }
 
 ContactMetaData::~ContactMetaData()
 {
-  delete d;
+    delete d;
 }
 
-void ContactMetaData::load( const Akonadi::Item &contact )
+void ContactMetaData::load(const Akonadi::Item &contact)
 {
-  if ( !contact.hasAttribute( "contactmetadata" ) ) {
-    return;
-  }
+    if (!contact.hasAttribute("contactmetadata")) {
+        return;
+    }
 
-  ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>();
-  const QVariantMap metaData = attribute->metaData();
+    ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>();
+    const QVariantMap metaData = attribute->metaData();
 
-  if ( metaData.contains( QLatin1String( "DisplayNameMode" ) ) ) {
-    d->mDisplayNameMode = metaData.value( QLatin1String( "DisplayNameMode" ) ).toInt();
-  } else {
-    d->mDisplayNameMode = -1;
-  }
+    if (metaData.contains(QLatin1String("DisplayNameMode"))) {
+        d->mDisplayNameMode = metaData.value(QLatin1String("DisplayNameMode")).toInt();
+    } else {
+        d->mDisplayNameMode = -1;
+    }
 
-  d->mCustomFieldDescriptions = metaData.value( QLatin1String( "CustomFieldDescriptions" ) ).toList();
+    d->mCustomFieldDescriptions = metaData.value(QLatin1String("CustomFieldDescriptions")).toList();
 }
 
-void ContactMetaData::store( Akonadi::Item &contact )
+void ContactMetaData::store(Akonadi::Item &contact)
 {
-  ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>( Item::AddIfMissing );
+    ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>(Item::AddIfMissing);
 
-  QVariantMap metaData;
-  if ( d->mDisplayNameMode != -1 ) {
-    metaData.insert( QLatin1String( "DisplayNameMode" ), QVariant( d->mDisplayNameMode ) );
-  }
+    QVariantMap metaData;
+    if (d->mDisplayNameMode != -1) {
+        metaData.insert(QLatin1String("DisplayNameMode"), QVariant(d->mDisplayNameMode));
+    }
 
-  if ( !d->mCustomFieldDescriptions.isEmpty() ) {
-    metaData.insert( QLatin1String( "CustomFieldDescriptions" ), d->mCustomFieldDescriptions );
-  }
+    if (!d->mCustomFieldDescriptions.isEmpty()) {
+        metaData.insert(QLatin1String("CustomFieldDescriptions"), d->mCustomFieldDescriptions);
+    }
 
-  attribute->setMetaData( metaData );
+    attribute->setMetaData(metaData);
 }
 
-void ContactMetaData::setDisplayNameMode( int mode )
+void ContactMetaData::setDisplayNameMode(int mode)
 {
-  d->mDisplayNameMode = mode;
+    d->mDisplayNameMode = mode;
 }
 
 int ContactMetaData::displayNameMode() const
 {
-  return d->mDisplayNameMode;
+    return d->mDisplayNameMode;
 }
 
-void ContactMetaData::setCustomFieldDescriptions( const QVariantList &descriptions )
+void ContactMetaData::setCustomFieldDescriptions(const QVariantList &descriptions)
 {
-  d->mCustomFieldDescriptions = descriptions;
+    d->mCustomFieldDescriptions = descriptions;
 }
 
 QVariantList ContactMetaData::customFieldDescriptions() const
 {
-  return d->mCustomFieldDescriptions;
+    return d->mCustomFieldDescriptions;
 }

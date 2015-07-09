@@ -53,7 +53,7 @@ QVariantMap ContactMetaDataAttribute::metaData() const
 
 QByteArray ContactMetaDataAttribute::type() const
 {
-    static const QByteArray sType( "contactmetadata" );
+    static const QByteArray sType("contactmetadata");
     return sType;
 }
 

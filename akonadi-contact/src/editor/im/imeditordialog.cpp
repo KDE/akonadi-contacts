@@ -102,8 +102,9 @@ void IMEditorDialog::readConfig()
         resize(sizeDialog);
     }
     const QByteArray header = group.readEntry("Header", QByteArray());
-    if (!header.isEmpty())
+    if (!header.isEmpty()) {
         mView->header()->restoreState(header);
+    }
 }
 
 void IMEditorDialog::writeConfig()
@@ -167,12 +168,12 @@ void IMEditorDialog::slotRemove()
     }
 
     if (KMessageBox::warningContinueCancel(
-            this,
-            xi18nc("@info Instant messaging",
-                   "Do you really want to delete the selected <resource>%1</resource> address?",
-                   mModel->data(mModel->index(currentRow, 0), Qt::DisplayRole).toString()),
-            i18nc("@title:window", "Confirm Delete Resource"),
-            KStandardGuiItem::del()) != KMessageBox::Continue) {
+                this,
+                xi18nc("@info Instant messaging",
+                       "Do you really want to delete the selected <resource>%1</resource> address?",
+                       mModel->data(mModel->index(currentRow, 0), Qt::DisplayRole).toString()),
+                i18nc("@title:window", "Confirm Delete Resource"),
+                KStandardGuiItem::del()) != KMessageBox::Continue) {
         return;
     }
 

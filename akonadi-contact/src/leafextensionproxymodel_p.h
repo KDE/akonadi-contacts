@@ -25,7 +25,8 @@
 
 #include <QSortFilterProxyModel>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class LeafExtensionProxyModel : public QSortFilterProxyModel
 {

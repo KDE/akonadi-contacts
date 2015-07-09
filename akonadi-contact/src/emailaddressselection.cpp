@@ -29,35 +29,35 @@
 using namespace Akonadi;
 
 EmailAddressSelection::Private::Private()
-  : QSharedData()
+    : QSharedData()
 {
 }
 
-EmailAddressSelection::Private::Private( const Private &other )
-  : QSharedData( other )
+EmailAddressSelection::Private::Private(const Private &other)
+    : QSharedData(other)
 {
-  mName = other.mName;
-  mEmailAddress = other.mEmailAddress;
-  mItem = other.mItem;
+    mName = other.mName;
+    mEmailAddress = other.mEmailAddress;
+    mItem = other.mItem;
 }
 
 EmailAddressSelection::EmailAddressSelection()
-  : d( new Private )
+    : d(new Private)
 {
 }
 
-EmailAddressSelection::EmailAddressSelection( const EmailAddressSelection &other )
-  : d( other.d )
+EmailAddressSelection::EmailAddressSelection(const EmailAddressSelection &other)
+    : d(other.d)
 {
 }
 
-EmailAddressSelection& EmailAddressSelection::operator=( const EmailAddressSelection &other )
+EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelection &other)
 {
-  if ( this != &other ) {
-    d = other.d;
-  }
+    if (this != &other) {
+        d = other.d;
+    }
 
-  return *this;
+    return *this;
 }
 
 EmailAddressSelection::~EmailAddressSelection()
@@ -66,35 +66,35 @@ EmailAddressSelection::~EmailAddressSelection()
 
 bool EmailAddressSelection::isValid() const
 {
-  return d->mItem.isValid();
+    return d->mItem.isValid();
 }
 
 QString EmailAddressSelection::name() const
 {
-  return d->mName;
+    return d->mName;
 }
 
 QString EmailAddressSelection::email() const
 {
-  return d->mEmailAddress;
+    return d->mEmailAddress;
 }
 
 QString EmailAddressSelection::quotedEmail() const
 {
-  if ( d->mItem.hasPayload<KContacts::ContactGroup>() ) {
-    if ( d->mEmailAddress == d->mName ) {
-      return d->mName;
+    if (d->mItem.hasPayload<KContacts::ContactGroup>()) {
+        if (d->mEmailAddress == d->mName) {
+            return d->mName;
+        }
     }
-  }
 
-  KMime::Types::Mailbox mailbox;
-  mailbox.setAddress( d->mEmailAddress.toUtf8() );
-  mailbox.setName( d->mName );
+    KMime::Types::Mailbox mailbox;
+    mailbox.setAddress(d->mEmailAddress.toUtf8());
+    mailbox.setName(d->mName);
 
-  return mailbox.prettyAddress( KMime::Types::Mailbox::QuoteWhenNecessary );
+    return mailbox.prettyAddress(KMime::Types::Mailbox::QuoteWhenNecessary);
 }
 
 Akonadi::Item EmailAddressSelection::item() const
 {
-  return d->mItem;
+    return d->mItem;
 }

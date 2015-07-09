@@ -177,7 +177,6 @@ void ContactEditorWidget::Private::initGuiContactTab()
     QGridLayout *internetLayout = new QGridLayout(internetGroupBox);
     QGridLayout *phonesLayout = new QGridLayout(phonesGroupBox);
 
-
     // setup name group box
     QLabel *label = new QLabel(i18nc("@label The name of a contact", "Name:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
@@ -616,7 +615,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     // dates group
     d->mBirthdateWidget->setDate(contact.birthday().date());
     d->mAnniversaryWidget->setDate(QDate::fromString(d->loadCustom(contact, QLatin1String("X-Anniversary")),
-                                                     Qt::ISODate));
+                                   Qt::ISODate));
 
     // family group
     d->mPartnerWidget->setText(d->loadCustom(contact, QLatin1String("X-SpousesName")));

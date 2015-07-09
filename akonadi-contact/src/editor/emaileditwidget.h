@@ -25,7 +25,8 @@
 #include <QDialog>
 #include <KContacts/Email>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
@@ -71,7 +72,6 @@ public:
     ~EmailEditDialog();
 
     bool changed() const;
-
 
     KContacts::Email::List emailList() const;
     void setEmailList(const KContacts::Email::List &list);

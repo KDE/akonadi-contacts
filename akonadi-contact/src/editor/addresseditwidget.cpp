@@ -50,8 +50,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
-struct LocaleAwareLessThan : std::binary_function<QString, QString, bool>
-{
+struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
     bool operator()(const QString &s1, const QString &s2) const
     {
         return QString::localeAwareCompare(s1, s2) < 0 ;
@@ -68,9 +67,9 @@ public:
     }
 
 protected:
-    bool eventFilter(QObject *, QEvent *event) Q_DECL_OVERRIDE
-    {
-        if (event->type() == QEvent::KeyPress) {
+    bool eventFilter(QObject *, QEvent *event) Q_DECL_OVERRIDE {
+        if (event->type() == QEvent::KeyPress)
+        {
             QKeyEvent *keyEvent = (QKeyEvent *)event;
             if (keyEvent->key() == Qt::Key_Tab) {
                 QApplication::sendEvent(parent(), event);
@@ -510,8 +509,8 @@ void AddressEditDialog::editLabel()
 {
     bool ok = false;
     QString result = QInputDialog::getMultiLineText(this, KContacts::Address::labelLabel(),
-                                                    KContacts::Address::labelLabel(),
-                                                    mLabel, &ok);
+                     KContacts::Address::labelLabel(),
+                     mLabel, &ok);
     if (ok) {
         mLabel = result;
     }

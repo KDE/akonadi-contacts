@@ -26,7 +26,8 @@
 
 #include <kcontacts/contactgroup.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class ContactGroupModel : public QAbstractItemModel
 {

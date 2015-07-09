@@ -27,7 +27,8 @@
 #include <QtCore/QPoint>
 #include <QPushButton>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 

@@ -107,8 +107,8 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     QGridLayout *layout = new QGridLayout(mainWidget);
 
     d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ?
-                                                 Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode,
-                                                 this);
+            Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode,
+            this);
 
     if (mode == CreateMode) {
         QLabel *label = new QLabel(i18n("Add to:"), mainWidget);

@@ -51,9 +51,9 @@ public:
         lineEdit->installEventFilter(this);
     }
 
-    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE
-    {
-        if (watched == mLineEdit && event->type() == QEvent::FocusOut) {
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE {
+        if (watched == mLineEdit && event->type() == QEvent::FocusOut)
+        {
             const QString fullEmailAddress = mLineEdit->text();
             const QString extractedEmailAddress = KEmailAddress::extractEmailAddress(fullEmailAddress);
             mLineEdit->setText(extractedEmailAddress);
@@ -289,7 +289,6 @@ KContacts::Email::List EmailEditDialog::emailList() const
 
 }
 
-
 void EmailEditDialog::add()
 {
     bool ok = false;
@@ -386,7 +385,7 @@ void EmailEditDialog::setEmailList(const KContacts::Email::List &list)
 {
     QStringList emails;
     bool preferred = true;
-    Q_FOREACH(const KContacts::Email &email, list) {
+    Q_FOREACH (const KContacts::Email &email, list) {
         if (!emails.contains(email.mail())) {
             EmailItem *emailItem = new EmailItem(email.mail(), mEmailListBox, preferred);
             emailItem->setEmail(email);

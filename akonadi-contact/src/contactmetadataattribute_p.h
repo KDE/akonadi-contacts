@@ -28,7 +28,8 @@
 
 #include <QtCore/QVariant>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @short Attribute to store contact specific meta data.

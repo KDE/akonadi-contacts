@@ -24,7 +24,8 @@
 
 #include <entitytreemodel.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class ContactCompletionModel : public EntityTreeModel
 {

@@ -29,7 +29,8 @@
 
 #include <QDialog>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @short A dialog to select email addresses from Akonadi.

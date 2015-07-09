@@ -139,7 +139,7 @@ ContactGroupEditorDelegate::~ContactGroupEditorDelegate()
 }
 
 QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
-                                                  const QModelIndex &index) const
+        const QModelIndex &index) const
 {
     Q_UNUSED(option)
     if (index.column() == 0) {

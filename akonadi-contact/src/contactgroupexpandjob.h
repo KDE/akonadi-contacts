@@ -28,7 +28,8 @@
 #include <kcontacts/contactgroup.h>
 #include <kjob.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @short Job that expands a ContactGroup to a list of contacts.

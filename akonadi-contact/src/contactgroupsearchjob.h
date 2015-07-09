@@ -28,7 +28,8 @@
 #include <itemsearchjob.h>
 #include <kcontacts/contactgroup.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @short Job that searches for contact groups in the Akonadi storage.

@@ -28,7 +28,8 @@ class QLabel;
 
 class KTextEdit;
 
-namespace KContacts {
+namespace KContacts
+{
 class PhoneNumber;
 }
 
