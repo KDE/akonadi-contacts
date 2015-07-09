@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 Icon=jabber_protocol
-X-KDE-ServiceTypes=KABC/IMProtocol,KPluginInfo
+X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/xmpp
 Comment=Jabber Protocol
 Comment[ast]=Protocolu Jabber

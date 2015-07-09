@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=ServiceType
-X-KDE-ServiceType=KABC/IMProtocol
+X-KDE-ServiceType=KContacts/IMProtocol
 X-KDE-KAddressBook-CEWVersion=1
 Name=KAddressbook Instant Messaging Protocol
 Name[ast]=Protocolu de mensaxería nel intre KAddressbook

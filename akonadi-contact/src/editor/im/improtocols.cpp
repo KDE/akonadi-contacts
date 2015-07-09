@@ -29,7 +29,7 @@ IMProtocols *IMProtocols::mSelf = Q_NULLPTR;
 
 IMProtocols::IMProtocols()
 {
-    const KService::List list = KServiceTypeTrader::self()->query(QStringLiteral("KABC/IMProtocol"));
+    const KService::List list = KServiceTypeTrader::self()->query(QStringLiteral("KContacts/IMProtocol"));
     KService::List::ConstIterator it = list.constBegin();
     KService::List::ConstIterator lastItem = list.constEnd();
     QMap<QString, QString> sortingMap;

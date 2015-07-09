@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 Icon=icq_protocol
-X-KDE-ServiceTypes=KABC/IMProtocol,KPluginInfo
+X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/icq
 Comment=ICQ Protocol
 Comment[ast]=Protocolu ICQ

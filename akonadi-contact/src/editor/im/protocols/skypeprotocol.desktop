@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 Icon=skype_protocol
-X-KDE-ServiceTypes=KABC/IMProtocol,KPluginInfo
+X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/skype
 Comment=Skype Internet Telephony
 Comment[ast]=Telefonía d'internet Skype

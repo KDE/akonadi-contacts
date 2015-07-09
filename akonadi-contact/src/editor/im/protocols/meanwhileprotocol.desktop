@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 Icon=meanwhile_protocol
-X-KDE-ServiceTypes=KABC/IMProtocol,KPluginInfo
+X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/meanwhile
 Comment=Meanwhile Protocol
 Comment[ast]=Protocolu Meanwhile

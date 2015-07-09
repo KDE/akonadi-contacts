@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 Icon=gadu_protocol
-X-KDE-ServiceTypes=KABC/IMProtocol,KPluginInfo
+X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/gadu
 Comment=Gadu-Gadu Protocol
 Comment[ast]=Protocolu Gadu-Gadu

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 Icon=groupwise_protocol
-X-KDE-ServiceTypes=KABC/IMProtocol,KPluginInfo
+X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/groupwise
 Comment=Novell GroupWise Messenger
 Comment[ast]=Novell GroupWise Messenger
