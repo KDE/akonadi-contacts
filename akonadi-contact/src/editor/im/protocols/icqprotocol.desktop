@@ -3,6 +3,7 @@ Type=Service
 Icon=icq_protocol
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/icq
+X-KDE-InstantMessagingKContactField=icq
 Comment=ICQ Protocol
 Comment[ast]=Protocolu ICQ
 Comment[bs]=ICQ Protokol

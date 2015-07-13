@@ -3,6 +3,7 @@ Type=Service
 Icon=msn_protocol
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/msn
+X-KDE-InstantMessagingKContactField=msn
 Comment=MSN Messenger
 Comment[ast]=MSN Messenger
 Comment[bs]=MSN Mesendžer

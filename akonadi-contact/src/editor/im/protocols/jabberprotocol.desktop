@@ -3,6 +3,7 @@ Type=Service
 Icon=jabber_protocol
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/xmpp
+X-KDE-InstantMessagingKContactField=jabber
 Comment=Jabber Protocol
 Comment[ast]=Protocolu Jabber
 Comment[bs]=Jabber Protokol

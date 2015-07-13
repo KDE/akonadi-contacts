@@ -11,4 +11,6 @@ install( FILES icqprotocol.desktop
                meanwhileprotocol.desktop
                skypeprotocol.desktop
 	       googletalkprotocol.desktop
+               facebookprotocol.desktop
+               twitterprotocol.desktop
          DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/akonadi/contact )

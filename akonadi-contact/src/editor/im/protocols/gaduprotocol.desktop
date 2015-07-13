@@ -3,6 +3,7 @@ Type=Service
 Icon=gadu_protocol
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/gadu
+X-KDE-InstantMessagingKContactField=gadugadu
 Comment=Gadu-Gadu Protocol
 Comment[ast]=Protocolu Gadu-Gadu
 Comment[bs]=Gadu-Gadu Protokol

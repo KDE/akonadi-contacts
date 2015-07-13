@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Service
+Icon=twitter_protocol
+X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
+X-KDE-InstantMessagingKContactField=twitter
+X-KDE-InstantMessagingKABCField=messaging/twitter
+Comment=Twitter Protocol
+Name=Twitter
+

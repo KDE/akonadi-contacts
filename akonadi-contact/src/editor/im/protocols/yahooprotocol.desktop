@@ -3,6 +3,7 @@ Type=Service
 Icon=yahoo_protocol
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/yahoo
+X-KDE-InstantMessagingKContactField=yahoo
 Comment=Yahoo Protocol
 Comment[ast]=Protocolu Yahoo
 Comment[bs]=Yahoo Protokol

@@ -3,6 +3,7 @@ Type=Service
 Icon=aim_protocol
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/aim
+X-KDE-InstantMessagingKContactField=aim
 Comment=AIM Protocol
 Comment[ast]=Protocolu AIM
 Comment[bs]=AIM Protokol
