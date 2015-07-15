@@ -359,8 +359,9 @@ void AddressEditWidget::updateAddressView()
 void AddressEditWidget::updateButtons()
 {
     mCreateButton->setEnabled(!mReadOnly);
-    mEditButton->setEnabled(!mReadOnly && (mAddressList.count() > 0));
-    mDeleteButton->setEnabled(!mReadOnly && (mAddressList.count() > 0));
+    const bool enabledButton(!mReadOnly && (!mAddressList.isEmpty()));
+    mEditButton->setEnabled(enabledButton);
+    mDeleteButton->setEnabled(enabledButton);
 }
 
 void AddressEditWidget::loadContact(const KContacts::Addressee &contact)
