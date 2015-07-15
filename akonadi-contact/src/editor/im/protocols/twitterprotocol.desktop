@@ -5,5 +5,17 @@ X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKContactField=twitter
 X-KDE-InstantMessagingKABCField=messaging/twitter
 Comment=Twitter Protocol
+Comment[ca]=Protocol Twitter
+Comment[gl]=Protocolo de Twitter
+Comment[nl]=Twitter-protocol
+Comment[pt]=Protocolo do Twitter
+Comment[pt_BR]=Protocolo do Twitter
+Comment[x-test]=xxTwitter Protocolxx
 Name=Twitter
+Name[ca]=Twitter
+Name[gl]=Twitter
+Name[nl]=Twitter
+Name[pt]=Twitter
+Name[pt_BR]=Twitter
+Name[x-test]=xxTwitterxx
 

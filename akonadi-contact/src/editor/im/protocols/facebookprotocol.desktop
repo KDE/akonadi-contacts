@@ -5,5 +5,17 @@ X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKContactField=facebook
 X-KDE-InstantMessagingKABCField=messaging/facebook
 Comment=Facebook Protocol
+Comment[ca]=Protocol Facebook
+Comment[gl]=Protocolo de Facebook
+Comment[nl]=Facebook-protocol
+Comment[pt]=Protocolo do Facebook
+Comment[pt_BR]=Protocolo do Facebook
+Comment[x-test]=xxFacebook Protocolxx
 Name=Facebook
+Name[ca]=Facebook
+Name[gl]=Facebook
+Name[nl]=Facebook
+Name[pt]=Facebook
+Name[pt_BR]=Facebook
+Name[x-test]=xxFacebookxx
 
