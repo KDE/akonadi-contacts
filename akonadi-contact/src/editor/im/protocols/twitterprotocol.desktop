@@ -10,6 +10,8 @@ Comment[gl]=Protocolo de Twitter
 Comment[nl]=Twitter-protocol
 Comment[pt]=Protocolo do Twitter
 Comment[pt_BR]=Protocolo do Twitter
+Comment[sk]=Protokol Twitter
+Comment[sv]=Twitter-protokoll
 Comment[x-test]=xxTwitter Protocolxx
 Name=Twitter
 Name[ca]=Twitter
@@ -17,5 +19,7 @@ Name[gl]=Twitter
 Name[nl]=Twitter
 Name[pt]=Twitter
 Name[pt_BR]=Twitter
+Name[sk]=Twitter
+Name[sv]=Twitter
 Name[x-test]=xxTwitterxx
 

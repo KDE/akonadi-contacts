@@ -10,6 +10,8 @@ Comment[gl]=Protocolo de Facebook
 Comment[nl]=Facebook-protocol
 Comment[pt]=Protocolo do Facebook
 Comment[pt_BR]=Protocolo do Facebook
+Comment[sk]=Protokol Facebook
+Comment[sv]=Facebook-protokoll
 Comment[x-test]=xxFacebook Protocolxx
 Name=Facebook
 Name[ca]=Facebook
@@ -17,5 +19,7 @@ Name[gl]=Facebook
 Name[nl]=Facebook
 Name[pt]=Facebook
 Name[pt_BR]=Facebook
+Name[sk]=Facebook
+Name[sv]=Facebook
 Name[x-test]=xxFacebookxx
 
