@@ -23,7 +23,7 @@
 #ifndef TEXTBROWSER_H
 #define TEXTBROWSER_H
 
-#include <qtextbrowser.h>
+#include <QTextBrowser>
 
 namespace Akonadi
 {
