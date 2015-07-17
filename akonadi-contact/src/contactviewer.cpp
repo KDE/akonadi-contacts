@@ -77,8 +77,8 @@ public:
     void updateView(const QVariantList &localCustomFieldDescriptions = QVariantList(), const QString &addressBookName = QString())
     {
         static QPixmap defaultPixmap = QIcon::fromTheme(QStringLiteral("user-identity")).pixmap(QSize(100, 100));
-        static QPixmap defaultMapPixmap = QIcon::fromTheme(QLatin1String("document-open-remote")).pixmap(QSize(16, 16));
-        static QPixmap defaultSmsPixmap = QIcon::fromTheme(IMProtocols::self()->icon(QString::fromLatin1("messaging/sms"))).pixmap(QSize(16, 16));
+        static QPixmap defaultMapPixmap = QIcon::fromTheme(QStringLiteral("document-open-remote")).pixmap(QSize(16, 16));
+        static QPixmap defaultSmsPixmap = QIcon::fromTheme(IMProtocols::self()->icon(QStringLiteral("messaging/sms"))).pixmap(QSize(16, 16));
 
         mParent->setWindowTitle(i18n("Contact %1", mCurrentContact.assembledName()));
 
@@ -88,28 +88,28 @@ public:
                                               mCurrentContact.photo().data());
         } else if (!mCurrentContact.photo().url().isEmpty()) {
             mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QLatin1String("contact_photo")),
+                                              QUrl(QStringLiteral("contact_photo")),
                                               defaultPixmap);
         } else {
             mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QLatin1String("contact_photo")),
+                                              QUrl(QStringLiteral("contact_photo")),
                                               defaultPixmap);
         }
 
         if (mCurrentContact.logo().isIntern()) {
             mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QLatin1String("contact_logo")),
+                                              QUrl(QStringLiteral("contact_logo")),
                                               mCurrentContact.logo().data());
         } else if (!mCurrentContact.logo().url().isEmpty()) {
             //TODO
         }
 
         mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                          QUrl(QLatin1String("map_icon")),
+                                          QUrl(QStringLiteral("map_icon")),
                                           defaultMapPixmap);
 
         mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                          QUrl(QLatin1String("sms_icon")),
+                                          QUrl(QStringLiteral("sms_icon")),
                                           defaultSmsPixmap);
 
 #ifdef HAVE_PRISON
@@ -124,10 +124,10 @@ public:
             mQRCode->setData(data);
             mDataMatrix->setData(data);
             mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QLatin1String("qrcode")),
+                                              QUrl(QStringLiteral("qrcode")),
                                               mQRCode->toImage(QSizeF(50, 50)));
             mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QLatin1String("datamatrix")),
+                                              QUrl(QStringLiteral("datamatrix")),
                                               mDataMatrix->toImage(QSizeF(50, 50)));
         }
 #endif // HAVE_PRISON
