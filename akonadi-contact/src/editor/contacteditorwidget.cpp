@@ -645,7 +645,9 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
 
     // Internet group
     d->mEmailWidget->storeContact(contact);
-    contact.setUrl(QUrl(d->mHomepageWidget->text().trimmed()));
+    KContacts::ResourceLocatorUrl resourceLocatorUrl;
+    resourceLocatorUrl.setUrl(QUrl(d->mHomepageWidget->text().trimmed()));
+    contact.setUrl(resourceLocatorUrl);
     d->storeCustom(contact, QLatin1String("BlogFeed"), d->mBlogWidget->text().trimmed());
     d->mIMWidget->storeContact(contact);
 

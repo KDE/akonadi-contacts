@@ -255,7 +255,7 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
         return true;
     }
 
-    if (contact.url().url().contains(filterString, Qt::CaseInsensitive)) {
+    if (contact.url().url().url().contains(filterString, Qt::CaseInsensitive)) {
         return true;
     }
 

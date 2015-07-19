@@ -157,7 +157,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
     // Homepage
     if (rawContact.url().isValid()) {
-        QString url = rawContact.url().url();
+        QString url = rawContact.url().url().url();
         if (!url.startsWith(QLatin1String("http://")) && !url.startsWith(QLatin1String("https://"))) {
             url = QLatin1String("http://") + url;
         }
