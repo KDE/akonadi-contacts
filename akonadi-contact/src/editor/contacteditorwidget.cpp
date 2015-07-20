@@ -566,7 +566,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
 
     // Internet group
     d->mEmailWidget->loadContact(contact);
-    d->mHomepageWidget->setText(contact.url().toString());
+    d->mHomepageWidget->setText(contact.url().url().toString());
     d->mBlogWidget->setText(d->loadCustom(contact, QLatin1String("BlogFeed")));
     d->mIMWidget->loadContact(contact);
 
