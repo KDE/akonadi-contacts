@@ -34,7 +34,7 @@ public:
 };
 
 ContactGroupSearchJob::ContactGroupSearchJob(QObject *parent)
-    : ItemSearchJob(QString(), parent)
+    : ItemSearchJob(parent)
     , d(new Private)
 {
     fetchScope().fetchFullPayload();
