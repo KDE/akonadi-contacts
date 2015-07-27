@@ -17,7 +17,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
 include(ECMInstallIcons)
 set(KF5_VERSION "5.12.0")
-set(KDEPIMLIBS_VERSION "5.0.40")
+set(KDEPIMLIBS_VERSION "5.0.41")
 set(KCONTACTS_VERSION "4.91.0")
 set(CALENDARCORE_VERSION "4.79.0")
 set(KMIMELIB_VERSION "4.79.0")
@@ -29,7 +29,6 @@ ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
 )
 
 ########### Find packages ###########
-find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
