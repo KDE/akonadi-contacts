@@ -22,15 +22,15 @@
 #ifndef CUSTOMFIELDEDITORDIALOG_H
 #define CUSTOMFIELDEDITORDIALOG_H
 
-#include <kdialog.h>
+#include <QDialog>
 
 #include "customfieldsmodel.h"
 
-class KComboBox;
+class QComboBox;
 class QLineEdit;
 class QCheckBox;
 
-class CustomFieldEditorDialog : public KDialog
+class CustomFieldEditorDialog : public QDialog
 {
     Q_OBJECT
 
@@ -40,11 +40,15 @@ public:
     void setCustomField(const CustomField &field);
     CustomField customField() const;
 
+private Q_SLOTS:
+    void toggleKeyRow(bool checked);
+
 private:
     QLineEdit *mTitle;
-    KComboBox *mType;
+    QComboBox *mType;
     QCheckBox *mScope;
     QLineEdit *mKey;
+    QPushButton *mAdvancedButton;
     CustomField mCustomField;
 };
 

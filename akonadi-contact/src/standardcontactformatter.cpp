@@ -31,7 +31,6 @@
 #include <kstringhandler.h>
 
 #include <QtCore/QSet>
-#include <KLocale>
 #include <QLocale>
 
 using namespace Akonadi;
@@ -271,10 +270,10 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                                 value = QLocale().toString(date, QLocale::ShortFormat);
                             } else if (descriptionType == QLatin1String("time")) {
                                 const QTime time = QTime::fromString(value, Qt::ISODate);
-                                value = KLocale::global()->formatTime(time);
+                                value = QLocale().toString(time);
                             } else if (descriptionType == QLatin1String("datetime")) {
                                 const QDateTime dateTime = QDateTime::fromString(value, Qt::ISODate);
-                                value = KLocale::global()->formatDateTime(dateTime, KLocale::ShortDate);
+                                value = QLocale().toString(dateTime, QLocale::ShortFormat);
                             } else if (descriptionType == QLatin1String("url")) {
                                 value = KStringHandler::tagUrls(value.toHtmlEscaped());
                                 needToEscape = false;

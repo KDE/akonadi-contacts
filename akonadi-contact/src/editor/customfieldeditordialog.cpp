@@ -21,40 +21,35 @@
 
 #include "customfieldeditordialog.h"
 
-#include <KComboBox>
-#include <KLineEdit>
+#include <QDialog>
+
+#include <QComboBox>
+#include <QLineEdit>
 #include <KLocalizedString>
 
 #include <QCheckBox>
 #include <QFormLayout>
+#include <QDialogButtonBox>
 #include <QRegExpValidator>
+#include <QPushButton>
 
 CustomFieldEditorDialog::CustomFieldEditorDialog(QWidget *parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setCaption(i18n("Edit Custom Field"));
-    setButtons(Ok | Cancel | Details);
+    setWindowTitle(i18n("Edit Custom Field"));
 
-    QWidget *widget = new QWidget(this);
-    setMainWidget(widget);
-
-    QFormLayout *layout = new QFormLayout(widget);
+    QFormLayout *layout = new QFormLayout(this);
+    setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
     mKey = new QLineEdit;
     mTitle = new QLineEdit;
-    mType = new KComboBox;
+    mType = new QComboBox;
     mScope = new QCheckBox(i18n("Use field for all contacts"));
 
     layout->addRow(i18nc("The title of a custom field", "Title"), mTitle);
     layout->addRow(i18nc("The type of a custom field", "Type"), mType);
     layout->addRow(QString(), mScope);
-
-    QWidget *detailsWidget = new QWidget;
-    QFormLayout *detailsLayout = new QFormLayout(detailsWidget);
-    detailsLayout->addRow(i18n("Key"), mKey);
-
-    setDetailsWidget(detailsWidget);
-    setButtonText(Details, i18nc("@label Opens the advanced dialog", "Advanced"));
+    layout->addRow(i18n("Key"), mKey);
 
     mType->addItem(i18n("Text"), CustomField::TextType);
     mType->addItem(i18n("Numeric"), CustomField::NumericType);
@@ -66,6 +61,24 @@ CustomFieldEditorDialog::CustomFieldEditorDialog(QWidget *parent)
 
     mKey->setValidator(new QRegExpValidator(QRegExp(QStringLiteral("[a-zA-Z0-9\\-]+")), this));
     mTitle->setFocus();
+
+    QDialogButtonBox *btnBox = new QDialogButtonBox(QDialogButtonBox::Ok |
+                                                    QDialogButtonBox::Cancel, this);
+    btnBox->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(btnBox, &QDialogButtonBox::accepted,
+            this, &QDialog::accept);
+    connect(btnBox, &QDialogButtonBox::rejected,
+            this, &QDialog::reject);
+
+    layout->addRow(btnBox);
+    mAdvancedButton = btnBox->addButton(i18n("Advanced"), QDialogButtonBox::ActionRole);
+    mAdvancedButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
+    mAdvancedButton->setCheckable(true);
+    mAdvancedButton->setChecked(false);
+    connect(mAdvancedButton, &QPushButton::clicked,
+            this, &CustomFieldEditorDialog::toggleKeyRow);
+
+    toggleKeyRow(false);
 }
 
 void CustomFieldEditorDialog::setCustomField(const CustomField &field)
@@ -92,4 +105,15 @@ CustomField CustomFieldEditorDialog::customField() const
     }
 
     return customField;
+}
+
+void CustomFieldEditorDialog::toggleKeyRow(bool checked)
+{
+    QFormLayout *flayout = static_cast<QFormLayout*>(layout());
+    flayout->itemAt(3, QFormLayout::LabelRole)->widget()->setVisible(checked);
+    flayout->itemAt(3, QFormLayout::FieldRole)->widget()->setVisible(checked);
+
+    mAdvancedButton->setText(i18n("Advanced") % (checked ? QStringLiteral(" <<") : QStringLiteral(" >>")));
+
+    adjustSize();
 }

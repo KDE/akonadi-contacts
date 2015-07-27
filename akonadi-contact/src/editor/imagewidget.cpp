@@ -38,6 +38,7 @@
 #include <QMenu>
 #include <QApplication>
 #include <QUrl>
+#include <QBuffer>
 /**
  * @short Small helper class to load image from network
  */
@@ -72,11 +73,18 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok)
         if (image.load(url.toLocalFile())) {
             (*ok) = true;
         }
-    } else if (KIO::NetAccess::download(url, tempFile, mParent)) {
-        if (image.load(tempFile)) {
-            (*ok) = true;
+    } else {
+        QByteArray imageData;
+        KIO::TransferJob *job = KIO::get(url, KIO::NoReload);
+        QObject::connect(job, &KIO::TransferJob::data,
+                         [&imageData](KIO::Job *, const QByteArray &data) {
+                            imageData.append(data);
+                         });
+        if (job->exec()) {
+            if (image.loadFromData(imageData)) {
+                (*ok) = true;
+            }
         }
-        KIO::NetAccess::removeTempFile(tempFile);
     }
 
     if (!(*ok)) {

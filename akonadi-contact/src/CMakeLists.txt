@@ -141,7 +141,6 @@ PRIVATE
     KF5::Codecs
     KF5::DBusAddons
     KF5::I18n
-    KF5::KDELibs4Support
     KF5::WidgetsAddons
     Phonon::phonon4qt5
 )

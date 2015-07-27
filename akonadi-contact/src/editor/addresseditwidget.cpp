@@ -34,6 +34,7 @@
 #include <QKeyEvent>
 #include <QLabel>
 #include <QPushButton>
+#include <QLocale>
 
 #include <kacceleratormanager.h>
 #include <KComboBox>
@@ -46,7 +47,6 @@
 #include <ktextedit.h>
 
 #include <functional>
-#include <KLocale>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
@@ -532,7 +532,7 @@ void AddressEditDialog::setAddress(const KContacts::Address &address)
 
     if (mAddress.isEmpty()) {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(),
-                                   KLocale::global()->countryCodeToName(KLocale::global()->country()));
+                                   QLocale::countryToString(QLocale().country()));
     } else {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(), mAddress.country());
     }
@@ -565,10 +565,10 @@ KContacts::Address AddressEditDialog::address() const
 void AddressEditDialog::fillCountryCombo()
 {
     QStringList countries;
-    const QStringList countryList = KLocale::global()->allCountriesList();
-    countries.reserve(countryList.count());
-    foreach (const QString &cc, countryList) {
-        countries.append(KLocale::global()->countryCodeToName(cc));
+    const QList<QLocale> localeList = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    countries.reserve(localeList.count());
+    foreach (const QLocale &locale, localeList) {
+        countries.append(QLocale::countryToString(locale.country()));
     }
 
     qSort(countries.begin(), countries.end(), LocaleAwareLessThan());
@@ -578,7 +578,7 @@ void AddressEditDialog::fillCountryCombo()
     mCountryCombo->completionObject()->setItems(countries);
     mCountryCombo->completionObject()->setIgnoreCase(true);
 
-    const QString currentCountry = KLocale::global()->countryCodeToName(KLocale::global()->country());
+    const QString currentCountry = QLocale::countryToString(QLocale().country());
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
 }
 
