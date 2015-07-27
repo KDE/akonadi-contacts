@@ -25,7 +25,8 @@
 
 #include <kcontacts/address.h>
 #include <krun.h>
-#include <ktoolinvocation.h>
+
+#include <QDesktopServices>
 
 using namespace Akonadi;
 
@@ -48,7 +49,7 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
         QString urlTemplate = ContactActionsSettings::self()->addressUrl();
         replaceArguments(urlTemplate, address);
         if (!urlTemplate.isEmpty()) {
-            KToolInvocation::invokeBrowser(urlTemplate);
+            QDesktopServices::openUrl(QUrl(urlTemplate));
         }
     } else if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseExternalAddressApplication) {
         QString commandTemplate = ContactActionsSettings::self()->addressCommand();
@@ -61,13 +62,13 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
         QString urlTemplate = QStringLiteral("https://maps.google.com/maps?q=%s,%l,%c");
         replaceArguments(urlTemplate, address);
         if (!urlTemplate.isEmpty()) {
-            KToolInvocation::invokeBrowser(urlTemplate);
+            QDesktopServices::openUrl(QUrl(urlTemplate));
         }
     } else if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseMapquest) {
         QString urlTemplate = QStringLiteral("http://open.mapquest.com/?q=%s,%l,%c");
         replaceArguments(urlTemplate, address);
         if (!urlTemplate.isEmpty()) {
-            KToolInvocation::invokeBrowser(urlTemplate);
+            QDesktopServices::openUrl(QUrl(urlTemplate));
         }
     }
 }

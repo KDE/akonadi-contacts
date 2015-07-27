@@ -28,8 +28,8 @@
 #include <kcontacts/address.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/phonenumber.h>
-#include <ktoolinvocation.h>
 #include <QtCore/QUrl>
+#include <QDesktopServices>
 
 using namespace Akonadi;
 
@@ -74,7 +74,7 @@ void ContactDefaultActions::connectToView(QObject *view)
 
 void ContactDefaultActions::showUrl(const QUrl &url)
 {
-    KToolInvocation::invokeBrowser(url.url());
+    QDesktopServices::openUrl(url);
 }
 
 void ContactDefaultActions::sendEmail(const QString &name, const QString &address)
@@ -85,7 +85,7 @@ void ContactDefaultActions::sendEmail(const QString &name, const QString &addres
     QUrl url;
     url.setScheme(QStringLiteral("mailto"));
     url.setPath(contact.fullEmail(address));
-    KToolInvocation::invokeMailer(url);
+    QDesktopServices::openUrl(url);
 }
 
 void ContactDefaultActions::dialPhoneNumber(const KContacts::PhoneNumber &number)
