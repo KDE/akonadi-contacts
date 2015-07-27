@@ -24,7 +24,8 @@
 #include <kcontacts/addressee.h>
 //#include <kfiledialog.h>
 
-#include <kio/netaccess.h>
+#include <KIO/StoredTransferJob>
+#include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QUrl>
@@ -60,7 +61,6 @@ SoundLoader::SoundLoader(QWidget *parent)
 QByteArray SoundLoader::loadSound(const QUrl &url, bool *ok)
 {
     QByteArray sound;
-    QString tempFile;
 
     if (url.isEmpty()) {
         return sound;
@@ -75,14 +75,13 @@ QByteArray SoundLoader::loadSound(const QUrl &url, bool *ok)
             file.close();
             (*ok) = true;
         }
-    } else if (KIO::NetAccess::download(url, tempFile, mParent)) {
-        QFile file(tempFile);
-        if (file.open(QIODevice::ReadOnly)) {
-            sound = file.readAll();
-            file.close();
-            (*ok) = true;
+    } else {
+        auto job = KIO::storedGet(url);
+        KJobWidgets::setWindow(job, mParent);
+        if (job->exec()) {
+            sound = job->data();
+	    (*ok) = true;
         }
-        KIO::NetAccess::removeTempFile(tempFile);
     }
 
     if (!(*ok)) {
