@@ -13,7 +13,7 @@ kconfig_add_kcfg_files(kcm_akonadicontact_actions_SRCS ../actions/contactactions
 add_library(kcm_akonadicontact_actions MODULE ${kcm_akonadicontact_actions_SRCS})
 #kcoreaddons_desktop_to_json(kcm_akonadicontact_actions akonadicontact_actions.desktop)
 
-target_link_libraries(kcm_akonadicontact_actions KF5::ConfigWidgets KF5::KDELibs4Support)
+target_link_libraries(kcm_akonadicontact_actions KF5::ConfigWidgets KF5::I18n KF5::Completion) 
 
 
 
