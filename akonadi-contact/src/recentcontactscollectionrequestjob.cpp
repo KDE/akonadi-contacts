@@ -38,13 +38,13 @@ RecentContactsCollectionRequestJob::RecentContactsCollectionRequestJob(QObject *
     displayNameMap.insert("recent-contacts", i18nc("recent contacts folder", "Recent Contacts"));
 
     static QMap<QByteArray, QString> iconNameMap;
-    iconNameMap.insert("recent-contacts", QLatin1String("folder"));
+    iconNameMap.insert("recent-contacts", QStringLiteral("folder"));
 
     QVariantMap options;
-    options.insert(QLatin1String("Name"), displayNameMap.value("recent-contacts"));
-    options.insert(QLatin1String("Path"), QString(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QLatin1String("recent-contacts")));
+    options.insert(QStringLiteral("Name"), displayNameMap.value("recent-contacts"));
+    options.insert(QStringLiteral("Path"), QString(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QLatin1String("recent-contacts")));
 
-    setDefaultResourceType(QLatin1String("akonadi_contacts_resource"));
+    setDefaultResourceType(QStringLiteral("akonadi_contacts_resource"));
     setDefaultResourceOptions(options);
 
     setTypes(displayNameMap.keys());

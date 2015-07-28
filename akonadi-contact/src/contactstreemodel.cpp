@@ -136,13 +136,13 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                     values += number.number();
                 }
 
-                return values.join(QLatin1String("\n"));
+                return values.join(QStringLiteral("\n"));
                 break;
             }
             case PreferredEmail:
                 return contact.preferredEmail();
             case AllEmails:
-                return contact.emails().join(QLatin1String("\n"));
+                return contact.emails().join(QStringLiteral("\n"));
             case Organization:
                 return contact.organization();
             case Role:

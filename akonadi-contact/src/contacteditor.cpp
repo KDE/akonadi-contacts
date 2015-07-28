@@ -198,8 +198,7 @@ void ContactEditor::Private::setupMonitor()
     mMonitor = new Akonadi::Monitor;
     mMonitor->ignoreSession(Akonadi::Session::defaultSession());
 
-    connect(mMonitor, SIGNAL(itemChanged(Akonadi::Item,QSet<QByteArray>)),
-            mParent, SLOT(itemChanged(Akonadi::Item,QSet<QByteArray>)));
+    connect(mMonitor, SIGNAL(itemChanged(Akonadi::Item,QSet<QByteArray>)), mParent, SLOT(itemChanged(Akonadi::Item,QSet<QByteArray>)));
 }
 
 ContactEditor::ContactEditor(Mode mode, QWidget *parent)

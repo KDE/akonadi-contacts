@@ -54,7 +54,7 @@ public:
 
         static QPixmap groupPixmap = QIcon::fromTheme(QStringLiteral("x-mail-distribution-list")).pixmap(QSize(100, 100));
         mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                          QUrl(QLatin1String("group_photo")),
+                                          QUrl(QStringLiteral("group_photo")),
                                           groupPixmap);
 
         mStandardContactGroupFormatter = new StandardContactGroupFormatter;
@@ -82,8 +82,8 @@ public:
 
         if (!mCurrentAddressBookName.isEmpty()) {
             QVariantMap addressBookName;
-            addressBookName.insert(QLatin1String("title"), i18n("Address Book"));
-            addressBookName.insert(QLatin1String("value"), mCurrentAddressBookName);
+            addressBookName.insert(QStringLiteral("title"), i18n("Address Book"));
+            addressBookName.insert(QStringLiteral("value"), mCurrentAddressBookName);
 
             additionalFields << addressBookName;
         }

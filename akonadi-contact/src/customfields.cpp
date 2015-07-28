@@ -135,26 +135,18 @@ QString CustomField::typeToString(CustomField::Type type)
     switch (type) {
     case CustomField::TextType:
     default:
-        return QLatin1String("text");
-        break;
+        return QStringLiteral("text");
     case CustomField::NumericType:
-        return QLatin1String("numeric");
-        break;
+        return QStringLiteral("numeric");
     case CustomField::BooleanType:
-        return QLatin1String("boolean");
-        break;
+        return QStringLiteral("boolean");
     case CustomField::DateType:
-        return QLatin1String("date");
-        break;
+        return QStringLiteral("date");
     case CustomField::TimeType:
-        return QLatin1String("time");
-        break;
+        return QStringLiteral("time");
     case CustomField::DateTimeType:
-        return QLatin1String("datetime");
-        break;
+        return QStringLiteral("datetime");
     case CustomField::UrlType:
-        return QLatin1String("url");
-        break;
-
+        return QStringLiteral("url");
     }
 }

@@ -205,26 +205,26 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     QString customData;
     static QMap<QString, QString> titleMap;
     if (titleMap.isEmpty()) {
-        titleMap.insert(QLatin1String("Department"), i18n("Department"));
-        titleMap.insert(QLatin1String("Profession"), i18n("Profession"));
-        titleMap.insert(QLatin1String("AssistantsName"), i18n("Assistant's Name"));
-        titleMap.insert(QLatin1String("ManagersName"), i18n("Manager's Name"));
-        titleMap.insert(QLatin1String("SpousesName"), i18nc("Wife/Husband/...", "Partner's Name"));
-        titleMap.insert(QLatin1String("Office"), i18n("Office"));
-        titleMap.insert(QLatin1String("IMAddress"), i18n("IM Address"));
-        titleMap.insert(QLatin1String("Anniversary"), i18n("Anniversary"));
-        titleMap.insert(QLatin1String("AddressBook"), i18n("Address Book"));
+        titleMap.insert(QStringLiteral("Department"), i18n("Department"));
+        titleMap.insert(QStringLiteral("Profession"), i18n("Profession"));
+        titleMap.insert(QStringLiteral("AssistantsName"), i18n("Assistant's Name"));
+        titleMap.insert(QStringLiteral("ManagersName"), i18n("Manager's Name"));
+        titleMap.insert(QStringLiteral("SpousesName"), i18nc("Wife/Husband/...", "Partner's Name"));
+        titleMap.insert(QStringLiteral("Office"), i18n("Office"));
+        titleMap.insert(QStringLiteral("IMAddress"), i18n("IM Address"));
+        titleMap.insert(QStringLiteral("Anniversary"), i18n("Anniversary"));
+        titleMap.insert(QStringLiteral("AddressBook"), i18n("Address Book"));
     }
 
     static QSet<QString> blacklistedKeys;
     if (blacklistedKeys.isEmpty()) {
-        blacklistedKeys.insert(QLatin1String("CRYPTOPROTOPREF"));
-        blacklistedKeys.insert(QLatin1String("OPENPGPFP"));
-        blacklistedKeys.insert(QLatin1String("SMIMEFP"));
-        blacklistedKeys.insert(QLatin1String("CRYPTOSIGNPREF"));
-        blacklistedKeys.insert(QLatin1String("CRYPTOENCRYPTPREF"));
-        blacklistedKeys.insert(QLatin1String("MailPreferedFormatting"));
-        blacklistedKeys.insert(QLatin1String("MailAllowToRemoteContent"));
+        blacklistedKeys.insert(QStringLiteral("CRYPTOPROTOPREF"));
+        blacklistedKeys.insert(QStringLiteral("OPENPGPFP"));
+        blacklistedKeys.insert(QStringLiteral("SMIMEFP"));
+        blacklistedKeys.insert(QStringLiteral("CRYPTOSIGNPREF"));
+        blacklistedKeys.insert(QStringLiteral("CRYPTOENCRYPTPREF"));
+        blacklistedKeys.insert(QStringLiteral("MailPreferedFormatting"));
+        blacklistedKeys.insert(QStringLiteral("MailAllowToRemoteContent"));
     }
 
     if (!rawContact.customs().empty()) {
@@ -297,7 +297,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         role = rawContact.role();
     }
     if (role.isEmpty()) {
-        role = rawContact.custom(QLatin1String("KADDRESSBOOK"), QLatin1String("X-Profession"));
+        role = rawContact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
     }
 
     QString strAddr = QString::fromLatin1(

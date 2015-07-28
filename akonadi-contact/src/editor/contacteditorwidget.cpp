@@ -703,10 +703,10 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
     birthday.setTime(QTime());
 
     contact.setBirthday(birthday);
-    d->storeCustom(contact, QLatin1String("X-Anniversary"), d->mAnniversaryWidget->date().toString(Qt::ISODate));
+    d->storeCustom(contact, QStringLiteral("X-Anniversary"), d->mAnniversaryWidget->date().toString(Qt::ISODate));
 
     // family group
-    d->storeCustom(contact, QLatin1String("X-SpousesName"), d->mPartnerWidget->text().trimmed());
+    d->storeCustom(contact, QStringLiteral("X-SpousesName"), d->mPartnerWidget->text().trimmed());
 
     if (d->mDisplayMode == FullMode) {
         // custom fields group

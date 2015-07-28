@@ -509,7 +509,7 @@ AddressEditDialog::~AddressEditDialog()
 void AddressEditDialog::editLabel()
 {
     bool ok = false;
-    QString result = QInputDialog::getMultiLineText(this, KContacts::Address::labelLabel(),
+    const QString result = QInputDialog::getMultiLineText(this, KContacts::Address::labelLabel(),
                      KContacts::Address::labelLabel(),
                      mLabel, &ok);
     if (ok) {
