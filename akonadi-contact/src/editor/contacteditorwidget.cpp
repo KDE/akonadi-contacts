@@ -518,15 +518,15 @@ void ContactEditorWidget::Private::loadCustomPages()
 
 QString ContactEditorWidget::Private::loadCustom(const KContacts::Addressee &contact, const QString &key) const
 {
-    return contact.custom(QLatin1String("KADDRESSBOOK"), key);
+    return contact.custom(QStringLiteral("KADDRESSBOOK"), key);
 }
 
 void ContactEditorWidget::Private::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const
 {
     if (value.isEmpty()) {
-        contact.removeCustom(QLatin1String("KADDRESSBOOK"), key);
+        contact.removeCustom(QStringLiteral("KADDRESSBOOK"), key);
     } else {
-        contact.insertCustom(QLatin1String("KADDRESSBOOK"), key, value);
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), key, value);
     }
 }
 
@@ -567,7 +567,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     // Internet group
     d->mEmailWidget->loadContact(contact);
     d->mHomepageWidget->setText(contact.url().url().toString());
-    d->mBlogWidget->setText(d->loadCustom(contact, QLatin1String("BlogFeed")));
+    d->mBlogWidget->setText(d->loadCustom(contact, QStringLiteral("BlogFeed")));
     d->mIMWidget->loadContact(contact);
 
     // phones group
@@ -576,7 +576,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     // categories section
     d->mCategoriesWidget->loadContact(contact);
 
-    const QString mailPreferedFormatting = d->loadCustom(contact, QLatin1String("MailPreferedFormatting"));
+    const QString mailPreferedFormatting = d->loadCustom(contact, QStringLiteral("MailPreferedFormatting"));
     if (mailPreferedFormatting.isEmpty()) {
         d->mMailPreferFormatting->setCurrentIndex(0);
     } else if (mailPreferedFormatting == QLatin1String("TEXT")) {
@@ -587,7 +587,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
         d->mMailPreferFormatting->setCurrentIndex(0);
     }
 
-    const QString mailAllowToRemoteContent = d->loadCustom(contact, QLatin1String("MailAllowToRemoteContent"));
+    const QString mailAllowToRemoteContent = d->loadCustom(contact, QStringLiteral("MailAllowToRemoteContent"));
     d->mAllowRemoteContent->setChecked(mailAllowToRemoteContent == QLatin1String("TRUE"));
 
     // address group
@@ -599,12 +599,12 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     // general group
     d->mLogoWidget->loadContact(contact);
     d->mOrganizationWidget->setText(contact.organization());
-    d->mProfessionWidget->setText(d->loadCustom(contact, QLatin1String("X-Profession")));
+    d->mProfessionWidget->setText(d->loadCustom(contact, QStringLiteral("X-Profession")));
     d->mTitleWidget->setText(contact.title());
     d->mDepartmentWidget->setText(contact.department());
-    d->mOfficeWidget->setText(d->loadCustom(contact, QLatin1String("X-Office")));
-    d->mManagerWidget->setText(d->loadCustom(contact, QLatin1String("X-ManagersName")));
-    d->mAssistantWidget->setText(d->loadCustom(contact, QLatin1String("X-AssistantsName")));
+    d->mOfficeWidget->setText(d->loadCustom(contact, QStringLiteral("X-Office")));
+    d->mManagerWidget->setText(d->loadCustom(contact, QStringLiteral("X-ManagersName")));
+    d->mAssistantWidget->setText(d->loadCustom(contact, QStringLiteral("X-AssistantsName")));
 
     // groupware group
     d->mFreeBusyWidget->loadContact(contact);
@@ -614,11 +614,11 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
 
     // dates group
     d->mBirthdateWidget->setDate(contact.birthday().date());
-    d->mAnniversaryWidget->setDate(QDate::fromString(d->loadCustom(contact, QLatin1String("X-Anniversary")),
+    d->mAnniversaryWidget->setDate(QDate::fromString(d->loadCustom(contact, QStringLiteral("X-Anniversary")),
                                    Qt::ISODate));
 
     // family group
-    d->mPartnerWidget->setText(d->loadCustom(contact, QLatin1String("X-SpousesName")));
+    d->mPartnerWidget->setText(d->loadCustom(contact, QStringLiteral("X-SpousesName")));
 
     d->mDisplayNameWidget->setDisplayType((DisplayNameEditWidget::DisplayType)metaData.displayNameMode());
 
@@ -648,7 +648,7 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
     KContacts::ResourceLocatorUrl resourceLocatorUrl;
     resourceLocatorUrl.setUrl(QUrl(d->mHomepageWidget->text().trimmed()));
     contact.setUrl(resourceLocatorUrl);
-    d->storeCustom(contact, QLatin1String("BlogFeed"), d->mBlogWidget->text().trimmed());
+    d->storeCustom(contact, QStringLiteral("BlogFeed"), d->mBlogWidget->text().trimmed());
     d->mIMWidget->storeContact(contact);
 
     // phones group
@@ -662,17 +662,17 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
     if (index == 0) {
         //Nothing => remove custom variable
     } else if (index == 1) {
-        mailPreferedFormatting = QLatin1String("TEXT");
+        mailPreferedFormatting = QStringLiteral("TEXT");
     } else if (index == 2) {
-        mailPreferedFormatting = QLatin1String("HTML");
+        mailPreferedFormatting = QStringLiteral("HTML");
     }
-    d->storeCustom(contact, QLatin1String("MailPreferedFormatting"), mailPreferedFormatting);
+    d->storeCustom(contact, QStringLiteral("MailPreferedFormatting"), mailPreferedFormatting);
 
     QString mailAllowToRemoteContent;
     if (d->mAllowRemoteContent->isChecked()) {
-        mailAllowToRemoteContent = QLatin1String("TRUE");
+        mailAllowToRemoteContent = QStringLiteral("TRUE");
     }
-    d->storeCustom(contact, QLatin1String("MailAllowToRemoteContent"), mailAllowToRemoteContent);
+    d->storeCustom(contact, QStringLiteral("MailAllowToRemoteContent"), mailAllowToRemoteContent);
 
     // address group
     d->mAddressesWidget->storeContact(contact);
@@ -683,12 +683,12 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
     // general group
     d->mLogoWidget->storeContact(contact);
     contact.setOrganization(d->mOrganizationWidget->text());
-    d->storeCustom(contact, QLatin1String("X-Profession"), d->mProfessionWidget->text().trimmed());
+    d->storeCustom(contact, QStringLiteral("X-Profession"), d->mProfessionWidget->text().trimmed());
     contact.setTitle(d->mTitleWidget->text().trimmed());
     contact.setDepartment(d->mDepartmentWidget->text().trimmed());
-    d->storeCustom(contact, QLatin1String("X-Office"), d->mOfficeWidget->text().trimmed());
-    d->storeCustom(contact, QLatin1String("X-ManagersName"), d->mManagerWidget->text().trimmed());
-    d->storeCustom(contact, QLatin1String("X-AssistantsName"), d->mAssistantWidget->text().trimmed());
+    d->storeCustom(contact, QStringLiteral("X-Office"), d->mOfficeWidget->text().trimmed());
+    d->storeCustom(contact, QStringLiteral("X-ManagersName"), d->mManagerWidget->text().trimmed());
+    d->storeCustom(contact, QStringLiteral("X-AssistantsName"), d->mAssistantWidget->text().trimmed());
 
     // groupware group
     d->mFreeBusyWidget->storeContact(contact);
