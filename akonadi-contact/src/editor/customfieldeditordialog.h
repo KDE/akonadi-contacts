@@ -29,7 +29,7 @@
 class QComboBox;
 class QLineEdit;
 class QCheckBox;
-
+class QFormLayout;
 class CustomFieldEditorDialog : public QDialog
 {
     Q_OBJECT
@@ -50,6 +50,7 @@ private:
     QLineEdit *mKey;
     QPushButton *mAdvancedButton;
     CustomField mCustomField;
+    QFormLayout *mLayout;
 };
 
 #endif
