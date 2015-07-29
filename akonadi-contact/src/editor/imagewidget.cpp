@@ -23,11 +23,11 @@
 
 #include <kcontacts/addressee.h>
 
-#include <kio/netaccess.h>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <kpixmapregionselectordialog.h>
 #include <KUrlMimeData>
+#include <KIO/TransferJob>
 #include <QImageReader>
 #include <QFileDialog>
 #include <QtCore/QMimeData>
