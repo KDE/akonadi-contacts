@@ -21,12 +21,14 @@
 
 #include "freebusyeditwidget.h"
 
-#include <QHBoxLayout>
-
 #include <kcontacts/addressee.h>
-#include <kcalcore/freebusyurlstore.h>
 #include <kurlrequester.h>
+#include <KConfig>
+#include <KConfigGroup>
 #include <KLineEdit>
+
+#include <QHBoxLayout>
+#include <QStandardPaths>
 
 FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     : QWidget(parent)
@@ -46,13 +48,19 @@ FreeBusyEditWidget::~FreeBusyEditWidget()
 {
 }
 
+static QString freeBusyUrlStore()
+{
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QStringLiteral("korganizer/freebusyurls");
+}
+
 void FreeBusyEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     if (contact.preferredEmail().isEmpty()) {
         return;
     }
 
-    mURL->setUrl(QUrl(KCalCore::FreeBusyUrlStore::self()->readUrl(contact.preferredEmail())));
+    KConfig config(freeBusyUrlStore());
+    mURL->setUrl(QUrl(config.group(contact.preferredEmail()).readEntry("url")));
 }
 
 void FreeBusyEditWidget::storeContact(KContacts::Addressee &contact) const
@@ -61,8 +69,8 @@ void FreeBusyEditWidget::storeContact(KContacts::Addressee &contact) const
         return;
     }
 
-    KCalCore::FreeBusyUrlStore::self()->writeUrl(contact.preferredEmail(), mURL->url().url());
-    KCalCore::FreeBusyUrlStore::self()->sync();
+    KConfig config(freeBusyUrlStore());
+    config.group(contact.preferredEmail()).writeEntry("url", mURL->url().url());
 }
 
 void FreeBusyEditWidget::setReadOnly(bool readOnly)
