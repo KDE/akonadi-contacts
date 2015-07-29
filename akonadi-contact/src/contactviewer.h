@@ -83,7 +83,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    ContactViewer(QWidget *parent = Q_NULLPTR);
+    explicit ContactViewer(QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the contact viewer.

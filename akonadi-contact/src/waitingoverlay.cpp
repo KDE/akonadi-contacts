@@ -28,7 +28,6 @@
 #include <QBoxLayout>
 #include <QLabel>
 #include <QPalette>
-//#include <QProgressBar>
 
 //@cond PRIVATE
 

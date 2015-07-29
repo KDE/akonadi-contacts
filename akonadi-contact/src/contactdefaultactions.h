@@ -95,7 +95,7 @@ public:
      *
      * @param parent The parent object.
      */
-    ContactDefaultActions(QObject *parent = Q_NULLPTR);
+    explicit ContactDefaultActions(QObject *parent = Q_NULLPTR);
 
     /**
      * Destroys the contact default actions object.
