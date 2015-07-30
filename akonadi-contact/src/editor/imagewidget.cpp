@@ -313,6 +313,7 @@ void ImageWidget::deleteImage()
 {
     mHasImage = false;
     mPicture.setData(QImage());
+    mPicture.setUrl(QString());
     updateView();
 }
 
