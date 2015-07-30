@@ -39,6 +39,7 @@
 #include <QApplication>
 #include <QUrl>
 #include <QBuffer>
+#include <QInputDialog>
 /**
  * @short Small helper class to load image from network
  */
@@ -47,7 +48,7 @@ class ImageLoader
 public:
     ImageLoader(QWidget *parent = Q_NULLPTR);
 
-    QImage loadImage(const QUrl &url, bool *ok);
+    QImage loadImage(const QUrl &url, bool *ok, bool selectPictureSize = true);
 
 private:
     QWidget *mParent;
@@ -58,10 +59,9 @@ ImageLoader::ImageLoader(QWidget *parent)
 {
 }
 
-QImage ImageLoader::loadImage(const QUrl &url, bool *ok)
+QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
 {
     QImage image;
-    QString tempFile;
 
     if (url.isEmpty()) {
         return image;
@@ -93,12 +93,13 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok)
         return image;
     }
 
-    QPixmap pixmap = QPixmap::fromImage(image);
-
-    image = KPixmapRegionSelectorDialog::getSelectedImage(pixmap, 1, 1, mParent);
-    if (image.isNull()) {
-        (*ok) = false;
-        return image;
+    if (selectPictureSize) {
+        QPixmap pixmap = QPixmap::fromImage(image);
+        image = KPixmapRegionSelectorDialog::getSelectedImage(pixmap, 1, 1, mParent);
+        if (image.isNull()) {
+            (*ok) = false;
+            return image;
+        }
     }
 
     if (image.height() > 720 || image.width() > 720) {
@@ -147,6 +148,8 @@ void ImageWidget::loadContact(const KContacts::Addressee &contact)
     mPicture = (mType == Photo ? contact.photo() : contact.logo());
     if (mPicture.isIntern() && !mPicture.data().isNull()) {
         mHasImage = true;
+    } else if (!mPicture.isIntern() && !mPicture.url().isEmpty()){
+        mHasImage = true;
     }
 
     updateView();
@@ -169,7 +172,15 @@ void ImageWidget::setReadOnly(bool readOnly)
 void ImageWidget::updateView()
 {
     if (mHasImage) {
-        setIcon(QPixmap::fromImage(mPicture.data()));
+        if (mPicture.isIntern()) {
+            setIcon(QPixmap::fromImage(mPicture.data()));
+        } else {
+            bool ok = false;
+            const QPixmap pix = QPixmap::fromImage(imageLoader()->loadImage(QUrl(mPicture.url()), &ok, false));
+            if (ok) {
+                setIcon(pix);
+            }
+        }
     } else {
         if (mType == Photo) {
             setIcon(QIcon::fromTheme(QStringLiteral("user-identity")));
@@ -239,6 +250,7 @@ void ImageWidget::contextMenuEvent(QContextMenuEvent *event)
     if (mType == Photo) {
         if (!mReadOnly) {
             menu.addAction(i18n("Change photo..."), this, SLOT(changeImage()));
+            menu.addAction(i18n("Change url..."), this, SLOT(changeUrl()));
         }
 
         if (mHasImage) {
@@ -251,6 +263,7 @@ void ImageWidget::contextMenuEvent(QContextMenuEvent *event)
     } else {
         if (!mReadOnly) {
             menu.addAction(i18n("Change logo..."), this, SLOT(changeImage()));
+            menu.addAction(i18n("Change url..."), this, SLOT(changeUrl()));
         }
 
         if (mHasImage) {
@@ -263,6 +276,23 @@ void ImageWidget::contextMenuEvent(QContextMenuEvent *event)
     }
 
     menu.exec(event->globalPos());
+}
+
+void ImageWidget::changeUrl()
+{
+    if (mReadOnly) {
+        return;
+    }
+    const QString path = QInputDialog::getText(this, i18n("Add image url"), i18n("Url"), QLineEdit::Normal, mPicture.url());
+    if (!path.isEmpty()) {
+        bool ok;
+        const QImage image = imageLoader()->loadImage(QUrl(path), &ok, false);
+        if (ok && !image.isNull()) {
+            mPicture.setUrl(path);
+            mHasImage = true;
+            updateView();
+        }
+    }
 }
 
 void ImageWidget::changeImage()

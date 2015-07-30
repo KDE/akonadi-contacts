@@ -68,6 +68,7 @@ private Q_SLOTS:
     void updateView();
 
     void changeImage();
+    void changeUrl();
     void saveImage();
     void deleteImage();
 
