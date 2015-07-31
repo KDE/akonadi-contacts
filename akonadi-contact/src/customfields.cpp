@@ -96,9 +96,9 @@ QString CustomField::value() const
 QVariantMap CustomField::toVariantMap() const
 {
     QVariantMap map;
-    map.insert(QLatin1String("key"), mKey);
-    map.insert(QLatin1String("title"), mTitle);
-    map.insert(QLatin1String("type"), typeToString(mType));
+    map.insert(QStringLiteral("key"), mKey);
+    map.insert(QStringLiteral("title"), mTitle);
+    map.insert(QStringLiteral("type"), typeToString(mType));
 
     return map;
 }

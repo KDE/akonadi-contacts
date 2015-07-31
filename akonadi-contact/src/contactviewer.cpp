@@ -85,7 +85,7 @@ public:
 
         if (mCurrentContact.photo().isIntern()) {
             mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QLatin1String("contact_photo")),
+                                              QUrl(QStringLiteral("contact_photo")),
                                               mCurrentContact.photo().data());
         } else if (!mCurrentContact.photo().url().isEmpty()) {
             QByteArray imageData;
@@ -98,7 +98,7 @@ public:
             if (job->exec()) {
                 if (image.loadFromData(imageData)) {
                     mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                                      QUrl(QLatin1String("contact_photo")),
+                                                      QUrl(QStringLiteral("contact_photo")),
                                                       image);
                 } else {
                     mBrowser->document()->addResource(QTextDocument::ImageResource,
@@ -147,8 +147,8 @@ public:
                                           defaultSmsPixmap);
 
 #ifdef HAVE_PRISON
-        KConfig config(QLatin1String("akonadi_contactrc"));
-        KConfigGroup group(&config, QLatin1String("View"));
+        KConfig config(QStringLiteral("akonadi_contactrc"));
+        KConfigGroup group(&config, QStringLiteral("View"));
         if (group.readEntry("QRCodes", true)) {
             KContacts::VCardConverter converter;
             KContacts::Addressee addr(mCurrentContact);
@@ -176,15 +176,15 @@ public:
 
         foreach (const CustomField &field, globalCustomFields) {
             QVariantMap description;
-            description.insert(QLatin1String("key"), field.key());
-            description.insert(QLatin1String("title"), field.title());
+            description.insert(QStringLiteral("key"), field.key());
+            description.insert(QStringLiteral("title"), field.title());
 
             customFieldDescriptions << description;
         }
 
         KContacts::Addressee contact(mCurrentContact);
         if (!addressBookName.isEmpty()) {
-            contact.insertCustom(QLatin1String("KADDRESSBOOK"), QLatin1String("AddressBook"), addressBookName);
+            contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("AddressBook"), addressBookName);
         }
 
         mContactFormatter->setContact(contact);
@@ -210,21 +210,21 @@ public:
                 urlScheme == QLatin1String("https")) {
             emit mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
-            const int pos = url.queryItemValue(QLatin1String("index")).toInt();
+            const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
             if (pos < numbers.count()) {
                 emit mParent->phoneNumberClicked(numbers.at(pos));
             }
         } else if (urlScheme == QLatin1String("sms")) {
-            const int pos = url.queryItemValue(QLatin1String("index")).toInt();
+            const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
             if (pos < numbers.count()) {
                 emit mParent->smsClicked(numbers.at(pos));
             }
         } else if (urlScheme == QLatin1String("address")) {
-            const int pos = url.queryItemValue(QLatin1String("index")).toInt();
+            const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::Address::List addresses = mCurrentContact.addresses();
             if (pos < addresses.count()) {

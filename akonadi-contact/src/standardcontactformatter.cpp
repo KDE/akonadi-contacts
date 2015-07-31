@@ -124,7 +124,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     int counter = 0;
     foreach (const KContacts::PhoneNumber &number, rawContact.phoneNumbers()) {
 
-        QString dispLabel = number.typeLabel().replace(QLatin1String(" "), QLatin1String("&nbsp;"));
+        QString dispLabel = number.typeLabel().replace(QStringLiteral(" "), QStringLiteral("&nbsp;"));
         QString dispValue = QString::fromLatin1("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
             QString dispIcon = QString::fromLatin1("<a href=\"sms:?index=%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
@@ -230,9 +230,9 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     if (!rawContact.customs().empty()) {
         const QStringList customs = rawContact.customs();
         foreach (QString custom, customs) {   //krazy:exclude=foreach
-            if (custom.startsWith(QLatin1String("KADDRESSBOOK-"))) {
-                custom.remove(QLatin1String("KADDRESSBOOK-X-"));
-                custom.remove(QLatin1String("KADDRESSBOOK-"));
+            if (custom.startsWith(QStringLiteral("KADDRESSBOOK-"))) {
+                custom.remove(QStringLiteral("KADDRESSBOOK-X-"));
+                custom.remove(QStringLiteral("KADDRESSBOOK-"));
 
                 int pos = custom.indexOf(QLatin1Char(':'));
                 QString key = custom.left(pos);
@@ -328,7 +328,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 #ifdef HAVE_PRISON
     if (d->displayQRcode) {
         KConfig config(QLatin1String("akonadi_contactrc"));
-        KConfigGroup group(&config, QLatin1String("View"));
+        KConfigGroup group(&config, QStringLiteral("View"));
         if (group.readEntry("QRCodes", true)) {
             strAddr.append(QString::fromLatin1(
                                "<p align=\"center\">"
@@ -336,8 +336,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                                "<img src=\"%2\" vspace=\"1\">"
                                "</p>"
                            )
-                           .arg(QLatin1String("datamatrix"))
-                           .arg(QLatin1String("qrcode")));
+                           .arg(QStringLiteral("datamatrix"))
+                           .arg(QStringLiteral("qrcode")));
         }
     }
 #endif // HAVE_PRISON

@@ -105,8 +105,8 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
     foreach (const QVariantMap &map, additionalFields()) {
         strGroup.append(QString::fromLatin1("<tr><td colspan=\"2\">&nbsp;</td></tr><tr><td align=\"right\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>"
                                             "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>%2</font></td></tr>")
-                        .arg(map.value(QLatin1String("title")).toString())
-                        .arg(map.value(QLatin1String("value")).toString()));
+                        .arg(map.value(QStringLiteral("title")).toString())
+                        .arg(map.value(QStringLiteral("value")).toString()));
     }
 
     strGroup.append(QString::fromLatin1("</table>\n"));
