@@ -46,6 +46,7 @@
 #include <prison/QRCodeBarcode>
 #include <prison/DataMatrixBarcode>
 #include <kcontacts/vcardconverter.h>
+#include <KIOCore/kio/transferjob.h>
 #endif // HAVE_PRISON
 
 using namespace Akonadi;
@@ -87,9 +88,29 @@ public:
                                               QUrl(QLatin1String("contact_photo")),
                                               mCurrentContact.photo().data());
         } else if (!mCurrentContact.photo().url().isEmpty()) {
-            mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QStringLiteral("contact_photo")),
-                                              defaultPixmap);
+            QByteArray imageData;
+            QImage image;
+            KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.photo().url()), KIO::NoReload);
+            QObject::connect(job, &KIO::TransferJob::data,
+                             [&imageData](KIO::Job *, const QByteArray &data) {
+                                imageData.append(data);
+                             });
+            if (job->exec()) {
+                if (image.loadFromData(imageData)) {
+                    mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                                      QUrl(QLatin1String("contact_photo")),
+                                                      image);
+                } else {
+                    mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                                      QUrl(QStringLiteral("contact_photo")),
+                                                      defaultPixmap);
+                }
+            } else {
+                mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                                  QUrl(QStringLiteral("contact_photo")),
+                                                  defaultPixmap);
+
+            }
         } else {
             mBrowser->document()->addResource(QTextDocument::ImageResource,
                                               QUrl(QStringLiteral("contact_photo")),
@@ -101,7 +122,20 @@ public:
                                               QUrl(QStringLiteral("contact_logo")),
                                               mCurrentContact.logo().data());
         } else if (!mCurrentContact.logo().url().isEmpty()) {
-            //TODO
+            QByteArray imageData;
+            QImage image;
+            KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.logo().url()), KIO::NoReload);
+            QObject::connect(job, &KIO::TransferJob::data,
+                             [&imageData](KIO::Job *, const QByteArray &data) {
+                                imageData.append(data);
+                             });
+            if (job->exec()) {
+                if (image.loadFromData(imageData)) {
+                    mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                                      QUrl(QStringLiteral("contact_logo")),
+                                                      image);
+                }
+            }
         }
 
         mBrowser->document()->addResource(QTextDocument::ImageResource,
