@@ -28,7 +28,7 @@
 #include "textbrowser_p.h"
 
 #include "editor/im/improtocols.h"
-
+#include <KIOCore/kio/transferjob.h>
 #include <collection.h>
 #include <collectionfetchjob.h>
 #include <entitydisplayattribute.h>
@@ -46,7 +46,6 @@
 #include <prison/QRCodeBarcode>
 #include <prison/DataMatrixBarcode>
 #include <kcontacts/vcardconverter.h>
-#include <KIOCore/kio/transferjob.h>
 #endif // HAVE_PRISON
 
 using namespace Akonadi;
