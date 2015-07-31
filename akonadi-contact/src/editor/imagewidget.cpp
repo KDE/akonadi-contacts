@@ -283,7 +283,7 @@ void ImageWidget::changeUrl()
     if (mReadOnly) {
         return;
     }
-    const QString path = QInputDialog::getText(this, i18n("Add image url"), i18n("Url"), QLineEdit::Normal, mPicture.url());
+    const QString path = QInputDialog::getText(this, i18n("Change image url"), i18n("Image url:"), QLineEdit::Normal, mPicture.url());
     if (!path.isEmpty()) {
         bool ok;
         const QImage image = imageLoader()->loadImage(QUrl(path), &ok, false);
