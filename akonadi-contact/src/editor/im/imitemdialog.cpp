@@ -86,7 +86,7 @@ void IMItemDialog::setAddress(const IMAddress &address)
 IMAddress IMItemDialog::address() const
 {
     return IMAddress(mProtocolCombo->itemData(mProtocolCombo->currentIndex()).toString(),
-                     mNameEdit->text(), false);
+                     mNameEdit->text().trimmed(), false);
 }
 
 void IMItemDialog::slotUpdateButtons()
