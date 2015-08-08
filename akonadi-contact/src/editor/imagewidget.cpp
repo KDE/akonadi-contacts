@@ -250,7 +250,7 @@ void ImageWidget::contextMenuEvent(QContextMenuEvent *event)
     if (mType == Photo) {
         if (!mReadOnly) {
             menu.addAction(i18n("Change photo..."), this, SLOT(changeImage()));
-            menu.addAction(i18n("Change url..."), this, SLOT(changeUrl()));
+            menu.addAction(i18n("Change URL..."), this, SLOT(changeUrl()));
         }
 
         if (mHasImage) {
@@ -263,7 +263,7 @@ void ImageWidget::contextMenuEvent(QContextMenuEvent *event)
     } else {
         if (!mReadOnly) {
             menu.addAction(i18n("Change logo..."), this, SLOT(changeImage()));
-            menu.addAction(i18n("Change url..."), this, SLOT(changeUrl()));
+            menu.addAction(i18n("Change URL..."), this, SLOT(changeUrl()));
         }
 
         if (mHasImage) {
@@ -283,7 +283,7 @@ void ImageWidget::changeUrl()
     if (mReadOnly) {
         return;
     }
-    const QString path = QInputDialog::getText(this, i18n("Change image url"), i18n("Image url:"), QLineEdit::Normal, mPicture.url());
+    const QString path = QInputDialog::getText(this, i18n("Change image URL"), i18n("Image URL:"), QLineEdit::Normal, mPicture.url());
     if (!path.isEmpty()) {
         bool ok;
         const QImage image = imageLoader()->loadImage(QUrl(path), &ok, false);
