@@ -144,7 +144,7 @@ void DisplayNameEditWidget::setReadOnly(bool readOnly)
 
 void DisplayNameEditWidget::setDisplayType(DisplayType type)
 {
-    if (type == -1) {
+    if ((int)type == -1) {
         // guess the used display type
         mDisplayType = guessedDisplayType(mContact);
     } else {
