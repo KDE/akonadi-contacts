@@ -25,7 +25,7 @@
 
 using namespace Akonadi;
 
-class ContactMetaDataAttribute::Private
+class Q_DECL_HIDDEN ContactMetaDataAttribute::Private
 {
 public:
     QVariantMap mData;

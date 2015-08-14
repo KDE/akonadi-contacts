@@ -42,7 +42,7 @@
 
 using namespace Akonadi;
 
-class ContactGroupEditorDialog::Private
+class Q_DECL_HIDDEN ContactGroupEditorDialog::Private
 {
 public:
     Private(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)

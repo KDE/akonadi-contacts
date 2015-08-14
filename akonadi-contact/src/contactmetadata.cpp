@@ -27,7 +27,7 @@
 
 using namespace Akonadi;
 
-class ContactMetaData::Private
+class Q_DECL_HIDDEN ContactMetaData::Private
 {
 public:
     Private()

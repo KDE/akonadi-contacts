@@ -42,7 +42,7 @@
 
 using namespace Akonadi;
 
-class ContactGroupViewer::Private
+class Q_DECL_HIDDEN ContactGroupViewer::Private
 {
 public:
     Private(ContactGroupViewer *parent)

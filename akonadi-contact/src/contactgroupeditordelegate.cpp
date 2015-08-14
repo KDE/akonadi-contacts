@@ -111,7 +111,7 @@ void ContactLineEdit::slotTextEdited()
     mIsReference = false;
 }
 
-class ContactGroupEditorDelegate::Private
+class Q_DECL_HIDDEN ContactGroupEditorDelegate::Private
 {
 public:
     Private()

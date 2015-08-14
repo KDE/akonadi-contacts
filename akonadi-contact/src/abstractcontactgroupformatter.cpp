@@ -26,7 +26,7 @@
 
 using namespace Akonadi;
 
-class AbstractContactGroupFormatter::Private
+class Q_DECL_HIDDEN AbstractContactGroupFormatter::Private
 {
 public:
     KContacts::ContactGroup mContactGroup;

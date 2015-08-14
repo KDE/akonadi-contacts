@@ -26,7 +26,7 @@
 
 using namespace Akonadi;
 
-class AbstractContactFormatter::Private
+class Q_DECL_HIDDEN AbstractContactFormatter::Private
 {
 public:
     KContacts::Addressee mContact;

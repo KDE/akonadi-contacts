@@ -34,7 +34,7 @@
 
 using namespace Akonadi;
 
-class ContactsTreeModel::Private
+class Q_DECL_HIDDEN ContactsTreeModel::Private
 {
 public:
     Private()

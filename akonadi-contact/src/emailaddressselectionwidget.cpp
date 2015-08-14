@@ -78,7 +78,7 @@ private:
 /**
  * @internal
  */
-class EmailAddressSelectionWidget::Private
+class Q_DECL_HIDDEN EmailAddressSelectionWidget::Private
 {
 public:
     Private(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)

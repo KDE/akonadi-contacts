@@ -26,7 +26,7 @@
 
 using namespace Akonadi;
 
-class ContactSearchJob::Private
+class Q_DECL_HIDDEN ContactSearchJob::Private
 {
 public:
     int mLimit;

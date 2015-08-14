@@ -26,7 +26,7 @@
 
 using namespace Akonadi;
 
-class LeafExtensionProxyModel::Private
+class Q_DECL_HIDDEN LeafExtensionProxyModel::Private
 {
 public:
     Private(LeafExtensionProxyModel *qq)

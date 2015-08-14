@@ -46,7 +46,7 @@ struct GroupMember {
     bool loadingError;
 };
 
-class ContactGroupModel::Private
+class Q_DECL_HIDDEN ContactGroupModel::Private
 {
 public:
     Private(ContactGroupModel *parent)

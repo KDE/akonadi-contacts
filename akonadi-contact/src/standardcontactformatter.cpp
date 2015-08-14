@@ -35,7 +35,7 @@
 
 using namespace Akonadi;
 
-class StandardContactFormatter::Private
+class Q_DECL_HIDDEN StandardContactFormatter::Private
 {
 public:
     Private()

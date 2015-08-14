@@ -37,7 +37,7 @@ namespace Akonadi
 class ContactGroupModel;
 class Monitor;
 
-class ContactGroupEditor::Private
+class Q_DECL_HIDDEN ContactGroupEditor::Private
 {
 public:
     Private(ContactGroupEditor *parent);

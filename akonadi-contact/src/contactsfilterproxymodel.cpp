@@ -32,7 +32,7 @@ static bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, cons
 
 using namespace Akonadi;
 
-class ContactsFilterProxyModel::Private
+class Q_DECL_HIDDEN ContactsFilterProxyModel::Private
 {
 public:
     Private()

@@ -31,7 +31,7 @@
 
 using namespace Akonadi;
 
-class EmailAddressSelectionDialog::Private
+class Q_DECL_HIDDEN EmailAddressSelectionDialog::Private
 {
 public:
     Private(EmailAddressSelectionDialog *qq, QAbstractItemModel *model)

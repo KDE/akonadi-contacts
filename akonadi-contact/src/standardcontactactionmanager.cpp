@@ -39,7 +39,7 @@
 
 using namespace Akonadi;
 
-class StandardContactActionManager::Private
+class Q_DECL_HIDDEN StandardContactActionManager::Private
 {
 public:
     Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)

@@ -54,7 +54,7 @@
 #include <QVBoxLayout>
 #include <KCompletion/KLineEdit>
 
-class ContactEditorWidget::Private
+class Q_DECL_HIDDEN ContactEditorWidget::Private
 {
 public:
     Private(ContactEditorWidget::DisplayMode displayMode, ContactEditorWidget *parent)

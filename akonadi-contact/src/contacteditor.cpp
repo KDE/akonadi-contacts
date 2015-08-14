@@ -44,7 +44,7 @@
 
 using namespace Akonadi;
 
-class ContactEditor::Private
+class Q_DECL_HIDDEN ContactEditor::Private
 {
 public:
     Private(ContactEditor::Mode mode, ContactEditor::DisplayMode displayMode, AbstractContactEditorWidget *editorWidget, ContactEditor *parent)

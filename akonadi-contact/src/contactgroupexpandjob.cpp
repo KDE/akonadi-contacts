@@ -28,7 +28,7 @@
 
 using namespace Akonadi;
 
-class ContactGroupExpandJob::Private
+class Q_DECL_HIDDEN ContactGroupExpandJob::Private
 {
 public:
     Private(const KContacts::ContactGroup &group, ContactGroupExpandJob *parent)

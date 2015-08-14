@@ -32,7 +32,7 @@
 
 using namespace Akonadi;
 
-class ContactGroupViewerDialog::Private
+class Q_DECL_HIDDEN ContactGroupViewerDialog::Private
 {
 public:
     ContactGroupViewer *mViewer;

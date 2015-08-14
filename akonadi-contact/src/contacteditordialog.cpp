@@ -40,7 +40,7 @@
 
 using namespace Akonadi;
 
-class ContactEditorDialog::Private
+class Q_DECL_HIDDEN ContactEditorDialog::Private
 {
 public:
     Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, AbstractContactEditorWidget *editorWidget,

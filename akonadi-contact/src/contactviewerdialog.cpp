@@ -34,7 +34,7 @@ using namespace Akonadi;
 #include <KConfigGroup>
 #include <QPushButton>
 
-class ContactViewerDialog::Private
+class Q_DECL_HIDDEN ContactViewerDialog::Private
 {
 public:
     Private(ContactViewerDialog *parent)

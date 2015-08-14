@@ -50,7 +50,7 @@
 
 using namespace Akonadi;
 
-class ContactViewer::Private
+class Q_DECL_HIDDEN ContactViewer::Private
 {
 public:
     Private(ContactViewer *parent)

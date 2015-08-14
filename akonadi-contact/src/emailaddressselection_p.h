@@ -31,7 +31,7 @@
 namespace Akonadi
 {
 
-class EmailAddressSelection::Private : public QSharedData
+class Q_DECL_HIDDEN EmailAddressSelection::Private : public QSharedData
 {
 public:
     Private();
