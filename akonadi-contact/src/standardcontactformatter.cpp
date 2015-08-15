@@ -166,7 +166,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     // Blog Feed
-    const QString blog = rawContact.custom(QLatin1String("KADDRESSBOOK"), QLatin1String("BlogFeed"));
+    const QString blog = rawContact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
     if (!blog.isEmpty()) {
         dynamicPart += rowFmtStr1.arg(i18n("Blog Feed")).arg(KStringHandler::tagUrls(blog.toHtmlEscaped()));
     }
@@ -182,7 +182,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
             formattedAddress = address.label().toHtmlEscaped();
         }
 
-        formattedAddress = formattedAddress.replace(QRegExp(QLatin1String("\n+")), QLatin1String("<br>"));
+        formattedAddress = formattedAddress.replace(QRegExp(QStringLiteral("\n+")), QStringLiteral("<br>"));
 
         const QString url = QString::fromLatin1("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                             .arg(counter)
@@ -256,9 +256,9 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                 } else {
                     // check whether it is a custom local field
                     foreach (const QVariantMap &description, customFieldDescriptions()) {
-                        if (description.value(QLatin1String("key")).toString() == key) {
-                            key = description.value(QLatin1String("title")).toString();
-                            const QString descriptionType = description.value(QLatin1String("type")).toString();
+                        if (description.value(QStringLiteral("key")).toString() == key) {
+                            key = description.value(QStringLiteral("title")).toString();
+                            const QString descriptionType = description.value(QStringLiteral("type")).toString();
                             if (descriptionType == QLatin1String("boolean")) {
                                 if (value == QLatin1String("true")) {
                                     value = i18nc("Boolean value", "yes");
@@ -315,7 +315,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                           "<tr>"
                           "<td colspan=\"2\" align=\"left\" width=\"70%\">%4</td>"  // organization
                           "</tr>")
-                      .arg(QLatin1String("contact_photo"))
+                      .arg(QStringLiteral("contact_photo"))
                       .arg(rawContact.realName().toHtmlEscaped())
                       .arg(role.toHtmlEscaped())
                       .arg(rawContact.organization().toHtmlEscaped());

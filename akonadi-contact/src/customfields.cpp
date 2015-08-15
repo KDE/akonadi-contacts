@@ -37,9 +37,9 @@ CustomField::CustomField(const QString &key, const QString &title, Type type, Sc
 
 CustomField CustomField::fromVariantMap(const QVariantMap &map, Scope scope)
 {
-    return CustomField(map.value(QLatin1String("key")).toString(),
-                       map.value(QLatin1String("title")).toString(),
-                       stringToType(map.value(QLatin1String("type")).toString()),
+    return CustomField(map.value(QStringLiteral("key")).toString(),
+                       map.value(QStringLiteral("title")).toString(),
+                       stringToType(map.value(QStringLiteral("type")).toString()),
                        scope);
 }
 

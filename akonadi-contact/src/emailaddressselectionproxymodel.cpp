@@ -31,7 +31,7 @@ using namespace Akonadi;
 
 static QString createToolTip(const KContacts::ContactGroup &group)
 {
-    QString txt = QLatin1String("<qt>");
+    QString txt = QStringLiteral("<qt>");
 
     txt += QStringLiteral("<b>%1</b>").arg(i18n("Distribution List %1", group.name()));
     txt += QLatin1String("<ul>");
