@@ -87,7 +87,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // single data item:
     //  %1 is the item name
     //  %2 is the item value
-    QString rowFmtStr1 = QString::fromLatin1(
+    QString rowFmtStr1 = QStringLiteral(
                              "<tr valign=\"top\">"
                              "<td align=\"right\" valign=\"top\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>\n"
                              "<td colspan=\"2\" align=\"left\" valign=\"top\" width=\"70%\"><font>%2</font></td>\n"
@@ -98,7 +98,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     //  %1 is the item name
     //  %2 is the item value
     //  %3 is the icon(s), each as a HTML <a><img> tag
-    QString rowFmtStr2 = QString::fromLatin1(
+    QString rowFmtStr2 = QStringLiteral(
                              "<tr valign=\"top\">"
                              "<td align=\"right\" valign=\"top\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>\n"
                              "<td align=\"left\" valign=\"top\"><font>%2</font></td>\n"
@@ -125,9 +125,9 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     foreach (const KContacts::PhoneNumber &number, rawContact.phoneNumbers()) {
 
         QString dispLabel = number.typeLabel().replace(QStringLiteral(" "), QStringLiteral("&nbsp;"));
-        QString dispValue = QString::fromLatin1("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
+        QString dispValue = QStringLiteral("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
-            QString dispIcon = QString::fromLatin1("<a href=\"sms:?index=%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
+            QString dispIcon = QStringLiteral("<a href=\"sms:?index=%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
                                .arg(counter)
                                .arg(i18nc("@info:tooltip", "Send SMS"));
             dynamicPart += rowFmtStr2
@@ -150,7 +150,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         const QString fullEmail = QString::fromLatin1(QUrl::toPercentEncoding(rawContact.fullEmail(email)));
 
         dynamicPart += rowFmtStr1.arg(type)
-                       .arg(QString::fromLatin1("<a href=\"mailto:%1\">%2</a>")
+                       .arg(QStringLiteral("<a href=\"mailto:%1\">%2</a>")
                             .arg(fullEmail, email));
     }
 
@@ -184,7 +184,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
         formattedAddress = formattedAddress.replace(QRegExp(QStringLiteral("\n+")), QStringLiteral("<br>"));
 
-        const QString url = QString::fromLatin1("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
+        const QString url = QStringLiteral("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                             .arg(counter)
                             .arg(i18nc("@info:tooltip", "Show address on map"));
         counter++;
@@ -300,7 +300,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         role = rawContact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
     }
 
-    QString strAddr = QString::fromLatin1(
+    QString strAddr = QStringLiteral(
                           "<div align=\"center\">"
                           "<table cellpadding=\"3\" cellspacing=\"1\">"
                           "<tr>"
@@ -323,7 +323,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     strAddr.append(dynamicPart);
     strAddr.append(notes);
     strAddr.append(customData);
-    strAddr.append(QString::fromLatin1("</table>"));
+    strAddr.append(QLatin1String("</table>"));
 
 #ifdef HAVE_PRISON
     if (d->displayQRcode) {
@@ -342,13 +342,13 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 #endif // HAVE_PRISON
 
-    strAddr.append(QString::fromLatin1("</div>\n"));
+    strAddr.append(QLatin1String("</div>\n"));
 
     if (form == EmbeddableForm) {
         return strAddr;
     }
 
-    const QString document = QString::fromLatin1(
+    const QString document = QStringLiteral(
                                  "<html>"
                                  "<head>"
                                  " <style type=\"text/css\">"

@@ -67,7 +67,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
     }
 
     // Assemble all parts
-    QString strGroup = QString::fromLatin1(
+    QString strGroup = QStringLiteral(
                            "<table cellpadding=\"3\" cellspacing=\"0\" width=\"100%\">"
                            "<tr>"
                            "<td align=\"right\" valign=\"top\" width=\"30%\">"
@@ -85,7 +85,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         const KContacts::ContactGroup::Data data = group.data(i);
 
         if (data.email().isEmpty()) {
-            strGroup.append(QString::fromLatin1("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
+            strGroup.append(QStringLiteral("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
                                                 "<td width=\"50%\"></td></tr>")
                             .arg(data.name()));
         } else {
@@ -93,9 +93,9 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
             contact.setFormattedName(data.name());
             contact.insertEmail(data.email());
 
-            const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail())) + QString::fromLatin1("\">%1</a>").arg(contact.preferredEmail());
+            const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail())) + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 
-            strGroup.append(QString::fromLatin1("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
+            strGroup.append(QStringLiteral("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
                                                 "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>&lt;%2&gt;</font></td></tr>")
                             .arg(contact.realName())
                             .arg(fullEmail));
@@ -103,21 +103,21 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
     }
 
     foreach (const QVariantMap &map, additionalFields()) {
-        strGroup.append(QString::fromLatin1("<tr><td colspan=\"2\">&nbsp;</td></tr><tr><td align=\"right\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>"
+        strGroup.append(QStringLiteral("<tr><td colspan=\"2\">&nbsp;</td></tr><tr><td align=\"right\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>"
                                             "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>%2</font></td></tr>")
                         .arg(map.value(QStringLiteral("title")).toString())
                         .arg(map.value(QStringLiteral("value")).toString()));
     }
 
-    strGroup.append(QString::fromLatin1("</table>\n"));
+    strGroup.append(QLatin1String("</table>\n"));
 
-    QString document = QString::fromLatin1("<div align=\"center\">%1</div>").arg(strGroup);
+    QString document = QStringLiteral("<div align=\"center\">%1</div>").arg(strGroup);
 
     if (form == EmbeddableForm) {
         return document;
     }
 
-    document = QString::fromLatin1(
+    document = QStringLiteral(
                    "<html>"
                    "<head>"
                    " <style type=\"text/css\">"
