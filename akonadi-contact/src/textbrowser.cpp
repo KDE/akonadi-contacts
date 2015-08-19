@@ -24,8 +24,7 @@
 #include <QUrl>
 #include <QAction>
 #include <KStandardAction>
-
-#include <kmime/kmime_util.h>
+#include <KCodecs>
 
 #include <QApplication>
 #include <QContextMenuEvent>
@@ -75,7 +74,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
     QString link = anchorAt(event->pos());
     if (!link.isEmpty()) {
         if (link.startsWith(QStringLiteral("mailto:"))) {
-            mDataToCopy = KMime::decodeRFC2047String(QUrl(link).path().toUtf8());
+            mDataToCopy = KCodecs::decodeRFC2047String(QUrl(link).path());
             // Action text matches that used in KMail
             act->setText(i18nc("@action:inmenu Copy a displayed email address", "Copy Email Address"));
         } else {
