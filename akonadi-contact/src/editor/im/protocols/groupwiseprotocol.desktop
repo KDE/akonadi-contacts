@@ -5,6 +5,7 @@ X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/groupwise
 
 Comment=Novell GroupWise Messenger
+Comment[ar]=مرسالة نوفل GroupWise
 Comment[ast]=Novell GroupWise Messenger
 Comment[bs]=Novell GroupWise mesendžer
 Comment[ca]=Novell GroupWise Messenger

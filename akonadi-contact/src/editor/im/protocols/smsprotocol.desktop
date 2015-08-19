@@ -4,6 +4,7 @@ Icon=sms_protocol
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/sms
 Comment=SMS Protocol
+Comment[ar]=ميفاق SMS
 Comment[ast]=Protocolu SMS
 Comment[bs]=SMS Protokol
 Comment[ca]=Protocol SMS
