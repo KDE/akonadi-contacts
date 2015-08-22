@@ -104,7 +104,7 @@ void ContactEditor::Private::itemFetchDone(KJob *job)
         return;
     }
 
-    mItem = fetchJob->items().first();
+    mItem = fetchJob->items().at(0);
 
     mReadOnly = false;
     if (mMode == ContactEditor::EditMode) {
@@ -134,7 +134,7 @@ void ContactEditor::Private::parentCollectionFetchDone(KJob *job)
         return;
     }
 
-    const Akonadi::Collection parentCollection = fetchJob->collections().first();
+    const Akonadi::Collection parentCollection = fetchJob->collections().at(0);
     if (parentCollection.isValid()) {
         mReadOnly = !(parentCollection.rights() & Collection::CanChangeItem);
     }

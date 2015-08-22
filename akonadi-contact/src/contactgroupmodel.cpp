@@ -87,7 +87,7 @@ public:
             return;
         }
 
-        const Item item = fetchJob->items().first();
+        const Item item = fetchJob->items().at(0);
         const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
 
         GroupMember &member = mMembers[row];

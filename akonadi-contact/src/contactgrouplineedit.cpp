@@ -138,7 +138,7 @@ void ContactGroupLineEdit::fetchDone(KJob *job)
     Akonadi::ItemFetchJob *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
 
     if (!fetchJob->items().isEmpty()) {
-        const Akonadi::Item item = fetchJob->items().first();
+        const Akonadi::Item item = fetchJob->items().at(0);
         updateView(item, fetchJob->property("preferredEmail").toString());
     }
 

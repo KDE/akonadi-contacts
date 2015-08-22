@@ -131,7 +131,7 @@ public:
         if (!job->error()) {
             CollectionFetchJob *fetchJob = qobject_cast<CollectionFetchJob *>(job);
             if (!fetchJob->collections().isEmpty()) {
-                const Collection collection = fetchJob->collections().first();
+                const Collection collection = fetchJob->collections().at(0);
                 mCurrentAddressBookName = collection.displayName();
             }
         }

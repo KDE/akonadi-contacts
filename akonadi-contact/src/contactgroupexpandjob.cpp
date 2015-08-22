@@ -96,7 +96,7 @@ public:
             return;
         }
 
-        mGroup = searchJob->contactGroups().first();
+        mGroup = searchJob->contactGroups().at(0);
         resolveGroup();
     }
 
