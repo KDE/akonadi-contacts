@@ -41,7 +41,11 @@ typedef RecentContactsCollectionsSettings Settings;
 
 Q_GLOBAL_STATIC(RecentContactsCollectionsPrivate, sInstance)
 
-static const QByteArray sRecentContactsType = "recent-contacts";
+static const QByteArray sRecentContactsType()
+{
+    static const QByteArray type = "recent-contacts";
+    return type;
+}
 
 RecentContactsCollectionsPrivate::RecentContactsCollectionsPrivate()
     : mInstance(new RecentContactsCollections(this))
@@ -73,27 +77,27 @@ RecentContactsCollections *RecentContactsCollections::self()
 
 bool RecentContactsCollections::hasCollection(const AgentInstance &instance) const
 {
-    return SpecialCollections::hasCollection(sRecentContactsType, instance);
+    return SpecialCollections::hasCollection(sRecentContactsType(), instance);
 }
 
 Collection RecentContactsCollections::collection(const AgentInstance &instance) const
 {
-    return SpecialCollections::collection(sRecentContactsType, instance);
+    return SpecialCollections::collection(sRecentContactsType(), instance);
 }
 
 bool RecentContactsCollections::registerCollection(const Collection &collection)
 {
-    return SpecialCollections::registerCollection(sRecentContactsType, collection);
+    return SpecialCollections::registerCollection(sRecentContactsType(), collection);
 }
 
 bool RecentContactsCollections::hasDefaultCollection() const
 {
-    return SpecialCollections::hasDefaultCollection(sRecentContactsType);
+    return SpecialCollections::hasDefaultCollection(sRecentContactsType());
 }
 
 Collection RecentContactsCollections::defaultCollection() const
 {
-    return SpecialCollections::defaultCollection(sRecentContactsType);
+    return SpecialCollections::defaultCollection(sRecentContactsType());
 }
 
 #include "moc_recentcontactscollections_p.cpp"

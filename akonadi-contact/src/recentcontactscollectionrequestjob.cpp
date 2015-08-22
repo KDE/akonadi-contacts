@@ -28,7 +28,11 @@
 
 using namespace Akonadi;
 
-static const QByteArray sRecentContactsType = "recent-contacts";
+static const QByteArray sRecentContactsType()
+{
+    static const QByteArray type = "recent-contacts";
+    return type;
+}
 
 RecentContactsCollectionRequestJob::RecentContactsCollectionRequestJob(QObject *parent)
     : SpecialCollectionsRequestJob(RecentContactsCollections::self(), parent)
@@ -58,10 +62,10 @@ RecentContactsCollectionRequestJob::~RecentContactsCollectionRequestJob()
 
 void RecentContactsCollectionRequestJob::requestDefaultCollection()
 {
-    SpecialCollectionsRequestJob::requestDefaultCollection(sRecentContactsType);
+    SpecialCollectionsRequestJob::requestDefaultCollection(sRecentContactsType());
 }
 
 void RecentContactsCollectionRequestJob::requestCollection(const AgentInstance &instance)
 {
-    SpecialCollectionsRequestJob::requestCollection(sRecentContactsType, instance);
+    SpecialCollectionsRequestJob::requestCollection(sRecentContactsType(), instance);
 }
