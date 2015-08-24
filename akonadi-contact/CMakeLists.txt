@@ -16,6 +16,8 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
 include(ECMInstallIcons)
+include(ECMQtDeclareLoggingCategory)
+
 set(KF5_VERSION "5.12.0")
 set(KDEPIMLIBS_VERSION "5.0.41")
 set(KCONTACTS_VERSION "4.91.0")

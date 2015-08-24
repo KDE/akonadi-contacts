@@ -62,7 +62,6 @@ set(akonadicontact_editor_SRCS
 )
 
 set(akonadicontact_LIB_SRC
-  akonadi_contact_debug.cpp
   abstractcontactformatter.cpp
   abstractcontactgroupformatter.cpp
   attributeregistrar.cpp
@@ -104,6 +103,8 @@ set(akonadicontact_LIB_SRC
   waitingoverlay.cpp
   ${akonadicontact_actions_SRCS}
 )
+
+ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME log_akonadi_contact)
 
 if(NOT KDE_PLATFORM_PROFILE STREQUAL "Mobile")
 set(akonadicontact_LIB_SRC
