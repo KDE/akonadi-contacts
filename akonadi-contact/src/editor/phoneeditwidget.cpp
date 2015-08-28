@@ -47,6 +47,7 @@ PhoneTypeCombo::PhoneTypeCombo(QWidget *parent)
     , mLastSelected(0)
 {
     const int nbMax = KContacts::PhoneNumber::typeList().count();
+    mTypeList.reserve(nbMax + 1);
     for (int i = 0; i < nbMax; ++i) {
         mTypeList.append(KContacts::PhoneNumber::typeList().at(i));
     }

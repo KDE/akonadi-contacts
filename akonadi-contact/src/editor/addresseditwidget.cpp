@@ -154,7 +154,9 @@ AddressTypeCombo::AddressTypeCombo(QWidget *parent)
     , mType(KContacts::Address::Home)
     , mLastSelected(0)
 {
-    for (int i = 0; i < KContacts::Address::typeList().count(); ++i) {
+    const int count = KContacts::Address::typeList().count();
+    mTypeList.reserve(count + 1);
+    for (int i = 0; i < count; ++i) {
         mTypeList.append(KContacts::Address::typeList().at(i));
     }
     mTypeList.append(-1);   // Others...
