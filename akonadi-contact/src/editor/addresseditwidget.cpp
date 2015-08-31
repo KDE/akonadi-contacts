@@ -570,7 +570,11 @@ void AddressEditDialog::fillCountryCombo()
     const QList<QLocale> localeList = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     countries.reserve(localeList.count());
     foreach (const QLocale &locale, localeList) {
-        countries.append(QLocale::countryToString(locale.country()));
+        const QString localeStr = QLocale::countryToString(locale.country());
+        if (countries.contains(localeStr)) {
+            continue;
+        }
+        countries.append(localeStr);
     }
 
     qSort(countries.begin(), countries.end(), LocaleAwareLessThan());
