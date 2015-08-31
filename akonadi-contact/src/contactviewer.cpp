@@ -60,8 +60,9 @@ public:
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
 #ifdef HAVE_PRISON
-        mQRCode = new prison::QRCodeBarcode();
-        mDataMatrix = new prison::DataMatrixBarcode();
+        //LAurent workaround for bug 352044 not commit in master. We are a new version of libprison
+        //mQRCode = new prison::QRCodeBarcode();
+        //mDataMatrix = new prison::DataMatrixBarcode();
 #endif // HAVE_PRISON
     }
 
@@ -69,8 +70,8 @@ public:
     {
         delete mStandardContactFormatter;
 #ifdef HAVE_PRISON
-        delete mQRCode;
-        delete mDataMatrix;
+        //delete mQRCode;
+        //delete mDataMatrix;
 #endif // HAVE_PRISON
     }
 
@@ -116,6 +117,9 @@ public:
         KConfig config(QLatin1String("akonadi_contactrc"));
         KConfigGroup group(&config, QLatin1String("View"));
         if (group.readEntry("QRCodes", true)) {
+            //Laurent workaround for 352044
+            prison::QRCodeBarcode *mQRCode = new prison::QRCodeBarcode();
+            prison::DataMatrixBarcode *mDataMatrix = new prison::DataMatrixBarcode();
             KContacts::VCardConverter converter;
             KContacts::Addressee addr(mCurrentContact);
             addr.setPhoto(KContacts::Picture());
@@ -235,8 +239,8 @@ public:
     AbstractContactFormatter *mStandardContactFormatter;
     CollectionFetchJob *mParentCollectionFetchJob;
 #ifdef HAVE_PRISON
-    prison::AbstractBarcode *mQRCode;
-    prison::AbstractBarcode *mDataMatrix;
+    //prison::AbstractBarcode *mQRCode;
+    //prison::AbstractBarcode *mDataMatrix;
 #endif // HAVE_PRISON
 };
 
