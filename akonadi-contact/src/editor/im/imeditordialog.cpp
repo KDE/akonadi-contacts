@@ -74,8 +74,8 @@ IMEditorDialog::IMEditorDialog(QWidget *parent)
     mView->setModel(mModel);
     mView->setItemDelegate(new IMDelegate(this));
 
-    connect(mView->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)),
-            this, SLOT(slotUpdateButtons()));
+    connect(mView->selectionModel(), &QItemSelectionModel::currentChanged,
+            this, &IMEditorDialog::slotUpdateButtons);
     connect(mView, &QTreeView::doubleClicked, this, &IMEditorDialog::slotEdit);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);

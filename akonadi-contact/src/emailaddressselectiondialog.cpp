@@ -44,7 +44,7 @@ public:
             mView = new EmailAddressSelectionWidget(q);
         }
         mainLayout->addWidget(mView);
-        q->connect(mView, SIGNAL(doubleClicked()), q, SLOT(accept()));
+        q->connect(mView, &EmailAddressSelectionWidget::doubleClicked, q, &QDialog::accept);
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         okButton->setDefault(true);

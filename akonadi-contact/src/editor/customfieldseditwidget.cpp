@@ -80,8 +80,8 @@ CustomFieldsEditWidget::CustomFieldsEditWidget(QWidget *parent)
     mView->setModel(proxyModel);
     mView->setColumnHidden(2, true);   // hide the 'key' column
 
-    connect(mView->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)),
-            this, SLOT(slotUpdateButtons()));
+    connect(mView->selectionModel(), &QItemSelectionModel::currentChanged,
+            this, &CustomFieldsEditWidget::slotUpdateButtons);
     connect(mAddButton, &QPushButton::clicked, this, &CustomFieldsEditWidget::slotAdd);
     connect(mEditButton, &QPushButton::clicked, this, &CustomFieldsEditWidget::slotEdit);
     connect(mRemoveButton, &QPushButton::clicked, this, &CustomFieldsEditWidget::slotRemove);

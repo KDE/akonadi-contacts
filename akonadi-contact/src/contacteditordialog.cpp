@@ -82,11 +82,11 @@ public:
         layout->addWidget(mEditor, 1, 0, 1, 2);
         layout->setColumnStretch(1, 1);
 
-        connect(mEditor, SIGNAL(contactStored(Akonadi::Item)),
-                q, SIGNAL(contactStored(Akonadi::Item)));
+        connect(mEditor, &ContactEditor::contactStored,
+                q, &ContactEditorDialog::contactStored);
 
-        connect(mEditor, SIGNAL(error(QString)),
-                q, SIGNAL(error(QString)));
+        connect(mEditor, &ContactEditor::error,
+                q, &ContactEditorDialog::error);
 
         connect(mEditor, SIGNAL(finished()), q, SLOT(slotFinish()));
 

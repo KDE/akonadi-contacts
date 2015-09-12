@@ -79,7 +79,7 @@ ContactLineEdit::ContactLineEdit(bool isReference, QWidget *parent)
 
     setCompleter(completer);
 
-    connect(this, SIGNAL(textEdited(QString)), SLOT(slotTextEdited()));
+    connect(this, &QLineEdit::textEdited, this, &ContactLineEdit::slotTextEdited);
 }
 
 bool ContactLineEdit::isReference() const
@@ -289,7 +289,7 @@ bool ContactGroupEditorDelegate::editorEvent(QEvent *event, QAbstractItemModel *
 
             if (buttonRect.contains(mouseEvent->pos())) {
                 model->removeRows(index.row(), 1);
-                QTimer::singleShot(0, this, SLOT(setFirstColumnAsCurrent()));
+                QTimer::singleShot(0, this, &ContactGroupEditorDelegate::setFirstColumnAsCurrent);
                 return true;
             }
         }

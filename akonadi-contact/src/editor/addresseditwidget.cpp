@@ -243,8 +243,8 @@ AddressEditWidget::AddressEditWidget(QWidget *parent)
     hboxLayout->addWidget(label);
 
     mAddressSelectionWidget = new AddressSelectionWidget(this);
-    connect(mAddressSelectionWidget, SIGNAL(selectionChanged(KContacts::Address)),
-            SLOT(updateAddressView()));
+    connect(mAddressSelectionWidget, &AddressSelectionWidget::selectionChanged,
+            this, &AddressEditWidget::updateAddressView);
     label->setBuddy(mAddressSelectionWidget);
     hboxLayout->addWidget(mAddressSelectionWidget, 1);
     layout->addLayout(hboxLayout, 0, 0, 1, 3);

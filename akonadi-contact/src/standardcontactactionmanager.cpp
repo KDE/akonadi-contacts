@@ -50,8 +50,8 @@ public:
         , mParent(parent)
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
-        mParent->connect(mGenericManager, SIGNAL(actionStateUpdated()),
-                         mParent, SIGNAL(actionStateUpdated()));
+        mParent->connect(mGenericManager, &StandardActionManager::actionStateUpdated,
+                         mParent, &StandardContactActionManager::actionStateUpdated);
 
         mGenericManager->setMimeTypeFilter(
             QStringList() << KContacts::Addressee::mimeType() << KContacts::ContactGroup::mimeType());

@@ -160,8 +160,8 @@ void EmailAddressSelectionWidget::Private::init()
     mView->setModel(mSelectionModel);
     mView->header()->hide();
 
-    q->connect(mSearchLine, SIGNAL(textChanged(QString)),
-               filter, SLOT(setFilterString(QString)));
+    q->connect(mSearchLine, &QLineEdit::textChanged,
+               filter, &ContactsFilterProxyModel::setFilterString);
 
     q->connect(mView, SIGNAL(doubleClicked(Akonadi::Item)),
                q, SIGNAL(doubleClicked()));
@@ -169,7 +169,7 @@ void EmailAddressSelectionWidget::Private::init()
 
     mSearchLine->setFocus();
 
-    QTimer::singleShot(1000, mView, SLOT(expandAll()));
+    QTimer::singleShot(1000, mView, &QTreeView::expandAll);
 }
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(QWidget *parent)
