@@ -29,6 +29,7 @@ Comment[sv]=Twitter-protokoll
 Comment[tr]=Twitter Protokolü
 Comment[uk]=Протокол Twitter
 Comment[x-test]=xxTwitter Protocolxx
+Comment[zh_CN]=Twitter 协议
 Name=Twitter
 Name[ca]=Twitter
 Name[de]=Twitter
@@ -55,4 +56,5 @@ Name[sv]=Twitter
 Name[tr]=Twitter
 Name[uk]=Twitter
 Name[x-test]=xxTwitterxx
+Name[zh_CN]=Twitter
 
