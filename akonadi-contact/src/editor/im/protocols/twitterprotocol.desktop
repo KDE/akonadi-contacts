@@ -28,6 +28,7 @@ Comment[sr@latin]=Protokol Twittera
 Comment[sv]=Twitter-protokoll
 Comment[uk]=Протокол Twitter
 Comment[x-test]=xxTwitter Protocolxx
+Comment[zh_CN]=Twitter 协议
 Name=Twitter
 Name[ca]=Twitter
 Name[de]=Twitter
@@ -53,4 +54,5 @@ Name[sr@latin]=Twitter
 Name[sv]=Twitter
 Name[uk]=Twitter
 Name[x-test]=xxTwitterxx
+Name[zh_CN]=Twitter
 
