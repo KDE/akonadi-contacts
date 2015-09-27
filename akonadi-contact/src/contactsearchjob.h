@@ -24,7 +24,6 @@
 
 #include "akonadi-contact_export.h"
 
-#include <item.h>
 #include <itemsearchjob.h>
 #include <kcontacts/addressee.h>
 
