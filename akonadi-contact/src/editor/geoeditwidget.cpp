@@ -174,22 +174,22 @@ static double calculateCoordinate(const QString &coordinate)
 
     switch (str.length()) {
     case 4:
-        d = str.left(2).toInt();
-        m = str.mid(2).toInt();
+        d = str.leftRef(2).toInt();
+        m = str.midRef(2).toInt();
         break;
     case 5:
-        d = str.left(3).toInt();
-        m = str.mid(3).toInt();
+        d = str.leftRef(3).toInt();
+        m = str.midRef(3).toInt();
         break;
     case 6:
-        d = str.left(2).toInt();
-        m = str.mid(2, 2).toInt();
-        s = str.right(2).toInt();
+        d = str.leftRef(2).toInt();
+        m = str.midRef(2, 2).toInt();
+        s = str.rightRef(2).toInt();
         break;
     case 7:
-        d = str.left(3).toInt();
-        m = str.mid(3, 2).toInt();
-        s = str.right(2).toInt();
+        d = str.leftRef(3).toInt();
+        m = str.midRef(3, 2).toInt();
+        s = str.rightRef(2).toInt();
         break;
     default:
         break;
