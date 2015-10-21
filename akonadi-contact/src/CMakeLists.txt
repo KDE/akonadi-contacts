@@ -102,6 +102,7 @@ set(akonadicontact_LIB_SRC
   standardcontactformatter.cpp
   standardcontactgroupformatter.cpp
   waitingoverlay.cpp
+  selectaddressbookdialog.cpp
   ${akonadicontact_actions_SRCS}
 )
 
@@ -212,6 +213,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
   StandardContactActionManager
   StandardContactFormatter
   StandardContactGroupFormatter
+  SelectAddressBookDialog
 
   REQUIRED_HEADERS AkonadiContact_HEADERS
   PREFIX Akonadi/Contact
