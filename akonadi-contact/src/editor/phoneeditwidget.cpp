@@ -82,7 +82,8 @@ void PhoneTypeCombo::update()
 {
     clear();
 
-    for (int i = 0; i < mTypeList.count(); ++i) {
+    const int typeListCount(mTypeList.count());
+    for (int i = 0; i < typeListCount; ++i) {
         if (mTypeList.at(i) == -1) {     // "Other..." entry
             addItem(i18nc("@item:inlistbox Category of contact info field", "Other..."));
         } else {
@@ -128,6 +129,7 @@ PhoneNumberWidget::PhoneNumberWidget(QWidget *parent)
     mTypeCombo = new PhoneTypeCombo(this);
     mNumberEdit = new KLineEdit(this);
     mNumberEdit->setTrapReturnKey(true);
+    mNumberEdit->setClearButtonEnabled(true);
     QFontMetrics fm(font());
     mNumberEdit->setMinimumWidth(fm.width(QStringLiteral("MMMMMMMMMM")));
 
