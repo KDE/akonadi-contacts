@@ -58,6 +58,7 @@ public:
     QString icon(const QString &protocol) const;
 
 private:
+    Q_DISABLE_COPY(IMProtocols)
     IMProtocols();
 
     static IMProtocols *mSelf;
