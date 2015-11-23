@@ -114,6 +114,10 @@ public:
      * @since 4.6
      */
     void setContactFormatter(AbstractContactFormatter *formatter);
+    /**
+     * @since 5.1
+     */
+    void updateView();
 
 public Q_SLOTS:
     /**
