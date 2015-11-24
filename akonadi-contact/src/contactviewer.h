@@ -119,6 +119,11 @@ public:
      */
     void updateView();
 
+    /**
+     * @since 5.2
+     */
+    void setShowQRCode(bool b);
+    bool showQRCode() const;
 public Q_SLOTS:
     /**
      * Sets the @p contact that shall be displayed in the viewer.

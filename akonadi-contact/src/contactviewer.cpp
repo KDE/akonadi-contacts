@@ -60,6 +60,9 @@ public:
     {
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
+        KConfig config(QStringLiteral("akonadi_contactrc"));
+        KConfigGroup group(&config, QStringLiteral("View"));
+        mShowQRCode = group.readEntry("QRCodes", true);
 #ifdef HAVE_PRISON
         mQRCode = new prison::QRCodeBarcode();
         mDataMatrix = new prison::DataMatrixBarcode();
@@ -147,9 +150,7 @@ public:
                                           defaultSmsPixmap);
 
 #ifdef HAVE_PRISON
-        KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("View"));
-        if (group.readEntry("QRCodes", true)) {
+        if (mShowQRCode) {
             KContacts::VCardConverter converter;
             KContacts::Addressee addr(mCurrentContact);
             addr.setPhoto(KContacts::Picture());
@@ -268,6 +269,7 @@ public:
     AbstractContactFormatter *mContactFormatter;
     AbstractContactFormatter *mStandardContactFormatter;
     CollectionFetchJob *mParentCollectionFetchJob;
+    bool mShowQRCode;
 #ifdef HAVE_PRISON
     prison::AbstractBarcode *mQRCode;
     prison::AbstractBarcode *mDataMatrix;
@@ -358,6 +360,19 @@ void ContactViewer::itemRemoved()
 void ContactViewer::updateView()
 {
     itemChanged(d->mCurrentItem);
+}
+
+void ContactViewer::setShowQRCode(bool b)
+{
+    if (d->mShowQRCode != b) {
+        d->mShowQRCode = b;
+        updateView();
+    }
+}
+
+bool ContactViewer::showQRCode() const
+{
+    return d->mShowQRCode;
 }
 
 #include "moc_contactviewer.cpp"
