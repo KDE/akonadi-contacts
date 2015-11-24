@@ -357,7 +357,7 @@ void ContactViewer::itemRemoved()
 
 void ContactViewer::updateView()
 {
-    d->updateView();
+    itemChanged(d->mCurrentItem);
 }
 
 #include "moc_contactviewer.cpp"
