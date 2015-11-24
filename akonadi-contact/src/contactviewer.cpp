@@ -355,4 +355,9 @@ void ContactViewer::itemRemoved()
     d->mBrowser->clear();
 }
 
+void ContactViewer::updateView()
+{
+    d->updateView();
+}
+
 #include "moc_contactviewer.cpp"
