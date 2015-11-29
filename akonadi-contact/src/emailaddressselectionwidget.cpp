@@ -186,7 +186,7 @@ EmailAddressSelectionWidget::EmailAddressSelectionWidget(QAbstractItemModel *mod
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(showOnlyContactWithEmail , this, model))
+    , d(new Private(showOnlyContactWithEmail, this, model))
 {
 }
 

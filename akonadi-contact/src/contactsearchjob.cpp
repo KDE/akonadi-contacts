@@ -67,7 +67,7 @@ static Akonadi::SearchTerm::Condition matchType(ContactSearchJob::Match match)
 
 void ContactSearchJob::setQuery(Criterion criterion, const QString &value, Match match)
 {
-    Akonadi::SearchQuery query(SearchTerm::RelOr) ;
+    Akonadi::SearchQuery query(SearchTerm::RelOr);
 
     if (criterion == Name) {
         query.addTerm(ContactSearchTerm(ContactSearchTerm::Name, value, matchType(match)));

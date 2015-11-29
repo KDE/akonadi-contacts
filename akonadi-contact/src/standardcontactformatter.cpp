@@ -198,7 +198,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Note
     QString notes;
     if (!rawContact.note().isEmpty()) {
-        notes = rowFmtStr1.arg(i18n("Notes")).arg(rawContact.note().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br>"))) ;
+        notes = rowFmtStr1.arg(i18n("Notes")).arg(rawContact.note().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br>")));
     }
 
     // Custom Data

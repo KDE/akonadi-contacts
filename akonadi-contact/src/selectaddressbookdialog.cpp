@@ -67,7 +67,6 @@ void SelectAddressBookDialogPrivate::writeConfig()
     group.sync();
 }
 
-
 SelectAddressBookDialog::SelectAddressBookDialog(QWidget *parent)
     : Akonadi::CollectionDialog(parent),
       d(new Akonadi::SelectAddressBookDialogPrivate(this))

@@ -86,7 +86,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
 
         if (data.email().isEmpty()) {
             strGroup.append(QStringLiteral("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
-                                                "<td width=\"50%\"></td></tr>")
+                                           "<td width=\"50%\"></td></tr>")
                             .arg(data.name()));
         } else {
             KContacts::Addressee contact;
@@ -96,7 +96,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
             const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail())) + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 
             strGroup.append(QStringLiteral("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
-                                                "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>&lt;%2&gt;</font></td></tr>")
+                                           "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>&lt;%2&gt;</font></td></tr>")
                             .arg(contact.realName())
                             .arg(fullEmail));
         }
@@ -104,7 +104,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
 
     foreach (const QVariantMap &map, additionalFields()) {
         strGroup.append(QStringLiteral("<tr><td colspan=\"2\">&nbsp;</td></tr><tr><td align=\"right\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>"
-                                            "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>%2</font></td></tr>")
+                                       "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>%2</font></td></tr>")
                         .arg(map.value(QStringLiteral("title")).toString())
                         .arg(map.value(QStringLiteral("value")).toString()));
     }

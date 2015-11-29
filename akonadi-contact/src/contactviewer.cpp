@@ -95,9 +95,9 @@ public:
             QImage image;
             KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.photo().url()), KIO::NoReload);
             QObject::connect(job, &KIO::TransferJob::data,
-                             [&imageData](KIO::Job *, const QByteArray &data) {
-                                imageData.append(data);
-                             });
+            [&imageData](KIO::Job *, const QByteArray & data) {
+                imageData.append(data);
+            });
             if (job->exec()) {
                 if (image.loadFromData(imageData)) {
                     mBrowser->document()->addResource(QTextDocument::ImageResource,
@@ -129,9 +129,9 @@ public:
             QImage image;
             KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.logo().url()), KIO::NoReload);
             QObject::connect(job, &KIO::TransferJob::data,
-                             [&imageData](KIO::Job *, const QByteArray &data) {
-                                imageData.append(data);
-                             });
+            [&imageData](KIO::Job *, const QByteArray & data) {
+                imageData.append(data);
+            });
             if (job->exec()) {
                 if (image.loadFromData(imageData)) {
                     mBrowser->document()->addResource(QTextDocument::ImageResource,

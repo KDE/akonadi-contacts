@@ -66,7 +66,7 @@ CustomFieldEditorDialog::CustomFieldEditorDialog(QWidget *parent)
     mTitle->setFocus();
 
     QDialogButtonBox *btnBox = new QDialogButtonBox(QDialogButtonBox::Ok |
-                                                    QDialogButtonBox::Cancel, this);
+            QDialogButtonBox::Cancel, this);
     btnBox->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(btnBox, &QDialogButtonBox::accepted,
             this, &QDialog::accept);

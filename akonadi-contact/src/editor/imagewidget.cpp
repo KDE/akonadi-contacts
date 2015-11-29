@@ -77,9 +77,9 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
         QByteArray imageData;
         KIO::TransferJob *job = KIO::get(url, KIO::NoReload);
         QObject::connect(job, &KIO::TransferJob::data,
-                         [&imageData](KIO::Job *, const QByteArray &data) {
-                            imageData.append(data);
-                         });
+        [&imageData](KIO::Job *, const QByteArray & data) {
+            imageData.append(data);
+        });
         if (job->exec()) {
             if (image.loadFromData(imageData)) {
                 (*ok) = true;
@@ -148,7 +148,7 @@ void ImageWidget::loadContact(const KContacts::Addressee &contact)
     mPicture = (mType == Photo ? contact.photo() : contact.logo());
     if (mPicture.isIntern() && !mPicture.data().isNull()) {
         mHasImage = true;
-    } else if (!mPicture.isIntern() && !mPicture.url().isEmpty()){
+    } else if (!mPicture.isIntern() && !mPicture.url().isEmpty()) {
         mHasImage = true;
     }
 

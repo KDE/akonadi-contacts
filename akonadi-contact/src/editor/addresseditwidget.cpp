@@ -53,7 +53,7 @@
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
     bool operator()(const QString &s1, const QString &s2) const
     {
-        return QString::localeAwareCompare(s1, s2) < 0 ;
+        return QString::localeAwareCompare(s1, s2) < 0;
     }
 };
 
@@ -512,8 +512,8 @@ void AddressEditDialog::editLabel()
 {
     bool ok = false;
     const QString result = QInputDialog::getMultiLineText(this, KContacts::Address::labelLabel(),
-                     KContacts::Address::labelLabel(),
-                     mLabel, &ok);
+                           KContacts::Address::labelLabel(),
+                           mLabel, &ok);
     if (ok) {
         mLabel = result;
     }

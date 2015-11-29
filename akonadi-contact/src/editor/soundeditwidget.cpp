@@ -80,7 +80,7 @@ QByteArray SoundLoader::loadSound(const QUrl &url, bool *ok)
         KJobWidgets::setWindow(job, mParent);
         if (job->exec()) {
             sound = job->data();
-	    (*ok) = true;
+            (*ok) = true;
         }
     }
 

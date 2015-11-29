@@ -400,7 +400,7 @@ KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
     KContacts::PhoneNumber::Type type = 0;
 
     for (int i = 0; i < mGroup->buttons().count(); ++i) {
-        QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i)) ;
+        QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
         if (box && box->isChecked()) {
             type |= mTypeList[i];
         }
