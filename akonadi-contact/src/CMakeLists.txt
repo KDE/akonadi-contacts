@@ -13,7 +13,7 @@ set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
 
 add_subdirectory(kcm)
 add_subdirectory(editor/im)
-
+add_subdirectory(icons)
 ########### next target ###############
 
 set(akonadicontact_actions_SRCS
