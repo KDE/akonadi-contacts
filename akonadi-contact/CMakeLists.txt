@@ -19,10 +19,10 @@ include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
 set(KF5_VERSION "5.17.0")
-set(KDEPIMLIBS_VERSION "5.1.42")
 set(KCONTACTS_VERSION "5.1.40")
 set(CALENDARCORE_VERSION "5.1.40")
 set(KMIMELIB_VERSION "5.1.40")
+set(AKONADI_VERSION "5.1.52")
 
 ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
@@ -36,20 +36,12 @@ find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
 find_package(Phonon4Qt5 CONFIG REQUIRED)
 
-
-
 find_package(KF5Contacts ${KCONTACTS_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${CALENDARCORE_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Contact_SOURCE_DIR})
-  find_package(KF5Akonadi CONFIG REQUIRED)
-  find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-else()
-  # IMPORTED targets are scoped, so KF5::AkonadiPrivate found in ../akonadi
-  # won't work here, and it is a PUBLIC dependency of KF5::Akonadi
-  find_package(KF5AkonadiServer ${KF5AkonadiServer_MIN_VERSION} CONFIG REQUIRED)
-endif()
+find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
+find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
 
