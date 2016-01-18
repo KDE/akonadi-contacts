@@ -19,7 +19,7 @@ include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
 set(KF5_VERSION "5.17.0")
-set(KDEPIMLIBS_VERSION "5.1.40")
+set(KDEPIMLIBS_VERSION "5.1.42")
 set(KCONTACTS_VERSION "5.1.40")
 set(CALENDARCORE_VERSION "5.1.40")
 set(KMIMELIB_VERSION "5.1.40")
