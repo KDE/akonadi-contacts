@@ -40,9 +40,10 @@ find_package(Phonon4Qt5 CONFIG REQUIRED)
 find_package(KF5Contacts ${KCONTACTS_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${CALENDARCORE_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
-
+if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Contact_SOURCE_DIR})
+  find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+endif()
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
 
