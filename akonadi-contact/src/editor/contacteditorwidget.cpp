@@ -421,50 +421,37 @@ void ContactEditorWidget::Private::initGuiBusinessTab()
 void ContactEditorWidget::Private::initGuiPersonalTab()
 {
     QWidget *widget = new QWidget;
-    QVBoxLayout *layout = new QVBoxLayout(widget);
+    mTabWidget->addTab( widget, i18nc( "@title:tab Personal properties of a contact", "Personal" ) );
+    QGridLayout *mainLayout = new QGridLayout( widget );
+    mainLayout->setMargin(10);
+    mainLayout->setSpacing(20);
+    QLabel *label = new QLabel( i18nc( "@label The birthdate of a contact", "Birthdate:" ) );
+    mainLayout->addWidget( label, 0, 0 );
 
-    mTabWidget->addTab(widget, i18nc("@title:tab Personal properties of a contact", "Personal"));
+    mBirthdateWidget = new DateEditWidget( DateEditWidget::Birthday );
+    label->setBuddy( mBirthdateWidget );
+    mainLayout->addWidget( mBirthdateWidget, 1, 0 );
 
-    QGroupBox *datesGroupBox = new QGroupBox(i18nc("@title:group Date related properties of a contact", "Dates"));
-    QGroupBox *familyGroupBox = new QGroupBox(i18nc("@title:group Family related properties of a contact", "Family"));
+    label = new QLabel( i18nc( "@label The wedding anniversary of a contact", "Anniversary:" ) );
+    mainLayout->addWidget( label, 0, 1 );
 
-    layout->addWidget(datesGroupBox);
-    layout->addWidget(familyGroupBox);
+    mAnniversaryWidget = new DateEditWidget( DateEditWidget::Anniversary );
+    label->setBuddy( mAnniversaryWidget );
+    mainLayout->addWidget( mAnniversaryWidget, 1, 1 );
 
-    QGridLayout *datesLayout = new QGridLayout(datesGroupBox);
-    QGridLayout *familyLayout = new QGridLayout(familyGroupBox);
-
-    // setup dates group box
-    QLabel *label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
-    label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    datesLayout->addWidget(label, 0, 0);
-
-    mBirthdateWidget = new DateEditWidget(DateEditWidget::Birthday);
-    label->setBuddy(mBirthdateWidget);
-    datesLayout->addWidget(mBirthdateWidget, 0, 1);
-
-    label = new QLabel(i18nc("@label The wedding anniversary of a contact", "Anniversary:"));
-    label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    datesLayout->addWidget(label, 1, 0);
-
-    mAnniversaryWidget = new DateEditWidget(DateEditWidget::Anniversary);
-    label->setBuddy(mAnniversaryWidget);
-    datesLayout->addWidget(mAnniversaryWidget, 1, 1);
-
-    datesLayout->setRowStretch(2, 1);
-    datesLayout->setColumnStretch(1, 1);
-
-    // widgets from family group
-    label = new QLabel(i18nc("@label The partner's name of a contact", "Partner's name:"));
-    label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    familyLayout->addWidget(label, 0, 0);
+    label = new QLabel( i18nc( "@label The partner's name of a contact", "Partner's name:" ) );
+    mainLayout->addWidget( label, 0, 2 );
 
     mPartnerWidget = new KLineEdit;
+    mPartnerWidget->setPlaceholderText(i18n("Add name"));
     mPartnerWidget->setTrapReturnKey(true);
-    label->setBuddy(mPartnerWidget);
-    familyLayout->addWidget(mPartnerWidget, 0, 1);
+    label->setBuddy( mPartnerWidget );
+    mainLayout->addWidget( mPartnerWidget, 1, 2 );
+    mainLayout->setColumnStretch( 1, 1 );
+    mainLayout->setColumnStretch( 0, 1 );
+    mainLayout->setColumnStretch( 2, 1 );
 
-    familyLayout->setRowStretch(1, 1);
+    mainLayout->setRowStretch( 2, 1 );
 }
 
 void ContactEditorWidget::Private::initGuiNotesTab()
