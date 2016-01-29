@@ -342,70 +342,77 @@ void ContactEditorWidget::Private::initGuiBusinessTab()
 
     // setup general group box
     mLogoWidget = new ImageWidget(ImageWidget::Logo);
-    generalLayout->addWidget(mLogoWidget, 0, 2, 6, 1, Qt::AlignTop);
+    generalLayout->addWidget(mLogoWidget, 0, 0, 6, 1, Qt::AlignTop);
 
     QLabel *label = new QLabel(i18nc("@label The organization of a contact", "Organization:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    generalLayout->addWidget(label, 0, 0);
+    generalLayout->addWidget(label, 0, 1);
 
     mOrganizationWidget = new KLineEdit;
+    mOrganizationWidget->setPlaceholderText(i18n("Add organization's name"));
     mOrganizationWidget->setTrapReturnKey(true);
     label->setBuddy(mOrganizationWidget);
-    generalLayout->addWidget(mOrganizationWidget, 0, 1);
+    generalLayout->addWidget(mOrganizationWidget, 0, 2);
 
     label = new QLabel(i18nc("@label The profession of a contact", "Profession:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    generalLayout->addWidget(label, 1, 0);
+    generalLayout->addWidget(label, 1, 1);
 
     mProfessionWidget = new KLineEdit;
+    mProfessionWidget->setPlaceholderText(i18n("Add profession"));
     mProfessionWidget->setTrapReturnKey(true);
     label->setBuddy(mProfessionWidget);
-    generalLayout->addWidget(mProfessionWidget, 1, 1);
+    generalLayout->addWidget(mProfessionWidget, 1, 2);
 
     label = new QLabel(i18nc("@label The title of a contact", "Title:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    generalLayout->addWidget(label, 2, 0);
+    generalLayout->addWidget(label, 2, 1);
 
     mTitleWidget = new KLineEdit;
+    mTitleWidget->setPlaceholderText(i18n("Add the title"));
     mTitleWidget->setTrapReturnKey(true);
     label->setBuddy(mTitleWidget);
-    generalLayout->addWidget(mTitleWidget, 2, 1);
+    generalLayout->addWidget(mTitleWidget, 2, 2);
 
     label = new QLabel(i18nc("@label The department of a contact", "Department:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    generalLayout->addWidget(label, 3, 0);
+    generalLayout->addWidget(label, 3, 1);
 
     mDepartmentWidget = new KLineEdit;
+    mDepartmentWidget->setPlaceholderText(i18n("Add the department"));
     mDepartmentWidget->setTrapReturnKey(true);
     label->setBuddy(mDepartmentWidget);
-    generalLayout->addWidget(mDepartmentWidget, 3, 1);
+    generalLayout->addWidget(mDepartmentWidget, 3, 2);
 
     label = new QLabel(i18nc("@label The office of a contact", "Office:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    generalLayout->addWidget(label, 4, 0);
+    generalLayout->addWidget(label, 4, 1);
 
     mOfficeWidget = new KLineEdit;
+    mOfficeWidget->setPlaceholderText(i18n("Add the office"));
     mOfficeWidget->setTrapReturnKey(true);
     label->setBuddy(mOfficeWidget);
-    generalLayout->addWidget(mOfficeWidget, 4, 1);
+    generalLayout->addWidget(mOfficeWidget, 4, 2);
 
     label = new QLabel(i18nc("@label The manager's name of a contact", "Manager's name:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    generalLayout->addWidget(label, 5, 0);
+    generalLayout->addWidget(label, 5, 1);
 
     mManagerWidget = new KLineEdit;
+    mManagerWidget->setPlaceholderText(i18n("Add manager's name"));
     mManagerWidget->setTrapReturnKey(true);
     label->setBuddy(mManagerWidget);
-    generalLayout->addWidget(mManagerWidget, 5, 1);
+    generalLayout->addWidget(mManagerWidget, 5, 2);
 
     label = new QLabel(i18nc("@label The assistant's name of a contact", "Assistant's name:"));
     label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    generalLayout->addWidget(label, 6, 0);
+    generalLayout->addWidget(label, 6, 1);
 
     mAssistantWidget = new KLineEdit;
+    mAssistantWidget->setPlaceholderText(i18n("Add assistant's name"));
     mAssistantWidget->setTrapReturnKey(true);
     label->setBuddy(mAssistantWidget);
-    generalLayout->addWidget(mAssistantWidget, 6, 1);
+    generalLayout->addWidget(mAssistantWidget, 6, 2);
 
     // setup groupware group box
     label = new QLabel(i18nc("@label The free/busy information of a contact", "Free/Busy:"));
