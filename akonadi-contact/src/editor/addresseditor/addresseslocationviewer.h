@@ -25,6 +25,7 @@
 #define ADDRESSESLOCATIONVIEWER_H
 
 #include <QWidget>
+#include <KContacts/Address>
 
 class AddressesLocationViewer : public QWidget
 {
@@ -32,6 +33,13 @@ class AddressesLocationViewer : public QWidget
 public:
     explicit AddressesLocationViewer(QWidget *parent = Q_NULLPTR);
     ~AddressesLocationViewer();
+
+
+    KContacts::Address::List addresses() const;
+    void setAddresses(const KContacts::Address::List &addresses);
+
+private:
+    KContacts::Address::List mAddresses;
 };
 
 #endif // ADDRESSESLOCATIONVIEWER_H
