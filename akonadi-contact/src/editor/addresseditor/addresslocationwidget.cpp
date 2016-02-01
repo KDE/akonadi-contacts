@@ -23,6 +23,7 @@
 
 #include "addresslocationwidget.h"
 
+#include <KComboBox>
 #include <KLineEdit>
 #include <KLocalizedString>
 
@@ -36,8 +37,44 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     QGridLayout *topLayout = new QGridLayout;
     setLayout(topLayout);
 
+
+
+    QLabel *label = new QLabel(KContacts::Address::postOfficeBoxLabel(), this);
+    label->setObjectName(QStringLiteral("postofficeboxlabel"));
+
+    mPOBoxEdit = new KLineEdit(this);
+    mPOBoxEdit->setObjectName(QStringLiteral("postofficeboxlineedit"));
+    mPOBoxEdit->setTrapReturnKey(true);
+
+
+    label = new QLabel(KContacts::Address::localityLabel(), this);
+    label->setObjectName(QStringLiteral("localitylabel"));
+    mLocalityEdit = new KLineEdit(this);
+    mLocalityEdit->setObjectName(QStringLiteral("localitylineedit"));
+    mLocalityEdit->setTrapReturnKey(true);
+
+    label = new QLabel(KContacts::Address::regionLabel(), this);
+    label->setObjectName(QStringLiteral("regionlabel"));
+    mRegionEdit = new KLineEdit(this);
+    mRegionEdit->setObjectName(QStringLiteral("regionlineedit"));
+    mRegionEdit->setTrapReturnKey(true);
+
+    label = new QLabel(KContacts::Address::postalCodeLabel(), this);
+    label->setObjectName(QStringLiteral("postalcodelabel"));
+    mPostalCodeEdit = new KLineEdit(this);
+    mPostalCodeEdit->setObjectName(QStringLiteral("postalcodelineedit"));
+    mPostalCodeEdit->setTrapReturnKey(true);
+
+    label = new QLabel(KContacts::Address::countryLabel(), this);
+    label->setObjectName(QStringLiteral("countrylabel"));
+    mCountryCombo = new KComboBox(this);
+    mCountryCombo->setObjectName(QStringLiteral("countrycombobox"));
+    mCountryCombo->setEditable(true);
+    mCountryCombo->setDuplicatesEnabled(false);
+
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), this);
     mPreferredCheckBox->setObjectName(QStringLiteral("preferredcheckbox"));
+
 }
 
 AddressLocationWidget::~AddressLocationWidget()

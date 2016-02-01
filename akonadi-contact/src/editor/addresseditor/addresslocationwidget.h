@@ -27,7 +27,9 @@
 #include <QWidget>
 #include <KContacts/Address>
 class QCheckBox;
-
+class KLineEdit;
+class KComboBox;
+class QPushButton;
 class AddressLocationWidget : public QWidget
 {
     Q_OBJECT
@@ -40,6 +42,12 @@ public:
 
 private:
     QCheckBox *mPreferredCheckBox;
+    KLineEdit *mPOBoxEdit;
+    KLineEdit *mLocalityEdit;
+    KLineEdit *mRegionEdit;
+    KLineEdit *mPostalCodeEdit;
+    KComboBox *mCountryCombo;
+    QPushButton *mAddAddress;
 };
 
 #endif // ADDRESSLOCATIONWIDGET_H
