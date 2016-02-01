@@ -35,10 +35,13 @@ public:
     ~AddressesLocationViewer();
 
 
+    void addAddress(const KContacts::Address &address);
+
     KContacts::Address::List addresses() const;
     void setAddresses(const KContacts::Address::List &addresses);
 
 private:
+    void updateView();
     KContacts::Address::List mAddresses;
 };
 

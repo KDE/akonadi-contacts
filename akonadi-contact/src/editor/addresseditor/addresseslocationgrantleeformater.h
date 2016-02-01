@@ -20,38 +20,22 @@
     02110-1301, USA.
 */
 
-#include "addresseslocationviewer.h"
+#ifndef ADDRESSESLOCATIONGRANTLEEFORMATER_H
+#define ADDRESSESLOCATIONGRANTLEEFORMATER_H
 
-AddressesLocationViewer::AddressesLocationViewer(QWidget *parent)
-    : QWidget(parent)
+#include <QObject>
+
+#include <KContacts/Address>
+
+class AddressesLocationGrantleeFormater : public QObject
 {
-    //TODO add list of address
-}
+    Q_OBJECT
+public:
+    explicit AddressesLocationGrantleeFormater(QObject *parent = Q_NULLPTR);
+    ~AddressesLocationGrantleeFormater();
 
-AddressesLocationViewer::~AddressesLocationViewer()
-{
+    QString formatAddresses(const KContacts::Address::List &addresses);
 
-}
+};
 
-void AddressesLocationViewer::updateView()
-{
-    //TODO
-}
-
-void AddressesLocationViewer::addAddress(const KContacts::Address &address)
-{
-    if (!address.isEmpty()) {
-        mAddresses.append(address);
-        updateView();
-    }
-}
-
-KContacts::Address::List AddressesLocationViewer::addresses() const
-{
-    return mAddresses;
-}
-
-void AddressesLocationViewer::setAddresses(const KContacts::Address::List &addresses)
-{
-    mAddresses = addresses;
-}
+#endif // ADDRESSESLOCATIONGRANTLEEFORMATER_H

@@ -35,6 +35,7 @@ kconfig_add_kcfg_files(akonadicontact_actions_SRCS actions/contactactionssetting
 set(akonadicontact_addresslocation_editor_SRCS
    editor/addresseditor/addresslocationwidget.cpp
    editor/addresseditor/addresseslocationviewer.cpp
+   editor/addresseditor/addresseslocationgrantleeformater.cpp
 )
 
 set(akonadicontact_editor_SRCS
