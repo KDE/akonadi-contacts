@@ -78,6 +78,7 @@ install(FILES
 )
 if (BUILD_TESTING)
    add_subdirectory(src/editor/autotests)
+   add_subdirectory(src/editor/addresseditor/autotests/)
 endif()
 if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
   feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
