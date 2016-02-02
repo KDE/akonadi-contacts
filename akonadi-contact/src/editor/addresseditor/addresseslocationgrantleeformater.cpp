@@ -22,18 +22,21 @@
 
 #include "addresseslocationgrantleeformater.h"
 #include "addressgrantleeobject.h"
-
+#include <grantlee/engine.h>
 #include <QVariantList>
 
 AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      mEngine(new Grantlee::Engine)
 {
-
+    mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
+    QString themePath; //TODO
+    changeGrantleePath(themePath);
 }
 
 AddressesLocationGrantleeFormater::~AddressesLocationGrantleeFormater()
 {
-
+    delete mEngine;
 }
 
 QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Address::List &addresses)
@@ -46,5 +49,22 @@ QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Addr
         addressList << QVariant::fromValue(static_cast<QObject *>(addressObj));
     }
     //TODO
-    return QString();
+    QVariantHash addressHash;
+    Grantlee::Context context(addressHash);
+    const QString contentHtml = mSelfcontainedTemplate->render(&context);
+    return contentHtml;
+}
+
+void AddressesLocationGrantleeFormater::changeGrantleePath(const QString &path)
+{
+    if (!mTemplateLoader) {
+        mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
+    }
+    mTemplateLoader->setTemplateDirs(QStringList() << path);
+    mEngine->addTemplateLoader(mTemplateLoader);
+
+    mSelfcontainedTemplate = mEngine->loadByName(QStringLiteral("sss")); //TODO
+    if (mSelfcontainedTemplate->error()) {
+        mErrorMessage += mSelfcontainedTemplate->errorString() + QLatin1String("<br>");
+    }
 }

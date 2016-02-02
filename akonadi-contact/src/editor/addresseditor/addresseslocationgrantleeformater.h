@@ -26,7 +26,12 @@
 #include <QObject>
 
 #include <KContacts/Address>
-
+#include <QSharedPointer>
+#include <grantlee/templateloader.h>
+namespace Grantlee
+{
+class Engine;
+}
 class AddressesLocationGrantleeFormater : public QObject
 {
     Q_OBJECT
@@ -35,7 +40,12 @@ public:
     ~AddressesLocationGrantleeFormater();
 
     QString formatAddresses(const KContacts::Address::List &addresses);
-
+private:
+    void changeGrantleePath(const QString &path);
+    Grantlee::Engine *mEngine;
+    QString mErrorMessage;
+    QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
+    Grantlee::Template mSelfcontainedTemplate;
 };
 
 #endif // ADDRESSESLOCATIONGRANTLEEFORMATER_H

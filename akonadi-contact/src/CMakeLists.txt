@@ -165,6 +165,7 @@ PRIVATE
     KF5::WidgetsAddons
     KF5::XmlGui
     Phonon::phonon4qt5
+    Grantlee5::Templates
 )
 
 if(KF5Prison_FOUND)
