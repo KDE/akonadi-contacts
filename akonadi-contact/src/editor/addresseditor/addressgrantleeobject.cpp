@@ -21,6 +21,7 @@
 */
 
 #include "addressgrantleeobject.h"
+#include "iconnamecache_p.h"
 
 AddressGrantleeObject::AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent)
     : QObject(parent),

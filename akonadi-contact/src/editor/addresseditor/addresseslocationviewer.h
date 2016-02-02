@@ -26,7 +26,7 @@
 
 #include <QWidget>
 #include <KContacts/Address>
-
+class AddressesLocationGrantleeFormater;
 class AddressesLocationViewer : public QWidget
 {
     Q_OBJECT
@@ -43,6 +43,7 @@ public:
 private:
     void updateView();
     KContacts::Address::List mAddresses;
+    AddressesLocationGrantleeFormater *mAddressesLocationGrantleeFormatter;
 };
 
 #endif // ADDRESSESLOCATIONVIEWER_H

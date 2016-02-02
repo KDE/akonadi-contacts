@@ -21,11 +21,12 @@
 */
 
 #include "addresseslocationviewer.h"
+#include "addresseslocationgrantleeformater.h"
 
 AddressesLocationViewer::AddressesLocationViewer(QWidget *parent)
-    : QWidget(parent)
+    : QWidget(parent),
+      mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))
 {
-    //TODO add list of address
 }
 
 AddressesLocationViewer::~AddressesLocationViewer()
