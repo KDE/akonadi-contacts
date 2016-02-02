@@ -42,6 +42,12 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("streetlabel"));
 
 
+    mStreetEdit = new KLineEdit(this);
+    mStreetEdit->setPlaceholderText(i18n("Add Street"));
+    mStreetEdit->setObjectName(QStringLiteral("streetlineedit"));
+    mStreetEdit->setTrapReturnKey(true);
+
+
 
     label = new QLabel(KContacts::Address::postOfficeBoxLabel(), this);
     label->setObjectName(QStringLiteral("postofficeboxlabel"));

@@ -22,8 +22,13 @@
 
 
 #include "addresslocationwidgettest.h"
-
+#include "../addresslocationwidget.h"
+#include <QLabel>
+#include <QPushButton>
+#include <KComboBox>
+#include <KLineEdit>
 #include <QTest>
+#include <QCheckBox>
 
 AddressLocationWidgetTest::AddressLocationWidgetTest(QObject *parent)
     : QObject(parent)
@@ -38,7 +43,44 @@ AddressLocationWidgetTest::~AddressLocationWidgetTest()
 
 void AddressLocationWidgetTest::shouldHaveDefaultValue()
 {
-    //TODO
+    AddressLocationWidget w;
+
+    QLabel *streetlabel = w.findChild<QLabel *>(QStringLiteral("streetlabel"));
+    QVERIFY(streetlabel);
+    KLineEdit *mStreetEdit = w.findChild<KLineEdit *>(QStringLiteral("streetlineedit"));
+    QVERIFY(mStreetEdit);
+
+
+    QLabel *postofficeboxlabel = w.findChild<QLabel *>(QStringLiteral("postofficeboxlabel"));
+    QVERIFY(postofficeboxlabel);
+    KLineEdit *postofficeboxlineedit = w.findChild<KLineEdit *>(QStringLiteral("postofficeboxlineedit"));
+    QVERIFY(postofficeboxlineedit);
+
+    QLabel *localitylabel = w.findChild<QLabel *>(QStringLiteral("localitylabel"));
+    QVERIFY(localitylabel);
+    KLineEdit *localitylineedit = w.findChild<KLineEdit *>(QStringLiteral("localitylineedit"));
+    QVERIFY(localitylineedit);
+
+    QLabel *regionlabel = w.findChild<QLabel *>(QStringLiteral("regionlabel"));
+    QVERIFY(regionlabel);
+    KLineEdit *regionlineedit = w.findChild<KLineEdit *>(QStringLiteral("regionlineedit"));
+    QVERIFY(regionlineedit);
+
+    QLabel *postalcodelabel = w.findChild<QLabel *>(QStringLiteral("postalcodelabel"));
+    QVERIFY(postalcodelabel);
+    KLineEdit *postalcodelineedit = w.findChild<KLineEdit *>(QStringLiteral("postalcodelineedit"));
+    QVERIFY(postalcodelineedit);
+
+    QLabel *countrylabel = w.findChild<QLabel *>(QStringLiteral("countrylabel"));
+    QVERIFY(countrylabel);
+    KComboBox *countrycombobox = w.findChild<KComboBox *>(QStringLiteral("countrylabel"));
+    QVERIFY(countrycombobox);
+
+    QCheckBox *preferredcheckbox = w.findChild<QCheckBox *>(QStringLiteral("preferredcheckbox"));
+    QVERIFY(preferredcheckbox);
+
+    QPushButton *addbuttonaddress = w.findChild<QPushButton *>(QStringLiteral("addbuttonaddress"));
+    QVERIFY(addbuttonaddress);
 }
 
 QTEST_MAIN(AddressLocationWidgetTest)

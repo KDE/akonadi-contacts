@@ -46,6 +46,7 @@ private:
     KLineEdit *mLocalityEdit;
     KLineEdit *mRegionEdit;
     KLineEdit *mPostalCodeEdit;
+    KLineEdit *mStreetEdit;
     KComboBox *mCountryCombo;
     QPushButton *mAddAddress;
 };
