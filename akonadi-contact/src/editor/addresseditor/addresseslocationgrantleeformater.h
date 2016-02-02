@@ -44,6 +44,7 @@ private:
     void changeGrantleePath(const QString &path);
     Grantlee::Engine *mEngine;
     QString mErrorMessage;
+    QString mGrantleeThemePath;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
     Grantlee::Template mSelfcontainedTemplate;
 };

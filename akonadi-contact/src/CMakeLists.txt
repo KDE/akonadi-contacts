@@ -242,3 +242,5 @@ install( FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
 )
 
+add_subdirectory(editor/addresseditor/html)
+

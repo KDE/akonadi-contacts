@@ -24,14 +24,17 @@
 #include "addressgrantleeobject.h"
 #include <grantlee/engine.h>
 #include <QVariantList>
+#include <QStandardPaths>
 
 AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *parent)
     : QObject(parent),
       mEngine(new Grantlee::Engine)
 {
     mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
-    QString themePath; //TODO
-    changeGrantleePath(themePath);
+    mGrantleeThemePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                     QStringLiteral("akonadicontact/grantleetheme/default/"),
+                                                     QStandardPaths::LocateDirectory);
+    changeGrantleePath(mGrantleeThemePath);
 }
 
 AddressesLocationGrantleeFormater::~AddressesLocationGrantleeFormater()
@@ -48,8 +51,10 @@ QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Addr
         AddressGrantleeObject *addressObj = new AddressGrantleeObject(addresses.at(i), i);
         addressList << QVariant::fromValue(static_cast<QObject *>(addressObj));
     }
-    //TODO
     QVariantHash addressHash;
+    addressHash.insert(QStringLiteral("addresses"), addressList);
+    addressHash.insert(QStringLiteral("absoluteThemePath"), mGrantleeThemePath);
+
     Grantlee::Context context(addressHash);
     const QString contentHtml = mSelfcontainedTemplate->render(&context);
     return contentHtml;
