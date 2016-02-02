@@ -63,8 +63,7 @@ QString AddressGrantleeObject::createActionUrl(const QString &actionName) const
 
 QString AddressGrantleeObject::removeAddressAction() const
 {
-    //TODO fix icons
-    const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("window-new"), KIconLoader::Small);
+    const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("edit-delete"), KIconLoader::Small);
     const QString text = QStringLiteral("<a href=\"%1\"><img class=\"headimage\" title=\"%3\" src=\"file:///%2\"></a>\n")
                          .arg(createActionUrl(QStringLiteral("removeaddress")), iconPath, i18n("Remove Address"));
     return text;
@@ -72,8 +71,7 @@ QString AddressGrantleeObject::removeAddressAction() const
 
 QString AddressGrantleeObject::modifyAddressAction() const
 {
-    //TODO fix icons
-    const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("window-new"), KIconLoader::Small);
+    const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("document-edit"), KIconLoader::Small);
     const QString text = QStringLiteral("<a href=\"%1\"><img class=\"headimage\" title=\"%3\" src=\"file:///%2\"></a>\n")
                          .arg(createActionUrl(QStringLiteral("editaddress")), iconPath, i18n("Edit Address"));
     return text;
