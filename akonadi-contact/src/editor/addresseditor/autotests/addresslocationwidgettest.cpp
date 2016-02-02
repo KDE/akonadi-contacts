@@ -73,7 +73,7 @@ void AddressLocationWidgetTest::shouldHaveDefaultValue()
 
     QLabel *countrylabel = w.findChild<QLabel *>(QStringLiteral("countrylabel"));
     QVERIFY(countrylabel);
-    KComboBox *countrycombobox = w.findChild<KComboBox *>(QStringLiteral("countrylabel"));
+    KComboBox *countrycombobox = w.findChild<KComboBox *>(QStringLiteral("countrycombobox"));
     QVERIFY(countrycombobox);
 
     QCheckBox *preferredcheckbox = w.findChild<QCheckBox *>(QStringLiteral("preferredcheckbox"));
