@@ -21,7 +21,10 @@
 */
 
 #include "addresseslocationwidgettest.h"
+#include "../addresseslocationwidget.h"
 #include <QTest>
+#include <editor/addresseditor/addresseslocationviewer.h>
+#include <editor/addresseditor/addresslocationwidget.h>
 
 AddressesLocationWidgetTest::AddressesLocationWidgetTest(QObject *parent)
     : QObject(parent)
@@ -32,6 +35,16 @@ AddressesLocationWidgetTest::AddressesLocationWidgetTest(QObject *parent)
 AddressesLocationWidgetTest::~AddressesLocationWidgetTest()
 {
 
+}
+
+void AddressesLocationWidgetTest::shouldHaveDefaultValue()
+{
+    AddressesLocationWidget w;
+    AddressLocationWidget *addressLocationWidget = w.findChild<AddressLocationWidget *>(QStringLiteral("addresslocationwidget"));
+    QVERIFY(addressLocationWidget);
+
+    AddressesLocationViewer *addressesLocationViewer = w.findChild<AddressesLocationViewer *>(QStringLiteral("addresseslocationviewer"));
+    QVERIFY(addressesLocationViewer);
 }
 
 QTEST_MAIN(AddressesLocationWidgetTest)

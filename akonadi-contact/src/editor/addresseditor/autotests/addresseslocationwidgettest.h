@@ -31,6 +31,9 @@ class AddressesLocationWidgetTest : public QObject
 public:
     explicit AddressesLocationWidgetTest(QObject *parent = Q_NULLPTR);
     ~AddressesLocationWidgetTest();
+
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // ADDRESSESLOCATIONWIDGETTEST_H
