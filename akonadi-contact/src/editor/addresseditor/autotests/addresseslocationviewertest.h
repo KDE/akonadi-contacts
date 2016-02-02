@@ -31,6 +31,8 @@ class AddressesLocationViewerTest : public QObject
 public:
     explicit AddressesLocationViewerTest(QObject *parent = Q_NULLPTR);
     ~AddressesLocationViewerTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // ADDRESSESLOCATIONVIEWERTEST_H

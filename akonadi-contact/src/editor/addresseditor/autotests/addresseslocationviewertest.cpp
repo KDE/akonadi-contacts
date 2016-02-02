@@ -21,6 +21,7 @@
 */
 
 #include "addresseslocationviewertest.h"
+#include "../addresseslocationviewer.h"
 #include <QTest>
 
 AddressesLocationViewerTest::AddressesLocationViewerTest(QObject *parent)
@@ -32,6 +33,12 @@ AddressesLocationViewerTest::AddressesLocationViewerTest(QObject *parent)
 AddressesLocationViewerTest::~AddressesLocationViewerTest()
 {
 
+}
+
+void AddressesLocationViewerTest::shouldHaveDefaultValue()
+{
+    AddressesLocationViewer w;
+    QVERIFY(w.addresses().isEmpty());
 }
 
 QTEST_MAIN(AddressesLocationViewerTest)

@@ -31,6 +31,7 @@ ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
                         SOVERSION 5
 )
 
+set(QT_REQUIRED_VERSION "5.5.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test WebKitWidgets)
 ########### Find packages ###########
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)

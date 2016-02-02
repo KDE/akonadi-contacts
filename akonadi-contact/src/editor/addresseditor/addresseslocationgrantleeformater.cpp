@@ -63,7 +63,7 @@ void AddressesLocationGrantleeFormater::changeGrantleePath(const QString &path)
     mTemplateLoader->setTemplateDirs(QStringList() << path);
     mEngine->addTemplateLoader(mTemplateLoader);
 
-    mSelfcontainedTemplate = mEngine->loadByName(QStringLiteral("sss")); //TODO
+    mSelfcontainedTemplate = mEngine->loadByName(QStringLiteral("addresseslocation.html"));
     if (mSelfcontainedTemplate->error()) {
         mErrorMessage += mSelfcontainedTemplate->errorString() + QLatin1String("<br>");
     }

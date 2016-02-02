@@ -1,11 +1,9 @@
-set(QT_REQUIRED_VERSION "5.4.0")
-find_package(Qt5Test ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
-set(addresseslocationviewer_SRCS addresseslocationviewertest.cpp )
+set(addresseslocationviewer_SRCS addresseslocationviewertest.cpp ../addresseslocationviewer.cpp ../addresseslocationgrantleeformater.cpp ../addressgrantleeobject.cpp)
 add_executable(addresseslocationviewer ${addresseslocationviewer_SRCS})
 add_test(addresseslocationviewer addresseslocationviewer)
 ecm_mark_as_test(addresseslocationviewer)
-target_link_libraries(addresseslocationviewer Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n)
+target_link_libraries(addresseslocationviewer Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n Qt5::WebKitWidgets Grantlee5::Templates)
 
 
 set(addresslocationwidget_SRCS addresslocationwidgettest.cpp ../addresslocationwidget.cpp)
