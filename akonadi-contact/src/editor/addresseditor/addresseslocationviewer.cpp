@@ -36,6 +36,8 @@ AddressesLocationViewer::~AddressesLocationViewer()
 
 void AddressesLocationViewer::updateView()
 {
+    const QString html = mAddressesLocationGrantleeFormatter->formatAddresses(mAddresses);
+    //TODO
     //TODO
 }
 
