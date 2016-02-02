@@ -21,6 +21,9 @@
 */
 
 #include "addresseslocationgrantleeformater.h"
+#include "addressgrantleeobject.h"
+
+#include <QVariantList>
 
 AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *parent)
     : QObject(parent)
@@ -35,6 +38,13 @@ AddressesLocationGrantleeFormater::~AddressesLocationGrantleeFormater()
 
 QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Address::List &addresses)
 {
+    QVariantList addressList;
+    const int nbAddress(addresses.count());
+    addressList.reserve(nbAddress);
+    for (int i = 0; i < nbAddress; ++i) {
+        AddressGrantleeObject *addressObj = new AddressGrantleeObject(addresses.at(i), i);
+        addressList << QVariant::fromValue(static_cast<QObject *>(addressObj));
+    }
     //TODO
     return QString();
 }

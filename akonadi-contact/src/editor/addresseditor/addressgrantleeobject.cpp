@@ -22,9 +22,10 @@
 
 #include "addressgrantleeobject.h"
 
-AddressGrantleeObject::AddressGrantleeObject(const KContacts::Address &address, QObject *parent)
+AddressGrantleeObject::AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent)
     : QObject(parent),
-      mAddress(address)
+      mAddress(address),
+      mAddressIndex(addressIndex)
 {
 
 }
@@ -32,4 +33,16 @@ AddressGrantleeObject::AddressGrantleeObject(const KContacts::Address &address, 
 AddressGrantleeObject::~AddressGrantleeObject()
 {
 
+}
+
+QString AddressGrantleeObject::removeAddressAction() const
+{
+    //TODO
+    return {};
+}
+
+QString AddressGrantleeObject::modifyAddressAction() const
+{
+    //TODO
+    return {};
 }
