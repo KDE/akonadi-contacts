@@ -36,6 +36,17 @@ AddressGrantleeObject::~AddressGrantleeObject()
 
 }
 
+QString AddressGrantleeObject::formattedAddress() const
+{
+    QString str;
+    if (mAddress.label().isEmpty()) {
+        str = mAddress.formattedAddress().trimmed().toHtmlEscaped();
+    } else {
+        str = mAddress.label().toHtmlEscaped();
+    }
+    return str;
+}
+
 QString AddressGrantleeObject::removeAddressAction() const
 {
     //TODO
@@ -46,4 +57,15 @@ QString AddressGrantleeObject::modifyAddressAction() const
 {
     //TODO
     return {};
+}
+
+QString AddressGrantleeObject::type() const
+{
+    //TODO
+    return {};
+}
+
+bool AddressGrantleeObject::preferredAddress() const
+{
+    return (mAddress.type() & KContacts::Address::Pref);
 }

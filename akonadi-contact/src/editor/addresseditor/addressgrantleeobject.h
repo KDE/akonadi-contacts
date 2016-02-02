@@ -30,12 +30,18 @@ class AddressGrantleeObject : public QObject
     Q_OBJECT
     Q_PROPERTY(QString removeAddressAction READ removeAddressAction)
     Q_PROPERTY(QString modifyAddressAction READ modifyAddressAction)
+    Q_PROPERTY(QString formattedAddress READ formattedAddress)
+    Q_PROPERTY(QString type READ type)
+    Q_PROPERTY(bool preferredAddress READ preferredAddress)
 public:
     explicit AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent = Q_NULLPTR);
     ~AddressGrantleeObject();
 
     QString removeAddressAction() const;
     QString modifyAddressAction() const;
+    QString formattedAddress() const;
+    QString type() const;
+    bool preferredAddress() const;
 private:
     KContacts::Address mAddress;
     int mAddressIndex;
