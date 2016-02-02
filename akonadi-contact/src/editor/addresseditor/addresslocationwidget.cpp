@@ -116,10 +116,50 @@ AddressLocationWidget::~AddressLocationWidget()
 
 void AddressLocationWidget::setAddress(const KContacts::Address &address)
 {
+    mAddress = address;
+    //mTypeCombo->setType(mAddress.type());
+    //mStreetTextEdit->setPlainText(mAddress.street());
+    mRegionEdit->setText(address.region());
+    mLocalityEdit->setText(address.locality());
+    mPostalCodeEdit->setText(address.postalCode());
+    mPOBoxEdit->setText(address.postOfficeBox());
+    mPreferredCheckBox->setChecked(address.type() &KContacts::Address::Pref);
+#if 0
+    if (address.isEmpty()) {
+        mCountryCombo->setItemText(mCountryCombo->currentIndex(),
+                                   QLocale::countryToString(QLocale().country()));
+    } else {
+        mCountryCombo->setItemText(mCountryCombo->currentIndex(), mAddress.country());
+    }
+#endif
     //TODO
 }
 
 KContacts::Address AddressLocationWidget::address() const
 {
+    KContacts::Address address(mAddress);
+
+    //address.setType(mTypeCombo->type());
+    address.setLocality(mLocalityEdit->text());
+    address.setRegion(mRegionEdit->text());
+    address.setPostalCode(mPostalCodeEdit->text());
+    address.setCountry(mCountryCombo->currentText());
+    address.setPostOfficeBox(mPOBoxEdit->text());
+    //address.setStreet(mStreetTextEdit->toPlainText());
+    //address.setLabel(mLabel);
+#if 0
+    if (mPreferredCheckBox->isChecked()) {
+        address.setType(address.type() | KContacts::Address::Pref);
+    } else {
+        address.setType(address.type() & ~(KContacts::Address::Pref));
+    }
+#endif
+    return address;
+
     return KContacts::Address();
+}
+
+void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)
+{
+    //TODO
 }

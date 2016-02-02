@@ -78,7 +78,7 @@ void AddressesLocationViewer::editAddress(int index)
         return;
     } else if (index < mAddresses.count()) {
         //TODO remove it from list ?
-        editAddress(mAddresses.at(index));
+        modifyAddress(mAddresses.at(index), index);
     }
 }
 

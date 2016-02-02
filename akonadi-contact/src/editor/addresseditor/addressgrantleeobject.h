@@ -43,6 +43,7 @@ public:
     QString type() const;
     bool preferredAddress() const;
 private:
+    QString createActionUrl(const QString &actionName) const;
     KContacts::Address mAddress;
     int mAddressIndex;
 };

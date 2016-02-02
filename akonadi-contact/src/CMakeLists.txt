@@ -38,6 +38,7 @@ set(akonadicontact_addresslocation_editor_SRCS
    editor/addresseditor/addresseslocationgrantleeformater.cpp
    editor/addresseditor/addressgrantleeobject.cpp
    editor/addresseditor/iconnamecache.cpp
+   editor/addresseditor/addresseslocationwidget.cpp
 )
 
 set(akonadicontact_editor_SRCS

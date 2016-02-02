@@ -44,7 +44,7 @@ private Q_SLOTS:
     void slotLinkClicked(const QUrl &url);
 
 Q_SIGNALS:
-    void editAddress(const KContacts::Address &address);
+    void modifyAddress(const KContacts::Address &address, int currentIndex);
 
 private:
     void updateView();

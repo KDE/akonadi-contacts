@@ -21,37 +21,24 @@
 */
 
 
-#ifndef ADDRESSLOCATIONWIDGET_H
-#define ADDRESSLOCATIONWIDGET_H
+#ifndef ADDRESSESLOCATIONWIDGET_H
+#define ADDRESSESLOCATIONWIDGET_H
 
 #include <QWidget>
 #include <KContacts/Address>
-class QCheckBox;
-class KLineEdit;
-class KComboBox;
-class QPushButton;
-class AddressLocationWidget : public QWidget
+class AddressesLocationViewer;
+class AddressesLocationWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AddressLocationWidget(QWidget *parent = Q_NULLPTR);
-    ~AddressLocationWidget();
+    explicit AddressesLocationWidget(QWidget *parent = Q_NULLPTR);
+    ~AddressesLocationWidget();
 
-    void setAddress(const KContacts::Address &address);
-    KContacts::Address address() const;
-
-    void slotModifyAddress(const KContacts::Address &address, int currentIndex);
+    KContacts::Address::List addresses() const;
+    void setAddresses(const KContacts::Address::List &addresses);
 
 private:
-    QCheckBox *mPreferredCheckBox;
-    KLineEdit *mPOBoxEdit;
-    KLineEdit *mLocalityEdit;
-    KLineEdit *mRegionEdit;
-    KLineEdit *mPostalCodeEdit;
-    KLineEdit *mStreetEdit;
-    KComboBox *mCountryCombo;
-    QPushButton *mAddAddress;
-    KContacts::Address mAddress;
+    AddressesLocationViewer *mAddressesLocationViewer;
 };
 
-#endif // ADDRESSLOCATIONWIDGET_H
+#endif // ADDRESSESLOCATIONWIDGET_H
