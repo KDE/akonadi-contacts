@@ -166,6 +166,7 @@ PRIVATE
     KF5::XmlGui
     Phonon::phonon4qt5
     Grantlee5::Templates
+    Qt5::WebKitWidgets
 )
 
 if(KF5Prison_FOUND)

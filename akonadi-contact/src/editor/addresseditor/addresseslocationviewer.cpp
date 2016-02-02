@@ -22,14 +22,26 @@
 
 #include "addresseslocationviewer.h"
 #include "addresseslocationgrantleeformater.h"
-
+#include <QWebSettings>
 AddressesLocationViewer::AddressesLocationViewer(QWidget *parent)
-    : QWidget(parent),
+    : QWebView(parent),
       mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))
 {
+    setContextMenuPolicy(Qt::CustomContextMenu);
+    settings()->setAttribute(QWebSettings::JavascriptEnabled, false);
+    settings()->setAttribute(QWebSettings::JavaEnabled, false);
+    settings()->setAttribute(QWebSettings::PluginsEnabled, false);
+    settings()->setAttribute(QWebSettings::DnsPrefetchEnabled, true);
+    settings()->setAttribute(QWebSettings::AutoLoadImages, true);
+    connect(this, &AddressesLocationViewer::linkClicked, this, &AddressesLocationViewer::slotLinkClicked);
 }
 
 AddressesLocationViewer::~AddressesLocationViewer()
+{
+
+}
+
+void AddressesLocationViewer::slotLinkClicked(const QUrl &url)
 {
 
 }

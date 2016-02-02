@@ -24,10 +24,10 @@
 #ifndef ADDRESSESLOCATIONVIEWER_H
 #define ADDRESSESLOCATIONVIEWER_H
 
-#include <QWidget>
+#include <QWebView>
 #include <KContacts/Address>
 class AddressesLocationGrantleeFormater;
-class AddressesLocationViewer : public QWidget
+class AddressesLocationViewer : public QWebView
 {
     Q_OBJECT
 public:
@@ -39,6 +39,9 @@ public:
 
     KContacts::Address::List addresses() const;
     void setAddresses(const KContacts::Address::List &addresses);
+
+private Q_SLOTS:
+    void slotLinkClicked(const QUrl &url);
 
 private:
     void updateView();
