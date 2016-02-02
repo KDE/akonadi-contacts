@@ -43,8 +43,13 @@ public:
 private Q_SLOTS:
     void slotLinkClicked(const QUrl &url);
 
+Q_SIGNALS:
+    void editAddress(const KContacts::Address &address);
+
 private:
     void updateView();
+    void editAddress(int index);
+    void removeAddress(int index);
     KContacts::Address::List mAddresses;
     AddressesLocationGrantleeFormater *mAddressesLocationGrantleeFormatter;
 };

@@ -22,7 +22,10 @@
 
 #include "addresseslocationviewer.h"
 #include "addresseslocationgrantleeformater.h"
+#include <QUrlQuery>
 #include <QWebSettings>
+#include <QDebug>
+
 AddressesLocationViewer::AddressesLocationViewer(QWidget *parent)
     : QWebView(parent),
       mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))
@@ -43,14 +46,46 @@ AddressesLocationViewer::~AddressesLocationViewer()
 
 void AddressesLocationViewer::slotLinkClicked(const QUrl &url)
 {
+    if (url.scheme() == QLatin1String("addresslocationaction")) {
+        const QString urlPath(url.path());
+        if (url.hasQuery()) {
+            const QUrlQuery urlQuery(url);
+            const int addressId = urlQuery.queryItemValue(QStringLiteral("id")).toInt();
+            if (urlPath == QStringLiteral("removeaddress")) {
+                removeAddress(addressId);
+            } else if (urlPath == QStringLiteral("editaddress")) {
+                editAddress(addressId);
+            } else {
+                qDebug() << "Unknown url" << url;
+            }
+        }
+    }
+}
 
+void AddressesLocationViewer::removeAddress(int index)
+{
+    if (index < 0) {
+        return;
+    } else if (index < mAddresses.count()) {
+        mAddresses.remove(index);
+        updateView();
+    }
+}
+
+void AddressesLocationViewer::editAddress(int index)
+{
+    if (index < 0) {
+        return;
+    } else if (index < mAddresses.count()) {
+        //TODO remove it from list ?
+        editAddress(mAddresses.at(index));
+    }
 }
 
 void AddressesLocationViewer::updateView()
 {
     const QString html = mAddressesLocationGrantleeFormatter->formatAddresses(mAddresses);
-    //TODO
-    //TODO
+    setHtml(html, QUrl(QStringLiteral("file://")));
 }
 
 void AddressesLocationViewer::addAddress(const KContacts::Address &address)
