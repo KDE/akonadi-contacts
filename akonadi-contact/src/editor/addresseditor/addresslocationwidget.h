@@ -43,6 +43,9 @@ public:
 
     void slotModifyAddress(const KContacts::Address &address, int currentIndex);
 
+private Q_SLOTS:
+    void slotAddAddress();
+
 private:
     KContacts::Address mAddress;
     QCheckBox *mPreferredCheckBox;

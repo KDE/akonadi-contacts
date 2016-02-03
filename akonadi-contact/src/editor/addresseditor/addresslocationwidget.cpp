@@ -110,6 +110,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
     mAddAddress = new QPushButton(i18n("Add Address"), this);
     mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
+    connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
     topLayout->addWidget(mAddAddress, 8, 0);
 
 }
@@ -119,11 +120,16 @@ AddressLocationWidget::~AddressLocationWidget()
 
 }
 
+void AddressLocationWidget::slotAddAddress()
+{
+    //TODO
+}
+
 void AddressLocationWidget::setAddress(const KContacts::Address &address)
 {
     mAddress = address;
     mTypeCombo->setType(mAddress.type());
-    //mStreetTextEdit->setPlainText(mAddress.street());
+    mStreetEdit->setText(mAddress.street());
     mRegionEdit->setText(address.region());
     mLocalityEdit->setText(address.locality());
     mPostalCodeEdit->setText(address.postalCode());
@@ -150,18 +156,13 @@ KContacts::Address AddressLocationWidget::address() const
     address.setPostalCode(mPostalCodeEdit->text());
     address.setCountry(mCountryCombo->currentText());
     address.setPostOfficeBox(mPOBoxEdit->text());
-    //address.setStreet(mStreetTextEdit->toPlainText());
-    //address.setLabel(mLabel);
-#if 0
+    address.setStreet(mStreetEdit->text());
     if (mPreferredCheckBox->isChecked()) {
         address.setType(address.type() | KContacts::Address::Pref);
     } else {
         address.setType(address.type() & ~(KContacts::Address::Pref));
     }
-#endif
     return address;
-
-    return KContacts::Address();
 }
 
 void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)
