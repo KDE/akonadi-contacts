@@ -87,4 +87,29 @@ void AddressLocationWidgetTest::shouldHaveDefaultValue()
     QVERIFY(addbuttonaddress);
 }
 
+void AddressLocationWidgetTest::shouldChangeReadOnlyStatus()
+{
+    AddressLocationWidget w;
+
+    w.setReadOnly(true);
+    SelectAddressTypeComboBox *typeAddress = w.findChild<SelectAddressTypeComboBox *>(QStringLiteral("typeaddress"));
+    QCOMPARE(typeAddress->isEnabled(), false);
+    KLineEdit *mStreetEdit = w.findChild<KLineEdit *>(QStringLiteral("streetlineedit"));
+    QCOMPARE(mStreetEdit->isReadOnly(), true);
+    KLineEdit *postofficeboxlineedit = w.findChild<KLineEdit *>(QStringLiteral("postofficeboxlineedit"));
+    QCOMPARE(postofficeboxlineedit->isReadOnly(), true);
+    KLineEdit *localitylineedit = w.findChild<KLineEdit *>(QStringLiteral("localitylineedit"));
+    QCOMPARE(localitylineedit->isReadOnly(), true);
+    KLineEdit *regionlineedit = w.findChild<KLineEdit *>(QStringLiteral("regionlineedit"));
+    QCOMPARE(regionlineedit->isReadOnly(), true);
+    KLineEdit *postalcodelineedit = w.findChild<KLineEdit *>(QStringLiteral("postalcodelineedit"));
+    QCOMPARE(postalcodelineedit->isReadOnly(), true);
+    KComboBox *countrycombobox = w.findChild<KComboBox *>(QStringLiteral("countrycombobox"));
+    QCOMPARE(countrycombobox->isEnabled(), false);
+    QCheckBox *preferredcheckbox = w.findChild<QCheckBox *>(QStringLiteral("preferredcheckbox"));
+    QCOMPARE(preferredcheckbox->isEnabled(), false);
+    QPushButton *addbuttonaddress = w.findChild<QPushButton *>(QStringLiteral("addbuttonaddress"));
+    QCOMPARE(addbuttonaddress->isEnabled(), false);
+}
+
 QTEST_MAIN(AddressLocationWidgetTest)

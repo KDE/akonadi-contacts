@@ -35,6 +35,7 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldChangeReadOnlyStatus();
 };
 
 #endif // ADDRESSLOCATIONWIDGETTEST_H
