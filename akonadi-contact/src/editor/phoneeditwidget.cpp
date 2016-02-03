@@ -284,6 +284,7 @@ PhoneEditWidget::PhoneEditWidget(QWidget *parent)
     QGridLayout *layout = new QGridLayout(this);
 
     mListScrollArea = new QScrollArea(this);
+    mListScrollArea->setFrameShape(QFrame::NoFrame);
     mPhoneNumberListWidget = new PhoneNumberListWidget;
     mListScrollArea->setWidget(mPhoneNumberListWidget);
     mListScrollArea->setWidgetResizable(true);
