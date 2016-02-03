@@ -24,25 +24,19 @@
 #include "addresseslocationwidget.h"
 #include "addresseslocationviewer.h"
 #include "addresslocationwidget.h"
-#include <QHBoxLayout>
-
 
 AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
-    : QWidget(parent)
+    : QSplitter(parent)
 {
-    QHBoxLayout *topLayout = new QHBoxLayout;
-    topLayout->setMargin(0);
     AddressLocationWidget *addressLocationWidget = new AddressLocationWidget(this);
+    addWidget(addressLocationWidget);
     addressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
-    topLayout->addWidget(addressLocationWidget);
 
     mAddressesLocationViewer = new AddressesLocationViewer(this);
     mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
-    topLayout->addWidget(mAddressesLocationViewer);
+    addWidget(mAddressesLocationViewer);
     connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, addressLocationWidget, &AddressLocationWidget::slotModifyAddress);
     connect(addressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
-
-    setLayout(topLayout);
 }
 
 AddressesLocationWidget::~AddressesLocationWidget()

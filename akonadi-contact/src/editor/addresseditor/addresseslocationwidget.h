@@ -24,10 +24,10 @@
 #ifndef ADDRESSESLOCATIONWIDGET_H
 #define ADDRESSESLOCATIONWIDGET_H
 
-#include <QWidget>
+#include <QSplitter>
 #include <KContacts/Address>
 class AddressesLocationViewer;
-class AddressesLocationWidget : public QWidget
+class AddressesLocationWidget : public QSplitter
 {
     Q_OBJECT
 public:
