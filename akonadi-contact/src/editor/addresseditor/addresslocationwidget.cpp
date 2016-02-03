@@ -169,3 +169,9 @@ void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address,
 {
     //TODO
 }
+
+
+void AddressLocationWidget::clear()
+{
+    //TODO
+}

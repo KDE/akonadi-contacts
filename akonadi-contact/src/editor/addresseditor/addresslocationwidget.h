@@ -43,6 +43,8 @@ public:
 
     void slotModifyAddress(const KContacts::Address &address, int currentIndex);
 
+    void clear();
+
 private Q_SLOTS:
     void slotAddAddress();
 
