@@ -55,7 +55,6 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     topLayout->addWidget(mStreetEdit, 2, 0);
 
 
-
     label = new QLabel(KContacts::Address::postOfficeBoxLabel(), this);
     label->setObjectName(QStringLiteral("postofficeboxlabel"));
     topLayout->addWidget(label, 1, 1);
@@ -113,7 +112,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
     connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
     topLayout->addWidget(mAddAddress, 8, 0);
-
+    topLayout->setRowStretch(9, 1);
 }
 
 AddressLocationWidget::~AddressLocationWidget()
