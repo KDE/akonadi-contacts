@@ -1,5 +1,13 @@
 set(addresseditor_SRCS
-  main.cpp  
+  main.cpp
+  ../addresseslocationwidget.cpp
+  ../addresseslocationviewer.cpp
+  ../addresseslocationgrantleeformater.cpp
+  ../addressgrantleeobject.cpp
+  ../iconnamecache.cpp
+  ../addresslocationwidget.cpp
+  ../selectaddresstypecombobox.cpp
+  ../addresstypedialog.cpp
 )
 
 add_executable(addresseditortest ${addresseditor_SRCS})
@@ -7,5 +15,12 @@ add_executable(addresseditortest ${addresseditor_SRCS})
 target_link_libraries(addresseditortest
   KF5::I18n
   Qt5::Widgets
+  KF5::AkonadiContact
+  KF5::Contacts
+  KF5::I18n
+  KF5::Completion
+  Qt5::WebKitWidgets
+  Grantlee5::Templates
+  KF5::IconThemes
 )
 

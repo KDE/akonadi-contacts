@@ -23,10 +23,14 @@
 
 #include <QApplication>
 
+#include "../addresseslocationwidget.h"
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
+    AddressesLocationWidget *addresseslocationwidget = new AddressesLocationWidget;
+    addresseslocationwidget->show();
 
     return app.exec();
 }
