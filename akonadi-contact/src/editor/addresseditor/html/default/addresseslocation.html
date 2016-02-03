@@ -7,7 +7,13 @@
 <body>
 {% if addresses %}
 {% for address in addresses %}
-  <div> {{ address.formattedAddress }}  {{ address.modifyAddressAction|safe}} {{ address.removeAddressAction|safe}} </div>
+  <div> {{ address.formattedAddress }}  
+   {% if readOnly %}
+   {% else %}
+   {{ address.modifyAddressAction|safe}} {{ address.removeAddressAction|safe}} 
+   {% endif %}
+  </div>
+
   </br>
 {% endfor %}
 {% endif %}
