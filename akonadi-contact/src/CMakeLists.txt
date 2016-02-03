@@ -245,5 +245,12 @@ install( FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
 )
 
+if (BUILD_TESTING)
+   add_subdirectory(editor/autotests)
+   add_subdirectory(editor/addresseditor/autotests/)
+   add_subdirectory(editor/addresseditor/tests)
+endif()
+
+
 add_subdirectory(editor/addresseditor/html)
 
