@@ -35,11 +35,10 @@
 #include <QLocale>
 
 DateView::DateView(QWidget *parent)
-    : QLabel(parent)
+    : QLineEdit(parent)
 {
-    setTextInteractionFlags(Qt::TextSelectableByMouse);
-    setFrameShape(QFrame::StyledPanel);
-    setFrameShadow(QFrame::Sunken);
+    setPlaceholderText(i18n("Click to Add Date"));
+    setReadOnly(true);
 }
 
 void DateView::contextMenuEvent(QContextMenuEvent *event)

@@ -23,7 +23,7 @@
 #define DATEEDITWIDGET_H
 
 #include <QtCore/QDate>
-#include <QLabel>
+#include <QLineEdit>
 #include <QWidget>
 
 class KDatePickerPopup;
@@ -31,7 +31,7 @@ class KDatePickerPopup;
 class QContextMenuEvent;
 class QToolButton;
 
-class DateView : public QLabel
+class DateView : public QLineEdit
 {
     Q_OBJECT
 
