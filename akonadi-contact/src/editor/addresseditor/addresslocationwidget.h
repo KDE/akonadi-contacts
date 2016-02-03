@@ -44,6 +44,8 @@ public:
     void slotModifyAddress(const KContacts::Address &address, int currentIndex);
 
     void clear();
+Q_SIGNALS:
+    void addNewAddress(const KContacts::Address &address);
 
 private Q_SLOTS:
     void slotAddAddress();

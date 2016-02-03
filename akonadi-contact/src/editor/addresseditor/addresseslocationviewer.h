@@ -34,11 +34,11 @@ public:
     explicit AddressesLocationViewer(QWidget *parent = Q_NULLPTR);
     ~AddressesLocationViewer();
 
-
-    void addAddress(const KContacts::Address &address);
-
     KContacts::Address::List addresses() const;
     void setAddresses(const KContacts::Address::List &addresses);
+
+public Q_SLOTS:
+    void addAddress(const KContacts::Address &address);
 
 private Q_SLOTS:
     void slotLinkClicked(const QUrl &url);

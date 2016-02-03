@@ -122,7 +122,10 @@ AddressLocationWidget::~AddressLocationWidget()
 
 void AddressLocationWidget::slotAddAddress()
 {
-    //TODO
+    KContacts::Address addr = address();
+    if (!addr.isEmpty()) {
+        Q_EMIT addNewAddress(addr);
+    }
 }
 
 void AddressLocationWidget::setAddress(const KContacts::Address &address)

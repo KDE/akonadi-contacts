@@ -40,6 +40,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
     topLayout->addWidget(mAddressesLocationViewer);
     connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, addressLocationWidget, &AddressLocationWidget::slotModifyAddress);
+    connect(addressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
 
     setLayout(topLayout);
 }
