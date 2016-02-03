@@ -32,6 +32,7 @@
 #include <QLabel>
 #include <QCheckBox>
 #include <QPushButton>
+#include <QDebug>
 
 AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     : QWidget(parent)
@@ -171,6 +172,7 @@ KContacts::Address AddressLocationWidget::address() const
 
 void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)
 {
+    qDebug()<<" void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)"<<currentIndex;
     setAddress(address);
     //TODO store currentIndex.
     //TODO
