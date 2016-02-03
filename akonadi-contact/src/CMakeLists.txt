@@ -39,6 +39,7 @@ set(akonadicontact_addresslocation_editor_SRCS
    editor/addresseditor/addressgrantleeobject.cpp
    editor/addresseditor/iconnamecache.cpp
    editor/addresseditor/addresseslocationwidget.cpp
+   editor/addresseditor/selectaddresstypecombobox.cpp
 )
 
 set(akonadicontact_editor_SRCS
