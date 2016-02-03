@@ -28,7 +28,8 @@
 
 AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *parent)
     : QObject(parent),
-      mEngine(new Grantlee::Engine)
+      mEngine(new Grantlee::Engine),
+      mReadOnly(false)
 {
     mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
     mGrantleeThemePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
@@ -54,10 +55,16 @@ QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Addr
     QVariantHash addressHash;
     addressHash.insert(QStringLiteral("addresses"), addressList);
     addressHash.insert(QStringLiteral("absoluteThemePath"), mGrantleeThemePath);
+    addressHash.insert(QStringLiteral("readOnly"), mReadOnly);
 
     Grantlee::Context context(addressHash);
     const QString contentHtml = mSelfcontainedTemplate->render(&context);
     return contentHtml;
+}
+
+void AddressesLocationGrantleeFormater::setReadOnly(bool readOnly)
+{
+    mReadOnly = readOnly;
 }
 
 void AddressesLocationGrantleeFormater::changeGrantleePath(const QString &path)

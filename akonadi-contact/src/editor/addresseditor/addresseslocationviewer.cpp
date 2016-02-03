@@ -45,9 +45,14 @@ AddressesLocationViewer::~AddressesLocationViewer()
 
 }
 
+void AddressesLocationViewer::setReadOnly(bool readOnly)
+{
+    mAddressesLocationGrantleeFormatter->setReadOnly(readOnly);
+    updateView();
+}
+
 void AddressesLocationViewer::slotLinkClicked(const QUrl &url)
 {
-    qDebug()<<" url "<<url;
     if (url.scheme() == QLatin1String("addresslocationaction")) {
         const QString urlPath(url.path());
         if (url.hasQuery()) {

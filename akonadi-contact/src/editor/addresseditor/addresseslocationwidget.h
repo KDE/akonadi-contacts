@@ -27,6 +27,7 @@
 #include <QSplitter>
 #include <KContacts/Address>
 class AddressesLocationViewer;
+class AddressLocationWidget;
 class AddressesLocationWidget : public QSplitter
 {
     Q_OBJECT
@@ -37,8 +38,10 @@ public:
     KContacts::Address::List addresses() const;
     void setAddresses(const KContacts::Address::List &addresses);
 
+    void setReadOnly(bool readOnly);
 private:
     AddressesLocationViewer *mAddressesLocationViewer;
+    AddressLocationWidget *mAddressLocationWidget;
 };
 
 #endif // ADDRESSESLOCATIONWIDGET_H

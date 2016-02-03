@@ -29,15 +29,15 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     : QSplitter(parent)
 {
     setChildrenCollapsible(false);
-    AddressLocationWidget *addressLocationWidget = new AddressLocationWidget(this);
-    addWidget(addressLocationWidget);
-    addressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
+    mAddressLocationWidget = new AddressLocationWidget(this);
+    addWidget(mAddressLocationWidget);
+    mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
 
     mAddressesLocationViewer = new AddressesLocationViewer(this);
     mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
     addWidget(mAddressesLocationViewer);
-    connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, addressLocationWidget, &AddressLocationWidget::slotModifyAddress);
-    connect(addressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
+    connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
+    connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
 }
 
 AddressesLocationWidget::~AddressesLocationWidget()
@@ -53,4 +53,10 @@ KContacts::Address::List AddressesLocationWidget::addresses() const
 void AddressesLocationWidget::setAddresses(const KContacts::Address::List &addresses)
 {
     mAddressesLocationViewer->setAddresses(addresses);
+}
+
+void AddressesLocationWidget::setReadOnly(bool readOnly)
+{
+    mAddressesLocationViewer->setReadOnly(readOnly);
+    mAddressLocationWidget->setReadOnly(readOnly);
 }

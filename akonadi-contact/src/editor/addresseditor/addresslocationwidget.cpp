@@ -128,6 +128,19 @@ AddressLocationWidget::~AddressLocationWidget()
 
 }
 
+void AddressLocationWidget::setReadOnly(bool readOnly)
+{
+    mPreferredCheckBox->setEnabled(!readOnly);
+    mPOBoxEdit->setReadOnly(readOnly);
+    mLocalityEdit->setReadOnly(readOnly);
+    mRegionEdit->setReadOnly(readOnly);
+    mPostalCodeEdit->setReadOnly(readOnly);
+    mStreetEdit->setReadOnly(readOnly);
+    mCountryCombo->setEnabled(!readOnly);
+    mAddAddress->setEnabled(!readOnly);
+    mTypeCombo->setEnabled(!readOnly);
+}
+
 void AddressLocationWidget::fillCountryCombo()
 {
     QStringList countries;

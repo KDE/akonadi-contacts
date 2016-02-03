@@ -40,6 +40,7 @@ public:
     ~AddressesLocationGrantleeFormater();
 
     QString formatAddresses(const KContacts::Address::List &addresses);
+    void setReadOnly(bool readOnly);
 private:
     void changeGrantleePath(const QString &path);
     Grantlee::Engine *mEngine;
@@ -47,6 +48,7 @@ private:
     QString mGrantleeThemePath;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
     Grantlee::Template mSelfcontainedTemplate;
+    bool mReadOnly;
 };
 
 #endif // ADDRESSESLOCATIONGRANTLEEFORMATER_H
