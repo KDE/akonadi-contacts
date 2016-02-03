@@ -28,6 +28,7 @@
 AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     : QSplitter(parent)
 {
+    setChildrenCollapsible(false);
     AddressLocationWidget *addressLocationWidget = new AddressLocationWidget(this);
     addWidget(addressLocationWidget);
     addressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));

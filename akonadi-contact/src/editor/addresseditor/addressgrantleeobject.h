@@ -31,6 +31,7 @@ class AddressGrantleeObject : public QObject
     Q_PROPERTY(QString removeAddressAction READ removeAddressAction)
     Q_PROPERTY(QString modifyAddressAction READ modifyAddressAction)
     Q_PROPERTY(QString formattedAddress READ formattedAddress)
+    Q_PROPERTY(QString preferredAddressAction READ preferredAddressAction)
     Q_PROPERTY(QString type READ type)
     Q_PROPERTY(bool preferredAddress READ preferredAddress)
 public:
@@ -42,6 +43,7 @@ public:
     QString formattedAddress() const;
     QString type() const;
     bool preferredAddress() const;
+    QString preferredAddressAction() const;
 private:
     QString createActionUrl(const QString &actionName) const;
     KContacts::Address mAddress;

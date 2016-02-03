@@ -34,6 +34,13 @@
 #include <QPushButton>
 #include <QDebug>
 
+struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
+    bool operator()(const QString &s1, const QString &s2) const
+    {
+        return QString::localeAwareCompare(s1, s2) < 0;
+    }
+};
+
 AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -113,12 +120,38 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
     topLayout->addWidget(mAddAddress, 8, 0);
     topLayout->setRowStretch(9, 1);
+    fillCountryCombo();
 }
 
 AddressLocationWidget::~AddressLocationWidget()
 {
 
 }
+
+void AddressLocationWidget::fillCountryCombo()
+{
+    QStringList countries;
+    const QList<QLocale> localeList = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    countries.reserve(localeList.count());
+    foreach (const QLocale &locale, localeList) {
+        const QString localeStr = QLocale::countryToString(locale.country());
+        if (countries.contains(localeStr)) {
+            continue;
+        }
+        countries.append(localeStr);
+    }
+
+    qSort(countries.begin(), countries.end(), LocaleAwareLessThan());
+
+    mCountryCombo->addItems(countries);
+    mCountryCombo->setAutoCompletion(true);
+    mCountryCombo->completionObject()->setItems(countries);
+    mCountryCombo->completionObject()->setIgnoreCase(true);
+
+    const QString currentCountry = QLocale::countryToString(QLocale().country());
+    mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
+}
+
 
 void AddressLocationWidget::slotAddAddress()
 {
@@ -139,15 +172,12 @@ void AddressLocationWidget::setAddress(const KContacts::Address &address)
     mPostalCodeEdit->setText(address.postalCode());
     mPOBoxEdit->setText(address.postOfficeBox());
     mPreferredCheckBox->setChecked(address.type() &KContacts::Address::Pref);
-#if 0
     if (address.isEmpty()) {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(),
                                    QLocale::countryToString(QLocale().country()));
     } else {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(), mAddress.country());
     }
-#endif
-    //TODO
 }
 
 KContacts::Address AddressLocationWidget::address() const

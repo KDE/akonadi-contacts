@@ -69,6 +69,7 @@ void AddressesLocationViewer::removeAddress(int index)
     if (index < 0) {
         return;
     } else if (index < mAddresses.count()) {
+        //TODO add KMessageBox here.
         mAddresses.remove(index);
         updateView();
     }

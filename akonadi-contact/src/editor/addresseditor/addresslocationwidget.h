@@ -51,6 +51,7 @@ private Q_SLOTS:
     void slotAddAddress();
 
 private:
+    void fillCountryCombo();
     KContacts::Address mAddress;
     QCheckBox *mPreferredCheckBox;
     KLineEdit *mPOBoxEdit;
