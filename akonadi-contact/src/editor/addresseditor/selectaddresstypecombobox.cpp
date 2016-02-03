@@ -21,8 +21,10 @@
 */
 
 
+#include "addresstypedialog.h"
 #include "selectaddresstypecombobox.h"
 #include <KLocalizedString>
+#include <autoqpointer_p.h>
 
 SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     : KComboBox(parent)
@@ -97,7 +99,6 @@ void SelectAddressTypeComboBox::selected(int pos)
 
 void SelectAddressTypeComboBox::otherSelected()
 {
-#if 0
     AutoQPointer<AddressTypeDialog> dlg = new AddressTypeDialog(mType, this);
     if (dlg->exec()) {
         mType = dlg->type();
@@ -107,6 +108,5 @@ void SelectAddressTypeComboBox::otherSelected()
     } else {
         setType(KContacts::Address::Type(mTypeList.at(mLastSelected)));
     }
-#endif
     update();
 }
