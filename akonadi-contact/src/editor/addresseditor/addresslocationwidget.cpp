@@ -125,6 +125,7 @@ void AddressLocationWidget::slotAddAddress()
     KContacts::Address addr = address();
     if (!addr.isEmpty()) {
         Q_EMIT addNewAddress(addr);
+        clear();
     }
 }
 
@@ -170,11 +171,14 @@ KContacts::Address AddressLocationWidget::address() const
 
 void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)
 {
+    setAddress(address);
+    //TODO store currentIndex.
     //TODO
 }
 
 
 void AddressLocationWidget::clear()
 {
+    setAddress(KContacts::Address());
     //TODO
 }
