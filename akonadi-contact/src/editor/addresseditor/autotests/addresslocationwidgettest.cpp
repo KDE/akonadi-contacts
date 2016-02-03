@@ -29,6 +29,7 @@
 #include <KLineEdit>
 #include <QTest>
 #include <QCheckBox>
+#include <editor/addresseditor/selectaddresstypecombobox.h>
 
 AddressLocationWidgetTest::AddressLocationWidgetTest(QObject *parent)
     : QObject(parent)
@@ -44,6 +45,9 @@ AddressLocationWidgetTest::~AddressLocationWidgetTest()
 void AddressLocationWidgetTest::shouldHaveDefaultValue()
 {
     AddressLocationWidget w;
+
+    SelectAddressTypeComboBox *typeAddress = w.findChild<SelectAddressTypeComboBox *>(QStringLiteral("typeaddress"));
+    QVERIFY(typeAddress);
 
     QLabel *streetlabel = w.findChild<QLabel *>(QStringLiteral("streetlabel"));
     QVERIFY(streetlabel);

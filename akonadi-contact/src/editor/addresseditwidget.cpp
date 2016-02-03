@@ -20,7 +20,7 @@
 */
 
 #include "addresseditwidget.h"
-
+#include "editor/addresseditor/addresstypedialog.h"
 #include "autoqpointer_p.h"
 
 #include <QtCore/QEvent>
@@ -83,24 +83,6 @@ protected:
     }
 };
 
-/**
- * Dialog for creating a new address types.
- *
- * @note This dialog is only used by AddressTypeCombo.
- */
-class AddressTypeDialog : public QDialog
-{
-public:
-    AddressTypeDialog(KContacts::Address::Type type, QWidget *parent);
-    ~AddressTypeDialog();
-
-    KContacts::Address::Type type() const;
-
-private:
-    QButtonGroup *mGroup;
-
-    KContacts::Address::TypeList mTypeList;
-};
 
 AddressSelectionWidget::AddressSelectionWidget(QWidget *parent)
     : KComboBox(parent)
@@ -586,67 +568,4 @@ void AddressEditDialog::fillCountryCombo()
 
     const QString currentCountry = QLocale::countryToString(QLocale().country());
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
-}
-
-AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *parent)
-    : QDialog(parent)
-{
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-    setWindowTitle(i18nc("street/postal", "Edit Address Type"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-    okButton->setDefault(true);
-    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    okButton->setDefault(true);
-
-    QWidget *page = new QWidget(this);
-    mainLayout->addWidget(page);
-    mainLayout->addWidget(buttonBox);
-    QVBoxLayout *layout = new QVBoxLayout(page);
-    layout->setMargin(0);
-
-    QGroupBox *box  = new QGroupBox(i18nc("street/postal", "Address Types"), page);
-    mainLayout->addWidget(box);
-    layout->addWidget(box);
-    mGroup = new QButtonGroup(box);
-    mGroup->setExclusive(false);
-
-    QGridLayout *buttonLayout = new QGridLayout(box);
-
-    mTypeList = KContacts::Address::typeList();
-    mTypeList.removeAll(KContacts::Address::Pref);
-
-    KContacts::Address::TypeList::ConstIterator it;
-    int i = 0;
-    int row = 0;
-    for (it = mTypeList.constBegin(); it != mTypeList.constEnd(); ++it, ++i) {
-        QCheckBox *cb = new QCheckBox(KContacts::Address::typeLabel(*it), box);
-        cb->setChecked(type & mTypeList[i]);
-        buttonLayout->addWidget(cb, row, i % 3);
-
-        if (i % 3 == 2) {
-            ++row;
-        }
-        mGroup->addButton(cb);
-    }
-}
-
-AddressTypeDialog::~AddressTypeDialog()
-{
-}
-
-KContacts::Address::Type AddressTypeDialog::type() const
-{
-    KContacts::Address::Type type;
-    for (int i = 0; i < mGroup->buttons().count(); ++i) {
-        QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
-        if (box && box->isChecked()) {
-            type |= mTypeList[i];
-        }
-    }
-
-    return type;
 }

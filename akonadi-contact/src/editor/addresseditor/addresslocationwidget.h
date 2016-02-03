@@ -30,6 +30,7 @@ class QCheckBox;
 class KLineEdit;
 class KComboBox;
 class QPushButton;
+class SelectAddressTypeComboBox;
 class AddressLocationWidget : public QWidget
 {
     Q_OBJECT
@@ -43,6 +44,7 @@ public:
     void slotModifyAddress(const KContacts::Address &address, int currentIndex);
 
 private:
+    KContacts::Address mAddress;
     QCheckBox *mPreferredCheckBox;
     KLineEdit *mPOBoxEdit;
     KLineEdit *mLocalityEdit;
@@ -51,7 +53,7 @@ private:
     KLineEdit *mStreetEdit;
     KComboBox *mCountryCombo;
     QPushButton *mAddAddress;
-    KContacts::Address mAddress;
+    SelectAddressTypeComboBox *mTypeCombo;
 };
 
 #endif // ADDRESSLOCATIONWIDGET_H

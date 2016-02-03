@@ -30,7 +30,8 @@ SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     , mLastSelected(0)
 {
     const int count = KContacts::Address::typeList().count();
-    mTypeList.reserve(count + 1);
+    mTypeList.reserve(count + 2);
+    mTypeList.append(-2); // Add initial message
     for (int i = 0; i < count; ++i) {
         mTypeList.append(KContacts::Address::typeList().at(i));
     }
@@ -38,8 +39,7 @@ SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
 
     update();
 
-    connect(this, SIGNAL(activated(int)),
-            this, SLOT(selected(int)));
+    connect(this, SIGNAL(activated(int)), this, SLOT(selected(int)));
 }
 
 SelectAddressTypeComboBox::~SelectAddressTypeComboBox()
@@ -71,6 +71,8 @@ void SelectAddressTypeComboBox::update()
     for (int i = 0; i < mTypeList.count(); ++i) {
         if (mTypeList.at(i) == -1) {     // "Other..." entry
             addItem(i18nc("@item:inlistbox Category of contact info field", "Other..."));
+        } else if (mTypeList.at(i) == -2) {
+            addItem(i18nc("@item:inlistbox Category of contact info field", "New Address Type"));
         } else {
             addItem(KContacts::Address::typeLabel(KContacts::Address::Type(mTypeList.at(i))));
         }
@@ -85,6 +87,8 @@ void SelectAddressTypeComboBox::selected(int pos)
 {
     if (mTypeList.at(pos) == -1) {
         otherSelected();
+    } else if (mTypeList.at(pos) == -2) {
+        return;
     } else {
         mType = KContacts::Address::Type(mTypeList.at(pos));
         mLastSelected = pos;

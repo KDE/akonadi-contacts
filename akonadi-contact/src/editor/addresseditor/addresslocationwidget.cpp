@@ -22,6 +22,7 @@
 
 
 #include "addresslocationwidget.h"
+#include "selectaddresstypecombobox.h"
 
 #include <KComboBox>
 #include <KLineEdit>
@@ -37,6 +38,10 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 {
     QGridLayout *topLayout = new QGridLayout;
     setLayout(topLayout);
+
+    mTypeCombo = new SelectAddressTypeComboBox(this);
+    mTypeCombo->setObjectName(QStringLiteral("typeaddress"));
+    topLayout->addWidget(mTypeCombo, 0, 0, 1, 2);
 
     QLabel *label = new QLabel(KContacts::Address::streetLabel(), this);
     label->setObjectName(QStringLiteral("streetlabel"));
@@ -117,7 +122,7 @@ AddressLocationWidget::~AddressLocationWidget()
 void AddressLocationWidget::setAddress(const KContacts::Address &address)
 {
     mAddress = address;
-    //mTypeCombo->setType(mAddress.type());
+    mTypeCombo->setType(mAddress.type());
     //mStreetTextEdit->setPlainText(mAddress.street());
     mRegionEdit->setText(address.region());
     mLocalityEdit->setText(address.locality());
@@ -139,7 +144,7 @@ KContacts::Address AddressLocationWidget::address() const
 {
     KContacts::Address address(mAddress);
 
-    //address.setType(mTypeCombo->type());
+    address.setType(mTypeCombo->type());
     address.setLocality(mLocalityEdit->text());
     address.setRegion(mRegionEdit->text());
     address.setPostalCode(mPostalCodeEdit->text());
