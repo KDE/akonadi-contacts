@@ -269,13 +269,11 @@ void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address,
     switchMode();
 }
 
-
 void AddressLocationWidget::clear()
 {
     mCurrentMode = CreateAddress;
     setAddress(KContacts::Address());
     switchMode();
-    //TODO
 }
 
 void AddressLocationWidget::slotUpdateAddress()
@@ -288,5 +286,6 @@ void AddressLocationWidget::slotUpdateAddress()
 
 void AddressLocationWidget::slotCancelModifyAddress()
 {
+    mCurrentAddress = -1;
     clear();
 }
