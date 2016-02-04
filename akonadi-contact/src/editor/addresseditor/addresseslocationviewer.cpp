@@ -22,6 +22,8 @@
 
 #include "addresseslocationviewer.h"
 #include "addresseslocationgrantleeformater.h"
+#include <KMessageBox>
+#include <KLocalizedString>
 #include <QUrlQuery>
 #include <QWebSettings>
 #include <QDebug>
@@ -74,7 +76,11 @@ void AddressesLocationViewer::removeAddress(int index)
     if (index < 0) {
         return;
     } else if (index < mAddresses.count()) {
-        //TODO add KMessageBox here.
+        const int result = KMessageBox::questionYesNo(this, i18n("Do you really want to delete this address?"));
+
+        if (result != KMessageBox::Yes) {
+            return;
+        }
         mAddresses.remove(index);
         updateView();
     }
