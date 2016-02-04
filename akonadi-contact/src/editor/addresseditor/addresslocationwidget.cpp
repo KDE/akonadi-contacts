@@ -33,6 +33,7 @@
 #include <QCheckBox>
 #include <QPushButton>
 #include <QDebug>
+#include <QStackedWidget>
 
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
     bool operator()(const QString &s1, const QString &s2) const
@@ -43,7 +44,8 @@ struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
 
 AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     : QWidget(parent),
-      mCurrentAddress(-1)
+      mCurrentAddress(-1),
+      mCurrentMode(CreateAddress)
 {
     QGridLayout *topLayout = new QGridLayout;
     setLayout(topLayout);
@@ -116,10 +118,34 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mPreferredCheckBox->setObjectName(QStringLiteral("preferredcheckbox"));
     topLayout->addWidget(mPreferredCheckBox, 7, 0, 1, 2);
 
+    mButtonStack = new QStackedWidget(this);
+    mButtonStack->setObjectName(QStringLiteral("buttonstacked"));
+    topLayout->addWidget(mButtonStack, 8, 0, 1, 2);
+
+    QWidget *addButtonWidget = new QWidget(this);
+    QHBoxLayout *addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
+    addButtonWidgetLayout->setMargin(0);
     mAddAddress = new QPushButton(i18n("Add Address"), this);
     mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
     connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
-    topLayout->addWidget(mAddAddress, 8, 0);
+    addButtonWidgetLayout->addWidget(mAddAddress);
+    addButtonWidgetLayout->addStretch(1);
+    mButtonStack->addWidget(addButtonWidget);
+
+    QWidget *modifyButtonWidget = new QWidget(this);
+    QHBoxLayout *modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
+    modifyButtonWidgetLayout->setMargin(0);
+    mButtonStack->addWidget(modifyButtonWidget);
+
+    mModifyAddress = new QPushButton(i18n("Update Address"), this);
+    mModifyAddress->setObjectName(QStringLiteral("modifybuttonaddress"));
+    modifyButtonWidgetLayout->addWidget(mModifyAddress);
+
+    mCancelAddress = new QPushButton(i18n("Cancel"), this);
+    mCancelAddress->setObjectName(QStringLiteral("cancelbuttonaddress"));
+    modifyButtonWidgetLayout->addWidget(mCancelAddress);
+    modifyButtonWidgetLayout->addStretch(1);
+
     topLayout->setRowStretch(9, 1);
     fillCountryCombo();
 }
@@ -140,6 +166,8 @@ void AddressLocationWidget::setReadOnly(bool readOnly)
     mCountryCombo->setEnabled(!readOnly);
     mAddAddress->setEnabled(!readOnly);
     mTypeCombo->setEnabled(!readOnly);
+    mModifyAddress->setEnabled(!readOnly);
+    mCancelAddress->setEnabled(!readOnly);
 }
 
 void AddressLocationWidget::fillCountryCombo()
@@ -213,15 +241,31 @@ KContacts::Address AddressLocationWidget::address() const
     return address;
 }
 
+void AddressLocationWidget::switchMode()
+{
+    switch(mCurrentMode) {
+    case CreateAddress:
+        mButtonStack->setCurrentIndex(0);
+        break;
+    case ModifyAddress:
+        mButtonStack->setCurrentIndex(1);
+        break;
+    }
+}
+
 void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)
 {
     setAddress(address);
+    mCurrentMode = ModifyAddress;
     mCurrentAddress = currentIndex;
+    switchMode();
 }
 
 
 void AddressLocationWidget::clear()
 {
+    mCurrentMode = CreateAddress;
     setAddress(KContacts::Address());
+    switchMode();
     //TODO
 }

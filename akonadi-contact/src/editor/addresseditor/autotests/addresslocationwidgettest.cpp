@@ -85,6 +85,12 @@ void AddressLocationWidgetTest::shouldHaveDefaultValue()
 
     QPushButton *addbuttonaddress = w.findChild<QPushButton *>(QStringLiteral("addbuttonaddress"));
     QVERIFY(addbuttonaddress);
+
+    QPushButton *modifybuttonaddress = w.findChild<QPushButton *>(QStringLiteral("modifybuttonaddress"));
+    QVERIFY(modifybuttonaddress);
+
+    QPushButton *cancelbuttonaddress = w.findChild<QPushButton *>(QStringLiteral("cancelbuttonaddress"));
+    QVERIFY(cancelbuttonaddress);
 }
 
 void AddressLocationWidgetTest::shouldChangeReadOnlyStatus()
@@ -110,6 +116,10 @@ void AddressLocationWidgetTest::shouldChangeReadOnlyStatus()
     QCOMPARE(preferredcheckbox->isEnabled(), false);
     QPushButton *addbuttonaddress = w.findChild<QPushButton *>(QStringLiteral("addbuttonaddress"));
     QCOMPARE(addbuttonaddress->isEnabled(), false);
+    QPushButton *modifybuttonaddress = w.findChild<QPushButton *>(QStringLiteral("modifybuttonaddress"));
+    QCOMPARE(modifybuttonaddress->isEnabled(), false);
+    QPushButton *cancelbuttonaddress = w.findChild<QPushButton *>(QStringLiteral("cancelbuttonaddress"));
+    QCOMPARE(cancelbuttonaddress->isEnabled(), false);
 }
 
 QTEST_MAIN(AddressLocationWidgetTest)

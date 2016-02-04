@@ -26,6 +26,7 @@
 
 #include <QWidget>
 #include <KContacts/Address>
+class QStackedWidget;
 class QCheckBox;
 class KLineEdit;
 class KComboBox;
@@ -35,6 +36,11 @@ class AddressLocationWidget : public QWidget
 {
     Q_OBJECT
 public:
+    enum Mode {
+        CreateAddress = 0,
+        ModifyAddress
+    };
+
     explicit AddressLocationWidget(QWidget *parent = Q_NULLPTR);
     ~AddressLocationWidget();
 
@@ -55,6 +61,7 @@ private Q_SLOTS:
 
 private:
     void fillCountryCombo();
+    void switchMode();
     KContacts::Address mAddress;
     QCheckBox *mPreferredCheckBox;
     KLineEdit *mPOBoxEdit;
@@ -64,8 +71,12 @@ private:
     KLineEdit *mStreetEdit;
     KComboBox *mCountryCombo;
     QPushButton *mAddAddress;
+    QPushButton *mModifyAddress;
+    QPushButton *mCancelAddress;
+    QStackedWidget *mButtonStack;
     SelectAddressTypeComboBox *mTypeCombo;
     int mCurrentAddress;
+    Mode mCurrentMode;
 };
 
 #endif // ADDRESSLOCATIONWIDGET_H
