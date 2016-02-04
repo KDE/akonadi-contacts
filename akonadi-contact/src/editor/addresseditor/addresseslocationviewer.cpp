@@ -91,6 +91,7 @@ void AddressesLocationViewer::editAddress(int index)
     if (index < 0) {
         return;
     } else if (index < mAddresses.count()) {
+        // TODO disable allow to remove address in edit mode
         Q_EMIT modifyAddress(mAddresses.at(index), index);
     }
 }
