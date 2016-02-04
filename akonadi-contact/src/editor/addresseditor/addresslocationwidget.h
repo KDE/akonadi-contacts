@@ -65,6 +65,7 @@ private:
     KComboBox *mCountryCombo;
     QPushButton *mAddAddress;
     SelectAddressTypeComboBox *mTypeCombo;
+    int mCurrentAddress;
 };
 
 #endif // ADDRESSLOCATIONWIDGET_H

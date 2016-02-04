@@ -36,8 +36,8 @@ public:
 
     KContacts::Address::List addresses() const;
     void setAddresses(const KContacts::Address::List &addresses);
-
     void setReadOnly(bool readOnly);
+    void replaceAddress(const KContacts::Address &address, int index);
 
 public Q_SLOTS:
     void addAddress(const KContacts::Address &address);

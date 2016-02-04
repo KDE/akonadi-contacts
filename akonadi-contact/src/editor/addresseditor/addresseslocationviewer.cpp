@@ -91,8 +91,17 @@ void AddressesLocationViewer::editAddress(int index)
     if (index < 0) {
         return;
     } else if (index < mAddresses.count()) {
-        //TODO remove it from list ?
-        modifyAddress(mAddresses.at(index), index);
+        Q_EMIT modifyAddress(mAddresses.at(index), index);
+    }
+}
+
+void AddressesLocationViewer::replaceAddress(const KContacts::Address &address, int index)
+{
+    if (index < 0) {
+        return;
+    } else if (index < mAddresses.count()) {
+        mAddresses[index] = address;
+        updateView();
     }
 }
 

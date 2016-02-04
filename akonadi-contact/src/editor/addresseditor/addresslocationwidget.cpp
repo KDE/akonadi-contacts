@@ -42,7 +42,8 @@ struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
 };
 
 AddressLocationWidget::AddressLocationWidget(QWidget *parent)
-    : QWidget(parent)
+    : QWidget(parent),
+      mCurrentAddress(-1)
 {
     QGridLayout *topLayout = new QGridLayout;
     setLayout(topLayout);
@@ -214,10 +215,8 @@ KContacts::Address AddressLocationWidget::address() const
 
 void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)
 {
-    qDebug()<<" void AddressLocationWidget::slotModifyAddress(const KContacts::Address &address, int currentIndex)"<<currentIndex;
     setAddress(address);
-    //TODO store currentIndex.
-    //TODO
+    mCurrentAddress = currentIndex;
 }
 
 
