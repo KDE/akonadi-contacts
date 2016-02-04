@@ -55,9 +55,12 @@ public:
 
 Q_SIGNALS:
     void addNewAddress(const KContacts::Address &address);
+    void updateAddress(const KContacts::Address &address, int index);
 
 private Q_SLOTS:
     void slotAddAddress();
+    void slotUpdateAddress();
+    void slotCancelModifyAddress();
 
 private:
     void fillCountryCombo();

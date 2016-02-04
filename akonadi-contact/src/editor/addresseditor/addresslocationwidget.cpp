@@ -140,9 +140,11 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mModifyAddress = new QPushButton(i18n("Update Address"), this);
     mModifyAddress->setObjectName(QStringLiteral("modifybuttonaddress"));
     modifyButtonWidgetLayout->addWidget(mModifyAddress);
+    connect(mModifyAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotUpdateAddress);
 
     mCancelAddress = new QPushButton(i18n("Cancel"), this);
     mCancelAddress->setObjectName(QStringLiteral("cancelbuttonaddress"));
+    connect(mCancelAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotCancelModifyAddress);
     modifyButtonWidgetLayout->addWidget(mCancelAddress);
     modifyButtonWidgetLayout->addStretch(1);
 
@@ -268,4 +270,17 @@ void AddressLocationWidget::clear()
     setAddress(KContacts::Address());
     switchMode();
     //TODO
+}
+
+void AddressLocationWidget::slotUpdateAddress()
+{
+    if (mCurrentMode == ModifyAddress) {
+        Q_EMIT updateAddress(address(), mCurrentAddress);
+        clear();
+    }
+}
+
+void AddressLocationWidget::slotCancelModifyAddress()
+{
+    clear();
 }

@@ -38,6 +38,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     addWidget(mAddressesLocationViewer);
     connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
+    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationViewer::replaceAddress);
 }
 
 AddressesLocationWidget::~AddressesLocationWidget()
