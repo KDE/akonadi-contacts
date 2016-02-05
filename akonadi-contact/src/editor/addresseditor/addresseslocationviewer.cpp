@@ -128,4 +128,5 @@ KContacts::Address::List AddressesLocationViewer::addresses() const
 void AddressesLocationViewer::setAddresses(const KContacts::Address::List &addresses)
 {
     mAddresses = addresses;
+    updateView();
 }
