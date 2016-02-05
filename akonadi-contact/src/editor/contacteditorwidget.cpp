@@ -34,7 +34,6 @@
 #include "imeditwidget.h"
 #include "nameeditwidget.h"
 #include "phoneeditwidget.h"
-#include "soundeditwidget.h"
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
@@ -85,7 +84,6 @@ public:
     ImageWidget *mPhotoWidget;
     DisplayNameEditWidget *mDisplayNameWidget;
     KLineEdit *mNickNameWidget;
-    SoundEditWidget *mPronunciationWidget;
 
     // widgets from Internet group
     EmailEditWidget *mEmailWidget;
@@ -202,15 +200,7 @@ void ContactEditorWidget::Private::initGuiContactTab()
     label->setBuddy(mNickNameWidget);
     nameLayout->addWidget(mNickNameWidget, 2, 1);
 
-    label = new QLabel(i18nc("@label The pronunciation of a contact's name", "Pronunciation:"));
-    label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    nameLayout->addWidget(label, 3, 0);
-
-    mPronunciationWidget = new SoundEditWidget;
-    label->setBuddy(mPronunciationWidget);
-    nameLayout->addWidget(mPronunciationWidget, 3, 1);
-
-    nameLayout->setRowStretch(4, 1);
+    nameLayout->setRowStretch(3, 1);
 
     // setup Internet group box
     label = new QLabel(i18nc("@label The email address of a contact", "Email:"));
@@ -520,7 +510,6 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     d->mNameWidget->loadContact(contact);
     d->mDisplayNameWidget->loadContact(contact);
     d->mNickNameWidget->setText(contact.nickName());
-    d->mPronunciationWidget->loadContact(contact);
 
     // Internet group
     d->mEmailWidget->loadContact(contact);
@@ -596,7 +585,6 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
     d->mNameWidget->storeContact(contact);
     d->mDisplayNameWidget->storeContact(contact);
     contact.setNickName(d->mNickNameWidget->text().trimmed());
-    d->mPronunciationWidget->storeContact(contact);
 
     // Internet group
     d->mEmailWidget->storeContact(contact);
@@ -681,7 +669,6 @@ void ContactEditorWidget::setReadOnly(bool readOnly)
     d->mPhotoWidget->setReadOnly(readOnly);
     d->mDisplayNameWidget->setReadOnly(readOnly);
     d->mNickNameWidget->setReadOnly(readOnly);
-    d->mPronunciationWidget->setReadOnly(readOnly);
 
     // widgets from Internet group
     d->mEmailWidget->setReadOnly(readOnly);

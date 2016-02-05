@@ -71,7 +71,6 @@ set(akonadicontact_editor_SRCS
   editor/nameeditwidget.cpp
   editor/phoneeditwidget.cpp
   editor/secrecyeditwidget.cpp
-  editor/soundeditwidget.cpp
 )
 
 set(akonadicontact_LIB_SRC
@@ -170,7 +169,6 @@ PRIVATE
     KF5::TextWidgets
     KF5::WidgetsAddons
     KF5::XmlGui
-    Phonon::phonon4qt5
     Grantlee5::Templates
     Qt5::WebKitWidgets
 )
