@@ -33,6 +33,12 @@ class AddressGrantleeObject : public QObject
     Q_PROPERTY(QString formattedAddress READ formattedAddress)
     Q_PROPERTY(QString preferredAddressAction READ preferredAddressAction)
     Q_PROPERTY(QString type READ type)
+    Q_PROPERTY(QString postOfficeBox READ postOfficeBox)
+    Q_PROPERTY(QString street READ street)
+    Q_PROPERTY(QString locality READ locality)
+    Q_PROPERTY(QString region READ region)
+    Q_PROPERTY(QString postalCode READ postalCode)
+    Q_PROPERTY(QString country READ country)
     Q_PROPERTY(bool preferredAddress READ preferredAddress)
 public:
     explicit AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent = Q_NULLPTR);
@@ -44,6 +50,13 @@ public:
     QString type() const;
     bool preferredAddress() const;
     QString preferredAddressAction() const;
+    QString postOfficeBox() const;
+    QString street() const;
+    QString locality() const;
+    QString region() const;
+    QString postalCode() const;
+    QString country() const;
+
 private:
     QString createActionUrl(const QString &actionName) const;
     KContacts::Address mAddress;

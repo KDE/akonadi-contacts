@@ -72,6 +72,36 @@ QString AddressGrantleeObject::preferredAddressAction() const
     return text;
 }
 
+QString AddressGrantleeObject::postOfficeBox() const
+{
+    return mAddress.postOfficeBox();
+}
+
+QString AddressGrantleeObject::street() const
+{
+    return mAddress.street();
+}
+
+QString AddressGrantleeObject::locality() const
+{
+    return mAddress.locality();
+}
+
+QString AddressGrantleeObject::region() const
+{
+    return mAddress.region();
+}
+
+QString AddressGrantleeObject::postalCode() const
+{
+    return mAddress.postalCode();
+}
+
+QString AddressGrantleeObject::country() const
+{
+    return mAddress.country();
+}
+
 QString AddressGrantleeObject::removeAddressAction() const
 {
     const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("edit-delete"), KIconLoader::Small);
