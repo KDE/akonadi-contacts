@@ -48,7 +48,6 @@ set(akonadicontact_addresslocation_editor_SRCS
 )
 
 set(akonadicontact_editor_SRCS
-  editor/addresseditwidget.cpp
   editor/categorieseditwidget.cpp
   editor/contacteditorwidget.cpp
   editor/customfieldeditordialog.cpp
@@ -59,7 +58,6 @@ set(akonadicontact_editor_SRCS
   editor/displaynameeditwidget.cpp
   editor/emaileditwidget.cpp
   editor/freebusyeditwidget.cpp
-  editor/geoeditwidget.cpp
   editor/im/imdelegate.cpp
   editor/im/imeditordialog.cpp
   editor/im/imaddress.cpp
