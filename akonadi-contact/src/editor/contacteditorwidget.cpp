@@ -22,7 +22,6 @@
 #include "contacteditorwidget.h"
 #include "config-akonadi-contact.h"
 
-#include "addresseditwidget.h"
 #include "categorieseditwidget.h"
 #include "contacteditorpageplugin.h"
 #include "contactmetadata_p.h"
@@ -31,7 +30,6 @@
 #include "displaynameeditwidget.h"
 #include "emaileditwidget.h"
 #include "freebusyeditwidget.h"
-#include "geoeditwidget.h"
 #include "imagewidget.h"
 #include "imeditwidget.h"
 #include "nameeditwidget.h"
@@ -53,6 +51,7 @@
 #include <QCheckBox>
 #include <QVBoxLayout>
 #include <KCompletion/KLineEdit>
+#include <editor/addresseditor/addresseslocationwidget.h>
 
 class Q_DECL_HIDDEN ContactEditorWidget::Private
 {
@@ -103,10 +102,7 @@ public:
     QCheckBox *mAllowRemoteContent;
 
     // widgets from addresses group
-    AddressEditWidget *mAddressesWidget;
-
-    // widgets from coordinates group
-    GeoEditWidget *mCoordinatesWidget;
+    AddressesLocationWidget *mAddressesLocationWidget;
 
     // widgets from general group
     ImageWidget *mLogoWidget;
@@ -298,30 +294,8 @@ void ContactEditorWidget::Private::initGuiContactTab()
 
 void ContactEditorWidget::Private::initGuiLocationTab()
 {
-    QWidget *widget = new QWidget;
-    QHBoxLayout *layout = new QHBoxLayout(widget);
-
-    mTabWidget->addTab(widget, i18nc("@title:tab", "Location"));
-
-    QGroupBox *addressesGroupBox = new QGroupBox(i18nc("@title:group", "Addresses"));
-    QGroupBox *coordinatesGroupBox = new QGroupBox(i18nc("@title:group", "Coordinates"));
-
-    layout->addWidget(addressesGroupBox);
-    layout->addWidget(coordinatesGroupBox);
-
-    QGridLayout *addressesLayout = new QGridLayout(addressesGroupBox);
-    QGridLayout *coordinatesLayout = new QGridLayout(coordinatesGroupBox);
-
-    // setup addresses group box
-    mAddressesWidget = new AddressEditWidget(addressesGroupBox);
-    mAddressesWidget->setMinimumHeight(200);
-    addressesLayout->addWidget(mAddressesWidget, 0, 0);
-    addressesLayout->setRowStretch(1, 1);
-
-    // setup coordinates group box
-    mCoordinatesWidget = new GeoEditWidget;
-    coordinatesLayout->addWidget(mCoordinatesWidget, 0, 0);
-    coordinatesLayout->setRowStretch(1, 1);
+    mAddressesLocationWidget = new AddressesLocationWidget;
+    mTabWidget->addTab(mAddressesLocationWidget, i18nc("@title:tab", "Location"));
 }
 
 void ContactEditorWidget::Private::initGuiBusinessTab()
@@ -575,10 +549,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     d->mAllowRemoteContent->setChecked(mailAllowToRemoteContent == QLatin1String("TRUE"));
 
     // address group
-    d->mAddressesWidget->loadContact(contact);
-
-    // coordinates group
-    d->mCoordinatesWidget->loadContact(contact);
+    d->mAddressesLocationWidget->loadContact(contact);
 
     // general group
     d->mLogoWidget->loadContact(contact);
@@ -659,10 +630,7 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
     d->storeCustom(contact, QStringLiteral("MailAllowToRemoteContent"), mailAllowToRemoteContent);
 
     // address group
-    d->mAddressesWidget->storeContact(contact);
-
-    // coordinates group
-    d->mCoordinatesWidget->storeContact(contact);
+    d->mAddressesLocationWidget->storeContact(contact);
 
     // general group
     d->mLogoWidget->storeContact(contact);
@@ -732,10 +700,7 @@ void ContactEditorWidget::setReadOnly(bool readOnly)
     d->mAllowRemoteContent->setEnabled(!readOnly);
 
     // widgets from addresses group
-    d->mAddressesWidget->setReadOnly(readOnly);
-
-    // widgets from coordinates group
-    d->mCoordinatesWidget->setReadOnly(readOnly);
+    d->mAddressesLocationWidget->setReadOnly(readOnly);
 
     // widgets from general group
     d->mLogoWidget->setReadOnly(readOnly);
