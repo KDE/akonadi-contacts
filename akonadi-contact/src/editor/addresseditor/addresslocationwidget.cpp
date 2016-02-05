@@ -172,8 +172,9 @@ void AddressLocationWidget::setReadOnly(bool readOnly)
     mPostalCodeEdit->setReadOnly(readOnly);
     mStreetEdit->setReadOnly(readOnly);
     mCountryCombo->setEnabled(!readOnly);
-    mAddAddress->setEnabled(!readOnly);
     mTypeCombo->setEnabled(!readOnly);
+
+    mAddAddress->setEnabled(!readOnly);
     mModifyAddress->setEnabled(!readOnly);
     mCancelAddress->setEnabled(!readOnly);
 }
