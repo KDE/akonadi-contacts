@@ -46,14 +46,27 @@ AddressesLocationWidget::~AddressesLocationWidget()
 
 }
 
-KContacts::Address::List AddressesLocationWidget::addresses() const
+void AddressesLocationWidget::loadContact(const KContacts::Addressee &contact)
 {
-    return mAddressesLocationViewer->addresses();
+    mAddressesLocationViewer->setAddresses(contact.addresses());
 }
 
-void AddressesLocationWidget::setAddresses(const KContacts::Address::List &addresses)
+void AddressesLocationWidget::storeContact(KContacts::Addressee &contact) const
 {
-    mAddressesLocationViewer->setAddresses(addresses);
+    // delete all previous addresses
+    const KContacts::Address::List oldAddresses = contact.addresses();
+    for (int i = 0; i < oldAddresses.count(); ++i) {
+        contact.removeAddress(oldAddresses.at(i));
+    }
+
+    const KContacts::Address::List addressList = mAddressesLocationViewer->addresses();
+    // insert the new ones
+    for (int i = 0; i < addressList.count(); ++i) {
+        const KContacts::Address address(addressList.at(i));
+        if (!address.isEmpty()) {
+            contact.insertAddress(address);
+        }
+    }
 }
 
 void AddressesLocationWidget::setReadOnly(bool readOnly)

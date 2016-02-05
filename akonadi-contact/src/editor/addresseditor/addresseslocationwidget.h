@@ -25,7 +25,7 @@
 #define ADDRESSESLOCATIONWIDGET_H
 
 #include <QSplitter>
-#include <KContacts/Address>
+#include <KContacts/Addressee>
 class AddressesLocationViewer;
 class AddressLocationWidget;
 class AddressesLocationWidget : public QSplitter
@@ -35,8 +35,8 @@ public:
     explicit AddressesLocationWidget(QWidget *parent = Q_NULLPTR);
     ~AddressesLocationWidget();
 
-    KContacts::Address::List addresses() const;
-    void setAddresses(const KContacts::Address::List &addresses);
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
 private:
