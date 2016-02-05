@@ -61,6 +61,7 @@ private:
     QString createActionUrl(const QString &actionName) const;
     KContacts::Address mAddress;
     int mAddressIndex;
+    int mIconSize;
 };
 
 #endif // ADDRESSGRANTLEEOBJECT_H

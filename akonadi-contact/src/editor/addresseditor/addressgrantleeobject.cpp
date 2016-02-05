@@ -31,7 +31,7 @@ AddressGrantleeObject::AddressGrantleeObject(const KContacts::Address &address, 
       mAddress(address),
       mAddressIndex(addressIndex)
 {
-
+    mIconSize = KIconLoader::global()->currentSize(KIconLoader::Small);
 }
 
 AddressGrantleeObject::~AddressGrantleeObject()
@@ -66,8 +66,8 @@ QString AddressGrantleeObject::preferredAddressAction() const
     QString text;
     if (preferredAddress()) {
         const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("bookmarks"), KIconLoader::Small);
-        text = QStringLiteral("<img class=\"headimage\" title=\"%1\" src=\"file:///%2\"></a>\n")
-                .arg(i18n("Remove Address"), iconPath );
+        text = QStringLiteral("<img class=\"headimage\"  height=\"%3\" width=\"%3\" title=\"%1\" src=\"file:///%2\"></a>\n")
+                .arg(i18n("Remove Address"), iconPath, QString::number(mIconSize) );
     }
     return text;
 }
@@ -105,16 +105,16 @@ QString AddressGrantleeObject::country() const
 QString AddressGrantleeObject::removeAddressAction() const
 {
     const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("edit-delete"), KIconLoader::Small);
-    const QString text = QStringLiteral("<a href=\"%1\"><img class=\"headimage\" title=\"%3\" src=\"file:///%2\"></a>\n")
-                         .arg(createActionUrl(QStringLiteral("removeaddress")), iconPath, i18n("Remove Address"));
+    const QString text = QStringLiteral("<a href=\"%1\"><img class=\"headimage\" height=\"%4\" width=\"%4\" title=\"%3\" src=\"file:///%2\"></a>\n")
+                         .arg(createActionUrl(QStringLiteral("removeaddress")), iconPath, i18n("Remove Address"), QString::number(mIconSize));
     return text;
 }
 
 QString AddressGrantleeObject::modifyAddressAction() const
 {
     const QString iconPath = IconNameCache::instance()->iconPath(QStringLiteral("document-edit"), KIconLoader::Small);
-    const QString text = QStringLiteral("<a href=\"%1\"><img class=\"headimage\" title=\"%3\" src=\"file:///%2\"></a>\n")
-                         .arg(createActionUrl(QStringLiteral("editaddress")), iconPath, i18n("Edit Address"));
+    const QString text = QStringLiteral("<a href=\"%1\"><img class=\"headimage\" height=\"%4\" width=\"%4\" title=\"%3\" src=\"file:///%2\"></a>\n")
+                         .arg(createActionUrl(QStringLiteral("editaddress")), iconPath, i18n("Edit Address"), QString::number(mIconSize));
     return text;
 }
 
