@@ -208,7 +208,7 @@ void AddressLocationWidget::slotAddAddress()
     KContacts::Address addr = address();
     if (!addr.isEmpty()) {
         Q_EMIT addNewAddress(addr);
-        clear();
+        reset();
     }
 }
 
@@ -280,12 +280,17 @@ void AddressLocationWidget::slotUpdateAddress()
 {
     if (mCurrentMode == ModifyAddress) {
         Q_EMIT updateAddress(address(), mCurrentAddress);
-        clear();
+        reset();
     }
+}
+
+void AddressLocationWidget::reset()
+{
+    mCurrentAddress = -1;
+    clear();
 }
 
 void AddressLocationWidget::slotCancelModifyAddress()
 {
-    mCurrentAddress = -1;
-    clear();
+    reset();
 }

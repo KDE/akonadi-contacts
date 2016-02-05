@@ -65,6 +65,7 @@ private Q_SLOTS:
 private:
     void fillCountryCombo();
     void switchMode();
+    void reset();
     KContacts::Address mAddress;
     QCheckBox *mPreferredCheckBox;
     KLineEdit *mPOBoxEdit;
