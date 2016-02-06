@@ -35,6 +35,10 @@ set(akonadicontact_editor_widgets_SRCS
    editor/widgets/kwidgetlister.cpp
 )
 
+set(akonadicontact_editor_generalinfo_SRCS
+   editor/generalinfoeditor/phonewidgetlister.cpp
+)
+
 set(akonadicontact_addresslocation_editor_SRCS
    editor/addresseditor/addresslocationwidget.cpp
    editor/addresseditor/addresseslocationviewer.cpp
@@ -75,6 +79,7 @@ set(akonadicontact_editor_SRCS
 set(akonadicontact_LIB_SRC
   ${akonadicontact_addresslocation_editor_SRCS}
   ${akonadicontact_editor_widgets_SRCS}
+  ${akonadicontact_editor_generalinfo_SRCS}
   abstractcontactformatter.cpp
   abstractcontactgroupformatter.cpp
   attributeregistrar.cpp
