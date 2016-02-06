@@ -20,16 +20,17 @@
     02110-1301, USA.
 */
 
-#include "phonewidgetlister.h"
-using namespace Akonadi;
 
-PhoneWidgetLister::PhoneWidgetLister(QWidget *parent)
-    : KWidgetLister(true, 1, 4, parent)
+#ifndef PHONEWIDGETTEST_H
+#define PHONEWIDGETTEST_H
+
+#include <QObject>
+class PhoneWidgetTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit PhoneWidgetTest(QObject *parent = Q_NULLPTR);
+    ~PhoneWidgetTest();
+};
 
-}
-
-PhoneWidgetLister::~PhoneWidgetLister()
-{
-
-}
+#endif // PHONEWIDGETTEST_H

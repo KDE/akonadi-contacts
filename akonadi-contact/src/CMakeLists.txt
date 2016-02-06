@@ -37,6 +37,7 @@ set(akonadicontact_editor_widgets_SRCS
 
 set(akonadicontact_editor_generalinfo_SRCS
    editor/generalinfoeditor/phonewidgetlister.cpp
+   editor/generalinfoeditor/phonewidget.cpp
 )
 
 set(akonadicontact_addresslocation_editor_SRCS

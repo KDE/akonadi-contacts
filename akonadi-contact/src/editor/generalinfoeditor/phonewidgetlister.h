@@ -24,7 +24,8 @@
 #define PHONEWIDGETLISTER_H
 
 #include "../widgets/kwidgetlister_p.h"
-
+namespace Akonadi
+{
 class PhoneWidgetLister : public KWidgetLister
 {
     Q_OBJECT
@@ -32,5 +33,5 @@ public:
     explicit PhoneWidgetLister(QWidget *parent = Q_NULLPTR);
     ~PhoneWidgetLister();
 };
-
+}
 #endif // PHONEWIDGETLISTER_H
