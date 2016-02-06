@@ -21,11 +21,23 @@
 */
 
 #include "phonewidget.h"
+#include <KLocalizedString>
+#include <QHBoxLayout>
+#include <QLineEdit>
+#include <QToolButton>
+
 using namespace Akonadi;
 PhoneWidget::PhoneWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QHBoxLayout *layout = new QHBoxLayout(this);
+    layout->setSpacing(0);
+    layout->setMargin(0);
 
+
+    mPhoneNumberEdit = new QLineEdit(this);
+    mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
+    layout->addWidget(mPhoneNumberEdit);
 }
 
 PhoneWidget::~PhoneWidget()

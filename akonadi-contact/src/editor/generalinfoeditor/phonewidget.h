@@ -24,6 +24,7 @@
 #define PHONEWIDGET_H
 
 #include <QWidget>
+class QLineEdit;
 namespace Akonadi
 {
 class PhoneWidget : public QWidget
@@ -32,6 +33,8 @@ class PhoneWidget : public QWidget
 public:
     explicit PhoneWidget(QWidget *parent = Q_NULLPTR);
     ~PhoneWidget();
+private:
+    QLineEdit *mPhoneNumberEdit;
 };
 }
 #endif // PHONEWIDGET_H
