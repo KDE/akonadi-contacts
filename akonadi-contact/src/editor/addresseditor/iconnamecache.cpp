@@ -20,7 +20,7 @@
 #include "iconnamecache_p.h"
 
 #include <KIconLoader>
-
+using namespace Akonadi;
 Q_GLOBAL_STATIC(IconNameCache, s_iconNameCache)
 
 IconNameCache *IconNameCache::instance()

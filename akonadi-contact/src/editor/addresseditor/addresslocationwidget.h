@@ -31,6 +31,8 @@ class QCheckBox;
 class KLineEdit;
 class KComboBox;
 class QPushButton;
+namespace Akonadi
+{
 class SelectAddressTypeComboBox;
 class AddressLocationWidget : public QWidget
 {
@@ -82,5 +84,5 @@ private:
     int mCurrentAddress;
     Mode mCurrentMode;
 };
-
+}
 #endif // ADDRESSLOCATIONWIDGET_H

@@ -30,7 +30,7 @@
 #include <QTest>
 #include <QCheckBox>
 #include <editor/addresseditor/selectaddresstypecombobox.h>
-
+using namespace Akonadi;
 AddressLocationWidgetTest::AddressLocationWidgetTest(QObject *parent)
     : QObject(parent)
 {

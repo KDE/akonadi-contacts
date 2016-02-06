@@ -24,6 +24,7 @@
 #include "addresseslocationwidget.h"
 #include "addresseslocationviewer.h"
 #include "addresslocationwidget.h"
+using namespace Akonadi;
 
 AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     : QSplitter(parent)

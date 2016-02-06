@@ -28,6 +28,8 @@
  *
  * The IconNameCache caches the result of iconPath() in a map and solves the slowness.
  */
+namespace Akonadi
+{
 class IconNameCache
 {
 public:
@@ -48,5 +50,5 @@ private:
 
     mutable QMap<Entry, QString> mCachedEntries;
 };
-
+}
 #endif

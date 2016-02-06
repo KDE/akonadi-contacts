@@ -31,6 +31,8 @@ class QButtonGroup;
  *
  * @note This dialog is only used by AddressTypeCombo.
  */
+namespace Akonadi
+{
 class AddressTypeDialog : public QDialog
 {
 public:
@@ -44,5 +46,6 @@ private:
 
     KContacts::Address::TypeList mTypeList;
 };
+}
 
 #endif // ADDRESSTYPEDIALOG_H

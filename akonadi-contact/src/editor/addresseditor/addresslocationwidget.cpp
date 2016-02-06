@@ -34,7 +34,7 @@
 #include <QPushButton>
 #include <QDebug>
 #include <QStackedWidget>
-
+using namespace Akonadi;
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
     bool operator()(const QString &s1, const QString &s2) const
     {

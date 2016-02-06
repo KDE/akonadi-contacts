@@ -26,6 +26,8 @@
 
 #include <QSplitter>
 #include <KContacts/Addressee>
+namespace Akonadi
+{
 class AddressesLocationViewer;
 class AddressLocationWidget;
 class AddressesLocationWidget : public QSplitter
@@ -43,5 +45,5 @@ private:
     AddressesLocationViewer *mAddressesLocationViewer;
     AddressLocationWidget *mAddressLocationWidget;
 };
-
+}
 #endif // ADDRESSESLOCATIONWIDGET_H

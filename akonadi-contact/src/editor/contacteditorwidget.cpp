@@ -100,7 +100,7 @@ public:
     QCheckBox *mAllowRemoteContent;
 
     // widgets from addresses group
-    AddressesLocationWidget *mAddressesLocationWidget;
+    Akonadi::AddressesLocationWidget *mAddressesLocationWidget;
 
     // widgets from general group
     ImageWidget *mLogoWidget;
@@ -284,7 +284,7 @@ void ContactEditorWidget::Private::initGuiContactTab()
 
 void ContactEditorWidget::Private::initGuiLocationTab()
 {
-    mAddressesLocationWidget = new AddressesLocationWidget;
+    mAddressesLocationWidget = new Akonadi::AddressesLocationWidget;
     mTabWidget->addTab(mAddressesLocationWidget, i18nc("@title:tab", "Location"));
 }
 

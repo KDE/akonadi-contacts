@@ -26,6 +26,8 @@
 #include <QVariantList>
 #include <QStandardPaths>
 
+using namespace Akonadi;
+
 AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *parent)
     : QObject(parent),
       mEngine(new Grantlee::Engine),

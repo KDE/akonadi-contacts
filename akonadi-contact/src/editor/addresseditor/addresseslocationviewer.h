@@ -26,6 +26,8 @@
 
 #include <QWebView>
 #include <KContacts/Address>
+namespace Akonadi
+{
 class AddressesLocationGrantleeFormater;
 class AddressesLocationViewer : public QWebView
 {
@@ -55,5 +57,5 @@ private:
     KContacts::Address::List mAddresses;
     AddressesLocationGrantleeFormater *mAddressesLocationGrantleeFormatter;
 };
-
+}
 #endif // ADDRESSESLOCATIONVIEWER_H

@@ -23,7 +23,7 @@
 #include "addresseslocationviewertest.h"
 #include "../addresseslocationviewer.h"
 #include <QTest>
-
+using namespace Akonadi;
 AddressesLocationViewerTest::AddressesLocationViewerTest(QObject *parent)
     : QObject(parent)
 {

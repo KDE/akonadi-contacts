@@ -24,7 +24,7 @@
 #include <QApplication>
 
 #include "../addresseslocationwidget.h"
-
+using namespace Akonadi;
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);

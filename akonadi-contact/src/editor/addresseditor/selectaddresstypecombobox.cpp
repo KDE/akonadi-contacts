@@ -25,7 +25,7 @@
 #include "selectaddresstypecombobox.h"
 #include <KLocalizedString>
 #include <autoqpointer_p.h>
-
+using namespace Akonadi;
 SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     : KComboBox(parent)
     , mType(KContacts::Address::Home)

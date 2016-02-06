@@ -28,6 +28,8 @@
 #include <QWebSettings>
 #include <QDebug>
 
+using namespace Akonadi;
+
 AddressesLocationViewer::AddressesLocationViewer(QWidget *parent)
     : QWebView(parent),
       mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))

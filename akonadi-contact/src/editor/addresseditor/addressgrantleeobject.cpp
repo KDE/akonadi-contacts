@@ -25,7 +25,7 @@
 #include <KIconLoader>
 #include <KLocalizedString>
 #include <QUrlQuery>
-
+using namespace Akonadi;
 AddressGrantleeObject::AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent)
     : QObject(parent),
       mAddress(address),

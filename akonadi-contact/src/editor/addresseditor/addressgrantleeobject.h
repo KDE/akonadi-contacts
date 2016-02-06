@@ -25,6 +25,8 @@
 
 #include <QObject>
 #include <KContacts/Address>
+namespace Akonadi
+{
 class AddressGrantleeObject : public QObject
 {
     Q_OBJECT
@@ -63,5 +65,5 @@ private:
     int mAddressIndex;
     int mIconSize;
 };
-
+}
 #endif // ADDRESSGRANTLEEOBJECT_H

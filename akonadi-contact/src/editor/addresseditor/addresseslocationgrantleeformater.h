@@ -32,6 +32,8 @@ namespace Grantlee
 {
 class Engine;
 }
+namespace Akonadi
+{
 class AddressesLocationGrantleeFormater : public QObject
 {
     Q_OBJECT
@@ -50,5 +52,5 @@ private:
     Grantlee::Template mSelfcontainedTemplate;
     bool mReadOnly;
 };
-
+}
 #endif // ADDRESSESLOCATIONGRANTLEEFORMATER_H

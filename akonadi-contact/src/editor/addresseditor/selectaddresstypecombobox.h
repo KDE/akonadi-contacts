@@ -30,6 +30,8 @@
 /**
  * @short A widget for selecting the type of an address.
  */
+namespace Akonadi
+{
 class SelectAddressTypeComboBox : public KComboBox
 {
     Q_OBJECT
@@ -69,5 +71,5 @@ private:
     int mLastSelected;
     QList<int> mTypeList;
 };
-
+}
 #endif

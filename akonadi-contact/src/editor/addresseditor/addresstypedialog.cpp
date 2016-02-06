@@ -27,7 +27,7 @@
 #include <QGroupBox>
 #include <QCheckBox>
 #include <QButtonGroup>
-
+using namespace Akonadi;
 AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *parent)
     : QDialog(parent)
 {
