@@ -35,14 +35,19 @@ set(akonadicontact_editor_widgets_SRCS
    editor/widgets/kwidgetlister.cpp
 )
 
-set(akonadicontact_editor_generalinfo_phoneSRCS
+set(akonadicontact_editor_generalinfo_phone_SRCS
    editor/generalinfoeditor/phone/phonewidgetlister.cpp
    editor/generalinfoeditor/phone/phonewidget.cpp
    editor/generalinfoeditor/phone/phonelistwidget.cpp
 )
 
+set(akonadicontact_editor_generainfo_web_SRCS
+   editor/generalinfoeditor/web/webwidgetlister.cpp
+)
+
 set(akonadicontact_editor_generalinfo_SRCS
-   ${akonadicontact_editor_generalinfo_phoneSRCS}
+   ${akonadicontact_editor_generalinfo_phone_SRCS}
+   ${akonadicontact_editor_generainfo_web_SRCS}
 )
 
 set(akonadicontact_addresslocation_editor_SRCS
