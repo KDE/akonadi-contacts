@@ -38,6 +38,8 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     mPhoneNumberEdit = new QLineEdit(this);
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
+
+    //TODO add type.
 }
 
 PhoneWidget::~PhoneWidget()

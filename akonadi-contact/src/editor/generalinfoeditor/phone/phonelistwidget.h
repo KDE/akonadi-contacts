@@ -26,12 +26,15 @@
 #include <QWidget>
 namespace Akonadi
 {
+class PhoneWidgetLister;
 class PhoneListWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit PhoneListWidget(QWidget *parent = Q_NULLPTR);
     ~PhoneListWidget();
+private:
+    Akonadi::PhoneWidgetLister *mPhoneWidgetLister;
 };
 }
 #endif // PHONELISTWIDGET_H

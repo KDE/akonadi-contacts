@@ -21,12 +21,27 @@
 */
 
 #include "phonelistwidget.h"
+#include "phonewidgetlister.h"
+#include <QLabel>
+#include <QVBoxLayout>
+#include <KLocalizedString>
 using namespace Akonadi;
 
 PhoneListWidget::PhoneListWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *topLayout = new QVBoxLayout;
+    topLayout->setMargin(0);
+    topLayout->setSpacing(0);
+    setLayout(topLayout);
 
+    QLabel *label = new QLabel(i18n("Phone"), this);
+    label->setObjectName(QStringLiteral("phonelistlabel"));
+    topLayout->addWidget(label);
+
+    mPhoneWidgetLister = new Akonadi::PhoneWidgetLister(this);
+    mPhoneWidgetLister->setObjectName(QStringLiteral("phonewidgetlister"));
+    topLayout->addWidget(mPhoneWidgetLister);
 }
 
 PhoneListWidget::~PhoneListWidget()
