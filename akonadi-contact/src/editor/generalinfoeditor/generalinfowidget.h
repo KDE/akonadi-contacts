@@ -24,6 +24,7 @@
 #define GENERALINFOWIDGET_H
 
 #include <QWidget>
+class QLineEdit;
 
 namespace Akonadi
 {
@@ -33,7 +34,8 @@ class GeneralInfoWidget : public QWidget
 public:
     explicit GeneralInfoWidget(QWidget *parent = Q_NULLPTR);
     ~GeneralInfoWidget();
-
+private:
+    QLineEdit *mNickName;
 };
 }
 #endif // GENERALINFOWIDGET_H

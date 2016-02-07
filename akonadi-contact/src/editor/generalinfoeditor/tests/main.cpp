@@ -20,20 +20,14 @@
     02110-1301, USA.
 */
 
-#include "generalinfowidget.h"
-#include <QGridLayout>
-#include <QLabel>
-#include <KLocalizedString>
-using namespace Akonadi;
 
-GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
-    : QWidget(parent)
+#include <QApplication>
+
+//using namespace Akonadi;
+int main(int argc, char *argv[])
 {
-    QGridLayout *grid = new QGridLayout(this);
-    grid->setMargin(0);
-}
+    QApplication app(argc, argv);
 
-GeneralInfoWidget::~GeneralInfoWidget()
-{
-
+    //TODO
+    return app.exec();
 }

@@ -265,6 +265,8 @@ if (BUILD_TESTING)
    add_subdirectory(editor/autotests)
    add_subdirectory(editor/addresseditor/autotests/)
    add_subdirectory(editor/addresseditor/tests)
+   add_subdirectory(editor/generalinfoeditor/autotests/)
+   add_subdirectory(editor/generalinfoeditor/tests)
 endif()
 
 
