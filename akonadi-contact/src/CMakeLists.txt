@@ -46,6 +46,7 @@ set(akonadicontact_editor_generainfo_web_SRCS
 )
 
 set(akonadicontact_editor_generalinfo_SRCS
+   editor/generalinfoeditor/generalinfowidget.cpp
    ${akonadicontact_editor_generalinfo_phone_SRCS}
    ${akonadicontact_editor_generainfo_web_SRCS}
 )
