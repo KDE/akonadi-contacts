@@ -25,6 +25,7 @@
 
 #include <QWidget>
 class QLineEdit;
+class QToolButton;
 namespace Akonadi
 {
 class PhoneWidget : public QWidget
@@ -33,8 +34,19 @@ class PhoneWidget : public QWidget
 public:
     explicit PhoneWidget(QWidget *parent = Q_NULLPTR);
     ~PhoneWidget();
+
+Q_SIGNALS:
+    void addWidget(QWidget *);
+    void removeWidget(QWidget *);
+
+private Q_SLOTS:
+    void slotAddPhone();
+    void slotRemovePhone();
+
 private:
     QLineEdit *mPhoneNumberEdit;
+    QToolButton *mAddButton;
+    QToolButton *mRemoveButton;
 };
 }
 #endif // PHONEWIDGET_H

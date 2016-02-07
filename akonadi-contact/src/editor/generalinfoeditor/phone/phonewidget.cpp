@@ -39,6 +39,15 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
 
+
+    //TODO add icon
+    mAddButton = new QToolButton(this);
+    mAddButton->setObjectName(QStringLiteral("addbutton"));
+    connect(mAddButton, &QToolButton::clicked, this, &PhoneWidget::slotAddPhone);
+
+    mRemoveButton = new QToolButton(this);
+    mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    connect(mRemoveButton, &QToolButton::clicked, this, &PhoneWidget::slotRemovePhone);
     //TODO add type.
 }
 
@@ -47,3 +56,12 @@ PhoneWidget::~PhoneWidget()
 
 }
 
+void PhoneWidget::slotAddPhone()
+{
+    Q_EMIT addWidget(this);
+}
+
+void PhoneWidget::slotRemovePhone()
+{
+    Q_EMIT removeWidget(this);
+}

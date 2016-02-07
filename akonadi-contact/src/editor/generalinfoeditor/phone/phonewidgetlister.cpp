@@ -21,6 +21,7 @@
 */
 
 #include "phonewidgetlister.h"
+#include "phonewidget.h"
 using namespace Akonadi;
 
 PhoneWidgetLister::PhoneWidgetLister(QWidget *parent)
@@ -32,4 +33,20 @@ PhoneWidgetLister::PhoneWidgetLister(QWidget *parent)
 PhoneWidgetLister::~PhoneWidgetLister()
 {
 
+}
+
+QWidget *PhoneWidgetLister::createWidget(QWidget *parent)
+{
+    PhoneWidget *w = new PhoneWidget(parent);
+    reconnectWidget(w);
+    return w;
+}
+
+void PhoneWidgetLister::reconnectWidget(PhoneWidget *w)
+{
+#if 0
+    connect(w, &PhoneWidget::addWidget, this, &FilterActionWidgetLister::slotAddWidget, Qt::UniqueConnection);
+
+    connect(w, &PhoneWidget::removeWidget, this, &FilterActionWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
+#endif
 }
