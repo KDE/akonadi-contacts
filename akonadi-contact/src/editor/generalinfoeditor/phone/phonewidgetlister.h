@@ -23,7 +23,7 @@
 #ifndef PHONEWIDGETLISTER_H
 #define PHONEWIDGETLISTER_H
 
-#include "../widgets/kwidgetlister_p.h"
+#include "../../widgets/kwidgetlister_p.h"
 namespace Akonadi
 {
 class PhoneWidgetLister : public KWidgetLister
