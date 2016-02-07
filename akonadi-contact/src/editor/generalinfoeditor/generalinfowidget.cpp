@@ -21,6 +21,9 @@
 */
 
 #include "generalinfowidget.h"
+#include <QGridLayout>
+#include <QLabel>
+#include <KLocalizedString>
 using namespace Akonadi;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
