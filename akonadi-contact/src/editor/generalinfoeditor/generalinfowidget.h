@@ -28,6 +28,7 @@ class QLineEdit;
 
 namespace Akonadi
 {
+class PhoneListWidget;
 class GeneralInfoWidget : public QWidget
 {
     Q_OBJECT
@@ -36,6 +37,7 @@ public:
     ~GeneralInfoWidget();
 private:
     QLineEdit *mNickName;
+    PhoneListWidget *mPhoneListWidget;
 };
 }
 #endif // GENERALINFOWIDGET_H

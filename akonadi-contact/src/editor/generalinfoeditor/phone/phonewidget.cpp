@@ -44,10 +44,12 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     mAddButton = new QToolButton(this);
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &PhoneWidget::slotAddPhone);
+    layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     connect(mRemoveButton, &QToolButton::clicked, this, &PhoneWidget::slotRemovePhone);
+    layout->addWidget(mRemoveButton);
     //TODO add type.
 }
 

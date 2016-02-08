@@ -1,6 +1,10 @@
 set(generalinfoeditor_SRCS
     main.cpp
     ../generalinfowidget.cpp
+    ../phone/phonewidget.cpp
+    ../phone/phonelistwidget.cpp
+    ../phone/phonewidgetlister.cpp
+    ../../widgets/kwidgetlister.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
