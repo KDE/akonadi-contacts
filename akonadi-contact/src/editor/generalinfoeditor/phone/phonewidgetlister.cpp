@@ -25,7 +25,7 @@
 using namespace Akonadi;
 
 PhoneWidgetLister::PhoneWidgetLister(QWidget *parent)
-    : KWidgetLister(false, 1, 4, parent)
+    : KWidgetLister(1, 4, parent)
 {
     setNumberOfShownWidgetsTo(widgetsMinimum());
 }

@@ -24,7 +24,7 @@
 using namespace Akonadi;
 
 WebWidgetLister::WebWidgetLister(QWidget *parent)
-    : KWidgetLister(true, 1, 4, parent)
+    : KWidgetLister(1, 4, parent)
 {
 
 }

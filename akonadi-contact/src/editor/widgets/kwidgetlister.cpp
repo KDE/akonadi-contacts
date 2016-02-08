@@ -48,9 +48,6 @@ class Q_DECL_HIDDEN KWidgetLister::Private
 public:
     Private(KWidgetLister *qq)
         : q(qq),
-          mBtnMore(Q_NULLPTR),
-          mBtnFewer(Q_NULLPTR),
-          mBtnClear(Q_NULLPTR),
           mLayout(Q_NULLPTR),
           mButtonBox(Q_NULLPTR),
           mMinWidgets(0),
@@ -65,10 +62,7 @@ public:
         mWidgetList.clear();
     }
 
-    void enableControls();
-
     KWidgetLister *q;
-    QPushButton *mBtnMore, *mBtnFewer, *mBtnClear;
     QVBoxLayout *mLayout;
     QWidget *mButtonBox;
     QList<QWidget *> mWidgetList;
@@ -76,25 +70,13 @@ public:
     int mMaxWidgets;
 };
 
-void KWidgetLister::Private::enableControls()
-{
-    const int count = mWidgetList.count();
-    const bool isMaxWidgets = (count >= mMaxWidgets);
-    const bool isMinWidgets = (count <= mMinWidgets);
-    if (mBtnMore) {
-        mBtnMore->setEnabled(!isMaxWidgets);
-    }
-    if (mBtnFewer) {
-        mBtnFewer->setEnabled(!isMinWidgets);
-    }
-}
 
-KWidgetLister::KWidgetLister(bool fewerMoreButton, int minWidgets, int maxWidgets, QWidget *parent)
+KWidgetLister::KWidgetLister(int minWidgets, int maxWidgets, QWidget *parent)
     : QWidget(parent), d(new Private(this))
 {
     d->mMinWidgets = qMax(minWidgets, 1);
     d->mMaxWidgets = qMax(maxWidgets, d->mMinWidgets + 1);
-    init(fewerMoreButton);
+    init();
 }
 
 KWidgetLister::~KWidgetLister()
@@ -102,7 +84,7 @@ KWidgetLister::~KWidgetLister()
     delete d;
 }
 
-void KWidgetLister::init(bool fewerMoreButton)
+void KWidgetLister::init()
 {
     //--------- the button box
     d->mLayout = new QVBoxLayout(this);
@@ -113,41 +95,6 @@ void KWidgetLister::init(bool fewerMoreButton)
     QHBoxLayout *mButtonBoxHBoxLayout = new QHBoxLayout(d->mButtonBox);
     mButtonBoxHBoxLayout->setMargin(0);
     d->mLayout->addWidget(d->mButtonBox);
-
-    if (fewerMoreButton) {
-        d->mBtnMore = new QPushButton(d->mButtonBox);
-        mButtonBoxHBoxLayout->addWidget(d->mBtnMore);
-        KGuiItem::assign(d->mBtnMore, KGuiItem(i18nc("more widgets", "More"),
-                                               QStringLiteral("list-add")));
-        mButtonBoxHBoxLayout->setStretchFactor(d->mBtnMore, 0);
-
-        d->mBtnFewer = new QPushButton(d->mButtonBox);
-        mButtonBoxHBoxLayout->addWidget(d->mBtnFewer);
-        KGuiItem::assign(d->mBtnFewer, KGuiItem(i18nc("fewer widgets", "Fewer"),
-                                                QStringLiteral("list-remove")));
-        mButtonBoxHBoxLayout->setStretchFactor(d->mBtnFewer, 0);
-    }
-    QWidget *spacer = new QWidget(d->mButtonBox);
-    mButtonBoxHBoxLayout->addWidget(spacer);
-    mButtonBoxHBoxLayout->setStretchFactor(spacer, 1);
-
-    d->mBtnClear = new QPushButton(d->mButtonBox);
-    mButtonBoxHBoxLayout->addWidget(d->mBtnClear);
-    KGuiItem::assign(d->mBtnClear, KStandardGuiItem::clear());
-    // FIXME a useful whats this. KStandardGuiItem::clear() returns a text with an edit box
-    d->mBtnClear->setWhatsThis(QString());
-    mButtonBoxHBoxLayout->setStretchFactor(d->mBtnClear, 0);
-
-    //---------- connect everything
-    if (fewerMoreButton) {
-        connect(d->mBtnMore, &QPushButton::clicked, this, &KWidgetLister::slotMore);
-        connect(d->mBtnFewer, &QPushButton::clicked, this, &KWidgetLister::slotFewer);
-    }
-
-    connect(d->mBtnClear, &QPushButton::clicked, this, &KWidgetLister::slotClear);
-
-    d->enableControls();
-
 }
 
 void KWidgetLister::slotMore()
@@ -157,8 +104,6 @@ void KWidgetLister::slotMore()
     assert((int)d->mWidgetList.count() < d->mMaxWidgets);
 
     addWidgetAtEnd();
-    //  adjustSize();
-    d->enableControls();
 }
 
 void KWidgetLister::slotFewer()
@@ -168,8 +113,6 @@ void KWidgetLister::slotFewer()
     assert((int)d->mWidgetList.count() > d->mMinWidgets);
 
     removeLastWidget();
-    //  adjustSize();
-    d->enableControls();
 }
 
 void KWidgetLister::slotClear()
@@ -181,8 +124,6 @@ void KWidgetLister::slotClear()
         clearWidget(widget);
     }
 
-    //  adjustSize();
-    d->enableControls();
     Q_EMIT clearWidgets();
 }
 
@@ -195,8 +136,6 @@ void KWidgetLister::addWidgetAtEnd(QWidget *widget)
     d->mLayout->insertWidget(d->mLayout->indexOf(d->mButtonBox), widget);
     d->mWidgetList.append(widget);
     widget->show();
-
-    d->enableControls();
     Q_EMIT widgetAdded();
     Q_EMIT widgetAdded(widget);
 }
@@ -206,7 +145,6 @@ void KWidgetLister::removeLastWidget()
     // The layout will take care that the
     // widget is removed from screen, too.
     delete d->mWidgetList.takeLast();
-    d->enableControls();
     Q_EMIT widgetRemoved();
 }
 
@@ -264,7 +202,6 @@ void KWidgetLister::removeWidget(QWidget *widget)
     QWidget *w =  d->mWidgetList.takeAt(index);
     w->deleteLater();
     w = Q_NULLPTR;
-    d->enableControls();
     Q_EMIT widgetRemoved(widget);
     Q_EMIT widgetRemoved();
 
@@ -286,7 +223,6 @@ void KWidgetLister::addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *wi
     }
     widget->show();
 
-    d->enableControls();
     Q_EMIT widgetAdded();
     Q_EMIT widgetAdded(widget);
 }

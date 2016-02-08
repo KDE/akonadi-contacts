@@ -69,7 +69,7 @@ public:
      * @param maxWidgets The maximum number of widgets to stay on the screen.
      * @param parent The parent widget.
      */
-    explicit KWidgetLister(bool fewerMoreButton, int minWidgets = 1, int maxWidgets = 8, QWidget *parent = Q_NULLPTR);
+    explicit KWidgetLister(int minWidgets = 1, int maxWidgets = 8, QWidget *parent = Q_NULLPTR);
 
     /**
      * Destroys the widget lister.
@@ -172,7 +172,7 @@ protected:
     virtual void addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *widget = Q_NULLPTR);
 
 private:
-    void init(bool fewerMoreButton = true);
+    void init();
 
 Q_SIGNALS:
     /**
