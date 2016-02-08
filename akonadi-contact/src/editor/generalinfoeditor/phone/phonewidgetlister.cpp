@@ -28,6 +28,7 @@ PhoneWidgetLister::PhoneWidgetLister(QWidget *parent)
     : KWidgetLister(1, 4, parent)
 {
     setNumberOfShownWidgetsTo(widgetsMinimum());
+    updateAddRemoveButton();
 }
 
 PhoneWidgetLister::~PhoneWidgetLister()
