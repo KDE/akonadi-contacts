@@ -36,6 +36,16 @@ PhoneWidgetLister::~PhoneWidgetLister()
 
 }
 
+void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
+{
+
+}
+
+void PhoneWidgetLister::storeContact(KContacts::Addressee &contact) const
+{
+
+}
+
 QWidget *PhoneWidgetLister::createWidget(QWidget *parent)
 {
     PhoneWidget *w = new PhoneWidget(parent);

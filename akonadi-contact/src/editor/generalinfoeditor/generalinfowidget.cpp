@@ -76,3 +76,13 @@ GeneralInfoWidget::~GeneralInfoWidget()
 {
 
 }
+
+void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
+{
+    //TODO
+}
+
+void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
+{
+    //TODO
+}

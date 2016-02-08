@@ -36,6 +36,16 @@ MailWidgetLister::~MailWidgetLister()
 
 }
 
+void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
+{
+
+}
+
+void MailWidgetLister::storeContact(KContacts::Addressee &contact) const
+{
+
+}
+
 QWidget *MailWidgetLister::createWidget(QWidget *parent)
 {
     MailWidget *w = new MailWidget(parent);

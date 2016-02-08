@@ -36,6 +36,16 @@ MessagingWidgetLister::~MessagingWidgetLister()
 
 }
 
+void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
+{
+
+}
+
+void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
+{
+
+}
+
 QWidget *MessagingWidgetLister::createWidget(QWidget *parent)
 {
     MessagingWidget *w = new MessagingWidget(parent);

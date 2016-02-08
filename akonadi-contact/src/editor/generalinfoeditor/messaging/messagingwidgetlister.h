@@ -24,6 +24,10 @@
 #define MESSAGINGWIDGETLISTER_H
 
 #include "../../widgets/kwidgetlister_p.h"
+namespace KContacts
+{
+class Addressee;
+}
 namespace Akonadi
 {
 class MessagingWidget;
@@ -33,6 +37,9 @@ class MessagingWidgetLister : public KWidgetLister
 public:
     explicit MessagingWidgetLister(QWidget *parent = Q_NULLPTR);
     ~MessagingWidgetLister();
+
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 
 protected:
     QWidget *createWidget(QWidget *) Q_DECL_OVERRIDE;

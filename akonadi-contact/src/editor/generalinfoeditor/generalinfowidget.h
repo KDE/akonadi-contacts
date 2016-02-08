@@ -27,6 +27,11 @@
 class QLineEdit;
 class ImageWidget;
 
+namespace KContacts
+{
+class Addressee;
+}
+
 namespace Akonadi
 {
 class PhoneListWidget;
@@ -39,6 +44,11 @@ class GeneralInfoWidget : public QWidget
 public:
     explicit GeneralInfoWidget(QWidget *parent = Q_NULLPTR);
     ~GeneralInfoWidget();
+
+    void loadContact(const KContacts::Addressee &contact);
+
+    void storeContact(KContacts::Addressee &contact) const;
+
 private:
     QLineEdit *mNickName;
     PhoneListWidget *mPhoneListWidget;

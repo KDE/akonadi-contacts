@@ -24,6 +24,10 @@
 #define WEBWIDGETLISTER_H
 
 #include "../../widgets/kwidgetlister_p.h"
+namespace KContacts
+{
+class Addressee;
+}
 namespace Akonadi
 {
 class WebWidget;
@@ -33,6 +37,9 @@ class WebWidgetLister : public KWidgetLister
 public:
     explicit WebWidgetLister(QWidget *parent = Q_NULLPTR);
     ~WebWidgetLister();
+
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 protected:
     QWidget *createWidget(QWidget *) Q_DECL_OVERRIDE;
 

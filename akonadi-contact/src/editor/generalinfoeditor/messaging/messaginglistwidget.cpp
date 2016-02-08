@@ -25,6 +25,7 @@
 #include <QLabel>
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <KContacts/Addressee>
 using namespace Akonadi;
 
 MessagingListWidget::MessagingListWidget(QWidget *parent)
@@ -47,4 +48,14 @@ MessagingListWidget::MessagingListWidget(QWidget *parent)
 MessagingListWidget::~MessagingListWidget()
 {
 
+}
+
+void MessagingListWidget::loadContact(const KContacts::Addressee &contact)
+{
+    mMessagingWidgetLister->loadContact(contact);
+}
+
+void MessagingListWidget::storeContact(KContacts::Addressee &contact) const
+{
+    mMessagingWidgetLister->storeContact(contact);
 }

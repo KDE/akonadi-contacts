@@ -25,6 +25,7 @@
 #include <QLabel>
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <KContacts/Addressee>
 using namespace Akonadi;
 
 PhoneListWidget::PhoneListWidget(QWidget *parent)
@@ -47,4 +48,14 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
 PhoneListWidget::~PhoneListWidget()
 {
 
+}
+
+void PhoneListWidget::loadContact(const KContacts::Addressee &contact)
+{
+    mPhoneWidgetLister->loadContact(contact);
+}
+
+void PhoneListWidget::storeContact(KContacts::Addressee &contact) const
+{
+    mPhoneWidgetLister->storeContact(contact);
 }

@@ -36,6 +36,16 @@ WebWidgetLister::~WebWidgetLister()
 
 }
 
+void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
+{
+
+}
+
+void WebWidgetLister::storeContact(KContacts::Addressee &contact) const
+{
+
+}
+
 QWidget *WebWidgetLister::createWidget(QWidget *parent)
 {
     WebWidget *w = new WebWidget(parent);

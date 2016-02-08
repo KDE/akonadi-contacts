@@ -24,6 +24,11 @@
 #define PHONELISTWIDGET_H
 
 #include <QWidget>
+
+namespace KContacts
+{
+class Addressee;
+}
 namespace Akonadi
 {
 class PhoneWidgetLister;
@@ -33,6 +38,8 @@ class PhoneListWidget : public QWidget
 public:
     explicit PhoneListWidget(QWidget *parent = Q_NULLPTR);
     ~PhoneListWidget();
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 private:
     Akonadi::PhoneWidgetLister *mPhoneWidgetLister;
 };
