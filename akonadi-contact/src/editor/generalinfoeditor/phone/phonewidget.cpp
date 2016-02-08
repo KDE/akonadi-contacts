@@ -36,6 +36,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 
 
     mPhoneNumberEdit = new QLineEdit(this);
+    mPhoneNumberEdit->setPlaceholderText(i18n("Add a phone number"));
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
 

@@ -44,6 +44,7 @@ set(akonadicontact_editor_generalinfo_phone_SRCS
 set(akonadicontact_editor_generainfo_web_SRCS
     editor/generalinfoeditor/web/webwidgetlister.cpp
     editor/generalinfoeditor/web/weblistwidget.cpp
+    editor/generalinfoeditor/web/webwidget.cpp
     )
 
 set(akonadicontact_editor_generalinfo_SRCS

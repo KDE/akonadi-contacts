@@ -21,15 +21,67 @@
 */
 
 #include "webwidgetlister.h"
+#include "webwidget.h"
 using namespace Akonadi;
 
 WebWidgetLister::WebWidgetLister(QWidget *parent)
     : KWidgetLister(1, 4, parent)
 {
-
+    setNumberOfShownWidgetsTo(widgetsMinimum());
+    updateAddRemoveButton();
 }
 
 WebWidgetLister::~WebWidgetLister()
 {
 
 }
+
+QWidget *WebWidgetLister::createWidget(QWidget *parent)
+{
+    WebWidget *w = new WebWidget(parent);
+    reconnectWidget(w);
+    return w;
+}
+
+void WebWidgetLister::reconnectWidget(WebWidget *w)
+{
+    connect(w, &WebWidget::addWidget, this, &WebWidgetLister::slotAddWidget, Qt::UniqueConnection);
+    connect(w, &WebWidget::removeWidget, this, &WebWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
+}
+
+void WebWidgetLister::slotAddWidget(QWidget *w)
+{
+    addWidgetAfterThisWidget(w);
+    updateAddRemoveButton();
+}
+
+void WebWidgetLister::slotRemoveWidget(QWidget *w)
+{
+    removeWidget(w);
+    updateAddRemoveButton();
+}
+
+void WebWidgetLister::updateAddRemoveButton()
+{
+    QList<QWidget *> widgetList = widgets();
+    const int numberOfWidget(widgetList.count());
+    bool addButtonEnabled = false;
+    bool removeButtonEnabled = false;
+    if (numberOfWidget <= widgetsMinimum()) {
+        addButtonEnabled = true;
+        removeButtonEnabled = false;
+    } else if (numberOfWidget >= widgetsMaximum()) {
+        addButtonEnabled = false;
+        removeButtonEnabled = true;
+    } else {
+        addButtonEnabled = true;
+        removeButtonEnabled = true;
+    }
+    QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
+    QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
+    for (; wIt != wEnd; ++wIt) {
+        WebWidget *w = qobject_cast<WebWidget *>(*wIt);
+        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
+    }
+}
+

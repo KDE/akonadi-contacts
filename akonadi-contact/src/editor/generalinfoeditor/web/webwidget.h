@@ -20,29 +20,24 @@
     02110-1301, USA.
 */
 
-#ifndef WEBWIDGETLISTER_H
-#define WEBWIDGETLISTER_H
+#ifndef WEBWIDGET_H
+#define WEBWIDGET_H
 
-#include "../../widgets/kwidgetlister_p.h"
+#include <QWidget>
+
 namespace Akonadi
 {
-class WebWidget;
-class WebWidgetLister : public KWidgetLister
+class WebWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit WebWidgetLister(QWidget *parent = Q_NULLPTR);
-    ~WebWidgetLister();
-protected:
-    QWidget *createWidget(QWidget *) Q_DECL_OVERRIDE;
+    explicit WebWidget(QWidget *parent = Q_NULLPTR);
+    ~WebWidget();
+    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
 
-private Q_SLOTS:
-    void slotAddWidget(QWidget *w);
-    void slotRemoveWidget(QWidget *w);
-
-private:
-    void reconnectWidget(WebWidget *w);
-    void updateAddRemoveButton();
+Q_SIGNALS:
+    void addWidget(QWidget *);
+    void removeWidget(QWidget *);
 };
 }
-#endif // WEBWIDGETLISTER_H
+#endif // WEBWIDGET_H
