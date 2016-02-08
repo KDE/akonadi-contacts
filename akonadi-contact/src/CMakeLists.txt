@@ -41,16 +41,30 @@ set(akonadicontact_editor_generalinfo_phone_SRCS
     editor/generalinfoeditor/phone/phonelistwidget.cpp
     )
 
-set(akonadicontact_editor_generainfo_web_SRCS
+set(akonadicontact_editor_generalinfo_web_SRCS
     editor/generalinfoeditor/web/webwidgetlister.cpp
     editor/generalinfoeditor/web/weblistwidget.cpp
     editor/generalinfoeditor/web/webwidget.cpp
     )
+set(akonadicontact_editor_generalinfo_mail_SRCS
+    editor/generalinfoeditor/mail/maillistwidget.cpp
+    editor/generalinfoeditor/mail/mailwidget.cpp
+    editor/generalinfoeditor/mail/mailwidgetlister.cpp
+    )
+
+set(akonadicontact_editor_generalinfo_messaging_SRCS
+    editor/generalinfoeditor/messaging/messaginglistwidget.cpp
+    editor/generalinfoeditor/messaging/messagingwidget.cpp
+    editor/generalinfoeditor/messaging/messagingwidgetlister.cpp
+    )
+
 
 set(akonadicontact_editor_generalinfo_SRCS
     editor/generalinfoeditor/generalinfowidget.cpp
+    ${akonadicontact_editor_generalinfo_messaging_SRCS}
     ${akonadicontact_editor_generalinfo_phone_SRCS}
-    ${akonadicontact_editor_generainfo_web_SRCS}
+    ${akonadicontact_editor_generalinfo_web_SRCS}
+    ${akonadicontact_editor_generalinfo_mail_SRCS}
     )
 
 set(akonadicontact_addresslocation_editor_SRCS

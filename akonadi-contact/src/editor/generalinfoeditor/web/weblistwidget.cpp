@@ -21,6 +21,8 @@
 */
 
 #include "weblistwidget.h"
+#include <QLabel>
+#include <KLocalizedString>
 
 using namespace Akonadi;
 

@@ -21,13 +21,37 @@
 */
 
 #include "webwidget.h"
-
+#include <QHBoxLayout>
+#include <QLineEdit>
+#include <QToolButton>
+#include <KLocalizedString>
 using namespace Akonadi;
 
 WebWidget::WebWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QHBoxLayout *layout = new QHBoxLayout(this);
+    layout->setSpacing(0);
+    layout->setMargin(0);
 
+
+    mWebSiteEdit = new QLineEdit(this);
+    mWebSiteEdit->setPlaceholderText(i18n("Add a web site"));
+    mWebSiteEdit->setObjectName(QStringLiteral("website"));
+    layout->addWidget(mWebSiteEdit);
+
+
+    //TODO add icon
+    mAddButton = new QToolButton(this);
+    mAddButton->setObjectName(QStringLiteral("addbutton"));
+    connect(mAddButton, &QToolButton::clicked, this, &WebWidget::slotAddWeb);
+    layout->addWidget(mAddButton);
+
+    mRemoveButton = new QToolButton(this);
+    mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    connect(mRemoveButton, &QToolButton::clicked, this, &WebWidget::slotRemoveWeb);
+    layout->addWidget(mRemoveButton);
+    //TODO add type.
 }
 
 WebWidget::~WebWidget()
@@ -37,6 +61,16 @@ WebWidget::~WebWidget()
 
 void WebWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
 {
-    //mAddButton->setEnabled(addButtonEnabled);
-    //mRemoveButton->setEnabled(removeButtonEnabled);
+    mAddButton->setEnabled(addButtonEnabled);
+    mRemoveButton->setEnabled(removeButtonEnabled);
+}
+
+void WebWidget::slotAddWeb()
+{
+    Q_EMIT addWidget(this);
+}
+
+void WebWidget::slotRemoveWeb()
+{
+    Q_EMIT removeWidget(this);
 }
