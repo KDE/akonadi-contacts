@@ -24,6 +24,7 @@
 #include <QGridLayout>
 #include <QLabel>
 #include <KLocalizedString>
+#include <QLineEdit>
 using namespace Akonadi;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
@@ -31,6 +32,14 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 {
     QGridLayout *grid = new QGridLayout(this);
     grid->setMargin(0);
+
+    QLabel *nickNameLabel = new QLabel(i18n("Nickname"), this);
+    nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));
+
+    mNickName = new QLineEdit(this);
+    mNickName->setPlaceholderText(i18n("Add a Nickname"));
+    mNickName->setObjectName(QStringLiteral("nickname"));
+
 }
 
 GeneralInfoWidget::~GeneralInfoWidget()
