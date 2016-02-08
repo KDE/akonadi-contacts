@@ -80,6 +80,6 @@ void PhoneWidgetLister::updateAddRemoveButton()
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
     for (; wIt != wEnd; ++wIt) {
         PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
-        //w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
+        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
     }
 }

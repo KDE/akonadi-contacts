@@ -56,6 +56,12 @@ PhoneWidget::~PhoneWidget()
 
 }
 
+void PhoneWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
+{
+    mAddButton->setEnabled(addButtonEnabled);
+    mRemoveButton->setEnabled(removeButtonEnabled);
+}
+
 void PhoneWidget::slotAddPhone()
 {
     Q_EMIT addWidget(this);

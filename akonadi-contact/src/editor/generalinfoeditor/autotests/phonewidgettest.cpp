@@ -21,6 +21,10 @@
 */
 
 #include "phonewidgettest.h"
+#include "../phone/phonewidget.h"
+#include <QTest>
+#include <QLineEdit>
+#include <QToolButton>
 
 PhoneWidgetTest::PhoneWidgetTest(QObject *parent)
     : QObject(parent)
@@ -32,3 +36,17 @@ PhoneWidgetTest::~PhoneWidgetTest()
 {
 
 }
+
+void PhoneWidgetTest::shouldHaveDefaultValue()
+{
+    Akonadi::PhoneWidget w;
+    QLineEdit *line = w.findChild<QLineEdit *>(QStringLiteral("phonenumber"));
+    QVERIFY(line);
+    QToolButton *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
+    QVERIFY(addButton);
+
+    QToolButton *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
+    QVERIFY(removeButton);
+}
+
+QTEST_MAIN(PhoneWidgetTest)

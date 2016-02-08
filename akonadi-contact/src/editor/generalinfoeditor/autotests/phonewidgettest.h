@@ -31,6 +31,8 @@ class PhoneWidgetTest : public QObject
 public:
     explicit PhoneWidgetTest(QObject *parent = Q_NULLPTR);
     ~PhoneWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // PHONEWIDGETTEST_H

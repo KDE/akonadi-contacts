@@ -35,6 +35,7 @@ public:
     explicit PhoneWidget(QWidget *parent = Q_NULLPTR);
     ~PhoneWidget();
 
+    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
 Q_SIGNALS:
     void addWidget(QWidget *);
     void removeWidget(QWidget *);
