@@ -29,6 +29,7 @@
 #include <editor/generalinfoeditor/messaging/messaginglistwidget.h>
 #include <editor/generalinfoeditor/mail/maillistwidget.h>
 #include <editor/generalinfoeditor/web/weblistwidget.h>
+#include <editor/imagewidget.h>
 
 using namespace Akonadi;
 
@@ -37,6 +38,10 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 {
     QGridLayout *grid = new QGridLayout(this);
     grid->setMargin(0);
+
+    mPhotoWidget = new ImageWidget(ImageWidget::Photo);
+    mPhotoWidget->setObjectName(QStringLiteral("photowidget"));
+    grid->addWidget(mPhotoWidget, 0, 0, 4, 1);
 
     QLabel *nickNameLabel = new QLabel(i18n("Nickname"), this);
     nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));

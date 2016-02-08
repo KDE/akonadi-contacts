@@ -14,6 +14,7 @@ set(generalinfoeditor_SRCS
     ../messaging/messaginglistwidget.cpp
     ../messaging/messagingwidget.cpp
     ../messaging/messagingwidgetlister.cpp
+    ../../imagewidget.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
@@ -26,5 +27,6 @@ target_link_libraries(generalinfoeditortest
     KF5::Completion
     KF5::IconThemes
     KF5::WidgetsAddons
+    KF5::KIOCore
     )
 

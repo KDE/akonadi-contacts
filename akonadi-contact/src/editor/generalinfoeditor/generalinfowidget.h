@@ -25,6 +25,7 @@
 
 #include <QWidget>
 class QLineEdit;
+class ImageWidget;
 
 namespace Akonadi
 {
@@ -44,6 +45,7 @@ private:
     WebListWidget *mWebListWidget;
     MessagingListWidget *mMessagingListWidget;
     MailListWidget *mMailListWidget;
+    ImageWidget *mPhotoWidget;
 };
 }
 #endif // GENERALINFOWIDGET_H
