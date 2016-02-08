@@ -79,10 +79,18 @@ GeneralInfoWidget::~GeneralInfoWidget()
 
 void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
 {
+    mPhoneListWidget->loadContact(contact);
+    mWebListWidget->loadContact(contact);
+    mMessagingListWidget->loadContact(contact);
+    mMailListWidget->loadContact(contact);
     //TODO
 }
 
 void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
 {
+    mPhoneListWidget->storeContact(contact);
+    mWebListWidget->storeContact(contact);
+    mMessagingListWidget->storeContact(contact);
+    mMailListWidget->storeContact(contact);
     //TODO
 }
