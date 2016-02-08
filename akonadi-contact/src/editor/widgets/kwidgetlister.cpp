@@ -95,6 +95,7 @@ void KWidgetLister::init()
     QHBoxLayout *mButtonBoxHBoxLayout = new QHBoxLayout(d->mButtonBox);
     mButtonBoxHBoxLayout->setMargin(0);
     d->mLayout->addWidget(d->mButtonBox);
+    d->mLayout->addStretch(1);
 }
 
 void KWidgetLister::slotMore()
