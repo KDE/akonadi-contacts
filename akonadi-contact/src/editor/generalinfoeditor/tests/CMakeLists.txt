@@ -1,5 +1,6 @@
 set(generalinfoeditor_SRCS
     main.cpp
+    ../generalinfowidget.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})

@@ -22,12 +22,14 @@
 
 
 #include <QApplication>
-
-//using namespace Akonadi;
+#include "../generalinfowidget.h"
+using namespace Akonadi;
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
+    Akonadi::GeneralInfoWidget w;
+    w.show();
     //TODO
     return app.exec();
 }
