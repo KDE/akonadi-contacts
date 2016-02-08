@@ -21,15 +21,28 @@
 */
 
 #include "weblistwidget.h"
+#include "webwidgetlister.h"
 #include <QLabel>
 #include <KLocalizedString>
+#include <QVBoxLayout>
 
 using namespace Akonadi;
 
 WebListWidget::WebListWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *topLayout = new QVBoxLayout;
+    topLayout->setMargin(0);
+    topLayout->setSpacing(0);
+    setLayout(topLayout);
 
+    QLabel *label = new QLabel(i18n("Web"), this);
+    label->setObjectName(QStringLiteral("weblistlabel"));
+    topLayout->addWidget(label);
+
+    mWebWidgetLister = new Akonadi::WebWidgetLister(this);
+    mWebWidgetLister->setObjectName(QStringLiteral("webwidgetlister"));
+    topLayout->addWidget(mWebWidgetLister);
 }
 
 WebListWidget::~WebListWidget()

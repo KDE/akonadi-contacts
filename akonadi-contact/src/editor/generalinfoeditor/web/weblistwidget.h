@@ -27,12 +27,15 @@
 
 namespace Akonadi
 {
+class WebWidgetLister;
 class WebListWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit WebListWidget(QWidget *parent = Q_NULLPTR);
     ~WebListWidget();
+private:
+    WebWidgetLister *mWebWidgetLister;
 };
 }
 #endif // WEBLISTWIDGET_H

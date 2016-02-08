@@ -26,6 +26,10 @@
 #include <KLocalizedString>
 #include <QLineEdit>
 #include <editor/generalinfoeditor/phone/phonelistwidget.h>
+#include <editor/generalinfoeditor/messaging/messaginglistwidget.h>
+#include <editor/generalinfoeditor/mail/maillistwidget.h>
+#include <editor/generalinfoeditor/web/weblistwidget.h>
+
 using namespace Akonadi;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
@@ -46,6 +50,15 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mPhoneListWidget = new PhoneListWidget(this);
     mPhoneListWidget->setObjectName(QStringLiteral("phonelistwidget"));
     grid->addWidget(mPhoneListWidget, 2, 1);
+
+    mWebListWidget = new WebListWidget(this);
+    mWebListWidget->setObjectName(QStringLiteral("weblistwidget"));
+    grid->addWidget(mWebListWidget, 3, 1);
+
+    mMessagingListWidget = new MessagingListWidget(this);
+    mMessagingListWidget->setObjectName(QStringLiteral("messaginglistwidget"));
+    grid->addWidget(mMessagingListWidget, 3, 2);
+
 }
 
 GeneralInfoWidget::~GeneralInfoWidget()

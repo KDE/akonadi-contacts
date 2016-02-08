@@ -5,6 +5,15 @@ set(generalinfoeditor_SRCS
     ../phone/phonelistwidget.cpp
     ../phone/phonewidgetlister.cpp
     ../../widgets/kwidgetlister.cpp
+    ../web/webwidgetlister.cpp
+    ../web/weblistwidget.cpp
+    ../web/webwidget.cpp
+    ../mail/maillistwidget.cpp
+    ../mail/mailwidget.cpp
+    ../mail/mailwidgetlister.cpp
+    ../messaging/messaginglistwidget.cpp
+    ../messaging/messagingwidget.cpp
+    ../messaging/messagingwidgetlister.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
