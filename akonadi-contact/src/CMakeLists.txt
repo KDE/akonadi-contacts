@@ -16,15 +16,15 @@ add_subdirectory(editor/im)
 ########### next target ###############
 
 set(akonadicontact_actions_SRCS
-  actions/dialphonenumberaction.cpp
-  actions/showaddressaction.cpp
-  actions/qdialer.cpp
-  actions/qskypedialer.cpp
-  actions/sendsmsaction.cpp
-  actions/smsdialog.cpp
-  actions/qsflphonedialer.cpp
-  actions/qekigadialer.cpp
-)
+    actions/dialphonenumberaction.cpp
+    actions/showaddressaction.cpp
+    actions/qdialer.cpp
+    actions/qskypedialer.cpp
+    actions/sendsmsaction.cpp
+    actions/smsdialog.cpp
+    actions/qsflphonedialer.cpp
+    actions/qekigadialer.cpp
+    )
 
 configure_file(config-akonadi-contact.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-akonadi-contact.h)
 
@@ -32,119 +32,120 @@ configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY
 kconfig_add_kcfg_files(akonadicontact_actions_SRCS actions/contactactionssettings.kcfgc)
 
 set(akonadicontact_editor_widgets_SRCS
-   editor/widgets/kwidgetlister.cpp
-)
+    editor/widgets/kwidgetlister.cpp
+    )
 
 set(akonadicontact_editor_generalinfo_phone_SRCS
-   editor/generalinfoeditor/phone/phonewidgetlister.cpp
-   editor/generalinfoeditor/phone/phonewidget.cpp
-   editor/generalinfoeditor/phone/phonelistwidget.cpp
-)
+    editor/generalinfoeditor/phone/phonewidgetlister.cpp
+    editor/generalinfoeditor/phone/phonewidget.cpp
+    editor/generalinfoeditor/phone/phonelistwidget.cpp
+    )
 
 set(akonadicontact_editor_generainfo_web_SRCS
-   editor/generalinfoeditor/web/webwidgetlister.cpp
-)
+    editor/generalinfoeditor/web/webwidgetlister.cpp
+    editor/generalinfoeditor/web/weblistwidget.cpp
+    )
 
 set(akonadicontact_editor_generalinfo_SRCS
-   editor/generalinfoeditor/generalinfowidget.cpp
-   ${akonadicontact_editor_generalinfo_phone_SRCS}
-   ${akonadicontact_editor_generainfo_web_SRCS}
-)
+    editor/generalinfoeditor/generalinfowidget.cpp
+    ${akonadicontact_editor_generalinfo_phone_SRCS}
+    ${akonadicontact_editor_generainfo_web_SRCS}
+    )
 
 set(akonadicontact_addresslocation_editor_SRCS
-   editor/addresseditor/addresslocationwidget.cpp
-   editor/addresseditor/addresseslocationviewer.cpp
-   editor/addresseditor/addresseslocationgrantleeformater.cpp
-   editor/addresseditor/addressgrantleeobject.cpp
-   editor/addresseditor/iconnamecache.cpp
-   editor/addresseditor/addresseslocationwidget.cpp
-   editor/addresseditor/selectaddresstypecombobox.cpp
-   editor/addresseditor/addresstypedialog.cpp
-)
+    editor/addresseditor/addresslocationwidget.cpp
+    editor/addresseditor/addresseslocationviewer.cpp
+    editor/addresseditor/addresseslocationgrantleeformater.cpp
+    editor/addresseditor/addressgrantleeobject.cpp
+    editor/addresseditor/iconnamecache.cpp
+    editor/addresseditor/addresseslocationwidget.cpp
+    editor/addresseditor/selectaddresstypecombobox.cpp
+    editor/addresseditor/addresstypedialog.cpp
+    )
 
 set(akonadicontact_editor_SRCS
-  editor/categorieseditwidget.cpp
-  editor/contacteditorwidget.cpp
-  editor/customfieldeditordialog.cpp
-  editor/customfieldsdelegate.cpp
-  editor/customfieldseditwidget.cpp
-  editor/customfieldsmodel.cpp
-  editor/dateeditwidget.cpp
-  editor/displaynameeditwidget.cpp
-  editor/emaileditwidget.cpp
-  editor/freebusyeditwidget.cpp
-  editor/im/imdelegate.cpp
-  editor/im/imeditordialog.cpp
-  editor/im/imaddress.cpp
-  editor/im/immodel.cpp
-  editor/im/improtocols.cpp
-  editor/im/imitemdialog.cpp
-  editor/imagewidget.cpp
-  editor/imeditwidget.cpp
-  editor/kdatepickerpopup.cpp
-  editor/nameeditdialog.cpp
-  editor/nameeditwidget.cpp
-  editor/phoneeditwidget.cpp
-  editor/secrecyeditwidget.cpp
-)
+    editor/categorieseditwidget.cpp
+    editor/contacteditorwidget.cpp
+    editor/customfieldeditordialog.cpp
+    editor/customfieldsdelegate.cpp
+    editor/customfieldseditwidget.cpp
+    editor/customfieldsmodel.cpp
+    editor/dateeditwidget.cpp
+    editor/displaynameeditwidget.cpp
+    editor/emaileditwidget.cpp
+    editor/freebusyeditwidget.cpp
+    editor/im/imdelegate.cpp
+    editor/im/imeditordialog.cpp
+    editor/im/imaddress.cpp
+    editor/im/immodel.cpp
+    editor/im/improtocols.cpp
+    editor/im/imitemdialog.cpp
+    editor/imagewidget.cpp
+    editor/imeditwidget.cpp
+    editor/kdatepickerpopup.cpp
+    editor/nameeditdialog.cpp
+    editor/nameeditwidget.cpp
+    editor/phoneeditwidget.cpp
+    editor/secrecyeditwidget.cpp
+    )
 
 set(akonadicontact_LIB_SRC
-  ${akonadicontact_addresslocation_editor_SRCS}
-  ${akonadicontact_editor_widgets_SRCS}
-  ${akonadicontact_editor_generalinfo_SRCS}
-  abstractcontactformatter.cpp
-  abstractcontactgroupformatter.cpp
-  attributeregistrar.cpp
-  collectionfiltermodel.cpp
-  contactcompletionmodel.cpp
-  contactdefaultactions.cpp
-  contacteditor.cpp
-  contacteditordialog.cpp
-  contactgroupeditor.cpp
-  contactgroupeditordelegate.cpp
-  contactgroupeditordialog.cpp
-  contactgrouplineedit.cpp
-  contactgroupexpandjob.cpp
-  contactgroupmodel.cpp
-  contactgroupsearchjob.cpp
-  contactgroupviewer.cpp
-  contactgroupviewerdialog.cpp
-  contactmetadata.cpp
-  contactmetadataattribute.cpp
-  contactparts.cpp
-  contactsearchjob.cpp
-  contactsfilterproxymodel.cpp
-  contactstreemodel.cpp
-  contactviewer.cpp
-  contactviewerdialog.cpp
-  customfields.cpp
-  customfieldmanager.cpp
-  emailaddressselection.cpp
-  emailaddressselectiondialog.cpp
-  emailaddressselectionproxymodel.cpp
-  emailaddressselectionwidget.cpp
-  emailaddressrequester.cpp
-  textbrowser.cpp
-  leafextensionproxymodel.cpp
-  recentcontactscollections.cpp
-  recentcontactscollectionrequestjob.cpp
-  standardcontactactionmanager.cpp
-  standardcontactformatter.cpp
-  standardcontactgroupformatter.cpp
-  waitingoverlay.cpp
-  selectaddressbookdialog.cpp
-  ${akonadicontact_actions_SRCS}
-)
+    ${akonadicontact_addresslocation_editor_SRCS}
+    ${akonadicontact_editor_widgets_SRCS}
+    ${akonadicontact_editor_generalinfo_SRCS}
+    abstractcontactformatter.cpp
+    abstractcontactgroupformatter.cpp
+    attributeregistrar.cpp
+    collectionfiltermodel.cpp
+    contactcompletionmodel.cpp
+    contactdefaultactions.cpp
+    contacteditor.cpp
+    contacteditordialog.cpp
+    contactgroupeditor.cpp
+    contactgroupeditordelegate.cpp
+    contactgroupeditordialog.cpp
+    contactgrouplineedit.cpp
+    contactgroupexpandjob.cpp
+    contactgroupmodel.cpp
+    contactgroupsearchjob.cpp
+    contactgroupviewer.cpp
+    contactgroupviewerdialog.cpp
+    contactmetadata.cpp
+    contactmetadataattribute.cpp
+    contactparts.cpp
+    contactsearchjob.cpp
+    contactsfilterproxymodel.cpp
+    contactstreemodel.cpp
+    contactviewer.cpp
+    contactviewerdialog.cpp
+    customfields.cpp
+    customfieldmanager.cpp
+    emailaddressselection.cpp
+    emailaddressselectiondialog.cpp
+    emailaddressselectionproxymodel.cpp
+    emailaddressselectionwidget.cpp
+    emailaddressrequester.cpp
+    textbrowser.cpp
+    leafextensionproxymodel.cpp
+    recentcontactscollections.cpp
+    recentcontactscollectionrequestjob.cpp
+    standardcontactactionmanager.cpp
+    standardcontactformatter.cpp
+    standardcontactgroupformatter.cpp
+    waitingoverlay.cpp
+    selectaddressbookdialog.cpp
+    ${akonadicontact_actions_SRCS}
+    )
 
 ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME log_akonadi_contact)
 
 if(NOT KDE_PLATFORM_PROFILE STREQUAL "Mobile")
-set(akonadicontact_LIB_SRC
-    ${akonadicontact_LIB_SRC}
-    ${akonadicontact_editor_SRCS}
-)
+    set(akonadicontact_LIB_SRC
+        ${akonadicontact_LIB_SRC}
+        ${akonadicontact_editor_SRCS}
+        )
 else()
-add_definitions(-DDISABLE_EDITOR_WIDGETS)
+    add_definitions(-DDISABLE_EDITOR_WIDGETS)
 endif()
 
 ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
@@ -165,11 +166,11 @@ target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi
 target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact>")
 
 target_link_libraries(KF5AkonadiContact
-PUBLIC
+    PUBLIC
     KF5::AkonadiCore
     KF5::Contacts
     Qt5::Widgets
-PRIVATE
+    PRIVATE
     KF5::AkonadiWidgets
     KF5::Completion
     KF5::ConfigCore
@@ -186,10 +187,10 @@ PRIVATE
     KF5::XmlGui
     Grantlee5::Templates
     Qt5::WebKitWidgets
-)
+    )
 
 if(KF5Prison_FOUND)
-   target_link_libraries(KF5AkonadiContact PRIVATE KF5::Prison)
+    target_link_libraries(KF5AkonadiContact PRIVATE KF5::Prison)
 endif()
 
 
@@ -197,12 +198,12 @@ set_target_properties(KF5AkonadiContact PROPERTIES
     VERSION ${AKONADICONTACT_VERSION_STRING}
     SOVERSION ${AKONADICONTACT_SOVERSION}
     EXPORT_NAME AkonadiContact
-)
+    )
 
 install(TARGETS
     KF5AkonadiContact
     EXPORT KF5AkonadiContactTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+    )
 
 install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
 install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
@@ -211,62 +212,62 @@ install(FILES recentcontactscollections.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
     LIB_NAME KF5AkonadiContact
     DEPS "AkonadiCore Abc" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact
-)
+    )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
-  HEADER_NAMES
-  AbstractContactFormatter
-  AbstractContactGroupFormatter
-  ContactDefaultActions
-  ContactEditor
-  ContactEditorDialog
-  ContactGroupEditor
-  ContactGroupEditorDialog
-  ContactGroupExpandJob
-  ContactGroupSearchJob
-  ContactGroupViewer
-  ContactGroupViewerDialog
-  ContactSearchJob
-  ContactsFilterProxyModel
-  ContactsTreeModel
-  ContactEditorPagePlugin
-  ContactParts
-  ContactViewer
-  ContactViewerDialog
-  EmailAddressSelection
-  EmailAddressSelectionDialog
-  EmailAddressSelectionWidget
-  EmailAddressRequester
-  RecentContactsCollectionRequestJob
-  StandardContactActionManager
-  StandardContactFormatter
-  StandardContactGroupFormatter
-  SelectAddressBookDialog
+    HEADER_NAMES
+    AbstractContactFormatter
+    AbstractContactGroupFormatter
+    ContactDefaultActions
+    ContactEditor
+    ContactEditorDialog
+    ContactGroupEditor
+    ContactGroupEditorDialog
+    ContactGroupExpandJob
+    ContactGroupSearchJob
+    ContactGroupViewer
+    ContactGroupViewerDialog
+    ContactSearchJob
+    ContactsFilterProxyModel
+    ContactsTreeModel
+    ContactEditorPagePlugin
+    ContactParts
+    ContactViewer
+    ContactViewerDialog
+    EmailAddressSelection
+    EmailAddressSelectionDialog
+    EmailAddressSelectionWidget
+    EmailAddressRequester
+    RecentContactsCollectionRequestJob
+    StandardContactActionManager
+    StandardContactFormatter
+    StandardContactGroupFormatter
+    SelectAddressBookDialog
 
-  REQUIRED_HEADERS AkonadiContact_HEADERS
-  PREFIX Akonadi/Contact
-)
-
-install( FILES
-  ${AkonadiContact_CamelCase_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact COMPONENT Devel
-)
+    REQUIRED_HEADERS AkonadiContact_HEADERS
+    PREFIX Akonadi/Contact
+    )
 
 install( FILES
-  ${AkonadiContact_HEADERS}
-  ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-  editor/im/improtocols.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
-)
+    ${AkonadiContact_CamelCase_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact COMPONENT Devel
+    )
+
+install( FILES
+    ${AkonadiContact_HEADERS}
+    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
+    editor/im/improtocols.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
+    )
 
 if (BUILD_TESTING)
-   add_subdirectory(editor/autotests)
-   add_subdirectory(editor/addresseditor/autotests/)
-   add_subdirectory(editor/addresseditor/tests)
-   add_subdirectory(editor/generalinfoeditor/autotests/)
-   add_subdirectory(editor/generalinfoeditor/tests)
+    add_subdirectory(editor/autotests)
+    add_subdirectory(editor/addresseditor/autotests/)
+    add_subdirectory(editor/addresseditor/tests)
+    add_subdirectory(editor/generalinfoeditor/autotests/)
+    add_subdirectory(editor/generalinfoeditor/tests)
 endif()
 
 

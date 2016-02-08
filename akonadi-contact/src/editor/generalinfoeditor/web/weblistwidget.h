@@ -20,15 +20,19 @@
     02110-1301, USA.
 */
 
+#ifndef WEBLISTWIDGET_H
+#define WEBLISTWIDGET_H
 
-#include <QApplication>
-#include "../generalinfowidget.h"
-using namespace Akonadi;
-int main(int argc, char *argv[])
+#include <QWidget>
+
+namespace Akonadi
 {
-    QApplication app(argc, argv);
-
-    Akonadi::GeneralInfoWidget w;
-    w.show();
-    return app.exec();
+class WebListWidget : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit WebListWidget(QWidget *parent = Q_NULLPTR);
+    ~WebListWidget();
+};
 }
+#endif // WEBLISTWIDGET_H
