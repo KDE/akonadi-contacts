@@ -59,6 +59,12 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mMessagingListWidget->setObjectName(QStringLiteral("messaginglistwidget"));
     grid->addWidget(mMessagingListWidget, 3, 2);
 
+
+    mMailListWidget = new MailListWidget(this);
+    mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
+    grid->addWidget(mMailListWidget, 2, 2);
+
+    grid->setRowStretch(4, 1);
 }
 
 GeneralInfoWidget::~GeneralInfoWidget()

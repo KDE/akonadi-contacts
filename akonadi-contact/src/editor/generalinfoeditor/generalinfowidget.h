@@ -31,6 +31,7 @@ namespace Akonadi
 class PhoneListWidget;
 class WebListWidget;
 class MessagingListWidget;
+class MailListWidget;
 class GeneralInfoWidget : public QWidget
 {
     Q_OBJECT
@@ -42,6 +43,7 @@ private:
     PhoneListWidget *mPhoneListWidget;
     WebListWidget *mWebListWidget;
     MessagingListWidget *mMessagingListWidget;
+    MailListWidget *mMailListWidget;
 };
 }
 #endif // GENERALINFOWIDGET_H
