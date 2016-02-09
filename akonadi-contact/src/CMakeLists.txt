@@ -39,6 +39,7 @@ set(akonadicontact_editor_generalinfo_phone_SRCS
     editor/generalinfoeditor/phone/phonewidgetlister.cpp
     editor/generalinfoeditor/phone/phonewidget.cpp
     editor/generalinfoeditor/phone/phonelistwidget.cpp
+    editor/generalinfoeditor/phone/phonecomboboxtype.cpp
     )
 
 set(akonadicontact_editor_generalinfo_web_SRCS
