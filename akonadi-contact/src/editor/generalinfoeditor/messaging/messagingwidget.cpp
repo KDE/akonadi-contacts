@@ -35,21 +35,21 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->setMargin(0);
 
 
-    mPhoneNumberEdit = new QLineEdit(this);
-    mPhoneNumberEdit->setPlaceholderText(i18n("Add a phone number"));
-    mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
-    layout->addWidget(mPhoneNumberEdit);
+    mMessagingEdit = new QLineEdit(this);
+    mMessagingEdit->setPlaceholderText(i18n("Add a identifier"));
+    mMessagingEdit->setObjectName(QStringLiteral("phonenumber"));
+    layout->addWidget(mMessagingEdit);
 
 
     //TODO add icon
     mAddButton = new QToolButton(this);
     mAddButton->setObjectName(QStringLiteral("addbutton"));
-    connect(mAddButton, &QToolButton::clicked, this, &MessagingWidget::slotAddPhone);
+    connect(mAddButton, &QToolButton::clicked, this, &MessagingWidget::slotAddMessaging);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
-    connect(mRemoveButton, &QToolButton::clicked, this, &MessagingWidget::slotRemovePhone);
+    connect(mRemoveButton, &QToolButton::clicked, this, &MessagingWidget::slotRemoveMessaging);
     layout->addWidget(mRemoveButton);
     //TODO add type.
 }
@@ -65,12 +65,12 @@ void MessagingWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeBu
     mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
-void MessagingWidget::slotAddPhone()
+void MessagingWidget::slotAddMessaging()
 {
     Q_EMIT addWidget(this);
 }
 
-void MessagingWidget::slotRemovePhone()
+void MessagingWidget::slotRemoveMessaging()
 {
     Q_EMIT removeWidget(this);
 }

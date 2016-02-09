@@ -36,12 +36,12 @@ MailListWidget::MailListWidget(QWidget *parent)
     topLayout->setSpacing(0);
     setLayout(topLayout);
 
-    QLabel *label = new QLabel(i18n("Phone"), this);
-    label->setObjectName(QStringLiteral("phonelistlabel"));
+    QLabel *label = new QLabel(i18n("Email"), this);
+    label->setObjectName(QStringLiteral("emaillistlabel"));
     topLayout->addWidget(label);
 
     mMailWidgetLister = new Akonadi::MailWidgetLister(this);
-    mMailWidgetLister->setObjectName(QStringLiteral("phonewidgetlister"));
+    mMailWidgetLister->setObjectName(QStringLiteral("emailwidgetlister"));
     topLayout->addWidget(mMailWidgetLister);
 }
 
