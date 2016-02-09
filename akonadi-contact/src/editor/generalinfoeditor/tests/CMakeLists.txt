@@ -15,6 +15,8 @@ set(generalinfoeditor_SRCS
     ../messaging/messagingwidget.cpp
     ../messaging/messagingwidgetlister.cpp
     ../../imagewidget.cpp
+    ../namewidget.cpp
+    ../nicknamewidget.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})

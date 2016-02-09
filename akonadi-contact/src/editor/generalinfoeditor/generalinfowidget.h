@@ -38,6 +38,7 @@ class PhoneListWidget;
 class WebListWidget;
 class MessagingListWidget;
 class MailListWidget;
+class NameWidget;
 class GeneralInfoWidget : public QWidget
 {
     Q_OBJECT
@@ -56,6 +57,7 @@ private:
     MessagingListWidget *mMessagingListWidget;
     MailListWidget *mMailListWidget;
     ImageWidget *mPhotoWidget;
+    NameWidget *mNameWidget;
 };
 }
 #endif // GENERALINFOWIDGET_H

@@ -20,43 +20,29 @@
     02110-1301, USA.
 */
 
-#include "namewidget.h"
+#include "nicknamewidget.h"
 #include <KLocalizedString>
-#include <QVBoxLayout>
 #include <QLabel>
+#include <QVBoxLayout>
 #include <QLineEdit>
-#include <KContacts/Addressee>
-
 using namespace Akonadi;
 
-NameWidget::NameWidget(QWidget *parent)
+NicknameWidget::NicknameWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    QLabel *label = new QLabel(i18n("Name"));
-    label->setObjectName(QStringLiteral("namelabel"));
-    topLayout->addWidget(label);
+    QLabel *nickNameLabel = new QLabel(i18n("Nickname"), this);
+    nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));
+    topLayout->addWidget(nickNameLabel);
 
-    QHBoxLayout *lineLayout = new QHBoxLayout;
-    lineLayout->setMargin(0);
-    topLayout->addLayout(lineLayout);
-    mNameEdit = new QLineEdit;
-    mNameEdit->setPlaceholderText(i18n("Add a name"));
-    lineLayout->addWidget(mNameEdit);
+    mNickName = new QLineEdit(this);
+    mNickName->setPlaceholderText(i18n("Add a Nickname"));
+    mNickName->setObjectName(QStringLiteral("nickname"));
+    topLayout->addWidget(mNickName);
 
 }
 
-NameWidget::~NameWidget()
+NicknameWidget::~NicknameWidget()
 {
 
-}
-
-void NameWidget::loadContact(const KContacts::Addressee &contact)
-{
-    //TODO
-}
-
-void NameWidget::storeContact(KContacts::Addressee &contact) const
-{
-    //TODO
 }

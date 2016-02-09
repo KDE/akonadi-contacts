@@ -20,43 +20,21 @@
     02110-1301, USA.
 */
 
-#include "namewidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QLineEdit>
-#include <KContacts/Addressee>
+#ifndef NICKNAMEWIDGET_H
+#define NICKNAMEWIDGET_H
 
-using namespace Akonadi;
-
-NameWidget::NameWidget(QWidget *parent)
-    : QWidget(parent)
+#include <QWidget>
+class QLineEdit;
+namespace Akonadi
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
-    QLabel *label = new QLabel(i18n("Name"));
-    label->setObjectName(QStringLiteral("namelabel"));
-    topLayout->addWidget(label);
-
-    QHBoxLayout *lineLayout = new QHBoxLayout;
-    lineLayout->setMargin(0);
-    topLayout->addLayout(lineLayout);
-    mNameEdit = new QLineEdit;
-    mNameEdit->setPlaceholderText(i18n("Add a name"));
-    lineLayout->addWidget(mNameEdit);
-
-}
-
-NameWidget::~NameWidget()
+class NicknameWidget : public QWidget
 {
-
+    Q_OBJECT
+public:
+    explicit NicknameWidget(QWidget *parent = Q_NULLPTR);
+    ~NicknameWidget();
+private:
+    QLineEdit *mNickName;
+};
 }
-
-void NameWidget::loadContact(const KContacts::Addressee &contact)
-{
-    //TODO
-}
-
-void NameWidget::storeContact(KContacts::Addressee &contact) const
-{
-    //TODO
-}
+#endif // NICKNAMEWIDGET_H

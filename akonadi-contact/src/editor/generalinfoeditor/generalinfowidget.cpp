@@ -21,6 +21,7 @@
 */
 
 #include "generalinfowidget.h"
+#include "namewidget.h"
 #include <QGridLayout>
 #include <QLabel>
 #include <KLocalizedString>
@@ -43,6 +44,10 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mPhotoWidget->setObjectName(QStringLiteral("photowidget"));
     grid->addWidget(mPhotoWidget, 0, 0, 4, 1);
 
+    mNameWidget = new NameWidget(this);
+    mNameWidget->setObjectName(QStringLiteral("namewidget"));
+    grid->addWidget(mNameWidget, 0, 1);
+
     QLabel *nickNameLabel = new QLabel(i18n("Nickname"), this);
     nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));
     grid->addWidget(nickNameLabel, 0, 2);
@@ -54,22 +59,22 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 
     mPhoneListWidget = new PhoneListWidget(this);
     mPhoneListWidget->setObjectName(QStringLiteral("phonelistwidget"));
-    grid->addWidget(mPhoneListWidget, 2, 1);
+    grid->addWidget(mPhoneListWidget, 1, 1);
 
     mWebListWidget = new WebListWidget(this);
     mWebListWidget->setObjectName(QStringLiteral("weblistwidget"));
-    grid->addWidget(mWebListWidget, 3, 1);
+    grid->addWidget(mWebListWidget, 2, 1);
 
     mMessagingListWidget = new MessagingListWidget(this);
     mMessagingListWidget->setObjectName(QStringLiteral("messaginglistwidget"));
-    grid->addWidget(mMessagingListWidget, 3, 2);
+    grid->addWidget(mMessagingListWidget, 2, 2);
 
 
     mMailListWidget = new MailListWidget(this);
     mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
-    grid->addWidget(mMailListWidget, 2, 2);
+    grid->addWidget(mMailListWidget, 1, 2);
 
-    grid->setRowStretch(4, 1);
+    grid->setRowStretch(3, 1);
 }
 
 GeneralInfoWidget::~GeneralInfoWidget()
