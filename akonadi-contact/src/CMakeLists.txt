@@ -31,6 +31,11 @@ configure_file(config-akonadi-contact.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config
 configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
 kconfig_add_kcfg_files(akonadicontact_actions_SRCS actions/contactactionssettings.kcfgc)
 
+set(akonadicontact_customfieldseditor_SRCS
+   editor/customfieldeditor/customfieldswidget.cpp
+   )
+
+
 set(akonadicontact_editor_widgets_SRCS
     editor/widgets/kwidgetlister.cpp
     )
@@ -111,6 +116,7 @@ set(akonadicontact_LIB_SRC
     ${akonadicontact_addresslocation_editor_SRCS}
     ${akonadicontact_editor_widgets_SRCS}
     ${akonadicontact_editor_generalinfo_SRCS}
+    ${akonadicontact_customfieldseditor_SRCS}
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
     attributeregistrar.cpp
