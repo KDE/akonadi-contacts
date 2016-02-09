@@ -25,7 +25,9 @@
 #define CUSTOMFIELDEDITORWIDGET_H
 
 #include <QWidget>
-
+class QLineEdit;
+class QPushButton;
+class QCheckBox;
 namespace Akonadi
 {
 class CustomFieldEditorWidget : public QWidget
@@ -34,6 +36,10 @@ class CustomFieldEditorWidget : public QWidget
 public:
     explicit CustomFieldEditorWidget(QWidget *parent = Q_NULLPTR);
     ~CustomFieldEditorWidget();
+private:
+    QLineEdit *mFieldName;
+    QPushButton *mAddField;
+    QCheckBox *mUseAllContacts;
 };
 }
 #endif // CUSTOMFIELDEDITORWIDGET_H

@@ -23,12 +23,32 @@
 #include "customfieldeditorwidget.h"
 #include <QGridLayout>
 #include <KLocalizedString>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+
 using namespace Akonadi;
 
 CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    QLabel *label = new QLabel(i18n("Title Custom Type"), this);
+    label->setObjectName(QStringLiteral("labeltitle"));
 
+    topLayout->addWidget(label);
+
+    QHBoxLayout *fieldLayout = new QHBoxLayout;
+    topLayout->addLayout(fieldLayout);
+    mFieldName = new QLineEdit(this);
+    mFieldName->setObjectName(QStringLiteral("fieldname"));
+    topLayout->addWidget(mFieldName);
+
+    //TODO add type
+
+    mAddField = new QPushButton(i18n("Add Field"), this);
+    mAddField->setObjectName(QStringLiteral("addfield"));
+    topLayout->addWidget(mAddField);
 }
 
 CustomFieldEditorWidget::~CustomFieldEditorWidget()
