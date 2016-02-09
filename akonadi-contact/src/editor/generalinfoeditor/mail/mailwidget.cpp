@@ -35,21 +35,21 @@ MailWidget::MailWidget(QWidget *parent)
     layout->setMargin(0);
 
 
-    mPhoneNumberEdit = new QLineEdit(this);
-    mPhoneNumberEdit->setPlaceholderText(i18n("Add a phone number"));
-    mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
-    layout->addWidget(mPhoneNumberEdit);
+    mMailEdit = new QLineEdit(this);
+    mMailEdit->setPlaceholderText(i18n("Add a email account"));
+    mMailEdit->setObjectName(QStringLiteral("mailedit"));
+    layout->addWidget(mMailEdit);
 
 
     //TODO add icon
     mAddButton = new QToolButton(this);
     mAddButton->setObjectName(QStringLiteral("addbutton"));
-    connect(mAddButton, &QToolButton::clicked, this, &MailWidget::slotAddPhone);
+    connect(mAddButton, &QToolButton::clicked, this, &MailWidget::slotAddMail);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
-    connect(mRemoveButton, &QToolButton::clicked, this, &MailWidget::slotRemovePhone);
+    connect(mRemoveButton, &QToolButton::clicked, this, &MailWidget::slotRemoveMail);
     layout->addWidget(mRemoveButton);
     //TODO add type.
 }
@@ -65,12 +65,12 @@ void MailWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonE
     mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
-void MailWidget::slotAddPhone()
+void MailWidget::slotAddMail()
 {
     Q_EMIT addWidget(this);
 }
 
-void MailWidget::slotRemovePhone()
+void MailWidget::slotRemoveMail()
 {
     Q_EMIT removeWidget(this);
 }

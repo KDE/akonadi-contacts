@@ -41,11 +41,11 @@ Q_SIGNALS:
     void removeWidget(QWidget *);
 
 private Q_SLOTS:
-    void slotAddPhone();
-    void slotRemovePhone();
+    void slotAddMail();
+    void slotRemoveMail();
 
 private:
-    QLineEdit *mPhoneNumberEdit;
+    QLineEdit *mMailEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
 };

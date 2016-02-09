@@ -20,39 +20,19 @@
     02110-1301, USA.
 */
 
-#include "namewidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QLineEdit>
-#include <KContacts/Addressee>
 
-using namespace Akonadi;
+#ifndef PHONEWIDGETTEST_H
+#define PHONEWIDGETTEST_H
 
-NameWidget::NameWidget(QWidget *parent)
-    : QWidget(parent)
+#include <QObject>
+class MailWidgetTest : public QObject
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
-    QLabel *label = new QLabel(i18n("Name"));
-    label->setObjectName(QStringLiteral("namelabel"));
-    topLayout->addWidget(label);
+    Q_OBJECT
+public:
+    explicit MailWidgetTest(QObject *parent = Q_NULLPTR);
+    ~MailWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+};
 
-    QHBoxLayout *lineLayout = new QHBoxLayout;
-    topLayout->addLayout(lineLayout);
-
-}
-
-NameWidget::~NameWidget()
-{
-
-}
-
-void NameWidget::loadContact(const KContacts::Addressee &contact)
-{
-    //TODO
-}
-
-void NameWidget::storeContact(KContacts::Addressee &contact) const
-{
-    //TODO
-}
+#endif // PHONEWIDGETTEST_H

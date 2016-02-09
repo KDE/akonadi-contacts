@@ -20,39 +20,33 @@
     02110-1301, USA.
 */
 
-#include "namewidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QLabel>
+#include "mailwidgettest.h"
+#include "../mail/mailwidget.h"
+#include <QTest>
 #include <QLineEdit>
-#include <KContacts/Addressee>
+#include <QToolButton>
 
-using namespace Akonadi;
-
-NameWidget::NameWidget(QWidget *parent)
-    : QWidget(parent)
-{
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
-    QLabel *label = new QLabel(i18n("Name"));
-    label->setObjectName(QStringLiteral("namelabel"));
-    topLayout->addWidget(label);
-
-    QHBoxLayout *lineLayout = new QHBoxLayout;
-    topLayout->addLayout(lineLayout);
-
-}
-
-NameWidget::~NameWidget()
+MailWidgetTest::MailWidgetTest(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
-void NameWidget::loadContact(const KContacts::Addressee &contact)
+MailWidgetTest::~MailWidgetTest()
 {
-    //TODO
+
 }
 
-void NameWidget::storeContact(KContacts::Addressee &contact) const
+void MailWidgetTest::shouldHaveDefaultValue()
 {
-    //TODO
+    Akonadi::MailWidget w;
+    QLineEdit *line = w.findChild<QLineEdit *>(QStringLiteral("mailedit"));
+    QVERIFY(line);
+    QToolButton *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
+    QVERIFY(addButton);
+
+    QToolButton *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
+    QVERIFY(removeButton);
 }
+
+QTEST_MAIN(MailWidgetTest)
