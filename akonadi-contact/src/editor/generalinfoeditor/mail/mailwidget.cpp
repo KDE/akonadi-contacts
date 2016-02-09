@@ -36,7 +36,7 @@ MailWidget::MailWidget(QWidget *parent)
 
 
     mMailEdit = new QLineEdit(this);
-    mMailEdit->setPlaceholderText(i18n("Add a email account"));
+    mMailEdit->setPlaceholderText(i18n("Add an email account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);
 
