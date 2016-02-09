@@ -43,11 +43,13 @@ MailWidget::MailWidget(QWidget *parent)
 
     //TODO add icon
     mAddButton = new QToolButton(this);
+    mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &MailWidget::slotAddMail);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
+    mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MailWidget::slotRemoveMail);
     layout->addWidget(mRemoveButton);

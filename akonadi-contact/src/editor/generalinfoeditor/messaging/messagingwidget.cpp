@@ -43,11 +43,13 @@ MessagingWidget::MessagingWidget(QWidget *parent)
 
     //TODO add icon
     mAddButton = new QToolButton(this);
+    mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &MessagingWidget::slotAddMessaging);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
+    mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MessagingWidget::slotRemoveMessaging);
     layout->addWidget(mRemoveButton);

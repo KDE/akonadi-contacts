@@ -43,12 +43,14 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 
     //TODO add icon
     mAddButton = new QToolButton(this);
+    mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &PhoneWidget::slotAddPhone);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     connect(mRemoveButton, &QToolButton::clicked, this, &PhoneWidget::slotRemovePhone);
     layout->addWidget(mRemoveButton);
     //TODO add type.
