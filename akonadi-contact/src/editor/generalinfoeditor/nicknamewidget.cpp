@@ -40,10 +40,19 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     mNickName->setPlaceholderText(i18n("Add a Nickname"));
     mNickName->setObjectName(QStringLiteral("nickname"));
     topLayout->addWidget(mNickName);
-
 }
 
 NicknameWidget::~NicknameWidget()
 {
 
+}
+
+void NicknameWidget::loadContact(const KContacts::Addressee &contact)
+{
+    //TODO
+}
+
+void NicknameWidget::storeContact(KContacts::Addressee &contact) const
+{
+    //TODO
 }

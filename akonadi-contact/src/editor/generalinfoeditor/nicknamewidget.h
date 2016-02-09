@@ -25,6 +25,10 @@
 
 #include <QWidget>
 class QLineEdit;
+namespace KContacts
+{
+class Addressee;
+}
 namespace Akonadi
 {
 class NicknameWidget : public QWidget
@@ -33,6 +37,8 @@ class NicknameWidget : public QWidget
 public:
     explicit NicknameWidget(QWidget *parent = Q_NULLPTR);
     ~NicknameWidget();
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 private:
     QLineEdit *mNickName;
 };
