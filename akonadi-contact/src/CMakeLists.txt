@@ -152,8 +152,6 @@ set(akonadicontact_LIB_SRC
     emailaddressrequester.cpp
     textbrowser.cpp
     leafextensionproxymodel.cpp
-    recentcontactscollections.cpp
-    recentcontactscollectionrequestjob.cpp
     standardcontactactionmanager.cpp
     standardcontactformatter.cpp
     standardcontactgroupformatter.cpp
@@ -174,7 +172,6 @@ else()
 endif()
 
 ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
-kconfig_add_kcfg_files(akonadicontact_LIB_SRC recentcontactscollectionssettings.kcfgc )
 
 
 add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
@@ -232,7 +229,6 @@ install(TARGETS
 
 install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
 install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
-install(FILES recentcontactscollections.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} )
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
     LIB_NAME KF5AkonadiContact
@@ -265,7 +261,6 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     EmailAddressSelectionDialog
     EmailAddressSelectionWidget
     EmailAddressRequester
-    RecentContactsCollectionRequestJob
     StandardContactActionManager
     StandardContactFormatter
     StandardContactGroupFormatter
