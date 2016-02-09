@@ -56,7 +56,6 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     connect(mRemoveButton, &QToolButton::clicked, this, &PhoneWidget::slotRemovePhone);
     layout->addWidget(mRemoveButton);
-    //TODO add type.
 }
 
 PhoneWidget::~PhoneWidget()
