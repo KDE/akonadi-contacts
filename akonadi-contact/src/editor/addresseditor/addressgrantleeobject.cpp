@@ -118,10 +118,9 @@ QString AddressGrantleeObject::modifyAddressAction() const
     return text;
 }
 
-QString AddressGrantleeObject::type() const
+QString AddressGrantleeObject::addressType() const
 {
-    //TODO
-    return {};
+    return KContacts::Address::typeLabel(mAddress.type());
 }
 
 bool AddressGrantleeObject::preferredAddress() const

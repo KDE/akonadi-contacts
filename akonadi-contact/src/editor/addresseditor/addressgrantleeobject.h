@@ -34,7 +34,7 @@ class AddressGrantleeObject : public QObject
     Q_PROPERTY(QString modifyAddressAction READ modifyAddressAction)
     Q_PROPERTY(QString formattedAddress READ formattedAddress)
     Q_PROPERTY(QString preferredAddressAction READ preferredAddressAction)
-    Q_PROPERTY(QString type READ type)
+    Q_PROPERTY(QString addressType READ addressType)
     Q_PROPERTY(QString postOfficeBox READ postOfficeBox)
     Q_PROPERTY(QString street READ street)
     Q_PROPERTY(QString locality READ locality)
@@ -49,7 +49,7 @@ public:
     QString removeAddressAction() const;
     QString modifyAddressAction() const;
     QString formattedAddress() const;
-    QString type() const;
+    QString addressType() const;
     bool preferredAddress() const;
     QString preferredAddressAction() const;
     QString postOfficeBox() const;
