@@ -17,6 +17,7 @@ set(generalinfoeditor_SRCS
     ../../imagewidget.cpp
     ../namewidget.cpp
     ../nicknamewidget.cpp
+    ../phone/phonecomboboxtype.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})

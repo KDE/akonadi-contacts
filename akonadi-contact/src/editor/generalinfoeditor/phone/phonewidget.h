@@ -28,6 +28,7 @@ class QLineEdit;
 class QToolButton;
 namespace Akonadi
 {
+class PhoneComboBoxType;
 class PhoneWidget : public QWidget
 {
     Q_OBJECT
@@ -48,6 +49,7 @@ private:
     QLineEdit *mPhoneNumberEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
+    PhoneComboBoxType *mPhoneType;
 };
 }
 #endif // PHONEWIDGET_H

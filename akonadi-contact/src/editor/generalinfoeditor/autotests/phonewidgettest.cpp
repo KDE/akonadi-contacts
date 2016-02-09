@@ -22,6 +22,7 @@
 
 #include "phonewidgettest.h"
 #include "../phone/phonewidget.h"
+#include "../phone/phonecomboboxtype.h"
 #include <QTest>
 #include <QLineEdit>
 #include <QToolButton>
@@ -44,6 +45,9 @@ void PhoneWidgetTest::shouldHaveDefaultValue()
     QVERIFY(line);
     QToolButton *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
     QVERIFY(addButton);
+
+    Akonadi::PhoneComboBoxType *combotype = w.findChild<Akonadi::PhoneComboBoxType *>(QStringLiteral("phonetype"));
+    QVERIFY(combotype);
 
     QToolButton *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
     QVERIFY(removeButton);

@@ -20,6 +20,7 @@
     02110-1301, USA.
 */
 
+#include "phonecomboboxtype.h"
 #include "phonewidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
@@ -40,6 +41,9 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
 
+    mPhoneType = new PhoneComboBoxType(this);
+    mPhoneType->setObjectName(QStringLiteral("phonetype"));
+    layout->addWidget(mPhoneType);
 
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));

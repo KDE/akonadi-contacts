@@ -1,8 +1,8 @@
-set(phonewidgettest_SRCS phonewidgettest.cpp ../phone/phonewidget.cpp)
+set(phonewidgettest_SRCS phonewidgettest.cpp ../phone/phonewidget.cpp ../phone/phonecomboboxtype.cpp)
 add_executable(phonewidgettest ${phonewidgettest_SRCS})
 add_test(phonewidgettest phonewidgettest)
 ecm_mark_as_test(phonewidgettest)
-target_link_libraries(phonewidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n )
+target_link_libraries(phonewidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n KF5::Completion)
 
 
 set(mailwidgettest_SRCS mailwidgettest.cpp ../mail/mailwidget.cpp)
