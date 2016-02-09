@@ -26,12 +26,15 @@
 #include <QWidget>
 namespace Akonadi
 {
+class CustomFieldEditorWidget;
 class CustomFieldsWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit CustomFieldsWidget(QWidget *parent = Q_NULLPTR);
     ~CustomFieldsWidget();
+private:
+    Akonadi::CustomFieldEditorWidget *mCustomFieldEditorWidget;
 };
 }
 #endif // CUSTOMFIELDSWIDGET_H

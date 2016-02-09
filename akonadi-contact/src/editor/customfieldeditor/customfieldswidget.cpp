@@ -20,6 +20,7 @@
     02110-1301, USA.
 */
 
+#include "customfieldeditorwidget.h"
 #include "customfieldswidget.h"
 #include <KLocalizedString>
 #include <QVBoxLayout>
@@ -29,7 +30,10 @@ using namespace Akonadi;
 CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     : QWidget(parent)
 {
-
+    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    mCustomFieldEditorWidget = new Akonadi::CustomFieldEditorWidget(this);
+    mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
+    topLayout->addWidget(mCustomFieldEditorWidget);
 }
 
 CustomFieldsWidget::~CustomFieldsWidget()

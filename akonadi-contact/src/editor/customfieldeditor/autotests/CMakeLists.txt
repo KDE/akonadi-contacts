@@ -1,4 +1,4 @@
-set(customfieldswidgettest_SRCS customfieldswidgettest.cpp ../customfieldswidget.cpp)
+set(customfieldswidgettest_SRCS customfieldswidgettest.cpp ../customfieldswidget.cpp ../customfieldeditorwidget.cpp)
 add_executable(customfieldswidgettest ${customfieldswidgettest_SRCS})
 add_test(customfieldswidgettest customfieldswidgettest)
 ecm_mark_as_test(customfieldswidgettest)
