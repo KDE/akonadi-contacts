@@ -41,7 +41,6 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->addWidget(mMessagingEdit);
 
 
-    //TODO add icon
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));

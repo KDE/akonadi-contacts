@@ -41,7 +41,6 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     layout->addWidget(mPhoneNumberEdit);
 
 
-    //TODO add icon
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));

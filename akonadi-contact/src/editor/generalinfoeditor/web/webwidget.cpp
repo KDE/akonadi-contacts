@@ -41,7 +41,6 @@ WebWidget::WebWidget(QWidget *parent)
     layout->addWidget(mWebSiteEdit);
 
 
-    //TODO add icon
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
