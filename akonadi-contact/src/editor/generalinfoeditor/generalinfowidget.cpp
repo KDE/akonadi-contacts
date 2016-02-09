@@ -22,6 +22,7 @@
 
 #include "generalinfowidget.h"
 #include "namewidget.h"
+#include "nicknamewidget.h"
 #include <QGridLayout>
 #include <QLabel>
 #include <KLocalizedString>
@@ -48,14 +49,9 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mNameWidget->setObjectName(QStringLiteral("namewidget"));
     grid->addWidget(mNameWidget, 0, 1);
 
-    QLabel *nickNameLabel = new QLabel(i18n("Nickname"), this);
-    nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));
-    grid->addWidget(nickNameLabel, 0, 2);
-
-    mNickName = new QLineEdit(this);
-    mNickName->setPlaceholderText(i18n("Add a Nickname"));
-    mNickName->setObjectName(QStringLiteral("nickname"));
-    grid->addWidget(mNickName, 1, 2);
+    mNickNameWidget = new NicknameWidget(this);
+    mNickNameWidget->setObjectName(QStringLiteral("nicknamewidget"));
+    grid->addWidget(mNickNameWidget, 0, 2);
 
     mPhoneListWidget = new PhoneListWidget(this);
     mPhoneListWidget->setObjectName(QStringLiteral("phonelistwidget"));

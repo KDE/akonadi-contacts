@@ -39,6 +39,7 @@ class WebListWidget;
 class MessagingListWidget;
 class MailListWidget;
 class NameWidget;
+class NicknameWidget;
 class GeneralInfoWidget : public QWidget
 {
     Q_OBJECT
@@ -51,13 +52,13 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
 
 private:
-    QLineEdit *mNickName;
     PhoneListWidget *mPhoneListWidget;
     WebListWidget *mWebListWidget;
     MessagingListWidget *mMessagingListWidget;
     MailListWidget *mMailListWidget;
     ImageWidget *mPhotoWidget;
     NameWidget *mNameWidget;
+    NicknameWidget *mNickNameWidget;
 };
 }
 #endif // GENERALINFOWIDGET_H

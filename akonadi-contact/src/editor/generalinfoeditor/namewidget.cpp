@@ -33,6 +33,7 @@ NameWidget::NameWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
+    topLayout->setMargin(0);
     QLabel *label = new QLabel(i18n("Name"));
     label->setObjectName(QStringLiteral("namelabel"));
     topLayout->addWidget(label);
