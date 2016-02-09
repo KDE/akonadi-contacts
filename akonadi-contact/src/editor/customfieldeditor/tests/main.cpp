@@ -21,19 +21,11 @@
 */
 
 
-#include "customfieldeditorwidgettest.h"
-#include "../customfieldeditorwidget.h"
-#include <QTest>
+#include <QApplication>
 
-CustomFieldEditorWidgetTest::CustomFieldEditorWidgetTest(QObject *parent)
-    : QObject(parent)
+int main(int argc, char *argv[])
 {
+    QApplication app(argc, argv);
 
+    return app.exec();
 }
-
-CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest()
-{
-
-}
-
-QTEST_MAIN(CustomFieldEditorWidgetTest)

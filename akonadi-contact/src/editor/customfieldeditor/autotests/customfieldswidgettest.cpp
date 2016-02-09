@@ -22,6 +22,7 @@
 
 
 #include "customfieldswidgettest.h"
+#include "../customfieldswidget.h"
 #include <QTest>
 
 CustomFieldsWidgetTest::CustomFieldsWidgetTest(QObject *parent)
