@@ -50,13 +50,11 @@ CustomFieldsWidget::~CustomFieldsWidget()
 
 void CustomFieldsWidget::loadContact(const KContacts::Addressee &contact)
 {
-    mCustomFieldEditorWidget->loadContact(contact);
     mCustomFieldsListWidget->loadContact(contact);
 }
 
 void CustomFieldsWidget::storeContact(KContacts::Addressee &contact) const
 {
-    mCustomFieldEditorWidget->storeContact(contact);
     mCustomFieldsListWidget->storeContact(contact);
 }
 

@@ -27,6 +27,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QComboBox>
+#include <QCheckBox>
 #include <KContacts/Addressee>
 
 using namespace Akonadi;
@@ -55,6 +56,12 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     mAddField = new QPushButton(i18n("Add Field"), this);
     mAddField->setObjectName(QStringLiteral("addfield"));
     fieldLayout->addWidget(mAddField);
+    connect(mAddField, &QPushButton::clicked, this, &CustomFieldEditorWidget::slotAddField);
+
+
+    mUseAllContacts = new QCheckBox(i18n("Use field for all contacts"));
+    mUseAllContacts->setObjectName(QStringLiteral("useallcontact"));
+    topLayout->addWidget(mUseAllContacts);
 }
 
 CustomFieldEditorWidget::~CustomFieldEditorWidget()
@@ -62,19 +69,15 @@ CustomFieldEditorWidget::~CustomFieldEditorWidget()
 
 }
 
-void CustomFieldEditorWidget::loadContact(const KContacts::Addressee &contact)
-{
-    //TODO
-}
-
-void CustomFieldEditorWidget::storeContact(KContacts::Addressee &contact) const
-{
-    //TODO
-}
-
 void CustomFieldEditorWidget::setReadOnly(bool readOnly)
 {
     mFieldName->setReadOnly(readOnly);
     mAddField->setEnabled(!readOnly);
     mFieldType->setEnabled(!readOnly);
+    mUseAllContacts->setEnabled(!readOnly);
+}
+
+void CustomFieldEditorWidget::slotAddField()
+{
+    //TODO
 }

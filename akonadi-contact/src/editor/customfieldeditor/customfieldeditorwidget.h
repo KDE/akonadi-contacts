@@ -41,9 +41,11 @@ class CustomFieldEditorWidget : public QWidget
 public:
     explicit CustomFieldEditorWidget(QWidget *parent = Q_NULLPTR);
     ~CustomFieldEditorWidget();
-    void loadContact(const KContacts::Addressee &contact);
-    void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
+
+private Q_SLOTS:
+    void slotAddField();
+
 private:
     QLineEdit *mFieldName;
     QPushButton *mAddField;
