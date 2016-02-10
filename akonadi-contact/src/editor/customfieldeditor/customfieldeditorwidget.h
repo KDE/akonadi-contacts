@@ -28,6 +28,11 @@
 class QLineEdit;
 class QPushButton;
 class QCheckBox;
+class QComboBox;
+namespace KContacts
+{
+class Addressee;
+}
 namespace Akonadi
 {
 class CustomFieldEditorWidget : public QWidget
@@ -36,10 +41,14 @@ class CustomFieldEditorWidget : public QWidget
 public:
     explicit CustomFieldEditorWidget(QWidget *parent = Q_NULLPTR);
     ~CustomFieldEditorWidget();
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
+    void setReadOnly(bool readOnly);
 private:
     QLineEdit *mFieldName;
     QPushButton *mAddField;
     QCheckBox *mUseAllContacts;
+    QComboBox *mFieldType;
 };
 }
 #endif // CUSTOMFIELDEDITORWIDGET_H

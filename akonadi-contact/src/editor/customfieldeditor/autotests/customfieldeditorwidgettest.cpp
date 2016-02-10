@@ -24,6 +24,9 @@
 #include "customfieldeditorwidgettest.h"
 #include "../customfieldeditorwidget.h"
 #include <QTest>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
 
 CustomFieldEditorWidgetTest::CustomFieldEditorWidgetTest(QObject *parent)
     : QObject(parent)
@@ -38,7 +41,15 @@ CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest()
 
 void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
 {
-    //TODO
+    Akonadi::CustomFieldEditorWidget w;
+    QLineEdit *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
+    QVERIFY(fieldname);
+    QVERIFY(fieldname->text().isEmpty());
+
+    QLabel *label = w.findChild<QLabel *>(QStringLiteral("labeltitle"));
+    QVERIFY(label);
+    QPushButton *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
+    QVERIFY(addfield);
 }
 
 QTEST_MAIN(CustomFieldEditorWidgetTest)

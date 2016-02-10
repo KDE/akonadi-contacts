@@ -34,6 +34,8 @@ kconfig_add_kcfg_files(akonadicontact_actions_SRCS actions/contactactionssetting
 set(akonadicontact_customfieldseditor_SRCS
    editor/customfieldeditor/customfieldswidget.cpp
    editor/customfieldeditor/customfieldeditorwidget.cpp
+   editor/customfieldeditor/customfielslistwidget.cpp
+   editor/customfieldeditor/customfieldslistdelegate.cpp
    )
 
 

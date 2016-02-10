@@ -26,6 +26,8 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QComboBox>
+#include <KContacts/Addressee>
 
 using namespace Akonadi;
 
@@ -44,6 +46,10 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     mFieldName->setObjectName(QStringLiteral("fieldname"));
     topLayout->addWidget(mFieldName);
 
+    mFieldType = new QComboBox(this);
+    //TODO fill it.
+    mFieldType->setObjectName(QStringLiteral("fieldtype"));
+    topLayout->addWidget(mFieldType);
     //TODO add type
 
     mAddField = new QPushButton(i18n("Add Field"), this);
@@ -54,4 +60,21 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
 CustomFieldEditorWidget::~CustomFieldEditorWidget()
 {
 
+}
+
+void CustomFieldEditorWidget::loadContact(const KContacts::Addressee &contact)
+{
+    //TODO
+}
+
+void CustomFieldEditorWidget::storeContact(KContacts::Addressee &contact) const
+{
+    //TODO
+}
+
+void CustomFieldEditorWidget::setReadOnly(bool readOnly)
+{
+    mFieldName->setReadOnly(readOnly);
+    mAddField->setEnabled(!readOnly);
+    mFieldType->setEnabled(!readOnly);
 }

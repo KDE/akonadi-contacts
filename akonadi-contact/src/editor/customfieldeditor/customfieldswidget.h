@@ -24,17 +24,29 @@
 #define CUSTOMFIELDSWIDGET_H
 
 #include <QWidget>
+
+namespace KContacts
+{
+class Addressee;
+}
+
 namespace Akonadi
 {
 class CustomFieldEditorWidget;
+class CustomFielsListWidget;
 class CustomFieldsWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit CustomFieldsWidget(QWidget *parent = Q_NULLPTR);
     ~CustomFieldsWidget();
+    void storeContact(KContacts::Addressee &contact) const;
+    void loadContact(const KContacts::Addressee &contact);
+
+    void setReadOnly(bool readOnly);
 private:
     Akonadi::CustomFieldEditorWidget *mCustomFieldEditorWidget;
+    Akonadi::CustomFielsListWidget *mCustomFieldsListWidget;
 };
 }
 #endif // CUSTOMFIELDSWIDGET_H

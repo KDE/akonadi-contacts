@@ -22,8 +22,10 @@
 
 #include "customfieldeditorwidget.h"
 #include "customfieldswidget.h"
+#include "customfielslistwidget.h"
 #include <KLocalizedString>
 #include <QVBoxLayout>
+#include <KContacts/Addressee>
 
 using namespace Akonadi;
 
@@ -34,9 +36,31 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     mCustomFieldEditorWidget = new Akonadi::CustomFieldEditorWidget(this);
     mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
     topLayout->addWidget(mCustomFieldEditorWidget);
+
+
+    mCustomFieldsListWidget = new Akonadi::CustomFielsListWidget(this);
+    mCustomFieldsListWidget->setObjectName(QStringLiteral("customfieldslistwidget"));
+    topLayout->addWidget(mCustomFieldsListWidget);
 }
 
 CustomFieldsWidget::~CustomFieldsWidget()
 {
 
+}
+
+void CustomFieldsWidget::loadContact(const KContacts::Addressee &contact)
+{
+    mCustomFieldEditorWidget->loadContact(contact);
+    mCustomFieldsListWidget->loadContact(contact);
+}
+
+void CustomFieldsWidget::storeContact(KContacts::Addressee &contact) const
+{
+    mCustomFieldEditorWidget->storeContact(contact);
+    mCustomFieldsListWidget->storeContact(contact);
+}
+
+void CustomFieldsWidget::setReadOnly(bool readOnly)
+{
+    //TODO
 }
