@@ -22,10 +22,12 @@
 
 
 #include <QApplication>
+#include "../customfieldswidget.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-
+    Akonadi::CustomFieldsWidget w;
+    w.show();
     return app.exec();
 }

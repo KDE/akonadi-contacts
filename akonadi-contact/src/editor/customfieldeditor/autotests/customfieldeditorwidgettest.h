@@ -31,6 +31,8 @@ class CustomFieldEditorWidgetTest : public QObject
 public:
     explicit CustomFieldEditorWidgetTest(QObject *parent = Q_NULLPTR);
     ~CustomFieldEditorWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 
 };
 

@@ -36,4 +36,9 @@ CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest()
 
 }
 
+void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
+{
+    //TODO
+}
+
 QTEST_MAIN(CustomFieldEditorWidgetTest)
