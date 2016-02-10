@@ -21,6 +21,7 @@
 */
 
 #include "customfieldeditorwidget.h"
+#include "../customfieldsmodel.h"
 #include <QGridLayout>
 #include <KLocalizedString>
 #include <QLabel>
@@ -28,6 +29,7 @@
 #include <QPushButton>
 #include <QComboBox>
 #include <QCheckBox>
+#include <QUuid>
 #include <KContacts/Addressee>
 
 using namespace Akonadi;
@@ -44,20 +46,21 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     QHBoxLayout *fieldLayout = new QHBoxLayout;
     topLayout->addLayout(fieldLayout);
     mFieldName = new QLineEdit(this);
+    mFieldName->setPlaceholderText(i18n("Add name"));
     mFieldName->setObjectName(QStringLiteral("fieldname"));
     fieldLayout->addWidget(mFieldName);
 
     mFieldType = new QComboBox(this);
-    //TODO fill it.
     mFieldType->setObjectName(QStringLiteral("fieldtype"));
     fieldLayout->addWidget(mFieldType);
-    //TODO add type
+    fillTypes();
 
     mAddField = new QPushButton(i18n("Add Field"), this);
     mAddField->setObjectName(QStringLiteral("addfield"));
     fieldLayout->addWidget(mAddField);
+    mAddField->setEnabled(false); //Disable at the beginning
     connect(mAddField, &QPushButton::clicked, this, &CustomFieldEditorWidget::slotAddField);
-
+    connect(mFieldName, &QLineEdit::textChanged, this, &CustomFieldEditorWidget::slotFielNameChanged);
 
     mUseAllContacts = new QCheckBox(i18n("Use field for all contacts"));
     mUseAllContacts->setObjectName(QStringLiteral("useallcontact"));
@@ -69,6 +72,17 @@ CustomFieldEditorWidget::~CustomFieldEditorWidget()
 
 }
 
+void CustomFieldEditorWidget::fillTypes()
+{
+    mFieldType->addItem(i18n("Text"), CustomField::TextType);
+    mFieldType->addItem(i18n("Numeric"), CustomField::NumericType);
+    mFieldType->addItem(i18n("Boolean"), CustomField::BooleanType);
+    mFieldType->addItem(i18n("Date"), CustomField::DateType);
+    mFieldType->addItem(i18n("Time"), CustomField::TimeType);
+    mFieldType->addItem(i18n("DateTime"), CustomField::DateTimeType);
+    mFieldType->addItem(i18n("Url"), CustomField::UrlType);
+}
+
 void CustomFieldEditorWidget::setReadOnly(bool readOnly)
 {
     mFieldName->setReadOnly(readOnly);
@@ -77,7 +91,30 @@ void CustomFieldEditorWidget::setReadOnly(bool readOnly)
     mUseAllContacts->setEnabled(!readOnly);
 }
 
+void CustomFieldEditorWidget::slotFielNameChanged(const QString &text)
+{
+    mAddField->setEnabled(!text.trimmed().isEmpty());
+}
+
 void CustomFieldEditorWidget::slotAddField()
 {
-    //TODO
+    CustomField field;
+    // We use a Uuid as default key, so we won't have any duplicated keys,
+    // the user can still change it to something else in the editor dialog.
+    // Since the key only allows [A-Za-z0-9\-]*, we have to remove the curly
+    // braces as well.
+    QString key = QUuid::createUuid().toString();
+    key.remove(QLatin1Char('{'));
+    key.remove(QLatin1Char('}'));
+
+    field.setKey(key);
+    field.setTitle(mFieldName->text());
+    field.setType(static_cast<CustomField::Type>(mFieldType->itemData(mFieldType->currentIndex()).toInt()));
+
+    //TODO verify it
+    if (field.scope() != CustomField::ExternalScope) {
+        // do not change the scope for externally defined custom fields
+        field.setScope(mUseAllContacts->isChecked() ? CustomField::GlobalScope : CustomField::LocalScope);
+    }
+    Q_EMIT addNewField(field);
 }

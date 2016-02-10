@@ -27,6 +27,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QComboBox>
 
 CustomFieldEditorWidgetTest::CustomFieldEditorWidgetTest(QObject *parent)
     : QObject(parent)
@@ -50,6 +51,12 @@ void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
     QVERIFY(label);
     QPushButton *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
     QVERIFY(addfield);
+    QVERIFY(!addfield->isEnabled());
+
+    QComboBox *combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
+    QVERIFY(combobox);
+    QVERIFY(combobox->count() > 0);
+
 }
 
 QTEST_MAIN(CustomFieldEditorWidgetTest)

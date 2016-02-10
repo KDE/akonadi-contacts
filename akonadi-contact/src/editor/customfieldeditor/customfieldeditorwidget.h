@@ -25,6 +25,7 @@
 #define CUSTOMFIELDEDITORWIDGET_H
 
 #include <QWidget>
+#include "customfields_p.h"
 class QLineEdit;
 class QPushButton;
 class QCheckBox;
@@ -43,10 +44,15 @@ public:
     ~CustomFieldEditorWidget();
     void setReadOnly(bool readOnly);
 
+Q_SIGNALS:
+    void addNewField(const CustomField &field);
+
 private Q_SLOTS:
-    void slotAddField();
+    void slotAddField();    
+    void slotFielNameChanged(const QString &text);
 
 private:
+    void fillTypes();
     QLineEdit *mFieldName;
     QPushButton *mAddField;
     QCheckBox *mUseAllContacts;

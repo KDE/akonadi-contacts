@@ -71,7 +71,7 @@ CustomFielsListWidget::~CustomFielsListWidget()
 
 }
 
-//TODO add edit/remove
+//TODO add edit/remove add delegate
 
 void CustomFielsListWidget::loadContact(const KContacts::Addressee &contact)
 {
@@ -210,4 +210,14 @@ void CustomFielsListWidget::storeContact(KContacts::Addressee &contact) const
 void CustomFielsListWidget::setReadOnly(bool readOnly)
 {
     mCustomFieldList->setEnabled(!readOnly);
+}
+
+void CustomFielsListWidget::slotAddNewField(const CustomField &field)
+{
+    const int lastRow = mModel->rowCount();
+    mModel->insertRow(lastRow);
+    mModel->setData(mModel->index(lastRow, 2), field.key(), Qt::EditRole);
+    mModel->setData(mModel->index(lastRow, 0), field.title(), Qt::EditRole);
+    mModel->setData(mModel->index(lastRow, 0), field.type(), CustomFieldsModel::TypeRole);
+    mModel->setData(mModel->index(lastRow, 0), field.scope(), CustomFieldsModel::ScopeRole);
 }

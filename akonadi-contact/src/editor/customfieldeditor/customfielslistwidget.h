@@ -42,6 +42,10 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void loadContact(const KContacts::Addressee &contact);
     void setReadOnly(bool readOnly);
+
+public Q_SLOTS:
+    void slotAddNewField(const CustomField &field);
+
 private:
     CustomField::List mLocalCustomFields;
     QTreeView *mCustomFieldList;

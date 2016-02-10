@@ -6,7 +6,7 @@ ecm_mark_as_test(customfieldswidgettest)
 target_link_libraries(customfieldswidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n KF5::Completion KF5::ConfigCore)
 
 
-set(customfieldeditorwidgettest_SRCS customfieldeditorwidgettest.cpp ../customfieldeditorwidget.cpp)
+set(customfieldeditorwidgettest_SRCS customfieldeditorwidgettest.cpp ../customfieldeditorwidget.cpp ../../../customfields.cpp)
 add_executable(customfieldeditorwidgettest ${customfieldeditorwidgettest_SRCS})
 add_test(customfieldeditorwidgettest customfieldeditorwidgettest)
 ecm_mark_as_test(customfieldeditorwidgettest)

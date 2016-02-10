@@ -33,6 +33,7 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
+    topLayout->setMargin(0);
     mCustomFieldEditorWidget = new Akonadi::CustomFieldEditorWidget(this);
     mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
     topLayout->addWidget(mCustomFieldEditorWidget);
@@ -41,6 +42,9 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     mCustomFieldsListWidget = new Akonadi::CustomFielsListWidget(this);
     mCustomFieldsListWidget->setObjectName(QStringLiteral("customfieldslistwidget"));
     topLayout->addWidget(mCustomFieldsListWidget);
+
+
+    connect(mCustomFieldEditorWidget, &CustomFieldEditorWidget::addNewField, mCustomFieldsListWidget, &CustomFielsListWidget::slotAddNewField);
 }
 
 CustomFieldsWidget::~CustomFieldsWidget()
