@@ -24,12 +24,13 @@
 #define CUSTOMFIELSLISTWIDGET_H
 
 #include <QWidget>
-
+#include "../customfieldsmodel.h"
+class QTreeView;
 namespace KContacts
 {
 class Addressee;
 }
-
+class CustomFieldsModel;
 namespace Akonadi
 {
 class CustomFielsListWidget : public QWidget
@@ -41,6 +42,10 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void loadContact(const KContacts::Addressee &contact);
     void setReadOnly(bool readOnly);
+private:
+    CustomField::List mLocalCustomFields;
+    QTreeView *mCustomFieldList;
+    CustomFieldsModel *mModel;
 };
 }
 #endif // CUSTOMFIELSLISTWIDGET_H

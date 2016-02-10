@@ -59,6 +59,7 @@ private Q_SLOTS:
     void slotUpdateButtons();
 
 private:
+    void splitCustomField(const QString &str, QString &app, QString &name, QString &value);
     QTreeView *mView;
 
     QPushButton *mAddButton;

@@ -2,6 +2,10 @@ set(customfieldeditor_SRCS
     ../customfieldswidget.cpp
     ../customfieldeditorwidget.cpp
     ../customfielslistwidget.cpp
+    ../../customfieldsmodel.cpp
+    ../../../customfields.cpp
+    ../customfieldslistdelegate.cpp
+    ../../../customfieldmanager.cpp
     main.cpp
     )
 
@@ -15,4 +19,5 @@ target_link_libraries(customfieldeditortest
     KF5::Completion
     KF5::IconThemes
     KF5::WidgetsAddons
+    KF5::ConfigCore
     )

@@ -37,21 +37,6 @@
 #include <QTreeView>
 #include <QSortFilterProxyModel>
 
-void splitCustomField(const QString &str, QString &app, QString &name, QString &value)
-{
-    const int colon = str.indexOf(QLatin1Char(':'));
-    if (colon != -1) {
-        const QString tmp = str.left(colon);
-        value = str.mid(colon + 1);
-
-        const int dash = tmp.indexOf(QLatin1Char('-'));
-        if (dash != -1) {
-            app = tmp.left(dash);
-            name = tmp.mid(dash + 1);
-        }
-    }
-}
-
 CustomFieldsEditWidget::CustomFieldsEditWidget(QWidget *parent)
     : QWidget(parent)
     , mReadOnly(false)
@@ -90,6 +75,21 @@ CustomFieldsEditWidget::CustomFieldsEditWidget(QWidget *parent)
 
 CustomFieldsEditWidget::~CustomFieldsEditWidget()
 {
+}
+
+void CustomFieldsEditWidget::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
+{
+    const int colon = str.indexOf(QLatin1Char(':'));
+    if (colon != -1) {
+        const QString tmp = str.left(colon);
+        value = str.mid(colon + 1);
+
+        const int dash = tmp.indexOf(QLatin1Char('-'));
+        if (dash != -1) {
+            app = tmp.left(dash);
+            name = tmp.mid(dash + 1);
+        }
+    }
 }
 
 void CustomFieldsEditWidget::loadContact(const KContacts::Addressee &contact)

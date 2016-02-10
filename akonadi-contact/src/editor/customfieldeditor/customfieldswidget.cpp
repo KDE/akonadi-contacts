@@ -62,5 +62,6 @@ void CustomFieldsWidget::storeContact(KContacts::Addressee &contact) const
 
 void CustomFieldsWidget::setReadOnly(bool readOnly)
 {
-    //TODO
+    mCustomFieldEditorWidget->setReadOnly(readOnly);
+    mCustomFieldsListWidget->setReadOnly(readOnly);
 }
