@@ -44,17 +44,17 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     topLayout->addLayout(fieldLayout);
     mFieldName = new QLineEdit(this);
     mFieldName->setObjectName(QStringLiteral("fieldname"));
-    topLayout->addWidget(mFieldName);
+    fieldLayout->addWidget(mFieldName);
 
     mFieldType = new QComboBox(this);
     //TODO fill it.
     mFieldType->setObjectName(QStringLiteral("fieldtype"));
-    topLayout->addWidget(mFieldType);
+    fieldLayout->addWidget(mFieldType);
     //TODO add type
 
     mAddField = new QPushButton(i18n("Add Field"), this);
     mAddField->setObjectName(QStringLiteral("addfield"));
-    topLayout->addWidget(mAddField);
+    fieldLayout->addWidget(mAddField);
 }
 
 CustomFieldEditorWidget::~CustomFieldEditorWidget()
