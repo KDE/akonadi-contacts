@@ -60,3 +60,8 @@ void WebListWidget::storeContact(KContacts::Addressee &contact) const
 {
     mWebWidgetLister->storeContact(contact);
 }
+
+void WebListWidget::setReadOnly(bool readOnly)
+{
+    mWebWidgetLister->setEnabled(!readOnly);
+}

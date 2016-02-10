@@ -59,3 +59,8 @@ void PhoneListWidget::storeContact(KContacts::Addressee &contact) const
 {
     mPhoneWidgetLister->storeContact(contact);
 }
+
+void PhoneListWidget::setReadOnly(bool readOnly)
+{
+    mPhoneWidgetLister->setEnabled(!readOnly);
+}

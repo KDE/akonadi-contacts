@@ -61,3 +61,8 @@ void NameWidget::storeContact(KContacts::Addressee &contact) const
 {
     //TODO
 }
+
+void NameWidget::setReadOnly(bool readOnly)
+{
+    mNameEdit->setReadOnly(readOnly);
+}

@@ -51,6 +51,7 @@ public:
 
     void storeContact(KContacts::Addressee &contact) const;
 
+    void setReadOnly(bool readOnly);
 private:
     PhoneListWidget *mPhoneListWidget;
     WebListWidget *mWebListWidget;

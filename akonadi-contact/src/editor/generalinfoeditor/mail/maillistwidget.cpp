@@ -59,3 +59,8 @@ void MailListWidget::storeContact(KContacts::Addressee &contact) const
 {
     mMailWidgetLister->storeContact(contact);
 }
+
+void MailListWidget::setReadOnly(bool readOnly)
+{
+    mMailWidgetLister->setEnabled(!readOnly);
+}

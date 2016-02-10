@@ -56,3 +56,8 @@ void NicknameWidget::storeContact(KContacts::Addressee &contact) const
 {
     //TODO
 }
+
+void NicknameWidget::setReadOnly(bool readOnly)
+{
+    mNickName->setReadOnly(readOnly);
+}
