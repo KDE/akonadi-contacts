@@ -1,4 +1,6 @@
 set(customfieldeditor_SRCS
+    ../customfieldswidget.cpp
+    ../customfieldeditorwidget.cpp
     main.cpp
     )
 
@@ -10,8 +12,6 @@ target_link_libraries(customfieldeditortest
     KF5::Contacts
     KF5::I18n
     KF5::Completion
-    Qt5::WebKitWidgets
-    Grantlee5::Templates
     KF5::IconThemes
     KF5::WidgetsAddons
     )
