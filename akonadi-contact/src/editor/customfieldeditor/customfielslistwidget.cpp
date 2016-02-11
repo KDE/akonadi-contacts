@@ -55,7 +55,8 @@ CustomFielsListWidget::CustomFielsListWidget(QWidget *parent)
     mCustomFieldList->setObjectName(QStringLiteral("customfieldlist"));
     mCustomFieldList->setSortingEnabled(true);
     mCustomFieldList->setRootIsDecorated(false);
-    mCustomFieldList->setItemDelegate(new Akonadi::CustomFieldsListDelegate(this));
+    Akonadi::CustomFieldsListDelegate *customFieldDelegate = new Akonadi::CustomFieldsListDelegate(mCustomFieldList, this);
+    mCustomFieldList->setItemDelegate(customFieldDelegate);
     topLayout->addWidget(mCustomFieldList);
 
     mModel = new CustomFieldsModel(this);
@@ -221,3 +222,4 @@ void CustomFielsListWidget::slotAddNewField(const CustomField &field)
     mModel->setData(mModel->index(lastRow, 0), field.type(), CustomFieldsModel::TypeRole);
     mModel->setData(mModel->index(lastRow, 0), field.scope(), CustomFieldsModel::ScopeRole);
 }
+

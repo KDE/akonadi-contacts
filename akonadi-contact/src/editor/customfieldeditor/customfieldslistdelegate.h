@@ -24,12 +24,13 @@
 #define CUSTOMFIELDSLISTDELEGATE_H
 
 #include <QStyledItemDelegate>
+class QAbstractItemView;
 namespace Akonadi
 {
 class CustomFieldsListDelegate : public QStyledItemDelegate
 {
 public:
-    explicit CustomFieldsListDelegate(QObject *parent = Q_NULLPTR);
+    explicit CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent = Q_NULLPTR);
     ~CustomFieldsListDelegate();
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
@@ -37,6 +38,17 @@ public:
     void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE;
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const Q_DECL_OVERRIDE;
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
+    bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) Q_DECL_OVERRIDE;
+
+private Q_SLOTS:
+    void setFirstColumnAsCurrent();
+
+private:
+    void removeField(int row, QAbstractItemModel *model);
+    const QIcon mIcon;
+    QSize mButtonSize;
+    QAbstractItemView *mItemView;
 };
 }
 #endif

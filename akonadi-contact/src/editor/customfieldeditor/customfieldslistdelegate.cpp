@@ -25,15 +25,23 @@
 #include "../customfieldsmodel.h"
 
 #include <KLocalizedString>
+#include <KMessageBox>
 
 #include <QDateEdit>
 #include <QDateTimeEdit>
 #include <QCheckBox>
 #include <QSpinBox>
 #include <QTimeEdit>
+#include <QMouseEvent>
+#include <QAbstractItemView>
+#include <QTimer>
+
 using namespace Akonadi;
-CustomFieldsListDelegate::CustomFieldsListDelegate(QObject *parent)
-    : QStyledItemDelegate(parent)
+CustomFieldsListDelegate::CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent)
+    : QStyledItemDelegate(parent),
+      mIcon(QIcon::fromTheme(QStringLiteral("list-remove"))),
+      mButtonSize(16, 16),
+      mItemView(view)
 {
 }
 
@@ -180,4 +188,55 @@ void CustomFieldsListDelegate::paint(QPainter *painter, const QStyleOptionViewIt
 {
     //TODO: somehow mark local/global/external fields
     QStyledItemDelegate::paint(painter, option, index);
+    if (index.column() == 1) {
+        mIcon.paint(painter, option.rect, Qt::AlignRight);
+    }
+}
+
+QSize CustomFieldsListDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    Q_UNUSED(option)
+
+    QSize hint = QStyledItemDelegate::sizeHint(option, index);
+    hint.setHeight(qMax(hint.height(), mButtonSize.height()));
+
+    if (index.column() == 1) {
+        hint.setWidth(hint.width() + mButtonSize.width());
+    }
+
+    return hint;
+}
+
+bool CustomFieldsListDelegate::editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index)
+{
+    if (index.column() == 1) {
+        if (event->type() == QEvent::MouseButtonRelease) {
+            const QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+            QRect buttonRect = mItemView->visualRect(index);
+            buttonRect.setLeft(buttonRect.right() - mButtonSize.width());
+
+            if (buttonRect.contains(mouseEvent->pos())) {
+                removeField(index.row(), model);
+                return true;
+            }
+        }
+    }
+    return QStyledItemDelegate::editorEvent(event, model, option, index);
+}
+
+void CustomFieldsListDelegate::setFirstColumnAsCurrent()
+{
+    mItemView->setCurrentIndex(mItemView->model()->index(mItemView->currentIndex().row(), 0));
+}
+
+void CustomFieldsListDelegate::removeField(int row, QAbstractItemModel *model)
+{
+    if (KMessageBox::warningContinueCancel(mItemView,
+                                           i18nc("Custom Fields", "Do you really want to delete the selected custom field?"),
+                                           i18n("Confirm Delete"), KStandardGuiItem::del()) != KMessageBox::Continue) {
+        return;
+    }
+
+    model->removeRow(row);
+    QTimer::singleShot(0, this, &CustomFieldsListDelegate::setFirstColumnAsCurrent);
 }
