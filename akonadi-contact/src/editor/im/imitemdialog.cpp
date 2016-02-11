@@ -51,7 +51,7 @@ IMItemDialog::IMItemDialog(QWidget *parent)
 
     const QStringList protocols = IMProtocols::self()->protocols();
     foreach (const QString &protocol, protocols) {
-        mProtocolCombo->addItem(QIcon::fromTheme(IMProtocols::self()->icon(protocol + QLatin1String(".png"))),
+        mProtocolCombo->addItem(QIcon::fromTheme(IMProtocols::self()->icon(protocol)),
                                 IMProtocols::self()->name(protocol),
                                 protocol);
     }
