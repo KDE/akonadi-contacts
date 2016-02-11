@@ -24,6 +24,8 @@
 #include "customfieldswidgettest.h"
 #include "../customfieldswidget.h"
 #include <QTest>
+#include <editor/customfieldeditor/customfieldeditorwidget.h>
+#include <editor/customfieldeditor/customfieldslistwidget.h>
 
 CustomFieldsWidgetTest::CustomFieldsWidgetTest(QObject *parent)
     : QObject(parent)
@@ -34,6 +36,16 @@ CustomFieldsWidgetTest::CustomFieldsWidgetTest(QObject *parent)
 CustomFieldsWidgetTest::~CustomFieldsWidgetTest()
 {
 
+}
+
+void CustomFieldsWidgetTest::shouldHaveDefaultValue()
+{
+    Akonadi::CustomFieldsWidget w;
+    Akonadi::CustomFieldEditorWidget *customFieldEditorWidget = w.findChild<Akonadi::CustomFieldEditorWidget *>(QStringLiteral("customfieldeditorwidget"));
+    QVERIFY(customFieldEditorWidget);
+
+    Akonadi::CustomFieldsListWidget *customFieldsListWidget = w.findChild<Akonadi::CustomFieldsListWidget *>(QStringLiteral("customfieldslistwidget"));
+    QVERIFY(customFieldsListWidget);
 }
 
 QTEST_MAIN(CustomFieldsWidgetTest)

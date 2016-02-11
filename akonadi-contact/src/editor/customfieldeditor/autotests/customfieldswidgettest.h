@@ -32,6 +32,8 @@ class CustomFieldsWidgetTest : public QObject
 public:
     explicit CustomFieldsWidgetTest(QObject *parent = Q_NULLPTR);
     ~CustomFieldsWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CUSTOMFIELDSWIDGETTEST_H
