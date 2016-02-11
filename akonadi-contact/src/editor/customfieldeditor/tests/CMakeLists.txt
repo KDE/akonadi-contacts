@@ -1,7 +1,7 @@
 set(customfieldeditor_SRCS
     ../customfieldswidget.cpp
     ../customfieldeditorwidget.cpp
-    ../customfielslistwidget.cpp
+    ../customfieldslistwidget.cpp
     ../customfieldsmodel.cpp
     ../../../customfields.cpp
     ../customfieldslistdelegate.cpp

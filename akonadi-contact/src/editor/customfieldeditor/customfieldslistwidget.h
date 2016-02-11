@@ -20,36 +20,39 @@
     02110-1301, USA.
 */
 
-#ifndef CUSTOMFIELDSWIDGET_H
-#define CUSTOMFIELDSWIDGET_H
+#ifndef CUSTOMFIELDSLISTWIDGET_H
+#define CUSTOMFIELDSLISTWIDGET_H
 
 #include <QWidget>
-#include <QVariantList>
-
+#include "customfieldsmodel.h"
+class QTreeView;
 namespace KContacts
 {
 class Addressee;
 }
-
+class CustomFieldsModel;
 namespace Akonadi
 {
-class CustomFieldEditorWidget;
-class CustomFieldsListWidget;
-class CustomFieldsWidget : public QWidget
+class CustomFieldsListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CustomFieldsWidget(QWidget *parent = Q_NULLPTR);
-    ~CustomFieldsWidget();
+    explicit CustomFieldsListWidget(QWidget *parent = Q_NULLPTR);
+    ~CustomFieldsListWidget();
     void storeContact(KContacts::Addressee &contact) const;
     void loadContact(const KContacts::Addressee &contact);
-
     void setReadOnly(bool readOnly);
+
     void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
     QVariantList localCustomFieldDescriptions() const;
+    static void splitCustomField(const QString &str, QString &app, QString &name, QString &value);
+public Q_SLOTS:
+    void slotAddNewField(const CustomField &field);
+
 private:
-    Akonadi::CustomFieldEditorWidget *mCustomFieldEditorWidget;
-    Akonadi::CustomFieldsListWidget *mCustomFieldsListWidget;
+    CustomField::List mLocalCustomFields;
+    QTreeView *mCustomFieldList;
+    CustomFieldsModel *mModel;
 };
 }
-#endif // CUSTOMFIELDSWIDGET_H
+#endif // CUSTOMFIELDSLISTWIDGET_H

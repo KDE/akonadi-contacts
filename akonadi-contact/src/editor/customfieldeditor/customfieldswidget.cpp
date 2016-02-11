@@ -22,7 +22,7 @@
 
 #include "customfieldeditorwidget.h"
 #include "customfieldswidget.h"
-#include "customfielslistwidget.h"
+#include "customfieldslistwidget.h"
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <KContacts/Addressee>
@@ -39,12 +39,12 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     topLayout->addWidget(mCustomFieldEditorWidget);
 
 
-    mCustomFieldsListWidget = new Akonadi::CustomFielsListWidget(this);
+    mCustomFieldsListWidget = new Akonadi::CustomFieldsListWidget(this);
     mCustomFieldsListWidget->setObjectName(QStringLiteral("customfieldslistwidget"));
     topLayout->addWidget(mCustomFieldsListWidget);
 
 
-    connect(mCustomFieldEditorWidget, &CustomFieldEditorWidget::addNewField, mCustomFieldsListWidget, &CustomFielsListWidget::slotAddNewField);
+    connect(mCustomFieldEditorWidget, &CustomFieldEditorWidget::addNewField, mCustomFieldsListWidget, &CustomFieldsListWidget::slotAddNewField);
 }
 
 CustomFieldsWidget::~CustomFieldsWidget()

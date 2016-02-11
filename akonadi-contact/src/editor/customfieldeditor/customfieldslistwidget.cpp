@@ -20,7 +20,7 @@
     02110-1301, USA.
 */
 
-#include "customfielslistwidget.h"
+#include "customfieldslistwidget.h"
 #include "customfieldmanager_p.h"
 #include "customfieldslistdelegate.h"
 #include <KLocalizedString>
@@ -32,7 +32,7 @@
 
 using namespace Akonadi;
 
-void CustomFielsListWidget::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
+void CustomFieldsListWidget::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
 {
     const int colon = str.indexOf(QLatin1Char(':'));
     if (colon != -1) {
@@ -47,7 +47,7 @@ void CustomFielsListWidget::splitCustomField(const QString &str, QString &app, Q
     }
 }
 
-CustomFielsListWidget::CustomFielsListWidget(QWidget *parent)
+CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
@@ -67,12 +67,12 @@ CustomFielsListWidget::CustomFielsListWidget(QWidget *parent)
     mCustomFieldList->setColumnHidden(2, true);   // hide the 'key' column
 }
 
-CustomFielsListWidget::~CustomFielsListWidget()
+CustomFieldsListWidget::~CustomFieldsListWidget()
 {
 
 }
 
-void CustomFielsListWidget::loadContact(const KContacts::Addressee &contact)
+void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 {
     CustomField::List externalCustomFields;
 
@@ -159,7 +159,7 @@ void CustomFielsListWidget::loadContact(const KContacts::Addressee &contact)
     mModel->setCustomFields(CustomField::List() << mLocalCustomFields << globalCustomFields << externalCustomFields);
 }
 
-void CustomFielsListWidget::storeContact(KContacts::Addressee &contact) const
+void CustomFieldsListWidget::storeContact(KContacts::Addressee &contact) const
 {
     const CustomField::List customFields = mModel->customFields();
     foreach (const CustomField &customField, customFields) {
@@ -206,12 +206,12 @@ void CustomFielsListWidget::storeContact(KContacts::Addressee &contact) const
     CustomFieldManager::setGlobalCustomFieldDescriptions(globalCustomFields);
 }
 
-void CustomFielsListWidget::setReadOnly(bool readOnly)
+void CustomFieldsListWidget::setReadOnly(bool readOnly)
 {
     mCustomFieldList->setEnabled(!readOnly);
 }
 
-void CustomFielsListWidget::slotAddNewField(const CustomField &field)
+void CustomFieldsListWidget::slotAddNewField(const CustomField &field)
 {
     const int lastRow = mModel->rowCount();
     mModel->insertRow(lastRow);
@@ -222,7 +222,7 @@ void CustomFielsListWidget::slotAddNewField(const CustomField &field)
 
 }
 
-void CustomFielsListWidget::setLocalCustomFieldDescriptions(const QVariantList &descriptions)
+void CustomFieldsListWidget::setLocalCustomFieldDescriptions(const QVariantList &descriptions)
 {
     mLocalCustomFields.clear();
     mLocalCustomFields.reserve(descriptions.count());
@@ -231,7 +231,7 @@ void CustomFielsListWidget::setLocalCustomFieldDescriptions(const QVariantList &
     }
 }
 
-QVariantList CustomFielsListWidget::localCustomFieldDescriptions() const
+QVariantList CustomFieldsListWidget::localCustomFieldDescriptions() const
 {
     const CustomField::List customFields = mModel->customFields();
 

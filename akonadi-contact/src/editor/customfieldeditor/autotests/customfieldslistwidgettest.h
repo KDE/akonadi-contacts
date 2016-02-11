@@ -19,40 +19,17 @@
     Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
     02110-1301, USA.
 */
+#ifndef CUSTOMFIELSLISTWIDGETTEST_H
+#define CUSTOMFIELSLISTWIDGETTEST_H
 
-#ifndef CUSTOMFIELSLISTWIDGET_H
-#define CUSTOMFIELSLISTWIDGET_H
+#include <QObject>
 
-#include <QWidget>
-#include "customfieldsmodel.h"
-class QTreeView;
-namespace KContacts
-{
-class Addressee;
-}
-class CustomFieldsModel;
-namespace Akonadi
-{
-class CustomFielsListWidget : public QWidget
+class CustomFielsListWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CustomFielsListWidget(QWidget *parent = Q_NULLPTR);
-    ~CustomFielsListWidget();
-    void storeContact(KContacts::Addressee &contact) const;
-    void loadContact(const KContacts::Addressee &contact);
-    void setReadOnly(bool readOnly);
-
-    void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
-    QVariantList localCustomFieldDescriptions() const;
-    static void splitCustomField(const QString &str, QString &app, QString &name, QString &value);
-public Q_SLOTS:
-    void slotAddNewField(const CustomField &field);
-
-private:
-    CustomField::List mLocalCustomFields;
-    QTreeView *mCustomFieldList;
-    CustomFieldsModel *mModel;
+    explicit CustomFielsListWidgetTest(QObject *parent = Q_NULLPTR);
+    ~CustomFielsListWidgetTest();
 };
-}
-#endif // CUSTOMFIELSLISTWIDGET_H
+
+#endif // CUSTOMFIELSLISTWIDGETTEST_H

@@ -20,7 +20,7 @@
 */
 
 #include "imeditwidget.h"
-#include "editor/customfieldeditor/customfielslistwidget.h"
+#include "editor/customfieldeditor/customfieldslistwidget.h"
 
 #include "im/imeditordialog.h"
 #include "im/improtocols.h"
@@ -64,7 +64,7 @@ void IMEditWidget::loadContact(const KContacts::Addressee &contact)
 
     foreach (const QString &custom, customs) {
         QString app, name, value;
-        Akonadi::CustomFielsListWidget::splitCustomField(custom, app, name, value);
+        Akonadi::CustomFieldsListWidget::splitCustomField(custom, app, name, value);
 
         if (app.startsWith(QStringLiteral("messaging/"))) {
             if (name == QLatin1String("All")) {
