@@ -26,6 +26,10 @@
 #include <QWidget>
 class QLineEdit;
 class QToolButton;
+namespace KContacts
+{
+class PhoneNumber;
+}
 namespace Akonadi
 {
 class PhoneComboBoxType;
@@ -37,6 +41,7 @@ public:
     ~PhoneWidget();
 
     void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
+    void loadPhone(const KContacts::PhoneNumber &number);
 Q_SIGNALS:
     void addWidget(QWidget *);
     void removeWidget(QWidget *);

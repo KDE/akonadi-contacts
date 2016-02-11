@@ -69,6 +69,12 @@ void PhoneWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButton
     mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
+void PhoneWidget::loadPhone(const KContacts::PhoneNumber &number)
+{
+    mPhoneNumberEdit->setText(number.number());
+    mPhoneType->setType(number.type());
+}
+
 void PhoneWidget::slotAddPhone()
 {
     Q_EMIT addWidget(this);

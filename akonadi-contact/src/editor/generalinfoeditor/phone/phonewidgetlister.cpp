@@ -22,6 +22,8 @@
 
 #include "phonewidgetlister.h"
 #include "phonewidget.h"
+
+#include <KContacts/Addressee>
 using namespace Akonadi;
 
 PhoneWidgetLister::PhoneWidgetLister(QWidget *parent)
@@ -38,12 +40,24 @@ PhoneWidgetLister::~PhoneWidgetLister()
 
 void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
-
+    const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
+    setNumberOfShownWidgetsTo(phoneNumbers.count());
+    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+    for (int i = 0; wIt != wEnd; ++wIt, ++i) {
+        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
+        w->loadPhone(phoneNumbers.at(i));
+    }
 }
 
 void PhoneWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
-
+    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+    for (; wIt != wEnd; ++wIt) {
+        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
+        //w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
+    }
 }
 
 QWidget *PhoneWidgetLister::createWidget(QWidget *parent)
