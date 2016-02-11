@@ -21,7 +21,7 @@
 */
 
 #include "customfieldeditorwidget.h"
-#include "../customfieldsmodel.h"
+#include "customfieldsmodel.h"
 #include <QGridLayout>
 #include <KLocalizedString>
 #include <QLabel>

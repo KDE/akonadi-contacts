@@ -22,7 +22,7 @@
 
 #include "customfieldslistdelegate.h"
 
-#include "../customfieldsmodel.h"
+#include "customfieldsmodel.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>

@@ -24,7 +24,7 @@
 #define CUSTOMFIELSLISTWIDGET_H
 
 #include <QWidget>
-#include "../customfieldsmodel.h"
+#include "customfieldsmodel.h"
 class QTreeView;
 namespace KContacts
 {
@@ -43,6 +43,9 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void setReadOnly(bool readOnly);
 
+    void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
+    QVariantList localCustomFieldDescriptions() const;
+    static void splitCustomField(const QString &str, QString &app, QString &name, QString &value);
 public Q_SLOTS:
     void slotAddNewField(const CustomField &field);
 

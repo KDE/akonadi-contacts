@@ -67,3 +67,13 @@ void CustomFieldsWidget::setReadOnly(bool readOnly)
     mCustomFieldEditorWidget->setReadOnly(readOnly);
     mCustomFieldsListWidget->setReadOnly(readOnly);
 }
+
+void CustomFieldsWidget::setLocalCustomFieldDescriptions(const QVariantList &descriptions)
+{
+    mCustomFieldsListWidget->setLocalCustomFieldDescriptions(descriptions);
+}
+
+QVariantList CustomFieldsWidget::localCustomFieldDescriptions() const
+{
+    return mCustomFieldsListWidget->localCustomFieldDescriptions();
+}

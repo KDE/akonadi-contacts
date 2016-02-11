@@ -1,4 +1,4 @@
-set(customfieldswidgettest_SRCS customfieldswidgettest.cpp ../customfieldswidget.cpp ../customfieldeditorwidget.cpp ../customfielslistwidget.cpp ../../customfieldsmodel.cpp
+set(customfieldswidgettest_SRCS customfieldswidgettest.cpp ../customfieldswidget.cpp ../customfieldeditorwidget.cpp ../customfielslistwidget.cpp ../customfieldsmodel.cpp
     ../../../customfields.cpp ../customfieldslistdelegate.cpp ../../../customfieldmanager.cpp)
 add_executable(customfieldswidgettest ${customfieldswidgettest_SRCS})
 add_test(customfieldswidgettest customfieldswidgettest)

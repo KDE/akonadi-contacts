@@ -24,6 +24,7 @@
 #define CUSTOMFIELDSWIDGET_H
 
 #include <QWidget>
+#include <QVariantList>
 
 namespace KContacts
 {
@@ -44,6 +45,8 @@ public:
     void loadContact(const KContacts::Addressee &contact);
 
     void setReadOnly(bool readOnly);
+    void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
+    QVariantList localCustomFieldDescriptions() const;
 private:
     Akonadi::CustomFieldEditorWidget *mCustomFieldEditorWidget;
     Akonadi::CustomFielsListWidget *mCustomFieldsListWidget;

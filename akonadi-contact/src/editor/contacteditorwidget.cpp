@@ -25,7 +25,6 @@
 #include "categorieseditwidget.h"
 #include "contacteditorpageplugin.h"
 #include "contactmetadata_p.h"
-#include "customfieldseditwidget.h"
 #include "dateeditwidget.h"
 #include "displaynameeditwidget.h"
 #include "emaileditwidget.h"
@@ -51,6 +50,7 @@
 #include <QVBoxLayout>
 #include <KCompletion/KLineEdit>
 #include <editor/addresseditor/addresseslocationwidget.h>
+#include "customfieldeditor/customfieldswidget.h"
 
 class Q_DECL_HIDDEN ContactEditorWidget::Private
 {
@@ -126,7 +126,7 @@ public:
     KLineEdit *mPartnerWidget;
 
     // widgets from custom fields group
-    CustomFieldsEditWidget *mCustomFieldsWidget;
+    Akonadi::CustomFieldsWidget *mCustomFieldsWidget;
 
     // custom editor pages
     QList<Akonadi::ContactEditorPagePlugin *> mCustomPages;
@@ -433,7 +433,7 @@ void ContactEditorWidget::Private::initGuiCustomFieldsTab()
 
     mTabWidget->addTab(widget, i18nc("@title:tab", "Custom Fields"));
 
-    mCustomFieldsWidget = new CustomFieldsEditWidget;
+    mCustomFieldsWidget = new Akonadi::CustomFieldsWidget;
     layout->addWidget(mCustomFieldsWidget);
 }
 

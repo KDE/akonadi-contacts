@@ -36,6 +36,7 @@ set(akonadicontact_customfieldseditor_SRCS
    editor/customfieldeditor/customfieldeditorwidget.cpp
    editor/customfieldeditor/customfielslistwidget.cpp
    editor/customfieldeditor/customfieldslistdelegate.cpp
+   editor/customfieldeditor/customfieldsmodel.cpp
    )
 
 
@@ -92,10 +93,6 @@ set(akonadicontact_addresslocation_editor_SRCS
 set(akonadicontact_editor_SRCS
     editor/categorieseditwidget.cpp
     editor/contacteditorwidget.cpp
-    editor/customfieldeditordialog.cpp
-    editor/customfieldsdelegate.cpp
-    editor/customfieldseditwidget.cpp
-    editor/customfieldsmodel.cpp
     editor/dateeditwidget.cpp
     editor/displaynameeditwidget.cpp
     editor/emaileditwidget.cpp

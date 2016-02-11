@@ -22,7 +22,7 @@
 #ifndef CUSTOMFIELDSMODEL_H
 #define CUSTOMFIELDSMODEL_H
 
-#include "../customfields_p.h"
+#include "../../customfields_p.h"
 
 #include <QtCore/QAbstractItemModel>
 #include <QtCore/QVector>

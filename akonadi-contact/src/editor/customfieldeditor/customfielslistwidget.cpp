@@ -28,11 +28,11 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 #include <KContacts/Addressee>
-#include <editor/customfieldsmodel.h>
+#include "customfieldsmodel.h"
 
 using namespace Akonadi;
 
-void splitCustomField(const QString &str, QString &app, QString &name, QString &value)
+void CustomFielsListWidget::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
 {
     const int colon = str.indexOf(QLatin1Char(':'));
     if (colon != -1) {
@@ -222,3 +222,25 @@ void CustomFielsListWidget::slotAddNewField(const CustomField &field)
 
 }
 
+void CustomFielsListWidget::setLocalCustomFieldDescriptions(const QVariantList &descriptions)
+{
+    mLocalCustomFields.clear();
+    mLocalCustomFields.reserve(descriptions.count());
+    foreach (const QVariant &description, descriptions) {
+        mLocalCustomFields.append(CustomField::fromVariantMap(description.toMap(), CustomField::LocalScope));
+    }
+}
+
+QVariantList CustomFielsListWidget::localCustomFieldDescriptions() const
+{
+    const CustomField::List customFields = mModel->customFields();
+
+    QVariantList descriptions;
+    foreach (const CustomField &field, customFields) {
+        if (field.scope() == CustomField::LocalScope) {
+            descriptions.append(field.toVariantMap());
+        }
+    }
+
+    return descriptions;
+}
