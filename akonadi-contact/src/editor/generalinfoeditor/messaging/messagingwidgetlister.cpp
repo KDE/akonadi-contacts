@@ -36,9 +36,79 @@ MessagingWidgetLister::~MessagingWidgetLister()
 
 }
 
+#if 0
+void IMEditWidget::loadContact(const KContacts::Addressee &contact)
+{
+    mIMEdit->setText(contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-IMAddress")));
+
+    const QStringList customs = contact.customs();
+
+    foreach (const QString &custom, customs) {
+        QString app, name, value;
+        Akonadi::CustomFieldsListWidget::splitCustomField(custom, app, name, value);
+
+        if (app.startsWith(QStringLiteral("messaging/"))) {
+            if (name == QLatin1String("All")) {
+                const QString protocol = app;
+                const QStringList names = value.split(QChar(0xE000), QString::SkipEmptyParts);
+
+                foreach (const QString &name, names) {
+                    mIMAddresses << IMAddress(protocol, name, (name == mIMEdit->text()));
+                }
+            }
+        }
+    }
+}
+
+void IMEditWidget::storeContact(KContacts::Addressee &contact) const
+{
+    if (!mIMEdit->text().isEmpty()) {
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-IMAddress"), mIMEdit->text());
+    } else {
+        contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-IMAddress"));
+    }
+
+    // create a map with protocol as key and list of names for that protocol as value
+    QMap<QString, QStringList> protocolMap;
+
+    // fill map with all known protocols
+    foreach (const QString &protocol, IMProtocols::self()->protocols()) {
+        protocolMap.insert(protocol, QStringList());
+    }
+
+    // add the configured addresses
+    foreach (const IMAddress &address, mIMAddresses) {
+        protocolMap[address.protocol()].append(address.name());
+    }
+
+    // iterate over this list and modify the contact according
+    QMapIterator<QString, QStringList> it(protocolMap);
+    while (it.hasNext()) {
+        it.next();
+
+        if (!it.value().isEmpty()) {
+            contact.insertCustom(it.key(), QStringLiteral("All"), it.value().join(QString(0xE000)));
+        } else {
+            contact.removeCustom(it.key(), QStringLiteral("All"));
+        }
+    }
+}
+
+#endif
+
 void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
-
+    //TODO add real support for IM vcard4
+#if 0
+    const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
+    setNumberOfShownWidgetsTo(phoneNumbers.count());
+    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+    for (int i = 0; wIt != wEnd; ++wIt, ++i) {
+        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
+        w->loadPhone(phoneNumbers.at(i));
+    }
+#endif
 }
 
 void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const

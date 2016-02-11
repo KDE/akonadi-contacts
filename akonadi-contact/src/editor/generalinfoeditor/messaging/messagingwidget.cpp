@@ -21,10 +21,13 @@
 */
 
 #include "messagingwidget.h"
+#include "../../im/improtocols.h"
+#include <KComboBox>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QToolButton>
+#include <QDebug>
 
 using namespace Akonadi;
 MessagingWidget::MessagingWidget(QWidget *parent)
@@ -41,6 +44,19 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->addWidget(mMessagingEdit);
 
 
+    mProtocolCombo = new KComboBox(this);
+    mProtocolCombo->setObjectName(QStringLiteral("protocol"));
+    mProtocolCombo->addItem(i18nc("@item:inlistbox select from a list of IM protocols",
+                                  "Select..."));
+    layout->addWidget(mProtocolCombo);
+
+    const QStringList protocols = IMProtocols::self()->protocols();
+    foreach (const QString &protocol, protocols) {
+        mProtocolCombo->addItem(QIcon::fromTheme(IMProtocols::self()->icon(protocol)),
+                                IMProtocols::self()->name(protocol),
+                                protocol);
+    }
+
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
@@ -52,7 +68,6 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MessagingWidget::slotRemoveMessaging);
     layout->addWidget(mRemoveButton);
-    //TODO add type.
 }
 
 MessagingWidget::~MessagingWidget()

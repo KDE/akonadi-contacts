@@ -26,6 +26,7 @@
 #include <QWidget>
 class QLineEdit;
 class QToolButton;
+class KComboBox;
 namespace Akonadi
 {
 class MessagingWidget : public QWidget
@@ -48,6 +49,7 @@ private:
     QLineEdit *mMessagingEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
+    KComboBox *mProtocolCombo;
 };
 }
 #endif // MESSAGINGWIDGET_H
