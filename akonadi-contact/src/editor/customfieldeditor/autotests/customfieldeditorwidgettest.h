@@ -33,6 +33,8 @@ public:
     ~CustomFieldEditorWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldEnableAddButtonWhenTextIsNotEmpty();
+    void shouldClearEditorWhenPressAdd();
 
 };
 

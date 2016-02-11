@@ -56,6 +56,30 @@ void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
     QComboBox *combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
     QVERIFY(combobox);
     QVERIFY(combobox->count() > 0);
+    QCOMPARE(combobox->currentIndex(), 0);
+
+}
+
+void CustomFieldEditorWidgetTest::shouldEnableAddButtonWhenTextIsNotEmpty()
+{
+    Akonadi::CustomFieldEditorWidget w;
+    QLineEdit *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
+    QVERIFY(fieldname->text().isEmpty());
+    QPushButton *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
+    QVERIFY(!addfield->isEnabled());
+
+    fieldname->setText(QStringLiteral("foo"));
+    QVERIFY(addfield->isEnabled());
+    fieldname->clear();
+    QVERIFY(!addfield->isEnabled());
+}
+
+void CustomFieldEditorWidgetTest::shouldClearEditorWhenPressAdd()
+{
+    Akonadi::CustomFieldEditorWidget w;
+    QLineEdit *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
+    QPushButton *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
+    QComboBox *combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
 
 }
 
