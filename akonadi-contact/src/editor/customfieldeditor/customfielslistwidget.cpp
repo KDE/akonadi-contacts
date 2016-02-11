@@ -72,8 +72,6 @@ CustomFielsListWidget::~CustomFielsListWidget()
 
 }
 
-//TODO add edit/remove add delegate
-
 void CustomFielsListWidget::loadContact(const KContacts::Addressee &contact)
 {
     CustomField::List externalCustomFields;
@@ -221,5 +219,6 @@ void CustomFielsListWidget::slotAddNewField(const CustomField &field)
     mModel->setData(mModel->index(lastRow, 0), field.title(), Qt::EditRole);
     mModel->setData(mModel->index(lastRow, 0), field.type(), CustomFieldsModel::TypeRole);
     mModel->setData(mModel->index(lastRow, 0), field.scope(), CustomFieldsModel::ScopeRole);
+
 }
 

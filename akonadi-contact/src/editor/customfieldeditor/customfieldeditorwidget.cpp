@@ -117,4 +117,6 @@ void CustomFieldEditorWidget::slotAddField()
         field.setScope(mUseAllContacts->isChecked() ? CustomField::GlobalScope : CustomField::LocalScope);
     }
     Q_EMIT addNewField(field);
+    mFieldName->clear();
+    mFieldType->setCurrentIndex(0);
 }

@@ -80,6 +80,12 @@ void CustomFieldEditorWidgetTest::shouldClearEditorWhenPressAdd()
     QLineEdit *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
     QPushButton *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
     QComboBox *combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
+    combobox->setCurrentIndex(1);
+    fieldname->setText(QStringLiteral("foo"));
+    QTest::mouseClick(addfield, Qt::LeftButton);
+    QVERIFY(fieldname->text().isEmpty());
+    QVERIFY(!addfield->isEnabled());
+    QCOMPARE(combobox->currentIndex(), 0);
 
 }
 
