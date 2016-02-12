@@ -52,12 +52,17 @@ void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
 
 void PhoneWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
+    KContacts::PhoneNumber::List phoneNumbers;
     QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
     for (; wIt != wEnd; ++wIt) {
         PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
-        //w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
+        KContacts::PhoneNumber number = w->storePhone();
+        if (!number.isEmpty()) {
+            phoneNumbers << number;
+        }
     }
+    contact.setPhoneNumbers(phoneNumbers);
 }
 
 QWidget *PhoneWidgetLister::createWidget(QWidget *parent)

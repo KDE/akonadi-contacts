@@ -42,7 +42,7 @@ public:
 
     void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
     void loadPhone(const KContacts::PhoneNumber &number);
-    void storePhone(KContacts::PhoneNumber &number) const;
+    KContacts::PhoneNumber storePhone();
 Q_SIGNALS:
     void addWidget(QWidget *);
     void removeWidget(QWidget *);
