@@ -97,9 +97,14 @@ set(akonadicontact_personal_editor_SRCS
     editor/personaleditor/personaleditorwidget.cpp
     )
 
+set(akonadicontact_business_editor_SRCS
+    editor/businesseditor/businesseditorwidget.cpp
+    )
+
 set(akonadicontact_editor_SRCS
     ${akonadicontact_personal_editor_SRCS}
     ${akonadicontact_editor_utils_SRCS}
+    ${akonadicontact_business_editor_SRCS}
     editor/categorieseditwidget.cpp
     editor/contacteditorwidget.cpp
     editor/dateeditwidget.cpp
