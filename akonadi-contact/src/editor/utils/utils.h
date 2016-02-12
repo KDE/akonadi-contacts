@@ -23,12 +23,18 @@
 #define UTILS_H
 
 #include <QString>
+namespace KContacts
+{
+class Addressee;
+}
 
 namespace Akonadi
 {
 namespace Utils
 {
 void splitCustomField(const QString &str, QString &app, QString &name, QString &value);
+QString loadCustom(const KContacts::Addressee &contact, const QString &key);
+void storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value);
 }
 }
 #endif // UTILS_H

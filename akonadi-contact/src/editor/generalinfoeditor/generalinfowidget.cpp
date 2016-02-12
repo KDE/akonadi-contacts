@@ -31,6 +31,7 @@
 #include <editor/generalinfoeditor/messaging/messaginglistwidget.h>
 #include <editor/generalinfoeditor/mail/maillistwidget.h>
 #include <editor/generalinfoeditor/web/weblistwidget.h>
+#include <editor/categorieseditwidget.h>
 #include <editor/imagewidget.h>
 
 using namespace Akonadi;
@@ -70,7 +71,19 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
     grid->addWidget(mMailListWidget, 1, 2);
 
-    grid->setRowStretch(3, 1);
+    QWidget *categoryWidget = new QWidget(this);
+    QVBoxLayout *categoryWidgetLayout = new QVBoxLayout(categoryWidget);
+    categoryWidgetLayout->setMargin(0);
+    QLabel *label = new QLabel(i18n("Tags"), this);
+    label->setObjectName(QStringLiteral("categorylabel"));
+    categoryWidgetLayout->addWidget(label);
+
+    mCategoriesWidget = new CategoriesEditWidget(this);
+    mCategoriesWidget->setObjectName(QStringLiteral("categories"));
+    categoryWidgetLayout->addWidget(mCategoriesWidget);
+    grid->addWidget(categoryWidget, 3, 1);
+
+    grid->setRowStretch(4, 1);
 }
 
 GeneralInfoWidget::~GeneralInfoWidget()
@@ -87,6 +100,7 @@ void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
     mNameWidget->loadContact(contact);
     mNickNameWidget->loadContact(contact);
     mPhotoWidget->loadContact(contact);
+    mCategoriesWidget->loadContact(contact);
 }
 
 void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
@@ -98,6 +112,7 @@ void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
     mNameWidget->storeContact(contact);
     mNickNameWidget->storeContact(contact);
     mPhotoWidget->storeContact(contact);
+    mCategoriesWidget->storeContact(contact);
 }
 
 void GeneralInfoWidget::setReadOnly(bool readOnly)
@@ -109,4 +124,5 @@ void GeneralInfoWidget::setReadOnly(bool readOnly)
     mNameWidget->setReadOnly(readOnly);
     mNickNameWidget->setReadOnly(readOnly);
     mPhotoWidget->setReadOnly(readOnly);
+    mCategoriesWidget->setReadOnly(readOnly);
 }

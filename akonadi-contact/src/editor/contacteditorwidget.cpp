@@ -22,6 +22,7 @@
 #include "contacteditorwidget.h"
 #include "config-akonadi-contact.h"
 
+#include "personaleditor/personaleditorwidget.h"
 #include "categorieseditwidget.h"
 #include "contacteditorpageplugin.h"
 #include "contactmetadata_p.h"
@@ -51,6 +52,8 @@
 #include <KCompletion/KLineEdit>
 #include <editor/addresseditor/addresseslocationwidget.h>
 #include "customfieldeditor/customfieldswidget.h"
+
+#include <editor/businesseditor/businesseditorwidget.h>
 
 class Q_DECL_HIDDEN ContactEditorWidget::Private
 {
@@ -102,28 +105,12 @@ public:
     // widgets from addresses group
     Akonadi::AddressesLocationWidget *mAddressesLocationWidget;
 
-    // widgets from general group
-    ImageWidget *mLogoWidget;
-    KLineEdit *mOrganizationWidget;
-    KLineEdit *mProfessionWidget;
-    KLineEdit *mTitleWidget;
-    KLineEdit *mDepartmentWidget;
-    KLineEdit *mOfficeWidget;
-    KLineEdit *mManagerWidget;
-    KLineEdit *mAssistantWidget;
-
-    // widgets from groupware group
-    FreeBusyEditWidget *mFreeBusyWidget;
+    Akonadi::BusinessEditorWidget *mBusinessEditorWidget;
 
     // widgets from notes group
     KTextEdit *mNotesWidget;
 
-    // widgets from dates group
-    DateEditWidget *mBirthdateWidget;
-    DateEditWidget *mAnniversaryWidget;
-
-    // widgets from family group
-    KLineEdit *mPartnerWidget;
+    Akonadi::PersonalEditorWidget *mPersonalEditorWidget;
 
     // widgets from custom fields group
     Akonadi::CustomFieldsWidget *mCustomFieldsWidget;
@@ -290,128 +277,14 @@ void ContactEditorWidget::Private::initGuiLocationTab()
 
 void ContactEditorWidget::Private::initGuiBusinessTab()
 {
-    QWidget *widget = new QWidget;
-
-    mTabWidget->addTab( widget, i18nc( "@title:tab", "Business" ) );
-
-    QGridLayout *generalLayout = new QGridLayout( widget );
-    generalLayout->setMargin(10);
-    generalLayout->setSpacing(10);
-
-    QLabel *label = 0;
-
-    // setup general group box
-    mLogoWidget = new ImageWidget( ImageWidget::Logo );
-    generalLayout->addWidget( mLogoWidget, 0, 0, 9, 1, Qt::AlignTop );
-
-    label = new QLabel( i18nc( "@label The organization of a contact", "Organization:" ) );
-    generalLayout->addWidget( label, 0, 1 );
-
-    mOrganizationWidget = new KLineEdit;
-    mOrganizationWidget->setTrapReturnKey(true);
-    mOrganizationWidget->setPlaceholderText(i18n("Add organization's name"));
-    label->setBuddy( mOrganizationWidget );
-    generalLayout->addWidget( mOrganizationWidget, 1, 1 );
-
-    label = new QLabel( i18nc( "@label The profession of a contact", "Profession:" ) );
-    generalLayout->addWidget( label, 0, 2 );
-
-    mProfessionWidget = new KLineEdit;
-    mProfessionWidget->setPlaceholderText(i18n("Add profession"));
-    mProfessionWidget->setTrapReturnKey(true);
-    label->setBuddy( mProfessionWidget );
-    generalLayout->addWidget( mProfessionWidget, 1, 2 );
-
-    label = new QLabel( i18nc( "@label The title of a contact", "Title:" ) );
-    generalLayout->addWidget( label, 3, 1 );
-
-    mTitleWidget = new KLineEdit;
-    mTitleWidget->setPlaceholderText(i18n("Add the title"));
-    mTitleWidget->setTrapReturnKey(true);
-    label->setBuddy( mTitleWidget );
-    generalLayout->addWidget( mTitleWidget , 4, 1 );
-
-    label = new QLabel( i18nc( "@label The department of a contact", "Department:" ) );
-    generalLayout->addWidget( label, 3, 2 );
-
-    mDepartmentWidget = new KLineEdit;
-    mDepartmentWidget->setPlaceholderText(i18n("Add the department"));
-    mDepartmentWidget->setTrapReturnKey(true);
-    label->setBuddy( mDepartmentWidget );
-    generalLayout->addWidget( mDepartmentWidget, 4, 2 );
-
-    label = new QLabel( i18nc( "@label The office of a contact", "Office:" ) );
-    generalLayout->addWidget( label, 5, 1 );
-
-    mOfficeWidget = new KLineEdit;
-    mOfficeWidget->setTrapReturnKey(true);
-    mOfficeWidget->setPlaceholderText(i18n("Add the office"));
-
-    label->setBuddy( mOfficeWidget );
-    generalLayout->addWidget( mOfficeWidget, 6, 1 );
-
-    label = new QLabel( i18nc( "@label The manager's name of a contact", "Manager's name:" ) );
-    generalLayout->addWidget( label, 5, 2 );
-
-    mManagerWidget = new KLineEdit;
-    mManagerWidget->setPlaceholderText(i18n("Add manager's name"));
-    mManagerWidget->setTrapReturnKey(true);
-    label->setBuddy( mManagerWidget );
-    generalLayout->addWidget( mManagerWidget, 6, 2 );
-
-    label = new QLabel( i18nc( "@label The assistant's name of a contact", "Assistant's name:" ) );
-    generalLayout->addWidget( label, 7, 1 );
-
-    mAssistantWidget = new KLineEdit;
-    mAssistantWidget->setPlaceholderText(i18n("Add assistant's name"));
-    mAssistantWidget->setTrapReturnKey(true);
-    label->setBuddy( mAssistantWidget );
-    generalLayout->addWidget( mAssistantWidget, 8, 1 );
-
-    // setup groupware group box
-    label = new QLabel( i18nc( "@label The free/busy information of a contact", "Free/Busy:" ) );
-    generalLayout->addWidget( label, 7, 2 );
-
-    mFreeBusyWidget = new FreeBusyEditWidget;
-    label->setBuddy( mFreeBusyWidget );
-    generalLayout->addWidget( mFreeBusyWidget, 8, 2 );
-    generalLayout->setRowStretch( 9, 1 );
+    mBusinessEditorWidget = new Akonadi::BusinessEditorWidget();
+    mTabWidget->addTab( mBusinessEditorWidget, i18nc( "@title:tab", "Business" ) );
 }
 
 void ContactEditorWidget::Private::initGuiPersonalTab()
 {
-    QWidget *widget = new QWidget;
-    mTabWidget->addTab( widget, i18nc( "@title:tab Personal properties of a contact", "Personal" ) );
-    QGridLayout *mainLayout = new QGridLayout( widget );
-    mainLayout->setMargin(10);
-    mainLayout->setSpacing(20);
-    QLabel *label = new QLabel( i18nc( "@label The birthdate of a contact", "Birthdate:" ) );
-    mainLayout->addWidget( label, 0, 0 );
-
-    mBirthdateWidget = new DateEditWidget( DateEditWidget::Birthday );
-    label->setBuddy( mBirthdateWidget );
-    mainLayout->addWidget( mBirthdateWidget, 1, 0 );
-
-    label = new QLabel( i18nc( "@label The wedding anniversary of a contact", "Anniversary:" ) );
-    mainLayout->addWidget( label, 0, 1 );
-
-    mAnniversaryWidget = new DateEditWidget( DateEditWidget::Anniversary );
-    label->setBuddy( mAnniversaryWidget );
-    mainLayout->addWidget( mAnniversaryWidget, 1, 1 );
-
-    label = new QLabel( i18nc( "@label The partner's name of a contact", "Partner's name:" ) );
-    mainLayout->addWidget( label, 0, 2 );
-
-    mPartnerWidget = new KLineEdit;
-    mPartnerWidget->setPlaceholderText(i18n("Add name"));
-    mPartnerWidget->setTrapReturnKey(true);
-    label->setBuddy( mPartnerWidget );
-    mainLayout->addWidget( mPartnerWidget, 1, 2 );
-    mainLayout->setColumnStretch( 1, 1 );
-    mainLayout->setColumnStretch( 0, 1 );
-    mainLayout->setColumnStretch( 2, 1 );
-
-    mainLayout->setRowStretch( 2, 1 );
+    mPersonalEditorWidget = new Akonadi::PersonalEditorWidget;
+    mTabWidget->addTab( mPersonalEditorWidget, i18nc( "@title:tab Personal properties of a contact", "Personal" ) );
 }
 
 void ContactEditorWidget::Private::initGuiNotesTab()
@@ -428,13 +301,8 @@ void ContactEditorWidget::Private::initGuiNotesTab()
 
 void ContactEditorWidget::Private::initGuiCustomFieldsTab()
 {
-    QWidget *widget = new QWidget;
-    QVBoxLayout *layout = new QVBoxLayout(widget);
-
-    mTabWidget->addTab(widget, i18nc("@title:tab", "Custom Fields"));
-
     mCustomFieldsWidget = new Akonadi::CustomFieldsWidget;
-    layout->addWidget(mCustomFieldsWidget);
+    mTabWidget->addTab(mCustomFieldsWidget, i18nc("@title:tab", "Custom Fields"));
 }
 
 void ContactEditorWidget::Private::loadCustomPages()
@@ -485,7 +353,7 @@ ContactEditorWidget::ContactEditorWidget(QWidget *parent)
     d->initGui();
 
     connect(d->mNameWidget, &NameEditWidget::nameChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
-    connect(d->mOrganizationWidget, &QLineEdit::textChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
+    connect(d->mBusinessEditorWidget, &Akonadi::BusinessEditorWidget::organizationChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
 }
 
 ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displayMode, QWidget *parent)
@@ -495,7 +363,7 @@ ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displa
     d->initGui();
 
     connect(d->mNameWidget, &NameEditWidget::nameChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
-    connect(d->mOrganizationWidget, &QLineEdit::textChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
+    connect(d->mBusinessEditorWidget, &Akonadi::BusinessEditorWidget::organizationChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
 }
 
 ContactEditorWidget::~ContactEditorWidget()
@@ -541,29 +409,11 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     d->mAddressesLocationWidget->loadContact(contact);
 
     // general group
-    d->mLogoWidget->loadContact(contact);
-    d->mOrganizationWidget->setText(contact.organization());
-    d->mProfessionWidget->setText(d->loadCustom(contact, QStringLiteral("X-Profession")));
-    d->mTitleWidget->setText(contact.title());
-    d->mDepartmentWidget->setText(contact.department());
-    d->mOfficeWidget->setText(d->loadCustom(contact, QStringLiteral("X-Office")));
-    d->mManagerWidget->setText(d->loadCustom(contact, QStringLiteral("X-ManagersName")));
-    d->mAssistantWidget->setText(d->loadCustom(contact, QStringLiteral("X-AssistantsName")));
-
-    // groupware group
-    d->mFreeBusyWidget->loadContact(contact);
-
+    d->mBusinessEditorWidget->loadContact(contact);
     // notes group
     d->mNotesWidget->setPlainText(contact.note());
 
-    // dates group
-    d->mBirthdateWidget->setDate(contact.birthday().date());
-    d->mAnniversaryWidget->setDate(QDate::fromString(d->loadCustom(contact, QStringLiteral("X-Anniversary")),
-                                   Qt::ISODate));
-
-    // family group
-    d->mPartnerWidget->setText(d->loadCustom(contact, QStringLiteral("X-SpousesName")));
-
+    d->mPersonalEditorWidget->loadContact(contact);
     d->mDisplayNameWidget->setDisplayType((DisplayNameEditWidget::DisplayType)metaData.displayNameMode());
 
     if (d->mDisplayMode == FullMode) {
@@ -621,32 +471,11 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
     d->mAddressesLocationWidget->storeContact(contact);
 
     // general group
-    d->mLogoWidget->storeContact(contact);
-    contact.setOrganization(d->mOrganizationWidget->text());
-    d->storeCustom(contact, QStringLiteral("X-Profession"), d->mProfessionWidget->text().trimmed());
-    contact.setTitle(d->mTitleWidget->text().trimmed());
-    contact.setDepartment(d->mDepartmentWidget->text().trimmed());
-    d->storeCustom(contact, QStringLiteral("X-Office"), d->mOfficeWidget->text().trimmed());
-    d->storeCustom(contact, QStringLiteral("X-ManagersName"), d->mManagerWidget->text().trimmed());
-    d->storeCustom(contact, QStringLiteral("X-AssistantsName"), d->mAssistantWidget->text().trimmed());
-
-    // groupware group
-    d->mFreeBusyWidget->storeContact(contact);
+    d->mBusinessEditorWidget->storeContact(contact);
 
     // notes group
     contact.setNote(d->mNotesWidget->toPlainText());
-
-    // dates group
-    QDateTime birthday = QDateTime(d->mBirthdateWidget->date(), QTime(), contact.birthday().timeSpec());
-    // This is needed because the constructor above sets the time component
-    // of the QDateTime to midnight.  We want it to stay invalid.
-    birthday.setTime(QTime());
-
-    contact.setBirthday(birthday);
-    d->storeCustom(contact, QStringLiteral("X-Anniversary"), d->mAnniversaryWidget->date().toString(Qt::ISODate));
-
-    // family group
-    d->storeCustom(contact, QStringLiteral("X-SpousesName"), d->mPartnerWidget->text().trimmed());
+    d->mPersonalEditorWidget->storeContact(contact);
 
     if (d->mDisplayMode == FullMode) {
         // custom fields group
@@ -690,28 +519,12 @@ void ContactEditorWidget::setReadOnly(bool readOnly)
     d->mAddressesLocationWidget->setReadOnly(readOnly);
 
     // widgets from general group
-    d->mLogoWidget->setReadOnly(readOnly);
-    d->mOrganizationWidget->setReadOnly(readOnly);
-    d->mProfessionWidget->setReadOnly(readOnly);
-    d->mTitleWidget->setReadOnly(readOnly);
-    d->mDepartmentWidget->setReadOnly(readOnly);
-    d->mOfficeWidget->setReadOnly(readOnly);
-    d->mManagerWidget->setReadOnly(readOnly);
-    d->mAssistantWidget->setReadOnly(readOnly);
-
-    // widgets from groupware group
-    d->mFreeBusyWidget->setReadOnly(readOnly);
+    d->mBusinessEditorWidget->setReadOnly(readOnly);
 
     // widgets from notes group
     d->mNotesWidget->setReadOnly(readOnly);
 
-    // widgets from dates group
-    d->mBirthdateWidget->setReadOnly(readOnly);
-    d->mAnniversaryWidget->setReadOnly(readOnly);
-
-    // widgets from family group
-    d->mPartnerWidget->setReadOnly(readOnly);
-
+    d->mPersonalEditorWidget->setReadOnly(readOnly);
     if (d->mDisplayMode == FullMode) {
         // widgets from custom fields group
         d->mCustomFieldsWidget->setReadOnly(readOnly);

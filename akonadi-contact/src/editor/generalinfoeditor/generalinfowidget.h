@@ -26,7 +26,7 @@
 #include <QWidget>
 class QLineEdit;
 class ImageWidget;
-
+class CategoriesEditWidget;
 namespace KContacts
 {
 class Addressee;
@@ -60,6 +60,7 @@ private:
     ImageWidget *mPhotoWidget;
     NameWidget *mNameWidget;
     NicknameWidget *mNickNameWidget;
+    CategoriesEditWidget *mCategoriesWidget;
 };
 }
 #endif // GENERALINFOWIDGET_H

@@ -20,6 +20,7 @@ set(generalinfoeditor_SRCS
     ../phone/phonecomboboxtype.cpp
     ../../im/imaddress.cpp
     ../../utils/utils.cpp
+    ../../categorieseditwidget.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
@@ -33,5 +34,6 @@ target_link_libraries(generalinfoeditortest
     KF5::IconThemes
     KF5::WidgetsAddons
     KF5::KIOCore
+    KF5::AkonadiWidgets
     )
 

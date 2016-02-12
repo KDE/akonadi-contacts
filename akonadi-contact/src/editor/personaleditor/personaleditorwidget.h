@@ -23,6 +23,12 @@
 #define PERSONALEDITORWIDGET_H
 
 #include <QWidget>
+class DateEditWidget;
+class KLineEdit;
+namespace KContacts
+{
+class Addressee;
+}
 
 namespace Akonadi
 {
@@ -32,6 +38,13 @@ class PersonalEditorWidget : public QWidget
 public:
     explicit PersonalEditorWidget(QWidget *parent = Q_NULLPTR);
     ~PersonalEditorWidget();
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact);
+    void setReadOnly(bool readOnly);
+private:
+    DateEditWidget *mBirthdateWidget;
+    DateEditWidget *mAnniversaryWidget;
+    KLineEdit *mPartnerWidget;
 };
 }
 #endif // PERSONALEDITORWIDGET_H

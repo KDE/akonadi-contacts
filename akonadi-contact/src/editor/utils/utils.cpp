@@ -22,6 +22,8 @@
 
 #include "utils.h"
 
+#include <KContacts/Addressee>
+
 void Akonadi::Utils::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
 {
     const int colon = str.indexOf(QLatin1Char(':'));
@@ -34,5 +36,19 @@ void Akonadi::Utils::splitCustomField(const QString &str, QString &app, QString 
             app = tmp.left(dash);
             name = tmp.mid(dash + 1);
         }
+    }
+}
+
+QString Akonadi::Utils::loadCustom(const KContacts::Addressee &contact, const QString &key)
+{
+    return contact.custom(QStringLiteral("KADDRESSBOOK"), key);
+}
+
+void Akonadi::Utils::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value)
+{
+    if (value.isEmpty()) {
+        contact.removeCustom(QStringLiteral("KADDRESSBOOK"), key);
+    } else {
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), key, value);
     }
 }
