@@ -68,13 +68,16 @@ void MailWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonE
 
 void MailWidget::setMail(const KContacts::Email &email)
 {
-    //TODO
+    mEmail = email;
+    mMailEdit->setText(email.mail());
+    //TODO look at type.
+    //TODO look at preference
 }
 
-KContacts::Email MailWidget::email() const
+KContacts::Email MailWidget::email()
 {
-    //TODO
-    return KContacts::Email();
+    mEmail.setEmail(mMailEdit->text());
+    return mEmail;
 }
 
 void MailWidget::slotAddMail()

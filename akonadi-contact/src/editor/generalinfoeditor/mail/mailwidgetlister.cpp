@@ -52,7 +52,17 @@ void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
 
 void MailWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
-
+    KContacts::Email::List emailList;
+    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+    for (; wIt != wEnd; ++wIt) {
+        MailWidget *w = qobject_cast<MailWidget *>(*wIt);
+        KContacts::Email newEmail = w->email();
+        if (newEmail.isValid()) {
+            emailList << newEmail;
+        }
+    }
+    contact.setEmailList(emailList);
 }
 
 QWidget *MailWidgetLister::createWidget(QWidget *parent)

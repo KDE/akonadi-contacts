@@ -39,7 +39,7 @@ public:
 
     void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
     void setMail(const KContacts::Email &email);
-    KContacts::Email email() const;
+    KContacts::Email email();
 Q_SIGNALS:
     void addWidget(QWidget *);
     void removeWidget(QWidget *);
@@ -49,6 +49,7 @@ private Q_SLOTS:
     void slotRemoveMail();
 
 private:
+    KContacts::Email mEmail;
     QLineEdit *mMailEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
