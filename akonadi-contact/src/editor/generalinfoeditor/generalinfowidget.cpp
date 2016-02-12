@@ -86,8 +86,7 @@ void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
     mMailListWidget->loadContact(contact);
     mNameWidget->loadContact(contact);
     mNickNameWidget->loadContact(contact);
-
-    //TODO load image
+    mPhotoWidget->loadContact(contact);
 }
 
 void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
@@ -98,7 +97,7 @@ void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
     mMailListWidget->storeContact(contact);
     mNameWidget->storeContact(contact);
     mNickNameWidget->storeContact(contact);
-    //TODO save image
+    mPhotoWidget->storeContact(contact);
 }
 
 void GeneralInfoWidget::setReadOnly(bool readOnly)
