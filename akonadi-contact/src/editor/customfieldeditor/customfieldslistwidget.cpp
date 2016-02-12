@@ -21,6 +21,7 @@
 */
 
 #include "customfieldslistwidget.h"
+#include "../utils/utils.h"
 #include "customfieldmanager_p.h"
 #include "customfieldslistdelegate.h"
 #include <KLocalizedString>
@@ -31,21 +32,6 @@
 #include "customfieldsmodel.h"
 
 using namespace Akonadi;
-
-void CustomFieldsListWidget::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
-{
-    const int colon = str.indexOf(QLatin1Char(':'));
-    if (colon != -1) {
-        const QString tmp = str.left(colon);
-        value = str.mid(colon + 1);
-
-        const int dash = tmp.indexOf(QLatin1Char('-'));
-        if (dash != -1) {
-            app = tmp.left(dash);
-            name = tmp.mid(dash + 1);
-        }
-    }
-}
 
 CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     : QWidget(parent)
@@ -82,7 +68,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
     foreach (const QString &custom, customs) {
 
         QString app, name, value;
-        splitCustomField(custom, app, name, value);
+        Akonadi::Utils::splitCustomField(custom, app, name, value);
 
         // skip all well-known fields that have separated editor widgets
         if (custom.startsWith(QStringLiteral("messaging/"))) {       // IM addresses

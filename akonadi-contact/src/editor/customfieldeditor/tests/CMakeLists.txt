@@ -6,6 +6,7 @@ set(customfieldeditor_SRCS
     ../../../customfields.cpp
     ../customfieldslistdelegate.cpp
     ../../../customfieldmanager.cpp
+    ../../utils/utils.cpp
     main.cpp
     )
 
