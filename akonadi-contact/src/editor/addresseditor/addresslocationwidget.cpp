@@ -111,6 +111,9 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("countrylabel"));
     gridLayout->addWidget(label, 5, 1);
     mCountryCombo = new KComboBox(this);
+    KLineEdit *edit = new KLineEdit(this);
+    edit->setTrapReturnKey(true);
+    mCountryCombo->setLineEdit(edit);
     mCountryCombo->setObjectName(QStringLiteral("countrycombobox"));
     mCountryCombo->setEditable(true);
     mCountryCombo->lineEdit()->setPlaceholderText(i18n("Add a Country"));
