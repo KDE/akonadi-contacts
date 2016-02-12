@@ -25,6 +25,7 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
+#include <KLineEdit>
 #include <KContacts/Addressee>
 
 using namespace Akonadi;
@@ -41,10 +42,11 @@ NameWidget::NameWidget(QWidget *parent)
     QHBoxLayout *lineLayout = new QHBoxLayout;
     lineLayout->setMargin(0);
     topLayout->addLayout(lineLayout);
-    mNameEdit = new QLineEdit;
+    mNameEdit = new KLineEdit;
+    mNameEdit->setObjectName(QStringLiteral("nameedit"));
+    mNameEdit->setTrapReturnKey(true);
     mNameEdit->setPlaceholderText(i18n("Add a name"));
     lineLayout->addWidget(mNameEdit);
-
 }
 
 NameWidget::~NameWidget()
@@ -54,7 +56,8 @@ NameWidget::~NameWidget()
 
 void NameWidget::loadContact(const KContacts::Addressee &contact)
 {
-    //TODO
+    mNameEdit->setText(contact.assembledName());
+    //TODO load type name ?
 }
 
 void NameWidget::storeContact(KContacts::Addressee &contact) const
