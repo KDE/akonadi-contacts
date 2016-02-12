@@ -93,7 +93,12 @@ set(akonadicontact_addresslocation_editor_SRCS
     editor/addresseditor/addresstypedialog.cpp
     )
 
+set(akonadicontact_personal_editor_SRCS
+    editor/personaleditor/personaleditorwidget.cpp
+    )
+
 set(akonadicontact_editor_SRCS
+    ${akonadicontact_personal_editor_SRCS}
     ${akonadicontact_editor_utils_SRCS}
     editor/categorieseditwidget.cpp
     editor/contacteditorwidget.cpp
