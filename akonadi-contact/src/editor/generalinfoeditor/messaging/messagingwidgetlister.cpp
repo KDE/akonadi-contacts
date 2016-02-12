@@ -22,10 +22,14 @@
 
 #include "messagingwidgetlister.h"
 #include "messagingwidget.h"
+#include "../../im/imaddress.h"
+#include "../../utils/utils.h"
+
+#include <KContacts/Addressee>
 using namespace Akonadi;
 
 MessagingWidgetLister::MessagingWidgetLister(QWidget *parent)
-    : KWidgetLister(1, 4, parent)
+    : KWidgetLister(1, 8, parent)
 {
     setNumberOfShownWidgetsTo(widgetsMinimum());
     updateAddRemoveButton();
@@ -98,21 +102,45 @@ void IMEditWidget::storeContact(KContacts::Addressee &contact) const
 
 void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
-    //TODO add real support for IM vcard4
-#if 0
-    const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
-    setNumberOfShownWidgetsTo(phoneNumbers.count());
+    IMAddress::List imaddresses;
+    const QStringList customs = contact.customs();
+
+    foreach (const QString &custom, customs) {
+        QString app, name, value;
+        Akonadi::Utils::splitCustomField(custom, app, name, value);
+
+        if (app.startsWith(QStringLiteral("messaging/"))) {
+            if (name == QLatin1String("All")) {
+                const QString protocol = app;
+                const QStringList names = value.split(QChar(0xE000), QString::SkipEmptyParts);
+
+                foreach (const QString &name, names) {
+                    //TODO prefered support ?
+                    imaddresses << IMAddress(protocol, name, false);
+                }
+            }
+        }
+    }
+    setNumberOfShownWidgetsTo(imaddresses.count());
     QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
     for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
-        w->loadPhone(phoneNumbers.at(i));
+        MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
+        w->setIMAddress(imaddresses.at(i));
     }
-#endif
+
+    //TODO add real support for IM vcard4
 }
 
 void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
+    IMAddress::List imaddresses;
+    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+    for (; wIt != wEnd; ++wIt) {
+        MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
+        imaddresses << w->imAddress();
+    }
 
 }
 

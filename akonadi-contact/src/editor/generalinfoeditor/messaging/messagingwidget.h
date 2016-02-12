@@ -24,6 +24,8 @@
 #define MESSAGINGWIDGET_H
 
 #include <QWidget>
+
+#include <editor/im/imaddress.h>
 class QLineEdit;
 class QToolButton;
 class KComboBox;
@@ -37,6 +39,9 @@ public:
     ~MessagingWidget();
 
     void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
+    IMAddress imAddress() const;
+    void setIMAddress(const IMAddress &address);
+
 Q_SIGNALS:
     void addWidget(QWidget *);
     void removeWidget(QWidget *);

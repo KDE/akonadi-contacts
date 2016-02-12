@@ -66,6 +66,17 @@ void MailWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonE
     mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
+void MailWidget::setMail(const KContacts::Email &email)
+{
+    //TODO
+}
+
+KContacts::Email MailWidget::email() const
+{
+    //TODO
+    return KContacts::Email();
+}
+
 void MailWidget::slotAddMail()
 {
     Q_EMIT addWidget(this);

@@ -22,6 +22,8 @@
 
 #include "mailwidgetlister.h"
 #include "mailwidget.h"
+
+#include <KContacts/Addressee>
 using namespace Akonadi;
 
 MailWidgetLister::MailWidgetLister(QWidget *parent)
@@ -38,16 +40,14 @@ MailWidgetLister::~MailWidgetLister()
 
 void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
-#if 0
-    const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
-    setNumberOfShownWidgetsTo(phoneNumbers.count());
+    KContacts::Email::List mailList = contact.emailList();
+    setNumberOfShownWidgetsTo(mailList.count());
     QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
     for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
-        w->loadPhone(phoneNumbers.at(i));
+        MailWidget *w = qobject_cast<MailWidget *>(*wIt);
+        w->setMail(mailList.at(i));
     }
-#endif
 }
 
 void MailWidgetLister::storeContact(KContacts::Addressee &contact) const

@@ -75,6 +75,19 @@ MessagingWidget::~MessagingWidget()
 
 }
 
+void MessagingWidget::setIMAddress(const IMAddress &address)
+{
+    mProtocolCombo->setCurrentIndex(
+        IMProtocols::self()->protocols().indexOf(address.protocol()) + 1);
+    mMessagingEdit->setText(address.name());
+}
+
+IMAddress MessagingWidget::imAddress() const
+{
+    return IMAddress(mProtocolCombo->itemData(mProtocolCombo->currentIndex()).toString(),
+                     mMessagingEdit->text().trimmed(), false);
+}
+
 void MessagingWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);

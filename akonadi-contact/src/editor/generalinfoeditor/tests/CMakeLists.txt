@@ -18,6 +18,8 @@ set(generalinfoeditor_SRCS
     ../namewidget.cpp
     ../nicknamewidget.cpp
     ../phone/phonecomboboxtype.cpp
+    ../../im/imaddress.cpp
+    ../../utils/utils.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})

@@ -24,6 +24,8 @@
 #define MAILWIDGET_H
 
 #include <QWidget>
+
+#include <KContacts/Email>
 class QLineEdit;
 class QToolButton;
 namespace Akonadi
@@ -36,6 +38,8 @@ public:
     ~MailWidget();
 
     void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
+    void setMail(const KContacts::Email &email);
+    KContacts::Email email() const;
 Q_SIGNALS:
     void addWidget(QWidget *);
     void removeWidget(QWidget *);
