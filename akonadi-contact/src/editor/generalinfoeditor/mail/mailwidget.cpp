@@ -60,10 +60,16 @@ MailWidget::~MailWidget()
 
 }
 
-void MailWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
+void MailWidget::clearWidget()
+{
+    mMailEdit->clear();
+    mEmail = KContacts::Email();
+    //TODO clear type too.
+}
+
+void MailWidget::updateAddRemoveButton(bool addButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);
-    mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
 void MailWidget::setMail(const KContacts::Email &email)

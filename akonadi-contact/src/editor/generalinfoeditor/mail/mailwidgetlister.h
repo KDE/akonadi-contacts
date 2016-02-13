@@ -45,8 +45,8 @@ protected:
     QWidget *createWidget(QWidget *) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void slotAddWidget(QWidget *w);
-    void slotRemoveWidget(QWidget *w);
+    void slotAddWidget(MailWidget *w);
+    void slotRemoveWidget(MailWidget *w);
 
 private:
     void reconnectWidget(MailWidget *w);

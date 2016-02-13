@@ -37,12 +37,13 @@ public:
     explicit MailWidget(QWidget *parent = Q_NULLPTR);
     ~MailWidget();
 
-    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
+    void clearWidget();
+    void updateAddRemoveButton(bool addButtonEnabled);
     void setMail(const KContacts::Email &email);
     KContacts::Email email();
 Q_SIGNALS:
-    void addWidget(QWidget *);
-    void removeWidget(QWidget *);
+    void addWidget(MailWidget *);
+    void removeWidget(MailWidget *);
 
 private Q_SLOTS:
     void slotAddMail();
