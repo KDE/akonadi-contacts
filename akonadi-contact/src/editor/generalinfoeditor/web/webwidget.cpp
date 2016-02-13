@@ -60,10 +60,15 @@ WebWidget::~WebWidget()
 
 }
 
-void WebWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
+void WebWidget::clearWidget()
+{
+    mWebSiteEdit->clear();
+    //TODO clear type too.
+}
+
+void WebWidget::updateAddRemoveButton(bool addButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);
-    mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
 void WebWidget::slotAddWeb()

@@ -34,11 +34,12 @@ class WebWidget : public QWidget
 public:
     explicit WebWidget(QWidget *parent = Q_NULLPTR);
     ~WebWidget();
-    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
+    void updateAddRemoveButton(bool addButtonEnabled);
 
+    void clearWidget();
 Q_SIGNALS:
-    void addWidget(QWidget *);
-    void removeWidget(QWidget *);
+    void addWidget(WebWidget *);
+    void removeWidget(WebWidget *);
 
 private Q_SLOTS:
     void slotRemoveWeb();
