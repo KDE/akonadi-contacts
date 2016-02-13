@@ -41,7 +41,6 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     : QWidget(parent)
 {
     QGridLayout *grid = new QGridLayout(this);
-    grid->setMargin(0);
 
     mPhotoWidget = new ImageWidget(ImageWidget::Photo);
     mPhotoWidget->setObjectName(QStringLiteral("photowidget"));
