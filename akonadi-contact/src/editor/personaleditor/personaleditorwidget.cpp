@@ -38,8 +38,6 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
     QGridLayout *mainLayout = new QGridLayout( this );
-    mainLayout->setMargin(10);
-    mainLayout->setSpacing(20);
     QLabel *label = new QLabel( i18nc( "@label The birthdate of a contact", "Birthdate:" ) );
     mainLayout->addWidget( label, 0, 0 );
 

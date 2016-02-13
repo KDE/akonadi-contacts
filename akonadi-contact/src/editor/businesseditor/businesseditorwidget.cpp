@@ -38,8 +38,6 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
     QGridLayout *generalLayout = new QGridLayout( this );
-    generalLayout->setMargin(10);
-    generalLayout->setSpacing(10);
 
     // setup general group box
     mLogoWidget = new ImageWidget( ImageWidget::Logo );
