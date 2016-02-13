@@ -26,7 +26,8 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <KLineEdit>
-#include <KContacts/Addressee>
+#include <QToolButton>
+#include <editor/nameeditdialog.h>
 
 using namespace Akonadi;
 
@@ -42,11 +43,19 @@ NameWidget::NameWidget(QWidget *parent)
     QHBoxLayout *lineLayout = new QHBoxLayout;
     lineLayout->setMargin(0);
     topLayout->addLayout(lineLayout);
+
     mNameEdit = new KLineEdit;
-    mNameEdit->setObjectName(QStringLiteral("nameedit"));
     mNameEdit->setTrapReturnKey(true);
-    mNameEdit->setPlaceholderText(i18n("Add a name"));
     lineLayout->addWidget(mNameEdit);
+    setFocusProxy(mNameEdit);
+    setFocusPolicy(Qt::StrongFocus);
+
+    mButtonEdit = new QToolButton;
+    mButtonEdit->setText(i18n("..."));
+    lineLayout->addWidget(mButtonEdit);
+
+    connect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
+    connect(mButtonEdit, &QToolButton::clicked, this, &NameWidget::slotOpenNameEditDialog);
 }
 
 NameWidget::~NameWidget()
@@ -54,18 +63,61 @@ NameWidget::~NameWidget()
 
 }
 
+void NameWidget::setReadOnly(bool readOnly)
+{
+    mNameEdit->setReadOnly(readOnly);
+    mButtonEdit->setEnabled(!readOnly);
+}
+
 void NameWidget::loadContact(const KContacts::Addressee &contact)
 {
+    mContact = contact;
+
+    disconnect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
     mNameEdit->setText(contact.assembledName());
-    //TODO load type name ?
+    connect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
 }
 
 void NameWidget::storeContact(KContacts::Addressee &contact) const
 {
-    //TODO
+    contact.setPrefix(mContact.prefix());
+    contact.setGivenName(mContact.givenName());
+    contact.setAdditionalName(mContact.additionalName());
+    contact.setFamilyName(mContact.familyName());
+    contact.setSuffix(mContact.suffix());
 }
 
-void NameWidget::setReadOnly(bool readOnly)
+void NameWidget::slotTextChanged(const QString &text)
 {
-    mNameEdit->setReadOnly(readOnly);
+    mContact.setNameFromString(text);
+
+    Q_EMIT nameChanged(mContact);
 }
+
+void NameWidget::slotOpenNameEditDialog()
+{
+    QPointer<NameEditDialog> dlg = new NameEditDialog(this);
+
+    dlg->setPrefix(mContact.prefix());
+    dlg->setGivenName(mContact.givenName());
+    dlg->setAdditionalName(mContact.additionalName());
+    dlg->setFamilyName(mContact.familyName());
+    dlg->setSuffix(mContact.suffix());
+
+    if (dlg->exec() == QDialog::Accepted) {
+        mContact.setPrefix(dlg->prefix());
+        mContact.setGivenName(dlg->givenName());
+        mContact.setAdditionalName(dlg->additionalName());
+        mContact.setFamilyName(dlg->familyName());
+        mContact.setSuffix(dlg->suffix());
+
+        disconnect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
+        mNameEdit->setText(mContact.assembledName());
+        connect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
+
+        Q_EMIT nameChanged(mContact);
+    }
+
+    delete dlg;
+}
+

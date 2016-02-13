@@ -24,11 +24,10 @@
 #define NAMEWIDGET_H
 
 #include <QWidget>
+
+#include <KContacts/Addressee>
 class KLineEdit;
-namespace KContacts
-{
-class Addressee;
-}
+class QToolButton;
 namespace Akonadi
 {
 class NameWidget : public QWidget
@@ -41,8 +40,18 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
+
+Q_SIGNALS:
+    void nameChanged(const KContacts::Addressee &contact);
+
+private Q_SLOTS:
+    void slotTextChanged(const QString &text);
+    void slotOpenNameEditDialog();
+
 private:
+    KContacts::Addressee mContact;
     KLineEdit *mNameEdit;
+    QToolButton *mButtonEdit;
 };
 }
 #endif // NAMEWIDGET_H

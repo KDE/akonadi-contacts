@@ -21,6 +21,7 @@ set(generalinfoeditor_SRCS
     ../../im/imaddress.cpp
     ../../utils/utils.cpp
     ../../categorieseditwidget.cpp
+    ../../nameeditdialog.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
