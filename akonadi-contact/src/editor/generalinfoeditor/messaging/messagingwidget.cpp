@@ -88,10 +88,9 @@ IMAddress MessagingWidget::imAddress() const
                      mMessagingEdit->text().trimmed(), false);
 }
 
-void MessagingWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
+void MessagingWidget::updateAddRemoveButton(bool addButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);
-    mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
 void MessagingWidget::slotAddMessaging()
@@ -102,4 +101,9 @@ void MessagingWidget::slotAddMessaging()
 void MessagingWidget::slotRemoveMessaging()
 {
     Q_EMIT removeWidget(this);
+}
+
+void MessagingWidget::clearWidget()
+{
+    //TODO
 }

@@ -160,16 +160,20 @@ void MessagingWidgetLister::reconnectWidget(MessagingWidget *w)
     connect(w, &MessagingWidget::removeWidget, this, &MessagingWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
 }
 
-void MessagingWidgetLister::slotAddWidget(QWidget *w)
+void MessagingWidgetLister::slotAddWidget(MessagingWidget *w)
 {
     addWidgetAfterThisWidget(w);
     updateAddRemoveButton();
 }
 
-void MessagingWidgetLister::slotRemoveWidget(QWidget *w)
+void MessagingWidgetLister::slotRemoveWidget(MessagingWidget *w)
 {
-    removeWidget(w);
-    updateAddRemoveButton();
+    if (widgets().count() == 1) {
+        w->clearWidget();
+    } else {
+        removeWidget(w);
+        updateAddRemoveButton();
+    }
 }
 
 void MessagingWidgetLister::updateAddRemoveButton()
@@ -177,21 +181,17 @@ void MessagingWidgetLister::updateAddRemoveButton()
     QList<QWidget *> widgetList = widgets();
     const int numberOfWidget(widgetList.count());
     bool addButtonEnabled = false;
-    bool removeButtonEnabled = false;
     if (numberOfWidget <= widgetsMinimum()) {
         addButtonEnabled = true;
-        removeButtonEnabled = false;
     } else if (numberOfWidget >= widgetsMaximum()) {
         addButtonEnabled = false;
-        removeButtonEnabled = true;
     } else {
         addButtonEnabled = true;
-        removeButtonEnabled = true;
     }
     QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
     for (; wIt != wEnd; ++wIt) {
         MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
-        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
+        w->updateAddRemoveButton(addButtonEnabled);
     }
 }

@@ -38,13 +38,14 @@ public:
     explicit MessagingWidget(QWidget *parent = Q_NULLPTR);
     ~MessagingWidget();
 
-    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
+    void updateAddRemoveButton(bool addButtonEnabled);
     IMAddress imAddress() const;
     void setIMAddress(const IMAddress &address);
 
+    void clearWidget();
 Q_SIGNALS:
-    void addWidget(QWidget *);
-    void removeWidget(QWidget *);
+    void addWidget(MessagingWidget *);
+    void removeWidget(MessagingWidget *);
 
 private Q_SLOTS:
     void slotAddMessaging();
