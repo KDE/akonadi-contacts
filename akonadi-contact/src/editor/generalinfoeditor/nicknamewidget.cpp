@@ -25,6 +25,7 @@
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QLineEdit>
+#include <KContacts/Addressee>
 using namespace Akonadi;
 
 NicknameWidget::NicknameWidget(QWidget *parent)
@@ -49,12 +50,12 @@ NicknameWidget::~NicknameWidget()
 
 void NicknameWidget::loadContact(const KContacts::Addressee &contact)
 {
-    //TODO
+    mNickName->setText(contact.nickName());
 }
 
 void NicknameWidget::storeContact(KContacts::Addressee &contact) const
 {
-    //TODO
+    contact.setNickName(mNickName->text().trimmed());
 }
 
 void NicknameWidget::setReadOnly(bool readOnly)
