@@ -118,11 +118,9 @@ set(akonadicontact_editor_SRCS
     editor/im/improtocols.cpp
     editor/im/imitemdialog.cpp
     editor/imagewidget.cpp
-    editor/imeditwidget.cpp
     editor/kdatepickerpopup.cpp
     editor/nameeditdialog.cpp
     editor/nameeditwidget.cpp
-    editor/phoneeditwidget.cpp
     editor/secrecyeditwidget.cpp
     )
 
