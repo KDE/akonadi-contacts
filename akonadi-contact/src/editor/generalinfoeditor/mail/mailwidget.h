@@ -26,7 +26,7 @@
 #include <QWidget>
 
 #include <KContacts/Email>
-class QLineEdit;
+class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {
@@ -51,7 +51,7 @@ private Q_SLOTS:
 
 private:
     KContacts::Email mEmail;
-    QLineEdit *mMailEdit;
+    KLineEdit *mMailEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
 };

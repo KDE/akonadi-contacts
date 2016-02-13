@@ -25,7 +25,7 @@
 #include <KComboBox>
 #include <KLocalizedString>
 #include <QHBoxLayout>
-#include <QLineEdit>
+#include <KLineEdit>
 #include <QToolButton>
 #include <QDebug>
 
@@ -38,7 +38,8 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->setMargin(0);
 
 
-    mMessagingEdit = new QLineEdit(this);
+    mMessagingEdit = new KLineEdit(this);
+    mMessagingEdit->setTrapReturnKey(true);
     mMessagingEdit->setPlaceholderText(i18n("Add an identifier"));
     mMessagingEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mMessagingEdit);

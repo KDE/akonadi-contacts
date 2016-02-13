@@ -26,7 +26,7 @@
 #include <QWidget>
 
 #include <editor/im/imaddress.h>
-class QLineEdit;
+class KLineEdit;
 class QToolButton;
 class KComboBox;
 namespace Akonadi
@@ -52,7 +52,7 @@ private Q_SLOTS:
     void slotRemoveMessaging();
 
 private:
-    QLineEdit *mMessagingEdit;
+    KLineEdit *mMessagingEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
     KComboBox *mProtocolCombo;

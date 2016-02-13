@@ -23,7 +23,7 @@
 #include "mailwidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
-#include <QLineEdit>
+#include <KLineEdit>
 #include <QToolButton>
 
 using namespace Akonadi;
@@ -35,7 +35,8 @@ MailWidget::MailWidget(QWidget *parent)
     layout->setMargin(0);
 
 
-    mMailEdit = new QLineEdit(this);
+    mMailEdit = new KLineEdit(this);
+    mMailEdit->setTrapReturnKey(true);
     mMailEdit->setPlaceholderText(i18n("Add an email account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);

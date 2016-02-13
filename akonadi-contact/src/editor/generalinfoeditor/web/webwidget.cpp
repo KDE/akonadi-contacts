@@ -22,7 +22,7 @@
 
 #include "webwidget.h"
 #include <QHBoxLayout>
-#include <QLineEdit>
+#include <KLineEdit>
 #include <QToolButton>
 #include <KLocalizedString>
 using namespace Akonadi;
@@ -35,7 +35,8 @@ WebWidget::WebWidget(QWidget *parent)
     layout->setMargin(0);
 
 
-    mWebSiteEdit = new QLineEdit(this);
+    mWebSiteEdit = new KLineEdit(this);
+    mWebSiteEdit->setTrapReturnKey(true);
     mWebSiteEdit->setPlaceholderText(i18n("Add a web site"));
     mWebSiteEdit->setObjectName(QStringLiteral("website"));
     layout->addWidget(mWebSiteEdit);

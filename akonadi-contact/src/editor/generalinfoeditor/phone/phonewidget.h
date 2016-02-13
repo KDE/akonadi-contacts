@@ -24,7 +24,7 @@
 #define PHONEWIDGET_H
 
 #include <QWidget>
-class QLineEdit;
+class KLineEdit;
 class QToolButton;
 namespace KContacts
 {
@@ -53,7 +53,7 @@ private Q_SLOTS:
     void slotRemovePhone();
 
 private:
-    QLineEdit *mPhoneNumberEdit;
+    KLineEdit *mPhoneNumberEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
     PhoneComboBoxType *mPhoneType;

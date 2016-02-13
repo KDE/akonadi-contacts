@@ -24,7 +24,7 @@
 #define WEBWIDGET_H
 
 #include <QWidget>
-class QLineEdit;
+class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {
@@ -46,7 +46,7 @@ private Q_SLOTS:
     void slotAddWeb();
 
 private:
-    QLineEdit *mWebSiteEdit;
+    KLineEdit *mWebSiteEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
 };
