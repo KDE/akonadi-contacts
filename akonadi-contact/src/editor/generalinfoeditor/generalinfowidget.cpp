@@ -40,11 +40,19 @@ using namespace Akonadi;
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QGridLayout *grid = new QGridLayout(this);
+    QHBoxLayout *topLayout = new QHBoxLayout(this);
 
+
+    QVBoxLayout *photoLayout = new QVBoxLayout;
+    topLayout->addLayout(photoLayout);
     mPhotoWidget = new ImageWidget(ImageWidget::Photo);
     mPhotoWidget->setObjectName(QStringLiteral("photowidget"));
-    grid->addWidget(mPhotoWidget, 0, 0, 4, 1);
+    photoLayout->addWidget(mPhotoWidget);
+    photoLayout->addStretch(1);
+
+    QGridLayout *grid = new QGridLayout;
+    topLayout->addLayout(grid);
+
 
     mNameWidget = new NameWidget(this);
     mNameWidget->setObjectName(QStringLiteral("namewidget"));
