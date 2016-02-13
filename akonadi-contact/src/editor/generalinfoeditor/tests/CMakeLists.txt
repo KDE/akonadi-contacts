@@ -20,7 +20,7 @@ set(generalinfoeditor_SRCS
     ../phone/phonecomboboxtype.cpp
     ../../im/imaddress.cpp
     ../../utils/utils.cpp
-    ../../categorieseditwidget.cpp
+    ../categorieseditwidget.cpp
     ../../nameeditdialog.cpp
     )
 

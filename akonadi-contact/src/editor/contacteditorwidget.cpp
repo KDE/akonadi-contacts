@@ -23,17 +23,9 @@
 #include "config-akonadi-contact.h"
 
 #include "personaleditor/personaleditorwidget.h"
-#include "categorieseditwidget.h"
 #include "contacteditorpageplugin.h"
 #include "contactmetadata_p.h"
 #include "dateeditwidget.h"
-#include "displaynameeditwidget.h"
-#include "emaileditwidget.h"
-#include "freebusyeditwidget.h"
-#include "imagewidget.h"
-#include "imeditwidget.h"
-#include "nameeditwidget.h"
-#include "phoneeditwidget.h"
 
 #include <kconfig.h>
 #include <kconfiggroup.h>

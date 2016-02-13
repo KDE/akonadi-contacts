@@ -76,6 +76,7 @@ set(akonadicontact_editor_generalinfo_SRCS
     editor/generalinfoeditor/generalinfowidget.cpp
     editor/generalinfoeditor/namewidget.cpp
     editor/generalinfoeditor/nicknamewidget.cpp
+    editor/generalinfoeditor/categorieseditwidget.cpp
     ${akonadicontact_editor_generalinfo_messaging_SRCS}
     ${akonadicontact_editor_generalinfo_phone_SRCS}
     ${akonadicontact_editor_generalinfo_web_SRCS}
@@ -105,7 +106,6 @@ set(akonadicontact_editor_SRCS
     ${akonadicontact_personal_editor_SRCS}
     ${akonadicontact_editor_utils_SRCS}
     ${akonadicontact_business_editor_SRCS}
-    editor/categorieseditwidget.cpp
     editor/contacteditorwidget.cpp
     editor/dateeditwidget.cpp
     editor/displaynameeditwidget.cpp

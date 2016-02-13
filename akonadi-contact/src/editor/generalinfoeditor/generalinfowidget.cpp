@@ -32,7 +32,7 @@
 #include <editor/generalinfoeditor/messaging/messaginglistwidget.h>
 #include <editor/generalinfoeditor/mail/maillistwidget.h>
 #include <editor/generalinfoeditor/web/weblistwidget.h>
-#include <editor/categorieseditwidget.h>
+#include "categorieseditwidget.h"
 #include <editor/imagewidget.h>
 
 using namespace Akonadi;
