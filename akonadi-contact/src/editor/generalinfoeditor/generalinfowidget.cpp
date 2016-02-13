@@ -25,6 +25,7 @@
 #include "nicknamewidget.h"
 #include <QGridLayout>
 #include <QLabel>
+#include <QDebug>
 #include <KLocalizedString>
 #include <QLineEdit>
 #include <editor/generalinfoeditor/phone/phonelistwidget.h>
@@ -105,6 +106,7 @@ void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
 
 void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
 {
+    qDebug()<<" void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const";
     mPhoneListWidget->storeContact(contact);
     mWebListWidget->storeContact(contact);
     mMessagingListWidget->storeContact(contact);

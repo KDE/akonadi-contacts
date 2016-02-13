@@ -121,14 +121,18 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
             }
         }
     }
-    setNumberOfShownWidgetsTo(imaddresses.count());
-    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
-    for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-        MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
-        w->setIMAddress(imaddresses.at(i));
+    if (imaddresses.isEmpty()) {
+        setNumberOfShownWidgetsTo(1);
+    } else {
+        setNumberOfShownWidgetsTo(imaddresses.count());
+        QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+        QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+        for (int i = 0; wIt != wEnd; ++wIt, ++i) {
+            MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
+            w->setIMAddress(imaddresses.at(i));
+        }
     }
-
+    //TODO store really
     //TODO add real support for IM vcard4
 }
 
@@ -141,7 +145,6 @@ void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
         MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
         imaddresses << w->imAddress();
     }
-
 }
 
 QWidget *MessagingWidgetLister::createWidget(QWidget *parent)

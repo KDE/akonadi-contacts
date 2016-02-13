@@ -41,12 +41,16 @@ PhoneWidgetLister::~PhoneWidgetLister()
 void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
     const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
-    setNumberOfShownWidgetsTo(phoneNumbers.count());
-    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
-    for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
-        w->loadPhone(phoneNumbers.at(i));
+    if (phoneNumbers.isEmpty()) {
+        setNumberOfShownWidgetsTo(1);
+    } else {
+        setNumberOfShownWidgetsTo(phoneNumbers.count());
+        QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+        QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+        for (int i = 0; wIt != wEnd; ++wIt, ++i) {
+            PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
+            w->loadPhone(phoneNumbers.at(i));
+        }
     }
 }
 

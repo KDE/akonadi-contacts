@@ -41,12 +41,16 @@ MailWidgetLister::~MailWidgetLister()
 void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
     KContacts::Email::List mailList = contact.emailList();
-    setNumberOfShownWidgetsTo(mailList.count());
-    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
-    for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-        MailWidget *w = qobject_cast<MailWidget *>(*wIt);
-        w->setMail(mailList.at(i));
+    if (mailList.isEmpty()) {
+        setNumberOfShownWidgetsTo(1);
+    } else {
+        setNumberOfShownWidgetsTo(mailList.count());
+        QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
+        QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+        for (int i = 0; wIt != wEnd; ++wIt, ++i) {
+            MailWidget *w = qobject_cast<MailWidget *>(*wIt);
+            w->setMail(mailList.at(i));
+        }
     }
 }
 
