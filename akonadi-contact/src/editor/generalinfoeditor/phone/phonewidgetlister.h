@@ -45,8 +45,8 @@ protected:
     QWidget *createWidget(QWidget *) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void slotAddWidget(QWidget *w);
-    void slotRemoveWidget(QWidget *w);
+    void slotAddWidget(PhoneWidget *w);
+    void slotRemoveWidget(PhoneWidget *w);
 
 private:
     void reconnectWidget(PhoneWidget *w);

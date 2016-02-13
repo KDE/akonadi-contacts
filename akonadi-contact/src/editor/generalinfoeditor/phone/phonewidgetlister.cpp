@@ -82,16 +82,20 @@ void PhoneWidgetLister::reconnectWidget(PhoneWidget *w)
     connect(w, &PhoneWidget::removeWidget, this, &PhoneWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
 }
 
-void PhoneWidgetLister::slotAddWidget(QWidget *w)
+void PhoneWidgetLister::slotAddWidget(PhoneWidget *w)
 {
     addWidgetAfterThisWidget(w);
     updateAddRemoveButton();
 }
 
-void PhoneWidgetLister::slotRemoveWidget(QWidget *w)
+void PhoneWidgetLister::slotRemoveWidget(PhoneWidget *w)
 {
-    removeWidget(w);
-    updateAddRemoveButton();
+    if (widgets().count() == 1) {
+        w->clearWidget();
+    } else {
+        removeWidget(w);
+        updateAddRemoveButton();
+    }
 }
 
 void PhoneWidgetLister::updateAddRemoveButton()
@@ -99,21 +103,17 @@ void PhoneWidgetLister::updateAddRemoveButton()
     QList<QWidget *> widgetList = widgets();
     const int numberOfWidget(widgetList.count());
     bool addButtonEnabled = false;
-    bool removeButtonEnabled = false;
     if (numberOfWidget <= widgetsMinimum()) {
         addButtonEnabled = true;
-        removeButtonEnabled = false;
     } else if (numberOfWidget >= widgetsMaximum()) {
         addButtonEnabled = false;
-        removeButtonEnabled = true;
     } else {
         addButtonEnabled = true;
-        removeButtonEnabled = true;
     }
     QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
     for (; wIt != wEnd; ++wIt) {
         PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
-        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
+        w->updateAddRemoveButton(addButtonEnabled);
     }
 }

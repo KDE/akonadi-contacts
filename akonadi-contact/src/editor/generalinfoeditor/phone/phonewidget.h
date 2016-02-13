@@ -40,12 +40,13 @@ public:
     explicit PhoneWidget(QWidget *parent = Q_NULLPTR);
     ~PhoneWidget();
 
-    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
+    void updateAddRemoveButton(bool addButtonEnabled);
     void loadPhone(const KContacts::PhoneNumber &number);
     KContacts::PhoneNumber storePhone();
+    void clearWidget();
 Q_SIGNALS:
-    void addWidget(QWidget *);
-    void removeWidget(QWidget *);
+    void addWidget(PhoneWidget *);
+    void removeWidget(PhoneWidget *);
 
 private Q_SLOTS:
     void slotAddPhone();

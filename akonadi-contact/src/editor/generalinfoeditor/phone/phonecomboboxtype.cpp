@@ -62,6 +62,11 @@ KContacts::PhoneNumber::Type PhoneComboBoxType::type() const
     return mType;
 }
 
+void PhoneComboBoxType::clear()
+{
+    setCurrentIndex(0);
+}
+
 void PhoneComboBoxType::update()
 {
     clear();
