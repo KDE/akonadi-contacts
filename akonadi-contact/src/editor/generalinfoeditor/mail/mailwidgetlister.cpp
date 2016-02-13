@@ -45,8 +45,9 @@ void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
         setNumberOfShownWidgetsTo(1);
     } else {
         setNumberOfShownWidgetsTo(mailList.count());
-        QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-        QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+        const QList<QWidget *> widgetList = widgets();
+        auto wIt = widgetList.constBegin();
+        auto wEnd = widgetList.constEnd();
         for (int i = 0; wIt != wEnd; ++wIt, ++i) {
             MailWidget *w = qobject_cast<MailWidget *>(*wIt);
             w->setMail(mailList.at(i));
@@ -56,11 +57,10 @@ void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
 
 void MailWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
+    const QList<QWidget *> widgetList = widgets();
     KContacts::Email::List emailList;
-    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
-    for (; wIt != wEnd; ++wIt) {
-        MailWidget *w = qobject_cast<MailWidget *>(*wIt);
+    for (QWidget *widget : widgetList) {
+        MailWidget *w = qobject_cast<MailWidget *>(widget);
         KContacts::Email newEmail = w->email();
         if (newEmail.isValid()) {
             emailList << newEmail;
@@ -100,7 +100,7 @@ void MailWidgetLister::slotRemoveWidget(MailWidget *w)
 
 void MailWidgetLister::updateAddRemoveButton()
 {
-    QList<QWidget *> widgetList = widgets();
+    const QList<QWidget *> widgetList = widgets();
     const int numberOfWidget(widgetList.count());
     bool addButtonEnabled = false;
     if (numberOfWidget <= widgetsMinimum()) {
@@ -110,10 +110,9 @@ void MailWidgetLister::updateAddRemoveButton()
     } else {
         addButtonEnabled = true;
     }
-    QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
-    for (; wIt != wEnd; ++wIt) {
-        MailWidget *w = qobject_cast<MailWidget *>(*wIt);
+
+    for (QWidget *widget : widgetList) {
+        MailWidget *w = qobject_cast<MailWidget *>(widget);
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }

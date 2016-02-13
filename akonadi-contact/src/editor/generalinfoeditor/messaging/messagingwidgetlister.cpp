@@ -125,8 +125,9 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
         setNumberOfShownWidgetsTo(1);
     } else {
         setNumberOfShownWidgetsTo(imaddresses.count());
-        QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-        QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+        const QList<QWidget *> widgetList = widgets();
+        auto wIt = widgetList.constBegin();
+        auto wEnd = widgetList.constEnd();
         for (int i = 0; wIt != wEnd; ++wIt, ++i) {
             MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
             w->setIMAddress(imaddresses.at(i));
@@ -139,10 +140,9 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
 void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
     IMAddress::List imaddresses;
-    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
-    for (; wIt != wEnd; ++wIt) {
-        MessagingWidget *w = qobject_cast<MessagingWidget *>(*wIt);
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        MessagingWidget *w = qobject_cast<MessagingWidget *>(widget);
         imaddresses << w->imAddress();
     }
 }

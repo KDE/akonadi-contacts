@@ -45,8 +45,9 @@ void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
         setNumberOfShownWidgetsTo(1);
     } else {
         setNumberOfShownWidgetsTo(phoneNumbers.count());
-        QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-        QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
+        const QList<QWidget *> widgetList = widgets();
+        auto wIt = widgetList.constBegin();
+        auto wEnd = widgetList.constEnd();
         for (int i = 0; wIt != wEnd; ++wIt, ++i) {
             PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
             w->loadPhone(phoneNumbers.at(i));
@@ -57,10 +58,9 @@ void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
 void PhoneWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
     KContacts::PhoneNumber::List phoneNumbers;
-    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
-    for (; wIt != wEnd; ++wIt) {
-        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        PhoneWidget *w = qobject_cast<PhoneWidget *>(widget);
         KContacts::PhoneNumber number = w->storePhone();
         if (!number.isEmpty()) {
             phoneNumbers << number;
@@ -100,7 +100,7 @@ void PhoneWidgetLister::slotRemoveWidget(PhoneWidget *w)
 
 void PhoneWidgetLister::updateAddRemoveButton()
 {
-    QList<QWidget *> widgetList = widgets();
+    const QList<QWidget *> widgetList = widgets();
     const int numberOfWidget(widgetList.count());
     bool addButtonEnabled = false;
     if (numberOfWidget <= widgetsMinimum()) {
@@ -110,10 +110,9 @@ void PhoneWidgetLister::updateAddRemoveButton()
     } else {
         addButtonEnabled = true;
     }
-    QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
-    for (; wIt != wEnd; ++wIt) {
-        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
+
+    for (QWidget *widget : widgetList) {
+        PhoneWidget *w = qobject_cast<PhoneWidget *>(widget);
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }
