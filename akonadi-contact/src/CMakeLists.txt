@@ -100,6 +100,7 @@ set(akonadicontact_personal_editor_SRCS
 
 set(akonadicontact_business_editor_SRCS
     editor/businesseditor/businesseditorwidget.cpp
+    editor/businesseditor/freebusyeditwidget.cpp
     )
 
 set(akonadicontact_editor_SRCS
@@ -110,7 +111,6 @@ set(akonadicontact_editor_SRCS
     editor/dateeditwidget.cpp
     editor/displaynameeditwidget.cpp
     editor/emaileditwidget.cpp
-    editor/freebusyeditwidget.cpp
     editor/im/imdelegate.cpp
     editor/im/imeditordialog.cpp
     editor/im/imaddress.cpp
