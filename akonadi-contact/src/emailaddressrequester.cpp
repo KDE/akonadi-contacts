@@ -54,7 +54,9 @@ void EmailAddressRequester::Private::slotAddressBook()
     }
 
     QStringList addressList;
-    foreach (const Akonadi::EmailAddressSelection &selection, dlg.selectedAddresses()) {
+    const auto selectedAddresses = dlg.selectedAddresses();
+    addressList.reserve(selectedAddresses.size());
+    for (const Akonadi::EmailAddressSelection &selection : selectedAddresses) {
         addressList << selection.quotedEmail();
     }
 
