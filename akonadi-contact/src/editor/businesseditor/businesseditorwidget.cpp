@@ -28,7 +28,7 @@
 #include <QLabel>
 
 #include "freebusyeditwidget.h"
-#include <editor/imagewidget.h>
+#include <editor/widgets/imagewidget.h>
 
 #include <KContacts/Addressee>
 

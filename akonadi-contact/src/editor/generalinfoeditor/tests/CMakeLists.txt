@@ -14,7 +14,7 @@ set(generalinfoeditor_SRCS
     ../messaging/messaginglistwidget.cpp
     ../messaging/messagingwidget.cpp
     ../messaging/messagingwidgetlister.cpp
-    ../../imagewidget.cpp
+    ../../widgets/imagewidget.cpp
     ../namewidget.cpp
     ../nicknamewidget.cpp
     ../phone/phonecomboboxtype.cpp

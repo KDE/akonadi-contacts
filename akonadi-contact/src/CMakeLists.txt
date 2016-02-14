@@ -113,7 +113,7 @@ set(akonadicontact_editor_SRCS
     editor/emaileditwidget.cpp
     editor/im/imaddress.cpp
     editor/im/improtocols.cpp
-    editor/imagewidget.cpp
+    editor/widgets/imagewidget.cpp
     editor/kdatepickerpopup.cpp
     editor/nameeditdialog.cpp
     editor/nameeditwidget.cpp
