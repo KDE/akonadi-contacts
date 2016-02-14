@@ -27,7 +27,7 @@
 using namespace Akonadi;
 
 MailWidgetLister::MailWidgetLister(QWidget *parent)
-    : KWidgetLister(1, 4, parent)
+    : KWidgetLister(1, 8, parent)
 {
     setNumberOfShownWidgetsTo(widgetsMinimum());
     updateAddRemoveButton();
