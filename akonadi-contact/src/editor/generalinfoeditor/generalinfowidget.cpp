@@ -42,7 +42,6 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 {
     QHBoxLayout *topLayout = new QHBoxLayout(this);
 
-
     QVBoxLayout *photoLayout = new QVBoxLayout;
     topLayout->addLayout(photoLayout);
     mPhotoWidget = new ImageWidget(ImageWidget::Photo);
@@ -50,34 +49,36 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     photoLayout->addWidget(mPhotoWidget);
     photoLayout->addStretch(1);
 
-    QGridLayout *grid = new QGridLayout;
-    topLayout->addLayout(grid);
+    QVBoxLayout *leftLayout = new QVBoxLayout;
+    topLayout->addLayout(leftLayout);
 
+    QVBoxLayout *rightLayout = new QVBoxLayout;
+    topLayout->addLayout(rightLayout);
 
     mNameWidget = new NameWidget(this);
     mNameWidget->setObjectName(QStringLiteral("namewidget"));
-    grid->addWidget(mNameWidget, 0, 1);
+    leftLayout->addWidget(mNameWidget);
 
     mNickNameWidget = new NicknameWidget(this);
     mNickNameWidget->setObjectName(QStringLiteral("nicknamewidget"));
-    grid->addWidget(mNickNameWidget, 0, 2);
+    rightLayout->addWidget(mNickNameWidget);
 
     mPhoneListWidget = new PhoneListWidget(this);
     mPhoneListWidget->setObjectName(QStringLiteral("phonelistwidget"));
-    grid->addWidget(mPhoneListWidget, 1, 1);
+    leftLayout->addWidget(mPhoneListWidget);
 
     mWebListWidget = new WebListWidget(this);
     mWebListWidget->setObjectName(QStringLiteral("weblistwidget"));
-    grid->addWidget(mWebListWidget, 2, 1);
+    leftLayout->addWidget(mWebListWidget);
 
     mMessagingListWidget = new MessagingListWidget(this);
     mMessagingListWidget->setObjectName(QStringLiteral("messaginglistwidget"));
-    grid->addWidget(mMessagingListWidget, 2, 2);
+    rightLayout->addWidget(mMessagingListWidget);
 
 
     mMailListWidget = new MailListWidget(this);
     mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
-    grid->addWidget(mMailListWidget, 1, 2);
+    rightLayout->addWidget(mMailListWidget);
 
     QWidget *categoryWidget = new QWidget(this);
     QVBoxLayout *categoryWidgetLayout = new QVBoxLayout(categoryWidget);
@@ -89,9 +90,9 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mCategoriesWidget = new CategoriesEditWidget(this);
     mCategoriesWidget->setObjectName(QStringLiteral("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);
-    grid->addWidget(categoryWidget, 3, 1);
-
-    grid->setRowStretch(4, 1);
+    leftLayout->addWidget(categoryWidget);
+    leftLayout->addStretch(1);
+    rightLayout->addStretch(1);
 }
 
 GeneralInfoWidget::~GeneralInfoWidget()
