@@ -25,6 +25,7 @@
 #include <QHBoxLayout>
 #include <KLineEdit>
 #include <QToolButton>
+#include <QComboBox>
 
 using namespace Akonadi;
 MailWidget::MailWidget(QWidget *parent)
@@ -41,6 +42,9 @@ MailWidget::MailWidget(QWidget *parent)
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);
 
+    mMailType = new QComboBox(this);
+    mMailType->setObjectName(QStringLiteral("mailtype"));
+    layout->addWidget(mMailType);
 
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));

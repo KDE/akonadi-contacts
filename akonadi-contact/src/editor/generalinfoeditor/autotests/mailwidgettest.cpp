@@ -25,6 +25,7 @@
 #include <QTest>
 #include <QLineEdit>
 #include <QToolButton>
+#include <QComboBox>
 
 MailWidgetTest::MailWidgetTest(QObject *parent)
     : QObject(parent)
@@ -42,11 +43,15 @@ void MailWidgetTest::shouldHaveDefaultValue()
     Akonadi::MailWidget w;
     QLineEdit *line = w.findChild<QLineEdit *>(QStringLiteral("mailedit"));
     QVERIFY(line);
+    QVERIFY(line->text().isEmpty());
     QToolButton *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
     QVERIFY(addButton);
 
     QToolButton *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
     QVERIFY(removeButton);
+
+    QComboBox *mailtype = w.findChild<QComboBox *>(QStringLiteral("mailtype"));
+    QVERIFY(mailtype);
 }
 
 QTEST_MAIN(MailWidgetTest)
