@@ -41,7 +41,7 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     mMessagingEdit = new KLineEdit(this);
     mMessagingEdit->setTrapReturnKey(true);
     mMessagingEdit->setPlaceholderText(i18n("Add an identifier"));
-    mMessagingEdit->setObjectName(QStringLiteral("phonenumber"));
+    mMessagingEdit->setObjectName(QStringLiteral("messaginglineedit"));
     layout->addWidget(mMessagingEdit);
 
 

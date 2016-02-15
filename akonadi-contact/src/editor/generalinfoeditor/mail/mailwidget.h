@@ -52,6 +52,7 @@ private Q_SLOTS:
 
 private:
     KContacts::Email mEmail;
+    QString mOldType;
     KLineEdit *mMailEdit;
     QComboBox *mMailType;
     QToolButton *mAddButton;

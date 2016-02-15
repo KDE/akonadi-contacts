@@ -44,6 +44,10 @@ MailWidget::MailWidget(QWidget *parent)
 
     mMailType = new QComboBox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
+    mMailType->addItem(i18n("Select..."), QString());
+    mMailType->addItem(i18n("Home"), QStringLiteral("HOME"));
+    mMailType->addItem(i18n("Work"), QStringLiteral("WORK"));
+    mMailType->addItem(i18n("Other"), QStringLiteral("OTHER"));
     layout->addWidget(mMailType);
 
     mAddButton = new QToolButton(this);
@@ -57,7 +61,6 @@ MailWidget::MailWidget(QWidget *parent)
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MailWidget::slotRemoveMail);
     layout->addWidget(mRemoveButton);
-    //TODO add type.
 }
 
 MailWidget::~MailWidget()
@@ -69,7 +72,7 @@ void MailWidget::clearWidget()
 {
     mMailEdit->clear();
     mEmail = KContacts::Email();
-    //TODO clear type too.
+    mMailType->setCurrentIndex(0);
 }
 
 void MailWidget::updateAddRemoveButton(bool addButtonEnabled)
@@ -81,6 +84,8 @@ void MailWidget::setMail(const KContacts::Email &email)
 {
     mEmail = email;
     mMailEdit->setText(email.mail());
+    //TODO store old type
+    //mOldType =
     //TODO look at type.
     //TODO look at preference
 }
@@ -88,7 +93,17 @@ void MailWidget::setMail(const KContacts::Email &email)
 KContacts::Email MailWidget::email()
 {
     mEmail.setEmail(mMailEdit->text());
-    //TODO setType too.
+    QMap<QString, QStringList> parameters = mEmail.parameters();
+    QStringList value = parameters.value(QStringLiteral("TYPE"));
+    const QString newType = mMailType->currentData().toString();
+    if (!newType.isEmpty()) {
+        if (!value.contains(newType)) {
+            value.append(newType);
+        }
+        //TODO remove old type.
+        value.removeAll(mOldType);
+        parameters.insert(QStringLiteral("TYPE"), value);
+    }
     return mEmail;
 }
 
