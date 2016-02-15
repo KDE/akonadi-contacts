@@ -28,7 +28,7 @@
 #include <QLineEdit>
 #include <KLineEdit>
 #include <QToolButton>
-#include <editor/nameeditdialog.h>
+#include "nameeditdialog.h"
 
 using namespace Akonadi;
 
