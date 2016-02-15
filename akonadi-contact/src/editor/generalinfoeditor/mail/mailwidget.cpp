@@ -84,6 +84,7 @@ void MailWidget::setMail(const KContacts::Email &email)
 KContacts::Email MailWidget::email()
 {
     mEmail.setEmail(mMailEdit->text());
+    //TODO setType too.
     return mEmail;
 }
 
