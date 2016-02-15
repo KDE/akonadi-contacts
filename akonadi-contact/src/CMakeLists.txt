@@ -96,6 +96,8 @@ set(akonadicontact_addresslocation_editor_SRCS
 
 set(akonadicontact_personal_editor_SRCS
     editor/personaleditor/personaleditorwidget.cpp
+    editor/personaleditor/dateeditwidget.cpp
+    editor/personaleditor/kdatepickerpopup.cpp
     )
 
 set(akonadicontact_business_editor_SRCS
@@ -108,12 +110,10 @@ set(akonadicontact_editor_SRCS
     ${akonadicontact_editor_utils_SRCS}
     ${akonadicontact_business_editor_SRCS}
     editor/contacteditorwidget.cpp
-    editor/dateeditwidget.cpp
     editor/displaynameeditwidget.cpp
     editor/im/imaddress.cpp
     editor/im/improtocols.cpp
     editor/widgets/imagewidget.cpp
-    editor/kdatepickerpopup.cpp
     editor/nameeditdialog.cpp
     )
 

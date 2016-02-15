@@ -28,7 +28,7 @@
 #include <QGridLayout>
 #include <QLabel>
 
-#include <editor/dateeditwidget.h>
+#include "dateeditwidget.h"
 
 #include <KContacts/Addressee>
 
