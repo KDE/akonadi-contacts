@@ -110,7 +110,6 @@ set(akonadicontact_editor_SRCS
     editor/contacteditorwidget.cpp
     editor/dateeditwidget.cpp
     editor/displaynameeditwidget.cpp
-    editor/emaileditwidget.cpp
     editor/im/imaddress.cpp
     editor/im/improtocols.cpp
     editor/widgets/imagewidget.cpp
@@ -288,7 +287,6 @@ install( FILES
     )
 
 if (BUILD_TESTING)
-    add_subdirectory(editor/autotests)
     add_subdirectory(editor/addresseditor/autotests/)
     add_subdirectory(editor/addresseditor/tests)
     add_subdirectory(editor/generalinfoeditor/autotests/)
