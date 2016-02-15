@@ -37,83 +37,91 @@ using namespace Akonadi;
 BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QGridLayout *generalLayout = new QGridLayout( this );
+    QHBoxLayout *topLayout = new QHBoxLayout(this);
+
+    QVBoxLayout *logoLayout = new QVBoxLayout;
+    topLayout->addLayout(logoLayout);
 
     // setup general group box
     mLogoWidget = new ImageWidget( ImageWidget::Logo );
-    generalLayout->addWidget( mLogoWidget, 0, 0, 9, 1, Qt::AlignTop );
+    logoLayout->addWidget( mLogoWidget, Qt::AlignTop );
+    logoLayout->addStretch(0);
+
+
+    QGridLayout *generalLayout = new QGridLayout;
+    topLayout->addLayout(generalLayout);
 
     QLabel *label = new QLabel( i18nc( "@label The organization of a contact", "Organization:" ) );
-    generalLayout->addWidget( label, 0, 1 );
+    generalLayout->addWidget( label, 0, 0 );
 
     mOrganizationWidget = new KLineEdit;
     mOrganizationWidget->setTrapReturnKey(true);
     mOrganizationWidget->setPlaceholderText(i18n("Add organization's name"));
     label->setBuddy( mOrganizationWidget );
-    generalLayout->addWidget( mOrganizationWidget, 1, 1 );
+    generalLayout->addWidget( mOrganizationWidget, 1, 0 );
 
     label = new QLabel( i18nc( "@label The profession of a contact", "Profession:" ) );
-    generalLayout->addWidget( label, 0, 2 );
+    generalLayout->addWidget( label, 0, 1 );
 
     mProfessionWidget = new KLineEdit;
     mProfessionWidget->setPlaceholderText(i18n("Add profession"));
     mProfessionWidget->setTrapReturnKey(true);
     label->setBuddy( mProfessionWidget );
-    generalLayout->addWidget( mProfessionWidget, 1, 2 );
+    generalLayout->addWidget( mProfessionWidget, 1, 1 );
 
     label = new QLabel( i18nc( "@label The title of a contact", "Title:" ) );
-    generalLayout->addWidget( label, 3, 1 );
+    generalLayout->addWidget( label, 3, 0 );
 
     mTitleWidget = new KLineEdit;
     mTitleWidget->setPlaceholderText(i18n("Add the title"));
     mTitleWidget->setTrapReturnKey(true);
     label->setBuddy( mTitleWidget );
-    generalLayout->addWidget( mTitleWidget , 4, 1 );
+    generalLayout->addWidget( mTitleWidget , 4, 0 );
 
     label = new QLabel( i18nc( "@label The department of a contact", "Department:" ) );
-    generalLayout->addWidget( label, 3, 2 );
+    generalLayout->addWidget( label, 3, 1 );
 
     mDepartmentWidget = new KLineEdit;
     mDepartmentWidget->setPlaceholderText(i18n("Add the department"));
     mDepartmentWidget->setTrapReturnKey(true);
     label->setBuddy( mDepartmentWidget );
-    generalLayout->addWidget( mDepartmentWidget, 4, 2 );
+    generalLayout->addWidget( mDepartmentWidget, 4, 1 );
 
     label = new QLabel( i18nc( "@label The office of a contact", "Office:" ) );
-    generalLayout->addWidget( label, 5, 1 );
+    generalLayout->addWidget( label, 5, 0 );
 
     mOfficeWidget = new KLineEdit;
     mOfficeWidget->setTrapReturnKey(true);
     mOfficeWidget->setPlaceholderText(i18n("Add the office"));
 
     label->setBuddy( mOfficeWidget );
-    generalLayout->addWidget( mOfficeWidget, 6, 1 );
+    generalLayout->addWidget( mOfficeWidget, 6, 0 );
 
     label = new QLabel( i18nc( "@label The manager's name of a contact", "Manager's name:" ) );
-    generalLayout->addWidget( label, 5, 2 );
+    generalLayout->addWidget( label, 5, 1 );
 
     mManagerWidget = new KLineEdit;
     mManagerWidget->setPlaceholderText(i18n("Add manager's name"));
     mManagerWidget->setTrapReturnKey(true);
     label->setBuddy( mManagerWidget );
-    generalLayout->addWidget( mManagerWidget, 6, 2 );
+    generalLayout->addWidget( mManagerWidget, 6, 1 );
 
     label = new QLabel( i18nc( "@label The assistant's name of a contact", "Assistant's name:" ) );
-    generalLayout->addWidget( label, 7, 1 );
+    generalLayout->addWidget( label, 7, 0 );
 
     mAssistantWidget = new KLineEdit;
     mAssistantWidget->setPlaceholderText(i18n("Add assistant's name"));
     mAssistantWidget->setTrapReturnKey(true);
     label->setBuddy( mAssistantWidget );
-    generalLayout->addWidget( mAssistantWidget, 8, 1 );
+    generalLayout->addWidget( mAssistantWidget, 8, 0 );
 
     // setup groupware group box
     label = new QLabel( i18nc( "@label The free/busy information of a contact", "Free/Busy:" ) );
-    generalLayout->addWidget( label, 7, 2 );
+    generalLayout->addWidget( label, 7, 1 );
 
     mFreeBusyWidget = new FreeBusyEditWidget;
     label->setBuddy( mFreeBusyWidget );
-    generalLayout->addWidget( mFreeBusyWidget, 8, 2 );
+    generalLayout->addWidget( mFreeBusyWidget, 8, 1 );
     generalLayout->setRowStretch( 9, 1 );
     connect(mOrganizationWidget, &KLineEdit::textChanged, this, &BusinessEditorWidget::organizationChanged);
 }
