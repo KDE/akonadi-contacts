@@ -26,7 +26,6 @@
 #include "customfieldmanager_p.h"
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"
-
 #include "editor/im/improtocols.h"
 #include <KIOCore/kio/transferjob.h>
 #include <collection.h>
@@ -317,6 +316,8 @@ void ContactViewer::setContactFormatter(AbstractContactFormatter *formatter)
         d->mContactFormatter = d->mStandardContactFormatter;
     } else {
         d->mContactFormatter = formatter;
+        delete d->mStandardContactFormatter;
+        d->mStandardContactFormatter = 0;
     }
 }
 
