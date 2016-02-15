@@ -106,5 +106,6 @@ void MessagingWidget::slotRemoveMessaging()
 
 void MessagingWidget::clearWidget()
 {
-    //TODO
+    mProtocolCombo->setCurrentIndex(0);
+    mMessagingEdit->clear();
 }
