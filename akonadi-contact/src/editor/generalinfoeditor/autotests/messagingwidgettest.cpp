@@ -21,6 +21,7 @@
 
 
 #include "messagingwidgettest.h"
+#include "../messaging/messagingwidget.h"
 #include <QTest>
 
 MessagingWidgetTest::MessagingWidgetTest(QObject *parent)
@@ -31,6 +32,12 @@ MessagingWidgetTest::MessagingWidgetTest(QObject *parent)
 
 MessagingWidgetTest::~MessagingWidgetTest()
 {
+
+}
+
+void MessagingWidgetTest::shouldHaveDefaultValues()
+{
+    Akonadi::MessagingWidget w;
 
 }
 

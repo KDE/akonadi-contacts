@@ -28,7 +28,7 @@
 #include <editor/im/imaddress.h>
 class KLineEdit;
 class QToolButton;
-class KComboBox;
+class QComboBox;
 namespace Akonadi
 {
 class MessagingWidget : public QWidget
@@ -55,7 +55,7 @@ private:
     KLineEdit *mMessagingEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
-    KComboBox *mProtocolCombo;
+    QComboBox *mProtocolCombo;
 };
 }
 #endif // MESSAGINGWIDGET_H

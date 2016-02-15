@@ -30,6 +30,8 @@ class MessagingWidgetTest : public QObject
 public:
     explicit MessagingWidgetTest(QObject *parent = Q_NULLPTR);
     ~MessagingWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // MESSAGINGWIDGETTEST_H
