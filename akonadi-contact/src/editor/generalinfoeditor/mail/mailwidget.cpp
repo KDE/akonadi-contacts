@@ -100,8 +100,10 @@ KContacts::Email MailWidget::email()
         if (!value.contains(newType)) {
             value.append(newType);
         }
-        //TODO remove old type.
-        value.removeAll(mOldType);
+        if (!mOldType.isEmpty()) {
+            //TODO remove old type.
+            value.removeAll(mOldType);
+        }
         parameters.insert(QStringLiteral("TYPE"), value);
     }
     return mEmail;
