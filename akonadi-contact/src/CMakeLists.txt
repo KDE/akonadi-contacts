@@ -116,7 +116,6 @@ set(akonadicontact_editor_SRCS
     editor/widgets/imagewidget.cpp
     editor/kdatepickerpopup.cpp
     editor/nameeditdialog.cpp
-    editor/secrecyeditwidget.cpp
     )
 
 set(akonadicontact_LIB_SRC
