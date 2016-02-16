@@ -1,4 +1,4 @@
-set(phonewidgettest_SRCS phonewidgettest.cpp ../phone/phonewidget.cpp ../phone/phonecomboboxtype.cpp ../../widgets/akonadicontactcombobox.cpp)
+set(phonewidgettest_SRCS phonewidgettest.cpp ../phone/phonewidget.cpp ../phone/phonecomboboxtype.cpp ../../widgets/akonadicontactcombobox.cpp ../phone/phonetypedialog.cpp)
 add_executable(phonewidgettest ${phonewidgettest_SRCS})
 add_test(phonewidgettest phonewidgettest)
 ecm_mark_as_test(phonewidgettest)

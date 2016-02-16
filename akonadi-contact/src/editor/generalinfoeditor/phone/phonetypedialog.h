@@ -21,13 +21,38 @@
 #ifndef PHONETYPEDIALOG_H
 #define PHONETYPEDIALOG_H
 
+#include <QDialog>
+#include <KContacts/PhoneNumber>
+class QButtonGroup;
+class QCheckBox;
+
 namespace Akonadi
 {
-class PhoneTypeDialog
+/**
+ * A dialog for editing phone number types.
+ */
+class PhoneTypeDialog : public QDialog
 {
 public:
-    PhoneTypeDialog();
-    ~PhoneTypeDialog();
+    /**
+     * Creates a new phone type dialog.
+     *
+     * @param type The initial type of the phone number.
+     * @param parent The parent widget.
+     */
+    explicit PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent = Q_NULLPTR);
+
+    /**
+     * Returns the selected type.
+     */
+    KContacts::PhoneNumber::Type type() const;
+
+private:
+    KContacts::PhoneNumber::Type mType;
+    KContacts::PhoneNumber::TypeList mTypeList;
+
+    QButtonGroup *mGroup;
+    QCheckBox *mPreferredBox;
 };
 }
 #endif // PHONETYPEDIALOG_H

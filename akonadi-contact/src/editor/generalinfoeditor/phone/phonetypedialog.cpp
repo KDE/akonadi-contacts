@@ -20,15 +20,80 @@
 */
 
 #include "phonetypedialog.h"
+#include <KLocalizedString>
+
+#include <QButtonGroup>
+#include <QCheckBox>
+#include <QDialogButtonBox>
+#include <QGroupBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace Akonadi;
 
-PhoneTypeDialog::PhoneTypeDialog()
+PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent)
+    : QDialog(parent)
+    , mType(type)
 {
+    setWindowTitle(i18n("Edit Phone Number"));
 
+    QVBoxLayout *layout = new QVBoxLayout(this);
+
+    mPreferredBox = new QCheckBox(i18n("This is the preferred phone number"), this);
+    layout->addWidget(mPreferredBox);
+
+    QGroupBox *box  = new QGroupBox(i18n("Types"), this);
+    layout->addWidget(box);
+
+    QGridLayout *buttonLayout = new QGridLayout(box);
+
+    // fill widgets
+    mTypeList = KContacts::PhoneNumber::typeList();
+    mTypeList.removeAll(KContacts::PhoneNumber::Pref);
+    KContacts::PhoneNumber::TypeList::ConstIterator it;
+    mGroup = new QButtonGroup(box);
+    mGroup->setExclusive(false);
+    int row, column, counter;
+    row = column = counter = 0;
+    for (it = mTypeList.constBegin(); it != mTypeList.constEnd(); ++it, ++counter) {
+        QCheckBox *cb = new QCheckBox(KContacts::PhoneNumber::typeLabel(*it), box);
+        cb->setChecked(type & mTypeList[counter]);
+        buttonLayout->addWidget(cb, row, column);
+        mGroup->addButton(cb);
+
+        column++;
+        if (column == 5) {
+            column = 0;
+            ++row;
+        }
+    }
+
+    mPreferredBox->setChecked(mType & KContacts::PhoneNumber::Pref);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    layout->addWidget(buttonBox);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &PhoneTypeDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &PhoneTypeDialog::reject);
 }
 
-PhoneTypeDialog::~PhoneTypeDialog()
+KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
 {
+    KContacts::PhoneNumber::Type type = 0;
 
+    for (int i = 0; i < mGroup->buttons().count(); ++i) {
+        QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i)) ;
+        if (box && box->isChecked()) {
+            type |= mTypeList[i];
+        }
+    }
+
+    if (mPreferredBox->isChecked()) {
+        type = type | KContacts::PhoneNumber::Pref;
+    } else {
+        type = type & ~KContacts::PhoneNumber::Pref;
+    }
+
+    return type;
 }

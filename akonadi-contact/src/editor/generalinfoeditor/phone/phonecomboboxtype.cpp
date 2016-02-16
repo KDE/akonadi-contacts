@@ -21,7 +21,9 @@
 */
 
 #include "phonecomboboxtype.h"
+#include "phonetypedialog.h"
 #include <KLocalizedString>
+#include <autoqpointer_p.h>
 
 using namespace Akonadi;
 
@@ -95,9 +97,7 @@ void PhoneComboBoxType::selected(int pos)
 
 void PhoneComboBoxType::otherSelected()
 {
-    //TODO
-#if 0
-    AutoQPointer<PhoneTypeDialog> dlg = new PhoneTypeDialog(mType, this);
+    AutoQPointer<Akonadi::PhoneTypeDialog> dlg = new Akonadi::PhoneTypeDialog(mType, this);
     if (dlg->exec()) {
         mType = dlg->type();
         if (!mTypeList.contains(mType)) {
@@ -108,5 +108,4 @@ void PhoneComboBoxType::otherSelected()
     }
 
     update();
-#endif
 }
