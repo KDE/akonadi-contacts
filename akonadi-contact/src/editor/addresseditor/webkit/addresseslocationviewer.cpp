@@ -21,7 +21,7 @@
 */
 
 #include "addresseslocationviewer.h"
-#include "addresseslocationgrantleeformater.h"
+#include "../addresseslocationgrantleeformater.h"
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <QUrlQuery>
