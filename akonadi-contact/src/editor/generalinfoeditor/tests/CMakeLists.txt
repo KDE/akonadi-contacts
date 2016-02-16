@@ -22,6 +22,7 @@ set(generalinfoeditor_SRCS
     ../../utils/utils.cpp
     ../categorieseditwidget.cpp
     ../nameeditdialog.cpp
+    ../../widgets/akonadicontactcombobox.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})

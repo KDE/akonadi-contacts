@@ -28,9 +28,9 @@
 #include <KContacts/Email>
 class KLineEdit;
 class QToolButton;
-class QComboBox;
 namespace Akonadi
 {
+class AkonadiContactComboBox;
 class MailWidget : public QWidget
 {
     Q_OBJECT
@@ -54,7 +54,7 @@ private:
     KContacts::Email mEmail;
     QString mOldType;
     KLineEdit *mMailEdit;
-    QComboBox *mMailType;
+    Akonadi::AkonadiContactComboBox *mMailType;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
 };
