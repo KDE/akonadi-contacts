@@ -1,7 +1,7 @@
 set(addresseditor_SRCS
     main.cpp
     ../addresseslocationwidget.cpp
-    ../addresseslocationviewer.cpp
+    ../webkit/addresseslocationviewer.cpp
     ../addresseslocationgrantleeformater.cpp
     ../addressgrantleeobject.cpp
     ../iconnamecache.cpp

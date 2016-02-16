@@ -1,5 +1,5 @@
 
-set(addresseslocationviewer_SRCS addresseslocationviewertest.cpp ../addresseslocationviewer.cpp ../addresseslocationgrantleeformater.cpp
+set(addresseslocationviewer_SRCS addresseslocationviewertest.cpp ../webkit/addresseslocationviewer.cpp ../addresseslocationgrantleeformater.cpp
     ../addressgrantleeobject.cpp ../iconnamecache.cpp)
 add_executable(addresseslocationviewer ${addresseslocationviewer_SRCS})
 add_test(addresseslocationviewer addresseslocationviewer)
@@ -13,7 +13,7 @@ add_test(addresslocationwidget addresslocationwidget)
 ecm_mark_as_test(addresslocationwidget)
 target_link_libraries(addresslocationwidget Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n KF5::Completion)
 
-set(addresseslocationwidget_SRCS addresseslocationwidgettest.cpp ../addresseslocationwidget.cpp ../addresseslocationviewer.cpp ../addresseslocationgrantleeformater.cpp
+set(addresseslocationwidget_SRCS addresseslocationwidgettest.cpp ../addresseslocationwidget.cpp ../webkit/addresseslocationviewer.cpp ../addresseslocationgrantleeformater.cpp
     ../addressgrantleeobject.cpp ../iconnamecache.cpp ../addresslocationwidget.cpp ../selectaddresstypecombobox.cpp ../addresstypedialog.cpp)
 add_executable(addresseslocationwidget ${addresseslocationwidget_SRCS})
 add_test(addresseslocationwidget addresseslocationwidget)

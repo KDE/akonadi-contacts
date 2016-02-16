@@ -22,7 +22,7 @@
 
 
 #include "addresseslocationwidget.h"
-#include "addresseslocationviewer.h"
+#include "webkit/addresseslocationviewer.h"
 #include "addresslocationwidget.h"
 using namespace Akonadi;
 

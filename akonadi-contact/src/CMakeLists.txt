@@ -53,6 +53,7 @@ set(akonadicontact_editor_generalinfo_phone_SRCS
     editor/generalinfoeditor/phone/phonewidget.cpp
     editor/generalinfoeditor/phone/phonelistwidget.cpp
     editor/generalinfoeditor/phone/phonecomboboxtype.cpp
+    editor/generalinfoeditor/phone/phonetypedialog.cpp
     )
 
 set(akonadicontact_editor_generalinfo_web_SRCS
@@ -85,9 +86,19 @@ set(akonadicontact_editor_generalinfo_SRCS
     ${akonadicontact_editor_generalinfo_mail_SRCS}
     )
 
+if (QTWEBENGINE_EXPERIMENTAL_OPTION)
+    set(akonadicontact_addresslocation_webengine_editor_SRCS
+        editor/addresseditor/webengine/addresseslocationengineviewer.cpp
+        )
+    set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
+endif()
+
+
+
 set(akonadicontact_addresslocation_editor_SRCS
+    ${akonadicontact_addresslocation_webengine_editor_SRCS}
     editor/addresseditor/addresslocationwidget.cpp
-    editor/addresseditor/addresseslocationviewer.cpp
+    editor/addresseditor/webkit/addresseslocationviewer.cpp
     editor/addresseditor/addresseslocationgrantleeformater.cpp
     editor/addresseditor/addressgrantleeobject.cpp
     editor/addresseditor/iconnamecache.cpp
@@ -214,6 +225,7 @@ target_link_libraries(KF5AkonadiContact
     KF5::XmlGui
     Grantlee5::Templates
     Qt5::WebKitWidgets
+    ${akonadicontact_webengine_LIB}
     )
 
 if(KF5Prison_FOUND)

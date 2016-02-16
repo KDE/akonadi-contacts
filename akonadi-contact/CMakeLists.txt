@@ -25,6 +25,13 @@ set(CALENDARCORE_VERSION "5.1.40")
 set(KMIMELIB_VERSION "5.1.40")
 set(AKONADI_VERSION "5.1.52")
 
+option(QTWEBENGINE_EXPERIMENTAL_OPTION "Enable support for qtwebengine. False by default." FALSE)
+
+if (QTWEBENGINE_EXPERIMENTAL_OPTION)
+    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets)
+endif()
+
+
 ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"

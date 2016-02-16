@@ -23,7 +23,7 @@
 #include "addresseslocationwidgettest.h"
 #include "../addresseslocationwidget.h"
 #include <QTest>
-#include <editor/addresseditor/addresseslocationviewer.h>
+#include <editor/addresseditor/webkit/addresseslocationviewer.h>
 #include <editor/addresseditor/addresslocationwidget.h>
 using namespace Akonadi;
 AddressesLocationWidgetTest::AddressesLocationWidgetTest(QObject *parent)
