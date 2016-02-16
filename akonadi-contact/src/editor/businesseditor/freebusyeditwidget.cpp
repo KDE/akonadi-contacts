@@ -26,6 +26,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLineEdit>
+#include <KLocalizedString>
 
 #include <QHBoxLayout>
 #include <QStandardPaths>
@@ -39,6 +40,7 @@ FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
 
     mURL = new KUrlRequester;
     mURL->lineEdit()->setTrapReturnKey(true);
+    mURL->lineEdit()->setPlaceholderText(i18n("Add FreeBusy"));
     layout->addWidget(mURL);
     setFocusProxy(mURL);
     setFocusPolicy(Qt::StrongFocus);
