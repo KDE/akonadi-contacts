@@ -23,7 +23,7 @@
 #ifndef PHONECOMBOBOXTYPE_H
 #define PHONECOMBOBOXTYPE_H
 
-#include <KComboBox>
+#include <editor/widgets/akonadicontactcombobox.h>
 #include <kcontacts/addressee.h>
 
 namespace Akonadi
@@ -31,7 +31,7 @@ namespace Akonadi
 /**
  * @short A combobox to select a phone number type.
  */
-class PhoneComboBoxType : public KComboBox
+class PhoneComboBoxType : public Akonadi::AkonadiContactComboBox
 {
     Q_OBJECT
 

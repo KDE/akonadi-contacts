@@ -26,7 +26,7 @@ using namespace Akonadi;
 AkonadiContactComboBox::AkonadiContactComboBox(QWidget *parent)
     : QComboBox(parent)
 {
-
+    setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLength);
 }
 
 AkonadiContactComboBox::~AkonadiContactComboBox()
@@ -36,5 +36,5 @@ AkonadiContactComboBox::~AkonadiContactComboBox()
 
 QSize AkonadiContactComboBox::minimumSizeHint() const
 {
-    return QSize(80, QComboBox::minimumSizeHint().height());
+    return QSize(150, QComboBox::minimumSizeHint().height());
 }

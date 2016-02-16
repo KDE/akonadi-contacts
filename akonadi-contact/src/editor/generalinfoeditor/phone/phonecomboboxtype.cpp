@@ -26,7 +26,7 @@
 using namespace Akonadi;
 
 PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
-    : KComboBox(parent)
+    : Akonadi::AkonadiContactComboBox(parent)
     , mType(KContacts::PhoneNumber::Home)
     , mLastSelected(0)
 {
