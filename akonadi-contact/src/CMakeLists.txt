@@ -45,6 +45,7 @@ set(akonadicontact_editor_utils_SRCS
 
 set(akonadicontact_editor_widgets_SRCS
     editor/widgets/kwidgetlister.cpp
+    editor/widgets/akonadicontactcombobox.cpp
     )
 
 set(akonadicontact_editor_generalinfo_phone_SRCS
