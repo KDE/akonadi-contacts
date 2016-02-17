@@ -96,6 +96,7 @@ else()
    set(akonadicontact_addresslocation_web_editor_SRCS
        editor/addresseditor/webkit/addresseslocationviewer.cpp
        )
+   set(akonadicontact_webengine_LIB Qt5::WebKitWidgets)
 endif()
 
 
@@ -228,7 +229,6 @@ target_link_libraries(KF5AkonadiContact
     KF5::WidgetsAddons
     KF5::XmlGui
     Grantlee5::Templates
-    Qt5::WebKitWidgets
     ${akonadicontact_webengine_LIB}
     )
 
