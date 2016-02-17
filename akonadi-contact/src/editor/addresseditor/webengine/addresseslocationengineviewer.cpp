@@ -1,8 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
-    Copyright (C) 2016 Laurent Montel <laurent.montel@kdab.com>
+    Copyright (C) 2016 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -21,6 +20,7 @@
 */
 
 #include "addresseslocationengineviewer.h"
+#include "addresseslocationenginepage.h"
 #include "../addresseslocationgrantleeformater.h"
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -34,16 +34,14 @@ AddressesLocationEngineViewer::AddressesLocationEngineViewer(QWidget *parent)
     : QWebEngineView(parent),
       mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))
 {
+
+    AddressesLocationEnginePage *pageEngine = new AddressesLocationEnginePage(this);
+    setPage(pageEngine);
+
+    setFocusPolicy(Qt::WheelFocus);
+    connect(pageEngine, &AddressesLocationEnginePage::urlClicked, this, &AddressesLocationEngineViewer::slotLinkClicked);
+
     setContextMenuPolicy(Qt::CustomContextMenu);
-    //TODO porting
-    //page()->setLinkDelegationPolicy(QWebPage::DelegateAllLinks);
-    settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, false);
-    //settings()->setAttribute(QWebEngineSettings::JavaEnabled, false);
-    //settings()->setAttribute(QWebEngineSettings::PluginsEnabled, false);
-    //settings()->setAttribute(QWebEngineSettings::DnsPrefetchEnabled, true);
-    settings()->setAttribute(QWebEngineSettings::AutoLoadImages, true);
-    //TODO porting
-    //connect(this, &AddressesLocationEngineViewer::linkClicked, this, &AddressesLocationEngineViewer::slotLinkClicked);
 }
 
 AddressesLocationEngineViewer::~AddressesLocationEngineViewer()

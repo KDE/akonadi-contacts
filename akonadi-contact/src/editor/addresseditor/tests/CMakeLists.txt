@@ -1,3 +1,4 @@
+if (NOT QTWEBENGINE_EXPERIMENTAL_OPTION)
 set(addresseditor_SRCS
     main.cpp
     ../addresseslocationwidget.cpp
@@ -24,3 +25,4 @@ target_link_libraries(addresseditortest
     KF5::WidgetsAddons
     )
 
+endif()

@@ -1,8 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
-    Copyright (C) 2016 Laurent Montel <laurent.montel@kdab.com>
+    Copyright (C) 2016 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,7 +18,6 @@
     Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
     02110-1301, USA.
 */
-
 
 #ifndef AddressesLocationEngineViewer_H
 #define AddressesLocationEngineViewer_H

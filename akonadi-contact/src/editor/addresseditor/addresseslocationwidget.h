@@ -26,10 +26,15 @@
 
 #include <QSplitter>
 #include <KContacts/Addressee>
+#include "config-akonadi-contact.h"
 namespace Akonadi
 {
-class AddressesLocationViewer;
 class AddressLocationWidget;
+#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+class AddressesLocationEngineViewer;
+#else
+class AddressesLocationViewer;
+#endif
 class AddressesLocationWidget : public QSplitter
 {
     Q_OBJECT
@@ -42,7 +47,11 @@ public:
 
     void setReadOnly(bool readOnly);
 private:
+#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+    AddressesLocationEngineViewer *mAddressesLocationViewer;
+#else
     AddressesLocationViewer *mAddressesLocationViewer;
+#endif
     AddressLocationWidget *mAddressLocationWidget;
 };
 }

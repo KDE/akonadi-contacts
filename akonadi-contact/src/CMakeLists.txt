@@ -87,18 +87,23 @@ set(akonadicontact_editor_generalinfo_SRCS
     )
 
 if (QTWEBENGINE_EXPERIMENTAL_OPTION)
-    set(akonadicontact_addresslocation_webengine_editor_SRCS
+    set(akonadicontact_addresslocation_web_editor_SRCS
         editor/addresseditor/webengine/addresseslocationengineviewer.cpp
+        editor/addresseditor/webengine/addresseslocationenginepage.cpp
         )
     set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
+else()
+   #set(akonadicontact_addresslocation_web_editor_SRCS
+   #    editor/addresseditor/webkit/addresseslocationviewer.cpp
+   #    )
 endif()
 
 
 
 set(akonadicontact_addresslocation_editor_SRCS
-    ${akonadicontact_addresslocation_webengine_editor_SRCS}
-    editor/addresseditor/addresslocationwidget.cpp
     editor/addresseditor/webkit/addresseslocationviewer.cpp
+    ${akonadicontact_addresslocation_web_editor_SRCS}
+    editor/addresseditor/addresslocationwidget.cpp
     editor/addresseditor/addresseslocationgrantleeformater.cpp
     editor/addresseditor/addressgrantleeobject.cpp
     editor/addresseditor/iconnamecache.cpp

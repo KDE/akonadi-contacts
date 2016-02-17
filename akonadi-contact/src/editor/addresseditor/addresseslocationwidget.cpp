@@ -22,7 +22,11 @@
 
 
 #include "addresseslocationwidget.h"
+#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+#include "webengine/addresseslocationengineviewer.h"
+#else
 #include "webkit/addresseslocationviewer.h"
+#endif
 #include "addresslocationwidget.h"
 using namespace Akonadi;
 
@@ -33,13 +37,21 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     mAddressLocationWidget = new AddressLocationWidget(this);
     addWidget(mAddressLocationWidget);
     mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
-
+#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+    mAddressesLocationViewer = new AddressesLocationEngineViewer(this);
+    mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
+    addWidget(mAddressesLocationViewer);
+    connect(mAddressesLocationViewer, &AddressesLocationEngineViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
+    connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::addAddress);
+    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::replaceAddress);
+#else
     mAddressesLocationViewer = new AddressesLocationViewer(this);
     mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
     addWidget(mAddressesLocationViewer);
     connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationViewer::replaceAddress);
+#endif
 }
 
 AddressesLocationWidget::~AddressesLocationWidget()
