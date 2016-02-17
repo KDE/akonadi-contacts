@@ -20,8 +20,13 @@
     02110-1301, USA.
 */
 
+#include "config-akonadi-contact.h"
 #include "addresseslocationviewertest.h"
+#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+#include "../webengine/addresseslocationengineviewer.h"
+#else
 #include "../webkit/addresseslocationviewer.h"
+#endif
 #include <QTest>
 using namespace Akonadi;
 AddressesLocationViewerTest::AddressesLocationViewerTest(QObject *parent)
@@ -37,7 +42,11 @@ AddressesLocationViewerTest::~AddressesLocationViewerTest()
 
 void AddressesLocationViewerTest::shouldHaveDefaultValue()
 {
+#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+    AddressesLocationEngineViewer w;
+#else
     AddressesLocationViewer w;
+#endif
     QVERIFY(w.addresses().isEmpty());
 }
 
