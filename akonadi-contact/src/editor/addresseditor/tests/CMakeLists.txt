@@ -1,8 +1,20 @@
-if (NOT QTWEBENGINE_EXPERIMENTAL_OPTION)
+if (QTWEBENGINE_EXPERIMENTAL_OPTION)
+    set(akonadicontact_addresslocation_web_editor_SRCS
+        ../webengine/addresseslocationengineviewer.cpp
+        ../webengine/addresseslocationenginepage.cpp
+        )
+    set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
+else()
+   set(akonadicontact_addresslocation_web_editor_SRCS
+       ../webkit/addresseslocationviewer.cpp
+       )
+   set(akonadicontact_webengine_LIB Qt5::WebKitWidgets)
+endif()
+
 set(addresseditor_SRCS
+    ${akonadicontact_addresslocation_web_editor_SRCS}
     main.cpp
     ../addresseslocationwidget.cpp
-    ../webkit/addresseslocationviewer.cpp
     ../addresseslocationgrantleeformater.cpp
     ../addressgrantleeobject.cpp
     ../iconnamecache.cpp
@@ -19,10 +31,9 @@ target_link_libraries(addresseditortest
     KF5::Contacts
     KF5::I18n
     KF5::Completion
-    Qt5::WebKitWidgets
     Grantlee5::Templates
     KF5::IconThemes
     KF5::WidgetsAddons
+    ${akonadicontact_webengine_LIB}
     )
 
-endif()
