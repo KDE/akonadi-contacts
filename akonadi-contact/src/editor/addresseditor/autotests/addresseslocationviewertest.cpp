@@ -20,8 +20,8 @@
     02110-1301, USA.
 */
 
-#include "config-akonadi-contact.h"
 #include "addresseslocationviewertest.h"
+#include "config-akonadi-contact.h"
 #ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
 #include "../webengine/addresseslocationengineviewer.h"
 #else
