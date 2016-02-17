@@ -28,6 +28,7 @@ class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {
+class AkonadiContactComboBox;
 class WebWidget : public QWidget
 {
     Q_OBJECT
@@ -49,6 +50,7 @@ private:
     KLineEdit *mWebSiteEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
+    Akonadi::AkonadiContactComboBox *mWebType;
 };
 }
 #endif // WEBWIDGET_H

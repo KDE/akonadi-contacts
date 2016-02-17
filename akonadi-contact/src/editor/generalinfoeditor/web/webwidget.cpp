@@ -25,6 +25,7 @@
 #include <KLineEdit>
 #include <QToolButton>
 #include <KLocalizedString>
+#include <editor/widgets/akonadicontactcombobox.h>
 using namespace Akonadi;
 
 WebWidget::WebWidget(QWidget *parent)
@@ -41,6 +42,12 @@ WebWidget::WebWidget(QWidget *parent)
     mWebSiteEdit->setObjectName(QStringLiteral("website"));
     layout->addWidget(mWebSiteEdit);
 
+    mWebType = new Akonadi::AkonadiContactComboBox(this);
+    mWebType->setObjectName(QStringLiteral("webtype"));
+    mWebType->addItem(i18n("Select..."), QString());
+    //TODO fill it.
+    layout->addWidget(mWebType);
+
 
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
@@ -53,7 +60,6 @@ WebWidget::WebWidget(QWidget *parent)
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     connect(mRemoveButton, &QToolButton::clicked, this, &WebWidget::slotRemoveWeb);
     layout->addWidget(mRemoveButton);
-    //TODO add type.
 }
 
 WebWidget::~WebWidget()
@@ -64,7 +70,7 @@ WebWidget::~WebWidget()
 void WebWidget::clearWidget()
 {
     mWebSiteEdit->clear();
-    //TODO clear type too.
+    mWebType->setCurrentIndex(0);
 }
 
 void WebWidget::updateAddRemoveButton(bool addButtonEnabled)
