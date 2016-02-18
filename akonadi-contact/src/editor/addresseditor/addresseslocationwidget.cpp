@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #include "addresseslocationwidget.h"
 #ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
 #include "webengine/addresseslocationengineviewer.h"

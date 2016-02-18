@@ -38,11 +38,9 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
     topLayout->addWidget(mCustomFieldEditorWidget);
 
-
     mCustomFieldsListWidget = new Akonadi::CustomFieldsListWidget(this);
     mCustomFieldsListWidget->setObjectName(QStringLiteral("customfieldslistwidget"));
     topLayout->addWidget(mCustomFieldsListWidget);
-
 
     connect(mCustomFieldEditorWidget, &CustomFieldEditorWidget::addNewField, mCustomFieldsListWidget, &CustomFieldsListWidget::slotAddNewField);
 }

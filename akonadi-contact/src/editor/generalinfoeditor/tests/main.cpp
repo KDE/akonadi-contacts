@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #include <QApplication>
 #include "../generalinfowidget.h"
 using namespace Akonadi;

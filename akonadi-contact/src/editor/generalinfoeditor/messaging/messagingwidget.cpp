@@ -38,13 +38,11 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-
     mMessagingEdit = new KLineEdit(this);
     mMessagingEdit->setTrapReturnKey(true);
     mMessagingEdit->setPlaceholderText(i18n("Add an identifier"));
     mMessagingEdit->setObjectName(QStringLiteral("messaginglineedit"));
     layout->addWidget(mMessagingEdit);
-
 
     mProtocolCombo = new Akonadi::AkonadiContactComboBox(this);
     mProtocolCombo->setObjectName(QStringLiteral("protocol"));

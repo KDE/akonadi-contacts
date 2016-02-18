@@ -75,7 +75,6 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mMessagingListWidget->setObjectName(QStringLiteral("messaginglistwidget"));
     rightLayout->addWidget(mMessagingListWidget);
 
-
     mMailListWidget = new MailListWidget(this);
     mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
     rightLayout->addWidget(mMailListWidget);

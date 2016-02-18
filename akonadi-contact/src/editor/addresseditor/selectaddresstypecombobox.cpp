@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #include "addresstypedialog.h"
 #include "selectaddresstypecombobox.h"
 #include <KLineEdit>

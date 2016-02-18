@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #include "customfieldeditorwidgettest.h"
 #include "../customfieldeditorwidget.h"
 #include <QTest>

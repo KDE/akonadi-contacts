@@ -19,7 +19,6 @@
     02110-1301, USA.
 */
 
-
 #include "messagingwidgettest.h"
 #include "../messaging/messagingwidget.h"
 #include <KLineEdit>
@@ -50,7 +49,7 @@ void MessagingWidgetTest::shouldHaveDefaultValues()
 
     QToolButton *add = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
     QVERIFY(add);
-    QToolButton *remove= w.findChild<QToolButton *>(QStringLiteral("removebutton"));
+    QToolButton *remove = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
     QVERIFY(remove);
 }
 

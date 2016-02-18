@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #ifndef CUSTOMFIELDEDITORWIDGET_H
 #define CUSTOMFIELDEDITORWIDGET_H
 
@@ -48,7 +47,7 @@ Q_SIGNALS:
     void addNewField(const CustomField &field);
 
 private Q_SLOTS:
-    void slotAddField();    
+    void slotAddField();
     void slotFielNameChanged(const QString &text);
 
 private:

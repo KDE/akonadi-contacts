@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #include "addresslocationwidget.h"
 #include "selectaddresstypecombobox.h"
 
@@ -67,7 +66,6 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mStreetEdit->setTrapReturnKey(true);
     gridLayout->addWidget(mStreetEdit, 2, 0);
 
-
     label = new QLabel(KContacts::Address::postOfficeBoxLabel(), this);
     label->setObjectName(QStringLiteral("postofficeboxlabel"));
     gridLayout->addWidget(label, 1, 1);
@@ -87,7 +85,6 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mPostalCodeEdit->setTrapReturnKey(true);
     gridLayout->addWidget(mPostalCodeEdit, 4, 0);
 
-
     label = new QLabel(KContacts::Address::localityLabel(), this);
     label->setObjectName(QStringLiteral("localitylabel"));
     gridLayout->addWidget(label, 3, 1);
@@ -105,7 +102,6 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mRegionEdit->setObjectName(QStringLiteral("regionlineedit"));
     mRegionEdit->setTrapReturnKey(true);
     gridLayout->addWidget(mRegionEdit, 6, 0);
-
 
     label = new QLabel(KContacts::Address::countryLabel(), this);
     label->setObjectName(QStringLiteral("countrylabel"));
@@ -128,8 +124,6 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mButtonStack = new QStackedWidget(this);
     mButtonStack->setObjectName(QStringLiteral("buttonstacked"));
     topLayout->addWidget(mButtonStack);
-
-
 
     QWidget *addButtonWidget = new QWidget(this);
     QHBoxLayout *addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
@@ -207,7 +201,6 @@ void AddressLocationWidget::fillCountryCombo()
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
 }
 
-
 void AddressLocationWidget::slotAddAddress()
 {
     KContacts::Address addr = address();
@@ -256,7 +249,7 @@ KContacts::Address AddressLocationWidget::address() const
 
 void AddressLocationWidget::switchMode()
 {
-    switch(mCurrentMode) {
+    switch (mCurrentMode) {
     case CreateAddress:
         mButtonStack->setCurrentIndex(0);
         break;

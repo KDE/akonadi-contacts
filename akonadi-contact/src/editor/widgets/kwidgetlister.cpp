@@ -70,7 +70,6 @@ public:
     int mMaxWidgets;
 };
 
-
 KWidgetLister::KWidgetLister(int minWidgets, int maxWidgets, QWidget *parent)
     : QWidget(parent), d(new Private(this))
 {

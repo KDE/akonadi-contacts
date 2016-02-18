@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #ifndef PHONEWIDGETTEST_H
 #define PHONEWIDGETTEST_H
 

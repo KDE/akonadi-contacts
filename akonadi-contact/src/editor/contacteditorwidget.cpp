@@ -70,7 +70,6 @@ public:
 
     Akonadi::GeneralInfoWidget *mGeneralInfoWidget;
 
-
     // widgets from addresses group
     Akonadi::AddressesLocationWidget *mAddressesLocationWidget;
 
@@ -122,13 +121,13 @@ void ContactEditorWidget::Private::initGuiLocationTab()
 void ContactEditorWidget::Private::initGuiBusinessTab()
 {
     mBusinessEditorWidget = new Akonadi::BusinessEditorWidget();
-    mTabWidget->addTab( mBusinessEditorWidget, i18nc( "@title:tab", "Business" ) );
+    mTabWidget->addTab(mBusinessEditorWidget, i18nc("@title:tab", "Business"));
 }
 
 void ContactEditorWidget::Private::initGuiPersonalTab()
 {
     mPersonalEditorWidget = new Akonadi::PersonalEditorWidget;
-    mTabWidget->addTab( mPersonalEditorWidget, i18nc( "@title:tab Personal properties of a contact", "Personal" ) );
+    mTabWidget->addTab(mPersonalEditorWidget, i18nc("@title:tab Personal properties of a contact", "Personal"));
 }
 
 void ContactEditorWidget::Private::initGuiNotesTab()
@@ -218,7 +217,7 @@ ContactEditorWidget::~ContactEditorWidget()
 }
 
 void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData)
-{    
+{
     d->mGeneralInfoWidget->loadContact(contact);
 
     // address group

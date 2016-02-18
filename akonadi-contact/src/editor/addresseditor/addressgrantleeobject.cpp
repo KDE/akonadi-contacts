@@ -67,7 +67,7 @@ QString AddressGrantleeObject::preferredAddressAction() const
     if (preferredAddress()) {
         const QString iconPath = QUrl::fromLocalFile(IconNameCache::instance()->iconPath(QStringLiteral("bookmarks"), KIconLoader::Small)).url();
         text = QStringLiteral("<img class=\"headimage\"  height=\"%3\" width=\"%3\" title=\"%1\" src=\"%2\"></a>\n")
-                .arg(i18n("Remove Address"), iconPath, QString::number(mIconSize) );
+               .arg(i18n("Remove Address"), iconPath, QString::number(mIconSize));
     }
     return text;
 }

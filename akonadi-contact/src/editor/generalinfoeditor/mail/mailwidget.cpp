@@ -36,7 +36,6 @@ MailWidget::MailWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-
     mMailEdit = new KLineEdit(this);
     mMailEdit->setTrapReturnKey(true);
     mMailEdit->setPlaceholderText(i18n("Add an email account"));

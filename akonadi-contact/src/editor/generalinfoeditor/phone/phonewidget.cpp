@@ -35,7 +35,6 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-
     mPhoneNumberEdit = new KLineEdit(this);
     mPhoneNumberEdit->setTrapReturnKey(true);
     mPhoneNumberEdit->setPlaceholderText(i18n("Add a phone number"));

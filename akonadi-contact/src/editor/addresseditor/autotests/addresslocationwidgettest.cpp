@@ -20,7 +20,6 @@
     02110-1301, USA.
 */
 
-
 #include "addresslocationwidgettest.h"
 #include "../addresslocationwidget.h"
 #include <QLabel>
@@ -53,7 +52,6 @@ void AddressLocationWidgetTest::shouldHaveDefaultValue()
     QVERIFY(streetlabel);
     KLineEdit *mStreetEdit = w.findChild<KLineEdit *>(QStringLiteral("streetlineedit"));
     QVERIFY(mStreetEdit);
-
 
     QLabel *postofficeboxlabel = w.findChild<QLabel *>(QStringLiteral("postofficeboxlabel"));
     QVERIFY(postofficeboxlabel);

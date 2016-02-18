@@ -19,7 +19,6 @@
     02110-1301, USA.
 */
 
-
 #include "personaleditorwidget.h"
 #include "../utils/utils.h"
 
@@ -37,34 +36,34 @@ using namespace Akonadi;
 PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QGridLayout *mainLayout = new QGridLayout( this );
-    QLabel *label = new QLabel( i18nc( "@label The birthdate of a contact", "Birthdate:" ) );
-    mainLayout->addWidget( label, 0, 0 );
+    QGridLayout *mainLayout = new QGridLayout(this);
+    QLabel *label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
+    mainLayout->addWidget(label, 0, 0);
 
-    mBirthdateWidget = new DateEditWidget( DateEditWidget::Birthday );
-    label->setBuddy( mBirthdateWidget );
-    mainLayout->addWidget( mBirthdateWidget, 1, 0 );
+    mBirthdateWidget = new DateEditWidget(DateEditWidget::Birthday);
+    label->setBuddy(mBirthdateWidget);
+    mainLayout->addWidget(mBirthdateWidget, 1, 0);
 
-    label = new QLabel( i18nc( "@label The wedding anniversary of a contact", "Anniversary:" ) );
-    mainLayout->addWidget( label, 0, 1 );
+    label = new QLabel(i18nc("@label The wedding anniversary of a contact", "Anniversary:"));
+    mainLayout->addWidget(label, 0, 1);
 
-    mAnniversaryWidget = new DateEditWidget( DateEditWidget::Anniversary );
-    label->setBuddy( mAnniversaryWidget );
-    mainLayout->addWidget( mAnniversaryWidget, 1, 1 );
+    mAnniversaryWidget = new DateEditWidget(DateEditWidget::Anniversary);
+    label->setBuddy(mAnniversaryWidget);
+    mainLayout->addWidget(mAnniversaryWidget, 1, 1);
 
-    label = new QLabel( i18nc( "@label The partner's name of a contact", "Partner's name:" ) );
-    mainLayout->addWidget( label, 0, 2 );
+    label = new QLabel(i18nc("@label The partner's name of a contact", "Partner's name:"));
+    mainLayout->addWidget(label, 0, 2);
 
     mPartnerWidget = new KLineEdit;
     mPartnerWidget->setPlaceholderText(i18n("Add name"));
     mPartnerWidget->setTrapReturnKey(true);
-    label->setBuddy( mPartnerWidget );
-    mainLayout->addWidget( mPartnerWidget, 1, 2 );
-    mainLayout->setColumnStretch( 1, 1 );
-    mainLayout->setColumnStretch( 0, 1 );
-    mainLayout->setColumnStretch( 2, 1 );
+    label->setBuddy(mPartnerWidget);
+    mainLayout->addWidget(mPartnerWidget, 1, 2);
+    mainLayout->setColumnStretch(1, 1);
+    mainLayout->setColumnStretch(0, 1);
+    mainLayout->setColumnStretch(2, 1);
 
-    mainLayout->setRowStretch( 2, 1 );
+    mainLayout->setRowStretch(2, 1);
 }
 
 PersonalEditorWidget::~PersonalEditorWidget()
@@ -76,7 +75,7 @@ void PersonalEditorWidget::loadContact(const KContacts::Addressee &contact)
 {
     mBirthdateWidget->setDate(contact.birthday().date());
     mAnniversaryWidget->setDate(QDate::fromString(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-Anniversary")),
-                                   Qt::ISODate));
+                                Qt::ISODate));
     // family group
     mPartnerWidget->setText(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-SpousesName")));
 }

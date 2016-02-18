@@ -35,7 +35,6 @@ WebWidget::WebWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-
     mWebSiteEdit = new KLineEdit(this);
     mWebSiteEdit->setTrapReturnKey(true);
     mWebSiteEdit->setPlaceholderText(i18n("Add a web site"));
@@ -47,7 +46,6 @@ WebWidget::WebWidget(QWidget *parent)
     mWebType->addItem(i18n("Select..."), QString());
     //TODO fill it.
     layout->addWidget(mWebType);
-
 
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));

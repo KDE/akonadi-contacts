@@ -35,8 +35,8 @@ AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *pa
 {
     mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
     mGrantleeThemePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                                     QStringLiteral("akonadicontact/grantleetheme/default/"),
-                                                     QStandardPaths::LocateDirectory);
+                         QStringLiteral("akonadicontact/grantleetheme/default/"),
+                         QStandardPaths::LocateDirectory);
     changeGrantleePath(mGrantleeThemePath);
 }
 

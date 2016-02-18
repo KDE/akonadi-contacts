@@ -44,12 +44,12 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
 {
     // synchronize
     ContactActionsSettings::self()->load();
-    qDebug()<<" void ShowAddressAction::showAddress(const KContacts::Address &address)******************************************";
+    qDebug() << " void ShowAddressAction::showAddress(const KContacts::Address &address)******************************************";
 
     if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseBrowser) {
         QString urlTemplate = ContactActionsSettings::self()->addressUrl();
         replaceArguments(urlTemplate, address);
-        qDebug()<<" ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"<<urlTemplate;
+        qDebug() << " ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss" << urlTemplate;
         if (!urlTemplate.isEmpty()) {
             QDesktopServices::openUrl(QUrl(urlTemplate));
         }
@@ -70,7 +70,7 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
         QString urlTemplate = QStringLiteral("http://open.mapquest.com/?q=%s,%l,%c");
         replaceArguments(urlTemplate, address);
         if (!urlTemplate.isEmpty()) {
-            qDebug()<<" void ShowAddressAction::showAddress"<<urlTemplate;
+            qDebug() << " void ShowAddressAction::showAddress" << urlTemplate;
             QDesktopServices::openUrl(QUrl(urlTemplate));
         }
     }

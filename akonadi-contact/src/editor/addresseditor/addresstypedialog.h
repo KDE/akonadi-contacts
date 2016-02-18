@@ -19,7 +19,6 @@
     02110-1301, USA.
 */
 
-
 #ifndef ADDRESSTYPEDIALOG_H
 #define ADDRESSTYPEDIALOG_H
 

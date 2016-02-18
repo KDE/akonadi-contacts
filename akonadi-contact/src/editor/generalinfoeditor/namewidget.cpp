@@ -72,7 +72,7 @@ void NameWidget::setReadOnly(bool readOnly)
 
 void NameWidget::loadContact(const KContacts::Addressee &contact)
 {
-    qDebug()<<"contact "<<contact.assembledName();
+    qDebug() << "contact " << contact.assembledName();
     mContact = contact;
 
     disconnect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
