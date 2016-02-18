@@ -28,7 +28,6 @@
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <KLineEdit>
 #include <KLocalizedString>
 #include <qtabwidget.h>
 #include <ktextedit.h>
@@ -36,11 +35,7 @@
 
 #include <QtCore/QDirIterator>
 #include <QtCore/QPluginLoader>
-#include <QGroupBox>
-#include <QLabel>
-#include <QCheckBox>
 #include <QVBoxLayout>
-#include <KCompletion/KLineEdit>
 #include "addresseditor/addresseslocationwidget.h"
 #include "customfieldeditor/customfieldswidget.h"
 #include "businesseditor/businesseditorwidget.h"
