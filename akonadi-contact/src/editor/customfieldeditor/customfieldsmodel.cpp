@@ -23,7 +23,7 @@
 
 #include <KLocalizedString>
 
-#include <QtCore/QDateTime>
+#include <QDateTime>
 #include <QLocale>
 
 Q_DECLARE_METATYPE(Qt::CheckState)

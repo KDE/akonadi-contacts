@@ -28,12 +28,12 @@
 #include <QDebug>
 #include <KLocalizedString>
 #include <QLineEdit>
-#include <editor/generalinfoeditor/phone/phonelistwidget.h>
-#include <editor/generalinfoeditor/messaging/messaginglistwidget.h>
-#include <editor/generalinfoeditor/mail/maillistwidget.h>
-#include <editor/generalinfoeditor/web/weblistwidget.h>
+#include "phone/phonelistwidget.h"
+#include "messaging/messaginglistwidget.h"
+#include "mail/maillistwidget.h"
+#include "web/weblistwidget.h"
 #include "categorieseditwidget.h"
-#include <editor/widgets/imagewidget.h>
+#include "../widgets/imagewidget.h"
 
 using namespace Akonadi;
 

@@ -33,8 +33,8 @@
 #include <ktextedit.h>
 #include <QUrl>
 
-#include <QtCore/QDirIterator>
-#include <QtCore/QPluginLoader>
+#include <QDirIterator>
+#include <QPluginLoader>
 #include <QVBoxLayout>
 #include "addresseditor/addresseslocationwidget.h"
 #include "customfieldeditor/customfieldswidget.h"
