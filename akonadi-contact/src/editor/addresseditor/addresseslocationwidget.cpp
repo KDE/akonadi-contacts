@@ -51,6 +51,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationViewer::replaceAddress);
 #endif
+    setSizes(QList<int>() << 400 << 300);
 }
 
 AddressesLocationWidget::~AddressesLocationWidget()
