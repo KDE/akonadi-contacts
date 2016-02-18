@@ -44,7 +44,8 @@ WebWidget::WebWidget(QWidget *parent)
     mWebType = new Akonadi::AkonadiContactComboBox(this);
     mWebType->setObjectName(QStringLiteral("webtype"));
     mWebType->addItem(i18n("Select..."), QString());
-    //TODO fill it.
+    mWebType->addItem(i18n("Home"), QStringLiteral("home"));
+    mWebType->addItem(i18n("Work"), QStringLiteral("work"));
     layout->addWidget(mWebType);
 
     mAddButton = new QToolButton(this);

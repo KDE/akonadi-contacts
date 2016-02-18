@@ -23,6 +23,7 @@
 #include "messagingwidgetlister.h"
 #include "messagingwidget.h"
 #include "../../im/imaddress.h"
+#include "../../im/improtocols.h"
 #include "../../utils/utils.h"
 
 #include <KContacts/Addressee>
@@ -133,7 +134,6 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
             w->setIMAddress(imaddresses.at(i));
         }
     }
-    //TODO store really
     //TODO add real support for IM vcard4
 }
 
@@ -144,6 +144,30 @@ void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
     for (QWidget *widget : widgetList) {
         MessagingWidget *w = qobject_cast<MessagingWidget *>(widget);
         imaddresses << w->imAddress();
+    }
+    // create a map with protocol as key and list of names for that protocol as value
+    QMap<QString, QStringList> protocolMap;
+
+    // fill map with all known protocols
+    foreach (const QString &protocol, IMProtocols::self()->protocols()) {
+        protocolMap.insert(protocol, QStringList());
+    }
+
+    // add the configured addresses
+    foreach (const IMAddress &address, imaddresses) {
+        protocolMap[address.protocol()].append(address.name());
+    }
+
+    // iterate over this list and modify the contact according
+    QMapIterator<QString, QStringList> it(protocolMap);
+    while (it.hasNext()) {
+        it.next();
+
+        if (!it.value().isEmpty()) {
+            contact.insertCustom(it.key(), QStringLiteral("All"), it.value().join(QString(0xE000)));
+        } else {
+            contact.removeCustom(it.key(), QStringLiteral("All"));
+        }
     }
 }
 
