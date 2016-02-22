@@ -149,6 +149,9 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     connect(mCancelAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotCancelModifyAddress);
     modifyButtonWidgetLayout->addWidget(mCancelAddress);
     modifyButtonWidgetLayout->addStretch(1);
+    const int buttonWidth = qMax(mCancelAddress->width(), mModifyAddress->width());
+    mModifyAddress->setMinimumWidth(buttonWidth);
+    mCancelAddress->setMinimumWidth(buttonWidth);
 
     topLayout->addStretch(1);
     fillCountryCombo();
