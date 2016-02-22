@@ -32,7 +32,8 @@ using namespace Akonadi;
 
 AddressesLocationEngineViewer::AddressesLocationEngineViewer(QWidget *parent)
     : QWebEngineView(parent),
-      mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))
+      mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this)),
+      mEditMode(false)
 {
 
     AddressesLocationEnginePage *pageEngine = new AddressesLocationEnginePage(this);
@@ -63,9 +64,13 @@ void AddressesLocationEngineViewer::slotLinkClicked(const QUrl &url)
             const QUrlQuery urlQuery(url);
             const int addressId = urlQuery.queryItemValue(QStringLiteral("id")).toInt();
             if (urlPath == QStringLiteral("removeaddress")) {
-                removeAddress(addressId);
+                if (!mEditMode) {
+                    removeAddress(addressId);
+                }
             } else if (urlPath == QStringLiteral("editaddress")) {
-                editAddress(addressId);
+                if (!mEditMode) {
+                    editAddress(addressId);
+                }
             } else {
                 qDebug() << "Unknown url" << url;
             }
@@ -93,7 +98,7 @@ void AddressesLocationEngineViewer::editAddress(int index)
     if (index < 0) {
         return;
     } else if (index < mAddresses.count()) {
-        // TODO disable allow to remove address in edit mode
+        mEditMode = true;
         Q_EMIT modifyAddress(mAddresses.at(index), index);
     }
 }
@@ -106,6 +111,12 @@ void AddressesLocationEngineViewer::replaceAddress(const KContacts::Address &add
         mAddresses[index] = address;
         updateView();
     }
+    mEditMode = false;
+}
+
+void AddressesLocationEngineViewer::updateAddressCanceled()
+{
+    mEditMode = false;
 }
 
 void AddressesLocationEngineViewer::updateView()

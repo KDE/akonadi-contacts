@@ -119,7 +119,6 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), this);
     mPreferredCheckBox->setObjectName(QStringLiteral("preferredcheckbox"));
     gridLayout->addWidget(mPreferredCheckBox, 7, 0, 1, 2);
-    //TODO fix column size
 
     mButtonStack = new QStackedWidget(this);
     mButtonStack->setObjectName(QStringLiteral("buttonstacked"));
@@ -284,6 +283,7 @@ void AddressLocationWidget::slotUpdateAddress()
 
 void AddressLocationWidget::reset()
 {
+    Q_EMIT updateAddressCanceled();
     mCurrentAddress = -1;
     clear();
 }

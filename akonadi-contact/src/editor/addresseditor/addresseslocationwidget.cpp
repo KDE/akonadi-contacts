@@ -42,6 +42,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     addWidget(mAddressesLocationViewer);
     connect(mAddressesLocationViewer, &AddressesLocationEngineViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::addAddress);
+    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddressCanceled, mAddressesLocationViewer, &AddressesLocationEngineViewer::updateAddressCanceled);
     connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::replaceAddress);
 #else
     mAddressesLocationViewer = new AddressesLocationViewer(this);
@@ -50,6 +51,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationViewer::replaceAddress);
+    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddressCanceled, mAddressesLocationViewer, &AddressesLocationViewer::updateAddressCanceled);
 #endif
     setSizes(QList<int>() << 400 << 300);
 }

@@ -57,6 +57,7 @@ public:
 Q_SIGNALS:
     void addNewAddress(const KContacts::Address &address);
     void updateAddress(const KContacts::Address &address, int index);
+    void updateAddressCanceled();
 
 private Q_SLOTS:
     void slotAddAddress();

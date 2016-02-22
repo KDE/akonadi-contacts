@@ -32,7 +32,8 @@ using namespace Akonadi;
 
 AddressesLocationViewer::AddressesLocationViewer(QWidget *parent)
     : QWebView(parent),
-      mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))
+      mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this)),
+      mEditMode(false)
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
     page()->setLinkDelegationPolicy(QWebPage::DelegateAllLinks);
@@ -63,9 +64,13 @@ void AddressesLocationViewer::slotLinkClicked(const QUrl &url)
             const QUrlQuery urlQuery(url);
             const int addressId = urlQuery.queryItemValue(QStringLiteral("id")).toInt();
             if (urlPath == QStringLiteral("removeaddress")) {
-                removeAddress(addressId);
+                if (!mEditMode) {
+                    removeAddress(addressId);
+                }
             } else if (urlPath == QStringLiteral("editaddress")) {
-                editAddress(addressId);
+                if (!mEditMode) {
+                    editAddress(addressId);
+                }
             } else {
                 qDebug() << "Unknown url" << url;
             }
@@ -93,7 +98,7 @@ void AddressesLocationViewer::editAddress(int index)
     if (index < 0) {
         return;
     } else if (index < mAddresses.count()) {
-        // TODO disable allow to remove address in edit mode
+        mEditMode = true;
         Q_EMIT modifyAddress(mAddresses.at(index), index);
     }
 }
@@ -106,6 +111,12 @@ void AddressesLocationViewer::replaceAddress(const KContacts::Address &address, 
         mAddresses[index] = address;
         updateView();
     }
+    mEditMode = false;
+}
+
+void AddressesLocationViewer::updateAddressCanceled()
+{
+    mEditMode = false;
 }
 
 void AddressesLocationViewer::updateView()

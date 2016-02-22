@@ -42,6 +42,8 @@ public:
 public Q_SLOTS:
     void addAddress(const KContacts::Address &address);
     void replaceAddress(const KContacts::Address &address, int index);
+    void updateAddressCanceled();
+
 
 private Q_SLOTS:
     void slotLinkClicked(const QUrl &url);
@@ -55,6 +57,7 @@ private:
     void removeAddress(int index);
     KContacts::Address::List mAddresses;
     AddressesLocationGrantleeFormater *mAddressesLocationGrantleeFormatter;
+    bool mEditMode;
 };
 }
 #endif // ADDRESSESLOCATIONVIEWER_H
