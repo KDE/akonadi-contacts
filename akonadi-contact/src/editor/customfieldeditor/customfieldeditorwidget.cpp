@@ -86,7 +86,7 @@ void CustomFieldEditorWidget::fillTypes()
 void CustomFieldEditorWidget::setReadOnly(bool readOnly)
 {
     mFieldName->setReadOnly(readOnly);
-    mAddField->setEnabled(!readOnly);
+    mAddField->setEnabled(!readOnly && !mFieldName->text().trimmed().isEmpty());
     mFieldType->setEnabled(!readOnly);
     mUseAllContacts->setEnabled(!readOnly);
 }
@@ -98,6 +98,9 @@ void CustomFieldEditorWidget::slotFielNameChanged(const QString &text)
 
 void CustomFieldEditorWidget::slotAddField()
 {
+    if (mFieldName->text().trimmed().isEmpty()) {
+        return;
+    }
     CustomField field;
     // We use a Uuid as default key, so we won't have any duplicated keys,
     // the user can still change it to something else in the editor dialog.
