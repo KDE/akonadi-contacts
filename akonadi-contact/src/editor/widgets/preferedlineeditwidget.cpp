@@ -22,6 +22,7 @@
 #include "preferedlineeditwidget.h"
 #include <KIconLoader>
 #include <KIconEffect>
+#include <KLocalizedString>
 #include <QAction>
 #include <QDebug>
 
@@ -39,6 +40,7 @@ PreferedLineEditWidget::PreferedLineEditWidget(QWidget *parent)
     mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
     mPreferedAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferedAction->setObjectName(QStringLiteral("preferedaction"));
+    mPreferedAction->setToolTip(i18n("Set as Prefered"));
     connect(mPreferedAction, &QAction::triggered, this, &PreferedLineEditWidget::slotPreferedStatusChanged);
 }
 
