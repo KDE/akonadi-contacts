@@ -42,6 +42,7 @@ MailWidget::MailWidget(QWidget *parent)
     mMailEdit->setPlaceholderText(i18n("Add an email account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);
+    connect(mMailEdit, &PreferedLineEditWidget::preferedChanged, this, &MailWidget::slotPreferedChanged);
 
     mMailType = new Akonadi::AkonadiContactComboBox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
@@ -67,6 +68,11 @@ MailWidget::MailWidget(QWidget *parent)
 MailWidget::~MailWidget()
 {
 
+}
+
+void MailWidget::slotPreferedChanged()
+{
+    Q_EMIT preferedChanged(this);
 }
 
 void MailWidget::clearWidget()
@@ -108,6 +114,11 @@ KContacts::Email MailWidget::email()
         parameters.insert(QStringLiteral("TYPE"), value);
     }
     return mEmail;
+}
+
+void MailWidget::setPrefered(bool b)
+{
+    mMailEdit->setPrefered(b);
 }
 
 void MailWidget::slotAddMail()

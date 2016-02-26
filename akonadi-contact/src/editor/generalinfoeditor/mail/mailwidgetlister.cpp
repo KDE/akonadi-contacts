@@ -24,6 +24,7 @@
 #include "mailwidget.h"
 
 #include <KContacts/Addressee>
+#include <QDebug>
 using namespace Akonadi;
 
 MailWidgetLister::MailWidgetLister(QWidget *parent)
@@ -80,6 +81,7 @@ void MailWidgetLister::reconnectWidget(MailWidget *w)
 {
     connect(w, &MailWidget::addWidget, this, &MailWidgetLister::slotAddWidget, Qt::UniqueConnection);
     connect(w, &MailWidget::removeWidget, this, &MailWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
+    connect(w, &MailWidget::preferedChanged, this, &MailWidgetLister::slotPreferedChanged, Qt::UniqueConnection);
 }
 
 void MailWidgetLister::slotAddWidget(MailWidget *w)
@@ -95,6 +97,16 @@ void MailWidgetLister::slotRemoveWidget(MailWidget *w)
     } else {
         removeWidget(w);
         updateAddRemoveButton();
+    }
+}
+
+void MailWidgetLister::slotPreferedChanged(MailWidget *w)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        if (widget != w) {
+            (static_cast<MailWidget *>(widget))->setPrefered(false);
+        }
     }
 }
 
