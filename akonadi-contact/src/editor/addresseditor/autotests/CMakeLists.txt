@@ -1,3 +1,5 @@
+include(ECMMarkAsTest)
+
 if (QTWEBENGINE_EXPERIMENTAL_OPTION)
     set(akonadicontact_addresslocation_web_editor_SRCS
         ../webengine/addresseslocationengineviewer.cpp
