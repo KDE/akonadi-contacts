@@ -23,6 +23,7 @@
 #include <KIconLoader>
 #include <KIconEffect>
 #include <QAction>
+#include <QDebug>
 
 using namespace Akonadi;
 
@@ -38,7 +39,7 @@ PreferedLineEditWidget::PreferedLineEditWidget(QWidget *parent)
     mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
     mPreferedAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferedAction->setObjectName(QStringLiteral("preferedaction"));
-    connect(mPreferedAction, &QAction::toggled, this, &PreferedLineEditWidget::slotPreferedStatusChanged);
+    connect(mPreferedAction, &QAction::triggered, this, &PreferedLineEditWidget::slotPreferedStatusChanged);
 }
 
 PreferedLineEditWidget::~PreferedLineEditWidget()

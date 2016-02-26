@@ -24,11 +24,10 @@
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <KLineEdit>
-#include <KIconEffect>
 #include <QToolButton>
 #include <QComboBox>
-#include <kiconloader.h>
 #include <editor/widgets/akonadicontactcombobox.h>
+#include <editor/widgets/preferedlineeditwidget.h>
 
 using namespace Akonadi;
 MailWidget::MailWidget(QWidget *parent)
@@ -38,18 +37,10 @@ MailWidget::MailWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-    mIconEnabled = QIcon(QIcon::fromTheme(QStringLiteral("rating")));
-    KIconLoader loader;
-    QImage iconDisabled =
-        mIconEnabled.pixmap(loader.currentSize(KIconLoader::Panel)).toImage();
-    KIconEffect::toGray(iconDisabled, 1.0);
-    mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
-
-    mMailEdit = new KLineEdit(this);
+    mMailEdit = new PreferedLineEditWidget(this);
     mMailEdit->setTrapReturnKey(true);
     mMailEdit->setPlaceholderText(i18n("Add an email account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
-    mMailEdit->addAction(mIconDisabled, QLineEdit::TrailingPosition);
     layout->addWidget(mMailEdit);
 
     mMailType = new Akonadi::AkonadiContactComboBox(this);

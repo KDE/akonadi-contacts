@@ -23,6 +23,7 @@ set(generalinfoeditor_SRCS
     ../categorieseditwidget.cpp
     ../nameeditdialog.cpp
     ../../widgets/akonadicontactcombobox.cpp
+    ../../widgets/preferedlineeditwidget.cpp
     ../phone/phonetypedialog.cpp
     )
 

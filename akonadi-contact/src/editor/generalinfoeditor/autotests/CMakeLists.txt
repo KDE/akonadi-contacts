@@ -5,7 +5,7 @@ ecm_mark_as_test(phonewidgettest)
 target_link_libraries(phonewidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n KF5::Completion)
 
 
-set(mailwidgettest_SRCS mailwidgettest.cpp ../mail/mailwidget.cpp ../../widgets/akonadicontactcombobox.cpp)
+set(mailwidgettest_SRCS mailwidgettest.cpp ../mail/mailwidget.cpp ../../widgets/akonadicontactcombobox.cpp ../../widgets/preferedlineeditwidget.cpp)
 add_executable(mailwidgettest ${mailwidgettest_SRCS})
 add_test(mailwidgettest mailwidgettest)
 ecm_mark_as_test(mailwidgettest)

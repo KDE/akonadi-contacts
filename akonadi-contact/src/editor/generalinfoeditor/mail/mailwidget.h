@@ -24,12 +24,12 @@
 #define MAILWIDGET_H
 
 #include <QWidget>
-#include <QIcon>
 #include <KContacts/Email>
 class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {
+class PreferedLineEditWidget;
 class AkonadiContactComboBox;
 class MailWidget : public QWidget
 {
@@ -53,9 +53,7 @@ private Q_SLOTS:
 private:
     KContacts::Email mEmail;
     QString mOldType;
-    QIcon mIconEnabled;
-    QIcon mIconDisabled;
-    KLineEdit *mMailEdit;
+    PreferedLineEditWidget *mMailEdit;
     Akonadi::AkonadiContactComboBox *mMailType;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
