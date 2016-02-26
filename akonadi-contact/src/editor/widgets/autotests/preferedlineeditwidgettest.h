@@ -30,6 +30,10 @@ class PreferedLineEditWidgetTest : public QObject
 public:
     explicit PreferedLineEditWidgetTest(QObject *parent = Q_NULLPTR);
     ~PreferedLineEditWidgetTest();
+
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+    void shouldChangePreferedValue();
 };
 
 #endif // PREFEREDLINEEDITWIDGETTEST_H

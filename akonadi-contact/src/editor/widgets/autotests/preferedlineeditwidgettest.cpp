@@ -21,6 +21,9 @@
 
 
 #include "preferedlineeditwidgettest.h"
+#include "../preferedlineeditwidget.h"
+#include <QAction>
+#include <QIcon>
 #include <QTest>
 
 PreferedLineEditWidgetTest::PreferedLineEditWidgetTest(QObject *parent)
@@ -31,6 +34,31 @@ PreferedLineEditWidgetTest::PreferedLineEditWidgetTest(QObject *parent)
 
 PreferedLineEditWidgetTest::~PreferedLineEditWidgetTest()
 {
+
+}
+
+void PreferedLineEditWidgetTest::shouldHaveDefaultValue()
+{
+    Akonadi::PreferedLineEditWidget w;
+    QAction *act = w.findChild<QAction *>(QStringLiteral("preferedaction"));
+    QVERIFY(act);
+    QVERIFY(!w.prefered());
+}
+
+void PreferedLineEditWidgetTest::shouldChangePreferedValue()
+{
+    Akonadi::PreferedLineEditWidget w;
+    QAction *act = w.findChild<QAction *>(QStringLiteral("preferedaction"));
+    QIcon disabled = act->icon();
+    w.setPrefered(true);
+    QVERIFY(w.prefered());
+    QIcon enabled = act->icon();
+    w.setPrefered(false);
+    QVERIFY(!w.prefered());
+    QCOMPARE(act->icon(), disabled);
+
+    w.setPrefered(true);
+    QCOMPARE(act->icon(), enabled);
 
 }
 
