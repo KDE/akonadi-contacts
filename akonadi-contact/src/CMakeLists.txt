@@ -132,6 +132,7 @@ set(akonadicontact_editor_SRCS
     editor/im/imaddress.cpp
     editor/im/improtocols.cpp
     editor/widgets/imagewidget.cpp
+    editor/widgets/preferedlineeditwidget.cpp
     )
 
 set(akonadicontact_LIB_SRC
