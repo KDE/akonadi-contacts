@@ -33,7 +33,20 @@ class PreferedLineEditWidget : public KLineEdit
 public:
     explicit PreferedLineEditWidget(QWidget *parent = Q_NULLPTR);
     ~PreferedLineEditWidget();
+
+    bool prefered() const;
+
+    void setPrefered(bool prefered);
+
+Q_SIGNALS:
+    void preferedChanged(QWidget *w);
+
+private Q_SLOTS:
+    void slotPreferedStatusChanged();
+
 private:
+    void updatePreferedIcon();
+    bool mPrefered;
     QIcon mIconEnabled;
     QIcon mIconDisabled;
     QAction *mPreferedAction;

@@ -27,7 +27,8 @@
 using namespace Akonadi;
 
 PreferedLineEditWidget::PreferedLineEditWidget(QWidget *parent)
-    : KLineEdit(parent)
+    : KLineEdit(parent),
+      mPrefered(false)
 {
     mIconEnabled = QIcon(QIcon::fromTheme(QStringLiteral("rating")));
     KIconLoader loader;
@@ -37,9 +38,35 @@ PreferedLineEditWidget::PreferedLineEditWidget(QWidget *parent)
     mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
     mPreferedAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferedAction->setObjectName(QStringLiteral("preferedaction"));
+    connect(mPreferedAction, &QAction::toggled, this, &PreferedLineEditWidget::slotPreferedStatusChanged);
 }
 
 PreferedLineEditWidget::~PreferedLineEditWidget()
 {
 
+}
+
+void PreferedLineEditWidget::slotPreferedStatusChanged()
+{
+    mPrefered = !mPrefered;
+    updatePreferedIcon();
+    Q_EMIT preferedChanged(this);
+}
+
+void PreferedLineEditWidget::updatePreferedIcon()
+{
+    mPreferedAction->setIcon(mPrefered ? mIconEnabled : mIconDisabled);
+}
+
+void PreferedLineEditWidget::setPrefered(bool prefered)
+{
+    if (mPrefered != prefered) {
+        mPrefered = prefered;
+        updatePreferedIcon();
+    }
+}
+
+bool PreferedLineEditWidget::prefered() const
+{
+    return mPrefered;
 }
