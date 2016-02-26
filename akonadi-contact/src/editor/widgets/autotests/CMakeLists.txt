@@ -2,4 +2,4 @@ set( preferedlineeditwidgettest_SRCS preferedlineeditwidgettest.cpp ../preferedl
 add_executable( preferedlineeditwidgettest ${preferedlineeditwidgettest_SRCS})
 add_test(preferedlineeditwidgettest preferedlineeditwidgettest)
 ecm_mark_as_test(preferedlineeditwidgettest)
-target_link_libraries( preferedlineeditwidgettest Qt5::Test Qt5::Widgets KF5::Completion KF5::IconThemes)
+target_link_libraries( preferedlineeditwidgettest Qt5::Test Qt5::Widgets KF5::Completion KF5::IconThemes KF5::I18n)

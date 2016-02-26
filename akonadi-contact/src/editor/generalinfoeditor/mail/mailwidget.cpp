@@ -28,6 +28,7 @@
 #include <QComboBox>
 #include <editor/widgets/akonadicontactcombobox.h>
 #include <editor/widgets/preferedlineeditwidget.h>
+#include <QDebug>
 
 using namespace Akonadi;
 MailWidget::MailWidget(QWidget *parent)
@@ -91,17 +92,22 @@ void MailWidget::setMail(const KContacts::Email &email)
 {
     mEmail = email;
     mMailEdit->setText(email.mail());
+    const QMap<QString, QStringList> parameters = mEmail.parameters();
+    const QStringList value = parameters.value(QStringLiteral("type"));
+    qDebug()<<" value "<<value << "parameters"<<parameters << email.mail();
+    if (value.contains(QStringLiteral("PREF"))) {
+        setPrefered(true);
+    }
     //TODO store old type
     //mOldType =
     //TODO look at type.
-    //TODO look at preference
 }
 
 KContacts::Email MailWidget::email()
 {
     mEmail.setEmail(mMailEdit->text());
     QMap<QString, QStringList> parameters = mEmail.parameters();
-    QStringList value = parameters.value(QStringLiteral("TYPE"));
+    QStringList value = parameters.value(QStringLiteral("type"));
     const QString newType = mMailType->currentData().toString();
     if (!newType.isEmpty()) {
         if (!value.contains(newType)) {
@@ -111,8 +117,17 @@ KContacts::Email MailWidget::email()
             //TODO remove old type.
             value.removeAll(mOldType);
         }
-        parameters.insert(QStringLiteral("TYPE"), value);
     }
+    if (mMailEdit->prefered()) {
+        if (!value.contains(QStringLiteral("PREF"))) {
+            value.append(QStringLiteral("PREF"));
+        }
+    } else {
+        if (value.contains(QStringLiteral("PREF"))) {
+            value.removeAll(QStringLiteral("PREF"));
+        }
+    }
+    parameters.insert(QStringLiteral("type"), value);
     return mEmail;
 }
 
