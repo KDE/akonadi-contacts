@@ -311,6 +311,7 @@ if (BUILD_TESTING)
     add_subdirectory(editor/generalinfoeditor/tests)
     add_subdirectory(editor/customfieldeditor/autotests/)
     add_subdirectory(editor/customfieldeditor/tests)
+    add_subdirectory(editor/widgets/autotests/)
 endif()
 
 
