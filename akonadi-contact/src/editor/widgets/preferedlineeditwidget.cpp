@@ -40,7 +40,7 @@ PreferedLineEditWidget::PreferedLineEditWidget(QWidget *parent)
     mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
     mPreferedAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferedAction->setObjectName(QStringLiteral("preferedaction"));
-    mPreferedAction->setToolTip(i18n("Set as Prefered"));
+    mPreferedAction->setToolTip(i18n("Set as Preferred"));
     connect(mPreferedAction, &QAction::triggered, this, &PreferedLineEditWidget::slotPreferedStatusChanged);
 }
 
