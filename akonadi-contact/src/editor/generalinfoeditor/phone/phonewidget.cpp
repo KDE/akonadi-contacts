@@ -41,6 +41,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     mPhoneNumberEdit->setPlaceholderText(i18n("Add a phone number"));
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
+    connect(mPhoneNumberEdit, &PreferredLineEditWidget::preferredChanged, this, &PhoneWidget::slotPreferredChanged);
 
     mPhoneType = new PhoneComboBoxType(this);
     mPhoneType->setObjectName(QStringLiteral("phonetype"));
@@ -97,4 +98,14 @@ void PhoneWidget::clearWidget()
 {
     mPhoneNumberEdit->clear();
     mPhoneType->resetToDefault();
+}
+
+void PhoneWidget::slotPreferredChanged()
+{
+    Q_EMIT preferredChanged(this);
+}
+
+void PhoneWidget::setPreferred(bool b)
+{
+    mPhoneNumberEdit->setPreferred(b);
 }

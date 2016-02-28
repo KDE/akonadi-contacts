@@ -45,13 +45,16 @@ public:
     void loadPhone(const KContacts::PhoneNumber &number);
     KContacts::PhoneNumber storePhone();
     void clearWidget();
+    void setPreferred(bool b);
 Q_SIGNALS:
     void addWidget(PhoneWidget *);
     void removeWidget(PhoneWidget *);
+    void preferredChanged(PhoneWidget *);
 
 private Q_SLOTS:
     void slotAddPhone();
-    void slotRemovePhone();
+    void slotRemovePhone();    
+    void slotPreferredChanged();
 
 private:
     PreferredLineEditWidget *mPhoneNumberEdit;

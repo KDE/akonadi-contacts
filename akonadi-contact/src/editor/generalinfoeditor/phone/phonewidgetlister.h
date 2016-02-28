@@ -47,6 +47,7 @@ protected:
 private Q_SLOTS:
     void slotAddWidget(PhoneWidget *w);
     void slotRemoveWidget(PhoneWidget *w);
+    void slotPreferredChanged(PhoneWidget *w);
 
 private:
     void reconnectWidget(PhoneWidget *w);

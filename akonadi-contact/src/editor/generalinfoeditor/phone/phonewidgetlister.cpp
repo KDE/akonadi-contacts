@@ -80,6 +80,7 @@ void PhoneWidgetLister::reconnectWidget(PhoneWidget *w)
 {
     connect(w, &PhoneWidget::addWidget, this, &PhoneWidgetLister::slotAddWidget, Qt::UniqueConnection);
     connect(w, &PhoneWidget::removeWidget, this, &PhoneWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
+    connect(w, &PhoneWidget::preferredChanged, this, &PhoneWidgetLister::slotPreferredChanged, Qt::UniqueConnection);
 }
 
 void PhoneWidgetLister::slotAddWidget(PhoneWidget *w)
@@ -95,6 +96,16 @@ void PhoneWidgetLister::slotRemoveWidget(PhoneWidget *w)
     } else {
         removeWidget(w);
         updateAddRemoveButton();
+    }
+}
+
+void PhoneWidgetLister::slotPreferredChanged(PhoneWidget *w)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        if (widget != w) {
+            (static_cast<PhoneWidget *>(widget))->setPreferred(false);
+        }
     }
 }
 
