@@ -32,6 +32,7 @@ class PhoneNumber;
 }
 namespace Akonadi
 {
+class PreferredLineEditWidget;
 class PhoneComboBoxType;
 class PhoneWidget : public QWidget
 {
@@ -53,7 +54,7 @@ private Q_SLOTS:
     void slotRemovePhone();
 
 private:
-    KLineEdit *mPhoneNumberEdit;
+    PreferredLineEditWidget *mPhoneNumberEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
     PhoneComboBoxType *mPhoneType;

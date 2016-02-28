@@ -1,8 +1,9 @@
-set(phonewidgettest_SRCS phonewidgettest.cpp ../phone/phonewidget.cpp ../phone/phonecomboboxtype.cpp ../../widgets/akonadicontactcombobox.cpp ../phone/phonetypedialog.cpp)
+set(phonewidgettest_SRCS phonewidgettest.cpp ../phone/phonewidget.cpp ../phone/phonecomboboxtype.cpp ../../widgets/akonadicontactcombobox.cpp ../phone/phonetypedialog.cpp
+    ../../widgets/preferredlineeditwidget.cpp)
 add_executable(phonewidgettest ${phonewidgettest_SRCS})
 add_test(phonewidgettest phonewidgettest)
 ecm_mark_as_test(phonewidgettest)
-target_link_libraries(phonewidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n KF5::Completion)
+target_link_libraries(phonewidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n KF5::Completion KF5::IconThemes)
 
 
 set(mailwidgettest_SRCS mailwidgettest.cpp ../mail/mailwidget.cpp ../../widgets/akonadicontactcombobox.cpp ../../widgets/preferredlineeditwidget.cpp)

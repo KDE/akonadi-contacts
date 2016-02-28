@@ -26,6 +26,7 @@
 #include <QHBoxLayout>
 #include <KLineEdit>
 #include <QToolButton>
+#include <editor/widgets/preferredlineeditwidget.h>
 
 using namespace Akonadi;
 PhoneWidget::PhoneWidget(QWidget *parent)
@@ -35,7 +36,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-    mPhoneNumberEdit = new KLineEdit(this);
+    mPhoneNumberEdit = new PreferredLineEditWidget(this);
     mPhoneNumberEdit->setTrapReturnKey(true);
     mPhoneNumberEdit->setPlaceholderText(i18n("Add a phone number"));
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
