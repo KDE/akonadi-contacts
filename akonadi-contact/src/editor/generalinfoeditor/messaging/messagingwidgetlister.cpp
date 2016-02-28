@@ -116,7 +116,7 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
                 const QStringList names = value.split(QChar(0xE000), QString::SkipEmptyParts);
 
                 foreach (const QString &name, names) {
-                    //TODO prefered support ?
+                    //TODO preferred support ?
                     imaddresses << IMAddress(protocol, name, false);
                 }
             }

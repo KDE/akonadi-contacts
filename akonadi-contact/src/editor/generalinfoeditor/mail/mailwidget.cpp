@@ -43,7 +43,7 @@ MailWidget::MailWidget(QWidget *parent)
     mMailEdit->setPlaceholderText(i18n("Add an email account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);
-    connect(mMailEdit, &PreferredLineEditWidget::preferedChanged, this, &MailWidget::slotPreferedChanged);
+    connect(mMailEdit, &PreferredLineEditWidget::preferredChanged, this, &MailWidget::slotPreferredChanged);
 
     mMailType = new Akonadi::AkonadiContactComboBox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
@@ -71,9 +71,9 @@ MailWidget::~MailWidget()
 
 }
 
-void MailWidget::slotPreferedChanged()
+void MailWidget::slotPreferredChanged()
 {
-    Q_EMIT preferedChanged(this);
+    Q_EMIT preferredChanged(this);
 }
 
 void MailWidget::clearWidget()
@@ -96,7 +96,7 @@ void MailWidget::setMail(const KContacts::Email &email)
     const QStringList value = parameters.value(QStringLiteral("type"));
     qDebug()<<" value "<<value << "parameters"<<parameters << email.mail();
     if (value.contains(QStringLiteral("PREF"))) {
-        setPrefered(true);
+        setPreferred(true);
     }
     //TODO store old type
     //mOldType =
@@ -118,7 +118,7 @@ KContacts::Email MailWidget::email()
             value.removeAll(mOldType);
         }
     }
-    if (mMailEdit->prefered()) {
+    if (mMailEdit->preferred()) {
         if (!value.contains(QStringLiteral("PREF"))) {
             value.append(QStringLiteral("PREF"));
         }
@@ -131,9 +131,9 @@ KContacts::Email MailWidget::email()
     return mEmail;
 }
 
-void MailWidget::setPrefered(bool b)
+void MailWidget::setPreferred(bool b)
 {
-    mMailEdit->setPrefered(b);
+    mMailEdit->setPreferred(b);
 }
 
 void MailWidget::slotAddMail()

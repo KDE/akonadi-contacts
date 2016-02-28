@@ -42,16 +42,16 @@ public:
     void updateAddRemoveButton(bool addButtonEnabled);
     void setMail(const KContacts::Email &email);
     KContacts::Email email();
-    void setPrefered(bool b);
+    void setPreferred(bool b);
 Q_SIGNALS:
     void addWidget(MailWidget *);
     void removeWidget(MailWidget *);
-    void preferedChanged(MailWidget *);
+    void preferredChanged(MailWidget *);
 
 private Q_SLOTS:
     void slotAddMail();
     void slotRemoveMail();
-    void slotPreferedChanged();
+    void slotPreferredChanged();
 private:
     KContacts::Email mEmail;
     QString mOldType;

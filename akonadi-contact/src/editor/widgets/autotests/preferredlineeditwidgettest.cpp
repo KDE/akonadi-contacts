@@ -26,40 +26,40 @@
 #include <QIcon>
 #include <QTest>
 
-PreferedLineEditWidgetTest::PreferedLineEditWidgetTest(QObject *parent)
+PreferredLineEditWidget::PreferredLineEditWidget(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-PreferedLineEditWidgetTest::~PreferedLineEditWidgetTest()
+PreferredLineEditWidget::~PreferredLineEditWidget()
 {
 
 }
 
-void PreferedLineEditWidgetTest::shouldHaveDefaultValue()
+void PreferredLineEditWidget::shouldHaveDefaultValue()
 {
     Akonadi::PreferredLineEditWidget w;
-    QAction *act = w.findChild<QAction *>(QStringLiteral("preferedaction"));
+    QAction *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
     QVERIFY(act);
-    QVERIFY(!w.prefered());
+    QVERIFY(!w.preferred());
 }
 
-void PreferedLineEditWidgetTest::shouldChangePreferedValue()
+void PreferredLineEditWidget::shouldChangePreferredValue()
 {
     Akonadi::PreferredLineEditWidget w;
-    QAction *act = w.findChild<QAction *>(QStringLiteral("preferedaction"));
+    QAction *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
     QIcon disabled = act->icon();
-    w.setPrefered(true);
-    QVERIFY(w.prefered());
+    w.setPreferred(true);
+    QVERIFY(w.preferred());
     QIcon enabled = act->icon();
-    w.setPrefered(false);
-    QVERIFY(!w.prefered());
+    w.setPreferred(false);
+    QVERIFY(!w.preferred());
     QCOMPARE(act->icon(), disabled);
 
-    w.setPrefered(true);
+    w.setPreferred(true);
     QCOMPARE(act->icon(), enabled);
 
 }
 
-QTEST_MAIN(PreferedLineEditWidgetTest)
+QTEST_MAIN(PreferredLineEditWidget)

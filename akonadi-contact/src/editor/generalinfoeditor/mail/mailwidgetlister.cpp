@@ -81,7 +81,7 @@ void MailWidgetLister::reconnectWidget(MailWidget *w)
 {
     connect(w, &MailWidget::addWidget, this, &MailWidgetLister::slotAddWidget, Qt::UniqueConnection);
     connect(w, &MailWidget::removeWidget, this, &MailWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
-    connect(w, &MailWidget::preferedChanged, this, &MailWidgetLister::slotPreferedChanged, Qt::UniqueConnection);
+    connect(w, &MailWidget::preferredChanged, this, &MailWidgetLister::slotPreferredChanged, Qt::UniqueConnection);
 }
 
 void MailWidgetLister::slotAddWidget(MailWidget *w)
@@ -100,12 +100,12 @@ void MailWidgetLister::slotRemoveWidget(MailWidget *w)
     }
 }
 
-void MailWidgetLister::slotPreferedChanged(MailWidget *w)
+void MailWidgetLister::slotPreferredChanged(MailWidget *w)
 {
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
         if (widget != w) {
-            (static_cast<MailWidget *>(widget))->setPrefered(false);
+            (static_cast<MailWidget *>(widget))->setPreferred(false);
         }
     }
 }

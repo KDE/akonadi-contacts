@@ -34,22 +34,22 @@ public:
     explicit PreferredLineEditWidget(QWidget *parent = Q_NULLPTR);
     ~PreferredLineEditWidget();
 
-    bool prefered() const;
+    bool preferred() const;
 
-    void setPrefered(bool prefered);
+    void setPreferred(bool preferred);
 
 Q_SIGNALS:
-    void preferedChanged(QWidget *w);
+    void preferredChanged(QWidget *w);
 
 private Q_SLOTS:
-    void slotPreferedStatusChanged();
+    void slotPreferredStatusChanged();
 
 private:
-    void updatePreferedIcon();
+    void updatePreferredIcon();
     bool mPreferred;
     QIcon mIconEnabled;
     QIcon mIconDisabled;
-    QAction *mPreferedAction;
+    QAction *mPreferredAction;
 };
 }
 #endif // PREFEREDLINEEDITWIDGET_H

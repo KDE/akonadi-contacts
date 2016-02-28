@@ -19,21 +19,21 @@
     02110-1301, USA.
 */
 
-#ifndef PREFEREDLINEEDITWIDGETTEST_H
-#define PREFEREDLINEEDITWIDGETTEST_H
+#ifndef PreferredLineEditWidget_H
+#define PreferredLineEditWidget_H
 
 #include <QObject>
 
-class PreferedLineEditWidgetTest : public QObject
+class PreferredLineEditWidget : public QObject
 {
     Q_OBJECT
 public:
-    explicit PreferedLineEditWidgetTest(QObject *parent = Q_NULLPTR);
-    ~PreferedLineEditWidgetTest();
+    explicit PreferredLineEditWidget(QObject *parent = Q_NULLPTR);
+    ~PreferredLineEditWidget();
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();
-    void shouldChangePreferedValue();
+    void shouldChangePreferredValue();
 };
 
-#endif // PREFEREDLINEEDITWIDGETTEST_H
+#endif // PreferredLineEditWidget_H

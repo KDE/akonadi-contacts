@@ -38,10 +38,10 @@ PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
         mIconEnabled.pixmap(loader.currentSize(KIconLoader::Panel)).toImage();
     KIconEffect::toGray(iconDisabled, 1.0);
     mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
-    mPreferedAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
-    mPreferedAction->setObjectName(QStringLiteral("preferedaction"));
-    mPreferedAction->setToolTip(i18n("Set as Prefered"));
-    connect(mPreferedAction, &QAction::triggered, this, &PreferredLineEditWidget::slotPreferedStatusChanged);
+    mPreferredAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
+    mPreferredAction->setObjectName(QStringLiteral("preferredaction"));
+    mPreferredAction->setToolTip(i18n("Set as Prefered"));
+    connect(mPreferredAction, &QAction::triggered, this, &PreferredLineEditWidget::slotPreferredStatusChanged);
 }
 
 PreferredLineEditWidget::~PreferredLineEditWidget()
@@ -49,27 +49,27 @@ PreferredLineEditWidget::~PreferredLineEditWidget()
 
 }
 
-void PreferredLineEditWidget::slotPreferedStatusChanged()
+void PreferredLineEditWidget::slotPreferredStatusChanged()
 {
     mPreferred = !mPreferred;
-    updatePreferedIcon();
-    Q_EMIT preferedChanged(this);
+    updatePreferredIcon();
+    Q_EMIT preferredChanged(this);
 }
 
-void PreferredLineEditWidget::updatePreferedIcon()
+void PreferredLineEditWidget::updatePreferredIcon()
 {
-    mPreferedAction->setIcon(mPreferred ? mIconEnabled : mIconDisabled);
+    mPreferredAction->setIcon(mPreferred ? mIconEnabled : mIconDisabled);
 }
 
-void PreferredLineEditWidget::setPrefered(bool prefered)
+void PreferredLineEditWidget::setPreferred(bool preferred)
 {
-    if (mPreferred != prefered) {
-        mPreferred = prefered;
-        updatePreferedIcon();
+    if (mPreferred != preferred) {
+        mPreferred = preferred;
+        updatePreferredIcon();
     }
 }
 
-bool PreferredLineEditWidget::prefered() const
+bool PreferredLineEditWidget::preferred() const
 {
     return mPreferred;
 }

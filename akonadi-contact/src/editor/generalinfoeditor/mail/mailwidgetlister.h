@@ -47,7 +47,7 @@ protected:
 private Q_SLOTS:
     void slotAddWidget(MailWidget *w);
     void slotRemoveWidget(MailWidget *w);    
-    void slotPreferedChanged(MailWidget *w);
+    void slotPreferredChanged(MailWidget *w);
 
 private:
     void reconnectWidget(MailWidget *w);
