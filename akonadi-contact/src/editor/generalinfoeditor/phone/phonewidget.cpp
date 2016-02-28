@@ -95,5 +95,5 @@ void PhoneWidget::slotRemovePhone()
 void PhoneWidget::clearWidget()
 {
     mPhoneNumberEdit->clear();
-    mPhoneType->clear();
+    mPhoneType->resetToDefault();
 }

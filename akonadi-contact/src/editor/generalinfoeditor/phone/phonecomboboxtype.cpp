@@ -23,6 +23,7 @@
 #include "phonecomboboxtype.h"
 #include "phonetypedialog.h"
 #include <KLocalizedString>
+#include <QDebug>
 #include <autoqpointer_p.h>
 
 using namespace Akonadi;
@@ -64,7 +65,7 @@ KContacts::PhoneNumber::Type PhoneComboBoxType::type() const
     return mType;
 }
 
-void PhoneComboBoxType::clear()
+void PhoneComboBoxType::resetToDefault()
 {
     setCurrentIndex(0);
 }

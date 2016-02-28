@@ -58,7 +58,7 @@ public:
      */
     KContacts::PhoneNumber::Type type() const;
 
-    void clear();
+    void resetToDefault();
 private Q_SLOTS:
     void selected(int);
     void otherSelected();
