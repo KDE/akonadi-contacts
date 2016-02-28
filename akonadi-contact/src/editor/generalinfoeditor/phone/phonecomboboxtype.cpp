@@ -36,7 +36,10 @@ PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
     const int nbMax = KContacts::PhoneNumber::typeList().count();
     mTypeList.reserve(nbMax + 1);
     for (int i = 0; i < nbMax; ++i) {
-        mTypeList.append(KContacts::PhoneNumber::typeList().at(i));
+        const KContacts::PhoneNumber::TypeFlag typeflag = KContacts::PhoneNumber::typeList().at(i);
+        if (typeflag != KContacts::PhoneNumber::Pref) {
+            mTypeList.append(typeflag);
+        }
     }
 
     mTypeList.append(-1);   // Others...
