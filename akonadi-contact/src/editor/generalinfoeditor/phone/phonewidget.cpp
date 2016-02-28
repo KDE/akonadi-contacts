@@ -74,14 +74,20 @@ KContacts::PhoneNumber PhoneWidget::storePhone()
 {
     KContacts::PhoneNumber number;
     number.setNumber(mPhoneNumberEdit->text());
-    number.setType(mPhoneType->type());
+    KContacts::PhoneNumber::Type currentType = mPhoneType->type();
+    if (mPhoneNumberEdit->preferred()) {
+        currentType |= KContacts::PhoneNumber::Pref;
+    }
+    number.setType(currentType);
     return number;
 }
 
 void PhoneWidget::loadPhone(const KContacts::PhoneNumber &number)
 {
     mPhoneNumberEdit->setText(number.number());
-    mPhoneType->setType(number.type());
+    KContacts::PhoneNumber::Type currentType = number.type();
+    mPhoneType->setType(number.type() &~ KContacts::PhoneNumber::Pref);
+    mPhoneNumberEdit->setPreferred(currentType & KContacts::PhoneNumber::Pref);
 }
 
 void PhoneWidget::slotAddPhone()
