@@ -19,7 +19,7 @@
     02110-1301, USA.
 */
 
-#include "preferedlineeditwidget.h"
+#include "preferredlineeditwidget.h"
 #include <KIconLoader>
 #include <KIconEffect>
 #include <KLocalizedString>
@@ -28,9 +28,9 @@
 
 using namespace Akonadi;
 
-PreferedLineEditWidget::PreferedLineEditWidget(QWidget *parent)
+PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     : KLineEdit(parent),
-      mPrefered(false)
+      mPreferred(false)
 {
     mIconEnabled = QIcon(QIcon::fromTheme(QStringLiteral("rating")));
     KIconLoader loader;
@@ -41,35 +41,35 @@ PreferedLineEditWidget::PreferedLineEditWidget(QWidget *parent)
     mPreferedAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferedAction->setObjectName(QStringLiteral("preferedaction"));
     mPreferedAction->setToolTip(i18n("Set as Prefered"));
-    connect(mPreferedAction, &QAction::triggered, this, &PreferedLineEditWidget::slotPreferedStatusChanged);
+    connect(mPreferedAction, &QAction::triggered, this, &PreferredLineEditWidget::slotPreferedStatusChanged);
 }
 
-PreferedLineEditWidget::~PreferedLineEditWidget()
+PreferredLineEditWidget::~PreferredLineEditWidget()
 {
 
 }
 
-void PreferedLineEditWidget::slotPreferedStatusChanged()
+void PreferredLineEditWidget::slotPreferedStatusChanged()
 {
-    mPrefered = !mPrefered;
+    mPreferred = !mPreferred;
     updatePreferedIcon();
     Q_EMIT preferedChanged(this);
 }
 
-void PreferedLineEditWidget::updatePreferedIcon()
+void PreferredLineEditWidget::updatePreferedIcon()
 {
-    mPreferedAction->setIcon(mPrefered ? mIconEnabled : mIconDisabled);
+    mPreferedAction->setIcon(mPreferred ? mIconEnabled : mIconDisabled);
 }
 
-void PreferedLineEditWidget::setPrefered(bool prefered)
+void PreferredLineEditWidget::setPrefered(bool prefered)
 {
-    if (mPrefered != prefered) {
-        mPrefered = prefered;
+    if (mPreferred != prefered) {
+        mPreferred = prefered;
         updatePreferedIcon();
     }
 }
 
-bool PreferedLineEditWidget::prefered() const
+bool PreferredLineEditWidget::prefered() const
 {
-    return mPrefered;
+    return mPreferred;
 }

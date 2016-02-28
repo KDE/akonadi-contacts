@@ -27,12 +27,12 @@
 class QAction;
 namespace Akonadi
 {
-class PreferedLineEditWidget : public KLineEdit
+class PreferredLineEditWidget : public KLineEdit
 {
     Q_OBJECT
 public:
-    explicit PreferedLineEditWidget(QWidget *parent = Q_NULLPTR);
-    ~PreferedLineEditWidget();
+    explicit PreferredLineEditWidget(QWidget *parent = Q_NULLPTR);
+    ~PreferredLineEditWidget();
 
     bool prefered() const;
 
@@ -46,7 +46,7 @@ private Q_SLOTS:
 
 private:
     void updatePreferedIcon();
-    bool mPrefered;
+    bool mPreferred;
     QIcon mIconEnabled;
     QIcon mIconDisabled;
     QAction *mPreferedAction;

@@ -27,7 +27,7 @@
 #include <QToolButton>
 #include <QComboBox>
 #include <editor/widgets/akonadicontactcombobox.h>
-#include <editor/widgets/preferedlineeditwidget.h>
+#include <editor/widgets/preferredlineeditwidget.h>
 #include <QDebug>
 
 using namespace Akonadi;
@@ -38,12 +38,12 @@ MailWidget::MailWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-    mMailEdit = new PreferedLineEditWidget(this);
+    mMailEdit = new PreferredLineEditWidget(this);
     mMailEdit->setTrapReturnKey(true);
     mMailEdit->setPlaceholderText(i18n("Add an email account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);
-    connect(mMailEdit, &PreferedLineEditWidget::preferedChanged, this, &MailWidget::slotPreferedChanged);
+    connect(mMailEdit, &PreferredLineEditWidget::preferedChanged, this, &MailWidget::slotPreferedChanged);
 
     mMailType = new Akonadi::AkonadiContactComboBox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
