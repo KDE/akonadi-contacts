@@ -29,6 +29,7 @@
 #include <KLineEdit>
 #include <QToolButton>
 #include <QDebug>
+#include <editor/widgets/preferredlineeditwidget.h>
 
 using namespace Akonadi;
 MessagingWidget::MessagingWidget(QWidget *parent)
@@ -38,10 +39,11 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-    mMessagingEdit = new KLineEdit(this);
+    mMessagingEdit = new PreferredLineEditWidget(this);
     mMessagingEdit->setTrapReturnKey(true);
     mMessagingEdit->setPlaceholderText(i18n("Add an identifier"));
     mMessagingEdit->setObjectName(QStringLiteral("messaginglineedit"));
+    connect(mMessagingEdit, &PreferredLineEditWidget::preferredChanged, this, &MessagingWidget::slotPreferredChanged);
     layout->addWidget(mMessagingEdit);
 
     mProtocolCombo = new Akonadi::AkonadiContactComboBox(this);
@@ -75,11 +77,21 @@ MessagingWidget::~MessagingWidget()
 
 }
 
+void MessagingWidget::slotPreferredChanged()
+{
+    Q_EMIT preferredChanged(this);
+}
+
 void MessagingWidget::setIMAddress(const IMAddress &address)
 {
     mProtocolCombo->setCurrentIndex(
         IMProtocols::self()->protocols().indexOf(address.protocol()) + 1);
     mMessagingEdit->setText(address.name());
+}
+
+void MessagingWidget::setPreferred(bool b)
+{
+    mMessagingEdit->setPreferred(b);
 }
 
 IMAddress MessagingWidget::imAddress() const

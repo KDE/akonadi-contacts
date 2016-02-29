@@ -30,6 +30,7 @@ class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {
+class PreferredLineEditWidget;
 class AkonadiContactComboBox;
 class MessagingWidget : public QWidget
 {
@@ -41,18 +42,19 @@ public:
     void updateAddRemoveButton(bool addButtonEnabled);
     IMAddress imAddress() const;
     void setIMAddress(const IMAddress &address);
-
+    void setPreferred(bool b);
     void clearWidget();
 Q_SIGNALS:
     void addWidget(MessagingWidget *);
     void removeWidget(MessagingWidget *);
+    void preferredChanged(MessagingWidget *);
 
 private Q_SLOTS:
     void slotAddMessaging();
-    void slotRemoveMessaging();
-
+    void slotRemoveMessaging();    
+    void slotPreferredChanged();
 private:
-    KLineEdit *mMessagingEdit;
+    PreferredLineEditWidget *mMessagingEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
     Akonadi::AkonadiContactComboBox *mProtocolCombo;
