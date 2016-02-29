@@ -55,10 +55,12 @@ PhoneComboBoxType::~PhoneComboBoxType()
 
 void PhoneComboBoxType::setType(KContacts::PhoneNumber::Type type)
 {
-    if (!mTypeList.contains(type)) {
-        mTypeList.insert(mTypeList.at(mTypeList.count() - 1), type);
-    }
+    if (static_cast<int>(type) != 0) {
 
+        if (!mTypeList.contains(type)) {
+            mTypeList.insert(mTypeList.at(mTypeList.count() - 1), type);
+        }
+    }
     mType = type;
     update();
 }
@@ -105,7 +107,9 @@ void PhoneComboBoxType::otherSelected()
     if (dlg->exec()) {
         mType = dlg->type();
         if (!mTypeList.contains(mType)) {
-            mTypeList.insert(mTypeList.at(mTypeList.count() - 1), mType);
+            if (static_cast<int>(mType) != 0) {
+                mTypeList.insert(mTypeList.at(mTypeList.count() - 1), mType);
+            }
         }
     } else {
         setType(KContacts::PhoneNumber::Type(mTypeList.at(mLastSelected)));
