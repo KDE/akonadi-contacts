@@ -46,8 +46,8 @@ protected:
 
 private Q_SLOTS:
     void slotAddWidget(MessagingWidget *w);
-    void slotRemoveWidget(MessagingWidget *w);
-
+    void slotRemoveWidget(MessagingWidget *w);    
+    void slotPreferredChanged(MessagingWidget *w);
 private:
     void reconnectWidget(MessagingWidget *w);
     void updateAddRemoveButton();

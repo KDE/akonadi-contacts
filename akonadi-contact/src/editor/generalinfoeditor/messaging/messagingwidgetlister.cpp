@@ -182,6 +182,17 @@ void MessagingWidgetLister::reconnectWidget(MessagingWidget *w)
 {
     connect(w, &MessagingWidget::addWidget, this, &MessagingWidgetLister::slotAddWidget, Qt::UniqueConnection);
     connect(w, &MessagingWidget::removeWidget, this, &MessagingWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
+    connect(w, &MessagingWidget::preferredChanged, this, &MessagingWidgetLister::slotPreferredChanged, Qt::UniqueConnection);
+}
+
+void MessagingWidgetLister::slotPreferredChanged(MessagingWidget *w)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        if (widget != w) {
+            (static_cast<MessagingWidget *>(widget))->setPreferred(false);
+        }
+    }
 }
 
 void MessagingWidgetLister::slotAddWidget(MessagingWidget *w)
