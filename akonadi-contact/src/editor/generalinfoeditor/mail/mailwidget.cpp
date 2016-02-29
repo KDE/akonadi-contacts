@@ -93,7 +93,7 @@ void MailWidget::setMail(const KContacts::Email &email)
     mEmail = email;
     mMailEdit->setText(email.mail());
     const QMap<QString, QStringList> parameters = mEmail.parameters();
-    const QStringList value = parameters.value(QStringLiteral("type"));
+    const QStringList value = parameters.value(QStringLiteral("TYPE"));
     qDebug()<<" value "<<value << "parameters"<<parameters << email.mail();
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
@@ -107,7 +107,7 @@ KContacts::Email MailWidget::email()
 {
     mEmail.setEmail(mMailEdit->text());
     QMap<QString, QStringList> parameters = mEmail.parameters();
-    QStringList value = parameters.value(QStringLiteral("type"));
+    QStringList value = parameters.value(QStringLiteral("TYPE"));
     const QString newType = mMailType->currentData().toString();
     if (!newType.isEmpty()) {
         if (!value.contains(newType)) {
@@ -127,7 +127,8 @@ KContacts::Email MailWidget::email()
             value.removeAll(QStringLiteral("PREF"));
         }
     }
-    parameters.insert(QStringLiteral("type"), value);
+    parameters.insert(QStringLiteral("TYPE"), value);
+    mEmail.setParameters(parameters);
     return mEmail;
 }
 
