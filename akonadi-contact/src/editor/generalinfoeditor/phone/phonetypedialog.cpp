@@ -39,24 +39,19 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
 
     QVBoxLayout *layout = new QVBoxLayout(this);
 
-    mPreferredBox = new QCheckBox(i18n("This is the preferred phone number"), this);
-    layout->addWidget(mPreferredBox);
-
-    QGroupBox *box  = new QGroupBox(i18n("Types"), this);
-    layout->addWidget(box);
-
-    QGridLayout *buttonLayout = new QGridLayout(box);
+    QGridLayout *buttonLayout = new QGridLayout;
+    layout->addLayout(buttonLayout);
 
     // fill widgets
     mTypeList = KContacts::PhoneNumber::typeList();
     mTypeList.removeAll(KContacts::PhoneNumber::Pref);
     KContacts::PhoneNumber::TypeList::ConstIterator it;
-    mGroup = new QButtonGroup(box);
-    mGroup->setExclusive(false);
     int row, column, counter;
     row = column = counter = 0;
+    mGroup = new QButtonGroup(this);
+    mGroup->setExclusive(false);
     for (it = mTypeList.constBegin(); it != mTypeList.constEnd(); ++it, ++counter) {
-        QCheckBox *cb = new QCheckBox(KContacts::PhoneNumber::typeLabel(*it), box);
+        QCheckBox *cb = new QCheckBox(KContacts::PhoneNumber::typeLabel(*it), this);
         cb->setChecked(type & mTypeList[counter]);
         buttonLayout->addWidget(cb, row, column);
         mGroup->addButton(cb);
@@ -68,7 +63,6 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
         }
     }
 
-    mPreferredBox->setChecked(mType & KContacts::PhoneNumber::Pref);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
@@ -88,12 +82,5 @@ KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
             type |= mTypeList[i];
         }
     }
-
-    if (mPreferredBox->isChecked()) {
-        type = type | KContacts::PhoneNumber::Pref;
-    } else {
-        type = type & ~KContacts::PhoneNumber::Pref;
-    }
-
     return type;
 }

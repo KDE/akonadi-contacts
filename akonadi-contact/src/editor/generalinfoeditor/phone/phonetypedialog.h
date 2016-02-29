@@ -52,7 +52,6 @@ private:
     KContacts::PhoneNumber::TypeList mTypeList;
 
     QButtonGroup *mGroup;
-    QCheckBox *mPreferredBox;
 };
 }
 #endif // PHONETYPEDIALOG_H
