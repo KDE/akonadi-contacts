@@ -86,7 +86,7 @@ void PhoneWidget::loadPhone(const KContacts::PhoneNumber &number)
 {
     mPhoneNumberEdit->setText(number.number());
     KContacts::PhoneNumber::Type currentType = number.type();
-    mPhoneType->setType(number.type() &~ KContacts::PhoneNumber::Pref);
+    mPhoneType->setType(number.type() & ~ KContacts::PhoneNumber::Pref);
     mPhoneNumberEdit->setPreferred(currentType & KContacts::PhoneNumber::Pref);
 }
 

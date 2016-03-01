@@ -44,7 +44,6 @@ public Q_SLOTS:
     void replaceAddress(const KContacts::Address &address, int index);
     void updateAddressCanceled();
 
-
 private Q_SLOTS:
     void slotLinkClicked(const QUrl &url);
 

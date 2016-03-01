@@ -51,7 +51,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void slotAddMessaging();
-    void slotRemoveMessaging();    
+    void slotRemoveMessaging();
     void slotPreferredChanged();
 private:
     PreferredLineEditWidget *mMessagingEdit;

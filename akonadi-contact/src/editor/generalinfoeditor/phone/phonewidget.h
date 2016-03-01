@@ -53,7 +53,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void slotAddPhone();
-    void slotRemovePhone();    
+    void slotRemovePhone();
     void slotPreferredChanged();
 
 private:
