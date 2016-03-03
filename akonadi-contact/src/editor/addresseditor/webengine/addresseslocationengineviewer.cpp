@@ -21,6 +21,7 @@
 
 #include "addresseslocationengineviewer.h"
 #include "addresseslocationenginepage.h"
+#include "akonadi_contact_debug.h"
 #include "../addresseslocationgrantleeformater.h"
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -72,7 +73,7 @@ void AddressesLocationEngineViewer::slotLinkClicked(const QUrl &url)
                     editAddress(addressId);
                 }
             } else {
-                qDebug() << "Unknown url" << url;
+                qCDebug(AKONADICONTACT_LOG) << "Unknown url" << url;
             }
         }
     }
