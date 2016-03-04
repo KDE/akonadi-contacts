@@ -11,6 +11,8 @@ else()
    set(akonadicontact_webengine_LIB Qt5::WebKitWidgets)
 endif()
 
+ecm_qt_declare_logging_category(akonadicontact_addresslocation_web_editor_SRCS HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME log_akonadi_contact)
+
 set(addresseditor_SRCS
     ${akonadicontact_addresslocation_web_editor_SRCS}
     main.cpp
