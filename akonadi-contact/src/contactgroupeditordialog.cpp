@@ -106,6 +106,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     QWidget *mainWidget = new QWidget(this);
 
     QGridLayout *layout = new QGridLayout(mainWidget);
+    layout->setMargin(0);
 
     d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ?
             Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode,
