@@ -38,7 +38,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    QLabel *label = new QLabel(i18n("Title Custom Type"), this);
+    QLabel *label = new QLabel(i18n("Custom Field Title"), this);
     label->setObjectName(QStringLiteral("labeltitle"));
 
     topLayout->addWidget(label);
