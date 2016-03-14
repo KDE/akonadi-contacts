@@ -26,6 +26,7 @@
 #include <QToolButton>
 #include <KLocalizedString>
 #include <editor/widgets/akonadicontactcombobox.h>
+#include <editor/widgets/preferredlineeditwidget.h>
 using namespace Akonadi;
 
 WebWidget::WebWidget(QWidget *parent)
@@ -35,11 +36,12 @@ WebWidget::WebWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setMargin(0);
 
-    mWebSiteEdit = new KLineEdit(this);
+    mWebSiteEdit = new PreferredLineEditWidget(this);
     mWebSiteEdit->setTrapReturnKey(true);
     mWebSiteEdit->setPlaceholderText(i18n("Add a web site"));
     mWebSiteEdit->setObjectName(QStringLiteral("website"));
     layout->addWidget(mWebSiteEdit);
+    connect(mWebSiteEdit, &PreferredLineEditWidget::preferredChanged, this, &WebWidget::slotPreferredChanged);
 
     mWebType = new Akonadi::AkonadiContactComboBox(this);
     mWebType->setObjectName(QStringLiteral("webtype"));
@@ -85,4 +87,14 @@ void WebWidget::slotAddWeb()
 void WebWidget::slotRemoveWeb()
 {
     Q_EMIT removeWidget(this);
+}
+
+void WebWidget::setPreferred(bool b)
+{
+    mWebSiteEdit->setPreferred(b);
+}
+
+void WebWidget::slotPreferredChanged()
+{
+    Q_EMIT preferredChanged(this);
 }

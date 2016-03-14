@@ -47,6 +47,7 @@ private Q_SLOTS:
     void slotAddWidget(WebWidget *w);
     void slotRemoveWidget(WebWidget *w);
 
+    void slotPreferredChanged(WebWidget *w);
 private:
     void reconnectWidget(WebWidget *w);
     void updateAddRemoveButton();

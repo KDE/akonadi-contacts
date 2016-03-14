@@ -29,6 +29,7 @@ class QToolButton;
 namespace Akonadi
 {
 class AkonadiContactComboBox;
+class PreferredLineEditWidget;
 class WebWidget : public QWidget
 {
     Q_OBJECT
@@ -38,16 +39,18 @@ public:
     void updateAddRemoveButton(bool addButtonEnabled);
 
     void clearWidget();
+    void setPreferred(bool b);
 Q_SIGNALS:
     void addWidget(WebWidget *);
     void removeWidget(WebWidget *);
+    void preferredChanged(WebWidget *);
 
 private Q_SLOTS:
     void slotRemoveWeb();
     void slotAddWeb();
-
+    void slotPreferredChanged();
 private:
-    KLineEdit *mWebSiteEdit;
+    PreferredLineEditWidget *mWebSiteEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
     Akonadi::AkonadiContactComboBox *mWebType;

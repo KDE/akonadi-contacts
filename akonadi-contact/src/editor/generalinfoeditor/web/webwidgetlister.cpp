@@ -66,6 +66,7 @@ void WebWidgetLister::reconnectWidget(WebWidget *w)
 {
     connect(w, &WebWidget::addWidget, this, &WebWidgetLister::slotAddWidget, Qt::UniqueConnection);
     connect(w, &WebWidget::removeWidget, this, &WebWidgetLister::slotRemoveWidget, Qt::UniqueConnection);
+    connect(w, &WebWidget::preferredChanged, this, &WebWidgetLister::slotPreferredChanged, Qt::UniqueConnection);
 }
 
 void WebWidgetLister::slotAddWidget(WebWidget *w)
@@ -101,6 +102,16 @@ void WebWidgetLister::updateAddRemoveButton()
     for (; wIt != wEnd; ++wIt) {
         WebWidget *w = qobject_cast<WebWidget *>(*wIt);
         w->updateAddRemoveButton(addButtonEnabled);
+    }
+}
+
+void WebWidgetLister::slotPreferredChanged(WebWidget *w)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        if (widget != w) {
+            (static_cast<WebWidget *>(widget))->setPreferred(false);
+        }
     }
 }
 
