@@ -40,7 +40,7 @@ MailWidget::MailWidget(QWidget *parent)
 
     mMailEdit = new PreferredLineEditWidget(this);
     mMailEdit->setTrapReturnKey(true);
-    mMailEdit->setPlaceholderText(i18n("Add an email account"));
+    mMailEdit->setPlaceholderText(i18n("Add an Email Account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);
     connect(mMailEdit, &PreferredLineEditWidget::preferredChanged, this, &MailWidget::slotPreferredChanged);
@@ -56,12 +56,14 @@ MailWidget::MailWidget(QWidget *parent)
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
+    mAddButton->setToolTip(i18n("Add an Email"));
     connect(mAddButton, &QToolButton::clicked, this, &MailWidget::slotAddMail);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    mRemoveButton->setToolTip(i18n("Remove Email"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MailWidget::slotRemoveMail);
     layout->addWidget(mRemoveButton);
 }

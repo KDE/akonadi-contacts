@@ -38,7 +38,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 
     mPhoneNumberEdit = new PreferredLineEditWidget(this);
     mPhoneNumberEdit->setTrapReturnKey(true);
-    mPhoneNumberEdit->setPlaceholderText(i18n("Add a phone number"));
+    mPhoneNumberEdit->setPlaceholderText(i18n("Add a Phone Number"));
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
     connect(mPhoneNumberEdit, &PreferredLineEditWidget::preferredChanged, this, &PhoneWidget::slotPreferredChanged);
@@ -49,12 +49,14 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    mAddButton->setToolTip(i18n("Add a Phone Number"));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &PhoneWidget::slotAddPhone);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    mRemoveButton->setToolTip(i18n("Remove Phone Number"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     connect(mRemoveButton, &QToolButton::clicked, this, &PhoneWidget::slotRemovePhone);
     layout->addWidget(mRemoveButton);

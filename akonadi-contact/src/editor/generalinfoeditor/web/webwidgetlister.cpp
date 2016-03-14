@@ -52,7 +52,7 @@ void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
 
 void WebWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
-
+    //TODO
 }
 
 QWidget *WebWidgetLister::createWidget(QWidget *parent)
