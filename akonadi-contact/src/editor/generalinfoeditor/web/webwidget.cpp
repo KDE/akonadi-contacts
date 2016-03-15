@@ -107,7 +107,11 @@ KContacts::ResourceLocatorUrl WebWidget::url()
 void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
 {
     mUrl = url;
-    //TODO preferred
+    const QMap<QString, QStringList> parameters = mUrl.parameters();
+    const QStringList value = parameters.value(QStringLiteral("type"));
+    if (value.contains(QStringLiteral("PREF"))) {
+        setPreferred(true);
+    }
     mWebSiteEdit->setText(mUrl.url().toDisplayString());
 }
 
