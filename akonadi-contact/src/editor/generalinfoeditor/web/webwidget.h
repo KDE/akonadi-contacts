@@ -24,6 +24,8 @@
 #define WEBWIDGET_H
 
 #include <QWidget>
+
+#include <kcontacts/resourcelocatorurl.h>
 class KLineEdit;
 class QToolButton;
 namespace Akonadi
@@ -40,6 +42,10 @@ public:
 
     void clearWidget();
     void setPreferred(bool b);
+
+    KContacts::ResourceLocatorUrl url();
+    void loadWebSite(const KContacts::ResourceLocatorUrl &url);
+
 Q_SIGNALS:
     void addWidget(WebWidget *);
     void removeWidget(WebWidget *);
@@ -50,6 +56,7 @@ private Q_SLOTS:
     void slotAddWeb();
     void slotPreferredChanged();
 private:
+    KContacts::ResourceLocatorUrl mUrl;
     PreferredLineEditWidget *mWebSiteEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;

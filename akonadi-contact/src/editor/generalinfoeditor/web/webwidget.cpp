@@ -24,6 +24,7 @@
 #include <QHBoxLayout>
 #include <KLineEdit>
 #include <QToolButton>
+#include <QUrl>
 #include <KLocalizedString>
 #include <editor/widgets/akonadicontactcombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
@@ -94,6 +95,20 @@ void WebWidget::slotRemoveWeb()
 void WebWidget::setPreferred(bool b)
 {
     mWebSiteEdit->setPreferred(b);
+}
+
+KContacts::ResourceLocatorUrl WebWidget::url()
+{
+    mUrl.setUrl(QUrl(mWebSiteEdit->text()));
+    //TODO preferred
+    return mUrl;
+}
+
+void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
+{
+    mUrl = url;
+    //TODO preferred
+    mWebSiteEdit->setText(mUrl.url().toDisplayString());
 }
 
 void WebWidget::slotPreferredChanged()

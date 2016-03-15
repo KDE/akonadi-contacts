@@ -38,6 +38,7 @@ WebWidgetLister::~WebWidgetLister()
 
 void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
+    //TODO
 #if 0
     const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
     setNumberOfShownWidgetsTo(phoneNumbers.count());
