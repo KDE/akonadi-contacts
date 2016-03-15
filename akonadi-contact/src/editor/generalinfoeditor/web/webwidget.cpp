@@ -38,7 +38,7 @@ WebWidget::WebWidget(QWidget *parent)
 
     mWebSiteEdit = new PreferredLineEditWidget(this);
     mWebSiteEdit->setTrapReturnKey(true);
-    mWebSiteEdit->setPlaceholderText(i18n("Add a web site"));
+    mWebSiteEdit->setPlaceholderText(i18n("Add a Web Site"));
     mWebSiteEdit->setObjectName(QStringLiteral("website"));
     layout->addWidget(mWebSiteEdit);
     connect(mWebSiteEdit, &PreferredLineEditWidget::preferredChanged, this, &WebWidget::slotPreferredChanged);
@@ -53,12 +53,14 @@ WebWidget::WebWidget(QWidget *parent)
     mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
+    mAddButton->setToolTip(i18n("Add a Web Site"));
     connect(mAddButton, &QToolButton::clicked, this, &WebWidget::slotAddWeb);
     layout->addWidget(mAddButton);
 
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
+    mRemoveButton->setToolTip(i18n("Remove Web Site"));
     connect(mRemoveButton, &QToolButton::clicked, this, &WebWidget::slotRemoveWeb);
     layout->addWidget(mRemoveButton);
 }
