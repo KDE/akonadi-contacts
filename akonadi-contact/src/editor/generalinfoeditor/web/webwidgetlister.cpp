@@ -53,6 +53,17 @@ void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
 
 void WebWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
+    const QList<QWidget *> widgetList = widgets();
+    //KContacts::Email::List emailList;
+    for (QWidget *widget : widgetList) {
+        WebWidget *w = qobject_cast<WebWidget *>(widget);
+        KContacts::ResourceLocatorUrl newUrl = w->url();
+        if (newUrl.isValid()) {
+            //emailList << newEmail;
+        }
+    }
+    //contact.setEmailList(emailList);
+
     //TODO
 }
 
