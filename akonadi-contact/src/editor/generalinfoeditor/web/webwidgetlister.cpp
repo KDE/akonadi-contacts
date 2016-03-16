@@ -22,6 +22,8 @@
 
 #include "webwidgetlister.h"
 #include "webwidget.h"
+
+#include <KContacts/Addressee>
 using namespace Akonadi;
 
 WebWidgetLister::WebWidgetLister(QWidget *parent)
@@ -38,33 +40,33 @@ WebWidgetLister::~WebWidgetLister()
 
 void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
-    //TODO
-#if 0
-    const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
-    setNumberOfShownWidgetsTo(phoneNumbers.count());
-    QList<QWidget *>::ConstIterator wIt = widgets().constBegin();
-    QList<QWidget *>::ConstIterator wEnd = widgets().constEnd();
-    for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-        PhoneWidget *w = qobject_cast<PhoneWidget *>(*wIt);
-        w->loadPhone(phoneNumbers.at(i));
+    KContacts::ResourceLocatorUrl::List resourceLocatorList = contact.extraUrlList();
+    if (resourceLocatorList.isEmpty()) {
+        setNumberOfShownWidgetsTo(1);
+    } else {
+        setNumberOfShownWidgetsTo(resourceLocatorList.count());
+        const QList<QWidget *> widgetList = widgets();
+        auto wIt = widgetList.constBegin();
+        auto wEnd = widgetList.constEnd();
+        for (int i = 0; wIt != wEnd; ++wIt, ++i) {
+            WebWidget *w = qobject_cast<WebWidget *>(*wIt);
+            w->loadWebSite(resourceLocatorList.at(i));
+        }
     }
-#endif
 }
 
 void WebWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
     const QList<QWidget *> widgetList = widgets();
-    //KContacts::Email::List emailList;
+    KContacts::ResourceLocatorUrl::List resourceLocatorList;
     for (QWidget *widget : widgetList) {
         WebWidget *w = qobject_cast<WebWidget *>(widget);
         KContacts::ResourceLocatorUrl newUrl = w->url();
         if (newUrl.isValid()) {
-            //emailList << newEmail;
+            resourceLocatorList << newUrl;
         }
     }
-    //contact.setEmailList(emailList);
-
-    //TODO
+    contact.setExtraUrlList(resourceLocatorList);
 }
 
 QWidget *WebWidgetLister::createWidget(QWidget *parent)

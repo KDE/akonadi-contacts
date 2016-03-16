@@ -100,7 +100,19 @@ void WebWidget::setPreferred(bool b)
 KContacts::ResourceLocatorUrl WebWidget::url()
 {
     mUrl.setUrl(QUrl(mWebSiteEdit->text()));
-    //TODO preferred
+    QMap<QString, QStringList> parameters = mUrl.parameters();
+    QStringList value = parameters.value(QStringLiteral("type"));
+    if (mWebSiteEdit->preferred()) {
+        if (!value.contains(QStringLiteral("PREF"))) {
+            value.append(QStringLiteral("PREF"));
+        }
+    } else {
+        if (value.contains(QStringLiteral("PREF"))) {
+            value.removeAll(QStringLiteral("PREF"));
+        }
+    }
+    parameters.insert(QStringLiteral("type"), value);
+    mUrl.setParameters(parameters);
     return mUrl;
 }
 
