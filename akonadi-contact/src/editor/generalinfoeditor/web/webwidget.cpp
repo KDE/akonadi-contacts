@@ -124,6 +124,7 @@ void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
     }
+    //TODO set type
     mWebSiteEdit->setText(mUrl.url().toDisplayString());
 }
 
