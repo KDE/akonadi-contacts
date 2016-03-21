@@ -19,11 +19,11 @@ include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
 set(KF5_VERSION "5.19.0")
-set(KDEPIMLIBS_VERSION "5.1.80")
-set(KCONTACTS_VERSION "5.1.80")
-set(CALENDARCORE_VERSION "5.1.80")
-set(KMIMELIB_VERSION "5.1.80")
-set(AKONADI_VERSION "5.1.80")
+set(KDEPIMLIBS_VERSION "5.2.40")
+set(KCONTACTS_VERSION "5.2.40")
+set(CALENDARCORE_VERSION "5.2.40")
+set(KMIMELIB_VERSION "5.2.40")
+set(AKONADI_VERSION "5.2.40")
 
 option(QTWEBENGINE_EXPERIMENTAL_OPTION "Enable support for qtwebengine. False by default." FALSE)
 
