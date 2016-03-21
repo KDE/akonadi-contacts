@@ -47,8 +47,17 @@ WebWidget::WebWidget(QWidget *parent)
     mWebType = new Akonadi::AkonadiContactComboBox(this);
     mWebType->setObjectName(QStringLiteral("webtype"));
     mWebType->addItem(i18n("Select..."), QString());
-    mWebType->addItem(i18n("Home"), QStringLiteral("home"));
-    mWebType->addItem(i18n("Work"), QStringLiteral("work"));
+
+    QString type = QStringLiteral("HOME");
+    mWebSiteType.append(type);
+
+    mWebType->addItem(i18n("Home"), type);
+    type = QStringLiteral("WORK");
+    mWebSiteType.append(type);
+    mWebType->addItem(i18n("Work"), type);
+    type = QStringLiteral("OTHER");
+    mWebSiteType.append(type);
+    mWebType->addItem(i18n("Other"), type);
     layout->addWidget(mWebType);
 
     mAddButton = new QToolButton(this);
@@ -102,6 +111,18 @@ KContacts::ResourceLocatorUrl WebWidget::url()
     mUrl.setUrl(QUrl(mWebSiteEdit->text()));
     QMap<QString, QStringList> parameters = mUrl.parameters();
     QStringList value = parameters.value(QStringLiteral("type"));
+
+    const QString newType = mWebType->currentData().toString();
+    if (!newType.isEmpty()) {
+        if (mOldType != newType) {
+            if (!value.contains(newType)) {
+                value.append(newType);
+            }
+            if (!mOldType.isEmpty()) {
+                value.removeAll(mOldType);
+            }
+        }
+    }
     if (mWebSiteEdit->preferred()) {
         if (!value.contains(QStringLiteral("PREF"))) {
             value.append(QStringLiteral("PREF"));
@@ -124,7 +145,13 @@ void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
     }
-    //TODO set type
+    Q_FOREACH (const QString &type, mWebSiteType) {
+        if (value.contains(type)) {
+            mOldType = type;
+            mWebType->setCurrentIndex(mWebType->findData(type));
+            break;
+        }
+    }
     mWebSiteEdit->setText(mUrl.url().toDisplayString());
 }
 

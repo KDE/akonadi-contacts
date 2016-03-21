@@ -57,6 +57,8 @@ private Q_SLOTS:
     void slotPreferredChanged();
 private:
     KContacts::ResourceLocatorUrl mUrl;
+    QStringList mWebSiteType;
+    QString mOldType;
     PreferredLineEditWidget *mWebSiteEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
