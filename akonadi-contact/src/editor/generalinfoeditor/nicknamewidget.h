@@ -24,7 +24,7 @@
 #define NICKNAMEWIDGET_H
 
 #include <QWidget>
-class QLineEdit;
+class KLineEdit;
 namespace KContacts
 {
 class Addressee;
@@ -41,7 +41,7 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
 private:
-    QLineEdit *mNickName;
+    KLineEdit *mNickName;
 };
 }
 #endif // NICKNAMEWIDGET_H
