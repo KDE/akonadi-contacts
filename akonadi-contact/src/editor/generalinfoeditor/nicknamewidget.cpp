@@ -24,7 +24,7 @@
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <QLineEdit>
+#include <KLineEdit>
 #include <KContacts/Addressee>
 using namespace Akonadi;
 
@@ -37,7 +37,8 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));
     topLayout->addWidget(nickNameLabel);
 
-    mNickName = new QLineEdit(this);
+    mNickName = new KLineEdit(this);
+    mNickName->setTrapReturnKey(true);
     mNickName->setPlaceholderText(i18n("Add a Nickname"));
     mNickName->setObjectName(QStringLiteral("nickname"));
     topLayout->addWidget(mNickName);
