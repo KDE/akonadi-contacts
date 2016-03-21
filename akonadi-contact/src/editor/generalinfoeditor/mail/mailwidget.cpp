@@ -48,9 +48,15 @@ MailWidget::MailWidget(QWidget *parent)
     mMailType = new Akonadi::AkonadiContactComboBox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
     mMailType->addItem(i18n("Select..."), QString());
-    mMailType->addItem(i18n("Home"), QStringLiteral("HOME"));
-    mMailType->addItem(i18n("Work"), QStringLiteral("WORK"));
-    mMailType->addItem(i18n("Other"), QStringLiteral("OTHER"));
+    QString type = QStringLiteral("HOME");
+    mEmailType.append(type);
+    mMailType->addItem(i18n("Home"), type);
+    type = QStringLiteral("WORK");
+    mEmailType.append(type);
+    mMailType->addItem(i18n("Work"), type);
+    type = QStringLiteral("OTHER");
+    mEmailType.append(type);
+    mMailType->addItem(i18n("Other"), type);
     layout->addWidget(mMailType);
 
     mAddButton = new QToolButton(this);
@@ -99,6 +105,13 @@ void MailWidget::setMail(const KContacts::Email &email)
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
     }
+    Q_FOREACH (const QString &type, mEmailType) {
+        if (value.contains(type)) {
+            mOldType = type;
+            mMailType->setCurrentIndex(mMailType->findData(type));
+            break;
+        }
+    }
 }
 
 KContacts::Email MailWidget::email()
@@ -108,12 +121,13 @@ KContacts::Email MailWidget::email()
     QStringList value = parameters.value(QStringLiteral("type"));
     const QString newType = mMailType->currentData().toString();
     if (!newType.isEmpty()) {
-        if (!value.contains(newType)) {
-            value.append(newType);
-        }
-        if (!mOldType.isEmpty()) {
-            //TODO remove old type.
-            value.removeAll(mOldType);
+        if (mOldType != newType) {
+            if (!value.contains(newType)) {
+                value.append(newType);
+            }
+            if (!mOldType.isEmpty()) {
+                value.removeAll(mOldType);
+            }
         }
     }
     if (mMailEdit->preferred()) {
