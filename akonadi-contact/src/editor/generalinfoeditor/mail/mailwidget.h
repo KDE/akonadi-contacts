@@ -54,6 +54,7 @@ private Q_SLOTS:
     void slotPreferredChanged();
 private:
     KContacts::Email mEmail;
+    QStringList mEmailType;
     QString mOldType;
     PreferredLineEditWidget *mMailEdit;
     Akonadi::AkonadiContactComboBox *mMailType;
