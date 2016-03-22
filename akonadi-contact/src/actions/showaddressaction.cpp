@@ -44,12 +44,10 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
 {
     // synchronize
     ContactActionsSettings::self()->load();
-    qDebug() << " void ShowAddressAction::showAddress(const KContacts::Address &address)******************************************";
 
     if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseBrowser) {
         QString urlTemplate = ContactActionsSettings::self()->addressUrl();
         replaceArguments(urlTemplate, address);
-        qDebug() << " ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss" << urlTemplate;
         if (!urlTemplate.isEmpty()) {
             QDesktopServices::openUrl(QUrl(urlTemplate));
         }
