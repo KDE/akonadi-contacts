@@ -21,7 +21,7 @@
 */
 
 #include "addresseslocationwidget.h"
-#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+#ifdef QTWEBENGINE_SUPPORT_OPTION
 #include "webengine/addresseslocationengineviewer.h"
 #else
 #include "webkit/addresseslocationviewer.h"
@@ -36,7 +36,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     mAddressLocationWidget = new AddressLocationWidget(this);
     addWidget(mAddressLocationWidget);
     mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
-#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+#ifdef QTWEBENGINE_SUPPORT_OPTION
     mAddressesLocationViewer = new AddressesLocationEngineViewer(this);
     mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
     addWidget(mAddressesLocationViewer);

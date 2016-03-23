@@ -29,7 +29,7 @@
 namespace Akonadi
 {
 class AddressLocationWidget;
-#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+#ifdef QTWEBENGINE_SUPPORT_OPTION
 class AddressesLocationEngineViewer;
 #else
 class AddressesLocationViewer;
@@ -46,7 +46,7 @@ public:
 
     void setReadOnly(bool readOnly);
 private:
-#ifdef QTWEBENGINE_EXPERIMENTAL_OPTION
+#ifdef QTWEBENGINE_SUPPORT_OPTION
     AddressesLocationEngineViewer *mAddressesLocationViewer;
 #else
     AddressesLocationViewer *mAddressesLocationViewer;

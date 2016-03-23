@@ -86,7 +86,7 @@ set(akonadicontact_editor_generalinfo_SRCS
     ${akonadicontact_editor_generalinfo_mail_SRCS}
     )
 
-if (QTWEBENGINE_EXPERIMENTAL_OPTION)
+if (QTWEBENGINE_SUPPORT_OPTION)
     set(akonadicontact_addresslocation_web_editor_SRCS
         editor/addresseditor/webengine/addresseslocationengineviewer.cpp
         editor/addresseditor/webengine/addresseslocationenginepage.cpp
