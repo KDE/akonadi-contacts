@@ -22,11 +22,7 @@
 
 #include "addresseslocationviewertest.h"
 #include "config-akonadi-contact.h"
-#ifdef QTWEBENGINE_SUPPORT_OPTION
 #include "../webengine/addresseslocationengineviewer.h"
-#else
-#include "../webkit/addresseslocationviewer.h"
-#endif
 #include <QTest>
 using namespace Akonadi;
 AddressesLocationViewerTest::AddressesLocationViewerTest(QObject *parent)
@@ -42,11 +38,7 @@ AddressesLocationViewerTest::~AddressesLocationViewerTest()
 
 void AddressesLocationViewerTest::shouldHaveDefaultValue()
 {
-#ifdef QTWEBENGINE_SUPPORT_OPTION
     AddressesLocationEngineViewer w;
-#else
-    AddressesLocationViewer w;
-#endif
     QVERIFY(w.addresses().isEmpty());
 }
 

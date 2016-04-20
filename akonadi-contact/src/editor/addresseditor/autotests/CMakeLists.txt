@@ -1,17 +1,10 @@
 include(ECMMarkAsTest)
 
-if (QTWEBENGINE_SUPPORT_OPTION)
-    set(akonadicontact_addresslocation_web_editor_SRCS
-        ../webengine/addresseslocationengineviewer.cpp
-        ../webengine/addresseslocationenginepage.cpp
-        )
-    set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
-else()
-   set(akonadicontact_addresslocation_web_editor_SRCS
-       ../webkit/addresseslocationviewer.cpp
-       )
-   set(akonadicontact_webengine_LIB Qt5::WebKitWidgets)
-endif()
+set(akonadicontact_addresslocation_web_editor_SRCS
+    ../webengine/addresseslocationengineviewer.cpp
+    ../webengine/addresseslocationenginepage.cpp
+    )
+set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
 
 ecm_qt_declare_logging_category(akonadicontact_addresslocation_web_editor_SRCS HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME log_akonadi_contact)
 

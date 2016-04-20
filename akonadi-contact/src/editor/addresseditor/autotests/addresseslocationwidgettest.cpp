@@ -22,11 +22,7 @@
 
 #include "addresseslocationwidgettest.h"
 #include "config-akonadi-contact.h"
-#ifdef QTWEBENGINE_SUPPORT_OPTION
 #include "../webengine/addresseslocationengineviewer.h"
-#else
-#include "../webkit/addresseslocationviewer.h"
-#endif
 
 #include "../addresseslocationwidget.h"
 #include <QTest>
@@ -50,14 +46,8 @@ void AddressesLocationWidgetTest::shouldHaveDefaultValue()
     AddressLocationWidget *addressLocationWidget = w.findChild<AddressLocationWidget *>(QStringLiteral("addresslocationwidget"));
     QVERIFY(addressLocationWidget);
 
-#ifdef QTWEBENGINE_SUPPORT_OPTION
     AddressesLocationEngineViewer *addressesLocationViewer = w.findChild<AddressesLocationEngineViewer *>(QStringLiteral("addresseslocationviewer"));
     QVERIFY(addressesLocationViewer);
-#else
-    AddressesLocationViewer *addressesLocationViewer = w.findChild<AddressesLocationViewer *>(QStringLiteral("addresseslocationviewer"));
-    QVERIFY(addressesLocationViewer);
-#endif
-
 }
 
 QTEST_MAIN(AddressesLocationWidgetTest)

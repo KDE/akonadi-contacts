@@ -29,11 +29,7 @@
 namespace Akonadi
 {
 class AddressLocationWidget;
-#ifdef QTWEBENGINE_SUPPORT_OPTION
 class AddressesLocationEngineViewer;
-#else
-class AddressesLocationViewer;
-#endif
 class AddressesLocationWidget : public QSplitter
 {
     Q_OBJECT
@@ -46,11 +42,7 @@ public:
 
     void setReadOnly(bool readOnly);
 private:
-#ifdef QTWEBENGINE_SUPPORT_OPTION
     AddressesLocationEngineViewer *mAddressesLocationViewer;
-#else
-    AddressesLocationViewer *mAddressesLocationViewer;
-#endif
     AddressLocationWidget *mAddressLocationWidget;
 };
 }

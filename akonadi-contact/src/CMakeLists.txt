@@ -86,18 +86,11 @@ set(akonadicontact_editor_generalinfo_SRCS
     ${akonadicontact_editor_generalinfo_mail_SRCS}
     )
 
-if (QTWEBENGINE_SUPPORT_OPTION)
-    set(akonadicontact_addresslocation_web_editor_SRCS
-        editor/addresseditor/webengine/addresseslocationengineviewer.cpp
-        editor/addresseditor/webengine/addresseslocationenginepage.cpp
-        )
-    set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
-else()
-   set(akonadicontact_addresslocation_web_editor_SRCS
-       editor/addresseditor/webkit/addresseslocationviewer.cpp
-       )
-   set(akonadicontact_webengine_LIB Qt5::WebKitWidgets)
-endif()
+set(akonadicontact_addresslocation_web_editor_SRCS
+    editor/addresseditor/webengine/addresseslocationengineviewer.cpp
+    editor/addresseditor/webengine/addresseslocationenginepage.cpp
+    )
+set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
 
 
 

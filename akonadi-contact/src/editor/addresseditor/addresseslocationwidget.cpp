@@ -21,11 +21,7 @@
 */
 
 #include "addresseslocationwidget.h"
-#ifdef QTWEBENGINE_SUPPORT_OPTION
 #include "webengine/addresseslocationengineviewer.h"
-#else
-#include "webkit/addresseslocationviewer.h"
-#endif
 #include "addresslocationwidget.h"
 using namespace Akonadi;
 
@@ -36,7 +32,6 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     mAddressLocationWidget = new AddressLocationWidget(this);
     addWidget(mAddressLocationWidget);
     mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
-#ifdef QTWEBENGINE_SUPPORT_OPTION
     mAddressesLocationViewer = new AddressesLocationEngineViewer(this);
     mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
     addWidget(mAddressesLocationViewer);
@@ -44,15 +39,6 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::addAddress);
     connect(mAddressLocationWidget, &AddressLocationWidget::updateAddressCanceled, mAddressesLocationViewer, &AddressesLocationEngineViewer::updateAddressCanceled);
     connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::replaceAddress);
-#else
-    mAddressesLocationViewer = new AddressesLocationViewer(this);
-    mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
-    addWidget(mAddressesLocationViewer);
-    connect(mAddressesLocationViewer, &AddressesLocationViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
-    connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationViewer::addAddress);
-    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationViewer::replaceAddress);
-    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddressCanceled, mAddressesLocationViewer, &AddressesLocationViewer::updateAddressCanceled);
-#endif
     setSizes(QList<int>() << 400 << 300);
 }
 
