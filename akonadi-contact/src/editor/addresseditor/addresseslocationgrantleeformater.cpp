@@ -50,9 +50,11 @@ QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Addr
     QVariantList addressList;
     const int nbAddress(addresses.count());
     addressList.reserve(nbAddress);
+    QList<AddressGrantleeObject *> lstAddress;
     for (int i = 0; i < nbAddress; ++i) {
         AddressGrantleeObject *addressObj = new AddressGrantleeObject(addresses.at(i), i);
         addressList << QVariant::fromValue(static_cast<QObject *>(addressObj));
+        lstAddress.append(addressObj);
     }
     QVariantHash addressHash;
     addressHash.insert(QStringLiteral("addresses"), addressList);
@@ -61,6 +63,7 @@ QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Addr
 
     Grantlee::Context context(addressHash);
     const QString contentHtml = mSelfcontainedTemplate->render(&context);
+    qDeleteAll(lstAddress);
     return contentHtml;
 }
 
