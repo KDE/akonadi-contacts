@@ -43,6 +43,7 @@ AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *pa
 AddressesLocationGrantleeFormater::~AddressesLocationGrantleeFormater()
 {
     delete mEngine;
+    mTemplateLoader.clear();
 }
 
 QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Address::List &addresses)
