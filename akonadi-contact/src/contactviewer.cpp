@@ -200,7 +200,7 @@ public:
         // remove the 'mailto:' and split into name and email address
         KContacts::Addressee::parseEmailAddress(email.mid(7), name, address);
 
-        emit mParent->emailClicked(name, address);
+        Q_EMIT mParent->emailClicked(name, address);
     }
 
     void slotUrlClicked(const QUrl &url)
@@ -208,27 +208,27 @@ public:
         const QString urlScheme(url.scheme());
         if (urlScheme == QLatin1String("http") ||
                 urlScheme == QLatin1String("https")) {
-            emit mParent->urlClicked(url);
+            Q_EMIT mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
             const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
             if (pos < numbers.count()) {
-                emit mParent->phoneNumberClicked(numbers.at(pos));
+                Q_EMIT mParent->phoneNumberClicked(numbers.at(pos));
             }
         } else if (urlScheme == QLatin1String("sms")) {
             const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
             if (pos < numbers.count()) {
-                emit mParent->smsClicked(numbers.at(pos));
+                Q_EMIT mParent->smsClicked(numbers.at(pos));
             }
         } else if (urlScheme == QLatin1String("address")) {
             const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::Address::List addresses = mCurrentContact.addresses();
             if (pos < addresses.count()) {
-                emit mParent->addressClicked(addresses.at(pos));
+                Q_EMIT mParent->addressClicked(addresses.at(pos));
             }
         } else if (urlScheme == QLatin1String("mailto")) {
             QString name, address;
@@ -236,7 +236,7 @@ public:
             // remove the 'mailto:' and split into name and email address
             KContacts::Addressee::parseEmailAddress(url.path(), name, address);
 
-            emit mParent->emailClicked(name, address);
+            Q_EMIT mParent->emailClicked(name, address);
         }
     }
 

@@ -125,34 +125,34 @@ void KDatePickerPopup::setItems(int items)
 void KDatePickerPopup::slotDateChanged(const QDate &date)
 {
     if (date != mDate) {
-        emit dateChanged(date);
+        Q_EMIT dateChanged(date);
     }
     hide();
 }
 
 void KDatePickerPopup::slotToday()
 {
-    emit dateChanged(QDate::currentDate());
+    Q_EMIT dateChanged(QDate::currentDate());
 }
 
 void KDatePickerPopup::slotTomorrow()
 {
-    emit dateChanged(QDate::currentDate().addDays(1));
+    Q_EMIT dateChanged(QDate::currentDate().addDays(1));
 }
 
 void KDatePickerPopup::slotNoDate()
 {
-    emit dateChanged(QDate());
+    Q_EMIT dateChanged(QDate());
 }
 
 void KDatePickerPopup::slotNextWeek()
 {
-    emit dateChanged(QDate::currentDate().addDays(7));
+    Q_EMIT dateChanged(QDate::currentDate().addDays(7));
 }
 
 void KDatePickerPopup::slotNextMonth()
 {
-    emit dateChanged(QDate::currentDate().addMonths(1));
+    Q_EMIT dateChanged(QDate::currentDate().addMonths(1));
 }
 
 #include "moc_kdatepickerpopup_p.cpp"

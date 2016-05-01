@@ -128,14 +128,14 @@ void ContactGroupEditor::Private::parentCollectionFetchDone(KJob *job)
 void ContactGroupEditor::Private::storeDone(KJob *job)
 {
     if (job->error()) {
-        emit mParent->error(job->errorString());
+        Q_EMIT mParent->error(job->errorString());
         return;
     }
 
     if (mMode == EditMode) {
-        emit mParent->contactGroupStored(mItem);
+        Q_EMIT mParent->contactGroupStored(mItem);
     } else if (mMode == CreateMode) {
-        emit mParent->contactGroupStored(static_cast<ItemCreateJob *>(job)->item());
+        Q_EMIT mParent->contactGroupStored(static_cast<ItemCreateJob *>(job)->item());
     }
 }
 

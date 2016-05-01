@@ -86,7 +86,7 @@ void KCMAkonadiContactActions::slotShowAddressActionChanged(int value)
     } else {
         ui.stackedWidget->setCurrentIndex(2);
     }
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
@@ -97,7 +97,7 @@ void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
     } else {
         ui.stackedWidget_3->setCurrentIndex(0);
     }
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMAkonadiContactActions::slotDialPhoneNumberActionChanged(int value)
@@ -108,7 +108,7 @@ void KCMAkonadiContactActions::slotDialPhoneNumberActionChanged(int value)
     } else {
         ui.stackedWidget_2->setCurrentIndex(0);
     }
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMAkonadiContactActions::load()

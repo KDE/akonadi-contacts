@@ -55,7 +55,7 @@ void DateView::contextMenuEvent(QContextMenuEvent *event)
 
 void DateView::emitSignal()
 {
-    emit resetDate();
+    Q_EMIT resetDate();
 }
 
 DateEditWidget::DateEditWidget(Type type, QWidget *parent)

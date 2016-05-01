@@ -102,7 +102,7 @@ void ContactLineEdit::completed(const QModelIndex &index)
         mIsReference = false;
     }
 
-    emit completed(this);
+    Q_EMIT completed(this);
 }
 
 void ContactLineEdit::slotTextEdited()
@@ -299,8 +299,8 @@ bool ContactGroupEditorDelegate::editorEvent(QEvent *event, QAbstractItemModel *
 
 void ContactGroupEditorDelegate::completed(QWidget *widget)
 {
-    emit commitData(widget);
-    emit closeEditor(widget);
+    Q_EMIT commitData(widget);
+    Q_EMIT closeEditor(widget);
 }
 
 void ContactGroupEditorDelegate::setFirstColumnAsCurrent()

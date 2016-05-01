@@ -425,7 +425,7 @@ public:
             mActions.value(StandardContactActionManager::EditItem)->setEnabled(canEditItem);
         }
 
-        emit mParent->actionStateUpdated();
+        Q_EMIT mParent->actionStateUpdated();
     }
 
     Collection selectedCollection() const

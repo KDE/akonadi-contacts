@@ -75,7 +75,7 @@ public:
 
         if (job->error()) {
             mMembers[row].loadingError = true;
-            emit mParent->dataChanged(mParent->index(row, 0, QModelIndex()), mParent->index(row, 1, QModelIndex()));
+            Q_EMIT mParent->dataChanged(mParent->index(row, 0, QModelIndex()), mParent->index(row, 1, QModelIndex()));
             return;
         }
 
@@ -83,7 +83,7 @@ public:
 
         if (fetchJob->items().count() != 1) {
             mMembers[row].loadingError = true;
-            emit mParent->dataChanged(mParent->index(row, 0, QModelIndex()), mParent->index(row, 1, QModelIndex()));
+            Q_EMIT mParent->dataChanged(mParent->index(row, 0, QModelIndex()), mParent->index(row, 1, QModelIndex()));
             return;
         }
 
@@ -92,7 +92,7 @@ public:
 
         GroupMember &member = mMembers[row];
         member.referencedContact = contact;
-        emit mParent->dataChanged(mParent->index(row, 0, QModelIndex()), mParent->index(row, 1, QModelIndex()));
+        Q_EMIT mParent->dataChanged(mParent->index(row, 0, QModelIndex()), mParent->index(row, 1, QModelIndex()));
     }
 
     void normalizeMemberList()
@@ -169,7 +169,7 @@ ContactGroupModel::~ContactGroupModel()
 
 void ContactGroupModel::loadContactGroup(const KContacts::ContactGroup &contactGroup)
 {
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
 
     d->mMembers.clear();
     d->mGroup = contactGroup;
@@ -196,7 +196,7 @@ void ContactGroupModel::loadContactGroup(const KContacts::ContactGroup &contactG
 
     d->normalizeMemberList();
 
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 bool ContactGroupModel::storeContactGroup(KContacts::ContactGroup &group) const

@@ -60,9 +60,9 @@ ContactsTreeModel::~ContactsTreeModel()
 
 void ContactsTreeModel::setColumns(const Columns &columns)
 {
-    emit beginResetModel();
+    Q_EMIT beginResetModel();
     d->mColumns = columns;
-    emit endResetModel();
+    Q_EMIT endResetModel();
 }
 
 ContactsTreeModel::Columns ContactsTreeModel::columns() const

@@ -100,7 +100,7 @@ public:
         // remove the 'mailto:' and split into name and email address
         KContacts::Addressee::parseEmailAddress(email.path(), name, address);
 
-        emit mParent->emailClicked(name, address);
+        Q_EMIT mParent->emailClicked(name, address);
     }
 
     void _k_expandResult(KJob *job)

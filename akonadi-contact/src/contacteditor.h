@@ -156,7 +156,7 @@ public Q_SLOTS:
 
     /**
      * Save the contact from the editor back to the storage. And return error.
-     * Need to connect to finished() signal, to keep time to emit signal.
+     * Need to connect to finished() signal, to keep time to Q_EMIT signal.
      * @since 4.11
      */
     void saveContactInAddressBook();

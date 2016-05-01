@@ -39,11 +39,11 @@ CustomFieldsModel::~CustomFieldsModel()
 
 void CustomFieldsModel::setCustomFields(const CustomField::List &customFields)
 {
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
 
     mCustomFields = customFields;
 
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 CustomField::List CustomFieldsModel::customFields() const
@@ -168,7 +168,7 @@ bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value,
             customField.setKey(value.toString());
         }
 
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
 
@@ -177,7 +177,7 @@ bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value,
             if (customField.type() == CustomField::BooleanType) {
                 customField.setValue(static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked ?
                                      QStringLiteral("true") : QStringLiteral("false"));
-                emit dataChanged(index, index);
+                Q_EMIT dataChanged(index, index);
                 return true;
             }
         }
@@ -185,13 +185,13 @@ bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value,
 
     if (role == TypeRole) {
         customField.setType((CustomField::Type)value.toInt());
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
 
     if (role == ScopeRole) {
         customField.setScope((CustomField::Scope)value.toInt());
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
 

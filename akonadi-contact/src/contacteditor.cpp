@@ -149,17 +149,17 @@ void ContactEditor::Private::parentCollectionFetchDone(KJob *job)
 void ContactEditor::Private::storeDone(KJob *job)
 {
     if (job->error() != KJob::NoError) {
-        emit mParent->error(job->errorString());
-        emit mParent->finished();
+        Q_EMIT mParent->error(job->errorString());
+        Q_EMIT mParent->finished();
         return;
     }
 
     if (mMode == EditMode) {
-        emit mParent->contactStored(mItem);
+        Q_EMIT mParent->contactStored(mItem);
     } else if (mMode == CreateMode) {
-        emit mParent->contactStored(static_cast<Akonadi::ItemCreateJob *>(job)->item());
+        Q_EMIT mParent->contactStored(static_cast<Akonadi::ItemCreateJob *>(job)->item());
     }
-    emit mParent->finished();
+    Q_EMIT mParent->finished();
 }
 
 void ContactEditor::Private::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &)
@@ -252,7 +252,7 @@ void ContactEditor::saveContactInAddressBook()
 {
     if (d->mMode == EditMode) {
         if (!d->mItem.isValid() || d->mReadOnly) {
-            emit finished();
+            Q_EMIT finished();
             return;
         }
 
