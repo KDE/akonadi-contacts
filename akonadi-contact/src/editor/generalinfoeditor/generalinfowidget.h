@@ -24,7 +24,6 @@
 #define GENERALINFOWIDGET_H
 
 #include <QWidget>
-class QLineEdit;
 class ImageWidget;
 class CategoriesEditWidget;
 namespace KContacts

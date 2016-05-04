@@ -25,7 +25,6 @@
 
 #include <QWidget>
 #include <KContacts/Email>
-class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {

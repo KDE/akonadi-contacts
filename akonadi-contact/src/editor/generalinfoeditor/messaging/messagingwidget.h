@@ -26,7 +26,6 @@
 #include <QWidget>
 
 #include <editor/im/imaddress.h>
-class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {

@@ -26,7 +26,6 @@
 #include <QWidget>
 
 #include <kcontacts/resourcelocatorurl.h>
-class KLineEdit;
 class QToolButton;
 namespace Akonadi
 {

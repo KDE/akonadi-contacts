@@ -29,10 +29,6 @@ class QLineEdit;
 class QPushButton;
 class QCheckBox;
 class QComboBox;
-namespace KContacts
-{
-class Addressee;
-}
 namespace Akonadi
 {
 class CustomFieldEditorWidget : public QWidget

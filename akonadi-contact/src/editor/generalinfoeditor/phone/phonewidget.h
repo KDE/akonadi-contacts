@@ -24,7 +24,6 @@
 #define PHONEWIDGET_H
 
 #include <QWidget>
-class KLineEdit;
 class QToolButton;
 namespace KContacts
 {

@@ -24,7 +24,6 @@
 #include <QDialog>
 #include <KContacts/PhoneNumber>
 class QButtonGroup;
-class QCheckBox;
 
 namespace Akonadi
 {
