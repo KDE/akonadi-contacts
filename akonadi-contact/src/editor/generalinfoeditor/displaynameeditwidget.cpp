@@ -26,10 +26,12 @@
 #include <QHBoxLayout>
 #include <QPainter>
 #include <QStyledItemDelegate>
+#include <QDebug>
 
 #include <kcontacts/addressee.h>
 #include <KComboBox>
 #include <KLocalizedString>
+
 
 // Tries to guess the display type that is used for the passed contact
 static DisplayNameEditWidget::DisplayType guessedDisplayType(const KContacts::Addressee &contact)
