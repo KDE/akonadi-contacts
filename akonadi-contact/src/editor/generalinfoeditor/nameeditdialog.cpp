@@ -23,6 +23,7 @@
 #include "nameeditdialog.h"
 
 #include <QFormLayout>
+#include <QDebug>
 
 #include <KComboBox>
 #include <KLineEdit>
