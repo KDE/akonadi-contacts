@@ -19,6 +19,7 @@
     02110-1301, USA.
 */
 
+#include "displaynameeditwidget.h"
 #include "nameeditdialog.h"
 
 #include <QFormLayout>
@@ -58,11 +59,16 @@ NameEditDialog::NameEditDialog(QWidget *parent)
     mSuffixCombo->setDuplicatesEnabled(false);
     mSuffixCombo->setEditable(true);
 
+
+    mDisplayNameEdit = new DisplayNameEditWidget(this);
+
+
     layout->addRow(i18n("Honorific prefixes:"), mPrefixCombo);
     layout->addRow(i18n("Given name:"), mGivenNameEdit);
     layout->addRow(i18n("Additional names:"), mAdditionalNameEdit);
     layout->addRow(i18n("Family names:"), mFamilyNameEdit);
     layout->addRow(i18n("Honorific suffixes:"), mSuffixCombo);
+    layout->addRow(i18n("Display:"), mDisplayNameEdit);
 
     QStringList prefixList;
     prefixList += QString();
@@ -144,4 +150,24 @@ void NameEditDialog::setAdditionalName(const QString &name)
 QString NameEditDialog::additionalName() const
 {
     return mAdditionalNameEdit->text();
+}
+
+void NameEditDialog::loadContact(const KContacts::Addressee &contact)
+{
+    setPrefix(contact.prefix());
+    setGivenName(contact.givenName());
+    setAdditionalName(contact.additionalName());
+    setFamilyName(contact.familyName());
+    setSuffix(contact.suffix());
+    mDisplayNameEdit->loadContact(contact);
+}
+
+void NameEditDialog::storeContact(KContacts::Addressee &contact) const
+{
+    mDisplayNameEdit->storeContact(contact);
+    contact.setPrefix(prefix());
+    contact.setGivenName(givenName());
+    contact.setAdditionalName(additionalName());
+    contact.setFamilyName(familyName());
+    contact.setSuffix(suffix());
 }

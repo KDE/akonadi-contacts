@@ -30,7 +30,6 @@
 #include <kcontacts/addressee.h>
 #include <KComboBox>
 #include <KLocalizedString>
-#include <QLabel>
 
 // Tries to guess the display type that is used for the passed contact
 static DisplayNameEditWidget::DisplayType guessedDisplayType(const KContacts::Addressee &contact)
@@ -116,9 +115,6 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
 
-    QLabel *lab = new QLabel(i18n("Display:"), this);
-    layout->addWidget(lab);
-
     mView = new KComboBox(this);
     mView->addItems(QStringList() << QString() << QString() << QString()
                     << QString() << QString() << QString());
@@ -166,6 +162,7 @@ DisplayNameEditWidget::DisplayType DisplayNameEditWidget::displayType() const
 void DisplayNameEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mContact = contact;
+    qDebug()<<" DisplayNameEditWidget::loadContact const"<<contact.formattedName();
 
     mDisplayType = guessedDisplayType(mContact);
 
@@ -175,6 +172,7 @@ void DisplayNameEditWidget::loadContact(const KContacts::Addressee &contact)
 void DisplayNameEditWidget::storeContact(KContacts::Addressee &contact) const
 {
     contact.setFormattedName(mView->currentText());
+    qDebug()<<" void DisplayNameEditWidget::storeContact(KContacts::Addressee &contact) const"<<contact.formattedName();
 }
 
 void DisplayNameEditWidget::changeName(const KContacts::Addressee &contact)

@@ -24,9 +24,11 @@
 
 #include <QDialog>
 
+#include <KContacts/Addressee>
+
 class KLineEdit;
 class KComboBox;
-
+class DisplayNameEditWidget;
 class NameEditDialog : public QDialog
 {
 public:
@@ -47,12 +49,15 @@ public:
     void setAdditionalName(const QString &name);
     QString additionalName() const;
 
+    void loadContact(const KContacts::Addressee &contact);
+    void storeContact(KContacts::Addressee &contact) const;
 private:
     KComboBox *mSuffixCombo;
     KComboBox *mPrefixCombo;
     KLineEdit *mFamilyNameEdit;
     KLineEdit *mGivenNameEdit;
     KLineEdit *mAdditionalNameEdit;
+    DisplayNameEditWidget *mDisplayNameEdit;
 };
 
 #endif

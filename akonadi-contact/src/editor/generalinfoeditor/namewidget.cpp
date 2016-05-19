@@ -100,20 +100,10 @@ void NameWidget::slotTextChanged(const QString &text)
 void NameWidget::slotOpenNameEditDialog()
 {
     QPointer<NameEditDialog> dlg = new NameEditDialog(this);
-
-    dlg->setPrefix(mContact.prefix());
-    dlg->setGivenName(mContact.givenName());
-    dlg->setAdditionalName(mContact.additionalName());
-    dlg->setFamilyName(mContact.familyName());
-    dlg->setSuffix(mContact.suffix());
+    dlg->loadContact(mContact);
 
     if (dlg->exec() == QDialog::Accepted) {
-        mContact.setPrefix(dlg->prefix());
-        mContact.setGivenName(dlg->givenName());
-        mContact.setAdditionalName(dlg->additionalName());
-        mContact.setFamilyName(dlg->familyName());
-        mContact.setSuffix(dlg->suffix());
-
+        dlg->storeContact(mContact);
         disconnect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
         mNameEdit->setText(mContact.assembledName());
         connect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
