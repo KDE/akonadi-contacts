@@ -88,6 +88,7 @@ void NameWidget::storeContact(KContacts::Addressee &contact) const
     contact.setAdditionalName(mContact.additionalName());
     contact.setFamilyName(mContact.familyName());
     contact.setSuffix(mContact.suffix());
+    contact.setFormattedName(mContact.formattedName());
 }
 
 void NameWidget::slotTextChanged(const QString &text)
