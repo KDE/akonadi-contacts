@@ -194,10 +194,6 @@ ContactEditorWidget::ContactEditorWidget(QWidget *parent)
 {
     Q_UNUSED(parent)
     d->initGui();
-
-    //TODO PORT
-    //connect(d->mNameWidget, &NameEditWidget::nameChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
-    //connect(d->mBusinessEditorWidget, &Akonadi::BusinessEditorWidget::organizationChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
 }
 
 ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displayMode, QWidget *parent)
@@ -205,10 +201,6 @@ ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displa
 {
     Q_UNUSED(parent)
     d->initGui();
-
-    //TODO PORT
-    //connect(d->mNameWidget, &NameEditWidget::nameChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeName);
-    //connect(d->mBusinessEditorWidget, &Akonadi::BusinessEditorWidget::organizationChanged, d->mDisplayNameWidget, &DisplayNameEditWidget::changeOrganization);
 }
 
 ContactEditorWidget::~ContactEditorWidget()
