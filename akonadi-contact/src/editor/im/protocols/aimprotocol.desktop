@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=aim_protocol
+Icon=im-aim
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/aim
 X-KDE-InstantMessagingKContactField=aim

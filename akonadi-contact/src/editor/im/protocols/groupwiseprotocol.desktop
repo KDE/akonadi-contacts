@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=groupwise_protocol
+Icon=im-groupwise
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/groupwise
 

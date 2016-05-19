@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=skype_protocol
+Icon=im-skype
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/skype
 X-KDE-InstantMessagingKContactField=skype

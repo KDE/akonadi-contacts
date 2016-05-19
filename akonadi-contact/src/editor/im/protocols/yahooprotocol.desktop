@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=yahoo_protocol
+Icon=im-yahoo
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/yahoo
 X-KDE-InstantMessagingKContactField=yahoo

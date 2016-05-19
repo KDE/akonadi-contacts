@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=google_protocol
+Icon=im-google
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/googletalk
 X-KDE-InstantMessagingKContactField=googletalk

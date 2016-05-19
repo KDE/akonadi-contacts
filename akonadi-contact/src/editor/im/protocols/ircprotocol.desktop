@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=irc_protocol
+Icon=im-irc
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKABCField=messaging/irc
 Comment=Internet Relay Chat

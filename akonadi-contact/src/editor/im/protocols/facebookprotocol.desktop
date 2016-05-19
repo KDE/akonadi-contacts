@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=facebook_protocol
+Icon=im-facebook
 X-KDE-ServiceTypes=KContacts/IMProtocol,KPluginInfo
 X-KDE-InstantMessagingKContactField=facebook
 X-KDE-InstantMessagingKABCField=messaging/facebook
