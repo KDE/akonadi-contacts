@@ -229,7 +229,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     d->mNotesWidget->setPlainText(contact.note());
 
     d->mPersonalEditorWidget->loadContact(contact);
-
+    d->mGeneralInfoWidget->setDisplayType((DisplayNameEditWidget::DisplayType)metaData.displayNameMode());
     if (d->mDisplayMode == FullMode) {
         // custom fields group
         d->mCustomFieldsWidget->setLocalCustomFieldDescriptions(metaData.customFieldDescriptions());
@@ -261,7 +261,7 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
         d->mCustomFieldsWidget->storeContact(contact);
         metaData.setCustomFieldDescriptions(d->mCustomFieldsWidget->localCustomFieldDescriptions());
 
-        //TODO metaData.setDisplayNameMode(d->mDisplayNameWidget->displayType());
+        metaData.setDisplayNameMode(d->mGeneralInfoWidget->displayType());
 
         // custom pages
         foreach (Akonadi::ContactEditorPagePlugin *plugin, d->mCustomPages) {

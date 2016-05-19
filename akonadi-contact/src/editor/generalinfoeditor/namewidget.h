@@ -23,6 +23,7 @@
 #ifndef NAMEWIDGET_H
 #define NAMEWIDGET_H
 
+#include "displaynameeditwidget.h"
 #include <QWidget>
 
 #include <KContacts/Addressee>
@@ -41,6 +42,9 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
 
+    void setDisplayType(DisplayNameEditWidget::DisplayType type);
+    DisplayNameEditWidget::DisplayType displayType() const;
+
 Q_SIGNALS:
     void nameChanged(const KContacts::Addressee &contact);
 
@@ -49,6 +53,7 @@ private Q_SLOTS:
     void slotOpenNameEditDialog();
 
 private:
+    DisplayNameEditWidget::DisplayType mDisplayType;
     KContacts::Addressee mContact;
     KLineEdit *mNameEdit;
     QToolButton *mButtonEdit;

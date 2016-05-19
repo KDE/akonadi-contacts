@@ -171,3 +171,13 @@ void NameEditDialog::storeContact(KContacts::Addressee &contact) const
     contact.setFamilyName(familyName());
     contact.setSuffix(suffix());
 }
+
+void NameEditDialog::setDisplayType(DisplayNameEditWidget::DisplayType type)
+{
+    mDisplayNameEdit->setDisplayType(type);
+}
+
+DisplayNameEditWidget::DisplayType NameEditDialog::displayType() const
+{
+    return mDisplayNameEdit->displayType();
+}

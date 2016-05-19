@@ -70,6 +70,16 @@ void NameWidget::setReadOnly(bool readOnly)
     mButtonEdit->setEnabled(!readOnly);
 }
 
+void NameWidget::setDisplayType(DisplayNameEditWidget::DisplayType type)
+{
+    mDisplayType = type;
+}
+
+DisplayNameEditWidget::DisplayType NameWidget::displayType() const
+{
+    return mDisplayType;
+}
+
 void NameWidget::loadContact(const KContacts::Addressee &contact)
 {
     mContact = contact;
@@ -100,9 +110,11 @@ void NameWidget::slotOpenNameEditDialog()
 {
     QPointer<NameEditDialog> dlg = new NameEditDialog(this);
     dlg->loadContact(mContact);
+    dlg->setDisplayType(mDisplayType);
 
     if (dlg->exec() == QDialog::Accepted) {
         dlg->storeContact(mContact);
+        mDisplayType = dlg->displayType();
         disconnect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);
         mNameEdit->setText(mContact.assembledName());
         connect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);

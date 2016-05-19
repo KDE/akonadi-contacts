@@ -98,6 +98,16 @@ GeneralInfoWidget::~GeneralInfoWidget()
 
 }
 
+void GeneralInfoWidget::setDisplayType(DisplayNameEditWidget::DisplayType type)
+{
+    mNameWidget->setDisplayType(type);
+}
+
+DisplayNameEditWidget::DisplayType GeneralInfoWidget::displayType() const
+{
+    return mNameWidget->displayType();
+}
+
 void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
 {
     mPhoneListWidget->loadContact(contact);

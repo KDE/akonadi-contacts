@@ -22,6 +22,7 @@
 #ifndef NAMEEDITDIALOG_H
 #define NAMEEDITDIALOG_H
 
+#include "displaynameeditwidget.h"
 #include <QDialog>
 
 #include <KContacts/Addressee>
@@ -51,6 +52,9 @@ public:
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
+
+    void setDisplayType(DisplayNameEditWidget::DisplayType type);
+    DisplayNameEditWidget::DisplayType displayType() const;
 private:
     KComboBox *mSuffixCombo;
     KComboBox *mPrefixCombo;

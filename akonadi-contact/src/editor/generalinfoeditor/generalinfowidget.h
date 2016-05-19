@@ -24,6 +24,7 @@
 #define GENERALINFOWIDGET_H
 
 #include <QWidget>
+#include "displaynameeditwidget.h"
 class ImageWidget;
 class CategoriesEditWidget;
 namespace KContacts
@@ -51,6 +52,8 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
+    void setDisplayType(DisplayNameEditWidget::DisplayType type);
+    DisplayNameEditWidget::DisplayType displayType() const;
 private:
     PhoneListWidget *mPhoneListWidget;
     WebListWidget *mWebListWidget;
