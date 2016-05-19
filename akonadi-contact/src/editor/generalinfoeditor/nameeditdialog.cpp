@@ -23,7 +23,6 @@
 #include "nameeditdialog.h"
 
 #include <QFormLayout>
-#include <QDebug>
 
 #include <KComboBox>
 #include <KLineEdit>
@@ -171,5 +170,4 @@ void NameEditDialog::storeContact(KContacts::Addressee &contact) const
     contact.setAdditionalName(additionalName());
     contact.setFamilyName(familyName());
     contact.setSuffix(suffix());
-    qDebug()<<" contact.***************************************"<<contact.formattedName();
 }

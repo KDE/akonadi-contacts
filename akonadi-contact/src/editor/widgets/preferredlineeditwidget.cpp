@@ -24,7 +24,6 @@
 #include <KIconEffect>
 #include <KLocalizedString>
 #include <QAction>
-#include <QDebug>
 
 using namespace Akonadi;
 

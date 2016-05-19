@@ -28,7 +28,6 @@
 #include <QHBoxLayout>
 #include <KLineEdit>
 #include <QToolButton>
-#include <QDebug>
 #include <editor/widgets/preferredlineeditwidget.h>
 
 using namespace Akonadi;

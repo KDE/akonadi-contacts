@@ -25,7 +25,6 @@
 #include "nicknamewidget.h"
 #include <QGridLayout>
 #include <QLabel>
-#include <QDebug>
 #include <KLocalizedString>
 #include <QLineEdit>
 #include "phone/phonelistwidget.h"

@@ -24,7 +24,6 @@
 #include "mailwidget.h"
 
 #include <KContacts/Addressee>
-#include <QDebug>
 using namespace Akonadi;
 
 MailWidgetLister::MailWidgetLister(QWidget *parent)

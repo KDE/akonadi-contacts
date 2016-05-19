@@ -23,7 +23,6 @@
 
 #include <kiconloader.h>
 #include <kservicetypetrader.h>
-#include <QDebug>
 #include <KService>
 IMProtocols *IMProtocols::mSelf = Q_NULLPTR;
 

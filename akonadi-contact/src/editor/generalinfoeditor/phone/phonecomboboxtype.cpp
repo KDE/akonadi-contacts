@@ -23,7 +23,6 @@
 #include "phonecomboboxtype.h"
 #include "phonetypedialog.h"
 #include <KLocalizedString>
-#include <QDebug>
 #include <autoqpointer_p.h>
 
 using namespace Akonadi;

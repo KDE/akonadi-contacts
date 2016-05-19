@@ -26,7 +26,6 @@
 #include <QHBoxLayout>
 #include <QPainter>
 #include <QStyledItemDelegate>
-#include <QDebug>
 
 #include <kcontacts/addressee.h>
 #include <KComboBox>
@@ -164,7 +163,6 @@ DisplayNameEditWidget::DisplayType DisplayNameEditWidget::displayType() const
 void DisplayNameEditWidget::loadContact(const KContacts::Addressee &contact)
 {
     mContact = contact;
-    qDebug()<<" DisplayNameEditWidget::loadContact const"<<contact.formattedName();
 
     mDisplayType = guessedDisplayType(mContact);
 
@@ -176,7 +174,6 @@ void DisplayNameEditWidget::storeContact(KContacts::Addressee &contact) const
     //metaData.setDisplayNameMode(d->mDisplayNameWidget->displayType());
     //d->mDisplayNameWidget->setDisplayType((DisplayNameEditWidget::DisplayType)metaData.displayNameMode());
     contact.setFormattedName(mView->currentText());
-    qDebug()<<" void DisplayNameEditWidget::storeContact(KContacts::Addressee &contact) const"<<contact.formattedName();
 }
 
 void DisplayNameEditWidget::changeName(const KContacts::Addressee &contact)

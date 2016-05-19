@@ -27,7 +27,6 @@
 #include <KLocalizedString>
 #include <QUrlQuery>
 #include <QWebEngineSettings>
-#include <QDebug>
 
 using namespace Akonadi;
 

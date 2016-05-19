@@ -28,7 +28,6 @@
 #include <QComboBox>
 #include <editor/widgets/akonadicontactcombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
-#include <QDebug>
 
 using namespace Akonadi;
 MailWidget::MailWidget(QWidget *parent)

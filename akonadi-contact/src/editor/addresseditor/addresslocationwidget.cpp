@@ -31,7 +31,6 @@
 #include <QLabel>
 #include <QCheckBox>
 #include <QPushButton>
-#include <QDebug>
 #include <QStackedWidget>
 using namespace Akonadi;
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
