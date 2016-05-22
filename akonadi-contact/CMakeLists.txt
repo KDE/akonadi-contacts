@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(Akonadi-Contact)
 
 # ECM setup
+set(KF5_VERSION "5.22.0")
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
@@ -18,7 +19,6 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
-set(KF5_VERSION "5.22.0")
 set(KDEPIMLIBS_VERSION "5.2.40")
 set(KCONTACTS_VERSION "5.2.40")
 set(CALENDARCORE_VERSION "5.2.40")
