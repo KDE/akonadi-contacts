@@ -38,6 +38,7 @@ void AkonadiContactSelectTypeComboboxTest::shouldHaveDefaultValue()
 {
     Akonadi::AkonadiContactSelectTypeCombobox w;
     QVERIFY(!w.selectTypeList().isEmpty());
+    QCOMPARE(w.count(), w.selectTypeList().count() + 1);
 }
 
 QTEST_MAIN(AkonadiContactSelectTypeComboboxTest)
