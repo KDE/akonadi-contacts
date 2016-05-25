@@ -81,6 +81,7 @@ set(akonadicontact_editor_generalinfo_SRCS
     editor/generalinfoeditor/categorieseditwidget.cpp
     editor/generalinfoeditor/nameeditdialog.cpp
     editor/generalinfoeditor/displaynameeditwidget.cpp
+    editor/generalinfoeditor/akonadicontactselecttypecombobox.cpp
     ${akonadicontact_editor_generalinfo_messaging_SRCS}
     ${akonadicontact_editor_generalinfo_phone_SRCS}
     ${akonadicontact_editor_generalinfo_web_SRCS}
@@ -91,9 +92,6 @@ set(akonadicontact_addresslocation_web_editor_SRCS
     editor/addresseditor/webengine/addresseslocationengineviewer.cpp
     editor/addresseditor/webengine/addresseslocationenginepage.cpp
     )
-set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
-
-
 
 set(akonadicontact_addresslocation_editor_SRCS
     ${akonadicontact_addresslocation_web_editor_SRCS}
@@ -223,7 +221,8 @@ target_link_libraries(KF5AkonadiContact
     KF5::WidgetsAddons
     KF5::XmlGui
     Grantlee5::Templates
-    ${akonadicontact_webengine_LIB}
+    Qt5::WebEngine
+    Qt5::WebEngineWidgets
     )
 
 if(KF5Prison_FOUND)
