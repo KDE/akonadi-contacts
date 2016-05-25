@@ -191,7 +191,7 @@ void AddressLocationWidget::fillCountryCombo()
         countries.append(localeStr);
     }
 
-    qSort(countries.begin(), countries.end(), LocaleAwareLessThan());
+    std::sort(countries.begin(), countries.end(), LocaleAwareLessThan());
 
     mCountryCombo->addItems(countries);
     mCountryCombo->setAutoCompletion(true);
