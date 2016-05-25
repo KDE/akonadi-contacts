@@ -171,8 +171,6 @@ void DisplayNameEditWidget::loadContact(const KContacts::Addressee &contact)
 
 void DisplayNameEditWidget::storeContact(KContacts::Addressee &contact) const
 {
-    //metaData.setDisplayNameMode(d->mDisplayNameWidget->displayType());
-    //d->mDisplayNameWidget->setDisplayType((DisplayNameEditWidget::DisplayType)metaData.displayNameMode());
     contact.setFormattedName(mView->currentText());
 }
 
