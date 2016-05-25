@@ -19,26 +19,20 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADICONTACTSELECTTYPECOMBOBOX_H
-#define AKONADICONTACTSELECTTYPECOMBOBOX_H
 
-#include "../widgets/akonadicontactcombobox.h"
+#ifndef AKONADICONTACTSELECTTYPECOMBOBOXTEST_H
+#define AKONADICONTACTSELECTTYPECOMBOBOXTEST_H
 
-namespace Akonadi
-{
-class AkonadiContactSelectTypeCombobox : public Akonadi::AkonadiContactComboBox
+#include <QObject>
+
+class AkonadiContactSelectTypeComboboxTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AkonadiContactSelectTypeCombobox(QWidget *parent = Q_NULLPTR);
-    ~AkonadiContactSelectTypeCombobox();
-
-    QStringList selectTypeList() const;
-
-private:
-    void initialize();
-    QStringList mSelectType;
+    explicit AkonadiContactSelectTypeComboboxTest(QObject *parent = Q_NULLPTR);
+    ~AkonadiContactSelectTypeComboboxTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
-}
 
-#endif // AKONADICONTACTSELECTTYPECOMBOBOX_H
+#endif // AKONADICONTACTSELECTTYPECOMBOBOXTEST_H

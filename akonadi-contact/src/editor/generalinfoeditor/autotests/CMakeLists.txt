@@ -17,3 +17,11 @@ add_executable(messagingwidgettest ${messagingwidgettest_SRCS})
 add_test(messagingwidgettest messagingwidgettest)
 ecm_mark_as_test(messagingwidgettest)
 target_link_libraries(messagingwidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::Contacts KF5::I18n KF5::Completion KF5::Service KF5::IconThemes)
+
+
+
+set(akonadicontactselecttypecomboboxtest_SRCS akonadicontactselecttypecomboboxtest.cpp ../akonadicontactselecttypecombobox.cpp ../../widgets/akonadicontactcombobox.cpp)
+add_executable(akonadicontactselecttypecomboboxtest ${akonadicontactselecttypecomboboxtest_SRCS})
+add_test(akonadicontactselecttypecomboboxtest akonadicontactselecttypecomboboxtest)
+ecm_mark_as_test(akonadicontactselecttypecomboboxtest)
+target_link_libraries(akonadicontactselecttypecomboboxtest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::I18n )

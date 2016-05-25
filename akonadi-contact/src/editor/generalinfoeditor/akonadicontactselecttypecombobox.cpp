@@ -20,16 +20,36 @@
 */
 
 #include "akonadicontactselecttypecombobox.h"
+#include <KLocalizedString>
 
 using namespace Akonadi;
 
 AkonadiContactSelectTypeCombobox::AkonadiContactSelectTypeCombobox(QWidget *parent)
     : Akonadi::AkonadiContactComboBox(parent)
 {
-
+    initialize();
 }
 
 AkonadiContactSelectTypeCombobox::~AkonadiContactSelectTypeCombobox()
 {
 
+}
+
+void AkonadiContactSelectTypeCombobox::initialize()
+{
+    addItem(i18n("Select..."), QString());
+    QString type = QStringLiteral("HOME");
+    mSelectType.append(type);
+    addItem(i18n("Home"), type);
+    type = QStringLiteral("WORK");
+    mSelectType.append(type);
+    addItem(i18n("Work"), type);
+    type = QStringLiteral("OTHER");
+    mSelectType.append(type);
+    addItem(i18n("Other"), type);
+}
+
+QStringList AkonadiContactSelectTypeCombobox::selectTypeList() const
+{
+    return mSelectType;
 }

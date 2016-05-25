@@ -19,26 +19,25 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADICONTACTSELECTTYPECOMBOBOX_H
-#define AKONADICONTACTSELECTTYPECOMBOBOX_H
+#include "akonadicontactselecttypecomboboxtest.h"
+#include "../akonadicontactselecttypecombobox.h"
+#include <QTest>
 
-#include "../widgets/akonadicontactcombobox.h"
-
-namespace Akonadi
+AkonadiContactSelectTypeComboboxTest::AkonadiContactSelectTypeComboboxTest(QObject *parent)
+    : QObject(parent)
 {
-class AkonadiContactSelectTypeCombobox : public Akonadi::AkonadiContactComboBox
-{
-    Q_OBJECT
-public:
-    explicit AkonadiContactSelectTypeCombobox(QWidget *parent = Q_NULLPTR);
-    ~AkonadiContactSelectTypeCombobox();
 
-    QStringList selectTypeList() const;
-
-private:
-    void initialize();
-    QStringList mSelectType;
-};
 }
 
-#endif // AKONADICONTACTSELECTTYPECOMBOBOX_H
+AkonadiContactSelectTypeComboboxTest::~AkonadiContactSelectTypeComboboxTest()
+{
+
+}
+
+void AkonadiContactSelectTypeComboboxTest::shouldHaveDefaultValue()
+{
+    Akonadi::AkonadiContactSelectTypeCombobox w;
+    QVERIFY(!w.selectTypeList().isEmpty());
+}
+
+QTEST_MAIN(AkonadiContactSelectTypeComboboxTest)
