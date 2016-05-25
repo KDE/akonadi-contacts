@@ -29,7 +29,7 @@ class QToolButton;
 namespace Akonadi
 {
 class PreferredLineEditWidget;
-class AkonadiContactComboBox;
+class AkonadiContactSelectTypeCombobox;
 class MailWidget : public QWidget
 {
     Q_OBJECT
@@ -53,10 +53,9 @@ private Q_SLOTS:
     void slotPreferredChanged();
 private:
     KContacts::Email mEmail;
-    QStringList mEmailType;
     QString mOldType;
     PreferredLineEditWidget *mMailEdit;
-    Akonadi::AkonadiContactComboBox *mMailType;
+    Akonadi::AkonadiContactSelectTypeCombobox *mMailType;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
 };

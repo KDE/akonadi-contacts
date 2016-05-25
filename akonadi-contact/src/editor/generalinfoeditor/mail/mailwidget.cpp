@@ -26,7 +26,7 @@
 #include <KLineEdit>
 #include <QToolButton>
 #include <QComboBox>
-#include <editor/widgets/akonadicontactcombobox.h>
+#include <editor/generalinfoeditor/akonadicontactselecttypecombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
 
 using namespace Akonadi;
@@ -44,18 +44,8 @@ MailWidget::MailWidget(QWidget *parent)
     layout->addWidget(mMailEdit);
     connect(mMailEdit, &PreferredLineEditWidget::preferredChanged, this, &MailWidget::slotPreferredChanged);
 
-    mMailType = new Akonadi::AkonadiContactComboBox(this);
+    mMailType = new Akonadi::AkonadiContactSelectTypeCombobox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
-    mMailType->addItem(i18n("Select..."), QString());
-    QString type = QStringLiteral("HOME");
-    mEmailType.append(type);
-    mMailType->addItem(i18n("Home"), type);
-    type = QStringLiteral("WORK");
-    mEmailType.append(type);
-    mMailType->addItem(i18n("Work"), type);
-    type = QStringLiteral("OTHER");
-    mEmailType.append(type);
-    mMailType->addItem(i18n("Other"), type);
     layout->addWidget(mMailType);
 
     mAddButton = new QToolButton(this);
@@ -104,7 +94,7 @@ void MailWidget::setMail(const KContacts::Email &email)
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
     }
-    Q_FOREACH (const QString &type, mEmailType) {
+    Q_FOREACH (const QString &type, mMailType->selectTypeList()) {
         if (value.contains(type)) {
             mOldType = type;
             mMailType->setCurrentIndex(mMailType->findData(type));

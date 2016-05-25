@@ -29,7 +29,7 @@
 class QToolButton;
 namespace Akonadi
 {
-class AkonadiContactComboBox;
+class AkonadiContactSelectTypeCombobox;
 class PreferredLineEditWidget;
 class WebWidget : public QWidget
 {
@@ -61,7 +61,7 @@ private:
     PreferredLineEditWidget *mWebSiteEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
-    Akonadi::AkonadiContactComboBox *mWebType;
+    Akonadi::AkonadiContactSelectTypeCombobox *mWebType;
 };
 }
 #endif // WEBWIDGET_H

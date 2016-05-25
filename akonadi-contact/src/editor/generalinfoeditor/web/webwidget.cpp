@@ -26,8 +26,8 @@
 #include <QToolButton>
 #include <QUrl>
 #include <KLocalizedString>
-#include <editor/widgets/akonadicontactcombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
+#include <editor/generalinfoeditor/akonadicontactselecttypecombobox.h>
 using namespace Akonadi;
 
 WebWidget::WebWidget(QWidget *parent)
@@ -44,7 +44,7 @@ WebWidget::WebWidget(QWidget *parent)
     layout->addWidget(mWebSiteEdit);
     connect(mWebSiteEdit, &PreferredLineEditWidget::preferredChanged, this, &WebWidget::slotPreferredChanged);
 
-    mWebType = new Akonadi::AkonadiContactComboBox(this);
+    mWebType = new Akonadi::AkonadiContactSelectTypeCombobox(this);
     mWebType->setObjectName(QStringLiteral("webtype"));
     mWebType->addItem(i18n("Select..."), QString());
 
@@ -145,7 +145,7 @@ void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
     }
-    Q_FOREACH (const QString &type, mWebSiteType) {
+    Q_FOREACH (const QString &type, mWebType->selectTypeList()) {
         if (value.contains(type)) {
             mOldType = type;
             mWebType->setCurrentIndex(mWebType->findData(type));
