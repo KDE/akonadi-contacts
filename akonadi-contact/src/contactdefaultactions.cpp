@@ -47,26 +47,26 @@ void ContactDefaultActions::connectToView(QObject *view)
 {
     const QMetaObject *metaObject = view->metaObject();
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("urlClicked(const QUrl&)")) != -1) {
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("urlClicked(const QUrl&)").constData()) != -1) {
         connect(view, SIGNAL(urlClicked(QUrl)), SLOT(showUrl(QUrl)));
     }
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("emailClicked(const QString&, const QString&)")) != -1) {
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("emailClicked(const QString&, const QString&)").constData()) != -1) {
         connect(view, SIGNAL(emailClicked(QString,QString)),
                 this, SLOT(sendEmail(QString,QString)));
     }
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KContacts::PhoneNumber&)")) != -1) {
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KContacts::PhoneNumber&)").constData()) != -1) {
         connect(view, SIGNAL(phoneNumberClicked(KContacts::PhoneNumber)),
                 this, SLOT(dialPhoneNumber(KContacts::PhoneNumber)));
     }
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("smsClicked(const KContacts::PhoneNumber&)")) != -1) {
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("smsClicked(const KContacts::PhoneNumber&)").constData()) != -1) {
         connect(view, SIGNAL(smsClicked(KContacts::PhoneNumber)),
                 this, SLOT(sendSms(KContacts::PhoneNumber)));
     }
 
-    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("addressClicked(const KContacts::Address&)")) != -1) {
+    if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("addressClicked(const KContacts::Address&)").constData()) != -1) {
         connect(view, SIGNAL(addressClicked(KContacts::Address)),
                 this, SLOT(showAddress(KContacts::Address)));
     }
