@@ -42,8 +42,7 @@
 #include <QVBoxLayout>
 #include <QIcon>
 #ifdef HAVE_PRISON
-#include <prison/QRCodeBarcode>
-#include <prison/DataMatrixBarcode>
+#include <prison/Prison>
 #include <kcontacts/vcardconverter.h>
 #endif // HAVE_PRISON
 
@@ -63,8 +62,8 @@ public:
         KConfigGroup group(&config, QStringLiteral("View"));
         mShowQRCode = group.readEntry("QRCodes", true);
 #ifdef HAVE_PRISON
-        mQRCode = new prison::QRCodeBarcode();
-        mDataMatrix = new prison::DataMatrixBarcode();
+        mQRCode = Prison::createBarcode(Prison::QRCode);
+        mDataMatrix = Prison::createBarcode(Prison::DataMatrix);
 #endif // HAVE_PRISON
     }
 
@@ -270,8 +269,8 @@ public:
     CollectionFetchJob *mParentCollectionFetchJob;
     bool mShowQRCode;
 #ifdef HAVE_PRISON
-    prison::AbstractBarcode *mQRCode;
-    prison::AbstractBarcode *mDataMatrix;
+    Prison::AbstractBarcode *mQRCode;
+    Prison::AbstractBarcode *mDataMatrix;
 #endif // HAVE_PRISON
 };
 
