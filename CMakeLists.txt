@@ -45,6 +45,13 @@ find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
+set(Prison_MIN_VERSION "1.2.2")
+find_package(KF5Prison ${Prison_MIN_VERSION})
+set_package_properties(Prison PROPERTIES DESCRIPTION "Prison" URL "http://projects.kde.org/prison" TYPE OPTIONAL$
+if (KF5Prison_FOUND)
+    add_definitions(-DHAVE_PRISON)
+endif()
+
 ########### Targets ###########
 
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
