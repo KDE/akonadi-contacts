@@ -42,9 +42,7 @@ find_package(Grantlee5 "5.1" CONFIG REQUIRED)
 find_package(KF5Contacts ${KCONTACTS_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${CALENDARCORE_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
-if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Contact_SOURCE_DIR})
-  find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-endif()
+find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
@@ -78,7 +76,5 @@ install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
-if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
 
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
