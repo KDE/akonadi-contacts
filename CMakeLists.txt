@@ -29,10 +29,10 @@ set(KMIMELIB_VERSION "5.2.40")
 set(AKONADI_VERSION "5.2.40")
 
 ecm_setup_version(${AKONADI_CONTACTS_VERSION} VARIABLE_PREFIX AKONADICONTACT
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
-                        SOVERSION 5
-)
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
+    SOVERSION 5
+    )
 
 set(QT_REQUIRED_VERSION "5.6.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test WebEngine WebEngineWidgets)
@@ -51,10 +51,10 @@ find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 set(Prison_MIN_VERSION "1.2.2")
 find_package(KF5Prison ${Prison_MIN_VERSION})
 set_package_properties(Prison PROPERTIES
-                       DESCRIPTION "Prison"
-                       URL "http://projects.kde.org/prison"
-                       TYPE OPTIONAL
-                       PURPOSE "Needed to show mobile barcodes of your contacts")
+    DESCRIPTION "Prison"
+    URL "http://projects.kde.org/prison"
+    TYPE OPTIONAL
+    PURPOSE "Needed to show mobile barcodes of your contacts")
 if (KF5Prison_FOUND)
     add_definitions(-DHAVE_PRISON)
 endif()
@@ -65,30 +65,30 @@ add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_subdirectory(src)
 if (BUILD_TESTING)
-  add_subdirectory(autotests)
-  add_subdirectory(tests)
+    add_subdirectory(autotests)
+    add_subdirectory(tests)
 endif()
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
 
 ecm_configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5AkonadiContactConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-)
+    "${CMAKE_CURRENT_SOURCE_DIR}/KF5AkonadiContactConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
-  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-  COMPONENT Devel
-)
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
 
 install(EXPORT KF5AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiContactTargets.cmake NAMESPACE KF5::)
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
-)
+    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

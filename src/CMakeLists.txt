@@ -22,16 +22,16 @@ configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY
 kconfig_add_kcfg_files(akonadicontact_actions_SRCS actions/contactactionssettings.kcfgc)
 
 set(akonadicontact_customfieldseditor_SRCS
-   editor/customfieldeditor/customfieldswidget.cpp
-   editor/customfieldeditor/customfieldeditorwidget.cpp
-   editor/customfieldeditor/customfieldslistwidget.cpp
-   editor/customfieldeditor/customfieldslistdelegate.cpp
-   editor/customfieldeditor/customfieldsmodel.cpp
-   )
+    editor/customfieldeditor/customfieldswidget.cpp
+    editor/customfieldeditor/customfieldeditorwidget.cpp
+    editor/customfieldeditor/customfieldslistwidget.cpp
+    editor/customfieldeditor/customfieldslistdelegate.cpp
+    editor/customfieldeditor/customfieldsmodel.cpp
+    )
 
 set(akonadicontact_editor_utils_SRCS
-   editor/utils/utils.cpp
-   )
+    editor/utils/utils.cpp
+    )
 
 set(akonadicontact_editor_widgets_SRCS
     editor/widgets/kwidgetlister.cpp
