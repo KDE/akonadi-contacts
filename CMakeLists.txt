@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(Akonadi-Contact)
 
 # ECM setup
+
 set(KF5_VERSION "5.22.0")
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -19,13 +20,15 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
-set(KDEPIMLIBS_VERSION "5.2.40")
+set(PIM_VERSION "5.2.40")
+set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
+set(AKONADI_MIME_VERSION "5.2.40")
 set(KCONTACTS_VERSION "5.2.40")
 set(CALENDARCORE_VERSION "5.2.40")
 set(KMIMELIB_VERSION "5.2.40")
 set(AKONADI_VERSION "5.2.40")
 
-ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX AKONADICONTACT
+ecm_setup_version(${AKONADI_CONTACTS_VERSION} VARIABLE_PREFIX AKONADICONTACT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
                         SOVERSION 5
@@ -42,7 +45,7 @@ find_package(Grantlee5 "5.1" CONFIG REQUIRED)
 find_package(KF5Contacts ${KCONTACTS_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${CALENDARCORE_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
-find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+find_package(KF5AkonadiMime ${AKONADI_MIME_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
 set(Prison_MIN_VERSION "1.2.2")
