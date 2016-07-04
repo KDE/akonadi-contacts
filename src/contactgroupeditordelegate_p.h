@@ -27,6 +27,7 @@
 #include <QStyledItemDelegate>
 
 #include <item.h>
+#include "contactcompletionmodel_p.h"
 
 namespace Akonadi
 {
@@ -36,7 +37,8 @@ class ContactLineEdit : public QLineEdit
     Q_OBJECT
 
 public:
-    explicit ContactLineEdit(bool isReference, QWidget *parent = 0);
+    explicit ContactLineEdit(bool isReference, ContactCompletionModel::Columns column,
+                             QWidget *parent = 0);
 
     bool isReference() const;
     Akonadi::Item completedItem() const;
