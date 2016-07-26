@@ -59,12 +59,10 @@ Q_SIGNALS:
     void updateAddress(const KContacts::Address &address, int index);
     void updateAddressCanceled();
 
-private Q_SLOTS:
+private:
     void slotAddAddress();
     void slotUpdateAddress();
     void slotCancelModifyAddress();
-
-private:
     void fillCountryCombo();
     void switchMode();
     void reset();

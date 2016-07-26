@@ -43,14 +43,12 @@ public:
 
     QString message() const;
 
-private Q_SLOTS:
+private:
     /**
      * Calculates the needed amount of sms and the number of characters left in the current sms.
      * Shows the result in the QLabel mLengthLabel.
      */
     void updateCounter();
-
-private:
     void initUI();
 
     QString mNumber;

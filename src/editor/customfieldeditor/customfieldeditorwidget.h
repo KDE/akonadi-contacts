@@ -42,11 +42,9 @@ public:
 Q_SIGNALS:
     void addNewField(const CustomField &field);
 
-private Q_SLOTS:
+private:
     void slotAddField();
     void slotFielNameChanged(const QString &text);
-
-private:
     void fillTypes();
     QLineEdit *mFieldName;
     QPushButton *mAddField;

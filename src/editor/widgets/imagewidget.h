@@ -64,15 +64,13 @@ protected:
     // context menu handling
     void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void updateView();
 
     void changeImage();
     void changeUrl();
     void saveImage();
     void deleteImage();
-
-private:
     ImageLoader *imageLoader();
 
     KContacts::Picture mPicture;

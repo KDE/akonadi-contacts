@@ -48,11 +48,9 @@ public:
 Q_SIGNALS:
     void nameChanged(const KContacts::Addressee &contact);
 
-private Q_SLOTS:
+private:
     void slotTextChanged(const QString &text);
     void slotOpenNameEditDialog();
-
-private:
     DisplayNameEditWidget::DisplayType mDisplayType;
     KContacts::Addressee mContact;
     KLineEdit *mNameEdit;

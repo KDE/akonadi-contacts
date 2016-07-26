@@ -47,11 +47,10 @@ Q_SIGNALS:
     void removeWidget(MailWidget *);
     void preferredChanged(MailWidget *);
 
-private Q_SLOTS:
+private:
     void slotAddMail();
     void slotRemoveMail();
     void slotPreferredChanged();
-private:
     KContacts::Email mEmail;
     QString mOldType;
     PreferredLineEditWidget *mMailEdit;

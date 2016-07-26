@@ -69,11 +69,9 @@ public Q_SLOTS:
 protected:
     bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void displayTypeChanged(int);
     void setComboBoxEditable(bool);
-
-private:
     void updateView();
 
     KComboBox *mView;

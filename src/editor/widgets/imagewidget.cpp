@@ -249,28 +249,28 @@ void ImageWidget::contextMenuEvent(QContextMenuEvent *event)
 
     if (mType == Photo) {
         if (!mReadOnly) {
-            menu.addAction(i18n("Change photo..."), this, SLOT(changeImage()));
-            menu.addAction(i18n("Change URL..."), this, SLOT(changeUrl()));
+            menu.addAction(i18n("Change photo..."), this, &ImageWidget::changeImage);
+            menu.addAction(i18n("Change URL..."), this, &ImageWidget::changeUrl);
         }
 
         if (mHasImage) {
-            menu.addAction(i18n("Save photo..."), this, SLOT(saveImage()));
+            menu.addAction(i18n("Save photo..."), this, &ImageWidget::saveImage);
 
             if (!mReadOnly) {
-                menu.addAction(i18n("Remove photo"), this, SLOT(deleteImage()));
+                menu.addAction(i18n("Remove photo"), this, &ImageWidget::deleteImage);
             }
         }
     } else {
         if (!mReadOnly) {
-            menu.addAction(i18n("Change logo..."), this, SLOT(changeImage()));
-            menu.addAction(i18n("Change URL..."), this, SLOT(changeUrl()));
+            menu.addAction(i18n("Change logo..."), this, &ImageWidget::changeImage);
+            menu.addAction(i18n("Change URL..."), this, &ImageWidget::changeUrl);
         }
 
         if (mHasImage) {
-            menu.addAction(i18n("Save logo..."), this, SLOT(saveImage()));
+            menu.addAction(i18n("Save logo..."), this, &ImageWidget::saveImage);
 
             if (!mReadOnly) {
-                menu.addAction(i18n("Remove logo"), this, SLOT(deleteImage()));
+                menu.addAction(i18n("Remove logo"), this, &ImageWidget::deleteImage);
             }
         }
     }

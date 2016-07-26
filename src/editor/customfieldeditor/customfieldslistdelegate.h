@@ -41,10 +41,8 @@ public:
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
     bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void setFirstColumnAsCurrent();
-
 private:
+    void setFirstColumnAsCurrent();
     void removeField(int row, QAbstractItemModel *model);
     const QIcon mIcon;
     QSize mButtonSize;

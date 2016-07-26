@@ -50,11 +50,10 @@ Q_SIGNALS:
     void removeWidget(WebWidget *);
     void preferredChanged(WebWidget *);
 
-private Q_SLOTS:
+private:
     void slotRemoveWeb();
     void slotAddWeb();
     void slotPreferredChanged();
-private:
     KContacts::ResourceLocatorUrl mUrl;
     QStringList mWebSiteType;
     QString mOldType;
