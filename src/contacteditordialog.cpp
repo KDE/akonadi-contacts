@@ -61,6 +61,7 @@ public:
         mainLayout->addWidget(buttonBox);
 
         QGridLayout *layout = new QGridLayout(mainWidget);
+        layout->setMargin(0);
 
         if (editorWidget) {
             mEditor = new ContactEditor(mode == ContactEditorDialog::CreateMode ? ContactEditor::CreateMode : ContactEditor::EditMode, editorWidget, q);
