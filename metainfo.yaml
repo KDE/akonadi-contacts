@@ -1,5 +1,6 @@
+fancyname: Akonadi Contacts
 maintainer: mlaurent
-description: Akonadi-Contact library
+description: Akonadi Contacts library
 tier: 3
 type: functional
 platforms:
@@ -12,3 +13,7 @@ libraries:
    cmake: "KF5::AkonadiContact"
 cmakename: KF5AkonadiContact
 
+public_lib: true
+group: kdepim
+platforms:
+    - name: Linux
