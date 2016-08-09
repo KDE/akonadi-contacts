@@ -1,4 +1,4 @@
-# Akonadi Contacts
+# Akonadi Contacts #
 
 Akonadi Contacts is a library that effectively bridges the type-agnostic API of
 the Akonadi client libraries and the domain-specific KContacts library. It provides
