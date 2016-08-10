@@ -46,13 +46,9 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     about->addAuthor(i18n("Tobias Koenig"), QString(), QStringLiteral("tokoe@kde.org"));
 
     setAboutData(about);
-    QVBoxLayout *layout = new QVBoxLayout(this);
-    QWidget *wdg = new QWidget;
-    layout->addWidget(wdg);
+    ui.setupUi(this);
 
-    ui.setupUi(wdg);
-
-    mConfigManager = addConfig(ContactActionsSettings::self(), wdg);
+    mConfigManager = addConfig(ContactActionsSettings::self(), this);
 
     ui.DialPhoneNumberAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkype);
     ui.DialPhoneNumberAction->addItem(i18n("Ekiga"), ContactActionsSettings::UseEkiga);
