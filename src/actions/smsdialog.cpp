@@ -50,8 +50,6 @@ void SmsDialog::initUI()
 {
     setWindowTitle(i18n("SMS text"));
 
-    //setFixedWidth(300);
-
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setMargin(0);
 
@@ -70,7 +68,7 @@ void SmsDialog::initUI()
     topLayout->addWidget(mLengthLabel);
 
     mSmsTextEdit->setFocus();
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
