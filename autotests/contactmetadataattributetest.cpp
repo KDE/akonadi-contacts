@@ -21,7 +21,7 @@
 
 #include "contactmetadataattributetest.h"
 
-#include "contactmetadataattribute_p.h"
+#include "attributes/contactmetadataattribute_p.h"
 
 #include <qtest.h>
 

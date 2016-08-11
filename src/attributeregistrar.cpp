@@ -19,7 +19,7 @@
     02110-1301, USA.
 */
 
-#include "contactmetadataattribute_p.h"
+#include "attributes/contactmetadataattribute_p.h"
 
 #include <attributefactory.h>
 

@@ -22,7 +22,7 @@
 #include "contactviewer.h"
 
 #include "contactmetadata_p.h"
-#include "contactmetadataattribute_p.h"
+#include "attributes/contactmetadataattribute_p.h"
 #include "customfieldmanager_p.h"
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"

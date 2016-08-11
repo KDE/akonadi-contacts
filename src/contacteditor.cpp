@@ -24,7 +24,7 @@
 #include "abstractcontacteditorwidget_p.h"
 #include "autoqpointer_p.h"
 #include "contactmetadata_p.h"
-#include "contactmetadataattribute_p.h"
+#include "attributes/contactmetadataattribute_p.h"
 #include "editor/contacteditorwidget.h"
 
 #include <collectiondialog.h>

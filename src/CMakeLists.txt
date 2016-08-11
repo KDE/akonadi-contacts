@@ -116,11 +116,16 @@ set(akonadicontact_editor_SRCS
     editor/widgets/preferredlineeditwidget.cpp
     )
 
+set(akonadicontact_attributes_SRCS
+    attributes/contactmetadataattribute.cpp
+)
+
 set(akonadicontact_LIB_SRC
     ${akonadicontact_addresslocation_editor_SRCS}
     ${akonadicontact_editor_widgets_SRCS}
     ${akonadicontact_editor_generalinfo_SRCS}
     ${akonadicontact_customfieldseditor_SRCS}
+    ${akonadicontact_attributes_SRCS}
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
     attributeregistrar.cpp
@@ -139,7 +144,6 @@ set(akonadicontact_LIB_SRC
     contactgroupviewer.cpp
     contactgroupviewerdialog.cpp
     contactmetadata.cpp
-    contactmetadataattribute.cpp
     contactparts.cpp
     contactsearchjob.cpp
     contactsfilterproxymodel.cpp
