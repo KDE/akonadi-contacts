@@ -23,9 +23,7 @@
 #include "customfieldeditorwidget.h"
 #include "customfieldswidget.h"
 #include "customfieldslistwidget.h"
-#include <KLocalizedString>
 #include <QVBoxLayout>
-#include <KContacts/Addressee>
 
 using namespace Akonadi;
 

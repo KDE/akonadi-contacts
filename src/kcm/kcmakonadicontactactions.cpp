@@ -24,7 +24,6 @@
 
 #include "contactactionssettings.h"
 
-#include <QVBoxLayout>
 
 #include <kaboutdata.h>
 #include <kconfigdialogmanager.h>

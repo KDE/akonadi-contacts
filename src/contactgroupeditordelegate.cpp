@@ -27,7 +27,6 @@
 #include <entitytreemodel.h>
 #include <KComboBox>
 
-#include <KLocalizedString>
 
 #include <QtCore/QTimer>
 #include <QIcon>

@@ -31,7 +31,6 @@
 #include <KLocalizedString>
 #include <qtabwidget.h>
 #include <ktextedit.h>
-#include <QUrl>
 
 #include <QDirIterator>
 #include <QPluginLoader>

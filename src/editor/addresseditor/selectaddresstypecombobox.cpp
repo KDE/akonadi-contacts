@@ -22,7 +22,6 @@
 
 #include "addresstypedialog.h"
 #include "selectaddresstypecombobox.h"
-#include <KLineEdit>
 #include <KLocalizedString>
 #include <autoqpointer_p.h>
 using namespace Akonadi;

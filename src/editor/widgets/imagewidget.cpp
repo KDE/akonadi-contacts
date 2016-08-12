@@ -38,7 +38,6 @@
 #include <QMenu>
 #include <QApplication>
 #include <QUrl>
-#include <QBuffer>
 #include <QInputDialog>
 /**
  * @short Small helper class to load image from network

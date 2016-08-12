@@ -24,7 +24,6 @@
 #include "../utils/utils.h"
 #include "customfieldmanager_p.h"
 #include "customfieldslistdelegate.h"
-#include <KLocalizedString>
 #include <QSortFilterProxyModel>
 #include <QTreeView>
 #include <QVBoxLayout>

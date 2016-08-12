@@ -23,7 +23,6 @@
 
 #include <kcontacts/phonenumber.h>
 #include <KLocalizedString>
-#include <KMessageBox>
 #include <ktextedit.h>
 
 #include <QLabel>

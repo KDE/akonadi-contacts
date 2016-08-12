@@ -37,7 +37,6 @@
 #include <session.h>
 #include <kcontacts/contactgroup.h>
 #include <KLocalizedString>
-#include <KLineEdit>
 #include <KMessageBox>
 #include <KColorScheme>
 

@@ -32,16 +32,12 @@
 
 #include "kwidgetlister_p.h"
 
-#include <QDialog>
-#include <KLocalizedString>
-#include <KGuiItem>
 #include <QHBoxLayout>
 
 #include <QPushButton>
 #include <QVBoxLayout>
 
 #include <assert.h>
-#include <KStandardGuiItem>
 
 class Q_DECL_HIDDEN KWidgetLister::Private
 {

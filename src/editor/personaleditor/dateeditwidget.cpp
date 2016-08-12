@@ -29,7 +29,6 @@
 
 #include <QContextMenuEvent>
 #include <QHBoxLayout>
-#include <QLabel>
 #include <QToolButton>
 #include <KLocalizedString>
 #include <QLocale>
