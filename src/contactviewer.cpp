@@ -41,6 +41,7 @@
 
 #include <QVBoxLayout>
 #include <QIcon>
+#include <QUrlQuery>
 #ifdef HAVE_PRISON
 #include <prison/Prison>
 #include <kcontacts/vcardconverter.h>
@@ -204,26 +205,27 @@ public:
 
     void slotUrlClicked(const QUrl &url)
     {
+        const QUrlQuery query(url);
         const QString urlScheme(url.scheme());
         if (urlScheme == QLatin1String("http") ||
                 urlScheme == QLatin1String("https")) {
             Q_EMIT mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
-            const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
+            const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
             if (pos < numbers.count()) {
                 Q_EMIT mParent->phoneNumberClicked(numbers.at(pos));
             }
         } else if (urlScheme == QLatin1String("sms")) {
-            const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
+            const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
             if (pos < numbers.count()) {
                 Q_EMIT mParent->smsClicked(numbers.at(pos));
             }
         } else if (urlScheme == QLatin1String("address")) {
-            const int pos = url.queryItemValue(QStringLiteral("index")).toInt();
+            const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
 
             const KContacts::Address::List addresses = mCurrentContact.addresses();
             if (pos < addresses.count()) {
