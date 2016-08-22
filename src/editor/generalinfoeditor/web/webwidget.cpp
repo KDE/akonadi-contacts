@@ -132,7 +132,9 @@ KContacts::ResourceLocatorUrl WebWidget::url()
             value.removeAll(QStringLiteral("PREF"));
         }
     }
-    parameters.insert(QStringLiteral("type"), value);
+    if (!value.isEmpty()) {
+        parameters.insert(QStringLiteral("type"), value);
+    }
     mUrl.setParameters(parameters);
     return mUrl;
 }
