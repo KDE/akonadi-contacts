@@ -50,8 +50,7 @@ find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiMime ${AKONADI_MIME_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
-#TODO make it depend against KF5_VERSION when we will depend against 5.25
-set(Prison_MIN_VERSION "1.2.2")
+set(Prison_MIN_VERSION "${KF5_VERSION}")
 find_package(KF5Prison ${Prison_MIN_VERSION})
 set_package_properties(Prison PROPERTIES
     DESCRIPTION "Prison"
