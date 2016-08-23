@@ -28,7 +28,6 @@
 #include <item.h>
 #include <kcontacts/contactgroup.h>
 #include <KLocalizedString>
-#include <KLocalizedString>
 
 #include <KLineEdit>
 #include <KConfig>
