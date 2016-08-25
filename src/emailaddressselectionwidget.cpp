@@ -37,7 +37,6 @@
 #include <kcontacts/contactgroup.h>
 #include <KLineEdit>
 #include <KLocalizedString>
-#include <KLocalizedString>
 
 #include <QtCore/QTimer>
 #include <QHBoxLayout>

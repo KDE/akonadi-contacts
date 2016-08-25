@@ -31,16 +31,14 @@ using namespace Akonadi;
 AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *parent)
     : QDialog(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("street/postal", "Edit Address Type"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    okButton->setDefault(true);
 
     QWidget *page = new QWidget(this);
     mainLayout->addWidget(page);
