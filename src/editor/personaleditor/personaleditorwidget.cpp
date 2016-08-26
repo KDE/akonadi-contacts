@@ -82,13 +82,7 @@ void PersonalEditorWidget::loadContact(const KContacts::Addressee &contact)
 
 void PersonalEditorWidget::storeContact(KContacts::Addressee &contact)
 {
-    // dates group
-    QDateTime birthday = QDateTime(mBirthdateWidget->date(), QTime(), contact.birthday().timeSpec());
-    // This is needed because the constructor above sets the time component
-    // of the QDateTime to midnight.  We want it to stay invalid.
-    birthday.setTime(QTime());
-
-    contact.setBirthday(birthday);
+    contact.setBirthday(mBirthdateWidget->date());
     Akonadi::Utils::storeCustom(contact, QStringLiteral("X-Anniversary"), mAnniversaryWidget->date().toString(Qt::ISODate));
 
     // family group
