@@ -31,10 +31,9 @@ using namespace Akonadi;
 MessagingListWidget::MessagingListWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout;
+    QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setMargin(0);
     topLayout->setSpacing(0);
-    setLayout(topLayout);
 
     QLabel *label = new QLabel(i18n("Messaging"), this);
     label->setObjectName(QStringLiteral("messaginglistlabel"));

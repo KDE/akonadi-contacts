@@ -45,8 +45,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
       mCurrentAddress(-1),
       mCurrentMode(CreateAddress)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout;
-    setLayout(topLayout);
+    QVBoxLayout *topLayout = new QVBoxLayout(this);
 
     QGridLayout *gridLayout = new QGridLayout;
     topLayout->addLayout(gridLayout);
