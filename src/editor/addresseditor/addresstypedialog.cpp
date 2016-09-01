@@ -60,7 +60,8 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     KContacts::Address::TypeList::ConstIterator it;
     int i = 0;
     int row = 0;
-    for (it = mTypeList.constBegin(); it != mTypeList.constEnd(); ++it, ++i) {
+    KContacts::Address::TypeList::ConstIterator end(mTypeList.constEnd());
+    for (it = mTypeList.constBegin(); it != end; ++it, ++i) {
         QCheckBox *cb = new QCheckBox(KContacts::Address::typeLabel(*it), box);
         cb->setChecked(type & mTypeList[i]);
         buttonLayout->addWidget(cb, row, i % 3);
@@ -79,7 +80,8 @@ AddressTypeDialog::~AddressTypeDialog()
 KContacts::Address::Type AddressTypeDialog::type() const
 {
     KContacts::Address::Type type;
-    for (int i = 0; i < mGroup->buttons().count(); ++i) {
+    const int numberOfButtons(mGroup->buttons().count());
+    for (int i = 0; i < numberOfButtons; ++i) {
         QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
         if (box && box->isChecked()) {
             type |= mTypeList[i];

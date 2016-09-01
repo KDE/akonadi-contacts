@@ -103,7 +103,8 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 
         // check whether it correspond to a local custom field
         bool isLocalCustomField = false;
-        for (int i = 0; i < mLocalCustomFields.count(); ++i) {
+        const int localCustomFieldsCount(mLocalCustomFields.count());
+        for (int i = 0; i < localCustomFieldsCount; ++i) {
             if (mLocalCustomFields[i].key() == name) {
                 mLocalCustomFields[i].setValue(value);
                 isLocalCustomField = true;
@@ -113,7 +114,8 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 
         // check whether it correspond to a global custom field
         bool isGlobalCustomField = false;
-        for (int i = 0; i < globalCustomFields.count(); ++i) {
+        const int globalCustomFieldsCount(globalCustomFields.count());
+        for (int i = 0; i < globalCustomFieldsCount; ++i) {
             if (globalCustomFields[i].key() == name) {
                 globalCustomFields[i].setValue(value);
                 isGlobalCustomField = true;

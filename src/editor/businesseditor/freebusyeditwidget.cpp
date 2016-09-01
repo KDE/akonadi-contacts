@@ -38,7 +38,7 @@ FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
 
-    mURL = new KUrlRequester;
+    mURL = new KUrlRequester(this);
     mURL->lineEdit()->setTrapReturnKey(true);
     mURL->lineEdit()->setPlaceholderText(i18n("Add FreeBusy"));
     layout->addWidget(mURL);

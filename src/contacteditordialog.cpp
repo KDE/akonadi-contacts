@@ -51,8 +51,7 @@ public:
     {
         q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18n("New Contact") : i18n("Edit Contact"));
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-        QVBoxLayout *mainLayout = new QVBoxLayout;
-        q->setLayout(mainLayout);
+        QVBoxLayout *mainLayout = new QVBoxLayout(q);
         q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(slotOkClicked()));
         q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(slotCancelClicked()));
 

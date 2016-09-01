@@ -66,7 +66,7 @@ public:
     */
     explicit KDatePickerPopup(Items items = DatePicker,
                               const QDate &date = QDate::currentDate(),
-                              QWidget *parent = 0);
+                              QWidget *parent = Q_NULLPTR);
 
     /**
        @return A pointer to the private variable mDatePicker, an instance of
@@ -76,13 +76,6 @@ public:
 
     void setDate(const QDate &date);
 
-#if 0
-    /** Set items which should be shown and rebuilds the menu afterwards.
-        Only if the menu is not visible.
-        @param items List of all desirable items, separated with a bitwise OR.
-    */
-    void setItems(int items = 1);
-#endif
     /** @return Returns the bitwise result of the active items in the popup. */
     int items() const
     {

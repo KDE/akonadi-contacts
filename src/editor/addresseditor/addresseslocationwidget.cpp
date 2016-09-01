@@ -56,13 +56,15 @@ void AddressesLocationWidget::storeContact(KContacts::Addressee &contact) const
 {
     // delete all previous addresses
     const KContacts::Address::List oldAddresses = contact.addresses();
-    for (int i = 0; i < oldAddresses.count(); ++i) {
+    const int numberOfOldAddresses(oldAddresses.count());
+    for (int i = 0; i < numberOfOldAddresses; ++i) {
         contact.removeAddress(oldAddresses.at(i));
     }
 
     const KContacts::Address::List addressList = mAddressesLocationViewer->addresses();
     // insert the new ones
-    for (int i = 0; i < addressList.count(); ++i) {
+    const int numberOfAddress(addressList.count());
+    for (int i = 0; i < numberOfAddress; ++i) {
         const KContacts::Address address(addressList.at(i));
         if (!address.isEmpty()) {
             contact.insertAddress(address);

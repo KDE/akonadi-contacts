@@ -69,7 +69,8 @@ void SelectAddressTypeComboBox::update()
     blockSignals(true);
 
     clear();
-    for (int i = 0; i < mTypeList.count(); ++i) {
+    const int numberOfType(mTypeList.count());
+    for (int i = 0; i < numberOfType; ++i) {
         if (mTypeList.at(i) == -1) {     // "Other..." entry
             addItem(i18nc("@item:inlistbox Category of contact info field", "Other..."));
         } else if (mTypeList.at(i) == -2) {

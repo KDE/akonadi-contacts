@@ -209,7 +209,8 @@ bool DisplayNameEditWidget::eventFilter(QObject *object, QEvent *event)
 
             int maxWidth = 0;
             QFontMetrics metrics(mView->font());
-            for (int i = 0; i < mView->count(); ++i) {
+            const int viewCount(mView->count());
+            for (int i = 0; i < viewCount; ++i) {
                 maxWidth = qMax(maxWidth, metrics.width(mView->itemText(i)));
             }
 
