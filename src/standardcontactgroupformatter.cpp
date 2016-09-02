@@ -21,7 +21,7 @@
 
 #include "standardcontactgroupformatter.h"
 
-#include <contactgroupexpandjob.h>
+#include "job/contactgroupexpandjob.h"
 #include <item.h>
 #include <kcontacts/addressee.h>
 #include <kcolorscheme.h>

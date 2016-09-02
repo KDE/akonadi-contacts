@@ -21,7 +21,7 @@
 
 #include "contactgroupexpandjob.h"
 #include "akonadi_contact_debug.h"
-#include <contactgroupsearchjob.h>
+#include "job/contactgroupsearchjob.h"
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 #include <itemsearchjob.h>

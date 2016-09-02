@@ -121,12 +121,19 @@ set(akonadicontact_attributes_SRCS
     attributes/attributeregistrar.cpp
 )
 
+set(akonadicontact_job_SRCS
+    job/contactgroupexpandjob.cpp
+    job/contactgroupsearchjob.cpp
+    job/contactsearchjob.cpp
+)
+
 set(akonadicontact_LIB_SRC
     ${akonadicontact_addresslocation_editor_SRCS}
     ${akonadicontact_editor_widgets_SRCS}
     ${akonadicontact_editor_generalinfo_SRCS}
     ${akonadicontact_customfieldseditor_SRCS}
     ${akonadicontact_attributes_SRCS}
+    ${akonadicontact_job_SRCS}
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
@@ -138,14 +145,11 @@ set(akonadicontact_LIB_SRC
     contactgroupeditordelegate.cpp
     contactgroupeditordialog.cpp
     contactgrouplineedit.cpp
-    contactgroupexpandjob.cpp
     contactgroupmodel.cpp
-    contactgroupsearchjob.cpp
     contactgroupviewer.cpp
     contactgroupviewerdialog.cpp
     contactmetadata.cpp
     contactparts.cpp
-    contactsearchjob.cpp
     contactsfilterproxymodel.cpp
     contactstreemodel.cpp
     contactviewer.cpp
@@ -245,6 +249,18 @@ ecm_generate_pri_file(BASE_NAME AkonadiContact
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
+ecm_generate_headers(AkonadiContactJob_CamelCase_HEADERS
+    HEADER_NAMES
+    ContactGroupExpandJob
+    ContactGroupSearchJob
+    ContactSearchJob
+    REQUIRED_HEADERS AkonadiContactJob_HEADERS
+    PREFIX Akonadi/Contact
+    RELATIVE job
+    )
+
+    
+
 ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     HEADER_NAMES
     AbstractContactFormatter
@@ -254,11 +270,8 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     ContactEditorDialog
     ContactGroupEditor
     ContactGroupEditorDialog
-    ContactGroupExpandJob
-    ContactGroupSearchJob
     ContactGroupViewer
     ContactGroupViewerDialog
-    ContactSearchJob
     ContactsFilterProxyModel
     ContactsTreeModel
     ContactEditorPagePlugin
@@ -280,11 +293,13 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
 
 install( FILES
     ${AkonadiContact_CamelCase_HEADERS}
+    ${AkonadiContactJob_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact COMPONENT Devel
     )
 
 install( FILES
     ${AkonadiContact_HEADERS}
+    ${AkonadiContactJob_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
     editor/im/improtocols.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel

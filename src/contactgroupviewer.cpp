@@ -21,7 +21,7 @@
 
 #include "contactgroupviewer.h"
 
-#include "contactgroupexpandjob.h"
+#include "job/contactgroupexpandjob.h"
 #include "standardcontactgroupformatter.h"
 #include "textbrowser_p.h"
 
