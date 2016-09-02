@@ -118,6 +118,7 @@ set(akonadicontact_editor_SRCS
 
 set(akonadicontact_attributes_SRCS
     attributes/contactmetadataattribute.cpp
+    attributes/attributeregistrar.cpp
 )
 
 set(akonadicontact_LIB_SRC
@@ -128,7 +129,6 @@ set(akonadicontact_LIB_SRC
     ${akonadicontact_attributes_SRCS}
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
-    attributeregistrar.cpp
     collectionfiltermodel.cpp
     contactcompletionmodel.cpp
     contactdefaultactions.cpp
