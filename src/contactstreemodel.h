@@ -49,19 +49,19 @@ namespace Akonadi
  * // fetch the EntityDisplayAttribute, which contains custom names and icons
  * scope.fetchAttribute<Akonadi::EntityDisplayAttribute>();
  *
- * Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder;
- * changeRecorder->setSession( session );
+ * Akonadi::Monitor *monitor = new Akonadi::Monitor;
+ * monitor->setSession( session );
  * // include fetching the collection tree
- * changeRecorder->fetchCollection( true );
+ * monitor->fetchCollection( true );
  * // set the fetch scope that shall be used
- * changeRecorder->setItemFetchScope( scope );
+ * monitor->setItemFetchScope( scope );
  * // monitor all collections below the root collection for changes
- * changeRecorder->setCollectionMonitored( Akonadi::Collection::root() );
+ * monitor->setCollectionMonitored( Akonadi::Collection::root() );
  * // list only contacts and contact groups
- * changeRecorder->setMimeTypeMonitored( KContacts::Addressee::mimeType(), true );
- * changeRecorder->setMimeTypeMonitored( KContacts::ContactGroup::mimeType(), true );
+ * monitor->setMimeTypeMonitored( KContacts::Addressee::mimeType(), true );
+ * monitor->setMimeTypeMonitored( KContacts::ContactGroup::mimeType(), true );
  *
- * Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel( changeRecorder );
+ * Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel( monitor );
  *
  * Akonadi::ContactsTreeModel::Columns columns;
  * columns << Akonadi::ContactsTreeModel::FullName;
@@ -167,10 +167,10 @@ public:
     /**
      * Creates a new contacts tree model.
      *
-     * @param monitor The ChangeRecorder whose entities should be represented in the model.
+     * @param monitor The Monitor whose entities should be represented in the model.
      * @param parent The parent object.
      */
-    explicit ContactsTreeModel(ChangeRecorder *monitor, QObject *parent = Q_NULLPTR);
+    explicit ContactsTreeModel(Monitor *monitor, QObject *parent = Q_NULLPTR);
 
     /**
      * Destroys the contacts tree model.

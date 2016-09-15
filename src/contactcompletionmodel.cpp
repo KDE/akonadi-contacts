@@ -21,7 +21,7 @@
 
 #include "contactcompletionmodel_p.h"
 
-#include <changerecorder.h>
+#include <monitor.h>
 #include <entitymimetypefiltermodel.h>
 #include <itemfetchscope.h>
 #include <session.h>
@@ -38,7 +38,7 @@ QAbstractItemModel *ContactCompletionModel::self()
         return mSelf;
     }
 
-    ChangeRecorder *monitor = new ChangeRecorder;
+    Monitor *monitor = new Monitor;
     monitor->fetchCollection(true);
     monitor->itemFetchScope().fetchFullPayload();
     monitor->setCollectionMonitored(Akonadi::Collection::root());
@@ -57,7 +57,7 @@ QAbstractItemModel *ContactCompletionModel::self()
     return mSelf;
 }
 
-ContactCompletionModel::ContactCompletionModel(ChangeRecorder *monitor, QObject *parent)
+ContactCompletionModel::ContactCompletionModel(Monitor *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent)
 {
     setCollectionFetchStrategy(InvisibleCollectionFetch);

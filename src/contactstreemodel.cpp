@@ -46,7 +46,7 @@ public:
     const int mIconSize;
 };
 
-ContactsTreeModel::ContactsTreeModel(ChangeRecorder *monitor, QObject *parent)
+ContactsTreeModel::ContactsTreeModel(Monitor *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent)
     , d(new Private)
 {
