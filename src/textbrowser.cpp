@@ -61,7 +61,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
 #ifndef QT_NO_CLIPBOARD
     QMenu popup;
 
-    QAction *act = KStandardAction::copy(this, SLOT(copy()), this);
+    QAction *act = KStandardAction::copy(this, &TextBrowser::copy, this);
     act->setEnabled(!textCursor().selectedText().isEmpty());
     act->setShortcut(QKeySequence());
     popup.addAction(act);
