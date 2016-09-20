@@ -6,7 +6,7 @@ set(akonadicontact_addresslocation_web_editor_SRCS
     )
 set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
 
-ecm_qt_declare_logging_category(akonadicontact_addresslocation_web_editor_SRCS HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME log_akonadi_contact)
+ecm_qt_declare_logging_category(akonadicontact_addresslocation_web_editor_SRCS HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadi_contact)
 
 set(addresseslocationviewer_SRCS addresseslocationviewertest.cpp ${akonadicontact_addresslocation_web_editor_SRCS} ../addresseslocationgrantleeformater.cpp
     ../addressgrantleeobject.cpp ../iconnamecache.cpp)
