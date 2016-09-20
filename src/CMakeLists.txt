@@ -171,7 +171,7 @@ set(akonadicontact_LIB_SRC
     ${akonadicontact_actions_SRCS}
     )
 
-ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME log_akonadi_contact)
+ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact)
 
 if(NOT KDE_PLATFORM_PROFILE STREQUAL "Mobile")
     set(akonadicontact_LIB_SRC
