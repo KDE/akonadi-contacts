@@ -30,6 +30,13 @@ AddressesLocationEnginePage::AddressesLocationEnginePage(QObject *parent)
     settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, false);
     settings()->setAttribute(QWebEngineSettings::PluginsEnabled, false);
     settings()->setAttribute(QWebEngineSettings::AutoLoadImages, true);
+    settings()->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, false);
+    settings()->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, false);
+    settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, false);
+    settings()->setAttribute(QWebEngineSettings::XSSAuditingEnabled, false);
+    settings()->setAttribute(QWebEngineSettings::ErrorPageEnabled, false);
+    settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, false);
+    settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, false);
 
 }
 
