@@ -65,6 +65,7 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     ui.ShowAddressAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalAddressApplication);
     ui.ShowAddressAction->addItem(i18n("Google map"), ContactActionsSettings::UseGooglemap);
     ui.ShowAddressAction->addItem(i18n("Map quest"), ContactActionsSettings::UseMapquest);
+    ui.ShowAddressAction->addItem(i18n("OpenStreetMap"), ContactActionsSettings::UseOpenStreetMap);
 
     connect(ui.ShowAddressAction, SIGNAL(currentIndexChanged(int)), SLOT(slotShowAddressActionChanged(int)));
 

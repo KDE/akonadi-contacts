@@ -70,5 +70,11 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
         if (!urlTemplate.isEmpty()) {
             QDesktopServices::openUrl(QUrl(urlTemplate));
         }
+    } else if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseOpenStreetMap) {
+        QString urlTemplate = QStringLiteral("https://www.openstreetmap.org/search?query=%s,%l,%c");
+        replaceArguments(urlTemplate, address);
+        if (!urlTemplate.isEmpty()) {
+            QDesktopServices::openUrl(QUrl(urlTemplate));
+        }
     }
 }
