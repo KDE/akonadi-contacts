@@ -52,6 +52,7 @@ QString AddressesLocationGrantleeFormater::formatAddresses(const KContacts::Addr
     const int nbAddress(addresses.count());
     addressList.reserve(nbAddress);
     QList<AddressGrantleeObject *> lstAddress;
+    lstAddress.reserve(nbAddress);
     for (int i = 0; i < nbAddress; ++i) {
         AddressGrantleeObject *addressObj = new AddressGrantleeObject(addresses.at(i), i);
         addressList << QVariant::fromValue(static_cast<QObject *>(addressObj));

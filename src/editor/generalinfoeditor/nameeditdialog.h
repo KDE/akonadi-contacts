@@ -32,6 +32,7 @@ class KComboBox;
 class DisplayNameEditWidget;
 class NameEditDialog : public QDialog
 {
+    Q_OBJECT
 public:
     explicit NameEditDialog(QWidget *parent = Q_NULLPTR);
 

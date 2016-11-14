@@ -32,6 +32,7 @@ namespace Akonadi
  */
 class PhoneTypeDialog : public QDialog
 {
+    Q_OBJECT
 public:
     /**
      * Creates a new phone type dialog.

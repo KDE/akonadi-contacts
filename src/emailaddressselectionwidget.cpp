@@ -52,6 +52,7 @@ using namespace Akonadi;
  */
 class SearchLineEdit : public QLineEdit
 {
+    Q_OBJECT
 public:
     SearchLineEdit(QWidget *receiver, QWidget *parent = Q_NULLPTR)
         : QLineEdit(parent)
@@ -232,3 +233,5 @@ QTreeView *EmailAddressSelectionWidget::view() const
 {
     return d->mView;
 }
+
+#include "emailaddressselectionwidget.moc"

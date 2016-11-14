@@ -52,6 +52,7 @@ static DisplayNameEditWidget::DisplayType guessedDisplayType(const KContacts::Ad
 
 class DisplayNameDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
 public:
     DisplayNameDelegate(QAbstractItemView *view, QObject *parent = Q_NULLPTR)
         : QStyledItemDelegate(parent)
@@ -253,3 +254,5 @@ void DisplayNameEditWidget::setComboBoxEditable(bool value)
 {
     mView->setEditable(value);
 }
+
+#include "displaynameeditwidget.moc"

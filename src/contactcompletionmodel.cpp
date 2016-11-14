@@ -90,8 +90,7 @@ QVariant ContactCompletionModel::entityData(const Item &item, int column, int ro
             }
             break;
         case NameAndEmailColumn: {
-            QString name = QStringLiteral("%1 %2").arg(contact.givenName())
-                           .arg(contact.familyName()).simplified();
+            QString name = QStringLiteral("%1 %2").arg(contact.givenName(), contact.familyName()).simplified();
             if (name.isEmpty()) {
                 name = contact.organization().simplified();
             }

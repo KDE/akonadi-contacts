@@ -34,6 +34,7 @@ namespace Akonadi
 {
 class AddressTypeDialog : public QDialog
 {
+    Q_OBJECT
 public:
     AddressTypeDialog(KContacts::Address::Type type, QWidget *parent);
     ~AddressTypeDialog();

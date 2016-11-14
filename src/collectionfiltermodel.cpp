@@ -53,7 +53,7 @@ bool CollectionFilterModel::filterAcceptsRow(int row, const QModelIndex &parent)
 
     if (!mContentMimeTypes.isEmpty()) {
         QSet<QString> contentMimeTypes = collection.contentMimeTypes().toSet();
-        accepted = accepted && !(contentMimeTypes.intersect(mContentMimeTypes).isEmpty());
+        accepted = accepted && contentMimeTypes.intersects(mContentMimeTypes);
     }
 
     if (mRights != Akonadi::Collection::ReadOnly) {

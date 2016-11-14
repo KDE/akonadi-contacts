@@ -28,6 +28,7 @@
 
 class CustomFieldsModel : public QAbstractItemModel
 {
+    Q_OBJECT
 public:
     enum Role {
         TypeRole = Qt::UserRole,
