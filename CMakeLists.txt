@@ -19,6 +19,8 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
+include(ECMCoverageOption)
+
 
 set(PIM_VERSION "5.4.40")
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
