@@ -302,7 +302,7 @@ void ImageWidget::changeImage()
 
     const QList<QByteArray> supportedImage = QImageReader::supportedImageFormats();
     QString filter;
-    Q_FOREACH (const QByteArray &ba, supportedImage) {
+    for (const QByteArray &ba : supportedImage) {
         if (!filter.isEmpty()) {
             filter += QLatin1Char(' ');
         }
