@@ -325,7 +325,7 @@ void ImageWidget::saveImage()
 {
     const QList<QByteArray> supportedImage = QImageWriter::supportedImageFormats();
     QString filter;
-    Q_FOREACH (const QByteArray &ba, supportedImage) {
+    for (const QByteArray &ba : supportedImage) {
         if (!filter.isEmpty()) {
             filter += QLatin1Char(' ');
         }

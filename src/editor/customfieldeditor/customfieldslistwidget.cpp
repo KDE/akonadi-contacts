@@ -149,7 +149,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 void CustomFieldsListWidget::storeContact(KContacts::Addressee &contact) const
 {
     const CustomField::List customFields = mModel->customFields();
-    foreach (const CustomField &customField, customFields) {
+    for (const CustomField &customField : customFields) {
         // write back values for local and global scope, leave external untouched
         if (customField.scope() != CustomField::ExternalScope) {
             if (!customField.value().isEmpty()) {
@@ -213,7 +213,7 @@ void CustomFieldsListWidget::setLocalCustomFieldDescriptions(const QVariantList 
 {
     mLocalCustomFields.clear();
     mLocalCustomFields.reserve(descriptions.count());
-    foreach (const QVariant &description, descriptions) {
+    for (const QVariant &description : descriptions) {
         mLocalCustomFields.append(CustomField::fromVariantMap(description.toMap(), CustomField::LocalScope));
     }
 }
@@ -223,7 +223,7 @@ QVariantList CustomFieldsListWidget::localCustomFieldDescriptions() const
     const CustomField::List customFields = mModel->customFields();
 
     QVariantList descriptions;
-    foreach (const CustomField &field, customFields) {
+    for (const CustomField &field : customFields) {
         if (field.scope() == CustomField::LocalScope) {
             descriptions.append(field.toVariantMap());
         }
