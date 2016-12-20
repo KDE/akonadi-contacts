@@ -6,7 +6,6 @@ X-KDE-InstantMessagingKABCField=messaging/groupwise
 
 Comment=Novell GroupWise Messenger
 Comment[ar]=مرسالة نوفل GroupWise
-Comment[ast]=Novell GroupWise Messenger
 Comment[bs]=Novell GroupWise mesendžer
 Comment[ca]=Novell GroupWise Messenger
 Comment[ca@valencia]=Novell GroupWise Messenger
@@ -56,7 +55,6 @@ Comment[x-test]=xxNovell GroupWise Messengerxx
 Comment[zh_CN]=Novell GroupWise Messenger
 Comment[zh_TW]=Novell GroupWise 即時訊息
 Name=GroupWise
-Name[ast]=GroupWise
 Name[bs]=GroupWise
 Name[ca]=GroupWise
 Name[ca@valencia]=GroupWise
