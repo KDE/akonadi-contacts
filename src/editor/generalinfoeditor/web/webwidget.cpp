@@ -147,7 +147,8 @@ void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
     }
-    Q_FOREACH (const QString &type, mWebType->selectTypeList()) {
+    const QStringList lst = mWebType->selectTypeList();
+    for (const QString &type : lst) {
         if (value.contains(type)) {
             mOldType = type;
             mWebType->setCurrentIndex(mWebType->findData(type));

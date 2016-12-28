@@ -94,7 +94,8 @@ void MailWidget::setMail(const KContacts::Email &email)
     if (value.contains(QStringLiteral("PREF"))) {
         setPreferred(true);
     }
-    Q_FOREACH (const QString &type, mMailType->selectTypeList()) {
+    const QStringList lst = mMailType->selectTypeList();
+    for (const QString &type : lst) {
         if (value.contains(type)) {
             mOldType = type;
             mMailType->setCurrentIndex(mMailType->findData(type));
