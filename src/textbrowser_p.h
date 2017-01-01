@@ -1,6 +1,6 @@
 /*
     This file is part of Akonadi Contact.
-    Copyright (c) 2012 Montel Laurent <montel@kde.org>
+    Copyright (c) 2012-2017 Montel Laurent <montel@kde.org>
 
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
