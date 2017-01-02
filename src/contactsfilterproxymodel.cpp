@@ -36,7 +36,7 @@ class Q_DECL_HIDDEN ContactsFilterProxyModel::Private
 {
 public:
     Private()
-        : flags(0)
+        : flags(nullptr)
         , mExcludeVirtualCollections(false)
     {
     }
@@ -139,7 +139,7 @@ Qt::ItemFlags ContactsFilterProxyModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
         // Don't crash
-        return 0;
+        return nullptr;
     }
     const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     if (collection.isValid()) {

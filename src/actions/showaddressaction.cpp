@@ -56,7 +56,7 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
         replaceArguments(commandTemplate, address);
 
         if (!commandTemplate.isEmpty()) {
-            KRun::runCommand(commandTemplate, 0);
+            KRun::runCommand(commandTemplate, nullptr);
         }
     } else if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseGooglemap) {
         QString urlTemplate = QStringLiteral("https://maps.google.com/maps?q=%s,%l,%c");

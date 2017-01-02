@@ -55,7 +55,7 @@ public:
     Private(ContactViewer *parent)
         : mParent(parent)
         , mBrowser(nullptr)
-        , mParentCollectionFetchJob(0)
+        , mParentCollectionFetchJob(nullptr)
     {
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
@@ -243,7 +243,7 @@ public:
 
     void slotParentCollectionFetched(KJob *job)
     {
-        mParentCollectionFetchJob = 0;
+        mParentCollectionFetchJob = nullptr;
 
         QString addressBookName;
 
@@ -313,12 +313,12 @@ KContacts::Addressee ContactViewer::rawContact() const
 
 void ContactViewer::setContactFormatter(AbstractContactFormatter *formatter)
 {
-    if (formatter == 0) {
+    if (formatter == nullptr) {
         d->mContactFormatter = d->mStandardContactFormatter;
     } else {
         d->mContactFormatter = formatter;
         delete d->mStandardContactFormatter;
-        d->mStandardContactFormatter = 0;
+        d->mStandardContactFormatter = nullptr;
     }
 }
 
@@ -347,7 +347,7 @@ void ContactViewer::itemChanged(const Item &contactItem)
     if (d->mParentCollectionFetchJob) {
         disconnect(d->mParentCollectionFetchJob, SIGNAL(result(KJob*)), this, SLOT(slotParentCollectionFetched(KJob*)));
         delete d->mParentCollectionFetchJob;
-        d->mParentCollectionFetchJob = 0;
+        d->mParentCollectionFetchJob = nullptr;
     }
 
     d->mParentCollectionFetchJob = new CollectionFetchJob(contactItem.parentCollection(), CollectionFetchJob::Base, this);

@@ -39,7 +39,7 @@ class Q_DECL_HIDDEN ContactViewerDialog::Private
 public:
     Private(ContactViewerDialog *parent)
         : q(parent)
-        , mViewer(0)
+        , mViewer(nullptr)
     {
     }
 

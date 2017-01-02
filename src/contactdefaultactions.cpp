@@ -35,7 +35,7 @@ using namespace Akonadi;
 
 ContactDefaultActions::ContactDefaultActions(QObject *parent)
     : QObject(parent)
-    , d(0)
+    , d(nullptr)
 {
 }
 

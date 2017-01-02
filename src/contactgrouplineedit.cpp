@@ -35,7 +35,7 @@
 
 ContactGroupLineEdit::ContactGroupLineEdit(QWidget *parent)
     : QLineEdit(parent)
-    , mCompleter(0)
+    , mCompleter(nullptr)
     , mContainsReference(false)
 {
     setClearButtonEnabled(true);

@@ -57,7 +57,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     QString command = ContactActionsSettings::self()->smsCommand();
 
     if (command.isEmpty()) {
-        KMessageBox::sorry(0, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
+        KMessageBox::sorry(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
         return;
     }
 
@@ -66,7 +66,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
         delete dlg;
         return;
     }
-    const QString message = (dlg != 0 ? dlg->message() : QString());
+    const QString message = (dlg != nullptr ? dlg->message() : QString());
     delete dlg;
 
     //   we handle skype separated
@@ -76,7 +76,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
             // I'm not sure whether here should be a notification.
             // Skype can do a notification itself if whished.
         } else {
-            KMessageBox::sorry(0, dialer.errorMessage());
+            KMessageBox::sorry(nullptr, dialer.errorMessage());
         }
 
         return;
@@ -91,5 +91,5 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     command = command.replace(QStringLiteral("%t"), message);
     //Bug: 293232 In KDE3 We used %F to replace text
     command = command.replace(QStringLiteral("%F"), message);
-    KRun::runCommand(command, 0);
+    KRun::runCommand(command, nullptr);
 }

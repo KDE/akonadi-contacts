@@ -64,7 +64,7 @@ static QDBusInterface *searchSkypeDBusInterface()
 }
 
 QSkypeDialer::QSkypeDialer(const QString &applicationName)
-    : QDialer(applicationName), mInterface(0)
+    : QDialer(applicationName), mInterface(nullptr)
 {
 }
 
@@ -103,7 +103,7 @@ bool QSkypeDialer::initializeSkype()
 
     if (!mInterface->isValid()) {
         delete mInterface;
-        mInterface = 0;
+        mInterface = nullptr;
 
         mErrorMessage = i18n("Skype Public API (D-Bus) seems to be disabled.");
         return false;
@@ -112,7 +112,7 @@ bool QSkypeDialer::initializeSkype()
     QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("NAME %1").arg(mApplicationName));
     if (reply.value() != QLatin1String("OK")) {
         delete mInterface;
-        mInterface = 0;
+        mInterface = nullptr;
 
         mErrorMessage = i18n("Skype registration failed.");
         return false;
@@ -121,7 +121,7 @@ bool QSkypeDialer::initializeSkype()
     reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("PROTOCOL 1"));
     if (reply.value() != QLatin1String("PROTOCOL 1")) {
         delete mInterface;
-        mInterface = 0;
+        mInterface = nullptr;
 
         mErrorMessage = i18n("Protocol mismatch.");
         return false;

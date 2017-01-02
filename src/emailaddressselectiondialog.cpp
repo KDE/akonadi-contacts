@@ -79,7 +79,7 @@ public:
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog(QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this, 0))
+    , d(new Private(this, nullptr))
 {
 }
 

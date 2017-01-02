@@ -46,7 +46,7 @@ public:
     Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, AbstractContactEditorWidget *editorWidget,
             ContactEditorDialog *parent)
         : q(parent)
-        , mAddressBookBox(0)
+        , mAddressBookBox(nullptr)
         , mMode(mode)
     {
         q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18n("New Contact") : i18n("Edit Contact"));
@@ -137,7 +137,7 @@ public:
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, FullMode, 0, this))
+    , d(new Private(mode, FullMode, nullptr, this))
 {
 }
 
@@ -149,7 +149,7 @@ ContactEditorDialog::ContactEditorDialog(Mode mode, AbstractContactEditorWidget 
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, DisplayMode displayMode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, displayMode, 0, this))
+    , d(new Private(mode, displayMode, nullptr, this))
 {
 }
 

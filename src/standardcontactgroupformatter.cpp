@@ -30,7 +30,7 @@
 using namespace Akonadi;
 
 StandardContactGroupFormatter::StandardContactGroupFormatter()
-    : d(0)
+    : d(nullptr)
 {
 }
 

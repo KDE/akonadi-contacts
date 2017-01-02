@@ -45,8 +45,8 @@ public:
     Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
         : mActionCollection(actionCollection)
         , mParentWidget(parentWidget)
-        , mCollectionSelectionModel(0)
-        , mItemSelectionModel(0)
+        , mCollectionSelectionModel(nullptr)
+        , mItemSelectionModel(nullptr)
         , mParent(parent)
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
@@ -641,7 +641,7 @@ QAction *StandardContactActionManager::action(Type type) const
         return d->mActions.value(type);
     }
 
-    return 0;
+    return nullptr;
 }
 
 QAction *StandardContactActionManager::action(StandardActionManager::Type type) const

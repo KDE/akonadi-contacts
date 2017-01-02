@@ -47,8 +47,8 @@ class Q_DECL_HIDDEN ContactGroupViewer::Private
 public:
     Private(ContactGroupViewer *parent)
         : mParent(parent)
-        , mExpandJob(0)
-        , mParentCollectionFetchJob(0)
+        , mExpandJob(nullptr)
+        , mParentCollectionFetchJob(nullptr)
     {
         mBrowser = new TextBrowser;
 
@@ -105,7 +105,7 @@ public:
 
     void _k_expandResult(KJob *job)
     {
-        mExpandJob = 0;
+        mExpandJob = nullptr;
 
         if (!job->error()) {
             ContactGroupExpandJob *expandJob = qobject_cast<ContactGroupExpandJob *>(job);
@@ -116,7 +116,7 @@ public:
         if (mParentCollectionFetchJob) {
             mParent->disconnect(mParentCollectionFetchJob, SIGNAL(result(KJob*)), mParent, SLOT(slotParentCollectionFetched(KJob*)));
             delete mParentCollectionFetchJob;
-            mParentCollectionFetchJob = 0;
+            mParentCollectionFetchJob = nullptr;
         }
 
         mParentCollectionFetchJob = new CollectionFetchJob(mCurrentItem.parentCollection(), CollectionFetchJob::Base, mParent);
@@ -125,7 +125,7 @@ public:
 
     void slotParentCollectionFetched(KJob *job)
     {
-        mParentCollectionFetchJob = 0;
+        mParentCollectionFetchJob = nullptr;
         mCurrentAddressBookName.clear();
 
         if (!job->error()) {
@@ -185,7 +185,7 @@ void ContactGroupViewer::setContactGroup(const Akonadi::Item &group)
 
 void ContactGroupViewer::setContactGroupFormatter(AbstractContactGroupFormatter *formatter)
 {
-    if (formatter == 0) {
+    if (formatter == nullptr) {
         d->mContactGroupFormatter = d->mStandardContactGroupFormatter;
     } else {
         d->mContactGroupFormatter = formatter;

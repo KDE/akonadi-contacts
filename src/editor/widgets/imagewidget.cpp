@@ -116,7 +116,7 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
 
 ImageWidget::ImageWidget(Type type, QWidget *parent)
     : QPushButton(parent)
-    , mImageLoader(0)
+    , mImageLoader(nullptr)
     , mType(type)
     , mHasImage(false)
     , mReadOnly(false)

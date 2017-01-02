@@ -54,7 +54,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     // synchronize
     ContactActionsSettings::self()->load();
 
-    QDialer *dialer = NULL;
+    QDialer *dialer = nullptr;
     // we handle skype separated
     if (ContactActionsSettings::self()->dialPhoneNumberAction() == ContactActionsSettings::UseSkype) {
         dialer = new QSkypeDialer(QStringLiteral("AkonadiContacts"));
@@ -65,7 +65,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     }
     if (dialer) {
         if (!dialer->dialNumber(strippedDialNumber(number.number().trimmed()))) {
-            KMessageBox::sorry(0, dialer->errorMessage());
+            KMessageBox::sorry(nullptr, dialer->errorMessage());
         }
         delete dialer;
         return;
@@ -74,7 +74,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     QString command = ContactActionsSettings::self()->phoneCommand();
 
     if (command.isEmpty()) {
-        KMessageBox::sorry(0, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
+        KMessageBox::sorry(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
         return;
     }
 
@@ -85,5 +85,5 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     command = command.replace(QStringLiteral("%N"), number.number());
     command = command.replace(QStringLiteral("%n"), strippedDialNumber(number.number().trimmed()));
 
-    KRun::runCommand(command, 0);
+    KRun::runCommand(command, nullptr);
 }

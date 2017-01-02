@@ -31,7 +31,7 @@
 #include <QTreeView>
 
 MainWidget::MainWidget()
-    : QWidget(0)
+    : QWidget(nullptr)
 {
     QGridLayout *layout = new QGridLayout(this);
 

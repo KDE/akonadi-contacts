@@ -176,7 +176,7 @@ void EmailAddressSelectionWidget::Private::init()
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(true, this, 0))
+    , d(new Private(true, this, nullptr))
 {
 }
 

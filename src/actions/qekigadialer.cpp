@@ -66,7 +66,7 @@ static QDBusInterface *searchEkigaDBusInterface()
 }
 
 QEkigaDialer::QEkigaDialer(const QString &applicationName)
-    : QDialer(applicationName), mInterface(0)
+    : QDialer(applicationName), mInterface(nullptr)
 {
 }
 
@@ -101,7 +101,7 @@ bool QEkigaDialer::initializeEkiga()
 
     if (!mInterface->isValid()) {
         delete mInterface;
-        mInterface = 0;
+        mInterface = nullptr;
 
         mErrorMessage = i18n("Ekiga Public API (D-Bus) seems to be disabled.");
         return false;

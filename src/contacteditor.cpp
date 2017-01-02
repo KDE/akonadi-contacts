@@ -50,13 +50,13 @@ public:
     Private(ContactEditor::Mode mode, ContactEditor::DisplayMode displayMode, AbstractContactEditorWidget *editorWidget, ContactEditor *parent)
         : mParent(parent)
         , mMode(mode)
-        , mMonitor(0)
+        , mMonitor(nullptr)
         , mReadOnly(false)
     {
         if (editorWidget) {
             mEditorWidget = editorWidget;
         } else {
-            mEditorWidget = new ContactEditorWidget(displayMode == FullMode ? ContactEditorWidget::FullMode : ContactEditorWidget::VCardMode, 0);
+            mEditorWidget = new ContactEditorWidget(displayMode == FullMode ? ContactEditorWidget::FullMode : ContactEditorWidget::VCardMode, nullptr);
         }
 
         QVBoxLayout *layout = new QVBoxLayout(mParent);
@@ -204,7 +204,7 @@ void ContactEditor::Private::setupMonitor()
 
 ContactEditor::ContactEditor(Mode mode, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(mode, FullMode, 0, this))
+    , d(new Private(mode, FullMode, nullptr, this))
 {
 }
 
@@ -216,7 +216,7 @@ ContactEditor::ContactEditor(Mode mode, AbstractContactEditorWidget *editorWidge
 
 ContactEditor::ContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(mode, displayMode, 0, this))
+    , d(new Private(mode, displayMode, nullptr, this))
 {
 }
 

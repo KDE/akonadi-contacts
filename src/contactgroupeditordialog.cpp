@@ -45,8 +45,8 @@ class Q_DECL_HIDDEN ContactGroupEditorDialog::Private
 public:
     Private(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
         : q(qq)
-        , mAddressBookBox(0)
-        , mEditor(0)
+        , mAddressBookBox(nullptr)
+        , mEditor(nullptr)
         , mMode(mode)
         , okButton(nullptr)
     {
