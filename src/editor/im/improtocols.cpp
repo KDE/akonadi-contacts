@@ -24,7 +24,7 @@
 #include <kiconloader.h>
 #include <kservicetypetrader.h>
 #include <KService>
-IMProtocols *IMProtocols::mSelf = Q_NULLPTR;
+IMProtocols *IMProtocols::mSelf = nullptr;
 
 IMProtocols::IMProtocols()
 {

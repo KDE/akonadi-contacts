@@ -44,8 +44,8 @@ class Q_DECL_HIDDEN KWidgetLister::Private
 public:
     Private(KWidgetLister *qq)
         : q(qq),
-          mLayout(Q_NULLPTR),
-          mButtonBox(Q_NULLPTR),
+          mLayout(nullptr),
+          mButtonBox(nullptr),
           mMinWidgets(0),
           mMaxWidgets(0)
 
@@ -197,7 +197,7 @@ void KWidgetLister::removeWidget(QWidget *widget)
     const int index = d->mWidgetList.indexOf(widget);
     QWidget *w =  d->mWidgetList.takeAt(index);
     w->deleteLater();
-    w = Q_NULLPTR;
+    w = nullptr;
     Q_EMIT widgetRemoved(widget);
     Q_EMIT widgetRemoved();
 

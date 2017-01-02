@@ -29,7 +29,7 @@ class AkonadiContactSelectTypeComboboxTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AkonadiContactSelectTypeComboboxTest(QObject *parent = Q_NULLPTR);
+    explicit AkonadiContactSelectTypeComboboxTest(QObject *parent = nullptr);
     ~AkonadiContactSelectTypeComboboxTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

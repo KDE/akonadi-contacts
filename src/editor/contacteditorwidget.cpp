@@ -46,7 +46,7 @@ public:
     Private(ContactEditorWidget::DisplayMode displayMode, ContactEditorWidget *parent)
         : mDisplayMode(displayMode)
         , mParent(parent)
-        , mCustomFieldsWidget(Q_NULLPTR)
+        , mCustomFieldsWidget(nullptr)
     {
     }
 

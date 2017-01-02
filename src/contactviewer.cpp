@@ -54,7 +54,7 @@ class Q_DECL_HIDDEN ContactViewer::Private
 public:
     Private(ContactViewer *parent)
         : mParent(parent)
-        , mBrowser(Q_NULLPTR)
+        , mBrowser(nullptr)
         , mParentCollectionFetchJob(0)
     {
         mStandardContactFormatter = new StandardContactFormatter;

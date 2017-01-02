@@ -48,7 +48,7 @@ public:
         , mAddressBookBox(0)
         , mEditor(0)
         , mMode(mode)
-        , okButton(Q_NULLPTR)
+        , okButton(nullptr)
     {
     }
 

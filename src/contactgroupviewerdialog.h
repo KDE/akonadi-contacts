@@ -66,7 +66,7 @@ public:
      *
      * @param parent The parent widget of the dialog.
      */
-    ContactGroupViewerDialog(QWidget *parent = Q_NULLPTR);
+    ContactGroupViewerDialog(QWidget *parent = nullptr);
 
     /**
      * Destroys the contact group viewer dialog.

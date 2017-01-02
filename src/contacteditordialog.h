@@ -97,7 +97,7 @@ public:
      * @param mode The mode of the dialog.
      * @param parent The parent widget of the dialog.
      */
-    explicit ContactEditorDialog(Mode mode, QWidget *parent = Q_NULLPTR);
+    explicit ContactEditorDialog(Mode mode, QWidget *parent = nullptr);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -106,7 +106,7 @@ public:
      * @param editorWidget The contact editor widget that shall be used for editing.
      * @param parent The parent widget of the dialog.
      */
-    ContactEditorDialog(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = Q_NULLPTR);
+    ContactEditorDialog(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -116,7 +116,7 @@ public:
      * @param parent The parent widget of the dialog.
      * @since 4.10
      */
-    ContactEditorDialog(Mode mode, DisplayMode displayMode, QWidget *parent = Q_NULLPTR);
+    ContactEditorDialog(Mode mode, DisplayMode displayMode, QWidget *parent = nullptr);
 
     /**
      * Destroys the contact editor dialog.

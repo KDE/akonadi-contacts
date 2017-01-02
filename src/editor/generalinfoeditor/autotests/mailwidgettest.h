@@ -28,7 +28,7 @@ class MailWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit MailWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit MailWidgetTest(QObject *parent = nullptr);
     ~MailWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

@@ -190,7 +190,7 @@ QString ContactGroupLineEdit::requestPreferredEmail(const KContacts::Addressee &
         return emails.first();
     }
 
-    QAction *action = Q_NULLPTR;
+    QAction *action = nullptr;
 
     QMenu menu;
     menu.setTitle(i18n("Select preferred email address"));

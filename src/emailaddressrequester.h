@@ -46,7 +46,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit EmailAddressRequester(QWidget *parent = Q_NULLPTR);
+    explicit EmailAddressRequester(QWidget *parent = nullptr);
 
     /**
      * Destroys the email address requester.

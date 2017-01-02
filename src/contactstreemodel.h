@@ -170,7 +170,7 @@ public:
      * @param monitor The Monitor whose entities should be represented in the model.
      * @param parent The parent object.
      */
-    explicit ContactsTreeModel(Monitor *monitor, QObject *parent = Q_NULLPTR);
+    explicit ContactsTreeModel(Monitor *monitor, QObject *parent = nullptr);
 
     /**
      * Destroys the contacts tree model.

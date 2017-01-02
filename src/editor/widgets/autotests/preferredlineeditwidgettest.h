@@ -28,7 +28,7 @@ class PreferredLineEditWidget : public QObject
 {
     Q_OBJECT
 public:
-    explicit PreferredLineEditWidget(QObject *parent = Q_NULLPTR);
+    explicit PreferredLineEditWidget(QObject *parent = nullptr);
     ~PreferredLineEditWidget();
 
 private Q_SLOTS:

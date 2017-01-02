@@ -29,7 +29,7 @@ class CustomFieldsWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CustomFieldsWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit CustomFieldsWidgetTest(QObject *parent = nullptr);
     ~CustomFieldsWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

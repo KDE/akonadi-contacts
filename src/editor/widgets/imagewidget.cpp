@@ -45,7 +45,7 @@
 class ImageLoader
 {
 public:
-    ImageLoader(QWidget *parent = Q_NULLPTR);
+    ImageLoader(QWidget *parent = nullptr);
 
     QImage loadImage(const QUrl &url, bool *ok, bool selectPictureSize = true);
 

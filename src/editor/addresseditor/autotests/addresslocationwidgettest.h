@@ -29,7 +29,7 @@ class AddressLocationWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AddressLocationWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit AddressLocationWidgetTest(QObject *parent = nullptr);
     ~AddressLocationWidgetTest();
 
 private Q_SLOTS:

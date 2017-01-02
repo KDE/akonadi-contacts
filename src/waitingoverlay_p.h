@@ -40,7 +40,7 @@ public:
      * @param baseWidget must not be null.
      * @param parent must not be equal to baseWidget
      */
-    explicit WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent = Q_NULLPTR);
+    explicit WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent = nullptr);
     ~WaitingOverlay();
 
 protected:

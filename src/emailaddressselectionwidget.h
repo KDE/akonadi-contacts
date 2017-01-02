@@ -74,7 +74,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionWidget(QWidget *parent = Q_NULLPTR);
+    explicit EmailAddressSelectionWidget(QWidget *parent = nullptr);
 
     /**
      * Creates a new email address selection widget.
@@ -82,7 +82,7 @@ public:
      * @param model A custom, ContactsTreeModel based model to use.
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionWidget(QAbstractItemModel *model, QWidget *parent = Q_NULLPTR);
+    explicit EmailAddressSelectionWidget(QAbstractItemModel *model, QWidget *parent = nullptr);
 
     /**
      * @brief Creates a new email address selection widget.
@@ -90,7 +90,7 @@ public:
      * @param model A custom ContactsTreeModel based model to use.
      * @param parent The parent widget.
      */
-    explicit EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model = Q_NULLPTR, QWidget *parent = Q_NULLPTR);
+    explicit EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model = nullptr, QWidget *parent = nullptr);
 
     /**
      * Destroys the email address selection widget.

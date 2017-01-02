@@ -29,7 +29,7 @@ class AddressesLocationViewerTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AddressesLocationViewerTest(QObject *parent = Q_NULLPTR);
+    explicit AddressesLocationViewerTest(QObject *parent = nullptr);
     ~AddressesLocationViewerTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

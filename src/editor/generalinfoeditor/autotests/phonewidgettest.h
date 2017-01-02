@@ -28,7 +28,7 @@ class PhoneWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit PhoneWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit PhoneWidgetTest(QObject *parent = nullptr);
     ~PhoneWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

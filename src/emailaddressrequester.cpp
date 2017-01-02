@@ -35,7 +35,7 @@ class Q_DECL_HIDDEN Akonadi::EmailAddressRequester::Private
 {
 public:
     Private(EmailAddressRequester *qq)
-        : q(qq), mLineEdit(Q_NULLPTR)
+        : q(qq), mLineEdit(nullptr)
     {
     }
 

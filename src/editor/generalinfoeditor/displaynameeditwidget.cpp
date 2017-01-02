@@ -54,7 +54,7 @@ class DisplayNameDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    DisplayNameDelegate(QAbstractItemView *view, QObject *parent = Q_NULLPTR)
+    DisplayNameDelegate(QAbstractItemView *view, QObject *parent = nullptr)
         : QStyledItemDelegate(parent)
         , mMaxDescriptionWidth(0)
     {

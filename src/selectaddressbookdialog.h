@@ -33,7 +33,7 @@ class AKONADI_CONTACT_EXPORT SelectAddressBookDialog : public Akonadi::Collectio
 {
     Q_OBJECT
 public:
-    explicit SelectAddressBookDialog(QWidget *parent = Q_NULLPTR);
+    explicit SelectAddressBookDialog(QWidget *parent = nullptr);
     ~SelectAddressBookDialog();
 
 private:
