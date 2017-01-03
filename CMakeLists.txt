@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
+set(PIM_VERSION "5.4.40")
 
-project(Akonadi-Contact)
+project(Akonadi-Contact VERSION ${PIM_VERSION})
 
 # ECM setup
 
@@ -22,14 +23,13 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMCoverageOption)
 
 
-set(PIM_VERSION "5.4.40")
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
 set(AKONADI_MIME_VERSION "5.4.40")
 set(KCONTACTS_VERSION "5.4.40")
 set(KMIMELIB_VERSION "5.4.40")
 set(AKONADI_VERSION "5.4.40")
 
-ecm_setup_version(${AKONADI_CONTACTS_VERSION} VARIABLE_PREFIX AKONADICONTACT
+ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
     SOVERSION 5
