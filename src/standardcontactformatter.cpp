@@ -123,7 +123,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     int counter = 0;
     foreach (const KContacts::PhoneNumber &number, rawContact.phoneNumbers()) {
 
-        QString dispLabel = number.typeLabel().replace(QStringLiteral(" "), QStringLiteral("&nbsp;"));
+        QString dispLabel = number.typeLabel().replace(QLatin1Char(' '), QStringLiteral("&nbsp;"));
         QString dispValue = QStringLiteral("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
             QString dispIcon = QStringLiteral("<a href=\"sms:?index=%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")

@@ -149,7 +149,7 @@ bool QSkypeDialer::sendSms(const QString &number, const QString &text)
 
     // First we create a new SMS object that gets an ID. We need that ID later...
     QDBusReply<QString> reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("CREATE SMS OUTGOING %1").arg(number));
-    const QString messageId = reply.value().section(QStringLiteral(" "), 1, 1);
+    const QString messageId = reply.value().section(QLatin1Char(' '), 1, 1);
 
     // Set the SMS text
     reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("SET SMS %1 BODY %2").arg(messageId, text));
