@@ -60,7 +60,7 @@ void ContactGroupLineEdit::setContactData(const KContacts::ContactGroup::Data &g
     mContactData = groupData;
     mContainsReference = false;
 
-    setText(QStringLiteral("%1 <%2>").arg(groupData.name()).arg(groupData.email()));
+    setText(QStringLiteral("%1 <%2>").arg(groupData.name(), groupData.email()));
 }
 
 KContacts::ContactGroup::Data ContactGroupLineEdit::contactData() const
@@ -166,7 +166,7 @@ void ContactGroupLineEdit::updateView(const Akonadi::Item &item, const QString &
     if (email.isEmpty()) {
         setText(QStringLiteral("%1").arg(name));
     } else {
-        setText(QStringLiteral("%1 <%2>").arg(name).arg(email));
+        setText(QStringLiteral("%1 <%2>").arg(name, email));
     }
 
     mContactReference.setGid(contact.uid());

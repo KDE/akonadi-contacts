@@ -103,7 +103,7 @@ QVariant ContactCompletionModel::entityData(const Item &item, int column, int ro
                 return QString();
             }
 
-            return QStringLiteral("%1 <%2>").arg(name).arg(email);
+            return QStringLiteral("%1 <%2>").arg(name, email);
         }
         break;
         case EmailColumn:
