@@ -567,11 +567,11 @@ void StandardContactActionManager::setItemSelectionModel(QItemSelectionModel *se
 
 QAction *StandardContactActionManager::createAction(Type type)
 {
-    if (d->mActions.contains(type)) {
-        return d->mActions.value(type);
+    QAction *action = d->mActions.value(type);
+    if (action) {
+        return action;
     }
 
-    QAction *action = nullptr;
 
     switch (type) {
     case CreateContact:

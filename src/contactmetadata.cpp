@@ -58,11 +58,7 @@ void ContactMetaData::load(const Akonadi::Item &contact)
     ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>();
     const QVariantMap metaData = attribute->metaData();
 
-    if (metaData.contains(QStringLiteral("DisplayNameMode"))) {
-        d->mDisplayNameMode = metaData.value(QStringLiteral("DisplayNameMode")).toInt();
-    } else {
-        d->mDisplayNameMode = -1;
-    }
+    d->mDisplayNameMode = metaData.value(QStringLiteral("DisplayNameMode"), -1).toInt();
 
     d->mCustomFieldDescriptions = metaData.value(QStringLiteral("CustomFieldDescriptions")).toList();
 }
