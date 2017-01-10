@@ -35,7 +35,7 @@ class NameWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit NameWidget(QWidget *parent = Q_NULLPTR);
+    explicit NameWidget(QWidget *parent = nullptr);
     ~NameWidget();
 
     void loadContact(const KContacts::Addressee &contact);

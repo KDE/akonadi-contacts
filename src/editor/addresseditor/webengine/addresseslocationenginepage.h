@@ -30,7 +30,7 @@ class AddressesLocationEnginePage : public QWebEnginePage
 {
     Q_OBJECT
 public:
-    explicit AddressesLocationEnginePage(QObject *parent = Q_NULLPTR);
+    explicit AddressesLocationEnginePage(QObject *parent = nullptr);
     ~AddressesLocationEnginePage();
 
 Q_SIGNALS:

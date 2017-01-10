@@ -35,7 +35,7 @@ class MailWidgetLister : public KWidgetLister
 {
     Q_OBJECT
 public:
-    explicit MailWidgetLister(QWidget *parent = Q_NULLPTR);
+    explicit MailWidgetLister(QWidget *parent = nullptr);
     ~MailWidgetLister();
 
     void loadContact(const KContacts::Addressee &contact);

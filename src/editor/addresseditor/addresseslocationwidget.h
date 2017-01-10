@@ -34,7 +34,7 @@ class AddressesLocationWidget : public QSplitter
 {
     Q_OBJECT
 public:
-    explicit AddressesLocationWidget(QWidget *parent = Q_NULLPTR);
+    explicit AddressesLocationWidget(QWidget *parent = nullptr);
     ~AddressesLocationWidget();
 
     void loadContact(const KContacts::Addressee &contact);

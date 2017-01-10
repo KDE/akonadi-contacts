@@ -40,7 +40,7 @@ public:
      * @param type The initial type of the phone number.
      * @param parent The parent widget.
      */
-    explicit PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent = Q_NULLPTR);
+    explicit PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent = nullptr);
 
     /**
      * Returns the selected type.

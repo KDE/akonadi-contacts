@@ -35,7 +35,7 @@ class WebWidgetLister : public KWidgetLister
 {
     Q_OBJECT
 public:
-    explicit WebWidgetLister(QWidget *parent = Q_NULLPTR);
+    explicit WebWidgetLister(QWidget *parent = nullptr);
     ~WebWidgetLister();
 
     void loadContact(const KContacts::Addressee &contact);

@@ -35,7 +35,7 @@ class MailListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MailListWidget(QWidget *parent = Q_NULLPTR);
+    explicit MailListWidget(QWidget *parent = nullptr);
     ~MailListWidget();
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

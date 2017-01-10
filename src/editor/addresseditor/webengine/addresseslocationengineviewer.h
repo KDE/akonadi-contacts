@@ -31,7 +31,7 @@ class AddressesLocationEngineViewer : public QWebEngineView
 {
     Q_OBJECT
 public:
-    explicit AddressesLocationEngineViewer(QWidget *parent = Q_NULLPTR);
+    explicit AddressesLocationEngineViewer(QWidget *parent = nullptr);
     ~AddressesLocationEngineViewer();
 
     KContacts::Address::List addresses() const;

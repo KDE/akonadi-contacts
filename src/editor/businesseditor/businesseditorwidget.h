@@ -35,7 +35,7 @@ class BusinessEditorWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit BusinessEditorWidget(QWidget *parent = Q_NULLPTR);
+    explicit BusinessEditorWidget(QWidget *parent = nullptr);
     ~BusinessEditorWidget();
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact);

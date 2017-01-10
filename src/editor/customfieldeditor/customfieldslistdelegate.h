@@ -30,7 +30,7 @@ namespace Akonadi
 class CustomFieldsListDelegate : public QStyledItemDelegate
 {
 public:
-    explicit CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent = Q_NULLPTR);
+    explicit CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent = nullptr);
     ~CustomFieldsListDelegate();
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;

@@ -41,7 +41,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit SelectAddressTypeComboBox(QWidget *parent = Q_NULLPTR);
+    explicit SelectAddressTypeComboBox(QWidget *parent = nullptr);
 
     /**
      * Destroys the address type combo.

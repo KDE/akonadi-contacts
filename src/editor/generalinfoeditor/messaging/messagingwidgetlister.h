@@ -35,7 +35,7 @@ class MessagingWidgetLister : public KWidgetLister
 {
     Q_OBJECT
 public:
-    explicit MessagingWidgetLister(QWidget *parent = Q_NULLPTR);
+    explicit MessagingWidgetLister(QWidget *parent = nullptr);
     ~MessagingWidgetLister();
 
     void loadContact(const KContacts::Addressee &contact);

@@ -39,7 +39,7 @@ class CustomFieldsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CustomFieldsWidget(QWidget *parent = Q_NULLPTR);
+    explicit CustomFieldsWidget(QWidget *parent = nullptr);
     ~CustomFieldsWidget();
     void storeContact(KContacts::Addressee &contact) const;
     void loadContact(const KContacts::Addressee &contact);

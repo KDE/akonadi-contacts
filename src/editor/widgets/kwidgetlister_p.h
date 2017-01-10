@@ -69,7 +69,7 @@ public:
      * @param maxWidgets The maximum number of widgets to stay on the screen.
      * @param parent The parent widget.
      */
-    explicit KWidgetLister(int minWidgets = 1, int maxWidgets = 8, QWidget *parent = Q_NULLPTR);
+    explicit KWidgetLister(int minWidgets = 1, int maxWidgets = 8, QWidget *parent = nullptr);
 
     /**
      * Destroys the widget lister.
@@ -115,7 +115,7 @@ protected:
      * from derived classes (@p mLayout is private).
      * Make sure the parent of the QWidget to add is this KWidgetLister.
      */
-    virtual void addWidgetAtEnd(QWidget *widget = Q_NULLPTR);
+    virtual void addWidgetAtEnd(QWidget *widget = nullptr);
 
     /**
      * Removes a single (always the last) widget. Doesn't care if there
@@ -169,7 +169,7 @@ protected:
     /**
      * Add widget after specific widget
      */
-    virtual void addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *widget = Q_NULLPTR);
+    virtual void addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *widget = nullptr);
 
 private:
     void init();

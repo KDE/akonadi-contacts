@@ -73,7 +73,7 @@ public:
      * @param group The contact group to expand.
      * @param parent The parent object.
      */
-    explicit ContactGroupExpandJob(const KContacts::ContactGroup &group, QObject *parent = Q_NULLPTR);
+    explicit ContactGroupExpandJob(const KContacts::ContactGroup &group, QObject *parent = nullptr);
 
     /**
      * Creates a new contact group expand job.
@@ -83,7 +83,7 @@ public:
      *
      * @since 4.5
      */
-    explicit ContactGroupExpandJob(const QString &name, QObject *parent = Q_NULLPTR);
+    explicit ContactGroupExpandJob(const QString &name, QObject *parent = nullptr);
 
     /**
      * Destroys the contact group expand job.

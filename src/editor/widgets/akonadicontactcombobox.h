@@ -30,7 +30,7 @@ class AkonadiContactComboBox : public QComboBox
 {
     Q_OBJECT
 public:
-    explicit AkonadiContactComboBox(QWidget *parent = Q_NULLPTR);
+    explicit AkonadiContactComboBox(QWidget *parent = nullptr);
     ~AkonadiContactComboBox();
 
 protected:

@@ -39,7 +39,7 @@ class CategoriesEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit CategoriesEditWidget(QWidget *parent = Q_NULLPTR);
+    explicit CategoriesEditWidget(QWidget *parent = nullptr);
     ~CategoriesEditWidget();
 
     void loadContact(const KContacts::Addressee &contact);

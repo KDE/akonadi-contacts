@@ -30,7 +30,7 @@ class AkonadiContactSelectTypeCombobox : public Akonadi::AkonadiContactComboBox
 {
     Q_OBJECT
 public:
-    explicit AkonadiContactSelectTypeCombobox(QWidget *parent = Q_NULLPTR);
+    explicit AkonadiContactSelectTypeCombobox(QWidget *parent = nullptr);
     ~AkonadiContactSelectTypeCombobox();
 
     QStringList selectTypeList() const;

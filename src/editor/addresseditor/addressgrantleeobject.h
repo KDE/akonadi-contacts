@@ -43,7 +43,7 @@ class AddressGrantleeObject : public QObject
     Q_PROPERTY(QString country READ country)
     Q_PROPERTY(bool preferredAddress READ preferredAddress)
 public:
-    explicit AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent = Q_NULLPTR);
+    explicit AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent = nullptr);
     ~AddressGrantleeObject();
 
     QString removeAddressAction() const;

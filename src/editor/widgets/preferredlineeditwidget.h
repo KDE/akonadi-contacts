@@ -31,7 +31,7 @@ class PreferredLineEditWidget : public KLineEdit
 {
     Q_OBJECT
 public:
-    explicit PreferredLineEditWidget(QWidget *parent = Q_NULLPTR);
+    explicit PreferredLineEditWidget(QWidget *parent = nullptr);
     ~PreferredLineEditWidget();
 
     bool preferred() const;

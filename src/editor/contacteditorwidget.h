@@ -47,7 +47,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit ContactEditorWidget(QWidget *parent = Q_NULLPTR);
+    explicit ContactEditorWidget(QWidget *parent = nullptr);
 
     ContactEditorWidget(DisplayMode displayMode, QWidget *parent);
 

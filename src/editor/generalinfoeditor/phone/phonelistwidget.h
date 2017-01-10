@@ -36,7 +36,7 @@ class PhoneListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit PhoneListWidget(QWidget *parent = Q_NULLPTR);
+    explicit PhoneListWidget(QWidget *parent = nullptr);
     ~PhoneListWidget();
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

@@ -41,7 +41,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit PhoneComboBoxType(QWidget *parent = Q_NULLPTR);
+    explicit PhoneComboBoxType(QWidget *parent = nullptr);
 
     /**
      * Destroys the phone type combo.

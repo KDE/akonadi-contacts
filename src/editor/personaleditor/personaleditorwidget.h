@@ -36,7 +36,7 @@ class PersonalEditorWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit PersonalEditorWidget(QWidget *parent = Q_NULLPTR);
+    explicit PersonalEditorWidget(QWidget *parent = nullptr);
     ~PersonalEditorWidget();
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact);

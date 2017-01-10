@@ -34,7 +34,7 @@ class MailWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MailWidget(QWidget *parent = Q_NULLPTR);
+    explicit MailWidget(QWidget *parent = nullptr);
     ~MailWidget();
 
     void clearWidget();

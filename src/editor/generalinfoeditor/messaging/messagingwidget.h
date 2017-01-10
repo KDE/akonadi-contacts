@@ -35,7 +35,7 @@ class MessagingWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MessagingWidget(QWidget *parent = Q_NULLPTR);
+    explicit MessagingWidget(QWidget *parent = nullptr);
     ~MessagingWidget();
 
     void updateAddRemoveButton(bool addButtonEnabled);

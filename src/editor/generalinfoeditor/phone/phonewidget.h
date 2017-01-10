@@ -37,7 +37,7 @@ class PhoneWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit PhoneWidget(QWidget *parent = Q_NULLPTR);
+    explicit PhoneWidget(QWidget *parent = nullptr);
     ~PhoneWidget();
 
     void updateAddRemoveButton(bool addButtonEnabled);

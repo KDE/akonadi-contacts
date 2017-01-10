@@ -35,7 +35,7 @@ public:
         ScopeRole
     };
 
-    explicit CustomFieldsModel(QObject *parent = Q_NULLPTR);
+    explicit CustomFieldsModel(QObject *parent = nullptr);
     ~CustomFieldsModel();
 
     void setCustomFields(const CustomField::List &addresses);

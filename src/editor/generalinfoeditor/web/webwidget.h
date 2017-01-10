@@ -35,7 +35,7 @@ class WebWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit WebWidget(QWidget *parent = Q_NULLPTR);
+    explicit WebWidget(QWidget *parent = nullptr);
     ~WebWidget();
     void updateAddRemoveButton(bool addButtonEnabled);
 

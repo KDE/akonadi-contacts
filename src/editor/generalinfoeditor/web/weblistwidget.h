@@ -36,7 +36,7 @@ class WebListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit WebListWidget(QWidget *parent = Q_NULLPTR);
+    explicit WebListWidget(QWidget *parent = nullptr);
     ~WebListWidget();
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

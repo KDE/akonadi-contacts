@@ -42,7 +42,7 @@ public:
         ModifyAddress
     };
 
-    explicit AddressLocationWidget(QWidget *parent = Q_NULLPTR);
+    explicit AddressLocationWidget(QWidget *parent = nullptr);
     ~AddressLocationWidget();
 
     void setAddress(const KContacts::Address &address);

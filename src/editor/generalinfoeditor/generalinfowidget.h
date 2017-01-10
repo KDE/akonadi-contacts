@@ -44,7 +44,7 @@ class GeneralInfoWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GeneralInfoWidget(QWidget *parent = Q_NULLPTR);
+    explicit GeneralInfoWidget(QWidget *parent = nullptr);
     ~GeneralInfoWidget();
 
     void loadContact(const KContacts::Addressee &contact);

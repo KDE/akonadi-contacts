@@ -35,7 +35,7 @@ class CustomFieldEditorWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CustomFieldEditorWidget(QWidget *parent = Q_NULLPTR);
+    explicit CustomFieldEditorWidget(QWidget *parent = nullptr);
     ~CustomFieldEditorWidget();
     void setReadOnly(bool readOnly);
 

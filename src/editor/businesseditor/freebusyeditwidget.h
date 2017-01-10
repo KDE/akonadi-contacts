@@ -36,7 +36,7 @@ class FreeBusyEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit FreeBusyEditWidget(QWidget *parent = Q_NULLPTR);
+    explicit FreeBusyEditWidget(QWidget *parent = nullptr);
     ~FreeBusyEditWidget();
 
     void loadContact(const KContacts::Addressee &contact);

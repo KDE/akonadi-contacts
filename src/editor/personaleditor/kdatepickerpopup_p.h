@@ -66,7 +66,7 @@ public:
     */
     explicit KDatePickerPopup(Items items = DatePicker,
                               const QDate &date = QDate::currentDate(),
-                              QWidget *parent = Q_NULLPTR);
+                              QWidget *parent = nullptr);
 
     /**
        @return A pointer to the private variable mDatePicker, an instance of

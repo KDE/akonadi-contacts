@@ -38,7 +38,7 @@ class AddressesLocationGrantleeFormater : public QObject
 {
     Q_OBJECT
 public:
-    explicit AddressesLocationGrantleeFormater(QObject *parent = Q_NULLPTR);
+    explicit AddressesLocationGrantleeFormater(QObject *parent = nullptr);
     ~AddressesLocationGrantleeFormater();
 
     QString formatAddresses(const KContacts::Address::List &addresses);
