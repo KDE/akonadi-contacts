@@ -343,11 +343,13 @@ public:
                             mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                            ki18np("Copy Contact", "Copy %1 Contacts"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)->setText(i18n("Copy Contact To"));
+                        QAction *act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu);
+                        if (act) {
+                            act->setText(i18n("Copy Contact To"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)->setText(i18n("Copy Contact To"));
+                        act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog);
+                        if (act) {
+                            act->setText(i18n("Copy Contact To"));
                         }
                         if (mGenericManager->action(Akonadi::StandardActionManager::DeleteItems)) {
                             mGenericManager->setActionText(Akonadi::StandardActionManager::DeleteItems,
@@ -357,25 +359,30 @@ public:
                             mGenericManager->setActionText(Akonadi::StandardActionManager::CutItems,
                                                            ki18np("Cut Contact", "Cut %1 Contacts"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)->setText(i18n("Move Contact To"));
+                        act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu);
+                        if (act) {
+                            act->setText(i18n("Move Contact To"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)->setText(i18n("Move Contact To"));
+                        act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog);
+                        if (act) {
+                            act->setText(i18n("Move Contact To"));
                         }
-                        if (mActions.contains(StandardContactActionManager::EditItem)) {
-                            mActions.value(StandardContactActionManager::EditItem)->setText(i18n("Edit Contact..."));
+                        act = mActions.value(StandardContactActionManager::EditItem);
+                        if (act) {
+                            act->setText(i18n("Edit Contact..."));
                         }
                     } else if (mimeType == KContacts::ContactGroup::mimeType()) {
                         if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
                             mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                            ki18np("Copy Group", "Copy %1 Groups"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)->setText(i18n("Copy Group To"));
+                        QAction *act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu);
+                        if (act) {
+                            act->setText(i18n("Copy Group To"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)->setText(i18n("Copy Group To"));
+                        act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog);
+                        if (act) {
+                            act->setText(i18n("Copy Group To"));
                         }
                         if (mGenericManager->action(Akonadi::StandardActionManager::DeleteItems)) {
                             mGenericManager->setActionText(Akonadi::StandardActionManager::DeleteItems,
@@ -385,14 +392,17 @@ public:
                             mGenericManager->setActionText(Akonadi::StandardActionManager::CutItems,
                                                            ki18np("Cut Group", "Cut %1 Groups"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)->setText(i18n("Move Group To"));
+                        act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu);
+                        if (act) {
+                            act->setText(i18n("Move Group To"));
                         }
-                        if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)) {
-                            mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)->setText(i18n("Move Group To"));
+                        act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog);
+                        if (act) {
+                            act->setText(i18n("Move Group To"));
                         }
-                        if (mActions.contains(StandardContactActionManager::EditItem)) {
-                            mActions.value(StandardContactActionManager::EditItem)->setText(i18n("Edit Group..."));
+                        act = mActions.value(StandardContactActionManager::EditItem);
+                        if (act) {
+                            act->setText(i18n("Edit Group..."));
                         }
                     }
                 }

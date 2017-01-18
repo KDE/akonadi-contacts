@@ -125,9 +125,7 @@ KContacts::Email MailWidget::email()
             value.append(QStringLiteral("PREF"));
         }
     } else {
-        if (value.contains(QStringLiteral("PREF"))) {
-            value.removeAll(QStringLiteral("PREF"));
-        }
+        value.removeAll(QStringLiteral("PREF"));
     }
     if (!value.isEmpty()) {
         parameters.insert(QStringLiteral("type"), value);
