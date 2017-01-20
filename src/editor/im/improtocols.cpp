@@ -39,9 +39,9 @@ IMProtocols::IMProtocols()
         sortingMap.insert((*it)->name(), propertyName);
     }
 
-    QMapIterator<QString, QString> sortedIt(sortingMap);
-    while (sortedIt.hasNext()) {
-        sortedIt.next();
+    QMap<QString, QString>::const_iterator sortedIt = sortingMap.cbegin();
+    const QMap<QString, QString>::const_iterator sortedItEnd = sortingMap.cend();
+    for (;sortedIt != sortedItEnd; ++sortedIt) {
         mSortedProtocols.append(sortedIt.value());
     }
 }

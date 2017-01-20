@@ -100,10 +100,9 @@ void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
     }
 
     // iterate over this list and modify the contact according
-    QMapIterator<QString, QStringList> it(protocolMap);
-    while (it.hasNext()) {
-        it.next();
-
+    QMap<QString, QStringList>::const_iterator it = protocolMap.cbegin();
+    const QMap<QString, QStringList>::const_iterator itEnd = protocolMap.cend();
+    for (; it != itEnd; ++it) {
         if (!it.value().isEmpty()) {
             contact.insertCustom(it.key(), QStringLiteral("All"), it.value().join(QString(0xE000)));
         } else {
