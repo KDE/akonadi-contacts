@@ -206,7 +206,7 @@ EmailAddressSelection::List EmailAddressSelectionWidget::selectedAddresses() con
     }
 
     const QModelIndexList selectedRows = d->mView->selectionModel()->selectedRows(0);
-    foreach (const QModelIndex &index, selectedRows) {
+    for (const QModelIndex &index : selectedRows) {
         EmailAddressSelection selection;
         selection.d->mName = index.data(EmailAddressSelectionProxyModel::NameRole).toString();
         selection.d->mEmailAddress = index.data(EmailAddressSelectionProxyModel::EmailAddressRole).toString();

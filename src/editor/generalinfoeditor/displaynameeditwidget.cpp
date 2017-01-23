@@ -20,6 +20,7 @@
 */
 
 #include "displaynameeditwidget.h"
+#include "helper_p.h"
 
 #include <QtCore/QEvent>
 #include <QAbstractItemView>
@@ -68,7 +69,7 @@ public:
         QFont font = view->font();
         font.setStyle(QFont::StyleItalic);
         QFontMetrics metrics(font);
-        foreach (const QString &description, mDescriptions) {
+        for (const QString &description : qAsConst(mDescriptions)) {
             mMaxDescriptionWidth = qMax(mMaxDescriptionWidth, metrics.width(description));
         }
 

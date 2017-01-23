@@ -52,7 +52,7 @@ void CategoriesEditWidget::loadContact(const KContacts::Addressee &contact)
 
     const QStringList categories = contact.categories();
     tags.reserve(categories.count());
-    foreach (const QString &category, categories) {
+    for (const QString &category : categories) {
         tags.append(Akonadi::Tag::fromUrl(QUrl(category)));
     }
 
@@ -65,7 +65,7 @@ void CategoriesEditWidget::storeContact(KContacts::Addressee &contact) const
 
     const Akonadi::Tag::List tags = mTagWidget->selection();
     categories.reserve(tags.count());
-    foreach (const Akonadi::Tag &tag, tags) {
+    for (const Akonadi::Tag &tag : tags) {
         categories.append(tag.url().url());
     }
 

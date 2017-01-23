@@ -52,7 +52,7 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->addWidget(mProtocolCombo);
 
     const QStringList protocols = IMProtocols::self()->protocols();
-    foreach (const QString &protocol, protocols) {
+    for (const QString &protocol : protocols) {
         mProtocolCombo->addItem(QIcon::fromTheme(IMProtocols::self()->icon(protocol)),
                                 IMProtocols::self()->name(protocol),
                                 protocol);

@@ -25,6 +25,7 @@
 #include "personaleditor/personaleditorwidget.h"
 #include "contacteditorpageplugin.h"
 #include "contactmetadata_p.h"
+#include "helper_p.h"
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
@@ -169,7 +170,7 @@ void ContactEditorWidget::Private::loadCustomPages()
         mCustomPages.append(plugin);
     }
 
-    foreach (Akonadi::ContactEditorPagePlugin *plugin, mCustomPages) {
+    for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(mCustomPages)) {
         mTabWidget->addTab(plugin, plugin->title());
     }
 }
@@ -227,7 +228,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
         d->mCustomFieldsWidget->loadContact(contact);
 
         // custom pages
-        foreach (Akonadi::ContactEditorPagePlugin *plugin, d->mCustomPages) {
+        for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
             plugin->loadContact(contact);
         }
     }
@@ -255,7 +256,7 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
         metaData.setDisplayNameMode(d->mGeneralInfoWidget->displayType());
 
         // custom pages
-        foreach (Akonadi::ContactEditorPagePlugin *plugin, d->mCustomPages) {
+        for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
             plugin->storeContact(contact);
         }
     }
@@ -279,7 +280,7 @@ void ContactEditorWidget::setReadOnly(bool readOnly)
         d->mCustomFieldsWidget->setReadOnly(readOnly);
 
         // custom pages
-        foreach (Akonadi::ContactEditorPagePlugin *plugin, d->mCustomPages) {
+        for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
             plugin->setReadOnly(readOnly);
         }
     }

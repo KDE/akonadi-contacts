@@ -96,7 +96,8 @@ KContacts::Addressee::List ContactSearchJob::contacts() const
 {
     KContacts::Addressee::List contacts;
 
-    foreach (const Item &item, items()) {
+    const Akonadi::Item::List lstItems = items();
+    for (const Item &item : lstItems) {
         if (item.hasPayload<KContacts::Addressee>()) {
             contacts.append(item.payload<KContacts::Addressee>());
         }

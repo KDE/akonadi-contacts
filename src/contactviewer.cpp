@@ -26,6 +26,7 @@
 #include "customfieldmanager_p.h"
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"
+#include "helper_p.h"
 #include "editor/im/improtocols.h"
 #include <KIOCore/kio/transferjob.h>
 #include <collection.h>
@@ -170,11 +171,11 @@ public:
         QVector<QVariantMap> customFieldDescriptions;
         const CustomField::List globalCustomFields = CustomFieldManager::globalCustomFieldDescriptions();
         customFieldDescriptions.reserve(localCustomFieldDescriptions.count() + globalCustomFields.count());
-        foreach (const QVariant &entry, localCustomFieldDescriptions) {
+        for (const QVariant &entry : qAsConst(localCustomFieldDescriptions)) {
             customFieldDescriptions << entry.toMap();
         }
 
-        foreach (const CustomField &field, globalCustomFields) {
+        for (const CustomField &field : qAsConst(globalCustomFields)) {
             QVariantMap description;
             description.insert(QStringLiteral("key"), field.key());
             description.insert(QStringLiteral("title"), field.title());

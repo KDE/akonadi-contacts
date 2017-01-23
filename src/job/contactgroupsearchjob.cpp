@@ -92,8 +92,8 @@ void ContactGroupSearchJob::setLimit(int limit)
 KContacts::ContactGroup::List ContactGroupSearchJob::contactGroups() const
 {
     KContacts::ContactGroup::List contactGroups;
-
-    foreach (const Item &item, items()) {
+    const Akonadi::Item::List lstItems = items();
+    for (const Item &item : lstItems) {
         if (item.hasPayload<KContacts::ContactGroup>()) {
             contactGroups.append(item.payload<KContacts::ContactGroup>());
         }

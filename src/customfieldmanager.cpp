@@ -32,7 +32,7 @@ void CustomFieldManager::setGlobalCustomFieldDescriptions(const CustomField::Lis
     KConfigGroup group(&config, QStringLiteral("GlobalCustomFields"));
 
     group.deleteGroup();
-    foreach (const CustomField &field, customFields) {
+    for (const CustomField &field : customFields) {
         const QString key = field.key();
         const QString value = CustomField::typeToString(field.type()) + QLatin1Char(':') + field.title();
 
@@ -49,7 +49,7 @@ CustomField::List CustomFieldManager::globalCustomFieldDescriptions()
 
     const QStringList keys = group.keyList();
     customFields.reserve(keys.count());
-    foreach (const QString &key, keys) {
+    for (const QString &key : keys) {
         CustomField field;
         field.setKey(key);
         field.setScope(CustomField::GlobalScope);

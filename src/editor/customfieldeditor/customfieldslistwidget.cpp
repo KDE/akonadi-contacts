@@ -22,6 +22,7 @@
 
 #include "customfieldslistwidget.h"
 #include "../utils/utils.h"
+#include "helper_p.h"
 #include "customfieldmanager_p.h"
 #include "customfieldslistdelegate.h"
 #include <QSortFilterProxyModel>
@@ -64,7 +65,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
     CustomField::List globalCustomFields = CustomFieldManager::globalCustomFieldDescriptions();
 
     const QStringList customs = contact.customs();
-    foreach (const QString &custom, customs) {
+    for (const QString &custom : customs) {
 
         QString app, name, value;
         Akonadi::Utils::splitCustomField(custom, app, name, value);
@@ -163,11 +164,11 @@ void CustomFieldsListWidget::storeContact(KContacts::Addressee &contact) const
     // Now remove all fields that were available in loadContact (these are stored in mLocalCustomFields)
     // but are not part of customFields now, which means they have been removed or renamed by the user
     // in the editor dialog.
-    foreach (const CustomField &oldCustomField, mLocalCustomFields) {
+    for (const CustomField &oldCustomField : qAsConst(mLocalCustomFields)) {
         if (oldCustomField.scope() != CustomField::ExternalScope) {
 
             bool fieldStillExists = false;
-            foreach (const CustomField &newCustomField, customFields) {
+            for (const CustomField &newCustomField : qAsConst(customFields)) {
                 if (newCustomField.scope() != CustomField::ExternalScope) {
                     if (newCustomField.key() == oldCustomField.key()) {
                         fieldStillExists = true;
@@ -184,7 +185,7 @@ void CustomFieldsListWidget::storeContact(KContacts::Addressee &contact) const
 
     // And store the global custom fields descriptions as well
     CustomField::List globalCustomFields;
-    foreach (const CustomField &customField, customFields) {
+    for (const CustomField &customField : qAsConst(customFields)) {
         if (customField.scope() == CustomField::GlobalScope) {
             globalCustomFields << customField;
         }

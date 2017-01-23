@@ -182,7 +182,7 @@ void AddressLocationWidget::fillCountryCombo()
     QStringList countries;
     const QList<QLocale> localeList = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     countries.reserve(localeList.count());
-    foreach (const QLocale &locale, localeList) {
+    for (const QLocale &locale : localeList) {
         const QString localeStr = QLocale::countryToString(locale.country());
         if (countries.contains(localeStr)) {
             continue;

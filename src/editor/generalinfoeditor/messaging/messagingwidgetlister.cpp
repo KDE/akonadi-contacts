@@ -25,6 +25,7 @@
 #include "../../im/imaddress.h"
 #include "../../im/improtocols.h"
 #include "../../utils/utils.h"
+#include "helper_p.h"
 
 #include <KContacts/Addressee>
 using namespace Akonadi;
@@ -47,7 +48,7 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
     IMAddress::List imaddresses;
     const QStringList customs = contact.customs();
 
-    foreach (const QString &custom, customs) {
+    for (const QString &custom : customs) {
         QString app, name, value;
         Akonadi::Utils::splitCustomField(custom, app, name, value);
 
@@ -56,7 +57,7 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
                 const QString protocol = app;
                 const QStringList names = value.split(QChar(0xE000), QString::SkipEmptyParts);
 
-                foreach (const QString &name, names) {
+                for (const QString &name : names) {
                     //TODO preferred support ?
                     imaddresses << IMAddress(protocol, name, false);
                 }
@@ -90,12 +91,13 @@ void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
     QMap<QString, QStringList> protocolMap;
 
     // fill map with all known protocols
-    foreach (const QString &protocol, IMProtocols::self()->protocols()) {
+    const QStringList lstProtocols = IMProtocols::self()->protocols();
+    for (const QString &protocol : lstProtocols) {
         protocolMap.insert(protocol, QStringList());
     }
 
     // add the configured addresses
-    foreach (const IMAddress &address, imaddresses) {
+    for (const IMAddress &address : qAsConst(imaddresses)) {
         protocolMap[address.protocol()].append(address.name());
     }
 

@@ -24,6 +24,7 @@
 #include "job/contactgroupexpandjob.h"
 #include "standardcontactgroupformatter.h"
 #include "textbrowser_p.h"
+#include "helper_p.h"
 
 #include <collectionfetchjob.h>
 #include <entitydisplayattribute.h>
@@ -72,7 +73,7 @@ public:
 
         KContacts::ContactGroup group;
         group.setName(mCurrentGroupName);
-        foreach (const KContacts::Addressee &contact, mCurrentContacts) {
+        for (const KContacts::Addressee &contact : qAsConst(mCurrentContacts)) {
             group.append(KContacts::ContactGroup::Data(contact.realName(), contact.preferredEmail()));
         }
 
