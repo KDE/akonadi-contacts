@@ -20,7 +20,7 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
-set(PIM_VERSION "5.4.2")
+set(PIM_VERSION "5.4.3")
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
 set(AKONADI_MIME_VERSION "5.4.2")
 set(KCONTACTS_VERSION "5.4.2")
