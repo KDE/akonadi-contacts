@@ -24,7 +24,6 @@
 
 #include "contactactionssettings.h"
 
-
 #include <kaboutdata.h>
 #include <kconfigdialogmanager.h>
 #include <kpluginfactory.h>

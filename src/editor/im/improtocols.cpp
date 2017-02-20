@@ -41,7 +41,7 @@ IMProtocols::IMProtocols()
 
     QMap<QString, QString>::const_iterator sortedIt = sortingMap.cbegin();
     const QMap<QString, QString>::const_iterator sortedItEnd = sortingMap.cend();
-    for (;sortedIt != sortedItEnd; ++sortedIt) {
+    for (; sortedIt != sortedItEnd; ++sortedIt) {
         mSortedProtocols.append(sortedIt.value());
     }
 }

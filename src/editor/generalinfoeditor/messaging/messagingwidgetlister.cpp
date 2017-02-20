@@ -42,7 +42,6 @@ MessagingWidgetLister::~MessagingWidgetLister()
 
 }
 
-
 void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
     IMAddress::List imaddresses;

@@ -19,7 +19,6 @@
     02110-1301, USA.
 */
 
-
 #include "emailaddressselectionmodel.h"
 #include <AkonadiCore/Session>
 #include <AkonadiCore/ItemFetchScope>
@@ -28,7 +27,6 @@
 #include <Akonadi/Contact/ContactsTreeModel>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
-
 
 using namespace Akonadi;
 

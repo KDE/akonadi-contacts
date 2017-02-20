@@ -89,7 +89,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     setWindowTitle(mode == CreateMode ? i18n("New Contact Group") : i18n("Edit Contact Group"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel,this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     d->okButton = buttonBox->button(QDialogButtonBox::Ok);
     d->okButton->setDefault(true);
     d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

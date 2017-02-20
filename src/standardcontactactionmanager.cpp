@@ -582,7 +582,6 @@ QAction *StandardContactActionManager::createAction(Type type)
         return action;
     }
 
-
     switch (type) {
     case CreateContact:
         action = new QAction(d->mParentWidget);

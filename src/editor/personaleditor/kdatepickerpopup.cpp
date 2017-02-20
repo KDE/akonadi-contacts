@@ -114,7 +114,6 @@ void KDatePickerPopup::setDate(const QDate &date)
     mDatePicker->setDate(date);
 }
 
-
 void KDatePickerPopup::slotDateChanged(const QDate &date)
 {
     if (date != mDate) {

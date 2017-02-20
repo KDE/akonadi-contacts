@@ -58,9 +58,7 @@ NameEditDialog::NameEditDialog(QWidget *parent)
     mSuffixCombo->setDuplicatesEnabled(false);
     mSuffixCombo->setEditable(true);
 
-
     mDisplayNameEdit = new DisplayNameEditWidget(this);
-
 
     layout->addRow(i18n("Honorific prefixes:"), mPrefixCombo);
     layout->addRow(i18n("Given name:"), mGivenNameEdit);
