@@ -161,6 +161,7 @@ set(akonadicontact_LIB_SRC
     emailaddressselectionproxymodel.cpp
     emailaddressselectionwidget.cpp
     emailaddressrequester.cpp
+    emailaddressselectionmodel.cpp
     textbrowser.cpp
     leafextensionproxymodel.cpp
     standardcontactactionmanager.cpp
@@ -277,6 +278,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     EmailAddressSelection
     EmailAddressSelectionDialog
     EmailAddressSelectionWidget
+    EmailAddressSelectionModel
     EmailAddressRequester
     StandardContactActionManager
     StandardContactFormatter

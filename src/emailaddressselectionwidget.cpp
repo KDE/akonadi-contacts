@@ -23,6 +23,7 @@
 #include "emailaddressselectionwidget.h"
 
 #include "emailaddressselection_p.h"
+#include "emailaddressselectionmodel.h"
 #include "emailaddressselectionproxymodel_p.h"
 
 #include <changerecorder.h>
@@ -104,24 +105,8 @@ void EmailAddressSelectionWidget::Private::init()
 {
     // setup internal model if needed
     if (!mModel) {
-        Akonadi::Session *session = new Akonadi::Session("InternalEmailAddressSelectionWidgetModel", q);
-
-        Akonadi::ItemFetchScope scope;
-        scope.fetchFullPayload(true);
-        scope.fetchAttribute<Akonadi::EntityDisplayAttribute>();
-
-        Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder(q);
-        changeRecorder->setSession(session);
-        changeRecorder->fetchCollection(true);
-        changeRecorder->setItemFetchScope(scope);
-        changeRecorder->setCollectionMonitored(Akonadi::Collection::root());
-        changeRecorder->setMimeTypeMonitored(KContacts::Addressee::mimeType(), true);
-        changeRecorder->setMimeTypeMonitored(KContacts::ContactGroup::mimeType(), true);
-
-        Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel(changeRecorder, q);
-//    model->setCollectionFetchStrategy( Akonadi::ContactsTreeModel::InvisibleFetch );
-
-        mModel = model;
+        Akonadi::EmailAddressSelectionModel *model = new Akonadi::EmailAddressSelectionModel(q);
+        mModel = model->model();
     }
 
     // setup ui
