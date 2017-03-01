@@ -59,7 +59,8 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         ContactGroupExpandJob *job = new ContactGroupExpandJob(group);
         if (job->exec()) {
             group.removeAllContactData();
-            foreach (const KContacts::Addressee &contact, job->contacts()) {
+            const KContacts::Addressee::List listContact = job->contacts();
+            for (const KContacts::Addressee &contact : listContact) {
                 group.append(KContacts::ContactGroup::Data(contact.realName(), contact.preferredEmail()));
             }
         }
@@ -101,7 +102,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         }
     }
 
-    foreach (const QVariantMap &map, additionalFields()) {
+    for (const QVariantMap &map : additionalFields()) {
         strGroup.append(QStringLiteral("<tr><td colspan=\"2\">&nbsp;</td></tr><tr><td align=\"right\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>"
                                        "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>%2</font></td></tr>")
                         .arg(map.value(QStringLiteral("title")).toString())

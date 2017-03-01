@@ -121,7 +121,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
     // Phone Numbers
     int counter = 0;
-    foreach (const KContacts::PhoneNumber &number, rawContact.phoneNumbers()) {
+
+    for (const KContacts::PhoneNumber &number : rawContact.phoneNumbers()) {
 
         QString dispLabel = number.typeLabel().replace(QLatin1Char(' '), QStringLiteral("&nbsp;"));
         QString dispValue = QStringLiteral("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
@@ -143,7 +144,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     // EMails
-    foreach (const QString &email, rawContact.emails()) {
+    for (const QString &email : rawContact.emails()) {
         const QString type = i18nc("a contact's email address", "Email");
 
         const QString fullEmail = QString::fromLatin1(QUrl::toPercentEncoding(rawContact.fullEmail(email)));
@@ -172,7 +173,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
     // Addresses
     counter = 0;
-    foreach (const KContacts::Address &address, rawContact.addresses()) {
+    for (const KContacts::Address &address : rawContact.addresses()) {
         QString formattedAddress;
 
         if (address.label().isEmpty()) {
@@ -254,7 +255,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                     key = keyIt.value();
                 } else {
                     // check whether it is a custom local field
-                    foreach (const QVariantMap &description, customFieldDescriptions()) {
+                    for (const QVariantMap &description : customFieldDescriptions()) {
                         if (description.value(QStringLiteral("key")).toString() == key) {
                             key = description.value(QStringLiteral("title")).toString();
                             const QString descriptionType = description.value(QStringLiteral("type")).toString();
