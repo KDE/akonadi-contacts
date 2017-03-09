@@ -199,9 +199,9 @@ target_link_libraries(KF5AkonadiContact
     PUBLIC
     KF5::AkonadiCore
     KF5::Contacts
+    KF5::AkonadiWidgets
     Qt5::Widgets
     PRIVATE
-    KF5::AkonadiWidgets
     KF5::Completion
     KF5::ConfigCore
     KF5::ConfigWidgets
