@@ -19,7 +19,7 @@
 #ifndef SELECTEDCOLLECTIONDIALOG_H
 #define SELECTEDCOLLECTIONDIALOG_H
 
-#include <CollectionDialog>
+#include <AkonadiWidgets/CollectionDialog>
 #include "akonadi-contact_export.h"
 
 namespace Akonadi
