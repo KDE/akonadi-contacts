@@ -11,7 +11,7 @@ release: false
 libraries:
  - qmake: AkonadiContact
    cmake: "KF5::AkonadiContact"
-cmakename: KF5AkonadiContact
+   cmakename: KF5AkonadiContact
 
 public_lib: true
 group: kdepim
