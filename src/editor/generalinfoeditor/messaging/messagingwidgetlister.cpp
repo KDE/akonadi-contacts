@@ -25,7 +25,7 @@
 #include "../../im/imaddress.h"
 #include "../../im/improtocols.h"
 #include "../../utils/utils.h"
-#include "helper_p.h"
+
 
 #include <KContacts/Addressee>
 using namespace Akonadi;

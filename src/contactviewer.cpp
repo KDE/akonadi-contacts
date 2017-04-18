@@ -26,7 +26,7 @@
 #include "customfieldmanager_p.h"
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"
-#include "helper_p.h"
+
 #include "editor/im/improtocols.h"
 #include <KIOCore/kio/transferjob.h>
 #include <collection.h>

@@ -24,7 +24,7 @@
 #include "job/contactgroupexpandjob.h"
 #include "standardcontactgroupformatter.h"
 #include "textbrowser_p.h"
-#include "helper_p.h"
+
 
 #include <collectionfetchjob.h>
 #include <entitydisplayattribute.h>

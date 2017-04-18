@@ -25,7 +25,7 @@
 #include "personaleditor/personaleditorwidget.h"
 #include "contacteditorpageplugin.h"
 #include "contactmetadata_p.h"
-#include "helper_p.h"
+
 
 #include <kconfig.h>
 #include <kconfiggroup.h>

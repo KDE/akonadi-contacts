@@ -31,7 +31,7 @@
 */
 
 #include "kwidgetlister_p.h"
-#include "helper_p.h"
+
 #include <QHBoxLayout>
 
 #include <QPushButton>

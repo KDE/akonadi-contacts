@@ -20,7 +20,7 @@
 */
 
 #include "displaynameeditwidget.h"
-#include "helper_p.h"
+
 
 #include <QtCore/QEvent>
 #include <QAbstractItemView>

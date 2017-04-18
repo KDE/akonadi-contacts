@@ -22,7 +22,7 @@
 
 #include "customfieldslistwidget.h"
 #include "../utils/utils.h"
-#include "helper_p.h"
+
 #include "customfieldmanager_p.h"
 #include "customfieldslistdelegate.h"
 #include <QSortFilterProxyModel>
