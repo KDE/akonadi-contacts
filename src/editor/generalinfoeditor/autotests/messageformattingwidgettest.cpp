@@ -19,17 +19,14 @@
     02110-1301, USA.
 */
 
-#ifndef MESSAGEFORMATTINGWIDGETTEXT_H
-#define MESSAGEFORMATTINGWIDGETTEXT_H
 
-#include <QObject>
+#include "messageformattingwidgettest.h"
+#include <QTest>
 
-class MessageFormattingWidgetText : public QObject
+MessageFormattingWidgetTest::MessageFormattingWidgetTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit MessageFormattingWidgetText(QObject *parent = nullptr);
-    ~MessageFormattingWidgetText() = default;
-};
 
-#endif // MESSAGEFORMATTINGWIDGETTEXT_H
+}
+
+QTEST_MAIN(MessageFormattingWidgetTest)

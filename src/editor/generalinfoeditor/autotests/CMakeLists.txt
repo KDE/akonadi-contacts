@@ -33,3 +33,9 @@ add_test(nicknamewidgettest nicknamewidgettest)
 ecm_mark_as_test(nicknamewidgettest)
 target_link_libraries(nicknamewidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::I18n )
 
+
+set(messageformattingwidgettest_SRCS messageformattingwidgettest.cpp)
+add_executable(messageformattingwidgettest ${messageformattingwidgettest_SRCS})
+add_test(messageformattingwidgettest messageformattingwidgettest)
+ecm_mark_as_test(messageformattingwidgettest)
+target_link_libraries(messageformattingwidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::I18n )

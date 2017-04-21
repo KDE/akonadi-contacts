@@ -24,9 +24,10 @@
 
 #include <QWidget>
 #include <KContacts/Addressee>
+#include "akonadicontact_private_export.h"
 class QComboBox;
 class QCheckBox;
-class MessageFormattingWidget : public QWidget
+class AKONADI_CONTACTS_TESTS_EXPORT MessageFormattingWidget : public QWidget
 {
     Q_OBJECT
 public:
