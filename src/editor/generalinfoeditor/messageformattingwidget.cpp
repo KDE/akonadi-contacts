@@ -20,6 +20,7 @@
 */
 
 #include "messageformattingwidget.h"
+#include "editor/utils/utils.h"
 #include <KLocalizedString>
 
 #include <QCheckBox>
@@ -55,12 +56,39 @@ MessageFormattingWidget::~MessageFormattingWidget()
 
 void MessageFormattingWidget::loadContact(const KContacts::Addressee &contact)
 {
+    const QString mailAllowToRemoteContent = Akonadi::Utils::loadCustom(contact, QLatin1String("MailAllowToRemoteContent"));
+    mAllowRemoteContent->setChecked(mailAllowToRemoteContent == QLatin1String("TRUE"));
 
+    const QString mailPreferedFormatting = Akonadi::Utils::loadCustom(contact, QLatin1String("MailPreferedFormatting"));
+    if (mailPreferedFormatting.isEmpty()) {
+        mMailPreferFormatting->setCurrentIndex(0);
+    } else if (mailPreferedFormatting == QLatin1String("TEXT")) {
+        mMailPreferFormatting->setCurrentIndex(1);
+    } else if (mailPreferedFormatting == QLatin1String("HTML")) {
+        mMailPreferFormatting->setCurrentIndex(2);
+    } else {
+        mMailPreferFormatting->setCurrentIndex(0);
+    }
 }
 
 void MessageFormattingWidget::storeContact(KContacts::Addressee &contact) const
 {
+    QString mailPreferedFormatting;
+    const int index = mMailPreferFormatting->currentIndex();
+    if (index == 0) {
+        //Nothing => remove custom variable
+    } else if (index == 1) {
+        mailPreferedFormatting = QLatin1String("TEXT");
+    } else if (index == 2) {
+        mailPreferedFormatting = QLatin1String("HTML");
+    }
+    Akonadi::Utils::storeCustom(contact, QLatin1String("MailPreferedFormatting"), mailPreferedFormatting);
 
+    QString mailAllowToRemoteContent;
+    if (mAllowRemoteContent->isChecked()) {
+        mailAllowToRemoteContent = QLatin1String("TRUE");
+    }
+    Akonadi::Utils::storeCustom(contact, QLatin1String("MailAllowToRemoteContent"), mailAllowToRemoteContent);
 }
 
 void MessageFormattingWidget::setReadOnly(bool readOnly)
