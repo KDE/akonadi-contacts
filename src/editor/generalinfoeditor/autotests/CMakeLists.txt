@@ -25,3 +25,11 @@ add_executable(akonadicontactselecttypecomboboxtest ${akonadicontactselecttypeco
 add_test(akonadicontactselecttypecomboboxtest akonadicontactselecttypecomboboxtest)
 ecm_mark_as_test(akonadicontactselecttypecomboboxtest)
 target_link_libraries(akonadicontactselecttypecomboboxtest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::I18n )
+
+
+set(nicknamewidgettest_SRCS nicknamewidgettest.cpp)
+add_executable(nicknamewidgettest ${nicknamewidgettest_SRCS})
+add_test(nicknamewidgettest nicknamewidgettest)
+ecm_mark_as_test(nicknamewidgettest)
+target_link_libraries(nicknamewidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiContact KF5::I18n )
+
