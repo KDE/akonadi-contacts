@@ -35,7 +35,7 @@ MessageFormattingWidgetTest::MessageFormattingWidgetTest(QObject *parent)
 
 void MessageFormattingWidgetTest::shouldHaveDefaultValue()
 {
-    MessageFormattingWidget w;
+    Akonadi::MessageFormattingWidget w;
 
     QLabel *label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);

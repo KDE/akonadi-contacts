@@ -28,6 +28,8 @@
 #include <QHBoxLayout>
 #include <QLabel>
 
+using namespace Akonadi;
+
 MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     : QWidget(parent)
 {

@@ -27,6 +27,8 @@
 #include "akonadicontact_private_export.h"
 class QComboBox;
 class QCheckBox;
+namespace Akonadi
+{
 class AKONADI_CONTACTS_TESTS_EXPORT MessageFormattingWidget : public QWidget
 {
     Q_OBJECT
@@ -42,5 +44,5 @@ private:
     QComboBox *mMailPreferFormatting;
     QCheckBox *mAllowRemoteContent;
 };
-
+}
 #endif // MESSAGEFORMATTINGWIDGET_H

@@ -33,6 +33,7 @@
 #include "web/weblistwidget.h"
 #include "categorieseditwidget.h"
 #include "../widgets/imagewidget.h"
+#include "messageformattingwidget.h"
 
 using namespace Akonadi;
 
@@ -89,6 +90,11 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mCategoriesWidget->setObjectName(QStringLiteral("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);
     leftLayout->addWidget(categoryWidget);
+
+    mMessageFormattingWidget = new MessageFormattingWidget(this);
+    mMessageFormattingWidget->setObjectName(QStringLiteral("mMessageFormattingWidget"));
+    leftLayout->addWidget(mMessageFormattingWidget);
+
     leftLayout->addStretch(1);
     rightLayout->addStretch(1);
 }
@@ -118,6 +124,7 @@ void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
     mNickNameWidget->loadContact(contact);
     mPhotoWidget->loadContact(contact);
     mCategoriesWidget->loadContact(contact);
+    mMessageFormattingWidget->loadContact(contact);
 }
 
 void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
@@ -130,6 +137,7 @@ void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
     mNickNameWidget->storeContact(contact);
     mPhotoWidget->storeContact(contact);
     mCategoriesWidget->storeContact(contact);
+    mMessageFormattingWidget->storeContact(contact);
 }
 
 void GeneralInfoWidget::setReadOnly(bool readOnly)
@@ -142,4 +150,5 @@ void GeneralInfoWidget::setReadOnly(bool readOnly)
     mNickNameWidget->setReadOnly(readOnly);
     mPhotoWidget->setReadOnly(readOnly);
     mCategoriesWidget->setReadOnly(readOnly);
+    mMessageFormattingWidget->setReadOnly(readOnly);
 }
