@@ -23,10 +23,10 @@
 #define AKONADICONTACTCOMBOBOX_H
 
 #include <QComboBox>
-
+#include "akonadicontact_private_export.h"
 namespace Akonadi
 {
-class AkonadiContactComboBox : public QComboBox
+class AKONADI_CONTACTS_TESTS_EXPORT AkonadiContactComboBox : public QComboBox
 {
     Q_OBJECT
 public:

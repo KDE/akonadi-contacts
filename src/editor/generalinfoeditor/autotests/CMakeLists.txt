@@ -20,7 +20,7 @@ target_link_libraries(messagingwidgettest Qt5::Test  Qt5::Widgets KF5::AkonadiCo
 
 
 
-set(akonadicontactselecttypecomboboxtest_SRCS akonadicontactselecttypecomboboxtest.cpp ../akonadicontactselecttypecombobox.cpp ../../widgets/akonadicontactcombobox.cpp)
+set(akonadicontactselecttypecomboboxtest_SRCS akonadicontactselecttypecomboboxtest.cpp)
 add_executable(akonadicontactselecttypecomboboxtest ${akonadicontactselecttypecomboboxtest_SRCS})
 add_test(akonadicontactselecttypecomboboxtest akonadicontactselecttypecomboboxtest)
 ecm_mark_as_test(akonadicontactselecttypecomboboxtest)

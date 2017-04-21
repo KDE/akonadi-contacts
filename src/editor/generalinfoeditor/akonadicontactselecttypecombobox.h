@@ -23,10 +23,11 @@
 #define AKONADICONTACTSELECTTYPECOMBOBOX_H
 
 #include "../widgets/akonadicontactcombobox.h"
+#include "akonadicontact_private_export.h"
 
 namespace Akonadi
 {
-class AkonadiContactSelectTypeCombobox : public Akonadi::AkonadiContactComboBox
+class AKONADI_CONTACTS_TESTS_EXPORT AkonadiContactSelectTypeCombobox : public Akonadi::AkonadiContactComboBox
 {
     Q_OBJECT
 public:
