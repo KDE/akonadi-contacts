@@ -72,6 +72,7 @@ set(akonadicontact_editor_generalinfo_SRCS
     editor/generalinfoeditor/nameeditdialog.cpp
     editor/generalinfoeditor/displaynameeditwidget.cpp
     editor/generalinfoeditor/akonadicontactselecttypecombobox.cpp
+    editor/generalinfoeditor/messageformattingwidget.cpp
     ${akonadicontact_editor_generalinfo_messaging_SRCS}
     ${akonadicontact_editor_generalinfo_phone_SRCS}
     ${akonadicontact_editor_generalinfo_web_SRCS}
