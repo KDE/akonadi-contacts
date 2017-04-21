@@ -21,12 +21,34 @@
 
 
 #include "messageformattingwidgettest.h"
+#include "../messageformattingwidget.h"
+#include <QCheckBox>
+#include <QComboBox>
+#include <QLabel>
 #include <QTest>
 
 MessageFormattingWidgetTest::MessageFormattingWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void MessageFormattingWidgetTest::shouldHaveDefaultValue()
+{
+    MessageFormattingWidget w;
+
+    QLabel *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    QVERIFY(label);
+    QVERIFY(!label->text().isEmpty());
+
+    QComboBox *mMailPreferFormatting = w.findChild<QComboBox *>(QStringLiteral("mMailPreferFormatting"));
+    QVERIFY(mMailPreferFormatting);
+    QVERIFY(mMailPreferFormatting->count() > 0);
+
+    QCheckBox *mAllowRemoteContent = w.findChild<QCheckBox *>(QStringLiteral("mAllowRemoteContent"));
+    QVERIFY(mAllowRemoteContent);
+    QVERIFY(!mAllowRemoteContent->text().isEmpty());
+    QVERIFY(!mAllowRemoteContent->isChecked());
 }
 
 QTEST_MAIN(MessageFormattingWidgetTest)

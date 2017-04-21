@@ -30,6 +30,8 @@ class MessageFormattingWidgetTest : public QObject
 public:
     explicit MessageFormattingWidgetTest(QObject *parent = nullptr);
     ~MessageFormattingWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // MESSAGEFORMATTINGWIDGETTEST_H
