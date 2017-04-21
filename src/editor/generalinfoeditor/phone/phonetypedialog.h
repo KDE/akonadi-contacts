@@ -23,6 +23,7 @@
 
 #include <QDialog>
 #include <KContacts/PhoneNumber>
+#include "akonadicontact_private_export.h"
 class QButtonGroup;
 
 namespace Akonadi
@@ -30,7 +31,7 @@ namespace Akonadi
 /**
  * A dialog for editing phone number types.
  */
-class PhoneTypeDialog : public QDialog
+class AKONADI_CONTACTS_TESTS_EXPORT PhoneTypeDialog : public QDialog
 {
     Q_OBJECT
 public:

@@ -25,13 +25,13 @@
 
 #include <editor/widgets/akonadicontactcombobox.h>
 #include <kcontacts/addressee.h>
-
+#include "akonadicontact_private_export.h"
 namespace Akonadi
 {
 /**
  * @short A combobox to select a phone number type.
  */
-class PhoneComboBoxType : public Akonadi::AkonadiContactComboBox
+class AKONADI_CONTACTS_TESTS_EXPORT PhoneComboBoxType : public Akonadi::AkonadiContactComboBox
 {
     Q_OBJECT
 

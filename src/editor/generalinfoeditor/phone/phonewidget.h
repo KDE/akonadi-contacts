@@ -24,6 +24,7 @@
 #define PHONEWIDGET_H
 
 #include <QWidget>
+#include "akonadicontact_private_export.h"
 class QToolButton;
 namespace KContacts
 {
@@ -33,7 +34,7 @@ namespace Akonadi
 {
 class PreferredLineEditWidget;
 class PhoneComboBoxType;
-class PhoneWidget : public QWidget
+class AKONADI_CONTACTS_TESTS_EXPORT PhoneWidget : public QWidget
 {
     Q_OBJECT
 public:

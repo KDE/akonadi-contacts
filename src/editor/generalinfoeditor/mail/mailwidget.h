@@ -25,12 +25,13 @@
 
 #include <QWidget>
 #include <KContacts/Email>
+#include "akonadicontact_private_export.h"
 class QToolButton;
 namespace Akonadi
 {
 class PreferredLineEditWidget;
 class AkonadiContactSelectTypeCombobox;
-class MailWidget : public QWidget
+class AKONADI_CONTACTS_TESTS_EXPORT MailWidget : public QWidget
 {
     Q_OBJECT
 public:

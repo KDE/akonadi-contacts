@@ -24,7 +24,7 @@
 #define PHONELISTWIDGET_H
 
 #include <QWidget>
-
+#include "akonadicontact_private_export.h"
 namespace KContacts
 {
 class Addressee;
@@ -32,7 +32,7 @@ class Addressee;
 namespace Akonadi
 {
 class PhoneWidgetLister;
-class PhoneListWidget : public QWidget
+class AKONADI_CONTACTS_TESTS_EXPORT PhoneListWidget : public QWidget
 {
     Q_OBJECT
 public:
