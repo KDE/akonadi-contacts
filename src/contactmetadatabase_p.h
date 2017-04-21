@@ -1,7 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
+    Copyright (c) 2017 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,8 +19,8 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADI_CONTACTMETADATA_P_H
-#define AKONADI_CONTACTMETADATA_P_H
+#ifndef AKONADI_CONTACTMETADATABASE_P_H
+#define AKONADI_CONTACTMETADATABASE_P_H
 
 #include <QtCore/QStringList>
 #include <QtCore/QVariant>
@@ -33,28 +33,29 @@ class Item;
 /**
  * @short A helper class for storing contact specific settings.
  */
-class ContactMetaData
+class ContactMetaDataBase
 {
 public:
     /**
      * Creates a contact meta data object.
      */
-    ContactMetaData();
+    ContactMetaDataBase();
 
     /**
      * Destroys the contact meta data object.
      */
-    ~ContactMetaData();
+    ~ContactMetaDataBase();
 
     /**
      * Loads the meta data for the given @p contact.
      */
-    void load(const Akonadi::Item &contact);
+    void loadMetaData(const QVariantMap &metaData);
 
     /**
      * Stores the meta data to the given @p contact.
      */
-    void store(Akonadi::Item &contact);
+    QVariantMap storeMetaData() const;
+
 
     /**
      * Sets the mode that is used for the display
@@ -93,7 +94,7 @@ public:
 
 private:
     //@cond PRIVATE
-    Q_DISABLE_COPY(ContactMetaData)
+    Q_DISABLE_COPY(ContactMetaDataBase)
 
     class Private;
     Private *const d;

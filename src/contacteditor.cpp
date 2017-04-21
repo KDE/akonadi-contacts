@@ -23,7 +23,7 @@
 
 #include "abstractcontacteditorwidget_p.h"
 #include "autoqpointer_p.h"
-#include "contactmetadata_p.h"
+#include "contactmetadataakonadi_p.h"
 #include "attributes/contactmetadataattribute_p.h"
 #include "editor/contacteditorwidget.h"
 
@@ -75,14 +75,14 @@ public:
     void storeDone(KJob *job);
     void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &);
 
-    void loadContact(const KContacts::Addressee &addr, const ContactMetaData &metaData);
-    void storeContact(KContacts::Addressee &addr, ContactMetaData &metaData);
+    void loadContact(const KContacts::Addressee &addr, const ContactMetaDataAkonadi &metaData);
+    void storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData);
     void setupMonitor();
 
     ContactEditor *mParent;
     ContactEditor::Mode mMode;
     Akonadi::Item mItem;
-    Akonadi::ContactMetaData mContactMetaData;
+    Akonadi::ContactMetaDataAkonadi mContactMetaData;
     Akonadi::Monitor *mMonitor;
     Akonadi::Collection mDefaultCollection;
     AbstractContactEditorWidget *mEditorWidget;
@@ -183,12 +183,12 @@ void ContactEditor::Private::itemChanged(const Akonadi::Item &item, const QSet<Q
     delete dlg;
 }
 
-void ContactEditor::Private::loadContact(const KContacts::Addressee &addr, const ContactMetaData &metaData)
+void ContactEditor::Private::loadContact(const KContacts::Addressee &addr, const ContactMetaDataAkonadi &metaData)
 {
     mEditorWidget->loadContact(addr, metaData);
 }
 
-void ContactEditor::Private::storeContact(KContacts::Addressee &addr, ContactMetaData &metaData)
+void ContactEditor::Private::storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData)
 {
     mEditorWidget->storeContact(addr, metaData);
 }

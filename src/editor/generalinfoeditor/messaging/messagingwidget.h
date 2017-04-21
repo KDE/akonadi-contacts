@@ -26,12 +26,13 @@
 #include <QWidget>
 
 #include <editor/im/imaddress.h>
+#include "akonadicontact_private_export.h"
 class QToolButton;
 namespace Akonadi
 {
 class PreferredLineEditWidget;
 class AkonadiContactComboBox;
-class MessagingWidget : public QWidget
+class AKONADI_CONTACTS_TESTS_EXPORT MessagingWidget : public QWidget
 {
     Q_OBJECT
 public:

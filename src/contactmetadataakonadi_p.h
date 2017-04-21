@@ -1,7 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    Copyright (c) 2010 Tobias Koenig <tokoe@kde.org>
+    Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,34 +19,44 @@
     02110-1301, USA.
 */
 
-#ifndef IMADDRESS_H
-#define IMADDRESS_H
+#ifndef AKONADI_CONTACTMETADATA_P_H
+#define AKONADI_CONTACTMETADATA_P_H
 
-#include <QVector>
-#include <QString>
-#include "akonadicontact_private_export.h"
+#include <QtCore/QStringList>
+#include <QtCore/QVariant>
+#include "contactmetadatabase_p.h"
+namespace Akonadi
+{
 
-class AKONADI_CONTACTS_TESTS_EXPORT IMAddress
+class Item;
+
+/**
+ * @short A helper class for storing contact specific settings.
+ */
+class ContactMetaDataAkonadi : public ContactMetaDataBase
 {
 public:
-    typedef QVector<IMAddress> List;
+    /**
+     * Creates a contact meta data object.
+     */
+    ContactMetaDataAkonadi();
 
-    IMAddress();
-    IMAddress(const QString &protocol, const QString &name, bool preferred);
+    /**
+     * Destroys the contact meta data object.
+     */
+    ~ContactMetaDataAkonadi();
 
-    void setProtocol(const QString &protocol);
-    QString protocol() const;
+    /**
+     * Loads the meta data for the given @p contact.
+     */
+    void load(const Akonadi::Item &contact);
 
-    void setName(const QString &name);
-    QString name() const;
-
-    void setPreferred(bool preferred);
-    bool preferred() const;
-
-private:
-    QString mProtocol;
-    QString mName;
-    bool mPreferred;
+    /**
+     * Stores the meta data to the given @p contact.
+     */
+    void store(Akonadi::Item &contact);
 };
 
-#endif // IMADDRESS_H
+}
+
+#endif

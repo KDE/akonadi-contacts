@@ -24,7 +24,7 @@
 
 #include "personaleditor/personaleditorwidget.h"
 #include "contacteditorpageplugin.h"
-#include "contactmetadata_p.h"
+#include "contactmetadataakonadi_p.h"
 
 
 #include <kconfig.h>
@@ -208,7 +208,7 @@ ContactEditorWidget::~ContactEditorWidget()
     delete d;
 }
 
-void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData)
+void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaDataBase &metaData)
 {
     d->mGeneralInfoWidget->loadContact(contact);
 
@@ -234,7 +234,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     }
 }
 
-void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaData &metaData) const
+void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaDataBase &metaData) const
 {
     d->mGeneralInfoWidget->storeContact(contact);
 

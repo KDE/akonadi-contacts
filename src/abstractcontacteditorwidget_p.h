@@ -32,7 +32,7 @@ class Addressee;
 namespace Akonadi
 {
 
-class ContactMetaData;
+class ContactMetaDataBase;
 
 class AbstractContactEditorWidget : public QWidget
 {
@@ -42,7 +42,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    AbstractContactEditorWidget(QWidget *parent = 0)
+    explicit AbstractContactEditorWidget(QWidget *parent = nullptr)
         : QWidget(parent)
     {
     }
@@ -57,12 +57,12 @@ public:
     /**
      * @param contact loads the given contact into the editor widget
      */
-    virtual void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaData &metaData) = 0;
+    virtual void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaDataBase &metaData) = 0;
 
     /**
      * @param contact store the given contact into the editor widget
      */
-    virtual void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaData &metaData) const = 0;
+    virtual void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaDataBase &metaData) const = 0;
 
     /**
      * @param readOnly set read-only mode

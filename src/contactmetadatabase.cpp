@@ -1,7 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
+    Copyright (c) 2017 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,7 +19,7 @@
     02110-1301, USA.
 */
 
-#include "contactmetadata_p.h"
+#include "contactmetadatabase_p.h"
 
 #include "attributes/contactmetadataattribute_p.h"
 
@@ -27,7 +27,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactMetaData::Private
+class Q_DECL_HIDDEN ContactMetaDataBase::Private
 {
 public:
     Private()
@@ -39,34 +39,25 @@ public:
     QVariantList mCustomFieldDescriptions;
 };
 
-ContactMetaData::ContactMetaData()
+ContactMetaDataBase::ContactMetaDataBase()
     : d(new Private)
 {
 }
 
-ContactMetaData::~ContactMetaData()
+ContactMetaDataBase::~ContactMetaDataBase()
 {
     delete d;
 }
 
-void ContactMetaData::load(const Akonadi::Item &contact)
+void ContactMetaDataBase::loadMetaData(const QVariantMap &metaData)
 {
-    if (!contact.hasAttribute("contactmetadata")) {
-        return;
-    }
-
-    ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>();
-    const QVariantMap metaData = attribute->metaData();
-
     d->mDisplayNameMode = metaData.value(QStringLiteral("DisplayNameMode"), -1).toInt();
 
     d->mCustomFieldDescriptions = metaData.value(QStringLiteral("CustomFieldDescriptions")).toList();
 }
 
-void ContactMetaData::store(Akonadi::Item &contact)
+QVariantMap ContactMetaDataBase::storeMetaData() const
 {
-    ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>(Item::AddIfMissing);
-
     QVariantMap metaData;
     if (d->mDisplayNameMode != -1) {
         metaData.insert(QStringLiteral("DisplayNameMode"), QVariant(d->mDisplayNameMode));
@@ -75,26 +66,25 @@ void ContactMetaData::store(Akonadi::Item &contact)
     if (!d->mCustomFieldDescriptions.isEmpty()) {
         metaData.insert(QStringLiteral("CustomFieldDescriptions"), d->mCustomFieldDescriptions);
     }
-
-    attribute->setMetaData(metaData);
+    return metaData;
 }
 
-void ContactMetaData::setDisplayNameMode(int mode)
+void ContactMetaDataBase::setDisplayNameMode(int mode)
 {
     d->mDisplayNameMode = mode;
 }
 
-int ContactMetaData::displayNameMode() const
+int ContactMetaDataBase::displayNameMode() const
 {
     return d->mDisplayNameMode;
 }
 
-void ContactMetaData::setCustomFieldDescriptions(const QVariantList &descriptions)
+void ContactMetaDataBase::setCustomFieldDescriptions(const QVariantList &descriptions)
 {
     d->mCustomFieldDescriptions = descriptions;
 }
 
-QVariantList ContactMetaData::customFieldDescriptions() const
+QVariantList ContactMetaDataBase::customFieldDescriptions() const
 {
     return d->mCustomFieldDescriptions;
 }

@@ -1,7 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    Copyright (c) 2010 Tobias Koenig <tokoe@kde.org>
+    Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,34 +19,35 @@
     02110-1301, USA.
 */
 
-#ifndef IMADDRESS_H
-#define IMADDRESS_H
+#include "contactmetadataakonadi_p.h"
 
-#include <QVector>
-#include <QString>
-#include "akonadicontact_private_export.h"
+#include "attributes/contactmetadataattribute_p.h"
 
-class AKONADI_CONTACTS_TESTS_EXPORT IMAddress
+#include <item.h>
+
+using namespace Akonadi;
+
+ContactMetaDataAkonadi::ContactMetaDataAkonadi()
 {
-public:
-    typedef QVector<IMAddress> List;
+}
 
-    IMAddress();
-    IMAddress(const QString &protocol, const QString &name, bool preferred);
+ContactMetaDataAkonadi::~ContactMetaDataAkonadi()
+{
+}
 
-    void setProtocol(const QString &protocol);
-    QString protocol() const;
+void ContactMetaDataAkonadi::load(const Akonadi::Item &contact)
+{
+    if (!contact.hasAttribute("contactmetadata")) {
+        return;
+    }
+    ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>();
+    const QVariantMap metaData = attribute->metaData();
+    loadMetaData(metaData);
+}
 
-    void setName(const QString &name);
-    QString name() const;
+void ContactMetaDataAkonadi::store(Akonadi::Item &contact)
+{
+    ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>(Item::AddIfMissing);
 
-    void setPreferred(bool preferred);
-    bool preferred() const;
-
-private:
-    QString mProtocol;
-    QString mName;
-    bool mPreferred;
-};
-
-#endif // IMADDRESS_H
+    attribute->setMetaData(storeMetaData());
+}

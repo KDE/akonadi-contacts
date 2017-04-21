@@ -149,7 +149,8 @@ set(akonadicontact_LIB_SRC
     contactgroupmodel.cpp
     contactgroupviewer.cpp
     contactgroupviewerdialog.cpp
-    contactmetadata.cpp
+    contactmetadataakonadi.cpp
+    contactmetadatabase.cpp
     contactparts.cpp
     contactsfilterproxymodel.cpp
     contactstreemodel.cpp

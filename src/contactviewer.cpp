@@ -21,7 +21,7 @@
 
 #include "contactviewer.h"
 
-#include "contactmetadata_p.h"
+#include "contactmetadataakonadi_p.h"
 #include "attributes/contactmetadataattribute_p.h"
 #include "customfieldmanager_p.h"
 #include "standardcontactformatter.h"
@@ -257,7 +257,7 @@ public:
         }
 
         // load the local meta data of the item
-        ContactMetaData metaData;
+        ContactMetaDataAkonadi metaData;
         metaData.load(mCurrentItem);
 
         updateView(metaData.customFieldDescriptions(), addressBookName);
