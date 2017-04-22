@@ -28,7 +28,6 @@
 namespace Akonadi
 {
 
-class Item;
 
 /**
  * @short A helper class for storing contact specific settings.
