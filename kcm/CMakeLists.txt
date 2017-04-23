@@ -6,8 +6,8 @@ set(kcm_akonadicontact_actions_SRCS
 
 ki18n_wrap_ui(kcm_akonadicontact_actions_SRCS akonadicontactactions.ui)
 
-configure_file( ../actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
-kconfig_add_kcfg_files(kcm_akonadicontact_actions_SRCS ../actions/contactactionssettings.kcfgc)
+configure_file( ${Akonadi-Contact_SOURCE_DIR}/src/actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
+kconfig_add_kcfg_files(kcm_akonadicontact_actions_SRCS ${Akonadi-Contact_SOURCE_DIR}/src/actions/contactactionssettings.kcfgc)
 
 
 add_library(kcm_akonadicontact_actions MODULE ${kcm_akonadicontact_actions_SRCS})
