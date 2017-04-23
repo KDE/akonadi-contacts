@@ -145,7 +145,6 @@ set(akonadicontact_LIB_SRC
     contactgroupeditor.cpp
     contactgroupeditordelegate.cpp
     contactgroupeditordialog.cpp
-    contactgrouplineedit.cpp
     contactgroupmodel.cpp
     contactgroupviewer.cpp
     contactgroupviewerdialog.cpp
