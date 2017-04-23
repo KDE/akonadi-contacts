@@ -131,6 +131,7 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                 QStringList values;
 
                 const KContacts::PhoneNumber::List numbers = contact.phoneNumbers();
+                values.reserve(numbers.count());
                 for (const KContacts::PhoneNumber &number : numbers) {
                     values += number.number();
                 }
