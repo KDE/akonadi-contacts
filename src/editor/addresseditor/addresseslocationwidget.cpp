@@ -30,8 +30,8 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
 {
     setChildrenCollapsible(false);
     mAddressLocationWidget = new AddressLocationWidget(this);
-    addWidget(mAddressLocationWidget);
     mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
+    addWidget(mAddressLocationWidget);
     mAddressesLocationViewer = new AddressesLocationEngineViewer(this);
     mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
     addWidget(mAddressesLocationViewer);

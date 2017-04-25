@@ -49,9 +49,9 @@ SelectAddressTypeComboBox::~SelectAddressTypeComboBox()
 
 void SelectAddressTypeComboBox::setType(KContacts::Address::Type type)
 {
-    if (!mTypeList.contains((int)type)) {
+    if (!mTypeList.contains(static_cast<int>(type))) {
         // insert at the end, but before the 'Others...' entry
-        mTypeList.insert(mTypeList.at(mTypeList.count() - 1), (int)type);
+        mTypeList.insert(mTypeList.at(mTypeList.count() - 1), static_cast<int>(type));
     }
 
     mType = type;
