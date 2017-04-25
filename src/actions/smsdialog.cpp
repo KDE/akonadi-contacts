@@ -50,7 +50,6 @@ void SmsDialog::initUI()
     setWindowTitle(i18n("SMS text"));
 
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
 
     QLabel *label = new QLabel(i18n("Please insert SMS text for an SMS to the following number: %1", mNumber), this);
     topLayout->addWidget(label);
