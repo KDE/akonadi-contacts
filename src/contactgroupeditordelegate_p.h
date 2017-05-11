@@ -38,7 +38,7 @@ class ContactLineEdit : public QLineEdit
 
 public:
     explicit ContactLineEdit(bool isReference, ContactCompletionModel::Columns column,
-                             QWidget *parent = 0);
+                             QWidget *parent = nullptr);
 
     bool isReference() const;
     Akonadi::Item completedItem() const;
@@ -60,7 +60,7 @@ class ContactGroupEditorDelegate : public QStyledItemDelegate
     Q_OBJECT
 
 public:
-    explicit ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent = 0);
+    explicit ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent = nullptr);
     ~ContactGroupEditorDelegate();
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;

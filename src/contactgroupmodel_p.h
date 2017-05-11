@@ -39,7 +39,7 @@ public:
         AllEmailsRole
     };
 
-    explicit ContactGroupModel(QObject *parent = 0);
+    explicit ContactGroupModel(QObject *parent = nullptr);
     ~ContactGroupModel();
 
     void loadContactGroup(const KContacts::ContactGroup &contactGroup);

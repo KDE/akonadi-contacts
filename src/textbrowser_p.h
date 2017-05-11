@@ -36,7 +36,7 @@ class TextBrowser : public QTextBrowser
 {
     Q_OBJECT
 public:
-    explicit TextBrowser(QWidget *parent = 0);
+    explicit TextBrowser(QWidget *parent = nullptr);
 private Q_SLOTS:
     void slotCopyData();
 protected:

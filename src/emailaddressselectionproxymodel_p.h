@@ -40,7 +40,7 @@ public:
         EmailAddressRole
     };
 
-    explicit EmailAddressSelectionProxyModel(QObject *parent = 0);
+    explicit EmailAddressSelectionProxyModel(QObject *parent = nullptr);
     ~EmailAddressSelectionProxyModel();
 
     QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;

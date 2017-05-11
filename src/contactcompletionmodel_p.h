@@ -38,7 +38,7 @@ public:
         EmailColumn         ///< The preferred email of the contact.
     };
 
-    explicit ContactCompletionModel(Monitor *monitor, QObject *parent = 0);
+    explicit ContactCompletionModel(Monitor *monitor, QObject *parent = nullptr);
     virtual ~ContactCompletionModel();
 
     QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
