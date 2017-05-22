@@ -214,6 +214,14 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         titleMap.insert(QStringLiteral("IMAddress"), i18n("IM Address"));
         titleMap.insert(QStringLiteral("Anniversary"), i18n("Anniversary"));
         titleMap.insert(QStringLiteral("AddressBook"), i18n("Address Book"));
+
+        QMap<QString, QString> upperCaseTitleMap;
+        QMap<QString, QString>::const_iterator iterator = titleMap.constBegin();
+        while (iterator != titleMap.constEnd()) {
+            upperCaseTitleMap.insert(iterator.key().toUpper(), iterator.value());
+            ++iterator;
+        }
+        titleMap.unite(upperCaseTitleMap);
     }
 
     static QSet<QString> blacklistedKeys;
@@ -225,6 +233,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         blacklistedKeys.insert(QStringLiteral("CRYPTOENCRYPTPREF"));
         blacklistedKeys.insert(QStringLiteral("MailPreferedFormatting"));
         blacklistedKeys.insert(QStringLiteral("MailAllowToRemoteContent"));
+        blacklistedKeys.insert(QStringLiteral("MAILPREFEREDFORMATTING"));
+        blacklistedKeys.insert(QStringLiteral("MAILALLOWTOREMOTECONTENT"));
     }
 
     if (!rawContact.customs().empty()) {
@@ -242,7 +252,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                 if (key == QLatin1String("Anniversary") || key == QLatin1String("ANNIVERSARY")) {
                     const QDateTime dateTime = QDateTime::fromString(value, Qt::ISODate);
                     value = QLocale().toString(dateTime.date());
-                } else if (key == QLatin1String("BlogFeed")) {      // blog is handled separated
+                } else if (key == QLatin1String("BlogFeed") || key == QLatin1String("BLOGFEED")) {      // blog is handled separated
                     continue;
                 } else if (blacklistedKeys.contains(key)) {
                     continue;

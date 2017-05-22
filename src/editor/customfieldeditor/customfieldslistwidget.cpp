@@ -85,9 +85,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
                           << QStringLiteral("X-ManagersName")
                           << QStringLiteral("X-AssistantsName")
                           << QStringLiteral("X-Anniversary")
-                          << QStringLiteral("X-ANNIVERSARY")
                           << QStringLiteral("X-SpousesName")
-                          << QStringLiteral("X-Profession")
                           << QStringLiteral("MailPreferedFormatting")
                           << QStringLiteral("MailAllowToRemoteContent")
                           << QStringLiteral("CRYPTOPROTOPREF")
@@ -96,7 +94,11 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
                           << QStringLiteral("CRYPTOSIGNPREF")
                           << QStringLiteral("CRYPTOENCRYPTPREF");
             }
-
+            QSet<QString> upperCaseBlacklist;
+            for (const QString &blacklistEntry : qAsConst(blacklist)) {
+                upperCaseBlacklist << blacklistEntry.toUpper();
+            }
+            blacklist.unite(upperCaseBlacklist);
             if (blacklist.contains(name)) {     // several KAddressBook specific fields
                 continue;
             }
