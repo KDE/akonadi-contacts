@@ -70,7 +70,7 @@ public:
     void setRightsFilter(Akonadi::Collection::Rights rights);
 
 protected:
-    bool filterAcceptsRow(int row, const QModelIndex &parent) const Q_DECL_OVERRIDE;
+    bool filterAcceptsRow(int row, const QModelIndex &parent) const override;
 
 private:
     QSet<QString> mContentMimeTypes;

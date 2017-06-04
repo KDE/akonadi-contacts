@@ -188,10 +188,10 @@ public:
     Columns columns() const;
 
     //@cond PRIVATE
-    QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-    QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-    QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
-    int entityColumnCount(HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
+    QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const override;
+    QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const override;
+    QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const override;
+    int entityColumnCount(HeaderGroup headerGroup) const override;
     //@endcond
 
 private:

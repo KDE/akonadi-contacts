@@ -157,7 +157,7 @@ Q_SIGNALS:
     void error(const QString &errMsg);
 
 public Q_SLOTS:
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 private:
     //@cond PRIVATE

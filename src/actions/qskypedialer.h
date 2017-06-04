@@ -34,8 +34,8 @@ public:
     explicit QSkypeDialer(const QString &applicationName);
     ~QSkypeDialer();
 
-    bool dialNumber(const QString &number) Q_DECL_OVERRIDE;
-    bool sendSms(const QString &number, const QString &text) Q_DECL_OVERRIDE;
+    bool dialNumber(const QString &number) override;
+    bool sendSms(const QString &number, const QString &text) override;
 
 private:
     bool initializeSkype();

@@ -67,7 +67,7 @@ public:
     /**
      * Returns the contact formatted as HTML.
      */
-    QString toHtml(HtmlForm form = SelfcontainedForm) const Q_DECL_OVERRIDE;
+    QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
     /*
      * @since 4.9.1

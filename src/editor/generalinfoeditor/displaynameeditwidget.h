@@ -67,7 +67,7 @@ public Q_SLOTS:
     void changeOrganization(const QString &organization);
 
 protected:
-    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *object, QEvent *event) override;
 
 private:
     void displayTypeChanged(int);

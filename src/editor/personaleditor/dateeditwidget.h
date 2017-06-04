@@ -42,7 +42,7 @@ Q_SIGNALS:
     void resetDate();
 
 protected:
-    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
+    void contextMenuEvent(QContextMenuEvent *event) override;
 
 private Q_SLOTS:
     void emitSignal();

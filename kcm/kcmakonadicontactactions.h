@@ -35,9 +35,9 @@ class KCMAkonadiContactActions : public KCModule
 public:
     KCMAkonadiContactActions(QWidget *parent, const QVariantList &args);
 
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 
 private Q_SLOTS:
     void slotDialPhoneNumberActionChanged(int);

@@ -80,7 +80,7 @@ public:
         return mMaxDescriptionWidth;
     }
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         QStyledItemDelegate::paint(painter, option, index);
         const QRect rect(option.rect.width() - mMaxDescriptionWidth, option.rect.y(), mMaxDescriptionWidth, option.rect.height());
@@ -97,7 +97,7 @@ public:
         painter->restore();
     }
 
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         QSize size = QStyledItemDelegate::sizeHint(option, index);
         size.setWidth(size.width() + mMaxDescriptionWidth);

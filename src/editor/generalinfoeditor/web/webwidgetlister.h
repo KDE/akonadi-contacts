@@ -41,7 +41,7 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
 protected:
-    QWidget *createWidget(QWidget *) Q_DECL_OVERRIDE;
+    QWidget *createWidget(QWidget *) override;
 
 private Q_SLOTS:
     void slotAddWidget(WebWidget *w);

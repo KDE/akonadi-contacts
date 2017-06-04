@@ -42,7 +42,7 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
 
 protected:
-    QWidget *createWidget(QWidget *) Q_DECL_OVERRIDE;
+    QWidget *createWidget(QWidget *) override;
 
 private Q_SLOTS:
     void slotAddWidget(MailWidget *w);

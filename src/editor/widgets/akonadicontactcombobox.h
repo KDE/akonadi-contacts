@@ -34,7 +34,7 @@ public:
     ~AkonadiContactComboBox();
 
 protected:
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const override;
 };
 }
 #endif // AKONADICONTACTCOMBOBOX_H
