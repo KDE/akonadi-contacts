@@ -38,7 +38,7 @@
 #include <kcontacts/addressee.h>
 #include <KLocalizedString>
 
-#include <QtCore/QPointer>
+#include <QPointer>
 #include <QVBoxLayout>
 #include <QMessageBox>
 

@@ -22,7 +22,7 @@
 #ifndef KDATEPICKERPOPUP_P_H
 #define KDATEPICKERPOPUP_P_H
 
-#include <QtCore/QDateTime>
+#include <QDateTime>
 #include <QMenu>
 
 class KDatePicker;

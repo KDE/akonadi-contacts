@@ -29,7 +29,7 @@
 #include <KLocalizedString>
 #include <kstringhandler.h>
 
-#include <QtCore/QSet>
+#include <QSet>
 #include <QLocale>
 
 using namespace Akonadi;

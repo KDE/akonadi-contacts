@@ -26,7 +26,7 @@
 
 #include <standardactionmanager.h>
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class QAction;
 class KActionCollection;

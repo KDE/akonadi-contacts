@@ -27,7 +27,7 @@
 #include <entitytreemodel.h>
 #include <KComboBox>
 
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QIcon>
 #include <QAbstractItemView>
 #include <QCompleter>

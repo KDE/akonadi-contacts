@@ -24,7 +24,7 @@
 
 #include <kcontacts/picture.h>
 
-#include <QtCore/QPoint>
+#include <QPoint>
 #include <QPushButton>
 
 namespace KContacts

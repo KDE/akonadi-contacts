@@ -25,9 +25,9 @@
 
 #include "akonadi-contact_export.h"
 
-#include <QtCore/QVector>
-#include <QtCore/QSharedDataPointer>
-#include <QtCore/QString>
+#include <QVector>
+#include <QSharedDataPointer>
+#include <QString>
 
 namespace Akonadi
 {

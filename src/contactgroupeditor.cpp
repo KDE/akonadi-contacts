@@ -40,7 +40,7 @@
 #include <KMessageBox>
 #include <KColorScheme>
 
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QMessageBox>
 
 using namespace Akonadi;

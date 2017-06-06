@@ -22,7 +22,7 @@
 
 #include "leafextensionproxymodel_p.h"
 
-#include <QtCore/QSet>
+#include <QSet>
 
 using namespace Akonadi;
 

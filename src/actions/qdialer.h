@@ -23,7 +23,7 @@
 #ifndef QDIALER_H
 #define QDIALER_H
 
-#include <QtCore/QString>
+#include <QString>
 
 class QDialer
 {

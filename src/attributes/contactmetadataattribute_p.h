@@ -26,7 +26,7 @@
 
 #include <attribute.h>
 
-#include <QtCore/QVariant>
+#include <QVariant>
 
 namespace Akonadi
 {

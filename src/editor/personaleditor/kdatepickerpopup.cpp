@@ -24,7 +24,7 @@
 #include <KDatePicker>
 #include <KLocalizedString>
 
-#include <QtCore/QDateTime>
+#include <QDateTime>
 #include <QWidgetAction>
 
 class KDatePickerAction : public QWidgetAction

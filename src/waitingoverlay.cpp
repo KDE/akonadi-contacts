@@ -24,7 +24,7 @@
 #include <KJob>
 #include <KLocalizedString>
 
-#include <QtCore/QEvent>
+#include <QEvent>
 #include <QBoxLayout>
 #include <QLabel>
 #include <QPalette>

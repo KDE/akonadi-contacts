@@ -24,7 +24,7 @@
 
 #include "qdialer.h"
 
-#include <QtCore/QString>
+#include <QString>
 
 class QDBusInterface;
 

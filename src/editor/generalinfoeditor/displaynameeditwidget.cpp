@@ -22,7 +22,7 @@
 #include "displaynameeditwidget.h"
 
 
-#include <QtCore/QEvent>
+#include <QEvent>
 #include <QAbstractItemView>
 #include <QHBoxLayout>
 #include <QPainter>

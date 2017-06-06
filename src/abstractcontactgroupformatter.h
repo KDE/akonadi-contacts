@@ -24,7 +24,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <QtCore/QVariant>
+#include <QVariant>
 
 namespace KContacts
 {

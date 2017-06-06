@@ -22,8 +22,8 @@
 #ifndef AKONADI_CONTACTMETADATABASE_P_H
 #define AKONADI_CONTACTMETADATABASE_P_H
 
-#include <QtCore/QStringList>
-#include <QtCore/QVariant>
+#include <QStringList>
+#include <QVariant>
 
 namespace Akonadi
 {

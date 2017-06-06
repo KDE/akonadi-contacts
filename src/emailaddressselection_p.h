@@ -23,8 +23,8 @@
 #ifndef AKONADI_EMAILADDRESSSELECTION_P_H
 #define AKONADI_EMAILADDRESSSELECTION_P_H
 
-#include <QtCore/QSharedData>
-#include <QtCore/QString>
+#include <QSharedData>
+#include <QString>
 
 #include <item.h>
 

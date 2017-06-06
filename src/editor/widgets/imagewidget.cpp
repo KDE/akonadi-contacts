@@ -30,7 +30,7 @@
 #include <KIO/TransferJob>
 #include <QImageReader>
 #include <QFileDialog>
-#include <QtCore/QMimeData>
+#include <QMimeData>
 #include <QDrag>
 #include <QImageWriter>
 #include <QDragEnterEvent>

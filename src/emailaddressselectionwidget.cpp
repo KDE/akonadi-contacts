@@ -39,7 +39,7 @@
 #include <KLineEdit>
 #include <KLocalizedString>
 
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QHBoxLayout>
 #include <QHeaderView>
 #include <QKeyEvent>

@@ -22,7 +22,7 @@
 #ifndef AKONADI_CONTACTGROUPMODEL_P_H
 #define AKONADI_CONTACTGROUPMODEL_P_H
 
-#include <QtCore/QAbstractItemModel>
+#include <QAbstractItemModel>
 
 #include <kcontacts/contactgroup.h>
 

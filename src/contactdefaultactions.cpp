@@ -28,7 +28,7 @@
 #include <kcontacts/address.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/phonenumber.h>
-#include <QtCore/QUrl>
+#include <QUrl>
 #include <QDesktopServices>
 
 using namespace Akonadi;

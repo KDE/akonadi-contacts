@@ -34,7 +34,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
-#include <QtCore/QPointer>
+#include <QPointer>
 #include <QItemSelectionModel>
 
 using namespace Akonadi;

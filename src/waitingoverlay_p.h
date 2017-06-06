@@ -22,7 +22,7 @@
 #ifndef AKONADI_WAITINGOVERLAY_P_H
 #define AKONADI_WAITINGOVERLAY_P_H
 
-#include <QtCore/QPointer>
+#include <QPointer>
 #include <QWidget>
 
 class KJob;

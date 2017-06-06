@@ -22,7 +22,7 @@
 #ifndef CONTACTMETADATAATTRIBUTETEST_H
 #define CONTACTMETADATAATTRIBUTETEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class ContactMetaDataAttributeTest : public QObject
 {

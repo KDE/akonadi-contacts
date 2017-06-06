@@ -26,11 +26,11 @@
 
 #include <QDBusConnectionInterface>
 
-#include <QtCore/QProcess>
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusConnectionInterface>
-#include <QtDBus/QDBusInterface>
-#include <QtDBus/QDBusReply>
+#include <QProcess>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusInterface>
+#include <QDBusReply>
 
 #include <unistd.h>
 #include <QString>

@@ -22,7 +22,7 @@
 #ifndef DATEEDITWIDGET_H
 #define DATEEDITWIDGET_H
 
-#include <QtCore/QDate>
+#include <QDate>
 #include <QLineEdit>
 #include <QWidget>
 

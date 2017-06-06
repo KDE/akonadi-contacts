@@ -21,7 +21,7 @@
 
 #include "contactmetadataattribute_p.h"
 
-#include <QtCore/QDataStream>
+#include <QDataStream>
 
 using namespace Akonadi;
 
