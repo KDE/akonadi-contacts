@@ -22,8 +22,8 @@
 #ifndef CUSTOMFIELDS_P_H
 #define CUSTOMFIELDS_P_H
 
-#include <QtCore/QString>
-#include <QtCore/QVariant>
+#include <QString>
+#include <QVariant>
 
 template <typename T>
 class QVector;
