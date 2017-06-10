@@ -30,7 +30,11 @@
 #include <QDBusReply>
 #include <KLocalizedString>
 
+#ifdef WIN32
+#include <windows.h>
+#else
 #include <unistd.h>
+#endif
 
 static bool isSkypeServiceRegistered()
 {
@@ -91,7 +95,11 @@ bool QSkypeDialer::initializeSkype()
         const int runs = 100;
         for (int i = 0; i < runs; ++i) {
             if (!isSkypeServiceRegistered()) {
+#ifdef WIN32
+                Sleep(2000);
+#else
                 ::sleep(2);
+#endif
             } else {
                 break;
             }
