@@ -69,6 +69,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
