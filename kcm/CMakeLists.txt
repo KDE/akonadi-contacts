@@ -1,4 +1,5 @@
 
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_akonadicontact_actions\")
 ########### next target ###############
 
 set(kcm_akonadicontact_actions_SRCS

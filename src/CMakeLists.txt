@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
+
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
 set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
 
