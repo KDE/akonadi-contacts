@@ -139,7 +139,7 @@ set(contacteditor_LIB_SRC
     ${contacteditor_job_SRCS}
     )
 
-ecm_qt_declare_logging_category(contacteditor_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact)
+ecm_qt_declare_logging_category(contacteditor_LIB_SRC HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor)
 
 set(contacteditor_LIB_SRC
     ${contacteditor_LIB_SRC}
