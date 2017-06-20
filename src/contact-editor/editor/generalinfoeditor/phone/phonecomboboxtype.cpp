@@ -28,7 +28,7 @@
 using namespace ContactEditor;
 
 PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
-    : ContactEditor::AkonadiContactComboBox(parent)
+    : ContactEditor::ContactEditorComboBox(parent)
     , mType(KContacts::PhoneNumber::Home)
     , mLastSelected(0)
 {

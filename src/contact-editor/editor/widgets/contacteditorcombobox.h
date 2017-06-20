@@ -26,12 +26,12 @@
 #include "contacteditor_private_export.h"
 namespace ContactEditor
 {
-class CONTACTEDITOR_TESTS_EXPORT AkonadiContactComboBox : public QComboBox
+class CONTACTEDITOR_TESTS_EXPORT ContactEditorComboBox : public QComboBox
 {
     Q_OBJECT
 public:
-    explicit AkonadiContactComboBox(QWidget *parent = nullptr);
-    ~AkonadiContactComboBox();
+    explicit ContactEditorComboBox(QWidget *parent = nullptr);
+    ~ContactEditorComboBox();
 
 protected:
     QSize minimumSizeHint() const override;

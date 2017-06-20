@@ -22,12 +22,12 @@
 #ifndef ContactSelectTypeCombobox_H
 #define ContactSelectTypeCombobox_H
 
-#include "../widgets/akonadicontactcombobox.h"
+#include "../widgets/contacteditorcombobox.h"
 #include "contacteditor_private_export.h"
 
 namespace ContactEditor
 {
-class CONTACTEDITOR_TESTS_EXPORT ContactSelectTypeCombobox : public ContactEditor::AkonadiContactComboBox
+class CONTACTEDITOR_TESTS_EXPORT ContactSelectTypeCombobox : public ContactEditor::ContactEditorComboBox
 {
     Q_OBJECT
 public:

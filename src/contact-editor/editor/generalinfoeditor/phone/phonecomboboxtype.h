@@ -23,7 +23,7 @@
 #ifndef PHONECOMBOBOXTYPE_H
 #define PHONECOMBOBOXTYPE_H
 
-#include <editor/widgets/akonadicontactcombobox.h>
+#include <editor/widgets/contacteditorcombobox.h>
 #include <kcontacts/addressee.h>
 #include "contacteditor_private_export.h"
 namespace ContactEditor
@@ -31,7 +31,7 @@ namespace ContactEditor
 /**
  * @short A combobox to select a phone number type.
  */
-class CONTACTEDITOR_TESTS_EXPORT PhoneComboBoxType : public ContactEditor::AkonadiContactComboBox
+class CONTACTEDITOR_TESTS_EXPORT PhoneComboBoxType : public ContactEditor::ContactEditorComboBox
 {
     Q_OBJECT
 

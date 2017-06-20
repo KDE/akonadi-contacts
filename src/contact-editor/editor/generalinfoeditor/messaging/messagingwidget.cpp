@@ -22,7 +22,7 @@
 
 #include "messagingwidget.h"
 #include "../../im/improtocols.h"
-#include "../../widgets/akonadicontactcombobox.h"
+#include "../../widgets/contacteditorcombobox.h"
 #include <QComboBox>
 #include <KLocalizedString>
 #include <QHBoxLayout>
@@ -45,7 +45,7 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     connect(mMessagingEdit, &PreferredLineEditWidget::preferredChanged, this, &MessagingWidget::slotPreferredChanged);
     layout->addWidget(mMessagingEdit);
 
-    mProtocolCombo = new ContactEditor::AkonadiContactComboBox(this);
+    mProtocolCombo = new ContactEditor::ContactEditorComboBox(this);
     mProtocolCombo->setObjectName(QStringLiteral("protocol"));
     mProtocolCombo->addItem(i18nc("@item:inlistbox select from a list of IM protocols",
                                   "Select..."));

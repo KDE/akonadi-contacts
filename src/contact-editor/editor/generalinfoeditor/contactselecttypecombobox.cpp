@@ -25,7 +25,7 @@
 using namespace ContactEditor;
 
 ContactSelectTypeCombobox::ContactSelectTypeCombobox(QWidget *parent)
-    : ContactEditor::AkonadiContactComboBox(parent)
+    : ContactEditor::ContactEditorComboBox(parent)
 {
     initialize();
 }

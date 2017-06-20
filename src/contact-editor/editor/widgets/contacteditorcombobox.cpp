@@ -19,22 +19,22 @@
     02110-1301, USA.
 */
 
-#include "akonadicontactcombobox.h"
+#include "contacteditorcombobox.h"
 
 using namespace ContactEditor;
 
-AkonadiContactComboBox::AkonadiContactComboBox(QWidget *parent)
+ContactEditorComboBox::ContactEditorComboBox(QWidget *parent)
     : QComboBox(parent)
 {
     setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLength);
 }
 
-AkonadiContactComboBox::~AkonadiContactComboBox()
+ContactEditorComboBox::~ContactEditorComboBox()
 {
 
 }
 
-QSize AkonadiContactComboBox::minimumSizeHint() const
+QSize ContactEditorComboBox::minimumSizeHint() const
 {
     return QSize(150, QComboBox::minimumSizeHint().height());
 }

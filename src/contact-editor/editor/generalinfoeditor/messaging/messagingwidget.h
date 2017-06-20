@@ -31,7 +31,7 @@ class QToolButton;
 namespace ContactEditor
 {
 class PreferredLineEditWidget;
-class AkonadiContactComboBox;
+class ContactEditorComboBox;
 class CONTACTEDITOR_TESTS_EXPORT MessagingWidget : public QWidget
 {
     Q_OBJECT
@@ -57,7 +57,7 @@ private:
     PreferredLineEditWidget *mMessagingEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
-    ContactEditor::AkonadiContactComboBox *mProtocolCombo;
+    ContactEditor::ContactEditorComboBox *mProtocolCombo;
 };
 }
 #endif // MESSAGINGWIDGET_H
