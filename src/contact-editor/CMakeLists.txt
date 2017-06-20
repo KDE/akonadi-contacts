@@ -227,11 +227,6 @@ install( FILES
 
 
 
-install( FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
-    )
-
 if (BUILD_TESTING)
     add_subdirectory(editor/addresseditor/autotests/)
     add_subdirectory(editor/addresseditor/tests)
