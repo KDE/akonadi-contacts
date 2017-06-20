@@ -1,4 +1,34 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
+
+ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
+    SOVERSION 5
+    )
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KF5AkonadiContactConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+install(EXPORT KF5AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiContactTargets.cmake NAMESPACE KF5::)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+install(EXPORT KF5AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiContactTargets.cmake NAMESPACE KF5::)
+
 
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
 set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )

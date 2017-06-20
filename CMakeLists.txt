@@ -29,12 +29,6 @@ set(KCONTACTS_VERSION "5.5.40")
 set(KMIMELIB_VERSION "5.5.40")
 set(AKONADI_VERSION "5.5.40")
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
-    SOVERSION 5
-    )
-
 set(QT_REQUIRED_VERSION "5.7.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test WebEngine WebEngineWidgets)
 ########### Find packages ###########
@@ -81,27 +75,5 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(tests)
 endif()
-########### CMake Config Files ###########
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
-
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF5AkonadiContactConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
-
-install(EXPORT KF5AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiContactTargets.cmake NAMESPACE KF5::)
-
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
-    )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
