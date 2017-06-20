@@ -247,3 +247,4 @@ install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonad
 
 add_subdirectory(editor/addresseditor/html)
 
+install( FILES contact-editor.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
