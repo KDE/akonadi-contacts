@@ -186,7 +186,6 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     ContactGroupViewerDialog
     ContactsFilterProxyModel
     ContactsTreeModel
-    ContactEditorPagePlugin
     ContactParts
     ContactViewer
     ContactViewerDialog
