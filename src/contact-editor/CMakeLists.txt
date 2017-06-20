@@ -27,9 +27,6 @@ install(FILES
     COMPONENT Devel
     )
 
-set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
-set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
-
 configure_file(config-contact-editor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-contact-editor.h)
 
 add_subdirectory(editor/im)
