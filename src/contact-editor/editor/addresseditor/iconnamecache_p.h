@@ -28,7 +28,7 @@
  *
  * The IconNameCache caches the result of iconPath() in a map and solves the slowness.
  */
-namespace Akonadi
+namespace ContactEditor
 {
 class IconNameCache
 {

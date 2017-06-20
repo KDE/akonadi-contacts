@@ -126,22 +126,15 @@ target_link_libraries(KF5AkonadiContact
     KF5::AkonadiWidgets
     Qt5::Widgets
     PRIVATE
-    KF5::Completion
     KF5::ConfigCore
     KF5::ConfigWidgets
     KF5::IconThemes
     KF5::KIOWidgets
     KF5::Mime
-    KF5::Codecs
     KF5::DBusAddons
     KF5::I18n
-    KF5::Service
     KF5::TextWidgets
-    KF5::WidgetsAddons
     KF5::XmlGui
-    Grantlee5::Templates
-    Qt5::WebEngine
-    Qt5::WebEngineWidgets
     KF5::ContactEditor
     )
 
@@ -160,9 +153,6 @@ install(TARGETS
     KF5AkonadiContact
     EXPORT KF5AkonadiContactTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
     )
-
-install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
-install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
     LIB_NAME KF5AkonadiContact
@@ -224,7 +214,6 @@ install( FILES
     ${AkonadiContact_HEADERS}
     ${AkonadiContactJob_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-    editor/im/improtocols.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
     )
 

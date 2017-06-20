@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2017 Laurent Montel <montel@kde.org>
 

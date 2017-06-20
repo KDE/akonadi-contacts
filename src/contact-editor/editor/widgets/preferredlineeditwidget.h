@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -25,7 +25,7 @@
 #include <KLineEdit>
 #include <QIcon>
 class QAction;
-namespace Akonadi
+namespace ContactEditor
 {
 class PreferredLineEditWidget : public KLineEdit
 {

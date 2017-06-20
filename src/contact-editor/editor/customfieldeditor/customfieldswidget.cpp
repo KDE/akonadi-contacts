@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -25,18 +25,18 @@
 #include "customfieldslistwidget.h"
 #include <QVBoxLayout>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setMargin(0);
-    mCustomFieldEditorWidget = new Akonadi::CustomFieldEditorWidget(this);
+    mCustomFieldEditorWidget = new ContactEditor::CustomFieldEditorWidget(this);
     mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
     topLayout->addWidget(mCustomFieldEditorWidget);
 
-    mCustomFieldsListWidget = new Akonadi::CustomFieldsListWidget(this);
+    mCustomFieldsListWidget = new ContactEditor::CustomFieldsListWidget(this);
     mCustomFieldsListWidget->setObjectName(QStringLiteral("customfieldslistwidget"));
     topLayout->addWidget(mCustomFieldsListWidget);
 

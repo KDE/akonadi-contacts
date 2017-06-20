@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -31,7 +31,7 @@
 
 #include <KContacts/Addressee>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)
@@ -74,19 +74,19 @@ PersonalEditorWidget::~PersonalEditorWidget()
 void PersonalEditorWidget::loadContact(const KContacts::Addressee &contact)
 {
     mBirthdateWidget->setDate(contact.birthday().date());
-    mAnniversaryWidget->setDate(QDate::fromString(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-Anniversary")),
+    mAnniversaryWidget->setDate(QDate::fromString(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-Anniversary")),
                                 Qt::ISODate));
     // family group
-    mPartnerWidget->setText(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-SpousesName")));
+    mPartnerWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-SpousesName")));
 }
 
 void PersonalEditorWidget::storeContact(KContacts::Addressee &contact)
 {
     contact.setBirthday(mBirthdateWidget->date());
-    Akonadi::Utils::storeCustom(contact, QStringLiteral("X-Anniversary"), mAnniversaryWidget->date().toString(Qt::ISODate));
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-Anniversary"), mAnniversaryWidget->date().toString(Qt::ISODate));
 
     // family group
-    Akonadi::Utils::storeCustom(contact, QStringLiteral("X-SpousesName"), mPartnerWidget->text().trimmed());
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-SpousesName"), mPartnerWidget->text().trimmed());
 }
 
 void PersonalEditorWidget::setReadOnly(bool readOnly)

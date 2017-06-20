@@ -26,11 +26,14 @@
 
 #include <QDialog>
 
+namespace ContactEditor
+{
+class AbstractContactEditorWidget;
+}
 namespace Akonadi
 {
 
-class AbstractContactEditorWidget;
-class ContactEditor;
+class AkonadiContactEditor;
 class Collection;
 class Item;
 
@@ -106,7 +109,7 @@ public:
      * @param editorWidget The contact editor widget that shall be used for editing.
      * @param parent The parent widget of the dialog.
      */
-    ContactEditorDialog(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
+    ContactEditorDialog(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -139,7 +142,7 @@ public:
     /**
      * Returns the ContactEditor that is used by this dialog.
      */
-    ContactEditor *editor() const;
+    AkonadiContactEditor *editor() const;
 
 Q_SIGNALS:
     /**

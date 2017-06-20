@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -28,7 +28,7 @@
 
 
 #include <KContacts/Addressee>
-using namespace Akonadi;
+using namespace ContactEditor;
 
 MessagingWidgetLister::MessagingWidgetLister(QWidget *parent)
     : KWidgetLister(1, 8, parent)
@@ -49,7 +49,7 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
 
     for (const QString &custom : customs) {
         QString app, name, value;
-        Akonadi::Utils::splitCustomField(custom, app, name, value);
+        ContactEditor::Utils::splitCustomField(custom, app, name, value);
 
         if (app.startsWith(QStringLiteral("messaging/"))) {
             if (name == QLatin1String("All")) {

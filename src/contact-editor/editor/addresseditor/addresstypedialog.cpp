@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
@@ -27,7 +27,7 @@
 #include <QGroupBox>
 #include <QCheckBox>
 #include <QButtonGroup>
-using namespace Akonadi;
+using namespace ContactEditor;
 AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *parent)
     : QDialog(parent)
 {

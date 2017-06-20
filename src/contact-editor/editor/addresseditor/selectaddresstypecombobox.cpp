@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -24,7 +24,7 @@
 #include "selectaddresstypecombobox.h"
 #include <KLocalizedString>
 #include <autoqpointer_p.h>
-using namespace Akonadi;
+using namespace ContactEditor;
 SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     : KComboBox(parent)
     , mType(KContacts::Address::Home)

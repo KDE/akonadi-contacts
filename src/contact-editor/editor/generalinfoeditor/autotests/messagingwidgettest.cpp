@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -39,7 +39,7 @@ MessagingWidgetTest::~MessagingWidgetTest()
 
 void MessagingWidgetTest::shouldHaveDefaultValues()
 {
-    Akonadi::MessagingWidget w;
+    ContactEditor::MessagingWidget w;
     KLineEdit *line = w.findChild<KLineEdit *>(QStringLiteral("messaginglineedit"));
     QVERIFY(line);
 

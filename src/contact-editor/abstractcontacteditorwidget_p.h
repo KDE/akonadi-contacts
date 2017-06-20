@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
@@ -29,7 +29,7 @@ namespace KContacts
 class Addressee;
 }
 
-namespace Akonadi
+namespace ContactEditor
 {
 
 class ContactMetaDataBase;
@@ -57,12 +57,12 @@ public:
     /**
      * @param contact loads the given contact into the editor widget
      */
-    virtual void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaDataBase &metaData) = 0;
+    virtual void loadContact(const KContacts::Addressee &contact, const ContactEditor::ContactMetaDataBase &metaData) = 0;
 
     /**
      * @param contact store the given contact into the editor widget
      */
-    virtual void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaDataBase &metaData) const = 0;
+    virtual void storeContact(KContacts::Addressee &contact, ContactEditor::ContactMetaDataBase &metaData) const = 0;
 
     /**
      * @param readOnly set read-only mode

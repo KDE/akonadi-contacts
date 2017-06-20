@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -25,10 +25,10 @@
 #include <KLocalizedString>
 #include <autoqpointer_p.h>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
-    : Akonadi::AkonadiContactComboBox(parent)
+    : ContactEditor::AkonadiContactComboBox(parent)
     , mType(KContacts::PhoneNumber::Home)
     , mLastSelected(0)
 {
@@ -102,7 +102,7 @@ void PhoneComboBoxType::selected(int pos)
 
 void PhoneComboBoxType::otherSelected()
 {
-    AutoQPointer<Akonadi::PhoneTypeDialog> dlg = new Akonadi::PhoneTypeDialog(mType, this);
+    AutoQPointer<ContactEditor::PhoneTypeDialog> dlg = new ContactEditor::PhoneTypeDialog(mType, this);
     if (dlg->exec()) {
         mType = dlg->type();
         if (!mTypeList.contains(mType)) {

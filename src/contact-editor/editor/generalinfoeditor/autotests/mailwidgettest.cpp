@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -40,7 +40,7 @@ MailWidgetTest::~MailWidgetTest()
 
 void MailWidgetTest::shouldHaveDefaultValue()
 {
-    Akonadi::MailWidget w;
+    ContactEditor::MailWidget w;
     QLineEdit *line = w.findChild<QLineEdit *>(QStringLiteral("mailedit"));
     QVERIFY(line);
     QVERIFY(line->text().isEmpty());

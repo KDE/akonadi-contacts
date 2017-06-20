@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -39,11 +39,11 @@ CustomFieldsWidgetTest::~CustomFieldsWidgetTest()
 
 void CustomFieldsWidgetTest::shouldHaveDefaultValue()
 {
-    Akonadi::CustomFieldsWidget w;
-    Akonadi::CustomFieldEditorWidget *customFieldEditorWidget = w.findChild<Akonadi::CustomFieldEditorWidget *>(QStringLiteral("customfieldeditorwidget"));
+    ContactEditor::CustomFieldsWidget w;
+    ContactEditor::CustomFieldEditorWidget *customFieldEditorWidget = w.findChild<ContactEditor::CustomFieldEditorWidget *>(QStringLiteral("customfieldeditorwidget"));
     QVERIFY(customFieldEditorWidget);
 
-    Akonadi::CustomFieldsListWidget *customFieldsListWidget = w.findChild<Akonadi::CustomFieldsListWidget *>(QStringLiteral("customfieldslistwidget"));
+    ContactEditor::CustomFieldsListWidget *customFieldsListWidget = w.findChild<ContactEditor::CustomFieldsListWidget *>(QStringLiteral("customfieldslistwidget"));
     QVERIFY(customFieldsListWidget);
 }
 

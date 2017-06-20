@@ -1,8 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
-    Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
+    Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -20,28 +19,27 @@
     02110-1301, USA.
 */
 
-#ifndef MAILISTWIDGET_H
-#define MAILISTWIDGET_H
+#ifndef ContactSelectTypeCombobox_H
+#define ContactSelectTypeCombobox_H
 
-#include <QWidget>
-namespace KContacts
-{
-class Addressee;
-}
+#include "../widgets/akonadicontactcombobox.h"
+#include "contacteditor_private_export.h"
+
 namespace ContactEditor
 {
-class MailWidgetLister;
-class MailListWidget : public QWidget
+class CONTACTEDITOR_TESTS_EXPORT ContactSelectTypeCombobox : public ContactEditor::AkonadiContactComboBox
 {
     Q_OBJECT
 public:
-    explicit MailListWidget(QWidget *parent = nullptr);
-    ~MailListWidget();
-    void loadContact(const KContacts::Addressee &contact);
-    void storeContact(KContacts::Addressee &contact) const;
-    void setReadOnly(bool readOnly);
+    explicit ContactSelectTypeCombobox(QWidget *parent = nullptr);
+    ~ContactSelectTypeCombobox();
+
+    QStringList selectTypeList() const;
+
 private:
-    ContactEditor::MailWidgetLister *mMailWidgetLister;
+    void initialize();
+    QStringList mSelectType;
 };
 }
-#endif // MAILISTWIDGET_H
+
+#endif // ContactSelectTypeCombobox_H

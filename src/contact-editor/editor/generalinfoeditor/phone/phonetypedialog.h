@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -26,12 +26,12 @@
 #include "contacteditor_private_export.h"
 class QButtonGroup;
 
-namespace Akonadi
+namespace ContactEditor
 {
 /**
  * A dialog for editing phone number types.
  */
-class AKONADI_CONTACTS_TESTS_EXPORT PhoneTypeDialog : public QDialog
+class CONTACTEDITOR_TESTS_EXPORT PhoneTypeDialog : public QDialog
 {
     Q_OBJECT
 public:

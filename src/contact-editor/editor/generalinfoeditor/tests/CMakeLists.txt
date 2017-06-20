@@ -26,7 +26,7 @@ set(generalinfoeditor_SRCS
     ../../widgets/preferredlineeditwidget.cpp
     ../phone/phonetypedialog.cpp
     ../displaynameeditwidget.cpp
-    ../akonadicontactselecttypecombobox.cpp
+    ../contactselecttypecombobox.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
@@ -30,7 +30,7 @@ class QButtonGroup;
  *
  * @note This dialog is only used by AddressTypeCombo.
  */
-namespace Akonadi
+namespace ContactEditor
 {
 class AddressTypeDialog : public QDialog
 {

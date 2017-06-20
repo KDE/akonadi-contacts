@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -23,7 +23,7 @@
 #include <QWebEngineSettings>
 #include <QWebEngineProfile>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 AddressesLocationEnginePage::AddressesLocationEnginePage(QObject *parent)
     : QWebEnginePage(parent)

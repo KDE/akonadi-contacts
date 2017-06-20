@@ -30,11 +30,13 @@ namespace KContacts
 {
 class Addressee;
 }
-
+namespace ContactEditor
+{
+class AbstractContactEditorWidget;
+}
 namespace Akonadi
 {
 
-class AbstractContactEditorWidget;
 class Collection;
 class Item;
 
@@ -79,7 +81,7 @@ class Item;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactEditor : public QWidget
+class AKONADI_CONTACT_EXPORT AkonadiContactEditor : public QWidget
 {
     Q_OBJECT
 
@@ -103,7 +105,7 @@ public:
      * @param mode The mode of the editor.
      * @param parent The parent widget of the editor.
      */
-    explicit ContactEditor(Mode mode, QWidget *parent = nullptr);
+    explicit AkonadiContactEditor(Mode mode, QWidget *parent = nullptr);
 
     /**
      * Creates a new contact editor with a custom editor widget.
@@ -112,7 +114,7 @@ public:
      * @param editorWidget The contact editor widget that shall be used for editing.
      * @param parent The parent widget of the editor.
      */
-    ContactEditor(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
+    AkonadiContactEditor(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -122,12 +124,12 @@ public:
      * @param parent The parent widget of the dialog.
      * @since 4.10
      */
-    ContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent = nullptr);
+    AkonadiContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent = nullptr);
 
     /**
      * Destroys the contact editor.
      */
-    virtual ~ContactEditor();
+    virtual ~AkonadiContactEditor();
 
     /**
      * Sets a @p contact that is used as template in create mode.

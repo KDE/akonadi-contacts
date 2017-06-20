@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -22,12 +22,12 @@
 
 #include <QApplication>
 #include "../generalinfowidget.h"
-using namespace Akonadi;
+using namespace ContactEditor;
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    Akonadi::GeneralInfoWidget w;
+    ContactEditor::GeneralInfoWidget w;
     w.show();
     return app.exec();
 }

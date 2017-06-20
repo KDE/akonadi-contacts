@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -30,7 +30,7 @@ namespace KContacts
 class Addressee;
 }
 
-namespace Akonadi
+namespace ContactEditor
 {
 class PersonalEditorWidget : public QWidget
 {

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -28,11 +28,11 @@
 #include <editor/im/imaddress.h>
 #include "contacteditor_private_export.h"
 class QToolButton;
-namespace Akonadi
+namespace ContactEditor
 {
 class PreferredLineEditWidget;
 class AkonadiContactComboBox;
-class AKONADI_CONTACTS_TESTS_EXPORT MessagingWidget : public QWidget
+class CONTACTEDITOR_TESTS_EXPORT MessagingWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -57,7 +57,7 @@ private:
     PreferredLineEditWidget *mMessagingEdit;
     QToolButton *mAddButton;
     QToolButton *mRemoveButton;
-    Akonadi::AkonadiContactComboBox *mProtocolCombo;
+    ContactEditor::AkonadiContactComboBox *mProtocolCombo;
 };
 }
 #endif // MESSAGINGWIDGET_H

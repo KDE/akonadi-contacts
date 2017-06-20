@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2010 Tobias Koenig <tokoe@kde.org>
 
@@ -26,7 +26,7 @@
 #include <QString>
 #include "contacteditor_private_export.h"
 
-class AKONADI_CONTACTS_TESTS_EXPORT IMAddress
+class CONTACTEDITOR_TESTS_EXPORT IMAddress
 {
 public:
     typedef QVector<IMAddress> List;

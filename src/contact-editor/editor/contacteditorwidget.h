@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
@@ -34,7 +34,7 @@ class Addressee;
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
-class CONTACTEDITOR_EXPORT ContactEditorWidget : public Akonadi::AbstractContactEditorWidget
+class CONTACTEDITOR_EXPORT ContactEditorWidget : public ContactEditor::AbstractContactEditorWidget
 {
 public:
     enum DisplayMode {
@@ -60,13 +60,13 @@ public:
      * Initializes the fields of the contact editor
      * with the values from a @p contact.
      */
-    void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaDataBase &metaData) override;
+    void loadContact(const KContacts::Addressee &contact, const ContactEditor::ContactMetaDataBase &metaData) override;
 
     /**
      * Stores back the fields of the contact editor
      * into the given @p contact.
      */
-    void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaDataBase &metaData) const override;
+    void storeContact(KContacts::Addressee &contact, ContactEditor::ContactMetaDataBase &metaData) const override;
 
     /**
      * Sets whether the contact in the editor allows

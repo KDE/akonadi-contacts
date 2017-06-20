@@ -17,18 +17,18 @@
     Boston, MA 02110-1301, USA.
 */
 
-#ifndef AKONADI_CONTACTSPRIVATE_EXPORT_H
-#define AKONADI_CONTACTSPRIVATE_EXPORT_H
+#ifndef CONTACTEDITOR_PRIVATE_EXPORT_H
+#define CONTACTEDITOR_PRIVATE_EXPORT_H
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
-# ifndef AKONADI_CONTACTS_TESTS_EXPORT
-#  define AKONADI_CONTACTS_TESTS_EXPORT AKONADI_CONTACT_EXPORT
+# ifndef CONTACTEDITOR_TESTS_EXPORT
+#  define CONTACTEDITOR_TESTS_EXPORT CONTACTEDITOR_EXPORT
 # endif
 #else /* not compiling tests */
-# define AKONADI_CONTACTS_TESTS_EXPORT
+# define CONTACTEDITOR_TESTS_EXPORT
 #endif
 
 #endif

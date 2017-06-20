@@ -1,7 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5\")
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5ContactEditor")
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX CONTACTEDITOR
+ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/contact-editor_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5ContactEditorConfigVersion.cmake"
     SOVERSION 5
@@ -84,7 +84,7 @@ set(contacteditor_editor_generalinfo_SRCS
     editor/generalinfoeditor/categorieseditwidget.cpp
     editor/generalinfoeditor/nameeditdialog.cpp
     editor/generalinfoeditor/displaynameeditwidget.cpp
-    editor/generalinfoeditor/akonadicontactselecttypecombobox.cpp
+    editor/generalinfoeditor/contactselecttypecombobox.cpp
     editor/generalinfoeditor/messageformattingwidget.cpp
     ${contacteditor_editor_generalinfo_messaging_SRCS}
     ${contacteditor_editor_generalinfo_phone_SRCS}
@@ -163,10 +163,10 @@ target_include_directories(KF5ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-
 
 target_link_libraries(KF5ContactEditor
     PUBLIC
-    KF5::AkonadiCore
     KF5::Contacts
-    KF5::AkonadiWidgets
     Qt5::Widgets
+    KF5::AkonadiCore
+    KF5::AkonadiWidgets
     PRIVATE
     KF5::Completion
     KF5::ConfigCore
@@ -204,7 +204,7 @@ install(TARGETS
 
 ecm_generate_pri_file(BASE_NAME ContactEditor
     LIB_NAME KF5ContactEditor
-    DEPS "AkonadiCore Contacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact
+    DEPS "Contacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor
     )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
@@ -240,11 +240,13 @@ if (BUILD_TESTING)
     add_subdirectory(editor/addresseditor/tests)
     add_subdirectory(editor/generalinfoeditor/autotests/)
     add_subdirectory(editor/generalinfoeditor/tests)
-    #Laurent reactivate it
-    #add_subdirectory(editor/customfieldeditor/autotests/)
-    #add_subdirectory(editor/customfieldeditor/tests)
+    add_subdirectory(editor/customfieldeditor/autotests/)
+    add_subdirectory(editor/customfieldeditor/tests)
     add_subdirectory(editor/widgets/autotests/)
 endif()
+
+install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
+install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
 
 add_subdirectory(editor/addresseditor/html)
 

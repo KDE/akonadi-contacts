@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2017 Laurent Montel <montel@kde.org>
 
@@ -19,14 +19,14 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADI_CONTACTMETADATABASE_P_H
-#define AKONADI_CONTACTMETADATABASE_P_H
+#ifndef CONTACTEDITOR_CONTACTMETADATABASE_P_H
+#define CONTACTEDITOR_CONTACTMETADATABASE_P_H
 
 #include "contacteditor_export.h"
 #include <QStringList>
 #include <QVariant>
 
-namespace Akonadi
+namespace ContactEditor
 {
 
 

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -31,7 +31,7 @@
 #include <KContacts/Addressee>
 #include "customfieldsmodel.h"
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     : QWidget(parent)
@@ -41,7 +41,7 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     mCustomFieldList->setObjectName(QStringLiteral("customfieldlist"));
     mCustomFieldList->setSortingEnabled(true);
     mCustomFieldList->setRootIsDecorated(false);
-    Akonadi::CustomFieldsListDelegate *customFieldDelegate = new Akonadi::CustomFieldsListDelegate(mCustomFieldList, this);
+    ContactEditor::CustomFieldsListDelegate *customFieldDelegate = new ContactEditor::CustomFieldsListDelegate(mCustomFieldList, this);
     mCustomFieldList->setItemDelegate(customFieldDelegate);
     topLayout->addWidget(mCustomFieldList);
 
@@ -68,7 +68,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
     for (const QString &custom : customs) {
 
         QString app, name, value;
-        Akonadi::Utils::splitCustomField(custom, app, name, value);
+        ContactEditor::Utils::splitCustomField(custom, app, name, value);
 
         // skip all well-known fields that have separated editor widgets
         if (custom.startsWith(QStringLiteral("messaging/"))) {       // IM addresses

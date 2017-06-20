@@ -43,7 +43,7 @@ using namespace Akonadi;
 class Q_DECL_HIDDEN ContactEditorDialog::Private
 {
 public:
-    Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, AbstractContactEditorWidget *editorWidget,
+    Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, ContactEditor::AbstractContactEditorWidget *editorWidget,
             ContactEditorDialog *parent)
         : q(parent)
         , mAddressBookBox(nullptr)
@@ -63,9 +63,9 @@ public:
         layout->setMargin(0);
 
         if (editorWidget) {
-            mEditor = new ContactEditor(mode == ContactEditorDialog::CreateMode ? ContactEditor::CreateMode : ContactEditor::EditMode, editorWidget, q);
+            mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode, editorWidget, q);
         } else {
-            mEditor = new ContactEditor(mode == ContactEditorDialog::CreateMode ? ContactEditor::CreateMode : ContactEditor::EditMode, displaymode == ContactEditorDialog::FullMode ? ContactEditor::FullMode : ContactEditor::VCardMode, q);
+            mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode, displaymode == ContactEditorDialog::FullMode ? AkonadiContactEditor::FullMode : AkonadiContactEditor::VCardMode, q);
         }
 
         if (mode == ContactEditorDialog::CreateMode) {
@@ -82,10 +82,10 @@ public:
         layout->addWidget(mEditor, 1, 0, 1, 2);
         layout->setColumnStretch(1, 1);
 
-        connect(mEditor, &ContactEditor::contactStored,
+        connect(mEditor, &AkonadiContactEditor::contactStored,
                 q, &ContactEditorDialog::contactStored);
 
-        connect(mEditor, &ContactEditor::error,
+        connect(mEditor, &AkonadiContactEditor::error,
                 q, &ContactEditorDialog::error);
 
         connect(mEditor, SIGNAL(finished()), q, SLOT(slotFinish()));
@@ -132,7 +132,7 @@ public:
     ContactEditorDialog *q;
     CollectionComboBox *mAddressBookBox;
     ContactEditorDialog::Mode mMode;
-    ContactEditor *mEditor;
+    AkonadiContactEditor *mEditor;
 };
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
@@ -141,7 +141,7 @@ ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
 {
 }
 
-ContactEditorDialog::ContactEditorDialog(Mode mode, AbstractContactEditorWidget *editorWidget, QWidget *parent)
+ContactEditorDialog::ContactEditorDialog(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent)
     : QDialog(parent)
     , d(new Private(mode, FullMode, editorWidget, this))
 {
@@ -173,7 +173,7 @@ void ContactEditorDialog::setDefaultAddressBook(const Akonadi::Collection &addre
     d->mAddressBookBox->setDefaultCollection(addressbook);
 }
 
-ContactEditor *ContactEditorDialog::editor() const
+AkonadiContactEditor *ContactEditorDialog::editor() const
 {
     return d->mEditor;
 }

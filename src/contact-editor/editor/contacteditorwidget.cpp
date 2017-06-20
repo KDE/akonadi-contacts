@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
@@ -68,23 +68,23 @@ public:
     ContactEditorWidget *mParent;
     QTabWidget *mTabWidget;
 
-    Akonadi::GeneralInfoWidget *mGeneralInfoWidget;
+    ContactEditor::GeneralInfoWidget *mGeneralInfoWidget;
 
     // widgets from addresses group
-    Akonadi::AddressesLocationWidget *mAddressesLocationWidget;
+    ContactEditor::AddressesLocationWidget *mAddressesLocationWidget;
 
-    Akonadi::BusinessEditorWidget *mBusinessEditorWidget;
+    ContactEditor::BusinessEditorWidget *mBusinessEditorWidget;
 
     // widgets from notes group
     KTextEdit *mNotesWidget;
 
-    Akonadi::PersonalEditorWidget *mPersonalEditorWidget;
+    ContactEditor::PersonalEditorWidget *mPersonalEditorWidget;
 
     // widgets from custom fields group
-    Akonadi::CustomFieldsWidget *mCustomFieldsWidget;
+    ContactEditor::CustomFieldsWidget *mCustomFieldsWidget;
 
     // custom editor pages
-    QList<Akonadi::ContactEditorPagePlugin *> mCustomPages;
+    QList<ContactEditor::ContactEditorPagePlugin *> mCustomPages;
 };
 
 void ContactEditorWidget::Private::initGui()
@@ -108,25 +108,25 @@ void ContactEditorWidget::Private::initGui()
 
 void ContactEditorWidget::Private::initGuiContactTab()
 {
-    mGeneralInfoWidget = new Akonadi::GeneralInfoWidget;
+    mGeneralInfoWidget = new ContactEditor::GeneralInfoWidget;
     mTabWidget->addTab(mGeneralInfoWidget, i18nc("@title:tab", "Contact"));
 }
 
 void ContactEditorWidget::Private::initGuiLocationTab()
 {
-    mAddressesLocationWidget = new Akonadi::AddressesLocationWidget;
+    mAddressesLocationWidget = new ContactEditor::AddressesLocationWidget;
     mTabWidget->addTab(mAddressesLocationWidget, i18nc("@title:tab", "Location"));
 }
 
 void ContactEditorWidget::Private::initGuiBusinessTab()
 {
-    mBusinessEditorWidget = new Akonadi::BusinessEditorWidget();
+    mBusinessEditorWidget = new ContactEditor::BusinessEditorWidget();
     mTabWidget->addTab(mBusinessEditorWidget, i18nc("@title:tab", "Business"));
 }
 
 void ContactEditorWidget::Private::initGuiPersonalTab()
 {
-    mPersonalEditorWidget = new Akonadi::PersonalEditorWidget;
+    mPersonalEditorWidget = new ContactEditor::PersonalEditorWidget;
     mTabWidget->addTab(mPersonalEditorWidget, i18nc("@title:tab Personal properties of a contact", "Personal"));
 }
 
@@ -144,7 +144,7 @@ void ContactEditorWidget::Private::initGuiNotesTab()
 
 void ContactEditorWidget::Private::initGuiCustomFieldsTab()
 {
-    mCustomFieldsWidget = new Akonadi::CustomFieldsWidget;
+    mCustomFieldsWidget = new ContactEditor::CustomFieldsWidget;
     mTabWidget->addTab(mCustomFieldsWidget, i18nc("@title:tab", "Custom Fields"));
 }
 
@@ -162,7 +162,7 @@ void ContactEditorWidget::Private::loadCustomPages()
             continue;
         }
 
-        Akonadi::ContactEditorPagePlugin *plugin = qobject_cast<Akonadi::ContactEditorPagePlugin *>(loader.instance());
+        ContactEditor::ContactEditorPagePlugin *plugin = qobject_cast<ContactEditor::ContactEditorPagePlugin *>(loader.instance());
         if (!plugin) {
             continue;
         }
@@ -170,7 +170,7 @@ void ContactEditorWidget::Private::loadCustomPages()
         mCustomPages.append(plugin);
     }
 
-    for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(mCustomPages)) {
+    for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(mCustomPages)) {
         mTabWidget->addTab(plugin, plugin->title());
     }
 }
@@ -208,7 +208,7 @@ ContactEditorWidget::~ContactEditorWidget()
     delete d;
 }
 
-void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaDataBase &metaData)
+void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const ContactEditor::ContactMetaDataBase &metaData)
 {
     d->mGeneralInfoWidget->loadContact(contact);
 
@@ -228,13 +228,13 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
         d->mCustomFieldsWidget->loadContact(contact);
 
         // custom pages
-        for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
+        for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
             plugin->loadContact(contact);
         }
     }
 }
 
-void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaDataBase &metaData) const
+void ContactEditorWidget::storeContact(KContacts::Addressee &contact, ContactEditor::ContactMetaDataBase &metaData) const
 {
     d->mGeneralInfoWidget->storeContact(contact);
 
@@ -256,7 +256,7 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, Akonadi::C
         metaData.setDisplayNameMode(d->mGeneralInfoWidget->displayType());
 
         // custom pages
-        for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
+        for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
             plugin->storeContact(contact);
         }
     }
@@ -280,7 +280,7 @@ void ContactEditorWidget::setReadOnly(bool readOnly)
         d->mCustomFieldsWidget->setReadOnly(readOnly);
 
         // custom pages
-        for (Akonadi::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
+        for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
             plugin->setReadOnly(readOnly);
         }
     }

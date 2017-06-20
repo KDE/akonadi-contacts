@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -25,7 +25,7 @@
 
 #include <QSplitter>
 #include <KContacts/Addressee>
-namespace Akonadi
+namespace ContactEditor
 {
 class AddressLocationWidget;
 class AddressesLocationEngineViewer;

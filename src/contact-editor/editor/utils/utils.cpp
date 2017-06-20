@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -23,7 +23,7 @@
 
 #include <KContacts/Addressee>
 
-void Akonadi::Utils::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
+void ContactEditor::Utils::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
 {
     const int colon = str.indexOf(QLatin1Char(':'));
     if (colon != -1) {
@@ -38,12 +38,12 @@ void Akonadi::Utils::splitCustomField(const QString &str, QString &app, QString 
     }
 }
 
-QString Akonadi::Utils::loadCustom(const KContacts::Addressee &contact, const QString &key)
+QString ContactEditor::Utils::loadCustom(const KContacts::Addressee &contact, const QString &key)
 {
     return contact.custom(QStringLiteral("KADDRESSBOOK"), key);
 }
 
-void Akonadi::Utils::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value)
+void ContactEditor::Utils::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value)
 {
     if (value.isEmpty()) {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), key);

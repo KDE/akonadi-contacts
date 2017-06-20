@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -26,12 +26,12 @@
 #include <editor/widgets/akonadicontactcombobox.h>
 #include <kcontacts/addressee.h>
 #include "contacteditor_private_export.h"
-namespace Akonadi
+namespace ContactEditor
 {
 /**
  * @short A combobox to select a phone number type.
  */
-class AKONADI_CONTACTS_TESTS_EXPORT PhoneComboBoxType : public Akonadi::AkonadiContactComboBox
+class CONTACTEDITOR_TESTS_EXPORT PhoneComboBoxType : public ContactEditor::AkonadiContactComboBox
 {
     Q_OBJECT
 

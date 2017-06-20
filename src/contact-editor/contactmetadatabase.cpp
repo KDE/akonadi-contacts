@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2017 Laurent Montel <montel@kde.org>
 
@@ -21,7 +21,7 @@
 
 #include "contactmetadatabase_p.h"
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 class Q_DECL_HIDDEN ContactMetaDataBase::Private
 {

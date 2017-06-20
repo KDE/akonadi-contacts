@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -41,7 +41,7 @@ CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest()
 
 void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
 {
-    Akonadi::CustomFieldEditorWidget w;
+    ContactEditor::CustomFieldEditorWidget w;
     QLineEdit *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
     QVERIFY(fieldname);
     QVERIFY(fieldname->text().isEmpty());
@@ -61,7 +61,7 @@ void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
 
 void CustomFieldEditorWidgetTest::shouldEnableAddButtonWhenTextIsNotEmpty()
 {
-    Akonadi::CustomFieldEditorWidget w;
+    ContactEditor::CustomFieldEditorWidget w;
     QLineEdit *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
     QVERIFY(fieldname->text().isEmpty());
     QPushButton *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
@@ -75,7 +75,7 @@ void CustomFieldEditorWidgetTest::shouldEnableAddButtonWhenTextIsNotEmpty()
 
 void CustomFieldEditorWidgetTest::shouldClearEditorWhenPressAdd()
 {
-    Akonadi::CustomFieldEditorWidget w;
+    ContactEditor::CustomFieldEditorWidget w;
     QLineEdit *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
     QPushButton *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
     QComboBox *combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));

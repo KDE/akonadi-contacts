@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -27,7 +27,7 @@
 #include <QVBoxLayout>
 #include <KContacts/Addressee>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 WebListWidget::WebListWidget(QWidget *parent)
     : QWidget(parent)
@@ -40,7 +40,7 @@ WebListWidget::WebListWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("weblistlabel"));
     topLayout->addWidget(label);
 
-    mWebWidgetLister = new Akonadi::WebWidgetLister(this);
+    mWebWidgetLister = new ContactEditor::WebWidgetLister(this);
     mWebWidgetLister->setObjectName(QStringLiteral("webwidgetlister"));
     topLayout->addWidget(mWebWidgetLister);
 }

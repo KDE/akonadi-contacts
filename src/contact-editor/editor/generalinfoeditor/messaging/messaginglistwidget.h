@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -28,7 +28,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace Akonadi
+namespace ContactEditor
 {
 class MessagingWidgetLister;
 class MessagingListWidget : public QWidget
@@ -43,7 +43,7 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    Akonadi::MessagingWidgetLister *mMessagingWidgetLister;
+    ContactEditor::MessagingWidgetLister *mMessagingWidgetLister;
 };
 }
 #endif // MAILISTWIDGET_H

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -38,7 +38,7 @@ PreferredLineEditWidget::~PreferredLineEditWidget()
 
 void PreferredLineEditWidget::shouldHaveDefaultValue()
 {
-    Akonadi::PreferredLineEditWidget w;
+    ContactEditor::PreferredLineEditWidget w;
     QAction *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
     QVERIFY(act);
     QVERIFY(!w.preferred());
@@ -46,7 +46,7 @@ void PreferredLineEditWidget::shouldHaveDefaultValue()
 
 void PreferredLineEditWidget::shouldChangePreferredValue()
 {
-    Akonadi::PreferredLineEditWidget w;
+    ContactEditor::PreferredLineEditWidget w;
     QAction *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
     QIcon disabled = act->icon();
     w.setPreferred(true);

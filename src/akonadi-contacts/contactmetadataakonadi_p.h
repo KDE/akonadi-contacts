@@ -33,7 +33,7 @@ class Item;
 /**
  * @short A helper class for storing contact specific settings.
  */
-class ContactMetaDataAkonadi : public ContactMetaDataBase
+class ContactMetaDataAkonadi : public ContactEditor::ContactMetaDataBase
 {
 public:
     /**

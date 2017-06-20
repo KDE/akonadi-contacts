@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2010 Tobias Koenig <tokoe@kde.org>
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
@@ -25,7 +25,7 @@
 
 #include <QStyledItemDelegate>
 class QAbstractItemView;
-namespace Akonadi
+namespace ContactEditor
 {
 class CustomFieldsListDelegate : public QStyledItemDelegate
 {

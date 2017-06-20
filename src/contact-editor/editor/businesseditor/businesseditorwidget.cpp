@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -32,7 +32,7 @@
 
 #include <KContacts/Addressee>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     : QWidget(parent)
@@ -134,12 +134,12 @@ void BusinessEditorWidget::loadContact(const KContacts::Addressee &contact)
 {
     mLogoWidget->loadContact(contact);
     mOrganizationWidget->setText(contact.organization());
-    mProfessionWidget->setText(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-Profession")));
+    mProfessionWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-Profession")));
     mTitleWidget->setText(contact.title());
     mDepartmentWidget->setText(contact.department());
-    mOfficeWidget->setText(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-Office")));
-    mManagerWidget->setText(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-ManagersName")));
-    mAssistantWidget->setText(Akonadi::Utils::loadCustom(contact, QStringLiteral("X-AssistantsName")));
+    mOfficeWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-Office")));
+    mManagerWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-ManagersName")));
+    mAssistantWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-AssistantsName")));
 
     // groupware group
     mFreeBusyWidget->loadContact(contact);
@@ -151,12 +151,12 @@ void BusinessEditorWidget::storeContact(KContacts::Addressee &contact)
     // general group
     mLogoWidget->storeContact(contact);
     contact.setOrganization(mOrganizationWidget->text());
-    Akonadi::Utils::storeCustom(contact, QStringLiteral("X-Profession"), mProfessionWidget->text().trimmed());
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-Profession"), mProfessionWidget->text().trimmed());
     contact.setTitle(mTitleWidget->text().trimmed());
     contact.setDepartment(mDepartmentWidget->text().trimmed());
-    Akonadi::Utils::storeCustom(contact, QStringLiteral("X-Office"), mOfficeWidget->text().trimmed());
-    Akonadi::Utils::storeCustom(contact, QStringLiteral("X-ManagersName"), mManagerWidget->text().trimmed());
-    Akonadi::Utils::storeCustom(contact, QStringLiteral("X-AssistantsName"), mAssistantWidget->text().trimmed());
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-Office"), mOfficeWidget->text().trimmed());
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-ManagersName"), mManagerWidget->text().trimmed());
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-AssistantsName"), mAssistantWidget->text().trimmed());
 
     // groupware group
     mFreeBusyWidget->storeContact(contact);

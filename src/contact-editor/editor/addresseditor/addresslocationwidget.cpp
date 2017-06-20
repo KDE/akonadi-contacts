@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -32,7 +32,7 @@
 #include <QCheckBox>
 #include <QPushButton>
 #include <QStackedWidget>
-using namespace Akonadi;
+using namespace ContactEditor;
 struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
     bool operator()(const QString &s1, const QString &s2) const
     {

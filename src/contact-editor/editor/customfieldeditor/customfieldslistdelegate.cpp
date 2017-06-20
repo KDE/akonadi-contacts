@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2010 Tobias Koenig <tokoe@kde.org>
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
@@ -36,7 +36,7 @@
 #include <QAbstractItemView>
 #include <QTimer>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 CustomFieldsListDelegate::CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent)
     : QStyledItemDelegate(parent),
       mIcon(QIcon::fromTheme(QStringLiteral("list-remove"))),

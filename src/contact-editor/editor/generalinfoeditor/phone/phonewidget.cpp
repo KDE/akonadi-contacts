@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -28,7 +28,7 @@
 #include <QToolButton>
 #include <editor/widgets/preferredlineeditwidget.h>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 PhoneWidget::PhoneWidget(QWidget *parent)
     : QWidget(parent)
 {

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -26,7 +26,7 @@
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <KContacts/Addressee>
-using namespace Akonadi;
+using namespace ContactEditor;
 
 PhoneListWidget::PhoneListWidget(QWidget *parent)
     : QWidget(parent)
@@ -39,7 +39,7 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("phonelistlabel"));
     topLayout->addWidget(label);
 
-    mPhoneWidgetLister = new Akonadi::PhoneWidgetLister(this);
+    mPhoneWidgetLister = new ContactEditor::PhoneWidgetLister(this);
     mPhoneWidgetLister->setObjectName(QStringLiteral("phonewidgetlister"));
     topLayout->addWidget(mPhoneWidgetLister);
 }

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2017 Laurent Montel <montel@kde.org>
 
@@ -27,9 +27,9 @@
 #include "contacteditor_private_export.h"
 class QComboBox;
 class QCheckBox;
-namespace Akonadi
+namespace ContactEditor
 {
-class AKONADI_CONTACTS_TESTS_EXPORT MessageFormattingWidget : public QWidget
+class CONTACTEDITOR_TESTS_EXPORT MessageFormattingWidget : public QWidget
 {
     Q_OBJECT
 public:

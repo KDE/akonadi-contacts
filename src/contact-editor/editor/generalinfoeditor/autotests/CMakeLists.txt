@@ -19,11 +19,11 @@ target_link_libraries(messagingwidgettest Qt5::Test  Qt5::Widgets KF5::ContactEd
 
 
 
-set(akonadicontactselecttypecomboboxtest_SRCS akonadicontactselecttypecomboboxtest.cpp)
-add_executable(akonadicontactselecttypecomboboxtest ${akonadicontactselecttypecomboboxtest_SRCS})
-add_test(akonadicontactselecttypecomboboxtest akonadicontactselecttypecomboboxtest)
-ecm_mark_as_test(akonadicontactselecttypecomboboxtest)
-target_link_libraries(akonadicontactselecttypecomboboxtest Qt5::Test  Qt5::Widgets KF5::ContactEditor KF5::I18n )
+set(contactselecttypecomboboxtest_SRCS contactselecttypecomboboxtest.cpp)
+add_executable(contactselecttypecomboboxtest ${contactselecttypecomboboxtest_SRCS})
+add_test(contactselecttypecomboboxtest contactselecttypecomboboxtest)
+ecm_mark_as_test(contactselecttypecomboboxtest)
+target_link_libraries(contactselecttypecomboboxtest Qt5::Test  Qt5::Widgets KF5::ContactEditor KF5::I18n )
 
 
 set(nicknamewidgettest_SRCS nicknamewidgettest.cpp)

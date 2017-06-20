@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -19,27 +19,19 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADICONTACTSELECTTYPECOMBOBOX_H
-#define AKONADICONTACTSELECTTYPECOMBOBOX_H
+#ifndef ContactSelectTypeComboboxTEST_H
+#define ContactSelectTypeComboboxTEST_H
 
-#include "../widgets/akonadicontactcombobox.h"
-#include "contacteditor_private_export.h"
+#include <QObject>
 
-namespace Akonadi
-{
-class AKONADI_CONTACTS_TESTS_EXPORT AkonadiContactSelectTypeCombobox : public Akonadi::AkonadiContactComboBox
+class ContactSelectTypeComboboxTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AkonadiContactSelectTypeCombobox(QWidget *parent = nullptr);
-    ~AkonadiContactSelectTypeCombobox();
-
-    QStringList selectTypeList() const;
-
-private:
-    void initialize();
-    QStringList mSelectType;
+    explicit ContactSelectTypeComboboxTest(QObject *parent = nullptr);
+    ~ContactSelectTypeComboboxTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
-}
 
-#endif // AKONADICONTACTSELECTTYPECOMBOBOX_H
+#endif // ContactSelectTypeComboboxTEST_H

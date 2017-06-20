@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -24,7 +24,7 @@
 
 #include <QWebEngineView>
 #include <KContacts/Address>
-namespace Akonadi
+namespace ContactEditor
 {
 class AddressesLocationGrantleeFormater;
 class AddressesLocationEngineViewer : public QWebEngineView

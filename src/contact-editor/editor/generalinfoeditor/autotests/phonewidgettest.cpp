@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -40,13 +40,13 @@ PhoneWidgetTest::~PhoneWidgetTest()
 
 void PhoneWidgetTest::shouldHaveDefaultValue()
 {
-    Akonadi::PhoneWidget w;
+    ContactEditor::PhoneWidget w;
     QLineEdit *line = w.findChild<QLineEdit *>(QStringLiteral("phonenumber"));
     QVERIFY(line);
     QToolButton *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
     QVERIFY(addButton);
 
-    Akonadi::PhoneComboBoxType *combotype = w.findChild<Akonadi::PhoneComboBoxType *>(QStringLiteral("phonetype"));
+    ContactEditor::PhoneComboBoxType *combotype = w.findChild<ContactEditor::PhoneComboBoxType *>(QStringLiteral("phonetype"));
     QVERIFY(combotype);
 
     QToolButton *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));

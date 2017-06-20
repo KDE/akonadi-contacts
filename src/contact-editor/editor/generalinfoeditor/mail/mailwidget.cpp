@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -26,10 +26,10 @@
 #include <KLineEdit>
 #include <QToolButton>
 #include <QComboBox>
-#include <editor/generalinfoeditor/akonadicontactselecttypecombobox.h>
+#include <editor/generalinfoeditor/contactselecttypecombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 MailWidget::MailWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -44,7 +44,7 @@ MailWidget::MailWidget(QWidget *parent)
     layout->addWidget(mMailEdit);
     connect(mMailEdit, &PreferredLineEditWidget::preferredChanged, this, &MailWidget::slotPreferredChanged);
 
-    mMailType = new Akonadi::AkonadiContactSelectTypeCombobox(this);
+    mMailType = new ContactEditor::ContactSelectTypeCombobox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
     layout->addWidget(mMailType);
 

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
@@ -29,7 +29,7 @@ namespace KContacts
 class Addressee;
 }
 
-namespace Akonadi
+namespace ContactEditor
 {
 
 /**
@@ -64,6 +64,6 @@ public:
 
 }
 
-Q_DECLARE_INTERFACE(Akonadi::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")
+Q_DECLARE_INTERFACE(ContactEditor::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")
 
 #endif

@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2017 Laurent Montel <montel@kde.org>
 
@@ -35,7 +35,7 @@ MessageFormattingWidgetTest::MessageFormattingWidgetTest(QObject *parent)
 
 void MessageFormattingWidgetTest::shouldHaveDefaultValue()
 {
-    Akonadi::MessageFormattingWidget w;
+    ContactEditor::MessageFormattingWidget w;
 
     QLabel *label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);

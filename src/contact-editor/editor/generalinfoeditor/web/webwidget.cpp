@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
     Copyright (C) 2016-2017 Laurent Montel <laurent.montel@kdab.com>
@@ -27,8 +27,8 @@
 #include <QUrl>
 #include <KLocalizedString>
 #include <editor/widgets/preferredlineeditwidget.h>
-#include <editor/generalinfoeditor/akonadicontactselecttypecombobox.h>
-using namespace Akonadi;
+#include <editor/generalinfoeditor/contactselecttypecombobox.h>
+using namespace ContactEditor;
 
 WebWidget::WebWidget(QWidget *parent)
     : QWidget(parent)
@@ -44,7 +44,7 @@ WebWidget::WebWidget(QWidget *parent)
     layout->addWidget(mWebSiteEdit);
     connect(mWebSiteEdit, &PreferredLineEditWidget::preferredChanged, this, &WebWidget::slotPreferredChanged);
 
-    mWebType = new Akonadi::AkonadiContactSelectTypeCombobox(this);
+    mWebType = new ContactEditor::ContactSelectTypeCombobox(this);
     mWebType->setObjectName(QStringLiteral("webtype"));
     mWebType->addItem(i18n("Select..."), QString());
 

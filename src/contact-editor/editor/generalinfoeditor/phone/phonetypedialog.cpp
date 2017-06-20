@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -29,7 +29,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent)
     : QDialog(parent)

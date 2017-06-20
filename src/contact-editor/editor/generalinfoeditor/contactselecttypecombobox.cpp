@@ -1,5 +1,5 @@
 /*
-    This file is part of Akonadi Contact.
+    This file is part of Contact Editor.
 
     Copyright (C) 2016-2017 Laurent Montel <montel@kde.org>
 
@@ -19,19 +19,37 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADICONTACTSELECTTYPECOMBOBOXTEST_H
-#define AKONADICONTACTSELECTTYPECOMBOBOXTEST_H
+#include "contactselecttypecombobox.h"
+#include <KLocalizedString>
 
-#include <QObject>
+using namespace ContactEditor;
 
-class AkonadiContactSelectTypeComboboxTest : public QObject
+ContactSelectTypeCombobox::ContactSelectTypeCombobox(QWidget *parent)
+    : ContactEditor::AkonadiContactComboBox(parent)
 {
-    Q_OBJECT
-public:
-    explicit AkonadiContactSelectTypeComboboxTest(QObject *parent = nullptr);
-    ~AkonadiContactSelectTypeComboboxTest();
-private Q_SLOTS:
-    void shouldHaveDefaultValue();
-};
+    initialize();
+}
 
-#endif // AKONADICONTACTSELECTTYPECOMBOBOXTEST_H
+ContactSelectTypeCombobox::~ContactSelectTypeCombobox()
+{
+
+}
+
+void ContactSelectTypeCombobox::initialize()
+{
+    addItem(i18n("Select..."), QString());
+    QString type = QStringLiteral("HOME");
+    mSelectType.append(type);
+    addItem(i18n("Home"), type);
+    type = QStringLiteral("WORK");
+    mSelectType.append(type);
+    addItem(i18n("Work"), type);
+    type = QStringLiteral("OTHER");
+    mSelectType.append(type);
+    addItem(i18n("Other"), type);
+}
+
+QStringList ContactSelectTypeCombobox::selectTypeList() const
+{
+    return mSelectType;
+}
