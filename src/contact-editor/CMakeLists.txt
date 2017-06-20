@@ -125,6 +125,7 @@ set(contacteditor_editor_SRCS
     editor/im/improtocols.cpp
     editor/widgets/imagewidget.cpp
     editor/widgets/preferredlineeditwidget.cpp
+    editor/widgets/categorieseditabstractwidget.cpp
     customfields.cpp
     customfieldmanager.cpp
     contactmetadatabase.cpp
@@ -162,8 +163,6 @@ target_link_libraries(KF5ContactEditor
     PUBLIC
     KF5::Contacts
     Qt5::Widgets
-    KF5::AkonadiCore
-    KF5::AkonadiWidgets
     PRIVATE
     KF5::Completion
     KF5::ConfigCore
@@ -213,13 +212,24 @@ ecm_generate_headers(ContactEditor_CamelCase_HEADERS
     PREFIX ContactEditor
     )
 
+ecm_generate_headers(ContactEditorWidget_CamelCase_HEADERS
+    HEADER_NAMES
+    CategoriesEditAbstractWidget
+    REQUIRED_HEADERS ContactEditorWidget_HEADERS
+    PREFIX ContactEditor
+    RELATIVE editor/widgets/
+    )
+
+
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
+    ${ContactEditorWidget_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor COMPONENT Devel
     )
 
 install( FILES
     ${ContactEditor_HEADERS}
+    ${ContactEditorWidget_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
     editor/im/improtocols.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/contacteditor COMPONENT Devel

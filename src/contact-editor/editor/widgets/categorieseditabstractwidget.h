@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
+    Copyright (c) 2017 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,31 +19,30 @@
     02110-1301, USA.
 */
 
-#include "categorieseditwidget.h"
+#ifndef CATEGORIESEDITABSTRACTWIDGET_H
+#define CATEGORIESEDITABSTRACTWIDGET_H
 
-#include <kcontacts/addressee.h>
+#include <QWidget>
+#include "contacteditor_export.h"
 
-#include <QHBoxLayout>
-
-CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
-    : ContactEditor::CategoriesEditAbstractWidget(parent)
+namespace KContacts
 {
-    QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+class Addressee;
 }
 
-CategoriesEditWidget::~CategoriesEditWidget()
+namespace ContactEditor
 {
-}
+class CONTACTEDITOR_EXPORT CategoriesEditAbstractWidget : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit CategoriesEditAbstractWidget(QWidget *parent = nullptr);
+    ~CategoriesEditAbstractWidget();
 
-void CategoriesEditWidget::setReadOnly(bool readOnly)
-{
-}
+    virtual void loadContact(const KContacts::Addressee &contact);
+    virtual void storeContact(KContacts::Addressee &contact) const;
 
-void CategoriesEditWidget::loadContact(const KContacts::Addressee &contact)
-{
+    virtual void setReadOnly(bool readOnly);
+};
 }
-
-void CategoriesEditWidget::storeContact(KContacts::Addressee &contact) const
-{
-}
+#endif // CATEGORIESEDITABSTRACTWIDGET_H

@@ -26,7 +26,6 @@
 #include <QWidget>
 #include "displaynameeditwidget.h"
 class ImageWidget;
-class CategoriesEditWidget;
 namespace KContacts
 {
 class Addressee;
@@ -34,6 +33,7 @@ class Addressee;
 
 namespace ContactEditor
 {
+class CategoriesEditAbstractWidget;
 class PhoneListWidget;
 class WebListWidget;
 class MessagingListWidget;
@@ -63,7 +63,7 @@ private:
     ImageWidget *mPhotoWidget;
     NameWidget *mNameWidget;
     NicknameWidget *mNickNameWidget;
-    CategoriesEditWidget *mCategoriesWidget;
+    ContactEditor::CategoriesEditAbstractWidget *mCategoriesWidget;
     MessageFormattingWidget *mMessageFormattingWidget;
 };
 }

@@ -34,6 +34,9 @@
 #include "categorieseditwidget.h"
 #include "../widgets/imagewidget.h"
 #include "messageformattingwidget.h"
+#include <KPluginLoader>
+#include <KPluginFactory>
+#include <QDebug>
 
 using namespace ContactEditor;
 
@@ -86,7 +89,13 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("categorylabel"));
     categoryWidgetLayout->addWidget(label);
 
-    mCategoriesWidget = new CategoriesEditWidget(this);
+    KPluginLoader loader(QStringLiteral("akonadi/contacts/plugins/categorieseditwidgetplugin"));
+    KPluginFactory *factory = loader.factory();
+    if (factory) {
+        mCategoriesWidget = factory->create<ContactEditor::CategoriesEditAbstractWidget>(parent);
+    } else {
+        mCategoriesWidget = new CategoriesEditWidget(parent);
+    }
     mCategoriesWidget->setObjectName(QStringLiteral("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);
     leftLayout->addWidget(categoryWidget);

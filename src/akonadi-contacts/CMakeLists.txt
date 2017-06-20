@@ -222,4 +222,6 @@ if (BUILD_TESTING)
     add_subdirectory(tests)
 endif()
 
+add_subdirectory(plugins)
+
 install( FILES akonadi-contacts.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
