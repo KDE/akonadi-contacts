@@ -27,13 +27,10 @@ install(FILES
     COMPONENT Devel
     )
 
-install(EXPORT KF5AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiContactTargets.cmake NAMESPACE KF5::)
-
 
 set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
 set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
 
-add_subdirectory(editor/im)
 ########### next target ###############
 
 set(akonadicontact_actions_SRCS
@@ -52,101 +49,6 @@ configure_file(config-akonadi-contact.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config
 configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
 kconfig_add_kcfg_files(akonadicontact_actions_SRCS actions/contactactionssettings.kcfgc)
 
-set(akonadicontact_customfieldseditor_SRCS
-    editor/customfieldeditor/customfieldswidget.cpp
-    editor/customfieldeditor/customfieldeditorwidget.cpp
-    editor/customfieldeditor/customfieldslistwidget.cpp
-    editor/customfieldeditor/customfieldslistdelegate.cpp
-    editor/customfieldeditor/customfieldsmodel.cpp
-    )
-
-set(akonadicontact_editor_utils_SRCS
-    editor/utils/utils.cpp
-    )
-
-set(akonadicontact_editor_widgets_SRCS
-    editor/widgets/kwidgetlister.cpp
-    editor/widgets/akonadicontactcombobox.cpp
-    )
-
-set(akonadicontact_editor_generalinfo_phone_SRCS
-    editor/generalinfoeditor/phone/phonewidgetlister.cpp
-    editor/generalinfoeditor/phone/phonewidget.cpp
-    editor/generalinfoeditor/phone/phonelistwidget.cpp
-    editor/generalinfoeditor/phone/phonecomboboxtype.cpp
-    editor/generalinfoeditor/phone/phonetypedialog.cpp
-    )
-
-set(akonadicontact_editor_generalinfo_web_SRCS
-    editor/generalinfoeditor/web/webwidgetlister.cpp
-    editor/generalinfoeditor/web/weblistwidget.cpp
-    editor/generalinfoeditor/web/webwidget.cpp
-    )
-set(akonadicontact_editor_generalinfo_mail_SRCS
-    editor/generalinfoeditor/mail/maillistwidget.cpp
-    editor/generalinfoeditor/mail/mailwidget.cpp
-    editor/generalinfoeditor/mail/mailwidgetlister.cpp
-    )
-
-set(akonadicontact_editor_generalinfo_messaging_SRCS
-    editor/generalinfoeditor/messaging/messaginglistwidget.cpp
-    editor/generalinfoeditor/messaging/messagingwidget.cpp
-    editor/generalinfoeditor/messaging/messagingwidgetlister.cpp
-    )
-
-
-set(akonadicontact_editor_generalinfo_SRCS
-    editor/generalinfoeditor/generalinfowidget.cpp
-    editor/generalinfoeditor/namewidget.cpp
-    editor/generalinfoeditor/nicknamewidget.cpp
-    editor/generalinfoeditor/categorieseditwidget.cpp
-    editor/generalinfoeditor/nameeditdialog.cpp
-    editor/generalinfoeditor/displaynameeditwidget.cpp
-    editor/generalinfoeditor/akonadicontactselecttypecombobox.cpp
-    editor/generalinfoeditor/messageformattingwidget.cpp
-    ${akonadicontact_editor_generalinfo_messaging_SRCS}
-    ${akonadicontact_editor_generalinfo_phone_SRCS}
-    ${akonadicontact_editor_generalinfo_web_SRCS}
-    ${akonadicontact_editor_generalinfo_mail_SRCS}
-    )
-
-set(akonadicontact_addresslocation_web_editor_SRCS
-    editor/addresseditor/webengine/addresseslocationengineviewer.cpp
-    editor/addresseditor/webengine/addresseslocationenginepage.cpp
-    )
-
-set(akonadicontact_addresslocation_editor_SRCS
-    ${akonadicontact_addresslocation_web_editor_SRCS}
-    editor/addresseditor/addresslocationwidget.cpp
-    editor/addresseditor/addresseslocationgrantleeformater.cpp
-    editor/addresseditor/addressgrantleeobject.cpp
-    editor/addresseditor/iconnamecache.cpp
-    editor/addresseditor/addresseslocationwidget.cpp
-    editor/addresseditor/selectaddresstypecombobox.cpp
-    editor/addresseditor/addresstypedialog.cpp
-    )
-
-set(akonadicontact_personal_editor_SRCS
-    editor/personaleditor/personaleditorwidget.cpp
-    editor/personaleditor/dateeditwidget.cpp
-    editor/personaleditor/kdatepickerpopup.cpp
-    )
-
-set(akonadicontact_business_editor_SRCS
-    editor/businesseditor/businesseditorwidget.cpp
-    editor/businesseditor/freebusyeditwidget.cpp
-    )
-
-set(akonadicontact_editor_SRCS
-    ${akonadicontact_personal_editor_SRCS}
-    ${akonadicontact_editor_utils_SRCS}
-    ${akonadicontact_business_editor_SRCS}
-    editor/contacteditorwidget.cpp
-    editor/im/imaddress.cpp
-    editor/im/improtocols.cpp
-    editor/widgets/imagewidget.cpp
-    editor/widgets/preferredlineeditwidget.cpp
-    )
 
 set(akonadicontact_attributes_SRCS
     attributes/contactmetadataattribute.cpp
@@ -160,9 +62,6 @@ set(akonadicontact_job_SRCS
 )
 
 set(akonadicontact_LIB_SRC
-    ${akonadicontact_addresslocation_editor_SRCS}
-    ${akonadicontact_editor_widgets_SRCS}
-    ${akonadicontact_editor_generalinfo_SRCS}
     ${akonadicontact_customfieldseditor_SRCS}
     ${akonadicontact_attributes_SRCS}
     ${akonadicontact_job_SRCS}
@@ -180,14 +79,11 @@ set(akonadicontact_LIB_SRC
     contactgroupviewer.cpp
     contactgroupviewerdialog.cpp
     contactmetadataakonadi.cpp
-    contactmetadatabase.cpp
     contactparts.cpp
     contactsfilterproxymodel.cpp
     contactstreemodel.cpp
     contactviewer.cpp
     contactviewerdialog.cpp
-    customfields.cpp
-    customfieldmanager.cpp
     emailaddressselection.cpp
     emailaddressselectiondialog.cpp
     emailaddressselectionproxymodel.cpp
@@ -208,7 +104,6 @@ ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_de
 
 set(akonadicontact_LIB_SRC
     ${akonadicontact_LIB_SRC}
-    ${akonadicontact_editor_SRCS}
     )
 
 ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
@@ -247,6 +142,7 @@ target_link_libraries(KF5AkonadiContact
     Grantlee5::Templates
     Qt5::WebEngine
     Qt5::WebEngineWidgets
+    KF5::ContactEditor
     )
 
 if(KF5Prison_FOUND)
@@ -332,21 +228,9 @@ install( FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
     )
 
-if (BUILD_TESTING)
-    add_subdirectory(editor/addresseditor/autotests/)
-    add_subdirectory(editor/addresseditor/tests)
-    add_subdirectory(editor/generalinfoeditor/autotests/)
-    add_subdirectory(editor/generalinfoeditor/tests)
-    add_subdirectory(editor/customfieldeditor/autotests/)
-    add_subdirectory(editor/customfieldeditor/tests)
-    add_subdirectory(editor/widgets/autotests/)
-endif()
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(tests)
 endif()
-
-
-add_subdirectory(editor/addresseditor/html)
 
