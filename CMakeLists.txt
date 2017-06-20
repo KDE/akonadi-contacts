@@ -71,9 +71,5 @@ endif(BUILD_TESTING)
 
 add_subdirectory(src)
 add_subdirectory(kcm)
-if (BUILD_TESTING)
-    add_subdirectory(autotests)
-    add_subdirectory(tests)
-endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

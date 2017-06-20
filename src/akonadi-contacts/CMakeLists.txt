@@ -342,6 +342,11 @@ if (BUILD_TESTING)
     add_subdirectory(editor/widgets/autotests/)
 endif()
 
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+    add_subdirectory(tests)
+endif()
+
 
 add_subdirectory(editor/addresseditor/html)
 
