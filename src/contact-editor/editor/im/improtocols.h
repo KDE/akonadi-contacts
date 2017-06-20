@@ -19,12 +19,12 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADI_CONTACT_IMPROTOCOLS_H
-#define AKONADI_CONTACT_IMPROTOCOLS_H
+#ifndef CONTACTEDITOR_CONTACT_IMPROTOCOLS_H
+#define CONTACTEDITOR_CONTACT_IMPROTOCOLS_H
 
 #include <kplugininfo.h>
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 class IMProtocolInfo
 {
@@ -42,7 +42,7 @@ private:
     QString mIcon;
 };
 
-class AKONADI_CONTACT_EXPORT IMProtocols
+class CONTACTEDITOR_EXPORT IMProtocols
 {
 public:
     ~IMProtocols();
