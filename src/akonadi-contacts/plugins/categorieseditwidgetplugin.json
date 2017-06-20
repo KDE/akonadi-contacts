@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "categorieseditwidget",
+        "Name": "CategoriesEditPlugin",
+        "ServiceTypes": [
+            "AkonadiContacts/CategoriesEditor"
+        ],
+        "Version": "1.0"
+    }
+}
