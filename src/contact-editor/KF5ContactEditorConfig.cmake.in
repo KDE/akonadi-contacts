@@ -1,6 +1,5 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
-find_dependency(KF5Akonadi "@AKONADI_VERSION@")
 find_dependency(KF5Contacts "@KCONTACTS_VERSION@")
 
 
