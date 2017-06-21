@@ -180,11 +180,6 @@ target_link_libraries(KF5ContactEditor
     Qt5::WebEngineWidgets
     )
 
-if(KF5Prison_FOUND)
-    target_link_libraries(KF5ContactEditor PRIVATE KF5::Prison)
-endif()
-
-
 set_target_properties(KF5ContactEditor PROPERTIES
     VERSION ${AKONADICONTACT_VERSION_STRING}
     SOVERSION ${AKONADICONTACT_SOVERSION}
