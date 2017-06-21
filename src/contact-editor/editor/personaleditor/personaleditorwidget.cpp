@@ -68,14 +68,13 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
 
 PersonalEditorWidget::~PersonalEditorWidget()
 {
-
 }
 
 void PersonalEditorWidget::loadContact(const KContacts::Addressee &contact)
 {
     mBirthdateWidget->setDate(contact.birthday().date());
     mAnniversaryWidget->setDate(QDate::fromString(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-Anniversary")),
-                                Qt::ISODate));
+                                                  Qt::ISODate));
     // family group
     mPartnerWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-SpousesName")));
 }

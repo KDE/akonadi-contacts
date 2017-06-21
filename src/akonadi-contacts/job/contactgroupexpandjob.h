@@ -28,9 +28,7 @@
 #include <kcontacts/contactgroup.h>
 #include <kjob.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short Job that expands a ContactGroup to a list of contacts.
  *
@@ -110,7 +108,6 @@ private:
     Q_PRIVATE_SLOT(d, void searchResult(KJob *))
     //@endcond
 };
-
 }
 
 #endif

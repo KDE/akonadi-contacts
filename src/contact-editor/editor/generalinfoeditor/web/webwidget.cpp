@@ -77,7 +77,6 @@ WebWidget::WebWidget(QWidget *parent)
 
 WebWidget::~WebWidget()
 {
-
 }
 
 void WebWidget::clearWidget()

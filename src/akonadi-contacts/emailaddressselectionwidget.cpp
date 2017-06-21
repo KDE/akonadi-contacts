@@ -63,9 +63,9 @@ public:
     }
 
 protected:
-    void keyPressEvent(QKeyEvent *event) override {
-        if (event->key() == Qt::Key_Down)
-        {
+    void keyPressEvent(QKeyEvent *event) override
+    {
+        if (event->key() == Qt::Key_Down) {
             QMetaObject::invokeMethod(mReceiver, "setFocus");
         }
 

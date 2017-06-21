@@ -40,6 +40,7 @@ public:
         , mExcludeVirtualCollections(false)
     {
     }
+
     QString mFilter;
     ContactsFilterProxyModel::FilterFlags flags;
     bool mExcludeVirtualCollections;

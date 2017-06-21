@@ -27,9 +27,7 @@
 
 #include <entitytreemodel.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short A model for contacts and contact groups as available in Akonadi.
  *
@@ -200,7 +198,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

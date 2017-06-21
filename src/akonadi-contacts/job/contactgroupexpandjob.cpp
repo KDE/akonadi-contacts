@@ -70,7 +70,7 @@ public:
             job->fetchScope().fetchFullPayload();
             job->setProperty("preferredEmail", reference.preferredEmail());
 
-            mParent->connect(job, SIGNAL(result(KJob*)), mParent, SLOT(fetchResult(KJob*)));
+            mParent->connect(job, SIGNAL(result(KJob *)), mParent, SLOT(fetchResult(KJob *)));
 
             mFetchCount++;
         }
@@ -160,7 +160,7 @@ void ContactGroupExpandJob::start()
         ContactGroupSearchJob *searchJob = new ContactGroupSearchJob(this);
         searchJob->setQuery(ContactGroupSearchJob::Name, d->mName);
         searchJob->setLimit(1);
-        connect(searchJob, SIGNAL(result(KJob*)), this, SLOT(searchResult(KJob*)));
+        connect(searchJob, SIGNAL(result(KJob *)), this, SLOT(searchResult(KJob *)));
     } else {
         QMetaObject::invokeMethod(this, "resolveGroup", Qt::QueuedConnection);
     }

@@ -26,7 +26,7 @@
 #include <QVariant>
 #include "contacteditor_export.h"
 
-template <typename T>
+template<typename T>
 class QVector;
 
 /**

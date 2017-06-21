@@ -52,7 +52,6 @@ EmailAddressSelectionModel::EmailAddressSelectionModel(QObject *parent)
 
 EmailAddressSelectionModel::~EmailAddressSelectionModel()
 {
-
 }
 
 Akonadi::ContactsTreeModel *EmailAddressSelectionModel::model() const

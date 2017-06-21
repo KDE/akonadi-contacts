@@ -26,12 +26,10 @@
 #include <QWidget>
 #include "contacteditor_private_export.h"
 class QToolButton;
-namespace KContacts
-{
+namespace KContacts {
 class PhoneNumber;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class PreferredLineEditWidget;
 class PhoneComboBoxType;
 class CONTACTEDITOR_TESTS_EXPORT PhoneWidget : public QWidget

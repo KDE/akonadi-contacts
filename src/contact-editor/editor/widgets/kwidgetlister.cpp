@@ -43,12 +43,11 @@ class Q_DECL_HIDDEN KWidgetLister::Private
 {
 public:
     Private(KWidgetLister *qq)
-        : q(qq),
-          mLayout(nullptr),
-          mButtonBox(nullptr),
-          mMinWidgets(0),
-          mMaxWidgets(0)
-
+        : q(qq)
+        , mLayout(nullptr)
+        , mButtonBox(nullptr)
+        , mMinWidgets(0)
+        , mMaxWidgets(0)
     {
     }
 
@@ -67,7 +66,8 @@ public:
 };
 
 KWidgetLister::KWidgetLister(int minWidgets, int maxWidgets, QWidget *parent)
-    : QWidget(parent), d(new Private(this))
+    : QWidget(parent)
+    , d(new Private(this))
 {
     d->mMinWidgets = qMax(minWidgets, 1);
     d->mMaxWidgets = qMax(maxWidgets, d->mMinWidgets + 1);
@@ -157,7 +157,7 @@ QWidget *KWidgetLister::createWidget(QWidget *parent)
 void KWidgetLister::setNumberOfShownWidgetsTo(int aNum)
 {
     int superfluousWidgets = qMax((int)d->mWidgetList.count() - aNum, 0);
-    int missingWidgets     = qMax(aNum - (int)d->mWidgetList.count(), 0);
+    int missingWidgets = qMax(aNum - (int)d->mWidgetList.count(), 0);
 
     // remove superfluous widgets
     for (; superfluousWidgets; superfluousWidgets--) {
@@ -190,17 +190,16 @@ void KWidgetLister::removeWidget(QWidget *widget)
     // The layout will take care that the
     // widget is removed from screen, too.
 
-    if (d->mWidgetList.count()  <= widgetsMinimum()) {
+    if (d->mWidgetList.count() <= widgetsMinimum()) {
         return;
     }
 
     const int index = d->mWidgetList.indexOf(widget);
-    QWidget *w =  d->mWidgetList.takeAt(index);
+    QWidget *w = d->mWidgetList.takeAt(index);
     w->deleteLater();
     w = nullptr;
     Q_EMIT widgetRemoved(widget);
     Q_EMIT widgetRemoved();
-
 }
 
 void KWidgetLister::addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *widget)
@@ -209,7 +208,7 @@ void KWidgetLister::addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *wi
         widget = this->createWidget(this);
     }
 
-    int index = d->mLayout->indexOf(currentWidget ? currentWidget :  d->mButtonBox) + 1;
+    int index = d->mLayout->indexOf(currentWidget ? currentWidget : d->mButtonBox) + 1;
     d->mLayout->insertWidget(index, widget);
     if (currentWidget) {
         index = d->mWidgetList.indexOf(currentWidget);
@@ -222,4 +221,3 @@ void KWidgetLister::addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *wi
     Q_EMIT widgetAdded();
     Q_EMIT widgetAdded(widget);
 }
-

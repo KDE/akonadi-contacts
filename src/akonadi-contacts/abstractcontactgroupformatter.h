@@ -26,13 +26,11 @@
 
 #include <QVariant>
 
-namespace KContacts
-{
+namespace KContacts {
 class ContactGroup;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Item;
 
 /**
@@ -123,7 +121,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

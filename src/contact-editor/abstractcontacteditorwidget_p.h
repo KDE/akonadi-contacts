@@ -24,14 +24,11 @@
 
 #include <QWidget>
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 
-namespace ContactEditor
-{
-
+namespace ContactEditor {
 class ContactMetaDataBase;
 
 class AbstractContactEditorWidget : public QWidget
@@ -69,7 +66,6 @@ public:
      */
     virtual void setReadOnly(bool readOnly) = 0;
 };
-
 }
 
 #endif

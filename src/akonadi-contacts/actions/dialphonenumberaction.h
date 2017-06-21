@@ -22,14 +22,11 @@
 #ifndef AKONADI_DIALPHONENUMBERACTION_H
 #define AKONADI_DIALPHONENUMBERACTION_H
 
-namespace KContacts
-{
+namespace KContacts {
 class PhoneNumber;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short An action to dial the phone number of a contact.
  *
@@ -40,7 +37,6 @@ class DialPhoneNumberAction
 public:
     void dialNumber(const KContacts::PhoneNumber &number);
 };
-
 }
 
 #endif

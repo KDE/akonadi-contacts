@@ -69,7 +69,6 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
 
 CustomFieldEditorWidget::~CustomFieldEditorWidget()
 {
-
 }
 
 void CustomFieldEditorWidget::fillTypes()

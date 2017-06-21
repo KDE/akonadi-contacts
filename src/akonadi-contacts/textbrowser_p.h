@@ -25,9 +25,7 @@
 
 #include <QTextBrowser>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * A convenience class to remove the 'Copy Link Location' action
  * from the context menu of QTextBrowser.
@@ -46,7 +44,6 @@ protected:
 private:
     QVariant mDataToCopy;
 };
-
 }
 
 #endif

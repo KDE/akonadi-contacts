@@ -43,8 +43,7 @@ using namespace Akonadi;
 class Q_DECL_HIDDEN ContactEditorDialog::Private
 {
 public:
-    Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, ContactEditor::AbstractContactEditorWidget *editorWidget,
-            ContactEditorDialog *parent)
+    Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, ContactEditor::AbstractContactEditorWidget *editorWidget, ContactEditorDialog *parent)
         : q(parent)
         , mAddressBookBox(nullptr)
         , mMode(mode)
@@ -65,7 +64,8 @@ public:
         if (editorWidget) {
             mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode, editorWidget, q);
         } else {
-            mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode, displaymode == ContactEditorDialog::FullMode ? AkonadiContactEditor::FullMode : AkonadiContactEditor::VCardMode, q);
+            mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode,
+                                               displaymode == ContactEditorDialog::FullMode ? AkonadiContactEditor::FullMode : AkonadiContactEditor::VCardMode, q);
         }
 
         if (mode == ContactEditorDialog::CreateMode) {
@@ -115,7 +115,7 @@ public:
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("ContactEditor"));
-        const QSize size = group.readEntry("Size", QSize(800,  500));
+        const QSize size = group.readEntry("Size", QSize(800, 500));
         if (size.isValid()) {
             q->resize(size);
         }

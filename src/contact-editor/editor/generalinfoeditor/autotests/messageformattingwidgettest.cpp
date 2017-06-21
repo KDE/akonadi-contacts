@@ -19,7 +19,6 @@
     02110-1301, USA.
 */
 
-
 #include "messageformattingwidgettest.h"
 #include "../messageformattingwidget.h"
 #include <QCheckBox>
@@ -30,7 +29,6 @@
 MessageFormattingWidgetTest::MessageFormattingWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MessageFormattingWidgetTest::shouldHaveDefaultValue()

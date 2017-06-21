@@ -28,9 +28,7 @@
 
 #include <QWidget>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class AbstractContactGroupFormatter;
 
 /**
@@ -124,7 +122,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotParentCollectionFetched(KJob *))
     //@endcond
 };
-
 }
 
 #endif

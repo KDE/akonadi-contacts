@@ -33,9 +33,7 @@ class KActionCollection;
 class QItemSelectionModel;
 class QWidget;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Item;
 
 /**
@@ -190,7 +188,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotContactEditorError(const QString &))
     //@endcond
 };
-
 }
 
 #endif

@@ -25,12 +25,10 @@
 class KLineEdit;
 class ImageWidget;
 class FreeBusyEditWidget;
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class BusinessEditorWidget : public QWidget
 {
     Q_OBJECT

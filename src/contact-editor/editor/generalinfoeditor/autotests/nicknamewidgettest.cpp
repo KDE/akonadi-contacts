@@ -19,7 +19,6 @@
     02110-1301, USA.
 */
 
-
 #include "nicknamewidgettest.h"
 
 #include <QTest>
@@ -27,7 +26,6 @@
 NicknameWidgetTest::NicknameWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 QTEST_MAIN(NicknameWidgetTest)

@@ -35,7 +35,8 @@ class Q_DECL_HIDDEN Akonadi::EmailAddressRequester::Private
 {
 public:
     Private(EmailAddressRequester *qq)
-        : q(qq), mLineEdit(nullptr)
+        : q(qq)
+        , mLineEdit(nullptr)
     {
     }
 
@@ -74,8 +75,8 @@ void EmailAddressRequester::Private::slotAddressBook()
 }
 
 EmailAddressRequester::EmailAddressRequester(QWidget *parent)
-    : QWidget(parent),
-      d(new Private(this))
+    : QWidget(parent)
+    , d(new Private(this))
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setSpacing(4);
@@ -121,4 +122,5 @@ KLineEdit *EmailAddressRequester::lineEdit() const
 {
     return d->mLineEdit;
 }
+
 #include "moc_emailaddressrequester.cpp"

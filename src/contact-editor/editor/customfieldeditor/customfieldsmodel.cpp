@@ -92,17 +92,20 @@ QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
             case CustomField::BooleanType:
                 return QString();
                 break;
-            case CustomField::DateType: {
+            case CustomField::DateType:
+            {
                 const QDate value = QDate::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value, QLocale::ShortFormat);
                 break;
             }
-            case CustomField::TimeType: {
+            case CustomField::TimeType:
+            {
                 const QTime value = QTime::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value);
                 break;
             }
-            case CustomField::DateTimeType: {
+            case CustomField::DateTimeType:
+            {
                 const QDateTime value = QDateTime::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value);
                 break;
@@ -117,7 +120,7 @@ QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
     if (role == Qt::CheckStateRole) {
         if (index.column() == 1) {
             if (customField.type() == CustomField::BooleanType) {
-                return (customField.value() == QLatin1String("true") ? Qt::Checked : Qt::Unchecked);
+                return customField.value() == QLatin1String("true") ? Qt::Checked : Qt::Unchecked;
             }
         }
     }
@@ -175,8 +178,8 @@ bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value,
     if (role == Qt::CheckStateRole) {
         if (index.column() == 1) {
             if (customField.type() == CustomField::BooleanType) {
-                customField.setValue(static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked ?
-                                     QStringLiteral("true") : QStringLiteral("false"));
+                customField.setValue(static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked
+                                     ? QStringLiteral("true") : QStringLiteral("false"));
                 Q_EMIT dataChanged(index, index);
                 return true;
             }
@@ -229,9 +232,9 @@ Qt::ItemFlags CustomFieldsModel::flags(const QModelIndex &index) const
 
     const Qt::ItemFlags parentFlags = QAbstractItemModel::flags(index);
     if ((customField.type() == CustomField::BooleanType) && (index.column() == 1)) {
-        return (parentFlags | Qt::ItemIsEnabled | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
+        return parentFlags | Qt::ItemIsEnabled | Qt::ItemIsEditable | Qt::ItemIsUserCheckable;
     } else {
-        return (parentFlags | Qt::ItemIsEnabled | Qt::ItemIsEditable);
+        return parentFlags | Qt::ItemIsEnabled | Qt::ItemIsEditable;
     }
 }
 

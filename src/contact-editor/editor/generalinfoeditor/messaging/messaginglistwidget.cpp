@@ -46,7 +46,6 @@ MessagingListWidget::MessagingListWidget(QWidget *parent)
 
 MessagingListWidget::~MessagingListWidget()
 {
-
 }
 
 void MessagingListWidget::loadContact(const KContacts::Addressee &contact)

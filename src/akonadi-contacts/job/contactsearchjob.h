@@ -27,9 +27,7 @@
 #include <itemsearchjob.h>
 #include <kcontacts/addressee.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short Job that searches for contacts in the Akonadi storage.
  *
@@ -148,7 +146,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

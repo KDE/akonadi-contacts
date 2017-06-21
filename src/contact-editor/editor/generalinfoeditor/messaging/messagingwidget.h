@@ -28,8 +28,7 @@
 #include <editor/im/imaddress.h>
 #include "contacteditor_private_export.h"
 class QToolButton;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class PreferredLineEditWidget;
 class ContactEditorComboBox;
 class CONTACTEDITOR_TESTS_EXPORT MessagingWidget : public QWidget

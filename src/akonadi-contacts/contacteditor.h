@@ -26,17 +26,13 @@
 
 #include <QWidget>
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AbstractContactEditorWidget;
 }
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Collection;
 class Item;
 
@@ -193,7 +189,6 @@ private:
     Q_PRIVATE_SLOT(d, void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &))
     //@endcond
 };
-
 }
 
 #endif

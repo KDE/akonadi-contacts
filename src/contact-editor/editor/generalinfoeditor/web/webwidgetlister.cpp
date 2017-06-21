@@ -35,7 +35,6 @@ WebWidgetLister::WebWidgetLister(QWidget *parent)
 
 WebWidgetLister::~WebWidgetLister()
 {
-
 }
 
 void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
@@ -128,4 +127,3 @@ void WebWidgetLister::slotPreferredChanged(WebWidget *w)
         }
     }
 }
-

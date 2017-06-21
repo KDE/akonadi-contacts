@@ -26,13 +26,11 @@
 #include <QWidget>
 #include <QVariantList>
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CustomFieldEditorWidget;
 class CustomFieldsListWidget;
 class CustomFieldsWidget : public QWidget

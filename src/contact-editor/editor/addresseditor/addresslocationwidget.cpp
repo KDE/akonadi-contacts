@@ -41,9 +41,9 @@ struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
 };
 
 AddressLocationWidget::AddressLocationWidget(QWidget *parent)
-    : QWidget(parent),
-      mCurrentAddress(-1),
-      mCurrentMode(CreateAddress)
+    : QWidget(parent)
+    , mCurrentAddress(-1)
+    , mCurrentMode(CreateAddress)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
 
@@ -158,7 +158,6 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
 AddressLocationWidget::~AddressLocationWidget()
 {
-
 }
 
 void AddressLocationWidget::setReadOnly(bool readOnly)

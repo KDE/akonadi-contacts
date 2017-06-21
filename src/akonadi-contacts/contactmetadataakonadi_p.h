@@ -25,9 +25,7 @@
 #include <QStringList>
 #include <QVariant>
 #include "contactmetadatabase_p.h"
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Item;
 
 /**
@@ -56,7 +54,6 @@ public:
      */
     void store(Akonadi::Item &contact);
 };
-
 }
 
 #endif

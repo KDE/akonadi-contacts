@@ -24,8 +24,7 @@
 
 #include <QWebEnginePage>
 
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AddressesLocationEnginePage : public QWebEnginePage
 {
     Q_OBJECT

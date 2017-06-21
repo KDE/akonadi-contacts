@@ -26,13 +26,11 @@
 
 #include <QVariantMap>
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Item;
 
 /**
@@ -131,7 +129,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

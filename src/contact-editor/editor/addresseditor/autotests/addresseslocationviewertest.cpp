@@ -28,12 +28,10 @@ using namespace ContactEditor;
 AddressesLocationViewerTest::AddressesLocationViewerTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AddressesLocationViewerTest::~AddressesLocationViewerTest()
 {
-
 }
 
 void AddressesLocationViewerTest::shouldHaveDefaultValue()

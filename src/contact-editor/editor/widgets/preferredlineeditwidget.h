@@ -25,8 +25,7 @@
 #include <KLineEdit>
 #include <QIcon>
 class QAction;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class PreferredLineEditWidget : public KLineEdit
 {
     Q_OBJECT

@@ -60,7 +60,7 @@ WaitingOverlay::WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent)
     reposition();
 }
 
-WaitingOverlay::~ WaitingOverlay()
+WaitingOverlay::~WaitingOverlay()
 {
     if (mBaseWidget) {
         mBaseWidget->setEnabled(mPreviousState);
@@ -99,10 +99,10 @@ void WaitingOverlay::reposition()
 
 bool WaitingOverlay::eventFilter(QObject *object, QEvent *event)
 {
-    if (object == mBaseWidget &&
-            (event->type() == QEvent::Move || event->type() == QEvent::Resize ||
-             event->type() == QEvent::Show || event->type() == QEvent::Hide ||
-             event->type() == QEvent::ParentChange)) {
+    if (object == mBaseWidget
+        && (event->type() == QEvent::Move || event->type() == QEvent::Resize
+            || event->type() == QEvent::Show || event->type() == QEvent::Hide
+            || event->type() == QEvent::ParentChange)) {
         reposition();
     }
     return QWidget::eventFilter(object, event);

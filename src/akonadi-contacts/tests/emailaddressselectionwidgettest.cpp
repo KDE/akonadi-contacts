@@ -69,7 +69,6 @@ void MainWidget::showSelection()
 
 int main(int argc, char **argv)
 {
-
     KAboutData aboutData(QStringLiteral("emailaddressselectionwidgettest"), i18n("Test EmailAddressSelectionWidget"), QStringLiteral("0.1"));
     KAboutData::setApplicationData(aboutData);
 

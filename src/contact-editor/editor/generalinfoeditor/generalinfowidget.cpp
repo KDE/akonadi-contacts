@@ -110,7 +110,6 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 
 GeneralInfoWidget::~GeneralInfoWidget()
 {
-
 }
 
 void GeneralInfoWidget::setDisplayType(DisplayNameEditWidget::DisplayType type)

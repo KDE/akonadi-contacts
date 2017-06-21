@@ -25,12 +25,10 @@
 
 #include <QWidget>
 class KLineEdit;
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class NicknameWidget : public QWidget
 {
     Q_OBJECT

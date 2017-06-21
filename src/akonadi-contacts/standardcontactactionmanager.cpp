@@ -103,7 +103,6 @@ public:
         updateGenericAction(StandardActionManager::MoveToTrashRestoreItem);
         updateGenericAction(StandardActionManager::MoveToTrashRestoreItemAlternative);
         updateGenericAction(StandardActionManager::SynchronizeFavoriteCollections);
-
     }
 
     void updateGenericAction(StandardActionManager::Type type)
@@ -126,10 +125,10 @@ public:
             mGenericManager->setContextText(
                 StandardActionManager::CreateCollection, StandardActionManager::ErrorMessageTitle,
                 i18n("Address book folder creation failed"));
-            mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setProperty("ContentMimeTypes", QStringList() <<
-                    QStringLiteral("application/x-vnd.kde.contactgroup") <<
-                    QStringLiteral("text/directory") <<
-                    QStringLiteral("application/x-vnd.kde.contactgroup"));
+            mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setProperty("ContentMimeTypes", QStringList()
+                                                                                                   <<QStringLiteral("application/x-vnd.kde.contactgroup")
+                                                                                                   <<QStringLiteral("text/directory")
+                                                                                                   <<QStringLiteral("application/x-vnd.kde.contactgroup"));
 
             break;
         case Akonadi::StandardActionManager::CopyCollections:
@@ -270,7 +269,7 @@ public:
                                                   "Update %1 Address Books"));
 
             mGenericManager->action(Akonadi::StandardActionManager::SynchronizeResources)->setWhatsThis
-            (i18n("Updates the content of all folders of the selected address books."));
+                (i18n("Updates the content of all folders of the selected address books."));
 
             break;
         case StandardActionManager::Paste:
@@ -285,16 +284,15 @@ public:
         default:
             break;
         }
-
     }
 
     static bool hasWritableCollection(const QModelIndex &index, const QString &mimeType)
     {
-        const Akonadi::Collection collection =
-            index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const Akonadi::Collection collection
+            = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
         if (collection.isValid()) {
-            if (collection.contentMimeTypes().contains(mimeType) &&
-                    (collection.rights() & Akonadi::Collection::CanCreateItem)) {
+            if (collection.contentMimeTypes().contains(mimeType)
+                && (collection.rights() & Akonadi::Collection::CanCreateItem)) {
                 return true;
             }
         }
@@ -590,7 +588,7 @@ QAction *StandardContactActionManager::createAction(Type type)
         action->setWhatsThis(i18n("Create a new contact<p>You will be presented with a dialog where you can add data about a person, including addresses and phone numbers.</p>"));
         d->mActions.insert(CreateContact, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_contact_create"), action);
-        d->mActionCollection->setDefaultShortcut(action,  QKeySequence(Qt::CTRL + Qt::Key_N));
+        d->mActionCollection->setDefaultShortcut(action, QKeySequence(Qt::CTRL + Qt::Key_N));
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContact()));
         break;
     case CreateContactGroup:
@@ -691,4 +689,5 @@ void StandardContactActionManager::setCollectionPropertiesPageNames(const QStrin
 {
     d->mGenericManager->setCollectionPropertiesPageNames(names);
 }
+
 #include "moc_standardcontactactionmanager.cpp"

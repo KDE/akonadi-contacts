@@ -127,7 +127,6 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
 
 BusinessEditorWidget::~BusinessEditorWidget()
 {
-
 }
 
 void BusinessEditorWidget::loadContact(const KContacts::Addressee &contact)
@@ -143,7 +142,6 @@ void BusinessEditorWidget::loadContact(const KContacts::Addressee &contact)
 
     // groupware group
     mFreeBusyWidget->loadContact(contact);
-
 }
 
 void BusinessEditorWidget::storeContact(KContacts::Addressee &contact)
@@ -175,5 +173,4 @@ void BusinessEditorWidget::setReadOnly(bool readOnly)
 
     // widgets from groupware group
     mFreeBusyWidget->setReadOnly(readOnly);
-
 }

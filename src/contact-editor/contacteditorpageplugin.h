@@ -24,14 +24,11 @@
 
 #include <QWidget>
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 
-namespace ContactEditor
-{
-
+namespace ContactEditor {
 /**
  * @short The base class for custom ContactEditor page plugins.
  *
@@ -61,7 +58,6 @@ public:
      */
     virtual void setReadOnly(bool readOnly) = 0;
 };
-
 }
 
 Q_DECLARE_INTERFACE(ContactEditor::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")

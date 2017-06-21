@@ -30,8 +30,7 @@ class QButtonGroup;
  *
  * @note This dialog is only used by AddressTypeCombo.
  */
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AddressTypeDialog : public QDialog
 {
     Q_OBJECT

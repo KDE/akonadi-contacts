@@ -66,7 +66,7 @@ public:
         job->setProperty("row", row);
         job->fetchScope().fetchFullPayload();
 
-        mParent->connect(job, SIGNAL(result(KJob*)), SLOT(itemFetched(KJob*)));
+        mParent->connect(job, SIGNAL(result(KJob *)), SLOT(itemFetched(KJob *)));
     }
 
     void itemFetched(KJob *job)
@@ -211,9 +211,9 @@ bool ContactGroupModel::storeContactGroup(KContacts::ContactGroup &group) const
         } else {
             if (i != (d->mMembers.count() - 1)) {
                 if (member.data.email().isEmpty()) {
-                    d->mLastErrorMessage =
-                        i18n("The member with name <b>%1</b> is missing an email address",
-                             member.data.name());
+                    d->mLastErrorMessage
+                        = i18n("The member with name <b>%1</b> is missing an email address",
+                               member.data.name());
                     return false;
                 }
                 group.append(member.data);
@@ -431,7 +431,7 @@ Qt::ItemFlags ContactGroupModel::flags(const QModelIndex &index) const
     }
 
     Qt::ItemFlags parentFlags = QAbstractItemModel::flags(index);
-    return (parentFlags | Qt::ItemIsEnabled | Qt::ItemIsEditable);
+    return parentFlags | Qt::ItemIsEnabled | Qt::ItemIsEditable;
 }
 
 int ContactGroupModel::columnCount(const QModelIndex &parent) const

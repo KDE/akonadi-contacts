@@ -31,9 +31,7 @@
 
 class KJob;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class ContactGroupModel;
 class Monitor;
 
@@ -65,7 +63,6 @@ public:
     bool mReadOnly;
     ContactGroupModel *mGroupModel;
 };
-
 }
 
 #endif

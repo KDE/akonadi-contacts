@@ -36,9 +36,7 @@ class QLineEdit;
 class QAbstractItemModel;
 class QTreeView;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short A widget to select email addresses from Akonadi.
  *
@@ -123,7 +121,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

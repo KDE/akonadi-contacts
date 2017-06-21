@@ -97,7 +97,6 @@ QModelIndex LeafExtensionProxyModel::index(int row, int column, const QModelInde
         const QModelIndex sourceParent = mapToSource(parent);
         const QModelIndex sourceIndex = sourceModel()->index(row, column, sourceParent);
         if (!sourceIndex.isValid()) {
-
             qint64 key = -1;
             QMapIterator<qint64, QModelIndex> it(d->mParentIndexes);
             while (it.hasNext()) {
@@ -190,7 +189,7 @@ bool LeafExtensionProxyModel::hasChildren(const QModelIndex &parent) const
 
     const QModelIndex sourceParent = mapToSource(parent);
     if (sourceModel() && sourceModel()->rowCount(sourceParent) == 0) {
-        return (leafRowCount(parent) != 0);
+        return leafRowCount(parent) != 0;
     }
 
     return QSortFilterProxyModel::hasChildren(parent);

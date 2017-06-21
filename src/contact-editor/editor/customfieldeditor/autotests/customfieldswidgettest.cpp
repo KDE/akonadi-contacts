@@ -29,12 +29,10 @@
 CustomFieldsWidgetTest::CustomFieldsWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CustomFieldsWidgetTest::~CustomFieldsWidgetTest()
 {
-
 }
 
 void CustomFieldsWidgetTest::shouldHaveDefaultValue()

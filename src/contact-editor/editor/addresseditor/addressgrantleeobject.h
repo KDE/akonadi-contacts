@@ -25,8 +25,7 @@
 
 #include <QObject>
 #include <KContacts/Address>
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AddressGrantleeObject : public QObject
 {
     Q_OBJECT

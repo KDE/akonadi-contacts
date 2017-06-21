@@ -24,12 +24,10 @@
 CustomFielsListWidgetTest::CustomFielsListWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CustomFielsListWidgetTest::~CustomFielsListWidgetTest()
 {
-
 }
 
 QTEST_MAIN(CustomFielsListWidgetTest)

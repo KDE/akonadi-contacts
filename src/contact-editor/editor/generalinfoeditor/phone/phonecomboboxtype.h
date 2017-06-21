@@ -26,8 +26,7 @@
 #include <editor/widgets/contacteditorcombobox.h>
 #include <kcontacts/addressee.h>
 #include "contacteditor_private_export.h"
-namespace ContactEditor
-{
+namespace ContactEditor {
 /**
  * @short A combobox to select a phone number type.
  */

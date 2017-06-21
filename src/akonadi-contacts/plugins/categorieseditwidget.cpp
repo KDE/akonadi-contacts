@@ -28,7 +28,8 @@
 #include <KPluginTrader>
 #include <QHBoxLayout>
 
-K_PLUGIN_FACTORY_WITH_JSON(CategoriesEditWidgetFactory, "categorieseditwidgetplugin.json", registerPlugin<CategoriesEditWidget>();)
+K_PLUGIN_FACTORY_WITH_JSON(CategoriesEditWidgetFactory, "categorieseditwidgetplugin.json", registerPlugin<CategoriesEditWidget>();
+                           )
 
 CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant> &)
     : ContactEditor::CategoriesEditAbstractWidget(parent)

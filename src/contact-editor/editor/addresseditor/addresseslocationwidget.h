@@ -25,8 +25,7 @@
 
 #include <QSplitter>
 #include <KContacts/Addressee>
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AddressLocationWidget;
 class AddressesLocationEngineViewer;
 class AddressesLocationWidget : public QSplitter

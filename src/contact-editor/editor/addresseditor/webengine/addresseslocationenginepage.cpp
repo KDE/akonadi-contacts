@@ -49,12 +49,10 @@ AddressesLocationEnginePage::AddressesLocationEnginePage(QObject *parent)
     settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, false);
 #endif
     profile()->setPersistentCookiesPolicy(QWebEngineProfile::NoPersistentCookies);
-
 }
 
 AddressesLocationEnginePage::~AddressesLocationEnginePage()
 {
-
 }
 
 bool AddressesLocationEnginePage::acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame)

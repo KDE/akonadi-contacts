@@ -24,8 +24,7 @@
 
 #include "abstractcontacteditorwidget_p.h"
 #include "contacteditor_export.h"
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 

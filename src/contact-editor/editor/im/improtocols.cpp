@@ -84,14 +84,12 @@ QString IMProtocols::icon(const QString &protocol) const
 
 IMProtocolInfo::IMProtocolInfo()
 {
-
 }
 
 IMProtocolInfo::IMProtocolInfo(const QString &name, const QString &icon)
-    : mName(name),
-      mIcon(icon)
+    : mName(name)
+    , mIcon(icon)
 {
-
 }
 
 QString IMProtocolInfo::name() const

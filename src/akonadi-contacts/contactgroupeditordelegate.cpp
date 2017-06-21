@@ -136,14 +136,13 @@ ContactGroupEditorDelegate::~ContactGroupEditorDelegate()
     delete d;
 }
 
-QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     const bool isReference = index.data(ContactGroupModel::IsReferenceRole).toBool();
     Q_UNUSED(option)
     if (index.column() == 0) {
         auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
-        connect(edit, SIGNAL(completed(QWidget*)), SLOT(completed(QWidget*)));
+        connect(edit, SIGNAL(completed(QWidget *)), SLOT(completed(QWidget *)));
 
         return edit;
     } else {
@@ -154,7 +153,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
             return comboBox;
         } else {
             auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
-            connect(edit, static_cast<void(ContactLineEdit::*)(QWidget *)>(&ContactLineEdit::completed),
+            connect(edit, static_cast<void (ContactLineEdit::*)(QWidget *)>(&ContactLineEdit::completed),
                     this, &ContactGroupEditorDelegate::completed);
             return edit;
         }
@@ -236,7 +235,7 @@ void ContactGroupEditorDelegate::setModelData(QWidget *editor, QAbstractItemMode
 
 static bool isLastRow(const QModelIndex &index)
 {
-    return (index.row() == (index.model()->rowCount() - 1));
+    return index.row() == (index.model()->rowCount() - 1);
 }
 
 void ContactGroupEditorDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const

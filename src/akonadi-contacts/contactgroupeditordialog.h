@@ -26,9 +26,7 @@
 
 #include <QDialog>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Item;
 class Collection;
 class ContactGroupEditor;
@@ -132,7 +130,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotGroupNameChanged(const QString &))
     //@endcond
 };
-
 }
 
 #endif

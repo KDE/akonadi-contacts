@@ -46,7 +46,6 @@ NicknameWidget::NicknameWidget(QWidget *parent)
 
 NicknameWidget::~NicknameWidget()
 {
-
 }
 
 void NicknameWidget::loadContact(const KContacts::Addressee &contact)

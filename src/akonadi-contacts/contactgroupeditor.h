@@ -26,14 +26,11 @@
 
 #include <QWidget>
 
-namespace KContacts
-{
+namespace KContacts {
 class ContactGroup;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Collection;
 class Item;
 
@@ -164,7 +161,6 @@ private:
     Q_PRIVATE_SLOT(d, void adaptHeaderSizes())
     //@endcond
 };
-
 }
 
 #endif

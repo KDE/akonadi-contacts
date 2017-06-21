@@ -68,7 +68,8 @@ static QDBusInterface *searchSkypeDBusInterface()
 }
 
 QSkypeDialer::QSkypeDialer(const QString &applicationName)
-    : QDialer(applicationName), mInterface(nullptr)
+    : QDialer(applicationName)
+    , mInterface(nullptr)
 {
 }
 
@@ -85,7 +86,6 @@ bool QSkypeDialer::initializeSkype()
 
     // first check whether dbus interface is available yet
     if (!isSkypeServiceRegistered()) {
-
         // it could be skype is not running yet, so start it now
         if (!QProcess::startDetached(QStringLiteral("skype"), QStringList())) {
             mErrorMessage = i18n("Unable to start skype process, check that skype executable is in your PATH variable.");

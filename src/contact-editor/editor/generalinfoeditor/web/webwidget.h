@@ -27,8 +27,7 @@
 
 #include <kcontacts/resourcelocatorurl.h>
 class QToolButton;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class ContactSelectTypeCombobox;
 class PreferredLineEditWidget;
 class WebWidget : public QWidget

@@ -46,7 +46,6 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
 
 PhoneListWidget::~PhoneListWidget()
 {
-
 }
 
 void PhoneListWidget::loadContact(const KContacts::Addressee &contact)

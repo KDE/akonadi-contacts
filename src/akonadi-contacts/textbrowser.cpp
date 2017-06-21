@@ -95,7 +95,6 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
         QString text = curs.block().text();     // try the text under cursor
 
         if (!text.isEmpty()) {
-
             // curs().block().text() over an image (contact photo or QR code)
             // returns a string starting with the character 0xFFFC (Unicode
             // object replacement character).  See the documentation for
@@ -106,25 +105,23 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                     QTextImageFormat imageFormat = charFormat.toImageFormat();
                     QString imageName = imageFormat.name();
                     QVariant imageResource = document()->resource(QTextDocument::ImageResource,
-                                             QUrl(imageName));
+                                                                  QUrl(imageName));
 
                     QPixmap pix = imageResource.value<QPixmap>();
                     if (!pix.isNull()) {
-
                         // There may be other images (e.g. contact type icons) that
                         // there is no point in copying.
                         if (imageName == QLatin1String("contact_photo")) {
                             mDataToCopy = pix;
                             act->setText(i18nc("@action:inmenu Copy a contact photo", "Copy Photo"));
-                        } else if (imageName == QLatin1String("datamatrix") ||
-                                   imageName == QLatin1String("qrcode")) {
+                        } else if (imageName == QLatin1String("datamatrix")
+                                   || imageName == QLatin1String("qrcode")) {
                             mDataToCopy = pix;
                             act->setText(i18nc("@action:inmenu Copy a QR or Datamatrix image", "Copy Code"));
                         }
                     }
                 }
             } else {
-
                 // Added by our formatter (but not I18N'ed) for a mobile
                 // telephone number.  See
                 // kdepim/kaddressbook/grantlee/grantleecontactformatter.cpp and
@@ -151,4 +148,5 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
     popup.exec(event->globalPos());
 #endif
 }
+
 #endif

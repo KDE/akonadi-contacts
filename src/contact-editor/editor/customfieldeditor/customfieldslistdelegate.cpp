@@ -38,10 +38,10 @@
 
 using namespace ContactEditor;
 CustomFieldsListDelegate::CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent)
-    : QStyledItemDelegate(parent),
-      mIcon(QIcon::fromTheme(QStringLiteral("list-remove"))),
-      mButtonSize(16, 16),
-      mItemView(view)
+    : QStyledItemDelegate(parent)
+    , mIcon(QIcon::fromTheme(QStringLiteral("list-remove")))
+    , mButtonSize(16, 16)
+    , mItemView(view)
 {
 }
 
@@ -60,33 +60,38 @@ QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOpt
         default:
             return QStyledItemDelegate::createEditor(parent, item, index);
             break;
-        case CustomField::NumericType: {
+        case CustomField::NumericType:
+        {
             QSpinBox *editor = new QSpinBox(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
             break;
         }
-        case CustomField::BooleanType: {
+        case CustomField::BooleanType:
+        {
             QCheckBox *editor = new QCheckBox(parent);
             return editor;
             break;
         }
-        case CustomField::DateType: {
+        case CustomField::DateType:
+        {
             QDateEdit *editor = new QDateEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
             break;
         }
-        case CustomField::TimeType: {
+        case CustomField::TimeType:
+        {
             QTimeEdit *editor = new QTimeEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
             break;
         }
-        case CustomField::DateTimeType: {
+        case CustomField::DateTimeType:
+        {
             QDateTimeEdit *editor = new QDateTimeEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
@@ -109,29 +114,34 @@ void CustomFieldsListDelegate::setEditorData(QWidget *editor, const QModelIndex 
         case CustomField::UrlType:
             QStyledItemDelegate::setEditorData(editor, index);
             break;
-        case CustomField::NumericType: {
+        case CustomField::NumericType:
+        {
             QSpinBox *widget = qobject_cast<QSpinBox *>(editor);
             widget->setValue(index.data(Qt::EditRole).toInt());
             break;
         }
-        case CustomField::BooleanType: {
+        case CustomField::BooleanType:
+        {
             QCheckBox *widget = qobject_cast<QCheckBox *>(editor);
             widget->setChecked(index.data(Qt::EditRole).toString() == QLatin1String("true"));
             break;
         }
-        case CustomField::DateType: {
+        case CustomField::DateType:
+        {
             QDateEdit *widget = qobject_cast<QDateEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("dd.MM.yyyy"));
             widget->setDate(QDate::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
             break;
         }
-        case CustomField::TimeType: {
+        case CustomField::TimeType:
+        {
             QTimeEdit *widget = qobject_cast<QTimeEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("hh:mm"));
             widget->setTime(QTime::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
             break;
         }
-        case CustomField::DateTimeType: {
+        case CustomField::DateTimeType:
+        {
             QDateTimeEdit *widget = qobject_cast<QDateTimeEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("dd.MM.yyyy hh:mm"));
             widget->setDateTime(QDateTime::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
@@ -153,27 +163,32 @@ void CustomFieldsListDelegate::setModelData(QWidget *editor, QAbstractItemModel 
         case CustomField::UrlType:
             QStyledItemDelegate::setModelData(editor, model, index);
             break;
-        case CustomField::NumericType: {
+        case CustomField::NumericType:
+        {
             QSpinBox *widget = qobject_cast<QSpinBox *>(editor);
             model->setData(index, QString::number(widget->value()));
             break;
         }
-        case CustomField::BooleanType: {
+        case CustomField::BooleanType:
+        {
             QCheckBox *widget = qobject_cast<QCheckBox *>(editor);
             model->setData(index, widget->isChecked() ? QStringLiteral("true") : QStringLiteral("false"));
             break;
         }
-        case CustomField::DateType: {
+        case CustomField::DateType:
+        {
             QDateEdit *widget = qobject_cast<QDateEdit *>(editor);
             model->setData(index, widget->date().toString(Qt::ISODate));
             break;
         }
-        case CustomField::TimeType: {
+        case CustomField::TimeType:
+        {
             QTimeEdit *widget = qobject_cast<QTimeEdit *>(editor);
             model->setData(index, widget->time().toString(Qt::ISODate));
             break;
         }
-        case CustomField::DateTimeType: {
+        case CustomField::DateTimeType:
+        {
             QDateTimeEdit *widget = qobject_cast<QDateTimeEdit *>(editor);
             model->setData(index, widget->dateTime().toString(Qt::ISODate));
             break;

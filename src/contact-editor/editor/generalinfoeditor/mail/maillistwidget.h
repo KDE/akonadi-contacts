@@ -24,12 +24,10 @@
 #define MAILISTWIDGET_H
 
 #include <QWidget>
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class MailWidgetLister;
 class MailListWidget : public QWidget
 {

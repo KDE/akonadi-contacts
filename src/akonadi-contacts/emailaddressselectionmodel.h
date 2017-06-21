@@ -25,8 +25,7 @@
 #include <QObject>
 #include "akonadi-contact_export.h"
 
-namespace Akonadi
-{
+namespace Akonadi {
 class ContactsTreeModel;
 class AKONADI_CONTACT_EXPORT EmailAddressSelectionModel : public QObject
 {

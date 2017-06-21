@@ -24,8 +24,7 @@
 
 #include <QWebEngineView>
 #include <KContacts/Address>
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AddressesLocationGrantleeFormater;
 class AddressesLocationEngineViewer : public QWebEngineView
 {

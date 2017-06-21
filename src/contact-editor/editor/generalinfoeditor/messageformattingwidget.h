@@ -27,8 +27,7 @@
 #include "contacteditor_private_export.h"
 class QComboBox;
 class QCheckBox;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CONTACTEDITOR_TESTS_EXPORT MessageFormattingWidget : public QWidget
 {
     Q_OBJECT

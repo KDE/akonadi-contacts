@@ -26,13 +26,10 @@
 
 #include <QDialog>
 
-namespace KContacts
-{
+namespace KContacts {
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Item;
 
 class ContactViewer;
@@ -99,7 +96,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

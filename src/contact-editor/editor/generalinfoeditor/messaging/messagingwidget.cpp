@@ -75,7 +75,6 @@ MessagingWidget::MessagingWidget(QWidget *parent)
 
 MessagingWidget::~MessagingWidget()
 {
-
 }
 
 void MessagingWidget::slotPreferredChanged()

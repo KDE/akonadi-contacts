@@ -30,12 +30,10 @@
 PhoneWidgetTest::PhoneWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 PhoneWidgetTest::~PhoneWidgetTest()
 {
-
 }
 
 void PhoneWidgetTest::shouldHaveDefaultValue()

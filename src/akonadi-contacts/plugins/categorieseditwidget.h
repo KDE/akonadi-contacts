@@ -27,8 +27,7 @@
 #include <kcontacts/addressee.h>
 #include <ContactEditor/CategoriesEditAbstractWidget>
 #include <QVariant>
-namespace Akonadi
-{
+namespace Akonadi {
 class TagWidget;
 }
 
@@ -40,7 +39,9 @@ class CategoriesEditWidget : public ContactEditor::CategoriesEditAbstractWidget
     Q_OBJECT
 
 public:
-    explicit CategoriesEditWidget(QWidget *parent = nullptr, const QList<QVariant> & = {});
+    explicit CategoriesEditWidget(QWidget *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~CategoriesEditWidget();
 
     void loadContact(const KContacts::Addressee &contact) override;

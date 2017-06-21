@@ -44,7 +44,6 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
 
 AddressesLocationWidget::~AddressesLocationWidget()
 {
-
 }
 
 void AddressesLocationWidget::loadContact(const KContacts::Addressee &contact)

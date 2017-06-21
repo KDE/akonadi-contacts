@@ -87,9 +87,9 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
         // about the modify rights of the item
 
         Akonadi::CollectionFetchJob *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
-                Akonadi::CollectionFetchJob::Base);
-        mParent->connect(collectionFetchJob, SIGNAL(result(KJob*)),
-                         SLOT(parentCollectionFetchDone(KJob*)));
+                                                                                          Akonadi::CollectionFetchJob::Base);
+        mParent->connect(collectionFetchJob, SIGNAL(result(KJob *)),
+                         SLOT(parentCollectionFetchDone(KJob *)));
     } else {
         const KContacts::ContactGroup group = mItem.payload<KContacts::ContactGroup>();
         loadContactGroup(group);
@@ -152,7 +152,7 @@ void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByte
         job->fetchScope().fetchFullPayload();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-        mParent->connect(job, SIGNAL(result(KJob*)), mParent, SLOT(itemFetchDone(KJob*)));
+        mParent->connect(job, SIGNAL(result(KJob *)), mParent, SLOT(itemFetchDone(KJob *)));
         new WaitingOverlay(job, mParent);
     }
 }
@@ -245,7 +245,7 @@ void ContactGroupEditor::loadContactGroup(const Akonadi::Item &item)
     job->fetchScope().fetchFullPayload();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, SIGNAL(result(KJob*)), SLOT(itemFetchDone(KJob*)));
+    connect(job, SIGNAL(result(KJob *)), SLOT(itemFetchDone(KJob *)));
 
     d->setupMonitor();
     d->mMonitor->setItemMonitored(item);
@@ -273,7 +273,7 @@ bool ContactGroupEditor::saveContactGroup()
         d->mItem.setPayload<KContacts::ContactGroup>(group);
 
         ItemModifyJob *job = new ItemModifyJob(d->mItem);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, SIGNAL(result(KJob *)), SLOT(storeDone(KJob *)));
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::ContactGroup::mimeType());
@@ -301,7 +301,7 @@ bool ContactGroupEditor::saveContactGroup()
         item.setMimeType(KContacts::ContactGroup::mimeType());
 
         ItemCreateJob *job = new ItemCreateJob(item, d->mDefaultCollection);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, SIGNAL(result(KJob *)), SLOT(storeDone(KJob *)));
     }
 
     return true;

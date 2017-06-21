@@ -28,12 +28,10 @@
 #include <KContacts/Address>
 #include <QSharedPointer>
 #include <grantlee/templateloader.h>
-namespace Grantlee
-{
+namespace Grantlee {
 class Engine;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AddressesLocationGrantleeFormater : public QObject
 {
     Q_OBJECT

@@ -31,12 +31,10 @@
 CustomFieldEditorWidgetTest::CustomFieldEditorWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest()
 {
-
 }
 
 void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
@@ -56,7 +54,6 @@ void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
     QVERIFY(combobox);
     QVERIFY(combobox->count() > 0);
     QCOMPARE(combobox->currentIndex(), 0);
-
 }
 
 void CustomFieldEditorWidgetTest::shouldEnableAddButtonWhenTextIsNotEmpty()
@@ -85,7 +82,6 @@ void CustomFieldEditorWidgetTest::shouldClearEditorWhenPressAdd()
     QVERIFY(fieldname->text().isEmpty());
     QVERIFY(!addfield->isEnabled());
     QCOMPARE(combobox->currentIndex(), 0);
-
 }
 
 QTEST_MAIN(CustomFieldEditorWidgetTest)

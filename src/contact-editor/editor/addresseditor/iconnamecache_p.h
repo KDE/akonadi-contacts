@@ -28,8 +28,7 @@
  *
  * The IconNameCache caches the result of iconPath() in a map and solves the slowness.
  */
-namespace ContactEditor
-{
+namespace ContactEditor {
 class IconNameCache
 {
 public:
@@ -45,7 +44,7 @@ private:
         QString fileName;
         int size;
 
-        bool operator < (const Entry &other) const;
+        bool operator <(const Entry &other) const;
     };
 
     mutable QMap<Entry, QString> mCachedEntries;

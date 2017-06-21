@@ -25,12 +25,10 @@ using namespace ContactEditor;
 CategoriesEditAbstractWidget::CategoriesEditAbstractWidget(QWidget *parent)
     : QWidget(parent)
 {
-
 }
 
 CategoriesEditAbstractWidget::~CategoriesEditAbstractWidget()
 {
-
 }
 
 void CategoriesEditAbstractWidget::loadContact(const KContacts::Addressee &contact)

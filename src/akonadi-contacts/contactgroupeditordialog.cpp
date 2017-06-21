@@ -68,6 +68,7 @@ public:
             q->resize(size);
         }
     }
+
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
@@ -75,6 +76,7 @@ public:
         group.writeEntry("Size", q->size());
         group.sync();
     }
+
     ContactGroupEditorDialog *q;
     CollectionComboBox *mAddressBookBox;
     ContactGroupEditor *mEditor;
@@ -106,9 +108,9 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     QGridLayout *layout = new QGridLayout(mainWidget);
     layout->setMargin(0);
 
-    d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ?
-            Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode,
-            this);
+    d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode
+                                                 ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode,
+                                                 this);
 
     if (mode == CreateMode) {
         QLabel *label = new QLabel(i18n("Add to:"), mainWidget);

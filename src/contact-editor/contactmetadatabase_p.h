@@ -26,10 +26,7 @@
 #include <QStringList>
 #include <QVariant>
 
-namespace ContactEditor
-{
-
-
+namespace ContactEditor {
 /**
  * @short A helper class for storing contact specific settings.
  */
@@ -55,7 +52,6 @@ public:
      * Stores the meta data to the given @p contact.
      */
     QVariantMap storeMetaData() const;
-
 
     /**
      * Sets the mode that is used for the display
@@ -100,7 +96,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

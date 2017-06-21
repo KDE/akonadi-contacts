@@ -26,13 +26,11 @@
 #include <QWidget>
 #include "displaynameeditwidget.h"
 class ImageWidget;
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CategoriesEditAbstractWidget;
 class PhoneListWidget;
 class WebListWidget;

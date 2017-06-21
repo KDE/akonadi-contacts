@@ -30,12 +30,10 @@
 MailWidgetTest::MailWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MailWidgetTest::~MailWidgetTest()
 {
-
 }
 
 void MailWidgetTest::shouldHaveDefaultValue()

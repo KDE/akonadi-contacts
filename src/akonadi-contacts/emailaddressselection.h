@@ -29,9 +29,7 @@
 #include <QSharedDataPointer>
 #include <QString>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Item;
 
 /**
@@ -114,7 +112,6 @@ private:
     QSharedDataPointer<Private> d;
     //@endcond
 };
-
 }
 
 Q_DECLARE_TYPEINFO(Akonadi::EmailAddressSelection, Q_MOVABLE_TYPE);

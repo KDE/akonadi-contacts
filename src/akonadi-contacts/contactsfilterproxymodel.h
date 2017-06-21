@@ -26,9 +26,7 @@
 
 #include <QSortFilterProxyModel>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short A proxy model for \a ContactsTreeModel models.
  *
@@ -122,7 +120,6 @@ private:
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ContactsFilterProxyModel::FilterFlags)
-
 }
 
 #endif

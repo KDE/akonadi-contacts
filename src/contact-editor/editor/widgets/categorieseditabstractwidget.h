@@ -25,13 +25,11 @@
 #include <QWidget>
 #include "contacteditor_export.h"
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CONTACTEDITOR_EXPORT CategoriesEditAbstractWidget : public QWidget
 {
     Q_OBJECT

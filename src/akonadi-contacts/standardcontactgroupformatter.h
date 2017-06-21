@@ -26,9 +26,7 @@
 
 #include "abstractcontactgroupformatter.h"
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short A class that formats a contact group as HTML code.
  *
@@ -75,7 +73,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

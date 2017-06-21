@@ -29,8 +29,7 @@ class QLineEdit;
 class QPushButton;
 class QCheckBox;
 class QComboBox;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CustomFieldEditorWidget : public QWidget
 {
     Q_OBJECT

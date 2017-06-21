@@ -31,7 +31,6 @@ ContactEditorComboBox::ContactEditorComboBox(QWidget *parent)
 
 ContactEditorComboBox::~ContactEditorComboBox()
 {
-
 }
 
 QSize ContactEditorComboBox::minimumSizeHint() const

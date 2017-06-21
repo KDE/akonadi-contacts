@@ -24,8 +24,7 @@
 
 #include <QComboBox>
 #include "contacteditor_private_export.h"
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CONTACTEDITOR_TESTS_EXPORT ContactEditorComboBox : public QComboBox
 {
     Q_OBJECT

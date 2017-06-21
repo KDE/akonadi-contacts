@@ -26,7 +26,6 @@
 #include "../../im/improtocols.h"
 #include "../../utils/utils.h"
 
-
 #include <KContacts/Addressee>
 using namespace ContactEditor;
 
@@ -39,7 +38,6 @@ MessagingWidgetLister::MessagingWidgetLister(QWidget *parent)
 
 MessagingWidgetLister::~MessagingWidgetLister()
 {
-
 }
 
 void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)

@@ -67,7 +67,6 @@ bool QSflPhoneDialer::initializeSflPhone()
 {
     // first check whether dbus interface is available yet
     if (!isSflPhoneServiceRegistered()) {
-
         // it could be skype is not running yet, so start it now
         if (!QProcess::startDetached(QStringLiteral("sflphone-client-kde"), QStringList())) {
             mErrorMessage = i18n("Unable to start sflphone-client-kde process, check that sflphone-client-kde executable is in your PATH variable.");

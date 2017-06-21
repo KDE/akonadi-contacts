@@ -28,15 +28,12 @@
 
 class QUrl;
 
-namespace KContacts
-{
+namespace KContacts {
 class Address;
 class PhoneNumber;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short A convenience class that handles different contact related actions.
  *
@@ -145,7 +142,6 @@ private:
     Private *const d;
     //@endcond PRIVATE
 };
-
 }
 
 #endif

@@ -29,12 +29,10 @@
 MessagingWidgetTest::MessagingWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MessagingWidgetTest::~MessagingWidgetTest()
 {
-
 }
 
 void MessagingWidgetTest::shouldHaveDefaultValues()

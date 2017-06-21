@@ -24,9 +24,7 @@
 
 #include <entitytreemodel.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class ContactCompletionModel : public EntityTreeModel
 {
     Q_OBJECT
@@ -51,7 +49,6 @@ public:
 private:
     static QAbstractItemModel *mSelf;
 };
-
 }
 
 #endif

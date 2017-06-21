@@ -28,13 +28,13 @@
 using namespace ContactEditor;
 
 PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
-    : KLineEdit(parent),
-      mPreferred(false)
+    : KLineEdit(parent)
+    , mPreferred(false)
 {
     mIconEnabled = QIcon(QIcon::fromTheme(QStringLiteral("rating")));
     KIconLoader loader;
-    QImage iconDisabled =
-        mIconEnabled.pixmap(loader.currentSize(KIconLoader::Panel)).toImage();
+    QImage iconDisabled
+        = mIconEnabled.pixmap(loader.currentSize(KIconLoader::Panel)).toImage();
     KIconEffect::toGray(iconDisabled, 1.0);
     mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
     mPreferredAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
@@ -45,7 +45,6 @@ PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
 
 PreferredLineEditWidget::~PreferredLineEditWidget()
 {
-
 }
 
 void PreferredLineEditWidget::slotPreferredStatusChanged()

@@ -28,12 +28,10 @@
 PreferredLineEditWidget::PreferredLineEditWidget(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 PreferredLineEditWidget::~PreferredLineEditWidget()
 {
-
 }
 
 void PreferredLineEditWidget::shouldHaveDefaultValue()
@@ -58,7 +56,6 @@ void PreferredLineEditWidget::shouldChangePreferredValue()
 
     w.setPreferred(true);
     QCOMPARE(act->icon(), enabled);
-
 }
 
 QTEST_MAIN(PreferredLineEditWidget)

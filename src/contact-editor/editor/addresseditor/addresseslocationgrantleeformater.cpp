@@ -29,14 +29,14 @@
 using namespace ContactEditor;
 
 AddressesLocationGrantleeFormater::AddressesLocationGrantleeFormater(QObject *parent)
-    : QObject(parent),
-      mEngine(new Grantlee::Engine),
-      mReadOnly(false)
+    : QObject(parent)
+    , mEngine(new Grantlee::Engine)
+    , mReadOnly(false)
 {
     mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
     mGrantleeThemePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                         QStringLiteral("contacteditor/grantleetheme/default/"),
-                         QStandardPaths::LocateDirectory);
+                                                QStringLiteral("contacteditor/grantleetheme/default/"),
+                                                QStandardPaths::LocateDirectory);
     changeGrantleePath(mGrantleeThemePath);
 }
 

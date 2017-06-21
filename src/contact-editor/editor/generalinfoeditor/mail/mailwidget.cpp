@@ -65,7 +65,6 @@ MailWidget::MailWidget(QWidget *parent)
 
 MailWidget::~MailWidget()
 {
-
 }
 
 void MailWidget::slotPreferredChanged()

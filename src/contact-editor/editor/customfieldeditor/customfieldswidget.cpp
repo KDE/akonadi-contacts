@@ -45,7 +45,6 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
 
 CustomFieldsWidget::~CustomFieldsWidget()
 {
-
 }
 
 void CustomFieldsWidget::loadContact(const KContacts::Addressee &contact)

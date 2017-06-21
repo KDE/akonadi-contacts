@@ -27,16 +27,15 @@
 #include <QUrlQuery>
 using namespace ContactEditor;
 AddressGrantleeObject::AddressGrantleeObject(const KContacts::Address &address, int addressIndex, QObject *parent)
-    : QObject(parent),
-      mAddress(address),
-      mAddressIndex(addressIndex)
+    : QObject(parent)
+    , mAddress(address)
+    , mAddressIndex(addressIndex)
 {
     mIconSize = KIconLoader::global()->currentSize(KIconLoader::Small);
 }
 
 AddressGrantleeObject::~AddressGrantleeObject()
 {
-
 }
 
 QString AddressGrantleeObject::formattedAddress() const
@@ -125,5 +124,5 @@ QString AddressGrantleeObject::addressType() const
 
 bool AddressGrantleeObject::preferredAddress() const
 {
-    return (mAddress.type() & KContacts::Address::Pref);
+    return mAddress.type() & KContacts::Address::Pref;
 }

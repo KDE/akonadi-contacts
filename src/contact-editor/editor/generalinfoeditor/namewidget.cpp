@@ -61,7 +61,6 @@ NameWidget::NameWidget(QWidget *parent)
 
 NameWidget::~NameWidget()
 {
-
 }
 
 void NameWidget::setReadOnly(bool readOnly)
@@ -124,4 +123,3 @@ void NameWidget::slotOpenNameEditDialog()
 
     delete dlg;
 }
-

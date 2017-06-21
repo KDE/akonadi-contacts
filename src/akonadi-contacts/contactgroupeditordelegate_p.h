@@ -29,16 +29,13 @@
 #include <item.h>
 #include "contactcompletionmodel_p.h"
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class ContactLineEdit : public QLineEdit
 {
     Q_OBJECT
 
 public:
-    explicit ContactLineEdit(bool isReference, ContactCompletionModel::Columns column,
-                             QWidget *parent = nullptr);
+    explicit ContactLineEdit(bool isReference, ContactCompletionModel::Columns column, QWidget *parent = nullptr);
 
     bool isReference() const;
     Akonadi::Item completedItem() const;
@@ -82,7 +79,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

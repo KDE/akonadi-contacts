@@ -68,14 +68,14 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
 
     // Assemble all parts
     QString strGroup = QStringLiteral(
-                           "<table cellpadding=\"3\" cellspacing=\"0\" width=\"100%\">"
-                           "<tr>"
-                           "<td align=\"right\" valign=\"top\" width=\"30%\">"
-                           "<img src=\"%1\" width=\"100\" vspace=\"1\">" // image
-                           "</td>"
-                           "<td align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>" // name
-                           "</tr>"
-                           "</table>")
+        "<table cellpadding=\"3\" cellspacing=\"0\" width=\"100%\">"
+        "<tr>"
+        "<td align=\"right\" valign=\"top\" width=\"30%\">"
+        "<img src=\"%1\" width=\"100\" vspace=\"1\">"                    // image
+        "</td>"
+        "<td align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>"                    // name
+        "</tr>"
+        "</table>")
                        .arg(QStringLiteral("group_photo"))
                        .arg(group.name());
 
@@ -93,7 +93,8 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
             contact.setFormattedName(data.name());
             contact.insertEmail(data.email());
 
-            const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail())) + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
+            const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
+                                      + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 
             strGroup.append(QStringLiteral("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
                                            "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>&lt;%2&gt;</font></td></tr>")
@@ -118,16 +119,16 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
     }
 
     document = QStringLiteral(
-                   "<html>"
-                   "<head>"
-                   " <style type=\"text/css\">"
-                   "  a {text-decoration:none; color:%1}"
-                   " </style>"
-                   "</head>"
-                   "<body text=\"%1\" bgcolor=\"%2\">" // text and background color
-                   "%3" // contact group part
-                   "</body>"
-                   "</html>")
+        "<html>"
+        "<head>"
+        " <style type=\"text/css\">"
+        "  a {text-decoration:none; color:%1}"
+        " </style>"
+        "</head>"
+        "<body text=\"%1\" bgcolor=\"%2\">"            // text and background color
+        "%3"            // contact group part
+        "</body>"
+        "</html>")
                .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name())
                .arg(KColorScheme(QPalette::Active, KColorScheme::View).background().color().name())
                .arg(document);

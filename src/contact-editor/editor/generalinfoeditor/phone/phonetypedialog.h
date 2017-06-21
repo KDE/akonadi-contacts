@@ -26,8 +26,7 @@
 #include "contacteditor_private_export.h"
 class QButtonGroup;
 
-namespace ContactEditor
-{
+namespace ContactEditor {
 /**
  * A dialog for editing phone number types.
  */

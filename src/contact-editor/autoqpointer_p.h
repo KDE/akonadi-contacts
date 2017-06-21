@@ -30,7 +30,7 @@
  *
  *  @author David Jarvie <djarvie@kde.org>
  */
-template <class T>
+template<class T>
 class AutoQPointer : public QPointer<T>
 {
 public:
@@ -38,23 +38,28 @@ public:
         : QPointer<T>()
     {
     }
+
     inline AutoQPointer(T *p)
         : QPointer<T>(p)
     {
     }
+
     inline AutoQPointer(const QPointer<T> &p)
         : QPointer<T>(p)
     {
     }
+
     inline ~AutoQPointer()
     {
         delete this->data();
     }
+
     inline AutoQPointer<T> &operator=(const AutoQPointer<T> &p)
     {
         QPointer<T>::operator=(p);
         return *this;
     }
+
     inline AutoQPointer<T> &operator=(T *p)
     {
         QPointer<T>::operator=(p);

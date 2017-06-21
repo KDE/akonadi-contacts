@@ -26,7 +26,6 @@
 #include "contacteditorpageplugin.h"
 #include "contactmetadatabase_p.h"
 
-
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <KLocalizedString>

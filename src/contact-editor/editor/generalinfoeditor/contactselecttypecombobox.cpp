@@ -32,7 +32,6 @@ ContactSelectTypeCombobox::ContactSelectTypeCombobox(QWidget *parent)
 
 ContactSelectTypeCombobox::~ContactSelectTypeCombobox()
 {
-
 }
 
 void ContactSelectTypeCombobox::initialize()

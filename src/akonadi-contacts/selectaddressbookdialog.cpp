@@ -41,6 +41,7 @@ public:
         q->changeCollectionDialogOptions(Akonadi::CollectionDialog::KeepTreeExpanded);
         readConfig();
     }
+
     ~SelectAddressBookDialogPrivate()
     {
         writeConfig();
@@ -68,8 +69,8 @@ void SelectAddressBookDialogPrivate::writeConfig()
 }
 
 SelectAddressBookDialog::SelectAddressBookDialog(QWidget *parent)
-    : Akonadi::CollectionDialog(parent),
-      d(new Akonadi::SelectAddressBookDialogPrivate(this))
+    : Akonadi::CollectionDialog(parent)
+    , d(new Akonadi::SelectAddressBookDialogPrivate(this))
 {
 }
 
@@ -77,4 +78,3 @@ SelectAddressBookDialog::~SelectAddressBookDialog()
 {
     delete d;
 }
-

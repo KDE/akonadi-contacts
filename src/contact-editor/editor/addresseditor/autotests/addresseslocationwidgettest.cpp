@@ -32,12 +32,10 @@ using namespace ContactEditor;
 AddressesLocationWidgetTest::AddressesLocationWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AddressesLocationWidgetTest::~AddressesLocationWidgetTest()
 {
-
 }
 
 void AddressesLocationWidgetTest::shouldHaveDefaultValue()

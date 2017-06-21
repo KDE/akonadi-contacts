@@ -30,8 +30,7 @@ class QCheckBox;
 class KLineEdit;
 class KComboBox;
 class QPushButton;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class SelectAddressTypeComboBox;
 class AddressLocationWidget : public QWidget
 {

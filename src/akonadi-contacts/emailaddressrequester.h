@@ -26,9 +26,7 @@
 
 class KLineEdit;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short A widget to input one or more email addresses.
  *
@@ -88,7 +86,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotAddressBook())
     //@endcond
 };
-
 }
 
 #endif

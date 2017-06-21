@@ -26,9 +26,7 @@
 
 #include <kcontacts/contactgroup.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class ContactGroupModel : public QAbstractItemModel
 {
     Q_OBJECT
@@ -64,7 +62,6 @@ private:
 
     Q_PRIVATE_SLOT(d, void itemFetched(KJob *))
 };
-
 }
 
 #endif

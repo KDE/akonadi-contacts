@@ -26,13 +26,11 @@
 #include <QWidget>
 #include "customfieldsmodel.h"
 class QTreeView;
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 class CustomFieldsModel;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CustomFieldsListWidget : public QWidget
 {
     Q_OBJECT

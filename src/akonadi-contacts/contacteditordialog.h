@@ -26,13 +26,10 @@
 
 #include <QDialog>
 
-namespace ContactEditor
-{
+namespace ContactEditor {
 class AbstractContactEditorWidget;
 }
-namespace Akonadi
-{
-
+namespace Akonadi {
 class AkonadiContactEditor;
 class Collection;
 class Item;
@@ -172,7 +169,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotFinish())
     //@endcond
 };
-
 }
 
 #endif

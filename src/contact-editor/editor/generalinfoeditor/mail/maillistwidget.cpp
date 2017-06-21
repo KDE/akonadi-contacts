@@ -46,7 +46,6 @@ MailListWidget::MailListWidget(QWidget *parent)
 
 MailListWidget::~MailListWidget()
 {
-
 }
 
 void MailListWidget::loadContact(const KContacts::Addressee &contact)

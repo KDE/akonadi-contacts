@@ -25,9 +25,7 @@
 
 #include <QSortFilterProxyModel>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class LeafExtensionProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -76,7 +74,6 @@ private:
     Q_PRIVATE_SLOT(d, void sourceRowsRemoved(const QModelIndex &, int, int))
     //@endcond
 };
-
 }
 
 #endif

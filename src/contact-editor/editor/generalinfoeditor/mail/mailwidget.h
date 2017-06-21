@@ -27,8 +27,7 @@
 #include <KContacts/Email>
 #include "contacteditor_private_export.h"
 class QToolButton;
-namespace ContactEditor
-{
+namespace ContactEditor {
 class PreferredLineEditWidget;
 class ContactSelectTypeCombobox;
 class CONTACTEDITOR_TESTS_EXPORT MailWidget : public QWidget

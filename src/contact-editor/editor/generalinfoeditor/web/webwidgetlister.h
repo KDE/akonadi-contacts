@@ -24,12 +24,10 @@
 #define WEBWIDGETLISTER_H
 
 #include "../../widgets/kwidgetlister_p.h"
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class WebWidget;
 class WebWidgetLister : public KWidgetLister
 {

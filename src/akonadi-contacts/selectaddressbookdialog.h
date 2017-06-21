@@ -22,8 +22,7 @@
 #include <AkonadiWidgets/CollectionDialog>
 #include "akonadi-contact_export.h"
 
-namespace Akonadi
-{
+namespace Akonadi {
 class SelectAddressBookDialogPrivate;
 /**
  * @brief The SelectAddressBookDialog class This class allows to select addressbook where saving contacts

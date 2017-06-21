@@ -28,9 +28,7 @@
 
 #include <item.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Q_DECL_HIDDEN EmailAddressSelection::Private : public QSharedData
 {
 public:
@@ -41,7 +39,6 @@ public:
     QString mEmailAddress;
     Akonadi::Item mItem;
 };
-
 }
 
 #endif

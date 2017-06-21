@@ -55,7 +55,6 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
 
 CustomFieldsListWidget::~CustomFieldsListWidget()
 {
-
 }
 
 void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
@@ -66,7 +65,6 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 
     const QStringList customs = contact.customs();
     for (const QString &custom : customs) {
-
         QString app, name, value;
         ContactEditor::Utils::splitCustomField(custom, app, name, value);
 
@@ -168,7 +166,6 @@ void CustomFieldsListWidget::storeContact(KContacts::Addressee &contact) const
     // in the editor dialog.
     for (const CustomField &oldCustomField : qAsConst(mLocalCustomFields)) {
         if (oldCustomField.scope() != CustomField::ExternalScope) {
-
             bool fieldStillExists = false;
             for (const CustomField &newCustomField : qAsConst(customFields)) {
                 if (newCustomField.scope() != CustomField::ExternalScope) {
@@ -209,7 +206,6 @@ void CustomFieldsListWidget::slotAddNewField(const CustomField &field)
     mModel->setData(mModel->index(lastRow, 0), field.title(), Qt::EditRole);
     mModel->setData(mModel->index(lastRow, 0), field.type(), CustomFieldsModel::TypeRole);
     mModel->setData(mModel->index(lastRow, 0), field.scope(), CustomFieldsModel::ScopeRole);
-
 }
 
 void CustomFieldsListWidget::setLocalCustomFieldDescriptions(const QVariantList &descriptions)

@@ -25,12 +25,10 @@
 
 #include <QWidget>
 #include "contacteditor_private_export.h"
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
-namespace ContactEditor
-{
+namespace ContactEditor {
 class PhoneWidgetLister;
 class CONTACTEDITOR_TESTS_EXPORT PhoneListWidget : public QWidget
 {

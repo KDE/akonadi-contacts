@@ -31,11 +31,10 @@
 using namespace ContactEditor;
 
 AddressesLocationEngineViewer::AddressesLocationEngineViewer(QWidget *parent)
-    : QWebEngineView(parent),
-      mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this)),
-      mEditMode(false)
+    : QWebEngineView(parent)
+    , mAddressesLocationGrantleeFormatter(new AddressesLocationGrantleeFormater(this))
+    , mEditMode(false)
 {
-
     AddressesLocationEnginePage *pageEngine = new AddressesLocationEnginePage(this);
     setPage(pageEngine);
 
@@ -47,7 +46,6 @@ AddressesLocationEngineViewer::AddressesLocationEngineViewer(QWidget *parent)
 
 AddressesLocationEngineViewer::~AddressesLocationEngineViewer()
 {
-
 }
 
 void AddressesLocationEngineViewer::setReadOnly(bool readOnly)

@@ -23,15 +23,12 @@
 #define UTILS_H
 
 #include <QString>
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 
-namespace ContactEditor
-{
-namespace Utils
-{
+namespace ContactEditor {
+namespace Utils {
 void splitCustomField(const QString &str, QString &app, QString &name, QString &value);
 QString loadCustom(const KContacts::Addressee &contact, const QString &key);
 void storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value);

@@ -29,8 +29,7 @@
 /**
  * @short A widget for selecting the type of an address.
  */
-namespace ContactEditor
-{
+namespace ContactEditor {
 class SelectAddressTypeComboBox : public KComboBox
 {
     Q_OBJECT

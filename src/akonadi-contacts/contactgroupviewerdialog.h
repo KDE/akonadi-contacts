@@ -26,9 +26,7 @@
 
 #include <QDialog>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Item;
 
 class ContactGroupViewer;
@@ -95,7 +93,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

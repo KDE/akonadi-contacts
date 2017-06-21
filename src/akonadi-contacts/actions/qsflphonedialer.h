@@ -34,6 +34,5 @@ public:
 
 private:
     bool initializeSflPhone();
-
 };
 #endif // QSFLPHONEDIALER_H

@@ -47,7 +47,6 @@ WebListWidget::WebListWidget(QWidget *parent)
 
 WebListWidget::~WebListWidget()
 {
-
 }
 
 void WebListWidget::loadContact(const KContacts::Addressee &contact)

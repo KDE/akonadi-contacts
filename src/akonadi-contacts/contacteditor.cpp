@@ -112,9 +112,9 @@ void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)
         // about the modify rights of the item
 
         Akonadi::CollectionFetchJob *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
-                Akonadi::CollectionFetchJob::Base);
-        mParent->connect(collectionFetchJob, SIGNAL(result(KJob*)),
-                         SLOT(parentCollectionFetchDone(KJob*)));
+                                                                                          Akonadi::CollectionFetchJob::Base);
+        mParent->connect(collectionFetchJob, SIGNAL(result(KJob *)),
+                         SLOT(parentCollectionFetchDone(KJob *)));
     } else {
         const KContacts::Addressee addr = mItem.payload<KContacts::Addressee>();
         mContactMetaData.load(mItem);
@@ -177,7 +177,7 @@ void Akonadi::AkonadiContactEditor::Private::itemChanged(const Akonadi::Item &it
         job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-        mParent->connect(job, SIGNAL(result(KJob*)), mParent, SLOT(itemFetchDone(KJob*)));
+        mParent->connect(job, SIGNAL(result(KJob *)), mParent, SLOT(itemFetchDone(KJob *)));
     }
 
     delete dlg;
@@ -236,7 +236,7 @@ void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
     job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, SIGNAL(result(KJob*)), SLOT(itemFetchDone(KJob*)));
+    connect(job, SIGNAL(result(KJob *)), SLOT(itemFetchDone(KJob *)));
 
     d->setupMonitor();
     d->mMonitor->setItemMonitored(item);
@@ -266,7 +266,7 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mItem.setPayload<KContacts::Addressee>(addr);
 
         Akonadi::ItemModifyJob *job = new Akonadi::ItemModifyJob(d->mItem);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, SIGNAL(result(KJob *)), SLOT(storeDone(KJob *)));
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::Addressee::mimeType());
@@ -293,7 +293,7 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mContactMetaData.store(item);
 
         Akonadi::ItemCreateJob *job = new Akonadi::ItemCreateJob(item, d->mDefaultCollection);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, SIGNAL(result(KJob *)), SLOT(storeDone(KJob *)));
     }
 }
 

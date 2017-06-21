@@ -76,7 +76,7 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
         QByteArray imageData;
         KIO::TransferJob *job = KIO::get(url, KIO::NoReload);
         QObject::connect(job, &KIO::TransferJob::data,
-        [&imageData](KIO::Job *, const QByteArray & data) {
+                         [&imageData](KIO::Job *, const QByteArray &data) {
             imageData.append(data);
         });
         if (job->exec()) {
@@ -230,9 +230,8 @@ void ImageWidget::mousePressEvent(QMouseEvent *event)
 
 void ImageWidget::mouseMoveEvent(QMouseEvent *event)
 {
-    if ((event->buttons() & Qt::LeftButton) &&
-            (event->pos() - mDragStartPos).manhattanLength() > QApplication::startDragDistance()) {
-
+    if ((event->buttons() & Qt::LeftButton)
+        && (event->pos() - mDragStartPos).manhattanLength() > QApplication::startDragDistance()) {
         if (mHasImage) {
             QDrag *drag = new QDrag(this);
             drag->setMimeData(new QMimeData());

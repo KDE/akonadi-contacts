@@ -27,9 +27,7 @@
 
 #include "contactstreemodel.h"
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class EmailAddressSelectionProxyModel : public Akonadi::LeafExtensionProxyModel
 {
     Q_OBJECT
@@ -64,7 +62,6 @@ protected:
 
 private:
 };
-
 }
 
 #endif
