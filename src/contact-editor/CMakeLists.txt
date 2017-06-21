@@ -171,12 +171,10 @@ target_link_libraries(KF5ContactEditor
     KF5::KIOWidgets
     KF5::Mime
     KF5::Codecs
-    KF5::DBusAddons
     KF5::I18n
     KF5::Service
     KF5::TextWidgets
     KF5::WidgetsAddons
-    KF5::XmlGui
     Grantlee5::Templates
     Qt5::WebEngine
     Qt5::WebEngineWidgets
