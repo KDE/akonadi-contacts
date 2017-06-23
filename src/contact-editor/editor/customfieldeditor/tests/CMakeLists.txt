@@ -3,9 +3,7 @@ set(customfieldeditor_SRCS
     ../customfieldeditorwidget.cpp
     ../customfieldslistwidget.cpp
     ../customfieldsmodel.cpp
-    ../../../customfields.cpp
     ../customfieldslistdelegate.cpp
-    ../../../customfieldmanager.cpp
     ../../utils/utils.cpp
     main.cpp
     )

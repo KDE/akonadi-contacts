@@ -22,9 +22,9 @@
 
 #include "customfieldswidgettest.h"
 #include "../customfieldswidget.h"
+#include "../customfieldeditorwidget.h"
+#include "../customfieldslistwidget.h"
 #include <QTest>
-#include <editor/customfieldeditor/customfieldeditorwidget.h>
-#include <editor/customfieldeditor/customfieldslistwidget.h>
 
 CustomFieldsWidgetTest::CustomFieldsWidgetTest(QObject *parent)
     : QObject(parent)

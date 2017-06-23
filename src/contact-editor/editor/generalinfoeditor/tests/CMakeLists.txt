@@ -1,32 +1,23 @@
 set(generalinfoeditor_SRCS
     main.cpp
     ../generalinfowidget.cpp
-    ../phone/phonewidget.cpp
-    ../phone/phonelistwidget.cpp
-    ../phone/phonewidgetlister.cpp
     ../../widgets/kwidgetlister.cpp
     ../web/webwidgetlister.cpp
     ../web/weblistwidget.cpp
     ../web/webwidget.cpp
     ../mail/maillistwidget.cpp
-    ../mail/mailwidget.cpp
     ../mail/mailwidgetlister.cpp
     ../messaging/messaginglistwidget.cpp
-    ../messaging/messagingwidget.cpp
     ../messaging/messagingwidgetlister.cpp
     ../../widgets/imagewidget.cpp
     ../namewidget.cpp
     ../nicknamewidget.cpp
-    ../phone/phonecomboboxtype.cpp
     ../../im/imaddress.cpp
     ../../utils/utils.cpp
     ../categorieseditwidget.cpp
     ../nameeditdialog.cpp
-    ../../widgets/contacteditorcombobox.cpp
     ../../widgets/preferredlineeditwidget.cpp
-    ../phone/phonetypedialog.cpp
     ../displaynameeditwidget.cpp
-    ../contactselecttypecombobox.cpp
     )
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
