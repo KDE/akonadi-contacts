@@ -153,8 +153,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
             return comboBox;
         } else {
             auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
-            connect(edit, static_cast<void (ContactLineEdit::*)(QWidget *)>(&ContactLineEdit::completed),
-                    this, &ContactGroupEditorDelegate::completed);
+            connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
             return edit;
         }
     }

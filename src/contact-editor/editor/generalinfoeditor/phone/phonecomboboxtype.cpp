@@ -45,7 +45,7 @@ PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
 
     update();
 
-    connect(this, static_cast<void (PhoneComboBoxType::*)(int)>(&PhoneComboBoxType::activated), this, &PhoneComboBoxType::selected);
+    connect(this, QOverload<int>::of(&PhoneComboBoxType::activated), this, &PhoneComboBoxType::selected);
 }
 
 PhoneComboBoxType::~PhoneComboBoxType()

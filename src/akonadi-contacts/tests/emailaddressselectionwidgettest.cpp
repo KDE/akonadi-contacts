@@ -44,7 +44,7 @@ MainWidget::MainWidget()
     KComboBox *box = new KComboBox;
     box->addItem(QStringLiteral("Single Selection"));
     box->addItem(QStringLiteral("Multi Selection"));
-    connect(box, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &MainWidget::selectionModeChanged);
+    connect(box, QOverload<int>::of(&KComboBox::activated), this, &MainWidget::selectionModeChanged);
     layout->addWidget(box, 1, 0);
 
     QPushButton *button = new QPushButton(QStringLiteral("Show Selection"));
