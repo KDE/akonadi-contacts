@@ -48,14 +48,16 @@ public:
 
 void EmailAddressRequester::Private::slotAddressBook()
 {
-    Akonadi::EmailAddressSelectionDialog dlg(q);
-    dlg.view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
-    if (!dlg.exec()) {
+    QPointer<Akonadi::EmailAddressSelectionDialog> dlg = new Akonadi::EmailAddressSelectionDialog(q);
+    dlg->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
+    if (!dlg->exec()) {
+        delete dlg;
         return;
     }
 
+
     QStringList addressList;
-    const auto selectedAddresses = dlg.selectedAddresses();
+    const auto selectedAddresses = dlg->selectedAddresses();
     addressList.reserve(selectedAddresses.size());
     for (const Akonadi::EmailAddressSelection &selection : selectedAddresses) {
         addressList << selection.quotedEmail();
@@ -72,6 +74,7 @@ void EmailAddressRequester::Private::slotAddressBook()
     }
 
     mLineEdit->setText(text + addressList.join(QLatin1Char(',')));
+    delete dlg;
 }
 
 EmailAddressRequester::EmailAddressRequester(QWidget *parent)
