@@ -64,20 +64,20 @@ public:
     void storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const;
 
     ContactEditorWidget::DisplayMode mDisplayMode;
-    ContactEditorWidget *mParent;
-    QTabWidget *mTabWidget;
+    ContactEditorWidget *mParent = nullptr;
+    QTabWidget *mTabWidget = nullptr;
 
-    ContactEditor::GeneralInfoWidget *mGeneralInfoWidget;
+    ContactEditor::GeneralInfoWidget *mGeneralInfoWidget = nullptr;
 
     // widgets from addresses group
-    ContactEditor::AddressesLocationWidget *mAddressesLocationWidget;
+    ContactEditor::AddressesLocationWidget *mAddressesLocationWidget = nullptr;
 
-    ContactEditor::BusinessEditorWidget *mBusinessEditorWidget;
+    ContactEditor::BusinessEditorWidget *mBusinessEditorWidget = nullptr;
 
     // widgets from notes group
-    KTextEdit *mNotesWidget;
+    KTextEdit *mNotesWidget = nullptr;
 
-    ContactEditor::PersonalEditorWidget *mPersonalEditorWidget;
+    ContactEditor::PersonalEditorWidget *mPersonalEditorWidget = nullptr;
 
     // widgets from custom fields group
     ContactEditor::CustomFieldsWidget *mCustomFieldsWidget;

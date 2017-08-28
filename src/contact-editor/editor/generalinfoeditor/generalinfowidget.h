@@ -54,15 +54,15 @@ public:
     void setDisplayType(DisplayNameEditWidget::DisplayType type);
     DisplayNameEditWidget::DisplayType displayType() const;
 private:
-    PhoneListWidget *mPhoneListWidget;
-    WebListWidget *mWebListWidget;
-    MessagingListWidget *mMessagingListWidget;
-    MailListWidget *mMailListWidget;
-    ImageWidget *mPhotoWidget;
-    NameWidget *mNameWidget;
-    NicknameWidget *mNickNameWidget;
-    ContactEditor::CategoriesEditAbstractWidget *mCategoriesWidget;
-    MessageFormattingWidget *mMessageFormattingWidget;
+    PhoneListWidget *mPhoneListWidget = nullptr;
+    WebListWidget *mWebListWidget = nullptr;
+    MessagingListWidget *mMessagingListWidget = nullptr;
+    MailListWidget *mMailListWidget = nullptr;
+    ImageWidget *mPhotoWidget = nullptr;
+    NameWidget *mNameWidget = nullptr;
+    NicknameWidget *mNickNameWidget = nullptr;
+    ContactEditor::CategoriesEditAbstractWidget *mCategoriesWidget = nullptr;
+    MessageFormattingWidget *mMessageFormattingWidget = nullptr;
 };
 }
 #endif // GENERALINFOWIDGET_H

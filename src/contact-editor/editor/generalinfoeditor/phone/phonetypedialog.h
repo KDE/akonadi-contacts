@@ -51,7 +51,7 @@ private:
     KContacts::PhoneNumber::Type mType;
     KContacts::PhoneNumber::TypeList mTypeList;
 
-    QButtonGroup *mGroup;
+    QButtonGroup *mGroup = nullptr;
 };
 }
 #endif // PHONETYPEDIALOG_H

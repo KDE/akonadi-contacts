@@ -61,8 +61,8 @@ public:
         group.sync();
     }
 
-    ContactViewerDialog *q;
-    ContactViewer *mViewer;
+    ContactViewerDialog *q = nullptr;
+    ContactViewer *mViewer = nullptr;
 };
 
 ContactViewerDialog::ContactViewerDialog(QWidget *parent)

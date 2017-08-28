@@ -43,7 +43,7 @@ public:
     void setReadOnly(bool readOnly);
 private:
     void changeGrantleePath(const QString &path);
-    Grantlee::Engine *mEngine;
+    Grantlee::Engine *mEngine = nullptr;
     QString mErrorMessage;
     QString mGrantleeThemePath;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;

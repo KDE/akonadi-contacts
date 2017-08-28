@@ -46,8 +46,8 @@ public:
     void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
     QVariantList localCustomFieldDescriptions() const;
 private:
-    ContactEditor::CustomFieldEditorWidget *mCustomFieldEditorWidget;
-    ContactEditor::CustomFieldsListWidget *mCustomFieldsListWidget;
+    ContactEditor::CustomFieldEditorWidget *mCustomFieldEditorWidget = nullptr;
+    ContactEditor::CustomFieldsListWidget *mCustomFieldsListWidget = nullptr;
 };
 }
 #endif // CUSTOMFIELDSWIDGET_H

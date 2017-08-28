@@ -39,7 +39,7 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
 private:
-    KLineEdit *mNickName;
+    KLineEdit *mNickName = nullptr;
 };
 }
 #endif // NICKNAMEWIDGET_H

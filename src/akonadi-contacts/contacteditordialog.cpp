@@ -130,9 +130,9 @@ public:
     }
 
     ContactEditorDialog *q;
-    CollectionComboBox *mAddressBookBox;
+    CollectionComboBox *mAddressBookBox = nullptr;
     ContactEditorDialog::Mode mMode;
-    AkonadiContactEditor *mEditor;
+    AkonadiContactEditor *mEditor = nullptr;
 };
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)

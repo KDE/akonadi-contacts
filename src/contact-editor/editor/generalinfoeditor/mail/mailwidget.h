@@ -53,10 +53,10 @@ private:
     void slotPreferredChanged();
     KContacts::Email mEmail;
     QString mOldType;
-    PreferredLineEditWidget *mMailEdit;
-    ContactEditor::ContactSelectTypeCombobox *mMailType;
-    QToolButton *mAddButton;
-    QToolButton *mRemoveButton;
+    PreferredLineEditWidget *mMailEdit = nullptr;
+    ContactEditor::ContactSelectTypeCombobox *mMailType = nullptr;
+    QToolButton *mAddButton = nullptr;
+    QToolButton *mRemoveButton = nullptr;
 };
 }
 #endif // MAILWIDGET_H

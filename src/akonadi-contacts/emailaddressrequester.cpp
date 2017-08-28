@@ -42,8 +42,8 @@ public:
 
     void slotAddressBook();
 
-    EmailAddressRequester *q;
-    KLineEdit *mLineEdit;
+    EmailAddressRequester *q = nullptr;
+    KLineEdit *mLineEdit = nullptr;
 };
 
 void EmailAddressRequester::Private::slotAddressBook()

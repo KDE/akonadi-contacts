@@ -40,8 +40,8 @@ public:
 
     void setReadOnly(bool readOnly);
 private:
-    AddressesLocationEngineViewer *mAddressesLocationViewer;
-    AddressLocationWidget *mAddressLocationWidget;
+    AddressesLocationEngineViewer *mAddressesLocationViewer = nullptr;
+    AddressLocationWidget *mAddressLocationWidget = nullptr;
 };
 }
 #endif // ADDRESSESLOCATIONWIDGET_H

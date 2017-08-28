@@ -139,16 +139,16 @@ public:
         updateView();
     }
 
-    ContactGroupViewer *mParent;
-    TextBrowser *mBrowser;
+    ContactGroupViewer *mParent = nullptr;
+    TextBrowser *mBrowser = nullptr;
     QString mCurrentGroupName;
     KContacts::Addressee::List mCurrentContacts;
     QString mCurrentAddressBookName;
     Item mCurrentItem;
-    ContactGroupExpandJob *mExpandJob;
-    CollectionFetchJob *mParentCollectionFetchJob;
-    AbstractContactGroupFormatter *mStandardContactGroupFormatter;
-    AbstractContactGroupFormatter *mContactGroupFormatter;
+    ContactGroupExpandJob *mExpandJob = nullptr;
+    CollectionFetchJob *mParentCollectionFetchJob = nullptr;
+    AbstractContactGroupFormatter *mStandardContactGroupFormatter = nullptr;
+    AbstractContactGroupFormatter *mContactGroupFormatter = nullptr;
 };
 
 ContactGroupViewer::ContactGroupViewer(QWidget *parent)

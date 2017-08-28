@@ -34,7 +34,7 @@ public:
     bool sendSms(const QString &number, const QString &text) override;
 private:
     bool initializeEkiga();
-    QDBusInterface *mInterface;
+    QDBusInterface *mInterface = nullptr;
 };
 
 #endif // QEKIGADIALER_H

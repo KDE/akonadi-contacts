@@ -36,7 +36,7 @@ public:
     Akonadi::ContactsTreeModel *model() const;
 
 private:
-    Akonadi::ContactsTreeModel *mModel;
+    Akonadi::ContactsTreeModel *mModel = nullptr;
 };
 }
 

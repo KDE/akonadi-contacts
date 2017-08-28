@@ -39,7 +39,7 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
 private:
-    ContactEditor::MailWidgetLister *mMailWidgetLister;
+    ContactEditor::MailWidgetLister *mMailWidgetLister = nullptr;
 };
 }
 #endif // MAILISTWIDGET_H

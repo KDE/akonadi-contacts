@@ -40,8 +40,8 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    QComboBox *mMailPreferFormatting;
-    QCheckBox *mAllowRemoteContent;
+    QComboBox *mMailPreferFormatting = nullptr;
+    QCheckBox *mAllowRemoteContent = nullptr;
 };
 }
 #endif // MESSAGEFORMATTINGWIDGET_H

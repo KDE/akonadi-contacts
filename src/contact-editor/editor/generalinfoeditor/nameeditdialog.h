@@ -57,12 +57,12 @@ public:
     void setDisplayType(DisplayNameEditWidget::DisplayType type);
     DisplayNameEditWidget::DisplayType displayType() const;
 private:
-    KComboBox *mSuffixCombo;
-    KComboBox *mPrefixCombo;
-    KLineEdit *mFamilyNameEdit;
-    KLineEdit *mGivenNameEdit;
-    KLineEdit *mAdditionalNameEdit;
-    DisplayNameEditWidget *mDisplayNameEdit;
+    KComboBox *mSuffixCombo = nullptr;
+    KComboBox *mPrefixCombo = nullptr;
+    KLineEdit *mFamilyNameEdit = nullptr;
+    KLineEdit *mGivenNameEdit = nullptr;
+    KLineEdit *mAdditionalNameEdit = nullptr;
+    DisplayNameEditWidget *mDisplayNameEdit = nullptr;
 };
 
 #endif

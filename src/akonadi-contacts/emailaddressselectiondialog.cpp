@@ -73,8 +73,8 @@ public:
         group.writeEntry("Size", q->size());
     }
 
-    EmailAddressSelectionDialog *q;
-    EmailAddressSelectionWidget *mView;
+    EmailAddressSelectionDialog *q = nullptr;
+    EmailAddressSelectionWidget *mView = nullptr;
 };
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog(QWidget *parent)

@@ -48,7 +48,7 @@ private:
     bool mPreferred;
     QIcon mIconEnabled;
     QIcon mIconDisabled;
-    QAction *mPreferredAction;
+    QAction *mPreferredAction = nullptr;
 };
 }
 #endif // PREFEREDLINEEDITWIDGET_H

@@ -40,7 +40,7 @@ public:
 private:
     bool initializeSkype();
 
-    QDBusInterface *mInterface;
+    QDBusInterface *mInterface = nullptr;
 };
 
 #endif

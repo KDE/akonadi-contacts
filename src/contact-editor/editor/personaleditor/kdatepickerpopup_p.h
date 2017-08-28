@@ -101,7 +101,7 @@ protected Q_SLOTS:
 private:
     void buildMenu();
 
-    KDatePicker *mDatePicker;
+    KDatePicker *mDatePicker = nullptr;
     Items mItems;
     QDate mDate;
 };

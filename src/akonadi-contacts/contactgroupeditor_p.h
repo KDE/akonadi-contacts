@@ -54,14 +54,14 @@ public:
     bool storeContactGroup(KContacts::ContactGroup &group);
     void setupMonitor();
 
-    ContactGroupEditor *mParent;
+    ContactGroupEditor *mParent = nullptr;
     ContactGroupEditor::Mode mMode;
     Item mItem;
-    Monitor *mMonitor;
+    Monitor *mMonitor = nullptr;
     Collection mDefaultCollection;
     Ui::ContactGroupEditor mGui;
     bool mReadOnly;
-    ContactGroupModel *mGroupModel;
+    ContactGroupModel *mGroupModel = nullptr;
 };
 }
 

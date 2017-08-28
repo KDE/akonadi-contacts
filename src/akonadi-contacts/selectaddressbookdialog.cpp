@@ -47,7 +47,7 @@ public:
         writeConfig();
     }
 
-    SelectAddressBookDialog *q;
+    SelectAddressBookDialog *q = nullptr;
     void readConfig();
     void writeConfig();
 };

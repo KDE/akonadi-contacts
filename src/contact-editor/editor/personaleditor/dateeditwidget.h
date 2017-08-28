@@ -73,12 +73,12 @@ private Q_SLOTS:
     void updateView();
 
 private:
-    DateView *mView;
-    QToolButton *mSelectButton;
-    QToolButton *mClearButton;
-    KDatePickerPopup *mMenu;
+    DateView *mView = nullptr;
+    QToolButton *mSelectButton = nullptr;
+    QToolButton *mClearButton = nullptr;
+    KDatePickerPopup *mMenu = nullptr;
     QDate mDate;
-    bool mReadOnly;
+    bool mReadOnly = false;
 };
 
 #endif

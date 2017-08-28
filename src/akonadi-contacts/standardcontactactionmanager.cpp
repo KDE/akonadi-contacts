@@ -526,14 +526,14 @@ public:
         KMessageBox::error(mParentWidget, i18n("Contact cannot be stored: %1", error), i18n("Failed to store contact"));
     }
 
-    KActionCollection *mActionCollection;
-    QWidget *mParentWidget;
-    StandardActionManager *mGenericManager;
-    QItemSelectionModel *mCollectionSelectionModel;
-    QItemSelectionModel *mItemSelectionModel;
+    KActionCollection *mActionCollection = nullptr;
+    QWidget *mParentWidget = nullptr;
+    StandardActionManager *mGenericManager = nullptr;
+    QItemSelectionModel *mCollectionSelectionModel = nullptr;
+    QItemSelectionModel *mItemSelectionModel = nullptr;
     QHash<StandardContactActionManager::Type, QAction *> mActions;
     QSet<StandardContactActionManager::Type> mInterceptedActions;
-    StandardContactActionManager *mParent;
+    StandardContactActionManager *mParent = nullptr;
 };
 
 StandardContactActionManager::StandardContactActionManager(KActionCollection *actionCollection, QWidget *parent)

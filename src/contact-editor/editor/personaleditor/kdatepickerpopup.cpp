@@ -54,8 +54,8 @@ protected:
     }
 
 private:
-    KDatePicker *mDatePicker;
-    QWidget *mOriginalParent;
+    KDatePicker *mDatePicker = nullptr;
+    QWidget *mOriginalParent = nullptr;
 };
 
 KDatePickerPopup::KDatePickerPopup(Items items, const QDate &date, QWidget *parent)

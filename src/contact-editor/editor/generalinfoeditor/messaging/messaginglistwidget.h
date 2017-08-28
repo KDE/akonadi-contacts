@@ -41,7 +41,7 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    ContactEditor::MessagingWidgetLister *mMessagingWidgetLister;
+    ContactEditor::MessagingWidgetLister *mMessagingWidgetLister = nullptr;
 };
 }
 #endif // MAILISTWIDGET_H

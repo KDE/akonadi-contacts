@@ -44,7 +44,7 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    KUrlRequester *mURL;
+    KUrlRequester *mURL = nullptr;
     bool mReadOnly;
 };
 

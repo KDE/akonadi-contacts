@@ -262,17 +262,17 @@ public:
         updateView(metaData.customFieldDescriptions(), addressBookName);
     }
 
-    ContactViewer *mParent;
-    TextBrowser *mBrowser;
+    ContactViewer *mParent = nullptr;
+    TextBrowser *mBrowser = nullptr;
     KContacts::Addressee mCurrentContact;
     Item mCurrentItem;
-    AbstractContactFormatter *mContactFormatter;
-    AbstractContactFormatter *mStandardContactFormatter;
-    CollectionFetchJob *mParentCollectionFetchJob;
+    AbstractContactFormatter *mContactFormatter = nullptr;
+    AbstractContactFormatter *mStandardContactFormatter = nullptr;
+    CollectionFetchJob *mParentCollectionFetchJob = nullptr;
     bool mShowQRCode;
 #ifdef HAVE_PRISON
-    Prison::AbstractBarcode *mQRCode;
-    Prison::AbstractBarcode *mDataMatrix;
+    Prison::AbstractBarcode *mQRCode = nullptr;
+    Prison::AbstractBarcode *mDataMatrix = nullptr;
 #endif // HAVE_PRISON
 };
 

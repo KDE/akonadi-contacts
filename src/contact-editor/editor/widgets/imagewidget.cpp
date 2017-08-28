@@ -50,7 +50,7 @@ public:
     QImage loadImage(const QUrl &url, bool *ok, bool selectPictureSize = true);
 
 private:
-    QWidget *mParent;
+    QWidget *mParent = nullptr;
 };
 
 ImageLoader::ImageLoader(QWidget *parent)

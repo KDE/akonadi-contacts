@@ -128,7 +128,7 @@ public:
         }
     }
 
-    ContactGroupExpandJob *mParent;
+    ContactGroupExpandJob *mParent = nullptr;
     KContacts::ContactGroup mGroup;
     QString mName;
     KContacts::Addressee::List mContacts;

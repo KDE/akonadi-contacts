@@ -73,7 +73,7 @@ protected:
     }
 
 private:
-    QWidget *mReceiver;
+    QWidget *mReceiver = nullptr;
 };
 
 /**
@@ -92,13 +92,13 @@ public:
 
     void init();
 
-    EmailAddressSelectionWidget *q;
-    QAbstractItemModel *mModel;
-    QLabel *mDescriptionLabel;
-    SearchLineEdit *mSearchLine;
-    Akonadi::EntityTreeView *mView;
-    EmailAddressSelectionProxyModel *mSelectionModel;
-    bool mShowOnlyContactWithEmail;
+    EmailAddressSelectionWidget *q = nullptr;
+    QAbstractItemModel *mModel = nullptr;
+    QLabel *mDescriptionLabel = nullptr;
+    SearchLineEdit *mSearchLine = nullptr;
+    Akonadi::EntityTreeView *mView = nullptr;
+    EmailAddressSelectionProxyModel *mSelectionModel = nullptr;
+    bool mShowOnlyContactWithEmail = false;
 };
 
 void EmailAddressSelectionWidget::Private::init()

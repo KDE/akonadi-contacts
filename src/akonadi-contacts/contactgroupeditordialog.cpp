@@ -78,10 +78,10 @@ public:
     }
 
     ContactGroupEditorDialog *q;
-    CollectionComboBox *mAddressBookBox;
-    ContactGroupEditor *mEditor;
+    CollectionComboBox *mAddressBookBox = nullptr;
+    ContactGroupEditor *mEditor = nullptr;
     ContactGroupEditorDialog::Mode mMode;
-    QPushButton *okButton;
+    QPushButton *okButton = nullptr;
 };
 
 ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)

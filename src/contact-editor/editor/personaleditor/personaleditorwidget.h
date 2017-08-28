@@ -40,9 +40,9 @@ public:
     void storeContact(KContacts::Addressee &contact);
     void setReadOnly(bool readOnly);
 private:
-    DateEditWidget *mBirthdateWidget;
-    DateEditWidget *mAnniversaryWidget;
-    KLineEdit *mPartnerWidget;
+    DateEditWidget *mBirthdateWidget = nullptr;
+    DateEditWidget *mAnniversaryWidget = nullptr;
+    KLineEdit *mPartnerWidget = nullptr;
 };
 }
 #endif // PERSONALEDITORWIDGET_H

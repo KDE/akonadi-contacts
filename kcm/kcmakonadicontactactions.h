@@ -44,7 +44,7 @@ private Q_SLOTS:
     void slotSmsPhoneNumberActionChanged(int value);
     void slotShowAddressActionChanged(int value);
 private:
-    KConfigDialogManager *mConfigManager;
+    KConfigDialogManager *mConfigManager = nullptr;
     Ui_AkonadiContactActions ui;
 };
 

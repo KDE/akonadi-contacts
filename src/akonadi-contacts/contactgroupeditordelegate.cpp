@@ -121,7 +121,7 @@ public:
 
     QSize mButtonSize;
     const QIcon mIcon;
-    QAbstractItemView *mItemView;
+    QAbstractItemView *mItemView = nullptr;
 };
 
 ContactGroupEditorDelegate::ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent)

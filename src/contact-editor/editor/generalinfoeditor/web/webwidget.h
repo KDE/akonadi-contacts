@@ -56,10 +56,10 @@ private:
     KContacts::ResourceLocatorUrl mUrl;
     QStringList mWebSiteType;
     QString mOldType;
-    PreferredLineEditWidget *mWebSiteEdit;
-    QToolButton *mAddButton;
-    QToolButton *mRemoveButton;
-    ContactEditor::ContactSelectTypeCombobox *mWebType;
+    PreferredLineEditWidget *mWebSiteEdit = nullptr;
+    QToolButton *mAddButton = nullptr;
+    QToolButton *mRemoveButton = nullptr;
+    ContactEditor::ContactSelectTypeCombobox *mWebType = nullptr;
 };
 }
 #endif // WEBWIDGET_H

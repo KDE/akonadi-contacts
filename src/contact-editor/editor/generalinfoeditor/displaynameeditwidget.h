@@ -74,9 +74,9 @@ private:
     void setComboBoxEditable(bool);
     void updateView();
 
-    KComboBox *mView;
+    KComboBox *mView = nullptr;
     KContacts::Addressee mContact;
-    QWidget *mViewport;
+    QWidget *mViewport = nullptr;
     DisplayType mDisplayType;
     int mAdditionalPopupWidth;
 };

@@ -48,8 +48,8 @@ public Q_SLOTS:
 
 private:
     CustomField::List mLocalCustomFields;
-    QTreeView *mCustomFieldList;
-    CustomFieldsModel *mModel;
+    QTreeView *mCustomFieldList = nullptr;
+    CustomFieldsModel *mModel = nullptr;
 };
 }
 #endif // CUSTOMFIELDSLISTWIDGET_H

@@ -38,7 +38,7 @@ public:
     void sourceRowsInserted(const QModelIndex &parentIndex, int start, int end);
     void sourceRowsRemoved(const QModelIndex &parentIndex, int start, int end);
 
-    LeafExtensionProxyModel *q;
+    LeafExtensionProxyModel *q = nullptr;
     QMap<qint64, QModelIndex> mParentIndexes;
     QSet<QModelIndex> mOwnIndexes;
     qint64 mUniqueKeyCounter;

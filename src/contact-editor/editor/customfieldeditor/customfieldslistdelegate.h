@@ -45,7 +45,7 @@ private:
     void removeField(int row, QAbstractItemModel *model);
     const QIcon mIcon;
     QSize mButtonSize;
-    QAbstractItemView *mItemView;
+    QAbstractItemView *mItemView = nullptr;
 };
 }
 #endif

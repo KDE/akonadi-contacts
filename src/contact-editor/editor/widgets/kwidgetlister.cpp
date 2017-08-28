@@ -57,12 +57,12 @@ public:
         mWidgetList.clear();
     }
 
-    KWidgetLister *q;
-    QVBoxLayout *mLayout;
-    QWidget *mButtonBox;
+    KWidgetLister *q = nullptr;
+    QVBoxLayout *mLayout = nullptr;
+    QWidget *mButtonBox = nullptr;
     QList<QWidget *> mWidgetList;
-    int mMinWidgets;
-    int mMaxWidgets;
+    int mMinWidgets = 0;
+    int mMaxWidgets = 0;
 };
 
 KWidgetLister::KWidgetLister(int minWidgets, int maxWidgets, QWidget *parent)

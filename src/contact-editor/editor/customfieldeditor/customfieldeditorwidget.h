@@ -45,10 +45,10 @@ private:
     void slotAddField();
     void slotFielNameChanged(const QString &text);
     void fillTypes();
-    QLineEdit *mFieldName;
-    QPushButton *mAddField;
-    QCheckBox *mUseAllContacts;
-    QComboBox *mFieldType;
+    QLineEdit *mFieldName = nullptr;
+    QPushButton *mAddField = nullptr;
+    QCheckBox *mUseAllContacts = nullptr;
+    QComboBox *mFieldType = nullptr;
 };
 }
 #endif // CUSTOMFIELDEDITORWIDGET_H

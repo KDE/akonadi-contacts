@@ -52,8 +52,8 @@ private:
     void slotOpenNameEditDialog();
     DisplayNameEditWidget::DisplayType mDisplayType;
     KContacts::Addressee mContact;
-    KLineEdit *mNameEdit;
-    QToolButton *mButtonEdit;
+    KLineEdit *mNameEdit = nullptr;
+    QToolButton *mButtonEdit = nullptr;
 };
 }
 #endif // NAMEWIDGET_H

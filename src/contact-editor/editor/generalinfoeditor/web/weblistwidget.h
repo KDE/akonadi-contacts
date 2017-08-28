@@ -40,7 +40,7 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
 private:
-    WebWidgetLister *mWebWidgetLister;
+    WebWidgetLister *mWebWidgetLister = nullptr;
 };
 }
 #endif // WEBLISTWIDGET_H

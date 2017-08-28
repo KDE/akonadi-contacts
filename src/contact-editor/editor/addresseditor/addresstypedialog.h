@@ -41,7 +41,7 @@ public:
     KContacts::Address::Type type() const;
 
 private:
-    QButtonGroup *mGroup;
+    QButtonGroup *mGroup = nullptr;
 
     KContacts::Address::TypeList mTypeList;
 };

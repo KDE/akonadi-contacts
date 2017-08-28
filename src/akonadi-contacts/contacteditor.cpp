@@ -79,14 +79,14 @@ public:
     void storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData);
     void setupMonitor();
 
-    AkonadiContactEditor *mParent;
+    AkonadiContactEditor *mParent = nullptr;
     AkonadiContactEditor::Mode mMode;
     Akonadi::Item mItem;
     Akonadi::ContactMetaDataAkonadi mContactMetaData;
-    Akonadi::Monitor *mMonitor;
+    Akonadi::Monitor *mMonitor = nullptr;
     Akonadi::Collection mDefaultCollection;
-    ContactEditor::AbstractContactEditorWidget *mEditorWidget;
-    bool mReadOnly;
+    ContactEditor::AbstractContactEditorWidget *mEditorWidget = nullptr;
+    bool mReadOnly = false;
 };
 
 void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)

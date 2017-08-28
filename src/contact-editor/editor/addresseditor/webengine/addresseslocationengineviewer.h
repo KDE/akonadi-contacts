@@ -53,7 +53,7 @@ private:
     void editAddress(int index);
     void removeAddress(int index);
     KContacts::Address::List mAddresses;
-    AddressesLocationGrantleeFormater *mAddressesLocationGrantleeFormatter;
+    AddressesLocationGrantleeFormater *mAddressesLocationGrantleeFormatter = nullptr;
     bool mEditMode;
 };
 }

@@ -51,8 +51,8 @@ private:
     void initUI();
 
     QString mNumber;
-    KTextEdit *mSmsTextEdit;
-    QLabel *mLengthLabel;
+    KTextEdit *mSmsTextEdit = nullptr;
+    QLabel *mLengthLabel = nullptr;
     QString mText;
 };
 

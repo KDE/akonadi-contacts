@@ -55,10 +55,10 @@ private Q_SLOTS:
     void slotPreferredChanged();
 
 private:
-    PreferredLineEditWidget *mPhoneNumberEdit;
-    QToolButton *mAddButton;
-    QToolButton *mRemoveButton;
-    PhoneComboBoxType *mPhoneType;
+    PreferredLineEditWidget *mPhoneNumberEdit = nullptr;
+    QToolButton *mAddButton = nullptr;
+    QToolButton *mRemoveButton = nullptr;
+    PhoneComboBoxType *mPhoneType = nullptr;
 };
 }
 #endif // PHONEWIDGET_H

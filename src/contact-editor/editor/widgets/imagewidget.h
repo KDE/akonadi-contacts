@@ -74,7 +74,7 @@ private:
 
     KContacts::Picture mPicture;
     QPoint mDragStartPos;
-    ImageLoader *mImageLoader;
+    ImageLoader *mImageLoader = nullptr;
     Type mType;
     bool mHasImage;
     bool mReadOnly;

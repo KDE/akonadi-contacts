@@ -40,7 +40,7 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
 private:
-    ContactEditor::PhoneWidgetLister *mPhoneWidgetLister;
+    ContactEditor::PhoneWidgetLister *mPhoneWidgetLister = nullptr;
 };
 }
 #endif // PHONELISTWIDGET_H

@@ -53,10 +53,10 @@ private Q_SLOTS:
     void slotRemoveMessaging();
     void slotPreferredChanged();
 private:
-    PreferredLineEditWidget *mMessagingEdit;
-    QToolButton *mAddButton;
-    QToolButton *mRemoveButton;
-    ContactEditor::ContactEditorComboBox *mProtocolCombo;
+    PreferredLineEditWidget *mMessagingEdit = nullptr;
+    QToolButton *mAddButton = nullptr;
+    QToolButton *mRemoveButton = nullptr;
+    ContactEditor::ContactEditorComboBox *mProtocolCombo = nullptr;
 };
 }
 #endif // MESSAGINGWIDGET_H

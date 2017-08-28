@@ -35,7 +35,7 @@ using namespace Akonadi;
 class Q_DECL_HIDDEN ContactGroupViewerDialog::Private
 {
 public:
-    ContactGroupViewer *mViewer;
+    ContactGroupViewer *mViewer = nullptr;
 };
 
 ContactGroupViewerDialog::ContactGroupViewerDialog(QWidget *parent)
