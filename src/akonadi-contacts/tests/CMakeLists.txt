@@ -22,3 +22,4 @@ endmacro()
 
 add_akonadi_contact_demo(emailaddressselectionwidgettest.cpp)
 add_akonadi_contact_demo(emailaddressselectiondialogtest.cpp)
+add_akonadi_contact_demo(emailaddressselectionmodeltest.cpp)
