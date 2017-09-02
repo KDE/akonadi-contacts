@@ -20,13 +20,14 @@
     02110-1301, USA.
 */
 
-#include "phonecomboboxtype.h"
 #include "phonewidget.h"
+#include "phonecomboboxtype.h"
+#include "editor/widgets/preferredlineeditwidget.h"
+
 #include <KLocalizedString>
+
 #include <QHBoxLayout>
-#include <KLineEdit>
 #include <QToolButton>
-#include <editor/widgets/preferredlineeditwidget.h>
 
 using namespace ContactEditor;
 PhoneWidget::PhoneWidget(QWidget *parent)

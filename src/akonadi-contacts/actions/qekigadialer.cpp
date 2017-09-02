@@ -20,15 +20,12 @@
 
 #include "qekigadialer.h"
 
-#include <KDBusConnectionPool>
-
 #include <KLocalizedString>
-
-#include <QDBusConnectionInterface>
 
 #include <QProcess>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
+#include <KDBusConnectionPool>
 #include <QDBusInterface>
 #include <QDBusReply>
 
@@ -37,7 +34,6 @@
 #else
 #include <unistd.h>
 #endif
-#include <QString>
 
 static bool isEkigaServiceRegistered()
 {

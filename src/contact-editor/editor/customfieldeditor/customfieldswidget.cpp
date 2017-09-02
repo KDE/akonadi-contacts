@@ -20,9 +20,10 @@
     02110-1301, USA.
 */
 
-#include "customfieldeditorwidget.h"
 #include "customfieldswidget.h"
+#include "customfieldeditorwidget.h"
 #include "customfieldslistwidget.h"
+
 #include <QVBoxLayout>
 
 using namespace ContactEditor;

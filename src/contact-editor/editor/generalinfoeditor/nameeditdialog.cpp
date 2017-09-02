@@ -19,16 +19,15 @@
     02110-1301, USA.
 */
 
-#include "displaynameeditwidget.h"
 #include "nameeditdialog.h"
-
-#include <QFormLayout>
+#include "displaynameeditwidget.h"
 
 #include <KComboBox>
 #include <KLineEdit>
 #include <KLocalizedString>
 
 #include <QDialogButtonBox>
+#include <QFormLayout>
 #include <QPushButton>
 
 NameEditDialog::NameEditDialog(QWidget *parent)

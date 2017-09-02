@@ -20,10 +20,12 @@
     02110-1301, USA.
 */
 
-#include "addresstypedialog.h"
 #include "selectaddresstypecombobox.h"
+#include "addresstypedialog.h"
+#include "autoqpointer_p.h"
+
 #include <KLocalizedString>
-#include <autoqpointer_p.h>
+
 using namespace ContactEditor;
 SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     : KComboBox(parent)

@@ -20,15 +20,12 @@
 
 #include "qsflphonedialer.h"
 
-#include <KDBusConnectionPool>
-
 #include <KLocalizedString>
-
-#include <QDBusConnectionInterface>
 
 #include <QProcess>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
+#include <KDBusConnectionPool>
 #include <QDBusInterface>
 #include <QDBusReply>
 
