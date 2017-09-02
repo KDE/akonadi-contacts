@@ -29,10 +29,10 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 
-#ifdef WIN32
-#include <windows.h>
-#else
+#if !defined(Q_OS_WIN)
 #include <unistd.h>
+#else
+#include <windows.h>
 #endif
 
 static bool isEkigaServiceRegistered()
@@ -89,10 +89,10 @@ bool QEkigaDialer::initializeEkiga()
         const int runs = 100;
         for (int i = 0; i < runs; ++i) {
             if (!isEkigaServiceRegistered()) {
-#ifdef WIN32
-                Sleep(2000);
-#else
+#if !defined(Q_OS_WIN)
                 ::sleep(2);
+#else
+                Sleep(2000);
 #endif
             } else {
                 break;
