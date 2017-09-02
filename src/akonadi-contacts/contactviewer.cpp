@@ -207,8 +207,8 @@ public:
     {
         const QUrlQuery query(url);
         const QString urlScheme(url.scheme());
-        if (urlScheme == QLatin1String("http")
-            || urlScheme == QLatin1String("https")) {
+        if (urlScheme == QLatin1String("http") ||
+            urlScheme == QLatin1String("https")) {
             Q_EMIT mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
             const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
@@ -345,13 +345,13 @@ void ContactViewer::itemChanged(const Item &contactItem)
 
     // stop any running fetch job
     if (d->mParentCollectionFetchJob) {
-        disconnect(d->mParentCollectionFetchJob, SIGNAL(result(KJob *)), this, SLOT(slotParentCollectionFetched(KJob *)));
+        disconnect(d->mParentCollectionFetchJob, SIGNAL(result(KJob*)), this, SLOT(slotParentCollectionFetched(KJob*)));
         delete d->mParentCollectionFetchJob;
         d->mParentCollectionFetchJob = nullptr;
     }
 
     d->mParentCollectionFetchJob = new CollectionFetchJob(contactItem.parentCollection(), CollectionFetchJob::Base, this);
-    connect(d->mParentCollectionFetchJob, SIGNAL(result(KJob *)), SLOT(slotParentCollectionFetched(KJob *)));
+    connect(d->mParentCollectionFetchJob, SIGNAL(result(KJob*)), SLOT(slotParentCollectionFetched(KJob*)));
 }
 
 void ContactViewer::itemRemoved()

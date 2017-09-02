@@ -142,7 +142,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
     Q_UNUSED(option)
     if (index.column() == 0) {
         auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
-        connect(edit, SIGNAL(completed(QWidget *)), SLOT(completed(QWidget *)));
+        connect(edit, SIGNAL(completed(QWidget*)), SLOT(completed(QWidget*)));
 
         return edit;
     } else {
