@@ -16,8 +16,8 @@
     02110-1301, USA.
  */
 
-#ifndef SELECTEDCOLLECTIONDIALOG_H
-#define SELECTEDCOLLECTIONDIALOG_H
+#ifndef SELECTADDRESSBOOKDIALOG_H
+#define SELECTADDRESSBOOKDIALOG_H
 
 #include <AkonadiWidgets/CollectionDialog>
 #include "akonadi-contact_export.h"
@@ -40,4 +40,4 @@ private:
 };
 }
 
-#endif // SELECTEDCOLLECTIONDIALOG_H
+#endif // SELECTADDRESSBOOKDIALOG_H

@@ -19,8 +19,8 @@
     02110-1301, USA.
 */
 
-#ifndef CONTACTEDITORCONTACTCOMBOBOX_H
-#define CONTACTEDITORCONTACTCOMBOBOX_H
+#ifndef CONTACTEDITORCOMBOBOX_H
+#define CONTACTEDITORCOMBOBOX_H
 
 #include <QComboBox>
 #include "contacteditor_private_export.h"
@@ -36,4 +36,4 @@ protected:
     QSize minimumSizeHint() const override;
 };
 }
-#endif // CONTACTEDITORCONTACTCOMBOBOX_H
+#endif // CONTACTEDITORCOMBOBOX_H

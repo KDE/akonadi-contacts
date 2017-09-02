@@ -20,8 +20,8 @@
     02110-1301, USA.
 */
 
-#ifndef MAILISTWIDGET_H
-#define MAILISTWIDGET_H
+#ifndef MAILLISTWIDGET_H
+#define MAILLISTWIDGET_H
 
 #include <QWidget>
 namespace KContacts {
@@ -42,4 +42,4 @@ private:
     ContactEditor::MailWidgetLister *mMailWidgetLister = nullptr;
 };
 }
-#endif // MAILISTWIDGET_H
+#endif // MAILLISTWIDGET_H

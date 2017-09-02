@@ -19,8 +19,8 @@
     Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
     02110-1301, USA.
 */
-#ifndef CUSTOMFIELSLISTWIDGETTEST_H
-#define CUSTOMFIELSLISTWIDGETTEST_H
+#ifndef CUSTOMFIELDSLISTWIDGETTEST_H
+#define CUSTOMFIELDSLISTWIDGETTEST_H
 
 #include <QObject>
 
@@ -32,4 +32,4 @@ public:
     ~CustomFielsListWidgetTest();
 };
 
-#endif // CUSTOMFIELSLISTWIDGETTEST_H
+#endif // CUSTOMFIELDSLISTWIDGETTEST_H

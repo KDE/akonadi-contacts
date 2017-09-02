@@ -19,8 +19,8 @@
     02110-1301, USA.
 */
 
-#ifndef AKONADI_CONTACTMETADATA_P_H
-#define AKONADI_CONTACTMETADATA_P_H
+#ifndef CONTACTMETADATAAKONADI_P_H
+#define CONTACTMETADATAAKONADI_P_H
 
 #include <QStringList>
 #include <QVariant>

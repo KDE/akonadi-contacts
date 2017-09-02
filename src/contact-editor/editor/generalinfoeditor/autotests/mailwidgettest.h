@@ -20,8 +20,8 @@
     02110-1301, USA.
 */
 
-#ifndef PHONEWIDGETTEST_H
-#define PHONEWIDGETTEST_H
+#ifndef MAILWIDGETTEST_H
+#define MAILWIDGETTEST_H
 
 #include <QObject>
 class MailWidgetTest : public QObject
@@ -34,4 +34,4 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // PHONEWIDGETTEST_H
+#endif // MAILWIDGETTEST_H

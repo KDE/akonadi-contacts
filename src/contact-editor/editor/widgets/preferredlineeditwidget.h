@@ -19,8 +19,8 @@
     02110-1301, USA.
 */
 
-#ifndef PREFEREDLINEEDITWIDGET_H
-#define PREFEREDLINEEDITWIDGET_H
+#ifndef PREFERREDLINEEDITWIDGET_H
+#define PREFERREDLINEEDITWIDGET_H
 
 #include <KLineEdit>
 #include <QIcon>
@@ -51,4 +51,4 @@ private:
     QAction *mPreferredAction = nullptr;
 };
 }
-#endif // PREFEREDLINEEDITWIDGET_H
+#endif // PREFERREDLINEEDITWIDGET_H
