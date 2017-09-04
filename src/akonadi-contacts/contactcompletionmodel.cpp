@@ -39,6 +39,7 @@ QAbstractItemModel *ContactCompletionModel::self()
     }
 
     Monitor *monitor = new Monitor;
+    monitor->setObjectName(QStringLiteral("ContactCompletionModelMonitor"));
     monitor->fetchCollection(true);
     monitor->itemFetchScope().fetchFullPayload();
     monitor->setCollectionMonitored(Akonadi::Collection::root());

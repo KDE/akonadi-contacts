@@ -197,6 +197,7 @@ void Akonadi::AkonadiContactEditor::Private::setupMonitor()
 {
     delete mMonitor;
     mMonitor = new Akonadi::Monitor;
+    mMonitor->setObjectName(QStringLiteral("ContactEditorMonitor"));
     mMonitor->ignoreSession(Akonadi::Session::defaultSession());
 
     connect(mMonitor, SIGNAL(itemChanged(Akonadi::Item,QSet<QByteArray>)), mParent, SLOT(itemChanged(Akonadi::Item,QSet<QByteArray>)));
