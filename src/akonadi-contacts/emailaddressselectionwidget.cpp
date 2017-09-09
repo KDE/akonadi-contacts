@@ -156,7 +156,11 @@ void EmailAddressSelectionWidget::Private::init()
 
     mSearchLine->setFocus();
 
-    QTimer::singleShot(1000, mView, &QTreeView::expandAll);
+    if (Akonadi::EntityTreeModel *etm = qobject_cast<Akonadi::EntityTreeModel*>(mModel)) {
+        QObject::connect(etm, &Akonadi::EntityTreeModel::collectionTreeFetched, mView, &QTreeView::expandAll);
+    } else {
+        QTimer::singleShot(1000, mView, &QTreeView::expandAll);
+    }
 }
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(QWidget *parent)
