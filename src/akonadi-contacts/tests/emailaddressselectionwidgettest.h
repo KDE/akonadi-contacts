@@ -39,8 +39,8 @@ private Q_SLOTS:
     void showSelection();
 
 private:
-    Akonadi::EmailAddressSelectionWidget *mAddressesWidget;
-    QTextBrowser *mInfo;
+    Akonadi::EmailAddressSelectionWidget *mAddressesWidget = nullptr;
+    QTextBrowser *mInfo = nullptr;
 };
 
 #endif

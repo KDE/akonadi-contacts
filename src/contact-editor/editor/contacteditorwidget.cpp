@@ -80,7 +80,7 @@ public:
     ContactEditor::PersonalEditorWidget *mPersonalEditorWidget = nullptr;
 
     // widgets from custom fields group
-    ContactEditor::CustomFieldsWidget *mCustomFieldsWidget;
+    ContactEditor::CustomFieldsWidget *mCustomFieldsWidget = nullptr;
 
     // custom editor pages
     QList<ContactEditor::ContactEditorPagePlugin *> mCustomPages;
