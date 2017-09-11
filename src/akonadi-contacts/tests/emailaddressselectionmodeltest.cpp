@@ -21,15 +21,10 @@
 #include <QTreeView>
 #include <Akonadi/Contact/ContactsTreeModel>
 
-#include <kaboutdata.h>
 #include <qapplication.h>
-#include <KLocalizedString>
 
 int main(int argc, char **argv)
 {
-    KAboutData aboutData(QStringLiteral("emailaddressselectiondialogtest"), QStringLiteral("Test EmailAddressSelectionModel"), QStringLiteral("0.1"));
-    KAboutData::setApplicationData(aboutData);
-
     QApplication app(argc, argv);
 
     Akonadi::EmailAddressSelectionModel model;

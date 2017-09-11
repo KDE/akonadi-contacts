@@ -20,15 +20,10 @@
 
 #include "emailaddressselectiondialog.h"
 
-#include <kaboutdata.h>
 #include <qapplication.h>
-#include <KLocalizedString>
 
 int main(int argc, char **argv)
 {
-    KAboutData aboutData(QStringLiteral("emailaddressselectiondialogtest"), i18n("Test EmailAddressSelectionDialog"), QStringLiteral("0.1"));
-    KAboutData::setApplicationData(aboutData);
-
     QApplication app(argc, argv);
 
     Akonadi::EmailAddressSelectionDialog dlg;

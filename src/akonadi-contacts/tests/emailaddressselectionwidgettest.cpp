@@ -20,11 +20,9 @@
 
 #include "emailaddressselectionwidgettest.h"
 
-#include <kaboutdata.h>
 #include <qapplication.h>
 #include <KComboBox>
 #include <qtextbrowser.h>
-#include <KLocalizedString>
 
 #include <QGridLayout>
 #include <QPushButton>
@@ -69,9 +67,6 @@ void MainWidget::showSelection()
 
 int main(int argc, char **argv)
 {
-    KAboutData aboutData(QStringLiteral("emailaddressselectionwidgettest"), i18n("Test EmailAddressSelectionWidget"), QStringLiteral("0.1"));
-    KAboutData::setApplicationData(aboutData);
-
     QApplication app(argc, argv);
 
     MainWidget wdg;
