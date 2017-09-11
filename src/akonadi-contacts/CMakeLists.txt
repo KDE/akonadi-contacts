@@ -136,11 +136,8 @@ target_link_libraries(KF5AkonadiContact
     KF5::TextWidgets
     KF5::XmlGui
     KF5::ContactEditor
+    KF5::Prison
     )
-
-if(KF5Prison_FOUND)
-    target_link_libraries(KF5AkonadiContact PRIVATE KF5::Prison)
-endif()
 
 
 set_target_properties(KF5AkonadiContact PROPERTIES

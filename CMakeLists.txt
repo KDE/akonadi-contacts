@@ -48,15 +48,8 @@ find_package(KF5AkonadiMime ${AKONADI_MIME_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
 set(Prison_MIN_VERSION "${KF5_VERSION}")
-find_package(KF5Prison ${Prison_MIN_VERSION})
-set_package_properties(Prison PROPERTIES
-    DESCRIPTION "Prison"
-    URL "http://projects.kde.org/prison"
-    TYPE OPTIONAL
-    PURPOSE "Needed to show mobile barcodes of your contacts")
-if (KF5Prison_FOUND)
-    add_definitions(-DHAVE_PRISON)
-endif()
+find_package(KF5Prison ${Prison_MIN_VERSION} CONFIG REQUIRED)
+add_definitions(-DHAVE_PRISON)
 
 ########### Targets ###########
 
