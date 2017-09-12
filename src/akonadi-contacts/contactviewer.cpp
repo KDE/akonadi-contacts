@@ -43,10 +43,8 @@
 #include <QVBoxLayout>
 #include <QIcon>
 #include <QUrlQuery>
-#ifdef HAVE_PRISON
 #include <prison/Prison>
 #include <kcontacts/vcardconverter.h>
-#endif // HAVE_PRISON
 
 using namespace Akonadi;
 
@@ -63,19 +61,15 @@ public:
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
         mShowQRCode = group.readEntry("QRCodes", true);
-#ifdef HAVE_PRISON
         mQRCode = Prison::createBarcode(Prison::QRCode);
         mDataMatrix = Prison::createBarcode(Prison::DataMatrix);
-#endif // HAVE_PRISON
     }
 
     ~Private()
     {
         delete mStandardContactFormatter;
-#ifdef HAVE_PRISON
         delete mQRCode;
         delete mDataMatrix;
-#endif // HAVE_PRISON
     }
 
     void updateView(const QVariantList &localCustomFieldDescriptions = QVariantList(), const QString &addressBookName = QString())
@@ -148,7 +142,6 @@ public:
                                           QUrl(QStringLiteral("sms_icon")),
                                           defaultSmsPixmap);
 
-#ifdef HAVE_PRISON
         if (mShowQRCode) {
             KContacts::VCardConverter converter;
             KContacts::Addressee addr(mCurrentContact);
@@ -164,7 +157,6 @@ public:
                                               QUrl(QStringLiteral("datamatrix")),
                                               mDataMatrix->toImage(QSizeF(50, 50)));
         }
-#endif // HAVE_PRISON
 
         // merge local and global custom field descriptions
         QVector<QVariantMap> customFieldDescriptions;
@@ -270,10 +262,8 @@ public:
     AbstractContactFormatter *mStandardContactFormatter = nullptr;
     CollectionFetchJob *mParentCollectionFetchJob = nullptr;
     bool mShowQRCode;
-#ifdef HAVE_PRISON
     Prison::AbstractBarcode *mQRCode = nullptr;
     Prison::AbstractBarcode *mDataMatrix = nullptr;
-#endif // HAVE_PRISON
 };
 
 ContactViewer::ContactViewer(QWidget *parent)

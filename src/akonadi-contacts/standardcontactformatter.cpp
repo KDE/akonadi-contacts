@@ -333,7 +333,6 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     strAddr.append(customData);
     strAddr.append(QLatin1String("</table>"));
 
-#ifdef HAVE_PRISON
     if (d->displayQRcode) {
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
@@ -348,7 +347,6 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                            .arg(QStringLiteral("qrcode")));
         }
     }
-#endif // HAVE_PRISON
 
     strAddr.append(QLatin1String("</div>\n"));
 
