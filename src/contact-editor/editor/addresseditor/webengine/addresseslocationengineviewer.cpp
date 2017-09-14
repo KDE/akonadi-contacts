@@ -26,7 +26,6 @@
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <QUrlQuery>
-#include <QWebEngineSettings>
 
 using namespace ContactEditor;
 

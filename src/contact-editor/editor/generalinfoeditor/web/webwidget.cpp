@@ -22,7 +22,6 @@
 
 #include "webwidget.h"
 #include <QHBoxLayout>
-#include <KLineEdit>
 #include <QToolButton>
 #include <QUrl>
 #include <KLocalizedString>

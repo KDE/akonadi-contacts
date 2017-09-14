@@ -23,9 +23,7 @@
 #include "mailwidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
-#include <KLineEdit>
 #include <QToolButton>
-#include <QComboBox>
 #include <editor/generalinfoeditor/contactselecttypecombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
 

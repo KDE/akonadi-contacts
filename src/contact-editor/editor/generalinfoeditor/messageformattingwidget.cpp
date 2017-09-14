@@ -25,9 +25,8 @@
 
 #include <QCheckBox>
 #include <QComboBox>
-#include <QHBoxLayout>
 #include <QLabel>
-
+#include <QVBoxLayout>
 using namespace ContactEditor;
 
 MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)

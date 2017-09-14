@@ -25,7 +25,6 @@
 #include <QButtonGroup>
 #include <QCheckBox>
 #include <QDialogButtonBox>
-#include <QGroupBox>
 #include <QPushButton>
 #include <QVBoxLayout>
 

@@ -22,8 +22,6 @@
 #ifndef CONTACTMETADATAAKONADI_P_H
 #define CONTACTMETADATAAKONADI_P_H
 
-#include <QStringList>
-#include <QVariant>
 #include "contactmetadatabase_p.h"
 namespace Akonadi {
 class Item;

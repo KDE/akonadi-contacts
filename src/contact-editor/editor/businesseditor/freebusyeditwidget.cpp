@@ -24,10 +24,9 @@
 #include <kcontacts/addressee.h>
 #include <kurlrequester.h>
 #include <KConfig>
-#include <KConfigGroup>
 #include <KLineEdit>
 #include <KLocalizedString>
-
+#include <KConfigGroup>
 #include <QHBoxLayout>
 #include <QStandardPaths>
 

@@ -36,7 +36,6 @@
 #include <session.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <KLineEdit>
 #include <KLocalizedString>
 
 #include <QTimer>
@@ -45,7 +44,7 @@
 #include <QKeyEvent>
 #include <QLabel>
 #include <QVBoxLayout>
-
+#include <QLineEdit>
 using namespace Akonadi;
 
 /**

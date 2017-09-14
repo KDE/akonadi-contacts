@@ -22,7 +22,6 @@
 
 #include "customfieldeditorwidget.h"
 #include "customfieldsmodel.h"
-#include <QGridLayout>
 #include <KLocalizedString>
 #include <QLabel>
 #include <QLineEdit>
@@ -31,6 +30,7 @@
 #include <QCheckBox>
 #include <QUuid>
 #include <KContacts/Addressee>
+#include <QVBoxLayout>
 
 using namespace ContactEditor;
 

@@ -26,8 +26,6 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <KDBusConnectionPool>
-#include <QDBusInterface>
-#include <QDBusReply>
 
 #if !defined(Q_OS_WIN)
 #include <unistd.h>

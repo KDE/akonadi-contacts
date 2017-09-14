@@ -23,10 +23,8 @@
 #include "messagingwidget.h"
 #include "../../im/improtocols.h"
 #include "../../widgets/contacteditorcombobox.h"
-#include <QComboBox>
 #include <KLocalizedString>
 #include <QHBoxLayout>
-#include <KLineEdit>
 #include <QToolButton>
 #include <editor/widgets/preferredlineeditwidget.h>
 

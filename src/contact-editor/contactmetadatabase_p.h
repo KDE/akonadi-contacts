@@ -23,7 +23,6 @@
 #define CONTACTEDITOR_CONTACTMETADATABASE_P_H
 
 #include "contacteditor_export.h"
-#include <QStringList>
 #include <QVariant>
 
 namespace ContactEditor {

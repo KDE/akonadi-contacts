@@ -23,10 +23,8 @@
 #include "generalinfowidget.h"
 #include "namewidget.h"
 #include "nicknamewidget.h"
-#include <QGridLayout>
 #include <QLabel>
 #include <KLocalizedString>
-#include <QLineEdit>
 #include "phone/phonelistwidget.h"
 #include "messaging/messaginglistwidget.h"
 #include "mail/maillistwidget.h"
@@ -36,8 +34,8 @@
 #include "messageformattingwidget.h"
 #include <KPluginLoader>
 #include <KPluginFactory>
-#include <QDebug>
-
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 using namespace ContactEditor;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
