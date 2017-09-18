@@ -72,7 +72,7 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     setWindowTitle(i18n("Show Contact"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
     QWidget *mainWidget = new QWidget(this);
     mainLayout->addWidget(mainWidget);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -83,7 +83,7 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
 
     QVBoxLayout *layout = new QVBoxLayout(mainWidget);
 
-    d->mViewer = new ContactViewer;
+    d->mViewer = new ContactViewer(this);
     layout->addWidget(d->mViewer);
 
     ContactDefaultActions *actions = new ContactDefaultActions(this);
