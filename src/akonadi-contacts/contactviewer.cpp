@@ -199,8 +199,8 @@ public:
     {
         const QUrlQuery query(url);
         const QString urlScheme(url.scheme());
-        if (urlScheme == QLatin1String("http") ||
-            urlScheme == QLatin1String("https")) {
+        if (urlScheme == QLatin1String("http")
+            || urlScheme == QLatin1String("https")) {
             Q_EMIT mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
             const int pos = query.queryItemValue(QStringLiteral("index")).toInt();

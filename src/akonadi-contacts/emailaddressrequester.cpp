@@ -55,7 +55,6 @@ void EmailAddressRequester::Private::slotAddressBook()
         return;
     }
 
-
     QStringList addressList;
     const auto selectedAddresses = dlg->selectedAddresses();
     addressList.reserve(selectedAddresses.size());

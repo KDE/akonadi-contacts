@@ -31,7 +31,8 @@
 
 Q_DECLARE_METATYPE(ContactActionsSettings::EnumDialPhoneNumberAction)
 
-K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiContactActions>();)
+K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiContactActions>();
+                 )
 
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
@@ -121,16 +122,17 @@ void KCMAkonadiContactActions::load()
     ContactActionsSettings::EnumSendSmsAction enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ContactActionsSettings::self()->sendSmsAction());
     const int indexSms = ui.SendSmsAction->findData(enumValueSms);
     ui.SendSmsAction->setCurrentIndex(indexSms);
-
 }
 
 void KCMAkonadiContactActions::save()
 {
     mConfigManager->updateSettings();
-    ContactActionsSettings::EnumShowAddressAction enumValueAddress = static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(ui.ShowAddressAction->currentIndex()).toInt());
+    ContactActionsSettings::EnumShowAddressAction enumValueAddress
+        = static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(ui.ShowAddressAction->currentIndex()).toInt());
     ContactActionsSettings::self()->setShowAddressAction(enumValueAddress);
 
-    ContactActionsSettings::EnumDialPhoneNumberAction enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(ui.DialPhoneNumberAction->currentIndex()).toInt());
+    ContactActionsSettings::EnumDialPhoneNumberAction enumValue
+        = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(ui.DialPhoneNumberAction->currentIndex()).toInt());
     ContactActionsSettings::self()->setDialPhoneNumberAction(enumValue);
 
     ContactActionsSettings::EnumSendSmsAction enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ui.SendSmsAction->itemData(ui.SendSmsAction->currentIndex()).toInt());
@@ -147,4 +149,5 @@ void KCMAkonadiContactActions::defaults()
     ui.ShowAddressAction->setCurrentIndex(ContactActionsSettings::self()->showAddressAction());
     ContactActionsSettings::self()->useDefaults(bUseDefaults);
 }
+
 #include "kcmakonadicontactactions.moc"
