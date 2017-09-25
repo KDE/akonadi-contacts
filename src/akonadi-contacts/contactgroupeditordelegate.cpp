@@ -73,7 +73,7 @@ ContactLineEdit::ContactLineEdit(bool isReference, ContactCompletionModel::Colum
     QCompleter *completer = new QCompleter(filter, this);
     completer->setCompletionColumn(column);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
-    connect(completer, SIGNAL(activated(QModelIndex)), SLOT(completed(QModelIndex)));
+    connect(completer, QOverload<const QModelIndex &>::of(&QCompleter::activated), this, QOverload<const QModelIndex &>::of(&ContactLineEdit::completed));
 
     setCompleter(completer);
 

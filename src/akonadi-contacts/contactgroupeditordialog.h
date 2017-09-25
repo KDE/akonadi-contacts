@@ -119,15 +119,12 @@ Q_SIGNALS:
      */
     void contactGroupStored(const Akonadi::Item &group);
 
-private Q_SLOTS:
+private:
     void slotAccepted();
 
-private:
     //@cond PRIVATE
     class Private;
     Private *const d;
-
-    Q_PRIVATE_SLOT(d, void slotGroupNameChanged(const QString &))
     //@endcond
 };
 }

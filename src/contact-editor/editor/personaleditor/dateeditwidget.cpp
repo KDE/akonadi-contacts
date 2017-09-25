@@ -45,7 +45,7 @@ void DateView::contextMenuEvent(QContextMenuEvent *event)
     }
 
     QMenu menu;
-    menu.addAction(i18n("Remove"), this, SLOT(emitSignal()));
+    menu.addAction(i18n("Remove"), this, &DateView::emitSignal);
 
     menu.exec(event->globalPos());
 }
