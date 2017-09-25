@@ -180,12 +180,6 @@ private:
     //@cond PRIVATE
     class Private;
     Private *const d;
-
-    Q_PRIVATE_SLOT(d, void updateActions())
-    Q_PRIVATE_SLOT(d, void slotCreateContact())
-    Q_PRIVATE_SLOT(d, void slotCreateContactGroup())
-    Q_PRIVATE_SLOT(d, void slotEditItem())
-    Q_PRIVATE_SLOT(d, void slotContactEditorError(const QString &))
     //@endcond
 };
 }

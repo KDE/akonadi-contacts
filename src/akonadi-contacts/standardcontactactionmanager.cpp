@@ -507,8 +507,8 @@ public:
         if (Akonadi::MimeTypeChecker::isWantedItem(item, KContacts::Addressee::mimeType())) {
             QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(
                 Akonadi::ContactEditorDialog::EditMode, mParentWidget);
-            connect(dlg, SIGNAL(error(QString)),
-                    mParent, SLOT(slotContactEditorError(QString)));
+            connect(dlg.data(), &ContactEditorDialog::error,
+                    mParent, [this](const QString &error) { slotContactEditorError(error); });
             dlg->setContact(item);
             dlg->exec();
             delete dlg;
@@ -552,12 +552,9 @@ void StandardContactActionManager::setCollectionSelectionModel(QItemSelectionMod
     d->mCollectionSelectionModel = selectionModel;
     d->mGenericManager->setCollectionSelectionModel(selectionModel);
 
-    connect(selectionModel->model(), SIGNAL(rowsInserted(QModelIndex,int,int)),
-            SLOT(updateActions()));
-    connect(selectionModel->model(), SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            SLOT(updateActions()));
-    connect(selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-            SLOT(updateActions()));
+    connect(selectionModel->model(), &QAbstractItemModel::rowsInserted, this, [this]() { d->updateActions(); } );
+    connect(selectionModel->model(), &QAbstractItemModel::rowsRemoved, this, [this]() { d->updateActions(); } );
+    connect(selectionModel, &QItemSelectionModel::selectionChanged, this, [this]() { d->updateActions(); } );
 
     d->updateActions();
 }
@@ -567,8 +564,7 @@ void StandardContactActionManager::setItemSelectionModel(QItemSelectionModel *se
     d->mItemSelectionModel = selectionModel;
     d->mGenericManager->setItemSelectionModel(selectionModel);
 
-    connect(selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-            SLOT(updateActions()));
+    connect(selectionModel, &QItemSelectionModel::selectionChanged, this, [this]() { d->updateActions(); } );
 
     d->updateActions();
 }
@@ -589,7 +585,7 @@ QAction *StandardContactActionManager::createAction(Type type)
         d->mActions.insert(CreateContact, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_contact_create"), action);
         d->mActionCollection->setDefaultShortcut(action, QKeySequence(Qt::CTRL + Qt::Key_N));
-        connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContact()));
+        connect(action, &QAction::triggered, this, [this]() {d->slotCreateContact();});
         break;
     case CreateContactGroup:
         action = new QAction(d->mParentWidget);
@@ -599,7 +595,7 @@ QAction *StandardContactActionManager::createAction(Type type)
         d->mActions.insert(CreateContactGroup, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_contact_group_create"), action);
         d->mActionCollection->setDefaultShortcut(action, QKeySequence(Qt::CTRL + Qt::Key_G));
-        connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateContactGroup()));
+        connect(action, &QAction::triggered, this, [this]() {d->slotCreateContactGroup(); });
         break;
     case EditItem:
         action = new QAction(d->mParentWidget);
@@ -610,7 +606,7 @@ QAction *StandardContactActionManager::createAction(Type type)
         d->mActions.insert(EditItem, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_contact_item_edit"), action);
 
-        connect(action, SIGNAL(triggered(bool)), this, SLOT(slotEditItem()));
+        connect(action, &QAction::triggered, this, [this]() {d->slotEditItem(); });
         break;
     default:
         Q_ASSERT(false);   // should never happen
