@@ -1,21 +1,7 @@
 {
     "KPlugin": {
         "Id": "categorieseditwidget",
-        "Name": "CategoriesEditPlugin",
-        "Name[ca@valencia]": "Connector editor de categories",
-        "Name[ca]": "Connector editor de categories",
-        "Name[es]": "Complemento de edición de categorías",
-        "Name[fr]": "Module d'édition des catégories",
-        "Name[nl]": "CategorieënBewerkPlug-in",
-        "Name[pt]": "'Plugin' de Edição de Categorias",
-        "Name[sl]": "VstavekZaUrejanjeKategorij",
-        "Name[sr@ijekavian]": "Прикључак уређивања категорија",
-        "Name[sr@ijekavianlatin]": "Priključak uređivanja kategorija",
-        "Name[sr@latin]": "Priključak uređivanja kategorija",
-        "Name[sr]": "Прикључак уређивања категорија",
-        "Name[sv]": "Insticksprogram för kategoriredigering",
-        "Name[uk]": "Додаток редагування категорій",
-        "Name[x-test]": "xxCategoriesEditPluginxx",
+        "Name": "Categories Editor",
         "ServiceTypes": [
             "AkonadiContacts/CategoriesEditor"
         ],
