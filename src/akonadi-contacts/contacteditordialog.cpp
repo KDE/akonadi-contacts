@@ -48,13 +48,14 @@ public:
         , mAddressBookBox(nullptr)
         , mMode(mode)
     {
+        QWidget *mainWidget = new QWidget(q);
+
         q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18n("New Contact") : i18n("Edit Contact"));
-        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
         QVBoxLayout *mainLayout = new QVBoxLayout(q);
+        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
         q->connect(buttonBox, &QDialogButtonBox::accepted, q, [this]() { slotOkClicked(); });
         q->connect(buttonBox, &QDialogButtonBox::rejected, q, [this]() { slotCancelClicked(); });
 
-        QWidget *mainWidget = new QWidget(q);
         mainLayout->addWidget(mainWidget);
         mainLayout->addWidget(buttonBox);
 
