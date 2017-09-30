@@ -2,6 +2,16 @@
     "KPlugin": {
         "Id": "categorieseditwidget",
         "Name": "Categories Editor",
+        "Name[ca]": "Editor de categories",
+        "Name[nl]": "Categorieënbewerker",
+        "Name[pt]": "Editor de Categorias",
+        "Name[sr@ijekavian]": "Уређивач категорија",
+        "Name[sr@ijekavianlatin]": "Uređivač kategorija",
+        "Name[sr@latin]": "Uređivač kategorija",
+        "Name[sr]": "Уређивач категорија",
+        "Name[sv]": "Kategorieditor",
+        "Name[uk]": "Редактор категорій",
+        "Name[x-test]": "xxCategories Editorxx",
         "ServiceTypes": [
             "AkonadiContacts/CategoriesEditor"
         ],
