@@ -267,7 +267,7 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mItem.setPayload<KContacts::Addressee>(addr);
 
         Akonadi::ItemModifyJob *job = new Akonadi::ItemModifyJob(d->mItem);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, &ItemModifyJob::result, this, [this](KJob *job) { d->storeDone(job); });
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::Addressee::mimeType());
@@ -294,7 +294,7 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mContactMetaData.store(item);
 
         Akonadi::ItemCreateJob *job = new Akonadi::ItemCreateJob(item, d->mDefaultCollection);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, &ItemCreateJob::result, this, [this](KJob *job) { d->storeDone(job); });
     }
 }
 

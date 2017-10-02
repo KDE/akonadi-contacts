@@ -66,7 +66,7 @@ public:
         job->setProperty("row", row);
         job->fetchScope().fetchFullPayload();
 
-        mParent->connect(job, SIGNAL(result(KJob*)), SLOT(itemFetched(KJob*)));
+        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob* job) { itemFetched(job); });
     }
 
     void itemFetched(KJob *job)

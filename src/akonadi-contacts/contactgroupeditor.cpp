@@ -246,7 +246,7 @@ void ContactGroupEditor::loadContactGroup(const Akonadi::Item &item)
     job->fetchScope().fetchFullPayload();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, SIGNAL(result(KJob*)), SLOT(itemFetchDone(KJob*)));
+    connect(job, &ItemModifyJob::result, this, [this](KJob *job) { d->itemFetchDone(job); });
 
     d->setupMonitor();
     d->mMonitor->setItemMonitored(item);
@@ -274,7 +274,7 @@ bool ContactGroupEditor::saveContactGroup()
         d->mItem.setPayload<KContacts::ContactGroup>(group);
 
         ItemModifyJob *job = new ItemModifyJob(d->mItem);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, &ItemModifyJob::result, this, [this](KJob *job) { d->storeDone(job); });
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::ContactGroup::mimeType());
@@ -302,7 +302,7 @@ bool ContactGroupEditor::saveContactGroup()
         item.setMimeType(KContacts::ContactGroup::mimeType());
 
         ItemCreateJob *job = new ItemCreateJob(item, d->mDefaultCollection);
-        connect(job, SIGNAL(result(KJob*)), SLOT(storeDone(KJob*)));
+        connect(job, &ItemCreateJob::result, this, [this](KJob *job) { d->storeDone(job); });
     }
 
     return true;
