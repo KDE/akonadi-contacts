@@ -121,6 +121,7 @@ void EmailAddressSelectionWidget::Private::init()
     layout->addLayout(searchLayout);
 
     mView = new Akonadi::EntityTreeView;
+    mView->setEditTriggers(Akonadi::EntityTreeView::NoEditTriggers);
 
     QLabel *label = new QLabel(i18nc("@label Search in a list of contacts", "Search:"));
     mSearchLine = new SearchLineEdit(mView);
