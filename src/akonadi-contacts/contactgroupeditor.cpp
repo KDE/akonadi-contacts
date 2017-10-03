@@ -96,7 +96,7 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
 
         setReadOnly(mReadOnly);
 
-        QTimer::singleShot(0, mParent, SLOT(adaptHeaderSizes()));
+        QTimer::singleShot(0, mParent, [this]() { adaptHeaderSizes(); });
     }
 }
 
@@ -121,7 +121,7 @@ void ContactGroupEditor::Private::parentCollectionFetchDone(KJob *job)
 
     setReadOnly(mReadOnly);
 
-    QTimer::singleShot(0, mParent, SLOT(adaptHeaderSizes()));
+    QTimer::singleShot(0, mParent, [this]() { adaptHeaderSizes(); });
 }
 
 void ContactGroupEditor::Private::storeDone(KJob *job)
@@ -224,7 +224,7 @@ ContactGroupEditor::ContactGroupEditor(Mode mode, QWidget *parent)
         KContacts::ContactGroup dummyGroup;
         d->mGroupModel->loadContactGroup(dummyGroup);
 
-        QTimer::singleShot(0, this, SLOT(adaptHeaderSizes()));
+        QTimer::singleShot(0, this, [this] () { d->adaptHeaderSizes(); });
         QTimer::singleShot(0, d->mGui.groupName, SLOT(setFocus()));
     }
 
