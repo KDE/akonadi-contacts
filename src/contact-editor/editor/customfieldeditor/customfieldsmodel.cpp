@@ -88,27 +88,22 @@ QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
             case CustomField::NumericType:
             case CustomField::UrlType:
                 return customField.value();
-                break;
             case CustomField::BooleanType:
                 return QString();
-                break;
             case CustomField::DateType:
             {
                 const QDate value = QDate::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value, QLocale::ShortFormat);
-                break;
             }
             case CustomField::TimeType:
             {
                 const QTime value = QTime::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value);
-                break;
             }
             case CustomField::DateTimeType:
             {
                 const QDateTime value = QDateTime::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value);
-                break;
             }
             }
             return customField.value();

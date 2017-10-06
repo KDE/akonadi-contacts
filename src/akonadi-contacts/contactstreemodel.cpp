@@ -183,11 +183,9 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
             {
                 const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
                 return group.name();
-                break;
             }
             default:
                 return QVariant();
-                break;
             }
         }
     }

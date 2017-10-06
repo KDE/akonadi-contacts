@@ -59,20 +59,17 @@ QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOpt
         case CustomField::UrlType:
         default:
             return QStyledItemDelegate::createEditor(parent, item, index);
-            break;
         case CustomField::NumericType:
         {
             QSpinBox *editor = new QSpinBox(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
-            break;
         }
         case CustomField::BooleanType:
         {
             QCheckBox *editor = new QCheckBox(parent);
             return editor;
-            break;
         }
         case CustomField::DateType:
         {
@@ -80,7 +77,6 @@ QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOpt
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
-            break;
         }
         case CustomField::TimeType:
         {
@@ -88,7 +84,6 @@ QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOpt
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
-            break;
         }
         case CustomField::DateTimeType:
         {
@@ -96,7 +91,6 @@ QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOpt
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
-            break;
         }
         }
     } else {
