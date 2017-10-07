@@ -313,7 +313,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         "<table cellpadding=\"3\" cellspacing=\"1\">"
         "<tr>"
         "<td align=\"right\" valign=\"top\" width=\"30%\" rowspan=\"3\">"
-        "<img src=\"%1\" width=\"100\" vspace=\"1\">"                   // image
+        "<img src=\"%1\" width=\"100\" vspace=\"1\"/>"                   // image
         "</td>"
         "<td colspan=\"2\" align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>"                   // name
         "</tr>"
@@ -339,8 +339,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         if (group.readEntry("QRCodes", true)) {
             strAddr.append(QString::fromLatin1(
                                "<p align=\"center\">"
-                               "<img src=\"%1\" vspace=\"1\">"
-                               "<img src=\"%2\" vspace=\"1\">"
+                               "<img src=\"%1\" vspace=\"1\"/>"
+                               "<img src=\"%2\" vspace=\"1\"/>"
                                "</p>"
                                )
                            .arg(QStringLiteral("datamatrix"))
