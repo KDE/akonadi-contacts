@@ -47,9 +47,6 @@ using namespace Akonadi;
 
 ContactGroupEditor::Private::Private(ContactGroupEditor *parent)
     : mParent(parent)
-    , mMonitor(nullptr)
-    , mReadOnly(false)
-    , mGroupModel(nullptr)
 {
 }
 
