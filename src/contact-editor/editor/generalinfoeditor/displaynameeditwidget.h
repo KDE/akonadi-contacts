@@ -77,7 +77,7 @@ private:
     KComboBox *mView = nullptr;
     KContacts::Addressee mContact;
     QWidget *mViewport = nullptr;
-    DisplayType mDisplayType;
+    DisplayType mDisplayType = DisplayType::SimpleName;
     int mAdditionalPopupWidth;
 };
 
