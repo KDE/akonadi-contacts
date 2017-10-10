@@ -1,3 +1,7 @@
+include(ECMMarkAsTest)
+
+find_package(Qt5Test CONFIG REQUIRED)
+
 set(phonewidgettest_SRCS phonewidgettest.cpp)
 add_executable(phonewidgettest ${phonewidgettest_SRCS})
 add_test(NAME phonewidgettest COMMAND phonewidgettest)

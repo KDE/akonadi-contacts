@@ -27,3 +27,23 @@ AbstractAddressLocationWidget::AbstractAddressLocationWidget(QWidget *parent)
 {
 
 }
+
+AbstractAddressLocationWidget::~AbstractAddressLocationWidget()
+{
+
+}
+
+void AbstractAddressLocationWidget::loadContact(const KContacts::Addressee &contact)
+{
+    Q_UNUSED(contact);
+}
+
+void AbstractAddressLocationWidget::storeContact(KContacts::Addressee &contact) const
+{
+    Q_UNUSED(contact);
+}
+
+void AbstractAddressLocationWidget::setReadOnly(bool readOnly)
+{
+    Q_UNUSED(readOnly);
+}

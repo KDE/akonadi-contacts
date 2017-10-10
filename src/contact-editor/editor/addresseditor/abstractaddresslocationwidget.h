@@ -24,14 +24,23 @@
 #define ABSTRACTADDRESSLOCATIONWIDGET_H
 
 #include <QWidget>
+
+#include <KContacts/Addressee>
+#include "contacteditor_export.h"
+
 namespace ContactEditor
 {
-class AbstractAddressLocationWidget : public QWidget
+class CONTACTEDITOR_EXPORT AbstractAddressLocationWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit AbstractAddressLocationWidget(QWidget *parent = nullptr);
     ~AbstractAddressLocationWidget();
+
+    virtual void loadContact(const KContacts::Addressee &contact);
+    virtual void storeContact(KContacts::Addressee &contact) const;
+
+    virtual void setReadOnly(bool readOnly);
 };
 }
 #endif // ABSTRACTADDRESSLOCATIONWIDGET_H

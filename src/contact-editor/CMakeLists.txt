@@ -30,6 +30,10 @@ configure_file(config-contact-editor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-
 
 add_subdirectory(editor/im)
 
+
+set(contacteditor_abstractaddresslocation_SRCS
+    editor/addresseditor/abstractaddresslocationwidget.cpp)
+
 set(contacteditor_customfieldseditor_SRCS
     editor/customfieldeditor/customfieldswidget.cpp
     editor/customfieldeditor/customfieldeditorwidget.cpp
@@ -86,22 +90,11 @@ set(contacteditor_editor_generalinfo_SRCS
     ${contacteditor_editor_generalinfo_phone_SRCS}
     ${contacteditor_editor_generalinfo_web_SRCS}
     ${contacteditor_editor_generalinfo_mail_SRCS}
-    )
-
-set(contacteditor_addresslocation_web_editor_SRCS
-    editor/addresseditor/webengine/addresseslocationengineviewer.cpp
-    editor/addresseditor/webengine/addresseslocationenginepage.cpp
+    ${contacteditor_abstractaddresslocation_SRCS}
     )
 
 set(contacteditor_addresslocation_editor_SRCS
-    ${contacteditor_addresslocation_web_editor_SRCS}
-    editor/addresseditor/addresslocationwidget.cpp
-    editor/addresseditor/addresseslocationgrantleeformater.cpp
-    editor/addresseditor/addressgrantleeobject.cpp
-    editor/addresseditor/iconnamecache.cpp
     editor/addresseditor/addresseslocationwidget.cpp
-    editor/addresseditor/selectaddresstypecombobox.cpp
-    editor/addresseditor/addresstypedialog.cpp
     )
 
 set(contacteditor_personal_editor_SRCS
@@ -174,9 +167,6 @@ target_link_libraries(KF5ContactEditor
     KF5::Service
     KF5::TextWidgets
     KF5::WidgetsAddons
-    Grantlee5::Templates
-    Qt5::WebEngine
-    Qt5::WebEngineWidgets
     )
 
 set_target_properties(KF5ContactEditor PROPERTIES
@@ -212,16 +202,25 @@ ecm_generate_headers(ContactEditorWidget_CamelCase_HEADERS
     RELATIVE editor/widgets/
     )
 
+ecm_generate_headers(ContactEditorAddressLocationWidget_CamelCase_HEADERS
+    HEADER_NAMES
+    AbstractAddressLocationWidget
+    REQUIRED_HEADERS ContactEditorAddressLocationWidget_HEADERS
+    PREFIX ContactEditor
+    RELATIVE editor/addresseditor/
+    )
 
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
     ${ContactEditorWidget_CamelCase_HEADERS}
+    ${ContactEditorAddressLocationWidget_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor COMPONENT Devel
     )
 
 install( FILES
     ${ContactEditor_HEADERS}
     ${ContactEditorWidget_HEADERS}
+    ${ContactEditorAddressLocationWidget_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
     editor/im/improtocols.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/contacteditor COMPONENT Devel
@@ -230,8 +229,6 @@ install( FILES
 
 
 if (BUILD_TESTING)
-    add_subdirectory(editor/addresseditor/autotests/)
-    add_subdirectory(editor/addresseditor/tests)
     add_subdirectory(editor/generalinfoeditor/autotests/)
     add_subdirectory(editor/generalinfoeditor/tests)
     add_subdirectory(editor/customfieldeditor/autotests/)
@@ -241,7 +238,5 @@ endif()
 
 install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
 install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
-
-add_subdirectory(editor/addresseditor/html)
 
 install( FILES contact-editor.categories DESTINATION ${KDE_INSTALL_CONFDIR} )

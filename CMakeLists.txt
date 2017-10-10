@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.6.40")
+set(PIM_VERSION "5.6.41")
 
 project(Akonadi-Contact VERSION ${PIM_VERSION})
 
@@ -31,7 +31,7 @@ set(KMIMELIB_VERSION "5.6.40")
 set(AKONADI_VERSION "5.6.40")
 
 set(QT_REQUIRED_VERSION "5.8.0")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test WebEngine WebEngineWidgets)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 ########### Find packages ###########
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
@@ -40,7 +40,7 @@ find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5IconThemes ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5TextWidgets ${KF5_VERSION} CONFIG REQUIRED)
-find_package(Grantlee5 "5.1" CONFIG REQUIRED)
+#find_package(Grantlee5 "5.1" CONFIG REQUIRED)
 
 find_package(KF5Contacts ${KCONTACTS_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)

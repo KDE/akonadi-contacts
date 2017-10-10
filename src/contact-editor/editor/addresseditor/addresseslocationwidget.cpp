@@ -21,25 +21,11 @@
 */
 
 #include "addresseslocationwidget.h"
-#include "webengine/addresseslocationengineviewer.h"
-#include "addresslocationwidget.h"
 using namespace ContactEditor;
 
 AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
-    : QSplitter(parent)
+    : QWidget(parent)
 {
-    setChildrenCollapsible(false);
-    mAddressLocationWidget = new AddressLocationWidget(this);
-    mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
-    addWidget(mAddressLocationWidget);
-    mAddressesLocationViewer = new AddressesLocationEngineViewer(this);
-    mAddressesLocationViewer->setObjectName(QStringLiteral("addresseslocationviewer"));
-    addWidget(mAddressesLocationViewer);
-    connect(mAddressesLocationViewer, &AddressesLocationEngineViewer::modifyAddress, mAddressLocationWidget, &AddressLocationWidget::slotModifyAddress);
-    connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::addAddress);
-    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddressCanceled, mAddressesLocationViewer, &AddressesLocationEngineViewer::updateAddressCanceled);
-    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressesLocationViewer, &AddressesLocationEngineViewer::replaceAddress);
-    setSizes(QList<int>() << 400 << 300);
 }
 
 AddressesLocationWidget::~AddressesLocationWidget()
@@ -48,31 +34,15 @@ AddressesLocationWidget::~AddressesLocationWidget()
 
 void AddressesLocationWidget::loadContact(const KContacts::Addressee &contact)
 {
-    mAddressesLocationViewer->setAddresses(contact.addresses());
+    //TODO
 }
 
 void AddressesLocationWidget::storeContact(KContacts::Addressee &contact) const
 {
-    // delete all previous addresses
-    const KContacts::Address::List oldAddresses = contact.addresses();
-    const int numberOfOldAddresses(oldAddresses.count());
-    for (int i = 0; i < numberOfOldAddresses; ++i) {
-        contact.removeAddress(oldAddresses.at(i));
-    }
-
-    const KContacts::Address::List addressList = mAddressesLocationViewer->addresses();
-    // insert the new ones
-    const int numberOfAddress(addressList.count());
-    for (int i = 0; i < numberOfAddress; ++i) {
-        const KContacts::Address address(addressList.at(i));
-        if (!address.isEmpty()) {
-            contact.insertAddress(address);
-        }
-    }
+    //TODO
 }
 
 void AddressesLocationWidget::setReadOnly(bool readOnly)
 {
-    mAddressesLocationViewer->setReadOnly(readOnly);
-    mAddressLocationWidget->setReadOnly(readOnly);
+    //TODO
 }
