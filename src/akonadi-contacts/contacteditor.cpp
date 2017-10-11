@@ -22,7 +22,6 @@
 #include "contacteditor.h"
 
 #include "abstractcontacteditorwidget_p.h"
-#include "autoqpointer_p.h"
 #include "contactmetadataakonadi_p.h"
 #include "attributes/contactmetadataattribute_p.h"
 #include "editor/contacteditorwidget.h"
@@ -272,14 +271,16 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::Addressee::mimeType());
 
-            AutoQPointer<CollectionDialog> dlg = new CollectionDialog(this);
+            QPointer<CollectionDialog> dlg = new CollectionDialog(this);
             dlg->setMimeTypeFilter(mimeTypeFilter);
             dlg->setAccessRightsFilter(Collection::CanCreateItem);
             dlg->setWindowTitle(i18n("Select Address Book"));
             dlg->setDescription(i18n("Select the address book the new contact shall be saved in:"));
             if (dlg->exec() == QDialog::Accepted) {
                 setDefaultAddressBook(dlg->selectedCollection());
+                delete dlg;
             } else {
+                delete dlg;
                 return;
             }
         }

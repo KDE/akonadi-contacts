@@ -23,7 +23,7 @@
 #include "phonecomboboxtype.h"
 #include "phonetypedialog.h"
 #include <KLocalizedString>
-#include <autoqpointer_p.h>
+#include <QPointer>
 
 using namespace ContactEditor;
 
@@ -101,7 +101,7 @@ void PhoneComboBoxType::selected(int pos)
 
 void PhoneComboBoxType::otherSelected()
 {
-    AutoQPointer<ContactEditor::PhoneTypeDialog> dlg = new ContactEditor::PhoneTypeDialog(mType, this);
+    QPointer<ContactEditor::PhoneTypeDialog> dlg = new ContactEditor::PhoneTypeDialog(mType, this);
     if (dlg->exec()) {
         mType = dlg->type();
         if (!mTypeList.contains(mType)) {
@@ -112,6 +112,6 @@ void PhoneComboBoxType::otherSelected()
     } else {
         setType(KContacts::PhoneNumber::Type(mTypeList.at(mLastSelected)));
     }
-
+    delete dlg;
     update();
 }

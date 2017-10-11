@@ -22,7 +22,6 @@
 #include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
 
-#include "autoqpointer_p.h"
 #include "contactgroupmodel_p.h"
 #include "contactgroupeditordelegate_p.h"
 #include "waitingoverlay_p.h"
@@ -138,7 +137,7 @@ void ContactGroupEditor::Private::storeDone(KJob *job)
 void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByteArray> &)
 {
     Q_UNUSED(item)
-    AutoQPointer<QMessageBox> dlg = new QMessageBox(mParent);   //krazy:exclude=qclasses
+    QPointer<QMessageBox> dlg = new QMessageBox(mParent);   //krazy:exclude=qclasses
 
     dlg->setInformativeText(i18n("The contact group has been changed by someone else.\nWhat should be done?"));
     dlg->addButton(i18n("Take over changes"), QMessageBox::AcceptRole);
@@ -152,6 +151,7 @@ void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByte
         mParent->connect(job, SIGNAL(result(KJob*)), mParent, SLOT(itemFetchDone(KJob*)));
         new WaitingOverlay(job, mParent);
     }
+    delete dlg;
 }
 
 void ContactGroupEditor::Private::loadContactGroup(const KContacts::ContactGroup &group)
@@ -276,7 +276,7 @@ bool ContactGroupEditor::saveContactGroup()
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::ContactGroup::mimeType());
 
-            AutoQPointer<CollectionDialog> dlg = new CollectionDialog(this);
+            QPointer<CollectionDialog> dlg = new CollectionDialog(this);
             dlg->setMimeTypeFilter(mimeTypeFilter);
             dlg->setAccessRightsFilter(Collection::CanCreateItem);
             dlg->setWindowTitle(i18n("Select Address Book"));
@@ -284,7 +284,9 @@ bool ContactGroupEditor::saveContactGroup()
 
             if (dlg->exec() == QDialog::Accepted) {
                 setDefaultAddressBook(dlg->selectedCollection());
+                delete dlg;
             } else {
+                delete dlg;
                 return false;
             }
         }
