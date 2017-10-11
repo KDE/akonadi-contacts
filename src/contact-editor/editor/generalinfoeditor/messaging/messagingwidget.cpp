@@ -66,7 +66,7 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     mRemoveButton = new QToolButton(this);
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
-    mRemoveButton->setToolTip(i18n("Add IM"));
+    mRemoveButton->setToolTip(i18n("Remove IM"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MessagingWidget::slotRemoveMessaging);
     layout->addWidget(mRemoveButton);
 }
