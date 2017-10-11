@@ -26,6 +26,7 @@
 #include <QSplitter>
 #include <KContacts/Addressee>
 namespace ContactEditor {
+class AbstractAddressLocationWidget;
 class AddressesLocationWidget : public QWidget
 {
     Q_OBJECT
@@ -37,6 +38,8 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
+private:
+    AbstractAddressLocationWidget *mAbstractAddressLocationWidget;
 };
 }
 #endif // ADDRESSESLOCATIONWIDGET_H
