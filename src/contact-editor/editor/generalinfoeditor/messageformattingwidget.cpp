@@ -58,10 +58,10 @@ MessageFormattingWidget::~MessageFormattingWidget()
 
 void MessageFormattingWidget::loadContact(const KContacts::Addressee &contact)
 {
-    const QString mailAllowToRemoteContent = ContactEditor::Utils::loadCustom(contact, QLatin1String("MailAllowToRemoteContent"));
+    const QString mailAllowToRemoteContent = ContactEditor::Utils::loadCustom(contact, QStringLiteral("MailAllowToRemoteContent"));
     mAllowRemoteContent->setChecked(mailAllowToRemoteContent == QLatin1String("TRUE"));
 
-    const QString mailPreferedFormatting = ContactEditor::Utils::loadCustom(contact, QLatin1String("MailPreferedFormatting"));
+    const QString mailPreferedFormatting = ContactEditor::Utils::loadCustom(contact, QStringLiteral("MailPreferedFormatting"));
     if (mailPreferedFormatting.isEmpty()) {
         mMailPreferFormatting->setCurrentIndex(0);
     } else if (mailPreferedFormatting == QLatin1String("TEXT")) {
@@ -80,9 +80,9 @@ void MessageFormattingWidget::storeContact(KContacts::Addressee &contact) const
     if (index == 0) {
         //Nothing => remove custom variable
     } else if (index == 1) {
-        mailPreferedFormatting = QLatin1String("TEXT");
+        mailPreferedFormatting = QStringLiteral("TEXT");
     } else if (index == 2) {
-        mailPreferedFormatting = QLatin1String("HTML");
+        mailPreferedFormatting = QStringLiteral("HTML");
     }
     ContactEditor::Utils::storeCustom(contact, QLatin1String("MailPreferedFormatting"), mailPreferedFormatting);
 

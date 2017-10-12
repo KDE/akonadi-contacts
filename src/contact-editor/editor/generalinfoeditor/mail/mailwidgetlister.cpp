@@ -58,6 +58,7 @@ void MailWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
     const QList<QWidget *> widgetList = widgets();
     KContacts::Email::List emailList;
+    emailList.reserve(widgetList.count());
     for (QWidget *widget : widgetList) {
         MailWidget *w = qobject_cast<MailWidget *>(widget);
         KContacts::Email newEmail = w->email();
