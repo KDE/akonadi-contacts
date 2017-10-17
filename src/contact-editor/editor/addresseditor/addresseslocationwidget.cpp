@@ -45,6 +45,9 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     } else {
         qCWarning(CONTACTEDITOR_LOG) << " error during loading contacteditor plugin : " << loader.errorString();
         QLabel *lab = new QLabel(i18n("Missing plugins. Please verify your installation"), this);
+        QFont font = lab->font();
+        font.setBold(true);
+        lab->setFont(font);
         lab->setAlignment(Qt::AlignCenter);
         mainLayout->addWidget(lab);
     }
