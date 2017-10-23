@@ -193,8 +193,8 @@ void ContactGroupEditor::Private::setupMonitor()
     mMonitor->setObjectName(QStringLiteral("ContactGroupEditorMonitor"));
     mMonitor->ignoreSession(Session::defaultSession());
 
-    connect(mMonitor, SIGNAL(itemChanged(Akonadi::Item,QSet<QByteArray>)),
-            mParent, SLOT(itemChanged(Akonadi::Item,QSet<QByteArray>)));
+    connect(mMonitor, &Monitor::itemChanged,
+            mParent, [this](const Akonadi::Item &item , const QSet<QByteArray> &arrays) { itemChanged(item,arrays); });
 }
 
 void ContactGroupEditor::Private::setReadOnly(bool readOnly)
