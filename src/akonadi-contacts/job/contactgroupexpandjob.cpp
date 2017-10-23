@@ -70,7 +70,7 @@ public:
             job->fetchScope().fetchFullPayload();
             job->setProperty("preferredEmail", reference.preferredEmail());
 
-            mParent->connect(job, SIGNAL(result(KJob*)), mParent, SLOT(fetchResult(KJob*)));
+            mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) { fetchResult(job); });
 
             mFetchCount++;
         }

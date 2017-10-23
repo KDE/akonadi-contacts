@@ -235,7 +235,7 @@ void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
     job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, SIGNAL(result(KJob*)), SLOT(itemFetchDone(KJob*)));
+    connect(job, &ItemFetchJob::result, this, [this](KJob *job) { d->itemFetchDone(job); });
 
     d->setupMonitor();
     d->mMonitor->setItemMonitored(item);

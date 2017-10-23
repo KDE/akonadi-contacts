@@ -221,7 +221,7 @@ ContactGroupEditor::ContactGroupEditor(Mode mode, QWidget *parent)
         d->mGroupModel->loadContactGroup(dummyGroup);
 
         QTimer::singleShot(0, this, [this] () { d->adaptHeaderSizes(); });
-        QTimer::singleShot(0, d->mGui.groupName, SLOT(setFocus()));
+        QTimer::singleShot(0, d->mGui.groupName, QOverload<>::of(&ContactGroupEditor::setFocus));
     }
 
     d->mGui.membersView->header()->setStretchLastSection(true);
