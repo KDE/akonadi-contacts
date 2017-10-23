@@ -84,8 +84,7 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
 
         Akonadi::CollectionFetchJob *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
                                                                                           Akonadi::CollectionFetchJob::Base);
-        mParent->connect(collectionFetchJob, SIGNAL(result(KJob*)),
-                         SLOT(parentCollectionFetchDone(KJob*)));
+        mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) { parentCollectionFetchDone(job); });
     } else {
         const KContacts::ContactGroup group = mItem.payload<KContacts::ContactGroup>();
         loadContactGroup(group);
