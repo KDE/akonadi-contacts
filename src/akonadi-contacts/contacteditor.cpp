@@ -91,6 +91,8 @@ public:
 void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)
 {
     if (job->error() != KJob::NoError) {
+        Q_EMIT mParent->error(job->errorString());
+        Q_EMIT mParent->finished();
         return;
     }
 
@@ -124,6 +126,8 @@ void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)
 void Akonadi::AkonadiContactEditor::Private::parentCollectionFetchDone(KJob *job)
 {
     if (job->error()) {
+        Q_EMIT mParent->error(job->errorString());
+        Q_EMIT mParent->finished();
         return;
     }
 
