@@ -166,6 +166,7 @@ void ImageWidget::storeContact(KContacts::Addressee &contact) const
 void ImageWidget::setReadOnly(bool readOnly)
 {
     mReadOnly = readOnly;
+    setAcceptDrops(!mReadOnly);
 }
 
 void ImageWidget::updateView()
