@@ -136,6 +136,14 @@ void MailWidget::setPreferred(bool b)
     mMailEdit->setPreferred(b);
 }
 
+void MailWidget::setReadOnly(bool readOnly)
+{
+    mMailEdit->setReadOnly(readOnly);
+    mMailType->setEnabled(!readOnly);
+    mAddButton->setEnabled(!readOnly);
+    mRemoveButton->setEnabled(!readOnly);
+}
+
 void MailWidget::slotAddMail()
 {
     Q_EMIT addWidget(this);

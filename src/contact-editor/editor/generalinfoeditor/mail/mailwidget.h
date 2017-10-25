@@ -42,6 +42,7 @@ public:
     void setMail(const KContacts::Email &email);
     KContacts::Email email();
     void setPreferred(bool b);
+    void setReadOnly(bool readOnly);
 Q_SIGNALS:
     void addWidget(MailWidget *);
     void removeWidget(MailWidget *);

@@ -69,6 +69,15 @@ void MailWidgetLister::storeContact(KContacts::Addressee &contact) const
     contact.setEmailList(emailList);
 }
 
+void MailWidgetLister::setReadOnly(bool readOnly)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        MailWidget *w = qobject_cast<MailWidget *>(widget);
+        w->setReadOnly(readOnly);
+    }
+}
+
 QWidget *MailWidgetLister::createWidget(QWidget *parent)
 {
     MailWidget *w = new MailWidget(parent);
