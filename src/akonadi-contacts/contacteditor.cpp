@@ -141,11 +141,11 @@ void Akonadi::AkonadiContactEditor::Private::parentCollectionFetchDone(KJob *job
         mReadOnly = !(parentCollection.rights() & Collection::CanChangeItem);
     }
 
-    mEditorWidget->setReadOnly(mReadOnly);
 
     const KContacts::Addressee addr = mItem.payload<KContacts::Addressee>();
     mContactMetaData.load(mItem);
     loadContact(addr, mContactMetaData);
+    mEditorWidget->setReadOnly(mReadOnly);
 }
 
 void Akonadi::AkonadiContactEditor::Private::storeDone(KJob *job)
