@@ -46,7 +46,7 @@ CategoriesEditWidget::~CategoriesEditWidget()
 
 void CategoriesEditWidget::setReadOnly(bool readOnly)
 {
-    mTagWidget->setEnabled(!readOnly);
+    mTagWidget->setReadOnly(readOnly);
 }
 
 void CategoriesEditWidget::loadContact(const KContacts::Addressee &contact)
