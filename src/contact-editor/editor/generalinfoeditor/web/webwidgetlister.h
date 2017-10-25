@@ -38,6 +38,7 @@ public:
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
+    void setReadOnly(bool readOnly);
 protected:
     QWidget *createWidget(QWidget *) override;
 

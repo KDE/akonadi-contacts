@@ -118,3 +118,12 @@ void MessagingWidget::clearWidget()
     mProtocolCombo->setCurrentIndex(0);
     mMessagingEdit->clear();
 }
+
+void MessagingWidget::setReadOnly(bool readOnly)
+{
+    mMessagingEdit->setReadOnly(readOnly);
+    mAddButton->setEnabled(!readOnly);
+    mRemoveButton->setEnabled(!readOnly);
+    mProtocolCombo->setEnabled(!readOnly);
+
+}

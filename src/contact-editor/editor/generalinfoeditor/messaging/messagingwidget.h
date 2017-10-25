@@ -43,6 +43,7 @@ public:
     void setIMAddress(const IMAddress &address);
     void setPreferred(bool b);
     void clearWidget();
+    void setReadOnly(bool readOnly);
 Q_SIGNALS:
     void addWidget(MessagingWidget *);
     void removeWidget(MessagingWidget *);

@@ -68,6 +68,15 @@ void WebWidgetLister::storeContact(KContacts::Addressee &contact) const
     contact.setExtraUrlList(resourceLocatorList);
 }
 
+void WebWidgetLister::setReadOnly(bool readOnly)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        WebWidget *w = qobject_cast<WebWidget *>(widget);
+        w->setReadOnly(readOnly);
+    }
+}
+
 QWidget *WebWidgetLister::createWidget(QWidget *parent)
 {
     WebWidget *w = new WebWidget(parent);

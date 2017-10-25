@@ -154,6 +154,14 @@ void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
     mWebSiteEdit->setText(mUrl.url().toDisplayString());
 }
 
+void WebWidget::setReadOnly(bool readOnly)
+{
+    mWebSiteEdit->setReadOnly(readOnly);
+    mAddButton->setEnabled(!readOnly);
+    mRemoveButton->setEnabled(!readOnly);
+    mWebType->setEnabled(!readOnly);
+}
+
 void WebWidget::slotPreferredChanged()
 {
     Q_EMIT preferredChanged(this);

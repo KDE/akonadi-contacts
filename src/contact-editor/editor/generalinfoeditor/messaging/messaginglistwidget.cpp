@@ -60,5 +60,5 @@ void MessagingListWidget::storeContact(KContacts::Addressee &contact) const
 
 void MessagingListWidget::setReadOnly(bool readOnly)
 {
-    mMessagingWidgetLister->setEnabled(!readOnly);
+    mMessagingWidgetLister->setReadOnly(readOnly);
 }

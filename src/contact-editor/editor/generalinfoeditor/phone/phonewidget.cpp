@@ -121,4 +121,7 @@ void PhoneWidget::setPreferred(bool b)
 void PhoneWidget::setReadOnly(bool readOnly)
 {
     mPhoneNumberEdit->setReadOnly(readOnly);
+    mAddButton->setEnabled(!readOnly);
+    mRemoveButton->setEnabled(!readOnly);
+    mPhoneType->setEnabled(!readOnly);
 }

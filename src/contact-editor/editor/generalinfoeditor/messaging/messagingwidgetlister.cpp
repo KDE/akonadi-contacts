@@ -110,6 +110,15 @@ void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
     }
 }
 
+void MessagingWidgetLister::setReadOnly(bool readOnly)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        MessagingWidget *w = qobject_cast<MessagingWidget *>(widget);
+        w->setReadOnly(readOnly);
+    }
+}
+
 QWidget *MessagingWidgetLister::createWidget(QWidget *parent)
 {
     MessagingWidget *w = new MessagingWidget(parent);

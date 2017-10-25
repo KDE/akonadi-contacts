@@ -44,6 +44,8 @@ public:
     KContacts::ResourceLocatorUrl url();
     void loadWebSite(const KContacts::ResourceLocatorUrl &url);
 
+    void setReadOnly(bool readOnly);
+
 Q_SIGNALS:
     void addWidget(WebWidget *);
     void removeWidget(WebWidget *);
