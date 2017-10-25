@@ -49,6 +49,9 @@ PreferredLineEditWidget::~PreferredLineEditWidget()
 
 void PreferredLineEditWidget::slotPreferredStatusChanged()
 {
+    if (isReadOnly()) {
+        return;
+    }
     mPreferred = !mPreferred;
     updatePreferredIcon();
     Q_EMIT preferredChanged(this);
