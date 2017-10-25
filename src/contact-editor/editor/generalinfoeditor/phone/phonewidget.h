@@ -44,6 +44,7 @@ public:
     KContacts::PhoneNumber storePhone();
     void clearWidget();
     void setPreferred(bool b);
+    void setReadOnly(bool readOnly);
 Q_SIGNALS:
     void addWidget(PhoneWidget *);
     void removeWidget(PhoneWidget *);

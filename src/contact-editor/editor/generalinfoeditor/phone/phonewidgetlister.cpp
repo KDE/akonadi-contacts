@@ -68,6 +68,15 @@ void PhoneWidgetLister::storeContact(KContacts::Addressee &contact) const
     contact.setPhoneNumbers(phoneNumbers);
 }
 
+void PhoneWidgetLister::setReadOnly(bool readOnly)
+{
+    const QList<QWidget *> widgetList = widgets();
+    for (QWidget *widget : widgetList) {
+        PhoneWidget *w = qobject_cast<PhoneWidget *>(widget);
+        w->setReadOnly(readOnly);
+    }
+}
+
 QWidget *PhoneWidgetLister::createWidget(QWidget *parent)
 {
     PhoneWidget *w = new PhoneWidget(parent);

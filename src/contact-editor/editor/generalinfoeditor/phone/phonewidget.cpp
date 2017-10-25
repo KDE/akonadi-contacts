@@ -117,3 +117,8 @@ void PhoneWidget::setPreferred(bool b)
 {
     mPhoneNumberEdit->setPreferred(b);
 }
+
+void PhoneWidget::setReadOnly(bool readOnly)
+{
+    mPhoneNumberEdit->setReadOnly(readOnly);
+}
