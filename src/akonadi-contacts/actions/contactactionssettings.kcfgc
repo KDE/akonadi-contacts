@@ -7,3 +7,4 @@ MemberVariables=private
 GlobalEnums=true
 ItemAccessors=true
 SetUserTexts=true
+TranslationSystem=kde
