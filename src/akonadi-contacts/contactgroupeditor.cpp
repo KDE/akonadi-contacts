@@ -147,7 +147,7 @@ void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByte
         job->fetchScope().fetchFullPayload();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-        mParent->connect(job, SIGNAL(result(KJob*)), mParent, SLOT(itemFetchDone(KJob*)));
+        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {itemFetchDone(job);});
         new WaitingOverlay(job, mParent);
     }
     delete dlg;
