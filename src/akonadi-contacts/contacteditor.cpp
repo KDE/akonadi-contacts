@@ -179,7 +179,7 @@ void Akonadi::AkonadiContactEditor::Private::itemChanged(const Akonadi::Item &it
         job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-        mParent->connect(job, SIGNAL(result(KJob*)), mParent, SLOT(itemFetchDone(KJob*)));
+        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {itemFetchDone(job);});
     }
 
     delete dlg;
@@ -202,7 +202,8 @@ void Akonadi::AkonadiContactEditor::Private::setupMonitor()
     mMonitor->setObjectName(QStringLiteral("ContactEditorMonitor"));
     mMonitor->ignoreSession(Akonadi::Session::defaultSession());
 
-    connect(mMonitor, SIGNAL(itemChanged(Akonadi::Item,QSet<QByteArray>)), mParent, SLOT(itemChanged(Akonadi::Item,QSet<QByteArray>)));
+    connect(mMonitor, &Monitor::itemChanged, mParent,
+            [this](const Akonadi::Item &item, const QSet<QByteArray> &set) {itemChanged(item, set); });
 }
 
 Akonadi::AkonadiContactEditor::AkonadiContactEditor(Mode mode, QWidget *parent)

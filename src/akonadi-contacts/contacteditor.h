@@ -182,10 +182,6 @@ private:
     //@cond PRIVATE
     class Private;
     Private *const d;
-
-    Q_PRIVATE_SLOT(d, void itemFetchDone(KJob *))
-    Q_PRIVATE_SLOT(d, void storeDone(KJob *))
-    Q_PRIVATE_SLOT(d, void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &))
     //@endcond
 };
 }
