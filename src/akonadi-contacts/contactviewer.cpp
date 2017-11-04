@@ -276,7 +276,9 @@ ContactViewer::ContactViewer(QWidget *parent)
     d->mBrowser = new TextBrowser;
 
     connect(d->mBrowser, &TextBrowser::anchorClicked,
-            this, [this](const QUrl &url) { d->slotUrlClicked(url);});
+            this, [this](const QUrl &url) {
+        d->slotUrlClicked(url);
+    });
 
     layout->addWidget(d->mBrowser);
 

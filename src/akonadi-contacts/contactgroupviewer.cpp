@@ -120,7 +120,9 @@ public:
         }
 
         mParentCollectionFetchJob = new CollectionFetchJob(mCurrentItem.parentCollection(), CollectionFetchJob::Base, mParent);
-        mParent->connect(mParentCollectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) { slotParentCollectionFetched(job); });
+        mParent->connect(mParentCollectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
+            slotParentCollectionFetched(job);
+        });
     }
 
     void slotParentCollectionFetched(KJob *job)
@@ -158,7 +160,9 @@ ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setMargin(0);
 
-    connect(d->mBrowser, &TextBrowser::anchorClicked, this, [this](const QUrl &url) { d->slotMailClicked(url); });
+    connect(d->mBrowser, &TextBrowser::anchorClicked, this, [this](const QUrl &url) {
+        d->slotMailClicked(url);
+    });
 
     layout->addWidget(d->mBrowser);
 

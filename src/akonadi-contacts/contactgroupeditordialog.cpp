@@ -128,7 +128,9 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
 
     connect(d->mEditor, &ContactGroupEditor::contactGroupStored, this, &ContactGroupEditorDialog::contactGroupStored);
     connect(d->mEditor->d->mGui.groupName, &QLineEdit::textChanged,
-            this, [this](const QString &str) { d->slotGroupNameChanged(str); });
+            this, [this](const QString &str) {
+        d->slotGroupNameChanged(str);
+    });
 
     d->okButton->setEnabled(!d->mEditor->d->mGui.groupName->text().trimmed().isEmpty());
     mainLayout->addWidget(mainWidget);

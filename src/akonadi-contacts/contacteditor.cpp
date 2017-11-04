@@ -114,7 +114,9 @@ void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)
 
         Akonadi::CollectionFetchJob *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
                                                                                           Akonadi::CollectionFetchJob::Base);
-        mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) { parentCollectionFetchDone(job); });
+        mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
+            parentCollectionFetchDone(job);
+        });
     } else {
         const KContacts::Addressee addr = mItem.payload<KContacts::Addressee>();
         mContactMetaData.load(mItem);
@@ -140,7 +142,6 @@ void Akonadi::AkonadiContactEditor::Private::parentCollectionFetchDone(KJob *job
     if (parentCollection.isValid()) {
         mReadOnly = !(parentCollection.rights() & Collection::CanChangeItem);
     }
-
 
     const KContacts::Addressee addr = mItem.payload<KContacts::Addressee>();
     mContactMetaData.load(mItem);
@@ -179,7 +180,9 @@ void Akonadi::AkonadiContactEditor::Private::itemChanged(const Akonadi::Item &it
         job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {itemFetchDone(job);});
+        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {
+            itemFetchDone(job);
+        });
     }
 
     delete dlg;
@@ -203,7 +206,9 @@ void Akonadi::AkonadiContactEditor::Private::setupMonitor()
     mMonitor->ignoreSession(Akonadi::Session::defaultSession());
 
     connect(mMonitor, &Monitor::itemChanged, mParent,
-            [this](const Akonadi::Item &item, const QSet<QByteArray> &set) {itemChanged(item, set); });
+            [this](const Akonadi::Item &item, const QSet<QByteArray> &set) {
+        itemChanged(item, set);
+    });
 }
 
 Akonadi::AkonadiContactEditor::AkonadiContactEditor(Mode mode, QWidget *parent)
@@ -240,7 +245,9 @@ void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
     job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, &ItemFetchJob::result, this, [this](KJob *job) { d->itemFetchDone(job); });
+    connect(job, &ItemFetchJob::result, this, [this](KJob *job) {
+        d->itemFetchDone(job);
+    });
 
     d->setupMonitor();
     d->mMonitor->setItemMonitored(item);
@@ -270,7 +277,9 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mItem.setPayload<KContacts::Addressee>(addr);
 
         Akonadi::ItemModifyJob *job = new Akonadi::ItemModifyJob(d->mItem);
-        connect(job, &ItemModifyJob::result, this, [this](KJob *job) { d->storeDone(job); });
+        connect(job, &ItemModifyJob::result, this, [this](KJob *job) {
+            d->storeDone(job);
+        });
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::Addressee::mimeType());
@@ -299,7 +308,9 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mContactMetaData.store(item);
 
         Akonadi::ItemCreateJob *job = new Akonadi::ItemCreateJob(item, d->mDefaultCollection);
-        connect(job, &ItemCreateJob::result, this, [this](KJob *job) { d->storeDone(job); });
+        connect(job, &ItemCreateJob::result, this, [this](KJob *job) {
+            d->storeDone(job);
+        });
     }
 }
 

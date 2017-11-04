@@ -25,12 +25,10 @@ using namespace ContactEditor;
 AbstractAddressLocationWidget::AbstractAddressLocationWidget(QWidget *parent)
     : QWidget(parent)
 {
-
 }
 
 AbstractAddressLocationWidget::~AbstractAddressLocationWidget()
 {
-
 }
 
 void AbstractAddressLocationWidget::loadContact(const KContacts::Addressee &contact)

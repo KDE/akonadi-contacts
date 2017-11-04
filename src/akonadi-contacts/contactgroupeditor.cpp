@@ -84,14 +84,18 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
 
         Akonadi::CollectionFetchJob *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
                                                                                           Akonadi::CollectionFetchJob::Base);
-        mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) { parentCollectionFetchDone(job); });
+        mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
+            parentCollectionFetchDone(job);
+        });
     } else {
         const KContacts::ContactGroup group = mItem.payload<KContacts::ContactGroup>();
         loadContactGroup(group);
 
         setReadOnly(mReadOnly);
 
-        QTimer::singleShot(0, mParent, [this]() { adaptHeaderSizes(); });
+        QTimer::singleShot(0, mParent, [this]() {
+            adaptHeaderSizes();
+        });
     }
 }
 
@@ -116,7 +120,9 @@ void ContactGroupEditor::Private::parentCollectionFetchDone(KJob *job)
 
     setReadOnly(mReadOnly);
 
-    QTimer::singleShot(0, mParent, [this]() { adaptHeaderSizes(); });
+    QTimer::singleShot(0, mParent, [this]() {
+        adaptHeaderSizes();
+    });
 }
 
 void ContactGroupEditor::Private::storeDone(KJob *job)
@@ -147,7 +153,9 @@ void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByte
         job->fetchScope().fetchFullPayload();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {itemFetchDone(job);});
+        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {
+            itemFetchDone(job);
+        });
         new WaitingOverlay(job, mParent);
     }
     delete dlg;
@@ -194,7 +202,9 @@ void ContactGroupEditor::Private::setupMonitor()
     mMonitor->ignoreSession(Session::defaultSession());
 
     connect(mMonitor, &Monitor::itemChanged,
-            mParent, [this](const Akonadi::Item &item , const QSet<QByteArray> &arrays) { itemChanged(item,arrays); });
+            mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &arrays) {
+        itemChanged(item, arrays);
+    });
 }
 
 void ContactGroupEditor::Private::setReadOnly(bool readOnly)
@@ -220,7 +230,9 @@ ContactGroupEditor::ContactGroupEditor(Mode mode, QWidget *parent)
         KContacts::ContactGroup dummyGroup;
         d->mGroupModel->loadContactGroup(dummyGroup);
 
-        QTimer::singleShot(0, this, [this] () { d->adaptHeaderSizes(); });
+        QTimer::singleShot(0, this, [this]() {
+            d->adaptHeaderSizes();
+        });
         QTimer::singleShot(0, d->mGui.groupName, QOverload<>::of(&ContactGroupEditor::setFocus));
     }
 
@@ -242,7 +254,9 @@ void ContactGroupEditor::loadContactGroup(const Akonadi::Item &item)
     job->fetchScope().fetchFullPayload();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, &ItemModifyJob::result, this, [this](KJob *job) { d->itemFetchDone(job); });
+    connect(job, &ItemModifyJob::result, this, [this](KJob *job) {
+        d->itemFetchDone(job);
+    });
 
     d->setupMonitor();
     d->mMonitor->setItemMonitored(item);
@@ -270,7 +284,9 @@ bool ContactGroupEditor::saveContactGroup()
         d->mItem.setPayload<KContacts::ContactGroup>(group);
 
         ItemModifyJob *job = new ItemModifyJob(d->mItem);
-        connect(job, &ItemModifyJob::result, this, [this](KJob *job) { d->storeDone(job); });
+        connect(job, &ItemModifyJob::result, this, [this](KJob *job) {
+            d->storeDone(job);
+        });
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::ContactGroup::mimeType());
@@ -300,7 +316,9 @@ bool ContactGroupEditor::saveContactGroup()
         item.setMimeType(KContacts::ContactGroup::mimeType());
 
         ItemCreateJob *job = new ItemCreateJob(item, d->mDefaultCollection);
-        connect(job, &ItemCreateJob::result, this, [this](KJob *job) { d->storeDone(job); });
+        connect(job, &ItemCreateJob::result, this, [this](KJob *job) {
+            d->storeDone(job);
+        });
     }
 
     return true;

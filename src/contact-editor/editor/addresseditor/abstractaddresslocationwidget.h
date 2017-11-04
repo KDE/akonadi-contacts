@@ -19,7 +19,6 @@
     02110-1301, USA.
 */
 
-
 #ifndef ABSTRACTADDRESSLOCATIONWIDGET_H
 #define ABSTRACTADDRESSLOCATIONWIDGET_H
 
@@ -28,8 +27,7 @@
 #include <KContacts/Addressee>
 #include "contacteditor_export.h"
 
-namespace ContactEditor
-{
+namespace ContactEditor {
 class CONTACTEDITOR_EXPORT AbstractAddressLocationWidget : public QWidget
 {
     Q_OBJECT

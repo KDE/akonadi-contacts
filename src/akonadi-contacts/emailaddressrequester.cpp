@@ -96,7 +96,9 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     button->setToolTip(i18n("Open Address Book"));
     layout->addWidget(button);
 
-    connect(button, &QPushButton::clicked, this, [this]() { d->slotAddressBook(); });
+    connect(button, &QPushButton::clicked, this, [this]() {
+        d->slotAddressBook();
+    });
     connect(d->mLineEdit, &KLineEdit::textChanged, this, &EmailAddressRequester::textChanged);
 }
 

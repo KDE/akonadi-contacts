@@ -90,10 +90,18 @@ void KDatePickerPopup::buildMenu()
     }
 
     if (mItems & Words) {
-        addAction(i18nc("@option today", "&Today"), this, [this]() { slotToday(); });
-        addAction(i18nc("@option tomorrow", "To&morrow"), this, [this]() { slotTomorrow(); });
-        addAction(i18nc("@option next week", "Next &Week"), this, [this]() { slotNextWeek(); });
-        addAction(i18nc("@option next month", "Next M&onth"), this, [this]() { slotNextMonth(); });
+        addAction(i18nc("@option today", "&Today"), this, [this]() {
+            slotToday();
+        });
+        addAction(i18nc("@option tomorrow", "To&morrow"), this, [this]() {
+            slotTomorrow();
+        });
+        addAction(i18nc("@option next week", "Next &Week"), this, [this]() {
+            slotNextWeek();
+        });
+        addAction(i18nc("@option next month", "Next M&onth"), this, [this]() {
+            slotNextMonth();
+        });
 
         if (mItems & NoDate) {
             addSeparator();
@@ -101,7 +109,9 @@ void KDatePickerPopup::buildMenu()
     }
 
     if (mItems & NoDate) {
-        addAction(i18nc("@option do not specify a date", "No Date"), this, [this]() { slotNoDate(); });
+        addAction(i18nc("@option do not specify a date", "No Date"), this, [this]() {
+            slotNoDate();
+        });
     }
 }
 

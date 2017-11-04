@@ -125,5 +125,4 @@ void MessagingWidget::setReadOnly(bool readOnly)
     mAddButton->setEnabled(!readOnly);
     mRemoveButton->setEnabled(!readOnly);
     mProtocolCombo->setEnabled(!readOnly);
-
 }
