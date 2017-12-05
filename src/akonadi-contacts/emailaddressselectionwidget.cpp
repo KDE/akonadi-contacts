@@ -150,8 +150,8 @@ void EmailAddressSelectionWidget::Private::init()
     q->connect(mSearchLine, &QLineEdit::textChanged,
                filter, &ContactsFilterProxyModel::setFilterString);
 
-    q->connect(mView, SIGNAL(doubleClicked(Akonadi::Item)),
-               q, SIGNAL(doubleClicked()));
+    q->connect(mView, QOverload<const Akonadi::Item &>::of(&Akonadi::EntityTreeView::doubleClicked),
+               q, [this]() { Q_EMIT q->doubleClicked(); });
     ControlGui::widgetNeedsAkonadi(q);
 
     mSearchLine->setFocus();
