@@ -140,7 +140,7 @@ Qt::ItemFlags ContactsFilterProxyModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
         // Don't crash
-        return nullptr;
+        return Qt::NoItemFlags;
     }
     const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     if (collection.isValid()) {
