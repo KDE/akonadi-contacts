@@ -27,22 +27,25 @@
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 
-static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString);
+using namespace Akonadi;
+
+static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString, ContactsFilterProxyModel::MatchFilterContactFlag flag);
 static bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, const QString &filterString);
 
-using namespace Akonadi;
 
 class Q_DECL_HIDDEN ContactsFilterProxyModel::Private
 {
 public:
     Private()
-        : flags(nullptr)
+        : flags(0)
+        , matchFilterFlag(ContactsFilterProxyModel::MatchFilterContactFlag::All)
         , mExcludeVirtualCollections(false)
     {
     }
 
     QString mFilter;
     ContactsFilterProxyModel::FilterFlags flags;
+    ContactsFilterProxyModel::MatchFilterContactFlag matchFilterFlag;
     bool mExcludeVirtualCollections;
 };
 
@@ -90,7 +93,7 @@ bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &pare
             }
         }
         if (!d->mFilter.isEmpty()) {
-            return contactMatchesFilter(contact, d->mFilter);
+            return contactMatchesFilter(contact, d->mFilter, d->matchFilterFlag);
         }
     } else {
         if (!d->mFilter.isEmpty()) {
@@ -121,6 +124,11 @@ bool ContactsFilterProxyModel::lessThan(const QModelIndex &leftIndex, const QMod
     }
 
     return QSortFilterProxyModel::lessThan(leftIndex, rightIndex);
+}
+
+void ContactsFilterProxyModel::setMatchFilterContactFlag(ContactsFilterProxyModel::MatchFilterContactFlag flag)
+{
+    d->matchFilterFlag = flag;
 }
 
 void ContactsFilterProxyModel::setFilterFlags(ContactsFilterProxyModel::FilterFlags flags)
@@ -182,7 +190,7 @@ static bool addressMatchesFilter(const KContacts::Address &address, const QStrin
     return false;
 }
 
-static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString)
+static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString, ContactsFilterProxyModel::MatchFilterContactFlag flag)
 {
     if (contact.assembledName().contains(filterString, Qt::CaseInsensitive)) {
         return true;
@@ -196,23 +204,26 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
         return true;
     }
 
-    if (contact.birthday().toString().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
 
-    const KContacts::Address::List addresses = contact.addresses();
-    int count = addresses.count();
-    for (int i = 0; i < count; ++i) {
-        if (addressMatchesFilter(addresses.at(i), filterString)) {
+    int count = 0;
+    if (flag == ContactsFilterProxyModel::MatchFilterContactFlag::All) {
+        if (contact.birthday().toString().contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
-    }
+        const KContacts::Address::List addresses = contact.addresses();
+        count = addresses.count();
+        for (int i = 0; i < count; ++i) {
+            if (addressMatchesFilter(addresses.at(i), filterString)) {
+                return true;
+            }
+        }
 
-    const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
-    count = phoneNumbers.count();
-    for (int i = 0; i < count; ++i) {
-        if (phoneNumbers.at(i).number().contains(filterString, Qt::CaseInsensitive)) {
-            return true;
+        const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
+        count = phoneNumbers.count();
+        for (int i = 0; i < count; ++i) {
+            if (phoneNumbers.at(i).number().contains(filterString, Qt::CaseInsensitive)) {
+                return true;
+            }
         }
     }
 
@@ -224,47 +235,49 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
         }
     }
 
-    const QStringList categories = contact.categories();
-    count = categories.count();
-    for (int i = 0; i < count; ++i) {
-        if (categories.at(i).contains(filterString, Qt::CaseInsensitive)) {
+
+    if (flag == ContactsFilterProxyModel::MatchFilterContactFlag::All) {
+        const QStringList categories = contact.categories();
+        count = categories.count();
+        for (int i = 0; i < count; ++i) {
+            if (categories.at(i).contains(filterString, Qt::CaseInsensitive)) {
+                return true;
+            }
+        }
+        if (contact.mailer().contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
-    }
 
-    if (contact.mailer().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
-
-    if (contact.title().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
-
-    if (contact.role().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
-
-    if (contact.organization().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
-
-    if (contact.department().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
-
-    if (contact.note().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
-
-    if (contact.url().url().url().contains(filterString, Qt::CaseInsensitive)) {
-        return true;
-    }
-
-    const QStringList customs = contact.customs();
-    count = customs.count();
-    for (int i = 0; i < count; ++i) {
-        if (customs.at(i).contains(filterString, Qt::CaseInsensitive)) {
+        if (contact.title().contains(filterString, Qt::CaseInsensitive)) {
             return true;
+        }
+
+        if (contact.role().contains(filterString, Qt::CaseInsensitive)) {
+            return true;
+        }
+
+        if (contact.organization().contains(filterString, Qt::CaseInsensitive)) {
+            return true;
+        }
+
+        if (contact.department().contains(filterString, Qt::CaseInsensitive)) {
+            return true;
+        }
+
+        if (contact.note().contains(filterString, Qt::CaseInsensitive)) {
+            return true;
+        }
+
+        if (contact.url().url().url().contains(filterString, Qt::CaseInsensitive)) {
+            return true;
+        }
+
+        const QStringList customs = contact.customs();
+        count = customs.count();
+        for (int i = 0; i < count; ++i) {
+            if (customs.at(i).contains(filterString, Qt::CaseInsensitive)) {
+                return true;
+            }
         }
     }
 

@@ -61,7 +61,10 @@ class AKONADI_CONTACT_EXPORT ContactsFilterProxyModel : public QSortFilterProxyM
     Q_OBJECT
 
 public:
-
+    enum MatchFilterContactFlag {
+        All = 0,
+        OnlyNameAndEmailsAddresses = 1
+    };
     enum FilterFlag {
         HasEmail = 0x01 /// Filters out contacts without any email address set.
     };
@@ -86,6 +89,15 @@ public:
     * @since 4.8
     */
     void setFilterFlags(ContactsFilterProxyModel::FilterFlags flags);
+
+
+    /**
+     * @brief setMatchFilterContactFlag
+     * @param flag
+     * @since 5.8.0
+     *
+     */
+    void setMatchFilterContactFlag(ContactsFilterProxyModel::MatchFilterContactFlag flag);
 
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 

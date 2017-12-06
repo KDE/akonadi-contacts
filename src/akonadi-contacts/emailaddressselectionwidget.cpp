@@ -138,6 +138,7 @@ void EmailAddressSelectionWidget::Private::init()
     if (mShowOnlyContactWithEmail) {
         filter->setFilterFlags(ContactsFilterProxyModel::HasEmail);
     }
+    filter->setMatchFilterContactFlag(ContactsFilterProxyModel::MatchFilterContactFlag::OnlyNameAndEmailsAddresses);
     filter->setExcludeVirtualCollections(true);
     filter->setSourceModel(mModel);
 
