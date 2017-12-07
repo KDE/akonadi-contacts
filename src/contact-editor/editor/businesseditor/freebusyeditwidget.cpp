@@ -51,7 +51,7 @@ FreeBusyEditWidget::~FreeBusyEditWidget()
 
 static QString freeBusyUrlStore()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QStringLiteral("korganizer/freebusyurls");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusyurls");
 }
 
 void FreeBusyEditWidget::loadContact(const KContacts::Addressee &contact)
