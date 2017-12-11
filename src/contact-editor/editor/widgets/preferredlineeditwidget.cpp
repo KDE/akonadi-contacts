@@ -31,7 +31,7 @@ PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     : KLineEdit(parent)
     , mPreferred(false)
 {
-    mIconEnabled = QIcon(QIcon::fromTheme(QStringLiteral("rating")));
+    mIconEnabled = QIcon::fromTheme(QStringLiteral("rating"));
     KIconLoader loader;
     QImage iconDisabled
         = mIconEnabled.pixmap(loader.currentSize(KIconLoader::Panel)).toImage();
