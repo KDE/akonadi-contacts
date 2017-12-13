@@ -141,8 +141,8 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
     const bool isReference = index.data(ContactGroupModel::IsReferenceRole).toBool();
     Q_UNUSED(option)
     if (index.column() == 0) {
-        auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
-        connect(edit, SIGNAL(completed(QWidget*)), SLOT(completed(QWidget*)));
+        ContactLineEdit *edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
+        connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
 
         return edit;
     } else {
