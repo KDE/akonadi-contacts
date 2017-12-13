@@ -103,9 +103,8 @@ private:
     class Private;
     Private *const d;
 
+    //Already use with QMetaObject::invokeMethod
     Q_PRIVATE_SLOT(d, void resolveGroup())
-    Q_PRIVATE_SLOT(d, void fetchResult(KJob *))
-    Q_PRIVATE_SLOT(d, void searchResult(KJob *))
     //@endcond
 };
 }
