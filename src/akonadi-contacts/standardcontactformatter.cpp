@@ -238,7 +238,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     if (!rawContact.customs().empty()) {
         const QStringList customs = rawContact.customs();
         for (QString custom : customs) {
-            if (custom.startsWith(QStringLiteral("KADDRESSBOOK-"))) {
+            if (custom.startsWith(QLatin1String("KADDRESSBOOK-"))) {
                 custom.remove(QStringLiteral("KADDRESSBOOK-X-"));
                 custom.remove(QStringLiteral("KADDRESSBOOK-"));
 

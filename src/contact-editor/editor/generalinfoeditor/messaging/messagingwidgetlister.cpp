@@ -49,7 +49,7 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
         QString app, name, value;
         ContactEditor::Utils::splitCustomField(custom, app, name, value);
 
-        if (app.startsWith(QStringLiteral("messaging/"))) {
+        if (app.startsWith(QLatin1String("messaging/"))) {
             if (name == QLatin1String("All")) {
                 const QString protocol = app;
                 const QStringList names = value.split(QChar(0xE000), QString::SkipEmptyParts);

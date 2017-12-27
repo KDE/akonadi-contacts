@@ -69,7 +69,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
         ContactEditor::Utils::splitCustomField(custom, app, name, value);
 
         // skip all well-known fields that have separated editor widgets
-        if (custom.startsWith(QStringLiteral("messaging/"))) {       // IM addresses
+        if (custom.startsWith(QLatin1String("messaging/"))) {       // IM addresses
             continue;
         }
 

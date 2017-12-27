@@ -73,7 +73,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
 
     QString link = anchorAt(event->pos());
     if (!link.isEmpty()) {
-        if (link.startsWith(QStringLiteral("mailto:"))) {
+        if (link.startsWith(QLatin1String("mailto:"))) {
             mDataToCopy = KCodecs::decodeRFC2047String(QUrl(link).path());
             // Action text matches that used in KMail
             act->setText(i18nc("@action:inmenu Copy a displayed email address", "Copy Email Address"));
