@@ -166,7 +166,11 @@ void ContactGroupExpandJob::start()
             d->searchResult(job);
         });
     } else {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+        QMetaObject::invokeMethod(this, [this]() { d->resolveGroup(); }, Qt::QueuedConnection);
+#else
         QMetaObject::invokeMethod(this, "resolveGroup", Qt::QueuedConnection);
+#endif
     }
 }
 
