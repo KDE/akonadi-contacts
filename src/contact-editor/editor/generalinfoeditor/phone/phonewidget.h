@@ -50,12 +50,10 @@ Q_SIGNALS:
     void removeWidget(PhoneWidget *);
     void preferredChanged(PhoneWidget *);
 
-private Q_SLOTS:
+private:
     void slotAddPhone();
     void slotRemovePhone();
     void slotPreferredChanged();
-
-private:
     PreferredLineEditWidget *mPhoneNumberEdit = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;

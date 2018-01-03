@@ -44,7 +44,7 @@ Q_SIGNALS:
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
-private Q_SLOTS:
+private:
     void emitSignal();
 };
 
@@ -67,12 +67,10 @@ public:
 
     void setReadOnly(bool readOnly);
 
-private Q_SLOTS:
+private:
     void dateSelected(const QDate &date);
     void resetDate();
     void updateView();
-
-private:
     DateView *mView = nullptr;
     QToolButton *mSelectButton = nullptr;
     QToolButton *mClearButton = nullptr;

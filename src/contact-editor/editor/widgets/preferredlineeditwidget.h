@@ -40,10 +40,8 @@ public:
 Q_SIGNALS:
     void preferredChanged(QWidget *w);
 
-private Q_SLOTS:
-    void slotPreferredStatusChanged();
-
 private:
+    void slotPreferredStatusChanged();
     void updatePreferredIcon();
     bool mPreferred;
     QIcon mIconEnabled;

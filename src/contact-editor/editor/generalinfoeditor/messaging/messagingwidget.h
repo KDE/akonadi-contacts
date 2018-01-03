@@ -49,11 +49,10 @@ Q_SIGNALS:
     void removeWidget(MessagingWidget *);
     void preferredChanged(MessagingWidget *);
 
-private Q_SLOTS:
+private:
     void slotAddMessaging();
     void slotRemoveMessaging();
     void slotPreferredChanged();
-private:
     PreferredLineEditWidget *mMessagingEdit = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;

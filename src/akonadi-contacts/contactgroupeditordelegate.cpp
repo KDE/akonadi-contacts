@@ -115,7 +115,6 @@ public:
     Private()
         : mButtonSize(16, 16)
         , mIcon(QIcon::fromTheme(QStringLiteral("list-remove")))
-        , mItemView(nullptr)
     {
     }
 

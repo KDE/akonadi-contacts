@@ -43,12 +43,10 @@ public:
 protected:
     QWidget *createWidget(QWidget *) override;
 
-private Q_SLOTS:
+private:
     void slotAddWidget(MailWidget *w);
     void slotRemoveWidget(MailWidget *w);
     void slotPreferredChanged(MailWidget *w);
-
-private:
     void reconnectWidget(MailWidget *w);
     void updateAddRemoveButton();
 };

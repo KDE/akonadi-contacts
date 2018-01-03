@@ -43,11 +43,9 @@ public:
 Q_SIGNALS:
     void completed(QWidget *widget);
 
-private Q_SLOTS:
+private:
     void completed(const QModelIndex &index);
     void slotTextEdited();
-
-private:
     bool mIsReference;
     Item mItem;
 };
@@ -71,11 +69,9 @@ public:
 
     bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) override;
 
-private Q_SLOTS:
+private:
     void completed(QWidget *widget);
     void setFirstColumnAsCurrent();
-
-private:
     class Private;
     Private *const d;
 };

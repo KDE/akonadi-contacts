@@ -35,13 +35,12 @@ class TextBrowser : public QTextBrowser
     Q_OBJECT
 public:
     explicit TextBrowser(QWidget *parent = nullptr);
-private Q_SLOTS:
-    void slotCopyData();
 protected:
 #ifndef QT_NO_CONTEXTMENU
     void contextMenuEvent(QContextMenuEvent *event) override;
 #endif
 private:
+    void slotCopyData();
     QVariant mDataToCopy;
 };
 }

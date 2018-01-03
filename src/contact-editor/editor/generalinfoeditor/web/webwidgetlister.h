@@ -42,12 +42,10 @@ public:
 protected:
     QWidget *createWidget(QWidget *) override;
 
-private Q_SLOTS:
+private:
     void slotAddWidget(WebWidget *w);
     void slotRemoveWidget(WebWidget *w);
-
     void slotPreferredChanged(WebWidget *w);
-private:
     void reconnectWidget(WebWidget *w);
     void updateAddRemoveButton();
 };
