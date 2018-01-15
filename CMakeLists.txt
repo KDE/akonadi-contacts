@@ -23,13 +23,6 @@ include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 include(ECMCoverageOption)
 
-if(NOT CMAKE_VERSION VERSION_LESS "3.10.0")
-  # CMake 3.9+ warns about automoc on files without Q_OBJECT, and doesn't know about other macros.
-  # 3.10+ lets us provide more macro names that require automoc.
-  # Remove this when depending on a Frameworks or ECM version that solves this upstream.
-  list(APPEND CMAKE_AUTOMOC_MACRO_NAMES "K_PLUGIN_FACTORY_WITH_JSON" "K_PLUGIN_FACTORY")
-endif()
-
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
 set(AKONADI_MIME_VERSION "5.7.0")
 set(KCONTACTS_VERSION "5.7.0")
@@ -64,6 +57,13 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
+endif()
+
+if(NOT CMAKE_VERSION VERSION_LESS "3.10.0" AND KF5_VERSION VERSION_LESS "5.42.0")
+  # CMake 3.9+ warns about automoc on files without Q_OBJECT, and doesn't know about other macros.
+  # 3.10+ lets us provide more macro names that require automoc.
+  # KF5 >= 5.42 takes care itself of adding its macros in its cmake config files
+  list(APPEND CMAKE_AUTOMOC_MACRO_NAMES "K_PLUGIN_FACTORY_WITH_JSON" "K_PLUGIN_FACTORY")
 endif()
 
 
