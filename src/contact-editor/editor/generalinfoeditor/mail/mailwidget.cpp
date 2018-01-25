@@ -88,7 +88,7 @@ void MailWidget::setMail(const KContacts::Email &email)
     mMailEdit->setText(email.mail());
     const QMap<QString, QStringList> parameters = mEmail.parameters();
     const QStringList value = parameters.value(QStringLiteral("type"));
-    if (value.contains(QStringLiteral("PREF"))) {
+    if (value.contains(QLatin1String("PREF"))) {
         setPreferred(true);
     }
     const QStringList lst = mMailType->selectTypeList();
@@ -118,7 +118,7 @@ KContacts::Email MailWidget::email()
         }
     }
     if (mMailEdit->preferred()) {
-        if (!value.contains(QStringLiteral("PREF"))) {
+        if (!value.contains(QLatin1String("PREF"))) {
             value.append(QStringLiteral("PREF"));
         }
     } else {

@@ -164,7 +164,7 @@ bool QSkypeDialer::sendSms(const QString &number, const QString &text)
 
     // Send the SMS
     reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("ALTER SMS %1 SEND").arg(messageId));
-    if (reply.value().contains(QStringLiteral("ERROR"))) {
+    if (reply.value().contains(QLatin1String("ERROR"))) {
         mErrorMessage = reply.value();
         // As sending the message failed (not enough Skype credit), lets delete the message
         reply = mInterface->call(QStringLiteral("Invoke"), QStringLiteral("DELETE SMS %1").arg(messageId));

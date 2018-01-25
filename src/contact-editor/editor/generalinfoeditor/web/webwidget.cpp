@@ -122,7 +122,7 @@ KContacts::ResourceLocatorUrl WebWidget::url()
         }
     }
     if (mWebSiteEdit->preferred()) {
-        if (!value.contains(QStringLiteral("PREF"))) {
+        if (!value.contains(QLatin1String("PREF"))) {
             value.append(QStringLiteral("PREF"));
         }
     } else {
@@ -140,7 +140,7 @@ void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
     mUrl = url;
     const QMap<QString, QStringList> parameters = mUrl.parameters();
     const QStringList value = parameters.value(QStringLiteral("type"));
-    if (value.contains(QStringLiteral("PREF"))) {
+    if (value.contains(QLatin1String("PREF"))) {
         setPreferred(true);
     }
     const QStringList lst = mWebType->selectTypeList();
