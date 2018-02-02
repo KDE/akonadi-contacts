@@ -54,6 +54,7 @@ Comment[x-test]=xxSMS Protocolxx
 Comment[zh_CN]=短消息协议
 Comment[zh_TW]=SMS 協定
 Name=SMS
+Name[ar]=SMS
 Name[bs]=SMS
 Name[ca]=SMS
 Name[ca@valencia]=SMS
