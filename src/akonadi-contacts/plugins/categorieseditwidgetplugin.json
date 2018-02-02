@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "categorieseditwidget",
         "Name": "Categories Editor",
+        "Name[ar]": "محرّر الفئات",
         "Name[ca@valencia]": "Editor de categories",
         "Name[ca]": "Editor de categories",
         "Name[cs]": "Editor kategorií",
