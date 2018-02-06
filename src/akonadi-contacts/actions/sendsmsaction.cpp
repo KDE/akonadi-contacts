@@ -86,10 +86,10 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
      * %N the raw number
      * %n the number with all additional non-number characters removed
      */
-    command = command.replace(QStringLiteral("%N"), QStringLiteral("\"%1\"").arg(phoneNumber.number()));
-    command = command.replace(QStringLiteral("%n"), QStringLiteral("\"%1\"").arg(strippedSmsNumber(number)));
-    command = command.replace(QStringLiteral("%t"), QStringLiteral("\"%1\"").arg(message));
+    command = command.replace(QLatin1String("%N"), QStringLiteral("\"%1\"").arg(phoneNumber.number()));
+    command = command.replace(QLatin1String("%n"), QStringLiteral("\"%1\"").arg(strippedSmsNumber(number)));
+    command = command.replace(QLatin1String("%t"), QStringLiteral("\"%1\"").arg(message));
     //Bug: 293232 In KDE3 We used %F to replace text
-    command = command.replace(QStringLiteral("%F"), message);
+    command = command.replace(QLatin1String("%F"), message);
     KRun::runCommand(command, nullptr);
 }

@@ -82,8 +82,8 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
      * %N the raw number
      * %n the number with all additional non-number characters removed
      */
-    command = command.replace(QStringLiteral("%N"), number.number());
-    command = command.replace(QStringLiteral("%n"), strippedDialNumber(number.number().trimmed()));
+    command = command.replace(QLatin1String("%N"), number.number());
+    command = command.replace(QLatin1String("%n"), strippedDialNumber(number.number().trimmed()));
 
     KRun::runCommand(command, nullptr);
 }
