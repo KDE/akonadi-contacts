@@ -27,9 +27,13 @@
 #include <kcontacts/addressee.h>
 #include <KPluginTrader>
 #include <QHBoxLayout>
+#include <kcoreaddons_version.h>
+#include <kpluginfactory.h>
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 44, 0)
+#define K_PLUGIN_CLASS_WITH_JSON(classname, json) K_PLUGIN_FACTORY_WITH_JSON(classname ## Factory, json, registerPlugin<classname >();)
+#endif
 
-K_PLUGIN_FACTORY_WITH_JSON(CategoriesEditWidgetFactory, "categorieseditwidgetplugin.json", registerPlugin<CategoriesEditWidget>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(CategoriesEditWidget, "categorieseditwidgetplugin.json")
 
 CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant> &)
     : ContactEditor::CategoriesEditAbstractWidget(parent)
