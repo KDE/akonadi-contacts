@@ -60,7 +60,7 @@ public:
     /**
      * Destroys the standard contact group formatter.
      */
-    virtual ~StandardContactGroupFormatter();
+    ~StandardContactGroupFormatter() override;
 
     /**
      * Returns the contact group formatted as HTML.

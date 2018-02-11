@@ -125,7 +125,7 @@ public:
     /**
      * Destroys the contact editor.
      */
-    virtual ~AkonadiContactEditor();
+    ~AkonadiContactEditor() override;
 
     /**
      * Sets a @p contact that is used as template in create mode.

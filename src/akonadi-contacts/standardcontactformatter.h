@@ -60,7 +60,7 @@ public:
     /**
      * Destroys the standard contact formatter.
      */
-    virtual ~StandardContactFormatter();
+    ~StandardContactFormatter() override;
 
     /**
      * Returns the contact formatted as HTML.

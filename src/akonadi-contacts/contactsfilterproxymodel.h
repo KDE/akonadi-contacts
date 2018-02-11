@@ -80,7 +80,7 @@ public:
     /**
      * Destroys the contacts filter proxy model.
      */
-    virtual ~ContactsFilterProxyModel();
+    ~ContactsFilterProxyModel() override;
 
     /**
     * Sets the filter @p flags. By default

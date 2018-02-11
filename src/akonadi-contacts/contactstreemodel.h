@@ -173,7 +173,7 @@ public:
     /**
      * Destroys the contacts tree model.
      */
-    virtual ~ContactsTreeModel();
+    ~ContactsTreeModel() override;
 
     /**
      * Sets the @p columns that the model should show.

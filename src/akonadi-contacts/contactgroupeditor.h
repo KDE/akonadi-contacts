@@ -102,7 +102,7 @@ public:
     /**
      * Destroys the contact group editor.
      */
-    virtual ~ContactGroupEditor();
+    ~ContactGroupEditor() override;
 
     /**
      * Sets a contact @p group that is used as template in create mode.

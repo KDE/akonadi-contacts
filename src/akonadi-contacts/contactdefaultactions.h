@@ -97,7 +97,7 @@ public:
     /**
      * Destroys the contact default actions object.
      */
-    virtual ~ContactDefaultActions();
+    ~ContactDefaultActions() override;
 
     /**
      * Tries to connect the well known signals of the @p view

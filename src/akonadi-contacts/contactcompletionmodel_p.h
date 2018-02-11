@@ -37,7 +37,7 @@ public:
     };
 
     explicit ContactCompletionModel(Monitor *monitor, QObject *parent = nullptr);
-    virtual ~ContactCompletionModel();
+    ~ContactCompletionModel() override;
 
     QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const override;
     QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const override;
