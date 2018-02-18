@@ -148,14 +148,18 @@ public:
             addr.setPhoto(KContacts::Picture());
             addr.setLogo(KContacts::Picture());
             const QString data = QString::fromUtf8(converter.createVCard(addr));
-            mQRCode->setData(data);
-            mDataMatrix->setData(data);
-            mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QStringLiteral("qrcode")),
-                                              mQRCode->toImage(QSizeF(50, 50)));
-            mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QStringLiteral("datamatrix")),
-                                              mDataMatrix->toImage(QSizeF(50, 50)));
+	    if (mQRCode) {
+                mQRCode->setData(data);
+                mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                                  QUrl(QStringLiteral("qrcode")),
+                                                  mQRCode->toImage(QSizeF(50, 50)));
+            }
+	    if (mDataMatrix) {
+                mDataMatrix->setData(data);
+                mBrowser->document()->addResource(QTextDocument::ImageResource,
+                                                  QUrl(QStringLiteral("datamatrix")),
+                                                  mDataMatrix->toImage(QSizeF(50, 50)));
+            }
         }
 
         // merge local and global custom field descriptions

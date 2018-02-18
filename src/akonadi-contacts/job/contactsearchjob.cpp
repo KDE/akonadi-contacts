@@ -67,6 +67,7 @@ static Akonadi::SearchTerm::Condition matchType(ContactSearchJob::Match match)
 
 void ContactSearchJob::setQuery(Criterion criterion, const QString &value, Match match)
 {
+    qDebug() << " void ContactSearchJob::setQuery(Criterion criterion, const QString &value, Match match)"<<value;
     Akonadi::SearchQuery query(SearchTerm::RelOr);
 
     if (criterion == Name) {
@@ -84,7 +85,9 @@ void ContactSearchJob::setQuery(Criterion criterion, const QString &value, Match
 
     query.setLimit(d->mLimit);
 
+    qDebug() << "void ContactSearchJob::setQuery(Criterion criterion, const QString &value, Match match)"<<value;
     ItemSearchJob::setQuery(query);
+    qDebug() << " AFTER ::::::::::::::::::::::::::::::::::::::::";
 }
 
 void ContactSearchJob::setLimit(int limit)
