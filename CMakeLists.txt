@@ -62,4 +62,6 @@ endif()
 add_subdirectory(src)
 add_subdirectory(kcm)
 
+install( FILES akonadi-contacts.renamecategories akonadi-contacts.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
