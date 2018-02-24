@@ -39,7 +39,7 @@ public:
 
     void setReadOnly(bool readOnly);
 private:
-    AbstractAddressLocationWidget *mAbstractAddressLocationWidget;
+    AbstractAddressLocationWidget *mAbstractAddressLocationWidget = nullptr;
 };
 }
 #endif // ADDRESSESLOCATIONWIDGET_H
