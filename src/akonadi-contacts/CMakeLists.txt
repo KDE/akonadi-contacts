@@ -220,4 +220,3 @@ endif()
 
 add_subdirectory(plugins)
 
-install( FILES akonadi-contacts.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
