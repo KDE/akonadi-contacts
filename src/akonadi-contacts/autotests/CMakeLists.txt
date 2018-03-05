@@ -10,7 +10,6 @@ macro(add_akonadi_contact_demo _source)
   add_executable( ${_name} ${_test} )
   add_test(NAME ${_name} COMMAND ${_name} )
   target_link_libraries(${_name}
-      KF5::AkonadiMime
      KF5::AkonadiContact
      Qt5::Test)
   ecm_mark_as_test(${_name})
