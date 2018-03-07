@@ -60,6 +60,7 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(kcm)
+add_subdirectory(serializers)
 
 install( FILES akonadi-contacts.renamecategories akonadi-contacts.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
