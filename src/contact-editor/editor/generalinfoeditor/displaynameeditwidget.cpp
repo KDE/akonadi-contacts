@@ -68,10 +68,10 @@ public:
         font.setStyle(QFont::StyleItalic);
         QFontMetrics metrics(font);
         for (const QString &description : qAsConst(mDescriptions)) {
-            mMaxDescriptionWidth = qMax(mMaxDescriptionWidth, metrics.width(description));
+            mMaxDescriptionWidth = qMax(mMaxDescriptionWidth, metrics.boundingRect(description).width());
         }
 
-        mMaxDescriptionWidth += 3;
+        mMaxDescriptionWidth += 2;
     }
 
     int maximumDescriptionWidth() const
@@ -211,7 +211,7 @@ bool DisplayNameEditWidget::eventFilter(QObject *object, QEvent *event)
             QFontMetrics metrics(mView->font());
             const int viewCount(mView->count());
             for (int i = 0; i < viewCount; ++i) {
-                maxWidth = qMax(maxWidth, metrics.width(mView->itemText(i)));
+                maxWidth = qMax(maxWidth, metrics.boundingRect(mView->itemText(i)).width());
             }
 
             // resize it to show the complete content
