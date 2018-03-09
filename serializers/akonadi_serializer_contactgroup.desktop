@@ -1,6 +1,18 @@
 [Misc]
 Name=Contact Group Serializer
+Name[ca]=Serialitzador del grup de contacte
+Name[nl]=Serialisator voor contactengroep
+Name[pt]=Serialização de Grupos de Contactos
+Name[sv]=Kontaktgruppserialisering
+Name[uk]=Серіалізатор груп контактів
+Name[x-test]=xxContact Group Serializerxx
 Comment=An Akonadi serializer plugin for contact group objects
+Comment[ca]=Un connector de serialització de l'Akonadi per a objectes del grup de contacte
+Comment[nl]=Een Akonadi serialisatorplug-in voor contactengroep-objecten
+Comment[pt]=Um 'plugin' de serialização do Akonadi para os objectos de grupos de contactos
+Comment[sv]=Ett insticksprogram till Akonadi för serialisering av kontaktgruppobjekt
+Comment[uk]=Додаток серіалізації Akonadi для об'єктів груп контактів
+Comment[x-test]=xxAn Akonadi serializer plugin for contact group objectsxx
 
 [Plugin]
 Type=application/x-vnd.kde.contactgroup
