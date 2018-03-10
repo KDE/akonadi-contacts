@@ -39,13 +39,12 @@ find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5IconThemes ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5TextWidgets ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Prison ${KF5_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Contacts ${KCONTACTS_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
-set(Prison_MIN_VERSION "${KF5_VERSION}")
-find_package(KF5Prison ${Prison_MIN_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
 
