@@ -1,7 +1,10 @@
 [Misc]
 Name=Addressee Serializer
 Name[ca]=Serialitzador del destinatari
+Name[ca@valencia]=Serialitzador del destinatari
+Name[de]=Empfänger-Serialisierung
 Name[en_GB]=Addressee Serialiser
+Name[fr]=Sérialiseur de destinataires
 Name[nb]=Adressatserialisator
 Name[nl]=Serialisator voor geadresseerde
 Name[nn]=Adressatserialisator
@@ -11,7 +14,9 @@ Name[uk]=Серіалізатор адрес
 Name[x-test]=xxAddressee Serializerxx
 Comment=An Akonadi serializer plugin for addressee objects
 Comment[ca]=Un connector de serialització de l'Akonadi per a objectes del destinatari
+Comment[ca@valencia]=Un connector de serialització de l'Akonadi per a objectes del destinatari
 Comment[en_GB]=An Akonadi serialiser plugin for addressee objects
+Comment[fr]=Un module externe Akonadi pour la sérialisation des destinataires
 Comment[nb]=Et Akonadi programtillegg for serialisering av adressat-objekter
 Comment[nl]=Een Akonadi serialisatorplug-in voor geadresseerde-objecten
 Comment[nn]=Eit Akonadi-serialisatortillegg for adressatobjekt
