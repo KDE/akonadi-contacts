@@ -12,6 +12,7 @@ Name[pt]=Serialização de Endereços
 Name[sv]=Adressatserialisering
 Name[uk]=Серіалізатор адрес
 Name[x-test]=xxAddressee Serializerxx
+Name[zh_CN]=收信人序列转换器
 Comment=An Akonadi serializer plugin for addressee objects
 Comment[ca]=Un connector de serialització de l'Akonadi per a objectes del destinatari
 Comment[ca@valencia]=Un connector de serialització de l'Akonadi per a objectes del destinatari
@@ -24,6 +25,7 @@ Comment[pt]=Um 'plugin' de serialização do Akonadi de objectos de endereços
 Comment[sv]=Ett insticksprogram till Akonadi för serialisering av adressatobjekt
 Comment[uk]=Додаток серіалізації Akonadi для об'єктів адресатів
 Comment[x-test]=xxAn Akonadi serializer plugin for addressee objectsxx
+Comment[zh_CN]=对收信人对象进行序列转换的 Akonadi 插件
 
 [Plugin]
 Type=text/vcard,text/directory

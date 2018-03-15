@@ -11,6 +11,7 @@ Name[pt]=Serialização de Grupos de Contactos
 Name[sv]=Kontaktgruppserialisering
 Name[uk]=Серіалізатор груп контактів
 Name[x-test]=xxContact Group Serializerxx
+Name[zh_CN]=联系人分组序列转换器
 Comment=An Akonadi serializer plugin for contact group objects
 Comment[ca]=Un connector de serialització de l'Akonadi per a objectes del grup de contacte
 Comment[ca@valencia]=Un connector de serialització de l'Akonadi per a objectes del grup de contacte
@@ -23,6 +24,7 @@ Comment[pt]=Um 'plugin' de serialização do Akonadi para os objectos de grupos 
 Comment[sv]=Ett insticksprogram till Akonadi för serialisering av kontaktgruppobjekt
 Comment[uk]=Додаток серіалізації Akonadi для об'єктів груп контактів
 Comment[x-test]=xxAn Akonadi serializer plugin for contact group objectsxx
+Comment[zh_CN]=对联系人分组对象进行序列转换的 Akonadi 插件
 
 [Plugin]
 Type=application/x-vnd.kde.contactgroup
