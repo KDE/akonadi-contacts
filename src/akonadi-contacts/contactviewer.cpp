@@ -256,6 +256,7 @@ public:
         updateView(metaData.customFieldDescriptions(), addressBookName);
     }
 
+    QMetaObject::Connection mCollectionFetchJobConnection;
     KContacts::Addressee mCurrentContact;
     Item mCurrentItem;
     ContactViewer *mParent = nullptr;
@@ -339,13 +340,13 @@ void ContactViewer::itemChanged(const Item &contactItem)
 
     // stop any running fetch job
     if (d->mParentCollectionFetchJob) {
-        disconnect(d->mParentCollectionFetchJob, SIGNAL(result(KJob*)), this, SLOT(slotParentCollectionFetched(KJob*)));
+        disconnect(d->mCollectionFetchJobConnection);
         delete d->mParentCollectionFetchJob;
         d->mParentCollectionFetchJob = nullptr;
     }
 
     d->mParentCollectionFetchJob = new CollectionFetchJob(contactItem.parentCollection(), CollectionFetchJob::Base, this);
-    connect(d->mParentCollectionFetchJob, SIGNAL(result(KJob*)), SLOT(slotParentCollectionFetched(KJob*)));
+    d->mCollectionFetchJobConnection = connect(d->mParentCollectionFetchJob, &CollectionFetchJob::result, this, [this](KJob *job) {d->slotParentCollectionFetched(job);});
 }
 
 void ContactViewer::itemRemoved()
