@@ -53,8 +53,6 @@ class Q_DECL_HIDDEN ContactViewer::Private
 public:
     Private(ContactViewer *parent)
         : mParent(parent)
-        , mBrowser(nullptr)
-        , mParentCollectionFetchJob(nullptr)
     {
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
@@ -258,16 +256,16 @@ public:
         updateView(metaData.customFieldDescriptions(), addressBookName);
     }
 
-    ContactViewer *mParent = nullptr;
-    TextBrowser *mBrowser = nullptr;
     KContacts::Addressee mCurrentContact;
     Item mCurrentItem;
+    ContactViewer *mParent = nullptr;
+    TextBrowser *mBrowser = nullptr;
     AbstractContactFormatter *mContactFormatter = nullptr;
     AbstractContactFormatter *mStandardContactFormatter = nullptr;
     CollectionFetchJob *mParentCollectionFetchJob = nullptr;
-    bool mShowQRCode;
     Prison::AbstractBarcode *mQRCode = nullptr;
     Prison::AbstractBarcode *mDataMatrix = nullptr;
+    bool mShowQRCode = true;
 };
 
 ContactViewer::ContactViewer(QWidget *parent)
