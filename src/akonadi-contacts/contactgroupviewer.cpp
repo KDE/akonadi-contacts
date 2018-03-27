@@ -114,13 +114,13 @@ public:
 
         // stop any running fetch job
         if (mParentCollectionFetchJob) {
-            mParent->disconnect(mParentCollectionFetchJob, SIGNAL(result(KJob*)), mParent, SLOT(slotParentCollectionFetched(KJob*)));
+            mParent->disconnect(mCollectionFetchJobConnection);
             delete mParentCollectionFetchJob;
             mParentCollectionFetchJob = nullptr;
         }
 
         mParentCollectionFetchJob = new CollectionFetchJob(mCurrentItem.parentCollection(), CollectionFetchJob::Base, mParent);
-        mParent->connect(mParentCollectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
+        mCollectionFetchJobConnection = mParent->connect(mParentCollectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
             slotParentCollectionFetched(job);
         });
     }
@@ -141,6 +141,8 @@ public:
         updateView();
     }
 
+    QMetaObject::Connection mCollectionFetchJobConnection;
+    QMetaObject::Connection mJobConnection;
     ContactGroupViewer *mParent = nullptr;
     TextBrowser *mBrowser = nullptr;
     QString mCurrentGroupName;
@@ -206,12 +208,12 @@ void ContactGroupViewer::itemChanged(const Item &item)
     d->mCurrentItem = item;
 
     if (d->mExpandJob) {
-        disconnect(d->mExpandJob, SIGNAL(result(KJob*)), this, SLOT(_k_expandResult(KJob*)));
+        disconnect(d->mJobConnection);
         d->mExpandJob->kill();
     }
 
     d->mExpandJob = new ContactGroupExpandJob(group);
-    connect(d->mExpandJob, SIGNAL(result(KJob*)), SLOT(_k_expandResult(KJob*)));
+    d->mJobConnection = connect(d->mExpandJob, &ContactGroupExpandJob::result, this, [this](KJob*job) { d->_k_expandResult(job);});
     d->mExpandJob->start();
 }
 
