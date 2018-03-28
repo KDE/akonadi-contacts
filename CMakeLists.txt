@@ -24,7 +24,6 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMCoverageOption)
 
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
-set(AKONADI_MIME_VERSION "5.7.80")
 set(KCONTACTS_VERSION "5.7.80")
 set(KMIMELIB_VERSION "5.7.80")
 set(AKONADI_VERSION "5.7.80")
