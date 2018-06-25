@@ -32,10 +32,10 @@ class QSkypeDialer : public QDialer
 {
 public:
     explicit QSkypeDialer(const QString &applicationName);
-    ~QSkypeDialer();
+    ~QSkypeDialer() override;
 
-    bool dialNumber(const QString &number) override;
-    bool sendSms(const QString &number, const QString &text) override;
+    Q_REQUIRED_RESULT bool dialNumber(const QString &number) override;
+    Q_REQUIRED_RESULT bool sendSms(const QString &number, const QString &text) override;
 
 private:
     bool initializeSkype();

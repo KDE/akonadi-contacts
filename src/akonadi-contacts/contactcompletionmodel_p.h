@@ -39,10 +39,10 @@ public:
     explicit ContactCompletionModel(Monitor *monitor, QObject *parent = nullptr);
     ~ContactCompletionModel() override;
 
-    QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const override;
-    QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const override;
-    int columnCount(const QModelIndex &parent) const override;
-    int entityColumnCount(HeaderGroup) const override;
+    Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const override;
+    Q_REQUIRED_RESULT QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const override;
+    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent) const override;
+    Q_REQUIRED_RESULT int entityColumnCount(HeaderGroup) const override;
 
     static QAbstractItemModel *self();
 

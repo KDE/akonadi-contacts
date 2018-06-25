@@ -33,9 +33,9 @@ public:
 
     IMProtocolInfo(const QString &name, const QString &icon);
 
-    QString icon() const;
+    Q_REQUIRED_RESULT QString icon() const;
     void setIcon(const QString &icon);
-    QString name() const;
+    Q_REQUIRED_RESULT QString name() const;
     void setName(const QString &name);
 private:
     QString mName;
@@ -52,10 +52,10 @@ public:
     /**
      * Returns the protocol identifiers in a sorted order.
      */
-    QStringList protocols() const;
+    Q_REQUIRED_RESULT QStringList protocols() const;
 
-    QString name(const QString &protocol) const;
-    QString icon(const QString &protocol) const;
+    Q_REQUIRED_RESULT QString name(const QString &protocol) const;
+    Q_REQUIRED_RESULT QString icon(const QString &protocol) const;
 
 private:
     Q_DISABLE_COPY(IMProtocols)

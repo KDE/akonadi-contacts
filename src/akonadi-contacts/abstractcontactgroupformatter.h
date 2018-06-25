@@ -73,7 +73,7 @@ public:
     /**
      * Returns the contact group that will be formatted.
      */
-    KContacts::ContactGroup contactGroup() const;
+    Q_REQUIRED_RESULT KContacts::ContactGroup contactGroup() const;
 
     /**
      * Sets the @p item who's payload will be formatted.
@@ -87,7 +87,7 @@ public:
     /**
      * Returns the item who's payload will be formatted.
      */
-    Akonadi::Item item() const;
+    Q_REQUIRED_RESULT Akonadi::Item item() const;
 
     /**
      * Sets the additional @p fields that will be shown.
@@ -105,7 +105,7 @@ public:
     /**
      * Returns the additional fields that will be shown.
      */
-    QVector<QVariantMap> additionalFields() const;
+    Q_REQUIRED_RESULT QVector<QVariantMap> additionalFields() const;
 
     /**
      * This method must be reimplemented to return the contact group formatted as HTML

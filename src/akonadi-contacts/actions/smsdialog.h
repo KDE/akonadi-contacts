@@ -40,7 +40,7 @@ public:
     explicit SmsDialog(const KContacts::PhoneNumber &number);
     ~SmsDialog();
 
-    QString message() const;
+    Q_REQUIRED_RESULT QString message() const;
 
 private:
     /**

@@ -33,7 +33,7 @@ public:
     explicit PreferredLineEditWidget(QWidget *parent = nullptr);
     ~PreferredLineEditWidget();
 
-    bool preferred() const;
+    Q_REQUIRED_RESULT bool preferred() const;
 
     void setPreferred(bool preferred);
 

@@ -39,9 +39,9 @@ public:
     };
 
     explicit EmailAddressSelectionProxyModel(QObject *parent = nullptr);
-    ~EmailAddressSelectionProxyModel();
+    ~EmailAddressSelectionProxyModel() override;
 
-    QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const override;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const override;
 
 protected:
     /**

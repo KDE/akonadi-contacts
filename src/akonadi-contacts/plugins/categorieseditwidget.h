@@ -42,7 +42,7 @@ public:
     explicit CategoriesEditWidget(QWidget *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~CategoriesEditWidget();
+    ~CategoriesEditWidget() override;
 
     void loadContact(const KContacts::Addressee &contact) override;
     void storeContact(KContacts::Addressee &contact) const override;

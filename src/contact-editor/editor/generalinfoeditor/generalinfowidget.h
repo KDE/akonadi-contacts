@@ -52,7 +52,7 @@ public:
 
     void setReadOnly(bool readOnly);
     void setDisplayType(DisplayNameEditWidget::DisplayType type);
-    DisplayNameEditWidget::DisplayType displayType() const;
+    Q_REQUIRED_RESULT DisplayNameEditWidget::DisplayType displayType() const;
 private:
     PhoneListWidget *mPhoneListWidget = nullptr;
     WebListWidget *mWebListWidget = nullptr;

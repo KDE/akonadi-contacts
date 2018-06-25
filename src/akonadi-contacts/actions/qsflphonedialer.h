@@ -27,10 +27,10 @@ class QSflPhoneDialer : public QDialer
 {
 public:
     explicit QSflPhoneDialer(const QString &applicationName);
-    ~QSflPhoneDialer();
+    ~QSflPhoneDialer() override;
 
-    bool dialNumber(const QString &number) override;
-    bool sendSms(const QString &number, const QString &text) override;
+    Q_REQUIRED_RESULT bool dialNumber(const QString &number) override;
+    Q_REQUIRED_RESULT bool sendSms(const QString &number, const QString &text) override;
 
 private:
     bool initializeSflPhone();

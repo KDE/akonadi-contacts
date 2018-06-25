@@ -35,13 +35,13 @@ public:
     IMAddress(const QString &protocol, const QString &name, bool preferred);
 
     void setProtocol(const QString &protocol);
-    QString protocol() const;
+    Q_REQUIRED_RESULT QString protocol() const;
 
     void setName(const QString &name);
-    QString name() const;
+    Q_REQUIRED_RESULT QString name() const;
 
     void setPreferred(bool preferred);
-    bool preferred() const;
+    Q_REQUIRED_RESULT bool preferred() const;
 
 private:
     QString mProtocol;

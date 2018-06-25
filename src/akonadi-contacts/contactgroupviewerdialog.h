@@ -74,7 +74,7 @@ public:
     /**
      * Returns the contact group that is currently displayed.
      */
-    Akonadi::Item contactGroup() const;
+    Q_REQUIRED_RESULT Akonadi::Item contactGroup() const;
 
     /**
      * Returns the ContactGroupViewer that is used by this dialog.

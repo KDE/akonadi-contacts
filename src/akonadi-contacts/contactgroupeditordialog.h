@@ -109,7 +109,7 @@ public:
     /**
      * Returns the ContactGroupEditor that is used by the dialog.
      */
-    ContactGroupEditor *editor() const;
+    Q_REQUIRED_RESULT ContactGroupEditor *editor() const;
 
 Q_SIGNALS:
     /**

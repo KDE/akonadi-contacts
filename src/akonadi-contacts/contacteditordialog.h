@@ -121,7 +121,7 @@ public:
     /**
      * Destroys the contact editor dialog.
      */
-    ~ContactEditorDialog();
+    ~ContactEditorDialog() override;
 
     /**
      * Sets the @p contact to edit when in EditMode.
@@ -139,7 +139,7 @@ public:
     /**
      * Returns the ContactEditor that is used by this dialog.
      */
-    AkonadiContactEditor *editor() const;
+    Q_REQUIRED_RESULT AkonadiContactEditor *editor() const;
 
 Q_SIGNALS:
     /**

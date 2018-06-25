@@ -74,7 +74,7 @@ public:
     /**
      * Returns the contact that will be formatted.
      */
-    KContacts::Addressee contact() const;
+    Q_REQUIRED_RESULT KContacts::Addressee contact() const;
 
     /**
      * Sets the @p item who's payload will be formatted.
@@ -87,7 +87,7 @@ public:
     /**
      * Returns the item who's payload will be formatted.
      */
-    Akonadi::Item item() const;
+    Q_REQUIRED_RESULT Akonadi::Item item() const;
 
     /**
      * Sets the custom field @p descriptions that will be used.
@@ -112,7 +112,7 @@ public:
     /**
      * Returns the custom field descriptions that will be used.
      */
-    QVector<QVariantMap> customFieldDescriptions() const;
+    Q_REQUIRED_RESULT QVector<QVariantMap> customFieldDescriptions() const;
 
     /**
      * This method must be reimplemented to return the contact formatted as HTML

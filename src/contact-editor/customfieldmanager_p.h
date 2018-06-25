@@ -32,7 +32,7 @@ class CustomFieldManager
 {
 public:
     CONTACTEDITOR_EXPORT static void setGlobalCustomFieldDescriptions(const CustomField::List &customFields);
-    CONTACTEDITOR_EXPORT static CustomField::List globalCustomFieldDescriptions();
+    Q_REQUIRED_RESULT CONTACTEDITOR_EXPORT static CustomField::List globalCustomFieldDescriptions();
 };
 
 #endif

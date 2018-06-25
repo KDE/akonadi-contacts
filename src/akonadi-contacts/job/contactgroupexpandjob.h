@@ -86,12 +86,12 @@ public:
     /**
      * Destroys the contact group expand job.
      */
-    ~ContactGroupExpandJob();
+    ~ContactGroupExpandJob() override;
 
     /**
      * Returns the list of contacts.
      */
-    KContacts::Addressee::List contacts() const;
+    Q_REQUIRED_RESULT KContacts::Addressee::List contacts() const;
 
     /**
      * Starts the expand job.

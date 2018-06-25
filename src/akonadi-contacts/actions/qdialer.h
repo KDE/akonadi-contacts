@@ -31,10 +31,10 @@ public:
     explicit QDialer(const QString &applicationName);
     virtual ~QDialer();
 
-    virtual bool dialNumber(const QString &number);
-    virtual bool sendSms(const QString &number, const QString &text);
+    Q_REQUIRED_RESULT virtual bool dialNumber(const QString &number);
+    Q_REQUIRED_RESULT virtual bool sendSms(const QString &number, const QString &text);
 
-    QString errorMessage() const;
+    Q_REQUIRED_RESULT QString errorMessage() const;
 
 protected:
     QString mApplicationName;

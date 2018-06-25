@@ -76,12 +76,12 @@ public:
     /**
      * Returns whether the selection is valid.
      */
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
     /**
      * Returns the name that is associated with the selected email address.
      */
-    QString name() const;
+    Q_REQUIRED_RESULT QString name() const;
 
     /**
      * Returns the address part of the selected email address.
@@ -89,7 +89,7 @@ public:
      * @note If a contact group has been selected, the name of the contact
      *       group is returned here and must be expanded by the caller.
      */
-    QString email() const;
+    Q_REQUIRED_RESULT QString email() const;
 
     /**
      * Returns the name and email address together, properly quoted if needed.
@@ -97,12 +97,12 @@ public:
      * @note If a contact group has been selected, the name of the contact
      *       group is returned here and must be expanded by the caller.
      */
-    QString quotedEmail() const;
+    Q_REQUIRED_RESULT QString quotedEmail() const;
 
     /**
      * Returns the Akonadi item that is associated with the selected email address.
      */
-    Akonadi::Item item() const;
+    Q_REQUIRED_RESULT Akonadi::Item item() const;
 
 private:
     //@cond PRIVATE

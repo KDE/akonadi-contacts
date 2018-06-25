@@ -85,7 +85,7 @@ public:
     /**
      * Destroys the contact viewer.
      */
-    ~ContactViewer();
+    ~ContactViewer() override;
 
     /**
      * Returns the contact that is currently displayed.
@@ -93,14 +93,14 @@ public:
      * @note The returned contact is only valid if it was
      *       set with setContact() before.
      */
-    Akonadi::Item contact() const;
+    Q_REQUIRED_RESULT Akonadi::Item contact() const;
 
     /**
      * Returns the raw contact that is currently displayed.
      *
      * @since 4.5
      */
-    KContacts::Addressee rawContact() const;
+    Q_REQUIRED_RESULT KContacts::Addressee rawContact() const;
 
     /**
      * Sets the contact @p formatter that should be used for formatting the
@@ -120,7 +120,7 @@ public:
      * @since 5.2
      */
     void setShowQRCode(bool b);
-    bool showQRCode() const;
+    Q_REQUIRED_RESULT bool showQRCode() const;
 public Q_SLOTS:
     /**
      * Sets the @p contact that shall be displayed in the viewer.

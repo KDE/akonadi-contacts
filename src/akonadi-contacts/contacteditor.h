@@ -145,7 +145,7 @@ public:
      * @brief ContactEditor::contact
      * @return
      */
-    KContacts::Addressee contact();
+    Q_REQUIRED_RESULT KContacts::Addressee contact();
 public Q_SLOTS:
     /**
      * Loads the @p contact into the editor.

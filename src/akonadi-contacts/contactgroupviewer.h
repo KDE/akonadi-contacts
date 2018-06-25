@@ -68,7 +68,7 @@ public:
     /**
      * Destroys the contact group viewer.
      */
-    ~ContactGroupViewer();
+    ~ContactGroupViewer() override;
 
     /**
      * Returns the contact group that is currently displayed.

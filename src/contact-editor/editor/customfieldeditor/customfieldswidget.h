@@ -44,7 +44,7 @@ public:
 
     void setReadOnly(bool readOnly);
     void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
-    QVariantList localCustomFieldDescriptions() const;
+    Q_REQUIRED_RESULT QVariantList localCustomFieldDescriptions() const;
 private:
     ContactEditor::CustomFieldEditorWidget *mCustomFieldEditorWidget = nullptr;
     ContactEditor::CustomFieldsListWidget *mCustomFieldsListWidget = nullptr;

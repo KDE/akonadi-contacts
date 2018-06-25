@@ -44,7 +44,7 @@ public:
     };
 
     explicit ImageWidget(Type type, QWidget *parent = nullptr);
-    ~ImageWidget();
+    ~ImageWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

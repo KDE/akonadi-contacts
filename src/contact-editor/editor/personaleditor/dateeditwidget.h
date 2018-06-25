@@ -63,7 +63,7 @@ public:
     ~DateEditWidget();
 
     void setDate(const QDate &date);
-    QDate date() const;
+    Q_REQUIRED_RESULT QDate date() const;
 
     void setReadOnly(bool readOnly);
 

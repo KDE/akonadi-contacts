@@ -98,7 +98,7 @@ public:
     /**
      * Returns the list of selected email addresses.
      */
-    EmailAddressSelection::List selectedAddresses() const;
+    Q_REQUIRED_RESULT EmailAddressSelection::List selectedAddresses() const;
 
     /**
      * Returns the line edit that is used for the search line.

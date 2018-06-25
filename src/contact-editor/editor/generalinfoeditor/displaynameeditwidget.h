@@ -52,7 +52,7 @@ public:
     };
 
     explicit DisplayNameEditWidget(QWidget *parent = nullptr);
-    ~DisplayNameEditWidget();
+    ~DisplayNameEditWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
@@ -60,7 +60,7 @@ public:
     void setReadOnly(bool readOnly);
 
     void setDisplayType(DisplayType type);
-    DisplayType displayType() const;
+    Q_REQUIRED_RESULT DisplayType displayType() const;
 
 public Q_SLOTS:
     void changeName(const KContacts::Addressee &contact);

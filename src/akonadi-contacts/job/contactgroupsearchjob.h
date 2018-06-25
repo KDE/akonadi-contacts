@@ -120,7 +120,7 @@ public:
     /**
      * Returns the contact groups that matched the search criteria.
      */
-    KContacts::ContactGroup::List contactGroups() const;
+    Q_REQUIRED_RESULT KContacts::ContactGroup::List contactGroups() const;
 
 private:
     //@cond PRIVATE

@@ -28,10 +28,10 @@ class QEkigaDialer : public QDialer
 {
 public:
     explicit QEkigaDialer(const QString &applicationName);
-    ~QEkigaDialer();
+    ~QEkigaDialer() override;
 
-    bool dialNumber(const QString &number) override;
-    bool sendSms(const QString &number, const QString &text) override;
+    Q_REQUIRED_RESULT bool dialNumber(const QString &number) override;
+    Q_REQUIRED_RESULT bool sendSms(const QString &number, const QString &text) override;
 private:
     bool initializeEkiga();
     QDBusInterface *mInterface = nullptr;

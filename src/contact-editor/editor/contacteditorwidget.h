@@ -53,7 +53,7 @@ public:
     /**
      * Destroys the contact editor widget.
      */
-    ~ContactEditorWidget();
+    ~ContactEditorWidget() override;
 
     /**
      * Initializes the fields of the contact editor
