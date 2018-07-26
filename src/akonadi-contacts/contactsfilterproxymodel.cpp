@@ -37,7 +37,7 @@ class Q_DECL_HIDDEN ContactsFilterProxyModel::Private
 {
 public:
     Private()
-        : flags(0)
+        : flags({})
         , matchFilterFlag(ContactsFilterProxyModel::MatchFilterContactFlag::All)
         , mExcludeVirtualCollections(false)
     {
