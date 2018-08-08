@@ -39,9 +39,10 @@ class SerializerPluginContactGroup : public QObject
                                    , public ItemIndexerInterface
 {
     Q_OBJECT
-    Q_INTERFACES(Akonadi::ItemSerializerPlugin)
-    Q_INTERFACES(Akonadi::DifferencesAlgorithmInterface)
-    Q_INTERFACES(Akonadi::GidExtractorInterface)
+    Q_INTERFACES(Akonadi::ItemSerializerPlugin
+                 Akonadi::DifferencesAlgorithmInterface
+                 Akonadi::GidExtractorInterface
+                 Akonadi::ItemIndexerInterface)
     Q_PLUGIN_METADATA(IID "org.kde.akonadi.SerializerPluginContactGroup")
 public:
     bool deserialize(Item &item, const QByteArray &label, QIODevice &data, int version) override;
