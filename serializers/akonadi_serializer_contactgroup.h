@@ -25,6 +25,8 @@
 #include <AkonadiCore/differencesalgorithminterface.h>
 #include <AkonadiCore/itemserializerplugin.h>
 #include <AkonadiCore/gidextractorinterface.h>
+#include <AkonadiCore/IndexerInterface>
+#include <AkonadiSearch/ObjectCache>
 
 namespace Akonadi {
 /**
@@ -34,6 +36,7 @@ class SerializerPluginContactGroup : public QObject
                                    , public ItemSerializerPlugin
                                    , public DifferencesAlgorithmInterface
                                    , public GidExtractorInterface
+                                   , public ItemIndexerInterface
 {
     Q_OBJECT
     Q_INTERFACES(Akonadi::ItemSerializerPlugin)
@@ -47,6 +50,10 @@ public:
     void compare(Akonadi::AbstractDifferencesReporter *reporter, const Akonadi::Item &leftItem, const Akonadi::Item &rightItem) override;
 
     QString extractGid(const Item &item) const override;
+    QByteArray index(const Item &item, const Collection &parent) const override;
+
+private:
+    Search::IndexerCache m_indexer;
 };
 }
 

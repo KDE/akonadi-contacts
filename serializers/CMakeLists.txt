@@ -12,6 +12,7 @@ target_link_libraries(akonadi_serializer_addressee
     KF5::Contacts
     KF5::AkonadiCore
     KF5::I18n
+    KF5::AkonadiSearch
 )
 install(TARGETS akonadi_serializer_addressee
     DESTINATION ${KDE_INSTALL_PLUGINDIR}
@@ -31,6 +32,7 @@ target_link_libraries(akonadi_serializer_contactgroup
     KF5::AkonadiCore
     KF5::I18n
     KF5::AkonadiContact
+    KF5::AkonadiSearch
 )
 install(TARGETS akonadi_serializer_contactgroup
     DESTINATION ${KDE_INSTALL_PLUGINDIR}
