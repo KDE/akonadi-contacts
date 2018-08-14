@@ -239,4 +239,3 @@ endif()
 install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
 install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
 
-install( FILES contact-editor.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
