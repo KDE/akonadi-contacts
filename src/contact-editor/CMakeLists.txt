@@ -86,6 +86,7 @@ set(contacteditor_editor_generalinfo_SRCS
     editor/generalinfoeditor/displaynameeditwidget.cpp
     editor/generalinfoeditor/contactselecttypecombobox.cpp
     editor/generalinfoeditor/messageformattingwidget.cpp
+    editor/generalinfoeditor/blogfeedwidget.cpp
     ${contacteditor_editor_generalinfo_messaging_SRCS}
     ${contacteditor_editor_generalinfo_phone_SRCS}
     ${contacteditor_editor_generalinfo_web_SRCS}

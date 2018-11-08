@@ -23,6 +23,7 @@
 #include "generalinfowidget.h"
 #include "namewidget.h"
 #include "nicknamewidget.h"
+#include "blogfeedwidget.h"
 #include <QLabel>
 #include <KLocalizedString>
 #include "phone/phonelistwidget.h"
@@ -98,6 +99,10 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     categoryWidgetLayout->addWidget(mCategoriesWidget);
     leftLayout->addWidget(categoryWidget);
 
+    mBlogFeedWidget = new BlogfeedWidget(this);
+    mBlogFeedWidget->setObjectName(QStringLiteral("blogfeed"));
+    rightLayout->addWidget(mBlogFeedWidget);
+
     mMessageFormattingWidget = new MessageFormattingWidget(this);
     mMessageFormattingWidget->setObjectName(QStringLiteral("mMessageFormattingWidget"));
     leftLayout->addWidget(mMessageFormattingWidget);
@@ -128,6 +133,7 @@ void GeneralInfoWidget::loadContact(const KContacts::Addressee &contact)
     mMailListWidget->loadContact(contact);
     mNameWidget->loadContact(contact);
     mNickNameWidget->loadContact(contact);
+    mBlogFeedWidget->loadContact(contact);
     mPhotoWidget->loadContact(contact);
     mCategoriesWidget->loadContact(contact);
     mMessageFormattingWidget->loadContact(contact);
@@ -141,6 +147,7 @@ void GeneralInfoWidget::storeContact(KContacts::Addressee &contact) const
     mMailListWidget->storeContact(contact);
     mNameWidget->storeContact(contact);
     mNickNameWidget->storeContact(contact);
+    mBlogFeedWidget->storeContact(contact);
     mPhotoWidget->storeContact(contact);
     mCategoriesWidget->storeContact(contact);
     mMessageFormattingWidget->storeContact(contact);
@@ -157,4 +164,5 @@ void GeneralInfoWidget::setReadOnly(bool readOnly)
     mPhotoWidget->setReadOnly(readOnly);
     mCategoriesWidget->setReadOnly(readOnly);
     mMessageFormattingWidget->setReadOnly(readOnly);
+    mBlogFeedWidget->setReadOnly(readOnly);
 }

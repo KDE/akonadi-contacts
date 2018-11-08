@@ -39,6 +39,7 @@ class MailListWidget;
 class NameWidget;
 class NicknameWidget;
 class MessageFormattingWidget;
+class BlogfeedWidget;
 class GeneralInfoWidget : public QWidget
 {
     Q_OBJECT
@@ -61,6 +62,7 @@ private:
     ImageWidget *mPhotoWidget = nullptr;
     NameWidget *mNameWidget = nullptr;
     NicknameWidget *mNickNameWidget = nullptr;
+    BlogfeedWidget *mBlogFeedWidget = nullptr;
     ContactEditor::CategoriesEditAbstractWidget *mCategoriesWidget = nullptr;
     MessageFormattingWidget *mMessageFormattingWidget = nullptr;
 };
