@@ -20,6 +20,7 @@
 */
 
 #include "blogfeedwidget.h"
+#include "../utils/utils.h"
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
@@ -50,12 +51,12 @@ BlogfeedWidget::~BlogfeedWidget()
 
 void BlogfeedWidget::loadContact(const KContacts::Addressee &contact)
 {
-    //mBlogFeed->setText(contact.nickName());
+    mBlogFeed->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("BlogFeed")));
 }
 
 void BlogfeedWidget::storeContact(KContacts::Addressee &contact) const
 {
-    //contact.setNickName(mBlogFeed->text().trimmed());
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("BlogFeed"), mBlogFeed->text().trimmed());
 }
 
 void BlogfeedWidget::setReadOnly(bool readOnly)
