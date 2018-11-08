@@ -34,7 +34,7 @@ set(nicknamewidgettest_SRCS nicknamewidgettest.cpp)
 add_executable(nicknamewidgettest ${nicknamewidgettest_SRCS})
 add_test(NAME nicknamewidgettest COMMAND nicknamewidgettest)
 ecm_mark_as_test(nicknamewidgettest)
-target_link_libraries(nicknamewidgettest Qt5::Test  Qt5::Widgets KF5::ContactEditor KF5::I18n )
+target_link_libraries(nicknamewidgettest Qt5::Test  Qt5::Widgets KF5::ContactEditor KF5::I18n KF5::Completion)
 
 
 set(messageformattingwidgettest_SRCS messageformattingwidgettest.cpp)

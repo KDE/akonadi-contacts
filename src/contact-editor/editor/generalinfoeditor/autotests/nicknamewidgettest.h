@@ -30,6 +30,8 @@ class NicknameWidgetTest : public QObject
 public:
     explicit NicknameWidgetTest(QObject *parent = nullptr);
     ~NicknameWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // NICKNAMEWIDGETTEST_H

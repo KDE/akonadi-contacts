@@ -24,12 +24,13 @@
 #define NICKNAMEWIDGET_H
 
 #include <QWidget>
+#include "contacteditor_private_export.h"
 class KLineEdit;
 namespace KContacts {
 class Addressee;
 }
 namespace ContactEditor {
-class NicknameWidget : public QWidget
+class CONTACTEDITOR_TESTS_EXPORT NicknameWidget : public QWidget
 {
     Q_OBJECT
 public:
