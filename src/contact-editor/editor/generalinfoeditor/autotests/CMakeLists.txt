@@ -36,6 +36,12 @@ add_test(NAME nicknamewidgettest COMMAND nicknamewidgettest)
 ecm_mark_as_test(nicknamewidgettest)
 target_link_libraries(nicknamewidgettest Qt5::Test  Qt5::Widgets KF5::ContactEditor KF5::I18n KF5::Completion)
 
+set(blogfeedwidgettest_SRCS blogfeedwidgettest.cpp)
+add_executable(blogfeedwidgettest ${blogfeedwidgettest_SRCS})
+add_test(NAME blogfeedwidgettest COMMAND blogfeedwidgettest)
+ecm_mark_as_test(blogfeedwidgettest)
+target_link_libraries(blogfeedwidgettest Qt5::Test  Qt5::Widgets KF5::ContactEditor KF5::I18n KF5::Completion)
+
 
 set(messageformattingwidgettest_SRCS messageformattingwidgettest.cpp)
 add_executable(messageformattingwidgettest ${messageformattingwidgettest_SRCS})
