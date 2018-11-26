@@ -46,7 +46,7 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     topLayout->addWidget(mCustomFieldList);
 
     mModel = new CustomFieldsModel(this);
-    QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel;
+    QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(this);
     proxyModel->setDynamicSortFilter(true);
     proxyModel->setSourceModel(mModel);
     mCustomFieldList->setModel(proxyModel);
