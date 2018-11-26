@@ -143,7 +143,7 @@ void ContactEditorWidget::Private::initGuiNotesTab()
 
 void ContactEditorWidget::Private::initGuiCustomFieldsTab()
 {
-    mCustomFieldsWidget = new ContactEditor::CustomFieldsWidget;
+    mCustomFieldsWidget = new ContactEditor::CustomFieldsWidget(mParent);
     mTabWidget->addTab(mCustomFieldsWidget, i18nc("@title:tab", "Custom Fields"));
 }
 
