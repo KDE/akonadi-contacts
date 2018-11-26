@@ -125,7 +125,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     setFocusPolicy(Qt::StrongFocus);
     connect(mView, QOverload<int>::of(&KComboBox::activated), this, &DisplayNameEditWidget::displayTypeChanged);
 
-    DisplayNameDelegate *delegate = new DisplayNameDelegate(mView->view());
+    DisplayNameDelegate *delegate = new DisplayNameDelegate(mView->view(), this);
     mView->view()->setItemDelegate(delegate);
 
     mAdditionalPopupWidth = delegate->maximumDescriptionWidth();
