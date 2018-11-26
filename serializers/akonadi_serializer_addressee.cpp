@@ -24,7 +24,7 @@
 
 #include <KContacts/Addressee>
 #include <KLocalizedString>
-#include <QDebug>
+#include "serializer_debug.h"
 
 using namespace Akonadi;
 
@@ -70,7 +70,7 @@ bool SerializerPluginAddressee::deserialize(Item &item, const QByteArray &label,
     if (!addr.isEmpty()) {
         item.setPayload<KContacts::Addressee>(addr);
     } else {
-        qWarning() << "Empty addressee object!";
+        qCWarning(AKONADI_SERIALIZER_CONTACT_LOG) << "Empty addressee object!";
     }
 
     return true;

@@ -1,3 +1,5 @@
 org.kde.pim.akonadicontact akonadicontact (pim lib) IDENTIFIER [AKONADICONTACT_LOG]
 org.kde.pim.contacteditor akonadicontact (contact editor) IDENTIFIER [CONTACTEDITOR_LOG]
+org.kde.pim.contact_serializer serializer contact (plugin) IDENTIFIER [AKONADI_SERIALIZER_CONTACT_LOG]
+
 
