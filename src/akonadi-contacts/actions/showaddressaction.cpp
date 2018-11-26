@@ -65,7 +65,7 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
             QDesktopServices::openUrl(QUrl(urlTemplate));
         }
     } else if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseMapquest) {
-        QString urlTemplate = QStringLiteral("http://open.mapquest.com/?q=%s,%l,%c");
+        QString urlTemplate = QStringLiteral("https://www.mapquest.com/search/result?query=%s,%l,%c");
         replaceArguments(urlTemplate, address);
         if (!urlTemplate.isEmpty()) {
             QDesktopServices::openUrl(QUrl(urlTemplate));
