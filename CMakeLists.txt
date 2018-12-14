@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.10.0")
+set(PIM_VERSION "5.10.1")
 
 project(Akonadi-Contact VERSION ${PIM_VERSION})
 
