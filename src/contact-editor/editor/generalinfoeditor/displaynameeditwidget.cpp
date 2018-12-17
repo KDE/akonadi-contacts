@@ -244,12 +244,7 @@ void DisplayNameEditWidget::updateView()
     mView->setItemText(5, mContact.formattedName());
 
     // delay the state change here, since we might have been called from mView via a signal
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     QMetaObject::invokeMethod(this,  [this]() { setComboBoxEditable(mDisplayType == CustomName); }, Qt::QueuedConnection);
-#else
-    QMetaObject::invokeMethod(this, "setComboBoxEditable", Qt::QueuedConnection, Q_ARG(bool, mDisplayType == CustomName));
-#endif
-
 
     mView->setCurrentIndex((int)mDisplayType);
 }
