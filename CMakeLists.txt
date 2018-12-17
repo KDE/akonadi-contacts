@@ -28,7 +28,7 @@ set(KCONTACTS_VERSION "5.10.40")
 set(KMIMELIB_VERSION "5.10.40")
 set(AKONADI_VERSION "5.10.40")
 
-set(QT_REQUIRED_VERSION "5.9.0")
+set(QT_REQUIRED_VERSION "5.10.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 ########### Find packages ###########
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
