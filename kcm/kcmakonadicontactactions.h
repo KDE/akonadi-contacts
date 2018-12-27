@@ -1,7 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    Copyright (C) 2013-2018 Laurent Montel <montel@kde.org>
+    Copyright (C) 2013-2019 Laurent Montel <montel@kde.org>
     Copyright (c) 2009 Tobias Koenig <tokoe@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
