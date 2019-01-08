@@ -35,6 +35,7 @@ class Addressee;
  */
 class CONTACTEDITOR_EXPORT ContactEditorWidget : public ContactEditor::AbstractContactEditorWidget
 {
+    Q_OBJECT
 public:
     enum DisplayMode {
         FullMode, ///< Show all pages

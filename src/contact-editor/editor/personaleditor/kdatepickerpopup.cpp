@@ -29,6 +29,7 @@
 
 class KDatePickerAction : public QWidgetAction
 {
+    Q_OBJECT
 public:
     KDatePickerAction(KDatePicker *widget, QObject *parent)
         : QWidgetAction(parent)
@@ -158,4 +159,5 @@ void KDatePickerPopup::slotNextMonth()
     Q_EMIT dateChanged(QDate::currentDate().addMonths(1));
 }
 
+#include "kdatepickerpopup.moc"
 #include "moc_kdatepickerpopup_p.cpp"

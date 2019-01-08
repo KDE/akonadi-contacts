@@ -28,6 +28,7 @@ class QAbstractItemView;
 namespace ContactEditor {
 class CustomFieldsListDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
 public:
     explicit CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent = nullptr);
     ~CustomFieldsListDelegate();

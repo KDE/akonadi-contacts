@@ -123,7 +123,7 @@ KContacts::ResourceLocatorUrl WebWidget::url()
     }
     if (mWebSiteEdit->preferred()) {
         if (!value.contains(QLatin1String("PREF"))) {
-            value.append(QLatin1String("PREF"));
+            value.append(QStringLiteral("PREF"));
         }
     } else {
         value.removeAll(QStringLiteral("PREF"));

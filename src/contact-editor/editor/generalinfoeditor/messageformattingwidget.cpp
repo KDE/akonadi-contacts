@@ -84,13 +84,13 @@ void MessageFormattingWidget::storeContact(KContacts::Addressee &contact) const
     } else if (index == 2) {
         mailPreferedFormatting = QStringLiteral("HTML");
     }
-    ContactEditor::Utils::storeCustom(contact, QLatin1String("MailPreferedFormatting"), mailPreferedFormatting);
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("MailPreferedFormatting"), mailPreferedFormatting);
 
     QString mailAllowToRemoteContent;
     if (mAllowRemoteContent->isChecked()) {
-        mailAllowToRemoteContent = QLatin1String("TRUE");
+        mailAllowToRemoteContent = QStringLiteral("TRUE");
     }
-    ContactEditor::Utils::storeCustom(contact, QLatin1String("MailAllowToRemoteContent"), mailAllowToRemoteContent);
+    ContactEditor::Utils::storeCustom(contact, QStringLiteral("MailAllowToRemoteContent"), mailAllowToRemoteContent);
 }
 
 void MessageFormattingWidget::setReadOnly(bool readOnly)

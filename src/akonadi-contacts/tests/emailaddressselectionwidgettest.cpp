@@ -57,8 +57,8 @@ void MainWidget::selectionModeChanged(int index)
 
 void MainWidget::showSelection()
 {
-    mInfo->append(QLatin1String("===========================\n"));
-    mInfo->append(QLatin1String("Current selection:\n"));
+    mInfo->append(QStringLiteral("===========================\n"));
+    mInfo->append(QStringLiteral("Current selection:\n"));
 
     for (const Akonadi::EmailAddressSelection &selection : mAddressesWidget->selectedAddresses()) {
         mInfo->append(QStringLiteral("%1: %2\n").arg(selection.name()).arg(selection.email()));

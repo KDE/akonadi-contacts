@@ -144,7 +144,7 @@ ImageWidget::~ImageWidget()
 
 void ImageWidget::loadContact(const KContacts::Addressee &contact)
 {
-    mPicture = (mType == Photo ? contact.photo() : contact.logo());
+    mPicture = (mType == Photo) ? contact.photo() : contact.logo();
     if (mPicture.isIntern() && !mPicture.data().isNull()) {
         mHasImage = true;
     } else if (!mPicture.isIntern() && !mPicture.url().isEmpty()) {

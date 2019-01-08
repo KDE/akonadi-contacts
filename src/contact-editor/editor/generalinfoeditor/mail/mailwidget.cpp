@@ -119,7 +119,7 @@ KContacts::Email MailWidget::email()
     }
     if (mMailEdit->preferred()) {
         if (!value.contains(QLatin1String("PREF"))) {
-            value.append(QLatin1String("PREF"));
+            value.append(QStringLiteral("PREF"));
         }
     } else {
         value.removeAll(QStringLiteral("PREF"));
