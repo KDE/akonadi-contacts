@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    Copyright (C) 2016-2019 Laurent Montel <montel@kde.org>
+    Copyright (C) 2019 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,21 +19,25 @@
     02110-1301, USA.
 */
 
-#ifndef CONTACTEDITORCOMBOBOX_H
-#define CONTACTEDITORCOMBOBOX_H
+#ifndef WebSelectTypeCombobox_H
+#define WebSelectTypeCombobox_H
 
-#include <QComboBox>
+#include "../contactselecttypecombobox.h"
 #include "contacteditor_private_export.h"
+
 namespace ContactEditor {
-class CONTACTEDITOR_TESTS_EXPORT ContactEditorComboBox : public QComboBox
+class CONTACTEDITOR_TESTS_EXPORT WebSelectTypeCombobox : public ContactEditor::ContactSelectTypeCombobox
 {
     Q_OBJECT
 public:
-    explicit ContactEditorComboBox(QWidget *parent = nullptr);
-    ~ContactEditorComboBox() override;
+    explicit WebSelectTypeCombobox(QWidget *parent = nullptr);
+    ~WebSelectTypeCombobox() override;
 
-protected:
-    QSize minimumSizeHint() const override;
+    QStringList selectTypeList() const;
+    void initialize() override;
+private:
+    QStringList mSelectType;
 };
 }
-#endif // CONTACTEDITORCOMBOBOX_H
+
+#endif // WebSelectTypeCombobox_H

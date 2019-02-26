@@ -21,12 +21,12 @@
 */
 
 #include "webwidget.h"
+#include "webselecttypecombobox.h"
 #include <QHBoxLayout>
 #include <QToolButton>
 #include <QUrl>
 #include <KLocalizedString>
 #include <editor/widgets/preferredlineeditwidget.h>
-#include <editor/generalinfoeditor/contactselecttypecombobox.h>
 using namespace ContactEditor;
 
 WebWidget::WebWidget(QWidget *parent)
@@ -43,20 +43,9 @@ WebWidget::WebWidget(QWidget *parent)
     layout->addWidget(mWebSiteEdit);
     connect(mWebSiteEdit, &PreferredLineEditWidget::preferredChanged, this, &WebWidget::slotPreferredChanged);
 
-    mWebType = new ContactEditor::ContactSelectTypeCombobox(this);
+    mWebType = new ContactEditor::WebSelectTypeCombobox(this);
     mWebType->setObjectName(QStringLiteral("webtype"));
-    mWebType->addItem(i18n("Select..."), QString());
-
-    QString type = QStringLiteral("HOME");
-    mWebSiteType.append(type);
-
-    mWebType->addItem(i18n("Home"), type);
-    type = QStringLiteral("WORK");
-    mWebSiteType.append(type);
-    mWebType->addItem(i18n("Work"), type);
-    type = QStringLiteral("OTHER");
-    mWebSiteType.append(type);
-    mWebType->addItem(i18n("Other"), type);
+    mWebType->initialize();
     layout->addWidget(mWebType);
 
     mAddButton = new QToolButton(this);

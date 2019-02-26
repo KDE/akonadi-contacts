@@ -44,6 +44,7 @@ MailWidget::MailWidget(QWidget *parent)
 
     mMailType = new ContactEditor::ContactSelectTypeCombobox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
+    mMailType->initialize();
     layout->addWidget(mMailType);
 
     mAddButton = new QToolButton(this);

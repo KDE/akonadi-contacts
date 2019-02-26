@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    Copyright (C) 2016-2019 Laurent Montel <montel@kde.org>
+    Copyright (C) 2019 Laurent Montel <montel@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,21 +19,21 @@
     02110-1301, USA.
 */
 
-#include "contactselecttypecombobox.h"
+#include "webselecttypecombobox.h"
 #include <KLocalizedString>
-#include <QDebug>
+
 using namespace ContactEditor;
 
-ContactSelectTypeCombobox::ContactSelectTypeCombobox(QWidget *parent)
-    : ContactEditor::ContactEditorComboBox(parent)
+WebSelectTypeCombobox::WebSelectTypeCombobox(QWidget *parent)
+    : ContactEditor::ContactSelectTypeCombobox(parent)
 {
 }
 
-ContactSelectTypeCombobox::~ContactSelectTypeCombobox()
+WebSelectTypeCombobox::~WebSelectTypeCombobox()
 {
 }
 
-void ContactSelectTypeCombobox::initialize()
+void WebSelectTypeCombobox::initialize()
 {
     addItem(i18n("Select..."), QString());
     QString type = QStringLiteral("HOME");
@@ -42,12 +42,15 @@ void ContactSelectTypeCombobox::initialize()
     type = QStringLiteral("WORK");
     mSelectType.append(type);
     addItem(i18n("Work"), type);
+    type = QStringLiteral("PROFILE");
+    mSelectType.append(type);
+    addItem(i18n("Profile"), type);
     type = QStringLiteral("OTHER");
     mSelectType.append(type);
     addItem(i18n("Other"), type);
 }
 
-QStringList ContactSelectTypeCombobox::selectTypeList() const
+QStringList WebSelectTypeCombobox::selectTypeList() const
 {
     return mSelectType;
 }

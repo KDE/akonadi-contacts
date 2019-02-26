@@ -63,6 +63,7 @@ set(contacteditor_editor_generalinfo_web_SRCS
     editor/generalinfoeditor/web/webwidgetlister.cpp
     editor/generalinfoeditor/web/weblistwidget.cpp
     editor/generalinfoeditor/web/webwidget.cpp
+    editor/generalinfoeditor/web/webselecttypecombobox.cpp
     )
 set(contacteditor_editor_generalinfo_mail_SRCS
     editor/generalinfoeditor/mail/maillistwidget.cpp

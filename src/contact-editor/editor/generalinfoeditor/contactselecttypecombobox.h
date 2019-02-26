@@ -34,9 +34,8 @@ public:
     ~ContactSelectTypeCombobox();
 
     QStringList selectTypeList() const;
-
+    virtual void initialize();
 private:
-    void initialize();
     QStringList mSelectType;
 };
 }
