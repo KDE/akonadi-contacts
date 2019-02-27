@@ -35,13 +35,13 @@ NameWidget::NameWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     QLabel *label = new QLabel(i18n("Name"));
     label->setObjectName(QStringLiteral("namelabel"));
     topLayout->addWidget(label);
 
     QHBoxLayout *lineLayout = new QHBoxLayout;
-    lineLayout->setMargin(0);
+    lineLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->addLayout(lineLayout);
 
     mNameEdit = new KLineEdit;

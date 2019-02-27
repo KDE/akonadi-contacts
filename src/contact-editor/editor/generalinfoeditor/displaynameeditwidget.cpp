@@ -114,7 +114,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     , mDisplayType(FullName)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     mView = new KComboBox(this);
     mView->addItems(QStringList() << QString() << QString() << QString()

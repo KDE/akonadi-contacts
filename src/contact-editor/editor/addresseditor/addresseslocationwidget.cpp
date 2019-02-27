@@ -34,7 +34,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     : QWidget(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     KPluginLoader loader(QStringLiteral("contacteditor/addresslocationeditorplugin"));
     KPluginFactory *factory = loader.factory();

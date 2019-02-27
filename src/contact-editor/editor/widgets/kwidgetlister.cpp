@@ -83,12 +83,12 @@ void KWidgetLister::init()
 {
     //--------- the button box
     d->mLayout = new QVBoxLayout(this);
-    d->mLayout->setMargin(0);
+    d->mLayout->setContentsMargins(0, 0, 0, 0);
     d->mLayout->setSpacing(4);
 
     d->mButtonBox = new QWidget(this);
     QHBoxLayout *mButtonBoxHBoxLayout = new QHBoxLayout(d->mButtonBox);
-    mButtonBoxHBoxLayout->setMargin(0);
+    mButtonBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
     d->mLayout->addWidget(d->mButtonBox);
     d->mLayout->addStretch(1);
 }

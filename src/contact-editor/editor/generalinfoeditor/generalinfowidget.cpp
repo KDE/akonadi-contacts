@@ -83,7 +83,7 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 
     QWidget *categoryWidget = new QWidget(this);
     QVBoxLayout *categoryWidgetLayout = new QVBoxLayout(categoryWidget);
-    categoryWidgetLayout->setMargin(0);
+    categoryWidgetLayout->setContentsMargins(0, 0, 0, 0);
     QLabel *label = new QLabel(i18n("Tags"), this);
     label->setObjectName(QStringLiteral("categorylabel"));
     categoryWidgetLayout->addWidget(label);

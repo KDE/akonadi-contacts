@@ -274,7 +274,7 @@ ContactViewer::ContactViewer(QWidget *parent)
     , d(new Private(this))
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     d->mBrowser = new TextBrowser;
 

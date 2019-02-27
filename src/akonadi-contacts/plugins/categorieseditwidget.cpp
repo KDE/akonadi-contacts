@@ -36,7 +36,7 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant
     : ContactEditor::CategoriesEditAbstractWidget(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     mTagWidget = new Akonadi::TagWidget(this);
     layout->addWidget(mTagWidget);
 }

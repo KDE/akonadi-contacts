@@ -29,7 +29,7 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
     : ContactEditor::CategoriesEditAbstractWidget(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 }
 
 CategoriesEditWidget::~CategoriesEditWidget()

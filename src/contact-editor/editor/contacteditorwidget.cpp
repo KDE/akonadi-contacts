@@ -89,7 +89,7 @@ public:
 void ContactEditorWidget::Private::initGui()
 {
     QVBoxLayout *layout = new QVBoxLayout(mParent);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     mTabWidget = new QTabWidget(mParent);
     layout->addWidget(mTabWidget);

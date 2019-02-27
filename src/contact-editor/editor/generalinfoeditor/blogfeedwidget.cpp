@@ -32,7 +32,7 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->setObjectName(QStringLiteral("mainlayout"));
     QLabel *blogFeedLabel = new QLabel(i18n("Blog Feed"), this);
     blogFeedLabel->setObjectName(QStringLiteral("blogFeedLabel"));

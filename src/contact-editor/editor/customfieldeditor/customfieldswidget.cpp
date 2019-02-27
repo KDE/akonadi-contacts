@@ -32,7 +32,7 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     mCustomFieldEditorWidget = new ContactEditor::CustomFieldEditorWidget(this);
     mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
     topLayout->addWidget(mCustomFieldEditorWidget);

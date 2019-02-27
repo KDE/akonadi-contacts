@@ -34,7 +34,7 @@ WebWidget::WebWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setSpacing(0);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     mWebSiteEdit = new PreferredLineEditWidget(this);
     mWebSiteEdit->setTrapReturnKey(true);

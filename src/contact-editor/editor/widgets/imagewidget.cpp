@@ -237,7 +237,7 @@ void ImageWidget::mouseMoveEvent(QMouseEvent *event)
             QDrag *drag = new QDrag(this);
             drag->setMimeData(new QMimeData());
             drag->mimeData()->setImageData(mPicture.data());
-            drag->start();
+            drag->exec(Qt::CopyAction);
         }
     }
 }

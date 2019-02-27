@@ -32,7 +32,7 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->setObjectName(QStringLiteral("mainlayout"));
     QLabel *nickNameLabel = new QLabel(i18n("Nickname"), this);
     nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));

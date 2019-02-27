@@ -35,7 +35,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setSpacing(0);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     mPhoneNumberEdit = new PreferredLineEditWidget(this);
     mPhoneNumberEdit->setTrapReturnKey(true);

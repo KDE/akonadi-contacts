@@ -64,7 +64,7 @@ public:
         mainLayout->addWidget(buttonBox);
 
         QGridLayout *layout = new QGridLayout(mainWidget);
-        layout->setMargin(0);
+        layout->setContentsMargins(0, 0, 0, 0);
 
         if (editorWidget) {
             mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode, editorWidget, q);
