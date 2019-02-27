@@ -39,7 +39,15 @@ void NicknameWidgetTest::shouldHaveDefaultValue()
 
     QVBoxLayout *topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(topLayout);
-    QCOMPARE(topLayout->margin(), 0);
+    int top = -1;
+    int bottom = -1;
+    int left = -1;
+    int right = -1;
+    topLayout->getContentsMargins(&left, &top, &right, &bottom);
+    QCOMPARE(top, 0);
+    QCOMPARE(left, 0);
+    QCOMPARE(bottom, 0);
+    QCOMPARE(right, 0);
 
     QLabel *nickNameLabel = editor.findChild<QLabel *>(QStringLiteral("nicknamelabel"));
     QVERIFY(nickNameLabel);
