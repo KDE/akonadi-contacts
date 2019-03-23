@@ -40,7 +40,7 @@ void ContactMetaDataAkonadi::load(const Akonadi::Item &contact)
     if (!contact.hasAttribute("contactmetadata")) {
         return;
     }
-    ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>();
+    const ContactMetaDataAttribute *attribute = contact.attribute<ContactMetaDataAttribute>();
     const QVariantMap metaData = attribute->metaData();
     loadMetaData(metaData);
 }

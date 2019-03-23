@@ -14,6 +14,7 @@ Comment[pt_BR]=Mensageiro Tencent QQ
 Comment[sv]=Tencent QQ-meddelandeklient
 Comment[uk]=Обмін повідомленнями Tencent QQ
 Comment[x-test]=xxTencent QQ Messagingxx
+Comment[zh_TW]=騰訊 QQ 通訊軟體
 Name=QQ
 Name[ca]=QQ
 Name[ca@valencia]=QQ
@@ -28,4 +29,5 @@ Name[pt_BR]=QQ
 Name[sv]=QQ
 Name[uk]=QQ
 Name[x-test]=xxQQxx
+Name[zh_TW]=QQ
 
