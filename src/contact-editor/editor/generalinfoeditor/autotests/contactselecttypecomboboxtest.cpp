@@ -35,6 +35,7 @@ ContactSelectTypeComboboxTest::~ContactSelectTypeComboboxTest()
 void ContactSelectTypeComboboxTest::shouldHaveDefaultValue()
 {
     ContactEditor::ContactSelectTypeCombobox w;
+    w.initialize();
     QVERIFY(!w.selectTypeList().isEmpty());
     QCOMPARE(w.count(), w.selectTypeList().count() + 1);
 }
