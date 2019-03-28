@@ -11,7 +11,6 @@ set(generalinfoeditor_SRCS
     ../messaging/messagingwidgetlister.cpp
     ../../widgets/imagewidget.cpp
     ../namewidget.cpp
-    ../nicknamewidget.cpp
     ../../utils/utils.cpp
     ../categorieseditwidget.cpp
     ../nameeditdialog.cpp
