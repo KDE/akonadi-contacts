@@ -21,7 +21,7 @@
 #include <QTreeView>
 #include <Akonadi/Contact/ContactsTreeModel>
 
-#include <qapplication.h>
+#include <QApplication>
 
 int main(int argc, char **argv)
 {

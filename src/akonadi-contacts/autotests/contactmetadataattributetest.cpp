@@ -23,7 +23,7 @@
 
 #include "attributes/contactmetadataattribute_p.h"
 
-#include <qtest.h>
+#include <QTest>
 
 QTEST_MAIN(ContactMetaDataAttributeTest)
 
