@@ -29,7 +29,7 @@
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <KLocalizedString>
-#include <qtabwidget.h>
+#include <QTabWidget>
 #include <ktextedit.h>
 
 #include <QDirIterator>

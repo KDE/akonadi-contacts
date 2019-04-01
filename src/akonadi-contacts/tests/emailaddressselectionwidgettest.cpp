@@ -20,9 +20,9 @@
 
 #include "emailaddressselectionwidgettest.h"
 
-#include <qapplication.h>
+#include <QApplication>
 #include <KComboBox>
-#include <qtextbrowser.h>
+#include <QTextBrowser>
 
 #include <QGridLayout>
 #include <QPushButton>
