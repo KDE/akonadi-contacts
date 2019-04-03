@@ -62,7 +62,7 @@
     </entry>
     <entry type="String" name="KdeconnectCommand">
       <label>kdeconnect Command</label>
-      <default>kdeconnect-cli --name \'phone name\' --share 'tel:%N'</default>
+      <default>kdeconnect-cli --name 'phone name' --share 'tel:%N'</default>
       <tooltip>The following placeholders can be used in the command:
    %N: The raw number as stored in the address book.
    %n: The normalized number with all non-digit characters removed.</tooltip>
@@ -89,6 +89,15 @@
    %n: The normalized number with all non-digit characters removed.
    %t: The text</tooltip>
     </entry>
+    <entry type="String" name="SmsKdeconnectCommand">
+      <default>kdeconnect-cli --name 'phone name' --destination %N --send-sms '%t'</default>
+      <label>KdeConnect SMS Command</label>
+      <tooltip>The following placeholders can be used in the command:
+   %N: The raw number as stored in the address book.
+   %n: The normalized number with all non-digit characters removed.
+   %t: The text</tooltip>
+    </entry>
+
   </group>
 
 </kcfg>

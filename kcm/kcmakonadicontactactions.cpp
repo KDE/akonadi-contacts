@@ -90,8 +90,10 @@ void KCMAkonadiContactActions::slotShowAddressActionChanged(int value)
 void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
 {
     ContactActionsSettings::EnumSendSmsAction enumValue = static_cast<ContactActionsSettings::EnumSendSmsAction>(ui.SendSmsAction->itemData(value).toInt());
-    if (enumValue == ContactActionsSettings::UseExternalSmsApplication  || enumValue == ContactActionsSettings::UseKdeConnectSms) {
+    if (enumValue == ContactActionsSettings::UseExternalSmsApplication) {
         ui.stackedWidget_3->setCurrentIndex(1);
+    } else if (enumValue == ContactActionsSettings::UseKdeConnectSms) {
+        ui.stackedWidget_3->setCurrentIndex(2);
     } else {
         ui.stackedWidget_3->setCurrentIndex(0);
     }
