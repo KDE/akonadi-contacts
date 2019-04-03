@@ -80,7 +80,7 @@ bool QEkigaDialer::initializeEkiga()
 {
     // first check whether dbus interface is available yet
     if (!isEkigaServiceRegistered()) {
-        // it could be skype is not running yet, so start it now
+        // it could be ekiga is not running yet, so start it now
         if (!QProcess::startDetached(QStringLiteral("ekiga"), QStringList())) {
             mErrorMessage = i18n("Unable to start ekiga process, check that ekiga executable is in your PATH variable.");
             return false;

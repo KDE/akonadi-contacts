@@ -52,12 +52,14 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     ui.DialPhoneNumberAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkype);
     ui.DialPhoneNumberAction->addItem(i18n("Ekiga"), ContactActionsSettings::UseEkiga);
     ui.DialPhoneNumberAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhone);
+    ui.DialPhoneNumberAction->addItem(i18n("kdeconnect"), ContactActionsSettings::UseKdeConnectPhone);
     ui.DialPhoneNumberAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalPhoneApplication);
 
     connect(ui.DialPhoneNumberAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
 
     ui.SendSmsAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkypeSms);
     ui.SendSmsAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhoneSms);
+    ui.SendSmsAction->addItem(i18n("kdeconnect"), ContactActionsSettings::UseKdeConnectSms);
     ui.SendSmsAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalSmsApplication);
     connect(ui.SendSmsAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
 
@@ -88,7 +90,7 @@ void KCMAkonadiContactActions::slotShowAddressActionChanged(int value)
 void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
 {
     ContactActionsSettings::EnumSendSmsAction enumValue = static_cast<ContactActionsSettings::EnumSendSmsAction>(ui.SendSmsAction->itemData(value).toInt());
-    if (enumValue == ContactActionsSettings::UseExternalSmsApplication) {
+    if (enumValue == ContactActionsSettings::UseExternalSmsApplication  || enumValue == ContactActionsSettings::UseKdeConnectSms) {
         ui.stackedWidget_3->setCurrentIndex(1);
     } else {
         ui.stackedWidget_3->setCurrentIndex(0);
@@ -101,6 +103,8 @@ void KCMAkonadiContactActions::slotDialPhoneNumberActionChanged(int value)
     ContactActionsSettings::EnumDialPhoneNumberAction enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(value).toInt());
     if (enumValue == ContactActionsSettings::UseExternalPhoneApplication) {
         ui.stackedWidget_2->setCurrentIndex(1);
+    } else if (enumValue == ContactActionsSettings::UseKdeConnectPhone) {
+        ui.stackedWidget_2->setCurrentIndex(2);
     } else {
         ui.stackedWidget_2->setCurrentIndex(0);
     }
