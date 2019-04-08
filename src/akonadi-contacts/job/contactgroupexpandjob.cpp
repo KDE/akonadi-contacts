@@ -47,7 +47,7 @@ public:
 
     void resolveGroup()
     {
-        for (unsigned int i = 0; i < mGroup.dataCount(); ++i) {
+        for (int i = 0; i < mGroup.dataCount(); ++i) {
             const KContacts::ContactGroup::Data data = mGroup.data(i);
 
             KContacts::Addressee contact;
@@ -57,7 +57,7 @@ public:
             mContacts.append(contact);
         }
 
-        for (unsigned int i = 0; i < mGroup.contactReferenceCount(); ++i) {
+        for (int i = 0; i < mGroup.contactReferenceCount(); ++i) {
             const KContacts::ContactGroup::ContactReference reference = mGroup.contactReference(i);
 
             Item item;
