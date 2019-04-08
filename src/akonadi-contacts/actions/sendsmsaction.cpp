@@ -54,7 +54,13 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     // synchronize
     ContactActionsSettings::self()->load();
 
-    QString command = ContactActionsSettings::self()->smsCommand();
+
+    QString command;
+    if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseKdeConnectSms) {
+        command = ContactActionsSettings::self()->smsKdeconnectCommand();
+    } else {
+        command = ContactActionsSettings::self()->smsCommand();
+    }
 
     if (command.isEmpty()) {
         KMessageBox::sorry(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
