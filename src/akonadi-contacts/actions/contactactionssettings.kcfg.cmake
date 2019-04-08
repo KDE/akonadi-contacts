@@ -16,7 +16,7 @@
         <choice name="UseOpenStreetMap"/>
       </choices>
       <whatsthis>Defines which application shall be used to show the postal address of a contact on a map. If 'Web Browser' is selected, an URL can be defined with placeholders for the single address parts. If 'External Application' is selected, a command with placeholders can be defined.</whatsthis>
-      <default>UseBrowser</default>
+      <default>UseOpenStreetMap</default>
     </entry>
     <entry type="String" name="AddressUrl">
       <default></default>
