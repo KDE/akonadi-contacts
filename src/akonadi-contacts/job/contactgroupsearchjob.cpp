@@ -30,7 +30,7 @@ using namespace Akonadi;
 class Q_DECL_HIDDEN ContactGroupSearchJob::Private
 {
 public:
-    int mLimit;
+    int mLimit = -1;
 };
 
 ContactGroupSearchJob::ContactGroupSearchJob(QObject *parent)
