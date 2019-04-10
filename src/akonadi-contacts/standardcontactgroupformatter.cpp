@@ -81,7 +81,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
 
     strGroup += QLatin1String("<table width=\"100%\">");
 
-    for (uint i = 0; i < group.dataCount(); ++i) {
+    for (int i = 0; i < group.dataCount(); ++i) {
         const KContacts::ContactGroup::Data data = group.data(i);
 
         if (data.email().isEmpty()) {
