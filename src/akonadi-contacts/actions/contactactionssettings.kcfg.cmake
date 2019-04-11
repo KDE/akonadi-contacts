@@ -45,24 +45,16 @@
       <choices>
         <choice name="UseSkype"/>
         <choice name="UseExternalPhoneApplication"/>
-        <choice name="UseWinCE"/>
         <choice name="UseSflPhone"/>
         <choice name="UseEkiga"/>
-        <choice name="UseKdeConnectPhone"/>
+        <choice name="UseSystemDefault"/>
       </choices>
-      <whatsthis>Defines which application shall be used to dial the phone number of a contact. If 'Skype' is selected the Skype application will be started (if installed on the computer) and the number is dialed. If 'External Application' is selected, a command with placeholders can be defined.</whatsthis>
-      <default>@AKONADI_PHONE_DIAL_DEFAULT@</default>
+      <whatsthis>Define how a phone number of a contact should be dialed. 'System Default' uses the default application configured for this on your system (e.g. KDE Connect). Selecting a specific application will use that (if installed), 'External Application' allows you to specify a dial command with placeholders manually.</whatsthis>
+      <default>UseSystemDefault</default>
     </entry>
     <entry type="String" name="PhoneCommand">
       <label>Phone Command</label>
       <whatsthis>This command defines the application that shall be executed to dial a contact's phone number.</whatsthis>
-      <tooltip>The following placeholders can be used in the command:
-   %N: The raw number as stored in the address book.
-   %n: The normalized number with all non-digit characters removed.</tooltip>
-    </entry>
-    <entry type="String" name="KdeconnectCommand">
-      <label>kdeconnect Command</label>
-      <default>kdeconnect-cli --name 'phone name' --share 'tel:%N'</default>
       <tooltip>The following placeholders can be used in the command:
    %N: The raw number as stored in the address book.
    %n: The normalized number with all non-digit characters removed.</tooltip>
@@ -74,7 +66,6 @@
       <choices>
         <choice name="UseSkypeSms"/>
         <choice name="UseExternalSmsApplication"/>
-        <choice name="UseWinCESms"/>
         <choice name="UseSflPhoneSms"/>
         <choice name="UseKdeConnectSms"/>
       </choices>

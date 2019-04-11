@@ -27,7 +27,6 @@ install(FILES
     )
 
 
-set( AKONADI_PHONE_DIAL_DEFAULT "UseSkype" )
 set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
 
 ########### next target ###############

@@ -49,10 +49,10 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
 
     mConfigManager = addConfig(ContactActionsSettings::self(), this);
 
+    ui.DialPhoneNumberAction->addItem(i18n("System Default"), ContactActionsSettings::UseSystemDefault);
     ui.DialPhoneNumberAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkype);
     ui.DialPhoneNumberAction->addItem(i18n("Ekiga"), ContactActionsSettings::UseEkiga);
     ui.DialPhoneNumberAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhone);
-    ui.DialPhoneNumberAction->addItem(i18n("kdeconnect"), ContactActionsSettings::UseKdeConnectPhone);
     ui.DialPhoneNumberAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalPhoneApplication);
 
     connect(ui.DialPhoneNumberAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
@@ -104,11 +104,9 @@ void KCMAkonadiContactActions::slotDialPhoneNumberActionChanged(int value)
 {
     ContactActionsSettings::EnumDialPhoneNumberAction enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(value).toInt());
     if (enumValue == ContactActionsSettings::UseExternalPhoneApplication) {
-        ui.stackedWidget_2->setCurrentIndex(1);
-    } else if (enumValue == ContactActionsSettings::UseKdeConnectPhone) {
-        ui.stackedWidget_2->setCurrentIndex(2);
+        ui.phoneDetailsStack->setCurrentIndex(1);
     } else {
-        ui.stackedWidget_2->setCurrentIndex(0);
+        ui.phoneDetailsStack->setCurrentIndex(0);
     }
     Q_EMIT changed(true);
 }

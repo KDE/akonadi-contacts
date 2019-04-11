@@ -32,6 +32,8 @@
 #include <KMessageBox>
 #include <krun.h>
 
+#include <QDesktopServices>
+
 using namespace Akonadi;
 
 static QString strippedDialNumber(const QString &number)
@@ -71,8 +73,15 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
         return;
     }
 
-    QString command = ContactActionsSettings::self()->phoneCommand();
+    if (ContactActionsSettings::self()->dialPhoneNumberAction() == ContactActionsSettings::UseSystemDefault) {
+        QUrl url;
+        url.setScheme(QStringLiteral("tel"));
+        url.setPath(strippedDialNumber(number.number()));
+        QDesktopServices::openUrl(url);
+        return;
+    }
 
+    QString command = ContactActionsSettings::self()->phoneCommand();
     if (command.isEmpty()) {
         KMessageBox::sorry(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
         return;
