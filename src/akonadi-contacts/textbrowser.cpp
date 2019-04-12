@@ -114,10 +114,9 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                         if (imageName == QLatin1String("contact_photo")) {
                             mDataToCopy = pix;
                             act->setText(i18nc("@action:inmenu Copy a contact photo", "Copy Photo"));
-                        } else if (imageName == QLatin1String("datamatrix")
-                                   || imageName == QLatin1String("qrcode")) {
+                        } else if (imageName == QLatin1String("qrcode")) {
                             mDataToCopy = pix;
-                            act->setText(i18nc("@action:inmenu Copy a QR or Datamatrix image", "Copy Code"));
+                            act->setText(i18nc("@action:inmenu Copy a QR code image", "Copy Code"));
                         }
                     }
                 }

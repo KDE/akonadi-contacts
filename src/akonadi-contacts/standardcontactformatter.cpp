@@ -340,10 +340,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
             strAddr.append(QString::fromLatin1(
                                "<p align=\"center\">"
                                "<img src=\"%1\" vspace=\"1\"/>"
-                               "<img src=\"%2\" vspace=\"1\"/>"
                                "</p>"
                                )
-                           .arg(QStringLiteral("datamatrix"))
                            .arg(QStringLiteral("qrcode")));
         }
     }

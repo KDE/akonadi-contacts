@@ -60,14 +60,12 @@ public:
         KConfigGroup group(&config, QStringLiteral("View"));
         mShowQRCode = group.readEntry("QRCodes", true);
         mQRCode = Prison::createBarcode(Prison::QRCode);
-        mDataMatrix = Prison::createBarcode(Prison::DataMatrix);
     }
 
     ~Private()
     {
         delete mStandardContactFormatter;
         delete mQRCode;
-        delete mDataMatrix;
     }
 
     void updateView(const QVariantList &localCustomFieldDescriptions = QVariantList(), const QString &addressBookName = QString())
@@ -151,12 +149,6 @@ public:
                 mBrowser->document()->addResource(QTextDocument::ImageResource,
                                                   QUrl(QStringLiteral("qrcode")),
                                                   mQRCode->toImage(QSizeF(50, 50)));
-            }
-	    if (mDataMatrix) {
-                mDataMatrix->setData(data);
-                mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                                  QUrl(QStringLiteral("datamatrix")),
-                                                  mDataMatrix->toImage(QSizeF(50, 50)));
             }
         }
 
@@ -265,7 +257,6 @@ public:
     AbstractContactFormatter *mStandardContactFormatter = nullptr;
     CollectionFetchJob *mParentCollectionFetchJob = nullptr;
     Prison::AbstractBarcode *mQRCode = nullptr;
-    Prison::AbstractBarcode *mDataMatrix = nullptr;
     bool mShowQRCode = true;
 };
 
