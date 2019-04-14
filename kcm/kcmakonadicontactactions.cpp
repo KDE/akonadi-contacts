@@ -57,9 +57,9 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
 
     connect(ui.DialPhoneNumberAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
 
+    ui.SendSmsAction->addItem(i18n("System Default"), ContactActionsSettings::UseSystemDefaultSms);
     ui.SendSmsAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkypeSms);
     ui.SendSmsAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhoneSms);
-    ui.SendSmsAction->addItem(i18n("kdeconnect"), ContactActionsSettings::UseKdeConnectSms);
     ui.SendSmsAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalSmsApplication);
     connect(ui.SendSmsAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
 
@@ -91,11 +91,9 @@ void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
 {
     ContactActionsSettings::EnumSendSmsAction enumValue = static_cast<ContactActionsSettings::EnumSendSmsAction>(ui.SendSmsAction->itemData(value).toInt());
     if (enumValue == ContactActionsSettings::UseExternalSmsApplication) {
-        ui.stackedWidget_3->setCurrentIndex(1);
-    } else if (enumValue == ContactActionsSettings::UseKdeConnectSms) {
-        ui.stackedWidget_3->setCurrentIndex(2);
+        ui.smsDetailsStack->setCurrentIndex(1);
     } else {
-        ui.stackedWidget_3->setCurrentIndex(0);
+        ui.smsDetailsStack->setCurrentIndex(0);
     }
     Q_EMIT changed(true);
 }

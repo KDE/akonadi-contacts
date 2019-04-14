@@ -26,9 +26,6 @@ install(FILES
     COMPONENT Devel
     )
 
-
-set( AKONADI_SEND_SMS_DEFAULT  "UseSkypeSms" )
-
 ########### next target ###############
 
 set(akonadicontact_actions_SRCS

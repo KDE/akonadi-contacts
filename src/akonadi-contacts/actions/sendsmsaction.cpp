@@ -23,6 +23,7 @@
 
 #include "contactactionssettings.h"
 #include "qskypedialer.h"
+#include "qsflphonedialer.h"
 #include "smsdialog.h"
 
 #include <kcontacts/phonenumber.h>
@@ -30,7 +31,12 @@
 #include <KMessageBox>
 #include <krun.h>
 
+#include <QDesktopServices>
 #include <QPointer>
+#include <QUrl>
+#include <QUrlQuery>
+
+#include <memory>
 
 static QString strippedSmsNumber(const QString &number)
 {
@@ -54,15 +60,9 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     // synchronize
     ContactActionsSettings::self()->load();
 
-
-    QString command;
-    if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseKdeConnectSms) {
-        command = ContactActionsSettings::self()->smsKdeconnectCommand();
-    } else {
-        command = ContactActionsSettings::self()->smsCommand();
-    }
-
-    if (command.isEmpty()) {
+    // check for valid config first, so the user doesn't type the message without a way to actually send it
+    QString command = ContactActionsSettings::self()->smsCommand();
+    if (command.isEmpty() && ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseExternalSmsApplication) {
         KMessageBox::sorry(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
         return;
     }
@@ -75,16 +75,30 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     const QString message = (dlg != nullptr ? dlg->message() : QString());
     delete dlg;
 
+    std::unique_ptr<QDialer> dialer;
     //   we handle skype separated
     if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseSkypeSms) {
-        QSkypeDialer dialer(QStringLiteral("AkonadiContacts"));
-        if (dialer.sendSms(number, message)) {
+        dialer.reset(new QSkypeDialer(QStringLiteral("AkonadiContacts")));
+    } else if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseSflPhoneSms) {
+        dialer.reset(new QSflPhoneDialer(QStringLiteral("AkonadiContacts")));
+    }
+    if (dialer) {
+        if (dialer->sendSms(number, message)) {
             // I'm not sure whether here should be a notification.
             // Skype can do a notification itself if whished.
         } else {
-            KMessageBox::sorry(nullptr, dialer.errorMessage());
+            KMessageBox::sorry(nullptr, dialer->errorMessage());
         }
+    }
 
+    if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseSystemDefaultSms) {
+        QUrl url;
+        url.setScheme(QStringLiteral("sms"));
+        url.setPath(strippedSmsNumber(phoneNumber.number()));
+        QUrlQuery query;
+        query.addQueryItem(QStringLiteral("body"), message);
+        url.setQuery(query);
+        QDesktopServices::openUrl(url);
         return;
     }
 

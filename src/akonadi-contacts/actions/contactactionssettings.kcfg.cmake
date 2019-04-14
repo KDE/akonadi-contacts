@@ -67,10 +67,10 @@
         <choice name="UseSkypeSms"/>
         <choice name="UseExternalSmsApplication"/>
         <choice name="UseSflPhoneSms"/>
-        <choice name="UseKdeConnectSms"/>
+        <choice name="UseSystemDefaultSms"/>
       </choices>
-      <whatsthis>Defines which application shall be used to send an SMS to the phone number of a contact. If 'Skype' is selected the Skype application will be started (if installed on the computer) and the SMS is sent via Skype. If 'External Application' is selected, a command with placeholders can be defined.</whatsthis>
-      <default>@AKONADI_SEND_SMS_DEFAULT@</default>
+      <whatsthis>Defines which application shall be used to send an SMS to the phone number of a contact. If 'System Default' is selected the default handler for SMS messages on your system will be used (e.g. KDE Connect), otherwise the selected application will be used to send the SMS message (if installed on the computer). If 'External Application' is selected, a command with placeholders can be defined.</whatsthis>
+      <default>UseSystemDefaultSms</default>
     </entry>
     <entry type="String" name="SmsCommand">
       <label>SMS Command</label>
@@ -80,15 +80,6 @@
    %n: The normalized number with all non-digit characters removed.
    %t: The text</tooltip>
     </entry>
-    <entry type="String" name="SmsKdeconnectCommand">
-      <default>kdeconnect-cli --name 'phone name' --destination %N --send-sms '%t'</default>
-      <label>KdeConnect SMS Command</label>
-      <tooltip>The following placeholders can be used in the command:
-   %N: The raw number as stored in the address book.
-   %n: The normalized number with all non-digit characters removed.
-   %t: The text</tooltip>
-    </entry>
-
   </group>
 
 </kcfg>
