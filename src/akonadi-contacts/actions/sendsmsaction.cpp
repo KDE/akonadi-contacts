@@ -38,21 +38,6 @@
 
 #include <memory>
 
-static QString strippedSmsNumber(const QString &number)
-{
-    QString result;
-
-    const int numberLenght(number.length());
-    for (int i = 0; i < numberLenght; ++i) {
-        const QChar character = number.at(i);
-        if (character.isDigit() || (character == QLatin1Char('+') && i == 0)) {
-            result += character;
-        }
-    }
-
-    return result;
-}
-
 void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
 {
     const QString number = phoneNumber.number().trimmed();
@@ -94,7 +79,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseSystemDefaultSms) {
         QUrl url;
         url.setScheme(QStringLiteral("sms"));
-        url.setPath(strippedSmsNumber(phoneNumber.number()));
+        url.setPath(phoneNumber.normalizedNumber());
         QUrlQuery query;
         query.addQueryItem(QStringLiteral("body"), message);
         url.setQuery(query);
@@ -107,7 +92,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
      * %n the number with all additional non-number characters removed
      */
     command = command.replace(QLatin1String("%N"), QStringLiteral("\"%1\"").arg(phoneNumber.number()));
-    command = command.replace(QLatin1String("%n"), QStringLiteral("\"%1\"").arg(strippedSmsNumber(number)));
+    command = command.replace(QLatin1String("%n"), QStringLiteral("\"%1\"").arg(phoneNumber.normalizedNumber()));
     command = command.replace(QLatin1String("%t"), QStringLiteral("\"%1\"").arg(message));
     //Bug: 293232 In KDE3 We used %F to replace text
     command = command.replace(QLatin1String("%F"), message);

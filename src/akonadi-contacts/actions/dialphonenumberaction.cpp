@@ -36,21 +36,6 @@
 
 using namespace Akonadi;
 
-static QString strippedDialNumber(const QString &number)
-{
-    QString result;
-
-    const int numberLength(number.length());
-    for (int i = 0; i < numberLength; ++i) {
-        const QChar character = number.at(i);
-        if (character.isDigit() || (character == QLatin1Char('+') && i == 0)) {
-            result += character;
-        }
-    }
-
-    return result;
-}
-
 void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
 {
     // synchronize
@@ -66,7 +51,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
         dialer = new QEkigaDialer(QStringLiteral("AkonadiContacts"));
     }
     if (dialer) {
-        if (!dialer->dialNumber(strippedDialNumber(number.number().trimmed()))) {
+        if (!dialer->dialNumber(number.normalizedNumber())) {
             KMessageBox::sorry(nullptr, dialer->errorMessage());
         }
         delete dialer;
@@ -76,7 +61,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     if (ContactActionsSettings::self()->dialPhoneNumberAction() == ContactActionsSettings::UseSystemDefault) {
         QUrl url;
         url.setScheme(QStringLiteral("tel"));
-        url.setPath(strippedDialNumber(number.number()));
+        url.setPath(number.normalizedNumber());
         QDesktopServices::openUrl(url);
         return;
     }
@@ -92,7 +77,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
      * %n the number with all additional non-number characters removed
      */
     command = command.replace(QLatin1String("%N"), number.number());
-    command = command.replace(QLatin1String("%n"), strippedDialNumber(number.number().trimmed()));
+    command = command.replace(QLatin1String("%n"), number.normalizedNumber());
 
     KRun::runCommand(command, nullptr);
 }
