@@ -133,12 +133,12 @@ void BusinessEditorWidget::loadContact(const KContacts::Addressee &contact)
 {
     mLogoWidget->loadContact(contact);
     mOrganizationWidget->setText(contact.organization());
-    mProfessionWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-Profession")));
+    mProfessionWidget->setText(contact.profession());
     mTitleWidget->setText(contact.title());
     mDepartmentWidget->setText(contact.department());
-    mOfficeWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-Office")));
-    mManagerWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-ManagersName")));
-    mAssistantWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-AssistantsName")));
+    mOfficeWidget->setText(contact.office());
+    mManagerWidget->setText(contact.managersName());
+    mAssistantWidget->setText(contact.assistantsName());
 
     // groupware group
     mFreeBusyWidget->loadContact(contact);
@@ -149,12 +149,12 @@ void BusinessEditorWidget::storeContact(KContacts::Addressee &contact)
     // general group
     mLogoWidget->storeContact(contact);
     contact.setOrganization(mOrganizationWidget->text());
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-Profession"), mProfessionWidget->text().trimmed());
+    contact.setProfession(mProfessionWidget->text().trimmed());
     contact.setTitle(mTitleWidget->text().trimmed());
     contact.setDepartment(mDepartmentWidget->text().trimmed());
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-Office"), mOfficeWidget->text().trimmed());
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-ManagersName"), mManagerWidget->text().trimmed());
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-AssistantsName"), mAssistantWidget->text().trimmed());
+    contact.setOffice(mOfficeWidget->text().trimmed());
+    contact.setManagersName(mManagerWidget->text().trimmed());
+    contact.setAssistantsName(mAssistantWidget->text().trimmed());
 
     // groupware group
     mFreeBusyWidget->storeContact(contact);

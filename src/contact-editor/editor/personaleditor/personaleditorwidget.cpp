@@ -73,19 +73,19 @@ PersonalEditorWidget::~PersonalEditorWidget()
 void PersonalEditorWidget::loadContact(const KContacts::Addressee &contact)
 {
     mBirthdateWidget->setDate(contact.birthday().date());
-    mAnniversaryWidget->setDate(QDate::fromString(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-Anniversary")),
-                                                  Qt::ISODate));
+    mAnniversaryWidget->setDate(contact.anniversary());
+
     // family group
-    mPartnerWidget->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("X-SpousesName")));
+    mPartnerWidget->setText(contact.spousesName());
 }
 
 void PersonalEditorWidget::storeContact(KContacts::Addressee &contact)
 {
     contact.setBirthday(mBirthdateWidget->date());
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-Anniversary"), mAnniversaryWidget->date().toString(Qt::ISODate));
+    contact.setAnniversary(mAnniversaryWidget->date());
 
     // family group
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("X-SpousesName"), mPartnerWidget->text().trimmed());
+    contact.setSpousesName(mPartnerWidget->text().trimmed());
 }
 
 void PersonalEditorWidget::setReadOnly(bool readOnly)

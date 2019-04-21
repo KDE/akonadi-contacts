@@ -51,12 +51,12 @@ BlogfeedWidget::~BlogfeedWidget()
 
 void BlogfeedWidget::loadContact(const KContacts::Addressee &contact)
 {
-    mBlogFeed->setText(ContactEditor::Utils::loadCustom(contact, QStringLiteral("BlogFeed")));
+    mBlogFeed->setText(contact.blogFeed().url());
 }
 
 void BlogfeedWidget::storeContact(KContacts::Addressee &contact) const
 {
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("BlogFeed"), mBlogFeed->text().trimmed());
+    contact.setBlogFeed(QUrl(mBlogFeed->text().trimmed()));
 }
 
 void BlogfeedWidget::setReadOnly(bool readOnly)
