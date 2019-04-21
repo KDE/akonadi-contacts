@@ -96,50 +96,16 @@ void WebWidget::setPreferred(bool b)
 KContacts::ResourceLocatorUrl WebWidget::url()
 {
     mUrl.setUrl(QUrl(mWebSiteEdit->text()));
-    QMap<QString, QStringList> parameters = mUrl.parameters();
-    QStringList value = parameters.value(QStringLiteral("type"));
-
-    const QString newType = mWebType->currentData().toString();
-    if (!newType.isEmpty()) {
-        if (mOldType != newType) {
-            if (!value.contains(newType)) {
-                value.append(newType);
-            }
-            if (!mOldType.isEmpty()) {
-                value.removeAll(mOldType);
-            }
-        }
-    }
-    if (mWebSiteEdit->preferred()) {
-        if (!value.contains(QLatin1String("PREF"))) {
-            value.append(QStringLiteral("PREF"));
-        }
-    } else {
-        value.removeAll(QStringLiteral("PREF"));
-    }
-    if (!value.isEmpty()) {
-        parameters.insert(QStringLiteral("type"), value);
-    }
-    mUrl.setParameters(parameters);
+    mUrl.setPreferred(mWebSiteEdit->preferred());
+    mUrl.setType(KContacts::ResourceLocatorUrl::Type(mWebType->currentData().toInt()));
     return mUrl;
 }
 
 void WebWidget::loadWebSite(const KContacts::ResourceLocatorUrl &url)
 {
     mUrl = url;
-    const QMap<QString, QStringList> parameters = mUrl.parameters();
-    const QStringList value = parameters.value(QStringLiteral("type"));
-    if (value.contains(QLatin1String("PREF"))) {
-        setPreferred(true);
-    }
-    const QStringList lst = mWebType->selectTypeList();
-    for (const QString &type : lst) {
-        if (value.contains(type)) {
-            mOldType = type;
-            mWebType->setCurrentIndex(mWebType->findData(type));
-            break;
-        }
-    }
+    setPreferred(url.isPreferred());
+    mWebType->setCurrentIndex(mWebType->findData((int)url.type()));
     mWebSiteEdit->setText(mUrl.url().toDisplayString());
 }
 

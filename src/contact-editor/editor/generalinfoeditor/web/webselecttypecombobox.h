@@ -33,10 +33,7 @@ public:
     explicit WebSelectTypeCombobox(QWidget *parent = nullptr);
     ~WebSelectTypeCombobox() override;
 
-    QStringList selectTypeList() const;
     void initialize() override;
-private:
-    QStringList mSelectType;
 };
 }
 

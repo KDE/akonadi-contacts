@@ -20,6 +20,9 @@
 */
 
 #include "webselecttypecombobox.h"
+
+#include <KContacts/ResourceLocatorUrl>
+
 #include <KLocalizedString>
 
 using namespace ContactEditor;
@@ -36,21 +39,8 @@ WebSelectTypeCombobox::~WebSelectTypeCombobox()
 void WebSelectTypeCombobox::initialize()
 {
     addItem(i18n("Select..."), QString());
-    QString type = QStringLiteral("HOME");
-    mSelectType.append(type);
-    addItem(i18n("Home"), type);
-    type = QStringLiteral("WORK");
-    mSelectType.append(type);
-    addItem(i18n("Work"), type);
-    type = QStringLiteral("PROFILE");
-    mSelectType.append(type);
-    addItem(i18n("Profile"), type);
-    type = QStringLiteral("OTHER");
-    mSelectType.append(type);
-    addItem(i18n("Other"), type);
-}
-
-QStringList WebSelectTypeCombobox::selectTypeList() const
-{
-    return mSelectType;
+    addItem(i18n("Home"), (int)KContacts::ResourceLocatorUrl::Home);
+    addItem(i18n("Work"), (int)KContacts::ResourceLocatorUrl::Work);
+    addItem(i18n("Profile"), (int)KContacts::ResourceLocatorUrl::Profile);
+    addItem(i18n("Other"), (int)KContacts::ResourceLocatorUrl::Other);
 }
