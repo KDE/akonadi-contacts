@@ -19,21 +19,13 @@
     02110-1301, USA.
 */
 
-#include "contactselecttypecombobox.h"
+#include "mailtypecombobox.h"
 #include <KLocalizedString>
 #include <QDebug>
 using namespace ContactEditor;
 
-ContactSelectTypeCombobox::ContactSelectTypeCombobox(QWidget *parent)
+MailTypeCombobox::MailTypeCombobox(QWidget *parent)
     : ContactEditor::ContactEditorComboBox(parent)
-{
-}
-
-ContactSelectTypeCombobox::~ContactSelectTypeCombobox()
-{
-}
-
-void ContactSelectTypeCombobox::initialize()
 {
     addItem(i18n("Select..."), QString());
     QString type = QStringLiteral("HOME");
@@ -47,7 +39,9 @@ void ContactSelectTypeCombobox::initialize()
     addItem(i18n("Other"), type);
 }
 
-QStringList ContactSelectTypeCombobox::selectTypeList() const
+MailTypeCombobox::~MailTypeCombobox() = default;
+
+QStringList MailTypeCombobox::selectTypeList() const
 {
     return mSelectType;
 }

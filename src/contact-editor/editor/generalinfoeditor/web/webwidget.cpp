@@ -45,7 +45,6 @@ WebWidget::WebWidget(QWidget *parent)
 
     mWebType = new ContactEditor::WebSelectTypeCombobox(this);
     mWebType->setObjectName(QStringLiteral("webtype"));
-    mWebType->initialize();
     layout->addWidget(mWebType);
 
     mAddButton = new QToolButton(this);

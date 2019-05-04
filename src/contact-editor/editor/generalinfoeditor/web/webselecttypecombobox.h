@@ -22,18 +22,16 @@
 #ifndef WebSelectTypeCombobox_H
 #define WebSelectTypeCombobox_H
 
-#include "../contactselecttypecombobox.h"
+#include "../../widgets/contacteditorcombobox.h"
 #include "contacteditor_private_export.h"
 
 namespace ContactEditor {
-class CONTACTEDITOR_TESTS_EXPORT WebSelectTypeCombobox : public ContactEditor::ContactSelectTypeCombobox
+class CONTACTEDITOR_TESTS_EXPORT WebSelectTypeCombobox : public ContactEditor::ContactEditorComboBox
 {
     Q_OBJECT
 public:
     explicit WebSelectTypeCombobox(QWidget *parent = nullptr);
     ~WebSelectTypeCombobox() override;
-
-    void initialize() override;
 };
 }
 

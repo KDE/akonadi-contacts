@@ -29,7 +29,7 @@
 class QToolButton;
 namespace ContactEditor {
 class PreferredLineEditWidget;
-class ContactSelectTypeCombobox;
+class MailTypeCombobox;
 class CONTACTEDITOR_TESTS_EXPORT MailWidget : public QWidget
 {
     Q_OBJECT
@@ -55,7 +55,7 @@ private:
     KContacts::Email mEmail;
     QString mOldType;
     PreferredLineEditWidget *mMailEdit = nullptr;
-    ContactEditor::ContactSelectTypeCombobox *mMailType = nullptr;
+    ContactEditor::MailTypeCombobox *mMailType = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;
 };

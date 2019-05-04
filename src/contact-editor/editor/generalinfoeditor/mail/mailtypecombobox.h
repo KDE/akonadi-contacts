@@ -19,25 +19,24 @@
     02110-1301, USA.
 */
 
-#ifndef ContactSelectTypeCombobox_H
-#define ContactSelectTypeCombobox_H
+#ifndef MAILTYPECOMBOBOX_H
+#define MAILTYPECOMBOBOX_H
 
-#include "../widgets/contacteditorcombobox.h"
+#include "../../widgets/contacteditorcombobox.h"
 #include "contacteditor_private_export.h"
 
 namespace ContactEditor {
-class CONTACTEDITOR_TESTS_EXPORT ContactSelectTypeCombobox : public ContactEditor::ContactEditorComboBox
+class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public ContactEditor::ContactEditorComboBox
 {
     Q_OBJECT
 public:
-    explicit ContactSelectTypeCombobox(QWidget *parent = nullptr);
-    ~ContactSelectTypeCombobox();
+    explicit MailTypeCombobox(QWidget *parent = nullptr);
+    ~MailTypeCombobox();
 
     QStringList selectTypeList() const;
-    virtual void initialize();
 private:
     QStringList mSelectType;
 };
 }
 
-#endif // ContactSelectTypeCombobox_H
+#endif // MAILTYPECOMBOBOX_H

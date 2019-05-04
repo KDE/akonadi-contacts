@@ -69,6 +69,7 @@ set(contacteditor_editor_generalinfo_mail_SRCS
     editor/generalinfoeditor/mail/maillistwidget.cpp
     editor/generalinfoeditor/mail/mailwidget.cpp
     editor/generalinfoeditor/mail/mailwidgetlister.cpp
+    editor/generalinfoeditor/mail/mailtypecombobox.cpp
     )
 
 set(contacteditor_editor_generalinfo_messaging_SRCS
@@ -85,7 +86,6 @@ set(contacteditor_editor_generalinfo_SRCS
     editor/generalinfoeditor/categorieseditwidget.cpp
     editor/generalinfoeditor/nameeditdialog.cpp
     editor/generalinfoeditor/displaynameeditwidget.cpp
-    editor/generalinfoeditor/contactselecttypecombobox.cpp
     editor/generalinfoeditor/messageformattingwidget.cpp
     editor/generalinfoeditor/blogfeedwidget.cpp
     ${contacteditor_editor_generalinfo_messaging_SRCS}

@@ -20,7 +20,7 @@
 */
 
 #include "contactselecttypecomboboxtest.h"
-#include "../contactselecttypecombobox.h"
+#include "../mail/mailtypecombobox.h"
 #include <QTest>
 
 ContactSelectTypeComboboxTest::ContactSelectTypeComboboxTest(QObject *parent)
@@ -34,8 +34,7 @@ ContactSelectTypeComboboxTest::~ContactSelectTypeComboboxTest()
 
 void ContactSelectTypeComboboxTest::shouldHaveDefaultValue()
 {
-    ContactEditor::ContactSelectTypeCombobox w;
-    w.initialize();
+    ContactEditor::MailTypeCombobox w;
     QVERIFY(!w.selectTypeList().isEmpty());
     QCOMPARE(w.count(), w.selectTypeList().count() + 1);
 }

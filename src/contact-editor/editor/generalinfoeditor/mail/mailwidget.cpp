@@ -24,7 +24,7 @@
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
-#include <editor/generalinfoeditor/contactselecttypecombobox.h>
+#include <editor/generalinfoeditor/mail/mailtypecombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
 
 using namespace ContactEditor;
@@ -42,9 +42,8 @@ MailWidget::MailWidget(QWidget *parent)
     layout->addWidget(mMailEdit);
     connect(mMailEdit, &PreferredLineEditWidget::preferredChanged, this, &MailWidget::slotPreferredChanged);
 
-    mMailType = new ContactEditor::ContactSelectTypeCombobox(this);
+    mMailType = new ContactEditor::MailTypeCombobox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
-    mMailType->initialize();
     layout->addWidget(mMailType);
 
     mAddButton = new QToolButton(this);

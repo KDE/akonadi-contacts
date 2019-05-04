@@ -28,15 +28,7 @@
 using namespace ContactEditor;
 
 WebSelectTypeCombobox::WebSelectTypeCombobox(QWidget *parent)
-    : ContactEditor::ContactSelectTypeCombobox(parent)
-{
-}
-
-WebSelectTypeCombobox::~WebSelectTypeCombobox()
-{
-}
-
-void WebSelectTypeCombobox::initialize()
+    : ContactEditor::ContactEditorComboBox(parent)
 {
     addItem(i18n("Select..."), QString());
     addItem(i18n("Home"), (int)KContacts::ResourceLocatorUrl::Home);
@@ -44,3 +36,5 @@ void WebSelectTypeCombobox::initialize()
     addItem(i18n("Profile"), (int)KContacts::ResourceLocatorUrl::Profile);
     addItem(i18n("Other"), (int)KContacts::ResourceLocatorUrl::Other);
 }
+
+WebSelectTypeCombobox::~WebSelectTypeCombobox() = default;
