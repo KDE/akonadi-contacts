@@ -32,10 +32,6 @@ class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public ContactEditor::Contac
 public:
     explicit MailTypeCombobox(QWidget *parent = nullptr);
     ~MailTypeCombobox();
-
-    QStringList selectTypeList() const;
-private:
-    QStringList mSelectType;
 };
 }
 

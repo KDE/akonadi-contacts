@@ -86,48 +86,15 @@ void MailWidget::setMail(const KContacts::Email &email)
 {
     mEmail = email;
     mMailEdit->setText(email.mail());
-    const QMap<QString, QStringList> parameters = mEmail.parameters();
-    const QStringList value = parameters.value(QStringLiteral("type"));
-    if (value.contains(QLatin1String("PREF"))) {
-        setPreferred(true);
-    }
-    const QStringList lst = mMailType->selectTypeList();
-    for (const QString &type : lst) {
-        if (value.contains(type)) {
-            mOldType = type;
-            mMailType->setCurrentIndex(mMailType->findData(type));
-            break;
-        }
-    }
+    mMailType->setCurrentIndex(mMailType->findData((int)email.type()));
+    setPreferred(email.isPreferred());
 }
 
 KContacts::Email MailWidget::email()
 {
     mEmail.setEmail(mMailEdit->text());
-    QMap<QString, QStringList> parameters = mEmail.parameters();
-    QStringList value = parameters.value(QStringLiteral("type"));
-    const QString newType = mMailType->currentData().toString();
-    if (!newType.isEmpty()) {
-        if (mOldType != newType) {
-            if (!value.contains(newType)) {
-                value.append(newType);
-            }
-            if (!mOldType.isEmpty()) {
-                value.removeAll(mOldType);
-            }
-        }
-    }
-    if (mMailEdit->preferred()) {
-        if (!value.contains(QLatin1String("PREF"))) {
-            value.append(QStringLiteral("PREF"));
-        }
-    } else {
-        value.removeAll(QStringLiteral("PREF"));
-    }
-    if (!value.isEmpty()) {
-        parameters.insert(QStringLiteral("type"), value);
-    }
-    mEmail.setParameters(parameters);
+    mEmail.setType(KContacts::Email::Type(mMailType->currentData().toInt()));
+    mEmail.setPreferred(mMailEdit->preferred());
     return mEmail;
 }
 

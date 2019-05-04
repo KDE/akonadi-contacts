@@ -20,28 +20,19 @@
 */
 
 #include "mailtypecombobox.h"
+
+#include <KContacts/Email>
 #include <KLocalizedString>
-#include <QDebug>
+
 using namespace ContactEditor;
 
 MailTypeCombobox::MailTypeCombobox(QWidget *parent)
     : ContactEditor::ContactEditorComboBox(parent)
 {
-    addItem(i18n("Select..."), QString());
-    QString type = QStringLiteral("HOME");
-    mSelectType.append(type);
-    addItem(i18n("Home"), type);
-    type = QStringLiteral("WORK");
-    mSelectType.append(type);
-    addItem(i18n("Work"), type);
-    type = QStringLiteral("OTHER");
-    mSelectType.append(type);
-    addItem(i18n("Other"), type);
+    addItem(i18n("Select..."), QVariant());
+    addItem(i18n("Home"), (int)KContacts::Email::Home);
+    addItem(i18n("Work"), (int)KContacts::Email::Work);
+    addItem(i18n("Other"), (int)KContacts::Email::Other);
 }
 
 MailTypeCombobox::~MailTypeCombobox() = default;
-
-QStringList MailTypeCombobox::selectTypeList() const
-{
-    return mSelectType;
-}
