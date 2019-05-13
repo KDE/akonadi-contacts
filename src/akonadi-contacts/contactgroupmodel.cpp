@@ -176,7 +176,7 @@ void ContactGroupModel::loadContactGroup(const KContacts::ContactGroup &contactG
     d->mMembers.clear();
     d->mGroup = contactGroup;
 
-    for (uint i = 0; i < d->mGroup.dataCount(); ++i) {
+    for (int i = 0; i < d->mGroup.dataCount(); ++i) {
         const KContacts::ContactGroup::Data data = d->mGroup.data(i);
         GroupMember member;
         member.isReference = false;
@@ -185,7 +185,7 @@ void ContactGroupModel::loadContactGroup(const KContacts::ContactGroup &contactG
         d->mMembers.append(member);
     }
 
-    for (uint i = 0; i < d->mGroup.contactReferenceCount(); ++i) {
+    for (int i = 0; i < d->mGroup.contactReferenceCount(); ++i) {
         const KContacts::ContactGroup::ContactReference reference = d->mGroup.contactReference(i);
         GroupMember member;
         member.isReference = true;
