@@ -179,16 +179,6 @@ public:
         mBrowser->setHtml(mContactFormatter->toHtml());
     }
 
-    void slotMailClicked(const QString &, const QString &email)
-    {
-        QString name, address;
-
-        // remove the 'mailto:' and split into name and email address
-        KContacts::Addressee::parseEmailAddress(email.mid(7), name, address);
-
-        Q_EMIT mParent->emailClicked(name, address);
-    }
-
     void slotUrlClicked(const QUrl &url)
     {
         const QUrlQuery query(url);
