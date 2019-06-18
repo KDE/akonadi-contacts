@@ -22,8 +22,7 @@
 
 #ifndef ADDRESSESLOCATIONWIDGET_H
 #define ADDRESSESLOCATIONWIDGET_H
-
-#include <QSplitter>
+#include <QWidget>
 #include <KContacts/Addressee>
 namespace ContactEditor {
 class AbstractAddressLocationWidget;

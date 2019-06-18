@@ -25,7 +25,6 @@
 #include <tag.h>
 #include <tagwidget.h>
 #include <kcontacts/addressee.h>
-#include <KPluginTrader>
 #include <QHBoxLayout>
 #include <kcoreaddons_version.h>
 #include <kpluginfactory.h>

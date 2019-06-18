@@ -24,7 +24,6 @@
 #include <kconfig.h>
 #include <kconfiggroup.h>
 
-#include <QVector>
 
 void CustomFieldManager::setGlobalCustomFieldDescriptions(const CustomField::List &customFields)
 {
