@@ -24,6 +24,7 @@
 
 #include <QString>
 #include <QVariant>
+#include <QVector>
 #include "contacteditor_export.h"
 
 template<typename T>
