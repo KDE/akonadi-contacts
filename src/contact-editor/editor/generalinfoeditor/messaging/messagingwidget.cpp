@@ -21,12 +21,15 @@
 */
 
 #include "messagingwidget.h"
-#include "../../im/improtocols.h"
 #include "../../widgets/contacteditorcombobox.h"
+#include <editor/widgets/preferredlineeditwidget.h>
+
+#include <KContacts/Impp>
+
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
-#include <editor/widgets/preferredlineeditwidget.h>
+#include <QUrl>
 
 using namespace ContactEditor;
 MessagingWidget::MessagingWidget(QWidget *parent)
@@ -49,10 +52,10 @@ MessagingWidget::MessagingWidget(QWidget *parent)
                                   "Select..."));
     layout->addWidget(mProtocolCombo);
 
-    const QStringList protocols = IMProtocols::self()->protocols();
+    const auto protocols = KContacts::Impp::serviceTypes();
     for (const QString &protocol : protocols) {
-        mProtocolCombo->addItem(QIcon::fromTheme(IMProtocols::self()->icon(protocol)),
-                                IMProtocols::self()->name(protocol),
+        mProtocolCombo->addItem(QIcon::fromTheme(KContacts::Impp::serviceIcon(protocol)),
+                                KContacts::Impp::serviceLabel(protocol),
                                 protocol);
     }
 
@@ -80,11 +83,14 @@ void MessagingWidget::slotPreferredChanged()
     Q_EMIT preferredChanged(this);
 }
 
-void MessagingWidget::setIMAddress(const IMAddress &address)
+void MessagingWidget::setIMAddress(const KContacts::Impp &address)
 {
-    mProtocolCombo->setCurrentIndex(
-        IMProtocols::self()->protocols().indexOf(address.protocol()) + 1);
-    mMessagingEdit->setText(address.name());
+    const int idx = mProtocolCombo->findData(address.serviceType());
+    if (idx >= 0) {
+        mProtocolCombo->setCurrentIndex(idx);
+    }
+    mMessagingEdit->setText(address.address().path());
+    mMessagingEdit->setPreferred(address.isPreferred());
 }
 
 void MessagingWidget::setPreferred(bool b)
@@ -92,10 +98,15 @@ void MessagingWidget::setPreferred(bool b)
     mMessagingEdit->setPreferred(b);
 }
 
-IMAddress MessagingWidget::imAddress() const
+KContacts::Impp MessagingWidget::imAddress() const
 {
-    return IMAddress(mProtocolCombo->itemData(mProtocolCombo->currentIndex()).toString(),
-                     mMessagingEdit->text().trimmed(), false);
+    QUrl uri;
+    uri.setScheme(mProtocolCombo->currentData().toString());
+    uri.setPath(mMessagingEdit->text().trimmed());
+    KContacts::Impp addr;
+    addr.setAddress(uri);
+    addr.setPreferred(mMessagingEdit->preferred());
+    return addr;
 }
 
 void MessagingWidget::updateAddRemoveButton(bool addButtonEnabled)

@@ -25,9 +25,14 @@
 
 #include <QWidget>
 
-#include <editor/im/imaddress.h>
 #include "contacteditor_private_export.h"
+
 class QToolButton;
+
+namespace KContacts {
+class Impp;
+}
+
 namespace ContactEditor {
 class PreferredLineEditWidget;
 class ContactEditorComboBox;
@@ -39,8 +44,8 @@ public:
     ~MessagingWidget();
 
     void updateAddRemoveButton(bool addButtonEnabled);
-    IMAddress imAddress() const;
-    void setIMAddress(const IMAddress &address);
+    KContacts::Impp imAddress() const;
+    void setIMAddress(const KContacts::Impp &address);
     void setPreferred(bool b);
     void clearWidget();
     void setReadOnly(bool readOnly);

@@ -27,7 +27,6 @@
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"
 
-#include "editor/im/improtocols.h"
 #include <KIOCore/kio/transferjob.h>
 #include <collection.h>
 #include <collectionfetchjob.h>
@@ -72,7 +71,7 @@ public:
     {
         static QPixmap defaultPixmap = QIcon::fromTheme(QStringLiteral("user-identity")).pixmap(QSize(100, 100));
         static QPixmap defaultMapPixmap = QIcon::fromTheme(QStringLiteral("map-symbolic")).pixmap(QSize(16, 16));
-        static QPixmap defaultSmsPixmap = QIcon::fromTheme(IMProtocols::self()->icon(QStringLiteral("messaging/sms"))).pixmap(QSize(16, 16));
+        static QPixmap defaultSmsPixmap = QIcon::fromTheme(KContacts::Impp::serviceIcon(QStringLiteral("sms"))).pixmap(QSize(16, 16));
 
         mParent->setWindowTitle(i18n("Contact %1", mCurrentContact.assembledName()));
 

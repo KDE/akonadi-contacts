@@ -22,8 +22,6 @@
 
 #include "messagingwidgetlister.h"
 #include "messagingwidget.h"
-#include "../../im/imaddress.h"
-#include "../../im/improtocols.h"
 #include "../../utils/utils.h"
 
 #include <KContacts/Addressee>
@@ -42,25 +40,7 @@ MessagingWidgetLister::~MessagingWidgetLister()
 
 void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
-    IMAddress::List imaddresses;
-    const QStringList customs = contact.customs();
-
-    for (const QString &custom : customs) {
-        QString app, name, value;
-        ContactEditor::Utils::splitCustomField(custom, app, name, value);
-
-        if (app.startsWith(QLatin1String("messaging/"))) {
-            if (name == QLatin1String("All")) {
-                const QString protocol = app;
-                const QStringList names = value.split(QChar(0xE000), QString::SkipEmptyParts);
-
-                for (const QString &name : names) {
-                    //TODO preferred support ?
-                    imaddresses << IMAddress(protocol, name, false);
-                }
-            }
-        }
-    }
+    const auto imaddresses = contact.imppList();
     if (imaddresses.isEmpty()) {
         setNumberOfShownWidgetsTo(1);
     } else {
@@ -73,41 +53,17 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
             w->setIMAddress(imaddresses.at(i));
         }
     }
-    //TODO add real support for IM vcard4
 }
 
 void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
 {
-    IMAddress::List imaddresses;
+    KContacts::Impp::List imaddresses;
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
         MessagingWidget *w = qobject_cast<MessagingWidget *>(widget);
         imaddresses << w->imAddress();
     }
-    // create a map with protocol as key and list of names for that protocol as value
-    QMap<QString, QStringList> protocolMap;
-
-    // fill map with all known protocols
-    const QStringList lstProtocols = IMProtocols::self()->protocols();
-    for (const QString &protocol : lstProtocols) {
-        protocolMap.insert(protocol, QStringList());
-    }
-
-    // add the configured addresses
-    for (const IMAddress &address : qAsConst(imaddresses)) {
-        protocolMap[address.protocol()].append(address.name());
-    }
-
-    // iterate over this list and modify the contact according
-    QMap<QString, QStringList>::const_iterator it = protocolMap.cbegin();
-    const QMap<QString, QStringList>::const_iterator itEnd = protocolMap.cend();
-    for (; it != itEnd; ++it) {
-        if (!it.value().isEmpty()) {
-            contact.insertCustom(it.key(), QStringLiteral("All"), it.value().join(QString(0xE000)));
-        } else {
-            contact.removeCustom(it.key(), QStringLiteral("All"));
-        }
-    }
+    contact.setImppList(imaddresses);
 }
 
 void MessagingWidgetLister::setReadOnly(bool readOnly)

@@ -28,7 +28,6 @@ install(FILES
 
 configure_file(config-contact-editor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-contact-editor.h)
 
-add_subdirectory(editor/im)
 
 
 set(contacteditor_abstractaddresslocation_SRCS
@@ -115,8 +114,6 @@ set(contacteditor_editor_SRCS
     ${contacteditor_editor_utils_SRCS}
     ${contacteditor_business_editor_SRCS}
     editor/contacteditorwidget.cpp
-    editor/im/imaddress.cpp
-    editor/im/improtocols.cpp
     editor/widgets/imagewidget.cpp
     editor/widgets/preferredlineeditwidget.cpp
     editor/widgets/categorieseditabstractwidget.cpp
@@ -226,7 +223,6 @@ install( FILES
     ${ContactEditorWidget_HEADERS}
     ${ContactEditorAddressLocationWidget_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
-    editor/im/improtocols.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/contacteditor COMPONENT Devel
     )
 
