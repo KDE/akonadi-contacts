@@ -56,7 +56,14 @@ set(akonadicontact_job_SRCS
     job/contactsearchjob.cpp
 )
 
+set(akonadicontact_recipientpicker_SRCS
+    recipientspicker/recipientseditormanager.cpp
+    recipientspicker/recipientspickerwidget.cpp
+    )
+
+
 set(akonadicontact_LIB_SRC
+    ${akonadicontact_recipientpicker_SRCS}
     ${akonadicontact_customfieldseditor_SRCS}
     ${akonadicontact_attributes_SRCS}
     ${akonadicontact_job_SRCS}
@@ -165,7 +172,15 @@ ecm_generate_headers(AkonadiContactJob_CamelCase_HEADERS
     RELATIVE job
     )
 
-    
+ecm_generate_headers(AkonadiContactRecipients_CamelCase_HEADERS
+    HEADER_NAMES
+    RecipientsEditorManager
+    RecipientsPickerWidget
+    REQUIRED_HEADERS AkonadiContactRecipients_HEADERS
+    PREFIX Akonadi/Contact
+    RELATIVE recipientspicker
+    )
+
 
 ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     HEADER_NAMES
@@ -200,12 +215,14 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
 install( FILES
     ${AkonadiContact_CamelCase_HEADERS}
     ${AkonadiContactJob_CamelCase_HEADERS}
+    ${AkonadiContactRecipients_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact COMPONENT Devel
     )
 
 install( FILES
     ${AkonadiContact_HEADERS}
     ${AkonadiContactJob_HEADERS}
+    ${AkonadiContactRecipients_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
     )
