@@ -22,7 +22,7 @@
 
 #include <QWidget>
 #include "akonadi-contact_export.h"
-
+class QAbstractItemModel;
 class QTreeView;
 namespace Akonadi {
 class EmailAddressSelectionWidget;
@@ -30,7 +30,7 @@ class AKONADI_CONTACT_EXPORT RecipientsPickerWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit RecipientsPickerWidget(bool onlyShowEmailWithAddress, QWidget *parent = nullptr);
+    explicit RecipientsPickerWidget(bool onlyShowEmailWithAddress, QAbstractItemModel *model, QWidget *parent = nullptr);
     ~RecipientsPickerWidget();
     Q_REQUIRED_RESULT QTreeView *view() const;
 

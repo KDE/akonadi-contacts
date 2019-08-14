@@ -21,6 +21,8 @@
 */
 
 #include "emailaddressselectiondialog.h"
+#include "recipientspicker/recipientspickerwidget.h"
+
 
 #include <KConfigGroup>
 
@@ -28,6 +30,8 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QTreeView>
+
 
 using namespace Akonadi;
 
@@ -39,12 +43,12 @@ public:
     {
         QVBoxLayout *mainLayout = new QVBoxLayout(q);
         if (model) {
-            mView = new EmailAddressSelectionWidget(model, q);
+            mView = new RecipientsPickerWidget(true, model, q);
         } else {
-            mView = new EmailAddressSelectionWidget(q);
+            mView = new RecipientsPickerWidget(true, nullptr, q);
         }
         mainLayout->addWidget(mView);
-        q->connect(mView, &EmailAddressSelectionWidget::doubleClicked, q, &QDialog::accept);
+        q->connect(mView->emailAddressSelectionWidget()->view(), &QTreeView::doubleClicked, q, &QDialog::accept);
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         okButton->setDefault(true);
@@ -74,7 +78,7 @@ public:
     }
 
     EmailAddressSelectionDialog *q = nullptr;
-    EmailAddressSelectionWidget *mView = nullptr;
+    RecipientsPickerWidget *mView = nullptr;
 };
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog(QWidget *parent)
@@ -97,10 +101,10 @@ EmailAddressSelectionDialog::~EmailAddressSelectionDialog()
 
 EmailAddressSelection::List EmailAddressSelectionDialog::selectedAddresses() const
 {
-    return d->mView->selectedAddresses();
+    return d->mView->emailAddressSelectionWidget()->selectedAddresses();
 }
 
 EmailAddressSelectionWidget *EmailAddressSelectionDialog::view() const
 {
-    return d->mView;
+    return d->mView->emailAddressSelectionWidget();
 }
