@@ -290,8 +290,8 @@ bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, const QStri
         return true;
     }
 
-    const uint count = group.dataCount();
-    for (uint i = 0; i < count; ++i) {
+    const int count = group.dataCount();
+    for (int i = 0; i < count; ++i) {
         if (group.data(i).name().contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
