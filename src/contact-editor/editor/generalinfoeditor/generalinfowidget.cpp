@@ -94,6 +94,7 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
         mCategoriesWidget = factory->create<ContactEditor::CategoriesEditAbstractWidget>(parent);
     } else {
         mCategoriesWidget = new CategoriesEditWidget(parent);
+        label->setVisible(false);
     }
     mCategoriesWidget->setObjectName(QStringLiteral("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);
