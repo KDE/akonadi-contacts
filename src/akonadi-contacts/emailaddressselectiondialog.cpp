@@ -82,13 +82,13 @@ public:
 };
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog(QWidget *parent)
-    : QDialog(parent)
+    : AbstractEmailAddressSelectionDialog(parent)
     , d(new Private(this, nullptr))
 {
 }
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog(QAbstractItemModel *model, QWidget *parent)
-    : QDialog(parent)
+    : AbstractEmailAddressSelectionDialog(parent)
     , d(new Private(this, model))
 {
 }

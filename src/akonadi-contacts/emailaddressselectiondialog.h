@@ -25,6 +25,7 @@
 
 #include "akonadi-contact_export.h"
 
+#include "abstractemailaddressselectiondialog.h"
 #include "emailaddressselectionwidget.h"
 
 #include <QDialog>
@@ -55,7 +56,7 @@ namespace Akonadi {
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.5
  */
-class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public QDialog
+class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public AbstractEmailAddressSelectionDialog
 {
     Q_OBJECT
 
@@ -78,17 +79,17 @@ public:
     /**
      * Destroys the email address selection dialog.
      */
-    ~EmailAddressSelectionDialog();
+    ~EmailAddressSelectionDialog() override;
 
     /**
      * Returns the list of selected email addresses.
      */
-    Q_REQUIRED_RESULT EmailAddressSelection::List selectedAddresses() const;
+    Q_REQUIRED_RESULT EmailAddressSelection::List selectedAddresses() const override;
 
     /**
      * Returns the email address selection view that is used.
      */
-    Q_REQUIRED_RESULT EmailAddressSelectionWidget *view() const;
+    Q_REQUIRED_RESULT EmailAddressSelectionWidget *view() const override;
 
 private:
     //@cond PRIVATE
