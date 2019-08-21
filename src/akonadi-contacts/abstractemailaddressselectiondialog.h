@@ -25,7 +25,7 @@
 #include "emailaddressselectionwidget.h"
 
 #include <QDialog>
-
+#include <KContacts/Addressee>
 namespace Akonadi {
 class AKONADI_CONTACT_EXPORT AbstractEmailAddressSelectionDialog : public QDialog
 {
@@ -43,6 +43,8 @@ public:
      * Returns the email address selection view that is used.
      */
     Q_REQUIRED_RESULT virtual EmailAddressSelectionWidget *view() const = 0;
+Q_SIGNALS:
+    void insertAddresses(const KContacts::Addressee::List &list);
 };
 }
 
