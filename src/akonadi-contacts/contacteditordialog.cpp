@@ -30,6 +30,7 @@
 
 #include <KLocalizedString>
 #include <KConfig>
+#include <KMessageBox>
 
 #include <QGridLayout>
 #include <QLabel>
@@ -188,6 +189,16 @@ AkonadiContactEditor *ContactEditorDialog::editor() const
 void ContactEditorDialog::accept()
 {
     //Nothing
+}
+
+void ContactEditorDialog::reject()
+{
+    if (KMessageBox::questionYesNo(
+            this,
+            i18nc("@info", "Do you really want to cancel?"),
+            i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
+        QDialog::reject(); // Discard current changes
+    }
 }
 
 #include "moc_contacteditordialog.cpp"

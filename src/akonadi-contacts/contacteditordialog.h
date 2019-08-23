@@ -141,6 +141,8 @@ public:
      */
     Q_REQUIRED_RESULT AkonadiContactEditor *editor() const;
 
+    void reject() override;
+
 Q_SIGNALS:
     /**
      * This signal is emitted whenever a contact was updated or stored.
