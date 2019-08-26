@@ -111,6 +111,7 @@ public:
      */
     Q_REQUIRED_RESULT ContactGroupEditor *editor() const;
 
+    void reject() override;
 Q_SIGNALS:
     /**
      * This signal is emitted whenever a contact group was updated or stored.

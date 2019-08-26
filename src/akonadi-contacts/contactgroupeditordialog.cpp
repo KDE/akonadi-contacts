@@ -30,6 +30,7 @@
 #include <KLocalizedString>
 
 #include <KConfig>
+#include <KMessageBox>
 
 #include <QPushButton>
 #include <QGridLayout>
@@ -173,5 +174,17 @@ void ContactGroupEditorDialog::slotAccepted()
         accept();
     }
 }
+
+void ContactGroupEditorDialog::reject()
+{
+    if (KMessageBox::questionYesNo(
+            this,
+            i18nc("@info", "Do you really want to cancel?"),
+            i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
+        QDialog::reject(); // Discard current changes
+    }
+}
+
+
 
 #include "moc_contactgroupeditordialog.cpp"
