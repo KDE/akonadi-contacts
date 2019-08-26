@@ -76,8 +76,8 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
      * %N the raw number
      * %n the number with all additional non-number characters removed
      */
-    command = command.replace(QLatin1String("%N"), number.number());
-    command = command.replace(QLatin1String("%n"), number.normalizedNumber());
+    command.replace(QLatin1String("%N"), number.number());
+    command.replace(QLatin1String("%n"), number.normalizedNumber());
 
     KRun::runCommand(command, nullptr);
 }

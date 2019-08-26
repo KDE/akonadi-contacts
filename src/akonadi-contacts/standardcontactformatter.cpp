@@ -180,7 +180,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
             formattedAddress = address.label().toHtmlEscaped();
         }
 
-        formattedAddress = formattedAddress.replace(QRegExp(QStringLiteral("\n+")), QStringLiteral("<br>"));
+        formattedAddress.replace(QRegExp(QStringLiteral("\n+")), QStringLiteral("<br>"));
 
         const QString url = QStringLiteral("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                             .arg(counter)
