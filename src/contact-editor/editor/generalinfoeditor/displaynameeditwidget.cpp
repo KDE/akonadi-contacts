@@ -38,7 +38,7 @@ static DisplayNameEditWidget::DisplayType guessedDisplayType(const KContacts::Ad
         return DisplayNameEditWidget::SimpleName;
     } else if (contact.formattedName() == contact.assembledName()) {
         return DisplayNameEditWidget::FullName;
-    } else if (contact.formattedName() == (contact.familyName() + QStringLiteral(", ") + contact.givenName())) {
+    } else if (contact.formattedName() == (contact.familyName() + QLatin1String(", ") + contact.givenName())) {
         return DisplayNameEditWidget::ReverseNameWithComma;
     } else if (contact.formattedName() == (contact.familyName() + QLatin1Char(' ') + contact.givenName())) {
         return DisplayNameEditWidget::ReverseName;
