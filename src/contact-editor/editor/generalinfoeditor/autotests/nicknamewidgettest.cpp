@@ -20,7 +20,6 @@
 */
 
 #include "nicknamewidgettest.h"
-#include "kdepimtest_layout.h"
 #include "editor/generalinfoeditor/nicknamewidget.h"
 
 #include <QLabel>
@@ -39,7 +38,9 @@ void NicknameWidgetTest::shouldHaveDefaultValue()
     ContactEditor::NicknameWidget editor;
 
     QVBoxLayout *topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    KdepimTestLayout::checkContentsMargins(0, topLayout);
+    QVERIFY(topLayout);
+    QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
 
     QLabel *nickNameLabel = editor.findChild<QLabel *>(QStringLiteral("nicknamelabel"));
     QVERIFY(nickNameLabel);

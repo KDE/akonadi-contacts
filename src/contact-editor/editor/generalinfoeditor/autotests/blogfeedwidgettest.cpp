@@ -20,7 +20,6 @@
 */
 
 #include "blogfeedwidgettest.h"
-#include "kdepimtest_layout.h"
 #include "editor/generalinfoeditor/blogfeedwidget.h"
 
 #include <QLabel>
@@ -39,7 +38,8 @@ void BlogfeedWidgetTest::shouldHaveDefaultValue()
     ContactEditor::BlogfeedWidget editor;
 
     QVBoxLayout *topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    KdepimTestLayout::checkContentsMargins(0, topLayout);
+    QVERIFY(topLayout);
+    QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QLabel *blogFeedLabel = editor.findChild<QLabel *>(QStringLiteral("blogFeedLabel"));
     QVERIFY(blogFeedLabel);
