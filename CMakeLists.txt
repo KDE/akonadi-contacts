@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.12.2")
+set(PIM_VERSION "5.12.3")
 
 project(Akonadi-Contact VERSION ${PIM_VERSION})
 
@@ -25,9 +25,9 @@ include(ECMQtDeclareLoggingCategory)
 
 
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
-set(KCONTACTS_VERSION "5.12.1")
-set(KMIMELIB_VERSION "5.12.1")
-set(AKONADI_VERSION "5.12.1")
+set(KCONTACTS_VERSION "5.12.2")
+set(KMIMELIB_VERSION "5.12.2")
+set(AKONADI_VERSION "5.12.2")
 
 set(QT_REQUIRED_VERSION "5.11.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
