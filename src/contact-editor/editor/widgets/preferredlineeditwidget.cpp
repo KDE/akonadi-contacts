@@ -20,8 +20,6 @@
 */
 
 #include "preferredlineeditwidget.h"
-#include <KIconLoader>
-#include <KIconEffect>
 #include <KLocalizedString>
 #include <QAction>
 
@@ -32,11 +30,7 @@ PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     , mPreferred(false)
 {
     mIconEnabled = QIcon::fromTheme(QStringLiteral("rating"));
-    KIconLoader loader;
-    QImage iconDisabled
-        = mIconEnabled.pixmap(loader.currentSize(KIconLoader::Panel)).toImage();
-    KIconEffect::toGray(iconDisabled, 1.0);
-    mIconDisabled = QIcon(QPixmap::fromImage(iconDisabled));
+    mIconDisabled = QIcon::fromTheme(QStringLiteral("rating-unrated"));
     mPreferredAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferredAction->setObjectName(QStringLiteral("preferredaction"));
     mPreferredAction->setToolTip(i18n("Set as Preferred"));

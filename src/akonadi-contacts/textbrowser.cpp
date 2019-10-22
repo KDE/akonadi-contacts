@@ -19,7 +19,6 @@
 */
 
 #include "textbrowser_p.h"
-#include <kicontheme.h>
 #include <KLocalizedString>
 #include <QUrl>
 #include <QAction>
