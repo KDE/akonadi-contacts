@@ -20,7 +20,6 @@
 #include "emailaddressrequester.h"
 
 #include "emailaddressselectiondialog.h"
-#include <kiconloader.h>
 #include <klineedit.h>
 #include <KLocalizedString>
 #include <QIcon>
@@ -91,7 +90,6 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
 
     QPushButton *button = new QPushButton(this);
     button->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
-    button->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
     button->setFixedHeight(d->mLineEdit->sizeHint().height());
     button->setToolTip(i18n("Open Address Book"));
     layout->addWidget(button);
