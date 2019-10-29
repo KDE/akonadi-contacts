@@ -20,33 +20,21 @@
     02110-1301, USA.
 */
 
-#ifndef ADDRESSESLOCATIONWIDGET_H
-#define ADDRESSESLOCATIONWIDGET_H
-#include <QSplitter>
-#include <KContacts/Addressee>
+#ifndef ADDRESSLOCATIONWIDGETTEST_H
+#define ADDRESSLOCATIONWIDGETTEST_H
 
-class QTreeView;
+#include <QObject>
 
-namespace ContactEditor {
-class AddressModel;
-class AddressLocationWidget;
-
-class AddressesLocationWidget : public QSplitter
+class AddressLocationWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AddressesLocationWidget(QWidget *parent = nullptr);
-    ~AddressesLocationWidget();
+    explicit AddressLocationWidgetTest(QObject *parent = nullptr);
+    ~AddressLocationWidgetTest();
 
-    void loadContact(const KContacts::Addressee &contact);
-    void storeContact(KContacts::Addressee &contact) const;
-
-    void setReadOnly(bool readOnly);
-private:
-    AddressLocationWidget *mAddressLocationWidget = nullptr;
-    QTreeView *mAddressesLocationView = nullptr;
-    AddressModel *mAddressModel = nullptr;
-    bool mReadOnly = false;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+    void shouldChangeReadOnlyStatus();
 };
-}
-#endif // ADDRESSESLOCATIONWIDGET_H
+
+#endif // ADDRESSLOCATIONWIDGETTEST_H

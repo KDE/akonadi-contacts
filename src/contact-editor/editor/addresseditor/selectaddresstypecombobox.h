@@ -20,33 +20,57 @@
     02110-1301, USA.
 */
 
-#ifndef ADDRESSESLOCATIONWIDGET_H
-#define ADDRESSESLOCATIONWIDGET_H
-#include <QSplitter>
-#include <KContacts/Addressee>
+#ifndef SELECTADDRESSTYPECOMBOBOX_H
+#define SELECTADDRESSTYPECOMBOBOX_H
 
-class QTreeView;
+#include <QComboBox>
+#include <KContacts/Address>
 
 namespace ContactEditor {
-class AddressModel;
-class AddressLocationWidget;
 
-class AddressesLocationWidget : public QSplitter
+/**
+ * @short A widget for selecting the type of an address.
+ */
+class SelectAddressTypeComboBox : public QComboBox
 {
     Q_OBJECT
+
 public:
-    explicit AddressesLocationWidget(QWidget *parent = nullptr);
-    ~AddressesLocationWidget();
+    /**
+     * Creates a new address type combo.
+     *
+     * @param parent The parent widget.
+     */
+    explicit SelectAddressTypeComboBox(QWidget *parent = nullptr);
 
-    void loadContact(const KContacts::Addressee &contact);
-    void storeContact(KContacts::Addressee &contact) const;
+    /**
+     * Destroys the address type combo.
+     */
+    ~SelectAddressTypeComboBox();
 
-    void setReadOnly(bool readOnly);
+    /**
+     * Sets the type that shall be selected in the combobox.
+     * @param type KABC address type to set.
+     */
+    void setType(KContacts::Address::Type type);
+
+    /**
+     * Returns the type that is currently selected.
+     */
+    KContacts::Address::Type type() const;
+
+private Q_SLOTS:
+    void selected(int);
+    void otherSelected();
+
 private:
-    AddressLocationWidget *mAddressLocationWidget = nullptr;
-    QTreeView *mAddressesLocationView = nullptr;
-    AddressModel *mAddressModel = nullptr;
-    bool mReadOnly = false;
+    void update();
+
+    KContacts::Address::Type mType;
+    int mLastSelected;
+    QList<int> mTypeList;
 };
+
 }
-#endif // ADDRESSESLOCATIONWIDGET_H
+
+#endif

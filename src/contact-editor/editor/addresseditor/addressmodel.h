@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    Copyright (C) 2017-2019 Laurent Montel <montel@kde.org>
+    Copyright (C) 2019 Volker Krause <vkrause@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,26 +19,35 @@
     02110-1301, USA.
 */
 
-#ifndef ABSTRACTADDRESSLOCATIONWIDGET_H
-#define ABSTRACTADDRESSLOCATIONWIDGET_H
+#ifndef CONTACTEDITOR_ADDRESSMODEL_H
+#define CONTACTEDITOR_ADDRESSMODEL_H
 
-#include <QWidget>
+#include <QAbstractListModel>
 
-#include <KContacts/Addressee>
-#include "contacteditor_export.h"
+#include <KContacts/Address>
 
 namespace ContactEditor {
-class CONTACTEDITOR_EXPORT AbstractAddressLocationWidget : public QWidget
+
+class AddressModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    explicit AbstractAddressLocationWidget(QWidget *parent = nullptr);
-    ~AbstractAddressLocationWidget();
+    explicit AddressModel(QObject *parent = nullptr);
+    ~AddressModel();
 
-    virtual void loadContact(const KContacts::Addressee &contact);
-    virtual void storeContact(KContacts::Addressee &contact) const;
+    KContacts::Address::List addresses() const;
+    void setAddresses(const KContacts::Address::List &addresses);
+    void addAddress(const KContacts::Address &address);
+    void replaceAddress(const KContacts::Address &address, int row);
+    void removeAddress(int row);
 
-    virtual void setReadOnly(bool readOnly);
+    int rowCount(const QModelIndex& parent) const override;
+    QVariant data(const QModelIndex& index, int role) const override;
+
+private:
+    KContacts::Address::List mAddresses;
 };
+
 }
-#endif // ABSTRACTADDRESSLOCATIONWIDGET_H
+
+#endif // CONTACTEDITOR_ADDRESSMODEL_H

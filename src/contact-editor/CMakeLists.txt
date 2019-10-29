@@ -30,9 +30,6 @@ configure_file(config-contact-editor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-
 
 
 
-set(contacteditor_abstractaddresslocation_SRCS
-    editor/addresseditor/abstractaddresslocationwidget.cpp)
-
 set(contacteditor_customfieldseditor_SRCS
     editor/customfieldeditor/customfieldswidget.cpp
     editor/customfieldeditor/customfieldeditorwidget.cpp
@@ -91,11 +88,15 @@ set(contacteditor_editor_generalinfo_SRCS
     ${contacteditor_editor_generalinfo_phone_SRCS}
     ${contacteditor_editor_generalinfo_web_SRCS}
     ${contacteditor_editor_generalinfo_mail_SRCS}
-    ${contacteditor_abstractaddresslocation_SRCS}
     )
 
 set(contacteditor_addresslocation_editor_SRCS
+    editor/addresseditor/addressdelegate.cpp
+    editor/addresseditor/addressmodel.cpp
     editor/addresseditor/addresseslocationwidget.cpp
+    editor/addresseditor/addresslocationwidget.cpp
+    editor/addresseditor/addresstypedialog.cpp
+    editor/addresseditor/selectaddresstypecombobox.cpp
     )
 
 set(contacteditor_personal_editor_SRCS
@@ -203,25 +204,15 @@ ecm_generate_headers(ContactEditorWidget_CamelCase_HEADERS
     RELATIVE editor/widgets/
     )
 
-ecm_generate_headers(ContactEditorAddressLocationWidget_CamelCase_HEADERS
-    HEADER_NAMES
-    AbstractAddressLocationWidget
-    REQUIRED_HEADERS ContactEditorAddressLocationWidget_HEADERS
-    PREFIX ContactEditor
-    RELATIVE editor/addresseditor/
-    )
-
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
     ${ContactEditorWidget_CamelCase_HEADERS}
-    ${ContactEditorAddressLocationWidget_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor COMPONENT Devel
     )
 
 install( FILES
     ${ContactEditor_HEADERS}
     ${ContactEditorWidget_HEADERS}
-    ${ContactEditorAddressLocationWidget_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/contacteditor COMPONENT Devel
     )
@@ -229,6 +220,7 @@ install( FILES
 
 
 if (BUILD_TESTING)
+    add_subdirectory(editor/addresseditor/autotests/)
     add_subdirectory(editor/generalinfoeditor/autotests/)
     add_subdirectory(editor/generalinfoeditor/tests)
     add_subdirectory(editor/customfieldeditor/autotests/)

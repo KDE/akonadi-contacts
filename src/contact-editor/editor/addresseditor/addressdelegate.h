@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    Copyright (C) 2017-2019 Laurent Montel <montel@kde.org>
+    Copyright (C) 2019 Volker Krause <vkrause@kde.org>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -19,29 +19,23 @@
     02110-1301, USA.
 */
 
-#include "abstractaddresslocationwidget.h"
+#ifndef CONTACTEDITOR_ADDRESSDELEGATE_H
+#define CONTACTEDITOR_ADDRESSDELEGATE_H
 
-using namespace ContactEditor;
-AbstractAddressLocationWidget::AbstractAddressLocationWidget(QWidget *parent)
-    : QWidget(parent)
+#include <QStyledItemDelegate>
+
+namespace ContactEditor {
+
+class AddressDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
+public:
+    explicit AddressDelegate(QObject *parent = nullptr);
+
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+};
+
 }
 
-AbstractAddressLocationWidget::~AbstractAddressLocationWidget()
-{
-}
-
-void AbstractAddressLocationWidget::loadContact(const KContacts::Addressee &contact)
-{
-    Q_UNUSED(contact);
-}
-
-void AbstractAddressLocationWidget::storeContact(KContacts::Addressee &contact) const
-{
-    Q_UNUSED(contact);
-}
-
-void AbstractAddressLocationWidget::setReadOnly(bool readOnly)
-{
-    Q_UNUSED(readOnly);
-}
+#endif // CONTACTEDITOR_ADDRESSDELEGATE_H

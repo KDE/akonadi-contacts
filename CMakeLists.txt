@@ -9,6 +9,7 @@ set(KF5_MIN_VERSION "5.63.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+set(CMAKE_CXX_STANDARD 14)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
