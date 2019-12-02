@@ -24,8 +24,8 @@
 #include "job/contactgroupexpandjob.h"
 #include <item.h>
 #include <kcontacts/addressee.h>
-#include <kcolorscheme.h>
-#include <kstringhandler.h>
+#include <KColorScheme>
+#include <KStringHandler>
 
 using namespace Akonadi;
 

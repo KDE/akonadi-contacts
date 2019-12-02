@@ -27,7 +27,7 @@
 #include <kcontacts/addressee.h>
 #include <QHBoxLayout>
 #include <kcoreaddons_version.h>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(CategoriesEditWidget, "categorieseditwidgetplugin.json")
 

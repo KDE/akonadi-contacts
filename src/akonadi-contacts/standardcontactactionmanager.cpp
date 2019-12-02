@@ -30,7 +30,7 @@
 #include <kcontacts/contactgroup.h>
 
 #include <QAction>
-#include <kactioncollection.h>
+#include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
 

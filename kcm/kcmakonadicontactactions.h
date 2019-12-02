@@ -23,7 +23,7 @@
 #ifndef KCMAKONADICONTACTACTIONS_H
 #define KCMAKONADICONTACTACTIONS_H
 
-#include <kcmodule.h>
+#include <KCModule>
 #include "ui_akonadicontactactions.h"
 
 class KConfigDialogManager;

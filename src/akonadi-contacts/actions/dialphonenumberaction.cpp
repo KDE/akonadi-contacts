@@ -30,7 +30,7 @@
 #include <kcontacts/phonenumber.h>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <krun.h>
+#include <KRun>
 
 #include <QDesktopServices>
 

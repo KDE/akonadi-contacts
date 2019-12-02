@@ -25,7 +25,7 @@
 
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kpixmapregionselectordialog.h>
+#include <KPixmapRegionSelectorDialog>
 #include <KUrlMimeData>
 #include <KIO/TransferJob>
 #include <QImageReader>

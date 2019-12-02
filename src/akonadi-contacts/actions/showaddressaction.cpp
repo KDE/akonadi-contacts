@@ -24,7 +24,7 @@
 #include "contactactionssettings.h"
 
 #include <kcontacts/address.h>
-#include <krun.h>
+#include <KRun>
 
 #include <QDesktopServices>
 

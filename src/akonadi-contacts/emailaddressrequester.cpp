@@ -20,7 +20,7 @@
 #include "emailaddressrequester.h"
 
 #include "emailaddressselectiondialog.h"
-#include <klineedit.h>
+#include <KLineEdit>
 #include <KLocalizedString>
 #include <QIcon>
 

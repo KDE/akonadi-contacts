@@ -26,7 +26,7 @@
 
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <kjob.h>
+#include <KJob>
 
 namespace Akonadi {
 /**

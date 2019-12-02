@@ -24,9 +24,9 @@
 
 #include "contactactionssettings.h"
 
-#include <kaboutdata.h>
-#include <kconfigdialogmanager.h>
-#include <kpluginfactory.h>
+#include <KAboutData>
+#include <KConfigDialogManager>
+#include <KPluginFactory>
 #include <KLocalizedString>
 
 Q_DECLARE_METATYPE(ContactActionsSettings::EnumDialPhoneNumberAction)

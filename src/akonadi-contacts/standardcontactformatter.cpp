@@ -23,11 +23,11 @@
 
 #include <item.h>
 #include <kcontacts/addressee.h>
-#include <kcolorscheme.h>
-#include <kconfiggroup.h>
+#include <KColorScheme>
+#include <KConfigGroup>
 
 #include <KLocalizedString>
-#include <kstringhandler.h>
+#include <KStringHandler>
 
 #include <QSet>
 #include <QLocale>

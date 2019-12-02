@@ -25,7 +25,7 @@
 #include <itemfetchscope.h>
 #include <kcontacts/addressee.h>
 
-#include <kiconloader.h>
+#include <KIconLoader>
 #include <KLocalizedString>
 #include <KIconEngine>
 #include <QIcon>

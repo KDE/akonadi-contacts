@@ -26,11 +26,11 @@
 #include "contacteditorpageplugin.h"
 #include "contactmetadatabase_p.h"
 
-#include <kconfig.h>
-#include <kconfiggroup.h>
+#include <KConfig>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <QTabWidget>
-#include <ktextedit.h>
+#include <KTextEdit>
 
 #include <QDirIterator>
 #include <QPluginLoader>

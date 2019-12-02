@@ -23,7 +23,7 @@
 
 #include "kdatepickerpopup_p.h"
 
-#include <kdatepicker.h>
+#include <KDatePicker>
 
 #include <QContextMenuEvent>
 #include <QHBoxLayout>

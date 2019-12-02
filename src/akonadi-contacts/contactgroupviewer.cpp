@@ -32,10 +32,10 @@
 #include <itemfetchscope.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <kcolorscheme.h>
+#include <KColorScheme>
 
 #include <KLocalizedString>
-#include <kstringhandler.h>
+#include <KStringHandler>
 
 #include <QVBoxLayout>
 #include <QIcon>

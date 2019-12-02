@@ -25,7 +25,7 @@
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 
-#include <kiconloader.h>
+#include <KIconLoader>
 #include <KLocalizedString>
 
 #include <QIcon>

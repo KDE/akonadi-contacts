@@ -21,8 +21,8 @@
 
 #include "customfieldmanager_p.h"
 
-#include <kconfig.h>
-#include <kconfiggroup.h>
+#include <KConfig>
+#include <KConfigGroup>
 
 
 void CustomFieldManager::setGlobalCustomFieldDescriptions(const CustomField::List &customFields)
