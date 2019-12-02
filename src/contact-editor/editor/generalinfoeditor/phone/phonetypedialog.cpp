@@ -73,7 +73,7 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
 
 KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
 {
-    KContacts::PhoneNumber::Type type = nullptr;
+    KContacts::PhoneNumber::Type type = {};
 
     for (int i = 0; i < mGroup->buttons().count(); ++i) {
         QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
