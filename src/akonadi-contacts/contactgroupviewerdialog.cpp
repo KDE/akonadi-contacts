@@ -42,7 +42,7 @@ ContactGroupViewerDialog::ContactGroupViewerDialog(QWidget *parent)
     : QDialog(parent)
     , d(new Private)
 {
-    setWindowTitle(i18n("Show Contact Group"));
+    setWindowTitle(i18nc("@title:window", "Show Contact Group"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);

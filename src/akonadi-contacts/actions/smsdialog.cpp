@@ -47,7 +47,7 @@ QString SmsDialog::message() const
 
 void SmsDialog::initUI()
 {
-    setWindowTitle(i18n("SMS text"));
+    setWindowTitle(i18nc("@title:window", "SMS text"));
 
     QVBoxLayout *topLayout = new QVBoxLayout(this);
 

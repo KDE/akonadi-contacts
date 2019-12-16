@@ -73,7 +73,7 @@ public:
         static QPixmap defaultMapPixmap = QIcon::fromTheme(QStringLiteral("map-symbolic")).pixmap(QSize(16, 16));
         static QPixmap defaultSmsPixmap = QIcon::fromTheme(KContacts::Impp::serviceIcon(QStringLiteral("sms"))).pixmap(QSize(16, 16));
 
-        mParent->setWindowTitle(i18n("Contact %1", mCurrentContact.assembledName()));
+        mParent->setWindowTitle(i18nc("@title:window", "Contact %1", mCurrentContact.assembledName()));
 
         if (mCurrentContact.photo().isIntern()) {
             mBrowser->document()->addResource(QTextDocument::ImageResource,

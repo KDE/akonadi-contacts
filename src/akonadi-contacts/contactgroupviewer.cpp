@@ -68,7 +68,7 @@ public:
 
     void updateView()
     {
-        mParent->setWindowTitle(i18n("Contact Group %1", mCurrentGroupName));
+        mParent->setWindowTitle(i18nc("@title:window", "Contact Group %1", mCurrentGroupName));
 
         KContacts::ContactGroup group;
         group.setName(mCurrentGroupName);

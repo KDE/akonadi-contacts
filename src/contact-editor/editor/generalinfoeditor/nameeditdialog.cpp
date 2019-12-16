@@ -33,7 +33,7 @@
 NameEditDialog::NameEditDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Edit Contact Name"));
+    setWindowTitle(i18nc("@title:window", "Edit Contact Name"));
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 

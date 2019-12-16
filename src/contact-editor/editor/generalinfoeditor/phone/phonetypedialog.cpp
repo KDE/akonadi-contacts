@@ -34,7 +34,7 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
     : QDialog(parent)
     , mType(type)
 {
-    setWindowTitle(i18n("Edit Phone Number"));
+    setWindowTitle(i18nc("@title:window", "Edit Phone Number"));
 
     QVBoxLayout *layout = new QVBoxLayout(this);
 
