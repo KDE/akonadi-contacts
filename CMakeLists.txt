@@ -5,7 +5,7 @@ project(Akonadi-Contact VERSION ${PIM_VERSION})
 
 # ECM setup
 
-set(KF5_MIN_VERSION "5.64.0")
+set(KF5_MIN_VERSION "5.65.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
