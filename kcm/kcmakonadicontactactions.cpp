@@ -55,13 +55,13 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     ui.DialPhoneNumberAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhone);
     ui.DialPhoneNumberAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalPhoneApplication);
 
-    connect(ui.DialPhoneNumberAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
+    connect(ui.DialPhoneNumberAction, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
 
     ui.SendSmsAction->addItem(i18n("System Default"), ContactActionsSettings::UseSystemDefaultSms);
     ui.SendSmsAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkypeSms);
     ui.SendSmsAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhoneSms);
     ui.SendSmsAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalSmsApplication);
-    connect(ui.SendSmsAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
+    connect(ui.SendSmsAction, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
 
     ui.ShowAddressAction->addItem(i18n("Web Browser"), ContactActionsSettings::UseBrowser);
     ui.ShowAddressAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalAddressApplication);
@@ -69,7 +69,7 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     ui.ShowAddressAction->addItem(i18n("Map quest"), ContactActionsSettings::UseMapquest);
     ui.ShowAddressAction->addItem(i18n("OpenStreetMap"), ContactActionsSettings::UseOpenStreetMap);
 
-    connect(ui.ShowAddressAction, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotShowAddressActionChanged);
+    connect(ui.ShowAddressAction, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotShowAddressActionChanged);
 
     load();
 }
