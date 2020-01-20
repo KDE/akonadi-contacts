@@ -52,7 +52,12 @@ bool CollectionFilterModel::filterAcceptsRow(int row, const QModelIndex &parent)
     }
 
     if (!mContentMimeTypes.isEmpty()) {
-        QSet<QString> contentMimeTypes = collection.contentMimeTypes().toSet();
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
+        const QSet<QString> contentMimeTypes = collection.contentMimeTypes().toSet();
+#else
+        const auto collectionMimeTypesSet  = collection.contentMimeTypes();
+        const QSet<QString> contentMimeTypes = QSet<QString>(collectionMimeTypesSet.begin(), collectionMimeTypesSet.end());
+#endif
         accepted = accepted && contentMimeTypes.intersects(mContentMimeTypes);
     }
 
