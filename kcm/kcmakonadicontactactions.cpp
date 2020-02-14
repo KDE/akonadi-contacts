@@ -54,22 +54,30 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     ui.DialPhoneNumberAction->addItem(i18n("Ekiga"), ContactActionsSettings::UseEkiga);
     ui.DialPhoneNumberAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhone);
     ui.DialPhoneNumberAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalPhoneApplication);
-
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(ui.DialPhoneNumberAction, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
-
+#else
+    connect(ui.DialPhoneNumberAction, QOverload<int, const QString &>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
+#endif
     ui.SendSmsAction->addItem(i18n("System Default"), ContactActionsSettings::UseSystemDefaultSms);
     ui.SendSmsAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkypeSms);
     ui.SendSmsAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhoneSms);
     ui.SendSmsAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalSmsApplication);
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(ui.SendSmsAction, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
-
+#else
+    connect(ui.SendSmsAction, QOverload<int, const QString &>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
+#endif
     ui.ShowAddressAction->addItem(i18n("Web Browser"), ContactActionsSettings::UseBrowser);
     ui.ShowAddressAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalAddressApplication);
     ui.ShowAddressAction->addItem(i18n("Google map"), ContactActionsSettings::UseGooglemap);
     ui.ShowAddressAction->addItem(i18n("Map quest"), ContactActionsSettings::UseMapquest);
     ui.ShowAddressAction->addItem(i18n("OpenStreetMap"), ContactActionsSettings::UseOpenStreetMap);
-
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(ui.ShowAddressAction, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotShowAddressActionChanged);
+#else
+    connect(ui.ShowAddressAction, QOverload<int, const QString &>::of(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotShowAddressActionChanged);
+#endif
 
     load();
 }
