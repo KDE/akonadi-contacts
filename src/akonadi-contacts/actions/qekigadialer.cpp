@@ -25,7 +25,6 @@
 #include <QProcess>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
-#include <KDBusConnectionPool>
 #include <QDBusInterface>
 #include <QDBusReply>
 
@@ -44,7 +43,7 @@ static bool isEkigaServiceRegistered()
         return true;
     }
 
-    interface = KDBusConnectionPool::threadConnection().interface();
+    interface = QDBusConnection::sessionBus().interface();
     if (interface->isServiceRegistered(service)) {
         return true;
     }
@@ -59,7 +58,7 @@ static QDBusInterface *searchEkigaDBusInterface()
     QDBusInterface *interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     if (!interface->isValid()) {
         delete interface;
-        interface = new QDBusInterface(service, path, QString(), KDBusConnectionPool::threadConnection());
+        interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     }
 
     return interface;

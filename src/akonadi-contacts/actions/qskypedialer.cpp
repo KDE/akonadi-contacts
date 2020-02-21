@@ -21,8 +21,6 @@
 
 #include "qskypedialer.h"
 
-#include <KDBusConnectionPool>
-
 #include <QProcess>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
@@ -45,7 +43,7 @@ static bool isSkypeServiceRegistered()
         return true;
     }
 
-    interface = KDBusConnectionPool::threadConnection().interface();
+    interface = QDBusConnection::sessionBus().interface();
     if (interface->isServiceRegistered(service)) {
         return true;
     }
@@ -61,7 +59,7 @@ static QDBusInterface *searchSkypeDBusInterface()
     QDBusInterface *interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     if (!interface->isValid()) {
         delete interface;
-        interface = new QDBusInterface(service, path, QString(), KDBusConnectionPool::threadConnection());
+        interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     }
 
     return interface;

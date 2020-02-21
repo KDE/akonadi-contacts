@@ -25,7 +25,6 @@
 #include <QProcess>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
-#include <KDBusConnectionPool>
 
 #if !defined(Q_OS_WIN)
 #include <unistd.h>
@@ -42,7 +41,7 @@ static bool isSflPhoneServiceRegistered()
         return true;
     }
 
-    interface = KDBusConnectionPool::threadConnection().interface();
+    interface = QDBusConnection::sessionBus().interface();
     if (interface->isServiceRegistered(service)) {
         return true;
     }

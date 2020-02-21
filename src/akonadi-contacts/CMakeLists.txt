@@ -136,7 +136,6 @@ target_link_libraries(KF5AkonadiContact
     KF5::IconThemes
     KF5::KIOWidgets
     KF5::Mime
-    KF5::DBusAddons
     KF5::I18n
     KF5::TextWidgets
     KF5::XmlGui
