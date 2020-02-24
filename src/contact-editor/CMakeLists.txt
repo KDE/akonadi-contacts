@@ -132,7 +132,16 @@ set(contacteditor_LIB_SRC
     ${contacteditor_job_SRCS}
     )
 
-ecm_qt_declare_logging_category(contacteditor_LIB_SRC HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(contacteditor_LIB_SRC HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor)
+else()
+    ecm_qt_declare_logging_category(contacteditor_LIB_SRC HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
+        DESCRIPTION "akonadicontact (contact editor)"
+        EXPORT AKONADICONTACTS
+    )
+endif()
+
+
 
 set(contacteditor_LIB_SRC
     ${contacteditor_LIB_SRC}
