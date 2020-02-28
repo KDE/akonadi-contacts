@@ -213,14 +213,13 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         titleMap.insert(QStringLiteral("IMAddress"), i18n("IM Address"));
         titleMap.insert(QStringLiteral("Anniversary"), i18n("Anniversary"));
         titleMap.insert(QStringLiteral("AddressBook"), i18n("Address Book"));
+        const QMap<QString, QString> tmpTitleMap = titleMap;
 
-        QMap<QString, QString> upperCaseTitleMap;
-        QMap<QString, QString>::const_iterator iterator = titleMap.constBegin();
+        QMap<QString, QString>::const_iterator iterator = tmpTitleMap.constBegin();
         while (iterator != titleMap.constEnd()) {
-            upperCaseTitleMap.insert(iterator.key().toUpper(), iterator.value());
+            titleMap.insert(iterator.key().toUpper(), iterator.value());
             ++iterator;
         }
-        titleMap.unite(upperCaseTitleMap);
     }
 
     static QSet<QString> blacklistedKeys;
