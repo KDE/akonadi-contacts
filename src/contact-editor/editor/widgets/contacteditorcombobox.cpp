@@ -26,7 +26,7 @@ using namespace ContactEditor;
 ContactEditorComboBox::ContactEditorComboBox(QWidget *parent)
     : QComboBox(parent)
 {
-    setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLength);
+    setSizeAdjustPolicy(QComboBox::AdjustToContents);
 }
 
 ContactEditorComboBox::~ContactEditorComboBox()
