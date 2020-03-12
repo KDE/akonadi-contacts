@@ -104,15 +104,11 @@ set(akonadicontact_LIB_SRC
     )
 
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact)
-else()
-    ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
+ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
         DESCRIPTION "akonadicontact (pim lib)"
         OLD_CATEGORY_NAMES log_akonadi_contact
         EXPORT AKONADICONTACTS
     )
-endif()
 
 
 set(akonadicontact_LIB_SRC

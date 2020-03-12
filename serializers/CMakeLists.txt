@@ -9,14 +9,10 @@ set(akonadi_serializer_addressee_SRCS
 )
 
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(akonadi_serializer_addressee_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CONTACT_LOG CATEGORY_NAME org.kde.pim.contact_serializer)
-else()
-    ecm_qt_declare_logging_category(akonadi_serializer_addressee_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CONTACT_LOG CATEGORY_NAME org.kde.pim.contact_serializer
+ecm_qt_declare_logging_category(akonadi_serializer_addressee_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CONTACT_LOG CATEGORY_NAME org.kde.pim.contact_serializer
         DESCRIPTION "serializer contact (plugin)"
         EXPORT AKONADICONTACTS
     )
-endif()
 
 add_library(akonadi_serializer_addressee MODULE ${akonadi_serializer_addressee_SRCS})
 target_link_libraries(akonadi_serializer_addressee
