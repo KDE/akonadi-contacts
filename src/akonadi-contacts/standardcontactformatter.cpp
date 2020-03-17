@@ -216,7 +216,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         const QMap<QString, QString> tmpTitleMap = titleMap;
 
         QMap<QString, QString>::const_iterator iterator = tmpTitleMap.constBegin();
-        while (iterator != titleMap.constEnd()) {
+        while (iterator != tmpTitleMap.constEnd()) {
             titleMap.insert(iterator.key().toUpper(), iterator.value());
             ++iterator;
         }
