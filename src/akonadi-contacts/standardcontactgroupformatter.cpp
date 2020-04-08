@@ -76,8 +76,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         "<td align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>"                    // name
         "</tr>"
         "</table>")
-                       .arg(QStringLiteral("group_photo"))
-                       .arg(group.name());
+                       .arg(QStringLiteral("group_photo"), group.name());
 
     strGroup += QLatin1String("<table width=\"100%\">");
 
@@ -98,8 +97,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
 
             strGroup.append(QStringLiteral("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
                                            "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>&lt;%2&gt;</font></td></tr>")
-                            .arg(contact.realName())
-                            .arg(fullEmail));
+                            .arg(contact.realName(), fullEmail));
         }
     }
 

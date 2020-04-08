@@ -189,9 +189,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         counter++;
 
         dynamicPart += rowFmtStr2
-                       .arg(KContacts::Address::typeLabel(address.type()))
-                       .arg(formattedAddress)
-                       .arg(url);
+                       .arg(KContacts::Address::typeLabel(address.type()), formattedAddress, url);
     }
 
     // Note
