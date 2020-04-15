@@ -59,6 +59,7 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
 endif()
 
 add_definitions(-DQT_NO_FOREACH)
+add_definitions(-DQT_NO_KEYWORDS)
 
 add_subdirectory(src)
 add_subdirectory(kcm)

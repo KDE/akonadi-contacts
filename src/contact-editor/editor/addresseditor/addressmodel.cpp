@@ -58,7 +58,7 @@ void AddressModel::replaceAddress(const KContacts::Address &address, int row)
     }
 
     mAddresses[row] = address;
-    emit dataChanged(index(row, 0), index(row, 0));
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
 void AddressModel::removeAddress(int row)
