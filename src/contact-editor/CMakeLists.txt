@@ -142,9 +142,7 @@ set(contacteditor_LIB_SRC
 
 
 add_library(KF5ContactEditor ${contacteditor_LIB_SRC})
-if (BUILD_TESTING)
-    target_compile_definitions(KF5ContactEditor PRIVATE BUILD_TESTING)
-endif()
+
 generate_export_header(KF5ContactEditor BASE_NAME contacteditor)
 
 add_library(KF5::ContactEditor ALIAS KF5ContactEditor)
