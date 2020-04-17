@@ -119,9 +119,7 @@ ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
 
 
 add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
-if (BUILD_TESTING)
-    target_compile_definitions(KF5AkonadiContact PRIVATE BUILD_TESTING)
-endif()
+
 generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
 add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)

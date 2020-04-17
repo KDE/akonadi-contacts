@@ -60,6 +60,9 @@ endif()
 
 add_definitions(-DQT_NO_FOREACH)
 add_definitions(-DQT_NO_KEYWORDS)
+if(BUILD_TESTING)
+   add_definitions(-DBUILD_TESTING)
+endif()
 
 add_subdirectory(src)
 add_subdirectory(kcm)
