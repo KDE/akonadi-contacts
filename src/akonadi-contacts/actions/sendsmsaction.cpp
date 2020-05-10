@@ -29,7 +29,8 @@
 #include <kcontacts/phonenumber.h>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KRun>
+#include <KDialogJobUiDelegate>
+#include <KIO/CommandLauncherJob>
 
 #include <QDesktopServices>
 #include <QPointer>
@@ -96,5 +97,8 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     command.replace(QLatin1String("%t"), QStringLiteral("\"%1\"").arg(message));
     //Bug: 293232 In KDE3 We used %F to replace text
     command.replace(QLatin1String("%F"), message);
-    KRun::runCommand(command, nullptr);
+
+    KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(command);
+    job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+    job->start();
 }

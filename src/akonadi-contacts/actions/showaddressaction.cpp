@@ -24,7 +24,8 @@
 #include "contactactionssettings.h"
 
 #include <kcontacts/address.h>
-#include <KRun>
+#include <KDialogJobUiDelegate>
+#include <KIO/CommandLauncherJob>
 
 #include <QDesktopServices>
 
@@ -56,7 +57,9 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
         replaceArguments(commandTemplate, address);
 
         if (!commandTemplate.isEmpty()) {
-            KRun::runCommand(commandTemplate, nullptr);
+            KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(commandTemplate);
+            job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+            job->start();
         }
     } else if (ContactActionsSettings::self()->showAddressAction() == ContactActionsSettings::UseGooglemap) {
         QString urlTemplate = QStringLiteral("https://maps.google.com/maps?q=%s,%l,%c");

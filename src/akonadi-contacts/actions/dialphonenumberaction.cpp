@@ -30,7 +30,8 @@
 #include <kcontacts/phonenumber.h>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KRun>
+#include <KDialogJobUiDelegate>
+#include <KIO/CommandLauncherJob>
 
 #include <QDesktopServices>
 
@@ -79,5 +80,8 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     command.replace(QLatin1String("%N"), number.number());
     command.replace(QLatin1String("%n"), number.normalizedNumber());
 
-    KRun::runCommand(command, nullptr);
+    KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(command);
+    job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+    job->start();
+
 }
