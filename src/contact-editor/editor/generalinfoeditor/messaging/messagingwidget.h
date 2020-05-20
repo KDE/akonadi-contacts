@@ -50,9 +50,9 @@ public:
     void clearWidget();
     void setReadOnly(bool readOnly);
 Q_SIGNALS:
-    void addWidget(MessagingWidget *);
-    void removeWidget(MessagingWidget *);
-    void preferredChanged(MessagingWidget *);
+    void addWidget(ContactEditor::MessagingWidget *);
+    void removeWidget(ContactEditor::MessagingWidget *);
+    void preferredChanged(ContactEditor::MessagingWidget *);
 
 private:
     void slotAddMessaging();

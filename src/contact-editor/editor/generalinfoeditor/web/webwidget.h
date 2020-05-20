@@ -47,9 +47,9 @@ public:
     void setReadOnly(bool readOnly);
 
 Q_SIGNALS:
-    void addWidget(WebWidget *);
-    void removeWidget(WebWidget *);
-    void preferredChanged(WebWidget *);
+    void addWidget(ContactEditor::WebWidget *);
+    void removeWidget(ContactEditor::WebWidget *);
+    void preferredChanged(ContactEditor::WebWidget *);
 
 private:
     void slotRemoveWeb();

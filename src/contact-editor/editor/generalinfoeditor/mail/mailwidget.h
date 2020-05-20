@@ -44,9 +44,9 @@ public:
     void setPreferred(bool b);
     void setReadOnly(bool readOnly);
 Q_SIGNALS:
-    void addWidget(MailWidget *);
-    void removeWidget(MailWidget *);
-    void preferredChanged(MailWidget *);
+    void addWidget(ContactEditor::MailWidget *);
+    void removeWidget(ContactEditor::MailWidget *);
+    void preferredChanged(ContactEditor::MailWidget *);
 
 private:
     void slotAddMail();

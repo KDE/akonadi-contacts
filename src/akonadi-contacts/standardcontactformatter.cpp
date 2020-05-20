@@ -122,7 +122,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Phone Numbers
     int counter = 0;
 
-    for (const KContacts::PhoneNumber &number : rawContact.phoneNumbers()) {
+    const auto phoneNumbers = rawContact.phoneNumbers();
+    for (const KContacts::PhoneNumber &number : phoneNumbers) {
         QString dispLabel = number.typeLabel().replace(QLatin1Char(' '), QStringLiteral("&nbsp;"));
         QString dispValue = QStringLiteral("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
@@ -130,13 +131,10 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                                .arg(counter)
                                .arg(i18nc("@info:tooltip", "Send SMS"));
             dynamicPart += rowFmtStr2
-                           .arg(dispLabel)
-                           .arg(dispValue)
-                           .arg(dispIcon);
+                           .arg(dispLabel, dispValue, dispIcon);
         } else {
             dynamicPart += rowFmtStr1
-                           .arg(dispLabel)
-                           .arg(dispValue);
+                           .arg(dispLabel, dispValue);
         }
 
         ++counter;
@@ -161,7 +159,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         }
 
         url = KStringHandler::tagUrls(url.toHtmlEscaped());
-        dynamicPart += rowFmtStr1.arg(i18n("Homepage")).arg(url);
+        dynamicPart += rowFmtStr1.arg(i18n("Homepage"), url);
     }
 
     // Blog Feed
@@ -172,7 +170,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
     // Addresses
     counter = 0;
-    for (const KContacts::Address &address : rawContact.addresses()) {
+    const auto addresses = rawContact.addresses();
+    for (const KContacts::Address &address : addresses) {
         QString formattedAddress;
 
         if (address.label().isEmpty()) {
@@ -292,7 +291,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                 if (needToEscape) {
                     value = value.toHtmlEscaped();
                 }
-                customData += rowFmtStr1.arg(key).arg(value);
+                customData += rowFmtStr1.arg(key, value);
             }
         }
     }

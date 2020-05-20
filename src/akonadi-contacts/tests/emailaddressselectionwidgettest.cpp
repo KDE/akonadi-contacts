@@ -60,7 +60,8 @@ void MainWidget::showSelection()
     mInfo->append(QStringLiteral("===========================\n"));
     mInfo->append(QStringLiteral("Current selection:\n"));
 
-    for (const Akonadi::EmailAddressSelection &selection : mAddressesWidget->selectedAddresses()) {
+    const auto selectedAddress = mAddressesWidget->selectedAddresses();
+    for (const Akonadi::EmailAddressSelection &selection : selectedAddress) {
         mInfo->append(QStringLiteral("%1: %2\n").arg(selection.name(), selection.email()));
     }
 }
