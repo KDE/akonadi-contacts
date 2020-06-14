@@ -34,20 +34,18 @@ public:
     Private(const KContacts::ContactGroup &group, ContactGroupExpandJob *parent)
         : mParent(parent)
         , mGroup(group)
-        , mFetchCount(0)
     {
     }
 
     Private(const QString &name, ContactGroupExpandJob *parent)
         : mParent(parent)
         , mName(name)
-        , mFetchCount(0)
     {
     }
 
     void resolveGroup()
     {
-        for (int i = 0; i < mGroup.dataCount(); ++i) {
+        for (int i = 0, total = mGroup.dataCount(); i < total; ++i) {
             const KContacts::ContactGroup::Data data = mGroup.data(i);
 
             KContacts::Addressee contact;
@@ -57,7 +55,7 @@ public:
             mContacts.append(contact);
         }
 
-        for (int i = 0; i < mGroup.contactReferenceCount(); ++i) {
+        for (int i = 0, total = mGroup.contactReferenceCount(); i < total; ++i) {
             const KContacts::ContactGroup::ContactReference reference = mGroup.contactReference(i);
 
             Item item;
@@ -135,7 +133,7 @@ public:
     QString mName;
     KContacts::Addressee::List mContacts;
 
-    int mFetchCount;
+    int mFetchCount = 0;
 };
 
 ContactGroupExpandJob::ContactGroupExpandJob(const KContacts::ContactGroup &group, QObject *parent)
