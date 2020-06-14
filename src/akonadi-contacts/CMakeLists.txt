@@ -54,6 +54,10 @@ set(akonadicontact_job_SRCS
     job/contactgroupexpandjob.cpp
     job/contactgroupsearchjob.cpp
     job/contactsearchjob.cpp
+    job/addcontactjob.cpp
+    job/addemailaddressjob.cpp
+    job/addemaildisplayjob.cpp
+    job/openemailaddressjob.cpp
 )
 
 set(akonadicontact_recipientpicker_SRCS
@@ -171,6 +175,10 @@ ecm_generate_headers(AkonadiContactJob_CamelCase_HEADERS
     ContactGroupExpandJob
     ContactGroupSearchJob
     ContactSearchJob
+    AddEmailAddressJob
+    AddEmailDisplayJob
+    OpenEmailAddressJob
+    AddContactJob
     REQUIRED_HEADERS AkonadiContactJob_HEADERS
     PREFIX Akonadi/Contact
     RELATIVE job
