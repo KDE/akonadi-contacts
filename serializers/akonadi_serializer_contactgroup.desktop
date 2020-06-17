@@ -24,7 +24,6 @@ Name[sk]=Serializátor skupiny kontaktov
 Name[sl]=Orodje za razvrščanje v zaporedje stikov skupin
 Name[sv]=Kontaktgruppserialisering
 Name[uk]=Серіалізатор груп контактів
-Name[x-test]=xxContact Group Serializerxx
 Name[zh_CN]=联系人分组序列转换器
 Name[zh_TW]=聯絡人群組序列器
 Comment=An Akonadi serializer plugin for contact group objects
@@ -52,7 +51,6 @@ Comment[sk]=Doplnok serializátora Akonadi pre objekty skupín kontaktov
 Comment[sl]=Akonadijev vstavek za razvrščanje v zaporedje naslovnih predmetov skupin
 Comment[sv]=Ett insticksprogram till Akonadi för serialisering av kontaktgruppobjekt
 Comment[uk]=Додаток серіалізації Akonadi для об'єктів груп контактів
-Comment[x-test]=xxAn Akonadi serializer plugin for contact group objectsxx
 Comment[zh_CN]=对联系人分组对象进行序列转换的 Akonadi 插件
 Comment[zh_TW]=適用於聯絡人群組物件的 Akonadi 序列器附加元件
 
