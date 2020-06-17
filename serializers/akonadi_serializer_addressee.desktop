@@ -22,7 +22,6 @@ Name[ru]=Сохранение контактов
 Name[sk]=Serializátor adresátov
 Name[sv]=Adressatserialisering
 Name[uk]=Серіалізатор адрес
-Name[x-test]=xxAddressee Serializerxx
 Name[zh_CN]=收信人序列转换器
 Name[zh_TW]=收件人序列器
 Comment=An Akonadi serializer plugin for addressee objects
@@ -48,7 +47,6 @@ Comment[ru]=Модуль сохранения контактов для Akonadi
 Comment[sk]=Doplnok serializátora Akonadi pre objekty adresáta
 Comment[sv]=Ett insticksprogram till Akonadi för serialisering av adressatobjekt
 Comment[uk]=Додаток серіалізації Akonadi для об'єктів адресатів
-Comment[x-test]=xxAn Akonadi serializer plugin for addressee objectsxx
 Comment[zh_CN]=对收信人对象进行序列转换的 Akonadi 插件
 Comment[zh_TW]=適用於收件人物件的 Akonadi 序列器附加元件
 
