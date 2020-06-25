@@ -47,7 +47,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     mAddressesLocationView->setRootIsDecorated(false);
     mAddressesLocationView->setHeaderHidden(true);
     mAddressesLocationView->setModel(mAddressModel);
-    mAddressesLocationView->setItemDelegate(new AddressDelegate);
+    mAddressesLocationView->setItemDelegate(new AddressDelegate(this));
     mAddressesLocationView->setContextMenuPolicy(Qt::CustomContextMenu);
     mAddressesLocationView->setObjectName(QStringLiteral("addresseslocationviewer"));
     addWidget(mAddressesLocationView);

@@ -55,7 +55,7 @@ public:
         if (editorWidget) {
             mEditorWidget = editorWidget;
         } else {
-            mEditorWidget = new ContactEditorWidget(displayMode == FullMode ? ContactEditorWidget::FullMode : ContactEditorWidget::VCardMode, nullptr);
+            mEditorWidget = new ContactEditorWidget(displayMode == FullMode ? ContactEditorWidget::FullMode : ContactEditorWidget::VCardMode, mParent);
         }
 
         QVBoxLayout *layout = new QVBoxLayout(mParent);
