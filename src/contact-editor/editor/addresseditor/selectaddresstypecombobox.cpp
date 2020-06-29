@@ -54,7 +54,7 @@ void SelectAddressTypeComboBox::setType(KContacts::Address::Type type)
 {
     if (!mTypeList.contains(static_cast<int>(type))) {
         // insert at the end, but before the 'Others...' entry
-        mTypeList.insert(mTypeList.at(mTypeList.count() - 1), static_cast<int>(type));
+        mTypeList.insert(mTypeList.count() - 1, static_cast<int>(type));
     }
 
     mType = type;
@@ -106,7 +106,7 @@ void SelectAddressTypeComboBox::otherSelected()
     if (dlg->exec()) {
         mType = dlg->type();
         if (!mTypeList.contains(mType)) {
-            mTypeList.insert(mTypeList.at(mTypeList.count() - 1), mType);
+            mTypeList.insert(mTypeList.count() - 1, mType);
         }
     } else {
         setType(KContacts::Address::Type(mTypeList.at(mLastSelected)));
