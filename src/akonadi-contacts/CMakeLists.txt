@@ -142,7 +142,10 @@ target_link_libraries(KF5AkonadiContact
     KF5::ConfigCore
     KF5::ConfigWidgets
     KF5::IconThemes
-    KF5::KIOWidgets
+    KF5::Completion
+    KF5::KIOCore
+    KF5::JobWidgets
+    KF5::KIOGui
     KF5::Mime
     KF5::I18n
     KF5::TextWidgets
