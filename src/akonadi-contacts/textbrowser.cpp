@@ -29,6 +29,7 @@
 #include <QContextMenuEvent>
 #include <QMenu>
 #include <QClipboard>
+#include <QRegularExpression>
 #include <QTextBlock>
 
 using namespace Akonadi;
@@ -81,7 +82,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
             // no point in copying these.  Internal links are always in the
             // form "protocol:?argument", whereas valid external links should
             // be in the form starting with "protocol://".
-            if (!link.contains(QRegExp(QStringLiteral("^\\w+:\\?")))) {
+            if (!link.contains(QRegularExpression(QStringLiteral("^\\w+:\\?")))) {
                 mDataToCopy = link;
                 // Action text matches that used in Konqueror
                 act->setText(i18nc("@action:inmenu Copy a link URL", "Copy Link URL"));
@@ -124,7 +125,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                 // telephone number.  See
                 // kdepim/kaddressbook/grantlee/grantleecontactformatter.cpp and
                 // kdepimlibs/akonadi/contact/standardcontactformatter.cpp
-                text.remove(QRegExp(QStringLiteral("\\s*\\(SMS\\)$")));
+                text.remove(QRegularExpression(QStringLiteral("\\s*\\(SMS\\)$")));
 
                 // For an item which was formatted with line breaks (as <br>
                 // in HTML), the returned text contains the character 0x2028
