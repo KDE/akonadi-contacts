@@ -1,5 +1,6 @@
 [Misc]
 Name=Addressee Serializer
+Name[az]=Kontaktların Saxlanılması
 Name[ca]=Serialitzador del destinatari
 Name[ca@valencia]=Serialitzador del destinatari
 Name[da]=Serieordning af adressater
@@ -29,6 +30,7 @@ Name[x-test]=xxAddressee Serializerxx
 Name[zh_CN]=收信人序列转换器
 Name[zh_TW]=收件人序列器
 Comment=An Akonadi serializer plugin for addressee objects
+Comment[az]=Akonadi üçün kontaktların saxlanılması modulu
 Comment[ca]=Un connector de serialització de l'Akonadi per a objectes del destinatari
 Comment[ca@valencia]=Un connector de serialització de l'Akonadi per a objectes del destinatari
 Comment[da]=Et Akonadi-plugin til serieordning af adressatobjekter
