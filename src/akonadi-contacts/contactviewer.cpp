@@ -29,6 +29,8 @@
 #include <QVBoxLayout>
 #include <QIcon>
 #include <QUrlQuery>
+#include <QGuiApplication>
+#include <QScreen>
 #include <prison/Prison>
 #include <kcontacts/vcardconverter.h>
 
@@ -134,7 +136,7 @@ public:
                 mQRCode->setData(data);
                 mBrowser->document()->addResource(QTextDocument::ImageResource,
                                                   QUrl(QStringLiteral("qrcode")),
-                                                  mQRCode->toImage(QSizeF(50, 50)));
+                                                  mQRCode->toImage(mQRCode->preferredSize(QGuiApplication::primaryScreen()->devicePixelRatio()).toSize()));
             }
         }
 
