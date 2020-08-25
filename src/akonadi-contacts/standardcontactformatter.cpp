@@ -25,12 +25,7 @@ using namespace Akonadi;
 class Q_DECL_HIDDEN StandardContactFormatter::Private
 {
 public:
-    Private()
-        : displayQRcode(true)
-    {
-    }
-
-    bool displayQRcode;
+    bool displayQRcode = true;
 };
 
 StandardContactFormatter::StandardContactFormatter()

@@ -89,12 +89,12 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
             if (text.startsWith(QChar(0xFFFC))) {
                 QTextCharFormat charFormat = curs.charFormat();
                 if (charFormat.isImageFormat()) {
-                    QTextImageFormat imageFormat = charFormat.toImageFormat();
-                    QString imageName = imageFormat.name();
-                    QVariant imageResource = document()->resource(QTextDocument::ImageResource,
+                    const QTextImageFormat imageFormat = charFormat.toImageFormat();
+                    const QString imageName = imageFormat.name();
+                    const QVariant imageResource = document()->resource(QTextDocument::ImageResource,
                                                                   QUrl(imageName));
 
-                    QPixmap pix = imageResource.value<QPixmap>();
+                    const QPixmap pix = imageResource.value<QPixmap>();
                     if (!pix.isNull()) {
                         // There may be other images (e.g. contact type icons) that
                         // there is no point in copying.
