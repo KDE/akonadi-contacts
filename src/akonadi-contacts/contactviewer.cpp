@@ -130,7 +130,7 @@ public:
             addr.setPhoto(KContacts::Picture());
             addr.setLogo(KContacts::Picture());
             const QString data = QString::fromUtf8(converter.createVCard(addr));
-	    if (mQRCode) {
+            if (mQRCode) {
                 mQRCode->setData(data);
                 mBrowser->document()->addResource(QTextDocument::ImageResource,
                                                   QUrl(QStringLiteral("qrcode")),
