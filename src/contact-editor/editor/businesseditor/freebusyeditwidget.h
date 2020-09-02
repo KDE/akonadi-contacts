@@ -32,7 +32,7 @@ public:
 
 private:
     KUrlRequester *mURL = nullptr;
-    bool mReadOnly;
+    bool mReadOnly = false;
 };
 
 #endif

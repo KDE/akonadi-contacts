@@ -36,8 +36,6 @@ public:
     Private(AkonadiContactEditor::Mode mode, AkonadiContactEditor::DisplayMode displayMode, ContactEditor::AbstractContactEditorWidget *editorWidget, AkonadiContactEditor *parent)
         : mParent(parent)
         , mMode(mode)
-        , mMonitor(nullptr)
-        , mReadOnly(false)
     {
         if (editorWidget) {
             mEditorWidget = editorWidget;

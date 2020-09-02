@@ -53,8 +53,8 @@ private Q_SLOTS:
 private:
     void update();
 
-    KContacts::Address::Type mType;
-    int mLastSelected;
+    KContacts::Address::Type mType = KContacts::Address::Home;
+    int mLastSelected = 0;
     QList<int> mTypeList;
 };
 

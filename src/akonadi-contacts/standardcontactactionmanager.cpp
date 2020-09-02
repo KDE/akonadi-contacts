@@ -32,8 +32,6 @@ public:
     Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
         : mActionCollection(actionCollection)
         , mParentWidget(parentWidget)
-        , mCollectionSelectionModel(nullptr)
-        , mItemSelectionModel(nullptr)
         , mParent(parent)
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
@@ -515,14 +513,14 @@ public:
         KMessageBox::error(mParentWidget, i18n("Contact cannot be stored: %1", error), i18n("Failed to store contact"));
     }
 
-    KActionCollection *mActionCollection = nullptr;
-    QWidget *mParentWidget = nullptr;
+    KActionCollection *const mActionCollection;
+    QWidget *const mParentWidget;
     StandardActionManager *mGenericManager = nullptr;
     QItemSelectionModel *mCollectionSelectionModel = nullptr;
     QItemSelectionModel *mItemSelectionModel = nullptr;
     QHash<StandardContactActionManager::Type, QAction *> mActions;
     QSet<StandardContactActionManager::Type> mInterceptedActions;
-    StandardContactActionManager *mParent = nullptr;
+    StandardContactActionManager *const mParent;
 };
 
 StandardContactActionManager::StandardContactActionManager(KActionCollection *actionCollection, QWidget *parent)

@@ -80,11 +80,11 @@ public:
         q->emitResult();
     }
 
-    OpenEmailAddressJob *q = nullptr;
+    OpenEmailAddressJob *const q;
     QString mCompleteAddress;
     QString mEmail;
     QString mName;
-    QWidget *mParentWidget = nullptr;
+    QWidget *const mParentWidget;
 };
 
 OpenEmailAddressJob::OpenEmailAddressJob(const QString &email, QWidget *parentWidget, QObject *parent)

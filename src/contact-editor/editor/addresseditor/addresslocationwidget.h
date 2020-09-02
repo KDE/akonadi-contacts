@@ -69,7 +69,7 @@ private:
     QPushButton *mCancelAddress = nullptr;
     QStackedWidget *mButtonStack = nullptr;
     SelectAddressTypeComboBox *mTypeCombo = nullptr;
-    int mCurrentAddress;
+    int mCurrentAddress = -1;
     Mode mCurrentMode;
 };
 

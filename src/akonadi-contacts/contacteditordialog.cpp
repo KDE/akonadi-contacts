@@ -33,7 +33,6 @@ class Q_DECL_HIDDEN ContactEditorDialog::Private
 public:
     Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, ContactEditor::AbstractContactEditorWidget *editorWidget, ContactEditorDialog *parent)
         : q(parent)
-        , mAddressBookBox(nullptr)
         , mMode(mode)
     {
         QWidget *mainWidget = new QWidget(q);
@@ -124,7 +123,7 @@ public:
         group.sync();
     }
 
-    ContactEditorDialog *q;
+    ContactEditorDialog *const q;
     CollectionComboBox *mAddressBookBox = nullptr;
     ContactEditorDialog::Mode mMode;
     AkonadiContactEditor *mEditor = nullptr;

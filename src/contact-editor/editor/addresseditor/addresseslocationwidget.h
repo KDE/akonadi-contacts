@@ -32,7 +32,7 @@ public:
 private:
     AddressLocationWidget *mAddressLocationWidget = nullptr;
     QTreeView *mAddressesLocationView = nullptr;
-    AddressModel *mAddressModel = nullptr;
+    AddressModel *const mAddressModel;
     bool mReadOnly = false;
 };
 }

@@ -22,10 +22,6 @@ class Q_DECL_HIDDEN KWidgetLister::Private
 public:
     Private(KWidgetLister *qq)
         : q(qq)
-        , mLayout(nullptr)
-        , mButtonBox(nullptr)
-        , mMinWidgets(0)
-        , mMaxWidgets(0)
     {
     }
 
@@ -35,7 +31,7 @@ public:
         mWidgetList.clear();
     }
 
-    KWidgetLister *q = nullptr;
+    KWidgetLister *const q;
     QVBoxLayout *mLayout = nullptr;
     QWidget *mButtonBox = nullptr;
     QList<QWidget *> mWidgetList;

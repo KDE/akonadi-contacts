@@ -64,7 +64,7 @@ public:
         group.writeEntry("Size", q->size());
     }
 
-    EmailAddressSelectionDialog *q = nullptr;
+    EmailAddressSelectionDialog *const q;
     RecipientsPickerWidget *mView = nullptr;
 };
 

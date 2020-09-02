@@ -229,7 +229,7 @@ public:
     QMetaObject::Connection mCollectionFetchJobConnection;
     KContacts::Addressee mCurrentContact;
     Item mCurrentItem;
-    ContactViewer *mParent = nullptr;
+    ContactViewer *const mParent;
     TextBrowser *mBrowser = nullptr;
     AbstractContactFormatter *mContactFormatter = nullptr;
     AbstractContactFormatter *mStandardContactFormatter = nullptr;

@@ -26,7 +26,6 @@ class Q_DECL_HIDDEN ContactViewerDialog::Private
 public:
     Private(ContactViewerDialog *parent)
         : q(parent)
-        , mViewer(nullptr)
     {
     }
 
@@ -48,7 +47,7 @@ public:
         group.sync();
     }
 
-    ContactViewerDialog *q = nullptr;
+    ContactViewerDialog *const q;
     ContactViewer *mViewer = nullptr;
 };
 

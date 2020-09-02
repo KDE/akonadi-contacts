@@ -16,8 +16,6 @@ using namespace ContactEditor;
 
 PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
     : ContactEditor::ContactEditorComboBox(parent)
-    , mType(KContacts::PhoneNumber::Home)
-    , mLastSelected(0)
 {
     const int nbMax = KContacts::PhoneNumber::typeList().count();
     mTypeList.reserve(nbMax + 1);

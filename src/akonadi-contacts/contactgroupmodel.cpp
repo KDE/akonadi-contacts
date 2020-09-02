@@ -20,17 +20,11 @@
 using namespace Akonadi;
 
 struct GroupMember {
-    GroupMember()
-        : isReference(false)
-        , loadingError(false)
-    {
-    }
-
     KContacts::ContactGroup::ContactReference reference;
     KContacts::ContactGroup::Data data;
     KContacts::Addressee referencedContact;
-    bool isReference;
-    bool loadingError;
+    bool isReference = false;
+    bool loadingError = false;
 };
 
 class Q_DECL_HIDDEN ContactGroupModel::Private

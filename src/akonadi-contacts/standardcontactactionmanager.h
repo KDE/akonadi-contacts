@@ -78,7 +78,7 @@ public:
      * connected to its default implementation provided by this class.
      * @param type the type of action to create
      */
-    Q_REQUIRED_RESULT QAction *createAction(Type type);
+    QAction *createAction(Type type);
 
     /**
      * Creates the action of the given type and adds it to the action collection

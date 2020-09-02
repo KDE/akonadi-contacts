@@ -17,8 +17,6 @@ using namespace ContactEditor;
 
 SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     : QComboBox(parent)
-    , mType(KContacts::Address::Home)
-    , mLastSelected(0)
 {
     const int count = KContacts::Address::typeList().count();
     mTypeList.reserve(count + 2);

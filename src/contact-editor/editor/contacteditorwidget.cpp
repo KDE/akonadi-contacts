@@ -33,7 +33,6 @@ public:
     Private(ContactEditorWidget::DisplayMode displayMode, ContactEditorWidget *parent)
         : mDisplayMode(displayMode)
         , mParent(parent)
-        , mCustomFieldsWidget(nullptr)
     {
     }
 
@@ -51,7 +50,7 @@ public:
     void storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const;
 
     ContactEditorWidget::DisplayMode mDisplayMode;
-    ContactEditorWidget *mParent = nullptr;
+    ContactEditorWidget *const mParent;
     QTabWidget *mTabWidget = nullptr;
 
     ContactEditor::GeneralInfoWidget *mGeneralInfoWidget = nullptr;

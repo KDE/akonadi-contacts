@@ -33,7 +33,7 @@ private:
     void removeField(int row, QAbstractItemModel *model);
     const QIcon mIcon;
     QSize mButtonSize;
-    QAbstractItemView *mItemView = nullptr;
+    QAbstractItemView *const mItemView;
 };
 }
 #endif

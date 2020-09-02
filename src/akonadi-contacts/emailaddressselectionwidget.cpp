@@ -59,7 +59,7 @@ protected:
     }
 
 private:
-    QWidget *mReceiver = nullptr;
+    QWidget *const mReceiver;
 };
 
 /**

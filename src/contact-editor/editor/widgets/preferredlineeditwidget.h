@@ -30,7 +30,7 @@ Q_SIGNALS:
 private:
     void slotPreferredStatusChanged();
     void updatePreferredIcon();
-    bool mPreferred;
+    bool mPreferred = false;
     QIcon mIconEnabled;
     QIcon mIconDisabled;
     QAction *mPreferredAction = nullptr;

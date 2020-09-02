@@ -13,12 +13,7 @@ using namespace ContactEditor;
 class Q_DECL_HIDDEN ContactMetaDataBase::Private
 {
 public:
-    Private()
-        : mDisplayNameMode(-1)
-    {
-    }
-
-    int mDisplayNameMode;
+    int mDisplayNameMode = -1;
     QVariantList mCustomFieldDescriptions;
 };
 

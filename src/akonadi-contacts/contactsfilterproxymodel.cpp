@@ -25,15 +25,13 @@ class Q_DECL_HIDDEN ContactsFilterProxyModel::Private
 public:
     Private()
         : flags({})
-        , matchFilterFlag(ContactsFilterProxyModel::MatchFilterContactFlag::All)
-        , mExcludeVirtualCollections(false)
     {
     }
 
     QString mFilter;
     ContactsFilterProxyModel::FilterFlags flags;
-    ContactsFilterProxyModel::MatchFilterContactFlag matchFilterFlag;
-    bool mExcludeVirtualCollections;
+    ContactsFilterProxyModel::MatchFilterContactFlag matchFilterFlag = ContactsFilterProxyModel::MatchFilterContactFlag::All;
+    bool mExcludeVirtualCollections = false;
 };
 
 ContactsFilterProxyModel::ContactsFilterProxyModel(QObject *parent)

@@ -33,10 +33,7 @@ class Q_DECL_HIDDEN ContactGroupEditorDialog::Private
 public:
     Private(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
         : q(qq)
-        , mAddressBookBox(nullptr)
-        , mEditor(nullptr)
         , mMode(mode)
-        , okButton(nullptr)
     {
     }
 
@@ -65,7 +62,7 @@ public:
         group.sync();
     }
 
-    ContactGroupEditorDialog *q;
+    ContactGroupEditorDialog *const q;
     CollectionComboBox *mAddressBookBox = nullptr;
     ContactGroupEditor *mEditor = nullptr;
     ContactGroupEditorDialog::Mode mMode;

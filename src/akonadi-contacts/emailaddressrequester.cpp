@@ -22,13 +22,12 @@ class Q_DECL_HIDDEN Akonadi::EmailAddressRequester::Private
 public:
     Private(EmailAddressRequester *qq)
         : q(qq)
-        , mLineEdit(nullptr)
     {
     }
 
     void slotAddressBook();
 
-    EmailAddressRequester *q = nullptr;
+    EmailAddressRequester *const q;
     KLineEdit *mLineEdit = nullptr;
 };
 

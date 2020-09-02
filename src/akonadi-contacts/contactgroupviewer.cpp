@@ -34,8 +34,6 @@ class Q_DECL_HIDDEN ContactGroupViewer::Private
 public:
     Private(ContactGroupViewer *parent)
         : mParent(parent)
-        , mExpandJob(nullptr)
-        , mParentCollectionFetchJob(nullptr)
     {
         mBrowser = new TextBrowser;
 

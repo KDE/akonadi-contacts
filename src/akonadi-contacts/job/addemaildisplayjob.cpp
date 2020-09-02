@@ -36,8 +36,6 @@ public:
         : q(qq)
         , mCompleteAddress(emailString)
         , mParentWidget(parentWidget)
-        , mShowAsHTML(false)
-        , mRemoteContent(false)
     {
         KContacts::Addressee::parseEmailAddress(emailString, mName, mEmail);
     }
@@ -251,13 +249,13 @@ public:
         q->emitResult();
     }
 
-    AddEmailDisplayJob *q = nullptr;
+    AddEmailDisplayJob *const q;
     Akonadi::Item contact;
     Akonadi::Item::Id messageId;
     QString mCompleteAddress;
     QString mEmail;
     QString mName;
-    QWidget *mParentWidget = nullptr;
+    QWidget *const mParentWidget;
     bool mShowAsHTML = false;
     bool mRemoteContent = false;
 };

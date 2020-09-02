@@ -18,17 +18,16 @@ class Q_DECL_HIDDEN LeafExtensionProxyModel::Private
 public:
     Private(LeafExtensionProxyModel *qq)
         : q(qq)
-        , mUniqueKeyCounter(0)
     {
     }
 
     void sourceRowsInserted(const QModelIndex &parentIndex, int start, int end);
     void sourceRowsRemoved(const QModelIndex &parentIndex, int start, int end);
 
-    LeafExtensionProxyModel *q = nullptr;
+    LeafExtensionProxyModel *const q;
     QMap<qint64, QModelIndex> mParentIndexes;
     QSet<QModelIndex> mOwnIndexes;
-    qint64 mUniqueKeyCounter;
+    qint64 mUniqueKeyCounter = 0;
 };
 
 void LeafExtensionProxyModel::Private::sourceRowsInserted(const QModelIndex &parentIndex, int start, int end)

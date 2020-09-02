@@ -19,7 +19,6 @@
 
 FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     : QWidget(parent)
-    , mReadOnly(false)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);

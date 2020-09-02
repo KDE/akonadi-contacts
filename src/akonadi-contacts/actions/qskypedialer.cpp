@@ -54,7 +54,6 @@ static QDBusInterface *searchSkypeDBusInterface()
 
 QSkypeDialer::QSkypeDialer(const QString &applicationName)
     : QDialer(applicationName)
-    , mInterface(nullptr)
 {
 }
 

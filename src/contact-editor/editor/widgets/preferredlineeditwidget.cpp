@@ -14,7 +14,6 @@ using namespace ContactEditor;
 
 PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     : KLineEdit(parent)
-    , mPreferred(false)
 {
     mIconEnabled = QIcon::fromTheme(QStringLiteral("rating"));
     mIconDisabled = QIcon::fromTheme(QStringLiteral("rating-unrated"));

@@ -53,7 +53,6 @@ static QDBusInterface *searchEkigaDBusInterface()
 
 QEkigaDialer::QEkigaDialer(const QString &applicationName)
     : QDialer(applicationName)
-    , mInterface(nullptr)
 {
 }
 

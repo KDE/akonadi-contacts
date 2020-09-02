@@ -122,7 +122,7 @@ public:
         q->emitResult();
     }
 
-    AddContactJob *q = nullptr;
+    AddContactJob *const q;
     KContacts::Addressee mContact;
     QWidget *mParentWidget = nullptr;
     Akonadi::Collection mCollection;
