@@ -65,12 +65,21 @@ set(akonadicontact_recipientpicker_SRCS
     recipientspicker/recipientspickerwidget.cpp
     )
 
+set(akonadicontact_grantlee_SRCS
+    grantlee/contactgrantleewrapper.cpp
+    grantlee/grantleecontactformatter.cpp
+    grantlee/grantleecontactgroupformatter.cpp
+    grantlee/grantleeprint.cpp
+    grantlee/grantleecontactviewer.cpp
+    )
+
 
 set(akonadicontact_LIB_SRC
     ${akonadicontact_recipientpicker_SRCS}
     ${akonadicontact_customfieldseditor_SRCS}
     ${akonadicontact_attributes_SRCS}
     ${akonadicontact_job_SRCS}
+    ${akonadicontact_grantlee_SRCS}
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
@@ -114,13 +123,7 @@ ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_de
         EXPORT AKONADICONTACTS
     )
 
-
-set(akonadicontact_LIB_SRC
-    ${akonadicontact_LIB_SRC}
-    )
-
 ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
-
 
 add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
 
@@ -138,6 +141,7 @@ target_link_libraries(KF5AkonadiContact
     KF5::Contacts
     KF5::AkonadiWidgets
     Qt5::Widgets
+    KF5::GrantleeTheme
     PRIVATE
     KF5::ConfigCore
     KF5::ConfigWidgets
@@ -152,6 +156,8 @@ target_link_libraries(KF5AkonadiContact
     KF5::XmlGui
     KF5::ContactEditor
     KF5::Prison
+    Grantlee5::Templates
+    KF5::Libkleo
     )
 
 
@@ -228,10 +234,24 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     PREFIX Akonadi/Contact
     )
 
+ecm_generate_headers(AkonadiContactGrantlee_CamelCase_HEADERS
+    HEADER_NAMES
+    ContactGrantleeWrapper
+    GrantleeContactFormatter
+    GrantleeContactGroupFormatter
+    GrantleePrint
+    GrantleeContactViewer
+
+    REQUIRED_HEADERS AkonadiContactGrantlee_HEADERS
+    RELATIVE grantlee
+    PREFIX Akonadi/Contact
+)
+
 install( FILES
     ${AkonadiContact_CamelCase_HEADERS}
     ${AkonadiContactJob_CamelCase_HEADERS}
     ${AkonadiContactRecipients_CamelCase_HEADERS}
+    ${AkonadiContactGrantlee_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact COMPONENT Devel
     )
 
@@ -239,6 +259,7 @@ install( FILES
     ${AkonadiContact_HEADERS}
     ${AkonadiContactJob_HEADERS}
     ${AkonadiContactRecipients_HEADERS}
+    ${AkonadiContactGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
     )

@@ -1,4 +1,5 @@
 include(ECMMarkAsTest)
+include(ECMAddTests)
 
 find_package(Qt5Test CONFIG REQUIRED)
 
@@ -18,3 +19,7 @@ endmacro()
 ########### next target ###############
 
 add_akonadi_contact_demo(contactmetadataattributetest.cpp)
+
+ecm_add_test(grantleeprinttest.cpp
+    LINK_LIBRARIES KF5::AkonadiContact Qt5::Test KF5::Contacts
+)
