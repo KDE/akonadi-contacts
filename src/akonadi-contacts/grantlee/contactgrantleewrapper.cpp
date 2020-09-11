@@ -57,7 +57,7 @@ QString ContactGrantleeWrapper::professionLabel() const
 
 QString ContactGrantleeWrapper::spouseLabel() const
 {
-    return i18n("Partner's Name");
+    return i18nc("Wife/Husband/...", "Partner's Name");
 }
 
 QString ContactGrantleeWrapper::addressBookName() const
