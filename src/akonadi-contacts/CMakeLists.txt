@@ -135,6 +135,7 @@ target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KD
 target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src>")
 
+if(UNIX)
 target_link_libraries(KF5AkonadiContact
     PUBLIC
     KF5::AkonadiCore
@@ -159,7 +160,32 @@ target_link_libraries(KF5AkonadiContact
     Grantlee5::Templates
     KF5::Libkleo
     )
-
+else()
+# win systems doesnt have kleo #
+target_link_libraries(KF5AkonadiContact
+    PUBLIC
+    KF5::AkonadiCore
+    KF5::Contacts
+    KF5::AkonadiWidgets
+    Qt5::Widgets
+    KF5::GrantleeTheme
+    PRIVATE
+    KF5::ConfigCore
+    KF5::ConfigWidgets
+    KF5::IconThemes
+    KF5::Completion
+    KF5::KIOCore
+    KF5::JobWidgets
+    KF5::KIOGui
+    KF5::Mime
+    KF5::I18n
+    KF5::TextWidgets
+    KF5::XmlGui
+    KF5::ContactEditor
+    KF5::Prison
+    Grantlee5::Templates
+    )
+endif()
 
 set_target_properties(KF5AkonadiContact PROPERTIES
     VERSION ${AKONADICONTACT_VERSION_STRING}

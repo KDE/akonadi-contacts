@@ -5,9 +5,9 @@
 */
 
 #include "contactgrantleewrapper.h"
-
+#ifndef Q_OS_WIN
 #include <Libkleo/Enum>
-
+#endif
 #include <KLocalizedString>
 
 #include <QBuffer>
@@ -77,12 +77,20 @@ int ContactGrantleeWrapper::age() const
 
 QString ContactGrantleeWrapper::cryptoPreference() const
 {
+    #ifndef Q_OS_WIN
     return Kleo::encryptionPreferenceToLabel(Kleo::stringToEncryptionPreference(custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOENCRYPTPREF"))));
+    #else
+    return i18n( "Never Encrypt" );
+    #endif
 }
 
 QString ContactGrantleeWrapper::signaturePreference() const
 {
+    #ifndef Q_OS_WIN
     return Kleo::signingPreferenceToLabel(Kleo::stringToSigningPreference(custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"))));
+    #else
+    return i18n( "Never Sign" );
+    #endif
 }
 
 static QString imgToDataUrl(const QImage &image)
