@@ -157,7 +157,6 @@ target_link_libraries(KF5AkonadiContact
     KF5::ContactEditor
     KF5::Prison
     Grantlee5::Templates
-    KF5::Libkleo
     )
 
 if(UNIX)
