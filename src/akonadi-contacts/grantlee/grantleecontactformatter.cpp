@@ -29,7 +29,6 @@
 
 #include <QLocale>
 #include <QMetaProperty>
-#include <QRegularExpression>
 #include <QSet>
 
 using namespace KAddressBookGrantlee;
