@@ -90,7 +90,7 @@ QString ContactGrantleeWrapper::signaturePreference() const
 #ifdef HAVE_KLEO
     return Kleo::signingPreferenceToLabel(Kleo::stringToSigningPreference(custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"))));
 #else
-    custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"));
+    return custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"));
 #endif
 }
 
