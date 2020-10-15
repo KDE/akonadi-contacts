@@ -67,7 +67,6 @@ private:
     QString formattedBirthday() const;
     QString formattedAnniversary() const;
 
-    QVariantList imAddresses() const;
 };
 
 }
