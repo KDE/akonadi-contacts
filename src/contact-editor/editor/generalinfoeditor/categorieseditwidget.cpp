@@ -8,7 +8,6 @@
 
 #include "categorieseditwidget.h"
 
-#include <kcontacts/addressee.h>
 
 #include <QHBoxLayout>
 

@@ -11,7 +11,6 @@
 #include <item.h>
 #include <tag.h>
 #include <tagwidget.h>
-#include <kcontacts/addressee.h>
 #include <QHBoxLayout>
 #include <KPluginFactory>
 

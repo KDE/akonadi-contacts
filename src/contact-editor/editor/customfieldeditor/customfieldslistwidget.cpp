@@ -16,7 +16,6 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 #include <KContacts/Addressee>
-#include "customfieldsmodel.h"
 
 using namespace ContactEditor;
 

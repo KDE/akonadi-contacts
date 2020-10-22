@@ -14,7 +14,6 @@
 #include <QPainter>
 #include <QStyledItemDelegate>
 
-#include <kcontacts/addressee.h>
 #include <KComboBox>
 #include <KLocalizedString>
 

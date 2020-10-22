@@ -7,7 +7,6 @@
 */
 
 #include "nameeditdialog.h"
-#include "displaynameeditwidget.h"
 
 #include <KComboBox>
 #include <KLineEdit>
