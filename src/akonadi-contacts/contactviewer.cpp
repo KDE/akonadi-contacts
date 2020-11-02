@@ -212,7 +212,7 @@ public:
         QString addressBookName;
 
         if (!job->error()) {
-            CollectionFetchJob *fetchJob = qobject_cast<CollectionFetchJob *>(job);
+            auto *fetchJob = qobject_cast<CollectionFetchJob *>(job);
             if (!fetchJob->collections().isEmpty()) {
                 const Collection collection = fetchJob->collections().at(0);
                 addressBookName = collection.displayName();
@@ -242,7 +242,7 @@ ContactViewer::ContactViewer(QWidget *parent)
     : QWidget(parent)
     , d(new Private(this))
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
     d->mBrowser = new TextBrowser;

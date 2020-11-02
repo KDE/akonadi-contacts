@@ -43,7 +43,7 @@ public:
             mEditorWidget = new ContactEditorWidget(displayMode == FullMode ? ContactEditorWidget::FullMode : ContactEditorWidget::VCardMode, mParent);
         }
 
-        QVBoxLayout *layout = new QVBoxLayout(mParent);
+        auto *layout = new QVBoxLayout(mParent);
         layout->setContentsMargins(0, 0, 0, 0);
         layout->setSpacing(0);
         layout->addWidget(mEditorWidget);
@@ -81,7 +81,7 @@ void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)
         return;
     }
 
-    Akonadi::ItemFetchJob *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
+    auto *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
     if (!fetchJob) {
         return;
     }
@@ -97,7 +97,7 @@ void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)
         // if in edit mode we have to fetch the parent collection to find out
         // about the modify rights of the item
 
-        Akonadi::CollectionFetchJob *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
+        auto *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
                                                                                           Akonadi::CollectionFetchJob::Base);
         mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
             parentCollectionFetchDone(job);
@@ -118,7 +118,7 @@ void Akonadi::AkonadiContactEditor::Private::parentCollectionFetchDone(KJob *job
         return;
     }
 
-    Akonadi::CollectionFetchJob *fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+    auto *fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
     if (!fetchJob) {
         return;
     }
@@ -160,7 +160,7 @@ void Akonadi::AkonadiContactEditor::Private::itemChanged(const Akonadi::Item &it
     dlg->addButton(i18n("Ignore and Overwrite changes"), QMessageBox::RejectRole);
 
     if (dlg->exec() == QMessageBox::AcceptRole) {
-        Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(mItem);
+        auto *job = new Akonadi::ItemFetchJob(mItem);
         job->fetchScope().fetchFullPayload();
         job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
@@ -225,7 +225,7 @@ void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
         Q_ASSERT_X(false, "ContactEditor::loadContact", "You are calling loadContact in CreateMode!");
     }
 
-    Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(item);
+    auto *job = new Akonadi::ItemFetchJob(item);
     job->fetchScope().fetchFullPayload();
     job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
@@ -261,7 +261,7 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
 
         d->mItem.setPayload<KContacts::Addressee>(addr);
 
-        Akonadi::ItemModifyJob *job = new Akonadi::ItemModifyJob(d->mItem);
+        auto *job = new Akonadi::ItemModifyJob(d->mItem);
         connect(job, &ItemModifyJob::result, this, [this](KJob *job) {
             d->storeDone(job);
         });
@@ -292,7 +292,7 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
 
         d->mContactMetaData.store(item);
 
-        Akonadi::ItemCreateJob *job = new Akonadi::ItemCreateJob(item, d->mDefaultCollection);
+        auto *job = new Akonadi::ItemCreateJob(item, d->mDefaultCollection);
         connect(job, &ItemCreateJob::result, this, [this](KJob *job) {
             d->storeDone(job);
         });

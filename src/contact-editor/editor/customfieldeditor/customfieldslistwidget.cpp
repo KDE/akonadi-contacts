@@ -22,17 +22,17 @@ using namespace ContactEditor;
 CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
     mCustomFieldList = new QTreeView(this);
     mCustomFieldList->setObjectName(QStringLiteral("customfieldlist"));
     mCustomFieldList->setSortingEnabled(true);
     mCustomFieldList->setRootIsDecorated(false);
-    ContactEditor::CustomFieldsListDelegate *customFieldDelegate = new ContactEditor::CustomFieldsListDelegate(mCustomFieldList, this);
+    auto *customFieldDelegate = new ContactEditor::CustomFieldsListDelegate(mCustomFieldList, this);
     mCustomFieldList->setItemDelegate(customFieldDelegate);
     topLayout->addWidget(mCustomFieldList);
 
     mModel = new CustomFieldsModel(this);
-    QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(this);
+    auto *proxyModel = new QSortFilterProxyModel(this);
     proxyModel->setDynamicSortFilter(true);
     proxyModel->setSourceModel(mModel);
     mCustomFieldList->setModel(proxyModel);

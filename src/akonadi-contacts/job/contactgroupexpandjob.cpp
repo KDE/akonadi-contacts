@@ -51,7 +51,7 @@ public:
             } else {
                 item.setId(reference.uid().toLongLong());
             }
-            ItemFetchJob *job = new ItemFetchJob(item, mParent);
+            auto *job = new ItemFetchJob(item, mParent);
             job->fetchScope().fetchFullPayload();
             job->setProperty("preferredEmail", reference.preferredEmail());
 
@@ -76,7 +76,7 @@ public:
             return;
         }
 
-        ContactGroupSearchJob *searchJob = qobject_cast<ContactGroupSearchJob *>(job);
+        auto *searchJob = qobject_cast<ContactGroupSearchJob *>(job);
 
         if (searchJob->contactGroups().isEmpty()) {
             mParent->emitResult();
@@ -144,7 +144,7 @@ void ContactGroupExpandJob::start()
 {
     if (!d->mName.isEmpty() && !d->mName.contains(QLatin1Char('@'))) {
         // we have to search the contact group first
-        ContactGroupSearchJob *searchJob = new ContactGroupSearchJob(this);
+        auto *searchJob = new ContactGroupSearchJob(this);
         searchJob->setQuery(ContactGroupSearchJob::Name, d->mName);
         searchJob->setLimit(1);
         connect(searchJob, &ContactGroupSearchJob::result, this, [this](KJob *job) {

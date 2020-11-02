@@ -96,15 +96,15 @@ void KCMAkonadiContactActions::load()
 {
     mConfigManager->updateWidgets();
 
-    ContactActionsSettings::EnumShowAddressAction enumValueAddress = static_cast<ContactActionsSettings::EnumShowAddressAction>(ContactActionsSettings::self()->showAddressAction());
+    auto enumValueAddress = static_cast<ContactActionsSettings::EnumShowAddressAction>(ContactActionsSettings::self()->showAddressAction());
     const int indexAddress = ui.ShowAddressAction->findData(enumValueAddress);
     ui.ShowAddressAction->setCurrentIndex(indexAddress);
 
-    ContactActionsSettings::EnumDialPhoneNumberAction enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ContactActionsSettings::self()->dialPhoneNumberAction());
+    auto enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ContactActionsSettings::self()->dialPhoneNumberAction());
     const int index = ui.DialPhoneNumberAction->findData(enumValue);
     ui.DialPhoneNumberAction->setCurrentIndex(index);
 
-    ContactActionsSettings::EnumSendSmsAction enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ContactActionsSettings::self()->sendSmsAction());
+    auto enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ContactActionsSettings::self()->sendSmsAction());
     const int indexSms = ui.SendSmsAction->findData(enumValueSms);
     ui.SendSmsAction->setCurrentIndex(indexSms);
 }

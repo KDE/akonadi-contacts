@@ -43,7 +43,7 @@ public:
         } else {
             item.setId(reference.uid().toLongLong());
         }
-        ItemFetchJob *job = new ItemFetchJob(item, mParent);
+        auto *job = new ItemFetchJob(item, mParent);
         job->setProperty("row", row);
         job->fetchScope().fetchFullPayload();
 
@@ -62,7 +62,7 @@ public:
             return;
         }
 
-        ItemFetchJob *fetchJob = qobject_cast<ItemFetchJob *>(job);
+        auto *fetchJob = qobject_cast<ItemFetchJob *>(job);
 
         if (fetchJob->items().count() != 1) {
             mMembers[row].loadingError = true;

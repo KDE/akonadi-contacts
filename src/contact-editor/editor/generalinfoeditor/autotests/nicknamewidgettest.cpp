@@ -24,16 +24,16 @@ void NicknameWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::NicknameWidget editor;
 
-    QVBoxLayout *topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(topLayout);
     QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
 
-    QLabel *nickNameLabel = editor.findChild<QLabel *>(QStringLiteral("nicknamelabel"));
+    auto *nickNameLabel = editor.findChild<QLabel *>(QStringLiteral("nicknamelabel"));
     QVERIFY(nickNameLabel);
     QVERIFY(!nickNameLabel->text().isEmpty());
 
-    KLineEdit *mNickName = editor.findChild<KLineEdit *>(QStringLiteral("nickname"));
+    auto *mNickName = editor.findChild<KLineEdit *>(QStringLiteral("nickname"));
     QVERIFY(mNickName);
     QVERIFY(mNickName->trapReturnKey());
     QVERIFY(!mNickName->placeholderText().isEmpty());

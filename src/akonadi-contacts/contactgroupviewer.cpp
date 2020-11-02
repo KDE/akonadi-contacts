@@ -93,7 +93,7 @@ public:
         mExpandJob = nullptr;
 
         if (!job->error()) {
-            ContactGroupExpandJob *expandJob = qobject_cast<ContactGroupExpandJob *>(job);
+            auto *expandJob = qobject_cast<ContactGroupExpandJob *>(job);
             mCurrentContacts = expandJob->contacts();
         }
 
@@ -116,7 +116,7 @@ public:
         mCurrentAddressBookName.clear();
 
         if (!job->error()) {
-            CollectionFetchJob *fetchJob = qobject_cast<CollectionFetchJob *>(job);
+            auto *fetchJob = qobject_cast<CollectionFetchJob *>(job);
             if (!fetchJob->collections().isEmpty()) {
                 const Collection collection = fetchJob->collections().at(0);
                 mCurrentAddressBookName = collection.displayName();
@@ -144,7 +144,7 @@ ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     : QWidget(parent)
     , d(new Private(this))
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
     connect(d->mBrowser, &TextBrowser::anchorClicked, this, [this](const QUrl &url) {

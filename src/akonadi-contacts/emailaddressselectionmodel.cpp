@@ -26,7 +26,7 @@ EmailAddressSelectionModel::EmailAddressSelectionModel(QObject *parent)
     scope.fetchFullPayload(true);
     scope.fetchAttribute<Akonadi::EntityDisplayAttribute>();
 
-    Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder(this);
+    auto *changeRecorder = new Akonadi::ChangeRecorder(this);
     changeRecorder->setSession(session);
     changeRecorder->fetchCollection(true);
     changeRecorder->setItemFetchScope(scope);

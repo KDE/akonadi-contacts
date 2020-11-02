@@ -21,9 +21,9 @@ NameEditDialog::NameEditDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Edit Contact Name"));
 
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
-    QFormLayout *layout = new QFormLayout;
+    auto *layout = new QFormLayout;
     mainLayout->addLayout(layout);
 
     mPrefixCombo = new KComboBox(this);

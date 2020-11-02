@@ -20,7 +20,7 @@ using namespace ContactEditor;
 AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *parent)
     : QDialog(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("street/postal", "Edit Address Type"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -32,7 +32,7 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     QWidget *page = new QWidget(this);
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
-    QVBoxLayout *layout = new QVBoxLayout(page);
+    auto *layout = new QVBoxLayout(page);
     layout->setContentsMargins(0, 0, 0, 0);
 
     QGroupBox *box = new QGroupBox(i18nc("street/postal", "Address Types"), page);
@@ -41,7 +41,7 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     mGroup = new QButtonGroup(box);
     mGroup->setExclusive(false);
 
-    QGridLayout *buttonLayout = new QGridLayout(box);
+    auto *buttonLayout = new QGridLayout(box);
 
     mTypeList = KContacts::Address::typeList();
     mTypeList.removeAll(KContacts::Address::Pref);
@@ -71,7 +71,7 @@ KContacts::Address::Type AddressTypeDialog::type() const
     KContacts::Address::Type type;
     const int numberOfButtons(mGroup->buttons().count());
     for (int i = 0; i < numberOfButtons; ++i) {
-        QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
+        auto *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
         if (box && box->isChecked()) {
             type |= mTypeList[i];
         }

@@ -35,7 +35,7 @@ void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
         auto wIt = widgetList.constBegin();
         auto wEnd = widgetList.constEnd();
         for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-            MailWidget *w = qobject_cast<MailWidget *>(*wIt);
+            auto *w = qobject_cast<MailWidget *>(*wIt);
             w->setMail(mailList.at(i));
         }
     }
@@ -47,7 +47,7 @@ void MailWidgetLister::storeContact(KContacts::Addressee &contact) const
     KContacts::Email::List emailList;
     emailList.reserve(widgetList.count());
     for (QWidget *widget : widgetList) {
-        MailWidget *w = qobject_cast<MailWidget *>(widget);
+        auto *w = qobject_cast<MailWidget *>(widget);
         KContacts::Email newEmail = w->email();
         if (newEmail.isValid()) {
             emailList << newEmail;
@@ -60,14 +60,14 @@ void MailWidgetLister::setReadOnly(bool readOnly)
 {
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
-        MailWidget *w = qobject_cast<MailWidget *>(widget);
+        auto *w = qobject_cast<MailWidget *>(widget);
         w->setReadOnly(readOnly);
     }
 }
 
 QWidget *MailWidgetLister::createWidget(QWidget *parent)
 {
-    MailWidget *w = new MailWidget(parent);
+    auto *w = new MailWidget(parent);
     reconnectWidget(w);
     return w;
 }
@@ -119,7 +119,7 @@ void MailWidgetLister::updateAddRemoveButton()
     }
 
     for (QWidget *widget : widgetList) {
-        MailWidget *w = qobject_cast<MailWidget *>(widget);
+        auto *w = qobject_cast<MailWidget *>(widget);
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }

@@ -67,7 +67,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     command.replace(QLatin1String("%N"), number.number());
     command.replace(QLatin1String("%n"), number.normalizedNumber());
 
-    KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(command);
+    auto *job = new KIO::CommandLauncherJob(command);
     job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
     job->start();
 

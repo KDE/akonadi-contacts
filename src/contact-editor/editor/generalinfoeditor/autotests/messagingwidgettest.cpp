@@ -25,16 +25,16 @@ MessagingWidgetTest::~MessagingWidgetTest()
 void MessagingWidgetTest::shouldHaveDefaultValues()
 {
     ContactEditor::MessagingWidget w;
-    KLineEdit *line = w.findChild<KLineEdit *>(QStringLiteral("messaginglineedit"));
+    auto *line = w.findChild<KLineEdit *>(QStringLiteral("messaginglineedit"));
     QVERIFY(line);
 
-    QComboBox *protocolCombo = w.findChild<QComboBox *>(QStringLiteral("protocol"));
+    auto *protocolCombo = w.findChild<QComboBox *>(QStringLiteral("protocol"));
     QVERIFY(protocolCombo);
     QVERIFY(protocolCombo->count() > 0);
 
-    QToolButton *add = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
+    auto *add = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
     QVERIFY(add);
-    QToolButton *remove = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
+    auto *remove = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
     QVERIFY(remove);
 }
 

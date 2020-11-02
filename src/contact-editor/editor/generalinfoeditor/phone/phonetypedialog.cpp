@@ -23,9 +23,9 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
 {
     setWindowTitle(i18nc("@title:window", "Edit Phone Number"));
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
 
-    QGridLayout *buttonLayout = new QGridLayout;
+    auto *buttonLayout = new QGridLayout;
     layout->addLayout(buttonLayout);
 
     // fill widgets
@@ -63,7 +63,7 @@ KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
     KContacts::PhoneNumber::Type type = {};
 
     for (int i = 0; i < mGroup->buttons().count(); ++i) {
-        QCheckBox *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
+        auto *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
         if (box && box->isChecked()) {
             type |= mTypeList[i];
         }

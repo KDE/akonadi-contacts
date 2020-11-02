@@ -19,7 +19,7 @@ using namespace ContactEditor;
 MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     QLabel *label = new QLabel(i18n("Show messages received from this contact as:"), this);
     label->setObjectName(QStringLiteral("label"));

@@ -38,7 +38,7 @@ public:
         QWidget *mainWidget = new QWidget(q);
 
         q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18n("New Contact") : i18n("Edit Contact"));
-        QVBoxLayout *mainLayout = new QVBoxLayout(q);
+        auto *mainLayout = new QVBoxLayout(q);
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
         q->connect(buttonBox, &QDialogButtonBox::accepted, q, [this]() {
             slotOkClicked();
@@ -50,7 +50,7 @@ public:
         mainLayout->addWidget(mainWidget);
         mainLayout->addWidget(buttonBox);
 
-        QGridLayout *layout = new QGridLayout(mainWidget);
+        auto *layout = new QGridLayout(mainWidget);
         layout->setContentsMargins(0, 0, 0, 0);
 
         if (editorWidget) {

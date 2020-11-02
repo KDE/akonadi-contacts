@@ -36,7 +36,7 @@ void SmsDialog::initUI()
 {
     setWindowTitle(i18nc("@title:window", "SMS text"));
 
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
 
     QLabel *label = new QLabel(i18n("Please insert SMS text for an SMS to the following number: %1", mNumber), this);
     topLayout->addWidget(label);

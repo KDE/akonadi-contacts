@@ -18,7 +18,7 @@
 MainWidget::MainWidget()
     : QWidget(nullptr)
 {
-    QGridLayout *layout = new QGridLayout(this);
+    auto *layout = new QGridLayout(this);
 
     mAddressesWidget = new Akonadi::EmailAddressSelectionWidget;
     layout->addWidget(mAddressesWidget, 0, 0);
@@ -26,7 +26,7 @@ MainWidget::MainWidget()
     mInfo = new QTextBrowser;
     layout->addWidget(mInfo, 0, 1);
 
-    KComboBox *box = new KComboBox;
+    auto *box = new KComboBox;
     box->addItem(QStringLiteral("Single Selection"));
     box->addItem(QStringLiteral("Multi Selection"));
     connect(box, QOverload<int>::of(&KComboBox::activated), this, &MainWidget::selectionModeChanged);

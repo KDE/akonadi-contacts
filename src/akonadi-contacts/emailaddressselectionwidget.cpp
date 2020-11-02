@@ -91,19 +91,19 @@ void EmailAddressSelectionWidget::Private::init()
 {
     // setup internal model if needed
     if (!mModel) {
-        Akonadi::EmailAddressSelectionModel *model = new Akonadi::EmailAddressSelectionModel(q);
+        auto *model = new Akonadi::EmailAddressSelectionModel(q);
         mModel = model->model();
     }
 
     // setup ui
-    QVBoxLayout *layout = new QVBoxLayout(q);
+    auto *layout = new QVBoxLayout(q);
     layout->setContentsMargins(0, 0, 0, 0);
 
     mDescriptionLabel = new QLabel;
     mDescriptionLabel->hide();
     layout->addWidget(mDescriptionLabel);
 
-    QHBoxLayout *searchLayout = new QHBoxLayout;
+    auto *searchLayout = new QHBoxLayout;
     searchLayout->setContentsMargins(0, 0, 0, 0);
     layout->addLayout(searchLayout);
 
@@ -121,7 +121,7 @@ void EmailAddressSelectionWidget::Private::init()
 #endif
     layout->addWidget(mView);
 
-    Akonadi::ContactsFilterProxyModel *filter = new Akonadi::ContactsFilterProxyModel(q);
+    auto *filter = new Akonadi::ContactsFilterProxyModel(q);
     if (mShowOnlyContactWithEmail) {
         filter->setFilterFlags(ContactsFilterProxyModel::HasEmail);
     }
@@ -144,7 +144,7 @@ void EmailAddressSelectionWidget::Private::init()
 
     mSearchLine->setFocus();
 
-    if (Akonadi::EntityTreeModel *etm = qobject_cast<Akonadi::EntityTreeModel *>(mModel)) {
+    if (auto *etm = qobject_cast<Akonadi::EntityTreeModel *>(mModel)) {
         QObject::connect(etm, &Akonadi::EntityTreeModel::collectionTreeFetched, mView, &QTreeView::expandAll);
     } else {
         QTimer::singleShot(1000, mView, &QTreeView::expandAll);

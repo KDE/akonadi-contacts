@@ -138,7 +138,7 @@ public:
                     const Akonadi::AgentType agentType = dlg->agentType();
 
                     if (agentType.isValid()) {
-                        Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(agentType, q);
+                        auto *job = new Akonadi::AgentInstanceCreateJob(agentType, q);
                         q->connect(job, &Akonadi::AgentInstanceCreateJob::result, q, [this](KJob *job) {
                             slotResourceCreationDone(job);
                         });
@@ -198,7 +198,7 @@ public:
         item.setPayload<KContacts::Addressee>(contact);
 
         // save the new item in akonadi storage
-        Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
+        auto *createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
         q->connect(createJob, &Akonadi::ItemCreateJob::result, q, [this](KJob *job) {
             slotAddContactDone(job);
         });
@@ -287,7 +287,7 @@ AddEmailAddressJob::~AddEmailAddressJob()
 void AddEmailAddressJob::start()
 {
     // first check whether a contact with the same email exists already
-    Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob(this);
+    auto *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
     searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(),
                         Akonadi::ContactSearchJob::ExactMatch);

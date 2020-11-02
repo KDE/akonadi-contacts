@@ -85,7 +85,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     //Bug: 293232 In KDE3 We used %F to replace text
     command.replace(QLatin1String("%F"), message);
 
-    KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(command);
+    auto *job = new KIO::CommandLauncherJob(command);
     job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
     job->start();
 }

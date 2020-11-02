@@ -65,7 +65,7 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     : QWidget(parent)
     , d(new Private(this))
 {
-    QHBoxLayout *layout = new QHBoxLayout(this);
+    auto *layout = new QHBoxLayout(this);
     layout->setSpacing(4);
     layout->setContentsMargins(0, 0, 0, 0);
 
@@ -74,7 +74,7 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     d->mLineEdit->setTrapReturnKey(true);
     layout->addWidget(d->mLineEdit, 1);
 
-    QPushButton *button = new QPushButton(this);
+    auto *button = new QPushButton(this);
     button->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
     button->setFixedHeight(d->mLineEdit->sizeHint().height());
     button->setToolTip(i18n("Open Address Book"));

@@ -48,33 +48,33 @@ QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOpt
             return QStyledItemDelegate::createEditor(parent, item, index);
         case CustomField::NumericType:
         {
-            QSpinBox *editor = new QSpinBox(parent);
+            auto *editor = new QSpinBox(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
         }
         case CustomField::BooleanType:
         {
-            QCheckBox *editor = new QCheckBox(parent);
+            auto *editor = new QCheckBox(parent);
             return editor;
         }
         case CustomField::DateType:
         {
-            QDateEdit *editor = new QDateEdit(parent);
+            auto *editor = new QDateEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
         }
         case CustomField::TimeType:
         {
-            QTimeEdit *editor = new QTimeEdit(parent);
+            auto *editor = new QTimeEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
         }
         case CustomField::DateTimeType:
         {
-            QDateTimeEdit *editor = new QDateTimeEdit(parent);
+            auto *editor = new QDateTimeEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
@@ -97,33 +97,33 @@ void CustomFieldsListDelegate::setEditorData(QWidget *editor, const QModelIndex 
             break;
         case CustomField::NumericType:
         {
-            QSpinBox *widget = qobject_cast<QSpinBox *>(editor);
+            auto *widget = qobject_cast<QSpinBox *>(editor);
             widget->setValue(index.data(Qt::EditRole).toInt());
             break;
         }
         case CustomField::BooleanType:
         {
-            QCheckBox *widget = qobject_cast<QCheckBox *>(editor);
+            auto *widget = qobject_cast<QCheckBox *>(editor);
             widget->setChecked(index.data(Qt::EditRole).toString() == QLatin1String("true"));
             break;
         }
         case CustomField::DateType:
         {
-            QDateEdit *widget = qobject_cast<QDateEdit *>(editor);
+            auto *widget = qobject_cast<QDateEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("dd.MM.yyyy"));
             widget->setDate(QDate::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
             break;
         }
         case CustomField::TimeType:
         {
-            QTimeEdit *widget = qobject_cast<QTimeEdit *>(editor);
+            auto *widget = qobject_cast<QTimeEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("hh:mm"));
             widget->setTime(QTime::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
             break;
         }
         case CustomField::DateTimeType:
         {
-            QDateTimeEdit *widget = qobject_cast<QDateTimeEdit *>(editor);
+            auto *widget = qobject_cast<QDateTimeEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("dd.MM.yyyy hh:mm"));
             widget->setDateTime(QDateTime::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
             break;
@@ -146,31 +146,31 @@ void CustomFieldsListDelegate::setModelData(QWidget *editor, QAbstractItemModel 
             break;
         case CustomField::NumericType:
         {
-            QSpinBox *widget = qobject_cast<QSpinBox *>(editor);
+            auto *widget = qobject_cast<QSpinBox *>(editor);
             model->setData(index, QString::number(widget->value()));
             break;
         }
         case CustomField::BooleanType:
         {
-            QCheckBox *widget = qobject_cast<QCheckBox *>(editor);
+            auto *widget = qobject_cast<QCheckBox *>(editor);
             model->setData(index, widget->isChecked() ? QStringLiteral("true") : QStringLiteral("false"));
             break;
         }
         case CustomField::DateType:
         {
-            QDateEdit *widget = qobject_cast<QDateEdit *>(editor);
+            auto *widget = qobject_cast<QDateEdit *>(editor);
             model->setData(index, widget->date().toString(Qt::ISODate));
             break;
         }
         case CustomField::TimeType:
         {
-            QTimeEdit *widget = qobject_cast<QTimeEdit *>(editor);
+            auto *widget = qobject_cast<QTimeEdit *>(editor);
             model->setData(index, widget->time().toString(Qt::ISODate));
             break;
         }
         case CustomField::DateTimeType:
         {
-            QDateTimeEdit *widget = qobject_cast<QDateTimeEdit *>(editor);
+            auto *widget = qobject_cast<QDateTimeEdit *>(editor);
             model->setData(index, widget->dateTime().toString(Qt::ISODate));
             break;
         }

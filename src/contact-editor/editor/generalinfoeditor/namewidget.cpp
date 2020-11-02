@@ -21,13 +21,13 @@ using namespace ContactEditor;
 NameWidget::NameWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     QLabel *label = new QLabel(i18n("Name"));
     label->setObjectName(QStringLiteral("namelabel"));
     topLayout->addWidget(label);
 
-    QHBoxLayout *lineLayout = new QHBoxLayout;
+    auto *lineLayout = new QHBoxLayout;
     lineLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->addLayout(lineLayout);
 

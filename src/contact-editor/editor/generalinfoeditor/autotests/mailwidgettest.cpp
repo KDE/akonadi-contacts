@@ -26,16 +26,16 @@ MailWidgetTest::~MailWidgetTest()
 void MailWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::MailWidget w;
-    QLineEdit *line = w.findChild<QLineEdit *>(QStringLiteral("mailedit"));
+    auto *line = w.findChild<QLineEdit *>(QStringLiteral("mailedit"));
     QVERIFY(line);
     QVERIFY(line->text().isEmpty());
-    QToolButton *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
+    auto *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
     QVERIFY(addButton);
 
-    QToolButton *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
+    auto *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
     QVERIFY(removeButton);
 
-    QComboBox *mailtype = w.findChild<QComboBox *>(QStringLiteral("mailtype"));
+    auto *mailtype = w.findChild<QComboBox *>(QStringLiteral("mailtype"));
     QVERIFY(mailtype);
 }
 

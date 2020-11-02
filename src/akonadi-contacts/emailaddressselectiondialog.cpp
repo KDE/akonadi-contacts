@@ -28,7 +28,7 @@ public:
     Private(EmailAddressSelectionDialog *qq, QAbstractItemModel *model)
         : q(qq)
     {
-        QVBoxLayout *mainLayout = new QVBoxLayout(q);
+        auto *mainLayout = new QVBoxLayout(q);
         if (model) {
             mView = new RecipientsPickerWidget(true, model, q);
         } else {

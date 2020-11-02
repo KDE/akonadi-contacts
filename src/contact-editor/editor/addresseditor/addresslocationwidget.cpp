@@ -33,9 +33,9 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     : QWidget(parent)
     , mCurrentMode(CreateAddress)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
 
-    QGridLayout *gridLayout = new QGridLayout;
+    auto *gridLayout = new QGridLayout;
     topLayout->addLayout(gridLayout);
 
     mTypeCombo = new SelectAddressTypeComboBox(this);
@@ -93,7 +93,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("countrylabel"));
     gridLayout->addWidget(label, 5, 1);
     mCountryCombo = new KComboBox(this);
-    KLineEdit *edit = new KLineEdit(this);
+    auto *edit = new KLineEdit(this);
     edit->setTrapReturnKey(true);
     mCountryCombo->setLineEdit(edit);
     mCountryCombo->setObjectName(QStringLiteral("countrycombobox"));
@@ -111,7 +111,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     topLayout->addWidget(mButtonStack);
 
     QWidget *addButtonWidget = new QWidget(this);
-    QHBoxLayout *addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
+    auto *addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
     addButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
     mAddAddress = new QPushButton(i18n("Add Address"), this);
     mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
@@ -121,7 +121,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mButtonStack->addWidget(addButtonWidget);
 
     QWidget *modifyButtonWidget = new QWidget(this);
-    QHBoxLayout *modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
+    auto *modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
     modifyButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
     mButtonStack->addWidget(modifyButtonWidget);
 

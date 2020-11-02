@@ -25,16 +25,16 @@ QAbstractItemModel *ContactCompletionModel::self()
         return mSelf;
     }
 
-    Monitor *monitor = new Monitor;
+    auto *monitor = new Monitor;
     monitor->setObjectName(QStringLiteral("ContactCompletionModelMonitor"));
     monitor->fetchCollection(true);
     monitor->itemFetchScope().fetchFullPayload();
     monitor->setCollectionMonitored(Akonadi::Collection::root());
     monitor->setMimeTypeMonitored(KContacts::Addressee::mimeType());
 
-    ContactCompletionModel *model = new ContactCompletionModel(monitor);
+    auto *model = new ContactCompletionModel(monitor);
 
-    EntityMimeTypeFilterModel *filter = new Akonadi::EntityMimeTypeFilterModel(model);
+    auto *filter = new Akonadi::EntityMimeTypeFilterModel(model);
     filter->setSourceModel(model);
     filter->addMimeTypeExclusionFilter(Akonadi::Collection::mimeType());
     filter->addMimeTypeExclusionFilter(Akonadi::Collection::virtualMimeType());

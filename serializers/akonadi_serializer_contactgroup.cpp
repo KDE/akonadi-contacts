@@ -99,10 +99,10 @@ void SerializerPluginContactGroup::compare(Akonadi::AbstractDifferencesReporter 
     }
 
     // using job->exec() is ok here, not a hot path
-    Akonadi::ContactGroupExpandJob *leftJob = new Akonadi::ContactGroupExpandJob(leftContactGroup);
+    auto *leftJob = new Akonadi::ContactGroupExpandJob(leftContactGroup);
     leftJob->exec();
 
-    Akonadi::ContactGroupExpandJob *rightJob = new Akonadi::ContactGroupExpandJob(rightContactGroup);
+    auto *rightJob = new Akonadi::ContactGroupExpandJob(rightContactGroup);
     rightJob->exec();
 
     compareVector(reporter, i18n("Member"), leftJob->contacts(), rightJob->contacts());

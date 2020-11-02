@@ -56,7 +56,7 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     , d(new Private(this))
 {
     setWindowTitle(i18nc("@title:window", "Show Contact"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
     QWidget *mainWidget = new QWidget(this);
@@ -67,12 +67,12 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ContactViewerDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ContactViewerDialog::reject);
 
-    QVBoxLayout *layout = new QVBoxLayout(mainWidget);
+    auto *layout = new QVBoxLayout(mainWidget);
 
     d->mViewer = new ContactViewer(this);
     layout->addWidget(d->mViewer);
 
-    ContactDefaultActions *actions = new ContactDefaultActions(this);
+    auto *actions = new ContactDefaultActions(this);
     actions->connectToView(d->mViewer);
 
     mainLayout->addWidget(buttonBox);

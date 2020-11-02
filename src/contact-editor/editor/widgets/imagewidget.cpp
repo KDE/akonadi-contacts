@@ -221,7 +221,7 @@ void ImageWidget::mouseMoveEvent(QMouseEvent *event)
     if ((event->buttons() & Qt::LeftButton)
         && (event->pos() - mDragStartPos).manhattanLength() > QApplication::startDragDistance()) {
         if (mHasImage) {
-            QDrag *drag = new QDrag(this);
+            auto *drag = new QDrag(this);
             drag->setMimeData(new QMimeData());
             drag->mimeData()->setImageData(mPicture.data());
             drag->exec(Qt::CopyAction);

@@ -23,7 +23,7 @@ using namespace ContactEditor;
 PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QGridLayout *mainLayout = new QGridLayout(this);
+    auto *mainLayout = new QGridLayout(this);
     QLabel *label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
     mainLayout->addWidget(label, 0, 0);
 

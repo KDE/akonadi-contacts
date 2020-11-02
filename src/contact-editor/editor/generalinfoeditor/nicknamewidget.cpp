@@ -18,7 +18,7 @@ using namespace ContactEditor;
 NicknameWidget::NicknameWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->setObjectName(QStringLiteral("mainlayout"));
     QLabel *nickNameLabel = new QLabel(i18n("Nickname"), this);
