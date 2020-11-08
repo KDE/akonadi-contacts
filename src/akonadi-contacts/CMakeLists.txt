@@ -39,6 +39,9 @@ set(akonadicontact_actions_SRCS
     actions/qekigadialer.cpp
     )
 
+if (TARGET KF5::Libkleo)
+    set(HAVE_KLEO TRUE)
+endif()
 configure_file(config-akonadi-contact.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-akonadi-contact.h)
 
 configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
@@ -159,10 +162,12 @@ target_link_libraries(KF5AkonadiContact
     Grantlee5::Templates
     )
 
+if(TARGET KF5::Libkleo)
 target_link_libraries(KF5AkonadiContact
     PRIVATE
     KF5::Libkleo
     )
+endif()
 
 set_target_properties(KF5AkonadiContact PROPERTIES
     VERSION ${AKONADICONTACT_VERSION_STRING}
