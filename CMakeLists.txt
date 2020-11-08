@@ -53,9 +53,11 @@ find_package(KF5Contacts ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkleo ${LIBKLEO_LIB_VERSION} CONFIG)
-if (NOT WIN32)
+
+if (NOT WIN32 OR MSVC)
     set_package_properties(KF5Libkleo PROPERTIES TYPE REQUIRED)
 endif()
+
 find_package(KF5GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(Grantlee5 ${GRANTLEE_LIB_VERSION} CONFIG REQUIRED)
