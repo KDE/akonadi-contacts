@@ -120,7 +120,7 @@ void KWidgetLister::removeLastWidget()
 
 void KWidgetLister::clearWidget(QWidget *widget)
 {
-    Q_UNUSED(widget);
+    Q_UNUSED(widget)
 }
 
 QWidget *KWidgetLister::createWidget(QWidget *parent)

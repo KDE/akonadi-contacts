@@ -22,7 +22,7 @@ QDialer::~QDialer()
 
 bool QDialer::dialNumber(const QString &number)
 {
-    Q_UNUSED(number);
+    Q_UNUSED(number)
     mErrorMessage = i18n("Dialing a number is not supported");
 
     return false;
@@ -30,8 +30,8 @@ bool QDialer::dialNumber(const QString &number)
 
 bool QDialer::sendSms(const QString &number, const QString &text)
 {
-    Q_UNUSED(number);
-    Q_UNUSED(text);
+    Q_UNUSED(number)
+    Q_UNUSED(text)
     mErrorMessage = i18n("Sending an SMS is not supported");
 
     return false;

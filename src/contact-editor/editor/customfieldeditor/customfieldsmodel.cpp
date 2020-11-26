@@ -40,13 +40,13 @@ CustomField::List CustomFieldsModel::customFields() const
 
 QModelIndex CustomFieldsModel::index(int row, int column, const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return createIndex(row, column);
 }
 
 QModelIndex CustomFieldsModel::parent(const QModelIndex &child) const
 {
-    Q_UNUSED(child);
+    Q_UNUSED(child)
     return QModelIndex();
 }
 

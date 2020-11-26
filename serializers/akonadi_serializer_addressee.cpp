@@ -27,7 +27,7 @@ using namespace Akonadi;
 
 bool SerializerPluginAddressee::deserialize(Item &item, const QByteArray &label, QIODevice &data, int version)
 {
-    Q_UNUSED(version);
+    Q_UNUSED(version)
 
     KContacts::Addressee addr;
     if (label == Item::FullPayload) {
@@ -65,7 +65,7 @@ bool SerializerPluginAddressee::deserialize(Item &item, const QByteArray &label,
 
 void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &label, QIODevice &data, int &version)
 {
-    Q_UNUSED(version);
+    Q_UNUSED(version)
 
     if (label != Item::FullPayload && label != CONTACTPART_STANDARD && label != CONTACTPART_LOOKUP) {
         return;

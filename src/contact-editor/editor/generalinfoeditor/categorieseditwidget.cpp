@@ -24,15 +24,15 @@ CategoriesEditWidget::~CategoriesEditWidget()
 
 void CategoriesEditWidget::setReadOnly(bool readOnly)
 {
-    Q_UNUSED(readOnly);
+    Q_UNUSED(readOnly)
 }
 
 void CategoriesEditWidget::loadContact(const KContacts::Addressee &contact)
 {
-    Q_UNUSED(contact);
+    Q_UNUSED(contact)
 }
 
 void CategoriesEditWidget::storeContact(KContacts::Addressee &contact) const
 {
-    Q_UNUSED(contact);
+    Q_UNUSED(contact)
 }
