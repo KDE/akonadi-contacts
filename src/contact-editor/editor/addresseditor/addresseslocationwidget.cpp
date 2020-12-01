@@ -15,8 +15,6 @@
 
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <QHBoxLayout>
-#include <QLabel>
 #include <QMenu>
 #include <QTreeView>
 

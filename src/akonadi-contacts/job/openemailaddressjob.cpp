@@ -15,7 +15,6 @@
 #include <itemcreatejob.h>
 #include <kcontacts/addressee.h>
 #include <QPointer>
-#include <KMessageBox>
 
 using namespace Akonadi;
 

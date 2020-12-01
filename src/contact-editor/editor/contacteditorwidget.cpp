@@ -14,7 +14,6 @@
 #include "contactmetadatabase_p.h"
 
 #include <KConfig>
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <QTabWidget>
 #include <KTextEdit>

@@ -24,13 +24,12 @@
 #include <KColorScheme>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KStringHandler>
 
 #include <QVBoxLayout>
+#include <QScreen>
 #include <QIcon>
 #include <QUrlQuery>
 #include <QGuiApplication>
-#include <QScreen>
 #include <prison/Prison>
 #include <kcontacts/vcardconverter.h>
 

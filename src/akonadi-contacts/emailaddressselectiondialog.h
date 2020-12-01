@@ -15,7 +15,6 @@
 #include "abstractemailaddressselectiondialog.h"
 #include "emailaddressselectionwidget.h"
 
-#include <QDialog>
 
 namespace Akonadi {
 /**

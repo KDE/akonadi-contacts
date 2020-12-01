@@ -22,7 +22,6 @@
 #include <KColorScheme>
 
 #include <KLocalizedString>
-#include <KStringHandler>
 
 #include <QVBoxLayout>
 #include <QIcon>

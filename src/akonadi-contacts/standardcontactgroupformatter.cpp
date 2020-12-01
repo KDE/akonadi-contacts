@@ -12,7 +12,6 @@
 #include <item.h>
 #include <kcontacts/addressee.h>
 #include <KColorScheme>
-#include <KStringHandler>
 
 using namespace Akonadi;
 
