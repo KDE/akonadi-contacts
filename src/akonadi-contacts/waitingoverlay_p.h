@@ -28,7 +28,7 @@ public:
      * @param parent must not be equal to baseWidget
      */
     explicit WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent = nullptr);
-    ~WaitingOverlay();
+    ~WaitingOverlay() override;
 
 protected:
     bool eventFilter(QObject *object, QEvent *event) override;

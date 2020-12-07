@@ -18,7 +18,7 @@ class CustomFieldsListDelegate : public QStyledItemDelegate
     Q_OBJECT
 public:
     explicit CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent = nullptr);
-    ~CustomFieldsListDelegate();
+    ~CustomFieldsListDelegate() override;
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 

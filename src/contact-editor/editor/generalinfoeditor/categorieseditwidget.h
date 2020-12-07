@@ -24,7 +24,7 @@ class CategoriesEditWidget : public ContactEditor::CategoriesEditAbstractWidget
 
 public:
     explicit CategoriesEditWidget(QWidget *parent = nullptr);
-    ~CategoriesEditWidget();
+    ~CategoriesEditWidget() override;
 
     void loadContact(const KContacts::Addressee &contact) override;
     void storeContact(KContacts::Addressee &contact) const override;

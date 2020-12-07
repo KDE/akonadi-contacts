@@ -19,7 +19,7 @@ class LeafExtensionProxyModel : public QSortFilterProxyModel
 
 public:
     explicit LeafExtensionProxyModel(QObject *parent = nullptr);
-    ~LeafExtensionProxyModel();
+    ~LeafExtensionProxyModel() override;
 
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &index) const override;

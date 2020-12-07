@@ -80,7 +80,7 @@ public:
     /**
      * Destroys the contact group editor dialog.
      */
-    ~ContactGroupEditorDialog();
+    ~ContactGroupEditorDialog() override;
 
     /**
      * Sets the contact @p group to edit when in EditMode.

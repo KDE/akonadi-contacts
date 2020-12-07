@@ -25,7 +25,7 @@ public:
     };
 
     explicit ContactGroupModel(QObject *parent = nullptr);
-    ~ContactGroupModel();
+    ~ContactGroupModel() override;
 
     void loadContactGroup(const KContacts::ContactGroup &contactGroup);
     bool storeContactGroup(KContacts::ContactGroup &contactGroup) const;

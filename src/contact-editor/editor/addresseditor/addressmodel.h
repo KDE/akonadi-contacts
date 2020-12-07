@@ -20,7 +20,7 @@ class AddressModel : public QAbstractListModel
     Q_OBJECT
 public:
     explicit AddressModel(QObject *parent = nullptr);
-    ~AddressModel();
+    ~AddressModel() override;
 
     KContacts::Address::List addresses() const;
     void setAddresses(const KContacts::Address::List &addresses);

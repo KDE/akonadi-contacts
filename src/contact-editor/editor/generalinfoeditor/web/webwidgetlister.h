@@ -21,7 +21,7 @@ class WebWidgetLister : public KWidgetLister
     Q_OBJECT
 public:
     explicit WebWidgetLister(QWidget *parent = nullptr);
-    ~WebWidgetLister();
+    ~WebWidgetLister() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

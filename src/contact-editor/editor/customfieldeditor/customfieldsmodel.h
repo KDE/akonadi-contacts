@@ -23,7 +23,7 @@ public:
     };
 
     explicit CustomFieldsModel(QObject *parent = nullptr);
-    ~CustomFieldsModel();
+    ~CustomFieldsModel() override;
 
     void setCustomFields(const CustomField::List &addresses);
     CustomField::List customFields() const;

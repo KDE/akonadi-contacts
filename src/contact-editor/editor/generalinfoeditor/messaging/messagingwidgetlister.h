@@ -21,7 +21,7 @@ class MessagingWidgetLister : public KWidgetLister
     Q_OBJECT
 public:
     explicit MessagingWidgetLister(QWidget *parent = nullptr);
-    ~MessagingWidgetLister();
+    ~MessagingWidgetLister() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

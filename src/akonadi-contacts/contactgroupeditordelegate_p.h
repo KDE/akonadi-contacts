@@ -43,7 +43,7 @@ class ContactGroupEditorDelegate : public QStyledItemDelegate
 
 public:
     explicit ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent = nullptr);
-    ~ContactGroupEditorDelegate();
+    ~ContactGroupEditorDelegate() override;
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 

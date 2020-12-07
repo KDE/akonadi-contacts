@@ -32,7 +32,7 @@ public:
     /**
      * Destroys the contact meta data attribute.
      */
-    ~ContactMetaDataAttribute();
+    ~ContactMetaDataAttribute() override;
 
     /**
      * Sets the meta @p data.
