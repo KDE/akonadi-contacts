@@ -69,7 +69,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     });
 
     setChildrenCollapsible(false);
-    setSizes(QList<int>() << 400 << 300);
+    setSizes({400, 300});
 }
 
 AddressesLocationWidget::~AddressesLocationWidget() = default;
