@@ -148,6 +148,12 @@ AddressLocationWidget::~AddressLocationWidget()
 {
 }
 
+bool AddressLocationWidget::wasChanged() const
+{
+    //TODO
+    return false;
+}
+
 void AddressLocationWidget::setReadOnly(bool readOnly)
 {
     mPreferredCheckBox->setEnabled(!readOnly);
@@ -273,6 +279,7 @@ void AddressLocationWidget::reset()
 {
     Q_EMIT updateAddressCanceled();
     mCurrentAddress = -1;
+    mWasChanged = false;
     clear();
 }
 
