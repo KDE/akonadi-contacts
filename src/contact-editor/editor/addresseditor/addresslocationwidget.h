@@ -36,7 +36,7 @@ public:
     ~AddressLocationWidget();
 
     void setAddress(const KContacts::Address &address);
-    KContacts::Address address() const;
+    Q_REQUIRED_RESULT KContacts::Address address() const;
 
     void slotModifyAddress(const KContacts::Address &address, int currentIndex);
 
@@ -44,6 +44,7 @@ public:
 
     void setReadOnly(bool readOnly);
 
+    Q_REQUIRED_RESULT bool wasChanged() const;
 Q_SIGNALS:
     void addNewAddress(const KContacts::Address &address);
     void updateAddress(const KContacts::Address &address, int index);
@@ -71,6 +72,7 @@ private:
     SelectAddressTypeComboBox *mTypeCombo = nullptr;
     int mCurrentAddress = -1;
     Mode mCurrentMode;
+    bool mWasChanged = false;
 };
 
 }
