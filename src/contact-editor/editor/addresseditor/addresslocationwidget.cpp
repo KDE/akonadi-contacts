@@ -40,6 +40,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
     mTypeCombo = new SelectAddressTypeComboBox(this);
     mTypeCombo->setObjectName(QStringLiteral("typeaddress"));
+    //connect(mTypeCombo, &SelectAddressTypeComboBox::activated, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mTypeCombo, 0, 0, 1, 2);
 
     QLabel *label = new QLabel(KContacts::Address::streetLabel(), this);
@@ -50,6 +51,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mStreetEdit->setPlaceholderText(i18n("Add Street"));
     mStreetEdit->setObjectName(QStringLiteral("streetlineedit"));
     mStreetEdit->setTrapReturnKey(true);
+    connect(mStreetEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mStreetEdit, 2, 0);
 
     label = new QLabel(KContacts::Address::postOfficeBoxLabel(), this);
@@ -60,6 +62,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mPOBoxEdit->setPlaceholderText(i18n("Add Post Office Box"));
     mPOBoxEdit->setObjectName(QStringLiteral("postofficeboxlineedit"));
     mPOBoxEdit->setTrapReturnKey(true);
+    connect(mPOBoxEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mPOBoxEdit, 2, 1);
 
     label = new QLabel(KContacts::Address::postalCodeLabel(), this);
@@ -69,6 +72,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mPostalCodeEdit->setPlaceholderText(i18n("Add Postal Code"));
     mPostalCodeEdit->setObjectName(QStringLiteral("postalcodelineedit"));
     mPostalCodeEdit->setTrapReturnKey(true);
+    connect(mPostalCodeEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mPostalCodeEdit, 4, 0);
 
     label = new QLabel(KContacts::Address::localityLabel(), this);
@@ -78,6 +82,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mLocalityEdit->setPlaceholderText(i18n("Add Locality"));
     mLocalityEdit->setObjectName(QStringLiteral("localitylineedit"));
     mLocalityEdit->setTrapReturnKey(true);
+    connect(mLocalityEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mLocalityEdit, 4, 1);
 
     label = new QLabel(KContacts::Address::regionLabel(), this);
@@ -87,6 +92,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mRegionEdit->setPlaceholderText(i18n("Add Region"));
     mRegionEdit->setObjectName(QStringLiteral("regionlineedit"));
     mRegionEdit->setTrapReturnKey(true);
+    connect(mRegionEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mRegionEdit, 6, 0);
 
     label = new QLabel(KContacts::Address::countryLabel(), this);
@@ -100,6 +106,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mCountryCombo->setEditable(true);
     mCountryCombo->lineEdit()->setPlaceholderText(i18n("Add a Country"));
     mCountryCombo->setDuplicatesEnabled(false);
+    //connect(mCountryCombo, &KComboBox::activated, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mCountryCombo, 6, 1);
 
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), this);
@@ -148,10 +155,14 @@ AddressLocationWidget::~AddressLocationWidget()
 {
 }
 
+void AddressLocationWidget::slotChanged()
+{
+    mWasChanged = true;
+}
+
 bool AddressLocationWidget::wasChanged() const
 {
-    //TODO
-    return false;
+    return mWasChanged;
 }
 
 void AddressLocationWidget::setReadOnly(bool readOnly)
