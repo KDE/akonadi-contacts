@@ -51,6 +51,7 @@ Q_SIGNALS:
     void updateAddressCanceled();
 
 private:
+    void slotChanged();
     void slotAddAddress();
     void slotUpdateAddress();
     void slotCancelModifyAddress();
