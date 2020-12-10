@@ -165,7 +165,6 @@ target_link_libraries(KF5ContactEditor
     KF5::ConfigCore
     KF5::ConfigWidgets
     KF5::KIOWidgets
-    KF5::Codecs
     KF5::I18n
     KF5::TextWidgets
     KF5::WidgetsAddons
