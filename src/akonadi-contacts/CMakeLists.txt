@@ -129,7 +129,15 @@ ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_de
 ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
 
 add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
-
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_source_files_properties(
+        grantlee/contactgrantleewrapper.cpp
+        grantlee/grantleecontactformatter.cpp
+        grantlee/grantleecontactgroupformatter.cpp
+        grantlee/grantleeprint.cpp
+        grantlee/grantleecontactviewer.cpp PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+    set_target_properties(KF5AkonadiContact PROPERTIES UNITY_BUILD ON)
+endif()
 generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
 add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)

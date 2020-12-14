@@ -147,6 +147,9 @@ set(contacteditor_LIB_SRC
 
 
 add_library(KF5ContactEditor ${contacteditor_LIB_SRC})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(KF5ContactEditor PROPERTIES UNITY_BUILD ON)
+endif()
 
 generate_export_header(KF5ContactEditor BASE_NAME contacteditor)
 
