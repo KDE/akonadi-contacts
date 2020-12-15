@@ -129,7 +129,7 @@ ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_de
 ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
 
 add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_source_files_properties(
         grantlee/contactgrantleewrapper.cpp
         grantlee/grantleecontactformatter.cpp
