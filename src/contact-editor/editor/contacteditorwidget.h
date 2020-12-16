@@ -61,6 +61,7 @@ public:
      */
     void setReadOnly(bool readOnly) override;
 
+    Q_REQUIRED_RESULT bool hasNoSavedData() const override;
 private:
     class Private;
     Private *const d;

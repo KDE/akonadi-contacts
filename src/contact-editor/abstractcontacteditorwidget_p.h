@@ -52,6 +52,8 @@ public:
      * @param readOnly set read-only mode
      */
     virtual void setReadOnly(bool readOnly) = 0;
+
+    virtual Q_REQUIRED_RESULT bool hasNoSavedData() const { return false; }
 };
 }
 
