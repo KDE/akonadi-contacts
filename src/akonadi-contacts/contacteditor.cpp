@@ -309,4 +309,9 @@ void Akonadi::AkonadiContactEditor::setDefaultAddressBook(const Akonadi::Collect
     d->mDefaultCollection = collection;
 }
 
+bool Akonadi::AkonadiContactEditor::hasNoSavedData() const
+{
+    return d->mEditorWidget->hasNoSavedData();
+}
+
 #include "moc_contacteditor.cpp"

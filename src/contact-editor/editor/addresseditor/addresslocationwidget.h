@@ -33,7 +33,7 @@ public:
     };
 
     explicit AddressLocationWidget(QWidget *parent = nullptr);
-    ~AddressLocationWidget();
+    ~AddressLocationWidget() override;
 
     void setAddress(const KContacts::Address &address);
     Q_REQUIRED_RESULT KContacts::Address address() const;

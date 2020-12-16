@@ -269,3 +269,8 @@ void ContactEditorWidget::setReadOnly(bool readOnly)
         }
     }
 }
+
+bool ContactEditorWidget::hasNoSavedData() const
+{
+    return d->mAddressesLocationWidget->hasNoSavedData();
+}

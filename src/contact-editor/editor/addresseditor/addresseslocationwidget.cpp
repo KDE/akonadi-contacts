@@ -104,3 +104,8 @@ void AddressesLocationWidget::setReadOnly(bool readOnly)
     mReadOnly = readOnly;
     mAddressLocationWidget->setReadOnly(readOnly);
 }
+
+bool AddressesLocationWidget::hasNoSavedData() const
+{
+    return mAddressLocationWidget->wasChanged();
+}

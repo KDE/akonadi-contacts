@@ -89,10 +89,7 @@ public:
 
     void slotOkClicked()
     {
-        if (mAddressBookBox) {
-            mEditor->setDefaultAddressBook(mAddressBookBox->currentCollection());
-        }
-        mEditor->saveContactInAddressBook();
+        q->accept();
     }
 
     void slotFinish()
@@ -174,7 +171,18 @@ AkonadiContactEditor *ContactEditorDialog::editor() const
 
 void ContactEditorDialog::accept()
 {
-    //Nothing
+    if (d->mEditor->hasNoSavedData()) {
+        if (KMessageBox::questionYesNo(
+                    this,
+                    i18nc("@info", "Location was not saved. Do you want to close editor?"),
+                    i18nc("@title:window", "Confirmation")) == KMessageBox::No) {
+            return;
+        }
+    }
+    if (d->mAddressBookBox) {
+        d->mEditor->setDefaultAddressBook(d->mAddressBookBox->currentCollection());
+    }
+    d->mEditor->saveContactInAddressBook();
 }
 
 void ContactEditorDialog::reject()

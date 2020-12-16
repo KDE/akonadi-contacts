@@ -23,12 +23,13 @@ class AddressesLocationWidget : public QSplitter
     Q_OBJECT
 public:
     explicit AddressesLocationWidget(QWidget *parent = nullptr);
-    ~AddressesLocationWidget();
+    ~AddressesLocationWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
+    Q_REQUIRED_RESULT bool hasNoSavedData() const;
 private:
     AddressLocationWidget *mAddressLocationWidget = nullptr;
     QTreeView *mAddressesLocationView = nullptr;
