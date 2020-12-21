@@ -11,12 +11,12 @@
 
 #include <QObject>
 
-class PreferredLineEditWidget : public QObject
+class PreferredLineEditWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit PreferredLineEditWidget(QObject *parent = nullptr);
-    ~PreferredLineEditWidget();
+    explicit PreferredLineEditWidgetTest(QObject *parent = nullptr);
+    ~PreferredLineEditWidgetTest();
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

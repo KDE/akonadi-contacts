@@ -12,16 +12,16 @@
 #include <QIcon>
 #include <QTest>
 
-PreferredLineEditWidget::PreferredLineEditWidget(QObject *parent)
+PreferredLineEditWidgetTest::PreferredLineEditWidgetTest(QObject *parent)
     : QObject(parent)
 {
 }
 
-PreferredLineEditWidget::~PreferredLineEditWidget()
+PreferredLineEditWidgetTest::~PreferredLineEditWidgetTest()
 {
 }
 
-void PreferredLineEditWidget::shouldHaveDefaultValue()
+void PreferredLineEditWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::PreferredLineEditWidget w;
     auto *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
@@ -29,7 +29,7 @@ void PreferredLineEditWidget::shouldHaveDefaultValue()
     QVERIFY(!w.preferred());
 }
 
-void PreferredLineEditWidget::shouldChangePreferredValue()
+void PreferredLineEditWidgetTest::shouldChangePreferredValue()
 {
     ContactEditor::PreferredLineEditWidget w;
     auto *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
@@ -45,4 +45,4 @@ void PreferredLineEditWidget::shouldChangePreferredValue()
     QCOMPARE(act->icon(), enabled);
 }
 
-QTEST_MAIN(PreferredLineEditWidget)
+QTEST_MAIN(PreferredLineEditWidgetTest)
