@@ -40,7 +40,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
     mTypeCombo = new SelectAddressTypeComboBox(this);
     mTypeCombo->setObjectName(QStringLiteral("typeaddress"));
-    connect(mTypeCombo, QOverload<const QString &>::of(&SelectAddressTypeComboBox::activated), this, &AddressLocationWidget::slotChanged);
+    connect(mTypeCombo, &SelectAddressTypeComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mTypeCombo, 0, 0, 1, 2);
 
     QLabel *label = new QLabel(KContacts::Address::streetLabel(), this);
@@ -106,7 +106,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mCountryCombo->setEditable(true);
     mCountryCombo->lineEdit()->setPlaceholderText(i18n("Add a Country"));
     mCountryCombo->setDuplicatesEnabled(false);
-    connect(mCountryCombo, QOverload<const QString &>::of(&KComboBox::activated), this, &AddressLocationWidget::slotChanged);
+    connect(mCountryCombo, &KComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mCountryCombo, 6, 1);
 
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), this);
