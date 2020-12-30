@@ -54,7 +54,7 @@ find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkleo ${LIBKLEO_LIB_VERSION} CONFIG)
 
-if (NOT WIN32 OR MSVC)
+if (NOT WIN32)
     set_package_properties(KF5Libkleo PROPERTIES TYPE REQUIRED)
 endif()
 
