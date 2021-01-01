@@ -1,6 +1,6 @@
 /*
     This file is part of Akonadi Contact.
-    SPDX-FileCopyrightText: 2012-2020 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2012-2021 Laurent Montel <montel@kde.org>
 
     SPDX-FileCopyrightText: 2009 Tobias Koenig <tokoe@kde.org>
 
