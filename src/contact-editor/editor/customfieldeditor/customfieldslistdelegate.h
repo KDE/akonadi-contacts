@@ -12,7 +12,8 @@
 
 #include <QStyledItemDelegate>
 class QAbstractItemView;
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CustomFieldsListDelegate : public QStyledItemDelegate
 {
     Q_OBJECT

@@ -12,11 +12,11 @@
 
 #include <KDatePicker>
 
+#include <KLocalizedString>
 #include <QContextMenuEvent>
 #include <QHBoxLayout>
-#include <QToolButton>
-#include <KLocalizedString>
 #include <QLocale>
+#include <QToolButton>
 
 DateView::DateView(QWidget *parent)
     : QLineEdit(parent)

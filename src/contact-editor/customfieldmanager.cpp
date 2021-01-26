@@ -11,7 +11,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 
-
 void CustomFieldManager::setGlobalCustomFieldDescriptions(const CustomField::List &customFields)
 {
     KConfig config(QStringLiteral("akonadi_contactrc"));

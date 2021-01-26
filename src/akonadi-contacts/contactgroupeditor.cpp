@@ -9,25 +9,25 @@
 #include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
 
-#include "contactgroupmodel_p.h"
 #include "contactgroupeditordelegate_p.h"
+#include "contactgroupmodel_p.h"
 #include "waitingoverlay_p.h"
 
+#include <KColorScheme>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <collectiondialog.h>
 #include <collectionfetchjob.h>
 #include <itemcreatejob.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 #include <itemmodifyjob.h>
+#include <kcontacts/contactgroup.h>
 #include <monitor.h>
 #include <session.h>
-#include <kcontacts/contactgroup.h>
-#include <KLocalizedString>
-#include <KMessageBox>
-#include <KColorScheme>
 
-#include <QTimer>
 #include <QMessageBox>
+#include <QTimer>
 
 using namespace Akonadi;
 
@@ -69,8 +69,7 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
         // if in edit mode we have to fetch the parent collection to find out
         // about the modify rights of the item
 
-        auto *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
-                                                                                          Akonadi::CollectionFetchJob::Base);
+        auto *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(), Akonadi::CollectionFetchJob::Base);
         mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
             parentCollectionFetchDone(job);
         });
@@ -129,7 +128,7 @@ void ContactGroupEditor::Private::storeDone(KJob *job)
 void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByteArray> &)
 {
     Q_UNUSED(item)
-    QPointer<QMessageBox> dlg = new QMessageBox(mParent);   //krazy:exclude=qclasses
+    QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
 
     dlg->setInformativeText(i18n("The contact group has been changed by someone else.\nWhat should be done?"));
     dlg->addButton(i18n("Take over changes"), QMessageBox::AcceptRole);
@@ -188,8 +187,7 @@ void ContactGroupEditor::Private::setupMonitor()
     mMonitor->setObjectName(QStringLiteral("ContactGroupEditorMonitor"));
     mMonitor->ignoreSession(Session::defaultSession());
 
-    connect(mMonitor, &Monitor::itemChanged,
-            mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &arrays) {
+    connect(mMonitor, &Monitor::itemChanged, mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &arrays) {
         itemChanged(item, arrays);
     });
 }
@@ -330,8 +328,7 @@ void ContactGroupEditor::groupNameIsValid(bool isValid)
     if (!isValid) {
         const KColorScheme::BackgroundRole bgColorScheme(KColorScheme::NegativeBackground);
         KStatefulBrush bgBrush(KColorScheme::View, bgColorScheme);
-        styleSheet = QStringLiteral("QLineEdit{ background-color:%1 }").
-                     arg(bgBrush.brush(this).color().name());
+        styleSheet = QStringLiteral("QLineEdit{ background-color:%1 }").arg(bgBrush.brush(this).color().name());
     }
     d->mGui.groupName->setStyleSheet(styleSheet);
 #endif

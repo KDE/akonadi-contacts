@@ -9,12 +9,13 @@
 #ifndef ADDRESSTYPEDIALOG_H
 #define ADDRESSTYPEDIALOG_H
 
-#include <QDialog>
 #include <KContacts/Address>
+#include <QDialog>
 
 class QButtonGroup;
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 /**
  * Dialog for creating a new address types.
  *

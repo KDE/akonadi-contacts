@@ -77,18 +77,15 @@ QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
                 return customField.value();
             case CustomField::BooleanType:
                 return QString();
-            case CustomField::DateType:
-            {
+            case CustomField::DateType: {
                 const QDate value = QDate::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value, QLocale::ShortFormat);
             }
-            case CustomField::TimeType:
-            {
+            case CustomField::TimeType: {
                 const QTime value = QTime::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value);
             }
-            case CustomField::DateTimeType:
-            {
+            case CustomField::DateTimeType: {
                 const QDateTime value = QDateTime::fromString(customField.value(), Qt::ISODate);
                 return QLocale().toString(value);
             }
@@ -160,8 +157,7 @@ bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value,
     if (role == Qt::CheckStateRole) {
         if (index.column() == 1) {
             if (customField.type() == CustomField::BooleanType) {
-                customField.setValue(static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked
-                                     ? QStringLiteral("true") : QStringLiteral("false"));
+                customField.setValue(static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked ? QStringLiteral("true") : QStringLiteral("false"));
                 Q_EMIT dataChanged(index, index);
                 return true;
             }

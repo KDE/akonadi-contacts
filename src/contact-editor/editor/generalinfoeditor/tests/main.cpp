@@ -7,8 +7,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <QApplication>
 #include "../generalinfowidget.h"
+#include <QApplication>
 using namespace ContactEditor;
 int main(int argc, char *argv[])
 {

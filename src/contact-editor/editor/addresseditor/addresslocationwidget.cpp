@@ -14,11 +14,11 @@
 #include <KLineEdit>
 #include <KLocalizedString>
 
-#include <QVBoxLayout>
-#include <QLabel>
 #include <QCheckBox>
+#include <QLabel>
 #include <QPushButton>
 #include <QStackedWidget>
+#include <QVBoxLayout>
 
 using namespace ContactEditor;
 
@@ -223,10 +223,9 @@ void AddressLocationWidget::setAddress(const KContacts::Address &address)
     mLocalityEdit->setText(address.locality());
     mPostalCodeEdit->setText(address.postalCode());
     mPOBoxEdit->setText(address.postOfficeBox());
-    mPreferredCheckBox->setChecked(address.type() &KContacts::Address::Pref);
+    mPreferredCheckBox->setChecked(address.type() & KContacts::Address::Pref);
     if (address.isEmpty()) {
-        mCountryCombo->setItemText(mCountryCombo->currentIndex(),
-                                   QLocale::countryToString(QLocale().country()));
+        mCountryCombo->setItemText(mCountryCombo->currentIndex(), QLocale::countryToString(QLocale().country()));
     } else {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(), mAddress.country());
     }

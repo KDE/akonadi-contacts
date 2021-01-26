@@ -10,22 +10,22 @@
 
 #include <kcontacts/addressee.h>
 
+#include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KPixmapRegionSelectorDialog>
 #include <KUrlMimeData>
-#include <KIO/TransferJob>
-#include <QImageReader>
-#include <QFileDialog>
-#include <QMimeData>
+#include <QApplication>
 #include <QDrag>
-#include <QImageWriter>
 #include <QDragEnterEvent>
 #include <QDropEvent>
-#include <QMenu>
-#include <QApplication>
-#include <QUrl>
+#include <QFileDialog>
+#include <QImageReader>
+#include <QImageWriter>
 #include <QInputDialog>
+#include <QMenu>
+#include <QMimeData>
+#include <QUrl>
 /**
  * @short Small helper class to load image from network
  */
@@ -62,8 +62,7 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
     } else {
         QByteArray imageData;
         KIO::TransferJob *job = KIO::get(url, KIO::NoReload);
-        QObject::connect(job, &KIO::TransferJob::data,
-                         [&imageData](KIO::Job *, const QByteArray &data) {
+        QObject::connect(job, &KIO::TransferJob::data, [&imageData](KIO::Job *, const QByteArray &data) {
             imageData.append(data);
         });
         if (job->exec()) {
@@ -197,7 +196,7 @@ void ImageWidget::dropEvent(QDropEvent *event)
     }
 
     const QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(mimeData);
-    if (urls.isEmpty()) {   // oops, no data
+    if (urls.isEmpty()) { // oops, no data
         event->setAccepted(false);
     } else {
         bool ok = false;
@@ -218,8 +217,7 @@ void ImageWidget::mousePressEvent(QMouseEvent *event)
 
 void ImageWidget::mouseMoveEvent(QMouseEvent *event)
 {
-    if ((event->buttons() & Qt::LeftButton)
-        && (event->pos() - mDragStartPos).manhattanLength() > QApplication::startDragDistance()) {
+    if ((event->buttons() & Qt::LeftButton) && (event->pos() - mDragStartPos).manhattanLength() > QApplication::startDragDistance()) {
         if (mHasImage) {
             auto *drag = new QDrag(this);
             drag->setMimeData(new QMimeData());

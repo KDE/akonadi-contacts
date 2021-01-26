@@ -9,8 +9,8 @@
 
 #include <KContacts/Addressee>
 
-namespace KAddressBookGrantlee {
-
+namespace KAddressBookGrantlee
+{
 /**
  * Additional properties for the KContacts::Addressee Grantlee model.
  */
@@ -47,7 +47,6 @@ public:
     ContactGrantleeWrapper(const KContacts::Addressee &addr);
 
 private:
-
     QString addressBookLabel() const;
     QString anniversaryLabel() const;
     QString assistantLabel() const;
@@ -66,7 +65,6 @@ private:
 
     QString formattedBirthday() const;
     QString formattedAnniversary() const;
-
 };
 
 }

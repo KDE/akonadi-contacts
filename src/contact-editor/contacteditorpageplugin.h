@@ -11,11 +11,13 @@
 
 #include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 /**
  * @short The base class for custom ContactEditor page plugins.
  *

@@ -12,7 +12,8 @@
 #include "../../widgets/contacteditorcombobox.h"
 #include "contacteditor_private_export.h"
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public ContactEditor::ContactEditorComboBox
 {
     Q_OBJECT

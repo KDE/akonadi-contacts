@@ -7,8 +7,8 @@
 
 #include "emailaddressselectionwidgettest.h"
 
-#include <QApplication>
 #include <KComboBox>
+#include <QApplication>
 #include <QTextBrowser>
 
 #include <QGridLayout>

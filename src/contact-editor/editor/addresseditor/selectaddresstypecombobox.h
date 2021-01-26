@@ -10,11 +10,11 @@
 #ifndef SELECTADDRESSTYPECOMBOBOX_H
 #define SELECTADDRESSTYPECOMBOBOX_H
 
-#include <QComboBox>
 #include <KContacts/Address>
+#include <QComboBox>
 
-namespace ContactEditor {
-
+namespace ContactEditor
+{
 /**
  * @short A widget for selecting the type of an address.
  */

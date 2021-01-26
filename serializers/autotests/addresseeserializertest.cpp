@@ -5,8 +5,8 @@
 */
 
 #include <AkonadiCore/Item>
-#include <QTest>
 #include <QObject>
+#include <QTest>
 
 #include "../akonadi_serializer_addressee.h"
 

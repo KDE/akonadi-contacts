@@ -12,9 +12,9 @@
 #include <itemfetchscope.h>
 #include <kcontacts/addressee.h>
 
+#include <KIconEngine>
 #include <KIconLoader>
 #include <KLocalizedString>
-#include <KIconEngine>
 #include <QIcon>
 
 using namespace Akonadi;
@@ -194,9 +194,7 @@ bool ContactGroupModel::storeContactGroup(KContacts::ContactGroup &group) const
         } else {
             if (i != (d->mMembers.count() - 1)) {
                 if (member.data.email().isEmpty()) {
-                    d->mLastErrorMessage
-                        = i18n("The member with name <b>%1</b> is missing an email address",
-                               member.data.name());
+                    d->mLastErrorMessage = i18n("The member with name <b>%1</b> is missing an email address", member.data.name());
                     return false;
                 }
                 group.append(member.data);

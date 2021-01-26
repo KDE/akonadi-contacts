@@ -10,14 +10,16 @@
 #ifndef GENERALINFOWIDGET_H
 #define GENERALINFOWIDGET_H
 
-#include <QWidget>
 #include "displaynameeditwidget.h"
+#include <QWidget>
 class ImageWidget;
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CategoriesEditAbstractWidget;
 class PhoneListWidget;
 class WebListWidget;
@@ -41,6 +43,7 @@ public:
     void setReadOnly(bool readOnly);
     void setDisplayType(DisplayNameEditWidget::DisplayType type);
     Q_REQUIRED_RESULT DisplayNameEditWidget::DisplayType displayType() const;
+
 private:
     PhoneListWidget *mPhoneListWidget = nullptr;
     WebListWidget *mWebListWidget = nullptr;

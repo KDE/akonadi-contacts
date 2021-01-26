@@ -6,16 +6,16 @@
 */
 
 #include "textbrowser_p.h"
-#include <KLocalizedString>
-#include <QUrl>
-#include <QAction>
-#include <KStandardAction>
 #include <KCodecs>
+#include <KLocalizedString>
+#include <KStandardAction>
+#include <QAction>
+#include <QUrl>
 
 #include <QApplication>
+#include <QClipboard>
 #include <QContextMenuEvent>
 #include <QMenu>
-#include <QClipboard>
 #include <QRegularExpression>
 #include <QTextBlock>
 
@@ -56,7 +56,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
     // Create a new action to correspond with what is under the click
     act = new QAction(i18nc("@action:inmenu Copy the text of a general item", "Copy Item"), this);
 
-    mDataToCopy.clear();                                       // nothing found to copy yet
+    mDataToCopy.clear(); // nothing found to copy yet
 
     QString link = anchorAt(event->pos());
     if (!link.isEmpty()) {
@@ -77,9 +77,9 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
         }
     }
 
-    if (!mDataToCopy.isValid()) {               // no link was found above
+    if (!mDataToCopy.isValid()) { // no link was found above
         QTextCursor curs = cursorForPosition(event->pos());
-        QString text = curs.block().text();     // try the text under cursor
+        QString text = curs.block().text(); // try the text under cursor
 
         if (!text.isEmpty()) {
             // curs().block().text() over an image (contact photo or QR code)
@@ -91,8 +91,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                 if (charFormat.isImageFormat()) {
                     const QTextImageFormat imageFormat = charFormat.toImageFormat();
                     const QString imageName = imageFormat.name();
-                    const QVariant imageResource = document()->resource(QTextDocument::ImageResource,
-                                                                  QUrl(imageName));
+                    const QVariant imageResource = document()->resource(QTextDocument::ImageResource, QUrl(imageName));
 
                     const QPixmap pix = imageResource.value<QPixmap>();
                     if (!pix.isNull()) {

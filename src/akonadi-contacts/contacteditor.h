@@ -13,13 +13,16 @@
 
 #include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class AbstractContactEditorWidget;
 }
-namespace Akonadi {
+namespace Akonadi
+{
 class Collection;
 class Item;
 
@@ -74,7 +77,7 @@ public:
      */
     enum Mode {
         CreateMode, ///< Creates a new contact
-        EditMode    ///< Edits an existing contact
+        EditMode ///< Edits an existing contact
     };
 
     enum DisplayMode {
@@ -166,6 +169,7 @@ Q_SIGNALS:
      * @since 4.11
      */
     void finished();
+
 private:
     //@cond PRIVATE
     class Private;

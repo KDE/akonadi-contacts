@@ -9,15 +9,15 @@
 #include "sendsmsaction.h"
 
 #include "contactactionssettings.h"
-#include "qskypedialer.h"
 #include "qsflphonedialer.h"
+#include "qskypedialer.h"
 #include "smsdialog.h"
 
-#include <kcontacts/phonenumber.h>
-#include <KLocalizedString>
-#include <KMessageBox>
 #include <KDialogJobUiDelegate>
 #include <KIO/CommandLauncherJob>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <kcontacts/phonenumber.h>
 
 #include <QDesktopServices>
 #include <QPointer>
@@ -41,7 +41,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     }
 
     QPointer<SmsDialog> dlg(new SmsDialog(number));
-    if (dlg->exec() != QDialog::Accepted) {   // the cancel button has been clicked
+    if (dlg->exec() != QDialog::Accepted) { // the cancel button has been clicked
         delete dlg;
         return;
     }
@@ -82,7 +82,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     command.replace(QLatin1String("%N"), QStringLiteral("\"%1\"").arg(phoneNumber.number()));
     command.replace(QLatin1String("%n"), QStringLiteral("\"%1\"").arg(phoneNumber.normalizedNumber()));
     command.replace(QLatin1String("%t"), QStringLiteral("\"%1\"").arg(message));
-    //Bug: 293232 In KDE3 We used %F to replace text
+    // Bug: 293232 In KDE3 We used %F to replace text
     command.replace(QLatin1String("%F"), message);
 
     auto *job = new KIO::CommandLauncherJob(command);

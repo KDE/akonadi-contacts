@@ -4,8 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "config-akonadi-contact.h"
 #include "contactgrantleewrapper.h"
+#include "config-akonadi-contact.h"
 #ifdef HAVE_KLEO
 #include <Libkleo/Enum>
 #endif
@@ -17,11 +17,12 @@
 
 using namespace KAddressBookGrantlee;
 
-static_assert(sizeof(KContacts::Addressee) == sizeof(KAddressBookGrantlee::ContactGrantleeWrapper), "Grantlee wrapper must not have member variables to prevent slicing issues");
+static_assert(sizeof(KContacts::Addressee) == sizeof(KAddressBookGrantlee::ContactGrantleeWrapper),
+              "Grantlee wrapper must not have member variables to prevent slicing issues");
 
 ContactGrantleeWrapper::ContactGrantleeWrapper() = default;
 
-ContactGrantleeWrapper::ContactGrantleeWrapper(const KContacts::Addressee& addr)
+ContactGrantleeWrapper::ContactGrantleeWrapper(const KContacts::Addressee &addr)
     : KContacts::Addressee(addr)
 {
 }

@@ -11,11 +11,13 @@
 
 #include <KJob>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Collection;
 /**
  * @short A job to add a new contact to Akonadi.

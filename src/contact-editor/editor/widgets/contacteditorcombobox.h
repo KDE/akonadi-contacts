@@ -9,9 +9,10 @@
 #ifndef CONTACTEDITORCOMBOBOX_H
 #define CONTACTEDITORCOMBOBOX_H
 
-#include <QComboBox>
 #include "contacteditor_private_export.h"
-namespace ContactEditor {
+#include <QComboBox>
+namespace ContactEditor
+{
 class CONTACTEDITOR_TESTS_EXPORT ContactEditorComboBox : public QComboBox
 {
     Q_OBJECT

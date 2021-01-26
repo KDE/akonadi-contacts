@@ -15,7 +15,8 @@
 
 #include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Q_DECL_HIDDEN EmailAddressSelection::Private : public QSharedData
 {
 public:

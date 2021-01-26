@@ -14,7 +14,8 @@
 #include <itemsearchjob.h>
 #include <kcontacts/addressee.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short Job that searches for contacts in the Akonadi storage.
  *
@@ -82,11 +83,11 @@ public:
      * Describes the criteria that can be searched for.
      */
     enum Criterion {
-        Name,       ///< The name of the contact.
-        Email,      ///< The email address of the contact.
-        NickName,   ///< The nickname of the contact.
+        Name, ///< The name of the contact.
+        Email, ///< The email address of the contact.
+        NickName, ///< The nickname of the contact.
         NameOrEmail, ///< The name or email address of the contact. @since 4.5
-        ContactUid   ///< The global unique identifier of the contact. @since 4.5
+        ContactUid ///< The global unique identifier of the contact. @since 4.5
     };
 
     /**
@@ -95,9 +96,9 @@ public:
      * @since 4.5
      */
     enum Match {
-        ExactMatch,      ///< The result must match exactly the pattern (case sensitive).
+        ExactMatch, ///< The result must match exactly the pattern (case sensitive).
         StartsWithMatch, ///< The result must start with the pattern (case insensitive).
-        ContainsMatch,    ///< The result must contain the pattern (case insensitive).
+        ContainsMatch, ///< The result must contain the pattern (case insensitive).
         ContainsWordBoundaryMatch ///< The result must contain a word starting with the pattern (case insensitive).
     };
 

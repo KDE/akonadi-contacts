@@ -10,15 +10,13 @@
 #include "emailaddressselectiondialog.h"
 #include "recipientspicker/recipientspickerwidget.h"
 
-
 #include <KConfigGroup>
 
 #include <KSharedConfig>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QTreeView>
-
+#include <QVBoxLayout>
 
 using namespace Akonadi;
 

@@ -43,6 +43,7 @@ public:
 
     void setDisplayType(DisplayNameEditWidget::DisplayType type);
     Q_REQUIRED_RESULT DisplayNameEditWidget::DisplayType displayType() const;
+
 private:
     KComboBox *mSuffixCombo = nullptr;
     KComboBox *mPrefixCombo = nullptr;

@@ -26,7 +26,7 @@ PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
         }
     }
 
-    mTypeList.append(-1);   // Others...
+    mTypeList.append(-1); // Others...
 
     update();
 
@@ -64,7 +64,7 @@ void PhoneComboBoxType::update()
 
     const int typeListCount(mTypeList.count());
     for (int i = 0; i < typeListCount; ++i) {
-        if (mTypeList.at(i) == -1) {     // "Other..." entry
+        if (mTypeList.at(i) == -1) { // "Other..." entry
             addItem(i18nc("@item:inlistbox Category of contact info field", "Other..."));
         } else {
             addItem(KContacts::PhoneNumber::typeLabel(KContacts::PhoneNumber::Type(mTypeList.at(i))));

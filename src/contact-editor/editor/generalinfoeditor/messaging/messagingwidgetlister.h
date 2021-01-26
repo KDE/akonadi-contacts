@@ -11,10 +11,12 @@
 #define MESSAGINGWIDGETLISTER_H
 
 #include "../../widgets/kwidgetlister_p.h"
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class MessagingWidget;
 class MessagingWidgetLister : public KWidgetLister
 {

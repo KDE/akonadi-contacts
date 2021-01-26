@@ -30,12 +30,12 @@ public:
      * Describes what the display name should look like.
      */
     enum DisplayType {
-        SimpleName,           ///< A name of the form: givenName familyName
-        FullName,             ///< A name of the form: prefix givenName additionalName familyName suffix
+        SimpleName, ///< A name of the form: givenName familyName
+        FullName, ///< A name of the form: prefix givenName additionalName familyName suffix
         ReverseNameWithComma, ///< A name of the form: familyName, givenName
-        ReverseName,          ///< A name of the form: familyName givenName
-        Organization,         ///< The organization name
-        CustomName            ///< Let the user input a display name
+        ReverseName, ///< A name of the form: familyName givenName
+        Organization, ///< The organization name
+        CustomName ///< Let the user input a display name
     };
 
     explicit DisplayNameEditWidget(QWidget *parent = nullptr);

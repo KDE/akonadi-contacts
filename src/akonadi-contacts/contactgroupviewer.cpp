@@ -12,6 +12,7 @@
 #include "standardcontactgroupformatter.h"
 #include "textbrowser_p.h"
 
+#include <KColorScheme>
 #include <collectionfetchjob.h>
 #include <entitydisplayattribute.h>
 #include <item.h>
@@ -19,12 +20,11 @@
 #include <itemfetchscope.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <KColorScheme>
 
 #include <KLocalizedString>
 
-#include <QVBoxLayout>
 #include <QIcon>
+#include <QVBoxLayout>
 
 using namespace Akonadi;
 
@@ -37,9 +37,7 @@ public:
         mBrowser = new TextBrowser;
 
         static QPixmap groupPixmap = QIcon::fromTheme(QStringLiteral("x-mail-distribution-list")).pixmap(QSize(100, 100));
-        mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                          QUrl(QStringLiteral("group_photo")),
-                                          groupPixmap);
+        mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("group_photo")), groupPixmap);
 
         mStandardContactGroupFormatter = new StandardContactGroupFormatter;
         mContactGroupFormatter = mStandardContactGroupFormatter;
@@ -197,7 +195,9 @@ void ContactGroupViewer::itemChanged(const Item &item)
     }
 
     d->mExpandJob = new ContactGroupExpandJob(group);
-    d->mJobConnection = connect(d->mExpandJob, &ContactGroupExpandJob::result, this, [this](KJob*job) { d->_k_expandResult(job);});
+    d->mJobConnection = connect(d->mExpandJob, &ContactGroupExpandJob::result, this, [this](KJob *job) {
+        d->_k_expandResult(job);
+    });
     d->mExpandJob->start();
 }
 

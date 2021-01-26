@@ -6,13 +6,13 @@
 
 #include "akonadi_serializer_contactgroup.h"
 
-#include <AkonadiCore/abstractdifferencesreporter.h>
 #include <Akonadi/Contact/ContactGroupExpandJob>
+#include <AkonadiCore/abstractdifferencesreporter.h>
 #include <AkonadiCore/item.h>
 
+#include <KLocalizedString>
 #include <kcontacts/contactgroup.h>
 #include <kcontacts/contactgrouptool.h>
-#include <KLocalizedString>
 
 #include <qplugin.h>
 
@@ -65,18 +65,17 @@ static QString toString(const KContacts::Addressee &contact)
     return contact.fullEmail();
 }
 
-template<class T>
-static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
+template<class T> static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
-        if (!right.contains(left[ i ])) {
-            reporter->addProperty(AbstractDifferencesReporter::AdditionalLeftMode, id, toString(left[ i ]), QString());
+        if (!right.contains(left[i])) {
+            reporter->addProperty(AbstractDifferencesReporter::AdditionalLeftMode, id, toString(left[i]), QString());
         }
     }
 
     for (int i = 0; i < right.count(); ++i) {
-        if (!left.contains(right[ i ])) {
-            reporter->addProperty(AbstractDifferencesReporter::AdditionalRightMode, id, QString(), toString(right[ i ]));
+        if (!left.contains(right[i])) {
+            reporter->addProperty(AbstractDifferencesReporter::AdditionalRightMode, id, QString(), toString(right[i]));
         }
     }
 }
@@ -94,8 +93,7 @@ void SerializerPluginContactGroup::compare(Akonadi::AbstractDifferencesReporter 
     const KContacts::ContactGroup rightContactGroup = rightItem.payload<KContacts::ContactGroup>();
 
     if (!compareString(leftContactGroup.name(), rightContactGroup.name())) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Name"),
-                              leftContactGroup.name(), rightContactGroup.name());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Name"), leftContactGroup.name(), rightContactGroup.name());
     }
 
     // using job->exec() is ok here, not a hot path

@@ -10,13 +10,14 @@
 #ifndef CUSTOMFIELDEDITORWIDGET_H
 #define CUSTOMFIELDEDITORWIDGET_H
 
-#include <QWidget>
 #include "customfields_p.h"
+#include <QWidget>
 class QLineEdit;
 class QPushButton;
 class QCheckBox;
 class QComboBox;
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CustomFieldEditorWidget : public QWidget
 {
     Q_OBJECT

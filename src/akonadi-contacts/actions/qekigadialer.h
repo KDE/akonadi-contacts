@@ -19,6 +19,7 @@ public:
 
     Q_REQUIRED_RESULT bool dialNumber(const QString &number) override;
     Q_REQUIRED_RESULT bool sendSms(const QString &number, const QString &text) override;
+
 private:
     bool initializeEkiga();
     QDBusInterface *mInterface = nullptr;

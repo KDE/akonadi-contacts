@@ -10,8 +10,8 @@
 #ifndef ADDRESSLOCATIONWIDGET_H
 #define ADDRESSLOCATIONWIDGET_H
 
-#include <QWidget>
 #include <KContacts/Address>
+#include <QWidget>
 
 class QStackedWidget;
 class QCheckBox;
@@ -19,18 +19,15 @@ class KLineEdit;
 class KComboBox;
 class QPushButton;
 
-namespace ContactEditor {
-
+namespace ContactEditor
+{
 class SelectAddressTypeComboBox;
 
 class AddressLocationWidget : public QWidget
 {
     Q_OBJECT
 public:
-    enum Mode {
-        CreateAddress = 0,
-        ModifyAddress
-    };
+    enum Mode { CreateAddress = 0, ModifyAddress };
 
     explicit AddressLocationWidget(QWidget *parent = nullptr);
     ~AddressLocationWidget() override;

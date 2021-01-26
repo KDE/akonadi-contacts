@@ -13,7 +13,8 @@
 
 #include <QDialog>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 
 class ContactGroupViewer;

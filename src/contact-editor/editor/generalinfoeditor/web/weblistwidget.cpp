@@ -9,10 +9,10 @@
 
 #include "weblistwidget.h"
 #include "webwidgetlister.h"
-#include <QLabel>
-#include <KLocalizedString>
-#include <QVBoxLayout>
 #include <KContacts/Addressee>
+#include <KLocalizedString>
+#include <QLabel>
+#include <QVBoxLayout>
 
 using namespace ContactEditor;
 

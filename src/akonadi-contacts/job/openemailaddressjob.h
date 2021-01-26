@@ -11,7 +11,8 @@
 
 #include <KJob>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short A job to open the contact editor for a contact with a given email address.
  *

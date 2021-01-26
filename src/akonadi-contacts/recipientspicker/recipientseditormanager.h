@@ -7,14 +7,16 @@
 #ifndef RECIPIENTSEDITORMANAGER_H
 #define RECIPIENTSEDITORMANAGER_H
 
-#include <QObject>
 #include "akonadi-contact_export.h"
+#include <QObject>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class EmailAddressSelectionModel;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class AKONADI_CONTACT_EXPORT RecipientsEditorManager : public QObject
 {
     Q_OBJECT

@@ -9,13 +9,12 @@
 #ifndef CUSTOMFIELDS_P_H
 #define CUSTOMFIELDS_P_H
 
+#include "contacteditor_export.h"
 #include <QString>
 #include <QVariant>
 #include <QVector>
-#include "contacteditor_export.h"
 
-template<typename T>
-class QVector;
+template<typename T> class QVector;
 
 /**
  * @short A class that represents non-standard contact fields.
@@ -38,19 +37,11 @@ class CONTACTEDITOR_EXPORT CustomField
 public:
     typedef QVector<CustomField> List;
 
-    enum Type {
-        TextType,
-        NumericType,
-        BooleanType,
-        DateType,
-        TimeType,
-        DateTimeType,
-        UrlType
-    };
+    enum Type { TextType, NumericType, BooleanType, DateType, TimeType, DateTimeType, UrlType };
 
     enum Scope {
-        LocalScope,   ///< Field has been defined by user for one contact
-        GlobalScope,  ///< Field has been defined by user for all contacts
+        LocalScope, ///< Field has been defined by user for one contact
+        GlobalScope, ///< Field has been defined by user for all contacts
         ExternalScope ///< Field has been defined by the external data source (e.g. vCard)
     };
 

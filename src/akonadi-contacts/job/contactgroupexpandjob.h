@@ -11,11 +11,12 @@
 
 #include "akonadi-contact_export.h"
 
+#include <KJob>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <KJob>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short Job that expands a ContactGroup to a list of contacts.
  *
@@ -90,7 +91,7 @@ private:
     class Private;
     Private *const d;
 
-    //Already use with QMetaObject::invokeMethod
+    // Already use with QMetaObject::invokeMethod
     Q_PRIVATE_SLOT(d, void resolveGroup())
     //@endcond
 };

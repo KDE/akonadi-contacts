@@ -35,15 +35,12 @@ MessagingWidget::MessagingWidget(QWidget *parent)
 
     mProtocolCombo = new ContactEditor::ContactEditorComboBox(this);
     mProtocolCombo->setObjectName(QStringLiteral("protocol"));
-    mProtocolCombo->addItem(i18nc("@item:inlistbox select from a list of IM protocols",
-                                  "Select..."));
+    mProtocolCombo->addItem(i18nc("@item:inlistbox select from a list of IM protocols", "Select..."));
     layout->addWidget(mProtocolCombo);
 
     const auto protocols = KContacts::Impp::serviceTypes();
     for (const QString &protocol : protocols) {
-        mProtocolCombo->addItem(QIcon::fromTheme(KContacts::Impp::serviceIcon(protocol)),
-                                KContacts::Impp::serviceLabel(protocol),
-                                protocol);
+        mProtocolCombo->addItem(QIcon::fromTheme(KContacts::Impp::serviceIcon(protocol)), KContacts::Impp::serviceLabel(protocol), protocol);
     }
 
     mAddButton = new QToolButton(this);

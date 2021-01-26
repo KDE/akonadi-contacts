@@ -13,7 +13,8 @@
 
 #include "abstractcontactformatter.h"
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short A class that formats a contact as HTML code.
  *

@@ -10,10 +10,11 @@
 #ifndef PHONECOMBOBOXTYPE_H
 #define PHONECOMBOBOXTYPE_H
 
+#include "contacteditor_private_export.h"
 #include <editor/widgets/contacteditorcombobox.h>
 #include <kcontacts/addressee.h>
-#include "contacteditor_private_export.h"
-namespace ContactEditor {
+namespace ContactEditor
+{
 /**
  * @short A combobox to select a phone number type.
  */
@@ -45,6 +46,7 @@ public:
     KContacts::PhoneNumber::Type type() const;
 
     void resetToDefault();
+
 private:
     void selected(int);
     void otherSelected();

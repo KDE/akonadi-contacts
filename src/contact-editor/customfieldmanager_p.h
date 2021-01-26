@@ -9,8 +9,8 @@
 #ifndef CUSTOMFIELDMANAGER_P_H
 #define CUSTOMFIELDMANAGER_P_H
 
-#include "customfields_p.h"
 #include "contacteditor_export.h"
+#include "customfields_p.h"
 
 /**
  * @short A class that manages the descriptions of all custom fields with global scope.

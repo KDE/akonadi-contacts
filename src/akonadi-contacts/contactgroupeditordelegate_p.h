@@ -13,10 +13,11 @@
 
 #include <QStyledItemDelegate>
 
-#include <item.h>
 #include "contactcompletionmodel_p.h"
+#include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ContactLineEdit : public QLineEdit
 {
     Q_OBJECT

@@ -8,13 +8,13 @@
 
 #include "job/addemailaddressjob.h"
 
-#include <collectiondialog.h>
 #include <Akonadi/Contact/ContactEditorDialog>
 #include <Akonadi/Contact/ContactSearchJob>
+#include <QPointer>
+#include <collectiondialog.h>
 #include <item.h>
 #include <itemcreatejob.h>
 #include <kcontacts/addressee.h>
-#include <QPointer>
 
 using namespace Akonadi;
 
@@ -102,8 +102,7 @@ void OpenEmailAddressJob::start()
     // first check whether a contact with the same email exists already
     auto *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
-    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(),
-                        Akonadi::ContactSearchJob::ExactMatch);
+    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, [this](KJob *job) {
         d->slotSearchDone(job);
     });

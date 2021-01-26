@@ -8,8 +8,8 @@
 */
 
 #include "addresseslocationwidget.h"
-#include "addresslocationwidget.h"
 #include "addressdelegate.h"
+#include "addresslocationwidget.h"
 #include "addressmodel.h"
 #include "contacteditor_debug.h"
 
@@ -49,7 +49,10 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
         mAddressLocationWidget->slotModifyAddress(idx.data(Qt::UserRole).value<KContacts::Address>(), idx.row());
     });
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressModel, &AddressModel::addAddress);
-    connect(mAddressLocationWidget, &AddressLocationWidget::updateAddressCanceled, mAddressesLocationView->selectionModel(), &QItemSelectionModel::clearSelection);
+    connect(mAddressLocationWidget,
+            &AddressLocationWidget::updateAddressCanceled,
+            mAddressesLocationView->selectionModel(),
+            &QItemSelectionModel::clearSelection);
     connect(mAddressLocationWidget, &AddressLocationWidget::updateAddress, mAddressModel, &AddressModel::replaceAddress);
     connect(mAddressesLocationView, &QWidget::customContextMenuRequested, this, [this](QPoint pos) {
         const auto idx = mAddressesLocationView->indexAt(pos);

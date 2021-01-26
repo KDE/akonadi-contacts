@@ -8,8 +8,8 @@
 */
 
 #include "messagingwidgetlister.h"
-#include "messagingwidget.h"
 #include "../../utils/utils.h"
+#include "messagingwidget.h"
 
 #include <KContacts/Addressee>
 using namespace ContactEditor;

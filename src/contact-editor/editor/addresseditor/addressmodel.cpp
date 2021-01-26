@@ -74,19 +74,18 @@ QVariant AddressModel::data(const QModelIndex &index, int role) const
     }
 
     switch (role) {
-        case Qt::DisplayRole:
-        {
-            const auto addr = mAddresses.at(index.row());
-            QString str = QLatin1String("<b>") + KContacts::Address::typeLabel(addr.type()) + QLatin1String("</b><br/>");
-            if (!addr.label().isEmpty()) {
-                str += addr.label().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
-            } else {
-                str += addr.formattedAddress().trimmed().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
-            }
-            return str;
+    case Qt::DisplayRole: {
+        const auto addr = mAddresses.at(index.row());
+        QString str = QLatin1String("<b>") + KContacts::Address::typeLabel(addr.type()) + QLatin1String("</b><br/>");
+        if (!addr.label().isEmpty()) {
+            str += addr.label().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
+        } else {
+            str += addr.formattedAddress().trimmed().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
         }
-        case Qt::UserRole:
-            return QVariant::fromValue(mAddresses.at(index.row()));
+        return str;
+    }
+    case Qt::UserRole:
+        return QVariant::fromValue(mAddresses.at(index.row()));
     }
 
     return {};

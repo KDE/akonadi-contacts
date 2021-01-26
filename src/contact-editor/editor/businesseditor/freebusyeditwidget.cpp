@@ -8,14 +8,14 @@
 
 #include "freebusyeditwidget.h"
 
-#include <kcontacts/addressee.h>
-#include <kurlrequester.h>
 #include <KConfig>
+#include <KConfigGroup>
 #include <KLineEdit>
 #include <KLocalizedString>
-#include <KConfigGroup>
 #include <QHBoxLayout>
 #include <QStandardPaths>
+#include <kcontacts/addressee.h>
+#include <kurlrequester.h>
 
 FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     : QWidget(parent)

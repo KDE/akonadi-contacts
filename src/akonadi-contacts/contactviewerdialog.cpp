@@ -7,8 +7,8 @@
 */
 
 #include "contactviewerdialog.h"
-#include "contactviewer.h"
 #include "contactdefaultactions.h"
+#include "contactviewer.h"
 
 #include <item.h>
 using namespace Akonadi;
@@ -16,10 +16,10 @@ using namespace Akonadi;
 #include <KConfig>
 #include <KLocalizedString>
 
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
 #include <KConfigGroup>
+#include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 class Q_DECL_HIDDEN ContactViewerDialog::Private
 {

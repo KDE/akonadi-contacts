@@ -10,14 +10,16 @@
 #ifndef CUSTOMFIELDSLISTWIDGET_H
 #define CUSTOMFIELDSLISTWIDGET_H
 
-#include <QWidget>
 #include "customfieldsmodel.h"
+#include <QWidget>
 class QTreeView;
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 class CustomFieldsModel;
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CustomFieldsListWidget : public QWidget
 {
     Q_OBJECT

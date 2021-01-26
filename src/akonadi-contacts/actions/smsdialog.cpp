@@ -8,14 +8,14 @@
 
 #include "smsdialog.h"
 
-#include <kcontacts/phonenumber.h>
 #include <KLocalizedString>
 #include <KTextEdit>
+#include <kcontacts/phonenumber.h>
 
-#include <QLabel>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QLabel>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 SmsDialog::SmsDialog(const KContacts::PhoneNumber &number)
     : mNumber(number.number())

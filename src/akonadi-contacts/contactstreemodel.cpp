@@ -99,24 +99,21 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                     return QLocale().toString(contact.birthday().date(), QLocale::ShortFormat);
                 }
                 break;
-            case HomeAddress:
-            {
+            case HomeAddress: {
                 const KContacts::Address address = contact.address(KContacts::Address::Home);
                 if (!address.isEmpty()) {
                     return address.formattedAddress();
                 }
                 break;
             }
-            case BusinessAddress:
-            {
+            case BusinessAddress: {
                 const KContacts::Address address = contact.address(KContacts::Address::Work);
                 if (!address.isEmpty()) {
                     return address.formattedAddress();
                 }
                 break;
             }
-            case PhoneNumbers:
-            {
+            case PhoneNumbers: {
                 QStringList values;
 
                 const KContacts::PhoneNumber::List numbers = contact.phoneNumbers();
@@ -166,8 +163,7 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
             }
         } else if ((role == Qt::DisplayRole) || (role == Qt::EditRole)) {
             switch (d->mColumns.at(column)) {
-            case FullName:
-            {
+            case FullName: {
                 const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
                 return group.name();
             }

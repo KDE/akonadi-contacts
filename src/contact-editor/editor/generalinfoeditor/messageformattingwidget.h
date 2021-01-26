@@ -9,12 +9,13 @@
 #ifndef MESSAGEFORMATTINGWIDGET_H
 #define MESSAGEFORMATTINGWIDGET_H
 
-#include <QWidget>
-#include <KContacts/Addressee>
 #include "contacteditor_private_export.h"
+#include <KContacts/Addressee>
+#include <QWidget>
 class QComboBox;
 class QCheckBox;
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CONTACTEDITOR_TESTS_EXPORT MessageFormattingWidget : public QWidget
 {
     Q_OBJECT

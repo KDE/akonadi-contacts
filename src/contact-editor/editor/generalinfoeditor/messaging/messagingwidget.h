@@ -16,11 +16,13 @@
 
 class QToolButton;
 
-namespace KContacts {
+namespace KContacts
+{
 class Impp;
 }
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class PreferredLineEditWidget;
 class ContactEditorComboBox;
 class CONTACTEDITOR_TESTS_EXPORT MessagingWidget : public QWidget

@@ -9,9 +9,9 @@
 
 #include <KLocalizedString>
 
-#include <QProcess>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
+#include <QProcess>
 
 #if !defined(Q_OS_WIN)
 #include <unistd.h>

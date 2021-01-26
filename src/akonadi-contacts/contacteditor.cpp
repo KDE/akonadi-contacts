@@ -9,31 +9,34 @@
 #include "contacteditor.h"
 
 #include "abstractcontacteditorwidget_p.h"
-#include "contactmetadataakonadi_p.h"
 #include "attributes/contactmetadataattribute_p.h"
+#include "contactmetadataakonadi_p.h"
 #include "editor/contacteditorwidget.h"
 
+#include <KLocalizedString>
 #include <collectiondialog.h>
 #include <collectionfetchjob.h>
 #include <itemcreatejob.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 #include <itemmodifyjob.h>
+#include <kcontacts/addressee.h>
 #include <monitor.h>
 #include <session.h>
-#include <kcontacts/addressee.h>
-#include <KLocalizedString>
 
+#include <QMessageBox>
 #include <QPointer>
 #include <QVBoxLayout>
-#include <QMessageBox>
 
 using namespace Akonadi;
 
 class Q_DECL_HIDDEN Akonadi::AkonadiContactEditor::Private
 {
 public:
-    Private(AkonadiContactEditor::Mode mode, AkonadiContactEditor::DisplayMode displayMode, ContactEditor::AbstractContactEditorWidget *editorWidget, AkonadiContactEditor *parent)
+    Private(AkonadiContactEditor::Mode mode,
+            AkonadiContactEditor::DisplayMode displayMode,
+            ContactEditor::AbstractContactEditorWidget *editorWidget,
+            AkonadiContactEditor *parent)
         : mParent(parent)
         , mMode(mode)
     {
@@ -97,8 +100,7 @@ void Akonadi::AkonadiContactEditor::Private::itemFetchDone(KJob *job)
         // if in edit mode we have to fetch the parent collection to find out
         // about the modify rights of the item
 
-        auto *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(),
-                                                                                          Akonadi::CollectionFetchJob::Base);
+        auto *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(), Akonadi::CollectionFetchJob::Base);
         mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
             parentCollectionFetchDone(job);
         });
@@ -153,7 +155,7 @@ void Akonadi::AkonadiContactEditor::Private::storeDone(KJob *job)
 void Akonadi::AkonadiContactEditor::Private::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &)
 {
     Q_UNUSED(item)
-    QPointer<QMessageBox> dlg = new QMessageBox(mParent);   //krazy:exclude=qclasses
+    QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
 
     dlg->setInformativeText(i18n("The contact has been changed by someone else.\nWhat should be done?"));
     dlg->addButton(i18n("Take over changes"), QMessageBox::AcceptRole);
@@ -190,8 +192,7 @@ void Akonadi::AkonadiContactEditor::Private::setupMonitor()
     mMonitor->setObjectName(QStringLiteral("ContactEditorMonitor"));
     mMonitor->ignoreSession(Akonadi::Session::defaultSession());
 
-    connect(mMonitor, &Monitor::itemChanged, mParent,
-            [this](const Akonadi::Item &item, const QSet<QByteArray> &set) {
+    connect(mMonitor, &Monitor::itemChanged, mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &set) {
         itemChanged(item, set);
     });
 }

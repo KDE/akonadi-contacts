@@ -8,9 +8,9 @@
 */
 
 #include "customfieldswidgettest.h"
-#include "../customfieldswidget.h"
 #include "../customfieldeditorwidget.h"
 #include "../customfieldslistwidget.h"
+#include "../customfieldswidget.h"
 #include <QTest>
 
 CustomFieldsWidgetTest::CustomFieldsWidgetTest(QObject *parent)

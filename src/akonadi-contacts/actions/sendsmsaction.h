@@ -9,7 +9,8 @@
 #ifndef SENDSMSACTION_H
 #define SENDSMSACTION_H
 
-namespace KContacts {
+namespace KContacts
+{
 class PhoneNumber;
 }
 

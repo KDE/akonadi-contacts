@@ -13,6 +13,7 @@
 #include "emailaddressselectionmodel.h"
 #include "emailaddressselectionproxymodel_p.h"
 
+#include <KLocalizedString>
 #include <changerecorder.h>
 #include <contactsfilterproxymodel.h>
 #include <contactstreemodel.h>
@@ -20,18 +21,17 @@
 #include <entitydisplayattribute.h>
 #include <entitytreeview.h>
 #include <itemfetchscope.h>
-#include <session.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <KLocalizedString>
+#include <session.h>
 
-#include <QTimer>
 #include <QHBoxLayout>
 #include <QHeaderView>
 #include <QKeyEvent>
 #include <QLabel>
-#include <QVBoxLayout>
 #include <QLineEdit>
+#include <QTimer>
+#include <QVBoxLayout>
 using namespace Akonadi;
 
 /**
@@ -135,11 +135,11 @@ void EmailAddressSelectionWidget::Private::init()
     mView->setModel(mSelectionModel);
     mView->header()->hide();
 
-    q->connect(mSearchLine, &QLineEdit::textChanged,
-               filter, &ContactsFilterProxyModel::setFilterString);
+    q->connect(mSearchLine, &QLineEdit::textChanged, filter, &ContactsFilterProxyModel::setFilterString);
 
-    q->connect(mView, QOverload<const Akonadi::Item &>::of(&Akonadi::EntityTreeView::doubleClicked),
-               q, [this]() { Q_EMIT q->doubleClicked(); });
+    q->connect(mView, QOverload<const Akonadi::Item &>::of(&Akonadi::EntityTreeView::doubleClicked), q, [this]() {
+        Q_EMIT q->doubleClicked();
+    });
     ControlGui::widgetNeedsAkonadi(q);
 
     mSearchLine->setFocus();

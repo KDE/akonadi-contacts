@@ -15,13 +15,15 @@
 
 #include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class Address;
 class Addressee;
 class PhoneNumber;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class AbstractContactFormatter;
 
 /**

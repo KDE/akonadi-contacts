@@ -15,7 +15,8 @@
 #include <itemsearchjob.h>
 #include <kcontacts/contactgroup.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short Job that searches for contact groups in the Akonadi storage.
  *
@@ -72,9 +73,9 @@ public:
      * @since 4.5
      */
     enum Match {
-        ExactMatch,      ///< The result must match exactly the pattern (case sensitive).
+        ExactMatch, ///< The result must match exactly the pattern (case sensitive).
         StartsWithMatch, ///< The result must start with the pattern (case insensitive).
-        ContainsMatch    ///< The result must contain the pattern (case insensitive).
+        ContainsMatch ///< The result must contain the pattern (case insensitive).
     };
 
     /**

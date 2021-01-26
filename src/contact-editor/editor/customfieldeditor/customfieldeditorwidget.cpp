@@ -9,14 +9,14 @@
 
 #include "customfieldeditorwidget.h"
 #include "customfieldsmodel.h"
+#include <KContacts/Addressee>
 #include <KLocalizedString>
+#include <QCheckBox>
+#include <QComboBox>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QComboBox>
-#include <QCheckBox>
 #include <QUuid>
-#include <KContacts/Addressee>
 #include <QVBoxLayout>
 
 using namespace ContactEditor;
@@ -45,7 +45,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     mAddField = new QPushButton(i18n("Add Field"), this);
     mAddField->setObjectName(QStringLiteral("addfield"));
     fieldLayout->addWidget(mAddField);
-    mAddField->setEnabled(false); //Disable at the beginning
+    mAddField->setEnabled(false); // Disable at the beginning
     connect(mAddField, &QPushButton::clicked, this, &CustomFieldEditorWidget::slotAddField);
     connect(mFieldName, &QLineEdit::textChanged, this, &CustomFieldEditorWidget::slotFielNameChanged);
 
@@ -100,7 +100,7 @@ void CustomFieldEditorWidget::slotAddField()
     field.setTitle(mFieldName->text());
     field.setType(static_cast<CustomField::Type>(mFieldType->itemData(mFieldType->currentIndex()).toInt()));
 
-    //TODO verify it
+    // TODO verify it
     if (field.scope() != CustomField::ExternalScope) {
         // do not change the scope for externally defined custom fields
         field.setScope(mUseAllContacts->isChecked() ? CustomField::GlobalScope : CustomField::LocalScope);

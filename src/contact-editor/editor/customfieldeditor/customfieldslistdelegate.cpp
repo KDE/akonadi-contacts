@@ -14,13 +14,13 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
+#include <QAbstractItemView>
+#include <QCheckBox>
 #include <QDateEdit>
 #include <QDateTimeEdit>
-#include <QCheckBox>
+#include <QMouseEvent>
 #include <QSpinBox>
 #include <QTimeEdit>
-#include <QMouseEvent>
-#include <QAbstractItemView>
 #include <QTimer>
 
 using namespace ContactEditor;
@@ -46,34 +46,29 @@ QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOpt
         case CustomField::UrlType:
         default:
             return QStyledItemDelegate::createEditor(parent, item, index);
-        case CustomField::NumericType:
-        {
+        case CustomField::NumericType: {
             auto *editor = new QSpinBox(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
         }
-        case CustomField::BooleanType:
-        {
+        case CustomField::BooleanType: {
             auto *editor = new QCheckBox(parent);
             return editor;
         }
-        case CustomField::DateType:
-        {
+        case CustomField::DateType: {
             auto *editor = new QDateEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
         }
-        case CustomField::TimeType:
-        {
+        case CustomField::TimeType: {
             auto *editor = new QTimeEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
             return editor;
         }
-        case CustomField::DateTimeType:
-        {
+        case CustomField::DateTimeType: {
             auto *editor = new QDateTimeEdit(parent);
             editor->setFrame(false);
             editor->setAutoFillBackground(true);
@@ -95,34 +90,29 @@ void CustomFieldsListDelegate::setEditorData(QWidget *editor, const QModelIndex 
         case CustomField::UrlType:
             QStyledItemDelegate::setEditorData(editor, index);
             break;
-        case CustomField::NumericType:
-        {
+        case CustomField::NumericType: {
             auto *widget = qobject_cast<QSpinBox *>(editor);
             widget->setValue(index.data(Qt::EditRole).toInt());
             break;
         }
-        case CustomField::BooleanType:
-        {
+        case CustomField::BooleanType: {
             auto *widget = qobject_cast<QCheckBox *>(editor);
             widget->setChecked(index.data(Qt::EditRole).toString() == QLatin1String("true"));
             break;
         }
-        case CustomField::DateType:
-        {
+        case CustomField::DateType: {
             auto *widget = qobject_cast<QDateEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("dd.MM.yyyy"));
             widget->setDate(QDate::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
             break;
         }
-        case CustomField::TimeType:
-        {
+        case CustomField::TimeType: {
             auto *widget = qobject_cast<QTimeEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("hh:mm"));
             widget->setTime(QTime::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
             break;
         }
-        case CustomField::DateTimeType:
-        {
+        case CustomField::DateTimeType: {
             auto *widget = qobject_cast<QDateTimeEdit *>(editor);
             widget->setDisplayFormat(QStringLiteral("dd.MM.yyyy hh:mm"));
             widget->setDateTime(QDateTime::fromString(index.data(Qt::EditRole).toString(), Qt::ISODate));
@@ -144,32 +134,27 @@ void CustomFieldsListDelegate::setModelData(QWidget *editor, QAbstractItemModel 
         case CustomField::UrlType:
             QStyledItemDelegate::setModelData(editor, model, index);
             break;
-        case CustomField::NumericType:
-        {
+        case CustomField::NumericType: {
             auto *widget = qobject_cast<QSpinBox *>(editor);
             model->setData(index, QString::number(widget->value()));
             break;
         }
-        case CustomField::BooleanType:
-        {
+        case CustomField::BooleanType: {
             auto *widget = qobject_cast<QCheckBox *>(editor);
             model->setData(index, widget->isChecked() ? QStringLiteral("true") : QStringLiteral("false"));
             break;
         }
-        case CustomField::DateType:
-        {
+        case CustomField::DateType: {
             auto *widget = qobject_cast<QDateEdit *>(editor);
             model->setData(index, widget->date().toString(Qt::ISODate));
             break;
         }
-        case CustomField::TimeType:
-        {
+        case CustomField::TimeType: {
             auto *widget = qobject_cast<QTimeEdit *>(editor);
             model->setData(index, widget->time().toString(Qt::ISODate));
             break;
         }
-        case CustomField::DateTimeType:
-        {
+        case CustomField::DateTimeType: {
             auto *widget = qobject_cast<QDateTimeEdit *>(editor);
             model->setData(index, widget->dateTime().toString(Qt::ISODate));
             break;
@@ -182,7 +167,7 @@ void CustomFieldsListDelegate::setModelData(QWidget *editor, QAbstractItemModel 
 
 void CustomFieldsListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    //TODO: somehow mark local/global/external fields
+    // TODO: somehow mark local/global/external fields
     QStyledItemDelegate::paint(painter, option, index);
     if (index.column() == 1) {
         mIcon.paint(painter, option.rect, Qt::AlignRight);
@@ -229,7 +214,9 @@ void CustomFieldsListDelegate::removeField(int row, QAbstractItemModel *model)
 {
     if (KMessageBox::warningContinueCancel(mItemView,
                                            i18nc("Custom Fields", "Do you really want to delete the selected custom field?"),
-                                           i18n("Confirm Delete"), KStandardGuiItem::del()) != KMessageBox::Continue) {
+                                           i18n("Confirm Delete"),
+                                           KStandardGuiItem::del())
+        != KMessageBox::Continue) {
         return;
     }
 

@@ -19,7 +19,6 @@ using namespace Akonadi;
 static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString, ContactsFilterProxyModel::MatchFilterContactFlag flag);
 static bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, const QString &filterString);
 
-
 class Q_DECL_HIDDEN ContactsFilterProxyModel::Private
 {
 public:
@@ -189,7 +188,6 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
         return true;
     }
 
-
     int count = 0;
     if (flag == ContactsFilterProxyModel::MatchFilterContactFlag::All) {
         if (contact.birthday().toString().contains(filterString, Qt::CaseInsensitive)) {
@@ -219,7 +217,6 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
             return true;
         }
     }
-
 
     if (flag == ContactsFilterProxyModel::MatchFilterContactFlag::All) {
         const QStringList categories = contact.categories();

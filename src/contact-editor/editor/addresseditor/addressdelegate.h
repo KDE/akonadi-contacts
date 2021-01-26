@@ -11,8 +11,8 @@
 
 #include <QStyledItemDelegate>
 
-namespace ContactEditor {
-
+namespace ContactEditor
+{
 class AddressDelegate : public QStyledItemDelegate
 {
     Q_OBJECT

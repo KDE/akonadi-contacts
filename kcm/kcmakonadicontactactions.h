@@ -10,8 +10,8 @@
 #ifndef KCMAKONADICONTACTACTIONS_H
 #define KCMAKONADICONTACTACTIONS_H
 
-#include <KCModule>
 #include "ui_akonadicontactactions.h"
+#include <KCModule>
 
 class KConfigDialogManager;
 
@@ -30,6 +30,7 @@ private Q_SLOTS:
     void slotDialPhoneNumberActionChanged(int);
     void slotSmsPhoneNumberActionChanged(int value);
     void slotShowAddressActionChanged(int value);
+
 private:
     KConfigDialogManager *mConfigManager = nullptr;
     Ui_AkonadiContactActions ui;

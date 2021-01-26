@@ -12,11 +12,13 @@
 #include <QWidget>
 class DateEditWidget;
 class KLineEdit;
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class PersonalEditorWidget : public QWidget
 {
     Q_OBJECT
@@ -26,6 +28,7 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact);
     void setReadOnly(bool readOnly);
+
 private:
     DateEditWidget *mBirthdateWidget = nullptr;
     DateEditWidget *mAnniversaryWidget = nullptr;

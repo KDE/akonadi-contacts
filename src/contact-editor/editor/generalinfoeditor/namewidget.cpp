@@ -8,13 +8,13 @@
 */
 
 #include "namewidget.h"
+#include "nameeditdialog.h"
+#include <KLineEdit>
 #include <KLocalizedString>
-#include <QVBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
-#include <KLineEdit>
 #include <QToolButton>
-#include "nameeditdialog.h"
+#include <QVBoxLayout>
 
 using namespace ContactEditor;
 

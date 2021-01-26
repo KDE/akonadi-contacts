@@ -8,19 +8,19 @@
 #include "addemailaddressjob.h"
 #include "akonadi/contact/selectaddressbookdialog.h"
 
-#include <KContacts/ContactGroup>
-#include <CollectionDialog>
-#include <Akonadi/Contact/ContactSearchJob>
-#include <Item>
-#include <ItemCreateJob>
-#include <CollectionFetchJob>
-#include <CollectionFetchScope>
-#include <Collection>
-#include <Akonadi/Contact/ContactEditorDialog>
-#include <AgentTypeDialog>
-#include <AgentType>
 #include <AgentFilterProxyModel>
 #include <AgentInstanceCreateJob>
+#include <AgentType>
+#include <AgentTypeDialog>
+#include <Akonadi/Contact/ContactEditorDialog>
+#include <Akonadi/Contact/ContactSearchJob>
+#include <Collection>
+#include <CollectionDialog>
+#include <CollectionFetchJob>
+#include <CollectionFetchScope>
+#include <Item>
+#include <ItemCreateJob>
+#include <KContacts/ContactGroup>
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -66,16 +66,12 @@ public:
         const KContacts::Addressee::List contacts = searchJob->contacts();
         if (!contacts.isEmpty()) {
             if (mInteractive) {
-                const QString text
-                    = xi18nc("@info",
-                             "A contact with the email address <email>%1</email> "
-                             "is already in your address book.", mCompleteAddress);
+                const QString text = xi18nc("@info",
+                                            "A contact with the email address <email>%1</email> "
+                                            "is already in your address book.",
+                                            mCompleteAddress);
 
-                KMessageBox::information(
-                    mParentWidget,
-                    text,
-                    QString(),
-                    QStringLiteral("alreadyInAddressBook"));
+                KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("alreadyInAddressBook"));
             }
             q->setError(UserDefinedError);
             q->emitResult();
@@ -88,9 +84,8 @@ public:
     {
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
 
-        Akonadi::CollectionFetchJob *const addressBookJob
-            = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-                                              Akonadi::CollectionFetchJob::Recursive);
+        Akonadi::CollectionFetchJob *const addressBookJob =
+            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
         addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
         q->connect(addressBookJob, &Akonadi::CollectionFetchJob::result, q, [this](KJob *job) {
@@ -107,14 +102,13 @@ public:
             return;
         }
 
-        const Akonadi::CollectionFetchJob *addressBookJob
-            = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+        const Akonadi::CollectionFetchJob *addressBookJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
 
         Akonadi::Collection::List canCreateItemCollections;
 
         const Akonadi::Collection::List lstColls = addressBookJob->collections();
         for (const Akonadi::Collection &collection : lstColls) {
-            if (Akonadi::Collection::CanCreateItem &collection.rights()) {
+            if (Akonadi::Collection::CanCreateItem & collection.rights()) {
                 canCreateItemCollections.append(collection);
             }
         }
@@ -123,11 +117,10 @@ public:
 
         const int nbItemCollection(canCreateItemCollections.size());
         if (nbItemCollection == 0) {
-            if (KMessageBox::questionYesNo(
-                    mParentWidget,
-                    i18nc("@info",
-                          "You must create an address book before adding a contact. Do you want to create an address book?"),
-                    i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
+            if (KMessageBox::questionYesNo(mParentWidget,
+                                           i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
+                                           i18nc("@title:window", "No Address Book Available"))
+                == KMessageBox::Yes) {
                 QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(mParentWidget);
                 dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
                 dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
@@ -146,13 +139,13 @@ public:
                         job->start();
                         delete dlg;
                         return;
-                    } else { //if agent is not valid => return error and finish job
+                    } else { // if agent is not valid => return error and finish job
                         q->setError(UserDefinedError);
                         q->emitResult();
                         delete dlg;
                         return;
                     }
-                } else { //Canceled create agent => return error and finish job
+                } else { // Canceled create agent => return error and finish job
                     q->setError(UserDefinedError);
                     q->emitResult();
                     delete dlg;
@@ -217,30 +210,20 @@ public:
         mItem = createJob->item();
 
         if (mInteractive) {
-            const QString text
-                = xi18nc("@info",
-                         "<para>A contact for \"%1\" was successfully added "
-                         "to your address book.</para>"
-                         "<para>Do you want to edit this new contact now?</para>",
-                         mCompleteAddress);
+            const QString text = xi18nc("@info",
+                                        "<para>A contact for \"%1\" was successfully added "
+                                        "to your address book.</para>"
+                                        "<para>Do you want to edit this new contact now?</para>",
+                                        mCompleteAddress);
 
-            if (KMessageBox::questionYesNo(
-                    mParentWidget,
-                    text,
-                    QString(),
-                    KStandardGuiItem::yes(),
-                    KStandardGuiItem::no(),
-                    QStringLiteral("addedtokabc")) == KMessageBox::Yes) {
-                QPointer<Akonadi::ContactEditorDialog> dlg
-                    = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode,
-                                                       mParentWidget);
+            if (KMessageBox::questionYesNo(mParentWidget, text, QString(), KStandardGuiItem::yes(), KStandardGuiItem::no(), QStringLiteral("addedtokabc"))
+                == KMessageBox::Yes) {
+                QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
                 dlg->setContact(mItem);
-                connect(dlg.data(), &Akonadi::ContactEditorDialog::contactStored,
-                        q, [this](const Akonadi::Item &item) {
+                connect(dlg.data(), &Akonadi::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
                     contactStored(item);
                 });
-                connect(dlg.data(), &Akonadi::ContactEditorDialog::error,
-                        q, [this](const QString &str) {
+                connect(dlg.data(), &Akonadi::ContactEditorDialog::error, q, [this](const QString &str) {
                     slotContactEditorError(str);
                 });
                 dlg->exec();
@@ -289,8 +272,7 @@ void AddEmailAddressJob::start()
     // first check whether a contact with the same email exists already
     auto *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
-    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(),
-                        Akonadi::ContactSearchJob::ExactMatch);
+    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, [this](KJob *job) {
         d->slotSearchDone(job);
     });

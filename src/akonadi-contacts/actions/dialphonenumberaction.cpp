@@ -10,15 +10,15 @@
 
 #include "contactactionssettings.h"
 #include "qdialer.h"
+#include "qekigadialer.h"
 #include "qsflphonedialer.h"
 #include "qskypedialer.h"
-#include "qekigadialer.h"
 
-#include <kcontacts/phonenumber.h>
-#include <KLocalizedString>
-#include <KMessageBox>
 #include <KDialogJobUiDelegate>
 #include <KIO/CommandLauncherJob>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <kcontacts/phonenumber.h>
 
 #include <QDesktopServices>
 
@@ -70,5 +70,4 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     auto *job = new KIO::CommandLauncherJob(command);
     job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
     job->start();
-
 }

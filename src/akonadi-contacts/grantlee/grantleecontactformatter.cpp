@@ -11,9 +11,9 @@
 
 #include <KContacts/Addressee>
 
-#include <GrantleeTheme/GrantleeThemeEngine>
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
 #include <GrantleeTheme/GrantleeTheme>
+#include <GrantleeTheme/GrantleeThemeEngine>
 
 #include <grantlee/context.h>
 #include <grantlee/metatype.h>
@@ -23,9 +23,9 @@
 
 #include <KColorScheme>
 
-#include <KStringHandler>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KStringHandler>
 
 #include <QLocale>
 #include <QMetaProperty>
@@ -34,13 +34,14 @@
 using namespace KAddressBookGrantlee;
 
 // Grantlee has no Q_GADGET support yet
-#define GRANTLEE_MAKE_GADGET(Class) \
-    GRANTLEE_BEGIN_LOOKUP(Class) \
-    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData()); \
-    if (idx < 0) { \
-        return {};} \
-    const auto mp = Class::staticMetaObject.property(idx); \
-    return mp.readOnGadget(&object); \
+#define GRANTLEE_MAKE_GADGET(Class)                                                                                                                            \
+    GRANTLEE_BEGIN_LOOKUP(Class)                                                                                                                               \
+    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData());                                                                   \
+    if (idx < 0) {                                                                                                                                             \
+        return {};                                                                                                                                             \
+    }                                                                                                                                                          \
+    const auto mp = Class::staticMetaObject.property(idx);                                                                                                     \
+    return mp.readOnGadget(&object);                                                                                                                           \
     GRANTLEE_END_LOOKUP
 
 GRANTLEE_MAKE_GADGET(KContacts::Address)
@@ -166,26 +167,24 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     // Custom fields
     QVariantList customFields;
     QVariantList customFieldsUrl;
-    static QSet<QString> blacklistedKeys = {
-        QStringLiteral("CRYPTOPROTOPREF"),
-        QStringLiteral("OPENPGPFP"),
-        QStringLiteral("SMIMEFP"),
-        QStringLiteral("CRYPTOSIGNPREF"),
-        QStringLiteral("CRYPTOENCRYPTPREF"),
-        QStringLiteral("Anniversary"),
-        QStringLiteral("BlogFeed"),
-        QStringLiteral("Profession"),
-        QStringLiteral("Office"),
-        QStringLiteral("ManagersName"),
-        QStringLiteral("AssistantsName"),
-        QStringLiteral("SpousesName"),
-        QStringLiteral("IMAddress"),
-        QStringLiteral("AddressBook"),
-        QStringLiteral("MailPreferedFormatting"),
-        QStringLiteral("MailAllowToRemoteContent"),
-        QStringLiteral("MAILPREFEREDFORMATTING"),
-        QStringLiteral("MAILALLOWTOREMOTECONTENT")
-    };
+    static QSet<QString> blacklistedKeys = {QStringLiteral("CRYPTOPROTOPREF"),
+                                            QStringLiteral("OPENPGPFP"),
+                                            QStringLiteral("SMIMEFP"),
+                                            QStringLiteral("CRYPTOSIGNPREF"),
+                                            QStringLiteral("CRYPTOENCRYPTPREF"),
+                                            QStringLiteral("Anniversary"),
+                                            QStringLiteral("BlogFeed"),
+                                            QStringLiteral("Profession"),
+                                            QStringLiteral("Office"),
+                                            QStringLiteral("ManagersName"),
+                                            QStringLiteral("AssistantsName"),
+                                            QStringLiteral("SpousesName"),
+                                            QStringLiteral("IMAddress"),
+                                            QStringLiteral("AddressBook"),
+                                            QStringLiteral("MailPreferedFormatting"),
+                                            QStringLiteral("MailAllowToRemoteContent"),
+                                            QStringLiteral("MAILPREFEREDFORMATTING"),
+                                            QStringLiteral("MAILALLOWTOREMOTECONTENT")};
 
     const auto customs = rawContact.customs();
     for (QString custom : customs) {
@@ -244,17 +243,11 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
 
     QVariantHash colorsObject;
 
-    colorsObject.insert(
-        QStringLiteral("linkColor"),
-        KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("linkColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
 
-    colorsObject.insert(
-        QStringLiteral("textColor"),
-        KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("textColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
 
-    colorsObject.insert(
-        QStringLiteral("backgroundColor"),
-        KColorScheme(QPalette::Active, KColorScheme::View).background().color().name());
+    colorsObject.insert(QStringLiteral("backgroundColor"), KColorScheme(QPalette::Active, KColorScheme::View).background().color().name());
 
     QVariantHash mapping;
     mapping.insert(QStringLiteral("contact"), QVariant::fromValue(ContactGrantleeWrapper(rawContact)));

@@ -12,10 +12,12 @@
 
 #include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class WebWidgetLister;
 class WebListWidget : public QWidget
 {
@@ -26,6 +28,7 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
+
 private:
     WebWidgetLister *mWebWidgetLister = nullptr;
 };

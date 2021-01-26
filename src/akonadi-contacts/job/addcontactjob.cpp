@@ -5,15 +5,15 @@
 */
 
 #include "addcontactjob.h"
-#include <Collection>
 #include "akonadi/contact/selectaddressbookdialog.h"
+#include <Collection>
 
 #include <Akonadi/Contact/ContactSearchJob>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <item.h>
 #include <itemcreatejob.h>
 #include <kcontacts/addressee.h>
-#include <KLocalizedString>
-#include <KMessageBox>
 
 #include <QPointer>
 
@@ -49,13 +49,12 @@ public:
 
         const KContacts::Addressee::List contacts = searchJob->contacts();
 
-        if (!contacts.isEmpty()) {   // contact is already part of the address book...
+        if (!contacts.isEmpty()) { // contact is already part of the address book...
             if (mShowMessageBox) {
-                const QString text
-                    = i18nc("@info",
-                            "The vCard's primary email address is already in "
-                            "your address book; however, you may save the vCard into "
-                            "a file and import it into the address book manually.");
+                const QString text = i18nc("@info",
+                                           "The vCard's primary email address is already in "
+                                           "your address book; however, you may save the vCard into "
+                                           "a file and import it into the address book manually.");
                 KMessageBox::information(mParentWidget, text);
             }
             q->setError(UserDefinedError);
@@ -108,16 +107,11 @@ public:
         }
 
         if (mShowMessageBox) {
-            const QString text
-                = i18nc("@info",
-                        "The vCard was added to your address book; "
-                        "you can add more information to this "
-                        "entry by opening the address book.");
-            KMessageBox::information(
-                mParentWidget,
-                text,
-                QString(),
-                QStringLiteral("addedtokabc"));
+            const QString text = i18nc("@info",
+                                       "The vCard was added to your address book; "
+                                       "you can add more information to this "
+                                       "entry by opening the address book.");
+            KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("addedtokabc"));
         }
         q->emitResult();
     }
@@ -156,8 +150,7 @@ void AddContactJob::start()
     // first check whether a contact with the same email exists already
     auto *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
-    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mContact.preferredEmail().toLower(),
-                        Akonadi::ContactSearchJob::ExactMatch);
+    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mContact.preferredEmail().toLower(), Akonadi::ContactSearchJob::ExactMatch);
 
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, [this](KJob *job) {
         d->slotSearchDone(job);

@@ -29,9 +29,7 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     mMailPreferFormatting->setObjectName(QStringLiteral("mMailPreferFormatting"));
     topLayout->addWidget(mMailPreferFormatting);
     label->setBuddy(mMailPreferFormatting);
-    const QStringList listFormat {
-        i18n("Default"), i18n("Plain Text"), i18n("HTML")
-    };
+    const QStringList listFormat{i18n("Default"), i18n("Plain Text"), i18n("HTML")};
     mMailPreferFormatting->addItems(listFormat);
 
     mAllowRemoteContent = new QCheckBox(i18n("Allow remote content in received HTML messages"), this);
@@ -65,7 +63,7 @@ void MessageFormattingWidget::storeContact(KContacts::Addressee &contact) const
     QString mailPreferedFormatting;
     const int index = mMailPreferFormatting->currentIndex();
     if (index == 0) {
-        //Nothing => remove custom variable
+        // Nothing => remove custom variable
     } else if (index == 1) {
         mailPreferedFormatting = QStringLiteral("TEXT");
     } else if (index == 2) {

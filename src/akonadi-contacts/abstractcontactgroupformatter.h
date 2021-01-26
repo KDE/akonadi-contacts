@@ -13,11 +13,13 @@
 
 #include <QVariant>
 
-namespace KContacts {
+namespace KContacts
+{
 class ContactGroup;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 
 /**
@@ -37,8 +39,8 @@ public:
      * Describes the form of the HTML that is created.
      */
     enum HtmlForm {
-        SelfcontainedForm,                ///< Creates a complete HTML document
-        EmbeddableForm,                   ///< Creates a div HTML element that can be embedded.
+        SelfcontainedForm, ///< Creates a complete HTML document
+        EmbeddableForm, ///< Creates a div HTML element that can be embedded.
         UserForm = SelfcontainedForm + 42 ///< Point for extension
     };
 

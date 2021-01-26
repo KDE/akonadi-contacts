@@ -5,12 +5,12 @@
 */
 
 #include "recipientspickerwidget.h"
-#include "recipientseditormanager.h"
-#include "emailaddressselectionwidget.h"
-#include "emailaddressselectionmodel.h"
 #include "contactstreemodel.h"
-#include <QHBoxLayout>
+#include "emailaddressselectionmodel.h"
+#include "emailaddressselectionwidget.h"
+#include "recipientseditormanager.h"
 #include <QAbstractItemView>
+#include <QHBoxLayout>
 #include <QTreeView>
 
 using namespace Akonadi;
@@ -20,7 +20,8 @@ RecipientsPickerWidget::RecipientsPickerWidget(bool onlyShowEmailWithAddress, QA
     auto *layout = new QHBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
-    mView = new Akonadi::EmailAddressSelectionWidget(onlyShowEmailWithAddress, model ? model : Akonadi::RecipientsEditorManager::self()->model()->model(), this);
+    mView =
+        new Akonadi::EmailAddressSelectionWidget(onlyShowEmailWithAddress, model ? model : Akonadi::RecipientsEditorManager::self()->model()->model(), this);
     layout->addWidget(mView);
     mView->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mView->view()->setAlternatingRowColors(true);

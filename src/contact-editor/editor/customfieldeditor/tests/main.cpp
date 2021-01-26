@@ -7,8 +7,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <QApplication>
 #include "../customfieldswidget.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {

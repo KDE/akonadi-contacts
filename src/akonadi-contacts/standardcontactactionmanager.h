@@ -20,7 +20,8 @@ class KActionCollection;
 class QItemSelectionModel;
 class QWidget;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 
 /**
@@ -39,9 +40,9 @@ public:
      */
     enum Type {
         CreateContact = StandardActionManager::LastType + 1, ///< Creates a new contact
-        CreateContactGroup,                                  ///< Creates a new contact group
-        EditItem,                                            ///< Edits the selected contact resp. contact group
-        LastType                                             ///< Marks last action
+        CreateContactGroup, ///< Creates a new contact group
+        EditItem, ///< Edits the selected contact resp. contact group
+        LastType ///< Marks last action
     };
 
     /**

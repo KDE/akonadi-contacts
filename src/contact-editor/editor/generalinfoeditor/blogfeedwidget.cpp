@@ -8,11 +8,11 @@
 
 #include "blogfeedwidget.h"
 #include "../utils/utils.h"
+#include <KContacts/Addressee>
+#include <KLineEdit>
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <KLineEdit>
-#include <KContacts/Addressee>
 using namespace ContactEditor;
 
 BlogfeedWidget::BlogfeedWidget(QWidget *parent)

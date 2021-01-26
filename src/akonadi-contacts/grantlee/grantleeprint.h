@@ -12,8 +12,8 @@
 #include <GrantleeTheme/GenericFormatter>
 #include <KContacts/Addressee>
 
-namespace KAddressBookGrantlee {
-
+namespace KAddressBookGrantlee
+{
 /** Grantlee-based contact printing. */
 class AKONADI_CONTACT_EXPORT GrantleePrint : public GrantleeTheme::GenericFormatter
 {

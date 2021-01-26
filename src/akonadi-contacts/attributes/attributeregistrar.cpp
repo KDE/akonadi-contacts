@@ -10,7 +10,8 @@
 
 #include <attributefactory.h>
 
-namespace {
+namespace
+{
 // Anonymous namespace; function is invisible outside this file.
 bool dummy()
 {

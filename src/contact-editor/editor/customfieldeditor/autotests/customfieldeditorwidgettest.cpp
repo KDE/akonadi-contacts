@@ -9,11 +9,11 @@
 
 #include "customfieldeditorwidgettest.h"
 #include "../customfieldeditorwidget.h"
-#include <QTest>
+#include <QComboBox>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QComboBox>
+#include <QTest>
 
 CustomFieldEditorWidgetTest::CustomFieldEditorWidgetTest(QObject *parent)
     : QObject(parent)

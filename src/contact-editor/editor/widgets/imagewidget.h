@@ -14,7 +14,8 @@
 #include <QPoint>
 #include <QPushButton>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
@@ -25,10 +26,7 @@ class ImageWidget : public QPushButton
     Q_OBJECT
 
 public:
-    enum Type {
-        Photo,
-        Logo
-    };
+    enum Type { Photo, Logo };
 
     explicit ImageWidget(Type type, QWidget *parent = nullptr);
     ~ImageWidget() override;

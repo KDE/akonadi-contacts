@@ -8,17 +8,17 @@
 
 #include "standardcontactformatter.h"
 
-#include <item.h>
-#include <kcontacts/addressee.h>
 #include <KColorScheme>
 #include <KConfigGroup>
+#include <item.h>
+#include <kcontacts/addressee.h>
 
 #include <KLocalizedString>
 #include <KStringHandler>
 
+#include <QLocale>
 #include <QRegularExpression>
 #include <QSet>
-#include <QLocale>
 
 using namespace Akonadi;
 
@@ -72,8 +72,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         "<tr valign=\"top\">"
         "<td align=\"right\" valign=\"top\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>\n"
         "<td colspan=\"2\" align=\"left\" valign=\"top\" width=\"70%\"><font>%2</font></td>\n"
-        "</tr>\n"
-        );
+        "</tr>\n");
 
     // data item plus additional icon(s):
     //  %1 is the item name
@@ -84,8 +83,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         "<td align=\"right\" valign=\"top\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>\n"
         "<td align=\"left\" valign=\"top\"><font>%2</font></td>\n"
         "<td align=\"left\" valign=\"top\">%3</td>\n"
-        "</tr>\n"
-        );
+        "</tr>\n");
 
     // Build the table's rows here
     QString dynamicPart;
@@ -95,10 +93,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     const int years = contactAge(date);
 
     if (date.isValid()) {
-        dynamicPart += rowFmtStr1
-                       .arg(KContacts::Addressee::birthdayLabel())
-                       .arg(QLocale().toString(date)
-                            +QLatin1String("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
+        dynamicPart += rowFmtStr1.arg(KContacts::Addressee::birthdayLabel())
+                           .arg(QLocale().toString(date) + QLatin1String("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
     }
 
     // Phone Numbers
@@ -110,13 +106,11 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         QString dispValue = QStringLiteral("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
             QString dispIcon = QStringLiteral("<a href=\"sms:?index=%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
-                               .arg(counter)
-                               .arg(i18nc("@info:tooltip", "Send SMS"));
-            dynamicPart += rowFmtStr2
-                           .arg(dispLabel, dispValue, dispIcon);
+                                   .arg(counter)
+                                   .arg(i18nc("@info:tooltip", "Send SMS"));
+            dynamicPart += rowFmtStr2.arg(dispLabel, dispValue, dispIcon);
         } else {
-            dynamicPart += rowFmtStr1
-                           .arg(dispLabel, dispValue);
+            dynamicPart += rowFmtStr1.arg(dispLabel, dispValue);
         }
 
         ++counter;
@@ -128,9 +122,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
         const QString fullEmail = QString::fromLatin1(QUrl::toPercentEncoding(rawContact.fullEmail(email)));
 
-        dynamicPart += rowFmtStr1.arg(type)
-                       .arg(QStringLiteral("<a href=\"mailto:%1\">%2</a>")
-                            .arg(fullEmail, email));
+        dynamicPart += rowFmtStr1.arg(type).arg(QStringLiteral("<a href=\"mailto:%1\">%2</a>").arg(fullEmail, email));
     }
 
     // Homepage
@@ -165,12 +157,11 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         formattedAddress.replace(QRegularExpression(QStringLiteral("\n+")), QStringLiteral("<br>"));
 
         const QString url = QStringLiteral("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
-                            .arg(counter)
-                            .arg(i18nc("@info:tooltip", "Show address on map"));
+                                .arg(counter)
+                                .arg(i18nc("@info:tooltip", "Show address on map"));
         counter++;
 
-        dynamicPart += rowFmtStr2
-                       .arg(KContacts::Address::typeLabel(address.type()), formattedAddress, url);
+        dynamicPart += rowFmtStr2.arg(KContacts::Address::typeLabel(address.type()), formattedAddress, url);
     }
 
     // Note
@@ -229,7 +220,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                 if (key == QLatin1String("Anniversary") || key == QLatin1String("ANNIVERSARY")) {
                     const QDateTime dateTime = QDateTime::fromString(value, Qt::ISODate);
                     value = QLocale().toString(dateTime.date());
-                } else if (key == QLatin1String("BlogFeed") || key == QLatin1String("BLOGFEED")) {      // blog is handled separated
+                } else if (key == QLatin1String("BlogFeed") || key == QLatin1String("BLOGFEED")) { // blog is handled separated
                     continue;
                 } else if (blacklistedKeys.contains(key)) {
                     continue;
@@ -288,24 +279,24 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     QString strAddr = QStringLiteral(
-        "<div align=\"center\">"
-        "<table cellpadding=\"3\" cellspacing=\"1\">"
-        "<tr>"
-        "<td align=\"right\" valign=\"top\" width=\"30%\" rowspan=\"3\">"
-        "<img src=\"%1\" width=\"100\" vspace=\"1\"/>"                   // image
-        "</td>"
-        "<td colspan=\"2\" align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>"                   // name
-        "</tr>"
-        "<tr>"
-        "<td colspan=\"2\" align=\"left\" width=\"70%\">%3</td>"                    // role
-        "</tr>"
-        "<tr>"
-        "<td colspan=\"2\" align=\"left\" width=\"70%\">%4</td>"                    // organization
-        "</tr>")
-                      .arg(QStringLiteral("contact_photo"))
-                      .arg(rawContact.realName().toHtmlEscaped())
-                      .arg(role.toHtmlEscaped())
-                      .arg(rawContact.organization().toHtmlEscaped());
+                          "<div align=\"center\">"
+                          "<table cellpadding=\"3\" cellspacing=\"1\">"
+                          "<tr>"
+                          "<td align=\"right\" valign=\"top\" width=\"30%\" rowspan=\"3\">"
+                          "<img src=\"%1\" width=\"100\" vspace=\"1\"/>" // image
+                          "</td>"
+                          "<td colspan=\"2\" align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>" // name
+                          "</tr>"
+                          "<tr>"
+                          "<td colspan=\"2\" align=\"left\" width=\"70%\">%3</td>" // role
+                          "</tr>"
+                          "<tr>"
+                          "<td colspan=\"2\" align=\"left\" width=\"70%\">%4</td>" // organization
+                          "</tr>")
+                          .arg(QStringLiteral("contact_photo"))
+                          .arg(rawContact.realName().toHtmlEscaped())
+                          .arg(role.toHtmlEscaped())
+                          .arg(rawContact.organization().toHtmlEscaped());
 
     strAddr.append(dynamicPart);
     strAddr.append(notes);
@@ -316,12 +307,10 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
         if (group.readEntry("QRCodes", true)) {
-            strAddr.append(QString::fromLatin1(
-                               "<p align=\"center\">"
-                               "<img src=\"%1\" vspace=\"1\"/>"
-                               "</p>"
-                               )
-                           .arg(QStringLiteral("qrcode")));
+            strAddr.append(QString::fromLatin1("<p align=\"center\">"
+                                               "<img src=\"%1\" vspace=\"1\"/>"
+                                               "</p>")
+                               .arg(QStringLiteral("qrcode")));
         }
     }
 
@@ -332,19 +321,19 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     const QString document = QStringLiteral(
-        "<html>"
-        "<head>"
-        " <style type=\"text/css\">"
-        "  a {text-decoration:none; color:%1}"
-        " </style>"
-        "</head>"
-        "<body text=\"%1\" bgcolor=\"%2\">"                          // text and background color
-        "%3"                          // contact part
-        "</body>"
-        "</html>")
-                             .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name())
-                             .arg(KColorScheme(QPalette::Active, KColorScheme::View).background().color().name())
-                             .arg(strAddr);
+                                 "<html>"
+                                 "<head>"
+                                 " <style type=\"text/css\">"
+                                 "  a {text-decoration:none; color:%1}"
+                                 " </style>"
+                                 "</head>"
+                                 "<body text=\"%1\" bgcolor=\"%2\">" // text and background color
+                                 "%3" // contact part
+                                 "</body>"
+                                 "</html>")
+                                 .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name())
+                                 .arg(KColorScheme(QPalette::Active, KColorScheme::View).background().color().name())
+                                 .arg(strAddr);
 
     return document;
 }

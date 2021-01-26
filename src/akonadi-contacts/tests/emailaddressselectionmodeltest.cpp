@@ -5,8 +5,8 @@
 */
 
 #include "emailaddressselectionmodel.h"
-#include <QTreeView>
 #include <Akonadi/Contact/ContactsTreeModel>
+#include <QTreeView>
 
 #include <QApplication>
 

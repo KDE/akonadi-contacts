@@ -8,22 +8,22 @@
 */
 
 #include "generalinfowidget.h"
+#include "../widgets/imagewidget.h"
+#include "blogfeedwidget.h"
+#include "categorieseditwidget.h"
+#include "mail/maillistwidget.h"
+#include "messageformattingwidget.h"
+#include "messaging/messaginglistwidget.h"
 #include "namewidget.h"
 #include "nicknamewidget.h"
-#include "blogfeedwidget.h"
-#include <QLabel>
-#include <KLocalizedString>
 #include "phone/phonelistwidget.h"
-#include "messaging/messaginglistwidget.h"
-#include "mail/maillistwidget.h"
 #include "web/weblistwidget.h"
-#include "categorieseditwidget.h"
-#include "../widgets/imagewidget.h"
-#include "messageformattingwidget.h"
-#include <KPluginLoader>
+#include <KLocalizedString>
 #include <KPluginFactory>
-#include <QVBoxLayout>
+#include <KPluginLoader>
 #include <QHBoxLayout>
+#include <QLabel>
+#include <QVBoxLayout>
 using namespace ContactEditor;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)

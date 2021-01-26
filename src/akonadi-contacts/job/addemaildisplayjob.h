@@ -11,7 +11,8 @@
 #include <AkonadiCore/Item>
 #include <KJob>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 /**
  * @brief The AddEmailDisplayJob class

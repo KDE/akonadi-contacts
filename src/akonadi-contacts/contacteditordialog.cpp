@@ -15,14 +15,14 @@
 
 #include <kcontacts/addressee.h>
 
-#include <KLocalizedString>
 #include <KConfig>
+#include <KLocalizedString>
 #include <KMessageBox>
 
-#include <QGridLayout>
-#include <QLabel>
 #include <KConfigGroup>
 #include <QDialogButtonBox>
+#include <QGridLayout>
+#include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -31,7 +31,10 @@ using namespace Akonadi;
 class Q_DECL_HIDDEN ContactEditorDialog::Private
 {
 public:
-    Private(ContactEditorDialog::Mode mode, ContactEditorDialog::DisplayMode displaymode, ContactEditor::AbstractContactEditorWidget *editorWidget, ContactEditorDialog *parent)
+    Private(ContactEditorDialog::Mode mode,
+            ContactEditorDialog::DisplayMode displaymode,
+            ContactEditor::AbstractContactEditorWidget *editorWidget,
+            ContactEditorDialog *parent)
         : q(parent)
         , mMode(mode)
     {
@@ -54,10 +57,13 @@ public:
         layout->setContentsMargins(0, 0, 0, 0);
 
         if (editorWidget) {
-            mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode, editorWidget, q);
+            mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode,
+                                               editorWidget,
+                                               q);
         } else {
             mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode,
-                                               displaymode == ContactEditorDialog::FullMode ? AkonadiContactEditor::FullMode : AkonadiContactEditor::VCardMode, q);
+                                               displaymode == ContactEditorDialog::FullMode ? AkonadiContactEditor::FullMode : AkonadiContactEditor::VCardMode,
+                                               q);
         }
 
         if (mode == ContactEditorDialog::CreateMode) {
@@ -74,11 +80,9 @@ public:
         layout->addWidget(mEditor, 1, 0, 1, 2);
         layout->setColumnStretch(1, 1);
 
-        connect(mEditor, &AkonadiContactEditor::contactStored,
-                q, &ContactEditorDialog::contactStored);
+        connect(mEditor, &AkonadiContactEditor::contactStored, q, &ContactEditorDialog::contactStored);
 
-        connect(mEditor, &AkonadiContactEditor::error,
-                q, &ContactEditorDialog::error);
+        connect(mEditor, &AkonadiContactEditor::error, q, &ContactEditorDialog::error);
 
         connect(mEditor, &AkonadiContactEditor::finished, q, [this]() {
             slotFinish();
@@ -172,10 +176,8 @@ AkonadiContactEditor *ContactEditorDialog::editor() const
 void ContactEditorDialog::accept()
 {
     if (d->mEditor->hasNoSavedData()) {
-        if (KMessageBox::questionYesNo(
-                    this,
-                    i18nc("@info", "Location was not saved. Do you want to close editor?"),
-                    i18nc("@title:window", "Confirmation")) == KMessageBox::No) {
+        if (KMessageBox::questionYesNo(this, i18nc("@info", "Location was not saved. Do you want to close editor?"), i18nc("@title:window", "Confirmation"))
+            == KMessageBox::No) {
             return;
         }
     }
@@ -187,10 +189,7 @@ void ContactEditorDialog::accept()
 
 void ContactEditorDialog::reject()
 {
-    if (KMessageBox::questionYesNo(
-            this,
-            i18nc("@info", "Do you really want to cancel?"),
-            i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
+    if (KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
         QDialog::reject(); // Discard current changes
     }
 }

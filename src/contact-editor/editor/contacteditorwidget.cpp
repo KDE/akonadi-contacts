@@ -9,22 +9,22 @@
 #include "contacteditorwidget.h"
 #include "config-contact-editor.h"
 
-#include "personaleditor/personaleditorwidget.h"
 #include "contacteditorpageplugin.h"
 #include "contactmetadatabase_p.h"
+#include "personaleditor/personaleditorwidget.h"
 
 #include <KConfig>
 #include <KLocalizedString>
-#include <QTabWidget>
 #include <KTextEdit>
+#include <QTabWidget>
 
+#include "addresseditor/addresseslocationwidget.h"
+#include "businesseditor/businesseditorwidget.h"
+#include "customfieldeditor/customfieldswidget.h"
+#include "generalinfoeditor/generalinfowidget.h"
 #include <QDirIterator>
 #include <QPluginLoader>
 #include <QVBoxLayout>
-#include "addresseditor/addresseslocationwidget.h"
-#include "customfieldeditor/customfieldswidget.h"
-#include "businesseditor/businesseditorwidget.h"
-#include "generalinfoeditor/generalinfowidget.h"
 
 class Q_DECL_HIDDEN ContactEditorWidget::Private
 {

@@ -10,10 +10,8 @@ using namespace Akonadi;
 AbstractEmailAddressSelectionDialog::AbstractEmailAddressSelectionDialog(QWidget *parent)
     : QDialog(parent)
 {
-
 }
 
 AbstractEmailAddressSelectionDialog::~AbstractEmailAddressSelectionDialog()
 {
-
 }

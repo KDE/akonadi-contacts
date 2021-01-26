@@ -12,10 +12,10 @@
 
 #include "customfieldmanager_p.h"
 #include "customfieldslistdelegate.h"
+#include <KContacts/Addressee>
 #include <QSortFilterProxyModel>
 #include <QTreeView>
 #include <QVBoxLayout>
-#include <KContacts/Addressee>
 
 using namespace ContactEditor;
 
@@ -36,7 +36,7 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     proxyModel->setDynamicSortFilter(true);
     proxyModel->setSourceModel(mModel);
     mCustomFieldList->setModel(proxyModel);
-    mCustomFieldList->setColumnHidden(2, true);   // hide the 'key' column
+    mCustomFieldList->setColumnHidden(2, true); // hide the 'key' column
 }
 
 CustomFieldsListWidget::~CustomFieldsListWidget()
@@ -55,27 +55,17 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
         ContactEditor::Utils::splitCustomField(custom, app, name, value);
 
         // skip all well-known fields that have separated editor widgets
-        if (custom.startsWith(QLatin1String("messaging/"))) {       // IM addresses
+        if (custom.startsWith(QLatin1String("messaging/"))) { // IM addresses
             continue;
         }
 
         if (app == QLatin1String("KADDRESSBOOK")) {
             static QSet<QString> blacklist;
             if (blacklist.isEmpty()) {
-                blacklist << QStringLiteral("BlogFeed")
-                          << QStringLiteral("X-IMAddress")
-                          << QStringLiteral("X-Profession")
-                          << QStringLiteral("X-Office")
-                          << QStringLiteral("X-ManagersName")
-                          << QStringLiteral("X-AssistantsName")
-                          << QStringLiteral("X-Anniversary")
-                          << QStringLiteral("X-SpousesName")
-                          << QStringLiteral("MailPreferedFormatting")
-                          << QStringLiteral("MailAllowToRemoteContent")
-                          << QStringLiteral("CRYPTOPROTOPREF")
-                          << QStringLiteral("OPENPGPFP")
-                          << QStringLiteral("SMIMEFP")
-                          << QStringLiteral("CRYPTOSIGNPREF")
+                blacklist << QStringLiteral("BlogFeed") << QStringLiteral("X-IMAddress") << QStringLiteral("X-Profession") << QStringLiteral("X-Office")
+                          << QStringLiteral("X-ManagersName") << QStringLiteral("X-AssistantsName") << QStringLiteral("X-Anniversary")
+                          << QStringLiteral("X-SpousesName") << QStringLiteral("MailPreferedFormatting") << QStringLiteral("MailAllowToRemoteContent")
+                          << QStringLiteral("CRYPTOPROTOPREF") << QStringLiteral("OPENPGPFP") << QStringLiteral("SMIMEFP") << QStringLiteral("CRYPTOSIGNPREF")
                           << QStringLiteral("CRYPTOENCRYPTPREF");
             }
             QSet<QString> upperCaseBlacklist;
@@ -83,7 +73,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
                 upperCaseBlacklist << blacklistEntry.toUpper();
             }
             blacklist.unite(upperCaseBlacklist);
-            if (blacklist.contains(name)) {     // several KAddressBook specific fields
+            if (blacklist.contains(name)) { // several KAddressBook specific fields
                 continue;
             }
         }

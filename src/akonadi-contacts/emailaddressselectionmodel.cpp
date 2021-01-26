@@ -7,11 +7,11 @@
 */
 
 #include "emailaddressselectionmodel.h"
-#include <AkonadiCore/Session>
-#include <AkonadiCore/ItemFetchScope>
-#include <AkonadiCore/EntityDisplayAttribute>
-#include <AkonadiCore/ChangeRecorder>
 #include <Akonadi/Contact/ContactsTreeModel>
+#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/EntityDisplayAttribute>
+#include <AkonadiCore/ItemFetchScope>
+#include <AkonadiCore/Session>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 

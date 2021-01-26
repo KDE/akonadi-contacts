@@ -10,14 +10,16 @@
 #ifndef CUSTOMFIELDSWIDGET_H
 #define CUSTOMFIELDSWIDGET_H
 
-#include <QWidget>
 #include <QVariantList>
+#include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CustomFieldEditorWidget;
 class CustomFieldsListWidget;
 class CustomFieldsWidget : public QWidget
@@ -32,6 +34,7 @@ public:
     void setReadOnly(bool readOnly);
     void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
     Q_REQUIRED_RESULT QVariantList localCustomFieldDescriptions() const;
+
 private:
     ContactEditor::CustomFieldEditorWidget *mCustomFieldEditorWidget = nullptr;
     ContactEditor::CustomFieldsListWidget *mCustomFieldsListWidget = nullptr;

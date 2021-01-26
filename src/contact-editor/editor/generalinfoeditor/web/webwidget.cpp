@@ -9,10 +9,10 @@
 
 #include "webwidget.h"
 #include "webselecttypecombobox.h"
+#include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
 #include <QUrl>
-#include <KLocalizedString>
 #include <editor/widgets/preferredlineeditwidget.h>
 using namespace ContactEditor;
 

@@ -9,10 +9,10 @@
 
 #include "emailaddressselectionproxymodel_p.h"
 
+#include <KLocalizedString>
 #include <item.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <KLocalizedString>
 
 using namespace Akonadi;
 
@@ -38,9 +38,7 @@ static QString createToolTip(const KContacts::ContactGroup &group)
 
 static QString createToolTip(const QString &name, const QString &email)
 {
-    return QStringLiteral("<qt>%1<b>%2</b></qt>")
-           .arg(name.isEmpty() ? QString() : name + QLatin1String("<br/>"))
-           .arg(email);
+    return QStringLiteral("<qt>%1<b>%2</b></qt>").arg(name.isEmpty() ? QString() : name + QLatin1String("<br/>")).arg(email);
 }
 
 EmailAddressSelectionProxyModel::EmailAddressSelectionProxyModel(QObject *parent)
@@ -56,7 +54,7 @@ QVariant EmailAddressSelectionProxyModel::data(const QModelIndex &index, int rol
 {
     const QVariant value = LeafExtensionProxyModel::data(index, role);
 
-    if (!value.isValid()) {   // index is not a leaf child
+    if (!value.isValid()) { // index is not a leaf child
         if (role == NameRole) {
             const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
             if (item.hasPayload<KContacts::Addressee>()) {
@@ -131,8 +129,7 @@ QVariant EmailAddressSelectionProxyModel::leafData(const QModelIndex &index, int
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
             const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
             if (row >= 0 && row < (int)group.dataCount()) {
-                return i18nc("Name and email address of a contact", "%1 <%2>",
-                             group.data(row).name(), group.data(row).email());
+                return i18nc("Name and email address of a contact", "%1 <%2>", group.data(row).name(), group.data(row).email());
             }
         }
     } else if (role == NameRole) {

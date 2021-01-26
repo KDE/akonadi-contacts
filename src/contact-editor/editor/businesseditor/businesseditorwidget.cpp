@@ -14,8 +14,8 @@
 #include <QGridLayout>
 #include <QLabel>
 
-#include "freebusyeditwidget.h"
 #include "../widgets/imagewidget.h"
+#include "freebusyeditwidget.h"
 
 #include <KContacts/Addressee>
 

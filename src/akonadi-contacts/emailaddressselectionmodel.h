@@ -9,10 +9,11 @@
 #ifndef EMAILADDRESSSELECTIONMODEL_H
 #define EMAILADDRESSSELECTIONMODEL_H
 
-#include <QObject>
 #include "akonadi-contact_export.h"
+#include <QObject>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ContactsTreeModel;
 class AKONADI_CONTACT_EXPORT EmailAddressSelectionModel : public QObject
 {

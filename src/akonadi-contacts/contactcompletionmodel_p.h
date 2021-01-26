@@ -11,16 +11,17 @@
 
 #include <entitytreemodel.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ContactCompletionModel : public EntityTreeModel
 {
     Q_OBJECT
 
 public:
     enum Columns {
-        NameColumn,         ///< The name of the contact.
+        NameColumn, ///< The name of the contact.
         NameAndEmailColumn, ///< The name and the email of the contact.
-        EmailColumn         ///< The preferred email of the contact.
+        EmailColumn ///< The preferred email of the contact.
     };
 
     explicit ContactCompletionModel(Monitor *monitor, QObject *parent = nullptr);

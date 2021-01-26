@@ -11,19 +11,19 @@
 #include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
 
+#include <KLocalizedString>
 #include <collectioncombobox.h>
 #include <item.h>
 #include <kcontacts/contactgroup.h>
-#include <KLocalizedString>
 
 #include <KConfig>
 #include <KMessageBox>
 
-#include <QPushButton>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QLabel>
-#include <QDialogButtonBox>
-#include <KConfigGroup>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 using namespace Akonadi;
@@ -93,9 +93,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     auto *layout = new QGridLayout(mainWidget);
     layout->setContentsMargins(0, 0, 0, 0);
 
-    d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode
-                                                 ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode,
-                                                 this);
+    d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode, this);
 
     if (mode == CreateMode) {
         QLabel *label = new QLabel(i18n("Add to:"), mainWidget);
@@ -112,8 +110,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     layout->setColumnStretch(1, 1);
 
     connect(d->mEditor, &ContactGroupEditor::contactGroupStored, this, &ContactGroupEditorDialog::contactGroupStored);
-    connect(d->mEditor->d->mGui.groupName, &QLineEdit::textChanged,
-            this, [this](const QString &str) {
+    connect(d->mEditor->d->mGui.groupName, &QLineEdit::textChanged, this, [this](const QString &str) {
         d->slotGroupNameChanged(str);
     });
 
@@ -161,14 +158,9 @@ void ContactGroupEditorDialog::slotAccepted()
 
 void ContactGroupEditorDialog::reject()
 {
-    if (KMessageBox::questionYesNo(
-            this,
-            i18nc("@info", "Do you really want to cancel?"),
-            i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
+    if (KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
         QDialog::reject(); // Discard current changes
     }
 }
-
-
 
 #include "moc_contactgroupeditordialog.cpp"

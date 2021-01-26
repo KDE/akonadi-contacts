@@ -13,16 +13,14 @@
 
 #include <kcontacts/contactgroup.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ContactGroupModel : public QAbstractItemModel
 {
     Q_OBJECT
 
 public:
-    enum Role {
-        IsReferenceRole = Qt::UserRole,
-        AllEmailsRole
-    };
+    enum Role { IsReferenceRole = Qt::UserRole, AllEmailsRole };
 
     explicit ContactGroupModel(QObject *parent = nullptr);
     ~ContactGroupModel() override;

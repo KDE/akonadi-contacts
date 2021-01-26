@@ -7,19 +7,19 @@
 #include "addemaildisplayjob.h"
 #include "akonadi/contact/selectaddressbookdialog.h"
 
-#include <CollectionDialog>
+#include <AgentFilterProxyModel>
+#include <AgentInstanceCreateJob>
+#include <AgentType>
+#include <AgentTypeDialog>
+#include <Akonadi/Contact/ContactEditorDialog>
 #include <Akonadi/Contact/ContactSearchJob>
+#include <Collection>
+#include <CollectionDialog>
+#include <CollectionFetchJob>
+#include <CollectionFetchScope>
 #include <Item>
 #include <ItemCreateJob>
 #include <ItemModifyJob>
-#include <CollectionFetchJob>
-#include <CollectionFetchScope>
-#include <Collection>
-#include <Akonadi/Contact/ContactEditorDialog>
-#include <AgentTypeDialog>
-#include <AgentType>
-#include <AgentFilterProxyModel>
-#include <AgentInstanceCreateJob>
 
 #include <KContacts/ContactGroup>
 #include <KLocalizedString>
@@ -56,8 +56,7 @@ public:
         // first check whether a contact with the same email exists already
         auto *searchJob = new Akonadi::ContactSearchJob(q);
         searchJob->setLimit(1);
-        searchJob->setQuery(Akonadi::ContactSearchJob::Email, mEmail.toLower(),
-                            Akonadi::ContactSearchJob::ExactMatch);
+        searchJob->setQuery(Akonadi::ContactSearchJob::Email, mEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
         q->connect(searchJob, &Akonadi::ContactSearchJob::result, q, [this](KJob *job) {
             slotSearchDone(job);
         });
@@ -68,8 +67,12 @@ public:
         Akonadi::Item item = contact;
         if (item.hasPayload<KContacts::Addressee>()) {
             KContacts::Addressee address = item.payload<KContacts::Addressee>();
-            address.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailPreferedFormatting"), mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));
-            address.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailAllowToRemoteContent"), mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
+            address.insertCustom(QStringLiteral("KADDRESSBOOK"),
+                                 QStringLiteral("MailPreferedFormatting"),
+                                 mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));
+            address.insertCustom(QStringLiteral("KADDRESSBOOK"),
+                                 QStringLiteral("MailAllowToRemoteContent"),
+                                 mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
             item.setPayload<KContacts::Addressee>(address);
             auto *itemModifyJob = new Akonadi::ItemModifyJob(item);
             q->connect(itemModifyJob, &Akonadi::ItemModifyJob::result, q, [this](KJob *itemModifyJob) {
@@ -101,8 +104,12 @@ public:
         } else {
             Akonadi::Item item = items.at(0);
             KContacts::Addressee contact = searchJob->contacts().at(0);
-            contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailPreferedFormatting"), mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));
-            contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailAllowToRemoteContent"), mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
+            contact.insertCustom(QStringLiteral("KADDRESSBOOK"),
+                                 QStringLiteral("MailPreferedFormatting"),
+                                 mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));
+            contact.insertCustom(QStringLiteral("KADDRESSBOOK"),
+                                 QStringLiteral("MailAllowToRemoteContent"),
+                                 mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
             item.setPayload<KContacts::Addressee>(contact);
             auto *itemModifyJob = new Akonadi::ItemModifyJob(item);
             q->connect(itemModifyJob, &Akonadi::ItemModifyJob::result, q, [this](KJob *itemModifyJob) {
@@ -119,9 +126,8 @@ public:
     {
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
 
-        Akonadi::CollectionFetchJob *const addressBookJob
-            = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-                                              Akonadi::CollectionFetchJob::Recursive);
+        Akonadi::CollectionFetchJob *const addressBookJob =
+            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
         addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
         q->connect(addressBookJob, &Akonadi::CollectionFetchJob::result, q, [this](KJob *job) {
@@ -138,13 +144,12 @@ public:
             return;
         }
 
-        const Akonadi::CollectionFetchJob *addressBookJob
-            = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+        const Akonadi::CollectionFetchJob *addressBookJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
 
         Akonadi::Collection::List canCreateItemCollections;
         const Akonadi::Collection::List colsList = addressBookJob->collections();
         for (const Akonadi::Collection &collection : colsList) {
-            if (Akonadi::Collection::CanCreateItem &collection.rights()) {
+            if (Akonadi::Collection::CanCreateItem & collection.rights()) {
                 canCreateItemCollections.append(collection);
             }
         }
@@ -153,11 +158,10 @@ public:
 
         const int nbItemCollection(canCreateItemCollections.size());
         if (nbItemCollection == 0) {
-            if (KMessageBox::questionYesNo(
-                    mParentWidget,
-                    i18nc("@info",
-                          "You must create an address book before adding a contact. Do you want to create an address book?"),
-                    i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
+            if (KMessageBox::questionYesNo(mParentWidget,
+                                           i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
+                                           i18nc("@title:window", "No Address Book Available"))
+                == KMessageBox::Yes) {
                 QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(mParentWidget);
                 dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
                 dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
@@ -176,13 +180,13 @@ public:
                         job->start();
                         delete dlg;
                         return;
-                    } else { //if agent is not valid => return error and finish job
+                    } else { // if agent is not valid => return error and finish job
                         q->setError(UserDefinedError);
                         q->emitResult();
                         delete dlg;
                         return;
                     }
-                } else { //Canceled create agent => return error and finish job
+                } else { // Canceled create agent => return error and finish job
                     q->setError(UserDefinedError);
                     q->emitResult();
                     delete dlg;
@@ -221,8 +225,12 @@ public:
         KContacts::Addressee contact;
         contact.setNameFromString(mName);
         contact.insertEmail(mEmail, true);
-        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailPreferedFormatting"), mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));
-        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailAllowToRemoteContent"), mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"),
+                             QStringLiteral("MailPreferedFormatting"),
+                             mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"),
+                             QStringLiteral("MailAllowToRemoteContent"),
+                             mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
 
         // create the new item
         Akonadi::Item item;

@@ -8,8 +8,8 @@
 
 #include "displaynameeditwidget.h"
 
-#include <QEvent>
 #include <QAbstractItemView>
+#include <QEvent>
 #include <QHBoxLayout>
 #include <QPainter>
 #include <QStyledItemDelegate>
@@ -103,8 +103,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     layout->setContentsMargins(0, 0, 0, 0);
 
     mView = new KComboBox(this);
-    mView->addItems(QStringList() << QString() << QString() << QString()
-                                  << QString() << QString() << QString());
+    mView->addItems(QStringList() << QString() << QString() << QString() << QString() << QString() << QString());
 
     layout->addWidget(mView);
     setFocusProxy(mView);
@@ -230,7 +229,12 @@ void DisplayNameEditWidget::updateView()
     mView->setItemText(5, mContact.formattedName());
 
     // delay the state change here, since we might have been called from mView via a signal
-    QMetaObject::invokeMethod(this,  [this]() { setComboBoxEditable(mDisplayType == CustomName); }, Qt::QueuedConnection);
+    QMetaObject::invokeMethod(
+        this,
+        [this]() {
+            setComboBoxEditable(mDisplayType == CustomName);
+        },
+        Qt::QueuedConnection);
 
     mView->setCurrentIndex((int)mDisplayType);
 }

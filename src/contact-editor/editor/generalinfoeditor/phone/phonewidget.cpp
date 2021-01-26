@@ -8,8 +8,8 @@
 */
 
 #include "phonewidget.h"
-#include "phonecomboboxtype.h"
 #include "editor/widgets/preferredlineeditwidget.h"
+#include "phonecomboboxtype.h"
 
 #include <KLocalizedString>
 

@@ -13,10 +13,12 @@
 
 #include <QDialog>
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class AbstractContactEditorWidget;
 }
-namespace Akonadi {
+namespace Akonadi
+{
 class AkonadiContactEditor;
 class Collection;
 class Item;
@@ -70,12 +72,12 @@ public:
      */
     enum Mode {
         CreateMode, ///< Creates a new contact
-        EditMode    ///< Edits an existing contact
+        EditMode ///< Edits an existing contact
     };
 
     enum DisplayMode {
-        FullMode, //Show all pages
-        VCardMode //Show just pages with elements stored in vcard.
+        FullMode, // Show all pages
+        VCardMode // Show just pages with elements stored in vcard.
     };
 
     /**

@@ -9,14 +9,16 @@
 #ifndef CATEGORIESEDITABSTRACTWIDGET_H
 #define CATEGORIESEDITABSTRACTWIDGET_H
 
-#include <QWidget>
 #include "contacteditor_export.h"
+#include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class CONTACTEDITOR_EXPORT CategoriesEditAbstractWidget : public QWidget
 {
     Q_OBJECT

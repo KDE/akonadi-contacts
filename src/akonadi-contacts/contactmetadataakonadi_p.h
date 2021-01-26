@@ -10,7 +10,8 @@
 #define CONTACTMETADATAAKONADI_P_H
 
 #include "contactmetadatabase_p.h"
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 
 /**

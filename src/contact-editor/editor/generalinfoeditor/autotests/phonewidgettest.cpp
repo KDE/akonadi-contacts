@@ -8,10 +8,10 @@
 */
 
 #include "phonewidgettest.h"
-#include "../phone/phonewidget.h"
 #include "../phone/phonecomboboxtype.h"
-#include <QTest>
+#include "../phone/phonewidget.h"
 #include <QLineEdit>
+#include <QTest>
 #include <QToolButton>
 
 PhoneWidgetTest::PhoneWidgetTest(QObject *parent)

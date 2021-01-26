@@ -10,11 +10,12 @@
 #ifndef MAILWIDGET_H
 #define MAILWIDGET_H
 
-#include <QWidget>
-#include <KContacts/Email>
 #include "contacteditor_private_export.h"
+#include <KContacts/Email>
+#include <QWidget>
 class QToolButton;
-namespace ContactEditor {
+namespace ContactEditor
+{
 class PreferredLineEditWidget;
 class MailTypeCombobox;
 class CONTACTEDITOR_TESTS_EXPORT MailWidget : public QWidget

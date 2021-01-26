@@ -7,11 +7,12 @@
 #ifndef RECIPIENTSPICKERWIDGET_H
 #define RECIPIENTSPICKERWIDGET_H
 
-#include <QWidget>
 #include "akonadi-contact_export.h"
+#include <QWidget>
 class QAbstractItemModel;
 class QTreeView;
-namespace Akonadi {
+namespace Akonadi
+{
 class EmailAddressSelectionWidget;
 class AKONADI_CONTACT_EXPORT RecipientsPickerWidget : public QWidget
 {
@@ -22,6 +23,7 @@ public:
     Q_REQUIRED_RESULT QTreeView *view() const;
 
     Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionWidget *emailAddressSelectionWidget() const;
+
 private:
     Akonadi::EmailAddressSelectionWidget *mView = nullptr;
 };

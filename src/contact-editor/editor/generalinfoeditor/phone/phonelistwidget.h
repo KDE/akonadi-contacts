@@ -10,12 +10,14 @@
 #ifndef PHONELISTWIDGET_H
 #define PHONELISTWIDGET_H
 
-#include <QWidget>
 #include "contacteditor_private_export.h"
-namespace KContacts {
+#include <QWidget>
+namespace KContacts
+{
 class Addressee;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class PhoneWidgetLister;
 class CONTACTEDITOR_TESTS_EXPORT PhoneListWidget : public QWidget
 {
@@ -26,6 +28,7 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
+
 private:
     ContactEditor::PhoneWidgetLister *mPhoneWidgetLister = nullptr;
 };

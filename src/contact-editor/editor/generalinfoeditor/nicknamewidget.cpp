@@ -8,11 +8,11 @@
 */
 
 #include "nicknamewidget.h"
+#include <KContacts/Addressee>
+#include <KLineEdit>
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <KLineEdit>
-#include <KContacts/Addressee>
 using namespace ContactEditor;
 
 NicknameWidget::NicknameWidget(QWidget *parent)

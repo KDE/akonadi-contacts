@@ -12,11 +12,13 @@
 #include "abstractcontactformatter.h"
 #include "akonadi-contact_export.h"
 
-namespace GrantleeTheme {
+namespace GrantleeTheme
+{
 class Theme;
 }
 
-namespace KAddressBookGrantlee {
+namespace KAddressBookGrantlee
+{
 /**
  * @short A class that formats a contact as HTML code.
  *

@@ -11,9 +11,10 @@
 
 #include "emailaddressselectionwidget.h"
 
-#include <QDialog>
 #include <KContacts/Addressee>
-namespace Akonadi {
+#include <QDialog>
+namespace Akonadi
+{
 class AKONADI_CONTACT_EXPORT AbstractEmailAddressSelectionDialog : public QDialog
 {
     Q_OBJECT

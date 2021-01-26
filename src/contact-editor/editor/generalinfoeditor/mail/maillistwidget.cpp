@@ -9,10 +9,10 @@
 
 #include "maillistwidget.h"
 #include "mailwidgetlister.h"
+#include <KContacts/Addressee>
+#include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <KLocalizedString>
-#include <KContacts/Addressee>
 using namespace ContactEditor;
 
 MailListWidget::MailListWidget(QWidget *parent)

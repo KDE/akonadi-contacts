@@ -11,10 +11,12 @@
 #define WEBWIDGETLISTER_H
 
 #include "../../widgets/kwidgetlister_p.h"
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class WebWidget;
 class WebWidgetLister : public KWidgetLister
 {
@@ -26,6 +28,7 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
+
 protected:
     QWidget *createWidget(QWidget *) override;
 

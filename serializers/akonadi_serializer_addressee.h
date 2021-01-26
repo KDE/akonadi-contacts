@@ -10,15 +10,13 @@
 #include <QObject>
 
 #include <AkonadiCore/differencesalgorithminterface.h>
-#include <AkonadiCore/itemserializerplugin.h>
 #include <AkonadiCore/gidextractorinterface.h>
+#include <AkonadiCore/itemserializerplugin.h>
 #include <kcontacts/vcardconverter.h>
 
-namespace Akonadi {
-class SerializerPluginAddressee : public QObject
-                                , public ItemSerializerPlugin
-                                , public DifferencesAlgorithmInterface
-                                , public GidExtractorInterface
+namespace Akonadi
+{
+class SerializerPluginAddressee : public QObject, public ItemSerializerPlugin, public DifferencesAlgorithmInterface, public GidExtractorInterface
 {
     Q_OBJECT
     Q_INTERFACES(Akonadi::ItemSerializerPlugin)

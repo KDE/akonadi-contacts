@@ -11,7 +11,8 @@
 
 #include "abstractcontacteditorwidget_p.h"
 #include "contacteditor_export.h"
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
 
@@ -62,6 +63,7 @@ public:
     void setReadOnly(bool readOnly) override;
 
     Q_REQUIRED_RESULT bool hasNoSavedData() const override;
+
 private:
     class Private;
     Private *const d;

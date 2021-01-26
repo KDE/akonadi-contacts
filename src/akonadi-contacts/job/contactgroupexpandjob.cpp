@@ -62,7 +62,7 @@ public:
             mFetchCount++;
         }
 
-        if (mFetchCount == 0) {   // nothing to fetch, so we can return immediately
+        if (mFetchCount == 0) { // nothing to fetch, so we can return immediately
             mParent->emitResult();
         }
     }
@@ -151,7 +151,12 @@ void ContactGroupExpandJob::start()
             d->searchResult(job);
         });
     } else {
-        QMetaObject::invokeMethod(this, [this]() { d->resolveGroup(); }, Qt::QueuedConnection);
+        QMetaObject::invokeMethod(
+            this,
+            [this]() {
+                d->resolveGroup();
+            },
+            Qt::QueuedConnection);
     }
 }
 

@@ -12,7 +12,8 @@
 
 #include <QTextBrowser>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * A convenience class to remove the 'Copy Link Location' action
  * from the context menu of QTextBrowser.
@@ -22,6 +23,7 @@ class TextBrowser : public QTextBrowser
     Q_OBJECT
 public:
     explicit TextBrowser(QWidget *parent = nullptr);
+
 protected:
 #ifndef QT_NO_CONTEXTMENU
     void contextMenuEvent(QContextMenuEvent *event) override;

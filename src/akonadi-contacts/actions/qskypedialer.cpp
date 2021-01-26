@@ -8,12 +8,12 @@
 
 #include "qskypedialer.h"
 
-#include <QProcess>
+#include <KLocalizedString>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
 #include <QDBusReply>
-#include <KLocalizedString>
+#include <QProcess>
 
 #if !defined(Q_OS_WIN)
 #include <unistd.h>

@@ -14,7 +14,8 @@
 
 #include <entitytreemodel.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short A model for contacts and contact groups as available in Akonadi.
  *
@@ -145,7 +146,7 @@ public:
      * Describes the role for contacts and contact groups.
      */
     enum Roles {
-        DateRole = EntityTreeModel::UserRole + 1,   ///< The QDate object for the current index.
+        DateRole = EntityTreeModel::UserRole + 1, ///< The QDate object for the current index.
         UserRole = DateRole + 42
     };
 

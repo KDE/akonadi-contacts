@@ -53,7 +53,8 @@ void GrantleePrintTest::shouldReturnEmails()
     address.setName(QStringLiteral("foo1"));
     address.insertEmail(QStringLiteral("foo@kde.org"), true);
     lst << address;
-    grantleePrint.setTemplateContent(QStringLiteral("{% if contacts %}{% for contact in contacts %}{% if contact.name %}{{ contact.name }}{% endif %}{% endfor %}{% endif %}"));
+    grantleePrint.setTemplateContent(
+        QStringLiteral("{% if contacts %}{% for contact in contacts %}{% if contact.name %}{{ contact.name }}{% endif %}{% endfor %}{% endif %}"));
 
     QCOMPARE(grantleePrint.contactsToHtml(lst), QStringLiteral("foo1"));
 }
@@ -111,7 +112,8 @@ void GrantleePrintTest::shouldDisplayContactInfo()
     address.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"), QStringLiteral("foo-spousesname"));
 
     lst << address;
-    grantleePrint.setTemplateContent(QStringLiteral("{% if contacts %}{% for contact in contacts %}{% if contact.%1 %}{{ contact.%1 }}{% endif %}{% endfor %}{% endif %}").arg(variable));
+    grantleePrint.setTemplateContent(
+        QStringLiteral("{% if contacts %}{% for contact in contacts %}{% if contact.%1 %}{{ contact.%1 }}{% endif %}{% endfor %}{% endif %}").arg(variable));
 
     QCOMPARE(grantleePrint.contactsToHtml(lst), result);
 }

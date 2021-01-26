@@ -12,11 +12,12 @@
 
 #include "akonadi-contact_export.h"
 
-#include <QVector>
 #include <QSharedDataPointer>
 #include <QString>
+#include <QVector>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 
 /**

@@ -11,7 +11,8 @@
 
 #include <KJob>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 /**
  * @short A job to add a new contact with a given email address to Akonadi.
@@ -52,6 +53,7 @@ public:
     void setInteractive(bool b);
 Q_SIGNALS:
     void successMessage(const QString &message);
+
 private:
     //@cond PRIVATE
     class Private;

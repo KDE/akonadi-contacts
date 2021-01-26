@@ -9,10 +9,10 @@
 
 #include "mailwidgettest.h"
 #include "../mail/mailwidget.h"
-#include <QTest>
-#include <QLineEdit>
-#include <QToolButton>
 #include <QComboBox>
+#include <QLineEdit>
+#include <QTest>
+#include <QToolButton>
 
 MailWidgetTest::MailWidgetTest(QObject *parent)
     : QObject(parent)

@@ -9,11 +9,11 @@
 
 #include <KLocalizedString>
 
-#include <QProcess>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
 #include <QDBusReply>
+#include <QProcess>
 
 #if !defined(Q_OS_WIN)
 #include <unistd.h>

@@ -12,7 +12,8 @@
 #include "contacteditor_export.h"
 #include <QVariant>
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 /**
  * @short A helper class for storing contact specific settings.
  */

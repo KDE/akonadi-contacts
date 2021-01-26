@@ -12,11 +12,11 @@
 #include "actions/sendsmsaction.h"
 #include "actions/showaddressaction.h"
 
+#include <QDesktopServices>
+#include <QUrl>
 #include <kcontacts/address.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/phonenumber.h>
-#include <QUrl>
-#include <QDesktopServices>
 
 using namespace Akonadi;
 
@@ -39,23 +39,19 @@ void ContactDefaultActions::connectToView(QObject *view)
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("emailClicked(const QString&, const QString&)").constData()) != -1) {
-        connect(view, SIGNAL(emailClicked(QString,QString)),
-                this, SLOT(sendEmail(QString,QString)));
+        connect(view, SIGNAL(emailClicked(QString, QString)), this, SLOT(sendEmail(QString, QString)));
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KContacts::PhoneNumber&)").constData()) != -1) {
-        connect(view, SIGNAL(phoneNumberClicked(KContacts::PhoneNumber)),
-                this, SLOT(dialPhoneNumber(KContacts::PhoneNumber)));
+        connect(view, SIGNAL(phoneNumberClicked(KContacts::PhoneNumber)), this, SLOT(dialPhoneNumber(KContacts::PhoneNumber)));
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("smsClicked(const KContacts::PhoneNumber&)").constData()) != -1) {
-        connect(view, SIGNAL(smsClicked(KContacts::PhoneNumber)),
-                this, SLOT(sendSms(KContacts::PhoneNumber)));
+        connect(view, SIGNAL(smsClicked(KContacts::PhoneNumber)), this, SLOT(sendSms(KContacts::PhoneNumber)));
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("addressClicked(const KContacts::Address&)").constData()) != -1) {
-        connect(view, SIGNAL(addressClicked(KContacts::Address)),
-                this, SLOT(showAddress(KContacts::Address)));
+        connect(view, SIGNAL(addressClicked(KContacts::Address)), this, SLOT(showAddress(KContacts::Address)));
     }
 }
 

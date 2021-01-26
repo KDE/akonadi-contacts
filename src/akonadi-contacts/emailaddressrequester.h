@@ -13,7 +13,8 @@
 
 class KLineEdit;
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short A widget to input one or more email addresses.
  *

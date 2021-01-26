@@ -9,13 +9,13 @@
 
 #include "addresslocationwidgettest.h"
 #include "../addresslocationwidget.h"
-#include <QLabel>
-#include <QPushButton>
+#include "../selectaddresstypecombobox.h"
 #include <KComboBox>
 #include <KLineEdit>
-#include <QTest>
 #include <QCheckBox>
-#include "../selectaddresstypecombobox.h"
+#include <QLabel>
+#include <QPushButton>
+#include <QTest>
 
 using namespace ContactEditor;
 

@@ -8,11 +8,11 @@
 
 #include "categorieseditwidget.h"
 
+#include <KPluginFactory>
+#include <QHBoxLayout>
 #include <item.h>
 #include <tag.h>
 #include <tagwidget.h>
-#include <QHBoxLayout>
-#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(CategoriesEditWidget, "categorieseditwidgetplugin.json")
 

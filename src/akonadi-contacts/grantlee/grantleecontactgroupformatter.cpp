@@ -14,8 +14,8 @@
 #include <grantlee/engine.h>
 #include <grantlee/templateloader.h>
 
-#include <AkonadiCore/Item>
 #include <Akonadi/Contact/ContactGroupExpandJob>
+#include <AkonadiCore/Item>
 
 #include <KColorScheme>
 
@@ -99,9 +99,8 @@ static QVariantHash memberHash(const KContacts::ContactGroup::Data &data)
     contact.setFormattedName(data.name());
     contact.insertEmail(data.email());
 
-    const QString emailLink = QStringLiteral("<a href=\"mailto:")
-                              +QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
-                              +QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
+    const QString emailLink = QStringLiteral("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
+        + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 
     setHashField(memberObject, QStringLiteral("emailLink"), emailLink);
 
@@ -122,7 +121,7 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
         group = contactGroup();
     }
 
-    if (group.name().isEmpty() && group.count() == 0) {   // empty group
+    if (group.name().isEmpty() && group.count() == 0) { // empty group
         return QString();
     }
 
@@ -159,14 +158,11 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     for (int i = 0; i < additionalFields().size(); ++i) {
         const QVariantMap field = additionalFields().at(i);
         QVariantHash fieldObject;
-        setHashField(fieldObject, QStringLiteral("key"),
-                     field.value(QStringLiteral("key")).toString());
+        setHashField(fieldObject, QStringLiteral("key"), field.value(QStringLiteral("key")).toString());
 
-        setHashField(fieldObject, QStringLiteral("title"),
-                     field.value(QStringLiteral("title")).toString());
+        setHashField(fieldObject, QStringLiteral("title"), field.value(QStringLiteral("title")).toString());
 
-        setHashField(fieldObject, QStringLiteral("value"),
-                     field.value(QStringLiteral("value")).toString());
+        setHashField(fieldObject, QStringLiteral("value"), field.value(QStringLiteral("value")).toString());
 
         fields << fieldObject;
     }
@@ -174,17 +170,11 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     contactGroupObject.insert(QStringLiteral("additionalFields"), fields);
 
     QVariantHash colorsObject;
-    colorsObject.insert(
-        QStringLiteral("linkColor"),
-        KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("linkColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
 
-    colorsObject.insert(
-        QStringLiteral("textColor"),
-        KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("textColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
 
-    colorsObject.insert(
-        QStringLiteral("backgroundColor"),
-        KColorScheme(QPalette::Active, KColorScheme::View).background().color().name());
+    colorsObject.insert(QStringLiteral("backgroundColor"), KColorScheme(QPalette::Active, KColorScheme::View).background().color().name());
 
     QVariantHash mapping;
     mapping.insert(QStringLiteral("contactGroup"), contactGroupObject);

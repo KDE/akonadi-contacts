@@ -8,12 +8,13 @@
 #ifndef PHONETYPEDIALOG_H
 #define PHONETYPEDIALOG_H
 
-#include <QDialog>
-#include <KContacts/PhoneNumber>
 #include "contacteditor_private_export.h"
+#include <KContacts/PhoneNumber>
+#include <QDialog>
 class QButtonGroup;
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 /**
  * A dialog for editing phone number types.
  */

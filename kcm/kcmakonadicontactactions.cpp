@@ -13,20 +13,21 @@
 
 #include <KAboutData>
 #include <KConfigDialogManager>
-#include <KPluginFactory>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 Q_DECLARE_METATYPE(ContactActionsSettings::EnumDialPhoneNumberAction)
 
-K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiContactActions>();
-                 )
+K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiContactActions>();)
 
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
     KAboutData *about = new KAboutData(QStringLiteral("kcmakonadicontactactions"),
                                        i18n("Contact Actions Settings"),
-                                       QString(), QString(), KAboutLicense::LGPL,
+                                       QString(),
+                                       QString(),
+                                       KAboutLicense::LGPL,
                                        i18n("(c) 2009 Tobias Koenig"));
 
     about->addAuthor(i18n("Tobias Koenig"), QString(), QStringLiteral("tokoe@kde.org"));
@@ -59,7 +60,8 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
 
 void KCMAkonadiContactActions::slotShowAddressActionChanged(int value)
 {
-    ContactActionsSettings::EnumShowAddressAction enumValue = static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(value).toInt());
+    ContactActionsSettings::EnumShowAddressAction enumValue =
+        static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(value).toInt());
     if (enumValue == ContactActionsSettings::UseBrowser) {
         ui.stackedWidget->setCurrentIndex(0);
     } else if (enumValue == ContactActionsSettings::UseExternalAddressApplication) {
@@ -83,7 +85,8 @@ void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
 
 void KCMAkonadiContactActions::slotDialPhoneNumberActionChanged(int value)
 {
-    ContactActionsSettings::EnumDialPhoneNumberAction enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(value).toInt());
+    ContactActionsSettings::EnumDialPhoneNumberAction enumValue =
+        static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(value).toInt());
     if (enumValue == ContactActionsSettings::UseExternalPhoneApplication) {
         ui.phoneDetailsStack->setCurrentIndex(1);
     } else {
@@ -112,15 +115,16 @@ void KCMAkonadiContactActions::load()
 void KCMAkonadiContactActions::save()
 {
     mConfigManager->updateSettings();
-    ContactActionsSettings::EnumShowAddressAction enumValueAddress
-        = static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(ui.ShowAddressAction->currentIndex()).toInt());
+    ContactActionsSettings::EnumShowAddressAction enumValueAddress =
+        static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(ui.ShowAddressAction->currentIndex()).toInt());
     ContactActionsSettings::self()->setShowAddressAction(enumValueAddress);
 
-    ContactActionsSettings::EnumDialPhoneNumberAction enumValue
-        = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(ui.DialPhoneNumberAction->currentIndex()).toInt());
+    ContactActionsSettings::EnumDialPhoneNumberAction enumValue =
+        static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(ui.DialPhoneNumberAction->currentIndex()).toInt());
     ContactActionsSettings::self()->setDialPhoneNumberAction(enumValue);
 
-    ContactActionsSettings::EnumSendSmsAction enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ui.SendSmsAction->itemData(ui.SendSmsAction->currentIndex()).toInt());
+    ContactActionsSettings::EnumSendSmsAction enumValueSms =
+        static_cast<ContactActionsSettings::EnumSendSmsAction>(ui.SendSmsAction->itemData(ui.SendSmsAction->currentIndex()).toInt());
     ContactActionsSettings::self()->setSendSmsAction(enumValueSms);
     ContactActionsSettings::self()->save();
 }

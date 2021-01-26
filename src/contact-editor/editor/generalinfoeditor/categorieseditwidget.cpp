@@ -8,7 +8,6 @@
 
 #include "categorieseditwidget.h"
 
-
 #include <QHBoxLayout>
 
 CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)

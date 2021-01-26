@@ -14,16 +14,14 @@
 
 #include "contactstreemodel.h"
 
-namespace Akonadi {
+namespace Akonadi
+{
 class EmailAddressSelectionProxyModel : public Akonadi::LeafExtensionProxyModel
 {
     Q_OBJECT
 
 public:
-    enum Role {
-        NameRole = ContactsTreeModel::DateRole + 1,
-        EmailAddressRole
-    };
+    enum Role { NameRole = ContactsTreeModel::DateRole + 1, EmailAddressRole };
 
     explicit EmailAddressSelectionProxyModel(QObject *parent = nullptr);
     ~EmailAddressSelectionProxyModel() override;

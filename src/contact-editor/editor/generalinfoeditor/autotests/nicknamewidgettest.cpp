@@ -28,7 +28,6 @@ void NicknameWidgetTest::shouldHaveDefaultValue()
     QVERIFY(topLayout);
     QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-
     auto *nickNameLabel = editor.findChild<QLabel *>(QStringLiteral("nicknamelabel"));
     QVERIFY(nickNameLabel);
     QVERIFY(!nickNameLabel->text().isEmpty());

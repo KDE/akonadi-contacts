@@ -13,8 +13,8 @@
 
 #include <KContacts/Address>
 
-namespace ContactEditor {
-
+namespace ContactEditor
+{
 class AddressModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -28,8 +28,8 @@ public:
     void replaceAddress(const KContacts::Address &address, int row);
     void removeAddress(int row);
 
-    int rowCount(const QModelIndex& parent) const override;
-    QVariant data(const QModelIndex& index, int role) const override;
+    int rowCount(const QModelIndex &parent) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
 
 private:
     KContacts::Address::List mAddresses;

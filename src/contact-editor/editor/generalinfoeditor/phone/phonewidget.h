@@ -10,13 +10,15 @@
 #ifndef PHONEWIDGET_H
 #define PHONEWIDGET_H
 
-#include <QWidget>
 #include "contacteditor_private_export.h"
+#include <QWidget>
 class QToolButton;
-namespace KContacts {
+namespace KContacts
+{
 class PhoneNumber;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class PreferredLineEditWidget;
 class PhoneComboBoxType;
 class CONTACTEDITOR_TESTS_EXPORT PhoneWidget : public QWidget

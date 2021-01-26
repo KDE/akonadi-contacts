@@ -5,11 +5,11 @@
 
 #include "selectaddressbookdialog.h"
 
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 
-#include <kcontacts/addressee.h>
 #include <KSharedConfig>
+#include <kcontacts/addressee.h>
 
 using namespace Akonadi;
 class Akonadi::SelectAddressBookDialogPrivate
@@ -22,9 +22,7 @@ public:
         q->setMimeTypeFilter(mimeTypes);
         q->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
         q->setWindowTitle(i18nc("@title:window", "Select Address Book"));
-        q->setDescription(
-            i18nc("@info",
-                  "Select the address book where the contact will be saved:"));
+        q->setDescription(i18nc("@info", "Select the address book where the contact will be saved:"));
         q->changeCollectionDialogOptions(Akonadi::CollectionDialog::KeepTreeExpanded);
         readConfig();
     }

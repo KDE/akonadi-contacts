@@ -11,15 +11,15 @@
 #include "contactcompletionmodel_p.h"
 #include "contactgroupmodel_p.h"
 
-#include <entitytreemodel.h>
 #include <KComboBox>
+#include <entitytreemodel.h>
 
-#include <QTimer>
-#include <QIcon>
 #include <QAbstractItemView>
 #include <QCompleter>
+#include <QIcon>
 #include <QMouseEvent>
 #include <QSortFilterProxyModel>
+#include <QTimer>
 
 using namespace Akonadi;
 

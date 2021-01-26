@@ -9,10 +9,10 @@
 
 #include "phonelistwidget.h"
 #include "phonewidgetlister.h"
+#include <KContacts/Addressee>
+#include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <KLocalizedString>
-#include <KContacts/Addressee>
 using namespace ContactEditor;
 
 PhoneListWidget::PhoneListWidget(QWidget *parent)

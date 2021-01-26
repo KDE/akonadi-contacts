@@ -13,7 +13,8 @@
 
 #include <QSortFilterProxyModel>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short A proxy model for \a ContactsTreeModel models.
  *
@@ -48,10 +49,7 @@ class AKONADI_CONTACT_EXPORT ContactsFilterProxyModel : public QSortFilterProxyM
     Q_OBJECT
 
 public:
-    enum MatchFilterContactFlag {
-        All = 0,
-        OnlyNameAndEmailsAddresses = 1
-    };
+    enum MatchFilterContactFlag { All = 0, OnlyNameAndEmailsAddresses = 1 };
     enum FilterFlag {
         HasEmail = 0x01 /// Filters out contacts without any email address set.
     };
@@ -70,13 +68,12 @@ public:
     ~ContactsFilterProxyModel() override;
 
     /**
-    * Sets the filter @p flags. By default
-    * ContactsFilterProxyModel::FilterString is set.
-    * @param flags the filter flags to set
-    * @since 4.8
-    */
+     * Sets the filter @p flags. By default
+     * ContactsFilterProxyModel::FilterString is set.
+     * @param flags the filter flags to set
+     * @since 4.8
+     */
     void setFilterFlags(ContactsFilterProxyModel::FilterFlags flags);
-
 
     /**
      * @brief setMatchFilterContactFlag

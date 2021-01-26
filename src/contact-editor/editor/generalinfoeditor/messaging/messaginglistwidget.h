@@ -11,10 +11,12 @@
 #define MESSAGINGLISTWIDGET_H
 
 #include <QWidget>
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class MessagingWidgetLister;
 class MessagingListWidget : public QWidget
 {

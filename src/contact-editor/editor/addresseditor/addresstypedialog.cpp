@@ -8,12 +8,12 @@
 
 #include "addresstypedialog.h"
 #include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QPushButton>
+#include <QButtonGroup>
+#include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QGroupBox>
-#include <QCheckBox>
-#include <QButtonGroup>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace ContactEditor;
 

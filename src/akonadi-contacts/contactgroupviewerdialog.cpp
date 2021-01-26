@@ -10,12 +10,12 @@
 
 #include "contactgroupviewer.h"
 
-#include <item.h>
 #include <KLocalizedString>
+#include <item.h>
 
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace Akonadi;
 

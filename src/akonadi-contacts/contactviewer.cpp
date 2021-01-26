@@ -8,30 +8,30 @@
 
 #include "contactviewer.h"
 
-#include "contactmetadataakonadi_p.h"
 #include "attributes/contactmetadataattribute_p.h"
+#include "contactmetadataakonadi_p.h"
 #include "customfieldmanager_p.h"
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"
 
+#include <KColorScheme>
+#include <KConfigGroup>
 #include <KIOCore/kio/transferjob.h>
+#include <KLocalizedString>
 #include <collection.h>
 #include <collectionfetchjob.h>
 #include <entitydisplayattribute.h>
 #include <item.h>
 #include <itemfetchscope.h>
 #include <kcontacts/addressee.h>
-#include <KColorScheme>
-#include <KConfigGroup>
-#include <KLocalizedString>
 
-#include <QVBoxLayout>
-#include <QScreen>
-#include <QIcon>
-#include <QUrlQuery>
 #include <QGuiApplication>
-#include <prison/Prison>
+#include <QIcon>
+#include <QScreen>
+#include <QUrlQuery>
+#include <QVBoxLayout>
 #include <kcontacts/vcardconverter.h>
+#include <prison/Prison>
 
 using namespace Akonadi;
 
@@ -64,66 +64,46 @@ public:
         mParent->setWindowTitle(i18nc("@title:window", "Contact %1", mCurrentContact.assembledName()));
 
         if (mCurrentContact.photo().isIntern()) {
-            mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QStringLiteral("contact_photo")),
-                                              mCurrentContact.photo().data());
+            mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("contact_photo")), mCurrentContact.photo().data());
         } else if (!mCurrentContact.photo().url().isEmpty()) {
             QByteArray imageData;
             QImage image;
             KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.photo().url()), KIO::NoReload);
-            QObject::connect(job, &KIO::TransferJob::data,
-                             [&imageData](KIO::Job *, const QByteArray &data) {
+            QObject::connect(job, &KIO::TransferJob::data, [&imageData](KIO::Job *, const QByteArray &data) {
                 imageData.append(data);
             });
             if (job->exec()) {
                 if (image.loadFromData(imageData)) {
-                    mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                                      QUrl(QStringLiteral("contact_photo")),
-                                                      image);
+                    mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("contact_photo")), image);
                 } else {
-                    mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                                      QUrl(QStringLiteral("contact_photo")),
-                                                      defaultPixmap);
+                    mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("contact_photo")), defaultPixmap);
                 }
             } else {
-                mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                                  QUrl(QStringLiteral("contact_photo")),
-                                                  defaultPixmap);
+                mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("contact_photo")), defaultPixmap);
             }
         } else {
-            mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QStringLiteral("contact_photo")),
-                                              defaultPixmap);
+            mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("contact_photo")), defaultPixmap);
         }
 
         if (mCurrentContact.logo().isIntern()) {
-            mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                              QUrl(QStringLiteral("contact_logo")),
-                                              mCurrentContact.logo().data());
+            mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("contact_logo")), mCurrentContact.logo().data());
         } else if (!mCurrentContact.logo().url().isEmpty()) {
             QByteArray imageData;
             QImage image;
             KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.logo().url()), KIO::NoReload);
-            QObject::connect(job, &KIO::TransferJob::data,
-                             [&imageData](KIO::Job *, const QByteArray &data) {
+            QObject::connect(job, &KIO::TransferJob::data, [&imageData](KIO::Job *, const QByteArray &data) {
                 imageData.append(data);
             });
             if (job->exec()) {
                 if (image.loadFromData(imageData)) {
-                    mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                                      QUrl(QStringLiteral("contact_logo")),
-                                                      image);
+                    mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("contact_logo")), image);
                 }
             }
         }
 
-        mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                          QUrl(QStringLiteral("map_icon")),
-                                          defaultMapPixmap);
+        mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("map_icon")), defaultMapPixmap);
 
-        mBrowser->document()->addResource(QTextDocument::ImageResource,
-                                          QUrl(QStringLiteral("sms_icon")),
-                                          defaultSmsPixmap);
+        mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("sms_icon")), defaultSmsPixmap);
 
         if (mShowQRCode) {
             KContacts::VCardConverter converter;
@@ -170,8 +150,7 @@ public:
     {
         const QUrlQuery query(url);
         const QString urlScheme(url.scheme());
-        if (urlScheme == QLatin1String("http")
-            || urlScheme == QLatin1String("https")) {
+        if (urlScheme == QLatin1String("http") || urlScheme == QLatin1String("https")) {
             Q_EMIT mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
             const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
@@ -246,8 +225,7 @@ ContactViewer::ContactViewer(QWidget *parent)
 
     d->mBrowser = new TextBrowser;
 
-    connect(d->mBrowser, &TextBrowser::anchorClicked,
-            this, [this](const QUrl &url) {
+    connect(d->mBrowser, &TextBrowser::anchorClicked, this, [this](const QUrl &url) {
         d->slotUrlClicked(url);
     });
 
@@ -314,7 +292,9 @@ void ContactViewer::itemChanged(const Item &contactItem)
     }
 
     d->mParentCollectionFetchJob = new CollectionFetchJob(contactItem.parentCollection(), CollectionFetchJob::Base, this);
-    d->mCollectionFetchJobConnection = connect(d->mParentCollectionFetchJob, &CollectionFetchJob::result, this, [this](KJob *job) {d->slotParentCollectionFetched(job);});
+    d->mCollectionFetchJobConnection = connect(d->mParentCollectionFetchJob, &CollectionFetchJob::result, this, [this](KJob *job) {
+        d->slotParentCollectionFetched(job);
+    });
 }
 
 void ContactViewer::itemRemoved()

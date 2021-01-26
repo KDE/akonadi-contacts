@@ -15,8 +15,8 @@
 #include "abstractemailaddressselectiondialog.h"
 #include "emailaddressselectionwidget.h"
 
-
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short A dialog to select email addresses from Akonadi.
  *

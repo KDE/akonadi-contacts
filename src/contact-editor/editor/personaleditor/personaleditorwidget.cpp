@@ -9,8 +9,8 @@
 #include "personaleditorwidget.h"
 #include "../utils/utils.h"
 
-#include <KLocalizedString>
 #include <KLineEdit>
+#include <KLocalizedString>
 #include <QGridLayout>
 #include <QLabel>
 

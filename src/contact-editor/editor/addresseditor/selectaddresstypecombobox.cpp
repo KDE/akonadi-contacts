@@ -24,7 +24,7 @@ SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     for (int i = 0; i < count; ++i) {
         mTypeList.append(KContacts::Address::typeList().at(i));
     }
-    mTypeList.append(-1);   // Others...
+    mTypeList.append(-1); // Others...
 
     update();
 
@@ -59,7 +59,7 @@ void SelectAddressTypeComboBox::update()
     clear();
     const int numberOfType(mTypeList.count());
     for (int i = 0; i < numberOfType; ++i) {
-        if (mTypeList.at(i) == -1) {     // "Other..." entry
+        if (mTypeList.at(i) == -1) { // "Other..." entry
             addItem(i18nc("@item:inlistbox Category of contact info field", "Other..."));
         } else if (mTypeList.at(i) == -2) {
             addItem(i18nc("@item:inlistbox Category of contact info field", "New Address Type"));

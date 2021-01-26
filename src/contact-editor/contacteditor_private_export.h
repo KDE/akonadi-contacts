@@ -11,11 +11,11 @@
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
-# ifndef CONTACTEDITOR_TESTS_EXPORT
-#  define CONTACTEDITOR_TESTS_EXPORT CONTACTEDITOR_EXPORT
-# endif
+#ifndef CONTACTEDITOR_TESTS_EXPORT
+#define CONTACTEDITOR_TESTS_EXPORT CONTACTEDITOR_EXPORT
+#endif
 #else /* not compiling tests */
-# define CONTACTEDITOR_TESTS_EXPORT
+#define CONTACTEDITOR_TESTS_EXPORT
 #endif
 
 #endif

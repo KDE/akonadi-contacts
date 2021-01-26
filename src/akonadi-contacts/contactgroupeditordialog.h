@@ -13,7 +13,8 @@
 
 #include <QDialog>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 class Collection;
 class ContactGroupEditor;
@@ -66,7 +67,7 @@ public:
      */
     enum Mode {
         CreateMode, ///< Creates a new contact group
-        EditMode    ///< Edits an existing contact group
+        EditMode ///< Edits an existing contact group
     };
 
     /**

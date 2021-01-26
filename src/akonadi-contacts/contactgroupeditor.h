@@ -13,11 +13,13 @@
 
 #include <QWidget>
 
-namespace KContacts {
+namespace KContacts
+{
 class ContactGroup;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Collection;
 class Item;
 
@@ -75,7 +77,7 @@ public:
      */
     enum Mode {
         CreateMode, ///< Creates a new contact group
-        EditMode    ///< Edits an existing contact group
+        EditMode ///< Edits an existing contact group
     };
 
     /**

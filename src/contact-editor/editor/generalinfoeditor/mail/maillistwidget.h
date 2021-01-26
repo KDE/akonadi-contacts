@@ -11,10 +11,12 @@
 #define MAILLISTWIDGET_H
 
 #include <QWidget>
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
-namespace ContactEditor {
+namespace ContactEditor
+{
 class MailWidgetLister;
 class MailListWidget : public QWidget
 {
@@ -25,6 +27,7 @@ public:
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);
+
 private:
     ContactEditor::MailWidgetLister *mMailWidgetLister = nullptr;
 };

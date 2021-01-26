@@ -36,11 +36,7 @@ class KDatePickerPopup : public QMenu
     Q_OBJECT
 
 public:
-    enum ItemFlag {
-        NoDate = 1,
-        DatePicker = 2,
-        Words = 4
-    };
+    enum ItemFlag { NoDate = 1, DatePicker = 2, Words = 4 };
 
     Q_DECLARE_FLAGS(Items, ItemFlag)
 

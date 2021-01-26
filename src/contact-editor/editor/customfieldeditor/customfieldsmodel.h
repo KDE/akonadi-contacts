@@ -17,10 +17,7 @@ class CustomFieldsModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
-    enum Role {
-        TypeRole = Qt::UserRole,
-        ScopeRole
-    };
+    enum Role { TypeRole = Qt::UserRole, ScopeRole };
 
     explicit CustomFieldsModel(QObject *parent = nullptr);
     ~CustomFieldsModel() override;

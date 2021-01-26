@@ -7,10 +7,11 @@
 #ifndef GRANTLEECONTACTVIEWER_H
 #define GRANTLEECONTACTVIEWER_H
 
-#include "contactviewer.h"
 #include "akonadi-contact_export.h"
+#include "contactviewer.h"
 
-namespace KAddressBookGrantlee {
+namespace KAddressBookGrantlee
+{
 class GrantleeContactFormatter;
 
 /** Grantlee-based contact viewer. */

@@ -8,9 +8,9 @@
 
 #include "contactcompletionmodel_p.h"
 
-#include <monitor.h>
 #include <entitymimetypefiltermodel.h>
 #include <itemfetchscope.h>
+#include <monitor.h>
 #include <session.h>
 
 #include <kcontacts/addressee.h>
@@ -77,8 +77,7 @@ QVariant ContactCompletionModel::entityData(const Item &item, int column, int ro
                 return contact.assembledName();
             }
             break;
-        case NameAndEmailColumn:
-        {
+        case NameAndEmailColumn: {
             QString name = QStringLiteral("%1 %2").arg(contact.givenName(), contact.familyName()).simplified();
             if (name.isEmpty()) {
                 name = contact.organization().simplified();

@@ -9,12 +9,13 @@
 
 #ifndef ADDRESSESLOCATIONWIDGET_H
 #define ADDRESSESLOCATIONWIDGET_H
-#include <QSplitter>
 #include <KContacts/Addressee>
+#include <QSplitter>
 
 class QTreeView;
 
-namespace ContactEditor {
+namespace ContactEditor
+{
 class AddressModel;
 class AddressLocationWidget;
 
@@ -30,6 +31,7 @@ public:
 
     void setReadOnly(bool readOnly);
     Q_REQUIRED_RESULT bool hasNoSavedData() const;
+
 private:
     AddressLocationWidget *mAddressLocationWidget = nullptr;
     QTreeView *mAddressesLocationView = nullptr;
