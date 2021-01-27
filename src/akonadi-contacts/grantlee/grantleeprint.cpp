@@ -15,24 +15,6 @@
 #include <QMetaProperty>
 #include <QVariant>
 
-// Grantlee has no Q_GADGET support yet
-#define GRANTLEE_MAKE_GADGET(Class)                                                                                                                            \
-    GRANTLEE_BEGIN_LOOKUP(Class)                                                                                                                               \
-    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData());                                                                   \
-    if (idx < 0) {                                                                                                                                             \
-        return {};                                                                                                                                             \
-    }                                                                                                                                                          \
-    const auto mp = Class::staticMetaObject.property(idx);                                                                                                     \
-    return mp.readOnGadget(&object);                                                                                                                           \
-    GRANTLEE_END_LOOKUP
-
-GRANTLEE_MAKE_GADGET(KContacts::Address)
-GRANTLEE_MAKE_GADGET(KContacts::Email)
-GRANTLEE_MAKE_GADGET(KContacts::Geo)
-GRANTLEE_MAKE_GADGET(KContacts::PhoneNumber)
-GRANTLEE_MAKE_GADGET(KContacts::ResourceLocatorUrl)
-GRANTLEE_MAKE_GADGET(KAddressBookGrantlee::ContactGrantleeWrapper)
-
 GRANTLEE_BEGIN_LOOKUP(QUrl)
 if (property == QLatin1String("scheme")) {
     return object.scheme();
@@ -56,13 +38,7 @@ GrantleePrint::~GrantleePrint() = default;
 
 void GrantleePrint::init()
 {
-    Grantlee::registerMetaType<KContacts::Address>();
-    Grantlee::registerMetaType<KContacts::Email>();
-    Grantlee::registerMetaType<KContacts::Geo>();
-    Grantlee::registerMetaType<KContacts::PhoneNumber>();
-    Grantlee::registerMetaType<KContacts::ResourceLocatorUrl>();
     Grantlee::registerMetaType<QUrl>();
-    Grantlee::registerMetaType<ContactGrantleeWrapper>();
 }
 
 QString GrantleePrint::contactsToHtml(const KContacts::Addressee::List &contacts)
