@@ -13,7 +13,7 @@ macro(add_akonadi_contact_demo _source)
      KF5::Completion
      KF5::I18n
      KF5::WidgetsAddons
-     Qt5::Test)
+     Qt::Test)
   ecm_mark_as_test(${_name})
 endmacro()
 

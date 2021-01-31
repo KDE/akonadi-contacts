@@ -151,7 +151,7 @@ target_link_libraries(KF5AkonadiContact
     KF5::AkonadiCore
     KF5::Contacts
     KF5::AkonadiWidgets
-    Qt5::Widgets
+    Qt::Widgets
     KF5::GrantleeTheme
     PRIVATE
     KF5::ConfigCore
