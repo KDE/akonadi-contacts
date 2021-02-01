@@ -162,7 +162,7 @@ target_include_directories(KF5ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-
 target_link_libraries(KF5ContactEditor
     PUBLIC
     KF5::Contacts
-    Qt::Widgets
+    Qt5::Widgets
     PRIVATE
     KF5::Completion
     KF5::ConfigCore
