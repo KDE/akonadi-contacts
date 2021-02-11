@@ -20,13 +20,13 @@ class AKONADI_CONTACT_EXPORT GrantleeContactViewer : public Akonadi::ContactView
     Q_OBJECT
 public:
     explicit GrantleeContactViewer(QWidget *parent = nullptr);
-    ~GrantleeContactViewer();
+    ~GrantleeContactViewer() override;
 
     void setForceDisableQRCode(bool b);
 
 private:
-    QString kaddressBookAbsoluteThemePath();
-    KAddressBookGrantlee::GrantleeContactFormatter *mFormatter = nullptr;
+    Q_REQUIRED_RESULT QString kaddressBookAbsoluteThemePath();
+    KAddressBookGrantlee::GrantleeContactFormatter *const mFormatter;
 };
 }
 

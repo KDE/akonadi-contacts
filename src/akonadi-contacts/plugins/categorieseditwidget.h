@@ -36,7 +36,7 @@ public:
     void setReadOnly(bool readOnly) override;
 
 private:
-    Akonadi::TagWidget *mTagWidget = nullptr;
+    Akonadi::TagWidget *const mTagWidget;
 };
 
 #endif

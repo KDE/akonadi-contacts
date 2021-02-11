@@ -81,7 +81,7 @@ public:
     /**
      * Destroys the email address selection widget.
      */
-    ~EmailAddressSelectionWidget();
+    ~EmailAddressSelectionWidget() override;
 
     /**
      * Returns the list of selected email addresses.

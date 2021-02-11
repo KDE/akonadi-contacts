@@ -117,7 +117,7 @@ public:
     }
 
     AddContactJob *const q;
-    KContacts::Addressee mContact;
+    const KContacts::Addressee mContact;
     QWidget *mParentWidget = nullptr;
     Akonadi::Collection mCollection;
     bool mShowMessageBox = true;

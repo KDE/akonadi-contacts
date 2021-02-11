@@ -37,7 +37,7 @@ public:
     /**
      * Destroys the email address requester.
      */
-    ~EmailAddressRequester();
+    ~EmailAddressRequester() override;
 
     /**
      * Clears the text of the email address requester.

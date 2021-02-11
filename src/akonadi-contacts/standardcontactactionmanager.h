@@ -56,7 +56,7 @@ public:
     /**
      * Destroys the standard contact action manager.
      */
-    ~StandardContactActionManager();
+    ~StandardContactActionManager() override;
 
     /**
      * Sets the collection selection model based on which the collection

@@ -18,10 +18,10 @@ K_PLUGIN_CLASS_WITH_JSON(CategoriesEditWidget, "categorieseditwidgetplugin.json"
 
 CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant> &)
     : ContactEditor::CategoriesEditAbstractWidget(parent)
+    , mTagWidget(new Akonadi::TagWidget(this))
 {
     auto *layout = new QHBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
-    mTagWidget = new Akonadi::TagWidget(this);
     layout->addWidget(mTagWidget);
 }
 

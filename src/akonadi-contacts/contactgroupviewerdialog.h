@@ -52,12 +52,12 @@ public:
      *
      * @param parent The parent widget of the dialog.
      */
-    ContactGroupViewerDialog(QWidget *parent = nullptr);
+    explicit ContactGroupViewerDialog(QWidget *parent = nullptr);
 
     /**
      * Destroys the contact group viewer dialog.
      */
-    ~ContactGroupViewerDialog();
+    ~ContactGroupViewerDialog() override;
 
     /**
      * Returns the contact group that is currently displayed.

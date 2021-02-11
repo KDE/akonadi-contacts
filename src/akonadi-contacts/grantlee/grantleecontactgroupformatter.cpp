@@ -25,8 +25,8 @@ class Q_DECL_HIDDEN GrantleeContactGroupFormatter::Private
 {
 public:
     Private()
+        : mEngine(new Grantlee::Engine)
     {
-        mEngine = new Grantlee::Engine;
 
         mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
     }
@@ -54,7 +54,7 @@ public:
     }
 
     QVector<QObject *> mObjects;
-    Grantlee::Engine *mEngine = nullptr;
+    Grantlee::Engine *const mEngine;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
     Grantlee::Template mSelfcontainedTemplate;
     Grantlee::Template mEmbeddableTemplate;

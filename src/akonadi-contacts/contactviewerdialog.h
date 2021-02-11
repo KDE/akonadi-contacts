@@ -61,7 +61,7 @@ public:
     /**
      * Destroys the contact viewer dialog.
      */
-    ~ContactViewerDialog();
+    ~ContactViewerDialog() override;
 
     /**
      * Returns the contact that is currently displayed.

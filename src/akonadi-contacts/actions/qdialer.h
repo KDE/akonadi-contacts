@@ -24,7 +24,7 @@ public:
     Q_REQUIRED_RESULT QString errorMessage() const;
 
 protected:
-    QString mApplicationName;
+    const QString mApplicationName;
     QString mErrorMessage;
 };
 

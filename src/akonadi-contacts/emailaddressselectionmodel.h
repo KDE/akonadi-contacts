@@ -20,7 +20,7 @@ class AKONADI_CONTACT_EXPORT EmailAddressSelectionModel : public QObject
     Q_OBJECT
 public:
     explicit EmailAddressSelectionModel(QObject *parent = nullptr);
-    ~EmailAddressSelectionModel();
+    ~EmailAddressSelectionModel() override;
     Q_REQUIRED_RESULT Akonadi::ContactsTreeModel *model() const;
 
 private:

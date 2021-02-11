@@ -19,7 +19,7 @@ class AKONADI_CONTACT_EXPORT RecipientsPickerWidget : public QWidget
     Q_OBJECT
 public:
     explicit RecipientsPickerWidget(bool onlyShowEmailWithAddress, QAbstractItemModel *model, QWidget *parent = nullptr);
-    ~RecipientsPickerWidget();
+    ~RecipientsPickerWidget() override;
     Q_REQUIRED_RESULT QTreeView *view() const;
 
     Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionWidget *emailAddressSelectionWidget() const;
