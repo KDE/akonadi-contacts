@@ -46,6 +46,7 @@ public:
         , mReceiver(receiver)
     {
         setClearButtonEnabled(true);
+        installEventFilter(this);
     }
 
 protected:
@@ -56,6 +57,22 @@ protected:
         }
 
         QLineEdit::keyPressEvent(event);
+    }
+    bool eventFilter(QObject *obj, QEvent *event) override
+    {
+        if (obj == this) {
+            if (event->type() == QEvent::KeyPress) {
+                auto *e = static_cast<QKeyEvent *>(event);
+                if (e->key() == Qt::Key_Return || e->key() == Qt::Key_Enter) {
+                    const bool stopEvent = (e->modifiers() == Qt::NoButton || e->modifiers() == Qt::KeypadModifier);
+                    if (stopEvent) {
+                        Q_EMIT returnPressed();
+                    }
+                    return true;
+                }
+            }
+        }
+        return QObject::eventFilter(obj, event);
     }
 
 private:
@@ -78,7 +95,7 @@ public:
 
     void init();
 
-    EmailAddressSelectionWidget *q = nullptr;
+    EmailAddressSelectionWidget *const q;
     QAbstractItemModel *mModel = nullptr;
     QLabel *mDescriptionLabel = nullptr;
     SearchLineEdit *mSearchLine = nullptr;
