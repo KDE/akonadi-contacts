@@ -20,7 +20,7 @@ class KCMAkonadiContactActions : public KCModule
     Q_OBJECT
 
 public:
-    KCMAkonadiContactActions(QWidget *parent, const QVariantList &args);
+    explicit KCMAkonadiContactActions(QWidget *parent, const QVariantList &args);
 
     void load() override;
     void save() override;

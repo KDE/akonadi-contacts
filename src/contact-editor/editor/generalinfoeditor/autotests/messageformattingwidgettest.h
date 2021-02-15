@@ -16,7 +16,7 @@ class MessageFormattingWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit MessageFormattingWidgetTest(QObject *parent = nullptr);
-    ~MessageFormattingWidgetTest() = default;
+    ~MessageFormattingWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

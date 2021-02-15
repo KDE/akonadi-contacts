@@ -16,7 +16,7 @@ class BlogfeedWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit BlogfeedWidgetTest(QObject *parent = nullptr);
-    ~BlogfeedWidgetTest() = default;
+    ~BlogfeedWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
