@@ -33,8 +33,8 @@ public:
     Q_REQUIRED_RESULT bool hasNoSavedData() const;
 
 private:
-    AddressLocationWidget *mAddressLocationWidget = nullptr;
-    QTreeView *mAddressesLocationView = nullptr;
+    AddressLocationWidget *const mAddressLocationWidget;
+    QTreeView *const mAddressesLocationView;
     AddressModel *const mAddressModel;
     bool mReadOnly = false;
 };

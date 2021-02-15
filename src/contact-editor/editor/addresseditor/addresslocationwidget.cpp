@@ -13,6 +13,7 @@
 #include <KComboBox>
 #include <KLineEdit>
 #include <KLocalizedString>
+#include <KMessageBox>
 
 #include <QCheckBox>
 #include <QLabel>
@@ -131,6 +132,11 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     auto *modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
     modifyButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
     mButtonStack->addWidget(modifyButtonWidget);
+
+    mRemoveAddress = new QPushButton(i18n("Remove Address"), this);
+    mRemoveAddress->setObjectName(QStringLiteral("removebuttonaddress"));
+    modifyButtonWidgetLayout->addWidget(mRemoveAddress);
+    connect(mRemoveAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotRemoveAddress);
 
     mModifyAddress = new QPushButton(i18n("Update Address"), this);
     mModifyAddress->setObjectName(QStringLiteral("modifybuttonaddress"));
@@ -282,6 +288,17 @@ void AddressLocationWidget::slotUpdateAddress()
     if (mCurrentMode == ModifyAddress) {
         Q_EMIT updateAddress(address(), mCurrentAddress);
         reset();
+    }
+}
+
+void AddressLocationWidget::slotRemoveAddress()
+{
+    if (mCurrentMode == ModifyAddress) {
+        const auto result = KMessageBox::questionYesNo(this, i18n("Do you really want to delete this address?"));
+        if (result == KMessageBox::Yes) {
+            Q_EMIT removeAddress(mCurrentAddress);
+            reset();
+        }
     }
 }
 

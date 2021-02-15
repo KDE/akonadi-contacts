@@ -22,13 +22,13 @@ using namespace ContactEditor;
 
 AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     : QSplitter(parent)
+    , mAddressLocationWidget(new AddressLocationWidget(this))
+    , mAddressesLocationView(new QTreeView(this))
     , mAddressModel(new AddressModel(this))
 {
-    mAddressLocationWidget = new AddressLocationWidget(this);
     mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
     addWidget(mAddressLocationWidget);
 
-    mAddressesLocationView = new QTreeView(this);
     mAddressesLocationView->setRootIsDecorated(false);
     mAddressesLocationView->setHeaderHidden(true);
     mAddressesLocationView->setModel(mAddressModel);
@@ -49,6 +49,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
         mAddressLocationWidget->slotModifyAddress(idx.data(Qt::UserRole).value<KContacts::Address>(), idx.row());
     });
     connect(mAddressLocationWidget, &AddressLocationWidget::addNewAddress, mAddressModel, &AddressModel::addAddress);
+    connect(mAddressLocationWidget, &AddressLocationWidget::removeAddress, mAddressModel, &AddressModel::removeAddress);
     connect(mAddressLocationWidget,
             &AddressLocationWidget::updateAddressCanceled,
             mAddressesLocationView->selectionModel(),

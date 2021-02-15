@@ -46,11 +46,13 @@ Q_SIGNALS:
     void addNewAddress(const KContacts::Address &address);
     void updateAddress(const KContacts::Address &address, int index);
     void updateAddressCanceled();
+    void removeAddress(int index);
 
 private:
     void slotChanged();
     void slotAddAddress();
     void slotUpdateAddress();
+    void slotRemoveAddress();
     void slotCancelModifyAddress();
     void fillCountryCombo();
     void switchMode();
@@ -64,6 +66,7 @@ private:
     KLineEdit *mStreetEdit = nullptr;
     KComboBox *mCountryCombo = nullptr;
     QPushButton *mAddAddress = nullptr;
+    QPushButton *mRemoveAddress = nullptr;
     QPushButton *mModifyAddress = nullptr;
     QPushButton *mCancelAddress = nullptr;
     QStackedWidget *mButtonStack = nullptr;
