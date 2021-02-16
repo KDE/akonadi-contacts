@@ -68,8 +68,6 @@ find_package(Grantlee5 ${GRANTLEE_LIB_VERSION} CONFIG REQUIRED)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055000)
 
-add_definitions(-DQT_NO_FOREACH)
-add_definitions(-DQT_NO_KEYWORDS)
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
