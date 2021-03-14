@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
-set(PIM_VERSION "5.16.80")
+set(PIM_VERSION "5.17.40")
 
 project(Akonadi-Contact VERSION ${PIM_VERSION})
 
 # ECM setup
 
-set(KF5_MIN_VERSION "5.79.0")
+set(KF5_MIN_VERSION "5.80.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -66,7 +66,7 @@ find_package(Grantlee5 ${GRANTLEE_LIB_VERSION} CONFIG REQUIRED)
 
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055000)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
