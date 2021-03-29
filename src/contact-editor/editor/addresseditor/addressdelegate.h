@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITOR_ADDRESSDELEGATE_H
-#define CONTACTEDITOR_ADDRESSDELEGATE_H
+#pragma once
 
 #include <QStyledItemDelegate>
 
@@ -25,4 +24,3 @@ public:
 
 }
 
-#endif // CONTACTEDITOR_ADDRESSDELEGATE_H

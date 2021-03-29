@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PHONECOMBOBOXTYPE_H
-#define PHONECOMBOBOXTYPE_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <editor/widgets/contacteditorcombobox.h>
@@ -56,4 +55,3 @@ private:
     QList<int> mTypeList;
 };
 }
-#endif

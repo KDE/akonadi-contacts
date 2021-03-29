@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef NAMEEDITDIALOG_H
-#define NAMEEDITDIALOG_H
+#pragma once
 
 #include "displaynameeditwidget.h"
 #include <QDialog>
@@ -53,4 +52,3 @@ private:
     DisplayNameEditWidget *mDisplayNameEdit = nullptr;
 };
 
-#endif

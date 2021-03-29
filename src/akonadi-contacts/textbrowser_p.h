@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TEXTBROWSER_H
-#define TEXTBROWSER_H
+#pragma once
 
 #include <QTextBrowser>
 
@@ -34,4 +33,3 @@ private:
 };
 }
 
-#endif

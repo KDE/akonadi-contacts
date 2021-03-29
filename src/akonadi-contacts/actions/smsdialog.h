@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SMSDIALOG_H
-#define SMSDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -44,4 +43,3 @@ private:
     QString mText;
 };
 
-#endif

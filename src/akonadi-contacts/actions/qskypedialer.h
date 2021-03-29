@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef QSKYPEDIALER_H
-#define QSKYPEDIALER_H
+#pragma once
 
 #include "qdialer.h"
 
@@ -30,4 +29,3 @@ private:
     QDBusInterface *mInterface = nullptr;
 };
 
-#endif

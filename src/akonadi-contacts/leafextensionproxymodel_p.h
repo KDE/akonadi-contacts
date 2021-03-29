@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LEAFEXTENSIONPROXYMODEL_H
-#define LEAFEXTENSIONPROXYMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -64,4 +63,3 @@ private:
 };
 }
 
-#endif

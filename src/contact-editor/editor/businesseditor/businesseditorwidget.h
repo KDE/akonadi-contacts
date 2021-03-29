@@ -5,8 +5,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef BUSINESSEDITORWIDGET_H
-#define BUSINESSEDITORWIDGET_H
+#pragma once
 
 #include <QWidget>
 class KLineEdit;
@@ -43,4 +42,3 @@ private:
     ImageWidget *mLogoWidget = nullptr;
 };
 }
-#endif // BUSINESSEDITORWIDGET_H

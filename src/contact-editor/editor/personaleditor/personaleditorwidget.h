@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PERSONALEDITORWIDGET_H
-#define PERSONALEDITORWIDGET_H
+#pragma once
 
 #include <QWidget>
 class DateEditWidget;
@@ -35,4 +34,3 @@ private:
     KLineEdit *mPartnerWidget = nullptr;
 };
 }
-#endif // PERSONALEDITORWIDGET_H

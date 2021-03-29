@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDSLISTWIDGET_H
-#define CUSTOMFIELDSLISTWIDGET_H
+#pragma once
 
 #include "customfieldsmodel.h"
 #include <QWidget>
@@ -41,4 +40,3 @@ private:
     CustomFieldsModel *mModel = nullptr;
 };
 }
-#endif // CUSTOMFIELDSLISTWIDGET_H

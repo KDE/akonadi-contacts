@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef WEBLISTWIDGET_H
-#define WEBLISTWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -33,4 +32,3 @@ private:
     WebWidgetLister *mWebWidgetLister = nullptr;
 };
 }
-#endif // WEBLISTWIDGET_H

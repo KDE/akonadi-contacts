@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef FREEBUSYEDITWIDGET_H
-#define FREEBUSYEDITWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -36,4 +35,3 @@ private:
     bool mReadOnly = false;
 };
 
-#endif

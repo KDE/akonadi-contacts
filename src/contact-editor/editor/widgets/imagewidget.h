@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef IMAGEWIDGET_H
-#define IMAGEWIDGET_H
+#pragma once
 
 #include <kcontacts/picture.h>
 
@@ -65,4 +64,3 @@ private:
     bool mReadOnly;
 };
 
-#endif

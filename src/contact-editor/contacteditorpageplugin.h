@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITOR_CONTACTEDITORPAGEPLUGIN_H
-#define CONTACTEDITOR_CONTACTEDITORPAGEPLUGIN_H
+#pragma once
 
 #include <QWidget>
 
@@ -51,4 +50,3 @@ public:
 
 Q_DECLARE_INTERFACE(ContactEditor::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")
 
-#endif

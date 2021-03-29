@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef QDIALER_H
-#define QDIALER_H
+#pragma once
 
 #include <QString>
 
@@ -28,4 +27,3 @@ protected:
     QString mErrorMessage;
 };
 
-#endif

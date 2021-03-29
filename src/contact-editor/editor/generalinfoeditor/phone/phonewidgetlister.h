@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PHONEWIDGETLISTER_H
-#define PHONEWIDGETLISTER_H
+#pragma once
 
 #include "../../widgets/kwidgetlister_p.h"
 #include "contacteditor_private_export.h"
@@ -41,4 +40,3 @@ private:
     void updateAddRemoveButton();
 };
 }
-#endif // PHONEWIDGETLISTER_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITOR_PRIVATE_EXPORT_H
-#define CONTACTEDITOR_PRIVATE_EXPORT_H
+#pragma once
 
 #include "contacteditor_export.h"
 
@@ -18,4 +17,3 @@
 #define CONTACTEDITOR_TESTS_EXPORT
 #endif
 
-#endif

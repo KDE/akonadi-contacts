@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MESSAGEFORMATTINGWIDGET_H
-#define MESSAGEFORMATTINGWIDGET_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <KContacts/Addressee>
@@ -32,4 +31,3 @@ private:
     QCheckBox *mAllowRemoteContent = nullptr;
 };
 }
-#endif // MESSAGEFORMATTINGWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRANTLEECONTACTVIEWER_H
-#define GRANTLEECONTACTVIEWER_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 #include "contactviewer.h"
@@ -30,4 +29,3 @@ private:
 };
 }
 
-#endif // GRANTLEECONTACTVIEWER_H

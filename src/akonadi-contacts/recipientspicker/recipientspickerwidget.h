@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef RECIPIENTSPICKERWIDGET_H
-#define RECIPIENTSPICKERWIDGET_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 #include <QWidget>
@@ -29,4 +28,3 @@ private:
 };
 }
 
-#endif // RECIPIENTSPICKERWIDGET_H

@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDSWIDGET_H
-#define CUSTOMFIELDSWIDGET_H
+#pragma once
 
 #include <QVariantList>
 #include <QWidget>
@@ -40,4 +39,3 @@ private:
     ContactEditor::CustomFieldsListWidget *mCustomFieldsListWidget = nullptr;
 };
 }
-#endif // CUSTOMFIELDSWIDGET_H

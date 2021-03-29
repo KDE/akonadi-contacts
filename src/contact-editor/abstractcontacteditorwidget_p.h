@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITOR_ABSTRACTCONTACTEDITORWIDGET_P_H
-#define CONTACTEDITOR_ABSTRACTCONTACTEDITORWIDGET_P_H
+#pragma once
 
 #include <QWidget>
 
@@ -62,4 +61,3 @@ public:
 };
 }
 
-#endif

@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTMETADATAATTRIBUTETEST_H
-#define CONTACTMETADATAATTRIBUTETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void serialization();
 };
 
-#endif

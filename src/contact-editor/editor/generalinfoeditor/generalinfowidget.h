@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GENERALINFOWIDGET_H
-#define GENERALINFOWIDGET_H
+#pragma once
 
 #include "displaynameeditwidget.h"
 #include <QWidget>
@@ -57,4 +56,3 @@ private:
     MessageFormattingWidget *mMessageFormattingWidget = nullptr;
 };
 }
-#endif // GENERALINFOWIDGET_H

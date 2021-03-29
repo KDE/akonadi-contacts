@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSTYPEDIALOG_H
-#define ADDRESSTYPEDIALOG_H
+#pragma once
 
 #include <KContacts/Address>
 #include <QDialog>
@@ -37,4 +36,3 @@ private:
 };
 }
 
-#endif // ADDRESSTYPEDIALOG_H

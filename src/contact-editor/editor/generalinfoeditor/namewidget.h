@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef NAMEWIDGET_H
-#define NAMEWIDGET_H
+#pragma once
 
 #include "displaynameeditwidget.h"
 #include <QWidget>
@@ -44,4 +43,3 @@ private:
     QToolButton *mButtonEdit = nullptr;
 };
 }
-#endif // NAMEWIDGET_H

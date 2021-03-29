@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef EMAILADDRESSSELECTIONMODEL_H
-#define EMAILADDRESSSELECTIONMODEL_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 #include <QObject>
@@ -28,4 +27,3 @@ private:
 };
 }
 
-#endif // EMAILADDRESSSELECTIONMODEL_H

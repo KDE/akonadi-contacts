@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_WAITINGOVERLAY_P_H
-#define AKONADI_WAITINGOVERLAY_P_H
+#pragma once
 
 #include <QPointer>
 #include <QWidget>
@@ -41,4 +40,3 @@ private:
     bool mPreviousState;
 };
 
-#endif

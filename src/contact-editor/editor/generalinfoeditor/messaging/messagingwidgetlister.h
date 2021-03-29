@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MESSAGINGWIDGETLISTER_H
-#define MESSAGINGWIDGETLISTER_H
+#pragma once
 
 #include "../../widgets/kwidgetlister_p.h"
 namespace KContacts
@@ -41,4 +40,3 @@ private:
     void updateAddRemoveButton();
 };
 }
-#endif // MESSAGINGWIDGETLISTER_H

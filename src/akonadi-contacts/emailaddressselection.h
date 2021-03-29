@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_EMAILADDRESSSELECTION_H
-#define AKONADI_EMAILADDRESSSELECTION_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 
@@ -104,4 +103,3 @@ private:
 
 Q_DECLARE_TYPEINFO(Akonadi::EmailAddressSelection, Q_MOVABLE_TYPE);
 
-#endif

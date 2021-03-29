@@ -3,8 +3,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-#ifndef SELECTADDRESSBOOKDIALOG_H
-#define SELECTADDRESSBOOKDIALOG_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 #include <AkonadiWidgets/CollectionDialog>
@@ -28,4 +27,3 @@ private:
 };
 }
 
-#endif // SELECTADDRESSBOOKDIALOG_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef QSFLPHONEDIALER_H
-#define QSFLPHONEDIALER_H
+#pragma once
 
 #include "qdialer.h"
 
@@ -22,4 +21,3 @@ public:
 private:
     bool initializeSflPhone();
 };
-#endif // QSFLPHONEDIALER_H

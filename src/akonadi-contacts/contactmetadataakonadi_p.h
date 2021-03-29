@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTMETADATAAKONADI_P_H
-#define CONTACTMETADATAAKONADI_P_H
+#pragma once
 
 #include "contactmetadatabase_p.h"
 namespace Akonadi
@@ -42,4 +41,3 @@ public:
 };
 }
 
-#endif

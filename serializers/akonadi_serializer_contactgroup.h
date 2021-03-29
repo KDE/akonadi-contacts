@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef __AKONADI_SERIALIZER_CONTACTGROUP_H__
-#define __AKONADI_SERIALIZER_CONTACTGROUP_H__
+#pragma once
 
 #include <QObject>
 
@@ -35,4 +34,3 @@ public:
 };
 }
 
-#endif

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDCONTACTJOB_H
-#define ADDCONTACTJOB_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 
@@ -71,4 +70,3 @@ private:
 };
 }
 
-#endif

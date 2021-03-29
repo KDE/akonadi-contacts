@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDMANAGER_P_H
-#define CUSTOMFIELDMANAGER_P_H
+#pragma once
 
 #include "contacteditor_export.h"
 #include "customfields_p.h"
@@ -22,4 +21,3 @@ public:
     Q_REQUIRED_RESULT CONTACTEDITOR_EXPORT static CustomField::List globalCustomFieldDescriptions();
 };
 
-#endif

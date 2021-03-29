@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDSMODEL_H
-#define CUSTOMFIELDSMODEL_H
+#pragma once
 
 #include "customfields_p.h"
 
@@ -41,4 +40,3 @@ private:
     CustomField::List mCustomFields;
 };
 
-#endif

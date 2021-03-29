@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef WEBWIDGET_H
-#define WEBWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -52,4 +51,3 @@ private:
     ContactEditor::WebSelectTypeCombobox *mWebType = nullptr;
 };
 }
-#endif // WEBWIDGET_H

@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PREFERREDLINEEDITWIDGET_H
-#define PREFERREDLINEEDITWIDGET_H
+#pragma once
 
 #include <KLineEdit>
 #include <QIcon>
@@ -37,4 +36,3 @@ private:
     QAction *mPreferredAction = nullptr;
 };
 }
-#endif // PREFERREDLINEEDITWIDGET_H

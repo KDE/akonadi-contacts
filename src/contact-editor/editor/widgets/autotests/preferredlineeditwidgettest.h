@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PreferredLineEditWidget_H
-#define PreferredLineEditWidget_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldChangePreferredValue();
 };
 
-#endif // PreferredLineEditWidget_H

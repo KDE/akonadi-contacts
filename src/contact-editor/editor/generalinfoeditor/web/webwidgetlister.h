@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef WEBWIDGETLISTER_H
-#define WEBWIDGETLISTER_H
+#pragma once
 
 #include "../../widgets/kwidgetlister_p.h"
 namespace KContacts
@@ -40,4 +39,3 @@ private:
     void updateAddRemoveButton();
 };
 }
-#endif // WEBWIDGETLISTER_H

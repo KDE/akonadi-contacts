@@ -5,8 +5,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef PHONETYPEDIALOG_H
-#define PHONETYPEDIALOG_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <KContacts/PhoneNumber>
@@ -42,4 +41,3 @@ private:
     QButtonGroup *mGroup = nullptr;
 };
 }
-#endif // PHONETYPEDIALOG_H

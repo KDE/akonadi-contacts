@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILWIDGETTEST_H
-#define MAILWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 class MailWidgetTest : public QObject
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // MAILWIDGETTEST_H

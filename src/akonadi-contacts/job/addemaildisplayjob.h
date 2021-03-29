@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDEMAILDISPLAYJOB_H
-#define ADDEMAILDISPLAYJOB_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 #include <AkonadiCore/Item>
@@ -44,4 +43,3 @@ private:
 };
 }
 
-#endif

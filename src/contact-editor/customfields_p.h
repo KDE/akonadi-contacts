@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDS_P_H
-#define CUSTOMFIELDS_P_H
+#pragma once
 
 #include "contacteditor_export.h"
 #include <QString>
@@ -78,4 +77,3 @@ private:
     QString mValue;
 };
 
-#endif

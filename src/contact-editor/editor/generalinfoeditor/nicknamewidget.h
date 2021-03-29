@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef NICKNAMEWIDGET_H
-#define NICKNAMEWIDGET_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <QWidget>
@@ -33,4 +32,3 @@ private:
     KLineEdit *mNickName = nullptr;
 };
 }
-#endif // NICKNAMEWIDGET_H

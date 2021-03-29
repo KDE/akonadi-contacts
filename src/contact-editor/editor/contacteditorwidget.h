@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITOR_H
-#define CONTACTEDITOR_H
+#pragma once
 
 #include "abstractcontacteditorwidget_p.h"
 #include "contacteditor_export.h"
@@ -69,4 +68,3 @@ private:
     Private *const d;
 };
 
-#endif

@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSLOCATIONWIDGET_H
-#define ADDRESSLOCATIONWIDGET_H
+#pragma once
 
 #include <KContacts/Address>
 #include <QWidget>
@@ -78,4 +77,3 @@ private:
 
 }
 
-#endif // ADDRESSLOCATIONWIDGET_H

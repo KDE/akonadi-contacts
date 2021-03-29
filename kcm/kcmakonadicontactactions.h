@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KCMAKONADICONTACTACTIONS_H
-#define KCMAKONADICONTACTACTIONS_H
+#pragma once
 
 #include "ui_akonadicontactactions.h"
 #include <KCModule>
@@ -36,4 +35,3 @@ private:
     Ui_AkonadiContactActions ui;
 };
 
-#endif

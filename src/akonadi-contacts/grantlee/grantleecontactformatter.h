@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GRANTLEECONTACTFORMATTER_H
-#define GRANTLEECONTACTFORMATTER_H
+#pragma once
 
 #include "abstractcontactformatter.h"
 #include "akonadi-contact_export.h"
@@ -62,4 +61,3 @@ private:
 };
 }
 
-#endif

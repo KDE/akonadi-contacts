@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ABSTRACTEMAILADDRESSSELECTIONDIALOG_H
-#define ABSTRACTEMAILADDRESSSELECTIONDIALOG_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 
@@ -36,4 +35,3 @@ Q_SIGNALS:
 };
 }
 
-#endif // ABSTRACTEMAILADDRESSSELECTIONDIALOG_H

@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_EMAILADDRESSSELECTION_P_H
-#define AKONADI_EMAILADDRESSSELECTION_P_H
+#pragma once
 
 #include <QSharedData>
 #include <QString>
@@ -29,4 +28,3 @@ public:
 };
 }
 
-#endif

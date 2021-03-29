@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PHONEWIDGET_H
-#define PHONEWIDGET_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <QWidget>
@@ -49,4 +48,3 @@ private:
     PhoneComboBoxType *mPhoneType = nullptr;
 };
 }
-#endif // PHONEWIDGET_H

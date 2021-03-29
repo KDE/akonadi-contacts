@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_CONTACTSFILTERPROXYMODEL_H
-#define AKONADI_CONTACTSFILTERPROXYMODEL_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 
@@ -118,4 +117,3 @@ private:
 Q_DECLARE_OPERATORS_FOR_FLAGS(ContactsFilterProxyModel::FilterFlags)
 }
 
-#endif

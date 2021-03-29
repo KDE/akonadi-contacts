@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SENDSMSACTION_H
-#define SENDSMSACTION_H
+#pragma once
 
 namespace KContacts
 {
@@ -20,4 +19,3 @@ public:
     void sendSms(const KContacts::PhoneNumber &number);
 };
 
-#endif

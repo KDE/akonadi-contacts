@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PHONEWIDGETTEST_H
-#define PHONEWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 class PhoneWidgetTest : public QObject
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // PHONEWIDGETTEST_H

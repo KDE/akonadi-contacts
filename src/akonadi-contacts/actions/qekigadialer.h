@@ -5,8 +5,7 @@
 
 */
 
-#ifndef QEKIGADIALER_H
-#define QEKIGADIALER_H
+#pragma once
 
 #include "qdialer.h"
 class QDBusInterface;
@@ -25,4 +24,3 @@ private:
     QDBusInterface *mInterface = nullptr;
 };
 
-#endif // QEKIGADIALER_H

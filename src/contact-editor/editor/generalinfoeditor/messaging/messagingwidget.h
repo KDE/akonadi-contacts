@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MESSAGINGWIDGET_H
-#define MESSAGINGWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -53,4 +52,3 @@ private:
     ContactEditor::ContactEditorComboBox *mProtocolCombo = nullptr;
 };
 }
-#endif // MESSAGINGWIDGET_H

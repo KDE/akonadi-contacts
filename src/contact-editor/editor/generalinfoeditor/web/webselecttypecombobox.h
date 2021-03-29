@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef WebSelectTypeCombobox_H
-#define WebSelectTypeCombobox_H
+#pragma once
 
 #include "../../widgets/contacteditorcombobox.h"
 #include "contacteditor_private_export.h"
@@ -23,4 +22,3 @@ public:
 };
 }
 
-#endif // WebSelectTypeCombobox_H

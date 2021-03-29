@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef UTILS_H
-#define UTILS_H
+#pragma once
 
 #include <QString>
 namespace KContacts
@@ -24,4 +23,3 @@ Q_REQUIRED_RESULT QString loadCustom(const KContacts::Addressee &contact, const 
 void storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value);
 }
 }
-#endif // UTILS_H

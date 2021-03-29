@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRANTLEEPRINT_H
-#define GRANTLEEPRINT_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 
@@ -28,4 +27,3 @@ private:
     void init();
 };
 }
-#endif // GRANTLEEPRINT_H

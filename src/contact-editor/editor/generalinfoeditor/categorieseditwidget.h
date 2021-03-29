@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CATEGORIESEDITWIDGET_H
-#define CATEGORIESEDITWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -32,4 +31,3 @@ public:
     void setReadOnly(bool readOnly) override;
 };
 
-#endif

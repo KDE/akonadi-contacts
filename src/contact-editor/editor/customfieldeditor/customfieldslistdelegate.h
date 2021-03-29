@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDSLISTDELEGATE_H
-#define CUSTOMFIELDSLISTDELEGATE_H
+#pragma once
 
 #include <QStyledItemDelegate>
 class QAbstractItemView;
@@ -37,4 +36,3 @@ private:
     QAbstractItemView *const mItemView;
 };
 }
-#endif

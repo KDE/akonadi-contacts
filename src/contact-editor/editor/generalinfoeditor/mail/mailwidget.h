@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILWIDGET_H
-#define MAILWIDGET_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <KContacts/Email>
@@ -48,4 +47,3 @@ private:
     QToolButton *mRemoveButton = nullptr;
 };
 }
-#endif // MAILWIDGET_H

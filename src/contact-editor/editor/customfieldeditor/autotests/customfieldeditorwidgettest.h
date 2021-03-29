@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDEDITORWIDGETTEST_H
-#define CUSTOMFIELDEDITORWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -24,4 +23,3 @@ private Q_SLOTS:
     void shouldClearEditorWhenPressAdd();
 };
 
-#endif // CUSTOMFIELDEDITORWIDGETTEST_H

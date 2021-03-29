@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONTACT_PRIVATE_EXPORT_H
-#define AKONADICONTACT_PRIVATE_EXPORT_H
+#pragma once
 
 #include "akonadi-contact_export.h"
 
@@ -18,4 +17,3 @@
 #define AKONADI_CONTACTS_TESTS_EXPORT
 #endif
 
-#endif

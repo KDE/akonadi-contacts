@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSLOCATIONWIDGETTEST_H
-#define ADDRESSLOCATIONWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -24,4 +23,3 @@ private Q_SLOTS:
     void shouldChangeReadOnlyStatus();
 };
 
-#endif // ADDRESSLOCATIONWIDGETTEST_H

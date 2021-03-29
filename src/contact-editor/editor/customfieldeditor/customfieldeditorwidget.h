@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CUSTOMFIELDEDITORWIDGET_H
-#define CUSTOMFIELDEDITORWIDGET_H
+#pragma once
 
 #include "customfields_p.h"
 #include <QWidget>
@@ -39,4 +38,3 @@ private:
     QComboBox *mFieldType = nullptr;
 };
 }
-#endif // CUSTOMFIELDEDITORWIDGET_H

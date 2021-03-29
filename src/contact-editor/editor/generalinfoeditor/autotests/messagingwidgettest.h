@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MESSAGINGWIDGETTEST_H
-#define MESSAGINGWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif // MESSAGINGWIDGETTEST_H

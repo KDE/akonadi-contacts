@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITOR_ADDRESSMODEL_H
-#define CONTACTEDITOR_ADDRESSMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 
@@ -37,4 +36,3 @@ private:
 
 }
 
-#endif // CONTACTEDITOR_ADDRESSMODEL_H

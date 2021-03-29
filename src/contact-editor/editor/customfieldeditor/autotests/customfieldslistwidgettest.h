@@ -6,8 +6,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef CUSTOMFIELDSLISTWIDGETTEST_H
-#define CUSTOMFIELDSLISTWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -19,4 +18,3 @@ public:
     ~CustomFielsListWidgetTest();
 };
 
-#endif // CUSTOMFIELDSLISTWIDGETTEST_H

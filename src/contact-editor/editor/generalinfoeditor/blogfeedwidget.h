@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef BLOGFEEDWIDGET_H
-#define BLOGFEEDWIDGET_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <QWidget>
@@ -32,4 +31,3 @@ private:
     KLineEdit *mBlogFeed = nullptr;
 };
 }
-#endif // BLOGFEEDWIDGET_H

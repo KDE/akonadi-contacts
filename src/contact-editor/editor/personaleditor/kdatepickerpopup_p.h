@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KDATEPICKERPOPUP_P_H
-#define KDATEPICKERPOPUP_P_H
+#pragma once
 
 #include <QDateTime>
 #include <QMenu>
@@ -91,4 +90,3 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KDatePickerPopup::Items)
 
-#endif

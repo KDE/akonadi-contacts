@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSESLOCATIONWIDGET_H
-#define ADDRESSESLOCATIONWIDGET_H
+#pragma once
 #include <KContacts/Addressee>
 #include <QSplitter>
 
@@ -39,4 +38,3 @@ private:
     bool mReadOnly = false;
 };
 }
-#endif // ADDRESSESLOCATIONWIDGET_H

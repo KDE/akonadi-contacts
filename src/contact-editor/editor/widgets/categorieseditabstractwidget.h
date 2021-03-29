@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CATEGORIESEDITABSTRACTWIDGET_H
-#define CATEGORIESEDITABSTRACTWIDGET_H
+#pragma once
 
 #include "contacteditor_export.h"
 #include <QWidget>
@@ -32,4 +31,3 @@ public:
     virtual void setReadOnly(bool readOnly);
 };
 }
-#endif // CATEGORIESEDITABSTRACTWIDGET_H

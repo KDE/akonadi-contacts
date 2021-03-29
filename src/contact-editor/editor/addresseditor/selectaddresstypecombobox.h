@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SELECTADDRESSTYPECOMBOBOX_H
-#define SELECTADDRESSTYPECOMBOBOX_H
+#pragma once
 
 #include <KContacts/Address>
 #include <QComboBox>
@@ -60,4 +59,3 @@ private:
 
 }
 
-#endif

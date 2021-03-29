@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_SHOWADDRESSACTION_H
-#define AKONADI_SHOWADDRESSACTION_H
+#pragma once
 
 namespace KContacts
 {
@@ -45,4 +44,3 @@ public:
 };
 }
 
-#endif

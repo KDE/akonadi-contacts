@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DATEEDITWIDGET_H
-#define DATEEDITWIDGET_H
+#pragma once
 
 #include <QDate>
 #include <QLineEdit>
@@ -62,4 +61,3 @@ private:
     bool mReadOnly = false;
 };
 
-#endif

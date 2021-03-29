@@ -8,8 +8,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITORCONTACT_KWIDGETLISTER_P_H
-#define CONTACTEDITORCONTACT_KWIDGETLISTER_P_H
+#pragma once
 
 #include <QWidget>
 
@@ -187,4 +186,3 @@ private:
     //@endcond
 };
 
-#endif // CONTACTEDITORCONTACT_KWIDGETLISTER_P_H

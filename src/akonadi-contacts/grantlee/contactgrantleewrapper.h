@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONTACTS_CONTACTGRANTLEEWRAPPER_H
-#define AKONADICONTACTS_CONTACTGRANTLEEWRAPPER_H
+#pragma once
 
 #include <KContacts/Addressee>
 
@@ -71,4 +70,3 @@ private:
 
 Q_DECLARE_METATYPE(KAddressBookGrantlee::ContactGrantleeWrapper)
 
-#endif // KADDRESSBOOKGRANTLEE_CONTACTGRANTLEEWRAPPER_H

@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MESSAGINGLISTWIDGET_H
-#define MESSAGINGLISTWIDGET_H
+#pragma once
 
 #include <QWidget>
 namespace KContacts
@@ -33,4 +32,3 @@ private:
     ContactEditor::MessagingWidgetLister *mMessagingWidgetLister = nullptr;
 };
 }
-#endif // MAILISTWIDGET_H

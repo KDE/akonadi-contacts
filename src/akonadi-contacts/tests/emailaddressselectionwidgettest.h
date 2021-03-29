@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef EMAILADDRESSSELECTIONWIDGETTEST_H
-#define EMAILADDRESSSELECTIONWIDGETTEST_H
+#pragma once
 
 #include "emailaddressselectionwidget.h"
 
@@ -30,4 +29,3 @@ private:
     QTextBrowser *mInfo = nullptr;
 };
 
-#endif

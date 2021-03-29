@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef EMAILADDRESSSELECTIONPROXYMODEL_H
-#define EMAILADDRESSSELECTIONPROXYMODEL_H
+#pragma once
 
 #include "leafextensionproxymodel_p.h"
 
@@ -49,4 +48,3 @@ private:
 };
 }
 
-#endif

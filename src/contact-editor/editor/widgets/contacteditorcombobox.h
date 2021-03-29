@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONTACTEDITORCOMBOBOX_H
-#define CONTACTEDITORCOMBOBOX_H
+#pragma once
 
 #include "contacteditor_private_export.h"
 #include <QComboBox>
@@ -24,4 +23,3 @@ protected:
     QSize minimumSizeHint() const override;
 };
 }
-#endif // CONTACTEDITORCOMBOBOX_H
