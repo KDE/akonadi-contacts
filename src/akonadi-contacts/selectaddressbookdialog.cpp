@@ -39,7 +39,7 @@ public:
 
 void SelectAddressBookDialogPrivate::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "SelectAddressBookDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectAddressBookDialog");
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         q->resize(size);
@@ -48,7 +48,7 @@ void SelectAddressBookDialogPrivate::readConfig()
 
 void SelectAddressBookDialogPrivate::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "SelectAddressBookDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectAddressBookDialog");
     group.writeEntry("Size", q->size());
     group.sync();
 }
