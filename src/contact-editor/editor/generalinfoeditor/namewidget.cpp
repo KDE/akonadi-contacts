@@ -31,13 +31,13 @@ NameWidget::NameWidget(QWidget *parent)
     lineLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->addLayout(lineLayout);
 
-    mNameEdit = new KLineEdit;
+    mNameEdit = new KLineEdit(this);
     mNameEdit->setTrapReturnKey(true);
     lineLayout->addWidget(mNameEdit);
     setFocusProxy(mNameEdit);
     setFocusPolicy(Qt::StrongFocus);
 
-    mButtonEdit = new QToolButton;
+    mButtonEdit = new QToolButton(this);
     mButtonEdit->setText(i18n("..."));
     mButtonEdit->setToolTip(i18n("Edit Contact Name"));
     lineLayout->addWidget(mButtonEdit);

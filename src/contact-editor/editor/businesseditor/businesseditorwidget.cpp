@@ -30,17 +30,17 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     topLayout->addLayout(logoLayout);
 
     // setup general group box
-    mLogoWidget = new ImageWidget(ImageWidget::Logo);
+    mLogoWidget = new ImageWidget(ImageWidget::Logo, this);
     logoLayout->addWidget(mLogoWidget, Qt::AlignTop);
     logoLayout->addStretch(0);
 
     auto *generalLayout = new QGridLayout;
     topLayout->addLayout(generalLayout);
 
-    QLabel *label = new QLabel(i18nc("@label The organization of a contact", "Organization:"));
+    QLabel *label = new QLabel(i18nc("@label The organization of a contact", "Organization:"), this);
     generalLayout->addWidget(label, 0, 0);
 
-    mOrganizationWidget = new KLineEdit;
+    mOrganizationWidget = new KLineEdit(this);
     mOrganizationWidget->setTrapReturnKey(true);
     mOrganizationWidget->setPlaceholderText(i18n("Add organization's name"));
     label->setBuddy(mOrganizationWidget);
@@ -49,7 +49,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The profession of a contact", "Profession:"));
     generalLayout->addWidget(label, 0, 1);
 
-    mProfessionWidget = new KLineEdit;
+    mProfessionWidget = new KLineEdit(this);
     mProfessionWidget->setPlaceholderText(i18n("Add profession"));
     mProfessionWidget->setTrapReturnKey(true);
     label->setBuddy(mProfessionWidget);
@@ -58,7 +58,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The title of a contact", "Title:"));
     generalLayout->addWidget(label, 3, 0);
 
-    mTitleWidget = new KLineEdit;
+    mTitleWidget = new KLineEdit(this);
     mTitleWidget->setPlaceholderText(i18n("Add the title"));
     mTitleWidget->setTrapReturnKey(true);
     label->setBuddy(mTitleWidget);
@@ -67,16 +67,16 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The department of a contact", "Department:"));
     generalLayout->addWidget(label, 3, 1);
 
-    mDepartmentWidget = new KLineEdit;
+    mDepartmentWidget = new KLineEdit(this);
     mDepartmentWidget->setPlaceholderText(i18n("Add the department"));
     mDepartmentWidget->setTrapReturnKey(true);
     label->setBuddy(mDepartmentWidget);
     generalLayout->addWidget(mDepartmentWidget, 4, 1);
 
-    label = new QLabel(i18nc("@label The office of a contact", "Office:"));
+    label = new QLabel(i18nc("@label The office of a contact", "Office:"), this);
     generalLayout->addWidget(label, 5, 0);
 
-    mOfficeWidget = new KLineEdit;
+    mOfficeWidget = new KLineEdit(this);
     mOfficeWidget->setTrapReturnKey(true);
     mOfficeWidget->setPlaceholderText(i18n("Add the office"));
 
@@ -86,7 +86,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The manager's name of a contact", "Manager's name:"));
     generalLayout->addWidget(label, 5, 1);
 
-    mManagerWidget = new KLineEdit;
+    mManagerWidget = new KLineEdit(this);
     mManagerWidget->setPlaceholderText(i18n("Add manager's name"));
     mManagerWidget->setTrapReturnKey(true);
     label->setBuddy(mManagerWidget);
@@ -95,7 +95,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The assistant's name of a contact", "Assistant's name:"));
     generalLayout->addWidget(label, 7, 0);
 
-    mAssistantWidget = new KLineEdit;
+    mAssistantWidget = new KLineEdit(this);
     mAssistantWidget->setPlaceholderText(i18n("Add assistant's name"));
     mAssistantWidget->setTrapReturnKey(true);
     label->setBuddy(mAssistantWidget);
@@ -105,7 +105,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The free/busy information of a contact", "Free/Busy:"));
     generalLayout->addWidget(label, 7, 1);
 
-    mFreeBusyWidget = new FreeBusyEditWidget;
+    mFreeBusyWidget = new FreeBusyEditWidget(this);
     label->setBuddy(mFreeBusyWidget);
     generalLayout->addWidget(mFreeBusyWidget, 8, 1);
     generalLayout->setRowStretch(9, 1);
