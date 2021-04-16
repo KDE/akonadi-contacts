@@ -62,6 +62,14 @@ find_package(KF5GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(Grantlee5 ${GRANTLEE_LIB_VERSION} CONFIG REQUIRED)
 
+############### Compilers flags ###############
+
+if (MSVC)
+    # This sets the __cplusplus macro to a real value based on the version of C++ specified by
+    # the /std switch. Without it MSVC keeps reporting C++98, so feature detection doesn't work.
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Zc:__cplusplus")
+endif()
+
 ########### Targets ###########
 
 
