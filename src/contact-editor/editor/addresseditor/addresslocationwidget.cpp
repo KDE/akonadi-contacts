@@ -23,13 +23,6 @@
 
 using namespace ContactEditor;
 
-struct LocaleAwareLessThan : std::binary_function<QString, QString, bool> {
-    bool operator()(const QString &s1, const QString &s2) const
-    {
-        return QString::localeAwareCompare(s1, s2) < 0;
-    }
-};
-
 AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     : QWidget(parent)
     , mCurrentMode(CreateAddress)
@@ -200,7 +193,9 @@ void AddressLocationWidget::fillCountryCombo()
         countries.append(localeStr);
     }
 
-    std::sort(countries.begin(), countries.end(), LocaleAwareLessThan());
+    std::sort(countries.begin(), countries.end(), [](const auto &s1, const auto &s2) {
+        return QString::localeAwareCompare(s1, s2) < 0;
+    });
 
     mCountryCombo->addItems(countries);
     mCountryCombo->setAutoCompletion(true);
