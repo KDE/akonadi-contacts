@@ -41,6 +41,7 @@ void ContactMetaDataAttributeTest::clone()
     const QVariantMap content2 = attribute2->metaData();
 
     QVERIFY(content1 == content2);
+    delete attribute2;
 }
 
 void ContactMetaDataAttributeTest::serialization()
