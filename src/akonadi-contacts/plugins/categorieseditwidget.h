@@ -8,8 +8,6 @@
 
 #pragma once
 
-#include <QWidget>
-
 #include <ContactEditor/CategoriesEditAbstractWidget>
 #include <QVariant>
 #include <kcontacts/addressee.h>
