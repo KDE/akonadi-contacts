@@ -29,19 +29,19 @@ using namespace ContactEditor;
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QHBoxLayout(this);
+    auto topLayout = new QHBoxLayout(this);
 
-    auto *photoLayout = new QVBoxLayout;
+    auto photoLayout = new QVBoxLayout;
     topLayout->addLayout(photoLayout);
     mPhotoWidget = new ImageWidget(ImageWidget::Photo);
     mPhotoWidget->setObjectName(QStringLiteral("photowidget"));
     photoLayout->addWidget(mPhotoWidget);
     photoLayout->addStretch(1);
 
-    auto *leftLayout = new QVBoxLayout;
+    auto leftLayout = new QVBoxLayout;
     topLayout->addLayout(leftLayout);
 
-    auto *rightLayout = new QVBoxLayout;
+    auto rightLayout = new QVBoxLayout;
     topLayout->addLayout(rightLayout);
 
     mNameWidget = new NameWidget(this);
@@ -68,10 +68,10 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
     rightLayout->addWidget(mMailListWidget);
 
-    QWidget *categoryWidget = new QWidget(this);
-    auto *categoryWidgetLayout = new QVBoxLayout(categoryWidget);
+    auto categoryWidget = new QWidget(this);
+    auto categoryWidgetLayout = new QVBoxLayout(categoryWidget);
     categoryWidgetLayout->setContentsMargins(0, 0, 0, 0);
-    QLabel *label = new QLabel(i18n("Tags"), this);
+    auto label = new QLabel(i18n("Tags"), this);
     label->setObjectName(QStringLiteral("categorylabel"));
     categoryWidgetLayout->addWidget(label);
 

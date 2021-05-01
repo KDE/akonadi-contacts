@@ -31,7 +31,7 @@ WaitingOverlay::WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent)
 
     QBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->addStretch();
-    QLabel *description = new QLabel(this);
+    auto description = new QLabel(this);
     description->setText(i18n("<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"));
     description->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     topLayout->addWidget(description);

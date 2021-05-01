@@ -44,7 +44,7 @@ void ShowAddressAction::showAddress(const KContacts::Address &address)
         replaceArguments(commandTemplate, address);
 
         if (!commandTemplate.isEmpty()) {
-            auto *job = new KIO::CommandLauncherJob(commandTemplate);
+            auto job = new KIO::CommandLauncherJob(commandTemplate);
             job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
             job->start();
         }

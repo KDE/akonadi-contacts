@@ -54,7 +54,7 @@ public:
     void searchContact()
     {
         // first check whether a contact with the same email exists already
-        auto *searchJob = new Akonadi::ContactSearchJob(q);
+        auto searchJob = new Akonadi::ContactSearchJob(q);
         searchJob->setLimit(1);
         searchJob->setQuery(Akonadi::ContactSearchJob::Email, mEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
         q->connect(searchJob, &Akonadi::ContactSearchJob::result, q, [this](KJob *job) {
@@ -66,7 +66,7 @@ public:
     {
         Akonadi::Item item = contact;
         if (item.hasPayload<KContacts::Addressee>()) {
-            KContacts::Addressee address = item.payload<KContacts::Addressee>();
+            auto address = item.payload<KContacts::Addressee>();
             address.insertCustom(QStringLiteral("KADDRESSBOOK"),
                                  QStringLiteral("MailPreferedFormatting"),
                                  mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));
@@ -74,9 +74,9 @@ public:
                                  QStringLiteral("MailAllowToRemoteContent"),
                                  mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
             item.setPayload<KContacts::Addressee>(address);
-            auto *itemModifyJob = new Akonadi::ItemModifyJob(item);
+            auto itemModifyJob = new Akonadi::ItemModifyJob(item);
             q->connect(itemModifyJob, &Akonadi::ItemModifyJob::result, q, [this](KJob *itemModifyJob) {
-                auto *modifiedJob = static_cast<Akonadi::ItemModifyJob *>(itemModifyJob);
+                auto modifiedJob = static_cast<Akonadi::ItemModifyJob *>(itemModifyJob);
                 if (!modifiedJob->error()) {
                     Q_EMIT q->contactUpdated(modifiedJob->item(), messageId, mShowAsHTML, mRemoteContent);
                 }
@@ -111,9 +111,9 @@ public:
                                  QStringLiteral("MailAllowToRemoteContent"),
                                  mRemoteContent ? QStringLiteral("TRUE") : QStringLiteral("FALSE"));
             item.setPayload<KContacts::Addressee>(contact);
-            auto *itemModifyJob = new Akonadi::ItemModifyJob(item);
+            auto itemModifyJob = new Akonadi::ItemModifyJob(item);
             q->connect(itemModifyJob, &Akonadi::ItemModifyJob::result, q, [this](KJob *itemModifyJob) {
-                auto *modifiedJob = static_cast<Akonadi::ItemModifyJob *>(itemModifyJob);
+                auto modifiedJob = static_cast<Akonadi::ItemModifyJob *>(itemModifyJob);
                 if (!modifiedJob->error()) {
                     Q_EMIT q->contactUpdated(modifiedJob->item(), messageId, mShowAsHTML, mRemoteContent);
                 }
@@ -126,8 +126,7 @@ public:
     {
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
 
-        Akonadi::CollectionFetchJob *const addressBookJob =
-            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+        auto const addressBookJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
         addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
         q->connect(addressBookJob, &Akonadi::CollectionFetchJob::result, q, [this](KJob *job) {
@@ -172,7 +171,7 @@ public:
                     const Akonadi::AgentType agentType = dlg->agentType();
 
                     if (agentType.isValid()) {
-                        auto *job = new Akonadi::AgentInstanceCreateJob(agentType, q);
+                        auto job = new Akonadi::AgentInstanceCreateJob(agentType, q);
                         q->connect(job, &Akonadi::AgentInstanceCreateJob::result, q, [this](KJob *job) {
                             slotResourceCreationDone(job);
                         });
@@ -238,9 +237,9 @@ public:
         item.setPayload<KContacts::Addressee>(contact);
 
         // save the new item in akonadi storage
-        auto *createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
+        auto createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
         q->connect(createJob, &Akonadi::ItemCreateJob::result, q, [this](KJob *createJob) {
-            auto *modifiedJob = static_cast<Akonadi::ItemCreateJob *>(createJob);
+            auto modifiedJob = static_cast<Akonadi::ItemCreateJob *>(createJob);
             if (!modifiedJob->error()) {
                 Q_EMIT q->contactUpdated(modifiedJob->item(), messageId, mShowAsHTML, mRemoteContent);
             }

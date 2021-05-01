@@ -25,10 +25,10 @@ CustomFieldsWidgetTest::~CustomFieldsWidgetTest()
 void CustomFieldsWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::CustomFieldsWidget w;
-    auto *customFieldEditorWidget = w.findChild<ContactEditor::CustomFieldEditorWidget *>(QStringLiteral("customfieldeditorwidget"));
+    auto customFieldEditorWidget = w.findChild<ContactEditor::CustomFieldEditorWidget *>(QStringLiteral("customfieldeditorwidget"));
     QVERIFY(customFieldEditorWidget);
 
-    auto *customFieldsListWidget = w.findChild<ContactEditor::CustomFieldsListWidget *>(QStringLiteral("customfieldslistwidget"));
+    auto customFieldsListWidget = w.findChild<ContactEditor::CustomFieldsListWidget *>(QStringLiteral("customfieldslistwidget"));
     QVERIFY(customFieldsListWidget);
 }
 

@@ -37,7 +37,7 @@ void ContactMetaDataAttributeTest::clone()
     Akonadi::ContactMetaDataAttribute attribute1;
     attribute1.setMetaData(content1);
 
-    auto *attribute2 = static_cast<Akonadi::ContactMetaDataAttribute *>(attribute1.clone());
+    auto attribute2 = static_cast<Akonadi::ContactMetaDataAttribute *>(attribute1.clone());
     const QVariantMap content2 = attribute2->metaData();
 
     QVERIFY(content1 == content2);

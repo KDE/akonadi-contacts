@@ -139,7 +139,7 @@ public:
     /**
      * Describes a list of columns of the contacts tree model.
      */
-    typedef QList<Column> Columns;
+    using Columns = QList<Column>;
 
     /**
      * Describes the role for contacts and contact groups.

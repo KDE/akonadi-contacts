@@ -61,7 +61,7 @@ void KWidgetLister::init()
     d->mLayout->setSpacing(4);
 
     d->mButtonBox = new QWidget(this);
-    auto *mButtonBoxHBoxLayout = new QHBoxLayout(d->mButtonBox);
+    auto mButtonBoxHBoxLayout = new QHBoxLayout(d->mButtonBox);
     mButtonBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
     d->mLayout->addWidget(d->mButtonBox);
     d->mLayout->addStretch(1);

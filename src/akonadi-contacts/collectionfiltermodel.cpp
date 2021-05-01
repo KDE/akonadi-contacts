@@ -33,7 +33,7 @@ bool CollectionFilterModel::filterAcceptsRow(int row, const QModelIndex &parent)
     bool accepted = true;
 
     const QModelIndex index = sourceModel()->index(row, 0, parent);
-    const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+    const auto collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     if (!collection.isValid()) {
         return false;
     }

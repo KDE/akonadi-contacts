@@ -99,7 +99,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     : QWidget(parent)
     , mDisplayType(FullName)
 {
-    auto *layout = new QHBoxLayout(this);
+    auto layout = new QHBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
     mView = new KComboBox(this);
@@ -110,7 +110,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     setFocusPolicy(Qt::StrongFocus);
     connect(mView, QOverload<int>::of(&KComboBox::activated), this, &DisplayNameEditWidget::displayTypeChanged);
 
-    auto *delegate = new DisplayNameDelegate(mView->view(), this);
+    auto delegate = new DisplayNameDelegate(mView->view(), this);
     mView->view()->setItemDelegate(delegate);
 
     mAdditionalPopupWidth = delegate->maximumDescriptionWidth();

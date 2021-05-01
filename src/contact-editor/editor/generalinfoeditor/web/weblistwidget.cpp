@@ -19,11 +19,11 @@ using namespace ContactEditor;
 WebListWidget::WebListWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->setSpacing(0);
 
-    QLabel *label = new QLabel(i18n("Web"), this);
+    auto label = new QLabel(i18n("Web"), this);
     label->setObjectName(QStringLiteral("weblistlabel"));
     topLayout->addWidget(label);
 

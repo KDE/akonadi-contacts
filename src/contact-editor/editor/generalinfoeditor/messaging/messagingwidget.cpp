@@ -22,7 +22,7 @@ using namespace ContactEditor;
 MessagingWidget::MessagingWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *layout = new QHBoxLayout(this);
+    auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);
     layout->setContentsMargins(0, 0, 0, 0);
 

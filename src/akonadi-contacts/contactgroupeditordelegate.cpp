@@ -54,10 +54,10 @@ ContactLineEdit::ContactLineEdit(bool isReference, ContactCompletionModel::Colum
 {
     setFrame(false);
 
-    auto *filter = new ContactsWithEmailFilterModel(this);
+    auto filter = new ContactsWithEmailFilterModel(this);
     filter->setSourceModel(Akonadi::ContactCompletionModel::self());
 
-    auto *completer = new QCompleter(filter, this);
+    auto completer = new QCompleter(filter, this);
     completer->setCompletionColumn(column);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
     connect(completer, QOverload<const QModelIndex &>::of(&QCompleter::activated), this, QOverload<const QModelIndex &>::of(&ContactLineEdit::completed));
@@ -127,13 +127,13 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
     const bool isReference = index.data(ContactGroupModel::IsReferenceRole).toBool();
     Q_UNUSED(option)
     if (index.column() == 0) {
-        auto *edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
+        auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
         connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
 
         return edit;
     } else {
         if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
-            auto *comboBox = new KComboBox(parent);
+            auto comboBox = new KComboBox(parent);
             comboBox->setFrame(false);
             comboBox->setAutoFillBackground(true);
             return comboBox;
@@ -149,14 +149,14 @@ void ContactGroupEditorDelegate::setEditorData(QWidget *editor, const QModelInde
 {
     if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
         if (index.column() == 0) {
-            auto *lineEdit = qobject_cast<QLineEdit *>(editor);
+            auto lineEdit = qobject_cast<QLineEdit *>(editor);
             if (!lineEdit) {
                 return;
             }
 
             lineEdit->setText(index.data(Qt::EditRole).toString());
         } else {
-            auto *comboBox = qobject_cast<KComboBox *>(editor);
+            auto comboBox = qobject_cast<KComboBox *>(editor);
             if (!comboBox) {
                 return;
             }
@@ -167,7 +167,7 @@ void ContactGroupEditorDelegate::setEditorData(QWidget *editor, const QModelInde
             comboBox->setCurrentIndex(comboBox->findText(index.data(Qt::EditRole).toString()));
         }
     } else {
-        auto *lineEdit = qobject_cast<QLineEdit *>(editor);
+        auto lineEdit = qobject_cast<QLineEdit *>(editor);
         if (!lineEdit) {
             return;
         }
@@ -180,7 +180,7 @@ void ContactGroupEditorDelegate::setModelData(QWidget *editor, QAbstractItemMode
 {
     if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
         if (index.column() == 0) {
-            auto *lineEdit = static_cast<ContactLineEdit *>(editor);
+            auto lineEdit = static_cast<ContactLineEdit *>(editor);
 
             const bool isReference = lineEdit->isReference();
             const Item item = lineEdit->completedItem();
@@ -195,7 +195,7 @@ void ContactGroupEditorDelegate::setModelData(QWidget *editor, QAbstractItemMode
         }
 
         if (index.column() == 1) {
-            auto *comboBox = qobject_cast<KComboBox *>(editor);
+            auto comboBox = qobject_cast<KComboBox *>(editor);
             if (!comboBox) {
                 return;
             }
@@ -203,7 +203,7 @@ void ContactGroupEditorDelegate::setModelData(QWidget *editor, QAbstractItemMode
             model->setData(index, comboBox->currentText(), Qt::EditRole);
         }
     } else {
-        auto *lineEdit = static_cast<ContactLineEdit *>(editor);
+        auto lineEdit = static_cast<ContactLineEdit *>(editor);
 
         const bool isReference = lineEdit->isReference();
         const Item item = lineEdit->completedItem();

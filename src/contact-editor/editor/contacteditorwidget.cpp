@@ -73,7 +73,7 @@ public:
 
 void ContactEditorWidget::Private::initGui()
 {
-    auto *layout = new QVBoxLayout(mParent);
+    auto layout = new QVBoxLayout(mParent);
     layout->setContentsMargins(0, 0, 0, 0);
 
     mTabWidget = new QTabWidget(mParent);
@@ -116,8 +116,8 @@ void ContactEditorWidget::Private::initGuiPersonalTab()
 
 void ContactEditorWidget::Private::initGuiNotesTab()
 {
-    QWidget *widget = new QWidget;
-    auto *layout = new QVBoxLayout(widget);
+    auto widget = new QWidget;
+    auto layout = new QVBoxLayout(widget);
 
     mTabWidget->addTab(widget, i18nc("@title:tab", "Notes"));
 

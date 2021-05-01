@@ -18,11 +18,11 @@ using namespace ContactEditor;
 MessagingListWidget::MessagingListWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->setSpacing(0);
 
-    QLabel *label = new QLabel(i18n("Messaging"), this);
+    auto label = new QLabel(i18n("Messaging"), this);
     label->setObjectName(QStringLiteral("messaginglistlabel"));
     topLayout->addWidget(label);
 

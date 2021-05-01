@@ -30,6 +30,7 @@
 #include <QLocale>
 #include <QMetaProperty>
 #include <QSet>
+#include <memory>
 
 using namespace KAddressBookGrantlee;
 
@@ -50,7 +51,7 @@ public:
         KConfigGroup group(&config, QStringLiteral("View"));
         showQRCode = group.readEntry("QRCodes", true);
 
-        mEngine.reset(new GrantleeTheme::Engine);
+        mEngine = std::make_unique<GrantleeTheme::Engine>();
 
         mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader());
     }

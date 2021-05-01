@@ -42,7 +42,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         // we got a contact group with unresolved references -> we have to resolve it ourself
         // this shouldn't be the normal case, actually the calling code should pass in an already resolved
         // contact group
-        auto *job = new ContactGroupExpandJob(group);
+        auto job = new ContactGroupExpandJob(group);
         if (job->exec()) {
             group.removeAllContactData();
             const KContacts::Addressee::List listContact = job->contacts();

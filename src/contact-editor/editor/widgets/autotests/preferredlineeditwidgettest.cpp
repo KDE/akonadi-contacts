@@ -24,7 +24,7 @@ PreferredLineEditWidgetTest::~PreferredLineEditWidgetTest()
 void PreferredLineEditWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::PreferredLineEditWidget w;
-    auto *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
+    auto act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
     QVERIFY(act);
     QVERIFY(!w.preferred());
 }
@@ -32,7 +32,7 @@ void PreferredLineEditWidgetTest::shouldHaveDefaultValue()
 void PreferredLineEditWidgetTest::shouldChangePreferredValue()
 {
     ContactEditor::PreferredLineEditWidget w;
-    auto *act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
+    auto act = w.findChild<QAction *>(QStringLiteral("preferredaction"));
     QIcon disabled = act->icon();
     w.setPreferred(true);
     QVERIFY(w.preferred());

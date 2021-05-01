@@ -18,11 +18,11 @@ using namespace ContactEditor;
 PhoneListWidget::PhoneListWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->setSpacing(0);
 
-    QLabel *label = new QLabel(i18n("Phone"), this);
+    auto label = new QLabel(i18n("Phone"), this);
     label->setObjectName(QStringLiteral("phonelistlabel"));
     topLayout->addWidget(label);
 

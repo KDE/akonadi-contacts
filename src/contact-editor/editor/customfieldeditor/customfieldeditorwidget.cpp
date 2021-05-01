@@ -24,13 +24,13 @@ using namespace ContactEditor;
 CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QVBoxLayout(this);
-    QLabel *label = new QLabel(i18n("Custom Field Title"), this);
+    auto topLayout = new QVBoxLayout(this);
+    auto label = new QLabel(i18n("Custom Field Title"), this);
     label->setObjectName(QStringLiteral("labeltitle"));
 
     topLayout->addWidget(label);
 
-    auto *fieldLayout = new QHBoxLayout;
+    auto fieldLayout = new QHBoxLayout;
     topLayout->addLayout(fieldLayout);
     mFieldName = new QLineEdit(this);
     mFieldName->setPlaceholderText(i18n("Add name"));

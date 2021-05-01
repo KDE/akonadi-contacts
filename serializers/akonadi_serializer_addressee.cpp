@@ -167,8 +167,8 @@ void SerializerPluginAddressee::compare(Akonadi::AbstractDifferencesReporter *re
     reporter->setLeftPropertyValueTitle(i18n("Changed Contact"));
     reporter->setRightPropertyValueTitle(i18n("Conflicting Contact"));
 
-    const KContacts::Addressee leftContact = leftItem.payload<KContacts::Addressee>();
-    const KContacts::Addressee rightContact = rightItem.payload<KContacts::Addressee>();
+    const auto leftContact = leftItem.payload<KContacts::Addressee>();
+    const auto rightContact = rightItem.payload<KContacts::Addressee>();
 
     if (!compareString(leftContact.uid(), rightContact.uid())) {
         reporter->addProperty(AbstractDifferencesReporter::ConflictMode, KContacts::Addressee::uidLabel(), leftContact.uid(), rightContact.uid());

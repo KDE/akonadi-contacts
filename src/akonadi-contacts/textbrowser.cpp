@@ -93,7 +93,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                     const QString imageName = imageFormat.name();
                     const QVariant imageResource = document()->resource(QTextDocument::ImageResource, QUrl(imageName));
 
-                    const QPixmap pix = imageResource.value<QPixmap>();
+                    const auto pix = imageResource.value<QPixmap>();
                     if (!pix.isNull()) {
                         // There may be other images (e.g. contact type icons) that
                         // there is no point in copying.

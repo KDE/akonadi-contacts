@@ -27,9 +27,9 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     : QWidget(parent)
     , mCurrentMode(CreateAddress)
 {
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
 
-    auto *gridLayout = new QGridLayout;
+    auto gridLayout = new QGridLayout;
     topLayout->addLayout(gridLayout);
 
     mTypeCombo = new SelectAddressTypeComboBox(this);
@@ -37,7 +37,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     connect(mTypeCombo, &SelectAddressTypeComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mTypeCombo, 0, 0, 1, 2);
 
-    QLabel *label = new QLabel(KContacts::Address::streetLabel(), this);
+    auto label = new QLabel(KContacts::Address::streetLabel(), this);
     label->setObjectName(QStringLiteral("streetlabel"));
     gridLayout->addWidget(label, 1, 0);
 
@@ -93,7 +93,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("countrylabel"));
     gridLayout->addWidget(label, 5, 1);
     mCountryCombo = new KComboBox(this);
-    auto *edit = new KLineEdit(this);
+    auto edit = new KLineEdit(this);
     edit->setTrapReturnKey(true);
     mCountryCombo->setLineEdit(edit);
     mCountryCombo->setObjectName(QStringLiteral("countrycombobox"));
@@ -111,8 +111,8 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mButtonStack->setObjectName(QStringLiteral("buttonstacked"));
     topLayout->addWidget(mButtonStack);
 
-    QWidget *addButtonWidget = new QWidget(this);
-    auto *addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
+    auto addButtonWidget = new QWidget(this);
+    auto addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
     addButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
     mAddAddress = new QPushButton(i18n("Add Address"), this);
     mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
@@ -121,8 +121,8 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     addButtonWidgetLayout->addStretch(1);
     mButtonStack->addWidget(addButtonWidget);
 
-    QWidget *modifyButtonWidget = new QWidget(this);
-    auto *modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
+    auto modifyButtonWidget = new QWidget(this);
+    auto modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
     modifyButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
     mButtonStack->addWidget(modifyButtonWidget);
 

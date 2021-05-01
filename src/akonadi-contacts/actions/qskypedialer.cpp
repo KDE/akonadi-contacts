@@ -43,7 +43,7 @@ static QDBusInterface *searchSkypeDBusInterface()
     const QString service(QStringLiteral("com.Skype.API"));
     const QString path(QStringLiteral("/com/Skype"));
 
-    QDBusInterface *interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
+    auto interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     if (!interface->isValid()) {
         delete interface;
         interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());

@@ -18,10 +18,10 @@ using namespace ContactEditor;
 BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->setObjectName(QStringLiteral("mainlayout"));
-    QLabel *blogFeedLabel = new QLabel(i18n("Blog Feed"), this);
+    auto blogFeedLabel = new QLabel(i18n("Blog Feed"), this);
     blogFeedLabel->setObjectName(QStringLiteral("blogFeedLabel"));
     topLayout->addWidget(blogFeedLabel);
 

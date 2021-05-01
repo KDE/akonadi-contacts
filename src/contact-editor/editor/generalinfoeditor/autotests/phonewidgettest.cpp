@@ -26,15 +26,15 @@ PhoneWidgetTest::~PhoneWidgetTest()
 void PhoneWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::PhoneWidget w;
-    auto *line = w.findChild<QLineEdit *>(QStringLiteral("phonenumber"));
+    auto line = w.findChild<QLineEdit *>(QStringLiteral("phonenumber"));
     QVERIFY(line);
-    auto *addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
+    auto addButton = w.findChild<QToolButton *>(QStringLiteral("addbutton"));
     QVERIFY(addButton);
 
-    auto *combotype = w.findChild<ContactEditor::PhoneComboBoxType *>(QStringLiteral("phonetype"));
+    auto combotype = w.findChild<ContactEditor::PhoneComboBoxType *>(QStringLiteral("phonetype"));
     QVERIFY(combotype);
 
-    auto *removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
+    auto removeButton = w.findChild<QToolButton *>(QStringLiteral("removebutton"));
     QVERIFY(removeButton);
 }
 

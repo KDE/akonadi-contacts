@@ -46,7 +46,7 @@ QByteArray ContactMetaDataAttribute::type() const
 
 Attribute *ContactMetaDataAttribute::clone() const
 {
-    auto *copy = new ContactMetaDataAttribute;
+    auto copy = new ContactMetaDataAttribute;
     copy->setMetaData(d->mData);
 
     return copy;

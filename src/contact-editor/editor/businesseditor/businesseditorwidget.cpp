@@ -24,9 +24,9 @@ using namespace ContactEditor;
 BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QHBoxLayout(this);
+    auto topLayout = new QHBoxLayout(this);
 
-    auto *logoLayout = new QVBoxLayout;
+    auto logoLayout = new QVBoxLayout;
     topLayout->addLayout(logoLayout);
 
     // setup general group box
@@ -34,10 +34,10 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     logoLayout->addWidget(mLogoWidget, Qt::AlignTop);
     logoLayout->addStretch(0);
 
-    auto *generalLayout = new QGridLayout;
+    auto generalLayout = new QGridLayout;
     topLayout->addLayout(generalLayout);
 
-    QLabel *label = new QLabel(i18nc("@label The organization of a contact", "Organization:"), this);
+    auto label = new QLabel(i18nc("@label The organization of a contact", "Organization:"), this);
     generalLayout->addWidget(label, 0, 0);
 
     mOrganizationWidget = new KLineEdit(this);

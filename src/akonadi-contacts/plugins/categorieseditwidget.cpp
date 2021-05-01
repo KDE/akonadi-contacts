@@ -20,7 +20,7 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant
     : ContactEditor::CategoriesEditAbstractWidget(parent)
     , mTagWidget(new Akonadi::TagWidget(this))
 {
-    auto *layout = new QHBoxLayout(this);
+    auto layout = new QHBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(mTagWidget);
 }

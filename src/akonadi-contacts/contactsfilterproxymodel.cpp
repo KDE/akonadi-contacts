@@ -57,7 +57,7 @@ bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &pare
 {
     const QModelIndex index = sourceModel()->index(row, 0, parent);
     if (d->mExcludeVirtualCollections) {
-        const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const auto collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
         if (collection.isValid() && collection.isVirtual()) {
             return false;
         }
@@ -67,10 +67,10 @@ bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &pare
         return true;
     }
 
-    const Akonadi::Item item = index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     if (item.hasPayload<KContacts::Addressee>()) {
-        const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+        const auto contact = item.payload<KContacts::Addressee>();
         if (d->flags & ContactsFilterProxyModel::HasEmail) {
             if (contact.emails().isEmpty()) {
                 return false;
@@ -82,7 +82,7 @@ bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &pare
     } else {
         if (!d->mFilter.isEmpty()) {
             if (item.hasPayload<KContacts::ContactGroup>()) {
-                const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+                const auto group = item.payload<KContacts::ContactGroup>();
                 return contactGroupMatchesFilter(group, d->mFilter);
             }
         }
@@ -134,7 +134,7 @@ Qt::ItemFlags ContactsFilterProxyModel::flags(const QModelIndex &index) const
         // Don't crash
         return Qt::NoItemFlags;
     }
-    const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+    const auto collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     if (collection.isValid()) {
         return QSortFilterProxyModel::flags(index) & ~(Qt::ItemIsSelectable);
     }

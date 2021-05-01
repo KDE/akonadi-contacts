@@ -26,7 +26,7 @@ public:
     Private(EmailAddressSelectionDialog *qq, QAbstractItemModel *model)
         : q(qq)
     {
-        auto *mainLayout = new QVBoxLayout(q);
+        auto mainLayout = new QVBoxLayout(q);
         if (model) {
             mView = new RecipientsPickerWidget(true, model, q);
         } else {
@@ -34,7 +34,7 @@ public:
         }
         mainLayout->addWidget(mView);
         q->connect(mView->emailAddressSelectionWidget()->view(), &QTreeView::doubleClicked, q, &QDialog::accept);
-        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
+        auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         okButton->setDefault(true);
         okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

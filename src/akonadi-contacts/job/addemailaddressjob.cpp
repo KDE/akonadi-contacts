@@ -84,8 +84,7 @@ public:
     {
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
 
-        Akonadi::CollectionFetchJob *const addressBookJob =
-            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+        auto const addressBookJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
         addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
         q->connect(addressBookJob, &Akonadi::CollectionFetchJob::result, q, [this](KJob *job) {
@@ -131,7 +130,7 @@ public:
                     const Akonadi::AgentType agentType = dlg->agentType();
 
                     if (agentType.isValid()) {
-                        auto *job = new Akonadi::AgentInstanceCreateJob(agentType, q);
+                        auto job = new Akonadi::AgentInstanceCreateJob(agentType, q);
                         q->connect(job, &Akonadi::AgentInstanceCreateJob::result, q, [this](KJob *job) {
                             slotResourceCreationDone(job);
                         });
@@ -191,7 +190,7 @@ public:
         item.setPayload<KContacts::Addressee>(contact);
 
         // save the new item in akonadi storage
-        auto *createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
+        auto createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
         q->connect(createJob, &Akonadi::ItemCreateJob::result, q, [this](KJob *job) {
             slotAddContactDone(job);
         });
@@ -270,7 +269,7 @@ AddEmailAddressJob::~AddEmailAddressJob()
 void AddEmailAddressJob::start()
 {
     // first check whether a contact with the same email exists already
-    auto *searchJob = new Akonadi::ContactSearchJob(this);
+    auto searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
     searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, [this](KJob *job) {

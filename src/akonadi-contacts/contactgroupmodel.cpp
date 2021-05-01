@@ -43,7 +43,7 @@ public:
         } else {
             item.setId(reference.uid().toLongLong());
         }
-        auto *job = new ItemFetchJob(item, mParent);
+        auto job = new ItemFetchJob(item, mParent);
         job->setProperty("row", row);
         job->fetchScope().fetchFullPayload();
 
@@ -62,7 +62,7 @@ public:
             return;
         }
 
-        auto *fetchJob = qobject_cast<ItemFetchJob *>(job);
+        auto fetchJob = qobject_cast<ItemFetchJob *>(job);
 
         if (fetchJob->items().count() != 1) {
             mMembers[row].loadingError = true;
@@ -71,7 +71,7 @@ public:
         }
 
         const Item item = fetchJob->items().at(0);
-        const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+        const auto contact = item.payload<KContacts::Addressee>();
 
         GroupMember &member = mMembers[row];
         member.referencedContact = contact;

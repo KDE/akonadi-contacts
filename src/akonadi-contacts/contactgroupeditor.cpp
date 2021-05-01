@@ -53,7 +53,7 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
         return;
     }
 
-    auto *fetchJob = qobject_cast<ItemFetchJob *>(job);
+    auto fetchJob = qobject_cast<ItemFetchJob *>(job);
     if (!fetchJob) {
         return;
     }
@@ -69,12 +69,12 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
         // if in edit mode we have to fetch the parent collection to find out
         // about the modify rights of the item
 
-        auto *collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(), Akonadi::CollectionFetchJob::Base);
+        auto collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(), Akonadi::CollectionFetchJob::Base);
         mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
             parentCollectionFetchDone(job);
         });
     } else {
-        const KContacts::ContactGroup group = mItem.payload<KContacts::ContactGroup>();
+        const auto group = mItem.payload<KContacts::ContactGroup>();
         loadContactGroup(group);
 
         setReadOnly(mReadOnly);
@@ -91,7 +91,7 @@ void ContactGroupEditor::Private::parentCollectionFetchDone(KJob *job)
         return;
     }
 
-    auto *fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+    auto fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
     if (!fetchJob) {
         return;
     }
@@ -101,7 +101,7 @@ void ContactGroupEditor::Private::parentCollectionFetchDone(KJob *job)
         mReadOnly = !(parentCollection.rights() & Collection::CanChangeItem);
     }
 
-    const KContacts::ContactGroup group = mItem.payload<KContacts::ContactGroup>();
+    const auto group = mItem.payload<KContacts::ContactGroup>();
     loadContactGroup(group);
 
     setReadOnly(mReadOnly);
@@ -135,7 +135,7 @@ void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByte
     dlg->addButton(i18n("Ignore and Overwrite changes"), QMessageBox::RejectRole);
 
     if (dlg->exec() == QMessageBox::AcceptRole) {
-        auto *job = new ItemFetchJob(mItem);
+        auto job = new ItemFetchJob(mItem);
         job->fetchScope().fetchFullPayload();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
@@ -235,7 +235,7 @@ void ContactGroupEditor::loadContactGroup(const Akonadi::Item &item)
         Q_ASSERT_X(false, "ContactGroupEditor::loadContactGroup", "You are calling loadContactGroup in CreateMode!");
     }
 
-    auto *job = new ItemFetchJob(item);
+    auto job = new ItemFetchJob(item);
     job->fetchScope().fetchFullPayload();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
@@ -260,7 +260,7 @@ bool ContactGroupEditor::saveContactGroup()
             return true;
         }
 
-        KContacts::ContactGroup group = d->mItem.payload<KContacts::ContactGroup>();
+        auto group = d->mItem.payload<KContacts::ContactGroup>();
 
         if (!d->storeContactGroup(group)) {
             return false;
@@ -268,7 +268,7 @@ bool ContactGroupEditor::saveContactGroup()
 
         d->mItem.setPayload<KContacts::ContactGroup>(group);
 
-        auto *job = new ItemModifyJob(d->mItem);
+        auto job = new ItemModifyJob(d->mItem);
         connect(job, &ItemModifyJob::result, this, [this](KJob *job) {
             d->storeDone(job);
         });
@@ -300,7 +300,7 @@ bool ContactGroupEditor::saveContactGroup()
         item.setPayload<KContacts::ContactGroup>(group);
         item.setMimeType(KContacts::ContactGroup::mimeType());
 
-        auto *job = new ItemCreateJob(item, d->mDefaultCollection);
+        auto job = new ItemCreateJob(item, d->mDefaultCollection);
         connect(job, &ItemCreateJob::result, this, [this](KJob *job) {
             d->storeDone(job);
         });

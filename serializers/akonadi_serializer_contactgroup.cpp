@@ -89,18 +89,18 @@ void SerializerPluginContactGroup::compare(Akonadi::AbstractDifferencesReporter 
     reporter->setLeftPropertyValueTitle(i18n("Changed Contact Group"));
     reporter->setRightPropertyValueTitle(i18n("Conflicting Contact Group"));
 
-    const KContacts::ContactGroup leftContactGroup = leftItem.payload<KContacts::ContactGroup>();
-    const KContacts::ContactGroup rightContactGroup = rightItem.payload<KContacts::ContactGroup>();
+    const auto leftContactGroup = leftItem.payload<KContacts::ContactGroup>();
+    const auto rightContactGroup = rightItem.payload<KContacts::ContactGroup>();
 
     if (!compareString(leftContactGroup.name(), rightContactGroup.name())) {
         reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Name"), leftContactGroup.name(), rightContactGroup.name());
     }
 
     // using job->exec() is ok here, not a hot path
-    auto *leftJob = new Akonadi::ContactGroupExpandJob(leftContactGroup);
+    auto leftJob = new Akonadi::ContactGroupExpandJob(leftContactGroup);
     leftJob->exec();
 
-    auto *rightJob = new Akonadi::ContactGroupExpandJob(rightContactGroup);
+    auto rightJob = new Akonadi::ContactGroupExpandJob(rightContactGroup);
     rightJob->exec();
 
     compareVector(reporter, i18n("Member"), leftJob->contacts(), rightJob->contacts());

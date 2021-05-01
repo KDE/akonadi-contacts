@@ -38,11 +38,11 @@ public:
         : q(parent)
         , mMode(mode)
     {
-        QWidget *mainWidget = new QWidget(q);
+        auto mainWidget = new QWidget(q);
 
         q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18n("New Contact") : i18n("Edit Contact"));
-        auto *mainLayout = new QVBoxLayout(q);
-        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
+        auto mainLayout = new QVBoxLayout(q);
+        auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
         q->connect(buttonBox, &QDialogButtonBox::accepted, q, [this]() {
             slotOkClicked();
         });
@@ -53,7 +53,7 @@ public:
         mainLayout->addWidget(mainWidget);
         mainLayout->addWidget(buttonBox);
 
-        auto *layout = new QGridLayout(mainWidget);
+        auto layout = new QGridLayout(mainWidget);
         layout->setContentsMargins(0, 0, 0, 0);
 
         if (editorWidget) {
@@ -67,7 +67,7 @@ public:
         }
 
         if (mode == ContactEditorDialog::CreateMode) {
-            QLabel *label = new QLabel(i18n("Add to:"), mainWidget);
+            auto label = new QLabel(i18n("Add to:"), mainWidget);
 
             mAddressBookBox = new CollectionComboBox(mainWidget);
             mAddressBookBox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());

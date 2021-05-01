@@ -56,27 +56,27 @@ QVariant EmailAddressSelectionProxyModel::data(const QModelIndex &index, int rol
 
     if (!value.isValid()) { // index is not a leaf child
         if (role == NameRole) {
-            const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+            const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
             if (item.hasPayload<KContacts::Addressee>()) {
-                const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+                const auto contact = item.payload<KContacts::Addressee>();
                 return contact.realName();
             } else if (item.hasPayload<KContacts::ContactGroup>()) {
-                const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+                const auto group = item.payload<KContacts::ContactGroup>();
                 return group.name();
             }
         } else if (role == EmailAddressRole) {
-            const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+            const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
             if (item.hasPayload<KContacts::Addressee>()) {
-                const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+                const auto contact = item.payload<KContacts::Addressee>();
                 return contact.preferredEmail();
             } else if (item.hasPayload<KContacts::ContactGroup>()) {
-                const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+                const auto group = item.payload<KContacts::ContactGroup>();
                 return group.name(); // the name must be resolved by the caller
             }
         } else if (role == Qt::ToolTipRole) {
-            const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+            const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
             if (item.hasPayload<KContacts::Addressee>()) {
-                const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+                const auto contact = item.payload<KContacts::Addressee>();
                 return createToolTip(contact.realName(), contact.preferredEmail());
             } else if (item.hasPayload<KContacts::ContactGroup>()) {
                 return createToolTip(item.payload<KContacts::ContactGroup>());
@@ -89,16 +89,16 @@ QVariant EmailAddressSelectionProxyModel::data(const QModelIndex &index, int rol
 
 int EmailAddressSelectionProxyModel::leafRowCount(const QModelIndex &index) const
 {
-    const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
     if (item.hasPayload<KContacts::Addressee>()) {
-        const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+        const auto contact = item.payload<KContacts::Addressee>();
         if (contact.emails().count() == 1) {
             return 0;
         } else {
             return contact.emails().count();
         }
     } else if (item.hasPayload<KContacts::ContactGroup>()) {
-        const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+        const auto group = item.payload<KContacts::ContactGroup>();
         return group.dataCount();
     } else {
         return 0;
@@ -107,7 +107,7 @@ int EmailAddressSelectionProxyModel::leafRowCount(const QModelIndex &index) cons
 
 int EmailAddressSelectionProxyModel::leafColumnCount(const QModelIndex &index) const
 {
-    const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
     if (item.hasPayload<KContacts::Addressee>()) {
         return 1;
     } else if (item.hasPayload<KContacts::ContactGroup>()) {
@@ -120,51 +120,51 @@ int EmailAddressSelectionProxyModel::leafColumnCount(const QModelIndex &index) c
 QVariant EmailAddressSelectionProxyModel::leafData(const QModelIndex &index, int row, int, int role) const
 {
     if (role == Qt::DisplayRole) {
-        const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+        const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+            const auto contact = item.payload<KContacts::Addressee>();
             if (row >= 0 && row < contact.emails().count()) {
                 return contact.emails().at(row);
             }
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
-            const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+            const auto group = item.payload<KContacts::ContactGroup>();
             if (row >= 0 && row < (int)group.dataCount()) {
                 return i18nc("Name and email address of a contact", "%1 <%2>", group.data(row).name(), group.data(row).email());
             }
         }
     } else if (role == NameRole) {
-        const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+        const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+            const auto contact = item.payload<KContacts::Addressee>();
             return contact.realName();
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
-            const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+            const auto group = item.payload<KContacts::ContactGroup>();
             if (row >= 0 && row < (int)group.dataCount()) {
                 return group.data(row).name();
             }
         }
     } else if (role == EmailAddressRole) {
-        const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+        const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+            const auto contact = item.payload<KContacts::Addressee>();
             if (row >= 0 && row < contact.emails().count()) {
                 return contact.emails().at(row);
             }
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
-            const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+            const auto group = item.payload<KContacts::ContactGroup>();
             if (row >= 0 && row < (int)group.dataCount()) {
                 return group.data(row).email();
             }
         }
     } else if (role == Qt::ToolTipRole) {
-        const Akonadi::Item item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+        const auto item = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+            const auto contact = item.payload<KContacts::Addressee>();
             if (row >= 0 && row < contact.emails().count()) {
                 return createToolTip(contact.realName(), contact.emails().at(row));
             }
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
-            const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+            const auto group = item.payload<KContacts::ContactGroup>();
             if (row >= 0 && row < (int)group.dataCount()) {
                 return createToolTip(group.data(row).name(), group.data(row).email());
             }

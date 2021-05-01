@@ -20,13 +20,13 @@ using namespace Akonadi;
 EmailAddressSelectionModel::EmailAddressSelectionModel(QObject *parent)
     : QObject(parent)
 {
-    Akonadi::Session *session = new Akonadi::Session("InternalEmailAddressSelectionWidgetModel", this);
+    auto session = new Akonadi::Session("InternalEmailAddressSelectionWidgetModel", this);
 
     Akonadi::ItemFetchScope scope;
     scope.fetchFullPayload(true);
     scope.fetchAttribute<Akonadi::EntityDisplayAttribute>();
 
-    auto *changeRecorder = new Akonadi::ChangeRecorder(this);
+    auto changeRecorder = new Akonadi::ChangeRecorder(this);
     changeRecorder->setSession(session);
     changeRecorder->fetchCollection(true);
     changeRecorder->setItemFetchScope(scope);

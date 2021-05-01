@@ -51,9 +51,9 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     std::unique_ptr<QDialer> dialer;
     //   we handle skype separated
     if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseSkypeSms) {
-        dialer.reset(new QSkypeDialer(QStringLiteral("AkonadiContacts")));
+        dialer = std::make_unique<QSkypeDialer>(QStringLiteral("AkonadiContacts"));
     } else if (ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseSflPhoneSms) {
-        dialer.reset(new QSflPhoneDialer(QStringLiteral("AkonadiContacts")));
+        dialer = std::make_unique<QSflPhoneDialer>(QStringLiteral("AkonadiContacts"));
     }
     if (dialer) {
         if (dialer->sendSms(number, message)) {
@@ -85,7 +85,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     // Bug: 293232 In KDE3 We used %F to replace text
     command.replace(QLatin1String("%F"), message);
 
-    auto *job = new KIO::CommandLauncherJob(command);
+    auto job = new KIO::CommandLauncherJob(command);
     job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
     job->start();
 }

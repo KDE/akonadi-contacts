@@ -52,7 +52,7 @@ public:
             return;
         }
 
-        auto *createJob = new AddEmailAddressJob(mCompleteAddress, mParentWidget, q);
+        auto createJob = new AddEmailAddressJob(mCompleteAddress, mParentWidget, q);
         q->connect(createJob, &AddEmailAddressJob::result, q, [this](KJob *job) {
             slotAddContactDone(job);
         });
@@ -100,7 +100,7 @@ OpenEmailAddressJob::~OpenEmailAddressJob()
 void OpenEmailAddressJob::start()
 {
     // first check whether a contact with the same email exists already
-    auto *searchJob = new Akonadi::ContactSearchJob(this);
+    auto searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
     searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, [this](KJob *job) {

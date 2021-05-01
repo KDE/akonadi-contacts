@@ -35,7 +35,7 @@ void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
         auto wIt = widgetList.constBegin();
         auto wEnd = widgetList.constEnd();
         for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-            auto *w = qobject_cast<WebWidget *>(*wIt);
+            auto w = qobject_cast<WebWidget *>(*wIt);
             w->loadWebSite(resourceLocatorList.at(i));
         }
     }
@@ -46,7 +46,7 @@ void WebWidgetLister::storeContact(KContacts::Addressee &contact) const
     const QList<QWidget *> widgetList = widgets();
     KContacts::ResourceLocatorUrl::List resourceLocatorList;
     for (QWidget *widget : widgetList) {
-        auto *w = qobject_cast<WebWidget *>(widget);
+        auto w = qobject_cast<WebWidget *>(widget);
         KContacts::ResourceLocatorUrl newUrl = w->url();
         if (newUrl.isValid()) {
             resourceLocatorList << newUrl;
@@ -59,14 +59,14 @@ void WebWidgetLister::setReadOnly(bool readOnly)
 {
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
-        auto *w = qobject_cast<WebWidget *>(widget);
+        auto w = qobject_cast<WebWidget *>(widget);
         w->setReadOnly(readOnly);
     }
 }
 
 QWidget *WebWidgetLister::createWidget(QWidget *parent)
 {
-    auto *w = new WebWidget(parent);
+    auto w = new WebWidget(parent);
     reconnectWidget(w);
     return w;
 }
@@ -109,7 +109,7 @@ void WebWidgetLister::updateAddRemoveButton()
     QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
     for (; wIt != wEnd; ++wIt) {
-        auto *w = qobject_cast<WebWidget *>(*wIt);
+        auto w = qobject_cast<WebWidget *>(*wIt);
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }

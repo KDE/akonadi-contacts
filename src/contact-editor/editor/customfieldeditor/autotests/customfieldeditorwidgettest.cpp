@@ -27,17 +27,17 @@ CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest()
 void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::CustomFieldEditorWidget w;
-    auto *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
+    auto fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
     QVERIFY(fieldname);
     QVERIFY(fieldname->text().isEmpty());
 
-    auto *label = w.findChild<QLabel *>(QStringLiteral("labeltitle"));
+    auto label = w.findChild<QLabel *>(QStringLiteral("labeltitle"));
     QVERIFY(label);
-    auto *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
+    auto addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
     QVERIFY(addfield);
     QVERIFY(!addfield->isEnabled());
 
-    auto *combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
+    auto combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
     QVERIFY(combobox);
     QVERIFY(combobox->count() > 0);
     QCOMPARE(combobox->currentIndex(), 0);
@@ -46,9 +46,9 @@ void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
 void CustomFieldEditorWidgetTest::shouldEnableAddButtonWhenTextIsNotEmpty()
 {
     ContactEditor::CustomFieldEditorWidget w;
-    auto *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
+    auto fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
     QVERIFY(fieldname->text().isEmpty());
-    auto *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
+    auto addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
     QVERIFY(!addfield->isEnabled());
 
     fieldname->setText(QStringLiteral("foo"));
@@ -60,9 +60,9 @@ void CustomFieldEditorWidgetTest::shouldEnableAddButtonWhenTextIsNotEmpty()
 void CustomFieldEditorWidgetTest::shouldClearEditorWhenPressAdd()
 {
     ContactEditor::CustomFieldEditorWidget w;
-    auto *fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
-    auto *addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
-    auto *combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
+    auto fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
+    auto addfield = w.findChild<QPushButton *>(QStringLiteral("addfield"));
+    auto combobox = w.findChild<QComboBox *>(QStringLiteral("fieldtype"));
     combobox->setCurrentIndex(1);
     fieldname->setText(QStringLiteral("foo"));
     QTest::mouseClick(addfield, Qt::LeftButton);

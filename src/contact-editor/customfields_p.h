@@ -34,7 +34,7 @@ template<typename T> class QVector;
 class CONTACTEDITOR_EXPORT CustomField
 {
 public:
-    typedef QVector<CustomField> List;
+    using List = QVector<CustomField>;
 
     enum Type { TextType, NumericType, BooleanType, DateType, TimeType, DateTimeType, UrlType };
 

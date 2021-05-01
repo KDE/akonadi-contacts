@@ -23,12 +23,12 @@ K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiConta
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcmakonadicontactactions"),
-                                       i18n("Contact Actions Settings"),
-                                       QString(),
-                                       QString(),
-                                       KAboutLicense::LGPL,
-                                       i18n("(c) 2009 Tobias Koenig"));
+    auto about = new KAboutData(QStringLiteral("kcmakonadicontactactions"),
+                                i18n("Contact Actions Settings"),
+                                QString(),
+                                QString(),
+                                KAboutLicense::LGPL,
+                                i18n("(c) 2009 Tobias Koenig"));
 
     about->addAuthor(i18n("Tobias Koenig"), QString(), QStringLiteral("tokoe@kde.org"));
 

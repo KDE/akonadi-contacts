@@ -23,9 +23,9 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
 {
     setWindowTitle(i18nc("@title:window", "Edit Phone Number"));
 
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
 
-    auto *buttonLayout = new QGridLayout;
+    auto buttonLayout = new QGridLayout;
     layout->addLayout(buttonLayout);
 
     // fill widgets
@@ -37,7 +37,7 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
     mGroup = new QButtonGroup(this);
     mGroup->setExclusive(false);
     for (it = mTypeList.constBegin(); it != mTypeList.constEnd(); ++it, ++counter) {
-        QCheckBox *cb = new QCheckBox(KContacts::PhoneNumber::typeLabel(*it), this);
+        auto cb = new QCheckBox(KContacts::PhoneNumber::typeLabel(*it), this);
         cb->setChecked(type & mTypeList[counter]);
         buttonLayout->addWidget(cb, row, column);
         mGroup->addButton(cb);
@@ -49,7 +49,7 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
         }
     }
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -63,7 +63,7 @@ KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
     KContacts::PhoneNumber::Type type = {};
 
     for (int i = 0; i < mGroup->buttons().count(); ++i) {
-        auto *box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
+        auto box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
         if (box && box->isChecked()) {
             type |= mTypeList[i];
         }

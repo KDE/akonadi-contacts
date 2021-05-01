@@ -36,9 +36,9 @@ void SmsDialog::initUI()
 {
     setWindowTitle(i18nc("@title:window", "SMS text"));
 
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
 
-    QLabel *label = new QLabel(i18n("Please insert SMS text for an SMS to the following number: %1", mNumber), this);
+    auto label = new QLabel(i18n("Please insert SMS text for an SMS to the following number: %1", mNumber), this);
     topLayout->addWidget(label);
     label->setWordWrap(true);
 
@@ -53,7 +53,7 @@ void SmsDialog::initUI()
     topLayout->addWidget(mLengthLabel);
 
     mSmsTextEdit->setFocus();
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

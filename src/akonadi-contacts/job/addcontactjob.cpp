@@ -87,7 +87,7 @@ public:
             item.setPayload<KContacts::Addressee>(mContact);
 
             // save the new item in akonadi storage
-            auto *job = new Akonadi::ItemCreateJob(item, mCollection);
+            auto job = new Akonadi::ItemCreateJob(item, mCollection);
             q->connect(job, &Akonadi::ItemCreateJob::result, q, [this](KJob *job) {
                 slotAddContactDone(job);
             });
@@ -148,7 +148,7 @@ void AddContactJob::showMessageBox(bool b)
 void AddContactJob::start()
 {
     // first check whether a contact with the same email exists already
-    auto *searchJob = new Akonadi::ContactSearchJob(this);
+    auto searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
     searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mContact.preferredEmail().toLower(), Akonadi::ContactSearchJob::ExactMatch);
 

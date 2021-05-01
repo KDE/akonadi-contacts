@@ -62,7 +62,7 @@ protected:
     {
         if (obj == this) {
             if (event->type() == QEvent::KeyPress) {
-                auto *e = static_cast<QKeyEvent *>(event);
+                auto e = static_cast<QKeyEvent *>(event);
                 if (e->key() == Qt::Key_Return || e->key() == Qt::Key_Enter) {
                     const bool stopEvent = (e->modifiers() == Qt::NoButton || e->modifiers() == Qt::KeypadModifier);
                     if (stopEvent) {
@@ -108,26 +108,26 @@ void EmailAddressSelectionWidget::Private::init()
 {
     // setup internal model if needed
     if (!mModel) {
-        auto *model = new Akonadi::EmailAddressSelectionModel(q);
+        auto model = new Akonadi::EmailAddressSelectionModel(q);
         mModel = model->model();
     }
 
     // setup ui
-    auto *layout = new QVBoxLayout(q);
+    auto layout = new QVBoxLayout(q);
     layout->setContentsMargins(0, 0, 0, 0);
 
     mDescriptionLabel = new QLabel;
     mDescriptionLabel->hide();
     layout->addWidget(mDescriptionLabel);
 
-    auto *searchLayout = new QHBoxLayout;
+    auto searchLayout = new QHBoxLayout;
     searchLayout->setContentsMargins(0, 0, 0, 0);
     layout->addLayout(searchLayout);
 
     mView = new Akonadi::EntityTreeView;
     mView->setEditTriggers(Akonadi::EntityTreeView::NoEditTriggers);
 
-    QLabel *label = new QLabel(i18nc("@label Search in a list of contacts", "Search:"));
+    auto label = new QLabel(i18nc("@label Search in a list of contacts", "Search:"));
     mSearchLine = new SearchLineEdit(mView);
     label->setBuddy(mSearchLine);
     searchLayout->addWidget(label);
@@ -138,7 +138,7 @@ void EmailAddressSelectionWidget::Private::init()
 #endif
     layout->addWidget(mView);
 
-    auto *filter = new Akonadi::ContactsFilterProxyModel(q);
+    auto filter = new Akonadi::ContactsFilterProxyModel(q);
     if (mShowOnlyContactWithEmail) {
         filter->setFilterFlags(ContactsFilterProxyModel::HasEmail);
     }
@@ -161,7 +161,7 @@ void EmailAddressSelectionWidget::Private::init()
 
     mSearchLine->setFocus();
 
-    if (auto *etm = qobject_cast<Akonadi::EntityTreeModel *>(mModel)) {
+    if (auto etm = qobject_cast<Akonadi::EntityTreeModel *>(mModel)) {
         QObject::connect(etm, &Akonadi::EntityTreeModel::collectionTreeFetched, mView, &QTreeView::expandAll);
     } else {
         QTimer::singleShot(1000, mView, &QTreeView::expandAll);

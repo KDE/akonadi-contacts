@@ -68,7 +68,7 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
             return QVariant();
         }
 
-        const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+        const auto contact = item.payload<KContacts::Addressee>();
 
         if (role == Qt::DecorationRole) {
             if (column == 0) {
@@ -164,7 +164,7 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
         } else if ((role == Qt::DisplayRole) || (role == Qt::EditRole)) {
             switch (d->mColumns.at(column)) {
             case FullName: {
-                const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+                const auto group = item.payload<KContacts::ContactGroup>();
                 return group.name();
             }
             default:

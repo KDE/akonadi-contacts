@@ -24,15 +24,15 @@ void BlogfeedWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::BlogfeedWidget editor;
 
-    auto *topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(topLayout);
     QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *blogFeedLabel = editor.findChild<QLabel *>(QStringLiteral("blogFeedLabel"));
+    auto blogFeedLabel = editor.findChild<QLabel *>(QStringLiteral("blogFeedLabel"));
     QVERIFY(blogFeedLabel);
     QVERIFY(!blogFeedLabel->text().isEmpty());
 
-    auto *mBlogFeed = editor.findChild<KLineEdit *>(QStringLiteral("blogfeed"));
+    auto mBlogFeed = editor.findChild<KLineEdit *>(QStringLiteral("blogfeed"));
     QVERIFY(mBlogFeed);
     QVERIFY(mBlogFeed->trapReturnKey());
     QVERIFY(!mBlogFeed->placeholderText().isEmpty());

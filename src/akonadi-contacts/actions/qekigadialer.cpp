@@ -42,7 +42,7 @@ static QDBusInterface *searchEkigaDBusInterface()
     const QString service(QStringLiteral("org.ekiga.Ekiga"));
     const QString path(QStringLiteral("/org/ekiga/Ekiga"));
 
-    QDBusInterface *interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
+    auto interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());
     if (!interface->isValid()) {
         delete interface;
         interface = new QDBusInterface(service, path, QString(), QDBusConnection::sessionBus());

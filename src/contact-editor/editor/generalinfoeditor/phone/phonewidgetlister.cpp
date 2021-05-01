@@ -35,7 +35,7 @@ void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
         auto wIt = widgetList.constBegin();
         auto wEnd = widgetList.constEnd();
         for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-            auto *w = qobject_cast<PhoneWidget *>(*wIt);
+            auto w = qobject_cast<PhoneWidget *>(*wIt);
             w->loadPhone(phoneNumbers.at(i));
         }
     }
@@ -46,7 +46,7 @@ void PhoneWidgetLister::storeContact(KContacts::Addressee &contact) const
     KContacts::PhoneNumber::List phoneNumbers;
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
-        auto *w = qobject_cast<PhoneWidget *>(widget);
+        auto w = qobject_cast<PhoneWidget *>(widget);
         KContacts::PhoneNumber number = w->storePhone();
         if (!number.isEmpty()) {
             phoneNumbers << number;
@@ -59,14 +59,14 @@ void PhoneWidgetLister::setReadOnly(bool readOnly)
 {
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
-        auto *w = qobject_cast<PhoneWidget *>(widget);
+        auto w = qobject_cast<PhoneWidget *>(widget);
         w->setReadOnly(readOnly);
     }
 }
 
 QWidget *PhoneWidgetLister::createWidget(QWidget *parent)
 {
-    auto *w = new PhoneWidget(parent);
+    auto w = new PhoneWidget(parent);
     reconnectWidget(w);
     return w;
 }
@@ -118,7 +118,7 @@ void PhoneWidgetLister::updateAddRemoveButton()
     }
 
     for (QWidget *widget : widgetList) {
-        auto *w = qobject_cast<PhoneWidget *>(widget);
+        auto w = qobject_cast<PhoneWidget *>(widget);
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }

@@ -241,7 +241,7 @@ public:
 
     static bool hasWritableCollection(const QModelIndex &index, const QString &mimeType)
     {
-        const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const auto collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
         if (collection.isValid()) {
             if (collection.contentMimeTypes().contains(mimeType) && (collection.rights() & Akonadi::Collection::CanCreateItem)) {
                 return true;
@@ -369,7 +369,7 @@ public:
             const QModelIndexList rows = mItemSelectionModel->selectedRows();
             if (rows.count() == 1) {
                 const QModelIndex index = rows.first();
-                const Collection parentCollection = index.data(EntityTreeModel::ParentCollectionRole).value<Collection>();
+                const auto parentCollection = index.data(EntityTreeModel::ParentCollectionRole).value<Collection>();
                 if (parentCollection.isValid()) {
                     canEditItem = canEditItem && (parentCollection.rights() & Collection::CanChangeItem);
                 }

@@ -25,16 +25,16 @@ QAbstractItemModel *ContactCompletionModel::self()
         return mSelf;
     }
 
-    auto *monitor = new Monitor;
+    auto monitor = new Monitor;
     monitor->setObjectName(QStringLiteral("ContactCompletionModelMonitor"));
     monitor->fetchCollection(true);
     monitor->itemFetchScope().fetchFullPayload();
     monitor->setCollectionMonitored(Akonadi::Collection::root());
     monitor->setMimeTypeMonitored(KContacts::Addressee::mimeType());
 
-    auto *model = new ContactCompletionModel(monitor);
+    auto model = new ContactCompletionModel(monitor);
 
-    auto *filter = new Akonadi::EntityMimeTypeFilterModel(model);
+    auto filter = new Akonadi::EntityMimeTypeFilterModel(model);
     filter->setSourceModel(model);
     filter->addMimeTypeExclusionFilter(Akonadi::Collection::mimeType());
     filter->addMimeTypeExclusionFilter(Akonadi::Collection::virtualMimeType());
@@ -67,7 +67,7 @@ QVariant ContactCompletionModel::entityData(const Item &item, int column, int ro
     }
 
     if (role == Qt::DisplayRole || role == Qt::EditRole) {
-        const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+        const auto contact = item.payload<KContacts::Addressee>();
 
         switch (column) {
         case NameColumn:

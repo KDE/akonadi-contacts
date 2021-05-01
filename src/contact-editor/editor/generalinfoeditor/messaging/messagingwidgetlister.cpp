@@ -36,7 +36,7 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
         auto wIt = widgetList.constBegin();
         auto wEnd = widgetList.constEnd();
         for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-            auto *w = qobject_cast<MessagingWidget *>(*wIt);
+            auto w = qobject_cast<MessagingWidget *>(*wIt);
             w->setIMAddress(imaddresses.at(i));
         }
     }
@@ -47,7 +47,7 @@ void MessagingWidgetLister::storeContact(KContacts::Addressee &contact) const
     KContacts::Impp::List imaddresses;
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
-        auto *w = qobject_cast<MessagingWidget *>(widget);
+        auto w = qobject_cast<MessagingWidget *>(widget);
         imaddresses << w->imAddress();
     }
     contact.setImppList(imaddresses);
@@ -57,14 +57,14 @@ void MessagingWidgetLister::setReadOnly(bool readOnly)
 {
     const QList<QWidget *> widgetList = widgets();
     for (QWidget *widget : widgetList) {
-        auto *w = qobject_cast<MessagingWidget *>(widget);
+        auto w = qobject_cast<MessagingWidget *>(widget);
         w->setReadOnly(readOnly);
     }
 }
 
 QWidget *MessagingWidgetLister::createWidget(QWidget *parent)
 {
-    auto *w = new MessagingWidget(parent);
+    auto w = new MessagingWidget(parent);
     reconnectWidget(w);
     return w;
 }
@@ -117,7 +117,7 @@ void MessagingWidgetLister::updateAddRemoveButton()
     QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
     for (; wIt != wEnd; ++wIt) {
-        auto *w = qobject_cast<MessagingWidget *>(*wIt);
+        auto w = qobject_cast<MessagingWidget *>(*wIt);
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }

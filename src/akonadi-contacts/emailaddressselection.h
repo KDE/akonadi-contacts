@@ -38,7 +38,7 @@ public:
     /**
      * A list of email address selection objects.
      */
-    typedef QVector<EmailAddressSelection> List;
+    using List = QVector<EmailAddressSelection>;
 
     /**
      * Creates a new email address selection.

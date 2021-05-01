@@ -74,9 +74,9 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     , d(new Private(this, mode))
 {
     setWindowTitle(mode == CreateMode ? i18n("New Contact Group") : i18n("Edit Contact Group"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     d->okButton = buttonBox->button(QDialogButtonBox::Ok);
     d->okButton->setDefault(true);
     d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -88,15 +88,15 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     d->okButton->setAutoDefault(false);
     buttonBox->button(QDialogButtonBox::Cancel)->setAutoDefault(false);
 
-    QWidget *mainWidget = new QWidget(this);
+    auto mainWidget = new QWidget(this);
 
-    auto *layout = new QGridLayout(mainWidget);
+    auto layout = new QGridLayout(mainWidget);
     layout->setContentsMargins(0, 0, 0, 0);
 
     d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode, this);
 
     if (mode == CreateMode) {
-        QLabel *label = new QLabel(i18n("Add to:"), mainWidget);
+        auto label = new QLabel(i18n("Add to:"), mainWidget);
 
         d->mAddressBookBox = new CollectionComboBox(mainWidget);
         d->mAddressBookBox->setMimeTypeFilter(QStringList() << KContacts::ContactGroup::mimeType());

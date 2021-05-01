@@ -22,15 +22,15 @@ void MessageFormattingWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::MessageFormattingWidget w;
 
-    auto *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
 
-    auto *mMailPreferFormatting = w.findChild<QComboBox *>(QStringLiteral("mMailPreferFormatting"));
+    auto mMailPreferFormatting = w.findChild<QComboBox *>(QStringLiteral("mMailPreferFormatting"));
     QVERIFY(mMailPreferFormatting);
     QVERIFY(mMailPreferFormatting->count() > 0);
 
-    auto *mAllowRemoteContent = w.findChild<QCheckBox *>(QStringLiteral("mAllowRemoteContent"));
+    auto mAllowRemoteContent = w.findChild<QCheckBox *>(QStringLiteral("mAllowRemoteContent"));
     QVERIFY(mAllowRemoteContent);
     QVERIFY(!mAllowRemoteContent->text().isEmpty());
     QVERIFY(!mAllowRemoteContent->isChecked());
