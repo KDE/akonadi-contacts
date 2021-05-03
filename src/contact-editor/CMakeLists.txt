@@ -174,7 +174,7 @@ target_link_libraries(KF5ContactEditor
     )
 
 set_target_properties(KF5ContactEditor PROPERTIES
-    VERSION ${AKONADICONTACT_VERSION_STRING}
+    VERSION ${AKONADICONTACT_VERSION}
     SOVERSION ${AKONADICONTACT_SOVERSION}
     EXPORT_NAME ContactEditor
     )
