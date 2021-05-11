@@ -34,9 +34,9 @@ public:
     void setPreferred(bool b);
     void setReadOnly(bool readOnly);
 Q_SIGNALS:
-    void addWidget(PhoneWidget *);
-    void removeWidget(PhoneWidget *);
-    void preferredChanged(PhoneWidget *);
+    void addWidget(ContactEditor::PhoneWidget *);
+    void removeWidget(ContactEditor::PhoneWidget *);
+    void preferredChanged(ContactEditor::PhoneWidget *);
 
 private:
     void slotAddPhone();

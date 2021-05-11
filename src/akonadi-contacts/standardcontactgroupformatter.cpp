@@ -87,11 +87,11 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         }
     }
 
-    for (const QVariantMap &map : additionalFields()) {
+    const auto additionalFieldsLst = additionalFields();
+    for (const QVariantMap &map : additionalFieldsLst) {
         strGroup.append(QStringLiteral("<tr><td colspan=\"2\">&nbsp;</td></tr><tr><td align=\"right\" width=\"30%\"><b><font color=\"grey\">%1</font></b></td>"
                                        "<td valign=\"bottom\" align=\"left\" width=\"50%\"><font>%2</font></td></tr>")
-                            .arg(map.value(QStringLiteral("title")).toString())
-                            .arg(map.value(QStringLiteral("value")).toString()));
+                            .arg(map.value(QStringLiteral("title")).toString(), map.value(QStringLiteral("value")).toString()));
     }
 
     strGroup.append(QLatin1String("</table>\n"));
@@ -113,9 +113,9 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
                    "%3" // contact group part
                    "</body>"
                    "</html>")
-                   .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name())
-                   .arg(KColorScheme(QPalette::Active, KColorScheme::View).background().color().name())
-                   .arg(document);
+                   .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name(),
+                        KColorScheme(QPalette::Active, KColorScheme::View).background().color().name(),
+                        document);
 
     return document;
 }

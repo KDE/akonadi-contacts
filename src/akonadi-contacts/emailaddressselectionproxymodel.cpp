@@ -38,7 +38,7 @@ static QString createToolTip(const KContacts::ContactGroup &group)
 
 static QString createToolTip(const QString &name, const QString &email)
 {
-    return QStringLiteral("<qt>%1<b>%2</b></qt>").arg(name.isEmpty() ? QString() : name + QLatin1String("<br/>")).arg(email);
+    return QStringLiteral("<qt>%1<b>%2</b></qt>").arg(name.isEmpty() ? QString() : name + QLatin1String("<br/>"), email);
 }
 
 EmailAddressSelectionProxyModel::EmailAddressSelectionProxyModel(QObject *parent)
