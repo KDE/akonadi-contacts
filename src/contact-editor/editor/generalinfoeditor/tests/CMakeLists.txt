@@ -21,7 +21,7 @@ set(generalinfoeditor_SRCS
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
 
 target_link_libraries(generalinfoeditortest
-    Qt5::Widgets
+    Qt::Widgets
     KF5::ContactEditor
     KF5::Contacts
     KF5::I18n
