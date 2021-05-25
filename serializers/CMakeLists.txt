@@ -4,17 +4,18 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-set(akonadi_serializer_addressee_SRCS
+add_library(akonadi_serializer_addressee MODULE)
+target_sources(akonadi_serializer_addressee PRIVATE
     akonadi_serializer_addressee.cpp
 )
 
 
-ecm_qt_declare_logging_category(akonadi_serializer_addressee_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CONTACT_LOG CATEGORY_NAME org.kde.pim.contact_serializer
+ecm_qt_declare_logging_category(akonadi_serializer_addressee HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CONTACT_LOG CATEGORY_NAME org.kde.pim.contact_serializer
         DESCRIPTION "serializer contact (plugin)"
         EXPORT AKONADICONTACTS
     )
 
-add_library(akonadi_serializer_addressee MODULE ${akonadi_serializer_addressee_SRCS})
+
 target_link_libraries(akonadi_serializer_addressee
     KF5::Contacts
     KF5::AkonadiCore
@@ -27,12 +28,12 @@ install(FILES akonadi_serializer_addressee.desktop
     DESTINATION ${KDE_INSTALL_DATADIR}/akonadi/plugins/serializer
 )
 
+##################################
 
-
-set(akonadi_serializer_contactgroup_SRCS
+add_library(akonadi_serializer_contactgroup MODULE)
+target_sources(akonadi_serializer_contactgroup PRIVATE
     akonadi_serializer_contactgroup.cpp
 )
-add_library(akonadi_serializer_contactgroup MODULE ${akonadi_serializer_contactgroup_SRCS})
 target_link_libraries(akonadi_serializer_contactgroup
     KF5::Contacts
     KF5::AkonadiCore

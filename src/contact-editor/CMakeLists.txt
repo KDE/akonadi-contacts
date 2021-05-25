@@ -1,4 +1,6 @@
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5ContactEditor")
+add_library(KF5ContactEditor)
+add_library(KF5::ContactEditor ALIAS KF5ContactEditor)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/contact-editor_version.h"
@@ -30,52 +32,31 @@ configure_file(config-contact-editor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-
 
 
 
-set(contacteditor_customfieldseditor_SRCS
+target_sources(KF5ContactEditor PRIVATE
     editor/customfieldeditor/customfieldswidget.cpp
     editor/customfieldeditor/customfieldeditorwidget.cpp
     editor/customfieldeditor/customfieldslistwidget.cpp
     editor/customfieldeditor/customfieldslistdelegate.cpp
     editor/customfieldeditor/customfieldsmodel.cpp
-    )
-
-set(contacteditor_editor_utils_SRCS
     editor/utils/utils.cpp
-    )
-
-set(contacteditor_editor_widgets_SRCS
     editor/widgets/kwidgetlister.cpp
     editor/widgets/contacteditorcombobox.cpp
-    )
-
-set(contacteditor_editor_generalinfo_phone_SRCS
     editor/generalinfoeditor/phone/phonewidgetlister.cpp
     editor/generalinfoeditor/phone/phonewidget.cpp
     editor/generalinfoeditor/phone/phonelistwidget.cpp
     editor/generalinfoeditor/phone/phonecomboboxtype.cpp
     editor/generalinfoeditor/phone/phonetypedialog.cpp
-    )
-
-set(contacteditor_editor_generalinfo_web_SRCS
     editor/generalinfoeditor/web/webwidgetlister.cpp
     editor/generalinfoeditor/web/weblistwidget.cpp
     editor/generalinfoeditor/web/webwidget.cpp
     editor/generalinfoeditor/web/webselecttypecombobox.cpp
-    )
-set(contacteditor_editor_generalinfo_mail_SRCS
     editor/generalinfoeditor/mail/maillistwidget.cpp
     editor/generalinfoeditor/mail/mailwidget.cpp
     editor/generalinfoeditor/mail/mailwidgetlister.cpp
     editor/generalinfoeditor/mail/mailtypecombobox.cpp
-    )
-
-set(contacteditor_editor_generalinfo_messaging_SRCS
     editor/generalinfoeditor/messaging/messaginglistwidget.cpp
     editor/generalinfoeditor/messaging/messagingwidget.cpp
     editor/generalinfoeditor/messaging/messagingwidgetlister.cpp
-    )
-
-
-set(contacteditor_editor_generalinfo_SRCS
     editor/generalinfoeditor/generalinfowidget.cpp
     editor/generalinfoeditor/namewidget.cpp
     editor/generalinfoeditor/nicknamewidget.cpp
@@ -84,36 +65,17 @@ set(contacteditor_editor_generalinfo_SRCS
     editor/generalinfoeditor/displaynameeditwidget.cpp
     editor/generalinfoeditor/messageformattingwidget.cpp
     editor/generalinfoeditor/blogfeedwidget.cpp
-    ${contacteditor_editor_generalinfo_messaging_SRCS}
-    ${contacteditor_editor_generalinfo_phone_SRCS}
-    ${contacteditor_editor_generalinfo_web_SRCS}
-    ${contacteditor_editor_generalinfo_mail_SRCS}
-    )
-
-set(contacteditor_addresslocation_editor_SRCS
     editor/addresseditor/addressdelegate.cpp
     editor/addresseditor/addressmodel.cpp
     editor/addresseditor/addresseslocationwidget.cpp
     editor/addresseditor/addresslocationwidget.cpp
     editor/addresseditor/addresstypedialog.cpp
     editor/addresseditor/selectaddresstypecombobox.cpp
-    )
-
-set(contacteditor_personal_editor_SRCS
     editor/personaleditor/personaleditorwidget.cpp
     editor/personaleditor/dateeditwidget.cpp
     editor/personaleditor/kdatepickerpopup.cpp
-    )
-
-set(contacteditor_business_editor_SRCS
     editor/businesseditor/businesseditorwidget.cpp
     editor/businesseditor/freebusyeditwidget.cpp
-    )
-
-set(contacteditor_editor_SRCS
-    ${contacteditor_personal_editor_SRCS}
-    ${contacteditor_editor_utils_SRCS}
-    ${contacteditor_business_editor_SRCS}
     editor/contacteditorwidget.cpp
     editor/widgets/imagewidget.cpp
     editor/widgets/preferredlineeditwidget.cpp
@@ -123,37 +85,17 @@ set(contacteditor_editor_SRCS
     contactmetadatabase.cpp
 )
 
-set(contacteditor_LIB_SRC
-    ${contacteditor_addresslocation_editor_SRCS}
-    ${contacteditor_editor_widgets_SRCS}
-    ${contacteditor_editor_generalinfo_SRCS}
-    ${contacteditor_customfieldseditor_SRCS}
-    ${contacteditor_attributes_SRCS}
-    ${contacteditor_job_SRCS}
-    )
-
-ecm_qt_declare_logging_category(contacteditor_LIB_SRC HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
+ecm_qt_declare_logging_category(KF5ContactEditor HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
         DESCRIPTION "akonadicontact (contact editor)"
         EXPORT AKONADICONTACTS
     )
 
-
-
-set(contacteditor_LIB_SRC
-    ${contacteditor_LIB_SRC}
-    ${contacteditor_editor_SRCS}
-    )
-
-
-
-add_library(KF5ContactEditor ${contacteditor_LIB_SRC})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5ContactEditor PROPERTIES UNITY_BUILD ON)
 endif()
 
 generate_export_header(KF5ContactEditor BASE_NAME contacteditor)
 
-add_library(KF5::ContactEditor ALIAS KF5ContactEditor)
 
 target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor;${KDE_INSTALL_INCLUDEDIR_KF5}>")
 target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/contacteditor>")

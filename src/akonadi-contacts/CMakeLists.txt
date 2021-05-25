@@ -1,5 +1,10 @@
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
 
+add_library(KF5AkonadiContact)
+add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
+
+
+
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
@@ -28,7 +33,7 @@ install(FILES
 
 ########### next target ###############
 
-set(akonadicontact_actions_SRCS
+target_sources(KF5AkonadiContact PRIVATE
     actions/dialphonenumberaction.cpp
     actions/showaddressaction.cpp
     actions/qdialer.cpp
@@ -45,15 +50,15 @@ endif()
 configure_file(config-akonadi-contact.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-akonadi-contact.h)
 
 configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
-kconfig_add_kcfg_files(akonadicontact_actions_SRCS actions/contactactionssettings.kcfgc)
+kconfig_add_kcfg_files(KF5AkonadiContact actions/contactactionssettings.kcfgc)
 
 
-set(akonadicontact_attributes_SRCS
+target_sources(KF5AkonadiContact PRIVATE
     attributes/contactmetadataattribute.cpp
     attributes/attributeregistrar.cpp
 )
 
-set(akonadicontact_job_SRCS
+target_sources(KF5AkonadiContact PRIVATE
     job/contactgroupexpandjob.cpp
     job/contactgroupsearchjob.cpp
     job/contactsearchjob.cpp
@@ -63,12 +68,12 @@ set(akonadicontact_job_SRCS
     job/openemailaddressjob.cpp
 )
 
-set(akonadicontact_recipientpicker_SRCS
+target_sources(KF5AkonadiContact PRIVATE
     recipientspicker/recipientseditormanager.cpp
     recipientspicker/recipientspickerwidget.cpp
     )
 
-set(akonadicontact_grantlee_SRCS
+target_sources(KF5AkonadiContact PRIVATE
     grantlee/contactgrantleewrapper.cpp
     grantlee/grantleecontactformatter.cpp
     grantlee/grantleecontactgroupformatter.cpp
@@ -77,12 +82,7 @@ set(akonadicontact_grantlee_SRCS
     )
 
 
-set(akonadicontact_LIB_SRC
-    ${akonadicontact_recipientpicker_SRCS}
-    ${akonadicontact_customfieldseditor_SRCS}
-    ${akonadicontact_attributes_SRCS}
-    ${akonadicontact_job_SRCS}
-    ${akonadicontact_grantlee_SRCS}
+target_sources(KF5AkonadiContact PRIVATE
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
@@ -116,19 +116,17 @@ set(akonadicontact_LIB_SRC
     standardcontactgroupformatter.cpp
     waitingoverlay.cpp
     selectaddressbookdialog.cpp
-    ${akonadicontact_actions_SRCS}
     )
 
 
-ecm_qt_declare_logging_category(akonadicontact_LIB_SRC HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
+ecm_qt_declare_logging_category(KF5AkonadiContact HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
         DESCRIPTION "akonadicontact (pim lib)"
         OLD_CATEGORY_NAMES log_akonadi_contact
         EXPORT AKONADICONTACTS
     )
 
-ki18n_wrap_ui(akonadicontact_LIB_SRC contactgroupeditor.ui)
+ki18n_wrap_ui(KF5AkonadiContact contactgroupeditor.ui)
 
-add_library(KF5AkonadiContact ${akonadicontact_LIB_SRC})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_source_files_properties(
         grantlee/contactgrantleewrapper.cpp
@@ -140,7 +138,6 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
-add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 
 target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact;${KDE_INSTALL_INCLUDEDIR_KF5}>")
 target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact>")
