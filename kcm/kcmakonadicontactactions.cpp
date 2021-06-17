@@ -18,7 +18,7 @@
 
 Q_DECLARE_METATYPE(ContactActionsSettings::EnumDialPhoneNumberAction)
 
-K_PLUGIN_FACTORY(KCMAkonadiContactActionsFactory, registerPlugin<KCMAkonadiContactActions>();)
+K_PLUGIN_CLASS_WITH_JSON(KCMAkonadiContactActions, "akonadicontact_actions.json")
 
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)

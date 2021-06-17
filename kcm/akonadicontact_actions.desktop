@@ -3,7 +3,7 @@ Icon=configure
 Type=Service
 X-KDE-ServiceTypes=KCModule
 
-X-KDE-Library=kcm_akonadicontact_actions
+X-KDE-Library=pim/kcms/kaddressbook/kcm_akonadicontact_actions
 X-KDE-ParentApp=kaddressbook
 X-KDE-ParentComponents=kaddressbook,kontact_kaddressbookplugin
 X-KDE-CfgDlgHierarchy=KAddressBook

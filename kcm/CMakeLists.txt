@@ -13,14 +13,8 @@ kconfig_add_kcfg_files(kcm_akonadicontact_actions ${Akonadi-Contact_SOURCE_DIR}/
 
 
 
-#kcoreaddons_desktop_to_json(kcm_akonadicontact_actions akonadicontact_actions.desktop DEFAULT_SERVICE_TYPE)
+install(FILES akonadicontact_actions.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+kcoreaddons_desktop_to_json(kcm_akonadicontact_actions akonadicontact_actions.desktop SERVICE_TYPES kcmodule.desktop)
+install(TARGETS kcm_akonadicontact_actions DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim/kcms/kaddressbook)
 
 target_link_libraries(kcm_akonadicontact_actions KF5::ConfigWidgets KF5::I18n KF5::Completion) 
-
-
-
-install(TARGETS kcm_akonadicontact_actions DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-########### install files ###############
-
-install(FILES akonadicontact_actions.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
