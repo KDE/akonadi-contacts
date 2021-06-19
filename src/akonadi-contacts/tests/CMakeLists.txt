@@ -1,8 +1,5 @@
 include(ECMMarkAsTest)
 
-find_package(Qt5Test CONFIG REQUIRED)
-
-
 # convenience macro to add akonadi demo application
 macro(add_akonadi_contact_demo _source)
   set(_test ${_source})
