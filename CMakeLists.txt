@@ -47,6 +47,7 @@ find_package(KF5TextWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5WidgetsAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5XmlGui ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Prison ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Contacts ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
