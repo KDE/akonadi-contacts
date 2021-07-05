@@ -54,7 +54,7 @@ public:
 
         KContacts::ContactGroup group;
         group.setName(mCurrentGroupName);
-        for (const KContacts::Addressee &contact : qAsConst(mCurrentContacts)) {
+        for (const KContacts::Addressee &contact : std::as_const(mCurrentContacts)) {
             group.append(KContacts::ContactGroup::Data(contact.realName(), contact.preferredEmail()));
         }
 

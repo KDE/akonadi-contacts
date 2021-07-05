@@ -154,7 +154,7 @@ void ContactEditorWidget::Private::loadCustomPages()
         mCustomPages.append(plugin);
     }
 
-    for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(mCustomPages)) {
+    for (ContactEditor::ContactEditorPagePlugin *plugin : std::as_const(mCustomPages)) {
         mTabWidget->addTab(plugin, plugin->title());
     }
 }
@@ -212,7 +212,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
         d->mCustomFieldsWidget->loadContact(contact);
 
         // custom pages
-        for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
+        for (ContactEditor::ContactEditorPagePlugin *plugin : std::as_const(d->mCustomPages)) {
             plugin->loadContact(contact);
         }
     }
@@ -240,7 +240,7 @@ void ContactEditorWidget::storeContact(KContacts::Addressee &contact, ContactEdi
         metaData.setDisplayNameMode(d->mGeneralInfoWidget->displayType());
 
         // custom pages
-        for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
+        for (ContactEditor::ContactEditorPagePlugin *plugin : std::as_const(d->mCustomPages)) {
             plugin->storeContact(contact);
         }
     }
@@ -264,7 +264,7 @@ void ContactEditorWidget::setReadOnly(bool readOnly)
         d->mCustomFieldsWidget->setReadOnly(readOnly);
 
         // custom pages
-        for (ContactEditor::ContactEditorPagePlugin *plugin : qAsConst(d->mCustomPages)) {
+        for (ContactEditor::ContactEditorPagePlugin *plugin : std::as_const(d->mCustomPages)) {
             plugin->setReadOnly(readOnly);
         }
     }

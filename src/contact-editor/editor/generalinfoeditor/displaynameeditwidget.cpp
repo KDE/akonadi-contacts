@@ -53,7 +53,7 @@ public:
         QFont font = view->font();
         font.setStyle(QFont::StyleItalic);
         QFontMetrics metrics(font);
-        for (const QString &description : qAsConst(mDescriptions)) {
+        for (const QString &description : std::as_const(mDescriptions)) {
             mMaxDescriptionWidth = qMax(mMaxDescriptionWidth, metrics.boundingRect(description).width());
         }
 

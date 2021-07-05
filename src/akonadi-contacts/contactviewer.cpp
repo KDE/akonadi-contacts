@@ -123,11 +123,11 @@ public:
         QVector<QVariantMap> customFieldDescriptions;
         const CustomField::List globalCustomFields = CustomFieldManager::globalCustomFieldDescriptions();
         customFieldDescriptions.reserve(localCustomFieldDescriptions.count() + globalCustomFields.count());
-        for (const QVariant &entry : qAsConst(localCustomFieldDescriptions)) {
+        for (const QVariant &entry : std::as_const(localCustomFieldDescriptions)) {
             customFieldDescriptions << entry.toMap();
         }
 
-        for (const CustomField &field : qAsConst(globalCustomFields)) {
+        for (const CustomField &field : std::as_const(globalCustomFields)) {
             QVariantMap description;
             description.insert(QStringLiteral("key"), field.key());
             description.insert(QStringLiteral("title"), field.title());

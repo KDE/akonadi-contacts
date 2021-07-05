@@ -69,7 +69,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
                           << QStringLiteral("CRYPTOENCRYPTPREF");
             }
             QSet<QString> upperCaseBlacklist;
-            for (const QString &blacklistEntry : qAsConst(blacklist)) {
+            for (const QString &blacklistEntry : std::as_const(blacklist)) {
                 upperCaseBlacklist << blacklistEntry.toUpper();
             }
             blacklist.unite(upperCaseBlacklist);
@@ -140,10 +140,10 @@ void CustomFieldsListWidget::storeContact(KContacts::Addressee &contact) const
     // Now remove all fields that were available in loadContact (these are stored in mLocalCustomFields)
     // but are not part of customFields now, which means they have been removed or renamed by the user
     // in the editor dialog.
-    for (const CustomField &oldCustomField : qAsConst(mLocalCustomFields)) {
+    for (const CustomField &oldCustomField : std::as_const(mLocalCustomFields)) {
         if (oldCustomField.scope() != CustomField::ExternalScope) {
             bool fieldStillExists = false;
-            for (const CustomField &newCustomField : qAsConst(customFields)) {
+            for (const CustomField &newCustomField : std::as_const(customFields)) {
                 if (newCustomField.scope() != CustomField::ExternalScope) {
                     if (newCustomField.key() == oldCustomField.key()) {
                         fieldStillExists = true;
@@ -160,7 +160,7 @@ void CustomFieldsListWidget::storeContact(KContacts::Addressee &contact) const
 
     // And store the global custom fields descriptions as well
     CustomField::List globalCustomFields;
-    for (const CustomField &customField : qAsConst(customFields)) {
+    for (const CustomField &customField : std::as_const(customFields)) {
         if (customField.scope() == CustomField::GlobalScope) {
             globalCustomFields << customField;
         }
