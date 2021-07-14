@@ -74,7 +74,7 @@ void GrantleePrintTest::shouldDisplayContactInfo_data()
     QTest::newRow("prefix") << QStringLiteral("prefix") << QStringLiteral("foo-prefix");
     QTest::newRow("department") << QStringLiteral("department") << QStringLiteral("foo-department");
     QTest::newRow("office") << QStringLiteral("office") << QStringLiteral("foo-office");
-    QTest::newRow("profesion") << QStringLiteral("profession") << QStringLiteral("foo-profession");
+    QTest::newRow("profession") << QStringLiteral("profession") << QStringLiteral("foo-profession");
     QTest::newRow("manager") << QStringLiteral("managersName") << QStringLiteral("foo-managersname");
     QTest::newRow("assistant") << QStringLiteral("assistantsName") << QStringLiteral("foo-assistantsname");
     QTest::newRow("spouse") << QStringLiteral("spousesName") << QStringLiteral("foo-spousesname");

@@ -16,7 +16,7 @@ class KDatePicker;
 /**
    @short This menu helps the user to select a date quickly.
 
-   This menu helps the user to select a date quicly. It offers various
+   This menu helps the user to select a date quickly. It offers various
    ways of selecting, e.g. with a KDatePicker or with words like "Tomorrow".
 
    The available items are:
