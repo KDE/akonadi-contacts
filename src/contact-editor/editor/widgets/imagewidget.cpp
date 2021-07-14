@@ -267,14 +267,17 @@ void ImageWidget::changeUrl()
     if (mReadOnly) {
         return;
     }
-    const QString path = QInputDialog::getText(this, i18n("Change image URL"), i18n("Image URL:"), QLineEdit::Normal, mPicture.url());
-    if (!path.isEmpty()) {
-        bool ok;
-        const QImage image = imageLoader()->loadImage(QUrl(path), &ok, false);
-        if (ok && !image.isNull()) {
-            mPicture.setUrl(path);
-            mHasImage = true;
-            updateView();
+    bool okPath = false;
+    const QString path = QInputDialog::getText(this, i18n("Change image URL"), i18n("Image URL:"), QLineEdit::Normal, mPicture.url(), &okPath);
+    if (okPath) {
+        if (!path.isEmpty()) {
+            bool ok;
+            const QImage image = imageLoader()->loadImage(QUrl(path), &ok, false);
+            if (ok && !image.isNull()) {
+                mPicture.setUrl(path);
+                mHasImage = true;
+                updateView();
+            }
         }
     }
 }
