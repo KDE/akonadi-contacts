@@ -73,7 +73,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     : QDialog(parent)
     , d(new Private(this, mode))
 {
-    setWindowTitle(mode == CreateMode ? i18n("New Contact Group") : i18n("Edit Contact Group"));
+    setWindowTitle(mode == CreateMode ? i18nc("@title:window", "New Contact Group") : i18nc("@title:window", "Edit Contact Group"));
     auto mainLayout = new QVBoxLayout(this);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
