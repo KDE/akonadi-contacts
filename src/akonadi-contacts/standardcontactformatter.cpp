@@ -40,7 +40,7 @@ StandardContactFormatter::~StandardContactFormatter()
 
 static int contactAge(const QDate &date)
 {
-    QDate now = QDate::currentDate();
+    const QDate now = QDate::currentDate();
     int age = now.year() - date.year();
     if (date > now.addYears(-age)) {
         age--;
@@ -93,8 +93,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     const int years = contactAge(date);
 
     if (date.isValid()) {
-        dynamicPart += rowFmtStr1.arg(KContacts::Addressee::birthdayLabel())
-                           .arg(QLocale().toString(date) + QLatin1String("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
+        dynamicPart += rowFmtStr1.arg(KContacts::Addressee::birthdayLabel(),
+                                      QLocale().toString(date) + QLatin1String("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
     }
 
     // Phone Numbers
@@ -122,7 +122,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
         const QString fullEmail = QString::fromLatin1(QUrl::toPercentEncoding(rawContact.fullEmail(email)));
 
-        dynamicPart += rowFmtStr1.arg(type).arg(QStringLiteral("<a href=\"mailto:%1\">%2</a>").arg(fullEmail, email));
+        dynamicPart += rowFmtStr1.arg(type, QStringLiteral("<a href=\"mailto:%1\">%2</a>").arg(fullEmail, email));
     }
 
     // Homepage
@@ -139,7 +139,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Blog Feed
     const QString blog = rawContact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
     if (!blog.isEmpty()) {
-        dynamicPart += rowFmtStr1.arg(i18n("Blog Feed")).arg(KStringHandler::tagUrls(blog.toHtmlEscaped()));
+        dynamicPart += rowFmtStr1.arg(i18n("Blog Feed"), KStringHandler::tagUrls(blog.toHtmlEscaped()));
     }
 
     // Addresses
@@ -167,7 +167,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Note
     QString notes;
     if (!rawContact.note().isEmpty()) {
-        notes = rowFmtStr1.arg(i18n("Notes")).arg(rawContact.note().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br>")));
+        notes = rowFmtStr1.arg(i18n("Notes"), rawContact.note().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br>")));
     }
 
     // Custom Data
@@ -278,25 +278,23 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         role = rawContact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
     }
 
-    QString strAddr = QStringLiteral(
-                          "<div align=\"center\">"
-                          "<table cellpadding=\"3\" cellspacing=\"1\">"
-                          "<tr>"
-                          "<td align=\"right\" valign=\"top\" width=\"30%\" rowspan=\"3\">"
-                          "<img src=\"%1\" width=\"100\" vspace=\"1\"/>" // image
-                          "</td>"
-                          "<td colspan=\"2\" align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>" // name
-                          "</tr>"
-                          "<tr>"
-                          "<td colspan=\"2\" align=\"left\" width=\"70%\">%3</td>" // role
-                          "</tr>"
-                          "<tr>"
-                          "<td colspan=\"2\" align=\"left\" width=\"70%\">%4</td>" // organization
-                          "</tr>")
-                          .arg(QStringLiteral("contact_photo"))
-                          .arg(rawContact.realName().toHtmlEscaped())
-                          .arg(role.toHtmlEscaped())
-                          .arg(rawContact.organization().toHtmlEscaped());
+    QString strAddr =
+        QStringLiteral(
+            "<div align=\"center\">"
+            "<table cellpadding=\"3\" cellspacing=\"1\">"
+            "<tr>"
+            "<td align=\"right\" valign=\"top\" width=\"30%\" rowspan=\"3\">"
+            "<img src=\"%1\" width=\"100\" vspace=\"1\"/>" // image
+            "</td>"
+            "<td colspan=\"2\" align=\"left\" width=\"70%\"><font size=\"+2\"><b>%2</b></font></td>" // name
+            "</tr>"
+            "<tr>"
+            "<td colspan=\"2\" align=\"left\" width=\"70%\">%3</td>" // role
+            "</tr>"
+            "<tr>"
+            "<td colspan=\"2\" align=\"left\" width=\"70%\">%4</td>" // organization
+            "</tr>")
+            .arg(QStringLiteral("contact_photo"), rawContact.realName().toHtmlEscaped(), role.toHtmlEscaped(), rawContact.organization().toHtmlEscaped());
 
     strAddr.append(dynamicPart);
     strAddr.append(notes);
@@ -331,9 +329,9 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                                  "%3" // contact part
                                  "</body>"
                                  "</html>")
-                                 .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name())
-                                 .arg(KColorScheme(QPalette::Active, KColorScheme::View).background().color().name())
-                                 .arg(strAddr);
+                                 .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name(),
+                                      KColorScheme(QPalette::Active, KColorScheme::View).background().color().name(),
+                                      strAddr);
 
     return document;
 }

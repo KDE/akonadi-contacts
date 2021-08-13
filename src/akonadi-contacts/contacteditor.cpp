@@ -47,7 +47,7 @@ public:
         }
 
         auto layout = new QVBoxLayout(mParent);
-        layout->setContentsMargins(0, 0, 0, 0);
+        layout->setContentsMargins({});
         layout->setSpacing(0);
         layout->addWidget(mEditorWidget);
     }

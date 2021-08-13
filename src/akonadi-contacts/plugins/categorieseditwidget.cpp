@@ -21,7 +21,7 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant
     , mTagWidget(new Akonadi::TagWidget(this))
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
     layout->addWidget(mTagWidget);
 }
 

@@ -80,7 +80,7 @@ public:
     }
 
     OpenEmailAddressJob *const q;
-    QString mCompleteAddress;
+    const QString mCompleteAddress;
     QString mEmail;
     QString mName;
     QWidget *const mParentWidget;

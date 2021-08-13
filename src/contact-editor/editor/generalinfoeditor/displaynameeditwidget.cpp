@@ -41,7 +41,6 @@ class DisplayNameDelegate : public QStyledItemDelegate
 public:
     DisplayNameDelegate(QAbstractItemView *view, QObject *parent = nullptr)
         : QStyledItemDelegate(parent)
-        , mMaxDescriptionWidth(0)
     {
         mDescriptions.append(i18n("Short Name"));
         mDescriptions.append(i18n("Full Name"));
@@ -92,7 +91,7 @@ public:
 
 private:
     QStringList mDescriptions;
-    int mMaxDescriptionWidth;
+    int mMaxDescriptionWidth = 0;
 };
 
 DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
@@ -100,7 +99,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     , mDisplayType(FullName)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mView = new KComboBox(this);
     mView->addItems(QStringList() << QString() << QString() << QString() << QString() << QString() << QString());

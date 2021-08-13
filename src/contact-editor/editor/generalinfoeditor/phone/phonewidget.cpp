@@ -22,7 +22,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mPhoneNumberEdit = new PreferredLineEditWidget(this);
     mPhoneNumberEdit->setTrapReturnKey(true);

@@ -114,14 +114,14 @@ void EmailAddressSelectionWidget::Private::init()
 
     // setup ui
     auto layout = new QVBoxLayout(q);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mDescriptionLabel = new QLabel;
     mDescriptionLabel->hide();
     layout->addWidget(mDescriptionLabel);
 
     auto searchLayout = new QHBoxLayout;
-    searchLayout->setContentsMargins(0, 0, 0, 0);
+    searchLayout->setContentsMargins({});
     layout->addLayout(searchLayout);
 
     mView = new Akonadi::EntityTreeView;

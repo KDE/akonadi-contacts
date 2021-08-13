@@ -74,7 +74,7 @@ public:
 void ContactEditorWidget::Private::initGui()
 {
     auto layout = new QVBoxLayout(mParent);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mTabWidget = new QTabWidget(mParent);
     layout->addWidget(mTabWidget);

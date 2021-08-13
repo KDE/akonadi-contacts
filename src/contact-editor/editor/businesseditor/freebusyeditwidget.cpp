@@ -21,7 +21,7 @@ FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mURL = new KUrlRequester(this);
     mURL->lineEdit()->setTrapReturnKey(true);

@@ -47,7 +47,7 @@ DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     , mReadOnly(false)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mView = new DateView;
     layout->addWidget(mView);

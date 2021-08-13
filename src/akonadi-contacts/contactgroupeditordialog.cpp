@@ -91,7 +91,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     auto mainWidget = new QWidget(this);
 
     auto layout = new QGridLayout(mainWidget);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode, this);
 

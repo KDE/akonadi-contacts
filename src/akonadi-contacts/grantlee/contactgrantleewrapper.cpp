@@ -69,7 +69,7 @@ QString ContactGrantleeWrapper::addressBookName() const
 
 int ContactGrantleeWrapper::age() const
 {
-    QDate now = QDate::currentDate();
+    const QDate now = QDate::currentDate();
     int age = now.year() - birthday().date().year();
     if (birthday().date() > now.addYears(-age)) {
         age--;

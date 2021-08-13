@@ -142,7 +142,7 @@ ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     , d(new Private(this))
 {
     auto layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     connect(d->mBrowser, &TextBrowser::anchorClicked, this, [this](const QUrl &url) {
         d->slotMailClicked(url);

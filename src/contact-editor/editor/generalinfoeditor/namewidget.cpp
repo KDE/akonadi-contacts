@@ -22,13 +22,13 @@ NameWidget::NameWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
     auto label = new QLabel(i18n("Name"));
     label->setObjectName(QStringLiteral("namelabel"));
     topLayout->addWidget(label);
 
     auto lineLayout = new QHBoxLayout;
-    lineLayout->setContentsMargins(0, 0, 0, 0);
+    lineLayout->setContentsMargins({});
     topLayout->addLayout(lineLayout);
 
     mNameEdit = new KLineEdit(this);

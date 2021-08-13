@@ -67,7 +67,7 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(4);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     d->mLineEdit = new KLineEdit(this);
     d->mLineEdit->setClearButtonEnabled(true);

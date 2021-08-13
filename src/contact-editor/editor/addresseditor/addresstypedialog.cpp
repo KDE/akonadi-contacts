@@ -33,7 +33,7 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
     auto layout = new QVBoxLayout(page);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     auto box = new QGroupBox(i18nc("street/postal", "Address Types"), page);
     mainLayout->addWidget(box);

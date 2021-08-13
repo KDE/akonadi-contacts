@@ -113,7 +113,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
     auto addButtonWidget = new QWidget(this);
     auto addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
-    addButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    addButtonWidgetLayout->setContentsMargins({});
     mAddAddress = new QPushButton(i18n("Add Address"), this);
     mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
     connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
@@ -123,7 +123,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
     auto modifyButtonWidget = new QWidget(this);
     auto modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
-    modifyButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    modifyButtonWidgetLayout->setContentsMargins({});
     mButtonStack->addWidget(modifyButtonWidget);
 
     mRemoveAddress = new QPushButton(i18n("Remove Address"), this);

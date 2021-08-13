@@ -20,7 +20,7 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
     auto label = new QLabel(i18n("Show messages received from this contact as:"), this);
     label->setObjectName(QStringLiteral("label"));
     topLayout->addWidget(label);

@@ -18,7 +18,7 @@ RecipientsPickerWidget::RecipientsPickerWidget(bool onlyShowEmailWithAddress, QA
     : QWidget(parent)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mView =
         new Akonadi::EmailAddressSelectionWidget(onlyShowEmailWithAddress, model ? model : Akonadi::RecipientsEditorManager::self()->model()->model(), this);
