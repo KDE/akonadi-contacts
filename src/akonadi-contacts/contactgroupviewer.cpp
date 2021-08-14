@@ -77,7 +77,8 @@ public:
 
     void slotMailClicked(const QUrl &email)
     {
-        QString name, address;
+        QString name;
+        QString address;
 
         // remove the 'mailto:' and split into name and email address
         KContacts::Addressee::parseEmailAddress(email.path(), name, address);

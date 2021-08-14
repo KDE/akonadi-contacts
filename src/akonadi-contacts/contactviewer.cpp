@@ -174,7 +174,8 @@ public:
                 Q_EMIT mParent->addressClicked(addresses.at(pos));
             }
         } else if (urlScheme == QLatin1String("mailto")) {
-            QString name, address;
+            QString name;
+            QString address;
 
             // remove the 'mailto:' and split into name and email address
             KContacts::Addressee::parseEmailAddress(url.path(), name, address);

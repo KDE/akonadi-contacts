@@ -32,7 +32,9 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
     mTypeList = KContacts::PhoneNumber::typeList();
     mTypeList.removeAll(KContacts::PhoneNumber::Pref);
     KContacts::PhoneNumber::TypeList::ConstIterator it;
-    int row, column, counter;
+    int row;
+    int column;
+    int counter;
     row = column = counter = 0;
     mGroup = new QButtonGroup(this);
     mGroup->setExclusive(false);

@@ -75,7 +75,8 @@ void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &la
         return;
     }
 
-    KContacts::Addressee addr, temp;
+    KContacts::Addressee addr;
+    KContacts::Addressee temp;
 
     temp = item.payload<KContacts::Addressee>();
 

@@ -51,7 +51,9 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 
     const QStringList customs = contact.customs();
     for (const QString &custom : customs) {
-        QString app, name, value;
+        QString app;
+        QString name;
+        QString value;
         ContactEditor::Utils::splitCustomField(custom, app, name, value);
 
         // skip all well-known fields that have separated editor widgets
