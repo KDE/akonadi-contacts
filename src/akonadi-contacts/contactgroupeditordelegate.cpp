@@ -127,7 +127,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
     const bool isReference = index.data(ContactGroupModel::IsReferenceRole).toBool();
     Q_UNUSED(option)
     if (index.column() == 0) {
-        auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
+        auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
         connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
 
         return edit;
@@ -138,7 +138,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
             comboBox->setAutoFillBackground(true);
             return comboBox;
         } else {
-            auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
+            auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
             connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
             return edit;
         }
