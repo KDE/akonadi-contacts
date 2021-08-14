@@ -448,4 +448,33 @@ bool ContactGroupModel::removeRows(int row, int count, const QModelIndex &parent
     return true;
 }
 
+GroupFilterModel::GroupFilterModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
+{
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
+    setFilterKeyColumn(-1);
+}
+
+bool GroupFilterModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+{
+    if (sourceRow == sourceModel()->rowCount() - 1) {
+        return true;
+    }
+
+    return QSortFilterProxyModel::filterAcceptsRow(sourceRow, sourceParent);
+}
+
+bool GroupFilterModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
+{
+    if (left.row() == sourceModel()->rowCount() - 1) {
+        return true;
+    }
+
+    if (right.row() == sourceModel()->rowCount() - 1) {
+        return false;
+    }
+
+    return QSortFilterProxyModel::lessThan(left, right);
+}
+
 #include "moc_contactgroupmodel_p.cpp"

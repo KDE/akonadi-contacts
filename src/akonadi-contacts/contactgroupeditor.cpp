@@ -149,6 +149,7 @@ void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByte
 
 void ContactGroupEditor::Private::loadContactGroup(const KContacts::ContactGroup &group)
 {
+    mGui.membersView->setSortingEnabled(false);
     mGui.groupName->setText(group.name());
 
     mGroupModel->loadContactGroup(group);
@@ -161,6 +162,7 @@ void ContactGroupEditor::Private::loadContactGroup(const KContacts::ContactGroup
     }
 
     mGui.membersView->header()->resizeSections(QHeaderView::Stretch);
+    mGui.membersView->setSortingEnabled(true);
 }
 
 bool ContactGroupEditor::Private::storeContactGroup(KContacts::ContactGroup &group)
@@ -208,7 +210,12 @@ ContactGroupEditor::ContactGroupEditor(Mode mode, QWidget *parent)
     d->mGui.membersView->setEditTriggers(QAbstractItemView::AllEditTriggers);
 
     d->mGroupModel = new ContactGroupModel(this);
-    d->mGui.membersView->setModel(d->mGroupModel);
+    auto proxyModel = new GroupFilterModel(this);
+    proxyModel->setSourceModel(d->mGroupModel);
+    connect(d->mGui.searchField, &QLineEdit::textChanged, this, [proxyModel](const QString &text) {
+        proxyModel->setFilterRegularExpression(text);
+    });
+    d->mGui.membersView->setModel(proxyModel);
     d->mGui.membersView->setItemDelegate(new ContactGroupEditorDelegate(d->mGui.membersView, this));
 
     if (mode == CreateMode) {

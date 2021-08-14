@@ -9,6 +9,7 @@
 #pragma once
 
 #include <QAbstractItemModel>
+#include <QSortFilterProxyModel>
 
 #include <kcontacts/contactgroup.h>
 
@@ -44,5 +45,14 @@ private:
     class Private;
     Private *const d;
 };
-}
 
+class GroupFilterModel : public QSortFilterProxyModel
+{
+public:
+    explicit GroupFilterModel(QObject *parent = nullptr);
+
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
+};
+
+}
