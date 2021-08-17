@@ -1,5 +1,15 @@
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
 
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KF5AkonadiContact_QCH
+        FILE KF5AkonadiContactQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5AkonadiContactQchTargets.cmake\")")
+endif()
+
 add_library(KF5AkonadiContact)
 add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
 
@@ -284,4 +294,32 @@ if (BUILD_TESTING)
 endif()
 
 add_subdirectory(plugins)
+
+if (BUILD_QCH)
+    ecm_add_qch(
+        KF5AkonadiContact_QCH
+        NAME KF5AkonadiContact
+        BASE_NAME KF5AkonadiContact
+        VERSION ${PIM_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+        ${AkonadiContact_HEADERS}
+        ${AkonadiContactJob_HEADERS}
+        ${AkonadiContactRecipients_HEADERS}
+        ${AkonadiContactGrantlee_HEADERS}
+        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
+        LINK_QCHS
+            Qt5Core_QCH
+            Qt5Gui_QCH
+            Qt5Widgets_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
+        BLANK_MACROS
+            KSIEVEUI_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
 

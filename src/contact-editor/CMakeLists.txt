@@ -1,4 +1,15 @@
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5ContactEditor")
+
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KF5ContactEditor_QCH
+        FILE KF5ContactEditorQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5ContactEditorQchTargets.cmake\")")
+endif()
+
 add_library(KF5ContactEditor)
 add_library(KF5::ContactEditor ALIAS KF5ContactEditor)
 
@@ -174,4 +185,31 @@ endif()
 
 install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
 install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
+
+if (BUILD_QCH)
+    ecm_add_qch(
+        KF5ContactEditor_QCH
+        NAME KF5ContactEditor
+        BASE_NAME KF5ContactEditor
+        VERSION ${PIM_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+        ${ContactEditor_HEADERS}
+        ${ContactEditorWidget_HEADERS}
+        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
+        LINK_QCHS
+            Qt5Core_QCH
+            Qt5Gui_QCH
+            Qt5Widgets_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
+        BLANK_MACROS
+            KSIEVEUI_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
+
 
