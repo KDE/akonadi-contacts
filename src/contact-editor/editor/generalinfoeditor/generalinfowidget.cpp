@@ -20,7 +20,6 @@
 #include "web/weblistwidget.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QVBoxLayout>
@@ -75,14 +74,16 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("categorylabel"));
     categoryWidgetLayout->addWidget(label);
 
-    KPluginLoader loader(QStringLiteral("akonadi/contacts/plugins/categorieseditwidgetplugin"));
-    KPluginFactory *factory = loader.factory();
-    if (factory) {
-        mCategoriesWidget = factory->create<ContactEditor::CategoriesEditAbstractWidget>(parent);
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("akonadi/contacts/plugins/categorieseditwidgetplugin"));
+    const auto result = KPluginFactory::instantiatePlugin<ContactEditor::CategoriesEditAbstractWidget>(editWidgetPlugin, parent);
+
+    if (result) {
+        mCategoriesWidget = result.plugin;
     } else {
         mCategoriesWidget = new CategoriesEditWidget(parent);
         label->setVisible(false);
     }
+
     mCategoriesWidget->setObjectName(QStringLiteral("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);
     leftLayout->addWidget(categoryWidget);
