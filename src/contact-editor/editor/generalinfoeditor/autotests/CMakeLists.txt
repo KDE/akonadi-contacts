@@ -4,20 +4,20 @@ set(phonewidgettest_SRCS phonewidgettest.cpp)
 add_executable(phonewidgettest ${phonewidgettest_SRCS})
 add_test(NAME phonewidgettest COMMAND phonewidgettest)
 ecm_mark_as_test(phonewidgettest)
-target_link_libraries(phonewidgettest Qt::Test  Qt::Widgets KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion KF5::IconThemes)
+target_link_libraries(phonewidgettest Qt::Test  KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion)
 
 
 set(mailwidgettest_SRCS mailwidgettest.cpp)
 add_executable(mailwidgettest ${mailwidgettest_SRCS})
 add_test(NAME mailwidgettest COMMAND mailwidgettest)
 ecm_mark_as_test(mailwidgettest)
-target_link_libraries(mailwidgettest Qt::Test  Qt::Widgets KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion KF5::IconThemes)
+target_link_libraries(mailwidgettest Qt::Test KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion)
 
 set(messagingwidgettest_SRCS messagingwidgettest.cpp ../../widgets/preferredlineeditwidget.cpp)
 add_executable(messagingwidgettest ${messagingwidgettest_SRCS})
 add_test(NAME messagingwidgettest COMMAND messagingwidgettest)
 ecm_mark_as_test(messagingwidgettest)
-target_link_libraries(messagingwidgettest Qt::Test  Qt::Widgets KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion KF5::Service KF5::IconThemes)
+target_link_libraries(messagingwidgettest Qt::Test KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion KF5::Service)
 
 
 
