@@ -60,7 +60,7 @@ ContactLineEdit::ContactLineEdit(bool isReference, ContactCompletionModel::Colum
     auto completer = new QCompleter(filter, this);
     completer->setCompletionColumn(column);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
-    connect(completer, QOverload<const QModelIndex &>::of(&QCompleter::activated), this, QOverload<const QModelIndex &>::of(&ContactLineEdit::completed));
+    connect(completer, qOverload<const QModelIndex &>(&QCompleter::activated), this, qOverload<const QModelIndex &>(&ContactLineEdit::completed));
 
     setCompleter(completer);
 
@@ -128,7 +128,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
     Q_UNUSED(option)
     if (index.column() == 0) {
         auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
-        connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
+        connect(edit, qOverload<QWidget *>(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
 
         return edit;
     } else {
@@ -139,7 +139,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
             return comboBox;
         } else {
             auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
-            connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
+            connect(edit, qOverload<QWidget *>(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
             return edit;
         }
     }

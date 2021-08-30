@@ -107,7 +107,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     layout->addWidget(mView);
     setFocusProxy(mView);
     setFocusPolicy(Qt::StrongFocus);
-    connect(mView, QOverload<int>::of(&KComboBox::activated), this, &DisplayNameEditWidget::displayTypeChanged);
+    connect(mView, qOverload<int>(&KComboBox::activated), this, &DisplayNameEditWidget::displayTypeChanged);
 
     auto delegate = new DisplayNameDelegate(mView->view(), this);
     mView->view()->setItemDelegate(delegate);
