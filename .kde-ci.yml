@@ -6,8 +6,8 @@ Dependencies:
   'require':
     'frameworks/kcontacts' : '@latest'
     'frameworks/prison' : '@latest'
-    'kde/pim/akonadi' : '@latest'
-    'kde/pim/kmime' : '@latest'
-    'kde/pim/libkleo' : '@latest'
-    'kde/pim/grantleetheme' : '@latest'
+    'kde/pim/akonadi' : '@same'
+    'kde/pim/kmime' : '@same'
+    'kde/pim/libkleo' : '@same'
+    'kde/pim/grantleetheme' : '@same'
     'third-party/grantlee' : '@stable'
