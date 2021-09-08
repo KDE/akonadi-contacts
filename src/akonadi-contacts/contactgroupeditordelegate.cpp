@@ -11,8 +11,8 @@
 #include "contactcompletionmodel_p.h"
 #include "contactgroupmodel_p.h"
 
+#include <Akonadi/EntityTreeModel>
 #include <KComboBox>
-#include <entitytreemodel.h>
 
 #include <QAbstractItemView>
 #include <QCompleter>

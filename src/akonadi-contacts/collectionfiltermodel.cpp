@@ -8,7 +8,7 @@
 
 #include "collectionfiltermodel_p.h"
 
-#include <entitytreemodel.h>
+#include <Akonadi/EntityTreeModel>
 
 CollectionFilterModel::CollectionFilterModel(QObject *parent)
     : QSortFilterProxyModel(parent)

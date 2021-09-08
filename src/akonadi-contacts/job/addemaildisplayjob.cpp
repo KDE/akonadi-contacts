@@ -12,14 +12,14 @@
 #include <Akonadi/AgentInstanceCreateJob>
 #include <Akonadi/AgentType>
 #include <Akonadi/Collection>
+#include <Akonadi/CollectionDialog>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/Contact/ContactEditorDialog>
 #include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemModifyJob>
-#include <CollectionDialog>
-#include <Item>
 
 #include <KContacts/ContactGroup>
 #include <KLocalizedString>

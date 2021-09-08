@@ -10,7 +10,7 @@
 
 #include "contactstreemodel.h"
 
-#include <entitytreemodel.h>
+#include <Akonadi/EntityTreeModel>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 

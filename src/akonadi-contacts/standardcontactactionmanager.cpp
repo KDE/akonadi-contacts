@@ -11,7 +11,7 @@
 #include "contacteditordialog.h"
 #include "contactgroupeditordialog.h"
 
-#include <entitytreemodel.h>
+#include <Akonadi/EntityTreeModel>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 #include <mimetypechecker.h>

@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <entitytreemodel.h>
+#include <Akonadi/EntityTreeModel>
 
 namespace Akonadi
 {

@@ -7,7 +7,7 @@
 */
 
 #include "contactsearchjob.h"
-#include <searchquery.h>
+#include <Akonadi/SearchQuery>
 
 #include <akonadi/itemfetchscope.h>
 
