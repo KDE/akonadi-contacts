@@ -8,7 +8,7 @@
 
 #include "attributes/contactmetadataattribute_p.h"
 
-#include <attributefactory.h>
+#include <akonadi/attributefactory.h>
 
 namespace
 {

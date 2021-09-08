@@ -7,10 +7,10 @@
 #include "addemaildisplayjob.h"
 #include "akonadi/contact/selectaddressbookdialog.h"
 
-#include <AgentTypeDialog>
 #include <Akonadi/AgentFilterProxyModel>
 #include <Akonadi/AgentInstanceCreateJob>
 #include <Akonadi/AgentType>
+#include <Akonadi/AgentTypeDialog>
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionDialog>
 #include <Akonadi/CollectionFetchJob>

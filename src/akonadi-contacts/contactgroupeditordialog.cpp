@@ -11,9 +11,9 @@
 #include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
 
+#include <Akonadi/CollectionComboBox>
 #include <Akonadi/Item>
 #include <KLocalizedString>
-#include <collectioncombobox.h>
 #include <kcontacts/contactgroup.h>
 
 #include <KConfig>

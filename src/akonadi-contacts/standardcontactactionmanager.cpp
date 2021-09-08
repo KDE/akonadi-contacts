@@ -12,9 +12,9 @@
 #include "contactgroupeditordialog.h"
 
 #include <Akonadi/EntityTreeModel>
+#include <Akonadi/MimeTypeChecker>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <mimetypechecker.h>
 
 #include <KActionCollection>
 #include <KLocalizedString>

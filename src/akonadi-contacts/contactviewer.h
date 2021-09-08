@@ -10,7 +10,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <itemmonitor.h>
+#include <Akonadi/ItemMonitor>
 
 #include <QWidget>
 

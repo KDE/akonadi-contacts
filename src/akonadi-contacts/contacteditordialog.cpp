@@ -10,8 +10,8 @@
 
 #include "contacteditor.h"
 
+#include <Akonadi/CollectionComboBox>
 #include <Akonadi/Item>
-#include <collectioncombobox.h>
 
 #include <kcontacts/addressee.h>
 

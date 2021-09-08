@@ -8,7 +8,7 @@
 
 #include <Akonadi/AbstractDifferencesReporter>
 #include <Akonadi/Contact/ContactGroupExpandJob>
-#include <AkonadiCore/item.h>
+#include <Akonadi/Item>
 
 #include <KLocalizedString>
 #include <kcontacts/contactgroup.h>

@@ -8,10 +8,10 @@
 
 #include "contactcompletionmodel_p.h"
 
+#include <Akonadi/EntityMimeTypeFilterModel>
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
 #include <akonadi/itemfetchscope.h>
-#include <entitymimetypefiltermodel.h>
 
 #include <kcontacts/addressee.h>
 
