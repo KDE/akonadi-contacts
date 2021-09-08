@@ -13,7 +13,7 @@
 
 #include "emailaddressselection.h"
 
-#include <item.h>
+#include <Akonadi/Item>
 
 #include <QAbstractItemView>
 #include <QWidget>

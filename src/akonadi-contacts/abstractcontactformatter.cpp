@@ -8,7 +8,7 @@
 
 #include "abstractcontactformatter.h"
 
-#include <item.h>
+#include <Akonadi/Item>
 #include <kcontacts/addressee.h>
 
 using namespace Akonadi;

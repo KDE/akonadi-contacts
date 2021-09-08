@@ -10,8 +10,8 @@
 
 #include "akonadi-contact_export.h"
 
-#include <item.h>
-#include <itemsearchjob.h>
+#include <Akonadi/Item>
+#include <Akonadi/ItemSearchJob>
 #include <kcontacts/contactgroup.h>
 
 namespace Akonadi

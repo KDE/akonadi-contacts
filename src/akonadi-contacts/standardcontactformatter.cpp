@@ -8,9 +8,9 @@
 
 #include "standardcontactformatter.h"
 
+#include <Akonadi/Item>
 #include <KColorScheme>
 #include <KConfigGroup>
-#include <item.h>
 #include <kcontacts/addressee.h>
 
 #include <KLocalizedString>

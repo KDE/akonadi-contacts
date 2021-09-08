@@ -8,9 +8,9 @@
 
 #include <QObject>
 
-#include <AkonadiCore/differencesalgorithminterface.h>
-#include <AkonadiCore/gidextractorinterface.h>
-#include <AkonadiCore/itemserializerplugin.h>
+#include <Akonadi/DifferencesAlgorithmInterface>
+#include <Akonadi/GidExtractorInterface>
+#include <Akonadi/ItemSerializerPlugin>
 #include <kcontacts/vcardconverter.h>
 
 namespace Akonadi

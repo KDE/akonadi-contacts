@@ -13,17 +13,17 @@
 #include "emailaddressselectionmodel.h"
 #include "emailaddressselectionproxymodel_p.h"
 
+#include <Akonadi/ChangeRecorder>
+#include <Akonadi/Session>
 #include <KLocalizedString>
-#include <changerecorder.h>
+#include <akonadi/entitydisplayattribute.h>
+#include <akonadi/itemfetchscope.h>
 #include <contactsfilterproxymodel.h>
 #include <contactstreemodel.h>
 #include <controlgui.h>
-#include <entitydisplayattribute.h>
 #include <entitytreeview.h>
-#include <itemfetchscope.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <session.h>
 
 #include <QHBoxLayout>
 #include <QHeaderView>

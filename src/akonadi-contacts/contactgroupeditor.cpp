@@ -13,18 +13,18 @@
 #include "contactgroupmodel_p.h"
 #include "waitingoverlay_p.h"
 
+#include <Akonadi/CollectionDialog>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemModifyJob>
+#include <Akonadi/Monitor>
+#include <Akonadi/Session>
 #include <KColorScheme>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <collectiondialog.h>
-#include <collectionfetchjob.h>
-#include <itemcreatejob.h>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
-#include <itemmodifyjob.h>
+#include <akonadi/itemfetchscope.h>
 #include <kcontacts/contactgroup.h>
-#include <monitor.h>
-#include <session.h>
 
 #include <QMessageBox>
 #include <QTimer>

@@ -19,7 +19,7 @@
 #include <grantlee/metatype.h>
 #include <grantlee/templateloader.h>
 
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 
 #include <KColorScheme>
 

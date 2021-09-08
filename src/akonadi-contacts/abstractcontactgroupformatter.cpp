@@ -8,7 +8,7 @@
 
 #include "abstractcontactgroupformatter.h"
 
-#include <item.h>
+#include <Akonadi/Item>
 #include <kcontacts/contactgroup.h>
 
 using namespace Akonadi;

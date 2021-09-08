@@ -6,7 +6,7 @@
 #pragma once
 
 #include "akonadi-contact_export.h"
-#include <AkonadiWidgets/CollectionDialog>
+#include <Akonadi/CollectionDialog>
 
 namespace Akonadi
 {

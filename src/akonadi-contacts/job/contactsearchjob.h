@@ -10,7 +10,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <itemsearchjob.h>
+#include <Akonadi/ItemSearchJob>
 #include <kcontacts/addressee.h>
 
 namespace Akonadi

@@ -8,18 +8,18 @@
 #include "addemailaddressjob.h"
 #include "akonadi/contact/selectaddressbookdialog.h"
 
-#include <AgentFilterProxyModel>
-#include <AgentInstanceCreateJob>
-#include <AgentType>
 #include <AgentTypeDialog>
+#include <Akonadi/AgentFilterProxyModel>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentType>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
 #include <Akonadi/Contact/ContactEditorDialog>
 #include <Akonadi/Contact/ContactSearchJob>
-#include <Collection>
+#include <Akonadi/ItemCreateJob>
 #include <CollectionDialog>
-#include <CollectionFetchJob>
-#include <CollectionFetchScope>
 #include <Item>
-#include <ItemCreateJob>
 #include <KContacts/ContactGroup>
 
 #include <KLocalizedString>

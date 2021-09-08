@@ -8,10 +8,10 @@
 
 #include "categorieseditwidget.h"
 
+#include <Akonadi/Item>
+#include <Akonadi/Tag>
 #include <KPluginFactory>
 #include <QHBoxLayout>
-#include <item.h>
-#include <tag.h>
 #include <tagwidget.h>
 
 K_PLUGIN_CLASS_WITH_JSON(CategoriesEditWidget, "categorieseditwidgetplugin.json")

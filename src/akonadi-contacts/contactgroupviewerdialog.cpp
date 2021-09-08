@@ -10,8 +10,8 @@
 
 #include "contactgroupviewer.h"
 
+#include <Akonadi/Item>
 #include <KLocalizedString>
-#include <item.h>
 
 #include <QDialogButtonBox>
 #include <QPushButton>

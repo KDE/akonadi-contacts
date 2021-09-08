@@ -8,8 +8,8 @@
 
 #include "contactgroupmodel_p.h"
 
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
+#include <Akonadi/ItemFetchJob>
+#include <akonadi/itemfetchscope.h>
 #include <kcontacts/addressee.h>
 
 #include <KIconEngine>

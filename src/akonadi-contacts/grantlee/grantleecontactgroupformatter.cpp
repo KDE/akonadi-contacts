@@ -15,7 +15,7 @@
 #include <grantlee/templateloader.h>
 
 #include <Akonadi/Contact/ContactGroupExpandJob>
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 
 #include <KColorScheme>
 

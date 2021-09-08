@@ -10,7 +10,7 @@
 #include "contactdefaultactions.h"
 #include "contactviewer.h"
 
-#include <item.h>
+#include <Akonadi/Item>
 using namespace Akonadi;
 
 #include <KConfig>

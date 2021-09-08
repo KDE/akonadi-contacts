@@ -9,9 +9,9 @@
 #include "contactgroupexpandjob.h"
 #include "akonadi_contact_debug.h"
 #include "job/contactgroupsearchjob.h"
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
-#include <itemsearchjob.h>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemSearchJob>
+#include <akonadi/itemfetchscope.h>
 
 using namespace Akonadi;
 

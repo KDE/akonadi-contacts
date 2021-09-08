@@ -8,12 +8,12 @@
 
 #include "job/addemailaddressjob.h"
 
+#include <Akonadi/CollectionDialog>
 #include <Akonadi/Contact/ContactEditorDialog>
 #include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/Item>
+#include <Akonadi/ItemCreateJob>
 #include <QPointer>
-#include <collectiondialog.h>
-#include <item.h>
-#include <itemcreatejob.h>
 #include <kcontacts/addressee.h>
 
 using namespace Akonadi;

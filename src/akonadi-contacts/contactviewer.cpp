@@ -14,15 +14,15 @@
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"
 
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/Item>
 #include <KColorScheme>
 #include <KConfigGroup>
 #include <KIOCore/kio/transferjob.h>
 #include <KLocalizedString>
-#include <collection.h>
-#include <collectionfetchjob.h>
-#include <entitydisplayattribute.h>
-#include <item.h>
-#include <itemfetchscope.h>
+#include <akonadi/entitydisplayattribute.h>
+#include <akonadi/itemfetchscope.h>
 #include <kcontacts/addressee.h>
 
 #include <QGuiApplication>

@@ -6,8 +6,8 @@
 
 #include "akonadi_serializer_contactgroup.h"
 
+#include <Akonadi/AbstractDifferencesReporter>
 #include <Akonadi/Contact/ContactGroupExpandJob>
-#include <AkonadiCore/abstractdifferencesreporter.h>
 #include <AkonadiCore/item.h>
 
 #include <KLocalizedString>

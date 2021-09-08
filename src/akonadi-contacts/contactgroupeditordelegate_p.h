@@ -13,7 +13,7 @@
 #include <QStyledItemDelegate>
 
 #include "contactcompletionmodel_p.h"
-#include <item.h>
+#include <Akonadi/Item>
 
 namespace Akonadi
 {

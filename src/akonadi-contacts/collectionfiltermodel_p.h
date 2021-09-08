@@ -10,7 +10,7 @@
 
 #include <QSortFilterProxyModel>
 
-#include <collection.h>
+#include <Akonadi/Collection>
 
 /**
  * @short A filter model for Akonadi collections.

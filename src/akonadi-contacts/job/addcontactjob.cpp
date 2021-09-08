@@ -6,13 +6,13 @@
 
 #include "addcontactjob.h"
 #include "akonadi/contact/selectaddressbookdialog.h"
-#include <Collection>
+#include <Akonadi/Collection>
 
 #include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/Item>
+#include <Akonadi/ItemCreateJob>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <item.h>
-#include <itemcreatejob.h>
 #include <kcontacts/addressee.h>
 
 #include <QPointer>

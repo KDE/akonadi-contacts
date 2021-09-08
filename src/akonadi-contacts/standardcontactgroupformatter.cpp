@@ -9,8 +9,8 @@
 #include "standardcontactgroupformatter.h"
 
 #include "job/contactgroupexpandjob.h"
+#include <Akonadi/Item>
 #include <KColorScheme>
-#include <item.h>
 #include <kcontacts/addressee.h>
 
 using namespace Akonadi;

@@ -9,8 +9,8 @@
 
 #include "emailaddressselectionproxymodel_p.h"
 
+#include <Akonadi/Item>
 #include <KLocalizedString>
-#include <item.h>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 

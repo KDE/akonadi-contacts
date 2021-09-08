@@ -6,8 +6,8 @@
 
 #include "akonadi_serializer_addressee.h"
 
-#include <AkonadiCore/AbstractDifferencesReporter>
-#include <AkonadiCore/Item>
+#include <Akonadi/AbstractDifferencesReporter>
+#include <Akonadi/Item>
 
 #include "serializer_debug.h"
 #include <KContacts/Addressee>

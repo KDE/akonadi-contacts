@@ -7,7 +7,7 @@
 #pragma once
 
 #include "akonadi-contact_export.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KJob>
 
 namespace Akonadi
