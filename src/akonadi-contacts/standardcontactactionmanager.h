@@ -10,7 +10,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <standardactionmanager.h>
+#include <Akonadi/StandardActionManager>
 
 #include <QObject>
 
