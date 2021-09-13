@@ -11,7 +11,6 @@
 #include "../widgets/imagewidget.h"
 #include "blogfeedwidget.h"
 #include "categorieseditwidget.h"
-#include "kcoreaddons_version.h"
 #include "mail/maillistwidget.h"
 #include "messageformattingwidget.h"
 #include "messaging/messaginglistwidget.h"
@@ -21,7 +20,6 @@
 #include "web/weblistwidget.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QVBoxLayout>
@@ -76,18 +74,11 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("categorylabel"));
     categoryWidgetLayout->addWidget(label);
 
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
-    KPluginLoader loader(QStringLiteral("akonadi/contacts/plugins/categorieseditwidgetplugin"));
-    KPluginFactory *factory = loader.factory();
-    if (factory) {
-        mCategoriesWidget = factory->create<ContactEditor::CategoriesEditAbstractWidget>(parent);
-#else
     const KPluginMetaData editWidgetPlugin(QStringLiteral("akonadi/contacts/plugins/categorieseditwidgetplugin"));
     const auto result = KPluginFactory::instantiatePlugin<ContactEditor::CategoriesEditAbstractWidget>(editWidgetPlugin, parent);
 
     if (result) {
         mCategoriesWidget = result.plugin;
-#endif
     } else {
         mCategoriesWidget = new CategoriesEditWidget(parent);
         label->setVisible(false);
