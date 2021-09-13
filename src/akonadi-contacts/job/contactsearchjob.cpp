@@ -9,7 +9,7 @@
 #include "contactsearchjob.h"
 #include <Akonadi/SearchQuery>
 
-#include <akonadi/itemfetchscope.h>
+#include <Akonadi/ItemFetchScope>
 
 using namespace Akonadi;
 

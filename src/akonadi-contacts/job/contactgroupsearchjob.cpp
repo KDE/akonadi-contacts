@@ -8,9 +8,9 @@
 
 #include "contactgroupsearchjob.h"
 
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/SearchQuery>
 #include <QStringList>
-#include <akonadi/itemfetchscope.h>
 
 using namespace Akonadi;
 

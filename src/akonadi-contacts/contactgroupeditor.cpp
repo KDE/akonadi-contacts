@@ -17,13 +17,13 @@
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/ItemModifyJob>
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
 #include <KColorScheme>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <akonadi/itemfetchscope.h>
 #include <kcontacts/contactgroup.h>
 
 #include <QMessageBox>

@@ -15,11 +15,11 @@
 
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/ControlGui>
+#include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/EntityTreeView>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/Session>
 #include <KLocalizedString>
-#include <akonadi/entitydisplayattribute.h>
-#include <akonadi/itemfetchscope.h>
 #include <contactsfilterproxymodel.h>
 #include <contactstreemodel.h>
 #include <kcontacts/addressee.h>

@@ -10,7 +10,7 @@
 
 #include "akonadi-contact_export.h"
 
-#include <akonadi/attribute.h>
+#include <Akonadi/Attribute>
 
 #include <QVariant>
 

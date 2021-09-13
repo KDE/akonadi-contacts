@@ -17,11 +17,11 @@
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/ItemModifyJob>
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
 #include <KLocalizedString>
-#include <akonadi/itemfetchscope.h>
 #include <kcontacts/addressee.h>
 
 #include <QMessageBox>

@@ -9,9 +9,9 @@
 #include "contactcompletionmodel_p.h"
 
 #include <Akonadi/EntityMimeTypeFilterModel>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
-#include <akonadi/itemfetchscope.h>
 
 #include <kcontacts/addressee.h>
 

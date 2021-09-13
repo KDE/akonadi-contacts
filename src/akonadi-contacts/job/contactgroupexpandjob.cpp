@@ -10,8 +10,8 @@
 #include "akonadi_contact_debug.h"
 #include "job/contactgroupsearchjob.h"
 #include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/ItemSearchJob>
-#include <akonadi/itemfetchscope.h>
 
 using namespace Akonadi;
 

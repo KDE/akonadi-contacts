@@ -9,7 +9,7 @@
 #include "contactgroupmodel_p.h"
 
 #include <Akonadi/ItemFetchJob>
-#include <akonadi/itemfetchscope.h>
+#include <Akonadi/ItemFetchScope>
 #include <kcontacts/addressee.h>
 
 #include <KIconEngine>

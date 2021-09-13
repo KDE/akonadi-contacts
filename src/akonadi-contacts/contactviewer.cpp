@@ -16,13 +16,13 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionFetchJob>
+#include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/Item>
+#include <Akonadi/ItemFetchScope>
 #include <KColorScheme>
 #include <KConfigGroup>
 #include <KIOCore/kio/transferjob.h>
 #include <KLocalizedString>
-#include <akonadi/entitydisplayattribute.h>
-#include <akonadi/itemfetchscope.h>
 #include <kcontacts/addressee.h>
 
 #include <QGuiApplication>
