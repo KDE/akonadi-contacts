@@ -8,9 +8,9 @@
 
 #include "smsdialog.h"
 
+#include <KContacts/PhoneNumber>
 #include <KLocalizedString>
 #include <KTextEdit>
-#include <kcontacts/phonenumber.h>
 
 #include <QDialogButtonBox>
 #include <QLabel>

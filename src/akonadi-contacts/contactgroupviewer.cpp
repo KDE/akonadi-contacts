@@ -17,8 +17,8 @@
 #include <Akonadi/Item>
 #include <Akonadi/ItemFetchScope>
 #include <KColorScheme>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include <KLocalizedString>
 

@@ -10,7 +10,7 @@
 
 #include <QWidget>
 
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 class KComboBox;
 

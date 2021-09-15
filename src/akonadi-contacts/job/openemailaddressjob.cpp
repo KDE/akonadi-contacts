@@ -13,8 +13,8 @@
 #include <Akonadi/Contact/ContactSearchJob>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
+#include <KContacts/Addressee>
 #include <QPointer>
-#include <kcontacts/addressee.h>
 
 using namespace Akonadi;
 

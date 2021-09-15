@@ -11,7 +11,7 @@
 #include "akonadi-contact_export.h"
 
 #include <Akonadi/ItemSearchJob>
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 namespace Akonadi
 {

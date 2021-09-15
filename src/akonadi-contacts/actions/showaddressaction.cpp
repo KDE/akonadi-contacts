@@ -10,9 +10,9 @@
 
 #include "contactactionssettings.h"
 
+#include <KContacts/Address>
 #include <KDialogJobUiDelegate>
 #include <KIO/CommandLauncherJob>
-#include <kcontacts/address.h>
 
 #include <QDesktopServices>
 

@@ -12,11 +12,11 @@
 #include "actions/sendsmsaction.h"
 #include "actions/showaddressaction.h"
 
+#include <KContacts/Address>
+#include <KContacts/Addressee>
+#include <KContacts/PhoneNumber>
 #include <QDesktopServices>
 #include <QUrl>
-#include <kcontacts/address.h>
-#include <kcontacts/addressee.h>
-#include <kcontacts/phonenumber.h>
 
 using namespace Akonadi;
 

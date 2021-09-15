@@ -9,8 +9,8 @@
 #pragma once
 
 #include <ContactEditor/CategoriesEditAbstractWidget>
+#include <KContacts/Addressee>
 #include <QVariant>
-#include <kcontacts/addressee.h>
 namespace Akonadi
 {
 class TagWidget;

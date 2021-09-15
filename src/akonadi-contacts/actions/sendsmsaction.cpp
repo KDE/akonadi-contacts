@@ -13,11 +13,11 @@
 #include "qskypedialer.h"
 #include "smsdialog.h"
 
+#include <KContacts/PhoneNumber>
 #include <KDialogJobUiDelegate>
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kcontacts/phonenumber.h>
 
 #include <QDesktopServices>
 #include <QPointer>

@@ -13,7 +13,7 @@
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
 
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 using namespace Akonadi;
 

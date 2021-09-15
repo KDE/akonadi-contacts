@@ -12,7 +12,7 @@
 
 #include <Akonadi/Item>
 #include <Akonadi/ItemSearchJob>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/ContactGroup>
 
 namespace Akonadi
 {

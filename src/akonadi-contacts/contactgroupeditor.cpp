@@ -22,9 +22,9 @@
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
 #include <KColorScheme>
+#include <KContacts/ContactGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kcontacts/contactgroup.h>
 
 #include <QMessageBox>
 #include <QTimer>

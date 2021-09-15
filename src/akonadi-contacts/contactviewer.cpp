@@ -21,16 +21,16 @@
 #include <Akonadi/ItemFetchScope>
 #include <KColorScheme>
 #include <KConfigGroup>
+#include <KContacts/Addressee>
 #include <KIOCore/kio/transferjob.h>
 #include <KLocalizedString>
-#include <kcontacts/addressee.h>
 
+#include <KContacts/VCardConverter>
 #include <QGuiApplication>
 #include <QIcon>
 #include <QScreen>
 #include <QUrlQuery>
 #include <QVBoxLayout>
-#include <kcontacts/vcardconverter.h>
 #include <prison/Prison>
 
 using namespace Akonadi;

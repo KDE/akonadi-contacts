@@ -13,8 +13,8 @@
 
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/Item>
+#include <KContacts/ContactGroup>
 #include <KLocalizedString>
-#include <kcontacts/contactgroup.h>
 
 #include <KConfig>
 #include <KMessageBox>

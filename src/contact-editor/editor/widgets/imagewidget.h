@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <kcontacts/picture.h>
+#include <KContacts/Picture>
 
 #include <QPoint>
 #include <QPushButton>

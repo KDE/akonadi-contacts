@@ -10,7 +10,7 @@
 
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 #include <KIconEngine>
 #include <KIconLoader>

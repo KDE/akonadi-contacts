@@ -10,8 +10,8 @@
 #include "emailaddressselection.h"
 #include "emailaddressselection_p.h"
 
-#include <kcontacts/contactgroup.h>
-#include <kmime/kmime_header_parsing.h>
+#include <KContacts/ContactGroup>
+#include <KMime/HeaderParsing>
 
 using namespace Akonadi;
 

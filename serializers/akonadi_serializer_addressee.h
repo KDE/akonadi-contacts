@@ -11,7 +11,7 @@
 #include <Akonadi/DifferencesAlgorithmInterface>
 #include <Akonadi/GidExtractorInterface>
 #include <Akonadi/ItemSerializerPlugin>
-#include <kcontacts/vcardconverter.h>
+#include <KContacts/VCardConverter>
 
 namespace Akonadi
 {

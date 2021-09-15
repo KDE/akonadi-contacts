@@ -10,9 +10,9 @@
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Item>
 
+#include <KContacts/ContactGroup>
+#include <KContacts/ContactGroupTool>
 #include <KLocalizedString>
-#include <kcontacts/contactgroup.h>
-#include <kcontacts/contactgrouptool.h>
 
 #include <qplugin.h>
 

@@ -11,8 +11,8 @@
 #include "contactstreemodel.h"
 
 #include <Akonadi/EntityTreeModel>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 using namespace Akonadi;
 

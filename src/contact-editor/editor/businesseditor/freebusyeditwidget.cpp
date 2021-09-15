@@ -10,11 +10,11 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KContacts/Addressee>
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QStandardPaths>
-#include <kcontacts/addressee.h>
 #include <kurlrequester.h>
 
 FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)

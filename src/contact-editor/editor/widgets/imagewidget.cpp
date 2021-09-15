@@ -8,7 +8,7 @@
 
 #include "imagewidget.h"
 
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 #include <KIO/TransferJob>
 #include <KLocalizedString>

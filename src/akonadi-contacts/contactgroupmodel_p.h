@@ -11,7 +11,7 @@
 #include <QAbstractItemModel>
 #include <QSortFilterProxyModel>
 
-#include <kcontacts/contactgroup.h>
+#include <KContacts/ContactGroup>
 
 namespace Akonadi
 {

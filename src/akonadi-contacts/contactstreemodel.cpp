@@ -9,8 +9,8 @@
 
 #include "contactstreemodel.h"
 
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include <KIconLoader>
 #include <KLocalizedString>

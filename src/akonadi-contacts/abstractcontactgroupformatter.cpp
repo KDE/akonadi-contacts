@@ -9,7 +9,7 @@
 #include "abstractcontactgroupformatter.h"
 
 #include <Akonadi/Item>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/ContactGroup>
 
 using namespace Akonadi;
 

@@ -21,8 +21,8 @@
 #include <Akonadi/ItemModifyJob>
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
+#include <KContacts/Addressee>
 #include <KLocalizedString>
-#include <kcontacts/addressee.h>
 
 #include <QMessageBox>
 #include <QPointer>

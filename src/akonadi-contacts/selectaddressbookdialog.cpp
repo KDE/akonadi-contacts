@@ -8,8 +8,8 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 
+#include <KContacts/Addressee>
 #include <KSharedConfig>
-#include <kcontacts/addressee.h>
 
 using namespace Akonadi;
 class Akonadi::SelectAddressBookDialogPrivate

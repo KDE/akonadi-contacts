@@ -11,9 +11,9 @@
 #include <Akonadi/Contact/ContactSearchJob>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
+#include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kcontacts/addressee.h>
 
 #include <QPointer>
 

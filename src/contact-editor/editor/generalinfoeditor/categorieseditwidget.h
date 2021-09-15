@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 #include <editor/widgets/categorieseditabstractwidget.h>
 

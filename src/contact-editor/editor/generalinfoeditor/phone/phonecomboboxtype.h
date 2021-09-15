@@ -10,8 +10,8 @@
 #pragma once
 
 #include "contacteditor_private_export.h"
+#include <KContacts/Addressee>
 #include <editor/widgets/contacteditorcombobox.h>
-#include <kcontacts/addressee.h>
 namespace ContactEditor
 {
 /**

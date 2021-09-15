@@ -11,7 +11,7 @@
 #include "job/contactgroupexpandjob.h"
 #include <Akonadi/Item>
 #include <KColorScheme>
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 using namespace Akonadi;
 

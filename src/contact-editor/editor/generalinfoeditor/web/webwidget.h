@@ -11,7 +11,7 @@
 
 #include <QWidget>
 
-#include <kcontacts/resourcelocatorurl.h>
+#include <KContacts/ResourceLocatorUrl>
 class QToolButton;
 namespace ContactEditor
 {

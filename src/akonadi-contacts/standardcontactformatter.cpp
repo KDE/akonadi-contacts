@@ -11,7 +11,7 @@
 #include <Akonadi/Item>
 #include <KColorScheme>
 #include <KConfigGroup>
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 #include <KLocalizedString>
 #include <KStringHandler>

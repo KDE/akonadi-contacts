@@ -10,9 +10,9 @@
 
 #include "akonadi-contact_export.h"
 
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 #include <KJob>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
 
 namespace Akonadi
 {

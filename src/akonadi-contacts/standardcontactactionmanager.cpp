@@ -13,8 +13,8 @@
 
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/MimeTypeChecker>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include <KActionCollection>
 #include <KLocalizedString>

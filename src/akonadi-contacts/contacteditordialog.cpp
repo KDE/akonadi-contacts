@@ -13,7 +13,7 @@
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/Item>
 
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 #include <KConfig>
 #include <KLocalizedString>
