@@ -14,6 +14,8 @@
 
 #include <memory>
 
+class KWidgetListerPrivate;
+
 /**
   @short Widget that manages a list of other widgets (incl. 'more', 'fewer' and 'clear' buttons).
 
@@ -183,8 +185,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<KWidgetListerPrivate> const d;
     //@endcond
 };
 

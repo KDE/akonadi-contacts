@@ -24,6 +24,7 @@ class QWidget;
 namespace Akonadi
 {
 class Item;
+class StandardContactActionManagerPrivate;
 
 /**
  * @short Manages contact specific actions for collection and item views.
@@ -167,8 +168,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<StandardContactActionManagerPrivate> const d;
     //@endcond
 };
 }

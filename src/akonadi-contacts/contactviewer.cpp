@@ -35,10 +35,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactViewer::Private
+class Akonadi::ContactViewerPrivate
 {
 public:
-    Private(ContactViewer *parent)
+    explicit ContactViewerPrivate(ContactViewer *parent)
         : mParent(parent)
     {
         mStandardContactFormatter = new StandardContactFormatter;
@@ -49,7 +49,7 @@ public:
         mQRCode = Prison::createBarcode(Prison::QRCode);
     }
 
-    ~Private()
+    ~ContactViewerPrivate()
     {
         delete mStandardContactFormatter;
         delete mQRCode;
@@ -219,7 +219,7 @@ public:
 
 ContactViewer::ContactViewer(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new ContactViewerPrivate(this))
 {
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});

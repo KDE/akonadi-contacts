@@ -28,10 +28,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupEditorDialog::Private
+class Akonadi::ContactGroupEditorDialogPrivate
 {
 public:
-    Private(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
+    ContactGroupEditorDialogPrivate(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
         : q(qq)
         , mMode(mode)
     {
@@ -71,7 +71,7 @@ public:
 
 ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this, mode))
+    , d(new ContactGroupEditorDialogPrivate(this, mode))
 {
     setWindowTitle(mode == CreateMode ? i18nc("@title:window", "New Contact Group") : i18nc("@title:window", "Edit Contact Group"));
     auto mainLayout = new QVBoxLayout(this);

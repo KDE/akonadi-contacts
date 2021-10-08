@@ -20,22 +20,22 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactsTreeModel::Private
+class Akonadi::ContactsTreeModelPrivate
 {
 public:
-    Private()
+    ContactsTreeModelPrivate()
         : mColumns(ContactsTreeModel::Columns() << ContactsTreeModel::FullName)
         , mIconSize(KIconLoader::global()->currentSize(KIconLoader::Small))
     {
     }
 
-    Columns mColumns;
+    ContactsTreeModel::Columns mColumns;
     const int mIconSize;
 };
 
 ContactsTreeModel::ContactsTreeModel(Monitor *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent)
-    , d(new Private)
+    , d(new ContactsTreeModelPrivate)
 {
 }
 

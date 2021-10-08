@@ -29,10 +29,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AddEmailDisplayJob::Private
+class Akonadi::AddEmailDisplayJobPrivate
 {
 public:
-    Private(AddEmailDisplayJob *qq, const QString &emailString, QWidget *parentWidget)
+    AddEmailDisplayJobPrivate(AddEmailDisplayJob *qq, const QString &emailString, QWidget *parentWidget)
         : q(qq)
         , mCompleteAddress(emailString)
         , mParentWidget(parentWidget)
@@ -180,19 +180,19 @@ public:
                         delete dlg;
                         return;
                     } else { // if agent is not valid => return error and finish job
-                        q->setError(UserDefinedError);
+                        q->setError(KJob::UserDefinedError);
                         q->emitResult();
                         delete dlg;
                         return;
                     }
                 } else { // Canceled create agent => return error and finish job
-                    q->setError(UserDefinedError);
+                    q->setError(KJob::UserDefinedError);
                     q->emitResult();
                     delete dlg;
                     return;
                 }
             } else {
-                q->setError(UserDefinedError);
+                q->setError(KJob::UserDefinedError);
                 q->emitResult();
                 return;
             }
@@ -206,7 +206,7 @@ public:
             if (dlg->exec()) {
                 addressBook = dlg->selectedCollection();
             } else {
-                q->setError(UserDefinedError);
+                q->setError(KJob::UserDefinedError);
                 q->emitResult();
                 gotIt = false;
             }
@@ -217,7 +217,7 @@ public:
         }
 
         if (!addressBook.isValid()) {
-            q->setError(UserDefinedError);
+            q->setError(KJob::UserDefinedError);
             q->emitResult();
             return;
         }
@@ -269,7 +269,7 @@ public:
 
 AddEmailDisplayJob::AddEmailDisplayJob(const QString &email, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, email, parentWidget))
+    , d(new AddEmailDisplayJobPrivate(this, email, parentWidget))
 {
 }
 

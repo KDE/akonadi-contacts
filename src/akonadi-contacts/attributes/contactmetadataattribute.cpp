@@ -12,14 +12,14 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactMetaDataAttribute::Private
+class Akonadi::ContactMetaDataAttributePrivate
 {
 public:
     QVariantMap mData;
 };
 
 ContactMetaDataAttribute::ContactMetaDataAttribute()
-    : d(new Private)
+    : d(new ContactMetaDataAttributePrivate)
 {
 }
 

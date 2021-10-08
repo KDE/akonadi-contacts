@@ -18,10 +18,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN OpenEmailAddressJob::Private
+class Akonadi::OpenEmailAddressJobPrivate
 {
 public:
-    Private(OpenEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
+    OpenEmailAddressJobPrivate(OpenEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
         : q(qq)
         , mCompleteAddress(emailString)
         , mParentWidget(parentWidget)
@@ -88,7 +88,7 @@ public:
 
 OpenEmailAddressJob::OpenEmailAddressJob(const QString &email, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, email, parentWidget))
+    , d(new OpenEmailAddressJobPrivate(this, email, parentWidget))
 {
 }
 

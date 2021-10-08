@@ -26,10 +26,10 @@
 #include <QPluginLoader>
 #include <QVBoxLayout>
 
-class Q_DECL_HIDDEN ContactEditorWidget::Private
+class ContactEditorWidgetPrivate
 {
 public:
-    Private(ContactEditorWidget::DisplayMode displayMode, ContactEditorWidget *parent)
+    ContactEditorWidgetPrivate(ContactEditorWidget::DisplayMode displayMode, ContactEditorWidget *parent)
         : mDisplayMode(displayMode)
         , mParent(parent)
     {
@@ -71,7 +71,7 @@ public:
     QList<ContactEditor::ContactEditorPagePlugin *> mCustomPages;
 };
 
-void ContactEditorWidget::Private::initGui()
+void ContactEditorWidgetPrivate::initGui()
 {
     auto layout = new QVBoxLayout(mParent);
     layout->setContentsMargins({});
@@ -84,37 +84,37 @@ void ContactEditorWidget::Private::initGui()
     initGuiBusinessTab();
     initGuiPersonalTab();
     initGuiNotesTab();
-    if (mDisplayMode == FullMode) {
+    if (mDisplayMode == ContactEditorWidget::FullMode) {
         initGuiCustomFieldsTab();
         loadCustomPages();
     }
 }
 
-void ContactEditorWidget::Private::initGuiContactTab()
+void ContactEditorWidgetPrivate::initGuiContactTab()
 {
     mGeneralInfoWidget = new ContactEditor::GeneralInfoWidget;
     mTabWidget->addTab(mGeneralInfoWidget, i18nc("@title:tab", "Contact"));
 }
 
-void ContactEditorWidget::Private::initGuiLocationTab()
+void ContactEditorWidgetPrivate::initGuiLocationTab()
 {
     mAddressesLocationWidget = new ContactEditor::AddressesLocationWidget;
     mTabWidget->addTab(mAddressesLocationWidget, i18nc("@title:tab", "Location"));
 }
 
-void ContactEditorWidget::Private::initGuiBusinessTab()
+void ContactEditorWidgetPrivate::initGuiBusinessTab()
 {
     mBusinessEditorWidget = new ContactEditor::BusinessEditorWidget();
     mTabWidget->addTab(mBusinessEditorWidget, i18nc("@title:tab", "Business"));
 }
 
-void ContactEditorWidget::Private::initGuiPersonalTab()
+void ContactEditorWidgetPrivate::initGuiPersonalTab()
 {
     mPersonalEditorWidget = new ContactEditor::PersonalEditorWidget;
     mTabWidget->addTab(mPersonalEditorWidget, i18nc("@title:tab Personal properties of a contact", "Personal"));
 }
 
-void ContactEditorWidget::Private::initGuiNotesTab()
+void ContactEditorWidgetPrivate::initGuiNotesTab()
 {
     auto widget = new QWidget;
     auto layout = new QVBoxLayout(widget);
@@ -126,13 +126,13 @@ void ContactEditorWidget::Private::initGuiNotesTab()
     layout->addWidget(mNotesWidget);
 }
 
-void ContactEditorWidget::Private::initGuiCustomFieldsTab()
+void ContactEditorWidgetPrivate::initGuiCustomFieldsTab()
 {
     mCustomFieldsWidget = new ContactEditor::CustomFieldsWidget(mParent);
     mTabWidget->addTab(mCustomFieldsWidget, i18nc("@title:tab", "Custom Fields"));
 }
 
-void ContactEditorWidget::Private::loadCustomPages()
+void ContactEditorWidgetPrivate::loadCustomPages()
 {
     qDeleteAll(mCustomPages);
     mCustomPages.clear();
@@ -159,12 +159,12 @@ void ContactEditorWidget::Private::loadCustomPages()
     }
 }
 
-QString ContactEditorWidget::Private::loadCustom(const KContacts::Addressee &contact, const QString &key) const
+QString ContactEditorWidgetPrivate::loadCustom(const KContacts::Addressee &contact, const QString &key) const
 {
     return contact.custom(QStringLiteral("KADDRESSBOOK"), key);
 }
 
-void ContactEditorWidget::Private::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const
+void ContactEditorWidgetPrivate::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const
 {
     if (value.isEmpty()) {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), key);
@@ -174,14 +174,14 @@ void ContactEditorWidget::Private::storeCustom(KContacts::Addressee &contact, co
 }
 
 ContactEditorWidget::ContactEditorWidget(QWidget *parent)
-    : d(new Private(FullMode, this))
+    : d(new ContactEditorWidgetPrivate(FullMode, this))
 {
     Q_UNUSED(parent)
     d->initGui();
 }
 
 ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displayMode, QWidget *parent)
-    : d(new Private(displayMode, this))
+    : d(new ContactEditorWidgetPrivate(displayMode, this))
 {
     Q_UNUSED(parent)
     d->initGui();

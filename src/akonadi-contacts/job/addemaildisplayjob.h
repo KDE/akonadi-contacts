@@ -15,6 +15,8 @@
 namespace Akonadi
 {
 class Item;
+class AddEmailDisplayJobPrivate;
+
 /**
  * @brief The AddEmailDisplayJob class
  * @author Laurent Montel <montel@kde.org>
@@ -39,8 +41,8 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class AddEmailDisplayJobPrivate;
+    std::unique_ptr<AddEmailDisplayJobPrivate> const d;
     //@endcond
 };
 }

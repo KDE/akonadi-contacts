@@ -29,10 +29,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AddEmailAddressJob::Private
+class Akonadi::AddEmailAddressJobPrivate
 {
 public:
-    Private(AddEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
+    AddEmailAddressJobPrivate(AddEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
         : q(qq)
         , mCompleteAddress(emailString)
         , mParentWidget(parentWidget)
@@ -73,7 +73,7 @@ public:
 
                 KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("alreadyInAddressBook"));
             }
-            q->setError(UserDefinedError);
+            q->setError(KJob::UserDefinedError);
             q->emitResult();
             return;
         }
@@ -139,19 +139,19 @@ public:
                         delete dlg;
                         return;
                     } else { // if agent is not valid => return error and finish job
-                        q->setError(UserDefinedError);
+                        q->setError(KJob::UserDefinedError);
                         q->emitResult();
                         delete dlg;
                         return;
                     }
                 } else { // Canceled create agent => return error and finish job
-                    q->setError(UserDefinedError);
+                    q->setError(KJob::UserDefinedError);
                     q->emitResult();
                     delete dlg;
                     return;
                 }
             } else {
-                q->setError(UserDefinedError);
+                q->setError(KJob::UserDefinedError);
                 q->emitResult();
                 return;
             }
@@ -165,7 +165,7 @@ public:
             if (dlg->exec()) {
                 addressBook = dlg->selectedCollection();
             } else {
-                q->setError(UserDefinedError);
+                q->setError(KJob::UserDefinedError);
                 q->emitResult();
                 gotIt = false;
             }
@@ -176,7 +176,7 @@ public:
         }
 
         if (!addressBook.isValid()) {
-            q->setError(UserDefinedError);
+            q->setError(KJob::UserDefinedError);
             q->emitResult();
             return;
         }
@@ -219,10 +219,10 @@ public:
                 == KMessageBox::Yes) {
                 QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
                 dlg->setContact(mItem);
-                connect(dlg.data(), &Akonadi::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
+                QObject::connect(dlg.data(), &Akonadi::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
                     contactStored(item);
                 });
-                connect(dlg.data(), &Akonadi::ContactEditorDialog::error, q, [this](const QString &str) {
+                QObject::connect(dlg.data(), &Akonadi::ContactEditorDialog::error, q, [this](const QString &str) {
                     slotContactEditorError(str);
                 });
                 dlg->exec();
@@ -257,7 +257,7 @@ public:
 
 AddEmailAddressJob::AddEmailAddressJob(const QString &email, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, email, parentWidget))
+    , d(new AddEmailAddressJobPrivate(this, email, parentWidget))
 {
 }
 

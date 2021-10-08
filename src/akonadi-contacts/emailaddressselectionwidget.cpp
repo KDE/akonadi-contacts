@@ -82,10 +82,10 @@ private:
 /**
  * @internal
  */
-class Q_DECL_HIDDEN EmailAddressSelectionWidget::Private
+class Akonadi::EmailAddressSelectionWidgetPrivate
 {
 public:
-    Private(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)
+    EmailAddressSelectionWidgetPrivate(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)
         : q(qq)
         , mModel(model)
         , mShowOnlyContactWithEmail(showOnlyContactWithEmail)
@@ -104,7 +104,7 @@ public:
     bool mShowOnlyContactWithEmail = false;
 };
 
-void EmailAddressSelectionWidget::Private::init()
+void EmailAddressSelectionWidgetPrivate::init()
 {
     // setup internal model if needed
     if (!mModel) {
@@ -170,19 +170,19 @@ void EmailAddressSelectionWidget::Private::init()
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(true, this, nullptr))
+    , d(new EmailAddressSelectionWidgetPrivate(true, this, nullptr))
 {
 }
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(QAbstractItemModel *model, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(true, this, model))
+    , d(new EmailAddressSelectionWidgetPrivate(true, this, model))
 {
 }
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(showOnlyContactWithEmail, this, model))
+    , d(new EmailAddressSelectionWidgetPrivate(showOnlyContactWithEmail, this, model))
 {
 }
 

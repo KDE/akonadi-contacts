@@ -28,13 +28,13 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactEditorDialog::Private
+class Akonadi::ContactEditorDialogPrivate
 {
 public:
-    Private(ContactEditorDialog::Mode mode,
-            ContactEditorDialog::DisplayMode displaymode,
-            ContactEditor::AbstractContactEditorWidget *editorWidget,
-            ContactEditorDialog *parent)
+    ContactEditorDialogPrivate(ContactEditorDialog::Mode mode,
+                               ContactEditorDialog::DisplayMode displaymode,
+                               ContactEditor::AbstractContactEditorWidget *editorWidget,
+                               ContactEditorDialog *parent)
         : q(parent)
         , mMode(mode)
     {
@@ -80,11 +80,11 @@ public:
         layout->addWidget(mEditor, 1, 0, 1, 2);
         layout->setColumnStretch(1, 1);
 
-        connect(mEditor, &AkonadiContactEditor::contactStored, q, &ContactEditorDialog::contactStored);
+        QObject::connect(mEditor, &AkonadiContactEditor::contactStored, q, &ContactEditorDialog::contactStored);
 
-        connect(mEditor, &AkonadiContactEditor::error, q, &ContactEditorDialog::error);
+        QObject::connect(mEditor, &AkonadiContactEditor::error, q, &ContactEditorDialog::error);
 
-        connect(mEditor, &AkonadiContactEditor::finished, q, [this]() {
+        QObject::connect(mEditor, &AkonadiContactEditor::finished, q, [this]() {
             slotFinish();
         });
 
@@ -132,19 +132,19 @@ public:
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, FullMode, nullptr, this))
+    , d(new ContactEditorDialogPrivate(mode, FullMode, nullptr, this))
 {
 }
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, FullMode, editorWidget, this))
+    , d(new ContactEditorDialogPrivate(mode, FullMode, editorWidget, this))
 {
 }
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, DisplayMode displayMode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, displayMode, nullptr, this))
+    , d(new ContactEditorDialogPrivate(mode, displayMode, nullptr, this))
 {
 }
 

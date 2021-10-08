@@ -22,11 +22,11 @@ namespace Akonadi
 class ContactGroupModel;
 class Monitor;
 
-class Q_DECL_HIDDEN ContactGroupEditor::Private
+class ContactGroupEditorPrivate
 {
 public:
-    Private(ContactGroupEditor *parent);
-    ~Private();
+    ContactGroupEditorPrivate(ContactGroupEditor *parent);
+    ~ContactGroupEditorPrivate();
 
     void itemFetchDone(KJob *job);
     void parentCollectionFetchDone(KJob *job);

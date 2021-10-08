@@ -17,15 +17,15 @@
 
 #include <assert.h>
 
-class Q_DECL_HIDDEN KWidgetLister::Private
+class KWidgetListerPrivate
 {
 public:
-    Private(KWidgetLister *qq)
+    explicit KWidgetListerPrivate(KWidgetLister *qq)
         : q(qq)
     {
     }
 
-    ~Private()
+    ~KWidgetListerPrivate()
     {
         qDeleteAll(mWidgetList);
         mWidgetList.clear();
@@ -41,7 +41,7 @@ public:
 
 KWidgetLister::KWidgetLister(int minWidgets, int maxWidgets, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new KWidgetListerPrivate(this))
 {
     d->mMinWidgets = qMax(minWidgets, 1);
     d->mMaxWidgets = qMax(maxWidgets, d->mMinWidgets + 1);

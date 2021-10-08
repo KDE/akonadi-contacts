@@ -26,10 +26,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN StandardContactActionManager::Private
+class Akonadi::StandardContactActionManagerPrivate
 {
 public:
-    Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
+    StandardContactActionManagerPrivate(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
         : mActionCollection(actionCollection)
         , mParentWidget(parentWidget)
         , mParent(parent)
@@ -42,7 +42,7 @@ public:
         mGenericManager->setCapabilityFilter(QStringList() << QStringLiteral("Resource"));
     }
 
-    ~Private()
+    ~StandardContactActionManagerPrivate()
     {
         delete mGenericManager;
     }
@@ -449,7 +449,7 @@ public:
 
         if (Akonadi::MimeTypeChecker::isWantedItem(item, KContacts::Addressee::mimeType())) {
             QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
-            connect(dlg.data(), &ContactEditorDialog::error, mParent, [this](const QString &error) {
+            QObject::connect(dlg.data(), &ContactEditorDialog::error, mParent, [this](const QString &error) {
                 slotContactEditorError(error);
             });
             dlg->setContact(item);
@@ -480,7 +480,7 @@ public:
 
 StandardContactActionManager::StandardContactActionManager(KActionCollection *actionCollection, QWidget *parent)
     : QObject(parent)
-    , d(new Private(actionCollection, parent, this))
+    , d(new StandardContactActionManagerPrivate(actionCollection, parent, this))
 {
 }
 

@@ -10,7 +10,7 @@
 
 using namespace ContactEditor;
 
-class Q_DECL_HIDDEN ContactMetaDataBase::Private
+class ContactEditor::ContactMetaDataBasePrivate
 {
 public:
     int mDisplayNameMode = -1;
@@ -18,7 +18,7 @@ public:
 };
 
 ContactMetaDataBase::ContactMetaDataBase()
-    : d(new Private)
+    : d(new ContactMetaDataBasePrivate)
 {
 }
 

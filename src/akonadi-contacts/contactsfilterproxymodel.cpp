@@ -19,10 +19,10 @@ using namespace Akonadi;
 static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString, ContactsFilterProxyModel::MatchFilterContactFlag flag);
 static bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, const QString &filterString);
 
-class Q_DECL_HIDDEN ContactsFilterProxyModel::Private
+class Akonadi::ContactsFilterProxyModelPrivate
 {
 public:
-    Private()
+    ContactsFilterProxyModelPrivate()
         : flags({})
     {
     }
@@ -35,7 +35,7 @@ public:
 
 ContactsFilterProxyModel::ContactsFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
-    , d(new Private)
+    , d(new ContactsFilterProxyModelPrivate)
 {
     // contact names should be sorted correctly
     setSortLocaleAware(true);

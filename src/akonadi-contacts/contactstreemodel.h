@@ -17,6 +17,8 @@
 
 namespace Akonadi
 {
+class ContactsTreeModelPrivate;
+
 /**
  * @short A model for contacts and contact groups as available in Akonadi.
  *
@@ -183,8 +185,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactsTreeModelPrivate> const d;
     //@endcond
 };
 }

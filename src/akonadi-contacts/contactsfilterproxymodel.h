@@ -16,6 +16,8 @@
 
 namespace Akonadi
 {
+class ContactsFilterProxyModelPrivate;
+
 /**
  * @short A proxy model for \a ContactsTreeModel models.
  *
@@ -111,8 +113,7 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactsFilterProxyModelPrivate> const d;
     //@endcond
 };
 

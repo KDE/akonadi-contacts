@@ -17,6 +17,8 @@
 
 namespace Akonadi
 {
+class ContactSearchJobPrivate;
+
 /**
  * @short Job that searches for contacts in the Akonadi storage.
  *
@@ -131,8 +133,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactSearchJobPrivate> const d;
     //@endcond
 };
 }

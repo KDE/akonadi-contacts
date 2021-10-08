@@ -96,10 +96,10 @@ void ContactLineEdit::slotTextEdited()
     mIsReference = false;
 }
 
-class Q_DECL_HIDDEN ContactGroupEditorDelegate::Private
+class Akonadi::ContactGroupEditorDelegatePrivate
 {
 public:
-    Private()
+    ContactGroupEditorDelegatePrivate()
         : mButtonSize(16, 16)
         , mIcon(QIcon::fromTheme(QStringLiteral("list-remove")))
     {
@@ -112,7 +112,7 @@ public:
 
 ContactGroupEditorDelegate::ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent)
     : QStyledItemDelegate(parent)
-    , d(new Private)
+    , d(new ContactGroupEditorDelegatePrivate)
 {
     d->mItemView = view;
 }

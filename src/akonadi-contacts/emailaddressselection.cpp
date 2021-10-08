@@ -15,12 +15,12 @@
 
 using namespace Akonadi;
 
-EmailAddressSelection::Private::Private()
+EmailAddressSelectionPrivate::EmailAddressSelectionPrivate()
     : QSharedData()
 {
 }
 
-EmailAddressSelection::Private::Private(const Private &other)
+EmailAddressSelectionPrivate::EmailAddressSelectionPrivate(const EmailAddressSelectionPrivate &other)
     : QSharedData(other)
 {
     mName = other.mName;
@@ -29,7 +29,7 @@ EmailAddressSelection::Private::Private(const Private &other)
 }
 
 EmailAddressSelection::EmailAddressSelection()
-    : d(new Private)
+    : d(new EmailAddressSelectionPrivate)
 {
 }
 

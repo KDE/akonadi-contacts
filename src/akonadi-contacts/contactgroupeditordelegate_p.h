@@ -39,6 +39,8 @@ private:
     Item mItem;
 };
 
+class ContactGroupEditorDelegatePrivate;
+
 class ContactGroupEditorDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
@@ -61,8 +63,9 @@ public:
 private:
     void completed(QWidget *widget);
     void setFirstColumnAsCurrent();
-    class Private;
-    std::unique_ptr<Private> const d;
+
+private:
+    std::unique_ptr<ContactGroupEditorDelegatePrivate> const d;
 };
 }
 

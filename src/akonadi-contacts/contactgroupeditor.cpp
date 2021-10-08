@@ -31,23 +31,23 @@
 
 using namespace Akonadi;
 
-ContactGroupEditor::Private::Private(ContactGroupEditor *parent)
+ContactGroupEditorPrivate::ContactGroupEditorPrivate(ContactGroupEditor *parent)
     : mParent(parent)
 {
 }
 
-ContactGroupEditor::Private::~Private()
+ContactGroupEditorPrivate::~ContactGroupEditorPrivate()
 {
     delete mMonitor;
 }
 
-void ContactGroupEditor::Private::adaptHeaderSizes()
+void ContactGroupEditorPrivate::adaptHeaderSizes()
 {
     mGui.membersView->header()->setDefaultSectionSize(mGui.membersView->header()->width() / 2);
     mGui.membersView->header()->resizeSections(QHeaderView::Interactive);
 }
 
-void ContactGroupEditor::Private::itemFetchDone(KJob *job)
+void ContactGroupEditorPrivate::itemFetchDone(KJob *job)
 {
     if (job->error()) {
         return;
@@ -85,7 +85,7 @@ void ContactGroupEditor::Private::itemFetchDone(KJob *job)
     }
 }
 
-void ContactGroupEditor::Private::parentCollectionFetchDone(KJob *job)
+void ContactGroupEditorPrivate::parentCollectionFetchDone(KJob *job)
 {
     if (job->error()) {
         return;
@@ -111,21 +111,21 @@ void ContactGroupEditor::Private::parentCollectionFetchDone(KJob *job)
     });
 }
 
-void ContactGroupEditor::Private::storeDone(KJob *job)
+void ContactGroupEditorPrivate::storeDone(KJob *job)
 {
     if (job->error()) {
         Q_EMIT mParent->error(job->errorString());
         return;
     }
 
-    if (mMode == EditMode) {
+    if (mMode == ContactGroupEditor::EditMode) {
         Q_EMIT mParent->contactGroupStored(mItem);
-    } else if (mMode == CreateMode) {
+    } else if (mMode == ContactGroupEditor::CreateMode) {
         Q_EMIT mParent->contactGroupStored(static_cast<ItemCreateJob *>(job)->item());
     }
 }
 
-void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByteArray> &)
+void ContactGroupEditorPrivate::itemChanged(const Item &item, const QSet<QByteArray> &)
 {
     Q_UNUSED(item)
     QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
@@ -147,7 +147,7 @@ void ContactGroupEditor::Private::itemChanged(const Item &item, const QSet<QByte
     delete dlg;
 }
 
-void ContactGroupEditor::Private::loadContactGroup(const KContacts::ContactGroup &group)
+void ContactGroupEditorPrivate::loadContactGroup(const KContacts::ContactGroup &group)
 {
     mGui.membersView->setSortingEnabled(false);
     mGui.groupName->setText(group.name());
@@ -157,7 +157,7 @@ void ContactGroupEditor::Private::loadContactGroup(const KContacts::ContactGroup
     const QAbstractItemModel *model = mGui.membersView->model();
     mGui.membersView->setCurrentIndex(model->index(model->rowCount() - 1, 0));
 
-    if (mMode == EditMode) {
+    if (mMode == ContactGroupEditor::EditMode) {
         mGui.membersView->setFocus();
     }
 
@@ -165,7 +165,7 @@ void ContactGroupEditor::Private::loadContactGroup(const KContacts::ContactGroup
     mGui.membersView->setSortingEnabled(true);
 }
 
-bool ContactGroupEditor::Private::storeContactGroup(KContacts::ContactGroup &group)
+bool ContactGroupEditorPrivate::storeContactGroup(KContacts::ContactGroup &group)
 {
     if (mGui.groupName->text().isEmpty()) {
         KMessageBox::error(mParent, i18n("The name of the contact group must not be empty."));
@@ -182,19 +182,19 @@ bool ContactGroupEditor::Private::storeContactGroup(KContacts::ContactGroup &gro
     return true;
 }
 
-void ContactGroupEditor::Private::setupMonitor()
+void ContactGroupEditorPrivate::setupMonitor()
 {
     delete mMonitor;
     mMonitor = new Monitor;
     mMonitor->setObjectName(QStringLiteral("ContactGroupEditorMonitor"));
     mMonitor->ignoreSession(Session::defaultSession());
 
-    connect(mMonitor, &Monitor::itemChanged, mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &arrays) {
+    QObject::connect(mMonitor, &Monitor::itemChanged, mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &arrays) {
         itemChanged(item, arrays);
     });
 }
 
-void ContactGroupEditor::Private::setReadOnly(bool readOnly)
+void ContactGroupEditorPrivate::setReadOnly(bool readOnly)
 {
     mGui.groupName->setReadOnly(readOnly);
     mGui.membersView->setEnabled(!readOnly);
@@ -202,7 +202,7 @@ void ContactGroupEditor::Private::setReadOnly(bool readOnly)
 
 ContactGroupEditor::ContactGroupEditor(Mode mode, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new ContactGroupEditorPrivate(this))
 {
     d->mMode = mode;
     d->mGui.setupUi(this);

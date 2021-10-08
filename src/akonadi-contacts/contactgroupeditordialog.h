@@ -19,6 +19,7 @@ namespace Akonadi
 class Item;
 class Collection;
 class ContactGroupEditor;
+class ContactGroupEditorDialogPrivate;
 
 /**
  * @short A dialog for creating or editing a contact group in Akonadi.
@@ -113,8 +114,7 @@ private:
     void slotAccepted();
 
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactGroupEditorDialogPrivate> const d;
     //@endcond
 };
 }

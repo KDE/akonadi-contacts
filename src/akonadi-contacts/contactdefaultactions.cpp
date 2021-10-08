@@ -20,7 +20,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactDefaultActions::Private
+class Akonadi::ContactDefaultActionsPrivate
 {
 };
 

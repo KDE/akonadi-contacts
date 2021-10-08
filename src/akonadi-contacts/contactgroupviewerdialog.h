@@ -19,6 +19,7 @@ namespace Akonadi
 class Item;
 
 class ContactGroupViewer;
+class ContactGroupViewerDialogPrivate;
 
 /**
  * @short A dialog for displaying a contact group in Akonadi.
@@ -78,8 +79,7 @@ public Q_SLOTS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactGroupViewerDialogPrivate> const d;
     //@endcond
 };
 }

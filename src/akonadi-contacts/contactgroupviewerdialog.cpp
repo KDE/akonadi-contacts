@@ -19,7 +19,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupViewerDialog::Private
+class Akonadi::ContactGroupViewerDialogPrivate
 {
 public:
     ContactGroupViewer *mViewer = nullptr;
@@ -27,7 +27,7 @@ public:
 
 ContactGroupViewerDialog::ContactGroupViewerDialog(QWidget *parent)
     : QDialog(parent)
-    , d(new Private)
+    , d(new ContactGroupViewerDialogPrivate)
 {
     setWindowTitle(i18nc("@title:window", "Show Contact Group"));
     auto mainLayout = new QVBoxLayout(this);

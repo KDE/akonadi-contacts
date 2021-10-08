@@ -23,6 +23,7 @@ namespace Akonadi
 class Item;
 
 class ContactViewer;
+class ContactViewerDialogPrivate;
 
 /**
  * @short A dialog for displaying a contact in Akonadi.
@@ -82,8 +83,7 @@ public Q_SLOTS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactViewerDialogPrivate> const d;
     //@endcond
 };
 }

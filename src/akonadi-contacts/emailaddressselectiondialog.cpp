@@ -20,10 +20,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN EmailAddressSelectionDialog::Private
+class Akonadi::EmailAddressSelectionDialogPrivate
 {
 public:
-    Private(EmailAddressSelectionDialog *qq, QAbstractItemModel *model)
+    EmailAddressSelectionDialogPrivate(EmailAddressSelectionDialog *qq, QAbstractItemModel *model)
         : q(qq)
     {
         auto mainLayout = new QVBoxLayout(q);
@@ -38,8 +38,8 @@ public:
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         okButton->setDefault(true);
         okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-        connect(buttonBox, &QDialogButtonBox::accepted, q, &QDialog::accept);
-        connect(buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
+        QObject::connect(buttonBox, &QDialogButtonBox::accepted, q, &QDialog::accept);
+        QObject::connect(buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
 
         mainLayout->addWidget(buttonBox);
         readConfig();
@@ -68,13 +68,13 @@ public:
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog(QWidget *parent)
     : AbstractEmailAddressSelectionDialog(parent)
-    , d(new Private(this, nullptr))
+    , d(new EmailAddressSelectionDialogPrivate(this, nullptr))
 {
 }
 
 EmailAddressSelectionDialog::EmailAddressSelectionDialog(QAbstractItemModel *model, QWidget *parent)
     : AbstractEmailAddressSelectionDialog(parent)
-    , d(new Private(this, model))
+    , d(new EmailAddressSelectionDialogPrivate(this, model))
 {
 }
 

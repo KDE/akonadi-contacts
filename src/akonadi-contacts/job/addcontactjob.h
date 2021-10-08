@@ -20,6 +20,8 @@ class Addressee;
 namespace Akonadi
 {
 class Collection;
+class AddContactJobPrivate;
+
 /**
  * @short A job to add a new contact to Akonadi.
  *
@@ -66,8 +68,8 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class AddContactJobPrivate;
+    std::unique_ptr<AddContactJobPrivate> const d;
     //@endcond
 };
 }

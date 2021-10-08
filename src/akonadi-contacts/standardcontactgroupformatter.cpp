@@ -15,7 +15,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN StandardContactGroupFormatter::Private
+class Akonadi::StandardContactGroupFormatterPrivate
 {
 };
 

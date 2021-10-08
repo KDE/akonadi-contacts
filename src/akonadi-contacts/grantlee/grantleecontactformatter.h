@@ -20,6 +20,8 @@ class Theme;
 
 namespace KAddressBookGrantlee
 {
+class GrantleeContactFormatterPrivate;
+
 /**
  * @short A class that formats a contact as HTML code.
  *
@@ -57,8 +59,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<GrantleeContactFormatterPrivate> const d;
     //@endcond
 };
 }

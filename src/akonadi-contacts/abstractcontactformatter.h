@@ -22,6 +22,7 @@ class Addressee;
 namespace Akonadi
 {
 class Item;
+class AbstractContactFormatterPrivate;
 
 /**
  * @short The interface for all contact formatters.
@@ -115,8 +116,7 @@ private:
     //@cond PRIVATE
     Q_DISABLE_COPY(AbstractContactFormatter)
 
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<AbstractContactFormatterPrivate> const d;
     //@endcond
 };
 }

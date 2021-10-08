@@ -42,10 +42,10 @@ if (property == QLatin1String("scheme")) {
 }
 GRANTLEE_END_LOOKUP
 
-class Q_DECL_HIDDEN GrantleeContactFormatter::Private
+class KAddressBookGrantlee::GrantleeContactFormatterPrivate
 {
 public:
-    Private()
+    GrantleeContactFormatterPrivate()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
@@ -56,7 +56,7 @@ public:
         mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader());
     }
 
-    ~Private()
+    ~GrantleeContactFormatterPrivate()
     {
         mTemplateLoader.clear();
     }
@@ -88,7 +88,7 @@ public:
 };
 
 GrantleeContactFormatter::GrantleeContactFormatter()
-    : d(new Private)
+    : d(new GrantleeContactFormatterPrivate)
 {
     Grantlee::registerMetaType<QUrl>();
 }

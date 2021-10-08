@@ -22,14 +22,14 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN StandardContactFormatter::Private
+class Akonadi::StandardContactFormatterPrivate
 {
 public:
     bool displayQRcode = true;
 };
 
 StandardContactFormatter::StandardContactFormatter()
-    : d(new Private())
+    : d(new StandardContactFormatterPrivate())
 {
 }
 

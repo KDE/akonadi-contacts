@@ -15,6 +15,8 @@
 
 namespace Akonadi
 {
+class LeafExtensionProxyModelPrivate;
+
 class LeafExtensionProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -56,8 +58,7 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<LeafExtensionProxyModelPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void sourceRowsInserted(const QModelIndex &, int, int))
     Q_PRIVATE_SLOT(d, void sourceRowsRemoved(const QModelIndex &, int, int))

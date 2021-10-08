@@ -17,6 +17,8 @@
 
 namespace Akonadi
 {
+class ContactGroupModelPrivate;
+
 class ContactGroupModel : public QAbstractItemModel
 {
     Q_OBJECT
@@ -44,8 +46,8 @@ public:
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class ContactGroupModelPrivate;
+    std::unique_ptr<ContactGroupModelPrivate> const d;
 };
 
 class GroupFilterModel : public QSortFilterProxyModel

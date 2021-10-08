@@ -18,6 +18,8 @@
 
 namespace Akonadi
 {
+class ContactMetaDataAttributePrivate;
+
 /**
  * @short Attribute to store contact specific meta data.
  *
@@ -53,8 +55,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactMetaDataAttributePrivate> const d;
     //@endcond
 };
 }

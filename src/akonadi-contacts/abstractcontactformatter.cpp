@@ -13,7 +13,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AbstractContactFormatter::Private
+class Akonadi::AbstractContactFormatterPrivate
 {
 public:
     KContacts::Addressee mContact;
@@ -22,7 +22,7 @@ public:
 };
 
 AbstractContactFormatter::AbstractContactFormatter()
-    : d(new Private)
+    : d(new AbstractContactFormatterPrivate)
 {
 }
 

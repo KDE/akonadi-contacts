@@ -27,10 +27,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupViewer::Private
+class Akonadi::ContactGroupViewerPrivate
 {
 public:
-    Private(ContactGroupViewer *parent)
+    explicit ContactGroupViewerPrivate(ContactGroupViewer *parent)
         : mParent(parent)
     {
         mBrowser = new TextBrowser;
@@ -42,7 +42,7 @@ public:
         mContactGroupFormatter = mStandardContactGroupFormatter;
     }
 
-    ~Private()
+    ~ContactGroupViewerPrivate()
     {
         delete mStandardContactGroupFormatter;
     }
@@ -139,7 +139,7 @@ public:
 
 ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new ContactGroupViewerPrivate(this))
 {
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});

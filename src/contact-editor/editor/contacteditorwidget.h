@@ -18,6 +18,8 @@ namespace KContacts
 class Addressee;
 }
 
+class ContactEditorWidgetPrivate;
+
 /**
  * @short A widget for editing a contact.
  *
@@ -67,7 +69,6 @@ public:
     Q_REQUIRED_RESULT bool hasNoSavedData() const override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactEditorWidgetPrivate> const d;
 };
 

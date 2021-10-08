@@ -24,6 +24,8 @@ class PhoneNumber;
 
 namespace Akonadi
 {
+class ContactDefaultActionsPrivate;
+
 /**
  * @short A convenience class that handles different contact related actions.
  *
@@ -128,8 +130,7 @@ public Q_SLOTS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactDefaultActionsPrivate> const d;
     //@endcond PRIVATE
 };
 }

@@ -13,10 +13,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN LeafExtensionProxyModel::Private
+class Akonadi::LeafExtensionProxyModelPrivate
 {
 public:
-    Private(LeafExtensionProxyModel *qq)
+    explicit LeafExtensionProxyModelPrivate(LeafExtensionProxyModel *qq)
         : q(qq)
     {
     }
@@ -30,7 +30,7 @@ public:
     qint64 mUniqueKeyCounter = 0;
 };
 
-void LeafExtensionProxyModel::Private::sourceRowsInserted(const QModelIndex &parentIndex, int start, int end)
+void LeafExtensionProxyModelPrivate::sourceRowsInserted(const QModelIndex &parentIndex, int start, int end)
 {
     // iterate over all of our stored parent indexes
     QMutableMapIterator<qint64, QModelIndex> it(mParentIndexes);
@@ -45,7 +45,7 @@ void LeafExtensionProxyModel::Private::sourceRowsInserted(const QModelIndex &par
     }
 }
 
-void LeafExtensionProxyModel::Private::sourceRowsRemoved(const QModelIndex &parentIndex, int start, int end)
+void LeafExtensionProxyModelPrivate::sourceRowsRemoved(const QModelIndex &parentIndex, int start, int end)
 {
     // iterate over all of our stored parent indexes
     QMutableMapIterator<qint64, QModelIndex> it(mParentIndexes);
@@ -64,7 +64,7 @@ void LeafExtensionProxyModel::Private::sourceRowsRemoved(const QModelIndex &pare
 
 LeafExtensionProxyModel::LeafExtensionProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
-    , d(new Private(this))
+    , d(new LeafExtensionProxyModelPrivate(this))
 {
 }
 

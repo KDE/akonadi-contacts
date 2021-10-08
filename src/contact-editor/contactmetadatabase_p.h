@@ -15,6 +15,8 @@
 
 namespace ContactEditor
 {
+class ContactMetaDataBasePrivate;
+
 /**
  * @short A helper class for storing contact specific settings.
  */
@@ -80,8 +82,7 @@ private:
     //@cond PRIVATE
     Q_DISABLE_COPY(ContactMetaDataBase)
 
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactMetaDataBasePrivate> const d;
     //@endcond
 };
 }

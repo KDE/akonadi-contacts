@@ -21,17 +21,17 @@
 
 using namespace KAddressBookGrantlee;
 
-class Q_DECL_HIDDEN GrantleeContactGroupFormatter::Private
+class KAddressBookGrantlee::GrantleeContactGroupFormatterPrivate
 {
 public:
-    Private()
+    GrantleeContactGroupFormatterPrivate()
         : mEngine(new Grantlee::Engine)
     {
 
         mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
     }
 
-    ~Private()
+    ~GrantleeContactGroupFormatterPrivate()
     {
         delete mEngine;
         mTemplateLoader.clear();
@@ -62,7 +62,7 @@ public:
 };
 
 GrantleeContactGroupFormatter::GrantleeContactGroupFormatter()
-    : d(new Private)
+    : d(new GrantleeContactGroupFormatterPrivate)
 {
 }
 

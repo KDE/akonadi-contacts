@@ -22,6 +22,7 @@ class ContactGroup;
 namespace Akonadi
 {
 class Item;
+class AbstractContactGroupFormatterPrivate;
 
 /**
  * @short The interface for all contact group formatters.
@@ -107,8 +108,7 @@ private:
     //@cond PRIVATE
     Q_DISABLE_COPY(AbstractContactGroupFormatter)
 
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<AbstractContactGroupFormatterPrivate> const d;
     //@endcond
 };
 }

@@ -19,6 +19,7 @@
 namespace Akonadi
 {
 class AbstractContactGroupFormatter;
+class ContactGroupViewerPrivate;
 
 /**
  * @short A viewer component for contact groups in Akonadi.
@@ -103,8 +104,7 @@ private:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactGroupViewerPrivate> const d;
     //@endcond
 };
 }

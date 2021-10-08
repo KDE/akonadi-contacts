@@ -16,6 +16,8 @@
 
 namespace Akonadi
 {
+class StandardContactGroupFormatterPrivate;
+
 /**
  * @short A class that formats a contact group as HTML code.
  *
@@ -58,8 +60,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<StandardContactGroupFormatterPrivate> const d;
     //@endcond
 };
 }

@@ -23,6 +23,7 @@ namespace Akonadi
 class AkonadiContactEditor;
 class Collection;
 class Item;
+class ContactEditorDialogPrivate;
 
 /**
  * @short A dialog for creating or editing a contact in Akonadi.
@@ -153,8 +154,7 @@ public Q_SLOTS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactEditorDialogPrivate> const d;
     //@endcond
 };
 }

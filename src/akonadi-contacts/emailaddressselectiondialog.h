@@ -18,6 +18,8 @@
 
 namespace Akonadi
 {
+class EmailAddressSelectionDialogPrivate;
+
 /**
  * @short A dialog to select email addresses from Akonadi.
  *
@@ -80,8 +82,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<EmailAddressSelectionDialogPrivate> const d;
     //@endcond
 };
 }

@@ -13,7 +13,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactSearchJob::Private
+class Akonadi::ContactSearchJobPrivate
 {
 public:
     int mLimit = -1;
@@ -21,7 +21,7 @@ public:
 
 ContactSearchJob::ContactSearchJob(QObject *parent)
     : ItemSearchJob(parent)
-    , d(new Private())
+    , d(new ContactSearchJobPrivate())
 {
     fetchScope().fetchFullPayload();
     d->mLimit = -1;

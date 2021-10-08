@@ -13,7 +13,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AbstractContactGroupFormatter::Private
+class Akonadi::AbstractContactGroupFormatterPrivate
 {
 public:
     KContacts::ContactGroup mContactGroup;
@@ -22,7 +22,7 @@ public:
 };
 
 AbstractContactGroupFormatter::AbstractContactGroupFormatter()
-    : d(new Private)
+    : d(new AbstractContactGroupFormatterPrivate)
 {
 }
 

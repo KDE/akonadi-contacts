@@ -26,6 +26,8 @@ class QTreeView;
 
 namespace Akonadi
 {
+class EmailAddressSelectionWidgetPrivate;
+
 /**
  * @short A widget to select email addresses from Akonadi.
  *
@@ -107,8 +109,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<EmailAddressSelectionWidgetPrivate> const d;
     //@endcond
 };
 }

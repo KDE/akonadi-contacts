@@ -15,16 +15,16 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupExpandJob::Private
+class Akonadi::ContactGroupExpandJobPrivate
 {
 public:
-    Private(const KContacts::ContactGroup &group, ContactGroupExpandJob *parent)
+    ContactGroupExpandJobPrivate(const KContacts::ContactGroup &group, ContactGroupExpandJob *parent)
         : mParent(parent)
         , mGroup(group)
     {
     }
 
-    Private(const QString &name, ContactGroupExpandJob *parent)
+    ContactGroupExpandJobPrivate(const QString &name, ContactGroupExpandJob *parent)
         : mParent(parent)
         , mName(name)
     {
@@ -125,13 +125,13 @@ public:
 
 ContactGroupExpandJob::ContactGroupExpandJob(const KContacts::ContactGroup &group, QObject *parent)
     : KJob(parent)
-    , d(new Private(group, this))
+    , d(new ContactGroupExpandJobPrivate(group, this))
 {
 }
 
 ContactGroupExpandJob::ContactGroupExpandJob(const QString &name, QObject *parent)
     : KJob(parent)
-    , d(new Private(name, this))
+    , d(new ContactGroupExpandJobPrivate(name, this))
 {
 }
 

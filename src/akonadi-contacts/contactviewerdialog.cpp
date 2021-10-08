@@ -21,10 +21,10 @@ using namespace Akonadi;
 #include <QPushButton>
 #include <QVBoxLayout>
 
-class Q_DECL_HIDDEN ContactViewerDialog::Private
+class Akonadi::ContactViewerDialogPrivate
 {
 public:
-    Private(ContactViewerDialog *parent)
+    explicit ContactViewerDialogPrivate(ContactViewerDialog *parent)
         : q(parent)
     {
     }
@@ -53,7 +53,7 @@ public:
 
 ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this))
+    , d(new ContactViewerDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Show Contact"));
     auto mainLayout = new QVBoxLayout(this);

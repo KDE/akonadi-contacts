@@ -27,10 +27,10 @@ struct GroupMember {
     bool loadingError = false;
 };
 
-class Q_DECL_HIDDEN ContactGroupModel::Private
+class Akonadi::ContactGroupModelPrivate
 {
 public:
-    Private(ContactGroupModel *parent)
+    ContactGroupModelPrivate(ContactGroupModel *parent)
         : mParent(parent)
     {
     }
@@ -141,7 +141,7 @@ public:
 
 ContactGroupModel::ContactGroupModel(QObject *parent)
     : QAbstractItemModel(parent)
-    , d(new Private(this))
+    , d(new ContactGroupModelPrivate(this))
 {
 }
 

@@ -23,6 +23,7 @@ namespace Akonadi
 {
 class Collection;
 class Item;
+class ContactGroupEditorPrivate;
 
 /**
  * @short An widget to edit contact groups in Akonadi.
@@ -139,8 +140,7 @@ private:
     //@cond PRIVATE
     friend class ContactGroupEditorDialog;
 
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ContactGroupEditorPrivate> const d;
 
     Q_DISABLE_COPY(ContactGroupEditor)
     //@endcond
