@@ -12,6 +12,8 @@
 
 #include <QDialog>
 
+#include <memory>
+
 namespace Akonadi
 {
 class Item;
@@ -77,7 +79,7 @@ public Q_SLOTS:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

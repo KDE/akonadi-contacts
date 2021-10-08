@@ -261,10 +261,7 @@ AddEmailAddressJob::AddEmailAddressJob(const QString &email, QWidget *parentWidg
 {
 }
 
-AddEmailAddressJob::~AddEmailAddressJob()
-{
-    delete d;
-}
+AddEmailAddressJob::~AddEmailAddressJob() = default;
 
 void AddEmailAddressJob::start()
 {

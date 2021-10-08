@@ -39,10 +39,7 @@ ContactsTreeModel::ContactsTreeModel(Monitor *monitor, QObject *parent)
 {
 }
 
-ContactsTreeModel::~ContactsTreeModel()
-{
-    delete d;
-}
+ContactsTreeModel::~ContactsTreeModel() = default;
 
 void ContactsTreeModel::setColumns(const Columns &columns)
 {

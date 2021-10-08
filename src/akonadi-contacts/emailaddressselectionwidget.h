@@ -18,6 +18,8 @@
 #include <QAbstractItemView>
 #include <QWidget>
 
+#include <memory>
+
 class QLineEdit;
 class QAbstractItemModel;
 class QTreeView;
@@ -106,7 +108,7 @@ Q_SIGNALS:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

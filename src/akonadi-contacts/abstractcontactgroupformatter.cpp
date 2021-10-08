@@ -26,10 +26,7 @@ AbstractContactGroupFormatter::AbstractContactGroupFormatter()
 {
 }
 
-AbstractContactGroupFormatter::~AbstractContactGroupFormatter()
-{
-    delete d;
-}
+AbstractContactGroupFormatter::~AbstractContactGroupFormatter() = default;
 
 void AbstractContactGroupFormatter::setContactGroup(const KContacts::ContactGroup &group)
 {

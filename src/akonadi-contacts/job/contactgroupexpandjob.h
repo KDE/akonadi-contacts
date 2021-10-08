@@ -14,6 +14,8 @@
 #include <KContacts/ContactGroup>
 #include <KJob>
 
+#include <memory>
+
 namespace Akonadi
 {
 /**
@@ -88,7 +90,7 @@ public:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 
     // Already use with QMetaObject::invokeMethod
     Q_PRIVATE_SLOT(d, void resolveGroup())

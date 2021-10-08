@@ -10,6 +10,8 @@
 #include <Akonadi/Item>
 #include <KJob>
 
+#include <memory>
+
 namespace Akonadi
 {
 class Item;
@@ -38,7 +40,7 @@ Q_SIGNALS:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

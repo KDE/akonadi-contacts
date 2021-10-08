@@ -34,10 +34,7 @@ ContactSearchJob::ContactSearchJob(QObject *parent)
     ItemSearchJob::setQuery(query);
 }
 
-ContactSearchJob::~ContactSearchJob()
-{
-    delete d;
-}
+ContactSearchJob::~ContactSearchJob() = default;
 
 static Akonadi::SearchTerm::Condition matchType(ContactSearchJob::Match match)
 {

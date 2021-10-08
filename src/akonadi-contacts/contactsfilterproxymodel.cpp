@@ -42,10 +42,7 @@ ContactsFilterProxyModel::ContactsFilterProxyModel(QObject *parent)
     setDynamicSortFilter(true);
 }
 
-ContactsFilterProxyModel::~ContactsFilterProxyModel()
-{
-    delete d;
-}
+ContactsFilterProxyModel::~ContactsFilterProxyModel() = default;
 
 void ContactsFilterProxyModel::setFilterString(const QString &filter)
 {

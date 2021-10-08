@@ -14,6 +14,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace KContacts
 {
 class Address;
@@ -179,7 +181,7 @@ private:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 
     Q_PRIVATE_SLOT(d, void slotUrlClicked(const QUrl &))
     Q_PRIVATE_SLOT(d, void slotParentCollectionFetched(KJob *))

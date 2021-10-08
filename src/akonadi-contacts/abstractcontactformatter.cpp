@@ -26,10 +26,7 @@ AbstractContactFormatter::AbstractContactFormatter()
 {
 }
 
-AbstractContactFormatter::~AbstractContactFormatter()
-{
-    delete d;
-}
+AbstractContactFormatter::~AbstractContactFormatter() = default;
 
 void AbstractContactFormatter::setContact(const KContacts::Addressee &contact)
 {

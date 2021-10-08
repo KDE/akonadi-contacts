@@ -10,6 +10,9 @@
 
 #include "abstractcontacteditorwidget_p.h"
 #include "contacteditor_export.h"
+
+#include <memory>
+
 namespace KContacts
 {
 class Addressee;
@@ -65,6 +68,6 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 

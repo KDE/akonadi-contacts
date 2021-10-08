@@ -135,10 +135,7 @@ ContactGroupExpandJob::ContactGroupExpandJob(const QString &name, QObject *paren
 {
 }
 
-ContactGroupExpandJob::~ContactGroupExpandJob()
-{
-    delete d;
-}
+ContactGroupExpandJob::~ContactGroupExpandJob() = default;
 
 void ContactGroupExpandJob::start()
 {

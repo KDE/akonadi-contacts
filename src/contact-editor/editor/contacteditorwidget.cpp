@@ -187,10 +187,7 @@ ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displa
     d->initGui();
 }
 
-ContactEditorWidget::~ContactEditorWidget()
-{
-    delete d;
-}
+ContactEditorWidget::~ContactEditorWidget() = default;
 
 void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const ContactEditor::ContactMetaDataBase &metaData)
 {

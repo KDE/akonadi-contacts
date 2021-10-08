@@ -59,7 +59,4 @@ SelectAddressBookDialog::SelectAddressBookDialog(QWidget *parent)
 {
 }
 
-SelectAddressBookDialog::~SelectAddressBookDialog()
-{
-    delete d;
-}
+SelectAddressBookDialog::~SelectAddressBookDialog() = default;

@@ -231,10 +231,7 @@ ContactGroupEditor::ContactGroupEditor(Mode mode, QWidget *parent)
     d->mGui.membersView->header()->setStretchLastSection(true);
 }
 
-ContactGroupEditor::~ContactGroupEditor()
-{
-    delete d;
-}
+ContactGroupEditor::~ContactGroupEditor() = default;
 
 void ContactGroupEditor::loadContactGroup(const Akonadi::Item &item)
 {

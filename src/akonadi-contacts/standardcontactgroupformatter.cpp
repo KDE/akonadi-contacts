@@ -15,6 +15,10 @@
 
 using namespace Akonadi;
 
+class Q_DECL_HIDDEN StandardContactGroupFormatter::Private
+{
+};
+
 StandardContactGroupFormatter::StandardContactGroupFormatter()
     : d(nullptr)
 {

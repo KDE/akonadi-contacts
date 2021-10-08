@@ -238,10 +238,7 @@ ContactViewer::ContactViewer(QWidget *parent)
     fetchScope().setAncestorRetrieval(ItemFetchScope::Parent);
 }
 
-ContactViewer::~ContactViewer()
-{
-    delete d;
-}
+ContactViewer::~ContactViewer() = default;
 
 Akonadi::Item ContactViewer::contact() const
 {

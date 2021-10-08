@@ -13,6 +13,8 @@
 
 #include <Akonadi/EntityTreeModel>
 
+#include <memory>
+
 namespace Akonadi
 {
 /**
@@ -182,7 +184,7 @@ public:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

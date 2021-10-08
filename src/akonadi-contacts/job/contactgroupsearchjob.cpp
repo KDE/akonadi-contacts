@@ -35,10 +35,7 @@ ContactGroupSearchJob::ContactGroupSearchJob(QObject *parent)
     ItemSearchJob::setQuery(query);
 }
 
-ContactGroupSearchJob::~ContactGroupSearchJob()
-{
-    delete d;
-}
+ContactGroupSearchJob::~ContactGroupSearchJob() = default;
 
 void ContactGroupSearchJob::setQuery(Criterion criterion, const QString &value)
 {

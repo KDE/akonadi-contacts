@@ -68,10 +68,7 @@ LeafExtensionProxyModel::LeafExtensionProxyModel(QObject *parent)
 {
 }
 
-LeafExtensionProxyModel::~LeafExtensionProxyModel()
-{
-    delete d;
-}
+LeafExtensionProxyModel::~LeafExtensionProxyModel() = default;
 
 QModelIndex LeafExtensionProxyModel::index(int row, int column, const QModelIndex &parent) const
 {

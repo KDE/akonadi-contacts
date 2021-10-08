@@ -66,10 +66,7 @@ GrantleeContactGroupFormatter::GrantleeContactGroupFormatter()
 {
 }
 
-GrantleeContactGroupFormatter::~GrantleeContactGroupFormatter()
-{
-    delete d;
-}
+GrantleeContactGroupFormatter::~GrantleeContactGroupFormatter() = default;
 
 void GrantleeContactGroupFormatter::setAbsoluteThemePath(const QString &path)
 {

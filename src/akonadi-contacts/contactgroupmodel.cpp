@@ -145,10 +145,7 @@ ContactGroupModel::ContactGroupModel(QObject *parent)
 {
 }
 
-ContactGroupModel::~ContactGroupModel()
-{
-    delete d;
-}
+ContactGroupModel::~ContactGroupModel() = default;
 
 void ContactGroupModel::loadContactGroup(const KContacts::ContactGroup &contactGroup)
 {

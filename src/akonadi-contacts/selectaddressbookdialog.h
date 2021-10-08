@@ -8,6 +8,8 @@
 #include "akonadi-contact_export.h"
 #include <Akonadi/CollectionDialog>
 
+#include <memory>
+
 namespace Akonadi
 {
 class SelectAddressBookDialogPrivate;
@@ -23,7 +25,7 @@ public:
     ~SelectAddressBookDialog() override;
 
 private:
-    SelectAddressBookDialogPrivate *const d;
+    std::unique_ptr<SelectAddressBookDialogPrivate> const d;
 };
 }
 

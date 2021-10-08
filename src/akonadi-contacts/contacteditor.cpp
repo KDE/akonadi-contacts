@@ -215,10 +215,7 @@ Akonadi::AkonadiContactEditor::AkonadiContactEditor(Mode mode, DisplayMode displ
 {
 }
 
-Akonadi::AkonadiContactEditor::~AkonadiContactEditor()
-{
-    delete d;
-}
+Akonadi::AkonadiContactEditor::~AkonadiContactEditor() = default;
 
 void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
 {

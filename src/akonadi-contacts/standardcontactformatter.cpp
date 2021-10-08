@@ -33,10 +33,7 @@ StandardContactFormatter::StandardContactFormatter()
 {
 }
 
-StandardContactFormatter::~StandardContactFormatter()
-{
-    delete d;
-}
+StandardContactFormatter::~StandardContactFormatter() = default;
 
 static int contactAge(const QDate &date)
 {

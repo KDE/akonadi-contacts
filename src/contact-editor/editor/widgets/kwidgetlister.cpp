@@ -48,10 +48,7 @@ KWidgetLister::KWidgetLister(int minWidgets, int maxWidgets, QWidget *parent)
     init();
 }
 
-KWidgetLister::~KWidgetLister()
-{
-    delete d;
-}
+KWidgetLister::~KWidgetLister() = default;
 
 void KWidgetLister::init()
 {

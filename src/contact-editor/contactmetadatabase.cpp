@@ -22,10 +22,7 @@ ContactMetaDataBase::ContactMetaDataBase()
 {
 }
 
-ContactMetaDataBase::~ContactMetaDataBase()
-{
-    delete d;
-}
+ContactMetaDataBase::~ContactMetaDataBase() = default;
 
 void ContactMetaDataBase::loadMetaData(const QVariantMap &metaData)
 {

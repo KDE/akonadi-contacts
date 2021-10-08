@@ -14,6 +14,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace Akonadi
 {
 class AbstractContactGroupFormatter;
@@ -102,7 +104,7 @@ private:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

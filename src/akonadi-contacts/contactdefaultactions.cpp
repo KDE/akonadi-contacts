@@ -20,6 +20,10 @@
 
 using namespace Akonadi;
 
+class Q_DECL_HIDDEN ContactDefaultActions::Private
+{
+};
+
 ContactDefaultActions::ContactDefaultActions(QObject *parent)
     : QObject(parent)
     , d(nullptr)

@@ -12,6 +12,8 @@
 
 #include <QVariant>
 
+#include <memory>
+
 namespace KContacts
 {
 class ContactGroup;
@@ -106,7 +108,7 @@ private:
     Q_DISABLE_COPY(AbstractContactGroupFormatter)
 
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

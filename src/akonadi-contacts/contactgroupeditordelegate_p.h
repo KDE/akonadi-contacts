@@ -15,6 +15,8 @@
 #include "contactcompletionmodel_p.h"
 #include <Akonadi/Item>
 
+#include <memory>
+
 namespace Akonadi
 {
 class ContactLineEdit : public QLineEdit
@@ -60,7 +62,7 @@ private:
     void completed(QWidget *widget);
     void setFirstColumnAsCurrent();
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

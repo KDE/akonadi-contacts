@@ -12,6 +12,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace KContacts
 {
 class Addressee;
@@ -172,7 +174,7 @@ Q_SIGNALS:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

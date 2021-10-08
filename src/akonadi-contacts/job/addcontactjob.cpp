@@ -135,10 +135,7 @@ AddContactJob::AddContactJob(const KContacts::Addressee &contact, const Akonadi:
 {
 }
 
-AddContactJob::~AddContactJob()
-{
-    delete d;
-}
+AddContactJob::~AddContactJob() = default;
 
 void AddContactJob::showMessageBox(bool b)
 {

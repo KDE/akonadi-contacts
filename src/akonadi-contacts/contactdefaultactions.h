@@ -12,6 +12,8 @@
 
 #include <QObject>
 
+#include <memory>
+
 class QUrl;
 
 namespace KContacts
@@ -127,7 +129,7 @@ public Q_SLOTS:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond PRIVATE
 };
 }

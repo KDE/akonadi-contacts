@@ -12,6 +12,8 @@
 
 #include <QVariantMap>
 
+#include <memory>
+
 namespace KContacts
 {
 class Addressee;
@@ -114,7 +116,7 @@ private:
     Q_DISABLE_COPY(AbstractContactFormatter)
 
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

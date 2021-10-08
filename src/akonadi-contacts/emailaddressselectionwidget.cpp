@@ -186,10 +186,7 @@ EmailAddressSelectionWidget::EmailAddressSelectionWidget(bool showOnlyContactWit
 {
 }
 
-EmailAddressSelectionWidget::~EmailAddressSelectionWidget()
-{
-    delete d;
-}
+EmailAddressSelectionWidget::~EmailAddressSelectionWidget() = default;
 
 EmailAddressSelection::List EmailAddressSelectionWidget::selectedAddresses() const
 {

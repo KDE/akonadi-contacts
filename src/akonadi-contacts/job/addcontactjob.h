@@ -10,6 +10,8 @@
 
 #include <KJob>
 
+#include <memory>
+
 namespace KContacts
 {
 class Addressee;
@@ -65,7 +67,7 @@ public:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

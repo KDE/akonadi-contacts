@@ -93,10 +93,7 @@ GrantleeContactFormatter::GrantleeContactFormatter()
     Grantlee::registerMetaType<QUrl>();
 }
 
-GrantleeContactFormatter::~GrantleeContactFormatter()
-{
-    delete d;
-}
+GrantleeContactFormatter::~GrantleeContactFormatter() = default;
 
 void GrantleeContactFormatter::setAbsoluteThemePath(const QString &path)
 {

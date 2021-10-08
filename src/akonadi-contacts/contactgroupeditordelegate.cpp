@@ -117,10 +117,7 @@ ContactGroupEditorDelegate::ContactGroupEditorDelegate(QAbstractItemView *view, 
     d->mItemView = view;
 }
 
-ContactGroupEditorDelegate::~ContactGroupEditorDelegate()
-{
-    delete d;
-}
+ContactGroupEditorDelegate::~ContactGroupEditorDelegate() = default;
 
 QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {

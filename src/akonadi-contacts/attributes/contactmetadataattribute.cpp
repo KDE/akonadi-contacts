@@ -23,10 +23,7 @@ ContactMetaDataAttribute::ContactMetaDataAttribute()
 {
 }
 
-ContactMetaDataAttribute::~ContactMetaDataAttribute()
-{
-    delete d;
-}
+ContactMetaDataAttribute::~ContactMetaDataAttribute() = default;
 
 void ContactMetaDataAttribute::setMetaData(const QVariantMap &data)
 {

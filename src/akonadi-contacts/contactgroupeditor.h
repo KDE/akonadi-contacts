@@ -12,6 +12,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace KContacts
 {
 class ContactGroup;
@@ -138,7 +140,7 @@ private:
     friend class ContactGroupEditorDialog;
 
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 
     Q_DISABLE_COPY(ContactGroupEditor)
     //@endcond

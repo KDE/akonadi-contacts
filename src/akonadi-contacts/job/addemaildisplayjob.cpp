@@ -273,10 +273,7 @@ AddEmailDisplayJob::AddEmailDisplayJob(const QString &email, QWidget *parentWidg
 {
 }
 
-AddEmailDisplayJob::~AddEmailDisplayJob()
-{
-    delete d;
-}
+AddEmailDisplayJob::~AddEmailDisplayJob() = default;
 
 void AddEmailDisplayJob::setShowAsHTML(bool html)
 {

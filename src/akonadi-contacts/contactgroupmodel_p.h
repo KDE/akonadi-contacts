@@ -13,6 +13,8 @@
 
 #include <KContacts/ContactGroup>
 
+#include <memory>
+
 namespace Akonadi
 {
 class ContactGroupModel : public QAbstractItemModel
@@ -43,7 +45,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 
 class GroupFilterModel : public QSortFilterProxyModel

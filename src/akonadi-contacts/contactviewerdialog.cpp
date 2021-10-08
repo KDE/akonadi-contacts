@@ -83,7 +83,6 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
 ContactViewerDialog::~ContactViewerDialog()
 {
     d->writeConfig();
-    delete d;
 }
 
 Akonadi::Item ContactViewerDialog::contact() const

@@ -92,10 +92,7 @@ OpenEmailAddressJob::OpenEmailAddressJob(const QString &email, QWidget *parentWi
 {
 }
 
-OpenEmailAddressJob::~OpenEmailAddressJob()
-{
-    delete d;
-}
+OpenEmailAddressJob::~OpenEmailAddressJob() = default;
 
 void OpenEmailAddressJob::start()
 {

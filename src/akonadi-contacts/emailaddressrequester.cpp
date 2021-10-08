@@ -86,10 +86,7 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     connect(d->mLineEdit, &KLineEdit::textChanged, this, &EmailAddressRequester::textChanged);
 }
 
-EmailAddressRequester::~EmailAddressRequester()
-{
-    delete d;
-}
+EmailAddressRequester::~EmailAddressRequester() = default;
 
 void EmailAddressRequester::clear()
 {

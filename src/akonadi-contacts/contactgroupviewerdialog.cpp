@@ -45,10 +45,7 @@ ContactGroupViewerDialog::ContactGroupViewerDialog(QWidget *parent)
     resize(QSize(500, 600));
 }
 
-ContactGroupViewerDialog::~ContactGroupViewerDialog()
-{
-    delete d;
-}
+ContactGroupViewerDialog::~ContactGroupViewerDialog() = default;
 
 Akonadi::Item ContactGroupViewerDialog::contactGroup() const
 {

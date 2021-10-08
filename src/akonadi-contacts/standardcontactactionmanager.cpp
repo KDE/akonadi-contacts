@@ -484,10 +484,7 @@ StandardContactActionManager::StandardContactActionManager(KActionCollection *ac
 {
 }
 
-StandardContactActionManager::~StandardContactActionManager()
-{
-    delete d;
-}
+StandardContactActionManager::~StandardContactActionManager() = default;
 
 void StandardContactActionManager::setCollectionSelectionModel(QItemSelectionModel *selectionModel)
 {

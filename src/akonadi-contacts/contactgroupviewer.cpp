@@ -155,10 +155,7 @@ ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     fetchScope().setAncestorRetrieval(ItemFetchScope::Parent);
 }
 
-ContactGroupViewer::~ContactGroupViewer()
-{
-    delete d;
-}
+ContactGroupViewer::~ContactGroupViewer() = default;
 
 Akonadi::Item ContactGroupViewer::contactGroup() const
 {

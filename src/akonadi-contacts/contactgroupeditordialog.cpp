@@ -123,7 +123,6 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
 ContactGroupEditorDialog::~ContactGroupEditorDialog()
 {
     d->writeConfig();
-    delete d;
 }
 
 void ContactGroupEditorDialog::setContactGroup(const Akonadi::Item &group)

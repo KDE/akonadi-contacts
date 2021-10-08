@@ -151,7 +151,6 @@ ContactEditorDialog::ContactEditorDialog(Mode mode, DisplayMode displayMode, QWi
 ContactEditorDialog::~ContactEditorDialog()
 {
     d->writeConfig();
-    delete d;
 }
 
 void ContactEditorDialog::setContact(const Akonadi::Item &contact)

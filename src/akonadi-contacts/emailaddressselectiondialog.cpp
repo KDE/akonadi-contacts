@@ -81,7 +81,6 @@ EmailAddressSelectionDialog::EmailAddressSelectionDialog(QAbstractItemModel *mod
 EmailAddressSelectionDialog::~EmailAddressSelectionDialog()
 {
     d->writeConfig();
-    delete d;
 }
 
 EmailAddressSelection::List EmailAddressSelectionDialog::selectedAddresses() const

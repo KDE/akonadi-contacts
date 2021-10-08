@@ -11,6 +11,8 @@
 #include "contacteditor_export.h"
 #include <QVariant>
 
+#include <memory>
+
 namespace ContactEditor
 {
 /**
@@ -79,7 +81,7 @@ private:
     Q_DISABLE_COPY(ContactMetaDataBase)
 
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }
