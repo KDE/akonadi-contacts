@@ -105,7 +105,6 @@ target_sources(KF5AkonadiContact PRIVATE
     contactgroupeditordialog.cpp
     contactgroupmodel.cpp
     contactgroupviewer.cpp
-    contactgroupviewerdialog.cpp
     contactmetadataakonadi.cpp
     contactparts.cpp
     contactsfilterproxymodel.cpp
@@ -236,7 +235,6 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     ContactGroupEditor
     ContactGroupEditorDialog
     ContactGroupViewer
-    ContactGroupViewerDialog
     ContactsFilterProxyModel
     ContactsTreeModel
     ContactParts
