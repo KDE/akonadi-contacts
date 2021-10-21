@@ -35,7 +35,7 @@ public:
     KContacts::PhoneNumber::Type type() const;
 
 private:
-    KContacts::PhoneNumber::Type mType;
+    const KContacts::PhoneNumber::Type mType;
     KContacts::PhoneNumber::TypeList mTypeList;
 
     QButtonGroup *mGroup = nullptr;

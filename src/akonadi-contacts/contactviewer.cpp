@@ -40,13 +40,13 @@ class Akonadi::ContactViewerPrivate
 public:
     explicit ContactViewerPrivate(ContactViewer *parent)
         : mParent(parent)
+        , mQRCode(Prison::createBarcode(Prison::QRCode))
     {
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
         mShowQRCode = group.readEntry("QRCodes", true);
-        mQRCode = Prison::createBarcode(Prison::QRCode);
     }
 
     ~ContactViewerPrivate()
@@ -213,7 +213,7 @@ public:
     AbstractContactFormatter *mContactFormatter = nullptr;
     AbstractContactFormatter *mStandardContactFormatter = nullptr;
     CollectionFetchJob *mParentCollectionFetchJob = nullptr;
-    Prison::AbstractBarcode *mQRCode = nullptr;
+    Prison::AbstractBarcode *const mQRCode;
     bool mShowQRCode = true;
 };
 

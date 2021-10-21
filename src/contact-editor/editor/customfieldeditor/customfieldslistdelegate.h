@@ -32,7 +32,7 @@ private:
     void setFirstColumnAsCurrent();
     void removeField(int row, QAbstractItemModel *model);
     const QIcon mIcon;
-    QSize mButtonSize;
+    const QSize mButtonSize;
     QAbstractItemView *const mItemView;
 };
 }
