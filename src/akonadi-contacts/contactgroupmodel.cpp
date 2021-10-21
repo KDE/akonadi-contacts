@@ -133,7 +133,7 @@ public:
         } while (foundEmpty);
     }
 
-    ContactGroupModel *mParent = nullptr;
+    ContactGroupModel *const mParent;
     QVector<GroupMember> mMembers;
     KContacts::ContactGroup mGroup;
     QString mLastErrorMessage;

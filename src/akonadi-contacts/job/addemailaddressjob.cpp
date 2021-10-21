@@ -247,10 +247,10 @@ public:
     }
 
     AddEmailAddressJob *const q;
-    QString mCompleteAddress;
+    const QString mCompleteAddress;
     QString mEmail;
     QString mName;
-    QWidget *mParentWidget = nullptr;
+    QWidget *const mParentWidget;
     Akonadi::Item mItem;
     bool mInteractive = false;
 };

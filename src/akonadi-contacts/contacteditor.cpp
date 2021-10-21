@@ -68,8 +68,8 @@ public:
     void storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData);
     void setupMonitor();
 
-    AkonadiContactEditor *mParent = nullptr;
-    AkonadiContactEditor::Mode mMode;
+    AkonadiContactEditor *const mParent;
+    const AkonadiContactEditor::Mode mMode;
     Akonadi::Item mItem;
     Akonadi::ContactMetaDataAkonadi mContactMetaData;
     Akonadi::Monitor *mMonitor = nullptr;

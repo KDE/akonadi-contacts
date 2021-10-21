@@ -126,7 +126,7 @@ public:
 
     ContactEditorDialog *const q;
     CollectionComboBox *mAddressBookBox = nullptr;
-    ContactEditorDialog::Mode mMode;
+    const ContactEditorDialog::Mode mMode;
     AkonadiContactEditor *mEditor = nullptr;
 };
 

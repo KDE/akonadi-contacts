@@ -43,7 +43,9 @@ void ContactDefaultActions::connectToView(QObject *view)
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("emailClicked(const QString&, const QString&)").constData()) != -1) {
-        connect(view, SIGNAL(emailClicked(QString, QString)), this, SLOT(sendEmail(QString, QString)));
+        // clang-format off
+        connect(view, SIGNAL(emailClicked(QString,QString)), this, SLOT(sendEmail(QString,QString)));
+        // clang-format on
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KContacts::PhoneNumber&)").constData()) != -1) {

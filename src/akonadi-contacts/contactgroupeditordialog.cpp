@@ -65,7 +65,7 @@ public:
     ContactGroupEditorDialog *const q;
     CollectionComboBox *mAddressBookBox = nullptr;
     ContactGroupEditor *mEditor = nullptr;
-    ContactGroupEditorDialog::Mode mMode;
+    const ContactGroupEditorDialog::Mode mMode;
     QPushButton *okButton = nullptr;
 };
 

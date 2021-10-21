@@ -125,7 +125,7 @@ public:
 
     QMetaObject::Connection mCollectionFetchJobConnection;
     QMetaObject::Connection mJobConnection;
-    ContactGroupViewer *mParent = nullptr;
+    ContactGroupViewer *const mParent;
     TextBrowser *mBrowser = nullptr;
     QString mCurrentGroupName;
     KContacts::Addressee::List mCurrentContacts;

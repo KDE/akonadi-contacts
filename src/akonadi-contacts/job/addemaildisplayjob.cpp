@@ -259,7 +259,7 @@ public:
     AddEmailDisplayJob *const q;
     Akonadi::Item contact;
     Akonadi::Item::Id messageId;
-    QString mCompleteAddress;
+    const QString mCompleteAddress;
     QString mEmail;
     QString mName;
     QWidget *const mParentWidget;
