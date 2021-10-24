@@ -12,7 +12,7 @@
 #include <Akonadi/Item>
 #include <KColorScheme>
 #include <KContacts/Addressee>
-
+#include <kcontacts_version.h>
 using namespace Akonadi;
 
 class Akonadi::StandardContactGroupFormatterPrivate
@@ -80,9 +80,12 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         } else {
             KContacts::Addressee contact;
             contact.setFormattedName(data.name());
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
+            contact.insertEmail(data.email());
+#else
             KContacts::Email email(data.email());
             contact.addEmail(email);
-
+#endif
             const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
                 + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 

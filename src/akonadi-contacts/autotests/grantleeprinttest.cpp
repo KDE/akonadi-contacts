@@ -7,6 +7,7 @@
 #include "grantleeprinttest.h"
 #include "grantlee/grantleeprint.h"
 #include <QTest>
+#include <kcontacts_version.h>
 
 GrantleePrintTest::GrantleePrintTest(QObject *parent)
     : QObject(parent)
@@ -39,9 +40,13 @@ void GrantleePrintTest::shouldReturnStringWhenAddContentAndContacts()
     KContacts::Addressee::List lst;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
+    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+#else
     KContacts::Email email(QStringLiteral("foo@kde.org"));
     email.setPreferred(true);
     address.addEmail(email);
+#endif
     lst << address;
 
     QCOMPARE(grantleePrint.contactsToHtml(lst), QStringLiteral("foo"));
@@ -53,9 +58,13 @@ void GrantleePrintTest::shouldReturnEmails()
     KContacts::Addressee::List lst;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
+    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+#else
     KContacts::Email email(QStringLiteral("foo@kde.org"));
     email.setPreferred(true);
     address.addEmail(email);
+#endif
     lst << address;
     grantleePrint.setTemplateContent(
         QStringLiteral("{% if contacts %}{% for contact in contacts %}{% if contact.name %}{{ contact.name }}{% endif %}{% endfor %}{% endif %}"));
@@ -97,9 +106,13 @@ void GrantleePrintTest::shouldDisplayContactInfo()
     address.setGivenName(QStringLiteral("foo-givenname"));
     address.setAdditionalName(QStringLiteral("foo-additionalname"));
     address.setName(QStringLiteral("foo1"));
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
+    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+#else
     KContacts::Email email(QStringLiteral("foo@kde.org"));
     email.setPreferred(true);
     address.addEmail(email);
+#endif
     address.setOrganization(QStringLiteral("kde"));
     address.insertLang(KContacts::Lang(QStringLiteral("fr")));
     address.setNote(QStringLiteral("foo-note"));
