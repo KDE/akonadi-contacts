@@ -182,7 +182,9 @@ public:
         }
         KContacts::Addressee contact;
         contact.setNameFromString(mName);
-        contact.insertEmail(mEmail, true);
+        KContacts::Email email(mEmail);
+        email.setPreferred(true);
+        contact.addEmail(email);
 
         // create the new item
         Akonadi::Item item;

@@ -39,7 +39,9 @@ void GrantleePrintTest::shouldReturnStringWhenAddContentAndContacts()
     KContacts::Addressee::List lst;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
-    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    email.setPreferred(true);
+    address.addEmail(email);
     lst << address;
 
     QCOMPARE(grantleePrint.contactsToHtml(lst), QStringLiteral("foo"));
@@ -51,7 +53,9 @@ void GrantleePrintTest::shouldReturnEmails()
     KContacts::Addressee::List lst;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
-    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    email.setPreferred(true);
+    address.addEmail(email);
     lst << address;
     grantleePrint.setTemplateContent(
         QStringLiteral("{% if contacts %}{% for contact in contacts %}{% if contact.name %}{{ contact.name }}{% endif %}{% endfor %}{% endif %}"));
@@ -93,7 +97,9 @@ void GrantleePrintTest::shouldDisplayContactInfo()
     address.setGivenName(QStringLiteral("foo-givenname"));
     address.setAdditionalName(QStringLiteral("foo-additionalname"));
     address.setName(QStringLiteral("foo1"));
-    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    email.setPreferred(true);
+    address.addEmail(email);
     address.setOrganization(QStringLiteral("kde"));
     address.insertLang(KContacts::Lang(QStringLiteral("fr")));
     address.setNote(QStringLiteral("foo-note"));

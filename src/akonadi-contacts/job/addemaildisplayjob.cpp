@@ -223,7 +223,9 @@ public:
         }
         KContacts::Addressee contact;
         contact.setNameFromString(mName);
-        contact.insertEmail(mEmail, true);
+        KContacts::Email email(mEmail);
+        email.setPreferred(true);
+        contact.addEmail(email);
         contact.insertCustom(QStringLiteral("KADDRESSBOOK"),
                              QStringLiteral("MailPreferedFormatting"),
                              mShowAsHTML ? QStringLiteral("HTML") : QStringLiteral("TEXT"));

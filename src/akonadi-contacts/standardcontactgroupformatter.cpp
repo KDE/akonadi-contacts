@@ -80,7 +80,8 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
         } else {
             KContacts::Addressee contact;
             contact.setFormattedName(data.name());
-            contact.insertEmail(data.email());
+            KContacts::Email email(data.email());
+            contact.addEmail(email);
 
             const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
                 + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());

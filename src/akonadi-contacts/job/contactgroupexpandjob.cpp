@@ -37,7 +37,9 @@ public:
 
             KContacts::Addressee contact;
             contact.setNameFromString(data.name());
-            contact.insertEmail(data.email(), true);
+            KContacts::Email email(data.email());
+            email.setPreferred(true);
+            contact.addEmail(email);
 
             mContacts.append(contact);
         }
@@ -93,13 +95,15 @@ public:
 
         const Item::List items = fetchJob->items();
         if (!items.isEmpty()) {
-            const QString email = fetchJob->property("preferredEmail").toString();
+            const QString preferredEmail = fetchJob->property("preferredEmail").toString();
 
             const Item item = items.first();
             if (item.hasPayload<KContacts::Addressee>()) {
                 auto contact = item.payload<KContacts::Addressee>();
-                if (!email.isEmpty()) {
-                    contact.insertEmail(email, true);
+                if (!preferredEmail.isEmpty()) {
+                    KContacts::Email email(preferredEmail);
+                    email.setPreferred(true);
+                    contact.addEmail(email);
                 }
 
                 mContacts.append(contact);
