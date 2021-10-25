@@ -175,6 +175,9 @@ target_link_libraries(KF5AkonadiContact
     KF5::Prison
     Grantlee5::Templates
     )
+if(TARGET KF5::I18nLocaleData)
+    target_link_libraries(KF5AkonadiContact PRIVATE KF5::I18nLocaleData)
+endif()
 
 if(TARGET KF5::Libkleo)
 target_link_libraries(KF5AkonadiContact
