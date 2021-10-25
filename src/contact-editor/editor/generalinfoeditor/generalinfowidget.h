@@ -33,7 +33,7 @@ class GeneralInfoWidget : public QWidget
     Q_OBJECT
 public:
     explicit GeneralInfoWidget(QWidget *parent = nullptr);
-    ~GeneralInfoWidget();
+    ~GeneralInfoWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
 

@@ -80,7 +80,7 @@ public:
     /**
      * Destroys the contact search job.
      */
-    ~ContactSearchJob();
+    ~ContactSearchJob() override;
 
     /**
      * Describes the criteria that can be searched for.

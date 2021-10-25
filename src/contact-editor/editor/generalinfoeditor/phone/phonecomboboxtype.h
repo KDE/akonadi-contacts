@@ -32,7 +32,7 @@ public:
     /**
      * Destroys the phone type combo.
      */
-    ~PhoneComboBoxType();
+    ~PhoneComboBoxType() override;
 
     /**
      * Sets the phone number @p type that shall be selected.

@@ -15,7 +15,7 @@ class PreferredLineEditWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit PreferredLineEditWidgetTest(QObject *parent = nullptr);
-    ~PreferredLineEditWidgetTest();
+    ~PreferredLineEditWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

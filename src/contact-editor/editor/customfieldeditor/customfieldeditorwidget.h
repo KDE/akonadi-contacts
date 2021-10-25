@@ -22,7 +22,7 @@ class CustomFieldEditorWidget : public QWidget
     Q_OBJECT
 public:
     explicit CustomFieldEditorWidget(QWidget *parent = nullptr);
-    ~CustomFieldEditorWidget();
+    ~CustomFieldEditorWidget() override;
     void setReadOnly(bool readOnly);
 
 Q_SIGNALS:

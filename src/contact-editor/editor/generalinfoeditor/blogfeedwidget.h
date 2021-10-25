@@ -22,7 +22,7 @@ class CONTACTEDITOR_TESTS_EXPORT BlogfeedWidget : public QWidget
     Q_OBJECT
 public:
     explicit BlogfeedWidget(QWidget *parent = nullptr);
-    ~BlogfeedWidget();
+    ~BlogfeedWidget() override;
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);

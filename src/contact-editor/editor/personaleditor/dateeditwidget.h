@@ -42,7 +42,7 @@ public:
     enum Type { General, Birthday, Anniversary };
 
     explicit DateEditWidget(Type type = General, QWidget *parent = nullptr);
-    ~DateEditWidget();
+    ~DateEditWidget() override;
 
     void setDate(const QDate &date);
     Q_REQUIRED_RESULT QDate date() const;

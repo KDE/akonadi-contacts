@@ -25,7 +25,7 @@ class CONTACTEDITOR_TESTS_EXPORT PhoneWidget : public QWidget
     Q_OBJECT
 public:
     explicit PhoneWidget(QWidget *parent = nullptr);
-    ~PhoneWidget();
+    ~PhoneWidget() override;
 
     void updateAddRemoveButton(bool addButtonEnabled);
     void loadPhone(const KContacts::PhoneNumber &number);

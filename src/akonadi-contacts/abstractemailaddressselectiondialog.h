@@ -19,7 +19,7 @@ class AKONADI_CONTACT_EXPORT AbstractEmailAddressSelectionDialog : public QDialo
     Q_OBJECT
 public:
     explicit AbstractEmailAddressSelectionDialog(QWidget *parent = nullptr);
-    virtual ~AbstractEmailAddressSelectionDialog();
+    ~AbstractEmailAddressSelectionDialog() override;
 
     /**
      * Returns the list of selected email addresses.

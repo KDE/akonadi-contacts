@@ -22,7 +22,7 @@ class NameWidget : public QWidget
     Q_OBJECT
 public:
     explicit NameWidget(QWidget *parent = nullptr);
-    ~NameWidget();
+    ~NameWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

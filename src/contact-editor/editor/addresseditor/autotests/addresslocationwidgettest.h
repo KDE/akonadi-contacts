@@ -16,7 +16,7 @@ class AddressLocationWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit AddressLocationWidgetTest(QObject *parent = nullptr);
-    ~AddressLocationWidgetTest();
+    ~AddressLocationWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

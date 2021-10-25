@@ -18,7 +18,7 @@ class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public ContactEditor::Contac
     Q_OBJECT
 public:
     explicit MailTypeCombobox(QWidget *parent = nullptr);
-    ~MailTypeCombobox();
+    ~MailTypeCombobox() override;
 };
 }
 

@@ -61,7 +61,7 @@ public:
     /**
      * Destroys the contact group search job.
      */
-    ~ContactGroupSearchJob();
+    ~ContactGroupSearchJob() override;
 
     /**
      * Describes the criteria that can be searched for.

@@ -15,7 +15,7 @@ class MessagingWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit MessagingWidgetTest(QObject *parent = nullptr);
-    ~MessagingWidgetTest();
+    ~MessagingWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

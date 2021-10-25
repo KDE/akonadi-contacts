@@ -23,7 +23,7 @@ class CONTACTEDITOR_TESTS_EXPORT PhoneListWidget : public QWidget
     Q_OBJECT
 public:
     explicit PhoneListWidget(QWidget *parent = nullptr);
-    ~PhoneListWidget();
+    ~PhoneListWidget() override;
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);

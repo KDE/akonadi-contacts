@@ -23,7 +23,7 @@ class CONTACTEDITOR_TESTS_EXPORT NicknameWidget : public QWidget
     Q_OBJECT
 public:
     explicit NicknameWidget(QWidget *parent = nullptr);
-    ~NicknameWidget();
+    ~NicknameWidget() override;
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);

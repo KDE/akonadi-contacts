@@ -23,7 +23,7 @@ class PersonalEditorWidget : public QWidget
     Q_OBJECT
 public:
     explicit PersonalEditorWidget(QWidget *parent = nullptr);
-    ~PersonalEditorWidget();
+    ~PersonalEditorWidget() override;
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact);
     void setReadOnly(bool readOnly);

@@ -25,7 +25,7 @@ class AddressTypeDialog : public QDialog
     Q_OBJECT
 public:
     AddressTypeDialog(KContacts::Address::Type type, QWidget *parent);
-    ~AddressTypeDialog();
+    ~AddressTypeDialog() override;
 
     KContacts::Address::Type type() const;
 

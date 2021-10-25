@@ -16,7 +16,7 @@ class CustomFieldsWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit CustomFieldsWidgetTest(QObject *parent = nullptr);
-    ~CustomFieldsWidgetTest();
+    ~CustomFieldsWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

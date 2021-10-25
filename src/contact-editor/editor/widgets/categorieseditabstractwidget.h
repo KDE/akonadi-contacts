@@ -23,7 +23,7 @@ class CONTACTEDITOR_EXPORT CategoriesEditAbstractWidget : public QWidget
     Q_OBJECT
 public:
     explicit CategoriesEditAbstractWidget(QWidget *parent = nullptr);
-    ~CategoriesEditAbstractWidget();
+    ~CategoriesEditAbstractWidget() override;
 
     virtual void loadContact(const KContacts::Addressee &contact);
     virtual void storeContact(KContacts::Addressee &contact) const;

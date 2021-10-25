@@ -29,7 +29,7 @@ class CONTACTEDITOR_TESTS_EXPORT MessagingWidget : public QWidget
     Q_OBJECT
 public:
     explicit MessagingWidget(QWidget *parent = nullptr);
-    ~MessagingWidget();
+    ~MessagingWidget() override;
 
     void updateAddRemoveButton(bool addButtonEnabled);
     KContacts::Impp imAddress() const;

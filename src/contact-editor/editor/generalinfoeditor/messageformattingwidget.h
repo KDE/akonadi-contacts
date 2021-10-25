@@ -20,7 +20,7 @@ class CONTACTEDITOR_TESTS_EXPORT MessageFormattingWidget : public QWidget
     Q_OBJECT
 public:
     explicit MessageFormattingWidget(QWidget *parent = nullptr);
-    ~MessageFormattingWidget();
+    ~MessageFormattingWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

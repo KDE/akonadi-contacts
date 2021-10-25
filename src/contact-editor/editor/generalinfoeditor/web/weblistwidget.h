@@ -23,7 +23,7 @@ class WebListWidget : public QWidget
     Q_OBJECT
 public:
     explicit WebListWidget(QWidget *parent = nullptr);
-    ~WebListWidget();
+    ~WebListWidget() override;
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
     void setReadOnly(bool readOnly);

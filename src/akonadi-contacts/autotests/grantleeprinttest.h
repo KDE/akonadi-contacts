@@ -13,7 +13,7 @@ class GrantleePrintTest : public QObject
     Q_OBJECT
 public:
     explicit GrantleePrintTest(QObject *parent = nullptr);
-    ~GrantleePrintTest();
+    ~GrantleePrintTest() override;
 private Q_SLOTS:
     void shouldReturnEmptyStringWhenNotContentAndNoContacts();
     void shouldReturnEmptyStringWhenAddContentWithoutContacts();

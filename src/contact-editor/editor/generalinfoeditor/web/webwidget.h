@@ -22,7 +22,7 @@ class WebWidget : public QWidget
     Q_OBJECT
 public:
     explicit WebWidget(QWidget *parent = nullptr);
-    ~WebWidget();
+    ~WebWidget() override;
     void updateAddRemoveButton(bool addButtonEnabled);
 
     void clearWidget();

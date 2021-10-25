@@ -22,7 +22,7 @@ class MessagingListWidget : public QWidget
     Q_OBJECT
 public:
     explicit MessagingListWidget(QWidget *parent = nullptr);
-    ~MessagingListWidget();
+    ~MessagingListWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

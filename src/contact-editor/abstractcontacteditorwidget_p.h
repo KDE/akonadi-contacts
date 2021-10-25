@@ -35,7 +35,7 @@ public:
     /**
      * Destroys the abstract contact editor widget.
      */
-    ~AbstractContactEditorWidget()
+    ~AbstractContactEditorWidget() override
     {
     }
 

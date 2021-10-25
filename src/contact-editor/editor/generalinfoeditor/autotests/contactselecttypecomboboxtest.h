@@ -15,7 +15,7 @@ class ContactSelectTypeComboboxTest : public QObject
     Q_OBJECT
 public:
     explicit ContactSelectTypeComboboxTest(QObject *parent = nullptr);
-    ~ContactSelectTypeComboboxTest();
+    ~ContactSelectTypeComboboxTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

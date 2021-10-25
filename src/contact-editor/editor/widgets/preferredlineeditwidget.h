@@ -18,7 +18,7 @@ class PreferredLineEditWidget : public KLineEdit
     Q_OBJECT
 public:
     explicit PreferredLineEditWidget(QWidget *parent = nullptr);
-    ~PreferredLineEditWidget();
+    ~PreferredLineEditWidget() override;
 
     Q_REQUIRED_RESULT bool preferred() const;
 

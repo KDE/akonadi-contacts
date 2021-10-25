@@ -22,7 +22,7 @@ class CONTACTEDITOR_TESTS_EXPORT MailWidget : public QWidget
     Q_OBJECT
 public:
     explicit MailWidget(QWidget *parent = nullptr);
-    ~MailWidget();
+    ~MailWidget() override;
 
     void clearWidget();
     void updateAddRemoveButton(bool addButtonEnabled);
