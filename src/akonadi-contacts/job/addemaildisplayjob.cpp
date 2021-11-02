@@ -17,7 +17,6 @@
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/Contact/ContactEditorDialog>
 #include <Akonadi/Contact/ContactSearchJob>
-#include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemModifyJob>
 

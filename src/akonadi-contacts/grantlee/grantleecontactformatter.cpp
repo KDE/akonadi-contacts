@@ -30,7 +30,6 @@
 #include <QLocale>
 #include <QMetaProperty>
 #include <QSet>
-#include <memory>
 
 using namespace KAddressBookGrantlee;
 
