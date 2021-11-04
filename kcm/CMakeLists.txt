@@ -4,7 +4,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_akonadicontact_actions\")
 add_library(kcm_akonadicontact_actions MODULE)
 
 target_sources(kcm_akonadicontact_actions PRIVATE
-    kcmakonadicontactactions.cpp)
+    kcmakonadicontactactions.cpp
+    kcmakonadicontactactions.h)
 
 ki18n_wrap_ui(kcm_akonadicontact_actions akonadicontactactions.ui)
 

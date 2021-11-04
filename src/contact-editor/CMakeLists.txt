@@ -94,6 +94,60 @@ target_sources(KF5ContactEditor PRIVATE
     customfields.cpp
     customfieldmanager.cpp
     contactmetadatabase.cpp
+    editor/addresseditor/addresslocationwidget.h
+    editor/addresseditor/selectaddresstypecombobox.h
+    editor/addresseditor/addresseslocationwidget.h
+    editor/addresseditor/addressdelegate.h
+    editor/addresseditor/addressmodel.h
+    editor/addresseditor/addresstypedialog.h
+    editor/utils/utils.h
+    editor/generalinfoeditor/web/webwidgetlister.h
+    editor/generalinfoeditor/web/weblistwidget.h
+    editor/generalinfoeditor/web/webwidget.h
+    editor/generalinfoeditor/web/webselecttypecombobox.h
+    editor/generalinfoeditor/messageformattingwidget.h
+    editor/generalinfoeditor/phone/phonelistwidget.h
+    editor/generalinfoeditor/phone/phonetypedialog.h
+    editor/generalinfoeditor/phone/phonewidget.h
+    editor/generalinfoeditor/phone/phonewidgetlister.h
+    editor/generalinfoeditor/phone/phonecomboboxtype.h
+    editor/generalinfoeditor/messaging/messaginglistwidget.h
+    editor/generalinfoeditor/messaging/messagingwidgetlister.h
+    editor/generalinfoeditor/messaging/messagingwidget.h
+    editor/generalinfoeditor/nicknamewidget.h
+    editor/generalinfoeditor/mail/maillistwidget.h
+    editor/generalinfoeditor/mail/mailwidget.h
+    editor/generalinfoeditor/mail/mailtypecombobox.h
+    editor/generalinfoeditor/mail/mailwidgetlister.h
+    editor/generalinfoeditor/blogfeedwidget.h
+    editor/generalinfoeditor/displaynameeditwidget.h
+    editor/generalinfoeditor/namewidget.h
+    editor/generalinfoeditor/categorieseditwidget.h
+    editor/generalinfoeditor/nameeditdialog.h
+    editor/generalinfoeditor/generalinfowidget.h
+    editor/contacteditorwidget.h
+    editor/customfieldeditor/customfieldsmodel.h
+    editor/customfieldeditor/customfieldslistdelegate.h
+    editor/customfieldeditor/customfieldswidget.h
+    editor/customfieldeditor/customfieldslistwidget.h
+    editor/customfieldeditor/customfieldeditorwidget.h
+    editor/personaleditor/dateeditwidget.h
+    editor/personaleditor/personaleditorwidget.h
+    editor/personaleditor/kdatepickerpopup_p.h
+    editor/widgets/categorieseditabstractwidget.h
+    editor/widgets/imagewidget.h
+    editor/widgets/kwidgetlister_p.h
+    editor/widgets/preferredlineeditwidget.h
+    editor/widgets/contacteditorcombobox.h
+    editor/businesseditor/freebusyeditwidget.h
+    editor/businesseditor/businesseditorwidget.h
+    contacteditor_private_export.h
+    contacteditorpageplugin.h
+    abstractcontacteditorwidget_p.h
+    customfieldmanager_p.h
+    contactmetadatabase_p.h
+    customfields_p.h
+
 )
 
 ecm_qt_declare_logging_category(KF5ContactEditor HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor

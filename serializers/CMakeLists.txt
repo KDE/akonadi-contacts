@@ -7,6 +7,7 @@ endif()
 add_library(akonadi_serializer_addressee MODULE)
 target_sources(akonadi_serializer_addressee PRIVATE
     akonadi_serializer_addressee.cpp
+    akonadi_serializer_addressee.h
 )
 
 
@@ -33,6 +34,7 @@ install(FILES akonadi_serializer_addressee.desktop
 add_library(akonadi_serializer_contactgroup MODULE)
 target_sources(akonadi_serializer_contactgroup PRIVATE
     akonadi_serializer_contactgroup.cpp
+    akonadi_serializer_contactgroup.h
 )
 target_link_libraries(akonadi_serializer_contactgroup
     KF5::Contacts

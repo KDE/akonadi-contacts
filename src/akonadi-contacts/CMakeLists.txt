@@ -125,6 +125,64 @@ target_sources(KF5AkonadiContact PRIVATE
     standardcontactgroupformatter.cpp
     waitingoverlay.cpp
     selectaddressbookdialog.cpp
+    emailaddressselectionproxymodel_p.h
+    job/contactgroupsearchjob.h
+    job/openemailaddressjob.h
+    job/contactsearchjob.h
+    job/addemailaddressjob.h
+    job/addemaildisplayjob.h
+    job/addcontactjob.h
+    job/contactgroupexpandjob.h
+    contactdefaultactions.h
+    contactviewer.h
+    contacteditor.h
+    contactgroupmodel_p.h
+    abstractemailaddressselectiondialog.h
+    emailaddressselectiondialog.h
+    actions/qsflphonedialer.h
+    actions/qekigadialer.h
+    actions/dialphonenumberaction.h
+    actions/qskypedialer.h
+    actions/smsdialog.h
+    actions/showaddressaction.h
+    actions/sendsmsaction.h
+    actions/qdialer.h
+    abstractcontactgroupformatter.h
+    contactstreemodel.h
+    emailaddressselectionmodel.h
+    grantlee/grantleecontactgroupformatter.h
+    grantlee/grantleeprint.h
+    grantlee/grantleecontactviewer.h
+    grantlee/contactgrantleewrapper.h
+    grantlee/grantleecontactformatter.h
+    standardcontactactionmanager.h
+    emailaddressselection.h
+    contactgroupeditordelegate_p.h
+    textbrowser_p.h
+    recipientspicker/recipientseditormanager.h
+    recipientspicker/recipientspickerwidget.h
+    akonadicontact_private_export.h
+    contacteditordialog.h
+    emailaddressselection_p.h
+    contactgroupviewer.h
+    collectionfiltermodel_p.h
+    abstractcontactformatter.h
+    contactsfilterproxymodel.h
+    standardcontactgroupformatter.h
+    standardcontactformatter.h
+    contactgroupeditordialog.h
+    contactgroupeditor_p.h
+    contactcompletionmodel_p.h
+    waitingoverlay_p.h
+    leafextensionproxymodel_p.h
+    emailaddressselectionwidget.h
+    selectaddressbookdialog.h
+    contactparts.h
+    contactmetadataakonadi_p.h
+    emailaddressrequester.h
+    contactgroupeditor.h
+    attributes/contactmetadataattribute_p.h
+    contactviewerdialog.h
     )
 
 
