@@ -289,7 +289,11 @@ void AddressLocationWidget::slotUpdateAddress()
 void AddressLocationWidget::slotRemoveAddress()
 {
     if (mCurrentMode == ModifyAddress) {
-        const auto result = KMessageBox::questionYesNo(this, i18n("Do you really want to delete this address?"));
+        const auto result = KMessageBox::questionYesNo(this,
+                                                       i18n("Do you really want to delete this address?"),
+                                                       QString(),
+                                                       KStandardGuiItem::del(),
+                                                       KStandardGuiItem::cancel());
         if (result == KMessageBox::Yes) {
             Q_EMIT removeAddress(mCurrentAddress);
             reset();

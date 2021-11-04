@@ -64,7 +64,11 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
         auto action = menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Address"));
         action->setEnabled(!mReadOnly);
         connect(action, &QAction::triggered, this, [this, idx]() {
-            const auto result = KMessageBox::questionYesNo(this, i18n("Do you really want to delete this address?"));
+            const auto result = KMessageBox::questionYesNo(this,
+                                                           i18n("Do you really want to delete this address?"),
+                                                           QString(),
+                                                           KStandardGuiItem::del(),
+                                                           KStandardGuiItem::cancel());
             if (result == KMessageBox::Yes) {
                 mAddressModel->removeAddress(idx.row());
             }

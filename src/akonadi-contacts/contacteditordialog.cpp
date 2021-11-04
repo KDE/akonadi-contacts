@@ -175,8 +175,12 @@ AkonadiContactEditor *ContactEditorDialog::editor() const
 void ContactEditorDialog::accept()
 {
     if (d->mEditor->hasNoSavedData()) {
-        if (KMessageBox::questionYesNo(this, i18nc("@info", "Location was not saved. Do you want to close editor?"), i18nc("@title:window", "Confirmation"))
-            == KMessageBox::No) {
+        const int answer = KMessageBox::questionYesNo(this,
+                                                      i18nc("@info", "Location was not saved. Do you want to close editor?"),
+                                                      i18nc("@title:window", "Confirmation"),
+                                                      KGuiItem(i18nc("@action:button", "Close Editor"), QStringLiteral("dialog-close")),
+                                                      KGuiItem(i18nc("@action:button", "Do Not Close"), QStringLiteral("dialog-cancel")));
+        if (answer == KMessageBox::No) {
             return;
         }
     }
@@ -188,7 +192,13 @@ void ContactEditorDialog::accept()
 
 void ContactEditorDialog::reject()
 {
-    if (KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
+    const int answer = KMessageBox::questionYesNo(this,
+                                                  i18nc("@info", "Do you really want to cancel?"),
+                                                  i18nc("@title:window", "Confirmation"),
+                                                  KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                                  KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")));
+
+    if (answer == KMessageBox::Yes) {
         QDialog::reject(); // Discard current changes
     }
 }
