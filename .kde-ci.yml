@@ -7,6 +7,7 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@latest'
     'frameworks/kcontacts' : '@latest'
     'frameworks/prison' : '@latest'
+    'frameworks/kcmutils': '@latest'
     'pim/akonadi' : '@same'
     'pim/kmime' : '@same'
     'pim/libkleo' : '@same'
