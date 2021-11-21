@@ -109,8 +109,7 @@ public:
                                             i18n("Address book folder creation failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setProperty("ContentMimeTypes",
-                              QStringList() << QStringLiteral("application/x-vnd.kde.contactgroup") << QStringLiteral("text/directory")
-                                            << QStringLiteral("application/x-vnd.kde.contactgroup"));
+                              QStringList() << QStringLiteral("application/x-vnd.kde.contactgroup") << QStringLiteral("text/directory"));
 
             break;
         case Akonadi::StandardActionManager::CopyCollections:
