@@ -15,9 +15,7 @@ RecipientsEditorManager::RecipientsEditorManager(QObject *parent)
 {
 }
 
-RecipientsEditorManager::~RecipientsEditorManager()
-{
-}
+RecipientsEditorManager::~RecipientsEditorManager() = default;
 
 RecipientsEditorManager *RecipientsEditorManager::self()
 {

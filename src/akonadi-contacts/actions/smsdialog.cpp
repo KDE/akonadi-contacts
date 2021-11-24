@@ -23,9 +23,7 @@ SmsDialog::SmsDialog(const KContacts::PhoneNumber &number)
     initUI();
 }
 
-SmsDialog::~SmsDialog()
-{
-}
+SmsDialog::~SmsDialog() = default;
 
 QString SmsDialog::message() const
 {

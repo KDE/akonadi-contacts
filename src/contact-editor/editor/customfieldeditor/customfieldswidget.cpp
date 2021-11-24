@@ -31,9 +31,7 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     connect(mCustomFieldEditorWidget, &CustomFieldEditorWidget::addNewField, mCustomFieldsListWidget, &CustomFieldsListWidget::slotAddNewField);
 }
 
-CustomFieldsWidget::~CustomFieldsWidget()
-{
-}
+CustomFieldsWidget::~CustomFieldsWidget() = default;
 
 void CustomFieldsWidget::loadContact(const KContacts::Addressee &contact)
 {

@@ -62,7 +62,7 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                 return item.remoteId();
             }
 
-            return QVariant();
+            return {};
         }
 
         const auto contact = item.payload<KContacts::Addressee>();
@@ -76,7 +76,7 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                     return QIcon::fromTheme(QStringLiteral("user-identity"));
                 }
             }
-            return QVariant();
+            return {};
         } else if ((role == Qt::DisplayRole) || (role == Qt::EditRole)) {
             switch (d->mColumns.at(column)) {
             case FullName:
@@ -149,14 +149,14 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                 return item.remoteId();
             }
 
-            return QVariant();
+            return {};
         }
 
         if (role == Qt::DecorationRole) {
             if (column == 0) {
                 return QIcon::fromTheme(QStringLiteral("x-mail-distribution-list"));
             } else {
-                return QVariant();
+                return {};
             }
         } else if ((role == Qt::DisplayRole) || (role == Qt::EditRole)) {
             switch (d->mColumns.at(column)) {
@@ -165,7 +165,7 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                 return group.name();
             }
             default:
-                return QVariant();
+                return {};
             }
         }
     }
@@ -204,7 +204,7 @@ QVariant ContactsTreeModel::entityHeaderData(int section, Qt::Orientation orient
         if (orientation == Qt::Horizontal) {
             if (headerGroup == EntityTreeModel::CollectionTreeHeaders) {
                 if (section >= 1) {
-                    return QVariant();
+                    return {};
                 }
 
                 switch (section) {
@@ -214,7 +214,7 @@ QVariant ContactsTreeModel::entityHeaderData(int section, Qt::Orientation orient
                 }
             } else if (headerGroup == EntityTreeModel::ItemListHeaders) {
                 if (section < 0 || section >= d->mColumns.count()) {
-                    return QVariant();
+                    return {};
                 }
 
                 switch (d->mColumns.at(section)) {

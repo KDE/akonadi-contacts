@@ -17,9 +17,7 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
     layout->setContentsMargins({});
 }
 
-CategoriesEditWidget::~CategoriesEditWidget()
-{
-}
+CategoriesEditWidget::~CategoriesEditWidget() = default;
 
 void CategoriesEditWidget::setReadOnly(bool readOnly)
 {

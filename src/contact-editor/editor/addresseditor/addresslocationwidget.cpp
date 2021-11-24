@@ -150,9 +150,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     switchMode();
 }
 
-AddressLocationWidget::~AddressLocationWidget()
-{
-}
+AddressLocationWidget::~AddressLocationWidget() = default;
 
 void AddressLocationWidget::slotChanged()
 {

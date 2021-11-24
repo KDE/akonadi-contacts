@@ -88,9 +88,7 @@ DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     updateView();
 }
 
-DateEditWidget::~DateEditWidget()
-{
-}
+DateEditWidget::~DateEditWidget() = default;
 
 void DateEditWidget::setDate(const QDate &date)
 {

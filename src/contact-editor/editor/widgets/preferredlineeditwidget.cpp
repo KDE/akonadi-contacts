@@ -23,9 +23,7 @@ PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     connect(mPreferredAction, &QAction::triggered, this, &PreferredLineEditWidget::slotPreferredStatusChanged);
 }
 
-PreferredLineEditWidget::~PreferredLineEditWidget()
-{
-}
+PreferredLineEditWidget::~PreferredLineEditWidget() = default;
 
 void PreferredLineEditWidget::slotPreferredStatusChanged()
 {

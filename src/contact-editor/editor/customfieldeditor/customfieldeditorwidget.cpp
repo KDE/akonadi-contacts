@@ -54,9 +54,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     topLayout->addWidget(mUseAllContacts);
 }
 
-CustomFieldEditorWidget::~CustomFieldEditorWidget()
-{
-}
+CustomFieldEditorWidget::~CustomFieldEditorWidget() = default;
 
 void CustomFieldEditorWidget::fillTypes()
 {

@@ -14,13 +14,9 @@
 
 using namespace Akonadi;
 
-ContactMetaDataAkonadi::ContactMetaDataAkonadi()
-{
-}
+ContactMetaDataAkonadi::ContactMetaDataAkonadi() = default;
 
-ContactMetaDataAkonadi::~ContactMetaDataAkonadi()
-{
-}
+ContactMetaDataAkonadi::~ContactMetaDataAkonadi() = default;
 
 void ContactMetaDataAkonadi::load(const Akonadi::Item &contact)
 {

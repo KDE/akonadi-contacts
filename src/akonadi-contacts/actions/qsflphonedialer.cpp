@@ -40,9 +40,7 @@ QSflPhoneDialer::QSflPhoneDialer(const QString &applicationName)
 {
 }
 
-QSflPhoneDialer::~QSflPhoneDialer()
-{
-}
+QSflPhoneDialer::~QSflPhoneDialer() = default;
 
 bool QSflPhoneDialer::initializeSflPhone()
 {

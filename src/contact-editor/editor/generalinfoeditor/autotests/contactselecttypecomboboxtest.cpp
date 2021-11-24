@@ -15,9 +15,7 @@ ContactSelectTypeComboboxTest::ContactSelectTypeComboboxTest(QObject *parent)
 {
 }
 
-ContactSelectTypeComboboxTest::~ContactSelectTypeComboboxTest()
-{
-}
+ContactSelectTypeComboboxTest::~ContactSelectTypeComboboxTest() = default;
 
 void ContactSelectTypeComboboxTest::shouldHaveDefaultValue()
 {

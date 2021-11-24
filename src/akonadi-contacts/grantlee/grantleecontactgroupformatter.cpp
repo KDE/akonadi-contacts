@@ -124,7 +124,7 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     }
 
     if (group.name().isEmpty() && group.count() == 0) { // empty group
-        return QString();
+        return {};
     }
 
     if (group.contactReferenceCount() != 0) {
@@ -189,6 +189,6 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     } else if (form == EmbeddableForm) {
         return d->mEmbeddableTemplate->render(&context);
     } else {
-        return QString();
+        return {};
     }
 }

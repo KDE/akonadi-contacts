@@ -14,9 +14,7 @@ GrantleePrintTest::GrantleePrintTest(QObject *parent)
 {
 }
 
-GrantleePrintTest::~GrantleePrintTest()
-{
-}
+GrantleePrintTest::~GrantleePrintTest() = default;
 
 void GrantleePrintTest::shouldReturnEmptyStringWhenNotContentAndNoContacts()
 {

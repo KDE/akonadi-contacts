@@ -24,9 +24,7 @@ StandardContactGroupFormatter::StandardContactGroupFormatter()
 {
 }
 
-StandardContactGroupFormatter::~StandardContactGroupFormatter()
-{
-}
+StandardContactGroupFormatter::~StandardContactGroupFormatter() = default;
 
 QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
 {
@@ -39,7 +37,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
     }
 
     if (group.name().isEmpty() && group.count() == 0) { // empty group
-        return QString();
+        return {};
     }
 
     if (group.contactReferenceCount() != 0) {

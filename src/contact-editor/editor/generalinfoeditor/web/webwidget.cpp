@@ -49,9 +49,7 @@ WebWidget::WebWidget(QWidget *parent)
     layout->addWidget(mRemoveButton);
 }
 
-WebWidget::~WebWidget()
-{
-}
+WebWidget::~WebWidget() = default;
 
 void WebWidget::clearWidget()
 {

@@ -34,9 +34,8 @@ EmailAddressSelection::EmailAddressSelection()
 }
 
 EmailAddressSelection::EmailAddressSelection(const EmailAddressSelection &other)
-    : d(other.d)
-{
-}
+
+    = default;
 
 EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelection &other)
 {
@@ -47,9 +46,7 @@ EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelect
     return *this;
 }
 
-EmailAddressSelection::~EmailAddressSelection()
-{
-}
+EmailAddressSelection::~EmailAddressSelection() = default;
 
 bool EmailAddressSelection::isValid() const
 {

@@ -12,6 +12,4 @@ AbstractEmailAddressSelectionDialog::AbstractEmailAddressSelectionDialog(QWidget
 {
 }
 
-AbstractEmailAddressSelectionDialog::~AbstractEmailAddressSelectionDialog()
-{
-}
+AbstractEmailAddressSelectionDialog::~AbstractEmailAddressSelectionDialog() = default;

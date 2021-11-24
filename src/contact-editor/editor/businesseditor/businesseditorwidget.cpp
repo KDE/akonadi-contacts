@@ -112,9 +112,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     connect(mOrganizationWidget, &KLineEdit::textChanged, this, &BusinessEditorWidget::organizationChanged);
 }
 
-BusinessEditorWidget::~BusinessEditorWidget()
-{
-}
+BusinessEditorWidget::~BusinessEditorWidget() = default;
 
 void BusinessEditorWidget::loadContact(const KContacts::Addressee &contact)
 {

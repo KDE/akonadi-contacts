@@ -216,21 +216,21 @@ QModelIndex ContactGroupModel::index(int row, int col, const QModelIndex &index)
 QModelIndex ContactGroupModel::parent(const QModelIndex &index) const
 {
     Q_UNUSED(index)
-    return QModelIndex();
+    return {};
 }
 
 QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (index.row() < 0 || index.row() >= d->mMembers.count()) {
-        return QVariant();
+        return {};
     }
 
     if (index.column() < 0 || index.column() > 1) {
-        return QVariant();
+        return {};
     }
 
     const GroupMember &member = d->mMembers[index.row()];
@@ -265,7 +265,7 @@ QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
 
     if (role == Qt::DecorationRole) {
         if (index.column() == 1) {
-            return QVariant();
+            return {};
         }
 
         if (member.loadingError) {
@@ -315,7 +315,7 @@ QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 bool ContactGroupModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -380,15 +380,15 @@ bool ContactGroupModel::setData(const QModelIndex &index, const QVariant &value,
 QVariant ContactGroupModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (section < 0 || section > 1) {
-        return QVariant();
+        return {};
     }
 
     if (orientation != Qt::Horizontal) {
-        return QVariant();
+        return {};
     }
 
     if (role != Qt::DisplayRole) {
-        return QVariant();
+        return {};
     }
 
     if (section == 0) {
@@ -405,7 +405,7 @@ Qt::ItemFlags ContactGroupModel::flags(const QModelIndex &index) const
     }
 
     if (d->mMembers[index.row()].loadingError) {
-        return Qt::ItemFlags(Qt::ItemIsEnabled);
+        return {Qt::ItemIsEnabled};
     }
 
     Qt::ItemFlags parentFlags = QAbstractItemModel::flags(index);

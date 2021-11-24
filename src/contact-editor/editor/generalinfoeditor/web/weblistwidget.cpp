@@ -32,9 +32,7 @@ WebListWidget::WebListWidget(QWidget *parent)
     topLayout->addWidget(mWebWidgetLister);
 }
 
-WebListWidget::~WebListWidget()
-{
-}
+WebListWidget::~WebListWidget() = default;
 
 void WebListWidget::loadContact(const KContacts::Addressee &contact)
 {

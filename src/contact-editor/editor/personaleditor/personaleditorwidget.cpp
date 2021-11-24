@@ -53,9 +53,7 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     mainLayout->setRowStretch(2, 1);
 }
 
-PersonalEditorWidget::~PersonalEditorWidget()
-{
-}
+PersonalEditorWidget::~PersonalEditorWidget() = default;
 
 void PersonalEditorWidget::loadContact(const KContacts::Addressee &contact)
 {

@@ -25,9 +25,7 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant
     layout->addWidget(mTagWidget);
 }
 
-CategoriesEditWidget::~CategoriesEditWidget()
-{
-}
+CategoriesEditWidget::~CategoriesEditWidget() = default;
 
 void CategoriesEditWidget::setReadOnly(bool readOnly)
 {

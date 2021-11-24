@@ -39,9 +39,7 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     mCustomFieldList->setColumnHidden(2, true); // hide the 'key' column
 }
 
-CustomFieldsListWidget::~CustomFieldsListWidget()
-{
-}
+CustomFieldsListWidget::~CustomFieldsListWidget() = default;
 
 void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 {

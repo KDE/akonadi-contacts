@@ -31,9 +31,7 @@ SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     connect(this, qOverload<int>(&QComboBox::activated), this, &SelectAddressTypeComboBox::selected);
 }
 
-SelectAddressTypeComboBox::~SelectAddressTypeComboBox()
-{
-}
+SelectAddressTypeComboBox::~SelectAddressTypeComboBox() = default;
 
 void SelectAddressTypeComboBox::setType(KContacts::Address::Type type)
 {

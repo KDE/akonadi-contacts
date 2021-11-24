@@ -58,9 +58,7 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->addWidget(mRemoveButton);
 }
 
-MessagingWidget::~MessagingWidget()
-{
-}
+MessagingWidget::~MessagingWidget() = default;
 
 void MessagingWidget::slotPreferredChanged()
 {

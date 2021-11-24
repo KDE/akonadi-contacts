@@ -33,9 +33,7 @@ PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
     connect(this, qOverload<int>(&PhoneComboBoxType::activated), this, &PhoneComboBoxType::selected);
 }
 
-PhoneComboBoxType::~PhoneComboBoxType()
-{
-}
+PhoneComboBoxType::~PhoneComboBoxType() = default;
 
 void PhoneComboBoxType::setType(KContacts::PhoneNumber::Type type)
 {

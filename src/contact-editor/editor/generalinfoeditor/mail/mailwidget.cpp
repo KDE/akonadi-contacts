@@ -48,9 +48,7 @@ MailWidget::MailWidget(QWidget *parent)
     layout->addWidget(mRemoveButton);
 }
 
-MailWidget::~MailWidget()
-{
-}
+MailWidget::~MailWidget() = default;
 
 void MailWidget::slotPreferredChanged()
 {

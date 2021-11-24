@@ -111,7 +111,7 @@ void SerializerPluginContactGroup::compare(Akonadi::AbstractDifferencesReporter 
 QString SerializerPluginContactGroup::extractGid(const Item &item) const
 {
     if (!item.hasPayload<KContacts::ContactGroup>()) {
-        return QString();
+        return {};
     }
     return item.payload<KContacts::ContactGroup>().id();
 }

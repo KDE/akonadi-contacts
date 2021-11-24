@@ -20,9 +20,7 @@ PhoneWidgetLister::PhoneWidgetLister(QWidget *parent)
     updateAddRemoveButton();
 }
 
-PhoneWidgetLister::~PhoneWidgetLister()
-{
-}
+PhoneWidgetLister::~PhoneWidgetLister() = default;
 
 void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
 {

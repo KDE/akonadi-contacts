@@ -13,8 +13,6 @@ CustomFielsListWidgetTest::CustomFielsListWidgetTest(QObject *parent)
 {
 }
 
-CustomFielsListWidgetTest::~CustomFielsListWidgetTest()
-{
-}
+CustomFielsListWidgetTest::~CustomFielsListWidgetTest() = default;
 
 QTEST_MAIN(CustomFielsListWidgetTest)

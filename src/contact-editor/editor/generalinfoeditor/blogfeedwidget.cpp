@@ -32,9 +32,7 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     topLayout->addWidget(mBlogFeed);
 }
 
-BlogfeedWidget::~BlogfeedWidget()
-{
-}
+BlogfeedWidget::~BlogfeedWidget() = default;
 
 void BlogfeedWidget::loadContact(const KContacts::Addressee &contact)
 {

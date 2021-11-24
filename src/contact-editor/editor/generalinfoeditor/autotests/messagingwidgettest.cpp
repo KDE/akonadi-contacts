@@ -18,9 +18,7 @@ MessagingWidgetTest::MessagingWidgetTest(QObject *parent)
 {
 }
 
-MessagingWidgetTest::~MessagingWidgetTest()
-{
-}
+MessagingWidgetTest::~MessagingWidgetTest() = default;
 
 void MessagingWidgetTest::shouldHaveDefaultValues()
 {

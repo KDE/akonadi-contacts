@@ -21,9 +21,7 @@ MessagingWidgetLister::MessagingWidgetLister(QWidget *parent)
     updateAddRemoveButton();
 }
 
-MessagingWidgetLister::~MessagingWidgetLister()
-{
-}
+MessagingWidgetLister::~MessagingWidgetLister() = default;
 
 void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
 {

@@ -32,9 +32,7 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     topLayout->addWidget(mNickName);
 }
 
-NicknameWidget::~NicknameWidget()
-{
-}
+NicknameWidget::~NicknameWidget() = default;
 
 void NicknameWidget::loadContact(const KContacts::Addressee &contact)
 {

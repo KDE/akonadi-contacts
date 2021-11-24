@@ -14,9 +14,7 @@ CategoriesEditAbstractWidget::CategoriesEditAbstractWidget(QWidget *parent)
 {
 }
 
-CategoriesEditAbstractWidget::~CategoriesEditAbstractWidget()
-{
-}
+CategoriesEditAbstractWidget::~CategoriesEditAbstractWidget() = default;
 
 void CategoriesEditAbstractWidget::loadContact(const KContacts::Addressee &contact)
 {

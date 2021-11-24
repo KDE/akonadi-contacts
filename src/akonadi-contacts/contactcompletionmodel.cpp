@@ -51,9 +51,7 @@ ContactCompletionModel::ContactCompletionModel(Monitor *monitor, QObject *parent
     setCollectionFetchStrategy(InvisibleCollectionFetch);
 }
 
-ContactCompletionModel::~ContactCompletionModel()
-{
-}
+ContactCompletionModel::~ContactCompletionModel() = default;
 
 QVariant ContactCompletionModel::entityData(const Item &item, int column, int role) const
 {
@@ -63,7 +61,7 @@ QVariant ContactCompletionModel::entityData(const Item &item, int column, int ro
             return item.remoteId();
         }
 
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::DisplayRole || role == Qt::EditRole) {

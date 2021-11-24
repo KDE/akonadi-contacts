@@ -62,9 +62,7 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     }
 }
 
-AddressTypeDialog::~AddressTypeDialog()
-{
-}
+AddressTypeDialog::~AddressTypeDialog() = default;
 
 KContacts::Address::Type AddressTypeDialog::type() const
 {

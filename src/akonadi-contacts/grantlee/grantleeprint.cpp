@@ -48,7 +48,7 @@ QString GrantleePrint::contactsToHtml(const KContacts::Addressee::List &contacts
     }
 
     if (contacts.isEmpty()) {
-        return QString();
+        return {};
     }
     QVariantList contactsList;
     contactsList.reserve(contacts.count());

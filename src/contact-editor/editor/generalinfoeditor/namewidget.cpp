@@ -46,9 +46,7 @@ NameWidget::NameWidget(QWidget *parent)
     connect(mButtonEdit, &QToolButton::clicked, this, &NameWidget::slotOpenNameEditDialog);
 }
 
-NameWidget::~NameWidget()
-{
-}
+NameWidget::~NameWidget() = default;
 
 void NameWidget::setReadOnly(bool readOnly)
 {

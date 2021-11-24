@@ -118,9 +118,7 @@ DisplayNameEditWidget::DisplayNameEditWidget(QWidget *parent)
     mViewport->installEventFilter(this);
 }
 
-DisplayNameEditWidget::~DisplayNameEditWidget()
-{
-}
+DisplayNameEditWidget::~DisplayNameEditWidget() = default;
 
 void DisplayNameEditWidget::setReadOnly(bool readOnly)
 {

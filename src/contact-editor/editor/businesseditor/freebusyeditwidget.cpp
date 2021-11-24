@@ -31,9 +31,7 @@ FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     setFocusPolicy(Qt::StrongFocus);
 }
 
-FreeBusyEditWidget::~FreeBusyEditWidget()
-{
-}
+FreeBusyEditWidget::~FreeBusyEditWidget() = default;
 
 static QString freeBusyUrlStore()
 {

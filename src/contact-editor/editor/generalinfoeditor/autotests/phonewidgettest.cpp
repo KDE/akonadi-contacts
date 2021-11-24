@@ -19,9 +19,7 @@ PhoneWidgetTest::PhoneWidgetTest(QObject *parent)
 {
 }
 
-PhoneWidgetTest::~PhoneWidgetTest()
-{
-}
+PhoneWidgetTest::~PhoneWidgetTest() = default;
 
 void PhoneWidgetTest::shouldHaveDefaultValue()
 {

@@ -32,9 +32,7 @@ CustomFieldsListDelegate::CustomFieldsListDelegate(QAbstractItemView *view, QObj
 {
 }
 
-CustomFieldsListDelegate::~CustomFieldsListDelegate()
-{
-}
+CustomFieldsListDelegate::~CustomFieldsListDelegate() = default;
 
 QWidget *CustomFieldsListDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &item, const QModelIndex &index) const
 {

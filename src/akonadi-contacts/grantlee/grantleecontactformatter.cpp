@@ -134,7 +134,7 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     }
 
     if (rawContact.isEmpty()) {
-        return QString();
+        return {};
     }
 
     // Custom fields
@@ -237,7 +237,7 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     } else if (form == EmbeddableForm) {
         return d->mEmbeddableTemplate->render(&context);
     } else {
-        return QString();
+        return {};
     }
 }
 

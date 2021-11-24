@@ -37,9 +37,7 @@ EmailAddressSelectionModel::EmailAddressSelectionModel(QObject *parent)
     mModel = new Akonadi::ContactsTreeModel(changeRecorder, this);
 }
 
-EmailAddressSelectionModel::~EmailAddressSelectionModel()
-{
-}
+EmailAddressSelectionModel::~EmailAddressSelectionModel() = default;
 
 Akonadi::ContactsTreeModel *EmailAddressSelectionModel::model() const
 {

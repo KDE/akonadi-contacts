@@ -20,9 +20,7 @@ CustomFieldEditorWidgetTest::CustomFieldEditorWidgetTest(QObject *parent)
 {
 }
 
-CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest()
-{
-}
+CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest() = default;
 
 void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
 {

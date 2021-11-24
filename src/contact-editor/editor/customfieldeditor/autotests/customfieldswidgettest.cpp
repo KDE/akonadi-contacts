@@ -18,9 +18,7 @@ CustomFieldsWidgetTest::CustomFieldsWidgetTest(QObject *parent)
 {
 }
 
-CustomFieldsWidgetTest::~CustomFieldsWidgetTest()
-{
-}
+CustomFieldsWidgetTest::~CustomFieldsWidgetTest() = default;
 
 void CustomFieldsWidgetTest::shouldHaveDefaultValue()
 {

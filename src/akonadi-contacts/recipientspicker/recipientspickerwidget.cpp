@@ -29,9 +29,7 @@ RecipientsPickerWidget::RecipientsPickerWidget(bool onlyShowEmailWithAddress, QA
     mView->view()->sortByColumn(0, Qt::AscendingOrder);
 }
 
-RecipientsPickerWidget::~RecipientsPickerWidget()
-{
-}
+RecipientsPickerWidget::~RecipientsPickerWidget() = default;
 
 QTreeView *RecipientsPickerWidget::view() const
 {

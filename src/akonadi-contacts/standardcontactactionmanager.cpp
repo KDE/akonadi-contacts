@@ -384,16 +384,16 @@ public:
     Collection selectedCollection() const
     {
         if (!mCollectionSelectionModel) {
-            return Collection();
+            return {};
         }
 
         if (mCollectionSelectionModel->selectedIndexes().isEmpty()) {
-            return Collection();
+            return {};
         }
 
         const QModelIndex index = mCollectionSelectionModel->selectedIndexes().first();
         if (!index.isValid()) {
-            return Collection();
+            return {};
         }
 
         return index.data(EntityTreeModel::CollectionRole).value<Collection>();

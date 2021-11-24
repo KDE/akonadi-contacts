@@ -31,9 +31,7 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
     topLayout->addWidget(mPhoneWidgetLister);
 }
 
-PhoneListWidget::~PhoneListWidget()
-{
-}
+PhoneListWidget::~PhoneListWidget() = default;
 
 void PhoneListWidget::loadContact(const KContacts::Addressee &contact)
 {

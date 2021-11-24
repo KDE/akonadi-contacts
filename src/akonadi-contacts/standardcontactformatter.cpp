@@ -56,7 +56,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     if (rawContact.isEmpty()) {
-        return QString();
+        return {};
     }
 
     // We'll be building a table to display the vCard in.

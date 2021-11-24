@@ -35,9 +35,7 @@ public:
     /**
      * Destroys the abstract contact editor widget.
      */
-    ~AbstractContactEditorWidget() override
-    {
-    }
+    ~AbstractContactEditorWidget() override = default;
 
     /**
      * @param contact loads the given contact into the editor widget

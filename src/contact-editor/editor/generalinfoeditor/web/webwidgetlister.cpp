@@ -20,9 +20,7 @@ WebWidgetLister::WebWidgetLister(QWidget *parent)
     updateAddRemoveButton();
 }
 
-WebWidgetLister::~WebWidgetLister()
-{
-}
+WebWidgetLister::~WebWidgetLister() = default;
 
 void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
 {

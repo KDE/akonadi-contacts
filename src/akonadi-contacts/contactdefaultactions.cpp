@@ -30,9 +30,7 @@ ContactDefaultActions::ContactDefaultActions(QObject *parent)
 {
 }
 
-ContactDefaultActions::~ContactDefaultActions()
-{
-}
+ContactDefaultActions::~ContactDefaultActions() = default;
 
 void ContactDefaultActions::connectToView(QObject *view)
 {

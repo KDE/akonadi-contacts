@@ -20,9 +20,7 @@ MailWidgetLister::MailWidgetLister(QWidget *parent)
     updateAddRemoveButton();
 }
 
-MailWidgetLister::~MailWidgetLister()
-{
-}
+MailWidgetLister::~MailWidgetLister() = default;
 
 void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
 {

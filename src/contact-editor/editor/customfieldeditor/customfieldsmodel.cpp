@@ -20,9 +20,7 @@ CustomFieldsModel::CustomFieldsModel(QObject *parent)
 {
 }
 
-CustomFieldsModel::~CustomFieldsModel()
-{
-}
+CustomFieldsModel::~CustomFieldsModel() = default;
 
 void CustomFieldsModel::setCustomFields(const CustomField::List &customFields)
 {
@@ -47,21 +45,21 @@ QModelIndex CustomFieldsModel::index(int row, int column, const QModelIndex &par
 QModelIndex CustomFieldsModel::parent(const QModelIndex &child) const
 {
     Q_UNUSED(child)
-    return QModelIndex();
+    return {};
 }
 
 QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (index.row() < 0 || index.row() >= mCustomFields.count()) {
-        return QVariant();
+        return {};
     }
 
     if (index.column() < 0 || index.column() > 2) {
-        return QVariant();
+        return {};
     }
 
     const CustomField &customField = mCustomFields[index.row()];
@@ -122,7 +120,7 @@ QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
         return customField.scope();
     }
 
-    return QVariant();
+    return {};
 }
 
 bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -182,15 +180,15 @@ bool CustomFieldsModel::setData(const QModelIndex &index, const QVariant &value,
 QVariant CustomFieldsModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (section < 0 || section > 1) {
-        return QVariant();
+        return {};
     }
 
     if (orientation != Qt::Horizontal) {
-        return QVariant();
+        return {};
     }
 
     if (role != Qt::DisplayRole) {
-        return QVariant();
+        return {};
     }
 
     if (section == 0) {

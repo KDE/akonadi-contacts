@@ -100,9 +100,7 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     rightLayout->addStretch(1);
 }
 
-GeneralInfoWidget::~GeneralInfoWidget()
-{
-}
+GeneralInfoWidget::~GeneralInfoWidget() = default;
 
 void GeneralInfoWidget::setDisplayType(DisplayNameEditWidget::DisplayType type)
 {

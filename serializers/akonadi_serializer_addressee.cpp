@@ -306,7 +306,7 @@ void SerializerPluginAddressee::compare(Akonadi::AbstractDifferencesReporter *re
 QString SerializerPluginAddressee::extractGid(const Item &item) const
 {
     if (!item.hasPayload<KContacts::Addressee>()) {
-        return QString();
+        return {};
     }
     return item.payload<KContacts::Addressee>().uid();
 }

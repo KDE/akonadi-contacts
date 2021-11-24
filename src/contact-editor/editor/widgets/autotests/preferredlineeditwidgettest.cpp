@@ -17,9 +17,7 @@ PreferredLineEditWidgetTest::PreferredLineEditWidgetTest(QObject *parent)
 {
 }
 
-PreferredLineEditWidgetTest::~PreferredLineEditWidgetTest()
-{
-}
+PreferredLineEditWidgetTest::~PreferredLineEditWidgetTest() = default;
 
 void PreferredLineEditWidgetTest::shouldHaveDefaultValue()
 {

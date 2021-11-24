@@ -16,9 +16,7 @@ QDialer::QDialer(const QString &applicationName)
 {
 }
 
-QDialer::~QDialer()
-{
-}
+QDialer::~QDialer() = default;
 
 bool QDialer::dialNumber(const QString &number)
 {

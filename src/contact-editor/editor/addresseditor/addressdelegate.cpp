@@ -27,7 +27,7 @@ QSize AddressDelegate::sizeHint(const QStyleOptionViewItem &option, const QModel
     QTextDocument doc;
     doc.setHtml(options.text);
     doc.setTextWidth(options.rect.width());
-    return QSize(doc.idealWidth(), doc.size().height());
+    return {doc.idealWidth(), doc.size().height()};
 }
 
 void AddressDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const

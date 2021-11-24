@@ -16,11 +16,9 @@ ContactEditorComboBox::ContactEditorComboBox(QWidget *parent)
     setSizeAdjustPolicy(QComboBox::AdjustToContents);
 }
 
-ContactEditorComboBox::~ContactEditorComboBox()
-{
-}
+ContactEditorComboBox::~ContactEditorComboBox() = default;
 
 QSize ContactEditorComboBox::minimumSizeHint() const
 {
-    return QSize(150, QComboBox::minimumSizeHint().height());
+    return {150, QComboBox::minimumSizeHint().height()};
 }

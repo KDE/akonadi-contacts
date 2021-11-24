@@ -31,9 +31,7 @@ MailListWidget::MailListWidget(QWidget *parent)
     topLayout->addWidget(mMailWidgetLister);
 }
 
-MailListWidget::~MailListWidget()
-{
-}
+MailListWidget::~MailListWidget() = default;
 
 void MailListWidget::loadContact(const KContacts::Addressee &contact)
 {

@@ -46,9 +46,7 @@ EmailAddressSelectionProxyModel::EmailAddressSelectionProxyModel(QObject *parent
 {
 }
 
-EmailAddressSelectionProxyModel::~EmailAddressSelectionProxyModel()
-{
-}
+EmailAddressSelectionProxyModel::~EmailAddressSelectionProxyModel() = default;
 
 QVariant EmailAddressSelectionProxyModel::data(const QModelIndex &index, int role) const
 {
@@ -173,5 +171,5 @@ QVariant EmailAddressSelectionProxyModel::leafData(const QModelIndex &index, int
         return index.data(role);
     }
 
-    return QVariant();
+    return {};
 }

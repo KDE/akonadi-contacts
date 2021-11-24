@@ -73,7 +73,7 @@ LeafExtensionProxyModel::~LeafExtensionProxyModel() = default;
 QModelIndex LeafExtensionProxyModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (row < 0 || column < 0) {
-        return QModelIndex();
+        return {};
     }
 
     if (parent.isValid()) {

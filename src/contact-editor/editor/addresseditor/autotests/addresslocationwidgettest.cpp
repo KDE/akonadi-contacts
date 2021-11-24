@@ -24,9 +24,7 @@ AddressLocationWidgetTest::AddressLocationWidgetTest(QObject *parent)
 {
 }
 
-AddressLocationWidgetTest::~AddressLocationWidgetTest()
-{
-}
+AddressLocationWidgetTest::~AddressLocationWidgetTest() = default;
 
 void AddressLocationWidgetTest::shouldHaveDefaultValue()
 {

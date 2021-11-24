@@ -50,9 +50,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     layout->addWidget(mRemoveButton);
 }
 
-PhoneWidget::~PhoneWidget()
-{
-}
+PhoneWidget::~PhoneWidget() = default;
 
 void PhoneWidget::updateAddRemoveButton(bool addButtonEnabled)
 {

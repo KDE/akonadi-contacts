@@ -19,9 +19,7 @@ MailWidgetTest::MailWidgetTest(QObject *parent)
 {
 }
 
-MailWidgetTest::~MailWidgetTest()
-{
-}
+MailWidgetTest::~MailWidgetTest() = default;
 
 void MailWidgetTest::shouldHaveDefaultValue()
 {

@@ -15,7 +15,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-#include <assert.h>
+#include <cassert>
 
 class KWidgetListerPrivate
 {

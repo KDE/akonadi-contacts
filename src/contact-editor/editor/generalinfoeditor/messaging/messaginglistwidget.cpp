@@ -31,9 +31,7 @@ MessagingListWidget::MessagingListWidget(QWidget *parent)
     topLayout->addWidget(mMessagingWidgetLister);
 }
 
-MessagingListWidget::~MessagingListWidget()
-{
-}
+MessagingListWidget::~MessagingListWidget() = default;
 
 void MessagingListWidget::loadContact(const KContacts::Addressee &contact)
 {

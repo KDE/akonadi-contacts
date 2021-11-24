@@ -37,9 +37,7 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     topLayout->addWidget(mAllowRemoteContent);
 }
 
-MessageFormattingWidget::~MessageFormattingWidget()
-{
-}
+MessageFormattingWidget::~MessageFormattingWidget() = default;
 
 void MessageFormattingWidget::loadContact(const KContacts::Addressee &contact)
 {
