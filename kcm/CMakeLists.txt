@@ -1,4 +1,5 @@
-
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_akonadicontact_actions\")
 ########### next target ###############
 add_library(kcm_akonadicontact_actions MODULE)

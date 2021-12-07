@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 set(customfieldswidgettest_SRCS customfieldswidgettest.cpp ../customfieldswidget.cpp ../customfieldeditorwidget.cpp ../customfieldslistwidget.cpp ../customfieldsmodel.cpp
     ../customfieldslistdelegate.cpp ../../utils/utils.cpp)
 add_executable(customfieldswidgettest ${customfieldswidgettest_SRCS})
