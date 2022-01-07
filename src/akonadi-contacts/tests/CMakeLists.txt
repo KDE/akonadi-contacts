@@ -6,7 +6,7 @@ include(ECMMarkAsTest)
 macro(add_akonadi_contact_demo _source)
   set(_test ${_source})
   get_filename_component( _name ${_source} NAME_WE )
-  add_executable( ${_name} ${_test} )
+  add_executable( ${_name} ${_test})
   target_link_libraries(${_name}
      KF5::AkonadiContact
      KF5::Completion

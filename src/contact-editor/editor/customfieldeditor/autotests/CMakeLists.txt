@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-set(customfieldswidgettest_SRCS customfieldswidgettest.cpp ../customfieldswidget.cpp ../customfieldeditorwidget.cpp ../customfieldslistwidget.cpp ../customfieldsmodel.cpp
+set(customfieldswidgettest_SRCS customfieldswidgettest.cpp customfieldswidgettest.h ../customfieldswidget.cpp ../customfieldeditorwidget.cpp ../customfieldslistwidget.cpp ../customfieldsmodel.cpp
     ../customfieldslistdelegate.cpp ../../utils/utils.cpp)
 add_executable(customfieldswidgettest ${customfieldswidgettest_SRCS})
 add_test(NAME customfieldswidgettest COMMAND customfieldswidgettest)
@@ -15,7 +15,7 @@ target_link_libraries(customfieldeditorwidgettest Qt::Test Qt::Widgets KF5::Cont
 
 add_executable(customfieldslistwidgettest)
 target_sources(customfieldslistwidgettest PRIVATE
-    customfieldslistwidgettest.cpp ../customfieldslistwidget.cpp ../customfieldsmodel.cpp
+    customfieldslistwidgettest.cpp customfieldslistwidgettest.h ../customfieldslistwidget.cpp ../customfieldsmodel.cpp
     ../customfieldslistdelegate.cpp  ../../utils/utils.cpp
 
 )
