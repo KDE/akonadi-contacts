@@ -28,7 +28,7 @@ SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
 
     update();
 
-    connect(this, qOverload<int>(&QComboBox::activated), this, &SelectAddressTypeComboBox::selected);
+    connect(this, &QComboBox::activated, this, &SelectAddressTypeComboBox::selected);
 }
 
 SelectAddressTypeComboBox::~SelectAddressTypeComboBox() = default;
