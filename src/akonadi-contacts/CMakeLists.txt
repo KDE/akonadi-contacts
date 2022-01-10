@@ -208,8 +208,8 @@ endif()
 generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
 
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact;${KDE_INSTALL_INCLUDEDIR_KF5}>")
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact>")
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/Akonadi/Contact;${KDE_INSTALL_INCLUDEDIR_KF}>")
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/akonadi/contact>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src>")
 
 target_link_libraries(KF5AkonadiContact
@@ -217,7 +217,7 @@ target_link_libraries(KF5AkonadiContact
     KF5::AkonadiCore
     KF5::Contacts
     KF5::AkonadiWidgets
-    Qt::Widgets
+    Qt${QT_MAJOR_VERSION}::Widgets
     KF5::GrantleeTheme
     PRIVATE
     KF5::ConfigCore
@@ -259,7 +259,7 @@ install(TARGETS
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
     LIB_NAME KF5AkonadiContact
-    DEPS "AkonadiCore KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact
+    DEPS "AkonadiCore KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/Akonadi/Contact
     )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
@@ -336,7 +336,7 @@ install( FILES
     ${AkonadiContactJob_CamelCase_HEADERS}
     ${AkonadiContactRecipients_CamelCase_HEADERS}
     ${AkonadiContactGrantlee_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Contact COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Akonadi/Contact COMPONENT Devel
     )
 
 install( FILES
@@ -345,7 +345,7 @@ install( FILES
     ${AkonadiContactRecipients_HEADERS}
     ${AkonadiContactGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/contact COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/akonadi/contact COMPONENT Devel
     )
 
 

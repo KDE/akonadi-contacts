@@ -164,14 +164,14 @@ endif()
 generate_export_header(KF5ContactEditor BASE_NAME contacteditor)
 
 
-target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor;${KDE_INSTALL_INCLUDEDIR_KF5}>")
-target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/contacteditor>")
+target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor;${KDE_INSTALL_INCLUDEDIR_KF}>")
+target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/contacteditor>")
 target_include_directories(KF5ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/contact-editor;${Akonadi-Contact_BINARY_DIR}/src/contact-editor>")
 
 target_link_libraries(KF5ContactEditor
     PUBLIC
     KF5::Contacts
-    Qt::Widgets
+    Qt${QT_MAJOR_VERSION}::Widgets
     PRIVATE
     KF5::Completion
     KF5::ConfigCore
@@ -195,7 +195,7 @@ install(TARGETS
 
 ecm_generate_pri_file(BASE_NAME ContactEditor
     LIB_NAME KF5ContactEditor
-    DEPS "KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor
+    DEPS "KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor
     )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
@@ -218,14 +218,14 @@ ecm_generate_headers(ContactEditorWidget_CamelCase_HEADERS
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
     ${ContactEditorWidget_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/ContactEditor COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor COMPONENT Devel
     )
 
 install( FILES
     ${ContactEditor_HEADERS}
     ${ContactEditorWidget_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/contacteditor COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/contacteditor COMPONENT Devel
     )
 
 
@@ -239,8 +239,8 @@ if (BUILD_TESTING)
     add_subdirectory(editor/widgets/autotests/)
 endif()
 
-install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/pics)
-install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF5}/akonadi/contact/data)
+install(FILES editor/pics/world.jpg DESTINATION ${KDE_INSTALL_DATADIR_KF}/akonadi/contact/pics)
+install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF}/akonadi/contact/data)
 
 if (BUILD_QCH)
     ecm_add_qch(

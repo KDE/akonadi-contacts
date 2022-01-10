@@ -13,7 +13,7 @@ set(customfieldeditor_SRCS
 add_executable(customfieldeditortest ${customfieldeditor_SRCS})
 
 target_link_libraries(customfieldeditortest
-    Qt::Widgets
+    Qt${QT_MAJOR_VERSION}::Widgets
     KF5::ContactEditor
     KF5::Contacts
     KF5::I18n
