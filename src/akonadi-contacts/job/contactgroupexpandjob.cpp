@@ -12,7 +12,6 @@
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/ItemSearchJob>
-#include <kcontacts_version.h>
 using namespace Akonadi;
 
 class Akonadi::ContactGroupExpandJobPrivate
@@ -37,13 +36,9 @@ public:
 
             KContacts::Addressee contact;
             contact.setNameFromString(data.name());
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-            contact.insertEmail(data.email(), true);
-#else
             KContacts::Email email(data.email());
             email.setPreferred(true);
             contact.addEmail(email);
-#endif
             mContacts.append(contact);
         }
 
@@ -103,17 +98,11 @@ public:
             const Item item = items.first();
             if (item.hasPayload<KContacts::Addressee>()) {
                 auto contact = item.payload<KContacts::Addressee>();
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-                if (!preferredEmail.isEmpty()) {
-                    contact.insertEmail(preferredEmail, true);
-                }
-#else
                 if (!preferredEmail.isEmpty()) {
                     KContacts::Email email(preferredEmail);
                     email.setPreferred(true);
                     contact.addEmail(email);
                 }
-#endif
                 mContacts.append(contact);
             } else {
                 qCWarning(AKONADICONTACT_LOG) << "Contact for Akonadi item" << item.id() << "does not exist anymore!";

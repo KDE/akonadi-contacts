@@ -18,7 +18,6 @@
 #include <Akonadi/Item>
 
 #include <KColorScheme>
-#include <kcontacts_version.h>
 
 using namespace KAddressBookGrantlee;
 
@@ -95,12 +94,8 @@ static QVariantHash memberHash(const KContacts::ContactGroup::Data &data)
 
     KContacts::Addressee contact;
     contact.setFormattedName(data.name());
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-    contact.insertEmail(data.email());
-#else
     KContacts::Email email(data.email());
     contact.addEmail(email);
-#endif
     const QString emailLink = QStringLiteral("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
         + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 
