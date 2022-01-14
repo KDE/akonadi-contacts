@@ -10,6 +10,5 @@ Dependencies:
     'frameworks/kcmutils': '@latest'
     'pim/akonadi' : '@same'
     'pim/kmime' : '@same'
-    'pim/libkleo' : '@same'
     'pim/grantleetheme' : '@same'
     'third-party/grantlee' : '@stable'

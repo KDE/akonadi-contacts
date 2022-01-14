@@ -39,7 +39,6 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
 set(KMIMELIB_VERSION "5.19.40")
 set(AKONADI_VERSION "5.19.40")
-set(LIBKLEO_LIB_VERSION "5.19.40")
 set(GRANTLEETHEME_LIB_VERSION "5.19.40")
 set(GRANTLEE_LIB_VERSION "5.2")
 
@@ -62,11 +61,6 @@ find_package(KF5Contacts ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KF5Libkleo ${LIBKLEO_LIB_VERSION} CONFIG)
-
-if (NOT WIN32)
-    set_package_properties(KF5Libkleo PROPERTIES TYPE REQUIRED)
-endif()
 
 find_package(KF5GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 

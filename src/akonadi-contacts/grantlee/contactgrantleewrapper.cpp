@@ -6,9 +6,6 @@
 
 #include "contactgrantleewrapper.h"
 #include "config-akonadi-contact.h"
-#ifdef HAVE_KLEO
-#include <Libkleo/Enum>
-#endif
 #include <KLocalizedString>
 
 #include <QBuffer>
@@ -75,24 +72,6 @@ int ContactGrantleeWrapper::age() const
         age--;
     }
     return age;
-}
-
-QString ContactGrantleeWrapper::cryptoPreference() const
-{
-#ifdef HAVE_KLEO
-    return Kleo::encryptionPreferenceToLabel(Kleo::stringToEncryptionPreference(custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOENCRYPTPREF"))));
-#else
-    return custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOENCRYPTPREF"));
-#endif
-}
-
-QString ContactGrantleeWrapper::signaturePreference() const
-{
-#ifdef HAVE_KLEO
-    return Kleo::signingPreferenceToLabel(Kleo::stringToSigningPreference(custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"))));
-#else
-    return custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"));
-#endif
 }
 
 static QString imgToDataUrl(const QImage &image)

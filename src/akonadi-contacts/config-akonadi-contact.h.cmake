@@ -1,2 +1,1 @@
 #define AKONADI_CONTACT_LIB  "${KDE_INSTALL_FULL_LIBDIR}"
-#cmakedefine HAVE_KLEO

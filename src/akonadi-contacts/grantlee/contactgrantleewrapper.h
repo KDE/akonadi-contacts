@@ -30,8 +30,6 @@ class ContactGrantleeWrapper : public KContacts::Addressee
 
     Q_PROPERTY(QString addressBookName READ addressBookName)
     Q_PROPERTY(int age READ age)
-    Q_PROPERTY(QString cryptoPreference READ cryptoPreference)
-    Q_PROPERTY(QString signaturePreference READ signaturePreference)
 
     // ### this shouldn't be returning assembled HTML, that's a job for Grantlee
     Q_PROPERTY(QString photo READ photoImgElement)
@@ -56,8 +54,6 @@ private:
 
     Q_REQUIRED_RESULT QString addressBookName() const;
     Q_REQUIRED_RESULT int age() const;
-    Q_REQUIRED_RESULT QString cryptoPreference() const;
-    Q_REQUIRED_RESULT QString signaturePreference() const;
 
     Q_REQUIRED_RESULT QString photoImgElement() const;
     Q_REQUIRED_RESULT QString logoImgElement() const;
