@@ -164,8 +164,7 @@ endif()
 generate_export_header(KF5ContactEditor BASE_NAME contacteditor)
 
 
-target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor;${KDE_INSTALL_INCLUDEDIR_KF}>")
-target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/contacteditor>")
+target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor>")
 target_include_directories(KF5ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/contact-editor;${Akonadi-Contact_BINARY_DIR}/src/contact-editor>")
 
 target_link_libraries(KF5ContactEditor
@@ -218,14 +217,14 @@ ecm_generate_headers(ContactEditorWidget_CamelCase_HEADERS
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
     ${ContactEditorWidget_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor/ContactEditor COMPONENT Devel
     )
 
 install( FILES
     ${ContactEditor_HEADERS}
     ${ContactEditorWidget_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/contacteditor COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor/contacteditor COMPONENT Devel
     )
 
 

@@ -11,9 +11,9 @@
 #include <Akonadi/Contact/ContactsTreeModel>
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/ItemFetchScope>
+#include <Akonadi/Session>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
-#include <akonadi/session.h>
 
 using namespace Akonadi;
 
