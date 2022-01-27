@@ -19,12 +19,12 @@
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/Item>
 #include <Akonadi/ItemFetchScope>
-#include <KColorScheme>
 #include <KConfigGroup>
 #include <KContacts/Addressee>
 #include <KIOCore/kio/transferjob.h>
 #include <KLocalizedString>
 
+#include <KConfig>
 #include <KContacts/VCardConverter>
 #include <QGuiApplication>
 #include <QIcon>

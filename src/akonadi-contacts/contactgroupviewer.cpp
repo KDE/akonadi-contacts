@@ -16,7 +16,6 @@
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/Item>
 #include <Akonadi/ItemFetchScope>
-#include <KColorScheme>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 
