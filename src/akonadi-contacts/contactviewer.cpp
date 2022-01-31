@@ -21,8 +21,8 @@
 #include <Akonadi/ItemFetchScope>
 #include <KConfigGroup>
 #include <KContacts/Addressee>
-#include <KIOCore/kio/transferjob.h>
 #include <KLocalizedString>
+#include <kio/transferjob.h>
 
 #include <KConfig>
 #include <KContacts/VCardConverter>
