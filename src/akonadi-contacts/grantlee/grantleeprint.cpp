@@ -7,19 +7,34 @@
 #include "grantleeprint.h"
 #include "contactgrantleewrapper.h"
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <grantlee/context.h>
 #include <grantlee/engine.h>
 #include <grantlee/metatype.h>
 #include <grantlee/templateloader.h>
+#else
+#include <KTextTemplate/context.h>
+#include <KTextTemplate/engine.h>
+#include <KTextTemplate/metatype.h>
+#include <KTextTemplate/templateloader.h>
+#endif
 
 #include <QMetaProperty>
 #include <QVariant>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 GRANTLEE_BEGIN_LOOKUP(QUrl)
+#else
+KTEXTTEMPLATE_BEGIN_LOOKUP(QUrl)
+#endif
 if (property == QLatin1String("scheme")) {
     return object.scheme();
 }
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 GRANTLEE_END_LOOKUP
+#else
+KTEXTTEMPLATE_END_LOOKUP
+#endif
 
 using namespace KAddressBookGrantlee;
 
