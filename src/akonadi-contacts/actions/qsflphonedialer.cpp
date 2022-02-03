@@ -12,6 +12,7 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QProcess>
+#include <QStandardPaths>
 
 #if !defined(Q_OS_WIN)
 #include <unistd.h>
@@ -49,7 +50,8 @@ bool QSflPhoneDialer::initializeSflPhone()
     // first check whether dbus interface is available yet
     if (!isSflPhoneServiceRegistered()) {
         // it could be skype is not running yet, so start it now
-        if (!QProcess::startDetached(QStringLiteral("sflphone-client-kde"), QStringList())) {
+        const QString progFullPath = QStandardPaths::findExecutable(QStringLiteral("sflphone-client-kde"));
+        if (progFullPath.isEmpty() || !QProcess::startDetached(QStringLiteral("sflphone-client-kde"), QStringList())) {
             mErrorMessage = i18n("Unable to start sflphone-client-kde process, check that sflphone-client-kde executable is in your PATH variable.");
             return false;
         }
@@ -79,7 +81,8 @@ bool QSflPhoneDialer::dialNumber(const QString &number)
     QStringList arguments;
     arguments << QStringLiteral("--place-call");
     arguments << number;
-    if (!QProcess::startDetached(QStringLiteral("sflphone-client-kde"), arguments)) {
+    const QString progFullPath = QStandardPaths::findExecutable(QStringLiteral("sflphone-client-kde"));
+    if (progFullPath.isEmpty() || !QProcess::startDetached(QStringLiteral("sflphone-client-kde"), arguments)) {
         return false;
     }
 
@@ -97,7 +100,8 @@ bool QSflPhoneDialer::sendSms(const QString &number, const QString &text)
     arguments << number;
     arguments << QStringLiteral("--message");
     arguments << text;
-    if (!QProcess::startDetached(QStringLiteral("sflphone-client-kde"), arguments)) {
+    const QString progFullPath = QStandardPaths::findExecutable(QStringLiteral("sflphone-client-kde"));
+    if (progFullPath.isEmpty() || !QProcess::startDetached(QStringLiteral("sflphone-client-kde"), arguments)) {
         return false;
     }
     return true;
