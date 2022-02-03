@@ -14,6 +14,7 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 #include <QProcess>
+#include <QStandardPaths>
 
 #if !defined(Q_OS_WIN)
 #include <unistd.h>
@@ -66,7 +67,8 @@ bool QEkigaDialer::initializeEkiga()
     // first check whether dbus interface is available yet
     if (!isEkigaServiceRegistered()) {
         // it could be ekiga is not running yet, so start it now
-        if (!QProcess::startDetached(QStringLiteral("ekiga"), QStringList())) {
+        const QString progFullPath = QStandardPaths::findExecutable(QStringLiteral("ekiga"));
+        if (progFullPath.isEmpty() || !QProcess::startDetached(QStringLiteral("ekiga"), QStringList())) {
             mErrorMessage = i18n("Unable to start ekiga process, check that ekiga executable is in your PATH variable.");
             return false;
         }

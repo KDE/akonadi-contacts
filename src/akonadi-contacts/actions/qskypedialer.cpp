@@ -16,6 +16,7 @@
 #include <QProcess>
 
 #if !defined(Q_OS_WIN)
+#include <QStandardPaths>
 #include <unistd.h>
 #else
 #include <windows.h>
@@ -71,7 +72,8 @@ bool QSkypeDialer::initializeSkype()
     // first check whether dbus interface is available yet
     if (!isSkypeServiceRegistered()) {
         // it could be skype is not running yet, so start it now
-        if (!QProcess::startDetached(QStringLiteral("skype"), QStringList())) {
+        const QString progFullPath = QStandardPaths::findExecutable(QStringLiteral("skype"));
+        if (progFullPath.isEmpty() || !QProcess::startDetached(QStringLiteral("skype"), QStringList())) {
             mErrorMessage = i18n("Unable to start skype process, check that skype executable is in your PATH variable.");
             return false;
         }
