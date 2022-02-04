@@ -14,9 +14,9 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 #include <QProcess>
+#include <QStandardPaths>
 
 #if !defined(Q_OS_WIN)
-#include <QStandardPaths>
 #include <unistd.h>
 #else
 #include <windows.h>
