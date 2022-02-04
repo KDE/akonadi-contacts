@@ -6,40 +6,6 @@
 
   <kcfgfile name="akonadi_contactrc"/>
 
-  <group name="Show Address Settings">
-    <entry type="Enum" name="ShowAddressAction">
-      <choices>
-        <choice name="UseBrowser"/>
-        <choice name="UseExternalAddressApplication"/>
-        <choice name="UseGooglemap"/>
-        <choice name="UseMapquest"/>
-        <choice name="UseOpenStreetMap"/>
-      </choices>
-      <whatsthis>Defines which application shall be used to show the postal address of a contact on a map. If 'Web Browser' is selected, an URL can be defined with placeholders for the single address parts. If 'External Application' is selected, a command with placeholders can be defined.</whatsthis>
-      <default>UseOpenStreetMap</default>
-    </entry>
-    <entry type="String" name="AddressUrl">
-      <default></default>
-      <whatsthis>This URL defines the website that shall be used to show a contact's postal address.</whatsthis>
-      <tooltip>The following placeholders can be used in the URL:
-   %s: Street
-   %r: Region
-   %l: Location
-   %z: Zip Code
-   %c: Country ISO Code</tooltip>
-    </entry>
-    <entry type="String" name="AddressCommand">
-      <label>Address Command</label>
-      <whatsthis>This command defines the application that shall be executed to show a contact's postal address.</whatsthis>
-      <tooltip>The following placeholders can be used in the command:
-   %s: Street
-   %r: Region
-   %l: Location
-   %z: Zip Code
-   %c: Country ISO Code</tooltip>
-    </entry>
-  </group>
-
   <group name="Phone Dial Settings">
     <entry type="Enum" name="DialPhoneNumberAction">
       <choices>

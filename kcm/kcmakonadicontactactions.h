@@ -28,7 +28,6 @@ public:
 private Q_SLOTS:
     void slotDialPhoneNumberActionChanged(int);
     void slotSmsPhoneNumberActionChanged(int value);
-    void slotShowAddressActionChanged(int value);
 
 private:
     KConfigDialogManager *mConfigManager = nullptr;

@@ -48,28 +48,8 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     ui.SendSmsAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhoneSms);
     ui.SendSmsAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalSmsApplication);
     connect(ui.SendSmsAction, qOverload<int>(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
-    ui.ShowAddressAction->addItem(i18n("Web Browser"), ContactActionsSettings::UseBrowser);
-    ui.ShowAddressAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalAddressApplication);
-    ui.ShowAddressAction->addItem(i18n("Google map"), ContactActionsSettings::UseGooglemap);
-    ui.ShowAddressAction->addItem(i18n("Map quest"), ContactActionsSettings::UseMapquest);
-    ui.ShowAddressAction->addItem(i18n("OpenStreetMap"), ContactActionsSettings::UseOpenStreetMap);
-    connect(ui.ShowAddressAction, qOverload<int>(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotShowAddressActionChanged);
 
     load();
-}
-
-void KCMAkonadiContactActions::slotShowAddressActionChanged(int value)
-{
-    ContactActionsSettings::EnumShowAddressAction enumValue =
-        static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(value).toInt());
-    if (enumValue == ContactActionsSettings::UseBrowser) {
-        ui.stackedWidget->setCurrentIndex(0);
-    } else if (enumValue == ContactActionsSettings::UseExternalAddressApplication) {
-        ui.stackedWidget->setCurrentIndex(1);
-    } else {
-        ui.stackedWidget->setCurrentIndex(2);
-    }
-    Q_EMIT changed(true);
 }
 
 void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
@@ -99,10 +79,6 @@ void KCMAkonadiContactActions::load()
 {
     mConfigManager->updateWidgets();
 
-    auto enumValueAddress = static_cast<ContactActionsSettings::EnumShowAddressAction>(ContactActionsSettings::self()->showAddressAction());
-    const int indexAddress = ui.ShowAddressAction->findData(enumValueAddress);
-    ui.ShowAddressAction->setCurrentIndex(indexAddress);
-
     auto enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ContactActionsSettings::self()->dialPhoneNumberAction());
     const int index = ui.DialPhoneNumberAction->findData(enumValue);
     ui.DialPhoneNumberAction->setCurrentIndex(index);
@@ -115,10 +91,6 @@ void KCMAkonadiContactActions::load()
 void KCMAkonadiContactActions::save()
 {
     mConfigManager->updateSettings();
-    ContactActionsSettings::EnumShowAddressAction enumValueAddress =
-        static_cast<ContactActionsSettings::EnumShowAddressAction>(ui.ShowAddressAction->itemData(ui.ShowAddressAction->currentIndex()).toInt());
-    ContactActionsSettings::self()->setShowAddressAction(enumValueAddress);
-
     ContactActionsSettings::EnumDialPhoneNumberAction enumValue =
         static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ui.DialPhoneNumberAction->itemData(ui.DialPhoneNumberAction->currentIndex()).toInt());
     ContactActionsSettings::self()->setDialPhoneNumberAction(enumValue);
@@ -135,7 +107,6 @@ void KCMAkonadiContactActions::defaults()
     const bool bUseDefaults = ContactActionsSettings::self()->useDefaults(true);
     ui.DialPhoneNumberAction->setCurrentIndex(ContactActionsSettings::self()->dialPhoneNumberAction());
     ui.SendSmsAction->setCurrentIndex(ContactActionsSettings::self()->sendSmsAction());
-    ui.ShowAddressAction->setCurrentIndex(ContactActionsSettings::self()->showAddressAction());
     ContactActionsSettings::self()->useDefaults(bUseDefaults);
 }
 

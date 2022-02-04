@@ -10,13 +10,16 @@
 
 #include "actions/dialphonenumberaction.h"
 #include "actions/sendsmsaction.h"
-#include "actions/showaddressaction.h"
 
 #include <KContacts/Address>
 #include <KContacts/Addressee>
 #include <KContacts/PhoneNumber>
+
+#include <KCountry>
+
 #include <QDesktopServices>
 #include <QUrl>
+#include <QUrlQuery>
 
 using namespace Akonadi;
 
@@ -89,6 +92,33 @@ void ContactDefaultActions::sendSms(const KContacts::PhoneNumber &number)
 
 void ContactDefaultActions::showAddress(const KContacts::Address &address)
 {
-    ShowAddressAction action;
-    action.showAddress(address);
+    // ### move geo: URI generation to KContacts::Address?
+    QUrl url;
+    url.setScheme(QStringLiteral("geo"));
+    if (address.geo().isValid()) {
+        url.setPath(QString::number(address.geo().latitude()) + QLatin1Char(',') + QString::number(address.geo().longitude()));
+    } else if (!address.isEmpty()) {
+        url.setPath(QStringLiteral("0,0"));
+        QStringList q;
+        if (!address.street().isEmpty()) {
+            q.push_back(address.street());
+        }
+        if (!address.locality().isEmpty()) {
+            q.push_back(address.postalCode().isEmpty() ? address.locality() : (address.postalCode() + QLatin1Char(' ') + address.locality()));
+        }
+        if (!address.region().isEmpty()) {
+            q.push_back(address.region());
+        }
+        if (!address.country().isEmpty()) {
+            const auto c = KCountry::fromName(address.country());
+            q.push_back(c.alpha2());
+        }
+        QUrlQuery query;
+        query.addQueryItem(QStringLiteral("q"), q.join(QLatin1String(", ")));
+        url.setQuery(query);
+    } else {
+        return;
+    }
+
+    QDesktopServices::openUrl(url);
 }

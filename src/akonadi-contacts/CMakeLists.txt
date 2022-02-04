@@ -47,7 +47,6 @@ install(FILES
 
 target_sources(KF5AkonadiContact PRIVATE
     actions/dialphonenumberaction.cpp
-    actions/showaddressaction.cpp
     actions/qdialer.cpp
     actions/qskypedialer.cpp
     actions/sendsmsaction.cpp
@@ -143,7 +142,6 @@ target_sources(KF5AkonadiContact PRIVATE
     actions/dialphonenumberaction.h
     actions/qskypedialer.h
     actions/smsdialog.h
-    actions/showaddressaction.h
     actions/sendsmsaction.h
     actions/qdialer.h
     abstractcontactgroupformatter.h
