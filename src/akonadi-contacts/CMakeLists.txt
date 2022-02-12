@@ -55,8 +55,6 @@ target_sources(KF5AkonadiContact PRIVATE
     actions/qekigadialer.cpp
     )
 
-configure_file(config-akonadi-contact.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-akonadi-contact.h)
-
 configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
 kconfig_add_kcfg_files(KF5AkonadiContact actions/contactactionssettings.kcfgc)
 

@@ -5,7 +5,6 @@
 */
 
 #include "contactgrantleewrapper.h"
-#include "config-akonadi-contact.h"
 #include <KLocalizedString>
 
 #include <QBuffer>
