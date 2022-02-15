@@ -85,7 +85,7 @@ endif()
 ########### Targets ###########
 
 
-ecm_set_disabled_deprecation_versions(QT 5.15.0 KF 5.91.0)
+ecm_set_disabled_deprecation_versions(QT 5.14.0 KF 5.91.0)
 
 
 if(BUILD_TESTING)
