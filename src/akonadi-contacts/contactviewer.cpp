@@ -26,12 +26,12 @@
 
 #include <KConfig>
 #include <KContacts/VCardConverter>
+#include <Prison/Prison>
 #include <QGuiApplication>
 #include <QIcon>
 #include <QScreen>
 #include <QUrlQuery>
 #include <QVBoxLayout>
-#include <prison/Prison>
 
 using namespace Akonadi;
 

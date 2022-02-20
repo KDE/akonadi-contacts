@@ -259,10 +259,11 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     mapping.insert(QStringLiteral("hasqrcode"), !d->forceDisableQRCode && d->showQRCode);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::Context context(mapping);
+    context.setLocalizer(d->mEngine->localizer());
 #else
     KTextTemplate::Context context(mapping);
+    // TODO context.setLocalizer(d->mEngine->localizer());
 #endif
-    context.setLocalizer(d->mEngine->localizer());
 
     if (form == SelfcontainedForm) {
         return d->mSelfcontainedTemplate->render(&context);
@@ -275,5 +276,9 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
 
 void GrantleeContactFormatter::setApplicationDomain(const QByteArray &domain)
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     d->mEngine->localizer()->setApplicationDomain(domain);
+#else
+    // TODO qt6
+#endif
 }
