@@ -104,7 +104,7 @@ public:
     std::unique_ptr<KTextTemplate::Engine> mEngine;
     QSharedPointer<KTextTemplate::FileSystemTemplateLoader> mTemplateLoader;
     KTextTemplate::Template mSelfcontainedTemplate;
-    v::Template mEmbeddableTemplate;
+    KTextTemplate::Template mEmbeddableTemplate;
 #endif
     QString mErrorMessage;
     bool forceDisableQRCode = false;

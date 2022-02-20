@@ -9,6 +9,7 @@
 #include "contactmetadataattribute_p.h"
 
 #include <QDataStream>
+#include <QIODevice>
 
 using namespace Akonadi;
 

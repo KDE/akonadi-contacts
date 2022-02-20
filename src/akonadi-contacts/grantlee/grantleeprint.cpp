@@ -53,7 +53,11 @@ GrantleePrint::~GrantleePrint() = default;
 
 void GrantleePrint::init()
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::registerMetaType<QUrl>();
+#else
+    KTextTemplate::registerMetaType<QUrl>();
+#endif
 }
 
 QString GrantleePrint::contactsToHtml(const KContacts::Addressee::List &contacts)

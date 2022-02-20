@@ -12,6 +12,7 @@
 #include "serializer_debug.h"
 #include <KContacts/Addressee>
 #include <KLocalizedString>
+#include <QIODevice>
 
 using namespace Akonadi;
 
