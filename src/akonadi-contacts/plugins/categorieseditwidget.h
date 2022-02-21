@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <ContactEditor/CategoriesEditAbstractWidget>
+#include <Akonadi/CategoriesEditAbstractWidget>
 #include <KContacts/Addressee>
 #include <QVariant>
 namespace Akonadi
