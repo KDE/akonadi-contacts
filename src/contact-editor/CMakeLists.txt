@@ -16,7 +16,7 @@ add_library(KF5ContactEditor)
 add_library(KF5::ContactEditor ALIAS KF5ContactEditor)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/contact-editor_version.h"
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5ContactEditorConfigVersion.cmake"
     SOVERSION 5
     )
@@ -164,7 +164,7 @@ endif()
 generate_export_header(KF5ContactEditor BASE_NAME contacteditor)
 
 
-target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor>")
+target_include_directories(KF5ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContactEditor>")
 target_include_directories(KF5ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/contact-editor;${Akonadi-Contact_BINARY_DIR}/src/contact-editor>")
 
 target_link_libraries(KF5ContactEditor
@@ -203,28 +203,28 @@ ecm_generate_headers(ContactEditor_CamelCase_HEADERS
     HEADER_NAMES
     ContactEditorPagePlugin
     REQUIRED_HEADERS ContactEditor_HEADERS
-    PREFIX ContactEditor
+    PREFIX Akonadi
     )
 
 ecm_generate_headers(ContactEditorWidget_CamelCase_HEADERS
     HEADER_NAMES
     CategoriesEditAbstractWidget
     REQUIRED_HEADERS ContactEditorWidget_HEADERS
-    PREFIX ContactEditor
+    PREFIX Akonadi
     RELATIVE editor/widgets/
     )
 
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
     ${ContactEditorWidget_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor/ContactEditor COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContactEditor/Akonadi COMPONENT Devel
     )
 
 install( FILES
     ${ContactEditor_HEADERS}
     ${ContactEditorWidget_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/ContactEditor/contacteditor COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContactEditor/akonadi COMPONENT Devel
     )
 
 
@@ -267,4 +267,7 @@ if (BUILD_QCH)
     )
 endif()
 
-
+install(FILES
+   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContactEditor COMPONENT Devel
+)

@@ -6,7 +6,7 @@
 */
 
 #include "addemailaddressjob.h"
-#include "akonadi/contact/selectaddressbookdialog.h"
+#include "selectaddressbookdialog.h"
 
 #include <Akonadi/AgentFilterProxyModel>
 #include <Akonadi/AgentInstanceCreateJob>
@@ -16,8 +16,8 @@
 #include <Akonadi/CollectionDialog>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
-#include <Akonadi/Contact/ContactEditorDialog>
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/ContactEditorDialog>
+#include <Akonadi/ContactSearchJob>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <KContacts/ContactGroup>

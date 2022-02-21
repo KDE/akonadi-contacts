@@ -201,8 +201,7 @@ endif()
 generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
 
 
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/Akonadi/Contact;${KDE_INSTALL_INCLUDEDIR_KF}>")
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/akonadi/contact>")
+target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact>")
 target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src>")
 
 target_link_libraries(KF5AkonadiContact
@@ -260,7 +259,7 @@ ecm_generate_headers(AkonadiContactJob_CamelCase_HEADERS
     OpenEmailAddressJob
     AddContactJob
     REQUIRED_HEADERS AkonadiContactJob_HEADERS
-    PREFIX Akonadi/Contact
+    PREFIX Akonadi
     RELATIVE job
     )
 
@@ -269,7 +268,7 @@ ecm_generate_headers(AkonadiContactRecipients_CamelCase_HEADERS
     RecipientsEditorManager
     RecipientsPickerWidget
     REQUIRED_HEADERS AkonadiContactRecipients_HEADERS
-    PREFIX Akonadi/Contact
+    PREFIX Akonadi
     RELATIVE recipientspicker
     )
 
@@ -301,7 +300,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     SelectAddressBookDialog
 
     REQUIRED_HEADERS AkonadiContact_HEADERS
-    PREFIX Akonadi/Contact
+    PREFIX Akonadi
     )
 
 ecm_generate_headers(AkonadiContactGrantlee_CamelCase_HEADERS
@@ -314,7 +313,7 @@ ecm_generate_headers(AkonadiContactGrantlee_CamelCase_HEADERS
 
     REQUIRED_HEADERS AkonadiContactGrantlee_HEADERS
     RELATIVE grantlee
-    PREFIX Akonadi/Contact
+    PREFIX Akonadi
 )
 
 install( FILES
@@ -322,7 +321,7 @@ install( FILES
     ${AkonadiContactJob_CamelCase_HEADERS}
     ${AkonadiContactRecipients_CamelCase_HEADERS}
     ${AkonadiContactGrantlee_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Akonadi/Contact COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact/Akonadi COMPONENT Devel
     )
 
 install( FILES
@@ -331,7 +330,7 @@ install( FILES
     ${AkonadiContactRecipients_HEADERS}
     ${AkonadiContactGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/akonadi/contact COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact/akonadi COMPONENT Devel
     )
 
 
@@ -370,3 +369,7 @@ if (BUILD_QCH)
     )
 endif()
 
+install(FILES
+   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact COMPONENT Devel
+)

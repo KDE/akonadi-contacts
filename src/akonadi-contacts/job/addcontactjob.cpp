@@ -5,10 +5,10 @@
 */
 
 #include "addcontactjob.h"
-#include "akonadi/contact/selectaddressbookdialog.h"
+#include "selectaddressbookdialog.h"
 #include <Akonadi/Collection>
 
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/ContactSearchJob>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <KContacts/Addressee>

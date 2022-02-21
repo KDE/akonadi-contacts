@@ -20,7 +20,7 @@
 #include <KTextTemplate/templateloader.h>
 #endif
 
-#include <Akonadi/Contact/ContactGroupExpandJob>
+#include <Akonadi/ContactGroupExpandJob>
 #include <Akonadi/Item>
 
 #include <KColorScheme>

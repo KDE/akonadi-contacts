@@ -7,7 +7,7 @@
 #include "akonadi_serializer_contactgroup.h"
 
 #include <Akonadi/AbstractDifferencesReporter>
-#include <Akonadi/Contact/ContactGroupExpandJob>
+#include <Akonadi/ContactGroupExpandJob>
 #include <Akonadi/Item>
 
 #include <KContacts/ContactGroup>

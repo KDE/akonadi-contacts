@@ -9,8 +9,8 @@
 #include "job/addemailaddressjob.h"
 
 #include <Akonadi/CollectionDialog>
-#include <Akonadi/Contact/ContactEditorDialog>
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/ContactEditorDialog>
+#include <Akonadi/ContactSearchJob>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <KContacts/Addressee>

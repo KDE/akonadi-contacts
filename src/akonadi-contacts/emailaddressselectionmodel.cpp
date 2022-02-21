@@ -8,7 +8,7 @@
 
 #include "emailaddressselectionmodel.h"
 #include <Akonadi/ChangeRecorder>
-#include <Akonadi/Contact/ContactsTreeModel>
+#include <Akonadi/ContactsTreeModel>
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Session>
