@@ -4,6 +4,6 @@ find_dependency(KF5Akonadi "@AKONADI_VERSION@")
 find_dependency(KF5Contacts "@KF5_MIN_VERSION@")
 find_dependency(KF5GrantleeTheme "@GRANTLEETHEME_LIB_VERSION@")
 
-find_dependency(Qt5Widgets "@QT_REQUIRED_VERSION@")
+find_dependency(Qt@QT_MAJOR_VERSION@Widgets "@QT_REQUIRED_VERSION@")
 
 include("${CMAKE_CURRENT_LIST_DIR}/KF5AkonadiContactTargets.cmake")
