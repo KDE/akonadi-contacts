@@ -80,7 +80,7 @@ QVariant AddressModel::data(const QModelIndex &index, int role) const
         if (!addr.label().isEmpty()) {
             str += addr.label().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
         } else {
-            str += addr.formattedAddress().trimmed().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
+            str += addr.formatted(KContacts::AddressFormatStyle::Postal).trimmed().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
         }
         return str;
     }

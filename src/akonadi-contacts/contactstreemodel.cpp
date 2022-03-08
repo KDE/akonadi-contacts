@@ -99,14 +99,14 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
             case HomeAddress: {
                 const KContacts::Address address = contact.address(KContacts::Address::Home);
                 if (!address.isEmpty()) {
-                    return address.formattedAddress();
+                    return address.formatted(KContacts::AddressFormatStyle::Postal);
                 }
                 break;
             }
             case BusinessAddress: {
                 const KContacts::Address address = contact.address(KContacts::Address::Work);
                 if (!address.isEmpty()) {
-                    return address.formattedAddress();
+                    return address.formatted(KContacts::AddressFormatStyle::Postal);
                 }
                 break;
             }

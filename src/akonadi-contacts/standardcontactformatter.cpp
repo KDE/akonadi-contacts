@@ -146,7 +146,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         QString formattedAddress;
 
         if (address.label().isEmpty()) {
-            formattedAddress = address.formattedAddress().trimmed().toHtmlEscaped();
+            formattedAddress = address.formatted(KContacts::AddressFormatStyle::Postal).trimmed().toHtmlEscaped();
         } else {
             formattedAddress = address.label().toHtmlEscaped();
         }
