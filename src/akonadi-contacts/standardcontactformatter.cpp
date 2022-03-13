@@ -12,6 +12,7 @@
 #include <KColorScheme>
 #include <KConfigGroup>
 #include <KContacts/Addressee>
+#include <kcontacts_version.h>
 
 #include <KLocalizedString>
 #include <KStringHandler>
@@ -146,12 +147,20 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         QString formattedAddress;
 
         if (address.label().isEmpty()) {
-            formattedAddress = address.formatted(KContacts::AddressFormatStyle::Postal).trimmed().toHtmlEscaped();
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 92, 0)
+            formattedAddress = address.formattedAddress().trimmed().toHtmlEscaped();
+#else
+            formattedAddress = address.formatted(KContacts::AddressFormatStyle::MultiLineInternational).toHtmlEscaped();
+#endif
         } else {
             formattedAddress = address.label().toHtmlEscaped();
         }
 
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 92, 0)
         formattedAddress.replace(QRegularExpression(QStringLiteral("\n+")), QStringLiteral("<br>"));
+#else
+        formattedAddress.replace(QLatin1Char('\n'), QStringLiteral("<br>"));
+#endif
 
         const QString url = QStringLiteral("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                                 .arg(counter)

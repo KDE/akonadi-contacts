@@ -11,6 +11,7 @@
 
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
+#include <kcontacts_version.h>
 
 #include <KIconLoader>
 #include <KLocalizedString>
@@ -99,14 +100,22 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
             case HomeAddress: {
                 const KContacts::Address address = contact.address(KContacts::Address::Home);
                 if (!address.isEmpty()) {
-                    return address.formatted(KContacts::AddressFormatStyle::Postal);
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 92, 0)
+                    return address.formattedAddress();
+#else
+                    return address.formatted(KContacts::AddressFormatStyle::MultiLineInternational);
+#endif
                 }
                 break;
             }
             case BusinessAddress: {
                 const KContacts::Address address = contact.address(KContacts::Address::Work);
                 if (!address.isEmpty()) {
-                    return address.formatted(KContacts::AddressFormatStyle::Postal);
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 92, 0)
+                    return address.formattedAddress();
+#else
+                    return address.formatted(KContacts::AddressFormatStyle::MultiLineInternational);
+#endif
                 }
                 break;
             }

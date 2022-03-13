@@ -8,6 +8,8 @@
 
 #include "addressmodel.h"
 
+#include <kcontacts_version.h>
+
 using namespace ContactEditor;
 
 AddressModel::AddressModel(QObject *parent)
@@ -80,7 +82,11 @@ QVariant AddressModel::data(const QModelIndex &index, int role) const
         if (!addr.label().isEmpty()) {
             str += addr.label().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
         } else {
-            str += addr.formatted(KContacts::AddressFormatStyle::Postal).trimmed().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 92, 0)
+            str += addr.formattedAddress().trimmed().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
+#else
+            str += addr.formatted(KContacts::AddressFormatStyle::MultiLineInternational).toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
+#endif
         }
         return str;
     }
