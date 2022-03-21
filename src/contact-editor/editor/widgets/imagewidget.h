@@ -63,4 +63,3 @@ private:
     bool mHasImage;
     bool mReadOnly;
 };
-

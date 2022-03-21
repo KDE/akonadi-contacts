@@ -28,4 +28,3 @@ public:
 
     void setReadOnly(bool readOnly) override;
 };
-

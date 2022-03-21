@@ -21,4 +21,3 @@ public:
     ~MailTypeCombobox() override;
 };
 }
-

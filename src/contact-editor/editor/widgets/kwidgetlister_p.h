@@ -188,4 +188,3 @@ private:
     std::unique_ptr<KWidgetListerPrivate> const d;
     //@endcond
 };
-

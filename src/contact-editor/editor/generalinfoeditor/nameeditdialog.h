@@ -51,4 +51,3 @@ private:
     KLineEdit *mAdditionalNameEdit = nullptr;
     DisplayNameEditWidget *mDisplayNameEdit = nullptr;
 };
-

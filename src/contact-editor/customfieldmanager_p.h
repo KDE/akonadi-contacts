@@ -20,4 +20,3 @@ public:
     CONTACTEDITOR_EXPORT static void setGlobalCustomFieldDescriptions(const CustomField::List &customFields);
     Q_REQUIRED_RESULT CONTACTEDITOR_EXPORT static CustomField::List globalCustomFieldDescriptions();
 };
-

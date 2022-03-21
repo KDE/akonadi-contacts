@@ -28,4 +28,3 @@ private:
     Akonadi::EmailAddressSelectionWidget *mAddressesWidget = nullptr;
     QTextBrowser *mInfo = nullptr;
 };
-

@@ -51,4 +51,3 @@ public:
     bool mReadOnly = false;
 };
 }
-

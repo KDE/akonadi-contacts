@@ -22,4 +22,3 @@ private Q_SLOTS:
     void shouldEnableAddButtonWhenTextIsNotEmpty();
     void shouldClearEditorWhenPressAdd();
 };
-

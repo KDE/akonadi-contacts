@@ -65,7 +65,8 @@ static QString toString(const KContacts::Addressee &contact)
     return contact.fullEmail();
 }
 
-template<class T> static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
+template<class T>
+static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {

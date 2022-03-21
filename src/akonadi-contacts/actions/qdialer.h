@@ -26,4 +26,3 @@ protected:
     const QString mApplicationName;
     QString mErrorMessage;
 };
-

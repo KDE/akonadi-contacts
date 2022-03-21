@@ -68,4 +68,3 @@ private:
     std::unique_ptr<ContactGroupEditorDelegatePrivate> const d;
 };
 }
-

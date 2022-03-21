@@ -28,4 +28,3 @@ private:
 
     QDBusInterface *mInterface = nullptr;
 };
-

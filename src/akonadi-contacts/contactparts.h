@@ -36,4 +36,3 @@ AKONADI_CONTACT_EXPORT extern const char Lookup[];
 AKONADI_CONTACT_EXPORT extern const char Standard[];
 }
 }
-

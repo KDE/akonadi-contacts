@@ -27,4 +27,3 @@ private:
     Akonadi::EmailAddressSelectionWidget *mView = nullptr;
 };
 }
-

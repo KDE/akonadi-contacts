@@ -18,4 +18,3 @@ class SendSmsAction
 public:
     void sendSms(const KContacts::PhoneNumber &number);
 };
-

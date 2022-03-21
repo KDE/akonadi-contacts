@@ -23,4 +23,3 @@ private:
     bool initializeEkiga();
     QDBusInterface *mInterface = nullptr;
 };
-

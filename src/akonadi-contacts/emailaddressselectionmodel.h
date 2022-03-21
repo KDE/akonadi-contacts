@@ -26,4 +26,3 @@ private:
     Akonadi::ContactsTreeModel *mModel = nullptr;
 };
 }
-

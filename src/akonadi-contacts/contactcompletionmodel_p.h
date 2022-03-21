@@ -37,4 +37,3 @@ private:
     static QAbstractItemModel *mSelf;
 };
 }
-

@@ -28,4 +28,3 @@ private:
     std::unique_ptr<SelectAddressBookDialogPrivate> const d;
 };
 }
-

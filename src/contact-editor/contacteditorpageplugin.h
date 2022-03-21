@@ -49,4 +49,3 @@ public:
 }
 
 Q_DECLARE_INTERFACE(ContactEditor::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")
-

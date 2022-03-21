@@ -23,4 +23,3 @@ private Q_SLOTS:
     void shouldDisplayContactInfo_data();
     void shouldDisplayContactInfo();
 };
-

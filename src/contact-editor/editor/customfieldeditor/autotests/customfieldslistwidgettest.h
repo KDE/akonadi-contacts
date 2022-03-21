@@ -17,4 +17,3 @@ public:
     explicit CustomFielsListWidgetTest(QObject *parent = nullptr);
     ~CustomFielsListWidgetTest() override;
 };
-

@@ -42,4 +42,3 @@ private:
     QLabel *mLengthLabel = nullptr;
     QString mText;
 };
-

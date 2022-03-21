@@ -40,4 +40,3 @@ public:
     void store(Akonadi::Item &contact);
 };
 }
-

@@ -130,7 +130,8 @@ static QString toString(const QString &value)
     return value;
 }
 
-template<class T> static void compareList(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QList<T> &left, const QList<T> &right)
+template<class T>
+static void compareList(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QList<T> &left, const QList<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {
@@ -145,7 +146,8 @@ template<class T> static void compareList(Akonadi::AbstractDifferencesReporter *
     }
 }
 
-template<class T> static void compareVector(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
+template<class T>
+static void compareVector(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {

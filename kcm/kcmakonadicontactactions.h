@@ -33,4 +33,3 @@ private:
     KConfigDialogManager *mConfigManager = nullptr;
     Ui_AkonadiContactActions ui;
 };
-

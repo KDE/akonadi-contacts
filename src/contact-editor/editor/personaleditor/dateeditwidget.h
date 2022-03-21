@@ -60,4 +60,3 @@ private:
     QDate mDate;
     bool mReadOnly = false;
 };
-

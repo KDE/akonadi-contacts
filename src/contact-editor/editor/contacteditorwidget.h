@@ -71,4 +71,3 @@ public:
 private:
     std::unique_ptr<ContactEditorWidgetPrivate> const d;
 };
-

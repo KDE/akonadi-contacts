@@ -66,4 +66,3 @@ private:
     DisplayType mDisplayType = DisplayType::SimpleName;
     int mAdditionalPopupWidth;
 };
-

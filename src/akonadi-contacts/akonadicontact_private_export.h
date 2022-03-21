@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define AKONADI_CONTACTS_TESTS_EXPORT
 #endif
-

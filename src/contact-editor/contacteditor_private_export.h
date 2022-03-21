@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define CONTACTEDITOR_TESTS_EXPORT
 #endif
-

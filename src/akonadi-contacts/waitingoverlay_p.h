@@ -39,4 +39,3 @@ private:
     QPointer<QWidget> mBaseWidget;
     bool mPreviousState;
 };
-

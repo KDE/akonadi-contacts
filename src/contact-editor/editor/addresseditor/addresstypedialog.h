@@ -35,4 +35,3 @@ private:
     KContacts::Address::TypeList mTypeList;
 };
 }
-

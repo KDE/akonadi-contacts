@@ -28,4 +28,3 @@ private:
     KAddressBookGrantlee::GrantleeContactFormatter *const mFormatter;
 };
 }
-

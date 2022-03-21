@@ -102,4 +102,3 @@ private:
 }
 
 Q_DECLARE_TYPEINFO(Akonadi::EmailAddressSelection, Q_MOVABLE_TYPE);
-

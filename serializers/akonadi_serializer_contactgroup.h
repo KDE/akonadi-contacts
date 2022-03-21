@@ -33,4 +33,3 @@ public:
     QString extractGid(const Item &item) const override;
 };
 }
-

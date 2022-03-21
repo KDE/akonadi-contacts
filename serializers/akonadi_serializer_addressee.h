@@ -34,4 +34,3 @@ private:
     KContacts::VCardConverter m_converter;
 };
 }
-

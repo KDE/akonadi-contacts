@@ -62,4 +62,3 @@ private:
     QSet<QString> mContentMimeTypes;
     Akonadi::Collection::Rights mRights;
 };
-

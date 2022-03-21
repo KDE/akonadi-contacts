@@ -35,4 +35,3 @@ public:
 private:
     Akonadi::TagWidget *const mTagWidget;
 };
-

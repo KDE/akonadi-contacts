@@ -26,4 +26,3 @@ public:
     void dialNumber(const KContacts::PhoneNumber &number);
 };
 }
-

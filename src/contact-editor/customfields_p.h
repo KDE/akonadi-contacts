@@ -13,7 +13,8 @@
 #include <QVariant>
 #include <QVector>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-template<typename T> class QVector;
+template<typename T>
+class QVector;
 #else
 template<typename T>
 class QList;
@@ -80,4 +81,3 @@ private:
     Scope mScope;
     QString mValue;
 };
-

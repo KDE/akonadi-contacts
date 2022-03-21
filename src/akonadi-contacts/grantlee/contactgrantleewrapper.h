@@ -65,4 +65,3 @@ private:
 }
 
 Q_DECLARE_METATYPE(KAddressBookGrantlee::ContactGrantleeWrapper)
-

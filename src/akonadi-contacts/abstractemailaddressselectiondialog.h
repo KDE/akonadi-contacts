@@ -34,4 +34,3 @@ Q_SIGNALS:
     void insertAddresses(const KContacts::Addressee::List &list);
 };
 }
-
