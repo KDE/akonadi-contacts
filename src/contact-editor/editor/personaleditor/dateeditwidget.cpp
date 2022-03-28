@@ -8,9 +8,8 @@
 
 #include "dateeditwidget.h"
 
-#include "kdatepickerpopup_p.h"
-
 #include <KDatePicker>
+#include <KDatePickerPopup>
 
 #include <KLocalizedString>
 #include <QContextMenuEvent>

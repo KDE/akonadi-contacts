@@ -86,7 +86,6 @@ target_sources(KF5ContactEditor PRIVATE
     editor/addresseditor/selectaddresstypecombobox.cpp
     editor/personaleditor/personaleditorwidget.cpp
     editor/personaleditor/dateeditwidget.cpp
-    editor/personaleditor/kdatepickerpopup.cpp
     editor/businesseditor/businesseditorwidget.cpp
     editor/businesseditor/freebusyeditwidget.cpp
     editor/contacteditorwidget.cpp
@@ -135,7 +134,6 @@ target_sources(KF5ContactEditor PRIVATE
     editor/customfieldeditor/customfieldeditorwidget.h
     editor/personaleditor/dateeditwidget.h
     editor/personaleditor/personaleditorwidget.h
-    editor/personaleditor/kdatepickerpopup_p.h
     editor/widgets/categorieseditabstractwidget.h
     editor/widgets/imagewidget.h
     editor/widgets/kwidgetlister_p.h
