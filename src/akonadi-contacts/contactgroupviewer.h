@@ -74,6 +74,11 @@ public:
      */
     void setContactGroupFormatter(AbstractContactGroupFormatter *formatter);
 
+    /**
+     * @since 5.20.41
+     */
+    void updateView();
+
 public Q_SLOTS:
     /**
      * Sets the contact @p group that shall be displayed in the viewer.

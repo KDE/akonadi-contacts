@@ -175,6 +175,11 @@ void ContactGroupViewer::setContactGroupFormatter(AbstractContactGroupFormatter 
     }
 }
 
+void ContactGroupViewer::updateView()
+{
+    itemChanged(d->mCurrentItem);
+}
+
 void ContactGroupViewer::itemChanged(const Item &item)
 {
     if (!item.hasPayload<KContacts::ContactGroup>()) {
