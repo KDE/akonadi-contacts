@@ -12,3 +12,7 @@ Dependencies:
     'pim/kmime' : '@same'
     'pim/grantleetheme' : '@same'
     'third-party/grantlee' : '@stable'
+
+
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]      
