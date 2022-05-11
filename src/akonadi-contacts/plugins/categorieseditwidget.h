@@ -10,6 +10,7 @@
 
 #include <Akonadi/CategoriesEditAbstractWidget>
 #include <KContacts/Addressee>
+#include <KJob>
 #include <QVariant>
 namespace Akonadi
 {
@@ -34,4 +35,7 @@ public:
 
 private:
     Akonadi::TagWidget *const mTagWidget;
+
+private Q_SLOTS:
+    void onMissingTagCreated(KJob *);
 };
