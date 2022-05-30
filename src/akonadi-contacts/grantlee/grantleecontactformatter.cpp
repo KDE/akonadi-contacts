@@ -62,13 +62,10 @@ public:
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
         showQRCode = group.readEntry("QRCodes", true);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         mEngine = std::make_unique<GrantleeTheme::Engine>();
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader());
 #else
-        mEngine = std::make_unique<KTextTemplate::Engine>();
-
         mTemplateLoader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>(new KTextTemplate::FileSystemTemplateLoader());
 #endif
     }
@@ -101,7 +98,7 @@ public:
     Grantlee::Template mSelfcontainedTemplate;
     Grantlee::Template mEmbeddableTemplate;
 #else
-    std::unique_ptr<KTextTemplate::Engine> mEngine;
+    std::unique_ptr<GrantleeTheme::Engine> mEngine;
     QSharedPointer<KTextTemplate::FileSystemTemplateLoader> mTemplateLoader;
     KTextTemplate::Template mSelfcontainedTemplate;
     KTextTemplate::Template mEmbeddableTemplate;
@@ -259,11 +256,10 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     mapping.insert(QStringLiteral("hasqrcode"), !d->forceDisableQRCode && d->showQRCode);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::Context context(mapping);
-    context.setLocalizer(d->mEngine->localizer());
 #else
     KTextTemplate::Context context(mapping);
-    // TODO context.setLocalizer(d->mEngine->localizer());
 #endif
+    context.setLocalizer(d->mEngine->localizer());
 
     if (form == SelfcontainedForm) {
         return d->mSelfcontainedTemplate->render(&context);
@@ -276,9 +272,5 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
 
 void GrantleeContactFormatter::setApplicationDomain(const QByteArray &domain)
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     d->mEngine->localizer()->setApplicationDomain(domain);
-#else
-    // TODO qt6
-#endif
 }
