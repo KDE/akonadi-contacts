@@ -144,6 +144,9 @@ void ContactGroupEditorPrivate::itemChanged(const Item &item, const QSet<QByteAr
             itemFetchDone(job);
         });
         new WaitingOverlay(job, mParent);
+    } else {
+        // Still update the item so that the internal revision match
+        mItem = item;
     }
     delete dlg;
 }

@@ -172,6 +172,9 @@ void Akonadi::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item
         mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {
             itemFetchDone(job);
         });
+    } else {
+        // Still update the item so that the internal revision match
+        mItem = item;
     }
 
     delete dlg;
