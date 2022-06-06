@@ -74,7 +74,8 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("categorylabel"));
     categoryWidgetLayout->addWidget(label);
 
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("akonadi/contacts/plugins/categorieseditwidgetplugin"));
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR))
+                                           + QStringLiteral("/akonadi/contacts/plugins/categorieseditwidgetplugin"));
     const auto result = KPluginFactory::instantiatePlugin<ContactEditor::CategoriesEditAbstractWidget>(editWidgetPlugin, parent);
 
     if (result) {
