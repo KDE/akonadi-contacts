@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Configure the Contact Actions",
         "Description[ar]": "اضبط إجراءات المتراسل",
+        "Description[ca@valencia]": "Configura les accions del contacte",
         "Description[ca]": "Configura les accions del contacte",
         "Description[fr]": "Configurer les actions sur les contacts",
         "Description[nl]": "De contactpersoon-actie configureren",
@@ -14,6 +15,7 @@
         "Icon": "configure",
         "Name": "Contact Actions",
         "Name[ar]": "إجراءات المتراسل",
+        "Name[ca@valencia]": "Accions del contacte",
         "Name[ca]": "Accions del contacte",
         "Name[fr]": "Actions sur les contacts",
         "Name[nl]": "Contactpersoon-acties",
