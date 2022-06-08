@@ -10,6 +10,7 @@
         "Description[pt]": "Configurar as Acções do Contacto",
         "Description[sl]": "Konfiguriraj Contact Actions",
         "Description[sv]": "Anpassa kontaktåtgärder",
+        "Description[tr]": "Kişi Eylemlerini Yapılandır",
         "Description[uk]": "Налаштування дій для записів контактів",
         "Description[x-test]": "xxConfigure the Contact Actionsxx",
         "Icon": "configure",
@@ -23,6 +24,7 @@
         "Name[pt]": "Acções do Contacto",
         "Name[sl]": "Contact Actions",
         "Name[sv]": "Kontaktåtgärder",
+        "Name[tr]": "Kişi Eylemleri",
         "Name[uk]": "Дії із записами контактів",
         "Name[x-test]": "xxContact Actionsxx",
         "ServiceTypes": [
