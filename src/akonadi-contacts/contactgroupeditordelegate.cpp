@@ -225,7 +225,9 @@ void ContactGroupEditorDelegate::paint(QPainter *painter, const QStyleOptionView
     QStyledItemDelegate::paint(painter, option, index);
 
     if (index.column() == 1 && !isLastRow(index)) {
-        d->mIcon.paint(painter, option.rect, Qt::AlignRight);
+        QRect buttonRect = d->mItemView->visualRect(index);
+        buttonRect.setLeft(buttonRect.right() - d->mButtonSize.width());
+        d->mIcon.paint(painter, buttonRect, Qt::AlignRight);
     }
 }
 
