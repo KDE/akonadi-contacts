@@ -206,8 +206,9 @@ void AddressLocationWidget::fillCountryCombo()
 
 void AddressLocationWidget::slotAddAddress()
 {
-    KContacts::Address addr = address();
-    if (!addr.isEmpty()) {
+    const KContacts::Address addr = address();
+    if (!mLocalityEdit->text().trimmed().isEmpty() || !mRegionEdit->text().trimmed().isEmpty() || !mPostalCodeEdit->text().trimmed().isEmpty()
+        || !mStreetEdit->text().trimmed().isEmpty() || !mPOBoxEdit->text().trimmed().isEmpty()) {
         Q_EMIT addNewAddress(addr);
         reset();
     }
