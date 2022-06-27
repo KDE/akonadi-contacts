@@ -105,7 +105,7 @@ public:
     {
     }
 
-    QSize mButtonSize;
+    const QSize mButtonSize;
     const QIcon mIcon;
     QAbstractItemView *mItemView = nullptr;
 };
@@ -252,7 +252,6 @@ bool ContactGroupEditorDelegate::editorEvent(QEvent *event, QAbstractItemModel *
             const QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
             QRect buttonRect = d->mItemView->visualRect(index);
             buttonRect.setLeft(buttonRect.right() - d->mButtonSize.width());
-
             if (buttonRect.contains(mouseEvent->pos())) {
                 model->removeRows(index.row(), 1);
                 QTimer::singleShot(0, this, &ContactGroupEditorDelegate::setFirstColumnAsCurrent);
