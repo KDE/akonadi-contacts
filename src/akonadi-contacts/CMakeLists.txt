@@ -36,13 +36,6 @@ install(FILES
 
 install(EXPORT KF5AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiContactTargets.cmake NAMESPACE KF5::)
 
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
-
 ########### next target ###############
 
 target_sources(KF5AkonadiContact PRIVATE
