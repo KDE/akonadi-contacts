@@ -2,6 +2,7 @@
 Name=Contact Group Serializer
 Name[ar]=مُسلسِل مجموعات المتراسلين
 Name[az]=Kontakt Qruplarının Saxlanılması Modulu
+Name[bg]=Сериализатор на контактни групи
 Name[ca]=Serialitzador del grup de contacte
 Name[ca@valencia]=Serialitzador del grup de contacte
 Name[da]=Serieordning af kontaktgruppe
@@ -38,6 +39,7 @@ Name[zh_TW]=聯絡人群組序列器
 Comment=An Akonadi serializer plugin for contact group objects
 Comment[ar]=ملحقة سَلسَلة «أكونادي» لكائنات مجموعات المتراسلين
 Comment[az]=Akonadi üçün kontakt qruplarının saxlanılması modulu
+Comment[bg]=Програма на Akonadi за сериализация на обекти за контактни групи
 Comment[ca]=Un connector de serialització de l'Akonadi per a objectes del grup de contacte
 Comment[ca@valencia]=Un connector de serialització d'Akonadi per a objectes del grup de contacte
 Comment[da]=Et Akonadi-plugin til serieordning af kontaktgruppeobjekter
