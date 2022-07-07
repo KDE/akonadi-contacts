@@ -1,7 +1,7 @@
 [Misc]
 Name=Addressee Serializer
 Name[ar]=مُسلسِل العناوين
-Name[az]=Kontaktların Saxlanılması
+Name[az]=Əlaqələrin saxlanılması
 Name[bg]=Сериализатор на адресати
 Name[ca]=Serialitzador del destinatari
 Name[ca@valencia]=Serialitzador del destinatari
@@ -38,7 +38,7 @@ Name[zh_CN]=收信人序列转换器
 Name[zh_TW]=收件人序列器
 Comment=An Akonadi serializer plugin for addressee objects
 Comment[ar]=ملحقة سَلسَلة «أكونادي» لكائنات العناوين
-Comment[az]=Akonadi üçün kontaktların saxlanılması modulu
+Comment[az]=Akonadi üçün əlaqələrinların saxlanılması modulu
 Comment[bg]=Програма на Akonadi за сериализация на обекти за адресати
 Comment[ca]=Un connector de serialització de l'Akonadi per a objectes del destinatari
 Comment[ca@valencia]=Un connector de serialització d'Akonadi per a objectes del destinatari
