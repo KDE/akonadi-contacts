@@ -36,7 +36,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
     // check for valid config first, so the user doesn't type the message without a way to actually send it
     QString command = ContactActionsSettings::self()->smsCommand();
     if (command.isEmpty() && ContactActionsSettings::self()->sendSmsAction() == ContactActionsSettings::UseExternalSmsApplication) {
-        KMessageBox::sorry(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
+        KMessageBox::error(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
         return;
     }
 
@@ -60,7 +60,7 @@ void SendSmsAction::sendSms(const KContacts::PhoneNumber &phoneNumber)
             // I'm not sure whether here should be a notification.
             // Skype can do a notification itself if whished.
         } else {
-            KMessageBox::sorry(nullptr, dialer->errorMessage());
+            KMessageBox::error(nullptr, dialer->errorMessage());
         }
     }
 

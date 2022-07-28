@@ -40,7 +40,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
     }
     if (dialer) {
         if (!dialer->dialNumber(number.normalizedNumber())) {
-            KMessageBox::sorry(nullptr, dialer->errorMessage());
+            KMessageBox::error(nullptr, dialer->errorMessage());
         }
         delete dialer;
         return;
@@ -56,7 +56,7 @@ void DialPhoneNumberAction::dialNumber(const KContacts::PhoneNumber &number)
 
     QString command = ContactActionsSettings::self()->phoneCommand();
     if (command.isEmpty()) {
-        KMessageBox::sorry(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
+        KMessageBox::error(nullptr, i18n("There is no application set which could be executed.\nPlease go to the settings dialog and configure one."));
         return;
     }
 
