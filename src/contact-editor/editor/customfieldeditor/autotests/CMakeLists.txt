@@ -8,7 +8,7 @@ ecm_mark_as_test(customfieldswidgettest)
 target_link_libraries(customfieldswidgettest Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion KF5::ConfigCore KF5::WidgetsAddons)
 
 
-add_executable(customfieldeditorwidgettest customfieldeditorwidgettest.cpp ../customfieldeditorwidget.cpp)
+add_executable(customfieldeditorwidgettest customfieldeditorwidgettest.cpp customfieldeditorwidgettest.h ../customfieldeditorwidget.cpp)
 add_test(NAME customfieldeditorwidgettest COMMAND customfieldeditorwidgettest)
 ecm_mark_as_test(customfieldeditorwidgettest)
 target_link_libraries(customfieldeditorwidgettest Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion KF5::WidgetsAddons)
