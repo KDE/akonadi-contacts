@@ -11,7 +11,7 @@ macro(add_akonadi_contact_demo _source)
   add_test(NAME ${_name} COMMAND ${_name} )
   target_link_libraries(${_name}
      KF5::AkonadiContact
-     Qt${QT_MAJOR_VERSION}::Test)
+     Qt::Test)
   ecm_mark_as_test(${_name})
 endmacro()
 
@@ -20,5 +20,5 @@ endmacro()
 add_akonadi_contact_demo(contactmetadataattributetest.cpp)
 
 ecm_add_test(grantleeprinttest.cpp
-    LINK_LIBRARIES KF5::AkonadiContact Qt${QT_MAJOR_VERSION}::Test KF5::Contacts
+    LINK_LIBRARIES KF5::AkonadiContact Qt::Test KF5::Contacts
 )
