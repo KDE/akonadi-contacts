@@ -180,7 +180,7 @@ set_target_properties(KF5ContactEditor PROPERTIES
 
 install(TARGETS
     KF5ContactEditor
-    EXPORT KF5ContactEditorTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KF5ContactEditorTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 ecm_generate_pri_file(BASE_NAME ContactEditor

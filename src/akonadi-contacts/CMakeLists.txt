@@ -232,7 +232,7 @@ set_target_properties(KF5AkonadiContact PROPERTIES
 
 install(TARGETS
     KF5AkonadiContact
-    EXPORT KF5AkonadiContactTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KF5AkonadiContactTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
