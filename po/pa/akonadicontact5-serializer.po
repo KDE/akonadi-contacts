@@ -1,0 +1,234 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2010-12-26 09:10+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "ਬਦਲਿਆ ਸੰਪਰਕ"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "ਸੰਪਰਕ ਟਕਰਾ"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "ਈਮੇਲ"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "ਫੋਨ ਨੰਬਰ"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "ਐਡਰੈੱਸ"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr ""
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr ""
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "ਨਾਂ"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "ਮੈਂਬਰ"
+
+#, fuzzy
+#~| msgid "Changed Contact"
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "ਬਦਲਿਆ ਸੰਪਰਕ"
+
+#, fuzzy
+#~| msgid "Conflicting Contact"
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "ਸੰਪਰਕ ਟਕਰਾ"
+
+#~ msgid "Yes"
+#~ msgstr "ਹਾਂ"
+
+#~ msgid "No"
+#~ msgstr "ਨਹੀਂ"
+
+#~ msgid "Attendees"
+#~ msgstr "ਦਰਸ਼ਕ"
+
+#~ msgid "Organizer"
+#~ msgstr "ਪਰਬੰਧਕ"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "Duration"
+#~ msgstr "ਅੰਤਰਾਲ"
+
+#~ msgid "Description"
+#~ msgstr "ਵੇਰਵਾ"
+
+#~ msgid "Summary"
+#~ msgstr "ਸੰਖੇਪ"
+
+#~ msgid "Status"
+#~ msgstr "ਹਾਲਤ"
+
+#~ msgid "Priority"
+#~ msgstr "ਤਰਜੀਹ"
+
+#~ msgid "Location"
+#~ msgstr "ਟਿਕਾਣਾ"
+
+#~ msgid "Categories"
+#~ msgstr "ਕੈਟਾਗਰੀਆਂ"
+
+#~ msgid "Alarms"
+#~ msgstr "ਅਲਾਰਮ"
+
+#~ msgid "Resources"
+#~ msgstr "ਸਰੋਤ"
+
+#~ msgid "Attachments"
+#~ msgstr "ਅਟੈਚਮੈਂਟ"
+
+#~ msgid "Created"
+#~ msgstr "ਬਣਾਇਆ"
+
+#~ msgid "Start time"
+#~ msgstr "ਸ਼ੁਰੂ ਸਮਾਂ"
+
+#~ msgid "End Date"
+#~ msgstr "ਅੰਤ ਮਿਤੀ"
+
+#~ msgid "Due Date"
+#~ msgstr "ਮਿਆਦ"
+
+#~ msgid "Complete"
+#~ msgstr "ਪੂਰਾ"
+
+#~ msgid "Changed Event"
+#~ msgstr "ਈਵੈਂਟ ਬਦਲਿਆ ਗਿਆ"
+
+#, fuzzy
+#~| msgid "UID"
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#, fuzzy
+#~| msgid "Alarms"
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "ਅਲਾਰਮ"
+
+#, fuzzy
+#~| msgid "Alarms"
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "ਅਲਾਰਮ"
+
+#, fuzzy
+#~| msgid "Start time"
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "ਸ਼ੁਰੂ ਸਮਾਂ"
+
+#, fuzzy
+#~| msgid "Start time"
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "ਸ਼ੁਰੂ ਸਮਾਂ"
+
+#, fuzzy
+#~| msgid "Organizer"
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "ਪਰਬੰਧਕ"
+
+#, fuzzy
+#~| msgid "Emails"
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "ਈਮੇਲ"
+
+#, fuzzy
+#~| msgid "Emails"
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "ਈਮੇਲ"
+
+#, fuzzy
+#~| msgid "Emails"
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "ਈਮੇਲ"
+
+#, fuzzy
+#~| msgid "Emails"
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "ਈਮੇਲ"
+
+#, fuzzy
+#~| msgid "Attachments"
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "ਅਟੈਚਮੈਂਟ"
+
+#, fuzzy
+#~| msgid "Emails"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "ਈਮੇਲ"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "ਹਾਂ"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "ਨਹੀਂ"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "ਹਾਂ"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "ਨਹੀਂ"

@@ -1,0 +1,1888 @@
+# Translation of akonadicontact5.po to Catalan
+# Copyright (C) 2009-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Manuel Tortosa Moreno <manutortosa@gmail.com>, 2009, 2010.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-contacts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-28 00:45+0000\n"
+"PO-Revision-Date: 2022-03-23 13:49+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
+#, kde-format
+msgid ""
+"Define how a phone number of a contact should be dialed. 'System Default' "
+"uses the default application configured for this on your system (e.g. KDE "
+"Connect). Selecting a specific application will use that (if installed), "
+"'External Application' allows you to specify a dial command with "
+"placeholders manually."
+msgstr ""
+"Defineix com s'ha de marcar el número de telèfon d'un contacte. "
+"«Predeterminat del sistema» usa l'aplicació configurada com a predeterminada "
+"en el sistema per a això (p. ex. el KDE Connect). En seleccionar una "
+"aplicació específica s'usarà aquesta (si està instal·lada), «Aplicació "
+"externa» permet especificar manualment una ordre de marcatge amb text "
+"variable."
+
+#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
+#, kde-format
+msgid "Phone Command"
+msgstr "Ordre de telèfon"
+
+#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
+#, kde-format
+msgid ""
+"This command defines the application that shall be executed to dial a "
+"contact's phone number."
+msgstr ""
+"Aquesta ordre defineix l'aplicació que s'executarà per a marcar el número de "
+"telèfon d'un contacte."
+
+#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
+#, no-c-format, kde-format
+msgid ""
+"The following placeholders can be used in the command:\n"
+"   %N: The raw number as stored in the address book.\n"
+"   %n: The normalized number with all non-digit characters removed."
+msgstr ""
+"Es poden usar les següents variables de substitució en l'ordre:\n"
+"   %N: El número tal com està desat a la llibreta d'adreces.\n"
+"   %n: El número normalitzat amb tots els caràcters no-dígits eliminats."
+
+#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
+#, kde-format
+msgid ""
+"Defines which application shall be used to send an SMS to the phone number "
+"of a contact. If 'System Default' is selected the default handler for SMS "
+"messages on your system will be used (e.g. KDE Connect), otherwise the "
+"selected application will be used to send the SMS message (if installed on "
+"the computer). If 'External Application' is selected, a command with "
+"placeholders can be defined."
+msgstr ""
+"Defineix quina aplicació s'usarà per a enviar un SMS al número de telèfon "
+"d'un contacte. Si està seleccionada la «Predeterminada del sistema», s'usarà "
+"el gestor predeterminat per als missatges SMS del sistema (p. ex. el KDE "
+"Connect), altrament s'usarà l'aplicació seleccionada per enviar el missatge "
+"SMS (si està instal·lada a l'ordinador). Si està seleccionada «Aplicació "
+"externa», s'ha de definir una ordre amb variables de substitució."
+
+#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
+#, kde-format
+msgid "SMS Command"
+msgstr "Ordre d'SMS"
+
+#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
+#, kde-format
+msgid ""
+"This command defines the application that shall be executed to send an SMS "
+"to a contact's phone number."
+msgstr ""
+"Aquesta ordre defineix l'aplicació que s'executarà per a enviar un SMS al "
+"número de telèfon d'un contacte."
+
+#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
+#, no-c-format, kde-format
+msgid ""
+"The following placeholders can be used in the command:\n"
+"   %N: The raw number as stored in the address book.\n"
+"   %n: The normalized number with all non-digit characters removed.\n"
+"   %t: The text"
+msgstr ""
+"Es poden usar les següents variables de substitució en l'ordre:\n"
+"   %N: El número tal com està desat a la llibreta d'adreces.\n"
+"   %n: El número normalitzat amb tots els caràcters no-dígits eliminats.\n"
+"   %t: El text"
+
+#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
+#: akonadi-contacts/actions/sendsmsaction.cpp:39
+#, kde-format
+msgid ""
+"There is no application set which could be executed.\n"
+"Please go to the settings dialog and configure one."
+msgstr ""
+"No hi ha cap aplicació establerta que es pugui executar. Si us plau, aneu al "
+"diàleg d'arranjament i configureu-ne una."
+
+#: akonadi-contacts/actions/qdialer.cpp:24
+#, kde-format
+msgid "Dialing a number is not supported"
+msgstr "No es permet marcar un número"
+
+#: akonadi-contacts/actions/qdialer.cpp:33
+#, kde-format
+msgid "Sending an SMS is not supported"
+msgstr "No es permet l'enviament d'un SMS"
+
+#: akonadi-contacts/actions/qekigadialer.cpp:72
+#, kde-format
+msgid ""
+"Unable to start ekiga process, check that ekiga executable is in your PATH "
+"variable."
+msgstr ""
+"No s'ha pogut iniciar el procés «ekiga», comproveu que l'executable de "
+"l'Ekiga es troba a la variable PATH."
+
+#: akonadi-contacts/actions/qekigadialer.cpp:97
+#, kde-format
+msgid "Ekiga Public API (D-Bus) seems to be disabled."
+msgstr "L'API pública de l'Ekiga (D-Bus) sembla que està desactivada."
+
+#: akonadi-contacts/actions/qekigadialer.cpp:117
+#, kde-format
+msgid "Sending an SMS is currently not supported on Ekiga."
+msgstr "Actualment no es permet l'enviament d'un SMS amb l'Ekiga."
+
+#: akonadi-contacts/actions/qsflphonedialer.cpp:53
+#, kde-format
+msgid ""
+"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
+"executable is in your PATH variable."
+msgstr ""
+"No s'ha pogut iniciar el procés «sflphone-client-kde», comproveu que "
+"l'executable de l'«sflphone-client-kde» es troba a la variable PATH."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:77
+#, kde-format
+msgid ""
+"Unable to start skype process, check that skype executable is in your PATH "
+"variable."
+msgstr ""
+"No s'ha pogut iniciar el procés «skype», comproveu que l'executable de "
+"l'«Skype» es troba a la variable PATH."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:102
+#, kde-format
+msgid "Skype Public API (D-Bus) seems to be disabled."
+msgstr "L'API pública de l'«Skype» (D-Bus) semblar estar desactivada."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:111
+#, kde-format
+msgid "Skype registration failed."
+msgstr "Ha fallat el registre de l'«Skype»."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:120
+#, kde-format
+msgid "Protocol mismatch."
+msgstr "Desfasament de protocol."
+
+#: akonadi-contacts/actions/smsdialog.cpp:35
+#, kde-format
+msgctxt "@title:window"
+msgid "SMS text"
+msgstr "Text de l'SMS"
+
+#: akonadi-contacts/actions/smsdialog.cpp:39
+#, kde-format
+msgid "Please insert SMS text for an SMS to the following number: %1"
+msgstr "Introduïu el text de l'SMS per a enviar al número següent: %1"
+
+#: akonadi-contacts/actions/smsdialog.cpp:80
+#, kde-format
+msgid "%1/%2 (%3 SMS)"
+msgstr "%1/%2 (%3 SMS)"
+
+#: akonadi-contacts/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Algú ha canviat el contacte.\n"
+"Què s'ha de fer?"
+
+#: akonadi-contacts/contacteditor.cpp:163
+#: akonadi-contacts/contactgroupeditor.cpp:135
+#, kde-format
+msgid "Take over changes"
+msgstr "Assumeix els canvis"
+
+#: akonadi-contacts/contacteditor.cpp:164
+#: akonadi-contacts/contactgroupeditor.cpp:136
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "Ignora i sobreescriu els canvis"
+
+#: akonadi-contacts/contacteditor.cpp:275
+#: akonadi-contacts/contactgroupeditor.cpp:287
+#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Selecció de la llibreta d'adreces"
+
+#: akonadi-contacts/contacteditor.cpp:276
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Seleccioneu la llibreta d'adreces on es desarà el nou contacte:"
+
+#: akonadi-contacts/contacteditordialog.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "Contacte nou"
+
+#: akonadi-contacts/contacteditordialog.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "Edició del contacte"
+
+#: akonadi-contacts/contacteditordialog.cpp:70
+#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#, kde-format
+msgid "Add to:"
+msgstr "Afegeix a:"
+
+#: akonadi-contacts/contacteditordialog.cpp:179
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr "No s'ha desat la ubicació. Voleu tancar l'editor?"
+
+#: akonadi-contacts/contacteditordialog.cpp:180
+#: akonadi-contacts/contacteditordialog.cpp:197
+#: akonadi-contacts/contactgroupeditordialog.cpp:162
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "Confirmació"
+
+#: akonadi-contacts/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr "Tanca l'editor"
+
+#: akonadi-contacts/contacteditordialog.cpp:182
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr "No el tanquis"
+
+#: akonadi-contacts/contacteditordialog.cpp:196
+#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Realment voleu cancel·lar?"
+
+#: akonadi-contacts/contacteditordialog.cpp:198
+#: akonadi-contacts/contactgroupeditordialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Cancel·la l'edició"
+
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "No cancel·lis"
+
+#: akonadi-contacts/contactgroupeditor.cpp:134
+#, kde-format
+msgid ""
+"The contact group has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Algú ha canviat el grup de contactes.\n"
+"Què s'ha de fer?"
+
+#: akonadi-contacts/contactgroupeditor.cpp:172
+#, kde-format
+msgid "The name of the contact group must not be empty."
+msgstr "El nom del grup de contactes no pot estar buit."
+
+#: akonadi-contacts/contactgroupeditor.cpp:288
+#, kde-format
+msgid "Select the address book the new contact group shall be saved in:"
+msgstr ""
+"Seleccioneu la llibreta d'adreces on es desarà el grup de contactes nou:"
+
+#. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
+#: akonadi-contacts/contactgroupeditor.ui:20
+#, kde-format
+msgctxt "@label The name of a contact group"
+msgid "Name:"
+msgstr "Nom:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: akonadi-contacts/contactgroupeditor.ui:46
+#, kde-format
+msgctxt "@label"
+msgid "Contact group members:"
+msgstr "Membres del grup de contactes:"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:53
+#, kde-format
+msgid "Search..."
+msgstr "Cerca..."
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact Group"
+msgstr "Grup de contactes nou"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Group"
+msgstr "Edició del grup de contactes"
+
+#: akonadi-contacts/contactgroupmodel.cpp:194
+#, kde-format
+msgid "The member with name <b>%1</b> is missing an email address"
+msgstr "Falta una adreça de correu electrònic pel membre amb el nom <b>%1</b>"
+
+#: akonadi-contacts/contactgroupmodel.cpp:241
+#, kde-format
+msgid "Contact does not exist any more"
+msgstr "El contacte ja no existeix"
+
+#: akonadi-contacts/contactgroupmodel.cpp:395
+#, kde-format
+msgctxt "contact's name"
+msgid "Name"
+msgstr "Nom"
+
+#: akonadi-contacts/contactgroupmodel.cpp:397
+#, kde-format
+msgctxt "contact's email address"
+msgid "EMail"
+msgstr "Correu electrònic"
+
+#: akonadi-contacts/contactgroupviewer.cpp:51
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "Grup de contactes %1"
+
+#: akonadi-contacts/contactgroupviewer.cpp:65
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts/standardcontactformatter.cpp:182
+#, kde-format
+msgid "Address Book"
+msgstr "Llibreta d'adreces"
+
+#: akonadi-contacts/contactstreemodel.cpp:212
+#, kde-format
+msgctxt "@title:column address books overview"
+msgid "Address Books"
+msgstr "Llibretes d'adreces"
+
+#: akonadi-contacts/contactstreemodel.cpp:222
+#, kde-format
+msgctxt "@title:column name of a person"
+msgid "Name"
+msgstr "Nom"
+
+#: akonadi-contacts/contactstreemodel.cpp:224
+#, kde-format
+msgctxt "@title:column family name of a person"
+msgid "Family Name"
+msgstr "Cognoms"
+
+#: akonadi-contacts/contactstreemodel.cpp:226
+#, kde-format
+msgctxt "@title:column given name of a person"
+msgid "Given Name"
+msgstr "Nom de pila"
+
+#: akonadi-contacts/contactstreemodel.cpp:230
+#, kde-format
+msgctxt "@title:column home address of a person"
+msgid "Home"
+msgstr "Pàgina personal"
+
+#: akonadi-contacts/contactstreemodel.cpp:232
+#, kde-format
+msgctxt "@title:column work address of a person"
+msgid "Work"
+msgstr "Feina"
+
+#: akonadi-contacts/contactstreemodel.cpp:234
+#, kde-format
+msgctxt "@title:column phone numbers of a person"
+msgid "Phone Numbers"
+msgstr "Números de telèfon"
+
+#: akonadi-contacts/contactstreemodel.cpp:236
+#, kde-format
+msgctxt "@title:column the preferred email addresses of a person"
+msgid "Preferred EMail"
+msgstr "Adreça electrònica preferida"
+
+#: akonadi-contacts/contactstreemodel.cpp:238
+#, kde-format
+msgctxt "@title:column all email addresses of a person"
+msgid "All EMails"
+msgstr "Tots els correus-e"
+
+#: akonadi-contacts/contactviewer.cpp:68
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "Contacte %1"
+
+#: akonadi-contacts/contactviewerdialog.cpp:58
+#, kde-format
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "Mostra el contacte"
+
+#: akonadi-contacts/emailaddressrequester.cpp:80
+#, kde-format
+msgid "Open Address Book"
+msgstr "Obre la llibreta d'adreces"
+
+#: akonadi-contacts/emailaddressselectionproxymodel.cpp:23
+#, kde-format
+msgid "Distribution List %1"
+msgstr "Llista de distribució %1"
+
+#: akonadi-contacts/emailaddressselectionproxymodel.cpp:130
+#, kde-format
+msgctxt "Name and email address of a contact"
+msgid "%1 <%2>"
+msgstr "%1 <%2>"
+
+#: akonadi-contacts/emailaddressselectionwidget.cpp:130
+#, kde-format
+msgctxt "@label Search in a list of contacts"
+msgid "Search:"
+msgstr "Cerca:"
+
+#: akonadi-contacts/emailaddressselectionwidget.cpp:132
+#, kde-format
+msgid "Search Contact..."
+msgstr "Cerca un contacte..."
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
+#: akonadi-contacts/standardcontactformatter.cpp:181
+#, kde-format
+msgid "Anniversary"
+msgstr "Aniversari"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
+#: akonadi-contacts/standardcontactformatter.cpp:176
+#, kde-format
+msgid "Assistant's Name"
+msgstr "Nom de l'assistent"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
+#: akonadi-contacts/standardcontactformatter.cpp:177
+#, kde-format
+msgid "Manager's Name"
+msgstr "Nom del gerent"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
+#: akonadi-contacts/standardcontactformatter.cpp:179
+#, kde-format
+msgid "Office"
+msgstr "Oficina"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
+#: akonadi-contacts/standardcontactformatter.cpp:175
+#, kde-format
+msgid "Profession"
+msgstr "Professió"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
+#: akonadi-contacts/standardcontactformatter.cpp:178
+#, kde-format
+msgctxt "Wife/Husband/..."
+msgid "Partner's Name"
+msgstr "Nom de la parella"
+
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
+#: akonadi-contacts/standardcontactformatter.cpp:239
+#, kde-format
+msgctxt "Boolean value"
+msgid "yes"
+msgstr "sí"
+
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
+#: akonadi-contacts/standardcontactformatter.cpp:241
+#, kde-format
+msgctxt "Boolean value"
+msgid "no"
+msgstr "no"
+
+#: akonadi-contacts/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+"L'adreça de correu electrònic primària de la vCard ja es troba a la llibreta "
+"d'adreces, així i tot encara podeu desar la vCard en un fitxer i importar-la "
+"a la llibreta d'adreces de forma manual."
+
+#: akonadi-contacts/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+"La vCard s'ha afegit a la llibreta d'adreces. Podeu afegir més informació en "
+"aquesta entrada obrint la llibreta d'adreces."
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:70
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr ""
+"Ja existeix un contacte amb l'adreça de correu <email>%1</email> a la "
+"llibreta d'adreces."
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:120
+#: akonadi-contacts/job/addemaildisplayjob.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+"Cal crear una llibreta d'adreces abans d'afegir un contacte. Voleu crear una "
+"llibreta d'adreces?"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:121
+#: akonadi-contacts/job/addemaildisplayjob.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "No hi ha disponible cap llibreta d'adreces"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:122
+#: akonadi-contacts/job/addemaildisplayjob.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Crea una llibreta d'adreces"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Afegeix una llibreta d'adreces"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:216
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+"<para>S'ha afegit correctament a la llibreta d'adreces el contacte per a "
+"«%1».</para><para>Voleu editar ara aquest contacte nou?</para>"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:224
+#, kde-format
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Edita"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:225
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr "Finalitza"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "El contacte no s'ha pogut emmagatzemar: %1"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
+#, kde-format
+msgid "Failed to store contact"
+msgstr "Ha fallat en emmagatzemar el contacte"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:253
+#, kde-format
+msgid "Contact created successfully"
+msgstr "El contacte s'ha creat correctament"
+
+#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#, kde-format
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "Seleccioneu la llibreta d'adreces on es desarà el nou contacte:"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "Afegeix una carpeta de la llibreta d'adreces..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr ""
+"Afegeix una carpeta nova per a la llibreta d'adreces a la carpeta "
+"seleccionada de la llibreta d'adreces."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "Carpeta nova de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "No s'ha pogut crear la carpeta de la llibreta d'adreces: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "Ha fallat la creació de la carpeta de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "Copia la carpeta de la llibreta d'adreces"
+msgstr[1] "Copia %1 carpetes de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr ""
+"Copia les carpetes seleccionades de la llibreta d'adreces al porta-retalls."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "Suprimeix la carpeta de la llibreta d'adreces"
+msgstr[1] "Suprimeix %1 carpetes de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr ""
+"Suprimeix les carpetes seleccionades de la llibreta d'adreces des de la "
+"llibreta d'adreces."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] ""
+"Realment voleu suprimir aquesta carpeta de la llibreta d'adreces i totes les "
+"seves subcarpetes?"
+msgstr[1] ""
+"Realment voleu suprimir %1 carpetes de llibreta d'adreces i totes les seves "
+"subcarpetes?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "Suprimeixo la carpeta de la llibreta d'adreces?"
+msgstr[1] "Suprimeixo les carpetes de la llibreta d'adreces?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "No s'ha pogut suprimir la carpeta de la llibreta d'adreces: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "Ha fallat l'eliminació de la carpeta de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "Actualitza la carpeta de la llibreta d'adreces"
+msgstr[1] "Actualitza %1 carpetes de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr ""
+"Actualitza el contingut de les carpetes seleccionades de la llibreta "
+"d'adreces."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "Retalla la carpeta de la llibreta d'adreces"
+msgstr[1] "Retalla %1 carpetes de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr ""
+"Retalla les carpetes seleccionades de la llibreta d'adreces des de la "
+"llibreta d'adreces."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "Propietats de la carpeta..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr ""
+"Obre un diàleg per a editar les propietats de la carpeta seleccionada de la "
+"llibreta d'adreces."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "Propietats de la carpeta de la llibreta d'adreces %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:161
+#: akonadi-contacts/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "Copia el contacte"
+msgstr[1] "Copia %1 contactes"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "Copia els contactes seleccionats al porta-retalls."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:165
+#: akonadi-contacts/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "Suprimeix el contacte"
+msgstr[1] "Suprimeix %1 contactes"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "Suprimeix els contactes seleccionats de la llibreta d'adreces."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "Realment voleu suprimir el contacte seleccionat?"
+msgstr[1] "Realment voleu suprimir els %1 contactes seleccionats?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "Suprimeixo el contacte?"
+msgstr[1] "Suprimeixo els contactes?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "No s'ha pogut suprimir el contacte: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "Ha fallat la supressió del contacte"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:180
+#: akonadi-contacts/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "Retalla el contacte"
+msgstr[1] "Retalla %1 contactes"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "Retalla els contactes seleccionats de la llibreta d'adreces."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "Afegeix una llibreta d'&adreces..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr ""
+"Afegeix una llibreta d'adreces nova<p>Es presentarà un diàleg a on podreu "
+"seleccionar el tipus de llibreta d'adreces que s'ha d'afegir.</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "No s'ha pogut crear la llibreta d'adreces: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "Ha fallat la creació de la llibreta d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "Su&primeix la llibreta d'adreces"
+msgstr[1] "Su&primeix %1 llibretes d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"Suprimeix les llibretes d'adreces seleccionades<p>Se suprimiran les "
+"llibretes d'adreces seleccionades, juntament amb tots els contactes i grups "
+"de contactes que contenen.</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "Realment voleu suprimir aquesta llibreta d'adreces?"
+msgstr[1] "Realment voleu suprimir les %1 llibretes d'adreces?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "Suprimeixo la llibreta d'adreces?"
+msgstr[1] "Suprimeixo les llibretes d'adreces?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "Propietats de la llibreta d'adreces..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr ""
+"Obre un diàleg per a editar les propietats de la llibreta d'adreces "
+"seleccionada."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "Actualitza la llibreta d'adreces"
+msgstr[1] "Actualitza %1 llibretes d'adreces"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr ""
+"Actualitza el contingut de totes les carpetes de les llibretes d'adreces "
+"seleccionades."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "No s'ha pogut enganxar el contacte: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "Ha fallat en enganxar"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:294
+#: akonadi-contacts/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "Copia el contacte a"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:308
+#: akonadi-contacts/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "Mou el contacte a"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:316
+#: akonadi-contacts/standardcontactactionmanager.cpp:553
+#, kde-format
+msgid "Edit Contact..."
+msgstr "Edita el contacte..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "Copia el grup"
+msgstr[1] "Copia %1 grups"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:324
+#: akonadi-contacts/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "Copia el grup a"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "Suprimeix el grup"
+msgstr[1] "Suprimeix %1 grups"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "Retalla el grup"
+msgstr[1] "Retalla %1 grups"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:338
+#: akonadi-contacts/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "Mou el grup a"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "Edita el grup..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:528
+#, kde-format
+msgid "New &Contact..."
+msgstr "&Contacte nou..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"Crea un contacte nou<p>Se us presentarà un diàleg en el qual podreu afegir "
+"dades d'una persona, incloent-hi adreces i números de telèfon.</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:541
+#, kde-format
+msgid "New &Group..."
+msgstr "&Grup nou..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:542
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr ""
+"Crea un grup nou<p>Es presentarà un diàleg a on podreu afegir un grup de "
+"contactes nou.</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr ""
+"Edita el contacte seleccionat<p>Se us presentarà un diàleg en el qual podreu "
+"editar les dades emmagatzemades d'una persona, incloent-hi les adreces i els "
+"números de telèfon.</p>"
+
+#: akonadi-contacts/standardcontactformatter.cpp:94
+#, kde-format
+msgid "(One year old)"
+msgid_plural "(%1 years old)"
+msgstr[0] "(Un any)"
+msgstr[1] "(%1 anys)"
+
+#: akonadi-contacts/standardcontactformatter.cpp:107
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Send SMS"
+msgstr "Envia un SMS"
+
+#: akonadi-contacts/standardcontactformatter.cpp:118
+#, kde-format
+msgctxt "a contact's email address"
+msgid "Email"
+msgstr "Correu electrònic"
+
+#: akonadi-contacts/standardcontactformatter.cpp:133
+#, kde-format
+msgid "Homepage"
+msgstr "Pàgina personal"
+
+#: akonadi-contacts/standardcontactformatter.cpp:139
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, kde-format
+msgid "Blog Feed"
+msgstr "Enllaç al blog"
+
+#: akonadi-contacts/standardcontactformatter.cpp:158
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Show address on map"
+msgstr "Mostra l'adreça en un mapa"
+
+#: akonadi-contacts/standardcontactformatter.cpp:167
+#, kde-format
+msgid "Notes"
+msgstr "Notes"
+
+#: akonadi-contacts/standardcontactformatter.cpp:174
+#, kde-format
+msgid "Department"
+msgstr "Departament"
+
+#: akonadi-contacts/standardcontactformatter.cpp:180
+#, kde-format
+msgid "IM Address"
+msgstr "Adreça de MI"
+
+#: akonadi-contacts/textbrowser.cpp:57
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "Copia l'element"
+
+#: akonadi-contacts/textbrowser.cpp:66
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "Copia l'adreça de correu"
+
+#: akonadi-contacts/textbrowser.cpp:75
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "Copia l'URL de l'enllaç"
+
+#: akonadi-contacts/textbrowser.cpp:102
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "Copia la fotografia"
+
+#: akonadi-contacts/textbrowser.cpp:105
+#, kde-format
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "Copia el codi"
+
+#: akonadi-contacts/waitingoverlay.cpp:35
+#, kde-format
+msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
+msgstr ""
+"<p style=\"color: white;\"><b>S'està esperant per l'operació</b><br/></p>"
+
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#, kde-format
+msgid "Remove Address"
+msgstr "Elimina l'adreça"
+
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#, kde-format
+msgid "Do you really want to delete this address?"
+msgstr "Esteu segur que voleu suprimir aquesta adreça?"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
+#, kde-format
+msgid "Add Street"
+msgstr "Afegeix un carrer"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
+#, kde-format
+msgid "Add Post Office Box"
+msgstr "Afegeix un apartat de correus"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
+#, kde-format
+msgid "Add Postal Code"
+msgstr "Afegeix un codi postal"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
+#, kde-format
+msgid "Add Locality"
+msgstr "Afegeix una localitat"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
+#, kde-format
+msgid "Add Region"
+msgstr "Afegeix una regió"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
+#, kde-format
+msgid "Add a Country"
+msgstr "Afegeix un país"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#, kde-format
+msgctxt "street/postal"
+msgid "This is the preferred address"
+msgstr "Aquesta és l'adreça preferida"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#, kde-format
+msgid "Add Address"
+msgstr "Afegeix una adreça"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#, kde-format
+msgid "Update Address"
+msgstr "Actualitza l'adreça"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#, kde-format
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: contact-editor/editor/addresseditor/addresstypedialog.cpp:24
+#, kde-format
+msgctxt "street/postal"
+msgid "Edit Address Type"
+msgstr "Edita el tipus d'adreça"
+
+#: contact-editor/editor/addresseditor/addresstypedialog.cpp:38
+#, kde-format
+msgctxt "street/postal"
+msgid "Address Types"
+msgstr "Tipus d'adreça"
+
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:61
+#: contact-editor/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "Other..."
+msgstr "Altres..."
+
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:63
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "New Address Type"
+msgstr "Tipus d'adreça nou"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:40
+#, kde-format
+msgctxt "@label The organization of a contact"
+msgid "Organization:"
+msgstr "Organització:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:45
+#, kde-format
+msgid "Add organization's name"
+msgstr "Afegeix el nom de l'organització"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:49
+#, kde-format
+msgctxt "@label The profession of a contact"
+msgid "Profession:"
+msgstr "Professió:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:53
+#, kde-format
+msgid "Add profession"
+msgstr "Afegeix la professió"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:58
+#, kde-format
+msgctxt "@label The title of a contact"
+msgid "Title:"
+msgstr "Títol:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:62
+#, kde-format
+msgid "Add the title"
+msgstr "Afegeix el títol"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
+#, kde-format
+msgctxt "@label The department of a contact"
+msgid "Department:"
+msgstr "Departament:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:71
+#, kde-format
+msgid "Add the department"
+msgstr "Afegeix el departament"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:76
+#, kde-format
+msgctxt "@label The office of a contact"
+msgid "Office:"
+msgstr "Oficina:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:81
+#, kde-format
+msgid "Add the office"
+msgstr "Afegeix l'oficina"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:86
+#, kde-format
+msgctxt "@label The manager's name of a contact"
+msgid "Manager's name:"
+msgstr "Nom del gerent:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:90
+#, kde-format
+msgid "Add manager's name"
+msgstr "Afegeix el nom del gerent"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:95
+#, kde-format
+msgctxt "@label The assistant's name of a contact"
+msgid "Assistant's name:"
+msgstr "Nom de l'assistent:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:99
+#, kde-format
+msgid "Add assistant's name"
+msgstr "Afegeix el nom de l'assistent"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:105
+#, kde-format
+msgctxt "@label The free/busy information of a contact"
+msgid "Free/Busy:"
+msgstr "Lliure/ocupat:"
+
+#: contact-editor/editor/businesseditor/freebusyeditwidget.cpp:28
+#, kde-format
+msgid "Add FreeBusy"
+msgstr "Afegeix lliure/ocupat"
+
+#: contact-editor/editor/contacteditorwidget.cpp:96
+#, kde-format
+msgctxt "@title:tab"
+msgid "Contact"
+msgstr "Contacte"
+
+#: contact-editor/editor/contacteditorwidget.cpp:102
+#, kde-format
+msgctxt "@title:tab"
+msgid "Location"
+msgstr "Ubicació"
+
+#: contact-editor/editor/contacteditorwidget.cpp:108
+#, kde-format
+msgctxt "@title:tab"
+msgid "Business"
+msgstr "Negocis"
+
+#: contact-editor/editor/contacteditorwidget.cpp:114
+#, kde-format
+msgctxt "@title:tab Personal properties of a contact"
+msgid "Personal"
+msgstr "Personal"
+
+#: contact-editor/editor/contacteditorwidget.cpp:122
+#, kde-format
+msgctxt "@title:tab"
+msgid "Notes"
+msgstr "Notes"
+
+#: contact-editor/editor/contacteditorwidget.cpp:132
+#, kde-format
+msgctxt "@title:tab"
+msgid "Custom Fields"
+msgstr "Camps personalitzats"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
+#, kde-format
+msgid "Custom Field Title"
+msgstr "Títol del camp personalitzat"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:36
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:45
+#, kde-format
+msgid "Add name"
+msgstr "Afegeix el nom"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:45
+#, kde-format
+msgid "Add Field"
+msgstr "Afegeix un camp"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:52
+#, kde-format
+msgid "Use field for all contacts"
+msgstr "Usa el camp per a tots els contactes"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#, kde-format
+msgid "Text"
+msgstr "Text"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#, kde-format
+msgid "Numeric"
+msgstr "Numèric"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#, kde-format
+msgid "Boolean"
+msgstr "Booleà"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#, kde-format
+msgid "Time"
+msgstr "Hora"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#, kde-format
+msgid "DateTime"
+msgstr "Data i hora"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#, kde-format
+msgid "Url"
+msgstr "URL"
+
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:214
+#, kde-format
+msgctxt "Custom Fields"
+msgid "Do you really want to delete the selected custom field?"
+msgstr "Realment voleu suprimir el camp personalitzat seleccionat?"
+
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:215
+#, kde-format
+msgid "Confirm Delete"
+msgstr "Confirmació de la supressió"
+
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:195
+#, kde-format
+msgctxt "custom field title"
+msgid "Title"
+msgstr "Títol"
+
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:197
+#, kde-format
+msgctxt "custom field value"
+msgid "Value"
+msgstr "Valor"
+
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:30
+#, kde-format
+msgid "Add a Blog Feed"
+msgstr "Afegeix una font de blog"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:45
+#, kde-format
+msgid "Short Name"
+msgstr "Nom curt"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:46
+#, kde-format
+msgid "Full Name"
+msgstr "Nom complet"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:47
+#, kde-format
+msgid "Reverse Name with Comma"
+msgstr "Nom a l'inrevés amb coma"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:48
+#, kde-format
+msgid "Reverse Name"
+msgstr "Nom a l'inrevés"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:49
+#, kde-format
+msgid "Organization"
+msgstr "Organització"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:50
+#, kde-format
+msgctxt "@item:inlistbox A custom name format"
+msgid "Custom"
+msgstr "Personalitzat"
+
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
+#, kde-format
+msgid "Tags"
+msgstr "Etiquetes"
+
+#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:25
+#, kde-format
+msgid "Email"
+msgstr "Correu electrònic"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
+#, kde-format
+msgid "Select..."
+msgstr "Selecciona..."
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, kde-format
+msgid "Home"
+msgstr "Casa"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, kde-format
+msgid "Work"
+msgstr "Feina"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, kde-format
+msgid "Other"
+msgstr "Altres"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:27
+#, kde-format
+msgid "Add an Email Account"
+msgstr "Afegeix un compte de correu electrònic"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:39
+#, kde-format
+msgid "Add an Email"
+msgstr "Afegeix un correu electrònic"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:46
+#, kde-format
+msgid "Remove Email"
+msgstr "Elimina el correu electrònic"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:24
+#, kde-format
+msgid "Show messages received from this contact as:"
+msgstr "Mostra els missatges rebuts d'aquest contacte com a:"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
+#, kde-format
+msgid "Default"
+msgstr "Omissió"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
+#, kde-format
+msgid "Plain Text"
+msgstr "Text net"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:35
+#, kde-format
+msgid "Allow remote content in received HTML messages"
+msgstr "Permet contingut remot en els missatges HTML rebuts"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:25
+#, kde-format
+msgid "Messaging"
+msgstr "Missatgeria"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:31
+#, kde-format
+msgid "Add an identifier"
+msgstr "Afegeix un identificador"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:38
+#, kde-format
+msgctxt "@item:inlistbox select from a list of IM protocols"
+msgid "Select..."
+msgstr "Selecciona..."
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:49
+#, kde-format
+msgid "Add an IM"
+msgstr "Afegeix un MI"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
+#, kde-format
+msgid "Remove IM"
+msgstr "Elimina l'IM"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Name"
+msgstr "Edició del nom del contacte"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:48
+#, kde-format
+msgid "Honorific prefixes:"
+msgstr "Prefixos honorífics:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:49
+#, kde-format
+msgid "Given name:"
+msgstr "Nom de pila:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:50
+#, kde-format
+msgid "Additional names:"
+msgstr "Noms addicionals:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:51
+#, kde-format
+msgid "Family names:"
+msgstr "Cognoms:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:52
+#, kde-format
+msgid "Honorific suffixes:"
+msgstr "Sufixos honorífics:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:53
+#, kde-format
+msgid "Display:"
+msgstr "Mostra:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:57
+#, kde-format
+msgid "Dr."
+msgstr "Dr."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:58
+#, kde-format
+msgid "Miss"
+msgstr "Sra."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:59
+#, kde-format
+msgid "Mr."
+msgstr "Sr."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:60
+#, kde-format
+msgid "Mrs."
+msgstr "Sra."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:61
+#, kde-format
+msgid "Ms."
+msgstr "Sra."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:62
+#, kde-format
+msgid "Prof."
+msgstr "Prof."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:67
+#, kde-format
+msgid "I"
+msgstr "I"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:68
+#, kde-format
+msgid "II"
+msgstr "II"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:69
+#, kde-format
+msgid "III"
+msgstr "III"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:70
+#, kde-format
+msgid "Jr."
+msgstr "Jr."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:71
+#, kde-format
+msgid "Sr."
+msgstr "Sr."
+
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:26
+#, kde-format
+msgid "Name"
+msgstr "Nom"
+
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:41
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:42
+#, kde-format
+msgid "Edit Contact Name"
+msgstr "Edita el nom del contacte"
+
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:24
+#, kde-format
+msgid "Nickname"
+msgstr "Sobrenom"
+
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:30
+#, kde-format
+msgid "Add a Nickname"
+msgstr "Afegeix un sobrenom"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:25
+#, kde-format
+msgid "Phone"
+msgstr "Telèfon"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Phone Number"
+msgstr "Edició del número de telèfon"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:29
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:40
+#, kde-format
+msgid "Add a Phone Number"
+msgstr "Afegeix un número de telèfon"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:47
+#, kde-format
+msgid "Remove Phone Number"
+msgstr "Elimina un número de telèfon"
+
+#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:26
+#, kde-format
+msgid "Web"
+msgstr "Web"
+
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, kde-format
+msgid "Profile"
+msgstr "Perfil"
+
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:28
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:40
+#, kde-format
+msgid "Add a Web Site"
+msgstr "Afegeix un lloc web"
+
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:47
+#, kde-format
+msgid "Remove Web Site"
+msgstr "Elimina un lloc web"
+
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:23
+#, kde-format
+msgid "Click to add date"
+msgstr "Feu clic per a afegir la data"
+
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:34
+#, kde-format
+msgid "Remove"
+msgstr "Elimina"
+
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
+#, kde-format
+msgctxt "@label The birthdate of a contact"
+msgid "Birthdate:"
+msgstr "Data de naixement:"
+
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:34
+#, kde-format
+msgctxt "@label The wedding anniversary of a contact"
+msgid "Anniversary:"
+msgstr "Aniversari:"
+
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:41
+#, kde-format
+msgctxt "@label The partner's name of a contact"
+msgid "Partner's name:"
+msgstr "Nom de la parella:"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:77
+#, kde-format
+msgid "This contact's image cannot be found."
+msgstr "No s'ha pogut trobar la imatge d'aquest contacte."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:118
+#, kde-format
+msgid "The photo of the contact (click to change)"
+msgstr "La fotografia del contacte (cliqueu per a canviar-la)"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:120
+#, kde-format
+msgid "The logo of the company (click to change)"
+msgstr "El logotip de la companyia (cliqueu per a canviar-lo)"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:236
+#, kde-format
+msgid "Change photo..."
+msgstr "Canvia la fotografia..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:237
+#: contact-editor/editor/widgets/imagewidget.cpp:250
+#, kde-format
+msgid "Change URL..."
+msgstr "Canvia l'URL..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:241
+#, kde-format
+msgid "Save photo..."
+msgstr "Desa la fotografia..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:244
+#, kde-format
+msgid "Remove photo"
+msgstr "Elimina la fotografia"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:249
+#, kde-format
+msgid "Change logo..."
+msgstr "Canvia el logotip..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:254
+#, kde-format
+msgid "Save logo..."
+msgstr "Desa el logotip..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:257
+#, kde-format
+msgid "Remove logo"
+msgstr "Elimina el logotip"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:271
+#, kde-format
+msgid "Change image URL"
+msgstr "Canvia l'URL de la imatge"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:271
+#, kde-format
+msgid "Image URL:"
+msgstr "URL de la imatge:"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:300
+#: contact-editor/editor/widgets/imagewidget.cpp:323
+#, kde-format
+msgid "Images (%1)"
+msgstr "Imatges (%1)"
+
+#: contact-editor/editor/widgets/preferredlineeditwidget.cpp:22
+#, kde-format
+msgid "Set as Preferred"
+msgstr "Estableix com a preferit"
+
+#~ msgctxt "@option today"
+#~ msgid "&Today"
+#~ msgstr "&Avui"
+
+#~ msgctxt "@option tomorrow"
+#~ msgid "To&morrow"
+#~ msgstr "De&mà"
+
+#~ msgctxt "@option next week"
+#~ msgid "Next &Week"
+#~ msgstr "Propera &setmana"
+
+#~ msgctxt "@option next month"
+#~ msgid "Next M&onth"
+#~ msgstr "Pr&oper mes"
+
+#~ msgctxt "@option do not specify a date"
+#~ msgid "No Date"
+#~ msgstr "Sense data"
+
+#~ msgid ""
+#~ "Defines which application shall be used to show the postal address of a "
+#~ "contact on a map. If 'Web Browser' is selected, an URL can be defined "
+#~ "with placeholders for the single address parts. If 'External Application' "
+#~ "is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "Defineix quina aplicació s'usarà per a mostrar l'adreça postal d'un "
+#~ "contacte en un mapa. Si seleccioneu «Navegador web», podreu definir un "
+#~ "URL amb variables de substitució per a cada part de l'adreça. Si se "
+#~ "selecciona «Aplicació externa» es pot definir una ordre amb variables de "
+#~ "substitució."
+
+#~ msgid ""
+#~ "This URL defines the website that shall be used to show a contact's "
+#~ "postal address."
+#~ msgstr ""
+#~ "Aquest URL defineix el lloc web que s'usarà per a mostrar l'adreça postal "
+#~ "d'un contacte."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the URL:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "Es poden usar els següents marcadors en l'URL:\n"
+#~ "   %s: Carrer\n"
+#~ "   %r: Regió\n"
+#~ "   %l: Ubicació\n"
+#~ "   %z: Codi postal\n"
+#~ "   %c: Codi ISO del país"
+
+#~ msgid "Address Command"
+#~ msgstr "Ordre d'adreça"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to show a "
+#~ "contact's postal address."
+#~ msgstr ""
+#~ "Aquesta ordre defineix l'aplicació que s'usarà per a mostrar l'adreça "
+#~ "postal d'un contacte."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "Es poden usar els següents marcadors en l'ordre:\n"
+#~ "   %s: Carrer\n"
+#~ "   %r: Regió\n"
+#~ "   %l: Ubicació\n"
+#~ "   %z: Codi postal\n"
+#~ "   %c: Codi ISO del país"
+
+#~ msgctxt "@title:window"
+#~ msgid "Show Contact Group"
+#~ msgstr "Mostra el grup de contactes"

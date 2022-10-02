@@ -1,0 +1,2235 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Jung Hee Lee <daemul72@gmail.com>, 2019, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-28 00:45+0000\n"
+"PO-Revision-Date: 2022-04-16 22:35+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
+#, kde-format
+msgid ""
+"Define how a phone number of a contact should be dialed. 'System Default' "
+"uses the default application configured for this on your system (e.g. KDE "
+"Connect). Selecting a specific application will use that (if installed), "
+"'External Application' allows you to specify a dial command with "
+"placeholders manually."
+msgstr ""
+"연락처의 전화 번호로 전화를 걸 방법을 지정합니다. '시스템 기본값'을 사용하면 "
+"시스템에 설정된 기본 프로그램을 사용합니다(예: KDE Connect). 프로그램을 선택"
+"하면 설치된 경우 사용할 것이며, '외부 프로그램'을 선택하면 자리 비움자가 들"
+"어 있는 전화 걸기 명령을 직접 지정할 수 있습니다."
+
+#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
+#, kde-format
+msgid "Phone Command"
+msgstr "전화 명령"
+
+#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
+#, kde-format
+msgid ""
+"This command defines the application that shall be executed to dial a "
+"contact's phone number."
+msgstr "이 명령은 연락처의 전화 번호로 전화를 걸 때 사용됩니다."
+
+#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
+#, no-c-format, kde-format
+msgid ""
+"The following placeholders can be used in the command:\n"
+"   %N: The raw number as stored in the address book.\n"
+"   %n: The normalized number with all non-digit characters removed."
+msgstr ""
+"명령에 다음 자리 비움자를 사용할 수 있습니다:\n"
+"  %N: 주소록에 저장되어 있는 그대로의 전화 번호.\n"
+"  %n: 숫자가 아닌 문자를 모두 삭제한 전화 번호."
+
+#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
+#, kde-format
+msgid ""
+"Defines which application shall be used to send an SMS to the phone number "
+"of a contact. If 'System Default' is selected the default handler for SMS "
+"messages on your system will be used (e.g. KDE Connect), otherwise the "
+"selected application will be used to send the SMS message (if installed on "
+"the computer). If 'External Application' is selected, a command with "
+"placeholders can be defined."
+msgstr ""
+"연락처의 전화 번호로 SMS를 보낼 때 사용할 프로그램을 지정합니다. '시스템 기본"
+"값'을 사용하면 시스템에 설정된 기본 SMS 메시지 프로그램을 사용합니다(예: KDE "
+"Connect). SMS 전송 프로그램을 선택하면 설치된 경우 사용할 것이며, '외부 프로"
+"그램'을 선택하면 자리 비움자가 들어 있는 SMS 전송 명령을 직접 지정할 수 있습"
+"니다."
+
+#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
+#, kde-format
+msgid "SMS Command"
+msgstr "SMS 명령"
+
+#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
+#, kde-format
+msgid ""
+"This command defines the application that shall be executed to send an SMS "
+"to a contact's phone number."
+msgstr "이 명령은 연락처의 전화 번호로 SMS를 보낼 때 사용됩니다."
+
+#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
+#, no-c-format, kde-format
+msgid ""
+"The following placeholders can be used in the command:\n"
+"   %N: The raw number as stored in the address book.\n"
+"   %n: The normalized number with all non-digit characters removed.\n"
+"   %t: The text"
+msgstr ""
+"명령에 다음 자리 비움자를 사용할 수 있습니다:\n"
+"  %N: 주소록에 저장되어 있는 그대로의 전화 번호.\n"
+"  %n: 숫자가 아닌 문자를 모두 삭제한 전화 번호.\n"
+"  %t: SMS 텍스트"
+
+#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
+#: akonadi-contacts/actions/sendsmsaction.cpp:39
+#, kde-format
+msgid ""
+"There is no application set which could be executed.\n"
+"Please go to the settings dialog and configure one."
+msgstr ""
+"실행할 프로그램이 설정되지 않았습니다.\n"
+"대화 상자로 이동하여 설정하십시오."
+
+#: akonadi-contacts/actions/qdialer.cpp:24
+#, kde-format
+msgid "Dialing a number is not supported"
+msgstr "전화 번호로 전화를 갈 수 없음"
+
+#: akonadi-contacts/actions/qdialer.cpp:33
+#, kde-format
+msgid "Sending an SMS is not supported"
+msgstr "문자 메시지를 보낼 수 없음"
+
+#: akonadi-contacts/actions/qekigadialer.cpp:72
+#, kde-format
+msgid ""
+"Unable to start ekiga process, check that ekiga executable is in your PATH "
+"variable."
+msgstr ""
+"ekiga 프로세스를 시작할 수 없습니다. PATH 환경 변수 하에 ekiga 실행 파일이 있"
+"는지 확인하십시오."
+
+#: akonadi-contacts/actions/qekigadialer.cpp:97
+#, kde-format
+msgid "Ekiga Public API (D-Bus) seems to be disabled."
+msgstr "Ekiga 공개 API(D-Bus)가 비활성화되어 있는 것 같습니다."
+
+#: akonadi-contacts/actions/qekigadialer.cpp:117
+#, kde-format
+msgid "Sending an SMS is currently not supported on Ekiga."
+msgstr "Ekiga에서 문자 메시지를 보낼 수 없습니다."
+
+#: akonadi-contacts/actions/qsflphonedialer.cpp:53
+#, kde-format
+msgid ""
+"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
+"executable is in your PATH variable."
+msgstr ""
+"sflphone-client-kde 프로세스를 시작할 수 없습니다. PATH 환경 변수 하에 "
+"sflphone-client-kde 실행 파일이 있는지 확인하십시오."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:77
+#, kde-format
+msgid ""
+"Unable to start skype process, check that skype executable is in your PATH "
+"variable."
+msgstr ""
+"skype 프로세스를 시작할 수 없습니다. PATH 환경 변수 하에 skype 실행 파일이 있"
+"는지 확인하십시오."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:102
+#, kde-format
+msgid "Skype Public API (D-Bus) seems to be disabled."
+msgstr "Skype 공개 API(D-Bus)가 비활성화되어 있는 것 같습니다."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:111
+#, kde-format
+msgid "Skype registration failed."
+msgstr "Skype 등록이 실패했습니다."
+
+#: akonadi-contacts/actions/qskypedialer.cpp:120
+#, kde-format
+msgid "Protocol mismatch."
+msgstr "프로토콜이 일치하지 않습니다."
+
+#: akonadi-contacts/actions/smsdialog.cpp:35
+#, kde-format
+msgctxt "@title:window"
+msgid "SMS text"
+msgstr "SMS 텍스트"
+
+#: akonadi-contacts/actions/smsdialog.cpp:39
+#, kde-format
+msgid "Please insert SMS text for an SMS to the following number: %1"
+msgstr "다음 번호로 보낼 문자 메시지(SMS) 텍스트를 입력하십시오: %1"
+
+#: akonadi-contacts/actions/smsdialog.cpp:80
+#, kde-format
+msgid "%1/%2 (%3 SMS)"
+msgstr "%1/%2(%3 SMS)"
+
+#: akonadi-contacts/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"다른 누군가가 이 대화 상대를 변경했습니다.\n"
+"무엇을 하시겠습니까?"
+
+#: akonadi-contacts/contacteditor.cpp:163
+#: akonadi-contacts/contactgroupeditor.cpp:135
+#, kde-format
+msgid "Take over changes"
+msgstr "변경 사항 적용하기"
+
+#: akonadi-contacts/contacteditor.cpp:164
+#: akonadi-contacts/contactgroupeditor.cpp:136
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "무시하고 변경 사항 덮어쓰기"
+
+#: akonadi-contacts/contacteditor.cpp:275
+#: akonadi-contacts/contactgroupeditor.cpp:287
+#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "주소록 선택"
+
+#: akonadi-contacts/contacteditor.cpp:276
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "새 연락처를 저장할 주소록을 선택하십시오:"
+
+#: akonadi-contacts/contacteditordialog.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "새 연락처"
+
+#: akonadi-contacts/contacteditordialog.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "연락처 편집"
+
+#: akonadi-contacts/contacteditordialog.cpp:70
+#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#, kde-format
+msgid "Add to:"
+msgstr "다음에 추가:"
+
+#: akonadi-contacts/contacteditordialog.cpp:179
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr "위치가 저장되지 않았습니다. 편집기를 닫으시겠습니까?"
+
+#: akonadi-contacts/contacteditordialog.cpp:180
+#: akonadi-contacts/contacteditordialog.cpp:197
+#: akonadi-contacts/contactgroupeditordialog.cpp:162
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "확인"
+
+#: akonadi-contacts/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr "편집기 닫기"
+
+#: akonadi-contacts/contacteditordialog.cpp:182
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr "닫지 않기"
+
+#: akonadi-contacts/contacteditordialog.cpp:196
+#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "정말로 취소하시겠습니까?"
+
+#: akonadi-contacts/contacteditordialog.cpp:198
+#: akonadi-contacts/contactgroupeditordialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "편집 취소"
+
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "취소하지 않기"
+
+#: akonadi-contacts/contactgroupeditor.cpp:134
+#, kde-format
+msgid ""
+"The contact group has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"다른 누군가가 이 연락처 그룹을 변경했습니다.\n"
+"무엇을 하시겠습니까?"
+
+#: akonadi-contacts/contactgroupeditor.cpp:172
+#, kde-format
+msgid "The name of the contact group must not be empty."
+msgstr "연락처 그룹의 이름을 지정하여야 합니다."
+
+#: akonadi-contacts/contactgroupeditor.cpp:288
+#, kde-format
+msgid "Select the address book the new contact group shall be saved in:"
+msgstr "새 연락처 그룹을 저장할 주소록을 선택하십시오:"
+
+#. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
+#: akonadi-contacts/contactgroupeditor.ui:20
+#, kde-format
+msgctxt "@label The name of a contact group"
+msgid "Name:"
+msgstr "이름:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: akonadi-contacts/contactgroupeditor.ui:46
+#, kde-format
+msgctxt "@label"
+msgid "Contact group members:"
+msgstr "연락처 그룹 구성원:"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:53
+#, kde-format
+msgid "Search..."
+msgstr "검색..."
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact Group"
+msgstr "새 연락처 그룹"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Group"
+msgstr "연락처 그룹 편집"
+
+#: akonadi-contacts/contactgroupmodel.cpp:194
+#, kde-format
+msgid "The member with name <b>%1</b> is missing an email address"
+msgstr "이름이 <b>%1</b>인 구성원의 이메일 주소가 없음"
+
+#: akonadi-contacts/contactgroupmodel.cpp:241
+#, kde-format
+msgid "Contact does not exist any more"
+msgstr "연락처가 더 이상 없음"
+
+#: akonadi-contacts/contactgroupmodel.cpp:395
+#, kde-format
+msgctxt "contact's name"
+msgid "Name"
+msgstr "이름"
+
+#: akonadi-contacts/contactgroupmodel.cpp:397
+#, kde-format
+msgctxt "contact's email address"
+msgid "EMail"
+msgstr "이메일"
+
+#: akonadi-contacts/contactgroupviewer.cpp:51
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "연락처 그룹 %1"
+
+#: akonadi-contacts/contactgroupviewer.cpp:65
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts/standardcontactformatter.cpp:182
+#, kde-format
+msgid "Address Book"
+msgstr "주소록"
+
+#: akonadi-contacts/contactstreemodel.cpp:212
+#, kde-format
+msgctxt "@title:column address books overview"
+msgid "Address Books"
+msgstr "주소록"
+
+#: akonadi-contacts/contactstreemodel.cpp:222
+#, kde-format
+msgctxt "@title:column name of a person"
+msgid "Name"
+msgstr "이름"
+
+#: akonadi-contacts/contactstreemodel.cpp:224
+#, kde-format
+msgctxt "@title:column family name of a person"
+msgid "Family Name"
+msgstr "성"
+
+#: akonadi-contacts/contactstreemodel.cpp:226
+#, kde-format
+msgctxt "@title:column given name of a person"
+msgid "Given Name"
+msgstr "성 제외 이름"
+
+#: akonadi-contacts/contactstreemodel.cpp:230
+#, kde-format
+msgctxt "@title:column home address of a person"
+msgid "Home"
+msgstr "홈"
+
+#: akonadi-contacts/contactstreemodel.cpp:232
+#, kde-format
+msgctxt "@title:column work address of a person"
+msgid "Work"
+msgstr "직장"
+
+#: akonadi-contacts/contactstreemodel.cpp:234
+#, kde-format
+msgctxt "@title:column phone numbers of a person"
+msgid "Phone Numbers"
+msgstr "전화번호"
+
+#: akonadi-contacts/contactstreemodel.cpp:236
+#, kde-format
+msgctxt "@title:column the preferred email addresses of a person"
+msgid "Preferred EMail"
+msgstr "선호하는 이메일"
+
+#: akonadi-contacts/contactstreemodel.cpp:238
+#, kde-format
+msgctxt "@title:column all email addresses of a person"
+msgid "All EMails"
+msgstr "모든 이메일"
+
+#: akonadi-contacts/contactviewer.cpp:68
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "연락처 %1"
+
+#: akonadi-contacts/contactviewerdialog.cpp:58
+#, kde-format
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "연락처 표시"
+
+#: akonadi-contacts/emailaddressrequester.cpp:80
+#, kde-format
+msgid "Open Address Book"
+msgstr "주소록 열기"
+
+#: akonadi-contacts/emailaddressselectionproxymodel.cpp:23
+#, kde-format
+msgid "Distribution List %1"
+msgstr "분배 목록 %1"
+
+#: akonadi-contacts/emailaddressselectionproxymodel.cpp:130
+#, kde-format
+msgctxt "Name and email address of a contact"
+msgid "%1 <%2>"
+msgstr "%1 <%2>"
+
+#: akonadi-contacts/emailaddressselectionwidget.cpp:130
+#, kde-format
+msgctxt "@label Search in a list of contacts"
+msgid "Search:"
+msgstr "찾기:"
+
+#: akonadi-contacts/emailaddressselectionwidget.cpp:132
+#, kde-format
+msgid "Search Contact..."
+msgstr "연락처 검색..."
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
+#: akonadi-contacts/standardcontactformatter.cpp:181
+#, kde-format
+msgid "Anniversary"
+msgstr "기념일"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
+#: akonadi-contacts/standardcontactformatter.cpp:176
+#, kde-format
+msgid "Assistant's Name"
+msgstr "비서 이름"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
+#: akonadi-contacts/standardcontactformatter.cpp:177
+#, kde-format
+msgid "Manager's Name"
+msgstr "관리자 이름"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
+#: akonadi-contacts/standardcontactformatter.cpp:179
+#, kde-format
+msgid "Office"
+msgstr "사무실"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
+#: akonadi-contacts/standardcontactformatter.cpp:175
+#, kde-format
+msgid "Profession"
+msgstr "직업"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
+#: akonadi-contacts/standardcontactformatter.cpp:178
+#, kde-format
+msgctxt "Wife/Husband/..."
+msgid "Partner's Name"
+msgstr "배우자 이름"
+
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
+#: akonadi-contacts/standardcontactformatter.cpp:239
+#, kde-format
+msgctxt "Boolean value"
+msgid "yes"
+msgstr "예"
+
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
+#: akonadi-contacts/standardcontactformatter.cpp:241
+#, kde-format
+msgctxt "Boolean value"
+msgid "no"
+msgstr "아니요"
+
+#: akonadi-contacts/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+"vCard의 주 이메일 주소가 주소록에 등록되어 있습니다. vCard를 파일로 저장한 다"
+"음 직접 주소록으로 가져올 수 있습니다."
+
+#: akonadi-contacts/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+"vCard가 주소록에 추가되었으며 주소록을 열어서 추가 정보를 저장할 수 있습니다."
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:70
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr "이메일 주소가 <email>%1</email>인 연락처가 이미 주소록에 있습니다."
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:120
+#: akonadi-contacts/job/addemaildisplayjob.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr "연락처를 추가하려면 주소록을 만들어야 합니다. 주소록을 만드시겠습니까?"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:121
+#: akonadi-contacts/job/addemaildisplayjob.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "주소록을 사용할 수 없음"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:122
+#: akonadi-contacts/job/addemaildisplayjob.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "주소록 만들기"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "주소록 추가"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:216
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+"<para>\"%1\"에 대한 연락처 항목이 주소록에 추가되었습니다.</para> <para>새 연"
+"락처를 편집하시겠습니까?</para>"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:224
+#, kde-format
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "편집"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:225
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr "완료"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "연락처를 저장할 수 없음: %1"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
+#, kde-format
+msgid "Failed to store contact"
+msgstr "연락처를 저장할 수 없음"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:253
+#, kde-format
+msgid "Contact created successfully"
+msgstr "연락처 생성 완료됨"
+
+#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#, kde-format
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "연락처를 저장할 주소록을 선택하십시오:"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "주소록 폴더 추가..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr "현재 선택한 주소록 폴더 아래에 새 주소록 폴더를 추가합니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "새 주소록 폴더"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "주소록 폴더를 만들 수 없음: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "주소록 폴더를 만들 수 없음"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "주소록 폴더 %1개 복사"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr "선택한 주소록 폴더를 클립보드에 복사합니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "주소록 폴더 %1개 삭제"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr "선택한 주소록 폴더를 주소록에서 삭제합니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] "주소록 폴더 %1개와 하위 폴더를 삭제하시겠습니까?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "주소록 폴더 삭제?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "주소록 폴더를 삭제할 수 없음: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "주소록 폴더 삭제 실패"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "주소록 폴더 %1개 업데이트"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr "선택한 주소록 폴더의 내용을 업데이트합니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "주소록 폴더 %1개 잘라내기"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr "선택한 주소록 폴더를 주소록에서 잘라냅니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "폴더 속성..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr "선택한 주소록 폴더의 속성을 편집하는 대화 상자를 엽니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "주소록 폴더 %1 속성"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:161
+#: akonadi-contacts/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "연락처 %1개 복사"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "선택한 연락처를 클립보드에 복사합니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:165
+#: akonadi-contacts/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "연락처 %1개 삭제"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "선택한 연락처를 주소록에서 삭제합니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "연락처 %1개를 삭제하시겠습니까?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "연락처 삭제?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "연락처를 삭제할 수 없음: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "연락처 삭제 실패"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:180
+#: akonadi-contacts/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "연락처 %1개 잘라내기"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "선택한 연락처를 주소록에서 잘라냅니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "주소록 추가(&A)..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr ""
+"새 주소록을 추가합니다<p>주소록 종류를 물어 보는 대화 상자가 표시됩니다.</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "주소록을 만들 수 없음: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "주소록 생성 실패"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "주소록 %1개 삭제(&D)"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"선택한 주소록 삭제<p>선택한 주소록과 포함된 모든 연락처 및 그룹을 삭제합니다."
+"</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "주소록 %1개를 삭제하시겠습니까?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "주소록 삭제?"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "주소록 속성..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr "선택한 주소록의 속성을 편집하는 대화 상자를 엽니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "주소록 %1개 업데이트"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr "선택한 주소록의 모든 폴더의 내용을 업데이트합니다."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "연락처를 붙여넣을 수 없음: %1"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "붙여넣기 실패"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:294
+#: akonadi-contacts/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "다음으로 연락처 복사"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:308
+#: akonadi-contacts/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "다음으로 연락처 이동"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:316
+#: akonadi-contacts/standardcontactactionmanager.cpp:553
+#, kde-format
+msgid "Edit Contact..."
+msgstr "연락처 편집..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "그룹 %1개 복사"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:324
+#: akonadi-contacts/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "다음으로 그룹 복사"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "그룹 %1개 삭제"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "그룹 %1개 잘라내기"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:338
+#: akonadi-contacts/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "다음으로 그룹 이동"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "그룹 편집..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:528
+#, kde-format
+msgid "New &Contact..."
+msgstr "새 연락처(&C)..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"새 연락처 만들기<p>주소, 전화번호 등 새 연락처 정보를 입력하는 대화 상자가 표"
+"시됩니다.</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:541
+#, kde-format
+msgid "New &Group..."
+msgstr "새 그룹(&G)..."
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:542
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr ""
+"새 그룹 만들기<p>새 연락처 그룹을 추가할 수 있는 대화 상자가 표시됩니다.</p>"
+
+#: akonadi-contacts/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr ""
+"선택한 연락처 편집하기<p>주소, 전화번호 등 연락처 정보를 편집하는 대화 상자"
+"가 표시됩니다.</p>"
+
+#: akonadi-contacts/standardcontactformatter.cpp:94
+#, kde-format
+msgid "(One year old)"
+msgid_plural "(%1 years old)"
+msgstr[0] "(%1세)"
+
+#: akonadi-contacts/standardcontactformatter.cpp:107
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Send SMS"
+msgstr "SMS 보내기"
+
+#: akonadi-contacts/standardcontactformatter.cpp:118
+#, kde-format
+msgctxt "a contact's email address"
+msgid "Email"
+msgstr "이메일"
+
+#: akonadi-contacts/standardcontactformatter.cpp:133
+#, kde-format
+msgid "Homepage"
+msgstr "홈페이지"
+
+#: akonadi-contacts/standardcontactformatter.cpp:139
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, kde-format
+msgid "Blog Feed"
+msgstr "블로그 피드"
+
+#: akonadi-contacts/standardcontactformatter.cpp:158
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Show address on map"
+msgstr "지도에 주소 표시"
+
+#: akonadi-contacts/standardcontactformatter.cpp:167
+#, kde-format
+msgid "Notes"
+msgstr "메모"
+
+#: akonadi-contacts/standardcontactformatter.cpp:174
+#, kde-format
+msgid "Department"
+msgstr "부서"
+
+#: akonadi-contacts/standardcontactformatter.cpp:180
+#, kde-format
+msgid "IM Address"
+msgstr "IM 주소"
+
+#: akonadi-contacts/textbrowser.cpp:57
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "항목 복사"
+
+#: akonadi-contacts/textbrowser.cpp:66
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "이메일 주소 복사"
+
+#: akonadi-contacts/textbrowser.cpp:75
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "링크 URL 복사"
+
+#: akonadi-contacts/textbrowser.cpp:102
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "사진 복사"
+
+#: akonadi-contacts/textbrowser.cpp:105
+#, kde-format
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "코드 복사"
+
+#: akonadi-contacts/waitingoverlay.cpp:35
+#, kde-format
+msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
+msgstr "<p style=\"color: white;\"><b>작업 대기 중</b><br/></p>"
+
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#, kde-format
+msgid "Remove Address"
+msgstr "주소 삭제"
+
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#, kde-format
+msgid "Do you really want to delete this address?"
+msgstr "이 주소를 삭제하시겠습니까?"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
+#, kde-format
+msgid "Add Street"
+msgstr "도로명 추가"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
+#, kde-format
+msgid "Add Post Office Box"
+msgstr "우편 사서함 추가"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
+#, kde-format
+msgid "Add Postal Code"
+msgstr "우편 번호 추가"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
+#, kde-format
+msgid "Add Locality"
+msgstr "도시 추가"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
+#, kde-format
+msgid "Add Region"
+msgstr "지역 추가"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
+#, kde-format
+msgid "Add a Country"
+msgstr "국가 추가"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#, kde-format
+msgctxt "street/postal"
+msgid "This is the preferred address"
+msgstr "이 주소가 선호하는 주소임"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#, kde-format
+msgid "Add Address"
+msgstr "주소 추가"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#, kde-format
+msgid "Update Address"
+msgstr "주소 업데이트"
+
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#, kde-format
+msgid "Cancel"
+msgstr "취소"
+
+#: contact-editor/editor/addresseditor/addresstypedialog.cpp:24
+#, kde-format
+msgctxt "street/postal"
+msgid "Edit Address Type"
+msgstr "주소 종류 편집"
+
+#: contact-editor/editor/addresseditor/addresstypedialog.cpp:38
+#, kde-format
+msgctxt "street/postal"
+msgid "Address Types"
+msgstr "주소 종류"
+
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:61
+#: contact-editor/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "Other..."
+msgstr "기타..."
+
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:63
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "New Address Type"
+msgstr "새 주소 종류"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:40
+#, kde-format
+msgctxt "@label The organization of a contact"
+msgid "Organization:"
+msgstr "조직:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:45
+#, kde-format
+msgid "Add organization's name"
+msgstr "조직 이름 추가"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:49
+#, kde-format
+msgctxt "@label The profession of a contact"
+msgid "Profession:"
+msgstr "직업:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:53
+#, kde-format
+msgid "Add profession"
+msgstr "직업 추가"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:58
+#, kde-format
+msgctxt "@label The title of a contact"
+msgid "Title:"
+msgstr "직함:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:62
+#, kde-format
+msgid "Add the title"
+msgstr "직위 추가"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
+#, kde-format
+msgctxt "@label The department of a contact"
+msgid "Department:"
+msgstr "부서:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:71
+#, kde-format
+msgid "Add the department"
+msgstr "부서 추가"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:76
+#, kde-format
+msgctxt "@label The office of a contact"
+msgid "Office:"
+msgstr "사무실:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:81
+#, kde-format
+msgid "Add the office"
+msgstr "사무실 추가"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:86
+#, kde-format
+msgctxt "@label The manager's name of a contact"
+msgid "Manager's name:"
+msgstr "관리자 이름:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:90
+#, kde-format
+msgid "Add manager's name"
+msgstr "관리자 이름 추가"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:95
+#, kde-format
+msgctxt "@label The assistant's name of a contact"
+msgid "Assistant's name:"
+msgstr "비서 이름:"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:99
+#, kde-format
+msgid "Add assistant's name"
+msgstr "비서 이름 추가"
+
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:105
+#, kde-format
+msgctxt "@label The free/busy information of a contact"
+msgid "Free/Busy:"
+msgstr "바쁨/한가함:"
+
+#: contact-editor/editor/businesseditor/freebusyeditwidget.cpp:28
+#, kde-format
+msgid "Add FreeBusy"
+msgstr "바쁨/한가함 추가"
+
+#: contact-editor/editor/contacteditorwidget.cpp:96
+#, kde-format
+msgctxt "@title:tab"
+msgid "Contact"
+msgstr "연락처"
+
+#: contact-editor/editor/contacteditorwidget.cpp:102
+#, kde-format
+msgctxt "@title:tab"
+msgid "Location"
+msgstr "위치"
+
+#: contact-editor/editor/contacteditorwidget.cpp:108
+#, kde-format
+msgctxt "@title:tab"
+msgid "Business"
+msgstr "사업"
+
+#: contact-editor/editor/contacteditorwidget.cpp:114
+#, kde-format
+msgctxt "@title:tab Personal properties of a contact"
+msgid "Personal"
+msgstr "개인"
+
+#: contact-editor/editor/contacteditorwidget.cpp:122
+#, kde-format
+msgctxt "@title:tab"
+msgid "Notes"
+msgstr "메모"
+
+#: contact-editor/editor/contacteditorwidget.cpp:132
+#, kde-format
+msgctxt "@title:tab"
+msgid "Custom Fields"
+msgstr "사용자 정의 필드"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
+#, kde-format
+msgid "Custom Field Title"
+msgstr "사용자 정의 필드 이름"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:36
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:45
+#, kde-format
+msgid "Add name"
+msgstr "이름 추가"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:45
+#, kde-format
+msgid "Add Field"
+msgstr "필드 추가"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:52
+#, kde-format
+msgid "Use field for all contacts"
+msgstr "모든 연락처에 필드 사용"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#, kde-format
+msgid "Text"
+msgstr "텍스트"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#, kde-format
+msgid "Numeric"
+msgstr "숫자"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#, kde-format
+msgid "Boolean"
+msgstr "참/거짓"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#, kde-format
+msgid "Date"
+msgstr "날짜"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#, kde-format
+msgid "Time"
+msgstr "시간"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#, kde-format
+msgid "DateTime"
+msgstr "날짜와 시간"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#, kde-format
+msgid "Url"
+msgstr "URL"
+
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:214
+#, kde-format
+msgctxt "Custom Fields"
+msgid "Do you really want to delete the selected custom field?"
+msgstr "선택한 사용자 정의 필드를 삭제하시겠습니까?"
+
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:215
+#, kde-format
+msgid "Confirm Delete"
+msgstr "삭제 확인"
+
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:195
+#, kde-format
+msgctxt "custom field title"
+msgid "Title"
+msgstr "제목"
+
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:197
+#, kde-format
+msgctxt "custom field value"
+msgid "Value"
+msgstr "값"
+
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:30
+#, kde-format
+msgid "Add a Blog Feed"
+msgstr "블로그 피드 추가"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:45
+#, kde-format
+msgid "Short Name"
+msgstr "짧은 이름"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:46
+#, kde-format
+msgid "Full Name"
+msgstr "전체 이름"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:47
+#, kde-format
+msgid "Reverse Name with Comma"
+msgstr "쉼표 있는 동양식 이름"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:48
+#, kde-format
+msgid "Reverse Name"
+msgstr "동양식 이름"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:49
+#, kde-format
+msgid "Organization"
+msgstr "조직"
+
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:50
+#, kde-format
+msgctxt "@item:inlistbox A custom name format"
+msgid "Custom"
+msgstr "사용자 정의"
+
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
+#, kde-format
+msgid "Tags"
+msgstr "태그"
+
+#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:25
+#, kde-format
+msgid "Email"
+msgstr "이메일"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
+#, kde-format
+msgid "Select..."
+msgstr "선택..."
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, kde-format
+msgid "Home"
+msgstr "집"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, kde-format
+msgid "Work"
+msgstr "직장"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, kde-format
+msgid "Other"
+msgstr "기타"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:27
+#, kde-format
+msgid "Add an Email Account"
+msgstr "이메일 계정 추가"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:39
+#, kde-format
+msgid "Add an Email"
+msgstr "이메일 추가"
+
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:46
+#, kde-format
+msgid "Remove Email"
+msgstr "이메일 삭제"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:24
+#, kde-format
+msgid "Show messages received from this contact as:"
+msgstr "이 연락처에서 받은 메시지를 다음으로 표시:"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
+#, kde-format
+msgid "Default"
+msgstr "기본값"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
+#, kde-format
+msgid "Plain Text"
+msgstr "일반 텍스트"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:35
+#, kde-format
+msgid "Allow remote content in received HTML messages"
+msgstr "받은 HTML 메시지의 원격 내용 불러오기 허용"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:25
+#, kde-format
+msgid "Messaging"
+msgstr "메시징"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:31
+#, kde-format
+msgid "Add an identifier"
+msgstr "식별자 추가"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:38
+#, kde-format
+msgctxt "@item:inlistbox select from a list of IM protocols"
+msgid "Select..."
+msgstr "선택..."
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:49
+#, kde-format
+msgid "Add an IM"
+msgstr "IM 추가"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
+#, kde-format
+msgid "Remove IM"
+msgstr "IM 삭제"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Name"
+msgstr "연락처 이름 편집"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:48
+#, kde-format
+msgid "Honorific prefixes:"
+msgstr "존칭 접두사:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:49
+#, kde-format
+msgid "Given name:"
+msgstr "성 제외 이름:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:50
+#, kde-format
+msgid "Additional names:"
+msgstr "추가 이름:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:51
+#, kde-format
+msgid "Family names:"
+msgstr "성:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:52
+#, kde-format
+msgid "Honorific suffixes:"
+msgstr "존칭 접미사:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:53
+#, kde-format
+msgid "Display:"
+msgstr "표시:"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:57
+#, kde-format
+msgid "Dr."
+msgstr "박사"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:58
+#, kde-format
+msgid "Miss"
+msgstr "Miss"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:59
+#, kde-format
+msgid "Mr."
+msgstr "Mr."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:60
+#, kde-format
+msgid "Mrs."
+msgstr "Mrs."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:61
+#, kde-format
+msgid "Ms."
+msgstr "Ms."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:62
+#, kde-format
+msgid "Prof."
+msgstr "교수"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:67
+#, kde-format
+msgid "I"
+msgstr "1세"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:68
+#, kde-format
+msgid "II"
+msgstr "2세"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:69
+#, kde-format
+msgid "III"
+msgstr "3세"
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:70
+#, kde-format
+msgid "Jr."
+msgstr "Jr."
+
+#: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:71
+#, kde-format
+msgid "Sr."
+msgstr "Sr."
+
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:26
+#, kde-format
+msgid "Name"
+msgstr "이름"
+
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:41
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:42
+#, kde-format
+msgid "Edit Contact Name"
+msgstr "연락처 이름 편집"
+
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:24
+#, kde-format
+msgid "Nickname"
+msgstr "별명"
+
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:30
+#, kde-format
+msgid "Add a Nickname"
+msgstr "별명 추가"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:25
+#, kde-format
+msgid "Phone"
+msgstr "전화"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Phone Number"
+msgstr "전화번호 편집"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:29
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:40
+#, kde-format
+msgid "Add a Phone Number"
+msgstr "전화번호 추가"
+
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:47
+#, kde-format
+msgid "Remove Phone Number"
+msgstr "전화번호 삭제"
+
+#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:26
+#, kde-format
+msgid "Web"
+msgstr "웹"
+
+#: contact-editor/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, kde-format
+msgid "Profile"
+msgstr "프로필"
+
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:28
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:40
+#, kde-format
+msgid "Add a Web Site"
+msgstr "웹사이트 추가"
+
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:47
+#, kde-format
+msgid "Remove Web Site"
+msgstr "웹사이트 삭제"
+
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:23
+#, kde-format
+msgid "Click to add date"
+msgstr "날짜를 추가하려면 클릭하십시오"
+
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:34
+#, kde-format
+msgid "Remove"
+msgstr "삭제"
+
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
+#, kde-format
+msgctxt "@label The birthdate of a contact"
+msgid "Birthdate:"
+msgstr "생일:"
+
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:34
+#, kde-format
+msgctxt "@label The wedding anniversary of a contact"
+msgid "Anniversary:"
+msgstr "기념일:"
+
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:41
+#, kde-format
+msgctxt "@label The partner's name of a contact"
+msgid "Partner's name:"
+msgstr "배우자 이름:"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:77
+#, kde-format
+msgid "This contact's image cannot be found."
+msgstr "연락처 그림을 찾을 수 없습니다."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:118
+#, kde-format
+msgid "The photo of the contact (click to change)"
+msgstr "연락처 사진(클릭해서 확대)"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:120
+#, kde-format
+msgid "The logo of the company (click to change)"
+msgstr "회사 로고(클릭해서 변경)"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:236
+#, kde-format
+msgid "Change photo..."
+msgstr "사진 변경..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:237
+#: contact-editor/editor/widgets/imagewidget.cpp:250
+#, kde-format
+msgid "Change URL..."
+msgstr "URL 변경..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:241
+#, kde-format
+msgid "Save photo..."
+msgstr "사진 저장..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:244
+#, kde-format
+msgid "Remove photo"
+msgstr "사진 삭제"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:249
+#, kde-format
+msgid "Change logo..."
+msgstr "로고 변경..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:254
+#, kde-format
+msgid "Save logo..."
+msgstr "로고 저장..."
+
+#: contact-editor/editor/widgets/imagewidget.cpp:257
+#, kde-format
+msgid "Remove logo"
+msgstr "로고 삭제"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:271
+#, kde-format
+msgid "Change image URL"
+msgstr "그림 URL 변경"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:271
+#, kde-format
+msgid "Image URL:"
+msgstr "그림 URL:"
+
+#: contact-editor/editor/widgets/imagewidget.cpp:300
+#: contact-editor/editor/widgets/imagewidget.cpp:323
+#, kde-format
+msgid "Images (%1)"
+msgstr "그림(%1)"
+
+#: contact-editor/editor/widgets/preferredlineeditwidget.cpp:22
+#, kde-format
+msgid "Set as Preferred"
+msgstr "선호하는 항목으로 설정"
+
+#~ msgctxt "@option today"
+#~ msgid "&Today"
+#~ msgstr "오늘(&T)"
+
+#~ msgctxt "@option tomorrow"
+#~ msgid "To&morrow"
+#~ msgstr "내일(&M)"
+
+#~ msgctxt "@option next week"
+#~ msgid "Next &Week"
+#~ msgstr "다음 주(&W)"
+
+#~ msgctxt "@option next month"
+#~ msgid "Next M&onth"
+#~ msgstr "다음 달(&O)"
+
+#~ msgctxt "@option do not specify a date"
+#~ msgid "No Date"
+#~ msgstr "날짜 없음"
+
+#~ msgid ""
+#~ "Defines which application shall be used to show the postal address of a "
+#~ "contact on a map. If 'Web Browser' is selected, an URL can be defined "
+#~ "with placeholders for the single address parts. If 'External Application' "
+#~ "is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "연락처 주소를 지도에 표시할 프로그램을 선택합니다. '웹 브라우저'를 선택하"
+#~ "면 URL 및 각각 주소 부분으로 대체될 자리 비움자를 입력할 수 있습니다. 만"
+#~ "약 '외부 프로그램'을 선택하면 프로그램 실행 명령어 및 자리 비움자를 입력"
+#~ "할 수 있습니다."
+
+#~ msgid ""
+#~ "This URL defines the website that shall be used to show a contact's "
+#~ "postal address."
+#~ msgstr "이 URL은 연락처의 우편 주소를 표시할 때 사용됩니다."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the URL:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "URL에 다음 자리 비움자를 사용할 수 있습니다:\n"
+#~ "  %s: 도로명\n"
+#~ "  %r: 시, 군, 구\n"
+#~ "  %l: 광역시, 도\n"
+#~ "  %z: 우편 번호\n"
+#~ "  %c: 국가 ISO 코드"
+
+#~ msgid "Address Command"
+#~ msgstr "주소 명령"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to show a "
+#~ "contact's postal address."
+#~ msgstr "이 명령은 연락처의 우편 주소를 표시할 때 사용됩니다."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "명령에 다음 자리 비움자를 사용할 수 있습니다:\n"
+#~ "  %s: 도로명\n"
+#~ "  %r: 시, 군, 구\n"
+#~ "  %l: 광역시, 도\n"
+#~ "  %z: 우편 번호\n"
+#~ "  %c: 국가 ISO 코드"
+
+#~ msgctxt "@title:window"
+#~ msgid "Show Contact Group"
+#~ msgstr "연락처 그룹 표시"
+
+#~ msgid "Select Address Book"
+#~ msgstr "주소록 선택"
+
+#~ msgid "Missing plugins. Please verify your installation"
+#~ msgstr "플러그인이 없습니다. 설치 상태를 확인하십시오"
+
+#, fuzzy
+#~| msgid "SMS Command"
+#~ msgid "KdeConnect SMS Command"
+#~ msgstr "SMS 명령"
+
+#~ msgid ""
+#~ "Defines which application shall be used to dial the phone number of a "
+#~ "contact. If 'Skype' is selected the Skype application will be started (if "
+#~ "installed on the computer) and the number is dialed. If 'External "
+#~ "Application' is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "연락처의 전화 번호로 전화를 걸 때 사용할 프로그램을 지정합니다. 'Skype'를 "
+#~ "선택하면 Skype 프로그램이 설치된 경우 실행되며 저장된 전화 번호로 전화를 "
+#~ "겁니다. '외부 프로그램'을 선택하면 자리 비움자를 포함한 명령을 지정할 수 "
+#~ "있습니다."
+
+#, fuzzy
+#~| msgid "Phone Command"
+#~ msgid "kdeconnect Command"
+#~ msgstr "전화 명령"
+
+#~ msgid "Add IM"
+#~ msgstr "IM 추가"
+
+#~ msgid "Edit Address"
+#~ msgstr "주소 편집"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Shinjo Park"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Show Address"
+#~ msgstr "주소 보이기"
+
+#~ msgid "Url:"
+#~ msgstr "URL:"
+
+#~ msgid "Command:"
+#~ msgstr "명령:"
+
+#~ msgid "Dial Phone Number"
+#~ msgstr "전화 걸기"
+
+#~ msgid "Send SMS"
+#~ msgstr "SMS 보내기"
+
+#~ msgid "Contact Actions Settings"
+#~ msgstr "대화 상대 동작 설정"
+
+#~ msgid "(c) 2009 Tobias Koenig"
+#~ msgstr "(c) 2009 Tobias Koenig"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "Ekiga"
+#~ msgstr "Ekiga"
+
+#~ msgid "SflPhone"
+#~ msgstr "SflPhone"
+
+#~ msgid "External Application"
+#~ msgstr "외부 프로그램"
+
+#~ msgid "Web Browser"
+#~ msgstr "웹 브라우저"
+
+#~ msgid "Google map"
+#~ msgstr "Google 지도"
+
+#~ msgid "Map quest"
+#~ msgstr "Mapquest"
+
+#~ msgid "OpenStreetMap"
+#~ msgstr "OpenStreetMap"
+
+#~ msgid "Select preferred email address"
+#~ msgstr "선호하는 이메일 주소 선택"
+
+#~ msgid "Title Custom Type"
+#~ msgstr "사용자 정의 제목 형식"
+
+#~ msgid "This is the preferred phone number"
+#~ msgstr "선호하는 전화 번호"
+
+#~ msgid "Types"
+#~ msgstr "형식"
+
+#~ msgid "Edit Email Addresses"
+#~ msgstr "이메일 주소 편집"
+
+#~ msgid "Add..."
+#~ msgstr "추가..."
+
+#~ msgid "New Email:"
+#~ msgstr "새 이메일:"
+
+#~ msgid "Edit Email"
+#~ msgstr "이메일 편집"
+
+#~ msgctxt "@label:textbox Inputfield for an email address"
+#~ msgid "Email:"
+#~ msgstr "이메일:"
+
+#~ msgid ""
+#~ "<qt>Are you sure that you want to remove the email address <b>%1</b>?</qt>"
+#~ msgstr "<qt>이메일 주소 <b>%1</b>을(를) 삭제하시겠습니까?</qt>"
+
+#~ msgid "Confirm Remove"
+#~ msgstr "삭제 확인"
+
+#~ msgid "&Delete"
+#~ msgstr "삭제(&D)"
+
+#~ msgctxt "@title:group Name related properties of a contact"
+#~ msgid "Name"
+#~ msgstr "이름"
+
+#~ msgctxt "@title:group"
+#~ msgid "Internet"
+#~ msgstr "인터넷"
+
+#~ msgctxt "@title:group"
+#~ msgid "Phones"
+#~ msgstr "전화"
+
+#~ msgctxt "@label The name of a contact"
+#~ msgid "Name:"
+#~ msgstr "이름:"
+
+#~ msgctxt "@label The nickname of a contact"
+#~ msgid "Nickname:"
+#~ msgstr "별명:"
+
+#~ msgctxt "@label The email address of a contact"
+#~ msgid "Email:"
+#~ msgstr "이메일:"
+
+#~ msgctxt "@label The homepage URL of a contact"
+#~ msgid "Homepage:"
+#~ msgstr "홈페이지:"
+
+#~ msgctxt "@label The blog URL of a contact"
+#~ msgid "Blog:"
+#~ msgstr "블로그:"
+
+#~ msgctxt "@label The instant messaging address of a contact"
+#~ msgid "Messaging:"
+#~ msgstr "메시징:"
+
+#~ msgctxt "@label The categories of a contact"
+#~ msgid "Categories:"
+#~ msgstr "분류:"
+
+#~ msgid "Messages"
+#~ msgstr "메시지"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Instant Messaging Addresses"
+#~ msgstr "인스턴트 메시지 주소 편집"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add..."
+#~ msgstr "추가..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Edit..."
+#~ msgstr "편집..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Remove"
+#~ msgstr "삭제"
+
+#~ msgctxt "@action:button"
+#~ msgid "Set as Standard"
+#~ msgstr "표준으로 설정"
+
+#~ msgctxt "@title:window"
+#~ msgid "Add IM Address"
+#~ msgstr "인스턴트 메시지 주소 추가"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit IM Address"
+#~ msgstr "인스턴트 메시지 주소 편집"
+
+#~ msgctxt "@info Instant messaging"
+#~ msgid ""
+#~ "Do you really want to delete the selected <resource>%1</resource> address?"
+#~ msgstr "선택한 <resource>%1</resource> 주소를 삭제하시겠습니까?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Delete Resource"
+#~ msgstr "자원 삭제 확인"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Protocol:"
+#~ msgstr "프로토콜:"
+
+#~ msgctxt "@label:textbox IM address"
+#~ msgid "Address:"
+#~ msgstr "주소:"
+
+#~ msgctxt "instant messaging protocol"
+#~ msgid "Protocol"
+#~ msgstr "프로토콜"
+
+#~ msgctxt "instant messaging address"
+#~ msgid "Address"
+#~ msgstr "주소"
+
+#~ msgid "Add"
+#~ msgstr "추가"
+
+#~ msgid "Edit Custom Field"
+#~ msgstr "사용자 정의 필드 편집"
+
+#~ msgctxt "The title of a custom field"
+#~ msgid "Title"
+#~ msgstr "제목"
+
+#~ msgctxt "The type of a custom field"
+#~ msgid "Type"
+#~ msgstr "종류"
+
+#~ msgid "Key"
+#~ msgstr "키"
+
+#~ msgid "Advanced"
+#~ msgstr "고급"
+
+#~ msgctxt "recent contacts folder"
+#~ msgid "Recent Contacts"
+#~ msgstr "최근 연락처"
+
+#~ msgid ""
+#~ "Id of the resource containing the default recent contacts collection."
+#~ msgstr "기본 최근 연락처 모음집을 포함하는 자원의 ID입니다."
+
+#~ msgid ""
+#~ "Id of the contacts resource containing the recent contacts collection."
+#~ msgstr "기본 최근 연락처 모음집을 포함하는 연락처 자원의 ID입니다."
+
+#~ msgctxt "@label:listbox type of address"
+#~ msgid "Address type:"
+#~ msgstr "주소 종류:"
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "New..."
+#~ msgstr "새로 만들기..."
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "Edit..."
+#~ msgstr "편집..."
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "Delete"
+#~ msgstr "삭제"
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit Address"
+#~ msgstr "주소 편집"
+
+#~ msgctxt "<streetLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postOfficeBoxLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<localityLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<regionLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postalCodeLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<countryLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Edit Label..."
+#~ msgstr "레이블 편집..."
+
+#~ msgctxt "@label The pronunciation of a contact's name"
+#~ msgid "Pronunciation:"
+#~ msgstr "발음:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Addresses"
+#~ msgstr "주소"
+
+#~ msgctxt "@title:group"
+#~ msgid "Coordinates"
+#~ msgstr "좌표"
+
+#~ msgctxt "@label"
+#~ msgid "Latitude:"
+#~ msgstr "위도:"
+
+#~ msgctxt "@label"
+#~ msgid "Longitude:"
+#~ msgstr "경도:"
+
+#~ msgctxt "@label Change the coordinates"
+#~ msgid "Change..."
+#~ msgstr "변경..."
+
+#~ msgctxt "@label Coordinates are not available"
+#~ msgid "n/a"
+#~ msgstr "없음"
+
+#~ msgctxt "@label The formatted coordinates"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgctxt "@title:window"
+#~ msgid "Coordinate Selection"
+#~ msgstr "좌표 선택"
+
+#~ msgctxt "@title:group Decimal representation of coordinates"
+#~ msgid "Decimal"
+#~ msgstr "10진법"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Latitude:"
+#~ msgstr "위도:"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Longitude:"
+#~ msgstr "경도:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Sexagesimal"
+#~ msgstr "60진법"
+
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "North"
+#~ msgstr "북"
+
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "South"
+#~ msgstr "남"
+
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "East"
+#~ msgstr "동"
+
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "West"
+#~ msgstr "서"
+
+#~ msgctxt "@item:inlistbox Undefined location"
+#~ msgid "Undefined"
+#~ msgstr "정의되지 않음"
+
+#~ msgid "This contact's sound cannot be found."
+#~ msgstr "이 연락처 소리를 찾을 수 없습니다."
+
+#~ msgid "Click to play pronunciation"
+#~ msgstr "발음을 들으려면 누르십시오"
+
+#~ msgid "No pronunciation available"
+#~ msgstr "발음 정보 없음"
+
+#~ msgid "Play"
+#~ msgstr "재생"
+
+#~ msgid "Change..."
+#~ msgstr "변경..."
+
+#~ msgid "Save..."
+#~ msgstr "저장..."
+
+#~ msgctxt "@title:group General properties of a contact"
+#~ msgid "General"
+#~ msgstr "일반"
+
+#~ msgctxt "@title:group"
+#~ msgid "Groupware"
+#~ msgstr "그룹웨어"
+
+#~ msgctxt "@title:group Date related properties of a contact"
+#~ msgid "Dates"
+#~ msgstr "날짜"
+
+#~ msgctxt "@title:group Family related properties of a contact"
+#~ msgid "Family"
+#~ msgstr "가족"
+
+#, fuzzy
+#~| msgid "Change..."
+#~ msgid "Change url..."
+#~ msgstr "변경..."

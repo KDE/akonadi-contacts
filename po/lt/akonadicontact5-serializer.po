@@ -1,0 +1,583 @@
+# Lithuanian translations for l package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the l package.
+#
+# Automatically generated, 2010.
+# Jonas Česnauskas <upynas@gmail.com>, 2011.
+# Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi_serializer_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2011-12-11 22:03+0200\n"
+"Last-Translator: Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>\n"
+"Language-Team: Lithuanian <kde-i18n-doc@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Lokalize 1.2\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "Pakeistas adresatas"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "Prieštaringas adresatas"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "El. laiškai"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Telefonų numeriai"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Adresai"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr "Pakeista adresato grupė"
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr "Prieštaringa adresatų grupė"
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Narys"
+
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "Priminimas pakeistas"
+
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "Konfliktuojamas priminimas"
+
+#~ msgctxt "@label"
+#~ msgid "Item revision"
+#~ msgstr "Elemento peržiūra"
+
+#~ msgid "Yes"
+#~ msgstr "Taip"
+
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgid "Attendees"
+#~ msgstr "Dalyviai"
+
+#~ msgid "Organizer"
+#~ msgstr "Tvarkytuvė"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "Is all-day"
+#~ msgstr "Visa diena"
+
+#~ msgid "Has duration"
+#~ msgstr "Trunka"
+
+#~ msgid "Duration"
+#~ msgstr "Trukmė"
+
+#~ msgid "Description"
+#~ msgstr "Aprašas"
+
+#~ msgid "Summary"
+#~ msgstr "Santrauka"
+
+#~ msgid "Status"
+#~ msgstr "Būsena"
+
+#~ msgid "Secrecy"
+#~ msgstr "Slaptumas"
+
+#~ msgid "Priority"
+#~ msgstr "Prioritetas"
+
+#~ msgid "Location"
+#~ msgstr "Vieta"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorijos"
+
+#~ msgid "Alarms"
+#~ msgstr "Pavojai"
+
+#~ msgid "Resources"
+#~ msgstr "Ištekliai"
+
+#~ msgid "Attachments"
+#~ msgstr "Priedai"
+
+#~ msgid "Exception Dates"
+#~ msgstr "Išimčių datos"
+
+#~ msgid "Exception Times"
+#~ msgstr "Išimčių laikai"
+
+#~ msgid "Created"
+#~ msgstr "Sukurta"
+
+#~ msgid "Related Uid"
+#~ msgstr "Susiję Uid"
+
+#~ msgid "Start time"
+#~ msgstr "Pradžios laikas"
+
+#~ msgid "Has End Date"
+#~ msgstr "Pabaigos data"
+
+#~ msgid "End Date"
+#~ msgstr "Pabaigos data"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Pradžios data"
+
+#~ msgid "Has Due Date"
+#~ msgstr "Pabaigos data"
+
+#~ msgid "Due Date"
+#~ msgstr "Pabaigos data"
+
+#~ msgid "Has Complete Date"
+#~ msgstr "Pabaigimo data"
+
+#~ msgid "Complete"
+#~ msgstr "Pabaigta"
+
+#~ msgid "Completed"
+#~ msgstr "Užbaigtas"
+
+#~ msgid "Changed Event"
+#~ msgstr "Pakeistas įvykis"
+
+#~ msgid "Conflicting Event"
+#~ msgstr "Prieštaingas įvykis"
+
+#~ msgid "Changed Todo"
+#~ msgstr "Pasikeitė atliktini darbai"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "Prieštaringi atliktini darbai"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Priminimo tipas"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Priminimo statusas"
+
+#~ msgctxt "@label"
+#~ msgid "Template name"
+#~ msgstr "Šablono pavadinimas"
+
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Sukūrimo laikas"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Pradžios laikas"
+
+#~ msgctxt "@label Start delay configured in an alarm template"
+#~ msgid "Template after time"
+#~ msgstr "Šablonas po laiko"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "Pasikartoja"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "Pasikartojimas"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition"
+#~ msgstr "subrepeticija "
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition interval"
+#~ msgstr "Papildomo pakartojimo intervalas"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition count"
+#~ msgstr "Papildomų pakartojimų skaičius"
+
+#~ msgctxt "@label"
+#~ msgid "Next sub-repetition"
+#~ msgstr "Kitas papildomas pakartojimas"
+
+#~ msgctxt "@label"
+#~ msgid "Work time only"
+#~ msgstr "Tik darbo laiku"
+
+#~ msgctxt "@label"
+#~ msgid "Holidays excluded"
+#~ msgstr "Išskyrus atostogas"
+
+#~ msgctxt "@label"
+#~ msgid "Next recurrence"
+#~ msgstr "Kitas pasikartojimas"
+
+#~ msgctxt "@label"
+#~ msgid "Late cancel"
+#~ msgstr "Vėlesnis pakartojimas"
+
+#~ msgctxt "@label Automatically close window"
+#~ msgid "Auto close"
+#~ msgstr "Automatiškai uždaryti"
+
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Kopijuoti į KOrganizer"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "Įjungtas"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "Tik skaitymui"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "Archyvas"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "Peržiūra"
+
+#~ msgctxt "@label"
+#~ msgid "Custom properties"
+#~ msgstr "Savitos savybės"
+
+#~ msgctxt "@label"
+#~ msgid "Message text"
+#~ msgstr "Pranešimo tekstas"
+
+#~ msgctxt "@label File to provide text for message"
+#~ msgid "Message file"
+#~ msgstr "Pranešimo failas"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "Priekinio plano spalva"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "Fono spalva"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "Šriftas"
+
+#~ msgctxt "@label Shell command to execute before alarm"
+#~ msgid "Pre-alarm action"
+#~ msgstr "Veiksmas prieš priminimą"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action cancel"
+#~ msgstr "Veiksmo prieš priminimą atšaukimas"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action no error"
+#~ msgstr "Veiksmo prieš priminimą klaida"
+
+#~ msgctxt "@label Shell command to execute after alarm"
+#~ msgid "Post-alarm action"
+#~ msgstr "Veiksmas po priminimo"
+
+#~ msgctxt "@label"
+#~ msgid "Confirm acknowledgement"
+#~ msgstr "Patvirtinti "
+
+#~ msgctxt "@label"
+#~ msgid "KMail serial number"
+#~ msgstr "KMail serijinis numeris"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "Garsas"
+
+#~ msgctxt "@label Whether audio should repeat"
+#~ msgid "Sound repeat"
+#~ msgstr "Kartoti garsą"
+
+#~ msgctxt "@label"
+#~ msgid "Sound volume"
+#~ msgstr "Garso lygis"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade volume"
+#~ msgstr "Garso pokyčio lygis"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade time"
+#~ msgstr "Garso pokyčio laikas"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "Priminimas"
+
+#~ msgctxt "@label Whether reminder is on first recurrence only"
+#~ msgid "Reminder once only"
+#~ msgstr "Priminti tik kartą"
+
+#~ msgctxt "@label Deferral type"
+#~ msgid "Deferral"
+#~ msgstr "Atidėjimas"
+
+#~ msgctxt "@label"
+#~ msgid "Deferral time"
+#~ msgstr "Atidėjimo laikas"
+
+#~ msgctxt "@label Default deferral delay"
+#~ msgid "Deferral default"
+#~ msgstr "Atidėjimo numatytos"
+
+#~ msgctxt "@label Whether deferral time is date-only by default"
+#~ msgid "Deferral default date only"
+#~ msgstr "Atidėjimo tik numatyta data"
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "Komanda"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "Žurnalo failas"
+
+#~ msgctxt "@label Execute in terminal window"
+#~ msgid "Execute in terminal"
+#~ msgstr "Vykdyti terminale"
+
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "El. laiško tema"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email sender ID"
+#~ msgstr "El. laiško siuntėjo ID"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "El. laiškai kam"
+
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "El. laiško bcc"
+
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "El. laiško turinys"
+
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "El. laiško priedai"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Display (text)"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (text)"
+#~ msgstr "Rodyti (tekstą)"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Display (file)"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (file)"
+#~ msgstr "Rodyti( failą)"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Display (command)"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (command)"
+#~ msgstr "Rodyti (komandą)"
+
+#, fuzzy
+#~| msgctxt "@label A shell command"
+#~| msgid "Command"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "Komanda"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Email"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "El. laiškas"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Audio"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Active"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "Aktyvus"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Archived"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "Archyvuotas"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Template"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "Šablonas"
+
+#, fuzzy
+#~| msgctxt "@info/plain Repeat at login"
+#~| msgid "At login until %1"
+#~ msgctxt "@info Repeat at login"
+#~ msgid "At login until %1"
+#~ msgstr "Registravimosi metu iki %1"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "%1"
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#, fuzzy
+#~| msgctxt "@info/plain Using default font"
+#~| msgid "Default"
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "Numatytas"
+
+#, fuzzy
+#~| msgctxt "@label Whether the alarm has a reminder"
+#~| msgid "Reminder"
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "Priminimas"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Speak"
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "Kalbėti"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Beep"
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "Pyptelėjimas"
+
+#, fuzzy
+#~| msgctxt "@info/plain Percentage"
+#~| msgid "%1%%"
+#~ msgctxt "@info Percentage"
+#~ msgid "%1%%"
+#~ msgstr "%1%%"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Second"
+#~| msgid_plural "%1 Seconds"
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] "%1 sekundė"
+#~ msgstr[1] "%1 sekundės"
+#~ msgstr[2] "%1 sekundžių"
+#~ msgstr[3] "%1 sekundė"
+
+#, fuzzy
+#~| msgctxt "@info/plain Error indication"
+#~| msgid "error!"
+#~ msgctxt "@info Error indication"
+#~ msgid "error!"
+#~ msgstr "klaida!"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Taip"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Minute"
+#~| msgid_plural "%1 Minutes"
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "%1 minutė"
+#~ msgstr[1] "%1 minutės"
+#~ msgstr[2] "%1 minučių"
+#~ msgstr[3] "%1 minutė"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Hour"
+#~| msgid_plural "%1 Hours"
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "%1 valanda"
+#~ msgstr[1] "%1 valandos"
+#~ msgstr[2] "%1 valandų"
+#~ msgstr[3] "%1 valanda"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Day"
+#~| msgid_plural "%1 Days"
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "%1 diena"
+#~ msgstr[1] "%1 dienos"
+#~ msgstr[2] "%1 dienų"
+#~ msgstr[3] "%1 diena"

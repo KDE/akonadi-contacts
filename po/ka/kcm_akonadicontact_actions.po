@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the akonadi-contacts package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-contacts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-05 00:44+0000\n"
+"PO-Revision-Date: 2022-09-12 09:47+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Temuri Doghonadze"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Temuri.doghonadze@gmail.com"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: akonadicontactactions.ui:29
+#, kde-format
+msgid "Dial Phone Number"
+msgstr "ტელეფონის ნომერზე დარეკვა"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: akonadicontactactions.ui:58 akonadicontactactions.ui:124
+#, kde-format
+msgid "Command:"
+msgstr "ბრძანება:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: akonadicontactactions.ui:95
+#, kde-format
+msgid "Send SMS"
+msgstr "SMS-ის გაგზავნა"
+
+#: kcmakonadicontactactions.cpp:27
+#, kde-format
+msgid "Contact Actions Settings"
+msgstr "კონტაქტის ქმედებების მორგება"
+
+#: kcmakonadicontactactions.cpp:31
+#, kde-format
+msgid "(c) 2009 Tobias Koenig"
+msgstr "(c) 2009 Tobias Koenig"
+
+#: kcmakonadicontactactions.cpp:33
+#, kde-format
+msgid "Tobias Koenig"
+msgstr "Tobias Koenig"
+
+#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
+#, kde-format
+msgid "System Default"
+msgstr "სისტემის ნაგულისხმები"
+
+#: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
+#, kde-format
+msgid "Skype"
+msgstr "Skype"
+
+#: kcmakonadicontactactions.cpp:42
+#, kde-format
+msgid "Ekiga"
+msgstr "Ekiga"
+
+#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
+#, kde-format
+msgid "SflPhone"
+msgstr "SflPhone"
+
+#: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
+#, kde-format
+msgid "External Application"
+msgstr "გარე აპლიკაცია"

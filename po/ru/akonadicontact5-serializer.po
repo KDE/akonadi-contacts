@@ -1,0 +1,530 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2011, 2015.
+# Julia Dronova <juliette.tux@gmail.com>, 2012.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2015-09-04 04:25+0300\n"
+"Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "Изменённый контакт"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "Конфликтующий контакт"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "Адреса электронной почты"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Телефонные номера"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Адреса"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr "Изменённая группа контактов"
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr "Конфликтующая группа контактов"
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Имя"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Участник"
+
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "Изменённое напоминание"
+
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "Конфликтующее напоминание"
+
+#~ msgctxt "@label"
+#~ msgid "Item revision"
+#~ msgstr "Объект проверки"
+
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "Attendees"
+#~ msgstr "Участники"
+
+#~ msgid "Organizer"
+#~ msgstr "Организатор"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "Is all-day"
+#~ msgstr "На весь день"
+
+#~ msgid "Has duration"
+#~ msgstr "Имеет длительность"
+
+#~ msgid "Duration"
+#~ msgstr "Длительность"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Summary"
+#~ msgstr "Краткие сведения"
+
+#~ msgid "Status"
+#~ msgstr "Состояние"
+
+#~ msgid "Secrecy"
+#~ msgstr "Секретность"
+
+#~ msgid "Priority"
+#~ msgstr "Приоритет"
+
+#~ msgid "Location"
+#~ msgstr "Место проведения"
+
+#~ msgid "Categories"
+#~ msgstr "Категории"
+
+#~ msgid "Alarms"
+#~ msgstr "Напоминания"
+
+#~ msgid "Resources"
+#~ msgstr "Ресурсы"
+
+#~ msgid "Attachments"
+#~ msgstr "Вложения"
+
+#~ msgid "Exception Dates"
+#~ msgstr "За исключением дней"
+
+#~ msgid "Exception Times"
+#~ msgstr "За исключением времени"
+
+#~ msgid "Created"
+#~ msgstr "Создан(а)"
+
+#~ msgid "Related Uid"
+#~ msgstr "Связанный UID"
+
+#~ msgid "Start time"
+#~ msgstr "Время начала"
+
+#~ msgid "Has End Date"
+#~ msgstr "Определена дата окончания"
+
+#~ msgid "End Date"
+#~ msgstr "Дата окончания"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Определена дата начала"
+
+#~ msgid "Has Due Date"
+#~ msgstr "Определён срок выполнения"
+
+#~ msgid "Due Date"
+#~ msgstr "Срок выполнения"
+
+#~ msgid "Has Complete Date"
+#~ msgstr "Определена дата выполнения"
+
+#~ msgid "Complete"
+#~ msgstr "Выполняется"
+
+#~ msgid "Completed"
+#~ msgstr "Выполнен(а)"
+
+#~ msgid "Changed Event"
+#~ msgstr "Изменённое событие"
+
+#~ msgid "Conflicting Event"
+#~ msgstr "Конфликтующее событие"
+
+#~ msgid "Changed Todo"
+#~ msgstr "Изменённая задача"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "Конфликтующая задача"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Тип напоминания"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Состояние напоминания"
+
+#~ msgctxt "@label"
+#~ msgid "Template name"
+#~ msgstr "Имя шаблона"
+
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Время создания"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Время начала"
+
+#~ msgctxt "@label Start delay configured in an alarm template"
+#~ msgid "Template after time"
+#~ msgstr "Шаблон с задержкой"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "Повторяется"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "Повторение"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition"
+#~ msgstr "Подповторение"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition interval"
+#~ msgstr "Интервал подповторения"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition count"
+#~ msgstr "Количество подповторений"
+
+#~ msgctxt "@label"
+#~ msgid "Next sub-repetition"
+#~ msgstr "Следующее подповторение"
+
+#~ msgctxt "@label"
+#~ msgid "Work time only"
+#~ msgstr "Только рабочее время"
+
+#~ msgctxt "@label"
+#~ msgid "Holidays excluded"
+#~ msgstr "Праздники исключены"
+
+#~ msgctxt "@label"
+#~ msgid "Next recurrence"
+#~ msgstr "Следующее повторение"
+
+#~ msgctxt "@label"
+#~ msgid "Late cancel"
+#~ msgstr "Отменить позднее"
+
+#~ msgctxt "@label Automatically close window"
+#~ msgid "Auto close"
+#~ msgstr "Закрыть автоматически"
+
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Копировать в KOrganizer"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "Включено"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "Только для чтения"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "Архивировать"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "Проверка"
+
+#~ msgctxt "@label"
+#~ msgid "Custom properties"
+#~ msgstr "Свойства пользователя"
+
+#~ msgctxt "@label"
+#~ msgid "Message text"
+#~ msgstr "Текст сообщения"
+
+#~ msgctxt "@label File to provide text for message"
+#~ msgid "Message file"
+#~ msgstr "Файл сообщения"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "Цвет переднего плана"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "Цвет фона"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "Шрифт"
+
+#~ msgctxt "@label Shell command to execute before alarm"
+#~ msgid "Pre-alarm action"
+#~ msgstr "Пред-аварийное действие"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action cancel"
+#~ msgstr "Отмена пред-аварийного действия"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action no error"
+#~ msgstr "Пред-аварийное действие без ошибок"
+
+#~ msgctxt "@label Shell command to execute after alarm"
+#~ msgid "Post-alarm action"
+#~ msgstr "Пост-аварийное действие"
+
+#~ msgctxt "@label"
+#~ msgid "Confirm acknowledgement"
+#~ msgstr "Подтвердить принятие"
+
+#~ msgctxt "@label"
+#~ msgid "KMail serial number"
+#~ msgstr "Серийный номер KMail"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "Звук"
+
+#~ msgctxt "@label Whether audio should repeat"
+#~ msgid "Sound repeat"
+#~ msgstr "Повторение звука"
+
+#~ msgctxt "@label"
+#~ msgid "Sound volume"
+#~ msgstr "Громкость звука"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade volume"
+#~ msgstr "Постепенное изменение громкости звука"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade time"
+#~ msgstr "Продолжительность постепенного изменения звука"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "Напоминание"
+
+#~ msgctxt "@label Whether reminder is on first recurrence only"
+#~ msgid "Reminder once only"
+#~ msgstr "Только одно напоминание"
+
+#~ msgctxt "@label Deferral type"
+#~ msgid "Deferral"
+#~ msgstr "Отсрочка"
+
+#~ msgctxt "@label"
+#~ msgid "Deferral time"
+#~ msgstr "Отсроченное время"
+
+#~ msgctxt "@label Default deferral delay"
+#~ msgid "Deferral default"
+#~ msgstr "Отсрочка по умолчанию"
+
+#~ msgctxt "@label Whether deferral time is date-only by default"
+#~ msgid "Deferral default date only"
+#~ msgstr "Только отсроченная по умолчанию дата"
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "Команда"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "Журнал"
+
+#~ msgctxt "@label Execute in terminal window"
+#~ msgid "Execute in terminal"
+#~ msgstr "Запустить в терминале"
+
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "Тема письма"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email sender ID"
+#~ msgstr "Идентификатор отправителя письма"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "Получатель"
+
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "Получатель скрытой копии"
+
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "Тело письма"
+
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "Вложения"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (text)"
+#~ msgstr "Показ (текст)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (file)"
+#~ msgstr "Показ (файл)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (command)"
+#~ msgstr "Показ (команды)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "Команда"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "Почтовое"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "Звуковое"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "Активное"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "Архивированное"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "Шаблон"
+
+#~ msgctxt "@info Repeat at login"
+#~ msgid "At login until %1"
+#~ msgstr "При входе в систему до %1"
+
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "По умолчанию"
+
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "Напоминание"
+
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "Произнести"
+
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "Сигнал"
+
+#~ msgctxt "@info Percentage"
+#~ msgid "%1%%"
+#~ msgstr "%1%%"
+
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] "%1 секунда"
+#~ msgstr[1] "%1 секунды"
+#~ msgstr[2] "%1 секунд"
+#~ msgstr[3] "%1 секунда"
+
+#~ msgctxt "@info Error indication"
+#~ msgid "error!"
+#~ msgstr "(ошибка)"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "%1 минута"
+#~ msgstr[1] "%1 минуты"
+#~ msgstr[2] "%1 минут"
+#~ msgstr[3] "%1 минута"
+
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "%1 час"
+#~ msgstr[1] "%1 часа"
+#~ msgstr[2] "%1 часов"
+#~ msgstr[3] "%1 час"
+
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "%1 день"
+#~ msgstr[1] "%1 дня"
+#~ msgstr[2] "%1 дней"
+#~ msgstr[3] "%1 день"
+
+#~ msgctxt "@info/plain Alarm type"
+#~ msgid "Command"
+#~ msgstr "Командное"
+
+#~ msgctxt "@info/plain"
+#~ msgid "Reminder"
+#~ msgstr "Напоминание"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Нет"

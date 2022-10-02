@@ -1,0 +1,526 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Vernekar <andrej.vernekar@gmail.com>, 2012.
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2015-08-25 17:47+0200\n"
+"Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "Spremenjen stik"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "Stik v sporu"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "E-pošta"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Telefonske številke"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Naslovi"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr "Spremenjena skupina stika"
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr "Skupina stika v sporu"
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Ime"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Član"
+
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "Spremenjen alarm"
+
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "Alarm v sporu"
+
+#~ msgctxt "@label"
+#~ msgid "Item revision"
+#~ msgstr "Predelava predmeta"
+
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgid "Attendees"
+#~ msgstr "Udeleženci"
+
+#~ msgid "Organizer"
+#~ msgstr "Organizator"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "Is all-day"
+#~ msgstr "Traja ves dan"
+
+#~ msgid "Has duration"
+#~ msgstr "Ima trajanje"
+
+#~ msgid "Duration"
+#~ msgstr "Trajanje"
+
+#~ msgid "Description"
+#~ msgstr "Opis"
+
+#~ msgid "Summary"
+#~ msgstr "Povzetek"
+
+#~ msgid "Status"
+#~ msgstr "Stanje"
+
+#~ msgid "Secrecy"
+#~ msgstr "Tajnost"
+
+#~ msgid "Priority"
+#~ msgstr "Prednost"
+
+#~ msgid "Location"
+#~ msgstr "Kraj"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorije"
+
+#~ msgid "Alarms"
+#~ msgstr "Alarmi"
+
+#~ msgid "Resources"
+#~ msgstr "Viri"
+
+#~ msgid "Attachments"
+#~ msgstr "Priloge"
+
+#~ msgid "Exception Dates"
+#~ msgstr "Datumi izjem"
+
+#~ msgid "Exception Times"
+#~ msgstr "Časi izjem"
+
+#~ msgid "Created"
+#~ msgstr "Ustvarjeno"
+
+#~ msgid "Related Uid"
+#~ msgstr "Povezan UID"
+
+#~ msgid "Start time"
+#~ msgstr "Začetni čas"
+
+#~ msgid "Has End Date"
+#~ msgstr "Ima končni datum"
+
+#~ msgid "End Date"
+#~ msgstr "Končni datum"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Ima začetni datum"
+
+#~ msgid "Has Due Date"
+#~ msgstr "Ima datum zapadlosti"
+
+#~ msgid "Due Date"
+#~ msgstr "Datum zapadlosti"
+
+#~ msgid "Has Complete Date"
+#~ msgstr "Ima datum zaključka"
+
+#~ msgid "Complete"
+#~ msgstr "Zaključeno"
+
+#~ msgid "Completed"
+#~ msgstr "Zaključeno"
+
+#~ msgid "Changed Event"
+#~ msgstr "Spremenjen dogodek"
+
+#~ msgid "Conflicting Event"
+#~ msgstr "Dogodek v sporu"
+
+#~ msgid "Changed Todo"
+#~ msgstr "Spremenjeno opravilo"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "Opravilo v sporu"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Vrsta alarma"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Stanje alarma"
+
+#~ msgctxt "@label"
+#~ msgid "Template name"
+#~ msgstr "Ime predloge"
+
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Čas ustvaritve"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Začetni čas"
+
+#~ msgctxt "@label Start delay configured in an alarm template"
+#~ msgid "Template after time"
+#~ msgstr "Čas zakasnitve v predlogi"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "Se ponavlja"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "Ponovitev"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition"
+#~ msgstr "Pod-ponavljanje"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition interval"
+#~ msgstr "Razmik pod-ponavljanja"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition count"
+#~ msgstr "Števec pod-ponavljanja"
+
+#~ msgctxt "@label"
+#~ msgid "Next sub-repetition"
+#~ msgstr "Naslednje pod-ponavljanje"
+
+#~ msgctxt "@label"
+#~ msgid "Work time only"
+#~ msgstr "Samo delovni čas"
+
+#~ msgctxt "@label"
+#~ msgid "Holidays excluded"
+#~ msgstr "Prazniki so izvzeti"
+
+#~ msgctxt "@label"
+#~ msgid "Next recurrence"
+#~ msgstr "Naslednja ponovitev"
+
+#~ msgctxt "@label"
+#~ msgid "Late cancel"
+#~ msgstr "Pozen preklic"
+
+#~ msgctxt "@label Automatically close window"
+#~ msgid "Auto close"
+#~ msgstr "Samodejno zapri"
+
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Kopiraj v KOrganizer"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "Omogočeno"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "Samo za branje"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "Arhiviraj"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "Predelava"
+
+#~ msgctxt "@label"
+#~ msgid "Custom properties"
+#~ msgstr "Lastnosti po meri"
+
+#~ msgctxt "@label"
+#~ msgid "Message text"
+#~ msgstr "Besedilo sporočila"
+
+#~ msgctxt "@label File to provide text for message"
+#~ msgid "Message file"
+#~ msgstr "Datoteka sporočila"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "Barva ospredja"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "Barva ozadja"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "Pisava"
+
+#~ msgctxt "@label Shell command to execute before alarm"
+#~ msgid "Pre-alarm action"
+#~ msgstr "Dejanje pred alarmom"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action cancel"
+#~ msgstr "Preklic dejanja pred alarmom"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action no error"
+#~ msgstr "Dejanje pred alarmom brez napak"
+
+#~ msgctxt "@label Shell command to execute after alarm"
+#~ msgid "Post-alarm action"
+#~ msgstr "Dejanje po alarmu"
+
+#~ msgctxt "@label"
+#~ msgid "Confirm acknowledgement"
+#~ msgstr "Potrdi seznanjenost"
+
+#~ msgctxt "@label"
+#~ msgid "KMail serial number"
+#~ msgstr "Zaporedna številka KMaila"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "Zvok"
+
+#~ msgctxt "@label Whether audio should repeat"
+#~ msgid "Sound repeat"
+#~ msgstr "Ponavljanje zvoka"
+
+#~ msgctxt "@label"
+#~ msgid "Sound volume"
+#~ msgstr "Glasnost zvoka"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade volume"
+#~ msgstr "Glasnost pojemanja zvoka"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade time"
+#~ msgstr "Čas pojemanja zvoka"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "Opomnik"
+
+#~ msgctxt "@label Whether reminder is on first recurrence only"
+#~ msgid "Reminder once only"
+#~ msgstr "Enkraten opomnik"
+
+#~ msgctxt "@label Deferral type"
+#~ msgid "Deferral"
+#~ msgstr "Odlog"
+
+#~ msgctxt "@label"
+#~ msgid "Deferral time"
+#~ msgstr "Čas odložitve"
+
+#~ msgctxt "@label Default deferral delay"
+#~ msgid "Deferral default"
+#~ msgstr "Privzet odlog"
+
+#~ msgctxt "@label Whether deferral time is date-only by default"
+#~ msgid "Deferral default date only"
+#~ msgstr "Odlog privzeto samo datumski"
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "Ukaz"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "Dnevniška datoteka"
+
+#~ msgctxt "@label Execute in terminal window"
+#~ msgid "Execute in terminal"
+#~ msgstr "Izvedi v terminalu"
+
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "Zadeva sporočila"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email sender ID"
+#~ msgstr "ID pošiljatelja sporočila"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "Pošlji sporočilo"
+
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "Sporočilo Skp"
+
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "Telo sporočila"
+
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "Priloge sporočila"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (text)"
+#~ msgstr "Prikaži (besedilo)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (file)"
+#~ msgstr "Prikaži (datoteko)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (command)"
+#~ msgstr "Prikaži (ukaz)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "Ukaz"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "E-pošta"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "Zvok"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "Dejaven"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "Arhiviran"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "Predloga"
+
+#~ msgctxt "@info Repeat at login"
+#~ msgid "At login until %1"
+#~ msgstr "Ob prijavi do %1"
+
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "Privzeta"
+
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "Opomnik"
+
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "Govor"
+
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "Pisk"
+
+#~ msgctxt "@info Percentage"
+#~ msgid "%1%%"
+#~ msgstr "%1% %"
+
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] "%1 sekund"
+#~ msgstr[1] "%1 sekunda"
+#~ msgstr[2] "%1 sekundi"
+#~ msgstr[3] "%1 sekunde"
+
+#~ msgctxt "@info Error indication"
+#~ msgid "error!"
+#~ msgstr "napaka!"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "%1 minut"
+#~ msgstr[1] "%1 minuta"
+#~ msgstr[2] "%1 minuti"
+#~ msgstr[3] "%1 minute"
+
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "%1 ur"
+#~ msgstr[1] "%1 ura"
+#~ msgstr[2] "%1 uri"
+#~ msgstr[3] "%1 ure"
+
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "%1 dni"
+#~ msgstr[1] "%1 dan"
+#~ msgstr[2] "%1 dneva"
+#~ msgstr[3] "%1 dnevi"
+
+#~ msgctxt "@info/plain Alarm type"
+#~ msgid "Command"
+#~ msgstr "Ukaz"
+
+#~ msgctxt "@info/plain"
+#~ msgid "Reminder"
+#~ msgstr "Opomnik"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Ne"

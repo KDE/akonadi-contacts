@@ -1,0 +1,516 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2010, 2011, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2016-01-14 23:34+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "Muudetud kontakt"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "Konfliktis kontakt"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "E-kirjad"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Telefoninumbrid"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Aadressid"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr "Muudetud kontaktirühm"
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr "Konfliktis kontaktirühm"
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Nimi"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Liige"
+
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "Muudetud häire"
+
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "Konfliktne häire"
+
+#~ msgctxt "@label"
+#~ msgid "Item revision"
+#~ msgstr "Elemendi versioon"
+
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "Attendees"
+#~ msgstr "Osalejad"
+
+#~ msgid "Organizer"
+#~ msgstr "Korraldaja"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "Is all-day"
+#~ msgstr "Kogu päev"
+
+#~ msgid "Has duration"
+#~ msgstr "Kestusega"
+
+#~ msgid "Duration"
+#~ msgstr "Kestus"
+
+#~ msgid "Description"
+#~ msgstr "Kirjeldus"
+
+#~ msgid "Summary"
+#~ msgstr "Kokkuvõte"
+
+#~ msgid "Status"
+#~ msgstr "Olek"
+
+#~ msgid "Secrecy"
+#~ msgstr "Salastatus"
+
+#~ msgid "Priority"
+#~ msgstr "Prioriteet"
+
+#~ msgid "Location"
+#~ msgstr "Asukoht"
+
+#~ msgid "Categories"
+#~ msgstr "Kategooriad"
+
+#~ msgid "Alarms"
+#~ msgstr "Häired"
+
+#~ msgid "Resources"
+#~ msgstr "Ressursid"
+
+#~ msgid "Attachments"
+#~ msgstr "Kaasatud failid"
+
+#~ msgid "Exception Dates"
+#~ msgstr "Väljajäetavad kuupäevad"
+
+#~ msgid "Exception Times"
+#~ msgstr "Väljajäetavad kellaajad"
+
+#~ msgid "Created"
+#~ msgstr "Loodud"
+
+#~ msgid "Related Uid"
+#~ msgstr "Seotud UID"
+
+#~ msgid "Start time"
+#~ msgstr "Algusaeg"
+
+#~ msgid "Has End Date"
+#~ msgstr "Lõppkuupäevaga"
+
+#~ msgid "End Date"
+#~ msgstr "Lõppkuupäev"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Alguskuupäevaga"
+
+#~ msgid "Has Due Date"
+#~ msgstr "Tähtajaga"
+
+#~ msgid "Due Date"
+#~ msgstr "Tähtaeg"
+
+#~ msgid "Has Complete Date"
+#~ msgstr "Lõpetamiskuupäevaga"
+
+#~ msgid "Complete"
+#~ msgstr "Lõpetamine"
+
+#~ msgid "Completed"
+#~ msgstr "Lõpetatud"
+
+#~ msgid "Changed Event"
+#~ msgstr "Muudetud sündmus"
+
+#~ msgid "Conflicting Event"
+#~ msgstr "Konfliktis sündmus"
+
+#~ msgid "Changed Todo"
+#~ msgstr "Muudetud ülesanne"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "Konfliktis ülesanne"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Häire tüüp"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Häire olek"
+
+#~ msgctxt "@label"
+#~ msgid "Template name"
+#~ msgstr "Malli nimi"
+
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Loomisaeg"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Algusaeg"
+
+#~ msgctxt "@label Start delay configured in an alarm template"
+#~ msgid "Template after time"
+#~ msgstr "Mall pärast aega"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "Kordub"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "Kordamine"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition"
+#~ msgstr "Alamkordus"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition interval"
+#~ msgstr "Alamkorduse intervall"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition count"
+#~ msgstr "Alamkorduste arv"
+
+#~ msgctxt "@label"
+#~ msgid "Next sub-repetition"
+#~ msgstr "Järgmine alamkordus"
+
+#~ msgctxt "@label"
+#~ msgid "Work time only"
+#~ msgstr "Ainult tööajal"
+
+#~ msgctxt "@label"
+#~ msgid "Holidays excluded"
+#~ msgstr "Välja arvatud pühad"
+
+#~ msgctxt "@label"
+#~ msgid "Next recurrence"
+#~ msgstr "Järgmine kordumine"
+
+#~ msgctxt "@label"
+#~ msgid "Late cancel"
+#~ msgstr "Ärajätmine hilinemisel"
+
+#~ msgctxt "@label Automatically close window"
+#~ msgid "Auto close"
+#~ msgstr "Automaatne sulgemine"
+
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Kopeerimine KOrganizerisse"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "Lubatud"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "Kirjutuskaitstud"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "Arhiveerimine"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "Versioon"
+
+#~ msgctxt "@label"
+#~ msgid "Custom properties"
+#~ msgstr "Kohandatud omadused"
+
+#~ msgctxt "@label"
+#~ msgid "Message text"
+#~ msgstr "Sõnumi tekst"
+
+#~ msgctxt "@label File to provide text for message"
+#~ msgid "Message file"
+#~ msgstr "Sõnumi fail"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "Esiplaani värv"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "Taustavärv"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "Font"
+
+#~ msgctxt "@label Shell command to execute before alarm"
+#~ msgid "Pre-alarm action"
+#~ msgstr "Häire-eelne toiming"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action cancel"
+#~ msgstr "Häire-eelse toimingu katkestamine"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action no error"
+#~ msgstr "Häire-eelne toiming vigadeta"
+
+#~ msgctxt "@label Shell command to execute after alarm"
+#~ msgid "Post-alarm action"
+#~ msgstr "Häirejärgne toiming"
+
+#~ msgctxt "@label"
+#~ msgid "Confirm acknowledgement"
+#~ msgstr "Kinnituse küsimine"
+
+#~ msgctxt "@label"
+#~ msgid "KMail serial number"
+#~ msgstr "KMaili seerianumber"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "Heli"
+
+#~ msgctxt "@label Whether audio should repeat"
+#~ msgid "Sound repeat"
+#~ msgstr "Heli kordamine"
+
+#~ msgctxt "@label"
+#~ msgid "Sound volume"
+#~ msgstr "Helitugevus"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade volume"
+#~ msgstr "Helitugevuse hääbumine"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade time"
+#~ msgstr "Helitugevuse hääbumise aeg"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "Meeldetuletus"
+
+#~ msgctxt "@label Whether reminder is on first recurrence only"
+#~ msgid "Reminder once only"
+#~ msgstr "Meeldetuletus ainult esimesel kordumisel"
+
+#~ msgctxt "@label Deferral type"
+#~ msgid "Deferral"
+#~ msgstr "Edasilükkamine"
+
+#~ msgctxt "@label"
+#~ msgid "Deferral time"
+#~ msgstr "Edasilükkamise aeg"
+
+#~ msgctxt "@label Default deferral delay"
+#~ msgid "Deferral default"
+#~ msgstr "Edasilükkamine vaikimisi"
+
+#~ msgctxt "@label Whether deferral time is date-only by default"
+#~ msgid "Deferral default date only"
+#~ msgstr "Edasilükkamine ainult kuupäeva alusel"
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "Käsk"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "Logifail"
+
+#~ msgctxt "@label Execute in terminal window"
+#~ msgid "Execute in terminal"
+#~ msgstr "Käivitamine terminali aknas"
+
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "Kirja teemarida"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email sender ID"
+#~ msgstr "Kirja saatja ID"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "E-kiri aadressile"
+
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "E-kirja BCC"
+
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "E-kirja sisu"
+
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "E-kirja manused"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (text)"
+#~ msgstr "Näitamine (tekst)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (file)"
+#~ msgstr "Näitamine (fail)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (command)"
+#~ msgstr "Näitamine (käsk)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "Käsk"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "E-kiri"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "Heli"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "Aktiivne"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "Arhiveeritud"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "Mall"
+
+#~ msgctxt "@info Repeat at login"
+#~ msgid "At login until %1"
+#~ msgstr "Sisselogimisel kuni %1"
+
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "Vaikimisi"
+
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "Meeldetuletus"
+
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "Ettelugemine"
+
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "Piiks"
+
+#~ msgctxt "@info Percentage"
+#~ msgid "%1%%"
+#~ msgstr "%1%%"
+
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] "1 sekund"
+#~ msgstr[1] "%1 sekundit"
+
+#~ msgctxt "@info Error indication"
+#~ msgid "error!"
+#~ msgstr "tõrge!"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "1 minut"
+#~ msgstr[1] "%1 minutit"
+
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "1 tund"
+#~ msgstr[1] "%1 tundi"
+
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "1 päev"
+#~ msgstr[1] "%1 päeva"
+
+#~ msgctxt "@info/plain Alarm type"
+#~ msgid "Command"
+#~ msgstr "Käsk"
+
+#~ msgctxt "@info/plain"
+#~ msgid "Reminder"
+#~ msgstr "Meeldetuletus"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Ei"

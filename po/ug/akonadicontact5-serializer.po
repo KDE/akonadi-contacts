@@ -1,0 +1,333 @@
+# Uyghur translation for akonadi_serializer_plugins.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi_serializer_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr ""
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr ""
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "ئېلخەتلەر"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "تېلېفون نومۇرلىرى"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "ئادرېسلار"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr ""
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr ""
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "ئاتى"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "ئەزا"
+
+#~ msgid "Yes"
+#~ msgstr "ھەئە"
+
+#~ msgid "No"
+#~ msgstr "ياق"
+
+#~ msgid "Attendees"
+#~ msgstr "قاتناشقۇچىلار"
+
+#~ msgid "Organizer"
+#~ msgstr "تەشكىللىگۈچى"
+
+#~ msgid "UID"
+#~ msgstr "ئىشلەتكۈچى كىملىكى(UID)"
+
+#~ msgid "Duration"
+#~ msgstr "ۋاقتى"
+
+#~ msgid "Description"
+#~ msgstr "چۈشەندۈرۈش"
+
+#~ msgid "Summary"
+#~ msgstr "ئۈزۈندى"
+
+#~ msgid "Status"
+#~ msgstr "ھالىتى"
+
+#~ msgid "Priority"
+#~ msgstr "مەرتىۋە"
+
+#~ msgid "Location"
+#~ msgstr "ئورنى"
+
+#~ msgid "Categories"
+#~ msgstr "كاتېگورىيە"
+
+#~ msgid "Alarms"
+#~ msgstr "قوڭغۇراقلار"
+
+#~ msgid "Resources"
+#~ msgstr "مەنبەلەر"
+
+#~ msgid "Attachments"
+#~ msgstr "قوشۇلمىلار"
+
+#~ msgid "Created"
+#~ msgstr "قۇرغان ۋاقتى"
+
+#~ msgid "Start time"
+#~ msgstr "باشلاش ۋاقتى"
+
+#~ msgid "End Date"
+#~ msgstr "ئاخىرلىشىش چېسلاسى"
+
+#~ msgid "Due Date"
+#~ msgstr "مۆھلىتى(چېسلا)"
+
+#~ msgid "Complete"
+#~ msgstr "تولۇق"
+
+#~ msgid "Completed"
+#~ msgstr "تاماملاندى"
+
+#~ msgid "Changed Todo"
+#~ msgstr "ئۆزگەرگەن قىلىدىغان ئىشلار"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "توقۇنۇشقان قىلىدىغان ئىشلار"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "ئىشلەتكۈچى كىملىكى(UID)"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "باشلاش ۋاقتى"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "تەكرارلاش"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "قايتىلىنىش"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "ئىناۋەتلىك قىلىنغان"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "پەقەتلا ئوقۇش"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "ئارخىپلاش"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "تۈزىتىلمە"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "ئالدى كۆرۈنۈش رەڭگى"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "تەگلىك رەڭگى"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "خەت نۇسخا"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "ئاۋاز"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "ئەسكەرتكۈچ"
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "بۇيرۇق"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "كاتىپ ھۆججەت"
+
+#, fuzzy
+#~| msgctxt "@label A shell command"
+#~| msgid "Command"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "بۇيرۇق"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Email"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "ئېلخەت"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Audio"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "ئۈن"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Active"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "ئاكتىپ"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Archived"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "ئارخىپلانغان"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Template"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "قېلىپ"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "%1"
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#, fuzzy
+#~| msgctxt "@info/plain Using default font"
+#~| msgid "Default"
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "كۆڭۈلدىكى"
+
+#, fuzzy
+#~| msgctxt "@label Whether the alarm has a reminder"
+#~| msgid "Reminder"
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "ئەسكەرتكۈچ"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Speak"
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "سۆزلەش"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Beep"
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "قوڭغۇراق ئاۋازى"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Second"
+#~| msgid_plural "%1 Seconds"
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] "%1 سېكۇنت"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "ھەئە"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "ياق"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Minute"
+#~| msgid_plural "%1 Minutes"
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "%1 مىنۇت"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Hour"
+#~| msgid_plural "%1 Hours"
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "%1 سائەت"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Day"
+#~| msgid_plural "%1 Days"
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "%1 كۈن"
+
+#~ msgctxt "@info/plain Alarm type"
+#~ msgid "Command"
+#~ msgstr "بۇيرۇق"
+
+#~ msgctxt "@info/plain"
+#~ msgid "Reminder"
+#~ msgstr "ئەسكەرتكۈچ"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "ھەئە"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "ياق"

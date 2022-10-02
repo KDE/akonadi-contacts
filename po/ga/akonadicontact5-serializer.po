@@ -1,0 +1,531 @@
+# Irish translation of akonadi_serializer_plugins
+# Copyright (C) 2011 This_file_is_part_of_KDE
+# This file is distributed under the same license as the akonadi_serializer_plugins package.
+# Kevin Scannell <kscanne@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi_serializer_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2011-12-28 12:28-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "Athraíodh an Teagmháil"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "Teagmháil Chontrártha"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "Seoltaí Ríomhphoist"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Uimhreacha Teileafóin"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Seoltaí"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr "Athraíodh an Grúpa Teagmhálacha"
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr "Grúpa Teagmhálacha Contrártha"
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Ainm"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Ball"
+
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "Athraíodh an tAláram"
+
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "Aláram Contrártha"
+
+#~ msgctxt "@label"
+#~ msgid "Item revision"
+#~ msgstr "Leasú na míre"
+
+#~ msgid "Yes"
+#~ msgstr "Tá"
+
+#~ msgid "No"
+#~ msgstr "Níl"
+
+#~ msgid "Attendees"
+#~ msgstr "Rannpháirtithe"
+
+#~ msgid "Organizer"
+#~ msgstr "Eagraí"
+
+#~ msgid "UID"
+#~ msgstr "Aitheantas Úsáideora"
+
+#~ msgid "Is all-day"
+#~ msgstr "An lá ar fad"
+
+#~ msgid "Has duration"
+#~ msgstr "Aga aige"
+
+#~ msgid "Duration"
+#~ msgstr "Aga"
+
+#~ msgid "Description"
+#~ msgstr "Cur Síos"
+
+#~ msgid "Summary"
+#~ msgstr "Achoimre"
+
+#~ msgid "Status"
+#~ msgstr "Stádas"
+
+#~ msgid "Secrecy"
+#~ msgstr "Rúndacht"
+
+#~ msgid "Priority"
+#~ msgstr "Tosaíocht"
+
+#~ msgid "Location"
+#~ msgstr "Suíomh"
+
+#~ msgid "Categories"
+#~ msgstr "Catagóirí"
+
+#~ msgid "Alarms"
+#~ msgstr "Aláraim"
+
+#~ msgid "Resources"
+#~ msgstr "Acmhainní"
+
+#~ msgid "Attachments"
+#~ msgstr "Iatáin"
+
+#~ msgid "Exception Dates"
+#~ msgstr "Dataí Eisceachta"
+
+#~ msgid "Exception Times"
+#~ msgstr "Amanna Eisceachta"
+
+#~ msgid "Created"
+#~ msgstr "Cruthaithe"
+
+#~ msgid "Related Uid"
+#~ msgstr "Aitheantas Gaolmhar"
+
+#~ msgid "Start time"
+#~ msgstr "Am Tosaithe"
+
+#~ msgid "Has End Date"
+#~ msgstr "Dáta Deiridh Aige"
+
+#~ msgid "End Date"
+#~ msgstr "Dáta Deiridh"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Dáta Tosaigh Aige"
+
+#~ msgid "Has Due Date"
+#~ msgstr "Spriocdháta Aige"
+
+#~ msgid "Due Date"
+#~ msgstr "Spriocdháta"
+
+#~ msgid "Has Complete Date"
+#~ msgstr "Dáta Críochnaithe Aige"
+
+#~ msgid "Complete"
+#~ msgstr "Críochnaithe"
+
+#~ msgid "Completed"
+#~ msgstr "Críochnaithe"
+
+#~ msgid "Changed Event"
+#~ msgstr "Imeacht Athraithe"
+
+#~ msgid "Conflicting Event"
+#~ msgstr "Imeacht Contrártha"
+
+#~ msgid "Changed Todo"
+#~ msgstr "Athraíodh an Tasc"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "Tasc Contrártha"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "Aitheantas Úsáideora"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Cineál an aláraim"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Cineál an aláraim"
+
+#~ msgctxt "@label"
+#~ msgid "Template name"
+#~ msgstr "Ainm an teimpléid"
+
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Am cruthaithe"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Am tosaithe"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "Atarlaíonn"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "Atarlú"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition"
+#~ msgstr "Fo-athdhéanamh"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition interval"
+#~ msgstr "Eatramh fo-athdhéanta"
+
+#~ msgctxt "@label"
+#~ msgid "Work time only"
+#~ msgstr "Am oibre amháin"
+
+#~ msgctxt "@label"
+#~ msgid "Holidays excluded"
+#~ msgstr "Laethanta saoire as an áireamh"
+
+#~ msgctxt "@label"
+#~ msgid "Late cancel"
+#~ msgstr "Cealú deireanach"
+
+#~ msgctxt "@label Automatically close window"
+#~ msgid "Auto close"
+#~ msgstr "Dún go huathoibríoch"
+
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Cóipeáil go Korganizer"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "Cumasaithe"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "Inléite amháin"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "Cuir i gcartlann"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "Leasú"
+
+#~ msgctxt "@label"
+#~ msgid "Custom properties"
+#~ msgstr "Airíonna saincheaptha"
+
+#~ msgctxt "@label"
+#~ msgid "Message text"
+#~ msgstr "Téacs na teachtaireachta"
+
+#~ msgctxt "@label File to provide text for message"
+#~ msgid "Message file"
+#~ msgstr "Comhad teachtaireachta"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "Dath an tulra"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "Dath an chúlra"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "Cló"
+
+#~ msgctxt "@label Shell command to execute before alarm"
+#~ msgid "Pre-alarm action"
+#~ msgstr "Gníomh réamhaláraim"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action cancel"
+#~ msgstr "Cealú an ghnímh réamhaláraim"
+
+#~ msgctxt "@label Shell command to execute after alarm"
+#~ msgid "Post-alarm action"
+#~ msgstr "Gníomh iar-aláraim"
+
+#~ msgctxt "@label"
+#~ msgid "Confirm acknowledgement"
+#~ msgstr "Dearbhaigh admháil"
+
+#~ msgctxt "@label"
+#~ msgid "KMail serial number"
+#~ msgstr "Sraithuimhir KMail"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "Fuaim"
+
+#~ msgctxt "@label Whether audio should repeat"
+#~ msgid "Sound repeat"
+#~ msgstr "Athsheinn an fhuaim"
+
+#~ msgctxt "@label"
+#~ msgid "Sound volume"
+#~ msgstr "Airde"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "Meabhrúchán"
+
+#~ msgctxt "@label Whether reminder is on first recurrence only"
+#~ msgid "Reminder once only"
+#~ msgstr "Meabhrúchán uair amháin"
+
+#~ msgctxt "@label Deferral type"
+#~ msgid "Deferral"
+#~ msgstr "Cur ar Athlá"
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "Ordú"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "Logchomhad"
+
+#~ msgctxt "@label Execute in terminal window"
+#~ msgid "Execute in terminal"
+#~ msgstr "Rith i dteirminéal"
+
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "Ábhar an ríomhphoist"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email sender ID"
+#~ msgstr "Aitheantas sheoltóir an ríomhphoist"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "Ríomhphost chuig"
+
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "Bcc an ríomhphoist"
+
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "Corp na teachtaireachta"
+
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "Iatáin"
+
+#, fuzzy
+#~| msgctxt "@label A shell command"
+#~| msgid "Command"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "Ordú"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Email"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "Ríomhphost"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Audio"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "Fuaim"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Active"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "Gníomhach"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Archived"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "Cartlannaithe"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Template"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "Teimpléad"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "%1"
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#, fuzzy
+#~| msgctxt "@info/plain Using default font"
+#~| msgid "Default"
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "Réamhshocrú"
+
+#, fuzzy
+#~| msgctxt "@label Whether the alarm has a reminder"
+#~| msgid "Reminder"
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "Meabhrúchán"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Speak"
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "Léigh"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Beep"
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "Bíp"
+
+#, fuzzy
+#~| msgctxt "@info/plain Percentage"
+#~| msgid "%1%%"
+#~ msgctxt "@info Percentage"
+#~ msgid "%1%%"
+#~ msgstr "%1%%"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Second"
+#~| msgid_plural "%1 Seconds"
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] "1 Soicind"
+#~ msgstr[1] "%1 Shoicind"
+#~ msgstr[2] "%1 Shoicind"
+#~ msgstr[3] "%1 Soicind"
+#~ msgstr[4] "%1 Soicind"
+
+#, fuzzy
+#~| msgctxt "@info/plain Error indication"
+#~| msgid "error!"
+#~ msgctxt "@info Error indication"
+#~ msgid "error!"
+#~ msgstr "earráid!"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Tá"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Níl"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Minute"
+#~| msgid_plural "%1 Minutes"
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "Aon Nóiméad"
+#~ msgstr[1] "Dhá Nóiméad"
+#~ msgstr[2] "%1 Nóiméad"
+#~ msgstr[3] "%1 Nóiméad"
+#~ msgstr[4] "%1 Nóiméad"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Hour"
+#~| msgid_plural "%1 Hours"
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "1 Uair"
+#~ msgstr[1] "%1 Uair"
+#~ msgstr[2] "%1 hUaire"
+#~ msgstr[3] "%1 nUaire"
+#~ msgstr[4] "%1 Uair"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Day"
+#~| msgid_plural "%1 Days"
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "Lá amháin"
+#~ msgstr[1] "%1 Lá"
+#~ msgstr[2] "%1 Lá"
+#~ msgstr[3] "%1 Lá"
+#~ msgstr[4] "%1 Lá"
+
+#~ msgctxt "@info/plain Alarm type"
+#~ msgid "Command"
+#~ msgstr "Ordú"
+
+#~ msgctxt "@info/plain"
+#~ msgid "Reminder"
+#~ msgstr "Meabhrúchán"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Tá"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Níl"

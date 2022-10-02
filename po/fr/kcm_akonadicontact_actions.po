@@ -1,0 +1,118 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2009, 2014.
+# Joëlle Cornavin <jcornavin@laposte.net>, 2010.
+# xavier <xavier.besnard@neuf.fr>, 2012, 2013.
+# Vincent Pinon <vpinon@kde.org>, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-05 00:44+0000\n"
+"PO-Revision-Date: 2019-04-25 17:38+0800\n"
+"Last-Translator: Simon Depiets <sdepiets@gmail.com>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.07.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Geoffray Levasseur, Joëlle Cornavin"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "geoffray.levasseurbrandin@numericable.fr, jcorn@free.fr"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: akonadicontactactions.ui:29
+#, kde-format
+msgid "Dial Phone Number"
+msgstr "Composer un numéro de téléphone"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: akonadicontactactions.ui:58 akonadicontactactions.ui:124
+#, kde-format
+msgid "Command:"
+msgstr "Commande :"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: akonadicontactactions.ui:95
+#, kde-format
+msgid "Send SMS"
+msgstr "Envoyer un SMS"
+
+#: kcmakonadicontactactions.cpp:27
+#, kde-format
+msgid "Contact Actions Settings"
+msgstr "Paramètres des actions sur les contacts"
+
+#: kcmakonadicontactactions.cpp:31
+#, kde-format
+msgid "(c) 2009 Tobias Koenig"
+msgstr "(c) 2009 Tobias Koenig"
+
+#: kcmakonadicontactactions.cpp:33
+#, kde-format
+msgid "Tobias Koenig"
+msgstr "Tobias Koenig"
+
+#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
+#, kde-format
+msgid "System Default"
+msgstr "Valeur par défaut du système"
+
+#: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
+#, kde-format
+msgid "Skype"
+msgstr "Skype"
+
+#: kcmakonadicontactactions.cpp:42
+#, kde-format
+msgid "Ekiga"
+msgstr "Ekiga"
+
+#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
+#, kde-format
+msgid "SflPhone"
+msgstr "SflPhone"
+
+#: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
+#, kde-format
+msgid "External Application"
+msgstr "Application externe"
+
+#~ msgid "Show Address"
+#~ msgstr "Afficher l'adresse"
+
+#~ msgid "Url:"
+#~ msgstr "URL :"
+
+#~ msgid "Web Browser"
+#~ msgstr "Navigateur Web"
+
+#~ msgid "Google map"
+#~ msgstr "Google Map"
+
+#~ msgid "Map quest"
+#~ msgstr "Map Quest"
+
+#~ msgid "OpenStreetMap"
+#~ msgstr "OpenStreetMap"
+
+#~ msgid "kcmakonadicontactactions"
+#~ msgstr "kcmakonadicontactactions"
+
+#~ msgid "WinCE"
+#~ msgstr "WinCE"

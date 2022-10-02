@@ -1,0 +1,592 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Einars Sprugis <einars8@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2012-07-12 23:17+0300\n"
+"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "Mainīts kontakts"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "Konfliktējošs kontakts"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "E-pasti"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Tālruņu numuri"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Adreses"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr "Mainīta kontaktu grupa"
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr "Konfliktējoša kontaktu grupa"
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Nosaukums"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Biedrs"
+
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "Mainīts atgādinājums"
+
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "Konfliktējošs atgādinājums"
+
+#~ msgctxt "@label"
+#~ msgid "Item revision"
+#~ msgstr "Vienības revīzija"
+
+#~ msgid "Yes"
+#~ msgstr "Jā"
+
+#~ msgid "No"
+#~ msgstr "Nē"
+
+#~ msgid "Attendees"
+#~ msgstr "Dalībnieki"
+
+#~ msgid "Organizer"
+#~ msgstr "Organizators"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "Is all-day"
+#~ msgstr "Ir visu dienu"
+
+#~ msgid "Has duration"
+#~ msgstr "Ir ilgums"
+
+#~ msgid "Duration"
+#~ msgstr "Ilgums"
+
+#~ msgid "Description"
+#~ msgstr "Apraksts"
+
+#~ msgid "Summary"
+#~ msgstr "Kopsavilkums"
+
+#~ msgid "Status"
+#~ msgstr "Statuss"
+
+#~ msgid "Secrecy"
+#~ msgstr "Slepenība"
+
+#~ msgid "Priority"
+#~ msgstr "Prioritāte"
+
+#~ msgid "Location"
+#~ msgstr "Vieta"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorijas"
+
+#~ msgid "Alarms"
+#~ msgstr "Trauksmes"
+
+#~ msgid "Resources"
+#~ msgstr "Resursi"
+
+#~ msgid "Attachments"
+#~ msgstr "Pielikumi"
+
+#~ msgid "Exception Dates"
+#~ msgstr "Izņēmuma datumi"
+
+#~ msgid "Exception Times"
+#~ msgstr "Izņēmuma laiki"
+
+#~ msgid "Created"
+#~ msgstr "Izveidots"
+
+#~ msgid "Related Uid"
+#~ msgstr "Saistītais Uid"
+
+#~ msgid "Start time"
+#~ msgstr "Sākuma laiks"
+
+#~ msgid "Has End Date"
+#~ msgstr "Ir beigu datums"
+
+#~ msgid "End Date"
+#~ msgstr "Beigu datums"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Ir sākuma datums"
+
+#~ msgid "Has Due Date"
+#~ msgstr "Ir termiņa beigu datums"
+
+#~ msgid "Due Date"
+#~ msgstr "Termiņa beigu datums"
+
+#~ msgid "Has Complete Date"
+#~ msgstr "Ir pabeigšanas datums"
+
+#~ msgid "Complete"
+#~ msgstr "Pabeigts"
+
+#~ msgid "Completed"
+#~ msgstr "Pabeigts"
+
+#~ msgid "Changed Event"
+#~ msgstr "Mainīts notikums"
+
+#~ msgid "Conflicting Event"
+#~ msgstr "Konfliktējošs notikums"
+
+#~ msgid "Changed Todo"
+#~ msgstr "Izmainīts darāmais"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "Konfliktējošs darāmais"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Atgādinājuma tips"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Atgādinājuma statuss"
+
+#~ msgctxt "@label"
+#~ msgid "Template name"
+#~ msgstr "Sagataves nosaukums"
+
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Izveidošanas laiks"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Sākuma laiks"
+
+#~ msgctxt "@label Start delay configured in an alarm template"
+#~ msgid "Template after time"
+#~ msgstr "Sagatave pēc laika"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "Atkārtojas"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "Atkārtošanās"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition"
+#~ msgstr "Apakšatkārtošanās"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition interval"
+#~ msgstr "Apakšatkārtošanās intervāls"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition count"
+#~ msgstr "Apakšatkārtošanos skaits"
+
+#~ msgctxt "@label"
+#~ msgid "Next sub-repetition"
+#~ msgstr "Nākamā apakšatkārtošanās"
+
+#~ msgctxt "@label"
+#~ msgid "Work time only"
+#~ msgstr "Tikai darba laikā"
+
+#~ msgctxt "@label"
+#~ msgid "Holidays excluded"
+#~ msgstr "Izņemot brīvdienas"
+
+#~ msgctxt "@label"
+#~ msgid "Next recurrence"
+#~ msgstr "Nākamā atkārtošanās"
+
+#~ msgctxt "@label"
+#~ msgid "Late cancel"
+#~ msgstr "Vēlā atcelšana"
+
+#~ msgctxt "@label Automatically close window"
+#~ msgid "Auto close"
+#~ msgstr "Automātiski aizvērt"
+
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Kopēt uz KOrganizer"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "Ieslēgts"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "Tikai lasāms"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "Arhīvs"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "Revīzija"
+
+#~ msgctxt "@label"
+#~ msgid "Custom properties"
+#~ msgstr "Pielāgotas īpašības"
+
+#~ msgctxt "@label"
+#~ msgid "Message text"
+#~ msgstr "Ziņojuma teksts"
+
+#~ msgctxt "@label File to provide text for message"
+#~ msgid "Message file"
+#~ msgstr "Ziņojuma fails"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "Priekšplāna krāsa"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "Fona krāsa"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "Fonts"
+
+#~ msgctxt "@label Shell command to execute before alarm"
+#~ msgid "Pre-alarm action"
+#~ msgstr "Pirmsatgādinājuma darbība"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action cancel"
+#~ msgstr "Pirmsatgādinājuma darbība 'atcelt'"
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action no error"
+#~ msgstr "Pirmsatgādinājuma darbība 'nav kļūdas'"
+
+#~ msgctxt "@label Shell command to execute after alarm"
+#~ msgid "Post-alarm action"
+#~ msgstr "Pēcatgādinājuma darbība"
+
+#~ msgctxt "@label"
+#~ msgid "Confirm acknowledgement"
+#~ msgstr "Apliecināt apstiprināšanu"
+
+#~ msgctxt "@label"
+#~ msgid "KMail serial number"
+#~ msgstr "KMail sērijas numurs"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "Skaņa"
+
+#~ msgctxt "@label Whether audio should repeat"
+#~ msgid "Sound repeat"
+#~ msgstr "Skaņas atkārtošanās"
+
+#~ msgctxt "@label"
+#~ msgid "Sound volume"
+#~ msgstr "Skaņas skaļums"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade volume"
+#~ msgstr "Skaņas izgaišanas skaļums"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade time"
+#~ msgstr "Skaņas izgaišanas ilgums"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "Papildu atgādinājums"
+
+#~ msgctxt "@label Whether reminder is on first recurrence only"
+#~ msgid "Reminder once only"
+#~ msgstr "Atgādināt tikai vienu reizi"
+
+#~ msgctxt "@label Deferral type"
+#~ msgid "Deferral"
+#~ msgstr "Atlikšana"
+
+#~ msgctxt "@label"
+#~ msgid "Deferral time"
+#~ msgstr "Atlikšanas laiks"
+
+#~ msgctxt "@label Default deferral delay"
+#~ msgid "Deferral default"
+#~ msgstr "Atlikšanas noklusējums"
+
+#~ msgctxt "@label Whether deferral time is date-only by default"
+#~ msgid "Deferral default date only"
+#~ msgstr "Atlikšanas noklusējums tikai datums"
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "Komanda"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "Žurnāla fails"
+
+#~ msgctxt "@label Execute in terminal window"
+#~ msgid "Execute in terminal"
+#~ msgstr "Izpildīt terminālī"
+
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "E-pasta tēma"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email sender ID"
+#~ msgstr "E-pasta sūtītāja ID"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "E-pasts uz"
+
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "E-pasta bcc"
+
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "E-pasta ķermenis"
+
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "E-pasta pielikumi"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Display (text)"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (text)"
+#~ msgstr "Rādīt (tekstu)"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Display (file)"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (file)"
+#~ msgstr "Rādīt (failu)"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Display (command)"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (command)"
+#~ msgstr "Rādīt (komandu)"
+
+#, fuzzy
+#~| msgctxt "@label A shell command"
+#~| msgid "Command"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "Komanda"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Email"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "E-pasts"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Audio"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Active"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "Aktīvs"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Archived"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "Arhivēts"
+
+#, fuzzy
+#~| msgctxt "@info/plain Alarm type"
+#~| msgid "Template"
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "Sagatave"
+
+#, fuzzy
+#~| msgctxt "@info/plain Repeat at login"
+#~| msgid "At login until %1"
+#~ msgctxt "@info Repeat at login"
+#~ msgid "At login until %1"
+#~ msgstr "Piesakoties līdz %1"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "%1"
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#, fuzzy
+#~| msgctxt "@info/plain Using default font"
+#~| msgid "Default"
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "Noklusētais"
+
+#, fuzzy
+#~| msgctxt "@label Whether the alarm has a reminder"
+#~| msgid "Reminder"
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "Papildu atgādinājums"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Speak"
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "Izrunāt"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "Beep"
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "Pīkstiens"
+
+#, fuzzy
+#~| msgctxt "@info/plain Percentage"
+#~| msgid "%1%%"
+#~ msgctxt "@info Percentage"
+#~ msgid "%1%%"
+#~ msgstr "%1%%"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Second"
+#~| msgid_plural "%1 Seconds"
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] " %1 sekunde"
+#~ msgstr[1] " %1 sekundes"
+#~ msgstr[2] " %1 sekunžu"
+
+#, fuzzy
+#~| msgctxt "@info/plain Error indication"
+#~| msgid "error!"
+#~ msgctxt "@info Error indication"
+#~ msgid "error!"
+#~ msgstr "kļūda!"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Jā"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Nē"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Minute"
+#~| msgid_plural "%1 Minutes"
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "%1 minūte"
+#~ msgstr[1] "%1 minūtes"
+#~ msgstr[2] "%1 minūšu"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Hour"
+#~| msgid_plural "%1 Hours"
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "%1 stunda"
+#~ msgstr[1] "%1 stundas"
+#~ msgstr[2] "%1 stundu"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid "1 Day"
+#~| msgid_plural "%1 Days"
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "%1 diena"
+#~ msgstr[1] "%1 dienas"
+#~ msgstr[2] "%1 dienu"
+
+#~ msgctxt "@info/plain Alarm type"
+#~ msgid "Command"
+#~ msgstr "Komanda"
+
+#~ msgctxt "@info/plain"
+#~ msgid "Reminder"
+#~ msgstr "Papildu atgādinājums"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Jā"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Nē"

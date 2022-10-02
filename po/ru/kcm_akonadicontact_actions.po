@@ -1,0 +1,117 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2017.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-05 00:44+0000\n"
+"PO-Revision-Date: 2020-04-04 19:27+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.12.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Александр Поташев"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aspotashev@gmail.com"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: akonadicontactactions.ui:29
+#, kde-format
+msgid "Dial Phone Number"
+msgstr "Приложение для набора номера"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: akonadicontactactions.ui:58 akonadicontactactions.ui:124
+#, kde-format
+msgid "Command:"
+msgstr "Команда запуска:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: akonadicontactactions.ui:95
+#, kde-format
+msgid "Send SMS"
+msgstr "Приложение для отправки SMS"
+
+#: kcmakonadicontactactions.cpp:27
+#, kde-format
+msgid "Contact Actions Settings"
+msgstr "Настройка действий с контактом"
+
+#: kcmakonadicontactactions.cpp:31
+#, kde-format
+msgid "(c) 2009 Tobias Koenig"
+msgstr "© Tobias Koenig, 2009"
+
+#: kcmakonadicontactactions.cpp:33
+#, kde-format
+msgid "Tobias Koenig"
+msgstr "Tobias Koenig"
+
+#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
+#, kde-format
+msgid "System Default"
+msgstr "Заданное в системе"
+
+#: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
+#, kde-format
+msgid "Skype"
+msgstr "Skype"
+
+#: kcmakonadicontactactions.cpp:42
+#, kde-format
+msgid "Ekiga"
+msgstr "Ekiga"
+
+#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
+#, kde-format
+msgid "SflPhone"
+msgstr "SflPhone"
+
+#: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
+#, kde-format
+msgid "External Application"
+msgstr "Внешнее приложение"
+
+#~ msgid "Show Address"
+#~ msgstr "Просмотр адреса"
+
+#~ msgid "Url:"
+#~ msgstr "Адрес URL:"
+
+#~ msgid "Web Browser"
+#~ msgstr "Веб-браузер"
+
+#~ msgid "Google map"
+#~ msgstr "Карта Google"
+
+#~ msgid "Map quest"
+#~ msgstr "Карта MapQuest"
+
+#~ msgid "OpenStreetMap"
+#~ msgstr "OpenStreetMap"
+
+#~ msgid "kcmakonadicontactactions"
+#~ msgstr "kcmakonadicontactactions"
+
+#~ msgid "WinCE"
+#~ msgstr "WinCE"

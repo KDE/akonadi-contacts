@@ -1,0 +1,518 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Xosé <xosecalvo@gmail.com>, 2011.
+# Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2017-10-04 21:00+0100\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr "Contacto cambiado"
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr "Contacto en conflito"
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr "Correos"
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Números de teléfono"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Enderezos"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr "Grupo de contacto cambiado"
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr "Grupo de contacto en conflito"
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Nome"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Membro"
+
+#~ msgctxt "@title:column"
+#~ msgid "Changed Alarm"
+#~ msgstr "Alarma cambiada"
+
+#~ msgctxt "@title:column"
+#~ msgid "Conflicting Alarm"
+#~ msgstr "Alarma en conflito"
+
+#~ msgctxt "@label"
+#~ msgid "Item revision"
+#~ msgstr "Revisión do elemento"
+
+#~ msgid "Yes"
+#~ msgstr "Si"
+
+#~ msgid "No"
+#~ msgstr "Non"
+
+#~ msgid "Attendees"
+#~ msgstr "Asistentes"
+
+#~ msgid "Organizer"
+#~ msgstr "Organizador"
+
+#~ msgid "UID"
+#~ msgstr "Identificador do usuario"
+
+#~ msgid "Is all-day"
+#~ msgstr "Leva todo o día"
+
+#~ msgid "Has duration"
+#~ msgstr "Ten duración"
+
+#~ msgid "Duration"
+#~ msgstr "Duración"
+
+#~ msgid "Description"
+#~ msgstr "Descrición"
+
+#~ msgid "Summary"
+#~ msgstr "Resumo"
+
+#~ msgid "Status"
+#~ msgstr "Estado"
+
+# Ten que haber unha tradución mellor, pero agora non caio.
+#~ msgid "Secrecy"
+#~ msgstr "Difusión"
+
+#~ msgid "Priority"
+#~ msgstr "Prioridade"
+
+#~ msgid "Location"
+#~ msgstr "Lugar"
+
+#~ msgid "Categories"
+#~ msgstr "Categorías"
+
+#~ msgid "Alarms"
+#~ msgstr "Alarmas"
+
+#~ msgid "Resources"
+#~ msgstr "Recursos"
+
+#~ msgid "Attachments"
+#~ msgstr "Anexos"
+
+#~ msgid "Exception Dates"
+#~ msgstr "Datas de excepción"
+
+#~ msgid "Exception Times"
+#~ msgstr "Horas de excepción"
+
+#~ msgid "Created"
+#~ msgstr "Creación"
+
+#~ msgid "Related Uid"
+#~ msgstr "Identificador do usuario relacionado"
+
+#~ msgid "Start time"
+#~ msgstr "Hora de inicio"
+
+#~ msgid "Has End Date"
+#~ msgstr "Ten data de finalización"
+
+#~ msgid "End Date"
+#~ msgstr "Data de finalización"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Ten data de inicio"
+
+#~ msgid "Has Due Date"
+#~ msgstr "Ten data límite"
+
+#~ msgid "Due Date"
+#~ msgstr "Data límite"
+
+#~ msgid "Has Complete Date"
+#~ msgstr "Ten data de completado"
+
+#~ msgid "Complete"
+#~ msgstr "Completo"
+
+#~ msgid "Completed"
+#~ msgstr "Completado"
+
+#~ msgid "Changed Event"
+#~ msgstr "Evento cambiado"
+
+#~ msgid "Conflicting Event"
+#~ msgstr "Evento en conflito"
+
+#~ msgid "Changed Todo"
+#~ msgstr "Tarefa cambiada"
+
+#~ msgid "Conflicting Todo"
+#~ msgstr "Tarefa en conflito"
+
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "Identificador do usuario"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Tipo de alarma"
+
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Estado da alarma"
+
+#~ msgctxt "@label"
+#~ msgid "Template name"
+#~ msgstr "Nome do modelo"
+
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Hora de creación"
+
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Hora de inicio"
+
+#~ msgctxt "@label Start delay configured in an alarm template"
+#~ msgid "Template after time"
+#~ msgstr "Modelo pola hora"
+
+#~ msgctxt "@label"
+#~ msgid "Recurs"
+#~ msgstr "Repítese"
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence"
+#~ msgstr "Repetición"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition"
+#~ msgstr "Sub-repetición"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition interval"
+#~ msgstr "Intervalo de sub-repetición"
+
+#~ msgctxt "@label"
+#~ msgid "Sub-repetition count"
+#~ msgstr "Número de sub-repeticións"
+
+#~ msgctxt "@label"
+#~ msgid "Next sub-repetition"
+#~ msgstr "Seguinte sub-repetición"
+
+#~ msgctxt "@label"
+#~ msgid "Work time only"
+#~ msgstr "Só horas lectivas"
+
+#~ msgctxt "@label"
+#~ msgid "Holidays excluded"
+#~ msgstr "Festivos excluídos"
+
+#~ msgctxt "@label"
+#~ msgid "Next recurrence"
+#~ msgstr "Seguinte repetición"
+
+#~ msgctxt "@label"
+#~ msgid "Late cancel"
+#~ msgstr "Cancelación a última hora"
+
+#~ msgctxt "@label Automatically close window"
+#~ msgid "Auto close"
+#~ msgstr "Pechar automaticamente"
+
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Copiar a KOrganizer"
+
+#~ msgctxt "@label"
+#~ msgid "Enabled"
+#~ msgstr "Activado"
+
+#~ msgctxt "@label"
+#~ msgid "Read-only"
+#~ msgstr "Só lectura"
+
+#~ msgctxt "@label Whether alarm should be archived"
+#~ msgid "Archive"
+#~ msgstr "Arquivo"
+
+#~ msgctxt "@label"
+#~ msgid "Revision"
+#~ msgstr "Revisión"
+
+#~ msgctxt "@label"
+#~ msgid "Custom properties"
+#~ msgstr "Propiedades personalizadas"
+
+#~ msgctxt "@label"
+#~ msgid "Message text"
+#~ msgstr "Texto da mensaxe"
+
+#~ msgctxt "@label File to provide text for message"
+#~ msgid "Message file"
+#~ msgstr "Ficheiro da mensaxe"
+
+#~ msgctxt "@label"
+#~ msgid "Foreground color"
+#~ msgstr "Cor de primeiro plano"
+
+#~ msgctxt "@label"
+#~ msgid "Background color"
+#~ msgstr "Cor de fondo"
+
+#~ msgctxt "@label"
+#~ msgid "Font"
+#~ msgstr "Tipo de letra"
+
+#~ msgctxt "@label Shell command to execute before alarm"
+#~ msgid "Pre-alarm action"
+#~ msgstr "Acción antes da alarma."
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action cancel"
+#~ msgstr "Cancelar a acción antes da alarma."
+
+#~ msgctxt "@label"
+#~ msgid "Pre-alarm action no error"
+#~ msgstr "Non se produciu un erro na acción antes da alarma."
+
+#~ msgctxt "@label Shell command to execute after alarm"
+#~ msgid "Post-alarm action"
+#~ msgstr "Acción despois da alarma."
+
+#~ msgctxt "@label"
+#~ msgid "Confirm acknowledgement"
+#~ msgstr "Confirmar o coñecemento"
+
+#~ msgctxt "@label"
+#~ msgid "KMail serial number"
+#~ msgstr "Número de serie de KMail"
+
+#~ msgctxt "@label Audio method"
+#~ msgid "Sound"
+#~ msgstr "Son"
+
+#~ msgctxt "@label Whether audio should repeat"
+#~ msgid "Sound repeat"
+#~ msgstr "Repeticións do son"
+
+#~ msgctxt "@label"
+#~ msgid "Sound volume"
+#~ msgstr "Volume do son"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade volume"
+#~ msgstr "Volume ao que chega o son"
+
+#~ msgctxt "@label"
+#~ msgid "Sound fade time"
+#~ msgstr "Tempo de esvaecemento do son"
+
+#~ msgctxt "@label Whether the alarm has a reminder"
+#~ msgid "Reminder"
+#~ msgstr "Recordatorio"
+
+#~ msgctxt "@label Whether reminder is on first recurrence only"
+#~ msgid "Reminder once only"
+#~ msgstr "Recordatorio só unha vez"
+
+#~ msgctxt "@label Deferral type"
+#~ msgid "Deferral"
+#~ msgstr "Suspender"
+
+#~ msgctxt "@label"
+#~ msgid "Deferral time"
+#~ msgstr "Tempo de suspensión"
+
+#~ msgctxt "@label Default deferral delay"
+#~ msgid "Deferral default"
+#~ msgstr "Suspensión predeterminada"
+
+#~ msgctxt "@label Whether deferral time is date-only by default"
+#~ msgid "Deferral default date only"
+#~ msgstr "Suspensión predeterminada só de data."
+
+#~ msgctxt "@label A shell command"
+#~ msgid "Command"
+#~ msgstr "Orde"
+
+#~ msgctxt "@label"
+#~ msgid "Log file"
+#~ msgstr "Ficheiro do historial"
+
+#~ msgctxt "@label Execute in terminal window"
+#~ msgid "Execute in terminal"
+#~ msgstr "Executar nun terminal."
+
+#~ msgctxt "@label"
+#~ msgid "Email subject"
+#~ msgstr "Asunto do correo"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email sender ID"
+#~ msgstr "Identificador do remitente"
+
+#~ msgctxt "@label Email address"
+#~ msgid "Email to"
+#~ msgstr "Para"
+
+#~ msgctxt "@label true/false"
+#~ msgid "Email bcc"
+#~ msgstr "Copia agochada"
+
+#~ msgctxt "@label"
+#~ msgid "Email body"
+#~ msgstr "Corpo"
+
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "Anexos"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (text)"
+#~ msgstr "Visíbel (texto)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (file)"
+#~ msgstr "Visíbel (ficheiro)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Display (command)"
+#~ msgstr "Visíbel (orde)"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Command"
+#~ msgstr "Orde"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Email"
+#~ msgstr "Correo"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Audio"
+#~ msgstr "Son"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Active"
+#~ msgstr "Activo"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Archived"
+#~ msgstr "Arquivado"
+
+#~ msgctxt "@info Alarm type"
+#~ msgid "Template"
+#~ msgstr "Modelo"
+
+#~ msgctxt "@info Repeat at login"
+#~ msgid "At login until %1"
+#~ msgstr "Ao acceder e ata %1"
+
+#~ msgctxt "@info"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@info Using default font"
+#~ msgid "Default"
+#~ msgstr "Predeterminado"
+
+#~ msgctxt "@info"
+#~ msgid "Reminder"
+#~ msgstr "Recordatorio"
+
+#~ msgctxt "@info"
+#~ msgid "Speak"
+#~ msgstr "Falar"
+
+#~ msgctxt "@info"
+#~ msgid "Beep"
+#~ msgstr "Badalada"
+
+#~ msgctxt "@info Percentage"
+#~ msgid "%1%%"
+#~ msgstr "%1%%"
+
+#~ msgctxt "@info"
+#~ msgid "1 Second"
+#~ msgid_plural "%1 Seconds"
+#~ msgstr[0] "1 segundo"
+#~ msgstr[1] "%1 segundos"
+
+#~ msgctxt "@info Error indication"
+#~ msgid "error!"
+#~ msgstr "Erro!"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Si"
+
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Non"
+
+#~ msgctxt "@info"
+#~ msgid "1 Minute"
+#~ msgid_plural "%1 Minutes"
+#~ msgstr[0] "1 minuto"
+#~ msgstr[1] "%1 minutos"
+
+#~ msgctxt "@info"
+#~ msgid "1 Hour"
+#~ msgid_plural "%1 Hours"
+#~ msgstr[0] "1 hora"
+#~ msgstr[1] "%1 horas"
+
+#~ msgctxt "@info"
+#~ msgid "1 Day"
+#~ msgid_plural "%1 Days"
+#~ msgstr[0] "1 día"
+#~ msgstr[1] "%1 días"
+
+#~ msgctxt "@info/plain Alarm type"
+#~ msgid "Command"
+#~ msgstr "Orde"
+
+#~ msgctxt "@info/plain"
+#~ msgid "Reminder"
+#~ msgstr "Recordatorio"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Si"
+
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Non"

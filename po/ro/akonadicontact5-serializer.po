@@ -1,0 +1,201 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2011, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
+"PO-Revision-Date: 2012-12-21 04:07+0200\n"
+"Last-Translator: Sergiu Bivol <sergiu.bivol@jurnaltv.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+
+#: akonadi_serializer_addressee.cpp:171
+#, kde-format
+msgid "Changed Contact"
+msgstr ""
+
+#: akonadi_serializer_addressee.cpp:172
+#, kde-format
+msgid "Conflicting Contact"
+msgstr ""
+
+#: akonadi_serializer_addressee.cpp:300
+#, kde-format
+msgid "Emails"
+msgstr ""
+
+#: akonadi_serializer_addressee.cpp:301
+#, kde-format
+msgid "Phone Numbers"
+msgstr "Numere de telefon"
+
+#: akonadi_serializer_addressee.cpp:302
+#, kde-format
+msgid "Addresses"
+msgstr "Adrese"
+
+#: akonadi_serializer_contactgroup.cpp:90
+#, kde-format
+msgid "Changed Contact Group"
+msgstr ""
+
+#: akonadi_serializer_contactgroup.cpp:91
+#, kde-format
+msgid "Conflicting Contact Group"
+msgstr ""
+
+#: akonadi_serializer_contactgroup.cpp:97
+#, kde-format
+msgid "Name"
+msgstr "Nume"
+
+#: akonadi_serializer_contactgroup.cpp:107
+#, kde-format
+msgid "Member"
+msgstr "Membru"
+
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgid "No"
+#~ msgstr "Nu"
+
+#~ msgid "Attendees"
+#~ msgstr "Participanți"
+
+#~ msgid "Organizer"
+#~ msgstr "Organizator"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "Is all-day"
+#~ msgstr "Dorează toată ziua"
+
+#~ msgid "Has duration"
+#~ msgstr "Are durată"
+
+#~ msgid "Duration"
+#~ msgstr "Durată"
+
+#~ msgid "Description"
+#~ msgstr "Descriere"
+
+#~ msgid "Summary"
+#~ msgstr "Sumar"
+
+#~ msgid "Status"
+#~ msgstr "Stare"
+
+#~ msgid "Secrecy"
+#~ msgstr "Secretism"
+
+#~ msgid "Priority"
+#~ msgstr "Prioritate"
+
+#~ msgid "Location"
+#~ msgstr "Amplasare"
+
+#~ msgid "Categories"
+#~ msgstr "Categorii"
+
+#~ msgid "Alarms"
+#~ msgstr "Alarme"
+
+#~ msgid "Resources"
+#~ msgstr "Resurse"
+
+#~ msgid "Attachments"
+#~ msgstr "Atașamente"
+
+#~ msgid "Created"
+#~ msgstr "Creat"
+
+#~ msgid "Start time"
+#~ msgstr "Timp de început"
+
+#~ msgid "Has End Date"
+#~ msgstr "Are dată de sfârșit"
+
+#~ msgid "End Date"
+#~ msgstr "Dată de sfârșit"
+
+#~ msgid "Has Start Date"
+#~ msgstr "Are dată de început"
+
+#~ msgid "Completed"
+#~ msgstr "Încheiat"
+
+#, fuzzy
+#~| msgid "UID"
+#~ msgctxt "@label Unique identifier"
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#, fuzzy
+#~| msgid "Alarms"
+#~ msgctxt "@label"
+#~ msgid "Alarm type"
+#~ msgstr "Alarme"
+
+#, fuzzy
+#~| msgid "Alarms"
+#~ msgctxt "@label"
+#~ msgid "Alarm status"
+#~ msgstr "Alarme"
+
+#, fuzzy
+#~| msgid "Start time"
+#~ msgctxt "@label"
+#~ msgid "Creation time"
+#~ msgstr "Timp de început"
+
+#, fuzzy
+#~| msgid "Start time"
+#~ msgctxt "@label"
+#~ msgid "Start time"
+#~ msgstr "Timp de început"
+
+#, fuzzy
+#~| msgid "Organizer"
+#~ msgctxt "@label"
+#~ msgid "Copy to KOrganizer"
+#~ msgstr "Organizator"
+
+#, fuzzy
+#~| msgid "Attachments"
+#~ msgctxt "@label"
+#~ msgid "Email attachments"
+#~ msgstr "Atașamente"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Nu"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "@info/plain General purpose status indication: yes or no"
+#~ msgid "No"
+#~ msgstr "Nu"
