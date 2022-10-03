@@ -27,7 +27,10 @@
 #include <QVBoxLayout>
 
 using namespace Akonadi;
-
+namespace
+{
+static const char myContactEditorDialogDialogGroupName[] = "ContactEditor";
+}
 class Akonadi::ContactEditorDialogPrivate
 {
 public:
@@ -109,7 +112,7 @@ public:
     void readConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactEditor"));
+        KConfigGroup group(&config, myContactEditorDialogDialogGroupName);
         const QSize size = group.readEntry("Size", QSize(800, 500));
         if (size.isValid()) {
             q->resize(size);
@@ -119,7 +122,7 @@ public:
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactEditor"));
+        KConfigGroup group(&config, myContactEditorDialogDialogGroupName);
         group.writeEntry("Size", q->size());
         group.sync();
     }

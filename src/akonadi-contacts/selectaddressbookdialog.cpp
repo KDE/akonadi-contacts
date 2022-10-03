@@ -12,6 +12,10 @@
 #include <KSharedConfig>
 
 using namespace Akonadi;
+namespace
+{
+static const char mySelectAddressBookDialogGroupName[] = "SelectAddressBookDialog";
+}
 class Akonadi::SelectAddressBookDialogPrivate
 {
 public:
@@ -39,7 +43,7 @@ public:
 
 void SelectAddressBookDialogPrivate::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectAddressBookDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), mySelectAddressBookDialogGroupName);
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         q->resize(size);
@@ -48,7 +52,7 @@ void SelectAddressBookDialogPrivate::readConfig()
 
 void SelectAddressBookDialogPrivate::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectAddressBookDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), mySelectAddressBookDialogGroupName);
     group.writeEntry("Size", q->size());
     group.sync();
 }

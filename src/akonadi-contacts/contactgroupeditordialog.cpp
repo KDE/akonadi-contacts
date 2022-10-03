@@ -28,6 +28,10 @@
 
 using namespace Akonadi;
 
+namespace
+{
+static const char myContactGroupEditorDialogGroupName[] = "ContactGroupEditorDialog";
+}
 class Akonadi::ContactGroupEditorDialogPrivate
 {
 public:
@@ -47,7 +51,7 @@ public:
     void readConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactGroupEditorDialog"));
+        KConfigGroup group(&config, myContactGroupEditorDialogGroupName);
         const QSize size = group.readEntry("Size", QSize(470, 400));
         if (size.isValid()) {
             q->resize(size);
@@ -57,7 +61,7 @@ public:
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactGroupEditorDialog"));
+        KConfigGroup group(&config, myContactGroupEditorDialogGroupName);
         group.writeEntry("Size", q->size());
         group.sync();
     }

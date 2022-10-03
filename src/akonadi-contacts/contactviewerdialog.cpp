@@ -21,6 +21,10 @@ using namespace Akonadi;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+namespace
+{
+static const char myContactViewerDialogGroupName[] = "ContactViewer";
+}
 class Akonadi::ContactViewerDialogPrivate
 {
 public:
@@ -32,7 +36,7 @@ public:
     void readConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactViewer"));
+        KConfigGroup group(&config, myContactViewerDialogGroupName);
         const QSize size = group.readEntry("Size", QSize(500, 600));
         if (size.isValid()) {
             q->resize(size);
@@ -42,7 +46,7 @@ public:
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactViewer"));
+        KConfigGroup group(&config, myContactViewerDialogGroupName);
         group.writeEntry("Size", q->size());
         group.sync();
     }
