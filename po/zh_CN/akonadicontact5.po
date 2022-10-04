@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-28 00:45+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2022-10-02 15:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -205,7 +205,7 @@ msgstr "忽略并覆盖更改"
 
 #: akonadi-contacts/contacteditor.cpp:275
 #: akonadi-contacts/contactgroupeditor.cpp:287
-#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
@@ -216,66 +216,66 @@ msgstr "选择地址簿"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "选择要存放新联系人的地址簿："
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "新建联系人"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "编辑联系人"
 
-#: akonadi-contacts/contacteditordialog.cpp:70
-#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#: akonadi-contacts/contacteditordialog.cpp:73
+#: akonadi-contacts/contactgroupeditordialog.cpp:103
 #, kde-format
 msgid "Add to:"
 msgstr "添加到："
 
-#: akonadi-contacts/contacteditordialog.cpp:179
+#: akonadi-contacts/contacteditordialog.cpp:182
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "位置尚未保存。您想要关闭编辑器吗？"
 
-#: akonadi-contacts/contacteditordialog.cpp:180
-#: akonadi-contacts/contacteditordialog.cpp:197
-#: akonadi-contacts/contactgroupeditordialog.cpp:162
+#: akonadi-contacts/contacteditordialog.cpp:183
+#: akonadi-contacts/contacteditordialog.cpp:200
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "确认"
 
-#: akonadi-contacts/contacteditordialog.cpp:181
+#: akonadi-contacts/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr "关闭编辑器"
 
-#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "不要关闭"
 
-#: akonadi-contacts/contacteditordialog.cpp:196
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "您真的想要取消吗？"
 
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:163
+#: akonadi-contacts/contacteditordialog.cpp:201
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "取消编辑"
 
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: akonadi-contacts/contacteditordialog.cpp:202
+#: akonadi-contacts/contactgroupeditordialog.cpp:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -320,13 +320,13 @@ msgstr "联系人组成员："
 msgid "Search..."
 msgstr "搜索..."
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "新建联系人组"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
@@ -427,7 +427,7 @@ msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "联系人 %1"
 
-#: akonadi-contacts/contactviewerdialog.cpp:58
+#: akonadi-contacts/contactviewerdialog.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
@@ -608,7 +608,7 @@ msgstr "保存联系人失败"
 msgid "Contact created successfully"
 msgstr "成功创建联系人"
 
-#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#: akonadi-contacts/selectaddressbookdialog.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"

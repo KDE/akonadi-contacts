@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-28 00:45+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2015-01-27 22:27+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -225,7 +225,7 @@ msgstr "Praleisti ir perrašyti pakeitimus"
 
 #: akonadi-contacts/contacteditor.cpp:275
 #: akonadi-contacts/contactgroupeditor.cpp:287
-#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
 msgctxt "@title:window"
@@ -237,70 +237,70 @@ msgstr "Parinkti adresų knygą"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Pasirinkite į kurią adresų knygą įrašyti naująjį adresatą:"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, fuzzy, kde-format
 #| msgid "New Contact"
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Naujas adresatas"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, fuzzy, kde-format
 #| msgid "Edit Contact"
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Keisti adresatą"
 
-#: akonadi-contacts/contacteditordialog.cpp:70
-#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#: akonadi-contacts/contacteditordialog.cpp:73
+#: akonadi-contacts/contactgroupeditordialog.cpp:103
 #, kde-format
 msgid "Add to:"
 msgstr "Pridėti į:"
 
-#: akonadi-contacts/contacteditordialog.cpp:179
+#: akonadi-contacts/contacteditordialog.cpp:182
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:180
-#: akonadi-contacts/contacteditordialog.cpp:197
-#: akonadi-contacts/contactgroupeditordialog.cpp:162
+#: akonadi-contacts/contacteditordialog.cpp:183
+#: akonadi-contacts/contacteditordialog.cpp:200
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
 #, fuzzy, kde-format
 #| msgid "Confirm Delete"
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Patvirtinti šalinimą"
 
-#: akonadi-contacts/contacteditordialog.cpp:181
+#: akonadi-contacts/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:196
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Ar tikrai norite pašalinti šį adresą?"
 
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:163
+#: akonadi-contacts/contacteditordialog.cpp:201
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: akonadi-contacts/contacteditordialog.cpp:202
+#: akonadi-contacts/contactgroupeditordialog.cpp:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -347,14 +347,14 @@ msgstr "Adresatų grupė:"
 msgid "Search..."
 msgstr "Paieška:"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, fuzzy, kde-format
 #| msgid "New Contact Group"
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Nauja adresatų grupė"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, fuzzy, kde-format
 #| msgid "Edit Contact Group"
 msgctxt "@title:window"
@@ -458,7 +458,7 @@ msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "Adresatas %1"
 
-#: akonadi-contacts/contactviewerdialog.cpp:58
+#: akonadi-contacts/contactviewerdialog.cpp:62
 #, fuzzy, kde-format
 #| msgid "Show Contact"
 msgctxt "@title:window"
@@ -644,7 +644,7 @@ msgstr "Nepavyko išsaugoti kontakto"
 msgid "Contact created successfully"
 msgstr ""
 
-#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#: akonadi-contacts/selectaddressbookdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Select the address book the new contact shall be saved in:"
 msgctxt "@info"

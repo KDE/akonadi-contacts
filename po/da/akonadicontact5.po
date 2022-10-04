@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-28 00:45+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2021-09-09 21:50+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -220,7 +220,7 @@ msgstr "Ignorér og overskriv ændringer"
 
 #: akonadi-contacts/contacteditor.cpp:275
 #: akonadi-contacts/contactgroupeditor.cpp:287
-#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
@@ -231,69 +231,69 @@ msgstr "Vælg adressebog"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Vælg den adressebog den ny kontakt skal gemmes i:"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, fuzzy, kde-format
 #| msgid "New Contact"
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Ny kontakt"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, fuzzy, kde-format
 #| msgid "Edit Contact"
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Redigér kontakt"
 
-#: akonadi-contacts/contacteditordialog.cpp:70
-#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#: akonadi-contacts/contacteditordialog.cpp:73
+#: akonadi-contacts/contactgroupeditordialog.cpp:103
 #, kde-format
 msgid "Add to:"
 msgstr "Føj til:"
 
-#: akonadi-contacts/contacteditordialog.cpp:179
+#: akonadi-contacts/contacteditordialog.cpp:182
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "Placeringen blev ikke gemt. Vil du lukke editoren?"
 
-#: akonadi-contacts/contacteditordialog.cpp:180
-#: akonadi-contacts/contacteditordialog.cpp:197
-#: akonadi-contacts/contactgroupeditordialog.cpp:162
+#: akonadi-contacts/contacteditordialog.cpp:183
+#: akonadi-contacts/contacteditordialog.cpp:200
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Bekræftelse"
 
-#: akonadi-contacts/contacteditordialog.cpp:181
+#: akonadi-contacts/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:196
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Vil du virkelig annullere?"
 
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:163
+#: akonadi-contacts/contacteditordialog.cpp:201
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Annullér"
 
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: akonadi-contacts/contacteditordialog.cpp:202
+#: akonadi-contacts/contactgroupeditordialog.cpp:168
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
@@ -341,14 +341,14 @@ msgstr "Medlemmer af kontaktgruppe:"
 msgid "Search..."
 msgstr "Søg:"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, fuzzy, kde-format
 #| msgid "New Contact Group"
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Ny kontaktgruppe"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, fuzzy, kde-format
 #| msgid "Edit Contact Group"
 msgctxt "@title:window"
@@ -450,7 +450,7 @@ msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "Kontakt %1"
 
-#: akonadi-contacts/contactviewerdialog.cpp:58
+#: akonadi-contacts/contactviewerdialog.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
@@ -642,7 +642,7 @@ msgstr "Kunne ikke gemme kontakt"
 msgid "Contact created successfully"
 msgstr "Kontakten blev oprettet"
 
-#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#: akonadi-contacts/selectaddressbookdialog.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"

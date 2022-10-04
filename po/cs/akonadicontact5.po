@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-28 00:45+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2022-04-06 11:30+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -195,7 +195,7 @@ msgstr "Ignorovat a přepsat změny"
 
 #: akonadi-contacts/contacteditor.cpp:275
 #: akonadi-contacts/contactgroupeditor.cpp:287
-#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
@@ -206,66 +206,66 @@ msgstr "Vyberte knihu adres"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Zvolte knihu adres, kam má být nový kontakt uložen:"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Nový kontakt"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Upravit kontakt"
 
-#: akonadi-contacts/contacteditordialog.cpp:70
-#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#: akonadi-contacts/contacteditordialog.cpp:73
+#: akonadi-contacts/contactgroupeditordialog.cpp:103
 #, kde-format
 msgid "Add to:"
 msgstr "Přidat k:"
 
-#: akonadi-contacts/contacteditordialog.cpp:179
+#: akonadi-contacts/contacteditordialog.cpp:182
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "místo nebylo uloženo. Přejete si uzavřít editor?"
 
-#: akonadi-contacts/contacteditordialog.cpp:180
-#: akonadi-contacts/contacteditordialog.cpp:197
-#: akonadi-contacts/contactgroupeditordialog.cpp:162
+#: akonadi-contacts/contacteditordialog.cpp:183
+#: akonadi-contacts/contacteditordialog.cpp:200
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Potvrzení"
 
-#: akonadi-contacts/contacteditordialog.cpp:181
+#: akonadi-contacts/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr "Zavřít editor"
 
-#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "Nezavírat"
 
-#: akonadi-contacts/contacteditordialog.cpp:196
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Přejete si opravdu přerušit?"
 
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:163
+#: akonadi-contacts/contacteditordialog.cpp:201
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Zrušit úpravy"
 
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: akonadi-contacts/contacteditordialog.cpp:202
+#: akonadi-contacts/contactgroupeditordialog.cpp:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -310,13 +310,13 @@ msgstr "Členové skupiny kontaktů:"
 msgid "Search..."
 msgstr "Hledat..."
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Nová skupina kontaktů"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
@@ -417,7 +417,7 @@ msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "Kontakt %1"
 
-#: akonadi-contacts/contactviewerdialog.cpp:58
+#: akonadi-contacts/contactviewerdialog.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
@@ -603,7 +603,7 @@ msgstr "Kontakt nelze uložit"
 msgid "Contact created successfully"
 msgstr "Kontakt byl úspěšně vytvořen"
 
-#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#: akonadi-contacts/selectaddressbookdialog.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"

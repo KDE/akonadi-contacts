@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-28 00:45+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2013-10-13 02:08+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -222,7 +222,7 @@ msgstr "Өзгерістерді елемей өзінше жаза беру"
 
 #: akonadi-contacts/contacteditor.cpp:275
 #: akonadi-contacts/contactgroupeditor.cpp:287
-#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
 msgctxt "@title:window"
@@ -234,63 +234,63 @@ msgstr "Адрестік кітапшасын таңдау"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Жаңа контактты жазып алатын адрестік кітапшасы:"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, fuzzy, kde-format
 #| msgid "New Contact"
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Жаңа контакт"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, fuzzy, kde-format
 #| msgid "Edit Contact"
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Контактты өзгерту"
 
-#: akonadi-contacts/contacteditordialog.cpp:70
-#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#: akonadi-contacts/contacteditordialog.cpp:73
+#: akonadi-contacts/contactgroupeditordialog.cpp:103
 #, kde-format
 msgid "Add to:"
 msgstr "Мынаған қосу:"
 
-#: akonadi-contacts/contacteditordialog.cpp:179
+#: akonadi-contacts/contacteditordialog.cpp:182
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:180
-#: akonadi-contacts/contacteditordialog.cpp:197
-#: akonadi-contacts/contactgroupeditordialog.cpp:162
+#: akonadi-contacts/contacteditordialog.cpp:183
+#: akonadi-contacts/contacteditordialog.cpp:200
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
 #, fuzzy, kde-format
 #| msgid "Confirm Delete"
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Кетіруді құптау"
 
-#: akonadi-contacts/contacteditordialog.cpp:181
+#: akonadi-contacts/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:196
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Осы адрес өшірілсін бе?"
 
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:163
+#: akonadi-contacts/contacteditordialog.cpp:201
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Cancel"
@@ -298,8 +298,8 @@ msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Бас тарту"
 
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: akonadi-contacts/contacteditordialog.cpp:202
+#: akonadi-contacts/contactgroupeditordialog.cpp:168
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Cancel"
@@ -348,14 +348,14 @@ msgstr "Топ мүшелері:"
 msgid "Search..."
 msgstr "Іздейтіні:"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, fuzzy, kde-format
 #| msgid "New Contact Group"
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Жаңа контакт тобы"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, fuzzy, kde-format
 #| msgid "Edit Contact Group"
 msgctxt "@title:window"
@@ -459,7 +459,7 @@ msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "%1 контакты"
 
-#: akonadi-contacts/contactviewerdialog.cpp:58
+#: akonadi-contacts/contactviewerdialog.cpp:62
 #, fuzzy, kde-format
 #| msgid "Show Contact"
 msgctxt "@title:window"
@@ -645,7 +645,7 @@ msgstr "Контактты сақтау жаңылысы"
 msgid "Contact created successfully"
 msgstr ""
 
-#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#: akonadi-contacts/selectaddressbookdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Select the address book the new contact shall be saved in:"
 msgctxt "@info"
