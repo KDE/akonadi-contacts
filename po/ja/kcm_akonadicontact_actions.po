@@ -85,12 +85,3 @@ msgstr ""
 #, kde-format
 msgid "External Application"
 msgstr "外部アプリケーション"
-
-#~ msgid "Show Address"
-#~ msgstr "住所を表示"
-
-#~ msgid "Url:"
-#~ msgstr "URL:"
-
-#~ msgid "Web Browser"
-#~ msgstr "ウェブブラウザ"

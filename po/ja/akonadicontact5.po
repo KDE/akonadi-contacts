@@ -1807,32 +1807,3 @@ msgstr ""
 #| msgid "Set as Standard"
 msgid "Set as Preferred"
 msgstr "デフォルトにする"
-
-#~ msgctxt "@option today"
-#~ msgid "&Today"
-#~ msgstr "今日(&T)"
-
-#~ msgctxt "@option tomorrow"
-#~ msgid "To&morrow"
-#~ msgstr "明日(&M)"
-
-#~ msgctxt "@option next week"
-#~ msgid "Next &Week"
-#~ msgstr "来週(&W)"
-
-#~ msgctxt "@option next month"
-#~ msgid "Next M&onth"
-#~ msgstr "来月(&O)"
-
-#~ msgctxt "@option do not specify a date"
-#~ msgid "No Date"
-#~ msgstr "日付指定なし"
-
-#~ msgid "Address Command"
-#~ msgstr "アドレスコマンド"
-
-#, fuzzy
-#~| msgid "Show Contact Group"
-#~ msgctxt "@title:window"
-#~ msgid "Show Contact Group"
-#~ msgstr "連絡先グループを表示"
