@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-08 00:48+0000\n"
 "PO-Revision-Date: 2022-03-23 18:37+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -223,15 +223,15 @@ msgstr "Överta ändringar"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignorera och skriv över ändringar"
 
-#: akonadi-contacts/contacteditor.cpp:275
-#: akonadi-contacts/contactgroupeditor.cpp:287
+#: akonadi-contacts/contacteditor.cpp:278
+#: akonadi-contacts/contactgroupeditor.cpp:290
 #: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Välj adressbok"
 
-#: akonadi-contacts/contacteditor.cpp:276
+#: akonadi-contacts/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Välj adressbok den nya kontakten ska sparas i:"
@@ -310,12 +310,12 @@ msgstr ""
 "Kontaktgruppen har ändrats av någon annan.\n"
 "Vad ska göras?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:172
+#: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Kontaktgruppens namn får inte vara tomt."
 
-#: akonadi-contacts/contactgroupeditor.cpp:288
+#: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Välj adressbok den nya kontaktgruppen ska sparas i:"

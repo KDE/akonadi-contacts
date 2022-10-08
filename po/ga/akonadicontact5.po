@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-08 00:48+0000\n"
 "PO-Revision-Date: 2009-12-24 06:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -228,8 +228,8 @@ msgstr "Coinnigh na hathruithe"
 msgid "Ignore and Overwrite changes"
 msgstr "Ná bac leis na hathruithe agus forscríobh"
 
-#: akonadi-contacts/contacteditor.cpp:275
-#: akonadi-contacts/contactgroupeditor.cpp:287
+#: akonadi-contacts/contacteditor.cpp:278
+#: akonadi-contacts/contactgroupeditor.cpp:290
 #: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
@@ -237,7 +237,7 @@ msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Roghnaigh Leabhar Seoltaí"
 
-#: akonadi-contacts/contacteditor.cpp:276
+#: akonadi-contacts/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr ""
@@ -325,12 +325,12 @@ msgstr ""
 "D'athraigh duine éigin eile an grúpa teagmhálacha.\n"
 "Cad é ba mhaith leat a dhéanamh?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:172
+#: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Ní cheadaítear ainm folamh ar an ngrúpa teagmhálacha."
 
-#: akonadi-contacts/contactgroupeditor.cpp:288
+#: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr ""

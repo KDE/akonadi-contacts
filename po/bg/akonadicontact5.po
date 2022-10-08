@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-08 00:48+0000\n"
 "PO-Revision-Date: 2022-06-28 09:53+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -218,15 +218,15 @@ msgstr "Приемане на промените"
 msgid "Ignore and Overwrite changes"
 msgstr "Игнориране и презаписване на промените"
 
-#: akonadi-contacts/contacteditor.cpp:275
-#: akonadi-contacts/contactgroupeditor.cpp:287
+#: akonadi-contacts/contacteditor.cpp:278
+#: akonadi-contacts/contactgroupeditor.cpp:290
 #: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Избор на адресник"
 
-#: akonadi-contacts/contacteditor.cpp:276
+#: akonadi-contacts/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Избиране на адресната книга, в която ще бъде запазен новият контакт:"
@@ -305,12 +305,12 @@ msgstr ""
 "Групата за контакти е променена от някой друг. \n"
 "Какво трябва да се направи?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:172
+#: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Името на групата контакти не трябва да бъде празно."
 
-#: akonadi-contacts/contactgroupeditor.cpp:288
+#: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr ""

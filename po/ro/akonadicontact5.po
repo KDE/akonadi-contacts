@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-08 00:48+0000\n"
 "PO-Revision-Date: 2013-01-12 06:26+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -191,8 +191,8 @@ msgstr "Preia modificările"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignoră și suprascrie modificările"
 
-#: akonadi-contacts/contacteditor.cpp:275
-#: akonadi-contacts/contactgroupeditor.cpp:287
+#: akonadi-contacts/contacteditor.cpp:278
+#: akonadi-contacts/contactgroupeditor.cpp:290
 #: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
@@ -200,7 +200,7 @@ msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Alege cartea de adrese"
 
-#: akonadi-contacts/contacteditor.cpp:276
+#: akonadi-contacts/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Alege cartea de adrese în care se va salva contactul nou:"
@@ -287,12 +287,12 @@ msgstr ""
 "Grupu de contacte a fost modificat de altcineva.\n"
 "Ce e de făcut?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:172
+#: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Numele grupului de contacte nu poate fi gol."
 
-#: akonadi-contacts/contactgroupeditor.cpp:288
+#: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Alege cartea de adrese în care se va salva grupul de contacte nou:"

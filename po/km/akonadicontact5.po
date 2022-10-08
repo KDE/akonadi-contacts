@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-08 00:48+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -227,8 +227,8 @@ msgstr "គ្រប់គ្រង​ការ​ផ្លាស់ប្ដូ
 msgid "Ignore and Overwrite changes"
 msgstr "មិន​អើ​ពើ​ និង​សរសេរ​ជាន់​លើ​ការ​ផ្លាស់​ប្ដូរ"
 
-#: akonadi-contacts/contacteditor.cpp:275
-#: akonadi-contacts/contactgroupeditor.cpp:287
+#: akonadi-contacts/contacteditor.cpp:278
+#: akonadi-contacts/contactgroupeditor.cpp:290
 #: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
@@ -236,7 +236,7 @@ msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "ជ្រើស​សៀវភៅ​​អាសយដ្ឋាន​"
 
-#: akonadi-contacts/contacteditor.cpp:276
+#: akonadi-contacts/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "ជ្រើស​សៀវភៅ​អាសយដ្ឋាន​ទំនាក់ទំនង​​​ថ្មី​នឹង​ត្រូវ​បាន​រក្សាទុក​នៅ​ក្នុង​ ៖"
@@ -323,12 +323,12 @@ msgstr ""
 "ក្រុម​ទំនាក់ទំនង​ត្រូវ​បាន​ផ្លាស់​ប្ដូរ​ដោយ​អ្នក​ផ្សេង​ទៀត ។\n"
 "តើ​គួរ​តែ​ធ្វើ​អ្វី ?​​"
 
-#: akonadi-contacts/contactgroupeditor.cpp:172
+#: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "ឈ្មោះ​របស់​​ក្រុម​ទាក់​ទង​​មិន​ត្រូវ​ទទេ​ ។"
 
-#: akonadi-contacts/contactgroupeditor.cpp:288
+#: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "ជ្រើស​សៀវភៅ​អាសយដ្ឋាន​ដែល​ក្រុម​ទំនាក់ទំនង​ថ្មី​នឹង​ត្រូវ​បាន​រក្សា​ទុក​នៅ​ក្នុង ​៖​"
