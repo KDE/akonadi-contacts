@@ -10,11 +10,11 @@
 
 #include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
-
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/Item>
 #include <KContacts/ContactGroup>
 #include <KLocalizedString>
+#include <kwidgetsaddons_version.h>
 
 #include <KConfig>
 #include <KMessageBox>
@@ -161,15 +161,24 @@ void ContactGroupEditorDialog::slotAccepted()
 
 void ContactGroupEditorDialog::reject()
 {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    const int answer = KMessageBox::questionTwoActions(this,
+#else
     const int answer = KMessageBox::questionYesNo(this,
-                                                  i18nc("@info", "Do you really want to cancel?"),
-                                                  i18nc("@title:window", "Confirmation"),
-                                                  KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                                  KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")));
+#endif
+                                                       i18nc("@info", "Do you really want to cancel?"),
+                                                       i18nc("@title:window", "Confirmation"),
+                                                       KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                                       KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")));
 
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
     if (answer == KMessageBox::Yes) {
+#endif
         QDialog::reject(); // Discard current changes
     }
 }
 
 #include "moc_contactgroupeditordialog.cpp"
+#include <kwidgetsaddons_version.h>
