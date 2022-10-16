@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-08 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
 "PO-Revision-Date: 2022-06-24 10:22+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -257,48 +257,48 @@ msgstr "Contactpersoon bewerken"
 msgid "Add to:"
 msgstr "Toevoegen aan:"
 
-#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "Locatie is niet opgeslagen. Wilt u de bewerker sluiten?"
 
-#: akonadi-contacts/contacteditordialog.cpp:183
-#: akonadi-contacts/contacteditordialog.cpp:200
-#: akonadi-contacts/contactgroupeditordialog.cpp:166
+#: akonadi-contacts/contacteditordialog.cpp:187
+#: akonadi-contacts/contacteditordialog.cpp:212
+#: akonadi-contacts/contactgroupeditordialog.cpp:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Bevestiging"
 
-#: akonadi-contacts/contacteditordialog.cpp:184
+#: akonadi-contacts/contacteditordialog.cpp:188
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr "Bewerker sluiten"
 
-#: akonadi-contacts/contacteditordialog.cpp:185
+#: akonadi-contacts/contacteditordialog.cpp:189
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "Niet sluiten"
 
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:165
+#: akonadi-contacts/contacteditordialog.cpp:211
+#: akonadi-contacts/contactgroupeditordialog.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Wilt u annuleren?"
 
-#: akonadi-contacts/contacteditordialog.cpp:201
-#: akonadi-contacts/contactgroupeditordialog.cpp:167
+#: akonadi-contacts/contacteditordialog.cpp:213
+#: akonadi-contacts/contactgroupeditordialog.cpp:171
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Bewerken annuleren"
 
-#: akonadi-contacts/contacteditordialog.cpp:202
-#: akonadi-contacts/contactgroupeditordialog.cpp:168
+#: akonadi-contacts/contacteditordialog.cpp:214
+#: akonadi-contacts/contactgroupeditordialog.cpp:172
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -567,8 +567,8 @@ msgstr ""
 "Een contactpersoon met het e-mailadres <email>>%1</email> is al in uw "
 "adresboekaanwezig."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:120
-#: akonadi-contacts/job/addemaildisplayjob.cpp:159
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -578,29 +578,29 @@ msgstr ""
 "Eerst een adresboek aanmaken alvorens een contactpersoon toevoegen. Wilt u "
 "een adresboek aanmaken?"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:121
-#: akonadi-contacts/job/addemaildisplayjob.cpp:160
+#: akonadi-contacts/job/addemailaddressjob.cpp:127
+#: akonadi-contacts/job/addemaildisplayjob.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Geen adresboek beschikbaar"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:122
-#: akonadi-contacts/job/addemaildisplayjob.cpp:161
+#: akonadi-contacts/job/addemailaddressjob.cpp:128
+#: akonadi-contacts/job/addemaildisplayjob.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Adresboek aanmaken"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:126
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts/job/addemailaddressjob.cpp:136
+#: akonadi-contacts/job/addemaildisplayjob.cpp:175
 #: akonadi-contacts/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Adresboek toevoegen"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:216
+#: akonadi-contacts/job/addemailaddressjob.cpp:226
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -610,31 +610,31 @@ msgstr ""
 "<para>Een contactpersoon voor \"%1\" is met success aan uw adresboek "
 "toegevoegd.</para><para>Wilt u deze nieuwe contactpersoon nu bewerken?</para>"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:224
+#: akonadi-contacts/job/addemailaddressjob.cpp:239
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Bewerken"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:225
+#: akonadi-contacts/job/addemailaddressjob.cpp:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Beëindigen"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Contactpersoon kan niet opgeslagen worden: %1"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Failed to store contact"
 msgstr "Contactpersoon opslaan is mislukt"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:253
+#: akonadi-contacts/job/addemailaddressjob.cpp:272
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Contactpersoon met succes aangemaakt."
@@ -1106,65 +1106,65 @@ msgstr "Code kopiëren"
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Wacht op bewerking</b><br/></p>"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:65
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, kde-format
 msgid "Remove Address"
 msgstr "Adres verwijderen"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:73
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:297
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Wilt u dit adres verwijderen?"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgid "Add Street"
 msgstr "Straat toevoegen"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Postbus toevoegen"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Postcode toevoegen"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr "Plaats toevoegen"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgid "Add Region"
 msgstr "Gebied toevoegen"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, kde-format
 msgid "Add a Country"
 msgstr "Land toevoegen"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:107
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Dit adres heeft de voorkeur"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:118
 #, kde-format
 msgid "Add Address"
 msgstr "Adres toevoegen"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, kde-format
 msgid "Update Address"
 msgstr "Adres bijwerken"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:140
 #, kde-format
 msgid "Cancel"
 msgstr "Annuleren"

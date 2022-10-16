@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-08 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
 "PO-Revision-Date: 2015-01-27 22:27+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -257,50 +257,50 @@ msgstr "Keisti adresatą"
 msgid "Add to:"
 msgstr "Pridėti į:"
 
-#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:183
-#: akonadi-contacts/contacteditordialog.cpp:200
-#: akonadi-contacts/contactgroupeditordialog.cpp:166
+#: akonadi-contacts/contacteditordialog.cpp:187
+#: akonadi-contacts/contacteditordialog.cpp:212
+#: akonadi-contacts/contactgroupeditordialog.cpp:170
 #, fuzzy, kde-format
 #| msgid "Confirm Delete"
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Patvirtinti šalinimą"
 
-#: akonadi-contacts/contacteditordialog.cpp:184
+#: akonadi-contacts/contacteditordialog.cpp:188
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:185
+#: akonadi-contacts/contacteditordialog.cpp:189
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:165
+#: akonadi-contacts/contacteditordialog.cpp:211
+#: akonadi-contacts/contactgroupeditordialog.cpp:169
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Ar tikrai norite pašalinti šį adresą?"
 
-#: akonadi-contacts/contacteditordialog.cpp:201
-#: akonadi-contacts/contactgroupeditordialog.cpp:167
+#: akonadi-contacts/contacteditordialog.cpp:213
+#: akonadi-contacts/contactgroupeditordialog.cpp:171
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:202
-#: akonadi-contacts/contactgroupeditordialog.cpp:168
+#: akonadi-contacts/contacteditordialog.cpp:214
+#: akonadi-contacts/contactgroupeditordialog.cpp:172
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -571,8 +571,8 @@ msgid ""
 "address book."
 msgstr ""
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:120
-#: akonadi-contacts/job/addemaildisplayjob.cpp:159
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -580,8 +580,8 @@ msgid ""
 "create an address book?"
 msgstr ""
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:121
-#: akonadi-contacts/job/addemaildisplayjob.cpp:160
+#: akonadi-contacts/job/addemailaddressjob.cpp:127
+#: akonadi-contacts/job/addemaildisplayjob.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "New Address Book Folder"
@@ -589,8 +589,8 @@ msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Naujas adresų knygos aplankas"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:122
-#: akonadi-contacts/job/addemaildisplayjob.cpp:161
+#: akonadi-contacts/job/addemailaddressjob.cpp:128
+#: akonadi-contacts/job/addemaildisplayjob.cpp:167
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
@@ -598,15 +598,15 @@ msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Naujinti adresų knygą"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:126
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts/job/addemailaddressjob.cpp:136
+#: akonadi-contacts/job/addemaildisplayjob.cpp:175
 #: akonadi-contacts/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Pridėti adresų knygą"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:216
+#: akonadi-contacts/job/addemailaddressjob.cpp:226
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -614,32 +614,32 @@ msgid ""
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:224
+#: akonadi-contacts/job/addemailaddressjob.cpp:239
 #, fuzzy, kde-format
 #| msgid "Edit..."
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Keisti..."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:225
+#: akonadi-contacts/job/addemailaddressjob.cpp:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Kontaktas negali būti išsaugotas: %1"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Failed to store contact"
 msgstr "Nepavyko išsaugoti kontakto"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:253
+#: akonadi-contacts/job/addemailaddressjob.cpp:272
 #, kde-format
 msgid "Contact created successfully"
 msgstr ""
@@ -1157,76 +1157,76 @@ msgstr "Kopijuoti kodą"
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Laukiama veiksmo</b><br/></p>"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:65
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, fuzzy, kde-format
 #| msgid "Show Address"
 msgid "Remove Address"
 msgstr "Rodyti adresą"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:73
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:297
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"
 #| msgid_plural "Do you really want to delete %1 address books?"
 msgid "Do you really want to delete this address?"
 msgstr "Ar tikrai norite šalinti parinktą adresų knygą?"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:46
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
 msgid "Add Street"
 msgstr "Laisvas(-a)/Užimtas(-a):"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr ""
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr ""
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr ""
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:87
 #, fuzzy, kde-format
 #| msgid "Profession"
 msgid "Add Region"
 msgstr "Profesija"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, fuzzy, kde-format
 #| msgid "Add Email"
 msgid "Add a Country"
 msgstr "Pridėti el. paštą"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:107
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Pageidautinas adresas"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:118
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add IM Address"
 msgid "Add Address"
 msgstr "Pridėti TP adresus"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
 msgid "Update Address"
 msgstr "Naujinti adresų knygą"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:140
 #, kde-format
 msgid "Cancel"
 msgstr ""
