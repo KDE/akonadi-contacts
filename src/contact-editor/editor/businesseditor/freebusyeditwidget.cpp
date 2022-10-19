@@ -13,9 +13,9 @@
 #include <KContacts/Addressee>
 #include <KLineEdit>
 #include <KLocalizedString>
+#include <KUrlRequester>
 #include <QHBoxLayout>
 #include <QStandardPaths>
-#include <kurlrequester.h>
 
 FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     : QWidget(parent)
