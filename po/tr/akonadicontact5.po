@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2022-10-18 05:53+0300\n"
+"PO-Revision-Date: 2022-10-20 11:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -123,7 +123,7 @@ msgid ""
 "There is no application set which could be executed.\n"
 "Please go to the settings dialog and configure one."
 msgstr ""
-"Çalıştırılabilecek bir uygulama ayarlanmadı.\n"
+"Yürütülebilecek bir uygulama ayarlanmadı.\n"
 "Lütfen ayarlar iletişim kutusuna gidin ve bir tane ayarlayın."
 
 #: akonadi-contacts/actions/qdialer.cpp:24
@@ -142,8 +142,8 @@ msgid ""
 "Unable to start ekiga process, check that ekiga executable is in your PATH "
 "variable."
 msgstr ""
-"ekiga süreci başlatılamıyor, ekiga çalıştırılabilir dosyasının PATH ortam "
-"değişkeninde olduğunu kontrol edin."
+"ekiga süreci başlatılamıyor, ekiga yürütülebilirinin PATH çevre değişkeninde "
+"olduğunu denetleyin."
 
 #: akonadi-contacts/actions/qekigadialer.cpp:97
 #, kde-format
@@ -162,7 +162,7 @@ msgid ""
 "executable is in your PATH variable."
 msgstr ""
 "sflphone-client-kde süreci başlatılamıyor, sflphone-client-kde "
-"çalıştırılabilir dosyasının PATH ortam değişkeninde olduğunu kontrol edin."
+"yürütülebilirinin PATH çevre değişkeninde olduğunu denetleyin."
 
 #: akonadi-contacts/actions/qskypedialer.cpp:77
 #, kde-format
@@ -170,8 +170,8 @@ msgid ""
 "Unable to start skype process, check that skype executable is in your PATH "
 "variable."
 msgstr ""
-"skype süreci başlatılamıyor, skype çalıştırılabilir dosyasının PATH ortam "
-"değişkeninde olduğunu kontrol edin."
+"skype süreci başlatılamıyor, skype yürütülebilirinin PATH çevre değişkeninde "
+"olduğunu denetleyin."
 
 #: akonadi-contacts/actions/qskypedialer.cpp:102
 #, kde-format
