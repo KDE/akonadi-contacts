@@ -82,7 +82,7 @@ msgstr ""
 "telèfon d'un contacte. Si està seleccionada la «Predeterminada del sistema», "
 "s'utilitzarà el gestor predeterminat per als missatges SMS del sistema (p. "
 "ex. KDE Connect), altrament s'utilitzarà l'aplicació seleccionada per a "
-"enviar el missatge SMS (si està instal·lada a l'ordinador). Si està "
+"enviar el missatge SMS (si està instal·lada en l'ordinador). Si està "
 "seleccionada «Aplicació externa», s'ha de definir una ordre amb variables de "
 "substitució."
 
