@@ -90,21 +90,3 @@ msgstr "SflPhone"
 #, kde-format
 msgid "External Application"
 msgstr "Aplicació externa"
-
-#~ msgid "Show Address"
-#~ msgstr "Mostra l'adreça"
-
-#~ msgid "Url:"
-#~ msgstr "URL:"
-
-#~ msgid "Web Browser"
-#~ msgstr "Navegador web"
-
-#~ msgid "Google map"
-#~ msgstr "Mapa de Google"
-
-#~ msgid "Map quest"
-#~ msgstr "MapQuest"
-
-#~ msgid "OpenStreetMap"
-#~ msgstr "OpenStreetMap"
