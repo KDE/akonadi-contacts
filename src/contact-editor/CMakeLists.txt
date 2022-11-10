@@ -34,10 +34,6 @@ install(FILES
 
 install(EXPORT KF5ContactEditorTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5ContactEditorTargets.cmake NAMESPACE KF5::)
 
-configure_file(config-contact-editor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-contact-editor.h)
-
-
-
 target_sources(KF5ContactEditor PRIVATE
     editor/customfieldeditor/customfieldswidget.cpp
     editor/customfieldeditor/customfieldeditorwidget.cpp
