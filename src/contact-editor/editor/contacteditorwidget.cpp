@@ -7,7 +7,6 @@
 */
 
 #include "contacteditorwidget.h"
-#include "config-contact-editor.h"
 
 #include "contacteditorpageplugin.h"
 #include "contactmetadatabase_p.h"
@@ -22,6 +21,7 @@
 #include "businesseditor/businesseditorwidget.h"
 #include "customfieldeditor/customfieldswidget.h"
 #include "generalinfoeditor/generalinfowidget.h"
+#include <QCoreApplication>
 #include <QDirIterator>
 #include <QPluginLoader>
 #include <QVBoxLayout>
@@ -137,21 +137,24 @@ void ContactEditorWidgetPrivate::loadCustomPages()
     qDeleteAll(mCustomPages);
     mCustomPages.clear();
 
-    const QString pluginDirectory = QStringLiteral("%1/contacteditor/editorpageplugins/").arg(QStringLiteral(EDITOR_CONTACT_LIB));
-    QDirIterator it(pluginDirectory, QDir::Files);
+    const QStringList pluginDirs = QCoreApplication::libraryPaths();
 
-    while (it.hasNext()) {
-        QPluginLoader loader(it.next());
-        if (!loader.load()) {
-            continue;
+    for (const QString &dir : pluginDirs) {
+        QDirIterator it(dir + QLatin1String("/pim" QT_STRINGIFY(QT_VERSION_MAJOR) "/contacteditor/editorpageplugins"), QDir::Files);
+
+        while (it.hasNext()) {
+            QPluginLoader loader(it.next());
+            if (!loader.load()) {
+                continue;
+            }
+
+            ContactEditor::ContactEditorPagePlugin *plugin = qobject_cast<ContactEditor::ContactEditorPagePlugin *>(loader.instance());
+            if (!plugin) {
+                continue;
+            }
+
+            mCustomPages.append(plugin);
         }
-
-        ContactEditor::ContactEditorPagePlugin *plugin = qobject_cast<ContactEditor::ContactEditorPagePlugin *>(loader.instance());
-        if (!plugin) {
-            continue;
-        }
-
-        mCustomPages.append(plugin);
     }
 
     for (ContactEditor::ContactEditorPagePlugin *plugin : std::as_const(mCustomPages)) {
