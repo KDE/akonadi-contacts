@@ -15,9 +15,9 @@
 #include <grantlee/engine.h>
 #include <grantlee/templateloader.h>
 #else
-#include <KTextTemplate/context.h>
-#include <KTextTemplate/engine.h>
-#include <KTextTemplate/templateloader.h>
+#include <KTextTemplate/Context>
+#include <KTextTemplate/Engine>
+#include <KTextTemplate/TemplateLoader>
 #endif
 
 #include <Akonadi/ContactGroupExpandJob>
