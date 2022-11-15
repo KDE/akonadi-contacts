@@ -18,7 +18,6 @@
 #include <Akonadi/ContactSearchJob>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemModifyJob>
-#include <kwidgetsaddons_version.h>
 
 #include <KContacts/ContactGroup>
 #include <KLocalizedString>
@@ -155,22 +154,13 @@ public:
 
         const int nbItemCollection(canCreateItemCollections.size());
         if (nbItemCollection == 0) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             if (KMessageBox::questionTwoActions(
                     mParentWidget,
-#else
-            if (KMessageBox::questionYesNo(mParentWidget,
-
-#endif
                     i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
                     i18nc("@title:window", "No Address Book Available"),
                     KGuiItem(i18nc("@action:button", "Create Address Book"), QStringLiteral("address-book-new")),
                     KStandardGuiItem::cancel())
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-                == KMessageBox::Yes) {
-#endif
                 QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(mParentWidget);
                 dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
                 dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());

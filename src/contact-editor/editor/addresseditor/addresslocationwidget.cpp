@@ -20,7 +20,6 @@
 #include <QPushButton>
 #include <QStackedWidget>
 #include <QVBoxLayout>
-#include <kwidgetsaddons_version.h>
 
 using namespace ContactEditor;
 
@@ -289,20 +288,12 @@ void AddressLocationWidget::slotUpdateAddress()
 void AddressLocationWidget::slotRemoveAddress()
 {
     if (mCurrentMode == ModifyAddress) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const auto result = KMessageBox::questionTwoActions(this,
-#else
-        const auto result = KMessageBox::questionYesNo(this,
-#endif
                                                             i18n("Do you really want to delete this address?"),
                                                             QString(),
                                                             KStandardGuiItem::del(),
                                                             KStandardGuiItem::cancel());
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (result == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-        if (result == KMessageBox::Yes) {
-#endif
             Q_EMIT removeAddress(mCurrentAddress);
             reset();
         }
