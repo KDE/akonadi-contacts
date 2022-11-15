@@ -74,7 +74,7 @@ if (QT_MAJOR_VERSION STREQUAL "5")
     set(MAIN_LIB Grantlee5::Templates)
 else()
     find_package(KF6TextTemplate CONFIG REQUIRED)
-    set(MAIN_LIB KF6TextTemplate::Templates)
+    set(MAIN_LIB KF6::TextTemplate)
 endif()
 
 ############### Compilers flags ###############
