@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
 "PO-Revision-Date: 2022-03-25 17:48+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -235,66 +235,66 @@ msgstr "Seleziona rubrica"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Seleziona la rubrica dove salvare il nuovo contatto:"
 
-#: akonadi-contacts/contacteditordialog.cpp:46
+#: akonadi-contacts/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Nuovo contatto"
 
-#: akonadi-contacts/contacteditordialog.cpp:46
+#: akonadi-contacts/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Modifica contatto"
 
-#: akonadi-contacts/contacteditordialog.cpp:73
-#: akonadi-contacts/contactgroupeditordialog.cpp:103
+#: akonadi-contacts/contacteditordialog.cpp:72
+#: akonadi-contacts/contactgroupeditordialog.cpp:102
 #, kde-format
 msgid "Add to:"
 msgstr "Aggiungi a:"
 
-#: akonadi-contacts/contacteditordialog.cpp:186
+#: akonadi-contacts/contacteditordialog.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "La posizione non è stata salvata. Vuoi chiudere l'editor?"
 
-#: akonadi-contacts/contacteditordialog.cpp:187
-#: akonadi-contacts/contacteditordialog.cpp:212
-#: akonadi-contacts/contactgroupeditordialog.cpp:170
+#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Conferma"
 
-#: akonadi-contacts/contacteditordialog.cpp:188
+#: akonadi-contacts/contacteditordialog.cpp:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr "Chiudi editor"
 
-#: akonadi-contacts/contacteditordialog.cpp:189
+#: akonadi-contacts/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "Non chiudere"
 
-#: akonadi-contacts/contacteditordialog.cpp:211
-#: akonadi-contacts/contactgroupeditordialog.cpp:169
+#: akonadi-contacts/contacteditordialog.cpp:198
+#: akonadi-contacts/contactgroupeditordialog.cpp:164
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Vuoi davvero annullare?"
 
-#: akonadi-contacts/contacteditordialog.cpp:213
-#: akonadi-contacts/contactgroupeditordialog.cpp:171
+#: akonadi-contacts/contacteditordialog.cpp:200
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Annulla la modifica"
 
-#: akonadi-contacts/contacteditordialog.cpp:214
-#: akonadi-contacts/contactgroupeditordialog.cpp:172
+#: akonadi-contacts/contacteditordialog.cpp:201
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -339,13 +339,13 @@ msgstr "Membri del gruppo di contatti:"
 msgid "Search..."
 msgstr "Cerca..."
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:80
+#: akonadi-contacts/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Nuovo gruppo di contatti"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:80
+#: akonadi-contacts/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
@@ -552,7 +552,7 @@ msgstr ""
 "La vCard è stata aggiunta alla rubrica; puoi aggiungere ulteriori "
 "informazioni per questa voce aprendo la rubrica."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:70
+#: akonadi-contacts/job/addemailaddressjob.cpp:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -562,8 +562,8 @@ msgstr ""
 "Un contatto con indirizzo di posta elettronica <email>%1</email> è già "
 "presente nella tua rubrica."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:126
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts/job/addemailaddressjob.cpp:120
+#: akonadi-contacts/job/addemaildisplayjob.cpp:159
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -573,29 +573,29 @@ msgstr ""
 "Devi creare una rubrica prima di aggiungere un contatto. Vuoi creare una "
 "rubrica?"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:127
-#: akonadi-contacts/job/addemaildisplayjob.cpp:166
+#: akonadi-contacts/job/addemailaddressjob.cpp:121
+#: akonadi-contacts/job/addemaildisplayjob.cpp:160
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Nessuna rubrica disponibile"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:128
-#: akonadi-contacts/job/addemaildisplayjob.cpp:167
+#: akonadi-contacts/job/addemailaddressjob.cpp:122
+#: akonadi-contacts/job/addemaildisplayjob.cpp:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Crea rubrica"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:136
-#: akonadi-contacts/job/addemaildisplayjob.cpp:175
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
 #: akonadi-contacts/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Aggiungi rubrica degli indirizzi"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:226
+#: akonadi-contacts/job/addemailaddressjob.cpp:216
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -605,31 +605,31 @@ msgstr ""
 "<para>Un contatto avente indirizzo «%1» è stato aggiunto correttamente alla "
 "tua rubrica.</para><para>Vuoi modificare subito questo nuovo contatto?</para>"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:239
+#: akonadi-contacts/job/addemailaddressjob.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Modifica"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:240
+#: akonadi-contacts/job/addemailaddressjob.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Fine"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Il contatto non può essere memorizzato:  %1"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Failed to store contact"
 msgstr "Impossibile memorizzare il contatto"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:272
+#: akonadi-contacts/job/addemailaddressjob.cpp:253
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Contatto creato correttamente"
@@ -1108,65 +1108,65 @@ msgstr "Copia codice"
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>In attesa dell'operazione</b><br/></p>"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:65
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
 #, kde-format
 msgid "Remove Address"
 msgstr "Rimuovi indirizzo"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:73
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:297
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Vuoi davvero eliminare questo indirizzo?"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:46
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
 #, kde-format
 msgid "Add Street"
 msgstr "Aggiungere strada"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:57
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Aggiungi casella postale"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:67
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Aggiungi CAP"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:77
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
 #, kde-format
 msgid "Add Locality"
 msgstr "Aggiungi località"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:87
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
 #, kde-format
 msgid "Add Region"
 msgstr "Aggiungi regione"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
 #, kde-format
 msgid "Add a Country"
 msgstr "Aggiungi una nazione"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:107
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Questo è l'indirizzo preferito"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:118
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
 #, kde-format
 msgid "Add Address"
 msgstr "Aggiungi indirizzo"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
 #, kde-format
 msgid "Update Address"
 msgstr "Aggiorna indirizzo"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:140
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
 #, kde-format
 msgid "Cancel"
 msgstr "Annulla"

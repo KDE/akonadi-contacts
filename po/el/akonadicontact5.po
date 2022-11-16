@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
 "PO-Revision-Date: 2021-11-06 10:01+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -236,66 +236,66 @@ msgstr "Επιλέξτε βιβλίο διευθύνσεων"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Επιλέξτε το βιβλίο διευθύνσεων στο οποίο η νέα επαφή θα αποθηκευτεί:"
 
-#: akonadi-contacts/contacteditordialog.cpp:46
+#: akonadi-contacts/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Νέα επαφή"
 
-#: akonadi-contacts/contacteditordialog.cpp:46
+#: akonadi-contacts/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Επεξεργασία επαφής"
 
-#: akonadi-contacts/contacteditordialog.cpp:73
-#: akonadi-contacts/contactgroupeditordialog.cpp:103
+#: akonadi-contacts/contacteditordialog.cpp:72
+#: akonadi-contacts/contactgroupeditordialog.cpp:102
 #, kde-format
 msgid "Add to:"
 msgstr "Προσθήκη στο:"
 
-#: akonadi-contacts/contacteditordialog.cpp:186
+#: akonadi-contacts/contacteditordialog.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "Η τοποθεσία δεν έχει αποθηκευθεί. Θέλετε να κλείσετε τον επεξεργαστή;"
 
-#: akonadi-contacts/contacteditordialog.cpp:187
-#: akonadi-contacts/contacteditordialog.cpp:212
-#: akonadi-contacts/contactgroupeditordialog.cpp:170
+#: akonadi-contacts/contacteditordialog.cpp:182
+#: akonadi-contacts/contacteditordialog.cpp:199
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Επιβεβαίωση"
 
-#: akonadi-contacts/contacteditordialog.cpp:188
+#: akonadi-contacts/contacteditordialog.cpp:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr "Κλείσιμο επεξεργαστή"
 
-#: akonadi-contacts/contacteditordialog.cpp:189
+#: akonadi-contacts/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "Να μην κλείσει"
 
-#: akonadi-contacts/contacteditordialog.cpp:211
-#: akonadi-contacts/contactgroupeditordialog.cpp:169
+#: akonadi-contacts/contacteditordialog.cpp:198
+#: akonadi-contacts/contactgroupeditordialog.cpp:164
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Θέλετε πράγματι να το ακυρώσετε;"
 
-#: akonadi-contacts/contacteditordialog.cpp:213
-#: akonadi-contacts/contactgroupeditordialog.cpp:171
+#: akonadi-contacts/contacteditordialog.cpp:200
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Ακύρωση επεξεργασίας"
 
-#: akonadi-contacts/contacteditordialog.cpp:214
-#: akonadi-contacts/contactgroupeditordialog.cpp:172
+#: akonadi-contacts/contacteditordialog.cpp:201
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -341,13 +341,13 @@ msgstr "Μέλη ομάδας επαφών:"
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:80
+#: akonadi-contacts/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Νέα ομάδα επαφών"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:80
+#: akonadi-contacts/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
@@ -556,7 +556,7 @@ msgstr ""
 "περισσότερες πληροφορίες σε αυτήν την εγγραφή ανοίγοντας το βιβλίο "
 "διευθύνσεων."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:70
+#: akonadi-contacts/job/addemailaddressjob.cpp:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -566,8 +566,8 @@ msgstr ""
 "Μια επαφή με διεύθυνση αλληλογραφίας <email>%1</email> βρίσκεται ήδη στο "
 "βιβλίο διευθύνσεων."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:126
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts/job/addemailaddressjob.cpp:120
+#: akonadi-contacts/job/addemaildisplayjob.cpp:159
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -577,29 +577,29 @@ msgstr ""
 "Πρέπει να δημιουργήσετε ένα βιβλίο διευθύνσεων πριν προσθέσετε την επαφή. "
 "Θέλετε να δημιουργήσετε ένα βιβλίο διευθύνσεων;"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:127
-#: akonadi-contacts/job/addemaildisplayjob.cpp:166
+#: akonadi-contacts/job/addemailaddressjob.cpp:121
+#: akonadi-contacts/job/addemaildisplayjob.cpp:160
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Δεν υπάρχει διαθέσιμο βιβλίο διευθύνσεων"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:128
-#: akonadi-contacts/job/addemaildisplayjob.cpp:167
+#: akonadi-contacts/job/addemailaddressjob.cpp:122
+#: akonadi-contacts/job/addemaildisplayjob.cpp:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Δημιουργία βιβλίου διευθύνσεων"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:136
-#: akonadi-contacts/job/addemaildisplayjob.cpp:175
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
 #: akonadi-contacts/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Προσθήκη βιβλίου διευθύνσεων"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:226
+#: akonadi-contacts/job/addemailaddressjob.cpp:216
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -609,31 +609,31 @@ msgstr ""
 "<para>Μια επαφή για το «%1» προστέθηκε επιτυχώς στο βιβλίο διευθύνσεων.</"
 "para><para>Θέλετε να επεξεργαστείτε αυτήν τη νέα επαφή τώρα;</para>"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:239
+#: akonadi-contacts/job/addemailaddressjob.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:240
+#: akonadi-contacts/job/addemailaddressjob.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Τέλος"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Αδυναμία αποθήκευσης της επαφής: %1"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/job/addemailaddressjob.cpp:246
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Failed to store contact"
 msgstr "Αποτυχία αποθήκευσης της επαφής"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:272
+#: akonadi-contacts/job/addemailaddressjob.cpp:253
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Η επαφή δημιουργήθηκε επιτυχώς"
@@ -1117,65 +1117,65 @@ msgstr "Αντιγραφή κώδικα"
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>αναμονή λειτουργίας</b><br/></p>"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:65
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
 #, kde-format
 msgid "Remove Address"
 msgstr "Διαγραφή διεύθυνσης"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:73
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:297
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Θέλετε πράγματι να διαγραφεί αυτή η διεύθυνση;"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:46
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
 #, kde-format
 msgid "Add Street"
 msgstr "Προσθήκη οδού"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:57
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Προσθήκη ταχυδρομικής θυρίδας"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:67
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Προσθήκη ταχ. κωδικού"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:77
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
 #, kde-format
 msgid "Add Locality"
 msgstr "Προσθήκη τοπικότητας"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:87
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
 #, kde-format
 msgid "Add Region"
 msgstr "Προσθήκη περιφέρειας"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
 #, kde-format
 msgid "Add a Country"
 msgstr "Προσθήκη χώρας"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:107
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Αυτή είναι η προτιμώμενη διεύθυνση"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:118
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
 #, kde-format
 msgid "Add Address"
 msgstr "Προσθήκη διεύθυνσης"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
 #, kde-format
 msgid "Update Address"
 msgstr "Ενημέρωση διεύθυνσης"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:140
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
