@@ -21,19 +21,21 @@
 using namespace ContactEditor;
 MessagingWidget::MessagingWidget(QWidget *parent)
     : QWidget(parent)
+    , mMessagingEdit(new PreferredLineEditWidget(this))
+    , mAddButton(new QToolButton(this))
+    , mRemoveButton(new QToolButton(this))
+    , mProtocolCombo(new ContactEditor::ContactEditorComboBox(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);
     layout->setContentsMargins({});
 
-    mMessagingEdit = new PreferredLineEditWidget(this);
     mMessagingEdit->setTrapReturnKey(true);
     mMessagingEdit->setPlaceholderText(i18n("Add an identifier"));
     mMessagingEdit->setObjectName(QStringLiteral("messaginglineedit"));
     connect(mMessagingEdit, &PreferredLineEditWidget::preferredChanged, this, &MessagingWidget::slotPreferredChanged);
     layout->addWidget(mMessagingEdit);
 
-    mProtocolCombo = new ContactEditor::ContactEditorComboBox(this);
     mProtocolCombo->setObjectName(QStringLiteral("protocol"));
     mProtocolCombo->addItem(i18nc("@item:inlistbox select from a list of IM protocols", "Select..."));
     layout->addWidget(mProtocolCombo);
@@ -43,14 +45,12 @@ MessagingWidget::MessagingWidget(QWidget *parent)
         mProtocolCombo->addItem(QIcon::fromTheme(KContacts::Impp::serviceIcon(protocol)), KContacts::Impp::serviceLabel(protocol), protocol);
     }
 
-    mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     mAddButton->setToolTip(i18n("Add an IM"));
     connect(mAddButton, &QToolButton::clicked, this, &MessagingWidget::slotAddMessaging);
     layout->addWidget(mAddButton);
 
-    mRemoveButton = new QToolButton(this);
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     mRemoveButton->setToolTip(i18n("Remove IM"));
