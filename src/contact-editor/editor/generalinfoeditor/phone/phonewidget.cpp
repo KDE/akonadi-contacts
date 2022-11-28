@@ -19,30 +19,30 @@
 using namespace ContactEditor;
 PhoneWidget::PhoneWidget(QWidget *parent)
     : QWidget(parent)
+    , mPhoneNumberEdit(new PreferredLineEditWidget(this))
+    , mAddButton(new QToolButton(this))
+    , mRemoveButton(new QToolButton(this))
+    , mPhoneType(new PhoneComboBoxType(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);
     layout->setContentsMargins({});
 
-    mPhoneNumberEdit = new PreferredLineEditWidget(this);
     mPhoneNumberEdit->setTrapReturnKey(true);
     mPhoneNumberEdit->setPlaceholderText(i18n("Add a Phone Number"));
     mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
     connect(mPhoneNumberEdit, &PreferredLineEditWidget::preferredChanged, this, &PhoneWidget::slotPreferredChanged);
 
-    mPhoneType = new PhoneComboBoxType(this);
     mPhoneType->setObjectName(QStringLiteral("phonetype"));
     layout->addWidget(mPhoneType);
 
-    mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setToolTip(i18n("Add a Phone Number"));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &PhoneWidget::slotAddPhone);
     layout->addWidget(mAddButton);
 
-    mRemoveButton = new QToolButton(this);
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     mRemoveButton->setToolTip(i18n("Remove Phone Number"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));

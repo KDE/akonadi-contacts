@@ -27,12 +27,20 @@ using namespace ContactEditor;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     : QWidget(parent)
+    , mPhoneListWidget(new PhoneListWidget(this))
+    , mWebListWidget(new WebListWidget(this))
+    , mMessagingListWidget(new MessagingListWidget(this))
+    , mMailListWidget(new MailListWidget(this))
+    , mPhotoWidget(new ImageWidget(ImageWidget::Photo))
+    , mNameWidget(new NameWidget(this))
+    , mNickNameWidget(new NicknameWidget(this))
+    , mBlogFeedWidget(new BlogfeedWidget(this))
+    , mMessageFormattingWidget(new MessageFormattingWidget(this))
 {
     auto topLayout = new QHBoxLayout(this);
 
     auto photoLayout = new QVBoxLayout;
     topLayout->addLayout(photoLayout);
-    mPhotoWidget = new ImageWidget(ImageWidget::Photo);
     mPhotoWidget->setObjectName(QStringLiteral("photowidget"));
     photoLayout->addWidget(mPhotoWidget);
     photoLayout->addStretch(1);
@@ -43,27 +51,21 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     auto rightLayout = new QVBoxLayout;
     topLayout->addLayout(rightLayout);
 
-    mNameWidget = new NameWidget(this);
     mNameWidget->setObjectName(QStringLiteral("namewidget"));
     leftLayout->addWidget(mNameWidget);
 
-    mNickNameWidget = new NicknameWidget(this);
     mNickNameWidget->setObjectName(QStringLiteral("nicknamewidget"));
     rightLayout->addWidget(mNickNameWidget);
 
-    mPhoneListWidget = new PhoneListWidget(this);
     mPhoneListWidget->setObjectName(QStringLiteral("phonelistwidget"));
     leftLayout->addWidget(mPhoneListWidget);
 
-    mWebListWidget = new WebListWidget(this);
     mWebListWidget->setObjectName(QStringLiteral("weblistwidget"));
     leftLayout->addWidget(mWebListWidget);
 
-    mMessagingListWidget = new MessagingListWidget(this);
     mMessagingListWidget->setObjectName(QStringLiteral("messaginglistwidget"));
     rightLayout->addWidget(mMessagingListWidget);
 
-    mMailListWidget = new MailListWidget(this);
     mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
     rightLayout->addWidget(mMailListWidget);
 
@@ -89,11 +91,9 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     categoryWidgetLayout->addWidget(mCategoriesWidget);
     leftLayout->addWidget(categoryWidget);
 
-    mBlogFeedWidget = new BlogfeedWidget(this);
     mBlogFeedWidget->setObjectName(QStringLiteral("blogfeed"));
     rightLayout->addWidget(mBlogFeedWidget);
 
-    mMessageFormattingWidget = new MessageFormattingWidget(this);
     mMessageFormattingWidget->setObjectName(QStringLiteral("mMessageFormattingWidget"));
     leftLayout->addWidget(mMessageFormattingWidget);
 

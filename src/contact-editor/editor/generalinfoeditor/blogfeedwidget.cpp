@@ -17,6 +17,7 @@ using namespace ContactEditor;
 
 BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     : QWidget(parent)
+    , mBlogFeed(new KLineEdit(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -25,7 +26,6 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     blogFeedLabel->setObjectName(QStringLiteral("blogFeedLabel"));
     topLayout->addWidget(blogFeedLabel);
 
-    mBlogFeed = new KLineEdit(this);
     mBlogFeed->setTrapReturnKey(true);
     mBlogFeed->setPlaceholderText(i18n("Add a Blog Feed"));
     mBlogFeed->setObjectName(QStringLiteral("blogfeed"));

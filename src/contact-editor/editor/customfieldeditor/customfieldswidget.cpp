@@ -17,14 +17,14 @@ using namespace ContactEditor;
 
 CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     : QWidget(parent)
+    , mCustomFieldEditorWidget(new ContactEditor::CustomFieldEditorWidget(this))
+    , mCustomFieldsListWidget(new ContactEditor::CustomFieldsListWidget(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
-    mCustomFieldEditorWidget = new ContactEditor::CustomFieldEditorWidget(this);
     mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
     topLayout->addWidget(mCustomFieldEditorWidget);
 
-    mCustomFieldsListWidget = new ContactEditor::CustomFieldsListWidget(this);
     mCustomFieldsListWidget->setObjectName(QStringLiteral("customfieldslistwidget"));
     topLayout->addWidget(mCustomFieldsListWidget);
 

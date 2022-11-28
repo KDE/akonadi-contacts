@@ -17,6 +17,7 @@ using namespace ContactEditor;
 
 NicknameWidget::NicknameWidget(QWidget *parent)
     : QWidget(parent)
+    , mNickName(new KLineEdit(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -25,7 +26,6 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));
     topLayout->addWidget(nickNameLabel);
 
-    mNickName = new KLineEdit(this);
     mNickName->setTrapReturnKey(true);
     mNickName->setPlaceholderText(i18n("Add a Nickname"));
     mNickName->setObjectName(QStringLiteral("nickname"));

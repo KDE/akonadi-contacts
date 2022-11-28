@@ -20,6 +20,8 @@ using namespace ContactEditor;
 
 NameWidget::NameWidget(QWidget *parent)
     : QWidget(parent)
+    , mNameEdit(new KLineEdit(this))
+    , mButtonEdit(new QToolButton(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -31,13 +33,11 @@ NameWidget::NameWidget(QWidget *parent)
     lineLayout->setContentsMargins({});
     topLayout->addLayout(lineLayout);
 
-    mNameEdit = new KLineEdit(this);
     mNameEdit->setTrapReturnKey(true);
     lineLayout->addWidget(mNameEdit);
     setFocusProxy(mNameEdit);
     setFocusPolicy(Qt::StrongFocus);
 
-    mButtonEdit = new QToolButton(this);
     mButtonEdit->setText(i18n("..."));
     mButtonEdit->setToolTip(i18n("Edit Contact Name"));
     lineLayout->addWidget(mButtonEdit);

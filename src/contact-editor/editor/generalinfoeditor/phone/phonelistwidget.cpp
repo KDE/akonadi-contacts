@@ -17,6 +17,7 @@ using namespace ContactEditor;
 
 PhoneListWidget::PhoneListWidget(QWidget *parent)
     : QWidget(parent)
+    , mPhoneWidgetLister(new ContactEditor::PhoneWidgetLister(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -26,7 +27,6 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("phonelistlabel"));
     topLayout->addWidget(label);
 
-    mPhoneWidgetLister = new ContactEditor::PhoneWidgetLister(this);
     mPhoneWidgetLister->setObjectName(QStringLiteral("phonewidgetlister"));
     topLayout->addWidget(mPhoneWidgetLister);
 }

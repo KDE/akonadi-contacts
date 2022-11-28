@@ -17,30 +17,30 @@
 using namespace ContactEditor;
 MailWidget::MailWidget(QWidget *parent)
     : QWidget(parent)
+    , mMailEdit(new PreferredLineEditWidget(this))
+    , mMailType(new ContactEditor::MailTypeCombobox(this))
+    , mAddButton(new QToolButton(this))
+    , mRemoveButton(new QToolButton(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);
     layout->setContentsMargins({});
 
-    mMailEdit = new PreferredLineEditWidget(this);
     mMailEdit->setTrapReturnKey(true);
     mMailEdit->setPlaceholderText(i18n("Add an Email Account"));
     mMailEdit->setObjectName(QStringLiteral("mailedit"));
     layout->addWidget(mMailEdit);
     connect(mMailEdit, &PreferredLineEditWidget::preferredChanged, this, &MailWidget::slotPreferredChanged);
 
-    mMailType = new ContactEditor::MailTypeCombobox(this);
     mMailType->setObjectName(QStringLiteral("mailtype"));
     layout->addWidget(mMailType);
 
-    mAddButton = new QToolButton(this);
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QStringLiteral("addbutton"));
     mAddButton->setToolTip(i18n("Add an Email"));
     connect(mAddButton, &QToolButton::clicked, this, &MailWidget::slotAddMail);
     layout->addWidget(mAddButton);
 
-    mRemoveButton = new QToolButton(this);
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QStringLiteral("removebutton"));
     mRemoveButton->setToolTip(i18n("Remove Email"));

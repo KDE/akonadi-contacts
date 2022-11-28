@@ -17,6 +17,7 @@ using namespace ContactEditor;
 
 MailListWidget::MailListWidget(QWidget *parent)
     : QWidget(parent)
+    , mMailWidgetLister(new ContactEditor::MailWidgetLister(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -26,7 +27,6 @@ MailListWidget::MailListWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("emaillistlabel"));
     topLayout->addWidget(label);
 
-    mMailWidgetLister = new ContactEditor::MailWidgetLister(this);
     mMailWidgetLister->setObjectName(QStringLiteral("emailwidgetlister"));
     topLayout->addWidget(mMailWidgetLister);
 }

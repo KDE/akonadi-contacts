@@ -18,6 +18,7 @@ using namespace ContactEditor;
 
 WebListWidget::WebListWidget(QWidget *parent)
     : QWidget(parent)
+    , mWebWidgetLister(new ContactEditor::WebWidgetLister(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -27,7 +28,6 @@ WebListWidget::WebListWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("weblistlabel"));
     topLayout->addWidget(label);
 
-    mWebWidgetLister = new ContactEditor::WebWidgetLister(this);
     mWebWidgetLister->setObjectName(QStringLiteral("webwidgetlister"));
     topLayout->addWidget(mWebWidgetLister);
 }

@@ -7,7 +7,6 @@
 */
 
 #include "personaleditorwidget.h"
-#include "../utils/utils.h"
 
 #include <KLineEdit>
 #include <KLocalizedString>
@@ -22,26 +21,26 @@ using namespace ContactEditor;
 
 PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)
+    , mBirthdateWidget(new DateEditWidget(DateEditWidget::Birthday, this))
+    , mAnniversaryWidget(new DateEditWidget(DateEditWidget::Anniversary, this))
+    , mPartnerWidget(new KLineEdit(this))
 {
     auto mainLayout = new QGridLayout(this);
     auto label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
     mainLayout->addWidget(label, 0, 0);
 
-    mBirthdateWidget = new DateEditWidget(DateEditWidget::Birthday);
     label->setBuddy(mBirthdateWidget);
     mainLayout->addWidget(mBirthdateWidget, 1, 0);
 
     label = new QLabel(i18nc("@label The wedding anniversary of a contact", "Anniversary:"));
     mainLayout->addWidget(label, 0, 1);
 
-    mAnniversaryWidget = new DateEditWidget(DateEditWidget::Anniversary);
     label->setBuddy(mAnniversaryWidget);
     mainLayout->addWidget(mAnniversaryWidget, 1, 1);
 
     label = new QLabel(i18nc("@label The partner's name of a contact", "Partner's name:"));
     mainLayout->addWidget(label, 0, 2);
 
-    mPartnerWidget = new KLineEdit;
     mPartnerWidget->setPlaceholderText(i18n("Add name"));
     mPartnerWidget->setTrapReturnKey(true);
     label->setBuddy(mPartnerWidget);

@@ -18,6 +18,8 @@ using namespace ContactEditor;
 
 MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     : QWidget(parent)
+    , mMailPreferFormatting(new QComboBox(this))
+    , mAllowRemoteContent(new QCheckBox(i18n("Allow remote content in received HTML messages"), this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -25,14 +27,12 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("label"));
     topLayout->addWidget(label);
 
-    mMailPreferFormatting = new QComboBox(this);
     mMailPreferFormatting->setObjectName(QStringLiteral("mMailPreferFormatting"));
     topLayout->addWidget(mMailPreferFormatting);
     label->setBuddy(mMailPreferFormatting);
     const QStringList listFormat{i18n("Default"), i18n("Plain Text"), i18n("HTML")};
     mMailPreferFormatting->addItems(listFormat);
 
-    mAllowRemoteContent = new QCheckBox(i18n("Allow remote content in received HTML messages"), this);
     mAllowRemoteContent->setObjectName(QStringLiteral("mAllowRemoteContent"));
     topLayout->addWidget(mAllowRemoteContent);
 }
