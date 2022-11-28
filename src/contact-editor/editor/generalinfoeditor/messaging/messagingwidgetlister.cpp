@@ -8,7 +8,6 @@
 */
 
 #include "messagingwidgetlister.h"
-#include "../../utils/utils.h"
 #include "messagingwidget.h"
 
 #include <KContacts/Addressee>
