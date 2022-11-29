@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-29 00:47+0000\n"
 "PO-Revision-Date: 2022-04-16 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -996,7 +996,7 @@ msgid "Homepage"
 msgstr "홈페이지"
 
 #: akonadi-contacts/standardcontactformatter.cpp:139
-#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
 msgstr "블로그 피드"
@@ -1145,84 +1145,84 @@ msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
 msgstr "새 주소 종류"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:40
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:48
 #, kde-format
 msgctxt "@label The organization of a contact"
 msgid "Organization:"
 msgstr "조직:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:45
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:52
 #, kde-format
 msgid "Add organization's name"
 msgstr "조직 이름 추가"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:49
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:56
 #, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
 msgstr "직업:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:53
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:59
 #, kde-format
 msgid "Add profession"
 msgstr "직업 추가"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:58
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:64
 #, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
 msgstr "직함:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:62
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
 #, kde-format
 msgid "Add the title"
 msgstr "직위 추가"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:72
 #, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
 msgstr "부서:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:71
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:75
 #, kde-format
 msgid "Add the department"
 msgstr "부서 추가"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:76
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:80
 #, kde-format
 msgctxt "@label The office of a contact"
 msgid "Office:"
 msgstr "사무실:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:81
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:84
 #, kde-format
 msgid "Add the office"
 msgstr "사무실 추가"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:86
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:89
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
 msgstr "관리자 이름:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:90
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:92
 #, kde-format
 msgid "Add manager's name"
 msgstr "관리자 이름 추가"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:95
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:97
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
 msgstr "비서 이름:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:99
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:100
 #, kde-format
 msgid "Add assistant's name"
 msgstr "비서 이름 추가"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:105
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:106
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
@@ -1269,26 +1269,26 @@ msgctxt "@title:tab"
 msgid "Custom Fields"
 msgstr "사용자 정의 필드"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
-#, kde-format
-msgid "Custom Field Title"
-msgstr "사용자 정의 필드 이름"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:36
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:45
-#, kde-format
-msgid "Add name"
-msgstr "이름 추가"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:45
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:27
 #, kde-format
 msgid "Add Field"
 msgstr "필드 추가"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:52
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
 #, kde-format
 msgid "Use field for all contacts"
 msgstr "모든 연락처에 필드 사용"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:32
+#, kde-format
+msgid "Custom Field Title"
+msgstr "사용자 정의 필드 이름"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:39
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:44
+#, kde-format
+msgid "Add name"
+msgstr "이름 추가"
 
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
@@ -1384,12 +1384,12 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "사용자 정의"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
 #, kde-format
 msgid "Tags"
 msgstr "태그"
 
-#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
 msgstr "이메일"
@@ -1418,12 +1418,12 @@ msgstr "직장"
 msgid "Other"
 msgstr "기타"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:27
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, kde-format
 msgid "Add an Email Account"
 msgstr "이메일 계정 추가"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:39
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgid "Add an Email"
 msgstr "이메일 추가"
@@ -1433,48 +1433,48 @@ msgstr "이메일 추가"
 msgid "Remove Email"
 msgstr "이메일 삭제"
 
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:24
-#, kde-format
-msgid "Show messages received from this contact as:"
-msgstr "이 연락처에서 받은 메시지를 다음으로 표시:"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Default"
-msgstr "기본값"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Plain Text"
-msgstr "일반 텍스트"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "HTML"
-msgstr "HTML"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:35
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
 msgid "Allow remote content in received HTML messages"
 msgstr "받은 HTML 메시지의 원격 내용 불러오기 허용"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, kde-format
+msgid "Show messages received from this contact as:"
+msgstr "이 연락처에서 받은 메시지를 다음으로 표시:"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr "기본값"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "일반 텍스트"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, kde-format
 msgid "Messaging"
 msgstr "메시징"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format
 msgid "Add an identifier"
 msgstr "식별자 추가"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:38
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
 msgstr "선택..."
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:49
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
 msgid "Add an IM"
 msgstr "IM 추가"
@@ -1575,7 +1575,7 @@ msgstr "Jr."
 msgid "Sr."
 msgstr "Sr."
 
-#: contact-editor/editor/generalinfoeditor/namewidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:28
 #, kde-format
 msgid "Name"
 msgstr "이름"
@@ -1590,7 +1590,7 @@ msgstr "..."
 msgid "Edit Contact Name"
 msgstr "연락처 이름 편집"
 
-#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, kde-format
 msgid "Nickname"
 msgstr "별명"
@@ -1600,7 +1600,7 @@ msgstr "별명"
 msgid "Add a Nickname"
 msgstr "별명 추가"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, kde-format
 msgid "Phone"
 msgstr "전화"
@@ -1611,8 +1611,8 @@ msgctxt "@title:window"
 msgid "Edit Phone Number"
 msgstr "전화번호 편집"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:29
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgid "Add a Phone Number"
 msgstr "전화번호 추가"
@@ -1622,7 +1622,7 @@ msgstr "전화번호 추가"
 msgid "Remove Phone Number"
 msgstr "전화번호 삭제"
 
-#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
 msgid "Web"
 msgstr "웹"
@@ -1632,8 +1632,8 @@ msgstr "웹"
 msgid "Profile"
 msgstr "프로필"
 
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:28
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr "웹사이트 추가"
@@ -1653,13 +1653,13 @@ msgstr "날짜를 추가하려면 클릭하십시오"
 msgid "Remove"
 msgstr "삭제"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr "생일:"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:34
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:35
 #, kde-format
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-29 00:47+0000\n"
 "PO-Revision-Date: 2022-04-15 23:09+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1030,7 +1030,7 @@ msgid "Homepage"
 msgstr "Kotisivu"
 
 #: akonadi-contacts/standardcontactformatter.cpp:139
-#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
 msgstr "Blogisyöte"
@@ -1179,84 +1179,84 @@ msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
 msgstr "Uusi osoitetyyppi"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:40
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:48
 #, kde-format
 msgctxt "@label The organization of a contact"
 msgid "Organization:"
 msgstr "Organisaatio:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:45
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:52
 #, kde-format
 msgid "Add organization's name"
 msgstr "Lisää organisaation nimi"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:49
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:56
 #, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
 msgstr "Ammatti:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:53
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:59
 #, kde-format
 msgid "Add profession"
 msgstr "Lisää ammatti"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:58
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:64
 #, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
 msgstr "Titteli:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:62
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
 #, kde-format
 msgid "Add the title"
 msgstr "Lisää titteli"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:72
 #, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
 msgstr "Osasto:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:71
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:75
 #, kde-format
 msgid "Add the department"
 msgstr "Lisää osasto"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:76
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:80
 #, kde-format
 msgctxt "@label The office of a contact"
 msgid "Office:"
 msgstr "Toimisto:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:81
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:84
 #, kde-format
 msgid "Add the office"
 msgstr "Lisää toimisto"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:86
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:89
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
 msgstr "Johtajan nimi:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:90
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:92
 #, kde-format
 msgid "Add manager's name"
 msgstr "Lisää johtajan nimi"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:95
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:97
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
 msgstr "Avustajan nimi:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:99
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:100
 #, kde-format
 msgid "Add assistant's name"
 msgstr "Lisää avustajan nimi"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:105
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:106
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
@@ -1303,26 +1303,26 @@ msgctxt "@title:tab"
 msgid "Custom Fields"
 msgstr "Omat kentät"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
-#, kde-format
-msgid "Custom Field Title"
-msgstr "Oman kentän otsikko"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:36
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:45
-#, kde-format
-msgid "Add name"
-msgstr "Lisää nimi"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:45
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:27
 #, kde-format
 msgid "Add Field"
 msgstr "Lisää kenttä"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:52
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
 #, kde-format
 msgid "Use field for all contacts"
 msgstr "Käytä kenttää kaikkiin yhteystietoihin"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:32
+#, kde-format
+msgid "Custom Field Title"
+msgstr "Oman kentän otsikko"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:39
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:44
+#, kde-format
+msgid "Add name"
+msgstr "Lisää nimi"
 
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
@@ -1418,12 +1418,12 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Mukautettu"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
 #, kde-format
 msgid "Tags"
 msgstr "Tunnisteet"
 
-#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
 msgstr "Sähköposti"
@@ -1452,12 +1452,12 @@ msgstr "Työ"
 msgid "Other"
 msgstr "Muu"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:27
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, kde-format
 msgid "Add an Email Account"
 msgstr "Lisää sähköpostitili"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:39
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgid "Add an Email"
 msgstr "Lisää sähköposti"
@@ -1467,49 +1467,49 @@ msgstr "Lisää sähköposti"
 msgid "Remove Email"
 msgstr "Poista sähköposti"
 
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:24
-#, kde-format
-msgid "Show messages received from this contact as:"
-msgstr "Näytä tältä käyttäjältä saadut viestit:"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Default"
-msgstr "Oletusmuodossa"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Plain Text"
-msgstr "Pelkkänä tekstinä"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "HTML"
-msgstr "HTML:nä"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:35
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
 msgid "Allow remote content in received HTML messages"
 msgstr "Salli etäsisältö vastaanotetuissa HTML-viesteissä"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, kde-format
+msgid "Show messages received from this contact as:"
+msgstr "Näytä tältä käyttäjältä saadut viestit:"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr "Oletusmuodossa"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "Pelkkänä tekstinä"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML:nä"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, kde-format
 msgid "Messaging"
 msgstr "Pikaviestimet"
 
 # Aiheuttaako ongelmia, että sekä identifier että tag ovat tunnisteita?
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format
 msgid "Add an identifier"
 msgstr "Lisää tunniste"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:38
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
 msgstr "Valitse…"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:49
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
 msgid "Add an IM"
 msgstr "Lisää pikaviestin"
@@ -1610,7 +1610,7 @@ msgstr "nuor."
 msgid "Sr."
 msgstr "vanh."
 
-#: contact-editor/editor/generalinfoeditor/namewidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:28
 #, kde-format
 msgid "Name"
 msgstr "Nimi"
@@ -1625,7 +1625,7 @@ msgstr "…"
 msgid "Edit Contact Name"
 msgstr "Muokkaa yhteystiedon nimeä"
 
-#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, kde-format
 msgid "Nickname"
 msgstr "Lempinimi"
@@ -1635,7 +1635,7 @@ msgstr "Lempinimi"
 msgid "Add a Nickname"
 msgstr "Lisää lempinimi"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, kde-format
 msgid "Phone"
 msgstr "Puhelin"
@@ -1646,8 +1646,8 @@ msgctxt "@title:window"
 msgid "Edit Phone Number"
 msgstr "Muokkaa puhelinnumeroa"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:29
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgid "Add a Phone Number"
 msgstr "Lisää puhelinnumero"
@@ -1657,7 +1657,7 @@ msgstr "Lisää puhelinnumero"
 msgid "Remove Phone Number"
 msgstr "Poista puhelinnumero"
 
-#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
 msgid "Web"
 msgstr "Verkko"
@@ -1667,8 +1667,8 @@ msgstr "Verkko"
 msgid "Profile"
 msgstr "Profiili"
 
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:28
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr "Lisää verkkosivusto"
@@ -1688,13 +1688,13 @@ msgstr "Lisää päiväys napsauttamalla"
 msgid "Remove"
 msgstr "Poista"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr "Syntymäpäivä:"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:34
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:35
 #, kde-format
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"

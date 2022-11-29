@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-29 00:47+0000\n"
 "PO-Revision-Date: 2022-06-05 07:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1064,7 +1064,7 @@ msgid "Homepage"
 msgstr "Domača stran"
 
 #: akonadi-contacts/standardcontactformatter.cpp:139
-#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
 msgstr "Vir bloga"
@@ -1213,84 +1213,84 @@ msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
 msgstr "Nova vrsta naslova"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:40
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:48
 #, kde-format
 msgctxt "@label The organization of a contact"
 msgid "Organization:"
 msgstr "Organizacija:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:45
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:52
 #, kde-format
 msgid "Add organization's name"
 msgstr "Dodaj ime organizacije"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:49
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:56
 #, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
 msgstr "Poklic:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:53
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:59
 #, kde-format
 msgid "Add profession"
 msgstr "Dodaj poklic"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:58
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:64
 #, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
 msgstr "Naziv:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:62
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
 #, kde-format
 msgid "Add the title"
 msgstr "Dodaj naslov"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:72
 #, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
 msgstr "Oddelek:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:71
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:75
 #, kde-format
 msgid "Add the department"
 msgstr "Dodaj oddelek"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:76
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:80
 #, kde-format
 msgctxt "@label The office of a contact"
 msgid "Office:"
 msgstr "Pisarna:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:81
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:84
 #, kde-format
 msgid "Add the office"
 msgstr "Dodaj pisarno"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:86
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:89
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
 msgstr "Ime nadrejenega:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:90
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:92
 #, kde-format
 msgid "Add manager's name"
 msgstr "Dodaj ime nadrejenega"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:95
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:97
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
 msgstr "Ime pomočnika:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:99
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:100
 #, kde-format
 msgid "Add assistant's name"
 msgstr "Dodaj ime pomočnika"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:105
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:106
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
@@ -1337,26 +1337,26 @@ msgctxt "@title:tab"
 msgid "Custom Fields"
 msgstr "Polja po meri"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
-#, kde-format
-msgid "Custom Field Title"
-msgstr "Naslov polja po meri"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:36
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:45
-#, kde-format
-msgid "Add name"
-msgstr "Dodaj ime"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:45
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:27
 #, kde-format
 msgid "Add Field"
 msgstr "Dodaj polje"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:52
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
 #, kde-format
 msgid "Use field for all contacts"
 msgstr "Uporabi polje za vse stike"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:32
+#, kde-format
+msgid "Custom Field Title"
+msgstr "Naslov polja po meri"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:39
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:44
+#, kde-format
+msgid "Add name"
+msgstr "Dodaj ime"
 
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
@@ -1452,12 +1452,12 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Po meri"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
 #, kde-format
 msgid "Tags"
 msgstr "Oznake"
 
-#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
 msgstr "E-pošta"
@@ -1486,12 +1486,12 @@ msgstr "Službeni"
 msgid "Other"
 msgstr "Drugi"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:27
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, kde-format
 msgid "Add an Email Account"
 msgstr "Dodaj e-poštni račun"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:39
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgid "Add an Email"
 msgstr "Dodaj e-pošto"
@@ -1501,48 +1501,48 @@ msgstr "Dodaj e-pošto"
 msgid "Remove Email"
 msgstr "Odstrani e-pošto"
 
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:24
-#, kde-format
-msgid "Show messages received from this contact as:"
-msgstr "Sporočila, ki jih je poslal ta stik, prikaži kot:"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Default"
-msgstr "Privzeto"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Plain Text"
-msgstr "Navadno besedilo"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "HTML"
-msgstr "HTML"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:35
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
 msgid "Allow remote content in received HTML messages"
 msgstr "Dovoli oddaljeno vsebino v prejetih sporočilih HTML"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, kde-format
+msgid "Show messages received from this contact as:"
+msgstr "Sporočila, ki jih je poslal ta stik, prikaži kot:"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr "Privzeto"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "Navadno besedilo"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, kde-format
 msgid "Messaging"
 msgstr "Sporočanje"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format
 msgid "Add an identifier"
 msgstr "Dodaj določilnik"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:38
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
 msgstr "Izberi..."
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:49
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
 msgid "Add an IM"
 msgstr "Dodaj neposredno sporočanje"
@@ -1643,7 +1643,7 @@ msgstr "ml."
 msgid "Sr."
 msgstr "st."
 
-#: contact-editor/editor/generalinfoeditor/namewidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:28
 #, kde-format
 msgid "Name"
 msgstr "Ime"
@@ -1658,7 +1658,7 @@ msgstr "..."
 msgid "Edit Contact Name"
 msgstr "Uredi ime stika"
 
-#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, kde-format
 msgid "Nickname"
 msgstr "Vzdevek"
@@ -1668,7 +1668,7 @@ msgstr "Vzdevek"
 msgid "Add a Nickname"
 msgstr "Dodaj vzdevek"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, kde-format
 msgid "Phone"
 msgstr "Telefon"
@@ -1679,8 +1679,8 @@ msgctxt "@title:window"
 msgid "Edit Phone Number"
 msgstr "Uredi telefonsko številko"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:29
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgid "Add a Phone Number"
 msgstr "Dodaj telefonsko številko"
@@ -1690,7 +1690,7 @@ msgstr "Dodaj telefonsko številko"
 msgid "Remove Phone Number"
 msgstr "Odstrani telefonsko številko"
 
-#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
 msgid "Web"
 msgstr "Splet"
@@ -1700,8 +1700,8 @@ msgstr "Splet"
 msgid "Profile"
 msgstr "Profil"
 
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:28
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr "Dodaj spletišče"
@@ -1721,13 +1721,13 @@ msgstr "Kliknite za dodajanje datuma"
 msgid "Remove"
 msgstr "Odstrani"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr "Rojstni datum:"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:34
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:35
 #, kde-format
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"

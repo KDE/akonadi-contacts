@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-29 00:47+0000\n"
 "PO-Revision-Date: 2022-10-20 11:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1040,7 +1040,7 @@ msgid "Homepage"
 msgstr "Ana Sayfa"
 
 #: akonadi-contacts/standardcontactformatter.cpp:139
-#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
 msgstr "Ağ Günlüğü Beslemesi"
@@ -1189,84 +1189,84 @@ msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
 msgstr "Yeni Adres Türü"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:40
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:48
 #, kde-format
 msgctxt "@label The organization of a contact"
 msgid "Organization:"
 msgstr "Kurum:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:45
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:52
 #, kde-format
 msgid "Add organization's name"
 msgstr "Kuruluş adını ekle"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:49
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:56
 #, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
 msgstr "Uzmanlık alanı:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:53
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:59
 #, kde-format
 msgid "Add profession"
 msgstr "Meslek ekle"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:58
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:64
 #, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
 msgstr "Başlık:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:62
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
 #, kde-format
 msgid "Add the title"
 msgstr "Başlık ekle"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:72
 #, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
 msgstr "Bölüm:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:71
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:75
 #, kde-format
 msgid "Add the department"
 msgstr "Bölüm ekle"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:76
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:80
 #, kde-format
 msgctxt "@label The office of a contact"
 msgid "Office:"
 msgstr "Ofis:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:81
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:84
 #, kde-format
 msgid "Add the office"
 msgstr "Ofis ekle"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:86
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:89
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
 msgstr "Yöneticisinin adı:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:90
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:92
 #, kde-format
 msgid "Add manager's name"
 msgstr "Yönetici adını ekle"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:95
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:97
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
 msgstr "Yardımcısının adı:"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:99
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:100
 #, kde-format
 msgid "Add assistant's name"
 msgstr "Yardımcı adını ekle"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:105
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:106
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
@@ -1313,26 +1313,26 @@ msgctxt "@title:tab"
 msgid "Custom Fields"
 msgstr "Özel Alanlar"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
-#, kde-format
-msgid "Custom Field Title"
-msgstr "Özel Alan Başlığı"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:36
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:45
-#, kde-format
-msgid "Add name"
-msgstr "Ad ekle"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:45
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:27
 #, kde-format
 msgid "Add Field"
 msgstr "Alan Ekle"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:52
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
 #, kde-format
 msgid "Use field for all contacts"
 msgstr "Tüm kişiler için alanı kullan"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:32
+#, kde-format
+msgid "Custom Field Title"
+msgstr "Özel Alan Başlığı"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:39
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:44
+#, kde-format
+msgid "Add name"
+msgstr "Ad ekle"
 
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
@@ -1428,12 +1428,12 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Özel"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
 #, kde-format
 msgid "Tags"
 msgstr "Etiketler"
 
-#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
 msgstr "E-posta"
@@ -1462,12 +1462,12 @@ msgstr "İş"
 msgid "Other"
 msgstr "Diğer"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:27
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, kde-format
 msgid "Add an Email Account"
 msgstr "E-posta Hesabı Ekle"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:39
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgid "Add an Email"
 msgstr "E-posta Ekle"
@@ -1477,48 +1477,48 @@ msgstr "E-posta Ekle"
 msgid "Remove Email"
 msgstr "E-postayı Kaldır"
 
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:24
-#, kde-format
-msgid "Show messages received from this contact as:"
-msgstr "Bu kişiden alınan iletileri şu şekilde göster:"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Default"
-msgstr "Öntanımlı"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Plain Text"
-msgstr "Düz Metin"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "HTML"
-msgstr "HTML"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:35
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
 msgid "Allow remote content in received HTML messages"
 msgstr "Alınan HTML iletilerindeki uzak içeriğe izin ver"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, kde-format
+msgid "Show messages received from this contact as:"
+msgstr "Bu kişiden alınan iletileri şu şekilde göster:"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr "Öntanımlı"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "Düz Metin"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, kde-format
 msgid "Messaging"
 msgstr "İletileşme"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format
 msgid "Add an identifier"
 msgstr "Tanımlayıcı ekle"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:38
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
 msgstr "Seç..."
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:49
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
 msgid "Add an IM"
 msgstr "Bir Anlık İletileşme Ekle"
@@ -1619,7 +1619,7 @@ msgstr "Jr."
 msgid "Sr."
 msgstr "Sr."
 
-#: contact-editor/editor/generalinfoeditor/namewidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:28
 #, kde-format
 msgid "Name"
 msgstr "Ad"
@@ -1634,7 +1634,7 @@ msgstr "..."
 msgid "Edit Contact Name"
 msgstr "Kişi Adını Düzenle"
 
-#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, kde-format
 msgid "Nickname"
 msgstr "Takma ad"
@@ -1644,7 +1644,7 @@ msgstr "Takma ad"
 msgid "Add a Nickname"
 msgstr "Bir Takma Ad Ekle"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, kde-format
 msgid "Phone"
 msgstr "Telefon"
@@ -1655,8 +1655,8 @@ msgctxt "@title:window"
 msgid "Edit Phone Number"
 msgstr "Telefon Numarasını Düzenle"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:29
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgid "Add a Phone Number"
 msgstr "Bir Telefon Numarası Ekle"
@@ -1666,7 +1666,7 @@ msgstr "Bir Telefon Numarası Ekle"
 msgid "Remove Phone Number"
 msgstr "Telefon Numarasını Kaldır"
 
-#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
 msgid "Web"
 msgstr "Web"
@@ -1676,8 +1676,8 @@ msgstr "Web"
 msgid "Profile"
 msgstr "Profil"
 
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:28
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr "Web Sitesi Ekle"
@@ -1697,13 +1697,13 @@ msgstr "Tarih eklemek için tıklayın"
 msgid "Remove"
 msgstr "Kaldır"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr "Doğum tarihi:"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:34
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:35
 #, kde-format
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"

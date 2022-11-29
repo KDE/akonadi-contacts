@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-29 00:47+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -1033,7 +1033,7 @@ msgid "Homepage"
 msgstr "គេហ​​ទំព័រ​"
 
 #: akonadi-contacts/standardcontactformatter.cpp:139
-#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
 msgstr "មតិ​ព័ត៌មាន​កំណត់​ហេតុ​បណ្តាញ​"
@@ -1203,91 +1203,91 @@ msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
 msgstr "ប្រភេទ​អាសយដ្ឋាន​"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:40
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:48
 #, kde-format
 msgctxt "@label The organization of a contact"
 msgid "Organization:"
 msgstr "អង្គការ​​ ៖​"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:45
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:52
 #, fuzzy, kde-format
 #| msgid "Additional names:"
 msgid "Add organization's name"
 msgstr "ឈ្មោះ​ដែល​បាន​បន្ថែម​ ៖​"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:49
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:56
 #, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
 msgstr "អាជីព​ ៖"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:53
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Profession"
 msgid "Add profession"
 msgstr "អាជីព"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:58
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:64
 #, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
 msgstr "ងារ​ ​៖"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:62
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
 #, kde-format
 msgid "Add the title"
 msgstr ""
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:67
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:72
 #, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
 msgstr "នាយក​ដ្ឋាន​ ៖"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:71
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:75
 #, fuzzy, kde-format
 #| msgid "Department"
 msgid "Add the department"
 msgstr "នាយក​ដ្ឋាន​"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:76
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:80
 #, kde-format
 msgctxt "@label The office of a contact"
 msgid "Office:"
 msgstr "ការិយាល័យ​ ៖"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:81
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:84
 #, kde-format
 msgid "Add the office"
 msgstr ""
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:86
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:89
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
 msgstr "ឈ្មោះ​របស់​អ្នក​គ្រប់គ្រង​ ៖​"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:90
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:92
 #, fuzzy, kde-format
 #| msgctxt "@label The manager's name of a contact"
 #| msgid "Manager's name:"
 msgid "Add manager's name"
 msgstr "ឈ្មោះ​របស់​អ្នក​គ្រប់គ្រង​ ៖​"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:95
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:97
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
 msgstr "ឈ្មោះ​របស់​អ្នក​ជំនួយ​ការ​ ៖"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:99
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:100
 #, fuzzy, kde-format
 #| msgctxt "@label The assistant's name of a contact"
 #| msgid "Assistant's name:"
 msgid "Add assistant's name"
 msgstr "ឈ្មោះ​របស់​អ្នក​ជំនួយ​ការ​ ៖"
 
-#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:105
+#: contact-editor/editor/businesseditor/businesseditorwidget.cpp:106
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
@@ -1336,30 +1336,30 @@ msgctxt "@title:tab"
 msgid "Custom Fields"
 msgstr "វាល​ផ្ទាល់​ខ្លួន​"
 
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:27
+#, fuzzy, kde-format
+#| msgid "Add Email"
+msgid "Add Field"
+msgstr "បន្ថែម​អ៊ីមែល​"
+
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
+#, kde-format
+msgid "Use field for all contacts"
+msgstr "ប្រើ​វាល​​សម្រាប់​គ្រប់​ការ​ទំនាក់ទំនង​"
+
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:32
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "Custom Fields"
 msgid "Custom Field Title"
 msgstr "វាល​ផ្ទាល់​ខ្លួន​"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:36
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:45
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:39
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Additional names:"
 msgid "Add name"
 msgstr "ឈ្មោះ​ដែល​បាន​បន្ថែម​ ៖​"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:45
-#, fuzzy, kde-format
-#| msgid "Add Email"
-msgid "Add Field"
-msgstr "បន្ថែម​អ៊ីមែល​"
-
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:52
-#, kde-format
-msgid "Use field for all contacts"
-msgstr "ប្រើ​វាល​​សម្រាប់​គ្រប់​ការ​ទំនាក់ទំនង​"
 
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
@@ -1456,14 +1456,14 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "ផ្ទាល់​ខ្លួន​"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Tags"
 msgid "Tags"
 msgstr "បន្ថែម​ស្លាក​"
 
-#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "a contact's email address"
 #| msgid "Email"
@@ -1502,13 +1502,13 @@ msgstr "កិច្ច​ការ​​"
 msgid "Other"
 msgstr "ផ្សេង​​ទៀត...​"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:27
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Add Email"
 msgid "Add an Email Account"
 msgstr "បន្ថែម​អ៊ីមែល​"
 
-#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:39
+#: contact-editor/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, fuzzy, kde-format
 #| msgid "Add Email"
 msgid "Add an Email"
@@ -1520,52 +1520,52 @@ msgstr "បន្ថែម​អ៊ីមែល​"
 msgid "Remove Email"
 msgstr "យក​រូប​សញ្ញា​ចេញ​"
 
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:24
-#, kde-format
-msgid "Show messages received from this contact as:"
-msgstr ""
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Default"
-msgstr ""
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "Plain Text"
-msgstr "អត្ថបទ​ធម្មតា"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:32
-#, kde-format
-msgid "HTML"
-msgstr "HTML"
-
-#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:35
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, fuzzy, kde-format
 #| msgid "Allow remote content."
 msgid "Allow remote content in received HTML messages"
 msgstr "អនុញ្ញាត​មាតិកា​ពី​ចម្ងាយ ។"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, kde-format
+msgid "Show messages received from this contact as:"
+msgstr ""
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr ""
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "អត្ថបទ​ធម្មតា"
+
+#: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "@label The instant messaging address of a contact"
 #| msgid "Messaging:"
 msgid "Messaging"
 msgstr "ការ​ផ្ញើ​សារ​ ៖​"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, fuzzy, kde-format
 #| msgid "Additional names:"
 msgid "Add an identifier"
 msgstr "ឈ្មោះ​ដែល​បាន​បន្ថែម​ ៖​"
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:38
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
 msgstr "ជ្រើស..."
 
-#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:49
+#: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, fuzzy, kde-format
 #| msgid "Additional names:"
 msgid "Add an IM"
@@ -1671,7 +1671,7 @@ msgstr "Jr."
 msgid "Sr."
 msgstr "Sr."
 
-#: contact-editor/editor/generalinfoeditor/namewidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/namewidget.cpp:28
 #, fuzzy, kde-format
 #| msgctxt "contact's name"
 #| msgid "Name"
@@ -1688,7 +1688,7 @@ msgstr "..."
 msgid "Edit Contact Name"
 msgstr "កែ​សម្រួលឈ្មោះ​​ទំនាក់​ទំនង​"
 
-#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:24
+#: contact-editor/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, fuzzy, kde-format
 #| msgctxt "@label The nickname of a contact"
 #| msgid "Nickname:"
@@ -1701,7 +1701,7 @@ msgstr "សម្មតិនាម​ ៖"
 msgid "Add a Nickname"
 msgstr "ឈ្មោះ​ដែល​បាន​បន្ថែម​ ៖​"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:25
+#: contact-editor/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "@title:group"
 #| msgid "Phones"
@@ -1715,8 +1715,8 @@ msgctxt "@title:window"
 msgid "Edit Phone Number"
 msgstr "កែ​សម្រួល​លេខ​ទូរស័ព្ទ"
 
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:29
-#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#: contact-editor/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, fuzzy, kde-format
 #| msgid "Edit Phone Number"
 msgid "Add a Phone Number"
@@ -1729,7 +1729,7 @@ msgstr "កែ​សម្រួល​លេខ​ទូរស័ព្ទ"
 msgid "Remove Phone Number"
 msgstr "លេខទូរស័​ព្ទ​​"
 
-#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:26
+#: contact-editor/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
 msgid "Web"
 msgstr ""
@@ -1740,8 +1740,8 @@ msgstr ""
 msgid "Profile"
 msgstr "សាស្ត្រាចារ្យ​​"
 
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:28
-#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:40
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:31
+#: contact-editor/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr ""
@@ -1761,13 +1761,13 @@ msgstr ""
 msgid "Remove"
 msgstr "យក​ចេញ​"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr "ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត ៖"
 
-#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:34
+#: contact-editor/editor/personaleditor/personaleditorwidget.cpp:35
 #, fuzzy, kde-format
 #| msgctxt "@label The anniversary of a contact"
 #| msgid "Anniversary:"
