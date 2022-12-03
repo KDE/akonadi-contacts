@@ -307,4 +307,3 @@ void AddEmailDisplayJob::start()
 }
 
 #include "moc_addemaildisplayjob.cpp"
-#include <kwidgetsaddons_version.h>

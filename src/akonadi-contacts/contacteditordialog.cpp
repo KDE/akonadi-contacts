@@ -206,4 +206,3 @@ void ContactEditorDialog::reject()
 }
 
 #include "moc_contacteditordialog.cpp"
-#include <kwidgetsaddons_version.h>

@@ -172,4 +172,3 @@ void ContactGroupEditorDialog::reject()
 }
 
 #include "moc_contactgroupeditordialog.cpp"
-#include <kwidgetsaddons_version.h>

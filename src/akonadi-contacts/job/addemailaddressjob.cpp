@@ -293,4 +293,3 @@ void AddEmailAddressJob::setInteractive(bool b)
 }
 
 #include "moc_addemailaddressjob.cpp"
-#include <kwidgetsaddons_version.h>
