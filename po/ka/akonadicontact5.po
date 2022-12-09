@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-29 00:47+0000\n"
-"PO-Revision-Date: 2022-09-12 09:45+0200\n"
+"PO-Revision-Date: 2022-12-08 11:30+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
@@ -77,6 +77,8 @@ msgid ""
 "This command defines the application that shall be executed to send an SMS "
 "to a contact's phone number."
 msgstr ""
+"ეს ბრძანება განსაზღვრავს აპლიკაციას, რომელიც კონტაქტის ტელეფონის ნომერზე SMS-"
+"ის გასაგზავნად უნდა შესრულდეს."
 
 #. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
@@ -112,16 +114,18 @@ msgid ""
 "Unable to start ekiga process, check that ekiga executable is in your PATH "
 "variable."
 msgstr ""
+"Ekiga-ის პროცესის გაშვების შეცდომა. შეამოწმეთ, გამშვები ფაილი ekiga თუ "
+"შეიძლება, PATH ცვლადში მოიძებნოს."
 
 #: akonadi-contacts/actions/qekigadialer.cpp:97
 #, kde-format
 msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr ""
+msgstr "როგორც ჩანს, Ekiga -ის საჯარო API (D-Bus) გათიშულია."
 
 #: akonadi-contacts/actions/qekigadialer.cpp:117
 #, kde-format
 msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr ""
+msgstr "Ekiga-ზე ამჟამად SMS-ის გაგზავნა მხარდაუჭერელია."
 
 #: akonadi-contacts/actions/qsflphonedialer.cpp:53
 #, kde-format
@@ -136,6 +140,8 @@ msgid ""
 "Unable to start skype process, check that skype executable is in your PATH "
 "variable."
 msgstr ""
+"Skype-ის პროცესის გაშვების შეცდომა. შეამოწმეთ, გამშვები ფაილი skype თუ "
+"შეიძლება, PATH ცვლადში მოიძებნოს."
 
 #: akonadi-contacts/actions/qskypedialer.cpp:102
 #, kde-format
@@ -161,7 +167,7 @@ msgstr "SMS ტექსტი"
 #: akonadi-contacts/actions/smsdialog.cpp:39
 #, kde-format
 msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr ""
+msgstr "შეიყვანეთ SMS ტექსტი შემდეგ ნომერზე გასაგზავნად: %1"
 
 #: akonadi-contacts/actions/smsdialog.cpp:80
 #, kde-format
@@ -174,12 +180,14 @@ msgid ""
 "The contact has been changed by someone else.\n"
 "What should be done?"
 msgstr ""
+"კონტაქტი ვიღაც სხვამ შეცვალა.\n"
+"რა ვქნა?"
 
 #: akonadi-contacts/contacteditor.cpp:163
 #: akonadi-contacts/contactgroupeditor.cpp:135
 #, kde-format
 msgid "Take over changes"
-msgstr ""
+msgstr "ცვლილებების ხელში აღება"
 
 #: akonadi-contacts/contacteditor.cpp:164
 #: akonadi-contacts/contactgroupeditor.cpp:136
@@ -282,7 +290,7 @@ msgstr "კონტაქტების ჯგუფის სახელი 
 #: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
-msgstr ""
+msgstr "აირჩიეთ მისამართების წიგნი, რომელშიც ახალი კონტაქტი იქნება შენახული:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
 #: akonadi-contacts/contactgroupeditor.ui:20
@@ -319,7 +327,7 @@ msgstr "კონტაქტების ჩასწორება"
 #: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
-msgstr ""
+msgstr "წევრს სახელით <b>%1</b>ელფოტის მისამართი მითითებული არ აქვს"
 
 #: akonadi-contacts/contactgroupmodel.cpp:241
 #, kde-format
@@ -425,7 +433,7 @@ msgstr "მისამართების წიგნის გახსნ�
 #: akonadi-contacts/emailaddressselectionproxymodel.cpp:23
 #, kde-format
 msgid "Distribution List %1"
-msgstr ""
+msgstr "დასაგზავნი სია %1"
 
 #: akonadi-contacts/emailaddressselectionproxymodel.cpp:130
 #, kde-format
@@ -519,6 +527,8 @@ msgid ""
 "A contact with the email address <email>%1</email> is already in your "
 "address book."
 msgstr ""
+"კონტაქტი ელფოსტის მისამართით <email>%1</email> თქვენს მისამართების წიგნაკში "
+"უკვე არსებობს."
 
 #: akonadi-contacts/job/addemailaddressjob.cpp:120
 #: akonadi-contacts/job/addemaildisplayjob.cpp:159
@@ -593,7 +603,7 @@ msgstr "კონტაქტი წარმატებით შეიქმ�
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
-msgstr ""
+msgstr "აირჩიეთ მისამართების წიგნი, რომელშიც ახალი კონტაქტი იქნება შენახული:"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:95
 #, kde-format
@@ -605,6 +615,7 @@ msgstr "მისამართების წიგნის საქაღ�
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
 msgstr ""
+"ამჟამად მონიშნულ მისამართების წიგნის საქაღალდეში ახალი საქაღალდის დამატება."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:101
 #, kde-format
@@ -632,7 +643,7 @@ msgstr[1] "%1 მისამართების წიგნის საქ�
 #: akonadi-contacts/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
-msgstr ""
+msgstr "მონიშნული მისამართების წიგნის საქაღალდის ბუფერში კოპირება."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:121
 #, kde-format
@@ -644,7 +655,7 @@ msgstr[1] "მისამართების წიგნის %1 საქ�
 #: akonadi-contacts/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
-msgstr ""
+msgstr "მონიშნული მისამართების წიგნის საქაღალდეების წაშლა."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:127
 #, kde-format
@@ -655,7 +666,11 @@ msgid_plural ""
 "Do you really want to delete %1 address book folders and all their sub-"
 "folders?"
 msgstr[0] ""
+"მართლა გნებავთ ამ მისამართების წიგნის საქაღალდის და მისი ქვესაქაღალდეების "
+"წაშლა?"
 msgstr[1] ""
+"მართლა გნებავთ %1 მისამართების წიგნის საქაღალდის და მისი ქვესაქაღალდეების "
+"წაშლა?"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:131
 #, kde-format
@@ -685,7 +700,7 @@ msgstr[1] "მისამართების წიგნის %1 საქ�
 #: akonadi-contacts/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update the content of the selected address book folders."
-msgstr ""
+msgstr "მონიშნული მისამართების წიგნის საქაღალდეების შემცველობის განახლება."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:148
 #, kde-format
@@ -697,7 +712,7 @@ msgstr[1] "მისამართების წიგნის %1 საქ�
 #: akonadi-contacts/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
-msgstr ""
+msgstr "მონიშნული მისამართების წიგნის საქაღალდის ამოჭრა."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:153
 #, kde-format
@@ -709,6 +724,8 @@ msgstr "საქაღალდის თვისებები..."
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
 msgstr ""
+"მონიშნული მისამართების წიგნის საქაღალდის თვისებების ჩასწორების ფანჯრის "
+"გახსნა."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:158
 #, kde-format
@@ -727,7 +744,7 @@ msgstr[1] "%1 კონტაქტის კოპირება"
 #: akonadi-contacts/standardcontactactionmanager.cpp:162
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
-msgstr ""
+msgstr "მონიშნული კონტაქტების ბუფერში კოპირება."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:165
 #: akonadi-contacts/standardcontactactionmanager.cpp:301
@@ -740,7 +757,7 @@ msgstr[1] "%1 კონტაქტის წაშლა"
 #: akonadi-contacts/standardcontactactionmanager.cpp:166
 #, kde-format
 msgid "Delete the selected contacts from the address book."
-msgstr ""
+msgstr "მისამართების წიგნიდან მონიშნული კონტაქტების წაშლა."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:169
 #, kde-format
@@ -840,7 +857,7 @@ msgstr "მისამართების წიგნის თვისე�
 #: akonadi-contacts/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
-msgstr ""
+msgstr "მონიშნული მისამართების წიგნის თვისებების ჩასწორების ფანჯრის გახსნა."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:224
 #, kde-format
@@ -852,7 +869,7 @@ msgstr[1] "მისამართების %1 წიგნის გან�
 #: akonadi-contacts/standardcontactactionmanager.cpp:227
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
-msgstr ""
+msgstr "მონიშნული მისამართის წიგნების ყველა საქაღალდის შემცველობის განახლება."
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:231
 #, kde-format
@@ -1474,7 +1491,7 @@ msgstr "კონტაქტის სახელის ჩასწორე�
 #: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:48
 #, kde-format
 msgid "Honorific prefixes:"
-msgstr ""
+msgstr "საპატიო პრეფიქსები:"
 
 #: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:49
 #, kde-format
@@ -1494,7 +1511,7 @@ msgstr "ოჯახის სახელები:"
 #: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:52
 #, kde-format
 msgid "Honorific suffixes:"
-msgstr ""
+msgstr "საპატიო სუფიქსები:"
 
 #: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:53
 #, kde-format
