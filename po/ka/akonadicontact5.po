@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-29 00:47+0000\n"
-"PO-Revision-Date: 2022-12-08 11:30+0100\n"
+"PO-Revision-Date: 2022-12-10 06:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -28,6 +28,10 @@ msgid ""
 "'External Application' allows you to specify a dial command with "
 "placeholders manually."
 msgstr ""
+"აღწერა, როგორ მოხდება კონტაქტის ტელეფონის ნომერზე დარეკვა. 'სისტემის "
+"ნაგულისხმები' ამ სისტემაში დაყენებულ ნაგულისხმებ აპლიკაციას გამოიყენებს "
+"(მაგ: KDE Connect). შეგიძლიათ სხვა აპლიკაციის მითითებაც. 'გარე აპლიკაცია' "
+"საშუალებას გაძლევთ დარეკვის პროგრამა ხელით მიუთითოთ."
 
 #. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
@@ -42,6 +46,8 @@ msgid ""
 "This command defines the application that shall be executed to dial a "
 "contact's phone number."
 msgstr ""
+"ბრძანება განსაზღვრავს აპლიკაციას, რომელიც კონტაქტის ტელეფონის ნომერზე "
+"დასარეკად იქნება გამოყენებული."
 
 #. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
@@ -51,6 +57,9 @@ msgid ""
 "   %N: The raw number as stored in the address book.\n"
 "   %n: The normalized number with all non-digit characters removed."
 msgstr ""
+"ბრძანებაში შემდეგი ცვლადები შეგიძლიათ გამოიყენოთ:\n"
+"  %N: დაუმუშაებელი ნომერი, როგორც მისამართების წიგნშია მითითებული.\n"
+"  %n: ნორმალიზებული ნომერი, არაციფრებმოცილებული."
 
 #. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
@@ -89,6 +98,10 @@ msgid ""
 "   %n: The normalized number with all non-digit characters removed.\n"
 "   %t: The text"
 msgstr ""
+"ბრძანებაში შემდეგი ცვლადები შეგიძლიათ გამოიყენოთ:\n"
+"  %N: დაუმუშაებელი ნომერი, როგორც მისამართების წიგნშია მითითებული.\n"
+"  %n: ნორმალიზებული ნომერი, არაციფრებმოცილებული.\n"
+"  %t: ტექსტი"
 
 #: akonadi-contacts/actions/dialphonenumberaction.cpp:59
 #: akonadi-contacts/actions/sendsmsaction.cpp:39
@@ -519,6 +532,8 @@ msgid ""
 "The vCard was added to your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
+"თქვენს მისამართების წიგნში vCard განახლდა. თუ გნებავთ, ამ ჩანაწერს "
+"ინფორმაცია კიდევ დაამატოთ, გახსენით ის."
 
 #: akonadi-contacts/job/addemailaddressjob.cpp:69
 #, kde-kuit-format
