@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-29 00:47+0000\n"
-"PO-Revision-Date: 2022-12-10 06:55+0100\n"
+"PO-Revision-Date: 2022-12-13 03:10+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -72,6 +72,12 @@ msgid ""
 "the computer). If 'External Application' is selected, a command with "
 "placeholders can be defined."
 msgstr ""
+"აღწერს აპლიკაციას, რომელიც კონტაქტის ტელეფონის ნომერზე SMS-ის გაგზავნისთვის "
+"გამოიყენება. თუ არჩეულია 'სისტემის ნაგულისხმები', გამოყენებული იქნება "
+"სისტემის მიერ მითითებული SMS-ის გასაგზავნი პროგრამა (მაგალითად; KDE "
+"Connect). წინააღმდეგ შემთხვევაში SMS-ის გასაგზავნად მითითებული აპლიკაცია "
+"იქნება გამოყენებული (თუ ის დაყენებულია). თუ არჩეულია 'გარე აპლიკაცია', "
+"საჭირო იქნება პროგრამის განსაზღვრა, პარამეტრების ჩათვლით."
 
 #. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
@@ -110,6 +116,8 @@ msgid ""
 "There is no application set which could be executed.\n"
 "Please go to the settings dialog and configure one."
 msgstr ""
+"აპლიკაცია, რომლის გაშვებაც შესაძლებელია, ვერ ვიპოვე.\n"
+"გადადით პარამეტრების ფანჯარაზე და მიუთითეთ ის."
 
 #: akonadi-contacts/actions/qdialer.cpp:24
 #, kde-format
@@ -146,6 +154,8 @@ msgid ""
 "Unable to start sflphone-client-kde process, check that sflphone-client-kde "
 "executable is in your PATH variable."
 msgstr ""
+"შეცდომა sflphone-client-kde პროცესის გაშვებისას. შეამოწმეთ, არსებობს თუ არა "
+"sflphone-client-kde ფაილი და შეგიძლიათ თუ არა მისი გაშვება."
 
 #: akonadi-contacts/actions/qskypedialer.cpp:77
 #, kde-format
@@ -524,6 +534,9 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
+"VCard-ის ძირითადი ელფოსტის მისამართი უკვე თქვენს მისამართების წიგნშია. "
+"მაგრამ შეგიძლიათ ეს vCard-ი ფაილად შეინახოთ და მისამართების წიგნში ხელით "
+"შემოიტანოთ."
 
 #: akonadi-contacts/job/addcontactjob.cpp:111
 #, kde-format
@@ -584,6 +597,8 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
+"<para>კონტაქტი \"%1\"-სთვის თქვენს მისამართების წიგნში წარმატებით ჩაემატა</"
+"para><para>გნებავთ ჩაასწოროთ ახალი კონტაქტი?</para>"
 
 #: akonadi-contacts/job/addemailaddressjob.cpp:224
 #, kde-format
@@ -823,6 +838,8 @@ msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
 "select the type of the address book that shall be added.</p>"
 msgstr ""
+"ახალი მისამართების წიგნის დამატება<p>გაჩვენებთ ფანჯარას, სადაც დასამატებელი "
+"მისამართების წიგნის ტიპს აირჩევთ.</p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:195
 #, kde-format
@@ -848,6 +865,8 @@ msgid ""
 "will be deleted, along with all the contacts and contact groups they contain."
 "</p>"
 msgstr ""
+"მონიშნული მისამართების წიგნის წაშლა<p>ამჟამად მონიშნული მისამართების წიგნები "
+"მათში არსებულ კონტაქტებთან და კონტაქტების ჯგუფებთან ერთად წაიშლება. <p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:210
 #, kde-format
@@ -963,6 +982,8 @@ msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
 "data about a person, including addresses and phone numbers.</p>"
 msgstr ""
+"ახალი კონტაქტის შექმნა<p> წარმოგიდგენთ ფანჯარას, სადაც პიროვნების შესახებ "
+"ინფორმაციის შეყვანას შეძლებთ.</p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:541
 #, kde-format
@@ -975,6 +996,8 @@ msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
 "new group of contacts.</p>"
 msgstr ""
+"ახალი ჯგუფის შექმნა<p>წარმოგიდგენთ ფანჯარას, სადაც კონტაქტების ახალი ჯგუფის "
+"დამატება შეგიძლიათ.</p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:555
 #, kde-format
@@ -983,6 +1006,9 @@ msgid ""
 "can edit the data stored about a person, including addresses and phone "
 "numbers.</p>"
 msgstr ""
+"მონიშნული კონტაქტის ჩასწორება<p>წარმოგიდგენთ ფანჯარას, სადაც პიროვნების "
+"შესახებ შენახული ინფორმაციის ჩასწორება შეგიძლიათ, მისამართებისა და ტელეფონის "
+"ნომრების ჩათვლით.</p>"
 
 #: akonadi-contacts/standardcontactformatter.cpp:94
 #, kde-format
