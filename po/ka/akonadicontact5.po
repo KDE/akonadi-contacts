@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2022-12-12 09:56+0100\n"
+"PO-Revision-Date: 2022-12-13 06:17+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -597,6 +597,8 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
+"<para>კონტაქტი \"%1\"-სთვის თქვენს მისამართების წიგნში წარმატებით ჩაემატა</"
+"para><para>გნებავთ ჩაასწოროთ ახალი კონტაქტი?</para>"
 
 #: akonadi-contacts/job/addemailaddressjob.cpp:239
 #, kde-format
@@ -836,6 +838,8 @@ msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
 "select the type of the address book that shall be added.</p>"
 msgstr ""
+"ახალი მისამართების წიგნის დამატება<p>გაჩვენებთ ფანჯარას, სადაც დასამატებელი "
+"მისამართების წიგნის ტიპს აირჩევთ.</p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:195
 #, kde-format
@@ -861,6 +865,8 @@ msgid ""
 "will be deleted, along with all the contacts and contact groups they contain."
 "</p>"
 msgstr ""
+"მონიშნული მისამართების წიგნის წაშლა<p>ამჟამად მონიშნული მისამართების წიგნები "
+"მათში არსებულ კონტაქტებთან და კონტაქტების ჯგუფებთან ერთად წაიშლება. <p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:210
 #, kde-format
@@ -976,6 +982,8 @@ msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
 "data about a person, including addresses and phone numbers.</p>"
 msgstr ""
+"ახალი კონტაქტის შექმნა<p> წარმოგიდგენთ ფანჯარას, სადაც პიროვნების შესახებ "
+"ინფორმაციის შეყვანას შეძლებთ.</p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:541
 #, kde-format
@@ -988,6 +996,8 @@ msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
 "new group of contacts.</p>"
 msgstr ""
+"ახალი ჯგუფის შექმნა<p>წარმოგიდგენთ ფანჯარას, სადაც კონტაქტების ახალი ჯგუფის "
+"დამატება შეგიძლიათ.</p>"
 
 #: akonadi-contacts/standardcontactactionmanager.cpp:555
 #, kde-format
@@ -996,6 +1006,9 @@ msgid ""
 "can edit the data stored about a person, including addresses and phone "
 "numbers.</p>"
 msgstr ""
+"მონიშნული კონტაქტის ჩასწორება<p>წარმოგიდგენთ ფანჯარას, სადაც პიროვნების "
+"შესახებ შენახული ინფორმაციის ჩასწორება შეგიძლიათ, მისამართებისა და ტელეფონის "
+"ნომრების ჩათვლით.</p>"
 
 #: akonadi-contacts/standardcontactformatter.cpp:94
 #, kde-format
