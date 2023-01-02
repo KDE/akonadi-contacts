@@ -545,7 +545,7 @@ msgid ""
 msgstr ""
 "L'adreça de correu electrònic primària de la vCard ja es troba en la "
 "llibreta d'adreces, així i tot encara podeu guardar la vCard en un fitxer i "
-"importar-la a la llibreta d'adreces de forma manual."
+"importar-la a dins de la llibreta d'adreces de forma manual."
 
 #: akonadi-contacts/job/addcontactjob.cpp:111
 #, kde-format
