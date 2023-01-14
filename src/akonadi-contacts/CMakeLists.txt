@@ -218,6 +218,7 @@ target_link_libraries(KF5AkonadiContact
     KF5::XmlGui
     KF5::ContactEditor
     KF5::Prison
+    KF5::Codecs
     ${MAIN_LIB}
     )
 if(TARGET KF5::I18nLocaleData)
