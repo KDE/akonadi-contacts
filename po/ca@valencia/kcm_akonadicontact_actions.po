@@ -54,7 +54,7 @@ msgstr "Envia un SMS"
 #: kcmakonadicontactactions.cpp:27
 #, kde-format
 msgid "Contact Actions Settings"
-msgstr "Configuració de les accions del contacte"
+msgstr "Configureu les accions del contacte"
 
 #: kcmakonadicontactactions.cpp:31
 #, kde-format
