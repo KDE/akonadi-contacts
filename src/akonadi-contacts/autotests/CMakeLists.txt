@@ -20,5 +20,5 @@ endmacro()
 add_akonadi_contact_demo(contactmetadataattributetest.cpp)
 
 ecm_add_test(grantleeprinttest.cpp
-    LINK_LIBRARIES KF5::AkonadiContact Qt::Test KF5::Contacts
+    LINK_LIBRARIES KF5::AkonadiContact Qt::Test KF${KF_MAJOR_VERSION}::Contacts
 )

@@ -9,4 +9,5 @@ set(addresslocationwidget_SRCS addresslocationwidgettest.cpp addresslocationwidg
 add_executable(addresslocationwidget ${addresslocationwidget_SRCS})
 add_test(NAME addresslocationwidget COMMAND addresslocationwidget)
 ecm_mark_as_test(addresslocationwidget)
-target_link_libraries(addresslocationwidget Qt::Test  Qt::Widgets KF5::ContactEditor KF5::Contacts KF5::I18n KF5::Completion KF5::WidgetsAddons)
+target_link_libraries(addresslocationwidget Qt::Test  Qt::Widgets KF5::ContactEditor KF${KF_MAJOR_VERSION}::Contacts KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::Completion KF${KF_MAJOR_VERSION}::WidgetsAddons)

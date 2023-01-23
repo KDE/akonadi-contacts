@@ -15,4 +15,4 @@ kconfig_add_kcfg_files(kcm_akonadicontact_actions ${Akonadi-Contact_SOURCE_DIR}/
 
 install(TARGETS kcm_akonadicontact_actions DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/kcms/kaddressbook)
 
-target_link_libraries(kcm_akonadicontact_actions KF5::ConfigWidgets KF5::I18n KF5::Completion KF5::CoreAddons) 
+target_link_libraries(kcm_akonadicontact_actions KF${KF_MAJOR_VERSION}::ConfigWidgets KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion KF${KF_MAJOR_VERSION}::CoreAddons)

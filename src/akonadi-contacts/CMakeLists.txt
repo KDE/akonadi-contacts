@@ -200,29 +200,29 @@ target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi
 target_link_libraries(KF5AkonadiContact
     PUBLIC
     KF5::AkonadiCore
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::Contacts
     KF5::AkonadiWidgets
     Qt::Widgets
     KF5::GrantleeTheme
     PRIVATE
-    KF5::ConfigCore
-    KF5::ConfigWidgets
-    KF5::IconThemes
-    KF5::Completion
-    KF5::KIOCore
-    KF5::JobWidgets
-    KF5::KIOGui
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::IconThemes
+    KF${KF_MAJOR_VERSION}::Completion
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::JobWidgets
+    KF${KF_MAJOR_VERSION}::KIOGui
     KF5::Mime
-    KF5::I18n
-    KF5::TextWidgets
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::TextWidgets
+    KF${KF_MAJOR_VERSION}::XmlGui
     KF5::ContactEditor
-    KF5::Prison
-    KF5::Codecs
+    KF${KF_MAJOR_VERSION}::Prison
+    KF${KF_MAJOR_VERSION}::Codecs
     ${MAIN_LIB}
     )
-if(TARGET KF5::I18nLocaleData)
-    target_link_libraries(KF5AkonadiContact PRIVATE KF5::I18nLocaleData)
+if(TARGET KF${KF_MAJOR_VERSION}::I18nLocaleData)
+    target_link_libraries(KF5AkonadiContact PRIVATE KF${KF_MAJOR_VERSION}::I18nLocaleData)
 endif()
 
 set_target_properties(KF5AkonadiContact PROPERTIES

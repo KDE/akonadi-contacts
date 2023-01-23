@@ -32,7 +32,11 @@ void TextBrowser::slotCopyData()
 #ifndef QT_NO_CLIPBOARD
     QClipboard *clip = QApplication::clipboard();
     // put the data into the mouse selection and the clipboard
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     if (mDataToCopy.type() == QVariant::Pixmap) {
+#else
+    if (mDataToCopy.userType() == QMetaType::QPixmap) {
+#endif
         clip->setPixmap(mDataToCopy.value<QPixmap>(), QClipboard::Clipboard);
         clip->setPixmap(mDataToCopy.value<QPixmap>(), QClipboard::Selection);
     } else {

@@ -20,9 +20,9 @@ ecm_qt_declare_logging_category(akonadi_serializer_addressee HEADER serializer_d
 
 
 target_link_libraries(akonadi_serializer_addressee
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::Contacts
     KF5::AkonadiCore
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::I18n
 )
 install(TARGETS akonadi_serializer_addressee
     DESTINATION ${KDE_INSTALL_PLUGINDIR}
@@ -39,9 +39,9 @@ target_sources(akonadi_serializer_contactgroup PRIVATE
     akonadi_serializer_contactgroup.h
 )
 target_link_libraries(akonadi_serializer_contactgroup
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::Contacts
     KF5::AkonadiCore
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::I18n
     KF5::AkonadiContact
 )
 install(TARGETS akonadi_serializer_contactgroup

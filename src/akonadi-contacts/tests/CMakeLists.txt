@@ -9,9 +9,9 @@ macro(add_akonadi_contact_demo _source)
   add_executable( ${_name} ${_test})
   target_link_libraries(${_name}
      KF5::AkonadiContact
-     KF5::Completion
-     KF5::I18n
-     KF5::WidgetsAddons
+     KF${KF_MAJOR_VERSION}::Completion
+     KF${KF_MAJOR_VERSION}::I18n
+     KF${KF_MAJOR_VERSION}::WidgetsAddons
      Qt::Test)
   ecm_mark_as_test(${_name})
 endmacro()

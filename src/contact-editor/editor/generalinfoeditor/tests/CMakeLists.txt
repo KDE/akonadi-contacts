@@ -23,11 +23,11 @@ add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
 target_link_libraries(generalinfoeditortest
     Qt::Widgets
     KF5::ContactEditor
-    KF5::Contacts
-    KF5::I18n
-    KF5::Completion
-    KF5::IconThemes
-    KF5::WidgetsAddons
-    KF5::KIOCore
+    KF${KF_MAJOR_VERSION}::Contacts
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::Completion
+    KF${KF_MAJOR_VERSION}::IconThemes
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::KIOCore
     )
 

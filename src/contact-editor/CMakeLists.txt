@@ -156,16 +156,16 @@ target_include_directories(KF5ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-
 
 target_link_libraries(KF5ContactEditor
     PUBLIC
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::Contacts
     Qt::Widgets
     PRIVATE
-    KF5::Completion
-    KF5::ConfigCore
-    KF5::ConfigWidgets
-    KF5::KIOWidgets
-    KF5::I18n
-    KF5::TextWidgets
-    KF5::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::Completion
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::TextWidgets
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
     )
 
 set_target_properties(KF5ContactEditor PROPERTIES

@@ -4,4 +4,4 @@ set( preferredlineeditwidgettest_SRCS preferredlineeditwidgettest.cpp preferredl
 add_executable( preferredlineeditwidgettest ${preferredlineeditwidgettest_SRCS})
 add_test(NAME preferredlineeditwidgettest COMMAND preferredlineeditwidgettest)
 ecm_mark_as_test(preferredlineeditwidgettest)
-target_link_libraries( preferredlineeditwidgettest Qt::Test Qt::Widgets KF5::Completion KF5::I18n)
+target_link_libraries( preferredlineeditwidgettest Qt::Test Qt::Widgets KF${KF_MAJOR_VERSION}::Completion KF${KF_MAJOR_VERSION}::I18n)
