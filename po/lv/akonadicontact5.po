@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2010-01-01 14:24+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -1150,33 +1150,33 @@ msgstr "Nodaļa"
 msgid "IM Address"
 msgstr "Ziņapm. adrese"
 
-#: akonadi-contacts/textbrowser.cpp:57
+#: akonadi-contacts/textbrowser.cpp:61
 #, kde-format
 msgctxt "@action:inmenu Copy the text of a general item"
 msgid "Copy Item"
 msgstr ""
 
-#: akonadi-contacts/textbrowser.cpp:66
+#: akonadi-contacts/textbrowser.cpp:70
 #, fuzzy, kde-format
 #| msgid "Edit Email Addresses"
 msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr "Rediģēt e-pasta adreses"
 
-#: akonadi-contacts/textbrowser.cpp:75
+#: akonadi-contacts/textbrowser.cpp:79
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr ""
 
-#: akonadi-contacts/textbrowser.cpp:102
+#: akonadi-contacts/textbrowser.cpp:106
 #, fuzzy, kde-format
 #| msgid "Show Contact"
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr "Rādīt kontaktu"
 
-#: akonadi-contacts/textbrowser.cpp:105
+#: akonadi-contacts/textbrowser.cpp:109
 #, fuzzy, kde-format
 #| msgid "Show Contact"
 msgctxt "@action:inmenu Copy a QR code image"

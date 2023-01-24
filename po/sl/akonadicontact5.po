@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2022-06-05 07:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1090,31 +1090,31 @@ msgstr "Oddelek"
 msgid "IM Address"
 msgstr "Naslov hipnega sporočanja"
 
-#: akonadi-contacts/textbrowser.cpp:57
+#: akonadi-contacts/textbrowser.cpp:61
 #, kde-format
 msgctxt "@action:inmenu Copy the text of a general item"
 msgid "Copy Item"
 msgstr "Kopiraj predmet"
 
-#: akonadi-contacts/textbrowser.cpp:66
+#: akonadi-contacts/textbrowser.cpp:70
 #, kde-format
 msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr "Kopiraj e-poštni naslov"
 
-#: akonadi-contacts/textbrowser.cpp:75
+#: akonadi-contacts/textbrowser.cpp:79
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr "Kopiraj povezavo URL"
 
-#: akonadi-contacts/textbrowser.cpp:102
+#: akonadi-contacts/textbrowser.cpp:106
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr "Kopiraj fotografijo"
 
-#: akonadi-contacts/textbrowser.cpp:105
+#: akonadi-contacts/textbrowser.cpp:109
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
