@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2022-02-06 11:59+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -1008,31 +1008,31 @@ msgstr "Avdeling"
 msgid "IM Address"
 msgstr "Lynmeldingsadresse"
 
-#: akonadi-contacts/textbrowser.cpp:57
+#: akonadi-contacts/textbrowser.cpp:61
 #, kde-format
 msgctxt "@action:inmenu Copy the text of a general item"
 msgid "Copy Item"
 msgstr ""
 
-#: akonadi-contacts/textbrowser.cpp:66
+#: akonadi-contacts/textbrowser.cpp:70
 #, kde-format
 msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr ""
 
-#: akonadi-contacts/textbrowser.cpp:75
+#: akonadi-contacts/textbrowser.cpp:79
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr ""
 
-#: akonadi-contacts/textbrowser.cpp:102
+#: akonadi-contacts/textbrowser.cpp:106
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr ""
 
-#: akonadi-contacts/textbrowser.cpp:105
+#: akonadi-contacts/textbrowser.cpp:109
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
