@@ -15,7 +15,7 @@
 class QStackedWidget;
 class QCheckBox;
 class KLineEdit;
-class KComboBox;
+class QComboBox;
 class QPushButton;
 
 namespace ContactEditor
@@ -63,7 +63,7 @@ private:
     KLineEdit *mRegionEdit = nullptr;
     KLineEdit *mPostalCodeEdit = nullptr;
     KLineEdit *mStreetEdit = nullptr;
-    KComboBox *mCountryCombo = nullptr;
+    QComboBox *mCountryCombo = nullptr;
     QPushButton *mAddAddress = nullptr;
     QPushButton *mRemoveAddress = nullptr;
     QPushButton *mModifyAddress = nullptr;

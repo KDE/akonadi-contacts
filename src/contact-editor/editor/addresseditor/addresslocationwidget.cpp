@@ -92,13 +92,9 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label = new QLabel(KContacts::Address::countryLabel(), this);
     label->setObjectName(QStringLiteral("countrylabel"));
     gridLayout->addWidget(label, 5, 1);
-    mCountryCombo = new KComboBox(this);
-    auto edit = new KLineEdit(this);
-    edit->setTrapReturnKey(true);
-    mCountryCombo->setLineEdit(edit);
+    mCountryCombo = new QComboBox(this);
     mCountryCombo->setObjectName(QStringLiteral("countrycombobox"));
-    mCountryCombo->setEditable(true);
-    mCountryCombo->lineEdit()->setPlaceholderText(i18n("Add a Country"));
+    mCountryCombo->setEditable(false);
     mCountryCombo->setDuplicatesEnabled(false);
     connect(mCountryCombo, &KComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mCountryCombo, 6, 1);
@@ -196,9 +192,6 @@ void AddressLocationWidget::fillCountryCombo()
     });
 
     mCountryCombo->addItems(countries);
-    mCountryCombo->setAutoCompletion(true);
-    mCountryCombo->completionObject()->setItems(countries);
-    mCountryCombo->completionObject()->setIgnoreCase(true);
 
     const QString currentCountry = QLocale::countryToString(QLocale().country());
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));

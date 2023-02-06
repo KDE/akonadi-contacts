@@ -10,9 +10,9 @@
 #include "addresslocationwidgettest.h"
 #include "../addresslocationwidget.h"
 #include "../selectaddresstypecombobox.h"
-#include <KComboBox>
 #include <KLineEdit>
 #include <QCheckBox>
+#include <QComboBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QTest>
@@ -60,7 +60,7 @@ void AddressLocationWidgetTest::shouldHaveDefaultValue()
 
     auto countrylabel = w.findChild<QLabel *>(QStringLiteral("countrylabel"));
     QVERIFY(countrylabel);
-    auto countrycombobox = w.findChild<KComboBox *>(QStringLiteral("countrycombobox"));
+    auto countrycombobox = w.findChild<QComboBox *>(QStringLiteral("countrycombobox"));
     QVERIFY(countrycombobox);
 
     auto preferredcheckbox = w.findChild<QCheckBox *>(QStringLiteral("preferredcheckbox"));
@@ -93,7 +93,7 @@ void AddressLocationWidgetTest::shouldChangeReadOnlyStatus()
     QCOMPARE(regionlineedit->isReadOnly(), true);
     auto postalcodelineedit = w.findChild<KLineEdit *>(QStringLiteral("postalcodelineedit"));
     QCOMPARE(postalcodelineedit->isReadOnly(), true);
-    auto countrycombobox = w.findChild<KComboBox *>(QStringLiteral("countrycombobox"));
+    auto countrycombobox = w.findChild<QComboBox *>(QStringLiteral("countrycombobox"));
     QCOMPARE(countrycombobox->isEnabled(), false);
     auto preferredcheckbox = w.findChild<QCheckBox *>(QStringLiteral("preferredcheckbox"));
     QCOMPARE(preferredcheckbox->isEnabled(), false);
