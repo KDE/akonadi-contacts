@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-07 01:00+0000\n"
 "PO-Revision-Date: 2022-03-24 11:12-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1111,13 +1111,13 @@ msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Aguardando pela operação</b><br/></p>"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
 #, kde-format
 msgid "Remove Address"
 msgstr "Remover endereço"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:285
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Deseja realmente excluir este endereço?"
@@ -1147,28 +1147,23 @@ msgstr "Adicionar localidade"
 msgid "Add Region"
 msgstr "Adicionar região"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
-#, kde-format
-msgid "Add a Country"
-msgstr "Adicionar um país"
-
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Este é o endereço preferido"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:113
 #, kde-format
 msgid "Add Address"
 msgstr "Adicionar endereço"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, kde-format
 msgid "Update Address"
 msgstr "Atualizar endereço"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
@@ -1795,6 +1790,9 @@ msgstr "Imagens (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Definir como preferido"
+
+#~ msgid "Add a Country"
+#~ msgstr "Adicionar um país"
 
 #~ msgctxt "@option today"
 #~ msgid "&Today"

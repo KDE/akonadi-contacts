@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-07 01:00+0000\n"
 "PO-Revision-Date: 2021-11-05 10:44+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1099,13 +1099,13 @@ msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Várakozás műveletre</b><br/></p>"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
 #, kde-format
 msgid "Remove Address"
 msgstr "Cím eltávolítása"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:285
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Biztos, hogy törölni szeretné ezt a címet?"
@@ -1135,28 +1135,23 @@ msgstr "Körzet hozzáadása"
 msgid "Add Region"
 msgstr "Régió hozzáadása"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
-#, kde-format
-msgid "Add a Country"
-msgstr "Ország hozzáadása"
-
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Ez az elsődleges cím"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:113
 #, kde-format
 msgid "Add Address"
 msgstr "Cím hozzáadása"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, kde-format
 msgid "Update Address"
 msgstr "Cím frissítése"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, kde-format
 msgid "Cancel"
 msgstr "Mégsem"
@@ -1783,6 +1778,9 @@ msgstr "Képek (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Beállítás elsődlegesnek"
+
+#~ msgid "Add a Country"
+#~ msgstr "Ország hozzáadása"
 
 #~ msgctxt "@option today"
 #~ msgid "&Today"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-07 01:00+0000\n"
 "PO-Revision-Date: 2010-09-24 20:39+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -1077,7 +1077,7 @@ msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr ""
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
@@ -1085,7 +1085,7 @@ msgid "Remove Address"
 msgstr "पता"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:285
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr ""
@@ -1118,34 +1118,27 @@ msgstr ""
 msgid "Add Region"
 msgstr "व्यवसाय"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Tags"
-msgid "Add a Country"
-msgstr "टैग जोड़ू"
-
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr ""
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:113
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
 msgid "Add Address"
 msgstr "पता"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
 msgid "Update Address"
 msgstr "पता"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Cancel"
@@ -1825,6 +1818,12 @@ msgstr ""
 #, kde-format
 msgid "Set as Preferred"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Add Tags"
+#~ msgid "Add a Country"
+#~ msgstr "टैग जोड़ू"
 
 #~ msgctxt "@option today"
 #~ msgid "&Today"

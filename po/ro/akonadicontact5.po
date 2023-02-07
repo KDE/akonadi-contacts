@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-07 01:00+0000\n"
 "PO-Revision-Date: 2013-01-12 06:26+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1095,7 +1095,7 @@ msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr ""
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
@@ -1103,7 +1103,7 @@ msgid "Remove Address"
 msgstr "Adresă"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:285
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete the selected contact?"
 #| msgid_plural "Do you really want to delete %1 contacts?"
@@ -1138,34 +1138,28 @@ msgstr ""
 msgid "Add Region"
 msgstr "Profesia"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
-#, fuzzy, kde-format
-#| msgid "Additional names:"
-msgid "Add a Country"
-msgstr "Nume suplimentare:"
-
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, fuzzy, kde-format
 #| msgid "Select preferred email address"
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Selectați adresa de email preferată"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:113
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Address Book"
 msgid "Add Address"
 msgstr "Adaugă carte de adrese"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
 msgid "Update Address"
 msgstr "Actualizează cartea de adrese"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Cancel"
@@ -1844,6 +1838,11 @@ msgstr ""
 #, kde-format
 msgid "Set as Preferred"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Additional names:"
+#~ msgid "Add a Country"
+#~ msgstr "Nume suplimentare:"
 
 #~ msgctxt "@option today"
 #~ msgid "&Today"

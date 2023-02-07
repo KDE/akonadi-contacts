@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-07 01:00+0000\n"
 "PO-Revision-Date: 2011-01-01 12:08+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -1100,7 +1100,7 @@ msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>ਓਪਰੇਸ਼ਨ ਲਈ ਉਡੀਕ ਜਾਰੀ</b><br/></p>"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
@@ -1108,7 +1108,7 @@ msgid "Remove Address"
 msgstr "ਐਡਰੈੱਸ"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:285
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
 msgid "Do you really want to delete this address?"
@@ -1142,32 +1142,26 @@ msgstr ""
 msgid "Add Region"
 msgstr "ਕਿੱਤਾ"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
-#, fuzzy, kde-format
-#| msgid "Add Email"
-msgid "Add a Country"
-msgstr "ਈਮੇਲ ਸ਼ਾਮਲ"
-
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, fuzzy, kde-format
 #| msgid "This is the preferred phone number"
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "ਇਹ ਪਸੰਦੀਦਾ ਫੋਨ ਨੰਬਰ ਹੈ"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:113
 #, fuzzy, kde-format
 #| msgid "IM Address"
 msgid "Add Address"
 msgstr "IM ਐਡਰੈੱਸ"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
 msgid "Update Address"
 msgstr "ਐਡਰੈੱਸ ਬੁੱਕ ਚੁਣੋ"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, kde-format
 msgid "Cancel"
 msgstr ""
@@ -1853,6 +1847,11 @@ msgstr ""
 #| msgid "Set as Standard"
 msgid "Set as Preferred"
 msgstr "ਸਟੈਂਡਰਡ ਸੈੱਟ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "Add Email"
+#~ msgid "Add a Country"
+#~ msgstr "ਈਮੇਲ ਸ਼ਾਮਲ"
 
 #~ msgctxt "@option today"
 #~ msgid "&Today"

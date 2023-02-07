@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-07 01:00+0000\n"
 "PO-Revision-Date: 2015-01-27 22:27+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1158,14 +1158,14 @@ msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Laukiama veiksmo</b><br/></p>"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
 #, fuzzy, kde-format
 #| msgid "Show Address"
 msgid "Remove Address"
 msgstr "Rodyti adresą"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:68
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:285
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"
 #| msgid_plural "Do you really want to delete %1 address books?"
@@ -1200,33 +1200,27 @@ msgstr ""
 msgid "Add Region"
 msgstr "Profesija"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
-#, fuzzy, kde-format
-#| msgid "Add Email"
-msgid "Add a Country"
-msgstr "Pridėti el. paštą"
-
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Pageidautinas adresas"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:113
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add IM Address"
 msgid "Add Address"
 msgstr "Pridėti TP adresus"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
 msgid "Update Address"
 msgstr "Naujinti adresų knygą"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, kde-format
 msgid "Cancel"
 msgstr ""
@@ -1904,6 +1898,11 @@ msgstr ""
 #| msgid "Set as Standard"
 msgid "Set as Preferred"
 msgstr "Nustatyti tipiniu"
+
+#, fuzzy
+#~| msgid "Add Email"
+#~ msgid "Add a Country"
+#~ msgstr "Pridėti el. paštą"
 
 #~ msgctxt "@option today"
 #~ msgid "&Today"
