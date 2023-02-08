@@ -30,7 +30,7 @@ PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
 
     update();
 
-    connect(this, qOverload<int>(&PhoneComboBoxType::activated), this, &PhoneComboBoxType::selected);
+    connect(this, &PhoneComboBoxType::activated, this, &PhoneComboBoxType::selected);
 }
 
 PhoneComboBoxType::~PhoneComboBoxType() = default;

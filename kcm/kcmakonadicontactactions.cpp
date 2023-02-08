@@ -42,12 +42,12 @@ KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVaria
     ui.DialPhoneNumberAction->addItem(i18n("Ekiga"), ContactActionsSettings::UseEkiga);
     ui.DialPhoneNumberAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhone);
     ui.DialPhoneNumberAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalPhoneApplication);
-    connect(ui.DialPhoneNumberAction, qOverload<int>(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
+    connect(ui.DialPhoneNumberAction, &QComboBox::currentIndexChanged, this, &KCMAkonadiContactActions::slotDialPhoneNumberActionChanged);
     ui.SendSmsAction->addItem(i18n("System Default"), ContactActionsSettings::UseSystemDefaultSms);
     ui.SendSmsAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkypeSms);
     ui.SendSmsAction->addItem(i18n("SflPhone"), ContactActionsSettings::UseSflPhoneSms);
     ui.SendSmsAction->addItem(i18n("External Application"), ContactActionsSettings::UseExternalSmsApplication);
-    connect(ui.SendSmsAction, qOverload<int>(&QComboBox::currentIndexChanged), this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
+    connect(ui.SendSmsAction, &QComboBox::currentIndexChanged, this, &KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged);
 
     load();
 }
