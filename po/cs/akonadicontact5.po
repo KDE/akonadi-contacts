@@ -1752,6 +1752,3 @@ msgstr "Obrázky (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Nastavit jako preferovaný"
-
-#~ msgid "Add a Country"
-#~ msgstr "Přidat zemi"
