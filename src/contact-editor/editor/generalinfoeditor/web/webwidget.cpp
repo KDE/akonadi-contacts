@@ -79,7 +79,7 @@ void WebWidget::setPreferred(bool b)
 
 KContacts::ResourceLocatorUrl WebWidget::url()
 {
-    mUrl.setUrl(QUrl(mWebSiteEdit->text()));
+    mUrl.setUrl(QUrl(mWebSiteEdit->text().trimmed()));
     mUrl.setPreferred(mWebSiteEdit->preferred());
     mUrl.setType(KContacts::ResourceLocatorUrl::Type(mWebType->currentData().toInt()));
     return mUrl;
