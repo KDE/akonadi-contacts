@@ -28,6 +28,7 @@
         "Description[tr]": "Kişi Eylemlerini Yapılandır",
         "Description[uk]": "Налаштування дій для записів контактів",
         "Description[x-test]": "xxConfigure the Contact Actionsxx",
+        "Description[zh_CN]": "配置联系人操作",
         "Icon": "configure",
         "Name": "Contact Actions",
         "Name[ar]": "إجراءات المتراسل",
@@ -57,6 +58,7 @@
         "Name[tr]": "Kişi Eylemleri",
         "Name[uk]": "Дії із записами контактів",
         "Name[x-test]": "xxContact Actionsxx",
+        "Name[zh_CN]": "联系人操作",
         "ServiceTypes": [
             "KCModule"
         ]
