@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the akonadi-contacts package.
 #
-# Kheyyam Gojayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# Kheyyam Gojayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:00+0000\n"
-"PO-Revision-Date: 2022-07-06 18:02+0400\n"
+"PO-Revision-Date: 2023-02-17 01:07+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
@@ -74,8 +74,8 @@ msgstr ""
 "olunacağını müəyyən edir. Əgər \"Standart Sistem\" seçilmişsə bunun üçün "
 "sistemin standart tətbiqindən (məs., KDE Connect) istifadə olunacaq, əks "
 "halda seçilmiş başqa tətbiq (əgər quraşdırılıbsa) SMS göndərilməsində "
-"istifadə olunacaq.Əgər \"Xarici Tətəbiq\" seçilmişsə doldurucularla əmr "
-"təyin edilə bilər."
+"istifadə olunacaq.Əgər \"Xarici Tətbiq\" seçilmişsə doldurucularla əmr təyin "
+"edilə bilər."
 
 #. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
