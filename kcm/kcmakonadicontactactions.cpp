@@ -79,11 +79,11 @@ void KCMAkonadiContactActions::load()
 {
     mConfigManager->updateWidgets();
 
-    auto enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ContactActionsSettings::self()->dialPhoneNumberAction());
+    const auto enumValue = static_cast<ContactActionsSettings::EnumDialPhoneNumberAction>(ContactActionsSettings::self()->dialPhoneNumberAction());
     const int index = ui.DialPhoneNumberAction->findData(enumValue);
     ui.DialPhoneNumberAction->setCurrentIndex(index);
 
-    auto enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ContactActionsSettings::self()->sendSmsAction());
+    const auto enumValueSms = static_cast<ContactActionsSettings::EnumSendSmsAction>(ContactActionsSettings::self()->sendSmsAction());
     const int indexSms = ui.SendSmsAction->findData(enumValueSms);
     ui.SendSmsAction->setCurrentIndex(indexSms);
 }
