@@ -118,7 +118,7 @@ public:
         // remove all empty lines first except the last line
         do {
             foundEmpty = false;
-            for (int i = 0; i < mMembers.count(); ++i) {
+            for (int i = 0, total = mMembers.count(); i < total; ++i) {
                 const GroupMember &member = mMembers[i];
                 if (!member.isReference && !(i == mMembers.count() - 1)) {
                     if (member.data.name().isEmpty() && member.data.email().isEmpty()) {
