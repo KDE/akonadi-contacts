@@ -212,7 +212,7 @@ target_link_libraries(KF5AkonadiContact
     KF${KF_MAJOR_VERSION}::KIOCore
     KF${KF_MAJOR_VERSION}::JobWidgets
     KF${KF_MAJOR_VERSION}::KIOGui
-    KF5::Mime
+    KPim${KF_MAJOR_VERSION}::Mime
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::TextWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
