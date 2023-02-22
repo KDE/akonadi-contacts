@@ -14,7 +14,7 @@ add_executable(customfieldeditortest ${customfieldeditor_SRCS})
 
 target_link_libraries(customfieldeditortest
     Qt::Widgets
-    KF5::ContactEditor
+    KPim${KF_MAJOR_VERSION}::ContactEditor
     KF${KF_MAJOR_VERSION}::Contacts
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::Completion

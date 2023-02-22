@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
-
+set(AKONADICONTACT_KF5_COMPAT FALSE)
 if (BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KF5AkonadiContact_QCH
@@ -12,33 +12,33 @@ if (BUILD_QCH)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5AkonadiContactQchTargets.cmake\")")
 endif()
 
-add_library(KF5AkonadiContact)
-add_library(KF5::AkonadiContact ALIAS KF5AkonadiContact)
-
+add_library(KPim${KF_MAJOR_VERSION}AkonadiContact)
+add_library(KPim${KF_MAJOR_VERSION}::AkonadiContact ALIAS KPim${KF_MAJOR_VERSION}AkonadiContact)
+add_library(KF5::AkonadiContact ALIAS KPim${KF_MAJOR_VERSION}AkonadiContact)
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactConfigVersion.cmake"
     SOVERSION 5
     )
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF5AkonadiContactConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KF5AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiContactTargets.cmake NAMESPACE KF5::)
+install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}AkonadiContactTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
 
 ########### next target ###############
 
-target_sources(KF5AkonadiContact PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     actions/dialphonenumberaction.cpp
     actions/qdialer.cpp
     actions/qskypedialer.cpp
@@ -49,15 +49,15 @@ target_sources(KF5AkonadiContact PRIVATE
     )
 
 configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
-kconfig_add_kcfg_files(KF5AkonadiContact actions/contactactionssettings.kcfgc)
+kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}AkonadiContact actions/contactactionssettings.kcfgc)
 
 
-target_sources(KF5AkonadiContact PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     attributes/contactmetadataattribute.cpp
     attributes/attributeregistrar.cpp
 )
 
-target_sources(KF5AkonadiContact PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     job/contactgroupexpandjob.cpp
     job/contactgroupsearchjob.cpp
     job/contactsearchjob.cpp
@@ -67,12 +67,12 @@ target_sources(KF5AkonadiContact PRIVATE
     job/openemailaddressjob.cpp
 )
 
-target_sources(KF5AkonadiContact PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     recipientspicker/recipientseditormanager.cpp
     recipientspicker/recipientspickerwidget.cpp
     )
 
-target_sources(KF5AkonadiContact PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     grantlee/contactgrantleewrapper.cpp
     grantlee/grantleecontactformatter.cpp
     grantlee/grantleecontactgroupformatter.cpp
@@ -81,7 +81,7 @@ target_sources(KF5AkonadiContact PRIVATE
     )
 
 
-target_sources(KF5AkonadiContact PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
@@ -174,13 +174,13 @@ target_sources(KF5AkonadiContact PRIVATE
     )
 
 
-ecm_qt_declare_logging_category(KF5AkonadiContact HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
+ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}AkonadiContact HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
         DESCRIPTION "akonadicontact (pim lib)"
         OLD_CATEGORY_NAMES log_akonadi_contact
         EXPORT AKONADICONTACTS
     )
 
-ki18n_wrap_ui(KF5AkonadiContact contactgroupeditor.ui)
+ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}AkonadiContact contactgroupeditor.ui)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_source_files_properties(
@@ -189,15 +189,15 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
         grantlee/grantleecontactgroupformatter.cpp
         grantlee/grantleeprint.cpp
         grantlee/grantleecontactviewer.cpp PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
-    set_target_properties(KF5AkonadiContact PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim${KF_MAJOR_VERSION}AkonadiContact PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KF5AkonadiContact BASE_NAME akonadi-contact)
+generate_export_header(KPim${KF_MAJOR_VERSION}AkonadiContact BASE_NAME akonadi-contact)
 
 
-target_include_directories(KF5AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact>")
-target_include_directories(KF5AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src>")
+target_include_directories(KPim${KF_MAJOR_VERSION}AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContact>")
+target_include_directories(KPim${KF_MAJOR_VERSION}AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src>")
 
-target_link_libraries(KF5AkonadiContact
+target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiContact
     PUBLIC
     KF5::AkonadiCore
     KF${KF_MAJOR_VERSION}::Contacts
@@ -216,29 +216,29 @@ target_link_libraries(KF5AkonadiContact
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::TextWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
-    KF5::ContactEditor
+    KPim${KF_MAJOR_VERSION}::ContactEditor
     KF${KF_MAJOR_VERSION}::Prison
     KF${KF_MAJOR_VERSION}::Codecs
     ${MAIN_LIB}
     )
 if(TARGET KF${KF_MAJOR_VERSION}::I18nLocaleData)
-    target_link_libraries(KF5AkonadiContact PRIVATE KF${KF_MAJOR_VERSION}::I18nLocaleData)
+    target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE KF${KF_MAJOR_VERSION}::I18nLocaleData)
 endif()
 
-set_target_properties(KF5AkonadiContact PROPERTIES
+set_target_properties(KPim${KF_MAJOR_VERSION}AkonadiContact PROPERTIES
     VERSION ${AKONADICONTACT_VERSION}
     SOVERSION ${AKONADICONTACT_SOVERSION}
     EXPORT_NAME AkonadiContact
     )
 
 install(TARGETS
-    KF5AkonadiContact
-    EXPORT KF5AkonadiContactTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim${KF_MAJOR_VERSION}AkonadiContact
+    EXPORT KPim${KF_MAJOR_VERSION}AkonadiContactTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 ecm_generate_pri_file(BASE_NAME AkonadiContact
-    LIB_NAME KF5AkonadiContact
-    DEPS "AkonadiCore KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/Akonadi/Contact
+    LIB_NAME KPim${KF_MAJOR_VERSION}AkonadiContact
+    DEPS "AkonadiCore KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/Akonadi/Contact
     )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
@@ -315,7 +315,7 @@ install( FILES
     ${AkonadiContactJob_CamelCase_HEADERS}
     ${AkonadiContactRecipients_CamelCase_HEADERS}
     ${AkonadiContactGrantlee_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact/Akonadi COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContact/Akonadi COMPONENT Devel
     )
 
 install( FILES
@@ -324,7 +324,7 @@ install( FILES
     ${AkonadiContactRecipients_HEADERS}
     ${AkonadiContactGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact/akonadi COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContact/akonadi COMPONENT Devel
     )
 
 
@@ -337,9 +337,9 @@ add_subdirectory(plugins)
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5AkonadiContact_QCH
-        NAME KF5AkonadiContact
-        BASE_NAME KF5AkonadiContact
+        KPim${KF_MAJOR_VERSION}AkonadiContact_QCH
+        NAME KPim${KF_MAJOR_VERSION}AkonadiContact
+        BASE_NAME KPim${KF_MAJOR_VERSION}AkonadiContact
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -365,5 +365,33 @@ endif()
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiContact COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContact COMPONENT Devel
+)
+
+##
+# TODO: Backwards compatiblity. Remove in next major version
+##
+set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
+set(AKONADICONTACT_KF5_COMPAT TRUE)
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactConfigVersion.cmake"
+    RENAME "KF5AkonadiContactConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiContactTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    FILE KPim${KF_MAJOR_VERSION}AkonadiContactTargets.cmake
+    NAMESPACE KF5::
 )

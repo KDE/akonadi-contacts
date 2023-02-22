@@ -4,5 +4,5 @@ kcoreaddons_add_plugin(categorieseditwidgetplugin SOURCES
     categorieseditwidget.cpp categorieseditwidget.h INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/akonadi/contacts/plugins)
 
 target_link_libraries(categorieseditwidgetplugin
-    KF5::AkonadiWidgets KF5::ContactEditor KF${KF_MAJOR_VERSION}::Service
+    KF5::AkonadiWidgets KPim${KF_MAJOR_VERSION}::ContactEditor KF${KF_MAJOR_VERSION}::Service
     )

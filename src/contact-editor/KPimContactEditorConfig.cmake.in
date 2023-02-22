@@ -1,0 +1,17 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+find_dependency(KF@KF_MAJOR_VERSION@Contacts "@KF_MIN_VERSION@")
+
+find_dependency(Qt@QT_MAJOR_VERSION@Widgets "@QT_REQUIRED_VERSION@")
+
+if (@AKONADICONTACTEDITOR_KF5_COMPAT@)
+    message(WARNING "\n"
+                    "************* DEPRECATION WARNING *************\n"
+		    "Using find_package(KF5AkonadiContactEditor) and KF5::AkonadiContactEditor targets is deprecated. "
+		    "Please use find_package(KPim@KF_MAJOR_VERSION@AkonadiContactEditor) and KPim@KF_MAJOR_VERSION@::AkonadiContactEditor instead. This backwards "
+                    "compatibility will be removed in the next major version.\n"
+                    "***********************************************\n")
+endif()
+
+
+include("${CMAKE_CURRENT_LIST_DIR}/KPim@KF_MAJOR_VERSION@ContactEditorTargets.cmake")
