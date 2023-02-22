@@ -203,7 +203,7 @@ target_link_libraries(KF5AkonadiContact
     KF${KF_MAJOR_VERSION}::Contacts
     KF5::AkonadiWidgets
     Qt::Widgets
-    KF5::GrantleeTheme
+    KPim${KF_MAJOR_VERSION}::GrantleeTheme
     PRIVATE
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::ConfigWidgets
