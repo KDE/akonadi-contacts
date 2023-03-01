@@ -21,7 +21,7 @@ ecm_qt_declare_logging_category(akonadi_serializer_addressee HEADER serializer_d
 
 target_link_libraries(akonadi_serializer_addressee
     KF${KF_MAJOR_VERSION}::Contacts
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KF${KF_MAJOR_VERSION}::I18n
 )
 install(TARGETS akonadi_serializer_addressee
@@ -40,7 +40,7 @@ target_sources(akonadi_serializer_contactgroup PRIVATE
 )
 target_link_libraries(akonadi_serializer_contactgroup
     KF${KF_MAJOR_VERSION}::Contacts
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::AkonadiContact
 )

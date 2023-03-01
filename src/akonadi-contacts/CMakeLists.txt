@@ -199,9 +199,9 @@ target_include_directories(KPim${KF_MAJOR_VERSION}AkonadiContact PUBLIC "$<BUILD
 
 target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiContact
     PUBLIC
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KF${KF_MAJOR_VERSION}::Contacts
-    KF5::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     Qt::Widgets
     KPim${KF_MAJOR_VERSION}::GrantleeTheme
     PRIVATE
