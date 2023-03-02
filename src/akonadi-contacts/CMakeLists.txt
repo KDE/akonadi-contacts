@@ -4,12 +4,12 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSI
 set(AKONADICONTACT_KF5_COMPAT FALSE)
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KF5AkonadiContact_QCH
-        FILE KF5AkonadiContactQchTargets.cmake
+        TARGETS KPim${KF_MAJOR_VERSION}AkonadiContact_QCH
+        FILE KPim${KF_MAJOR_VERSION}AkonadiContactQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5AkonadiContactQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactQchTargets.cmake\")")
 endif()
 
 add_library(KPim${KF_MAJOR_VERSION}AkonadiContact)
