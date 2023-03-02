@@ -28,7 +28,7 @@ msgid ""
 "'External Application' allows you to specify a dial command with "
 "placeholders manually."
 msgstr ""
-"연락처의 전화 번호로 전화를 걸 방법을 지정합니다. '시스템 기본값'을 사용하면 "
+"연락처의 전화번호로 전화를 걸 방법을 지정합니다. '시스템 기본값'을 사용하면 "
 "시스템에 설정된 기본 프로그램을 사용합니다(예: KDE Connect). 프로그램을 선택"
 "하면 설치된 경우 사용할 것이며, '외부 프로그램'을 선택하면 자리 비움자가 들"
 "어 있는 전화 걸기 명령을 직접 지정할 수 있습니다."
@@ -45,7 +45,7 @@ msgstr "전화 명령"
 msgid ""
 "This command defines the application that shall be executed to dial a "
 "contact's phone number."
-msgstr "이 명령은 연락처의 전화 번호로 전화를 걸 때 사용됩니다."
+msgstr "이 명령은 연락처의 전화번호로 전화를 걸 때 사용됩니다."
 
 #. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
@@ -56,8 +56,8 @@ msgid ""
 "   %n: The normalized number with all non-digit characters removed."
 msgstr ""
 "명령에 다음 자리 비움자를 사용할 수 있습니다:\n"
-"  %N: 주소록에 저장되어 있는 그대로의 전화 번호.\n"
-"  %n: 숫자가 아닌 문자를 모두 삭제한 전화 번호."
+"  %N: 주소록에 저장되어 있는 그대로의 전화번호.\n"
+"  %n: 숫자가 아닌 문자를 모두 삭제한 전화번호."
 
 #. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
@@ -70,7 +70,7 @@ msgid ""
 "the computer). If 'External Application' is selected, a command with "
 "placeholders can be defined."
 msgstr ""
-"연락처의 전화 번호로 SMS를 보낼 때 사용할 프로그램을 지정합니다. '시스템 기본"
+"연락처의 전화번호로 SMS를 보낼 때 사용할 프로그램을 지정합니다. '시스템 기본"
 "값'을 사용하면 시스템에 설정된 기본 SMS 메시지 프로그램을 사용합니다(예: KDE "
 "Connect). SMS 전송 프로그램을 선택하면 설치된 경우 사용할 것이며, '외부 프로"
 "그램'을 선택하면 자리 비움자가 들어 있는 SMS 전송 명령을 직접 지정할 수 있습"
@@ -88,7 +88,7 @@ msgstr "SMS 명령"
 msgid ""
 "This command defines the application that shall be executed to send an SMS "
 "to a contact's phone number."
-msgstr "이 명령은 연락처의 전화 번호로 SMS를 보낼 때 사용됩니다."
+msgstr "이 명령은 연락처의 전화번호로 SMS를 보낼 때 사용됩니다."
 
 #. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
 #: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
@@ -100,8 +100,8 @@ msgid ""
 "   %t: The text"
 msgstr ""
 "명령에 다음 자리 비움자를 사용할 수 있습니다:\n"
-"  %N: 주소록에 저장되어 있는 그대로의 전화 번호.\n"
-"  %n: 숫자가 아닌 문자를 모두 삭제한 전화 번호.\n"
+"  %N: 주소록에 저장되어 있는 그대로의 전화번호.\n"
+"  %n: 숫자가 아닌 문자를 모두 삭제한 전화번호.\n"
 "  %t: SMS 텍스트"
 
 #: akonadi-contacts/actions/dialphonenumberaction.cpp:59
@@ -117,7 +117,7 @@ msgstr ""
 #: akonadi-contacts/actions/qdialer.cpp:24
 #, kde-format
 msgid "Dialing a number is not supported"
-msgstr "전화 번호로 전화를 갈 수 없음"
+msgstr "전화번호로 전화를 갈 수 없음"
 
 #: akonadi-contacts/actions/qdialer.cpp:33
 #, kde-format
