@@ -10,7 +10,6 @@
         "Description[de]": "Kontakt-Aktionen einrichten",
         "Description[el]": "Διαμόρφωση των ενεργειών για τις επαφές",
         "Description[en_GB]": "Configure the Contact Actions",
-        "Description[eo]": "Agordi la Kontakt-Agojn",
         "Description[es]": "Configurar las acciones de los contactos",
         "Description[eu]": "Konfiguratu kontaktuetarako ekintzak",
         "Description[fi]": "Yhteystietotoimintojen asetukset",
@@ -30,7 +29,6 @@
         "Description[uk]": "Налаштування дій для записів контактів",
         "Description[x-test]": "xxConfigure the Contact Actionsxx",
         "Description[zh_CN]": "配置联系人操作",
-        "Description[zh_TW]": "設定聯絡人動作",
         "Icon": "configure",
         "Name": "Contact Actions",
         "Name[ar]": "إجراءات المتراسل",
@@ -42,7 +40,6 @@
         "Name[de]": "Kontakt-Aktionen",
         "Name[el]": "Ενέργειες για τις επαφές",
         "Name[en_GB]": "Contact Actions",
-        "Name[eo]": "Kontakt-Agoj",
         "Name[es]": "Acciones de los contactos",
         "Name[eu]": "Kontaktuetarako ekintzak",
         "Name[fi]": "Yhteystietotoiminnot",
@@ -62,7 +59,6 @@
         "Name[uk]": "Дії із записами контактів",
         "Name[x-test]": "xxContact Actionsxx",
         "Name[zh_CN]": "联系人操作",
-        "Name[zh_TW]": "聯絡人動作",
         "ServiceTypes": [
             "KCModule"
         ]
