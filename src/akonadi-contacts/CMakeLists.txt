@@ -14,7 +14,6 @@ endif()
 
 add_library(KPim${KF_MAJOR_VERSION}AkonadiContact)
 add_library(KPim${KF_MAJOR_VERSION}::AkonadiContact ALIAS KPim${KF_MAJOR_VERSION}AkonadiContact)
-add_library(KF5::AkonadiContact ALIAS KPim${KF_MAJOR_VERSION}AkonadiContact)
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT

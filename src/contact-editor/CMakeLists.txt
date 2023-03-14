@@ -14,7 +14,6 @@ endif()
 
 add_library(KPim${KF_MAJOR_VERSION}ContactEditor)
 add_library(KPim${KF_MAJOR_VERSION}::ContactEditor ALIAS KPim${KF_MAJOR_VERSION}ContactEditor)
-add_library(KF5::ContactEditor ALIAS KPim${KF_MAJOR_VERSION}ContactEditor)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h"
