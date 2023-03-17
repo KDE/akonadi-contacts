@@ -9,6 +9,7 @@
 
 #pragma once
 
+#include "kcmutils_version.h"
 #include "ui_akonadicontactactions.h"
 #include <KCModule>
 
@@ -19,7 +20,11 @@ class KCMAkonadiContactActions : public KCModule
     Q_OBJECT
 
 public:
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     explicit KCMAkonadiContactActions(QWidget *parent, const QVariantList &args);
+#else
+    explicit KCMAkonadiContactActions(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+#endif
 
     void load() override;
     void save() override;

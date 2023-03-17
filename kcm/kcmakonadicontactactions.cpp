@@ -20,22 +20,21 @@ Q_DECLARE_METATYPE(ContactActionsSettings::EnumDialPhoneNumberAction)
 
 K_PLUGIN_CLASS_WITH_JSON(KCMAkonadiContactActions, "akonadicontact_actions.json")
 
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
 KCMAkonadiContactActions::KCMAkonadiContactActions(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
+#else
+KCMAkonadiContactActions::KCMAkonadiContactActions(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
+#endif
 {
-    auto about = new KAboutData(QStringLiteral("kcmakonadicontactactions"),
-                                i18n("Contact Actions Settings"),
-                                QString(),
-                                QString(),
-                                KAboutLicense::LGPL,
-                                i18n("(c) 2009 Tobias Koenig"));
-
-    about->addAuthor(i18n("Tobias Koenig"), QString(), QStringLiteral("tokoe@kde.org"));
-
-    setAboutData(about);
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     ui.setupUi(this);
-
     mConfigManager = addConfig(ContactActionsSettings::self(), this);
+#else
+    ui.setupUi(widget());
+    mConfigManager = addConfig(ContactActionsSettings::self(), widget());
+#endif
 
     ui.DialPhoneNumberAction->addItem(i18n("System Default"), ContactActionsSettings::UseSystemDefault);
     ui.DialPhoneNumberAction->addItem(i18n("Skype"), ContactActionsSettings::UseSkype);
@@ -60,7 +59,11 @@ void KCMAkonadiContactActions::slotSmsPhoneNumberActionChanged(int value)
     } else {
         ui.smsDetailsStack->setCurrentIndex(0);
     }
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     Q_EMIT changed(true);
+#else
+    markAsChanged();
+#endif
 }
 
 void KCMAkonadiContactActions::slotDialPhoneNumberActionChanged(int value)
@@ -72,7 +75,11 @@ void KCMAkonadiContactActions::slotDialPhoneNumberActionChanged(int value)
     } else {
         ui.phoneDetailsStack->setCurrentIndex(0);
     }
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     Q_EMIT changed(true);
+#else
+    markAsChanged();
+#endif
 }
 
 void KCMAkonadiContactActions::load()
