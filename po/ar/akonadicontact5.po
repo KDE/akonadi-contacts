@@ -160,12 +160,12 @@ msgstr "تعذّر بدء عمليّة skype، تأكّد من وجود التن
 #: akonadi-contacts/actions/qskypedialer.cpp:102
 #, kde-format
 msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "تبدو واجهة برمجة التطبيقات (D-Bus) العامّة لِ‍«سكايپ» معطّلة."
+msgstr "تبدو واجهة برمجة التطبيقات (D-Bus) العامّة لِ‍«سكايب» معطّلة."
 
 #: akonadi-contacts/actions/qskypedialer.cpp:111
 #, kde-format
 msgid "Skype registration failed."
-msgstr "فشل تسجيل «سكايپ»."
+msgstr "فشل تسجيل «سكايب»."
 
 #: akonadi-contacts/actions/qskypedialer.cpp:120
 #, kde-format
@@ -1935,8 +1935,8 @@ msgstr "اضبط كالمفضّل"
 #~ "installed on the computer) and the number is dialed. If 'External "
 #~ "Application' is selected, a command with placeholders can be defined."
 #~ msgstr ""
-#~ "يحدّد التّطبيق الذي سيُستخدم للاتّصال برقم هاتف المتراسل. إن اخترت ’سكايپ‘ "
-#~ "فسيبدأ تطبيق «سكايپ» (إن كان مثبّتًا على الحاسوب) وسيتّصل بالرّقم. إن اخترت "
+#~ "يحدّد التّطبيق الذي سيُستخدم للاتّصال برقم هاتف المتراسل. إن اخترت ’سكايب‘ "
+#~ "فسيبدأ تطبيق «سكايب» (إن كان مثبّتًا على الحاسوب) وسيتّصل بالرّقم. إن اخترت "
 #~ "’تطبيق خارجيّ‘، فيمكن تحديد أمر فيه ماسكات مكان."
 
 #, fuzzy
