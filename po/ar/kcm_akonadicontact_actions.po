@@ -71,7 +71,7 @@ msgstr "افتراضيات النظام"
 #: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
 #, kde-format
 msgid "Skype"
-msgstr "سكايپ"
+msgstr "سكايب"
 
 #: kcmakonadicontactactions.cpp:42
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "تطبيق خارجيّ"
 #~ msgstr "خرائط غوغل"
 
 #~ msgid "Map quest"
-#~ msgstr "ماپ كوِست"
+#~ msgstr "ماب كوِست"
 
 #~ msgid "OpenStreetMap"
 #~ msgstr "خريطة الشّوارع المفتوحة"
