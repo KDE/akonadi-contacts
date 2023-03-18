@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-05 00:44+0000\n"
+"POT-Creation-Date: 2023-03-18 00:59+0000\n"
 "PO-Revision-Date: 2023-03-11 04:51\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -47,42 +47,36 @@ msgstr "命令："
 msgid "Send SMS"
 msgstr "发送短消息"
 
-#: kcmakonadicontactactions.cpp:27
-#, kde-format
-msgid "Contact Actions Settings"
-msgstr "联系人操作设置"
-
-#: kcmakonadicontactactions.cpp:31
-#, kde-format
-msgid "(c) 2009 Tobias Koenig"
-msgstr "(c) 2009 Tobias Koenig"
-
-#: kcmakonadicontactactions.cpp:33
-#, kde-format
-msgid "Tobias Koenig"
-msgstr "Tobias Koenig"
-
-#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
+#: kcmakonadicontactactions.cpp:39 kcmakonadicontactactions.cpp:45
 #, kde-format
 msgid "System Default"
 msgstr "系统默认"
 
-#: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
+#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
 #, kde-format
 msgid "Skype"
 msgstr "Skype"
 
-#: kcmakonadicontactactions.cpp:42
+#: kcmakonadicontactactions.cpp:41
 #, kde-format
 msgid "Ekiga"
 msgstr "Ekiga"
 
-#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
+#: kcmakonadicontactactions.cpp:42 kcmakonadicontactactions.cpp:47
 #, kde-format
 msgid "SflPhone"
 msgstr "SflPhone"
 
-#: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
+#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
 #, kde-format
 msgid "External Application"
 msgstr "外部应用程序"
+
+#~ msgid "Contact Actions Settings"
+#~ msgstr "联系人操作设置"
+
+#~ msgid "(c) 2009 Tobias Koenig"
+#~ msgstr "(c) 2009 Tobias Koenig"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"

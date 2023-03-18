@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-05 00:44+0000\n"
+"POT-Creation-Date: 2023-03-18 00:59+0000\n"
 "PO-Revision-Date: 2019-09-29 09:17+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -48,45 +48,39 @@ msgstr "Orde:"
 msgid "Send SMS"
 msgstr "Enviar unha mensaxe de texto"
 
-#: kcmakonadicontactactions.cpp:27
-#, kde-format
-msgid "Contact Actions Settings"
-msgstr "Configuración das accións de contacto"
-
-#: kcmakonadicontactactions.cpp:31
-#, kde-format
-msgid "(c) 2009 Tobias Koenig"
-msgstr "© 2009 Tobias Koenig"
-
-#: kcmakonadicontactactions.cpp:33
-#, kde-format
-msgid "Tobias Koenig"
-msgstr "Tobias Koenig"
-
-#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
+#: kcmakonadicontactactions.cpp:39 kcmakonadicontactactions.cpp:45
 #, kde-format
 msgid "System Default"
 msgstr "Predeterminado do sistema"
 
-#: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
+#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
 #, kde-format
 msgid "Skype"
 msgstr "Skype"
 
-#: kcmakonadicontactactions.cpp:42
+#: kcmakonadicontactactions.cpp:41
 #, kde-format
 msgid "Ekiga"
 msgstr "Ekiga"
 
-#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
+#: kcmakonadicontactactions.cpp:42 kcmakonadicontactactions.cpp:47
 #, kde-format
 msgid "SflPhone"
 msgstr "SflPhone"
 
-#: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
+#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
 #, kde-format
 msgid "External Application"
 msgstr "Aplicación externa"
+
+#~ msgid "Contact Actions Settings"
+#~ msgstr "Configuración das accións de contacto"
+
+#~ msgid "(c) 2009 Tobias Koenig"
+#~ msgstr "© 2009 Tobias Koenig"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
 
 #~ msgid "Show Address"
 #~ msgstr "Mostrar o enderezo"

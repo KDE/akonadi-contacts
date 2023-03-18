@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-05 00:44+0000\n"
+"POT-Creation-Date: 2023-03-18 00:59+0000\n"
 "PO-Revision-Date: 2013-02-05 15:08+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -46,45 +46,39 @@ msgstr "आदेश :"
 msgid "Send SMS"
 msgstr "SMS पाठवा"
 
-#: kcmakonadicontactactions.cpp:27
-#, kde-format
-msgid "Contact Actions Settings"
-msgstr "संपर्क क्रिया संयोजना"
-
-#: kcmakonadicontactactions.cpp:31
-#, kde-format
-msgid "(c) 2009 Tobias Koenig"
-msgstr "(c) 2009 टोबियास कोएनिग"
-
-#: kcmakonadicontactactions.cpp:33
-#, kde-format
-msgid "Tobias Koenig"
-msgstr "टोबियास कोएनिग"
-
-#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
+#: kcmakonadicontactactions.cpp:39 kcmakonadicontactactions.cpp:45
 #, kde-format
 msgid "System Default"
 msgstr ""
 
-#: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
+#: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
 #, kde-format
 msgid "Skype"
 msgstr "स्काइप"
 
-#: kcmakonadicontactactions.cpp:42
+#: kcmakonadicontactactions.cpp:41
 #, kde-format
 msgid "Ekiga"
 msgstr ""
 
-#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
+#: kcmakonadicontactactions.cpp:42 kcmakonadicontactactions.cpp:47
 #, kde-format
 msgid "SflPhone"
 msgstr ""
 
-#: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
+#: kcmakonadicontactactions.cpp:43 kcmakonadicontactactions.cpp:48
 #, kde-format
 msgid "External Application"
 msgstr "बाहेरचा अनुप्रयोग"
+
+#~ msgid "Contact Actions Settings"
+#~ msgstr "संपर्क क्रिया संयोजना"
+
+#~ msgid "(c) 2009 Tobias Koenig"
+#~ msgstr "(c) 2009 टोबियास कोएनिग"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "टोबियास कोएनिग"
 
 #~ msgid "Show Address"
 #~ msgstr "पत्ता दर्शवा"
