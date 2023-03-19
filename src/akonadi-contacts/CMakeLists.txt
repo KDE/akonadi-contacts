@@ -205,7 +205,6 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiContact
     KPim${KF_MAJOR_VERSION}::GrantleeTheme
     PRIVATE
     KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::ConfigWidgets
     KF${KF_MAJOR_VERSION}::IconThemes
     KF${KF_MAJOR_VERSION}::Completion
     KF${KF_MAJOR_VERSION}::KIOCore

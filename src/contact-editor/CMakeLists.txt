@@ -161,7 +161,6 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}ContactEditor
     PRIVATE
     KF${KF_MAJOR_VERSION}::Completion
     KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::ConfigWidgets
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::TextWidgets
