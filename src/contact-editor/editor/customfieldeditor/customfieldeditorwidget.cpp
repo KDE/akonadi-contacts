@@ -10,11 +10,11 @@
 #include "customfieldeditorwidget.h"
 #include "customfieldsmodel.h"
 #include <KContacts/Addressee>
+#include <KLineEdit>
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>
-#include <QLineEdit>
 #include <QPushButton>
 #include <QUuid>
 #include <QVBoxLayout>
@@ -23,7 +23,7 @@ using namespace ContactEditor;
 
 CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     : QWidget(parent)
-    , mFieldName(new QLineEdit(this))
+    , mFieldName(new KLineEdit(this))
     , mAddField(new QPushButton(i18n("Add Field"), this))
     , mUseAllContacts(new QCheckBox(i18n("Use field for all contacts")))
     , mFieldType(new QComboBox(this))
@@ -38,6 +38,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     topLayout->addLayout(fieldLayout);
     mFieldName->setPlaceholderText(i18n("Add name"));
     mFieldName->setObjectName(QStringLiteral("fieldname"));
+    mFieldName->setTrapReturnKey(true);
     fieldLayout->addWidget(mFieldName);
 
     mFieldType->setObjectName(QStringLiteral("fieldtype"));
@@ -48,7 +49,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     fieldLayout->addWidget(mAddField);
     mAddField->setEnabled(false); // Disable at the beginning
     connect(mAddField, &QPushButton::clicked, this, &CustomFieldEditorWidget::slotAddField);
-    connect(mFieldName, &QLineEdit::textChanged, this, &CustomFieldEditorWidget::slotFielNameChanged);
+    connect(mFieldName, &KLineEdit::textChanged, this, &CustomFieldEditorWidget::slotFielNameChanged);
 
     mUseAllContacts->setObjectName(QStringLiteral("useallcontact"));
     topLayout->addWidget(mUseAllContacts);

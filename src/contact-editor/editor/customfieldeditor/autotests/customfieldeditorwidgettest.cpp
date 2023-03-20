@@ -9,9 +9,9 @@
 
 #include "customfieldeditorwidgettest.h"
 #include "../customfieldeditorwidget.h"
+#include <KLineEdit>
 #include <QComboBox>
 #include <QLabel>
-#include <QLineEdit>
 #include <QPushButton>
 #include <QTest>
 
@@ -25,9 +25,10 @@ CustomFieldEditorWidgetTest::~CustomFieldEditorWidgetTest() = default;
 void CustomFieldEditorWidgetTest::shouldHaveDefaultValue()
 {
     ContactEditor::CustomFieldEditorWidget w;
-    auto fieldname = w.findChild<QLineEdit *>(QStringLiteral("fieldname"));
+    auto fieldname = w.findChild<KLineEdit *>(QStringLiteral("fieldname"));
     QVERIFY(fieldname);
     QVERIFY(fieldname->text().isEmpty());
+    QVERIFY(fieldname->trapReturnKey());
 
     auto label = w.findChild<QLabel *>(QStringLiteral("labeltitle"));
     QVERIFY(label);
