@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:00+0000\n"
+"POT-Creation-Date: 2023-03-21 00:48+0000\n"
 "PO-Revision-Date: 2023-01-07 04:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -306,21 +306,21 @@ msgid "Select the address book the new contact group shall be saved in:"
 msgstr "選擇新聯絡人群組要儲存到哪個通訊錄："
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
-#: akonadi-contacts/contactgroupeditor.ui:20
+#: akonadi-contacts/contactgroupeditor.ui:29
 #, kde-format
 msgctxt "@label The name of a contact group"
 msgid "Name:"
 msgstr "名稱："
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: akonadi-contacts/contactgroupeditor.ui:46
+#: akonadi-contacts/contactgroupeditor.ui:59
 #, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
 msgstr "聯絡人群組成員："
 
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
-#: akonadi-contacts/contactgroupeditor.ui:53
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
 msgstr "搜尋…"
@@ -1274,37 +1274,37 @@ msgstr "自定欄位標題"
 msgid "Add name"
 msgstr "增加名字"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Text"
 msgstr "文字"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
 #, kde-format
 msgid "Numeric"
 msgstr "數值"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
 #, kde-format
 msgid "Boolean"
 msgstr "布林值"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "Date"
 msgstr "日期"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "Time"
 msgstr "時間"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "DateTime"
 msgstr "日期時間"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:68
 #, kde-format
 msgid "Url"
 msgstr "網址"

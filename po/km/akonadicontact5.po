@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:00+0000\n"
+"POT-Creation-Date: 2023-03-21 00:48+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -334,21 +334,21 @@ msgid "Select the address book the new contact group shall be saved in:"
 msgstr "ជ្រើស​សៀវភៅ​អាសយដ្ឋាន​ដែល​ក្រុម​ទំនាក់ទំនង​ថ្មី​នឹង​ត្រូវ​បាន​រក្សា​ទុក​នៅ​ក្នុង ​៖​"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
-#: akonadi-contacts/contactgroupeditor.ui:20
+#: akonadi-contacts/contactgroupeditor.ui:29
 #, kde-format
 msgctxt "@label The name of a contact group"
 msgid "Name:"
 msgstr "ឈ្មោះ​ ៖"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: akonadi-contacts/contactgroupeditor.ui:46
+#: akonadi-contacts/contactgroupeditor.ui:59
 #, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
 msgstr "សមាជិក​ក្រុម​ទំនាក់ទំនង​ ៖​"
 
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
-#: akonadi-contacts/contactgroupeditor.ui:53
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:66
 #, fuzzy, kde-format
 #| msgctxt "@label Search in a list of contacts"
 #| msgid "Search:"
@@ -1355,37 +1355,37 @@ msgstr "វាល​ផ្ទាល់​ខ្លួន​"
 msgid "Add name"
 msgstr "ឈ្មោះ​ដែល​បាន​បន្ថែម​ ៖​"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Text"
 msgstr "អត្ថបទ​​"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
 #, kde-format
 msgid "Numeric"
 msgstr "ជា​លេខ​​"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
 #, kde-format
 msgid "Boolean"
 msgstr "ប៊ូលីន​"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "Date"
 msgstr "កាលបរិច្ឆេទ"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "Time"
 msgstr "ពេលវេលា​"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "DateTime"
 msgstr "DateTime​"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:68
 #, kde-format
 msgid "Url"
 msgstr ""

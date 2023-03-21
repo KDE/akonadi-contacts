@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:00+0000\n"
-"PO-Revision-Date: 2023-03-19 06:34+0100\n"
+"POT-Creation-Date: 2023-03-21 00:48+0000\n"
+"PO-Revision-Date: 2023-03-20 08:27+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -319,21 +319,21 @@ msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Izberite imenik, v katerega se naj shrani nova skupina stikov:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
-#: akonadi-contacts/contactgroupeditor.ui:20
+#: akonadi-contacts/contactgroupeditor.ui:29
 #, kde-format
 msgctxt "@label The name of a contact group"
 msgid "Name:"
 msgstr "Ime:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: akonadi-contacts/contactgroupeditor.ui:46
+#: akonadi-contacts/contactgroupeditor.ui:59
 #, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
 msgstr "Člani skupine stikov:"
 
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
-#: akonadi-contacts/contactgroupeditor.ui:53
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
 msgstr "Poišči..."
@@ -1353,37 +1353,37 @@ msgstr "Naslov polja po meri"
 msgid "Add name"
 msgstr "Dodaj ime"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Text"
 msgstr "Besedilo"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
 #, kde-format
 msgid "Numeric"
 msgstr "Število"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
 #, kde-format
 msgid "Boolean"
 msgstr "Logična vrednost"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "Date"
 msgstr "Datum"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "Time"
 msgstr "Čas"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "DateTime"
 msgstr "Datum in čas"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:68
 #, kde-format
 msgid "Url"
 msgstr "URL"

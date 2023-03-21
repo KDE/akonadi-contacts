@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:00+0000\n"
+"POT-Creation-Date: 2023-03-21 00:48+0000\n"
 "PO-Revision-Date: 2015-01-27 22:27+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -326,21 +326,21 @@ msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Pasirinkite į kurią adresų knygą įrašyti naująją adresatų grupę:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
-#: akonadi-contacts/contactgroupeditor.ui:20
+#: akonadi-contacts/contactgroupeditor.ui:29
 #, kde-format
 msgctxt "@label The name of a contact group"
 msgid "Name:"
 msgstr "Vardas:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: akonadi-contacts/contactgroupeditor.ui:46
+#: akonadi-contacts/contactgroupeditor.ui:59
 #, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
 msgstr "Adresatų grupė:"
 
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
-#: akonadi-contacts/contactgroupeditor.ui:53
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:66
 #, fuzzy, kde-format
 #| msgctxt "@label Search in a list of contacts"
 #| msgid "Search:"
@@ -1410,37 +1410,37 @@ msgstr "Savi laukai"
 msgid "Add name"
 msgstr "Papildomi vardai:"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Text"
 msgstr "Tekstas"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
 #, kde-format
 msgid "Numeric"
 msgstr "Skaitmeninis"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
 #, kde-format
 msgid "Boolean"
 msgstr "Loginis"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "Time"
 msgstr "Laikas"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "DateTime"
 msgstr "Data laikas"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:68
 #, kde-format
 msgid "Url"
 msgstr "Url"

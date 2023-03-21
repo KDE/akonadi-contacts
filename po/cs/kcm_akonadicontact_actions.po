@@ -71,12 +71,3 @@ msgstr "SflPhone"
 #, kde-format
 msgid "External Application"
 msgstr "Externí program"
-
-#~ msgid "Contact Actions Settings"
-#~ msgstr "Nastavení činností kontaktu"
-
-#~ msgid "(c) 2009 Tobias Koenig"
-#~ msgstr "(c) 2009 Tobias Koenig"
-
-#~ msgid "Tobias Koenig"
-#~ msgstr "Tobias Koenig"
