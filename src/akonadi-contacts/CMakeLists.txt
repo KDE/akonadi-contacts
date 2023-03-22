@@ -393,3 +393,12 @@ install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiContactTargets
     FILE KPim${KF_MAJOR_VERSION}AkonadiContactTargets.cmake
     NAMESPACE KF5::
 )
+
+if (BUILD_QCH)
+    install(FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactQchTargets.cmake"
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+        COMPONENT Devel
+    )
+endif()
+

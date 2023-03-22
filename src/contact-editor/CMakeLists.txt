@@ -280,6 +280,13 @@ install(FILES
     DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
     COMPONENT Devel
 )
+if (BUILD_QCH)     
+    install(FILES
+	    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorQchTargets.cmake"
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+        COMPONENT Devel
+    )
+endif()
 if (0)
 install(EXPORT KPim${KF_MAJOR_VERSION}ContactEditorTargets
     DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
