@@ -148,7 +148,7 @@ msgstr ""
 #: akonadi-contacts/actions/qekigadialer.cpp:97
 #, kde-format
 msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "La API pública d'Ekiga (D-Bus) pareix que està desactivada."
+msgstr "L'API pública d'Ekiga (D-Bus) pareix que està desactivada."
 
 #: akonadi-contacts/actions/qekigadialer.cpp:117
 #, kde-format
@@ -176,7 +176,7 @@ msgstr ""
 #: akonadi-contacts/actions/qskypedialer.cpp:102
 #, kde-format
 msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "La API pública de «Skype» (D-Bus) pareix que està desactivada."
+msgstr "L'API pública de «Skype» (D-Bus) pareix que està desactivada."
 
 #: akonadi-contacts/actions/qskypedialer.cpp:111
 #, kde-format
@@ -1800,6 +1800,3 @@ msgstr "Imatges (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Establix com a preferit"
-
-#~ msgid "Add a Country"
-#~ msgstr "Afig un país"
