@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:00+0000\n"
+"POT-Creation-Date: 2023-03-21 00:48+0000\n"
 "PO-Revision-Date: 2014-03-16 18:00+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -307,21 +307,21 @@ msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Velg den adresseboka der den nye kontaktgruppa skal lagres:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
-#: akonadi-contacts/contactgroupeditor.ui:20
+#: akonadi-contacts/contactgroupeditor.ui:29
 #, kde-format
 msgctxt "@label The name of a contact group"
 msgid "Name:"
 msgstr "Navn:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: akonadi-contacts/contactgroupeditor.ui:46
+#: akonadi-contacts/contactgroupeditor.ui:59
 #, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
 msgstr "Kontaktgruppe-medlemmer:"
 
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
-#: akonadi-contacts/contactgroupeditor.ui:53
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
 msgstr ""
@@ -1304,37 +1304,37 @@ msgstr ""
 msgid "Add name"
 msgstr "Legg til navn"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Text"
 msgstr "Tekst"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
 #, kde-format
 msgid "Numeric"
 msgstr "Numerisk"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
 #, kde-format
 msgid "Boolean"
 msgstr "Boolsk"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "Date"
 msgstr "Dato"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "Time"
 msgstr "Tid"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "DateTime"
 msgstr "Dato og klokkeslett"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:68
 #, kde-format
 msgid "Url"
 msgstr "Nettadresse"
