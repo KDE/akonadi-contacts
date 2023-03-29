@@ -24,7 +24,7 @@ public:
     void setForceDisableQRCode(bool b);
 
 private:
-    Q_REQUIRED_RESULT QString kaddressBookAbsoluteThemePath();
+    Q_REQUIRED_RESULT AKONADI_CONTACT_NO_EXPORT QString kaddressBookAbsoluteThemePath() const;
     KAddressBookGrantlee::GrantleeContactFormatter *const mFormatter;
 };
 }

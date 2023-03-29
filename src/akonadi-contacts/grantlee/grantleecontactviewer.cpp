@@ -25,7 +25,7 @@ GrantleeContactViewer::~GrantleeContactViewer()
     delete mFormatter;
 }
 
-QString GrantleeContactViewer::kaddressBookAbsoluteThemePath()
+QString GrantleeContactViewer::kaddressBookAbsoluteThemePath() const
 {
     QString themeName = GrantleeTheme::ThemeManager::configuredThemeName(QStringLiteral("addressbook"));
     if (themeName.isEmpty()) {

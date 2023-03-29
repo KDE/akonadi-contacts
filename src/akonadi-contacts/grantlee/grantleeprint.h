@@ -24,6 +24,6 @@ public:
     Q_REQUIRED_RESULT QString contactsToHtml(const KContacts::Addressee::List &contacts);
 
 private:
-    void init();
+    AKONADI_CONTACT_NO_EXPORT void init();
 };
 }

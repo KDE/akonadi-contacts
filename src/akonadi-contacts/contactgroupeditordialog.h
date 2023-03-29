@@ -111,7 +111,7 @@ Q_SIGNALS:
     void contactGroupStored(const Akonadi::Item &group);
 
 private:
-    void slotAccepted();
+    AKONADI_CONTACT_NO_EXPORT void slotAccepted();
 
     //@cond PRIVATE
     std::unique_ptr<ContactGroupEditorDialogPrivate> const d;

@@ -99,13 +99,13 @@ private:
     /**
      * This method is called whenever the displayed contact @p group has been changed.
      */
-    void itemChanged(const Item &group) override;
+    AKONADI_CONTACT_NO_EXPORT void itemChanged(const Item &group) override;
 
     /**
      * This method is called whenever the displayed contact group has been
      * removed from Akonadi.
      */
-    void itemRemoved() override;
+    AKONADI_CONTACT_NO_EXPORT void itemRemoved() override;
 
 private:
     //@cond PRIVATE
