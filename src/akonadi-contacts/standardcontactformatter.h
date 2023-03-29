@@ -65,7 +65,7 @@ public:
     /*
      * @since 4.9.1
      */
-    bool displayQRCode() const;
+    Q_REQUIRED_RESULT bool displayQRCode() const;
 
 private:
     //@cond PRIVATE
