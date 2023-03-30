@@ -154,7 +154,9 @@ public:
     {
         const QUrlQuery query(url);
         const QString urlScheme(url.scheme());
-        if (urlScheme == QLatin1String("http") || urlScheme == QLatin1String("https")) {
+        if (urlScheme == QLatin1String("http") || urlScheme == QLatin1String("https") || urlScheme == QLatin1String("tel")
+            || (urlScheme == QLatin1String("sms") && !query.hasQueryItem(QLatin1String("index"))) || urlScheme == QLatin1String("geo")
+            || urlScheme == QLatin1String("mailto")) {
             Q_EMIT mParent->urlClicked(url);
         } else if (urlScheme == QLatin1String("phone")) {
             const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
