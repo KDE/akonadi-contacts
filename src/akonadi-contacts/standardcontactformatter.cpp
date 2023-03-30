@@ -95,22 +95,18 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     // Phone Numbers
-    int counter = 0;
-
     const auto phoneNumbers = rawContact.phoneNumbers();
     for (const KContacts::PhoneNumber &number : phoneNumbers) {
         QString dispLabel = number.typeLabel().replace(QLatin1Char(' '), QStringLiteral("&nbsp;"));
-        QString dispValue = QStringLiteral("<a href=\"phone:?index=%1\">%2</a>").arg(counter).arg(number.number().toHtmlEscaped());
+        QString dispValue = QStringLiteral("<a href=\"tel:%1\">%2</a>").arg(number.normalizedNumber()).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
-            QString dispIcon = QStringLiteral("<a href=\"sms:?index=%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
-                                   .arg(counter)
+            QString dispIcon = QStringLiteral("<a href=\"sms:%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
+                                   .arg(number.normalizedNumber())
                                    .arg(i18nc("@info:tooltip", "Send SMS"));
             dynamicPart += rowFmtStr2.arg(dispLabel, dispValue, dispIcon);
         } else {
             dynamicPart += rowFmtStr1.arg(dispLabel, dispValue);
         }
-
-        ++counter;
     }
 
     // EMails
@@ -140,7 +136,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     // Addresses
-    counter = 0;
+    int counter = 0;
     const auto addresses = rawContact.addresses();
     for (const KContacts::Address &address : addresses) {
         QString formattedAddress;
