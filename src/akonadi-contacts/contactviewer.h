@@ -20,7 +20,6 @@ namespace KContacts
 {
 class Address;
 class Addressee;
-class PhoneNumber;
 }
 
 namespace Akonadi
@@ -133,31 +132,6 @@ Q_SIGNALS:
      * @param url The url that has been clicked.
      */
     void urlClicked(const QUrl &url);
-
-    /**
-     * This signal is emitted whenever the user has clicked on
-     * an email address in the viewer.
-     *
-     * @param name The name of the contact.
-     * @param email The plain email address of the contact.
-     */
-    void emailClicked(const QString &name, const QString &email);
-
-    /**
-     * This signal is emitted whenever the user has clicked on a
-     * phone number (that includes fax numbers as well) in the viewer.
-     *
-     * @param number The corresponding phone number.
-     */
-    void phoneNumberClicked(const KContacts::PhoneNumber &number);
-
-    /**
-     * This signal is emitted whenever the user has clicked on a SMS link of a
-     * phone number in the viewer.
-     *
-     * @param number The corresponding phone number.
-     */
-    void smsClicked(const KContacts::PhoneNumber &number);
 
     /**
      * This signal is emitted whenever the user has clicked on an

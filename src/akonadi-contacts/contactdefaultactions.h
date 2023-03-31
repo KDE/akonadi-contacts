@@ -104,25 +104,6 @@ public Q_SLOTS:
     void showUrl(const QUrl &url);
 
     /**
-     * Opens the users preferred mail composer and does the setup
-     * to send a mail to the contact with the given @p name and
-     * email @p address.
-     */
-    void sendEmail(const QString &name, const QString &address);
-
-    /**
-     * Dials the given phone @p number with the application as
-     * configured by the user in the general settings dialog.
-     */
-    void dialPhoneNumber(const KContacts::PhoneNumber &number);
-
-    /**
-     * Sends a sms to @p number with the application as
-     * configured by the user in the general settings dialog.
-     */
-    void sendSms(const KContacts::PhoneNumber &number);
-
-    /**
      * Shows the @p address of a contact in a webbrowser or application
      * as configured by the user in the general settings dialog.
      */

@@ -154,24 +154,9 @@ public:
     {
         const QUrlQuery query(url);
         const QString urlScheme(url.scheme());
-        if (urlScheme == QLatin1String("http") || urlScheme == QLatin1String("https") || urlScheme == QLatin1String("tel")
-            || (urlScheme == QLatin1String("sms") && !query.hasQueryItem(QLatin1String("index"))) || urlScheme == QLatin1String("geo")
-            || urlScheme == QLatin1String("mailto")) {
+        if (urlScheme == QLatin1String("http") || urlScheme == QLatin1String("https") || urlScheme == QLatin1String("tel") || urlScheme == QLatin1String("sms")
+            || urlScheme == QLatin1String("geo") || urlScheme == QLatin1String("mailto")) {
             Q_EMIT mParent->urlClicked(url);
-        } else if (urlScheme == QLatin1String("phone")) {
-            const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
-
-            const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
-            if (pos < numbers.count()) {
-                Q_EMIT mParent->phoneNumberClicked(numbers.at(pos));
-            }
-        } else if (urlScheme == QLatin1String("sms")) {
-            const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
-
-            const KContacts::PhoneNumber::List numbers = mCurrentContact.phoneNumbers();
-            if (pos < numbers.count()) {
-                Q_EMIT mParent->smsClicked(numbers.at(pos));
-            }
         } else if (urlScheme == QLatin1String("address")) {
             const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
 
@@ -179,14 +164,6 @@ public:
             if (pos < addresses.count()) {
                 Q_EMIT mParent->addressClicked(addresses.at(pos));
             }
-        } else if (urlScheme == QLatin1String("mailto")) {
-            QString name;
-            QString address;
-
-            // remove the 'mailto:' and split into name and email address
-            KContacts::Addressee::parseEmailAddress(url.path(), name, address);
-
-            Q_EMIT mParent->emailClicked(name, address);
         }
     }
 

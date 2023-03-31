@@ -38,20 +38,6 @@ install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiContactTargets DESTINATION "${CMAKE
 ########### next target ###############
 
 target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
-    actions/dialphonenumberaction.cpp
-    actions/qdialer.cpp
-    actions/qskypedialer.cpp
-    actions/sendsmsaction.cpp
-    actions/smsdialog.cpp
-    actions/qsflphonedialer.cpp
-    actions/qekigadialer.cpp
-    )
-
-configure_file( actions/contactactionssettings.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/contactactionssettings.kcfg @ONLY)
-kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}AkonadiContact actions/contactactionssettings.kcfgc)
-
-
-target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     attributes/contactmetadataattribute.cpp
     attributes/attributeregistrar.cpp
 )
@@ -127,13 +113,6 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     contactgroupmodel_p.h
     abstractemailaddressselectiondialog.h
     emailaddressselectiondialog.h
-    actions/qsflphonedialer.h
-    actions/qekigadialer.h
-    actions/dialphonenumberaction.h
-    actions/qskypedialer.h
-    actions/smsdialog.h
-    actions/sendsmsaction.h
-    actions/qdialer.h
     abstractcontactgroupformatter.h
     contactstreemodel.h
     emailaddressselectionmodel.h
