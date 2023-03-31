@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 00:48+0000\n"
+"POT-Creation-Date: 2023-03-31 00:47+0000\n"
 "PO-Revision-Date: 2020-09-28 01:54+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -386,7 +386,7 @@ msgstr "Kontaktirühm %1"
 
 #: akonadi-contacts/contactgroupviewer.cpp:65
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts/standardcontactformatter.cpp:182
+#: akonadi-contacts/standardcontactformatter.cpp:186
 #, kde-format
 msgid "Address Book"
 msgstr "Aadressiraamat"
@@ -486,51 +486,51 @@ msgid "Search Contact..."
 msgstr "Uus &kontakt..."
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts/standardcontactformatter.cpp:181
+#: akonadi-contacts/standardcontactformatter.cpp:185
 #, kde-format
 msgid "Anniversary"
 msgstr "Aastapäev"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts/standardcontactformatter.cpp:176
+#: akonadi-contacts/standardcontactformatter.cpp:180
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Assistendi nimi"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts/standardcontactformatter.cpp:177
+#: akonadi-contacts/standardcontactformatter.cpp:181
 #, kde-format
 msgid "Manager's Name"
 msgstr "Juhi nimi"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts/standardcontactformatter.cpp:179
+#: akonadi-contacts/standardcontactformatter.cpp:183
 #, kde-format
 msgid "Office"
 msgstr "Ettevõte"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts/standardcontactformatter.cpp:175
+#: akonadi-contacts/standardcontactformatter.cpp:179
 #, kde-format
 msgid "Profession"
 msgstr "Eriala"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts/standardcontactformatter.cpp:178
+#: akonadi-contacts/standardcontactformatter.cpp:182
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Elukaaslase nimi"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
-#: akonadi-contacts/standardcontactformatter.cpp:239
+#: akonadi-contacts/standardcontactformatter.cpp:243
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "jah"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
-#: akonadi-contacts/standardcontactformatter.cpp:241
+#: akonadi-contacts/standardcontactformatter.cpp:245
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -1018,7 +1018,7 @@ msgstr ""
 "Valitud kontakti muutmine<p>Ilmub dialoog, kus saab muuta kõiki vastava "
 "isiku andmeid, sealhulgas aadresse ja telefoninumbreid.</p>"
 
-#: akonadi-contacts/standardcontactformatter.cpp:94
+#: akonadi-contacts/standardcontactformatter.cpp:96
 #, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
@@ -1031,40 +1031,41 @@ msgctxt "@info:tooltip"
 msgid "Send SMS"
 msgstr "SMS-i saatmine"
 
-#: akonadi-contacts/standardcontactformatter.cpp:118
+#: akonadi-contacts/standardcontactformatter.cpp:116
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
 msgstr "E-post"
 
-#: akonadi-contacts/standardcontactformatter.cpp:133
+#: akonadi-contacts/standardcontactformatter.cpp:131
 #, kde-format
 msgid "Homepage"
 msgstr "Kodulehekülg"
 
-#: akonadi-contacts/standardcontactformatter.cpp:139
+#: akonadi-contacts/standardcontactformatter.cpp:137
 #: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
 msgstr "Veebipäeviku voog"
 
-#: akonadi-contacts/standardcontactformatter.cpp:158
+#: akonadi-contacts/standardcontactformatter.cpp:157
+#: akonadi-contacts/standardcontactformatter.cpp:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Aadressi näitamine kaardil"
 
-#: akonadi-contacts/standardcontactformatter.cpp:167
+#: akonadi-contacts/standardcontactformatter.cpp:171
 #, kde-format
 msgid "Notes"
 msgstr "Märkused"
 
-#: akonadi-contacts/standardcontactformatter.cpp:174
+#: akonadi-contacts/standardcontactformatter.cpp:178
 #, kde-format
 msgid "Department"
 msgstr "Osakond"
 
-#: akonadi-contacts/standardcontactformatter.cpp:180
+#: akonadi-contacts/standardcontactformatter.cpp:184
 #, kde-format
 msgid "IM Address"
 msgstr "Kiirsuhtlusaadress"

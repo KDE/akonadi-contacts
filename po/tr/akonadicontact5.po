@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 00:48+0000\n"
+"POT-Creation-Date: 2023-03-31 00:47+0000\n"
 "PO-Revision-Date: 2023-03-07 19:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -384,7 +384,7 @@ msgstr "Kişi Grubu %1"
 
 #: akonadi-contacts/contactgroupviewer.cpp:65
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts/standardcontactformatter.cpp:182
+#: akonadi-contacts/standardcontactformatter.cpp:186
 #, kde-format
 msgid "Address Book"
 msgstr "Adres Defteri"
@@ -483,51 +483,51 @@ msgid "Search Contact..."
 msgstr "Kişi Ara..."
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts/standardcontactformatter.cpp:181
+#: akonadi-contacts/standardcontactformatter.cpp:185
 #, kde-format
 msgid "Anniversary"
 msgstr "Yıl Dönümü"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts/standardcontactformatter.cpp:176
+#: akonadi-contacts/standardcontactformatter.cpp:180
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Yardımcısının Adı"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts/standardcontactformatter.cpp:177
+#: akonadi-contacts/standardcontactformatter.cpp:181
 #, kde-format
 msgid "Manager's Name"
 msgstr "Yöneticisinin Adı"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts/standardcontactformatter.cpp:179
+#: akonadi-contacts/standardcontactformatter.cpp:183
 #, kde-format
 msgid "Office"
 msgstr "Ofis"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts/standardcontactformatter.cpp:175
+#: akonadi-contacts/standardcontactformatter.cpp:179
 #, kde-format
 msgid "Profession"
 msgstr "Uzmanlık Alanı"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts/standardcontactformatter.cpp:178
+#: akonadi-contacts/standardcontactformatter.cpp:182
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Arkadaşının Adı"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
-#: akonadi-contacts/standardcontactformatter.cpp:239
+#: akonadi-contacts/standardcontactformatter.cpp:243
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "evet"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
-#: akonadi-contacts/standardcontactformatter.cpp:241
+#: akonadi-contacts/standardcontactformatter.cpp:245
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -1015,7 +1015,7 @@ msgstr ""
 "Seçili kişiyi düzenle<p>Kişiye ait adresler ve telefon numaraları da dahil "
 "olmak üzere birçok bilgiyi düzenleyebileceğiniz bir pencere açılacak.</p>"
 
-#: akonadi-contacts/standardcontactformatter.cpp:94
+#: akonadi-contacts/standardcontactformatter.cpp:96
 #, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
@@ -1028,40 +1028,41 @@ msgctxt "@info:tooltip"
 msgid "Send SMS"
 msgstr "SMS Gönder"
 
-#: akonadi-contacts/standardcontactformatter.cpp:118
+#: akonadi-contacts/standardcontactformatter.cpp:116
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
 msgstr "E-posta"
 
-#: akonadi-contacts/standardcontactformatter.cpp:133
+#: akonadi-contacts/standardcontactformatter.cpp:131
 #, kde-format
 msgid "Homepage"
 msgstr "Ana Sayfa"
 
-#: akonadi-contacts/standardcontactformatter.cpp:139
+#: akonadi-contacts/standardcontactformatter.cpp:137
 #: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
 msgstr "Ağ Günlüğü Beslemesi"
 
-#: akonadi-contacts/standardcontactformatter.cpp:158
+#: akonadi-contacts/standardcontactformatter.cpp:157
+#: akonadi-contacts/standardcontactformatter.cpp:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Haritada adresi göster"
 
-#: akonadi-contacts/standardcontactformatter.cpp:167
+#: akonadi-contacts/standardcontactformatter.cpp:171
 #, kde-format
 msgid "Notes"
 msgstr "Notlar"
 
-#: akonadi-contacts/standardcontactformatter.cpp:174
+#: akonadi-contacts/standardcontactformatter.cpp:178
 #, kde-format
 msgid "Department"
 msgstr "Bölüm"
 
-#: akonadi-contacts/standardcontactformatter.cpp:180
+#: akonadi-contacts/standardcontactformatter.cpp:184
 #, kde-format
 msgid "IM Address"
 msgstr "Anında İletileşme Adresi"
