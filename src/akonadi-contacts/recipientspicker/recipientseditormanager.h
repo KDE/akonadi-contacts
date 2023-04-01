@@ -27,6 +27,6 @@ public:
     Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionModel *model();
 
 private:
-    Akonadi::EmailAddressSelectionModel *mModel = nullptr;
+    Akonadi::EmailAddressSelectionModel *const mModel;
 };
 }

@@ -12,6 +12,7 @@ using namespace Akonadi;
 
 RecipientsEditorManager::RecipientsEditorManager(QObject *parent)
     : QObject(parent)
+    , mModel(new Akonadi::EmailAddressSelectionModel(this))
 {
 }
 
@@ -25,8 +26,5 @@ RecipientsEditorManager *RecipientsEditorManager::self()
 
 Akonadi::EmailAddressSelectionModel *RecipientsEditorManager::model()
 {
-    if (!mModel) {
-        mModel = new Akonadi::EmailAddressSelectionModel(this);
-    }
     return mModel;
 }
