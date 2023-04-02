@@ -72,20 +72,7 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     auto categoryWidget = new QWidget(this);
     auto categoryWidgetLayout = new QVBoxLayout(categoryWidget);
     categoryWidgetLayout->setContentsMargins({});
-    auto label = new QLabel(i18n("Tags"), this);
-    label->setObjectName(QStringLiteral("categorylabel"));
-    categoryWidgetLayout->addWidget(label);
-
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR))
-                                           + QStringLiteral("/akonadi/contacts/plugins/categorieseditwidgetplugin"));
-    const auto result = KPluginFactory::instantiatePlugin<ContactEditor::CategoriesEditAbstractWidget>(editWidgetPlugin, parent);
-
-    if (result) {
-        mCategoriesWidget = result.plugin;
-    } else {
-        mCategoriesWidget = new CategoriesEditWidget(parent);
-        label->setVisible(false);
-    }
+    mCategoriesWidget = new CategoriesEditWidget(parent);
 
     mCategoriesWidget->setObjectName(QStringLiteral("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);

@@ -16,10 +16,9 @@ namespace KContacts
 {
 class Addressee;
 }
-
+class CategoriesEditWidget;
 namespace ContactEditor
 {
-class CategoriesEditAbstractWidget;
 class PhoneListWidget;
 class WebListWidget;
 class MessagingListWidget;
@@ -52,7 +51,7 @@ private:
     NameWidget *mNameWidget = nullptr;
     NicknameWidget *mNickNameWidget = nullptr;
     BlogfeedWidget *mBlogFeedWidget = nullptr;
-    ContactEditor::CategoriesEditAbstractWidget *mCategoriesWidget = nullptr;
+    CategoriesEditWidget *mCategoriesWidget = nullptr;
     MessageFormattingWidget *mMessageFormattingWidget = nullptr;
 };
 }

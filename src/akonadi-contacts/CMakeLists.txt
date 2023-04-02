@@ -331,8 +331,6 @@ if (BUILD_TESTING)
     add_subdirectory(tests)
 endif()
 
-add_subdirectory(plugins)
-
 if (BUILD_QCH)
     ecm_add_qch(
         KPim${KF_MAJOR_VERSION}AkonadiContact_QCH

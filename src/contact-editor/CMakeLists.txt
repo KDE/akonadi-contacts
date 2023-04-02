@@ -165,6 +165,7 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}ContactEditor
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::TextWidgets
     KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     )
 
 set_target_properties(KPim${KF_MAJOR_VERSION}ContactEditor PROPERTIES

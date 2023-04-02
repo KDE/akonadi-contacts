@@ -29,5 +29,7 @@ target_link_libraries(generalinfoeditortest
     KF${KF_MAJOR_VERSION}::IconThemes
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF${KF_MAJOR_VERSION}::KIOCore
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
+
     )
 
