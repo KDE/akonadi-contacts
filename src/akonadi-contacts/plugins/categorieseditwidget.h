@@ -34,8 +34,6 @@ public:
     void setReadOnly(bool readOnly) override;
 
 private:
-    Akonadi::TagWidget *const mTagWidget;
-
-private Q_SLOTS:
     void onMissingTagCreated(KJob *);
+    Akonadi::TagWidget *const mTagWidget;
 };
