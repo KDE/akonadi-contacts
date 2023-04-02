@@ -80,7 +80,6 @@ target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
     editor/contacteditorwidget.cpp
     editor/widgets/imagewidget.cpp
     editor/widgets/preferredlineeditwidget.cpp
-    editor/widgets/categorieseditabstractwidget.cpp
     customfields.cpp
     customfieldmanager.cpp
     contactmetadatabase.cpp
@@ -123,7 +122,6 @@ target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
     editor/customfieldeditor/customfieldeditorwidget.h
     editor/personaleditor/dateeditwidget.h
     editor/personaleditor/personaleditorwidget.h
-    editor/widgets/categorieseditabstractwidget.h
     editor/widgets/imagewidget.h
     editor/widgets/kwidgetlister_p.h
     editor/widgets/preferredlineeditwidget.h
@@ -193,17 +191,8 @@ ecm_generate_headers(ContactEditor_CamelCase_HEADERS
     PREFIX Akonadi
     )
 
-ecm_generate_headers(ContactEditorWidget_CamelCase_HEADERS
-    HEADER_NAMES
-    CategoriesEditAbstractWidget
-    REQUIRED_HEADERS ContactEditorWidget_HEADERS
-    PREFIX Akonadi
-    RELATIVE editor/widgets/
-    )
-
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
-    ${ContactEditorWidget_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor/Akonadi COMPONENT Devel
     )
 
