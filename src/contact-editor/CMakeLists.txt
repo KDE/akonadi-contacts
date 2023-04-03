@@ -209,6 +209,7 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}ContactEditor
     KPim${KF_MAJOR_VERSION}::AkonadiContact
     KF${KF_MAJOR_VERSION}::Prison
     KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::Codecs
     )
 
 set_target_properties(KPim${KF_MAJOR_VERSION}ContactEditor PROPERTIES
