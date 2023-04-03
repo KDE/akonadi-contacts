@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2022-04-07 17:45+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,186 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-
-#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Define how a phone number of a contact should be dialed. 'System Default' "
-"uses the default application configured for this on your system (e.g. KDE "
-"Connect). Selecting a specific application will use that (if installed), "
-"'External Application' allows you to specify a dial command with "
-"placeholders manually."
-msgstr ""
-"Definujte, ako sa má vytočiť telefónne číslo kontaktu. „Predvolené systémom“ "
-"používa predvolenú aplikáciu nakonfigurovanú pre tento systém vo vašom "
-"systéme (napríklad KDE Connect). Výberom konkrétnej aplikácie sa táto "
-"aplikácia použije (ak je nainštalovaná), možnosť \"Externá aplikácia\" "
-"umožňuje manuálne zadať príkaz vytáčania so zástupnými symbolmi."
-
-#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
-#, kde-format
-msgid "Phone Command"
-msgstr "Telefónny príkaz"
-
-#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to dial a "
-"contact's phone number."
-msgstr ""
-"Tento príkaz definuje aplikáciu ktorá sa má spustiť pri vytočení telefónneho "
-"čísla kontaktu."
-
-#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed."
-msgstr ""
-"Nasledovné zástupné znaky sa dajú použiť v príkaze:\n"
-"   %N: Čisté číslo ako uložené v adresári.\n"
-"   %n: Normalizované číslo s odstránenými nečíselnými znakmi."
-
-#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
-#, kde-format
-msgid ""
-"Defines which application shall be used to send an SMS to the phone number "
-"of a contact. If 'System Default' is selected the default handler for SMS "
-"messages on your system will be used (e.g. KDE Connect), otherwise the "
-"selected application will be used to send the SMS message (if installed on "
-"the computer). If 'External Application' is selected, a command with "
-"placeholders can be defined."
-msgstr ""
-"Definuje, ktorá aplikácia sa má použiť na odoslanie SMS na telefónne číslo "
-"kontaktu. Ak je vybratá možnosť „Predvolené systémom“, použije sa predvolený "
-"obslužný program pre SMS správy vo vašom systéme (napr. KDE Connect), inak "
-"sa zvolená aplikácia použije na odoslanie SMS správy (ak je nainštalovaná v "
-"počítači). Ak je vybratá možnosť „Externá aplikácia“, môže byť definovaný "
-"príkaz so zástupnými symbolmi."
-
-#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
-#, kde-format
-msgid "SMS Command"
-msgstr "SMS príkaz"
-
-#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to send an SMS "
-"to a contact's phone number."
-msgstr ""
-"Tento príkaz definuje aplikáciu ktorá sa má spustiť pri poslaní SMS na "
-"telefónne číslo kontaktu."
-
-#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed.\n"
-"   %t: The text"
-msgstr ""
-"Nasledovné zástupné znaky sa dajú použiť v príkaze:\n"
-"   %N: Čisté číslo ako je uložené v adresári.\n"
-"   %n: Normalizované číslo s odstránenými nečíselnými znakmi.\n"
-"   %t: Text"
-
-#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
-#: akonadi-contacts/actions/sendsmsaction.cpp:39
-#, kde-format
-msgid ""
-"There is no application set which could be executed.\n"
-"Please go to the settings dialog and configure one."
-msgstr ""
-"Nie je žiadna sada aplikácií, ktorá sa dá spustiť.\n"
-"Prosím prejdite na dialóg nastavení a nastavte jednu."
-
-#: akonadi-contacts/actions/qdialer.cpp:24
-#, kde-format
-msgid "Dialing a number is not supported"
-msgstr "Vytáčanie čísla nie je podporované"
-
-#: akonadi-contacts/actions/qdialer.cpp:33
-#, kde-format
-msgid "Sending an SMS is not supported"
-msgstr "Posielanie SMS nie je podporované"
-
-#: akonadi-contacts/actions/qekigadialer.cpp:72
-#, kde-format
-msgid ""
-"Unable to start ekiga process, check that ekiga executable is in your PATH "
-"variable."
-msgstr ""
-"Nemôžem spustiť proces ekiga, skontrolujte že binárka ekiga je v premennej "
-"PATH."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:97
-#, kde-format
-msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "Ekiga Public API (D-Bus) je zrejme zakázané."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:117
-#, kde-format
-msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr "Posielanie SMS momentálne nie je podporované cez Ekiga."
-
-#: akonadi-contacts/actions/qsflphonedialer.cpp:53
-#, kde-format
-msgid ""
-"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
-"executable is in your PATH variable."
-msgstr ""
-"Nemôžem spustiť proces sflphone-client-kde, skontrolujte že binárka sflphone-"
-"client-kde je v premennej PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:77
-#, kde-format
-msgid ""
-"Unable to start skype process, check that skype executable is in your PATH "
-"variable."
-msgstr ""
-"Nemôžem spustiť proces skype, skontrolujte že binárka skype je v premennej "
-"PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:102
-#, kde-format
-msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "Skype Public API (D-Bus) je zrejme zakázané."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:111
-#, kde-format
-msgid "Skype registration failed."
-msgstr "Skype registrácia zlyhala."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:120
-#, kde-format
-msgid "Protocol mismatch."
-msgstr "Nezhoda protokolu."
-
-#: akonadi-contacts/actions/smsdialog.cpp:35
-#, kde-format
-msgctxt "@title:window"
-msgid "SMS text"
-msgstr "SMS text"
-
-#: akonadi-contacts/actions/smsdialog.cpp:39
-#, kde-format
-msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr "Prosím vložte SMS text pre SMS na nasledovné číslo: %1"
-
-#: akonadi-contacts/actions/smsdialog.cpp:80
-#, kde-format
-msgid "%1/%2 (%3 SMS)"
-msgstr "%1/%2 (%3 SMS)"
 
 #: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
@@ -1428,11 +1248,6 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Vlastné"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
-#, kde-format
-msgid "Tags"
-msgstr "Značky"
-
 #: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
@@ -1786,6 +1601,136 @@ msgstr "Obrázky (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Nastaviť ako preferované"
+
+#~ msgid ""
+#~ "Define how a phone number of a contact should be dialed. 'System Default' "
+#~ "uses the default application configured for this on your system (e.g. KDE "
+#~ "Connect). Selecting a specific application will use that (if installed), "
+#~ "'External Application' allows you to specify a dial command with "
+#~ "placeholders manually."
+#~ msgstr ""
+#~ "Definujte, ako sa má vytočiť telefónne číslo kontaktu. „Predvolené "
+#~ "systémom“ používa predvolenú aplikáciu nakonfigurovanú pre tento systém "
+#~ "vo vašom systéme (napríklad KDE Connect). Výberom konkrétnej aplikácie sa "
+#~ "táto aplikácia použije (ak je nainštalovaná), možnosť \"Externá aplikácia"
+#~ "\" umožňuje manuálne zadať príkaz vytáčania so zástupnými symbolmi."
+
+#~ msgid "Phone Command"
+#~ msgstr "Telefónny príkaz"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr ""
+#~ "Tento príkaz definuje aplikáciu ktorá sa má spustiť pri vytočení "
+#~ "telefónneho čísla kontaktu."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "Nasledovné zástupné znaky sa dajú použiť v príkaze:\n"
+#~ "   %N: Čisté číslo ako uložené v adresári.\n"
+#~ "   %n: Normalizované číslo s odstránenými nečíselnými znakmi."
+
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "Definuje, ktorá aplikácia sa má použiť na odoslanie SMS na telefónne "
+#~ "číslo kontaktu. Ak je vybratá možnosť „Predvolené systémom“, použije sa "
+#~ "predvolený obslužný program pre SMS správy vo vašom systéme (napr. KDE "
+#~ "Connect), inak sa zvolená aplikácia použije na odoslanie SMS správy (ak "
+#~ "je nainštalovaná v počítači). Ak je vybratá možnosť „Externá aplikácia“, "
+#~ "môže byť definovaný príkaz so zástupnými symbolmi."
+
+#~ msgid "SMS Command"
+#~ msgstr "SMS príkaz"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "Tento príkaz definuje aplikáciu ktorá sa má spustiť pri poslaní SMS na "
+#~ "telefónne číslo kontaktu."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "Nasledovné zástupné znaky sa dajú použiť v príkaze:\n"
+#~ "   %N: Čisté číslo ako je uložené v adresári.\n"
+#~ "   %n: Normalizované číslo s odstránenými nečíselnými znakmi.\n"
+#~ "   %t: Text"
+
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "Nie je žiadna sada aplikácií, ktorá sa dá spustiť.\n"
+#~ "Prosím prejdite na dialóg nastavení a nastavte jednu."
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "Vytáčanie čísla nie je podporované"
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "Posielanie SMS nie je podporované"
+
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nemôžem spustiť proces ekiga, skontrolujte že binárka ekiga je v "
+#~ "premennej PATH."
+
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "Ekiga Public API (D-Bus) je zrejme zakázané."
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "Posielanie SMS momentálne nie je podporované cez Ekiga."
+
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "Nemôžem spustiť proces sflphone-client-kde, skontrolujte že binárka "
+#~ "sflphone-client-kde je v premennej PATH."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nemôžem spustiť proces skype, skontrolujte že binárka skype je v "
+#~ "premennej PATH."
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "Skype Public API (D-Bus) je zrejme zakázané."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "Skype registrácia zlyhala."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "Nezhoda protokolu."
+
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "SMS text"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "Prosím vložte SMS text pre SMS na nasledovné číslo: %1"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 SMS)"
+
+#~ msgid "Tags"
+#~ msgstr "Značky"
 
 #~ msgid "Add a Country"
 #~ msgstr "Pridať krajinu"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2017-05-16 07:04-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
@@ -17,181 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Zanata 3.9.6\n"
-
-#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Define how a phone number of a contact should be dialed. 'System Default' "
-"uses the default application configured for this on your system (e.g. KDE "
-"Connect). Selecting a specific application will use that (if installed), "
-"'External Application' allows you to specify a dial command with "
-"placeholders manually."
-msgstr ""
-
-#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
-#, kde-format
-msgid "Phone Command"
-msgstr "פקודת טלפון"
-
-#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to dial a "
-"contact's phone number."
-msgstr "זוהי הפקודה המגדירה את היישום שישמש לחיוג אל הטלפון של איש הקשר."
-
-#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed."
-msgstr ""
-"מציינים המקום הבאים זמינים בפקודה: \n"
-"   %N: המספר טלפון כפי שמוגדר בפנקס הכתבות.\n"
-"   %n: מספר הטלפון בצורה נקייה, כולל ספרות בלבד, אחרי הסרה של אותיות וסימנים."
-
-#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
-#, fuzzy, kde-format
-#| msgid ""
-#| "Defines which application shall be used to send an SMS to the phone "
-#| "number of a contact. If 'Skype' is selected the Skype application will be "
-#| "started (if installed on the computer) and the SMS is sent via Skype. If "
-#| "'External Application' is selected, a command with placeholders can be "
-#| "defined."
-msgid ""
-"Defines which application shall be used to send an SMS to the phone number "
-"of a contact. If 'System Default' is selected the default handler for SMS "
-"messages on your system will be used (e.g. KDE Connect), otherwise the "
-"selected application will be used to send the SMS message (if installed on "
-"the computer). If 'External Application' is selected, a command with "
-"placeholders can be defined."
-msgstr ""
-"מגדיר את היישום לשימוש בעת שליחת מסרון אל מספר הטלפון של איש הקשר. אם נבחר "
-"\"Skype\" היישום Skype יופעל (אם מותקן במחשב) והמסרון ישלח בעזרת Skype. אם "
-"נבחר \"יישום חיצוני\", ניתן להגדיר פקודה עם מצייני מקום."
-
-#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
-#, kde-format
-msgid "SMS Command"
-msgstr "פקודת מסרון"
-
-#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to send an SMS "
-"to a contact's phone number."
-msgstr ""
-"פקודה זו מגדירה את היישום שישמש להפעלה בעת שליחת מסרון אל מספר הטלפון של איש "
-"הקשר."
-
-#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed.\n"
-"   %t: The text"
-msgstr ""
-"מצייני המקום הבאים זמינים בפקודה:\n"
-"   %N: המספר טלפון כפי שמוגדר בפנקס הכתבות.\n"
-"   %n: מספר הטלפון בצורה נקייה, כולל ספרות בלבד, אחרי הסרה של אותיות "
-"וסימנים.    %t: תוכן ההודעה"
-
-#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
-#: akonadi-contacts/actions/sendsmsaction.cpp:39
-#, fuzzy, kde-format
-msgid ""
-"There is no application set which could be executed.\n"
-"Please go to the settings dialog and configure one."
-msgstr "אין יישום להפעלה. אנא פנה אל חלון ההגדרה וקבע יישום להפעלה."
-
-#: akonadi-contacts/actions/qdialer.cpp:24
-#, kde-format
-msgid "Dialing a number is not supported"
-msgstr "חיוג של מספר לא נתמך"
-
-#: akonadi-contacts/actions/qdialer.cpp:33
-#, kde-format
-msgid "Sending an SMS is not supported"
-msgstr "שליחה של מסרון לא נתמכת"
-
-#: akonadi-contacts/actions/qekigadialer.cpp:72
-#, fuzzy, kde-format
-msgid ""
-"Unable to start ekiga process, check that ekiga executable is in your PATH "
-"variable."
-msgstr ""
-"אין אפשרות להפעיל את Skype, אנא בדוק שהיישום Skype מותקן וזמין דרך משתנה "
-"PATH."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:97
-#, fuzzy, kde-format
-msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "נראה שממשק הפיתוח (D-Bus) של Skype מבוטל."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:117
-#, fuzzy, kde-format
-msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr "שליחה של מיסרונים לא נתמכת ב־WinCE"
-
-#: akonadi-contacts/actions/qsflphonedialer.cpp:53
-#, fuzzy, kde-format
-msgid ""
-"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
-"executable is in your PATH variable."
-msgstr ""
-"אין אפשרות להפעיל את Skype, אנא בדוק שהיישום Skype מותקן וזמין דרך משתנה "
-"PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:77
-#, kde-format
-msgid ""
-"Unable to start skype process, check that skype executable is in your PATH "
-"variable."
-msgstr ""
-"אין אפשרות להפעיל את Skype, אנא בדוק שהיישום Skype מותקן וזמין דרך משתנה "
-"PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:102
-#, kde-format
-msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "נראה שממשק הפיתוח (D-Bus) של Skype מבוטל."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:111
-#, kde-format
-msgid "Skype registration failed."
-msgstr "הרישום אל Skype נכשל."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:120
-#, kde-format
-msgid "Protocol mismatch."
-msgstr "אי התאמה של פרוטוקול"
-
-#: akonadi-contacts/actions/smsdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "SMS text"
-msgctxt "@title:window"
-msgid "SMS text"
-msgstr "טקסט המסרון"
-
-#: akonadi-contacts/actions/smsdialog.cpp:39
-#, kde-format
-msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr "אנא הכנס את טקסט המסרון לשלוח אל המספר: %1"
-
-#: akonadi-contacts/actions/smsdialog.cpp:80
-#, kde-format
-msgid "%1/%2 (%3 SMS)"
-msgstr "%1/%2 (%3 SMS)"
 
 #: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
@@ -1417,11 +1242,6 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "מותאם אישית"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
-#, fuzzy, kde-format
-msgid "Tags"
-msgstr "הוסף תגיות"
-
 #: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, fuzzy, kde-format
 msgid "Email"
@@ -1779,6 +1599,132 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Set as Preferred"
 msgstr "קבע בתור תקן"
+
+#~ msgid "Phone Command"
+#~ msgstr "פקודת טלפון"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr "זוהי הפקודה המגדירה את היישום שישמש לחיוג אל הטלפון של איש הקשר."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "מציינים המקום הבאים זמינים בפקודה: \n"
+#~ "   %N: המספר טלפון כפי שמוגדר בפנקס הכתבות.\n"
+#~ "   %n: מספר הטלפון בצורה נקייה, כולל ספרות בלבד, אחרי הסרה של אותיות "
+#~ "וסימנים."
+
+#, fuzzy
+#~| msgid ""
+#~| "Defines which application shall be used to send an SMS to the phone "
+#~| "number of a contact. If 'Skype' is selected the Skype application will "
+#~| "be started (if installed on the computer) and the SMS is sent via Skype. "
+#~| "If 'External Application' is selected, a command with placeholders can "
+#~| "be defined."
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "מגדיר את היישום לשימוש בעת שליחת מסרון אל מספר הטלפון של איש הקשר. אם "
+#~ "נבחר \"Skype\" היישום Skype יופעל (אם מותקן במחשב) והמסרון ישלח בעזרת "
+#~ "Skype. אם נבחר \"יישום חיצוני\", ניתן להגדיר פקודה עם מצייני מקום."
+
+#~ msgid "SMS Command"
+#~ msgstr "פקודת מסרון"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "פקודה זו מגדירה את היישום שישמש להפעלה בעת שליחת מסרון אל מספר הטלפון של "
+#~ "איש הקשר."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "מצייני המקום הבאים זמינים בפקודה:\n"
+#~ "   %N: המספר טלפון כפי שמוגדר בפנקס הכתבות.\n"
+#~ "   %n: מספר הטלפון בצורה נקייה, כולל ספרות בלבד, אחרי הסרה של אותיות "
+#~ "וסימנים.    %t: תוכן ההודעה"
+
+#, fuzzy
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr "אין יישום להפעלה. אנא פנה אל חלון ההגדרה וקבע יישום להפעלה."
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "חיוג של מספר לא נתמך"
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "שליחה של מסרון לא נתמכת"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "אין אפשרות להפעיל את Skype, אנא בדוק שהיישום Skype מותקן וזמין דרך משתנה "
+#~ "PATH."
+
+#, fuzzy
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "נראה שממשק הפיתוח (D-Bus) של Skype מבוטל."
+
+#, fuzzy
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "שליחה של מיסרונים לא נתמכת ב־WinCE"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "אין אפשרות להפעיל את Skype, אנא בדוק שהיישום Skype מותקן וזמין דרך משתנה "
+#~ "PATH."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "אין אפשרות להפעיל את Skype, אנא בדוק שהיישום Skype מותקן וזמין דרך משתנה "
+#~ "PATH."
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "נראה שממשק הפיתוח (D-Bus) של Skype מבוטל."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "הרישום אל Skype נכשל."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "אי התאמה של פרוטוקול"
+
+#, fuzzy
+#~| msgid "SMS text"
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "טקסט המסרון"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "אנא הכנס את טקסט המסרון לשלוח אל המספר: %1"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 SMS)"
+
+#, fuzzy
+#~ msgid "Tags"
+#~ msgstr "הוסף תגיות"
 
 #, fuzzy
 #~ msgid "Add a Country"

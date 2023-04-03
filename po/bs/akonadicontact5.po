@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2014-01-31 20:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -19,187 +19,6 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Launchpad (build 16877)\n"
 "X-Launchpad-Export-Date: 2013-12-28 05:35+0000\n"
-
-#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Define how a phone number of a contact should be dialed. 'System Default' "
-"uses the default application configured for this on your system (e.g. KDE "
-"Connect). Selecting a specific application will use that (if installed), "
-"'External Application' allows you to specify a dial command with "
-"placeholders manually."
-msgstr ""
-
-#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
-#, kde-format
-msgid "Phone Command"
-msgstr "Naredba telefona"
-
-#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to dial a "
-"contact's phone number."
-msgstr ""
-"Ova naredba određuje program koji se izvršava za pozivanje telefonskog broja "
-"kontakta."
-
-#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed."
-msgstr ""
-"U naredbi se mogu upotrijebiti sljedeća predviđena mjesta:\n"
-"   %N: Sirovi broj, tačno kako je zapisan u adresaru.\n"
-"   %n: Normalizovani broj, bez svih znakova koji nisu cifre."
-
-#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
-#, fuzzy, kde-format
-#| msgid ""
-#| "Defines which application shall be used to send an SMS to the phone "
-#| "number of a contact. If 'Skype' is selected the Skype application will be "
-#| "started (if installed on the computer) and the SMS is sent via Skype. If "
-#| "'External Application' is selected, a command with placeholders can be "
-#| "defined."
-msgid ""
-"Defines which application shall be used to send an SMS to the phone number "
-"of a contact. If 'System Default' is selected the default handler for SMS "
-"messages on your system will be used (e.g. KDE Connect), otherwise the "
-"selected application will be used to send the SMS message (if installed on "
-"the computer). If 'External Application' is selected, a command with "
-"placeholders can be defined."
-msgstr ""
-"Definiše aplikacija koja se koristi da pošaljete SMS na broj telefona za "
-"kontakt. Ako je \"Skype\" izabrano Skype aplikacija će biti pokrenuta (ako "
-"je instalirana na računaru), a SMS poruka se šalje preko Skype-a. Ako je "
-"\"Spoljašnji program\" izabrano, komanda na navedenom mjesta može da se "
-"definiše."
-
-#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
-#, kde-format
-msgid "SMS Command"
-msgstr "SMS komanda"
-
-#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to send an SMS "
-"to a contact's phone number."
-msgstr ""
-"Ova komanda definiše aplikaciju koja se izvršava da pošaljete SMS na broj "
-"telefona kontakta."
-
-#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed.\n"
-"   %t: The text"
-msgstr ""
-"Sljedeća mjesta se koriste u komandi:\n"
-"   %N: Neobrađen broj kakav je u adresaru.\n"
-"   %n: Normalizovani broj s uklonjenim nenumeričkim znakovima.\n"
-"   %t: Tekst"
-
-#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
-#: akonadi-contacts/actions/sendsmsaction.cpp:39
-#, kde-format
-msgid ""
-"There is no application set which could be executed.\n"
-"Please go to the settings dialog and configure one."
-msgstr ""
-"Ne postoji skup aplikacija koje se mogu pokrenuti.\n"
-" Molim idite na dijalog postavki i podesite ga."
-
-#: akonadi-contacts/actions/qdialer.cpp:24
-#, kde-format
-msgid "Dialing a number is not supported"
-msgstr "Okretanje broja nije podržano."
-
-#: akonadi-contacts/actions/qdialer.cpp:33
-#, kde-format
-msgid "Sending an SMS is not supported"
-msgstr "Slanje SMS‑a nije podržano."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:72
-#, kde-format
-msgid ""
-"Unable to start ekiga process, check that ekiga executable is in your PATH "
-"variable."
-msgstr ""
-"Nemoguće započeti proces ekiga, provjerite da li je naredba ekiga dostupna "
-"kroz promjenljivu PATH."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:97
-#, kde-format
-msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "Izgleda da je javni API Ekiga (D‑Bus) isključen."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:117
-#, kde-format
-msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr "Slanje SMS‑a trenutno nije podržano na Ekiga."
-
-#: akonadi-contacts/actions/qsflphonedialer.cpp:53
-#, kde-format
-msgid ""
-"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
-"executable is in your PATH variable."
-msgstr ""
-"Nemoguće započeti proces sflphone-client-kde, provjerite da li je naredba "
-"sflphone-client-kde dostupna kroz promjenljivu PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:77
-#, kde-format
-msgid ""
-"Unable to start skype process, check that skype executable is in your PATH "
-"variable."
-msgstr ""
-"Nemoguće započeti proces skype, provjerite da li je naredba skype dostupna "
-"kroz promjenljivu PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:102
-#, kde-format
-msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "Izgleda da je javni API Skypea (D‑Bus) isključen."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:111
-#, kde-format
-msgid "Skype registration failed."
-msgstr "Skype registracija nije uspjela."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:120
-#, kde-format
-msgid "Protocol mismatch."
-msgstr "Protokoli nisu usklađeni."
-
-#: akonadi-contacts/actions/smsdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "SMS text"
-msgctxt "@title:window"
-msgid "SMS text"
-msgstr "SMS tekst"
-
-#: akonadi-contacts/actions/smsdialog.cpp:39
-#, kde-format
-msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr "Unesite tekst za slanje SMS‑a na sljedeći broj: %1"
-
-#: akonadi-contacts/actions/smsdialog.cpp:80
-#, kde-format
-msgid "%1/%2 (%3 SMS)"
-msgstr "%1/%2 (%3 SMS)"
 
 #: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
@@ -1485,13 +1304,6 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "specijalno"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Tags"
-msgid "Tags"
-msgstr "Dodaj oznake"
-
 #: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "a contact's email address"
@@ -1882,6 +1694,134 @@ msgstr ""
 #| msgid "Set as Standard"
 msgid "Set as Preferred"
 msgstr "Postavi kao standardno"
+
+#~ msgid "Phone Command"
+#~ msgstr "Naredba telefona"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr ""
+#~ "Ova naredba određuje program koji se izvršava za pozivanje telefonskog "
+#~ "broja kontakta."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "U naredbi se mogu upotrijebiti sljedeća predviđena mjesta:\n"
+#~ "   %N: Sirovi broj, tačno kako je zapisan u adresaru.\n"
+#~ "   %n: Normalizovani broj, bez svih znakova koji nisu cifre."
+
+#, fuzzy
+#~| msgid ""
+#~| "Defines which application shall be used to send an SMS to the phone "
+#~| "number of a contact. If 'Skype' is selected the Skype application will "
+#~| "be started (if installed on the computer) and the SMS is sent via Skype. "
+#~| "If 'External Application' is selected, a command with placeholders can "
+#~| "be defined."
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "Definiše aplikacija koja se koristi da pošaljete SMS na broj telefona za "
+#~ "kontakt. Ako je \"Skype\" izabrano Skype aplikacija će biti pokrenuta "
+#~ "(ako je instalirana na računaru), a SMS poruka se šalje preko Skype-a. "
+#~ "Ako je \"Spoljašnji program\" izabrano, komanda na navedenom mjesta može "
+#~ "da se definiše."
+
+#~ msgid "SMS Command"
+#~ msgstr "SMS komanda"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "Ova komanda definiše aplikaciju koja se izvršava da pošaljete SMS na broj "
+#~ "telefona kontakta."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "Sljedeća mjesta se koriste u komandi:\n"
+#~ "   %N: Neobrađen broj kakav je u adresaru.\n"
+#~ "   %n: Normalizovani broj s uklonjenim nenumeričkim znakovima.\n"
+#~ "   %t: Tekst"
+
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "Ne postoji skup aplikacija koje se mogu pokrenuti.\n"
+#~ " Molim idite na dijalog postavki i podesite ga."
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "Okretanje broja nije podržano."
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "Slanje SMS‑a nije podržano."
+
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nemoguće započeti proces ekiga, provjerite da li je naredba ekiga "
+#~ "dostupna kroz promjenljivu PATH."
+
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "Izgleda da je javni API Ekiga (D‑Bus) isključen."
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "Slanje SMS‑a trenutno nije podržano na Ekiga."
+
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "Nemoguće započeti proces sflphone-client-kde, provjerite da li je naredba "
+#~ "sflphone-client-kde dostupna kroz promjenljivu PATH."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nemoguće započeti proces skype, provjerite da li je naredba skype "
+#~ "dostupna kroz promjenljivu PATH."
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "Izgleda da je javni API Skypea (D‑Bus) isključen."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "Skype registracija nije uspjela."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "Protokoli nisu usklađeni."
+
+#, fuzzy
+#~| msgid "SMS text"
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "SMS tekst"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "Unesite tekst za slanje SMS‑a na sljedeći broj: %1"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 SMS)"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Add Tags"
+#~ msgid "Tags"
+#~ msgstr "Dodaj oznake"
 
 #, fuzzy
 #~| msgid "Add Email"

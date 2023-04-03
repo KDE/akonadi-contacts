@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2023-01-07 04:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -19,173 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Define how a phone number of a contact should be dialed. 'System Default' "
-"uses the default application configured for this on your system (e.g. KDE "
-"Connect). Selecting a specific application will use that (if installed), "
-"'External Application' allows you to specify a dial command with "
-"placeholders manually."
-msgstr ""
-"定義聯絡人的電話號碼要如何撥打。「系統預設」會使用您的系統上為此配置的預設應"
-"用程式（例如 KDE 連線）。選取特定應用程式的話如果該應用程式有安裝就會使用它。"
-"「外部應用程式」讓您手動使用替代符指定電話撥打用的命令。"
-
-#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
-#, kde-format
-msgid "Phone Command"
-msgstr "電話命令"
-
-#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to dial a "
-"contact's phone number."
-msgstr "此命令定義用於撥出聯絡人電話號碼的應用程式。"
-
-#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed."
-msgstr ""
-"以下的替代符可用於命令內：\n"
-"   %N: 儲存在通訊錄內的原始號碼。\n"
-"   %n: 將所有非數字的字元都移除掉後的號碼。"
-
-#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
-#, kde-format
-msgid ""
-"Defines which application shall be used to send an SMS to the phone number "
-"of a contact. If 'System Default' is selected the default handler for SMS "
-"messages on your system will be used (e.g. KDE Connect), otherwise the "
-"selected application will be used to send the SMS message (if installed on "
-"the computer). If 'External Application' is selected, a command with "
-"placeholders can be defined."
-msgstr ""
-"定義要用哪個應用程式發送簡訊給聯絡人。「系統預設」會使用您系統預設處理 SMS 簡"
-"訊的應用程式（例如 KDE 連線），不然就會使用選取的應用程式（如果有安裝的話）。"
-"如果選取了「外部應用程式」，則您可以使用替代符指定命令。"
-
-#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
-#, kde-format
-msgid "SMS Command"
-msgstr "簡訊命令"
-
-#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to send an SMS "
-"to a contact's phone number."
-msgstr "此命令定義用於傳送簡訊給聯絡人的應用程式。"
-
-#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed.\n"
-"   %t: The text"
-msgstr ""
-"以下的替代符可用於命令內：\n"
-"   %N: 儲存在通訊錄內的原始號碼。\n"
-"   %n: 將所有非數字的字元都移除掉後的號碼。\n"
-"   %t: 簡訊文字"
-
-#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
-#: akonadi-contacts/actions/sendsmsaction.cpp:39
-#, kde-format
-msgid ""
-"There is no application set which could be executed.\n"
-"Please go to the settings dialog and configure one."
-msgstr ""
-"沒有設定可執行的應用程式。\n"
-"請到設定視窗去設定。"
-
-#: akonadi-contacts/actions/qdialer.cpp:24
-#, kde-format
-msgid "Dialing a number is not supported"
-msgstr "不支援撥號功能"
-
-#: akonadi-contacts/actions/qdialer.cpp:33
-#, kde-format
-msgid "Sending an SMS is not supported"
-msgstr "不支援傳送簡訊"
-
-#: akonadi-contacts/actions/qekigadialer.cpp:72
-#, kde-format
-msgid ""
-"Unable to start ekiga process, check that ekiga executable is in your PATH "
-"variable."
-msgstr "無法啟動 ekiga。請檢查 ekiga 的執行檔是否在您的可執行路徑內。"
-
-#: akonadi-contacts/actions/qekigadialer.cpp:97
-#, kde-format
-msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "Ekiga 公開 API（D-Bus）似乎已被關閉。"
-
-#: akonadi-contacts/actions/qekigadialer.cpp:117
-#, kde-format
-msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr "目前在 Ekiga 上不支援傳送簡訊。"
-
-#: akonadi-contacts/actions/qsflphonedialer.cpp:53
-#, kde-format
-msgid ""
-"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
-"executable is in your PATH variable."
-msgstr ""
-"無法啟動 sflphone-client-kde。請檢查 sflphone-client-kde 的執行檔是否在您的可"
-"執行路徑內。"
-
-#: akonadi-contacts/actions/qskypedialer.cpp:77
-#, kde-format
-msgid ""
-"Unable to start skype process, check that skype executable is in your PATH "
-"variable."
-msgstr "無法啟動 skype。請檢查 skype 的執行檔是否在您的可執行路徑內。"
-
-#: akonadi-contacts/actions/qskypedialer.cpp:102
-#, kde-format
-msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "Skype 公開 API（D-Bus）似乎已被關閉。"
-
-#: akonadi-contacts/actions/qskypedialer.cpp:111
-#, kde-format
-msgid "Skype registration failed."
-msgstr "Skype 註冊失敗。"
-
-#: akonadi-contacts/actions/qskypedialer.cpp:120
-#, kde-format
-msgid "Protocol mismatch."
-msgstr "協定不符。"
-
-#: akonadi-contacts/actions/smsdialog.cpp:35
-#, kde-format
-msgctxt "@title:window"
-msgid "SMS text"
-msgstr "簡訊文字"
-
-#: akonadi-contacts/actions/smsdialog.cpp:39
-#, kde-format
-msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr "請輸入要發送給下列號碼的簡訊文字：%1"
-
-#: akonadi-contacts/actions/smsdialog.cpp:80
-#, kde-format
-msgid "%1/%2 (%3 SMS)"
-msgstr "%1/%2 (%3 封簡訊)"
 
 #: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
@@ -1369,11 +1202,6 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "自訂"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
-#, kde-format
-msgid "Tags"
-msgstr "標籤"
-
 #: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
@@ -1727,6 +1555,123 @@ msgstr "影像 (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "設為偏好"
+
+#~ msgid ""
+#~ "Define how a phone number of a contact should be dialed. 'System Default' "
+#~ "uses the default application configured for this on your system (e.g. KDE "
+#~ "Connect). Selecting a specific application will use that (if installed), "
+#~ "'External Application' allows you to specify a dial command with "
+#~ "placeholders manually."
+#~ msgstr ""
+#~ "定義聯絡人的電話號碼要如何撥打。「系統預設」會使用您的系統上為此配置的預設"
+#~ "應用程式（例如 KDE 連線）。選取特定應用程式的話如果該應用程式有安裝就會使"
+#~ "用它。「外部應用程式」讓您手動使用替代符指定電話撥打用的命令。"
+
+#~ msgid "Phone Command"
+#~ msgstr "電話命令"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr "此命令定義用於撥出聯絡人電話號碼的應用程式。"
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "以下的替代符可用於命令內：\n"
+#~ "   %N: 儲存在通訊錄內的原始號碼。\n"
+#~ "   %n: 將所有非數字的字元都移除掉後的號碼。"
+
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "定義要用哪個應用程式發送簡訊給聯絡人。「系統預設」會使用您系統預設處理 "
+#~ "SMS 簡訊的應用程式（例如 KDE 連線），不然就會使用選取的應用程式（如果有安"
+#~ "裝的話）。如果選取了「外部應用程式」，則您可以使用替代符指定命令。"
+
+#~ msgid "SMS Command"
+#~ msgstr "簡訊命令"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr "此命令定義用於傳送簡訊給聯絡人的應用程式。"
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "以下的替代符可用於命令內：\n"
+#~ "   %N: 儲存在通訊錄內的原始號碼。\n"
+#~ "   %n: 將所有非數字的字元都移除掉後的號碼。\n"
+#~ "   %t: 簡訊文字"
+
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "沒有設定可執行的應用程式。\n"
+#~ "請到設定視窗去設定。"
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "不支援撥號功能"
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "不支援傳送簡訊"
+
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr "無法啟動 ekiga。請檢查 ekiga 的執行檔是否在您的可執行路徑內。"
+
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "Ekiga 公開 API（D-Bus）似乎已被關閉。"
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "目前在 Ekiga 上不支援傳送簡訊。"
+
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "無法啟動 sflphone-client-kde。請檢查 sflphone-client-kde 的執行檔是否在您"
+#~ "的可執行路徑內。"
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr "無法啟動 skype。請檢查 skype 的執行檔是否在您的可執行路徑內。"
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "Skype 公開 API（D-Bus）似乎已被關閉。"
+
+#~ msgid "Skype registration failed."
+#~ msgstr "Skype 註冊失敗。"
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "協定不符。"
+
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "簡訊文字"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "請輸入要發送給下列號碼的簡訊文字：%1"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 封簡訊)"
+
+#~ msgid "Tags"
+#~ msgstr "標籤"
 
 #~ msgid "Add a Country"
 #~ msgstr "新增國家"

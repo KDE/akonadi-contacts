@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2022-03-25 17:48+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -18,188 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Define how a phone number of a contact should be dialed. 'System Default' "
-"uses the default application configured for this on your system (e.g. KDE "
-"Connect). Selecting a specific application will use that (if installed), "
-"'External Application' allows you to specify a dial command with "
-"placeholders manually."
-msgstr ""
-"Definisce come deve essere composto il numero di telefono di un contatto. "
-"«Impostazioni predefinite di sistema» utilizza l'applicazione predefinita "
-"configurata sul tuo sistema (ad es. KDE Connect). Selezionare "
-"un'applicazione specifica per utilizzarla (se installata), «Applicazione "
-"esterna» ti consente di specificare manualmente un comando di composizione "
-"con segnaposti."
-
-#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
-#, kde-format
-msgid "Phone Command"
-msgstr "Comando per la chiamata"
-
-#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to dial a "
-"contact's phone number."
-msgstr ""
-"Questo comando definisce l'applicazione da usare per chiamare il numero di "
-"telefono di un contatto."
-
-#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed."
-msgstr ""
-"Nel comando possono essere usati i seguenti segnaposti:\n"
-"   %N: il numero per così come è memorizzato nella rubrica.\n"
-"   %n: il numero normalizzato, con i caratteri diversi dalle cifre rimossi."
-
-#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
-#, kde-format
-msgid ""
-"Defines which application shall be used to send an SMS to the phone number "
-"of a contact. If 'System Default' is selected the default handler for SMS "
-"messages on your system will be used (e.g. KDE Connect), otherwise the "
-"selected application will be used to send the SMS message (if installed on "
-"the computer). If 'External Application' is selected, a command with "
-"placeholders can be defined."
-msgstr ""
-"Definisce quale applicazione deve essere usata per inviare un SMS al numero "
-"di telefono di un contatto. Se è selezionato «Predefinita di sistema», sarà "
-"utilizzato il gestore predefinito per i messaggi SMS sul tuo sistema (ad es. "
-"KDE Connect), altrimenti l'applicazione selezionata sarà utilizzata per "
-"inviare il messaggio SMS (se installata sul computer). Se è selezionato "
-"«Applicazione esterna», può essere definito un comando con dei segnaposto."
-
-#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
-#, kde-format
-msgid "SMS Command"
-msgstr "Comando per SMS"
-
-#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to send an SMS "
-"to a contact's phone number."
-msgstr ""
-"Questo comando definisce l'applicazione da usare per inviare un SMS al "
-"numero di telefono di un contatto."
-
-#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed.\n"
-"   %t: The text"
-msgstr ""
-"Nel comando possono essere usati i seguenti segnaposti:\n"
-"   %N: il numero per così come è memorizzato nella rubrica.\n"
-"   %n: il numero normalizzato, con i caratteri diversi dalle cifre rimossi.\n"
-"   %t: il testo"
-
-#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
-#: akonadi-contacts/actions/sendsmsaction.cpp:39
-#, kde-format
-msgid ""
-"There is no application set which could be executed.\n"
-"Please go to the settings dialog and configure one."
-msgstr ""
-"Non c'è nessuna applicazione che possa essere eseguita.\n"
-"Vai nella finestra di dialogo delle impostazioni e configurane una."
-
-#: akonadi-contacts/actions/qdialer.cpp:24
-#, kde-format
-msgid "Dialing a number is not supported"
-msgstr "Le telefonate verso numeri telefonici non sono supportate"
-
-#: akonadi-contacts/actions/qdialer.cpp:33
-#, kde-format
-msgid "Sending an SMS is not supported"
-msgstr "L'invio di SMS non è supportato"
-
-#: akonadi-contacts/actions/qekigadialer.cpp:72
-#, kde-format
-msgid ""
-"Unable to start ekiga process, check that ekiga executable is in your PATH "
-"variable."
-msgstr ""
-"Impossibile eseguire il processo ekiga, verifica che l'eseguibile ekiga sia "
-"in un percorso specificato dalla variabile PATH."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:97
-#, kde-format
-msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "L'API pubblica di Ekiga (D-Bus) sembra essere disabilitata."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:117
-#, kde-format
-msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr "L'invio di SMS non è attualmente supportato da Ekiga."
-
-#: akonadi-contacts/actions/qsflphonedialer.cpp:53
-#, kde-format
-msgid ""
-"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
-"executable is in your PATH variable."
-msgstr ""
-"Impossibile eseguire il processo sflphone-client-kde, verifica che "
-"l'eseguibile sflphone-client-kde sia in un percorso specificato dalla "
-"variabile PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:77
-#, kde-format
-msgid ""
-"Unable to start skype process, check that skype executable is in your PATH "
-"variable."
-msgstr ""
-"Impossibile eseguire il processo skype, verifica che l'eseguibile skype sia "
-"in un percorso specificato dalla variabile PATH."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:102
-#, kde-format
-msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "L'API pubblica di Skype (D-Bus) sembra essere disabilitata."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:111
-#, kde-format
-msgid "Skype registration failed."
-msgstr "Registrazione a Skype non riuscita."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:120
-#, kde-format
-msgid "Protocol mismatch."
-msgstr "Protocollo non corrispondente."
-
-#: akonadi-contacts/actions/smsdialog.cpp:35
-#, kde-format
-msgctxt "@title:window"
-msgid "SMS text"
-msgstr "Testo SMS"
-
-#: akonadi-contacts/actions/smsdialog.cpp:39
-#, kde-format
-msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr "Inserisci il testo dell'SMS per il seguente numero: %1"
-
-#: akonadi-contacts/actions/smsdialog.cpp:80
-#, kde-format
-msgid "%1/%2 (%3 SMS)"
-msgstr "%1/%2 (%3 SMS)"
 
 #: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
@@ -1431,11 +1249,6 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Personalizzato"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
-#, kde-format
-msgid "Tags"
-msgstr "Etichette"
-
 #: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
@@ -1789,6 +1602,141 @@ msgstr "Immagini (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Imposta come preferito"
+
+#~ msgid ""
+#~ "Define how a phone number of a contact should be dialed. 'System Default' "
+#~ "uses the default application configured for this on your system (e.g. KDE "
+#~ "Connect). Selecting a specific application will use that (if installed), "
+#~ "'External Application' allows you to specify a dial command with "
+#~ "placeholders manually."
+#~ msgstr ""
+#~ "Definisce come deve essere composto il numero di telefono di un contatto. "
+#~ "«Impostazioni predefinite di sistema» utilizza l'applicazione predefinita "
+#~ "configurata sul tuo sistema (ad es. KDE Connect). Selezionare "
+#~ "un'applicazione specifica per utilizzarla (se installata), «Applicazione "
+#~ "esterna» ti consente di specificare manualmente un comando di "
+#~ "composizione con segnaposti."
+
+#~ msgid "Phone Command"
+#~ msgstr "Comando per la chiamata"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr ""
+#~ "Questo comando definisce l'applicazione da usare per chiamare il numero "
+#~ "di telefono di un contatto."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "Nel comando possono essere usati i seguenti segnaposti:\n"
+#~ "   %N: il numero per così come è memorizzato nella rubrica.\n"
+#~ "   %n: il numero normalizzato, con i caratteri diversi dalle cifre "
+#~ "rimossi."
+
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "Definisce quale applicazione deve essere usata per inviare un SMS al "
+#~ "numero di telefono di un contatto. Se è selezionato «Predefinita di "
+#~ "sistema», sarà utilizzato il gestore predefinito per i messaggi SMS sul "
+#~ "tuo sistema (ad es. KDE Connect), altrimenti l'applicazione selezionata "
+#~ "sarà utilizzata per inviare il messaggio SMS (se installata sul "
+#~ "computer). Se è selezionato «Applicazione esterna», può essere definito "
+#~ "un comando con dei segnaposto."
+
+#~ msgid "SMS Command"
+#~ msgstr "Comando per SMS"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "Questo comando definisce l'applicazione da usare per inviare un SMS al "
+#~ "numero di telefono di un contatto."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "Nel comando possono essere usati i seguenti segnaposti:\n"
+#~ "   %N: il numero per così come è memorizzato nella rubrica.\n"
+#~ "   %n: il numero normalizzato, con i caratteri diversi dalle cifre "
+#~ "rimossi.\n"
+#~ "   %t: il testo"
+
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "Non c'è nessuna applicazione che possa essere eseguita.\n"
+#~ "Vai nella finestra di dialogo delle impostazioni e configurane una."
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "Le telefonate verso numeri telefonici non sono supportate"
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "L'invio di SMS non è supportato"
+
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Impossibile eseguire il processo ekiga, verifica che l'eseguibile ekiga "
+#~ "sia in un percorso specificato dalla variabile PATH."
+
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "L'API pubblica di Ekiga (D-Bus) sembra essere disabilitata."
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "L'invio di SMS non è attualmente supportato da Ekiga."
+
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "Impossibile eseguire il processo sflphone-client-kde, verifica che "
+#~ "l'eseguibile sflphone-client-kde sia in un percorso specificato dalla "
+#~ "variabile PATH."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Impossibile eseguire il processo skype, verifica che l'eseguibile skype "
+#~ "sia in un percorso specificato dalla variabile PATH."
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "L'API pubblica di Skype (D-Bus) sembra essere disabilitata."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "Registrazione a Skype non riuscita."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "Protocollo non corrispondente."
+
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "Testo SMS"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "Inserisci il testo dell'SMS per il seguente numero: %1"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 SMS)"
+
+#~ msgid "Tags"
+#~ msgstr "Etichette"
 
 #~ msgid "Add a Country"
 #~ msgstr "Aggiungi una nazione"

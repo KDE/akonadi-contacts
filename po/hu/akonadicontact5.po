@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2021-11-05 10:44+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,184 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.08.3\n"
-
-#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Define how a phone number of a contact should be dialed. 'System Default' "
-"uses the default application configured for this on your system (e.g. KDE "
-"Connect). Selecting a specific application will use that (if installed), "
-"'External Application' allows you to specify a dial command with "
-"placeholders manually."
-msgstr ""
-"Megadja a névjegyek telefonszámai tárcsázásának módját. A „Rendszer "
-"alapértelmezése” a rendszerben beállított alkalmazást fogja használni "
-"(például a KDE Connectet). Más alkalmazást választva (ha az telepítve van) a "
-"„Külső alkalmazás”-sal lehetővé teszi egyéni tárcsázó parancs megadását."
-
-#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
-#, kde-format
-msgid "Phone Command"
-msgstr "Telefonparancs"
-
-#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to dial a "
-"contact's phone number."
-msgstr ""
-"Ez a parancs megadja, hogy melyik alkalmazást kell elindítani a partner "
-"telefonszámának felhívásához."
-
-#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed."
-msgstr ""
-"Az alábbi helykitöltők használhatók a parancsban:\n"
-"   %N: A címjegyzékben tárolt nyers szám.\n"
-"   %n: A nem szám karakterek eltávolításával kapott normalizált szám."
-
-#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
-#, kde-format
-msgid ""
-"Defines which application shall be used to send an SMS to the phone number "
-"of a contact. If 'System Default' is selected the default handler for SMS "
-"messages on your system will be used (e.g. KDE Connect), otherwise the "
-"selected application will be used to send the SMS message (if installed on "
-"the computer). If 'External Application' is selected, a command with "
-"placeholders can be defined."
-msgstr ""
-"Megadja, hogy mely alkalmazást kell használni SMS küldésére a partner "
-"telefonszámára. Ha a „Rendszer alapértelmezése” van kiválasztva, az "
-"alapértelemzett SMS küldő alkalmazás lesz használva (például KDE Connect). "
-"Ha a „Külső alkalmazás” van kiválasztva, a parancs helykitöltőkkel is "
-"megadható."
-
-#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
-#, kde-format
-msgid "SMS Command"
-msgstr "SMS parancs"
-
-#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to send an SMS "
-"to a contact's phone number."
-msgstr ""
-"Ez a parancs megadja, hogy mely alkalmazást kell elindítani SMS küldéséhez "
-"egy partner telefonszámára."
-
-#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed.\n"
-"   %t: The text"
-msgstr ""
-"Az alábbi helykitöltők használhatók a parancsban:\n"
-"   %N: A címjegyzékben tárolt nyers szám.\n"
-"   %n: A nem szám karakterek eltávolításával kapott normalizált szám.\n"
-"   %t: A szöveg"
-
-#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
-#: akonadi-contacts/actions/sendsmsaction.cpp:39
-#, kde-format
-msgid ""
-"There is no application set which could be executed.\n"
-"Please go to the settings dialog and configure one."
-msgstr ""
-"Nincs futtatható alkalmazás beállítva.\n"
-"Kérem állítson be egyet a beállítóablakban."
-
-#: akonadi-contacts/actions/qdialer.cpp:24
-#, kde-format
-msgid "Dialing a number is not supported"
-msgstr "A számtárcsázás nem támogatott"
-
-#: akonadi-contacts/actions/qdialer.cpp:33
-#, kde-format
-msgid "Sending an SMS is not supported"
-msgstr "Az SMS küldés nem támogatott"
-
-#: akonadi-contacts/actions/qekigadialer.cpp:72
-#, kde-format
-msgid ""
-"Unable to start ekiga process, check that ekiga executable is in your PATH "
-"variable."
-msgstr ""
-"Nem sikerült elindítani az Ekiga folyamatot, ellenőrizze, hogy az "
-"Ekigavégrehajtható állomány szerepel-e a PATH változóban."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:97
-#, kde-format
-msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "Úgy látszik, az Ekiga nyilvános API (D-Bus) le van tiltva."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:117
-#, kde-format
-msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr "Az SMS küldés jelenleg nem támogatott Ekiga rendszeren."
-
-#: akonadi-contacts/actions/qsflphonedialer.cpp:53
-#, kde-format
-msgid ""
-"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
-"executable is in your PATH variable."
-msgstr ""
-"Nem sikerült elindítani a sflphone-client-kde folyamatot, ellenőrizze, hogy "
-"a sflphone-client-kde végrehajtható állomány szerepel-e a PATH változóban."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:77
-#, kde-format
-msgid ""
-"Unable to start skype process, check that skype executable is in your PATH "
-"variable."
-msgstr ""
-"Nem sikerült elindítani a Skype folyamatot, ellenőrizze, hogy a Skype "
-"végrehajtható állomány szerepel-e a PATH változóban."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:102
-#, kde-format
-msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "Úgy látszik, a Skype nyilvános API (D-Bus) le van tiltva."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:111
-#, kde-format
-msgid "Skype registration failed."
-msgstr "A Skype regisztráció sikertelen."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:120
-#, kde-format
-msgid "Protocol mismatch."
-msgstr "Nem megfelelő protokoll."
-
-#: akonadi-contacts/actions/smsdialog.cpp:35
-#, kde-format
-msgctxt "@title:window"
-msgid "SMS text"
-msgstr "SMS szöveg"
-
-#: akonadi-contacts/actions/smsdialog.cpp:39
-#, kde-format
-msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr "Kérem, írja be a(z) %1 számra küldendő SMS szövegét"
-
-#: akonadi-contacts/actions/smsdialog.cpp:80
-#, kde-format
-msgid "%1/%2 (%3 SMS)"
-msgstr "%1/%2 (%3 SMS)"
 
 #: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
@@ -1421,11 +1243,6 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Egyedi"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
-#, kde-format
-msgid "Tags"
-msgstr "Címkék"
-
 #: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
@@ -1779,6 +1596,136 @@ msgstr "Képek (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Beállítás elsődlegesnek"
+
+#~ msgid ""
+#~ "Define how a phone number of a contact should be dialed. 'System Default' "
+#~ "uses the default application configured for this on your system (e.g. KDE "
+#~ "Connect). Selecting a specific application will use that (if installed), "
+#~ "'External Application' allows you to specify a dial command with "
+#~ "placeholders manually."
+#~ msgstr ""
+#~ "Megadja a névjegyek telefonszámai tárcsázásának módját. A „Rendszer "
+#~ "alapértelmezése” a rendszerben beállított alkalmazást fogja használni "
+#~ "(például a KDE Connectet). Más alkalmazást választva (ha az telepítve "
+#~ "van) a „Külső alkalmazás”-sal lehetővé teszi egyéni tárcsázó parancs "
+#~ "megadását."
+
+#~ msgid "Phone Command"
+#~ msgstr "Telefonparancs"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr ""
+#~ "Ez a parancs megadja, hogy melyik alkalmazást kell elindítani a partner "
+#~ "telefonszámának felhívásához."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "Az alábbi helykitöltők használhatók a parancsban:\n"
+#~ "   %N: A címjegyzékben tárolt nyers szám.\n"
+#~ "   %n: A nem szám karakterek eltávolításával kapott normalizált szám."
+
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "Megadja, hogy mely alkalmazást kell használni SMS küldésére a partner "
+#~ "telefonszámára. Ha a „Rendszer alapértelmezése” van kiválasztva, az "
+#~ "alapértelemzett SMS küldő alkalmazás lesz használva (például KDE "
+#~ "Connect). Ha a „Külső alkalmazás” van kiválasztva, a parancs "
+#~ "helykitöltőkkel is megadható."
+
+#~ msgid "SMS Command"
+#~ msgstr "SMS parancs"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "Ez a parancs megadja, hogy mely alkalmazást kell elindítani SMS "
+#~ "küldéséhez egy partner telefonszámára."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "Az alábbi helykitöltők használhatók a parancsban:\n"
+#~ "   %N: A címjegyzékben tárolt nyers szám.\n"
+#~ "   %n: A nem szám karakterek eltávolításával kapott normalizált szám.\n"
+#~ "   %t: A szöveg"
+
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "Nincs futtatható alkalmazás beállítva.\n"
+#~ "Kérem állítson be egyet a beállítóablakban."
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "A számtárcsázás nem támogatott"
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "Az SMS küldés nem támogatott"
+
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nem sikerült elindítani az Ekiga folyamatot, ellenőrizze, hogy az "
+#~ "Ekigavégrehajtható állomány szerepel-e a PATH változóban."
+
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "Úgy látszik, az Ekiga nyilvános API (D-Bus) le van tiltva."
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "Az SMS küldés jelenleg nem támogatott Ekiga rendszeren."
+
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "Nem sikerült elindítani a sflphone-client-kde folyamatot, ellenőrizze, "
+#~ "hogy a sflphone-client-kde végrehajtható állomány szerepel-e a PATH "
+#~ "változóban."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nem sikerült elindítani a Skype folyamatot, ellenőrizze, hogy a Skype "
+#~ "végrehajtható állomány szerepel-e a PATH változóban."
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "Úgy látszik, a Skype nyilvános API (D-Bus) le van tiltva."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "A Skype regisztráció sikertelen."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "Nem megfelelő protokoll."
+
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "SMS szöveg"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "Kérem, írja be a(z) %1 számra küldendő SMS szövegét"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 SMS)"
+
+#~ msgid "Tags"
+#~ msgstr "Címkék"
 
 #~ msgid "Add a Country"
 #~ msgstr "Ország hozzáadása"

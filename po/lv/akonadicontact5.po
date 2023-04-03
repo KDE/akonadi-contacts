@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2010-01-01 14:24+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -17,215 +17,6 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-
-#. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Define how a phone number of a contact should be dialed. 'System Default' "
-"uses the default application configured for this on your system (e.g. KDE "
-"Connect). Selecting a specific application will use that (if installed), "
-"'External Application' allows you to specify a dial command with "
-"placeholders manually."
-msgstr ""
-
-#. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
-#, kde-format
-msgid "Phone Command"
-msgstr "Zvanīšanas komanda"
-
-#. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "This command defines the application that shall be executed to dial a "
-#| "contact's\n"
-#| "                 phone number."
-msgid ""
-"This command defines the application that shall be executed to dial a "
-"contact's phone number."
-msgstr ""
-"Šī komanda nosaka programmu, ko darbināt lai piezvanītu uz kontakta\n"
-"                 telefona numuru."
-
-#. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
-#, fuzzy, no-c-format, kde-format
-#| msgid ""
-#| "The following placeholders can be used in the command:\n"
-#| "   %N: The raw number as stored in the address book.\n"
-#| "   %n: The normalized number with all non-digit characters removed.\n"
-#| "      "
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed."
-msgstr ""
-"Komandā var izmantot šādus vietturus:\n"
-"   %N: Numurs, kā tas ir ierakstīts adrešu grāmatā.\n"
-"   %n: Normalizēts numurs, kas sastāv tikai no cipariem.\n"
-"      "
-
-#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
-#, fuzzy, kde-format
-#| msgid ""
-#| "Defines which application shall be used to dial the phone number of a "
-#| "contact. If 'Skype' is selected the Skype application will be started (if "
-#| "installed on the computer) and the number is dialed. If 'External "
-#| "Application' is selected, a command with placeholders can be defined."
-msgid ""
-"Defines which application shall be used to send an SMS to the phone number "
-"of a contact. If 'System Default' is selected the default handler for SMS "
-"messages on your system will be used (e.g. KDE Connect), otherwise the "
-"selected application will be used to send the SMS message (if installed on "
-"the computer). If 'External Application' is selected, a command with "
-"placeholders can be defined."
-msgstr ""
-"Norāda programmu, ko izmantot kontaktpersonas telefona numura sazvanīšanai. "
-"Ja izvēlēts Skype, tiks palaista Skype programma (ja instalēta) un sastādīts "
-"izvēlētais numurs. Ja izvēlēta 'Ārēja programma', jānorāda komanda ar "
-"vietturiem."
-
-#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
-#, fuzzy, kde-format
-#| msgid "Phone Command"
-msgid "SMS Command"
-msgstr "Zvanīšanas komanda"
-
-#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
-#, fuzzy, kde-format
-#| msgid ""
-#| "This command defines the application that shall be executed to dial a "
-#| "contact's\n"
-#| "                 phone number."
-msgid ""
-"This command defines the application that shall be executed to send an SMS "
-"to a contact's phone number."
-msgstr ""
-"Šī komanda nosaka programmu, ko darbināt lai piezvanītu uz kontakta\n"
-"                 telefona numuru."
-
-#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
-#, fuzzy, no-c-format, kde-format
-#| msgid ""
-#| "The following placeholders can be used in the command:\n"
-#| "   %N: The raw number as stored in the address book.\n"
-#| "   %n: The normalized number with all non-digit characters removed.\n"
-#| "      "
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %N: The raw number as stored in the address book.\n"
-"   %n: The normalized number with all non-digit characters removed.\n"
-"   %t: The text"
-msgstr ""
-"Komandā var izmantot šādus vietturus:\n"
-"   %N: Numurs, kā tas ir ierakstīts adrešu grāmatā.\n"
-"   %n: Normalizēts numurs, kas sastāv tikai no cipariem.\n"
-"      "
-
-#: akonadi-contacts/actions/dialphonenumberaction.cpp:59
-#: akonadi-contacts/actions/sendsmsaction.cpp:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "There is no application set which could be executed. Please go to the "
-#| "settings dialog and configure one."
-msgid ""
-"There is no application set which could be executed.\n"
-"Please go to the settings dialog and configure one."
-msgstr ""
-"Nav iestatīta izpildāmā programma. Lūdzu atveriet iestatījumu dialogu un "
-"norādiet to."
-
-#: akonadi-contacts/actions/qdialer.cpp:24
-#, kde-format
-msgid "Dialing a number is not supported"
-msgstr ""
-
-#: akonadi-contacts/actions/qdialer.cpp:33
-#, kde-format
-msgid "Sending an SMS is not supported"
-msgstr ""
-
-#: akonadi-contacts/actions/qekigadialer.cpp:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to start skype process, check that skype executable is in your "
-#| "PATH variable."
-msgid ""
-"Unable to start ekiga process, check that ekiga executable is in your PATH "
-"variable."
-msgstr ""
-"Neizdevās palaist Skype procesu, pārbaudiet vai skype izpildfails ir jūsu "
-"PATH mainīgajā."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:97
-#, fuzzy, kde-format
-#| msgid "Skype Public API (DBus) seems to be disabled."
-msgid "Ekiga Public API (D-Bus) seems to be disabled."
-msgstr "Skype publiskais API (DBus), izskatās, ir atslēgts."
-
-#: akonadi-contacts/actions/qekigadialer.cpp:117
-#, kde-format
-msgid "Sending an SMS is currently not supported on Ekiga."
-msgstr ""
-
-#: akonadi-contacts/actions/qsflphonedialer.cpp:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to start skype process, check that skype executable is in your "
-#| "PATH variable."
-msgid ""
-"Unable to start sflphone-client-kde process, check that sflphone-client-kde "
-"executable is in your PATH variable."
-msgstr ""
-"Neizdevās palaist Skype procesu, pārbaudiet vai skype izpildfails ir jūsu "
-"PATH mainīgajā."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:77
-#, kde-format
-msgid ""
-"Unable to start skype process, check that skype executable is in your PATH "
-"variable."
-msgstr ""
-"Neizdevās palaist Skype procesu, pārbaudiet vai skype izpildfails ir jūsu "
-"PATH mainīgajā."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:102
-#, fuzzy, kde-format
-#| msgid "Skype Public API (DBus) seems to be disabled."
-msgid "Skype Public API (D-Bus) seems to be disabled."
-msgstr "Skype publiskais API (DBus), izskatās, ir atslēgts."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:111
-#, kde-format
-msgid "Skype registration failed."
-msgstr "Neizdevās reģistrēties Skype."
-
-#: akonadi-contacts/actions/qskypedialer.cpp:120
-#, kde-format
-msgid "Protocol mismatch."
-msgstr "Protokolu nesaderība."
-
-#: akonadi-contacts/actions/smsdialog.cpp:35
-#, kde-format
-msgctxt "@title:window"
-msgid "SMS text"
-msgstr ""
-
-#: akonadi-contacts/actions/smsdialog.cpp:39
-#, kde-format
-msgid "Please insert SMS text for an SMS to the following number: %1"
-msgstr ""
-
-#: akonadi-contacts/actions/smsdialog.cpp:80
-#, kde-format
-msgid "%1/%2 (%3 SMS)"
-msgstr ""
 
 #: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
@@ -1549,11 +1340,6 @@ msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Pielāgots"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:75
-#, kde-format
-msgid "Tags"
-msgstr ""
-
 #: contact-editor/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "a contact's email address"
@@ -1939,6 +1725,146 @@ msgstr ""
 #| msgid "Set Standard"
 msgid "Set as Preferred"
 msgstr "Iesattīt par standarta"
+
+#~ msgid "Phone Command"
+#~ msgstr "Zvanīšanas komanda"
+
+#, fuzzy
+#~| msgid ""
+#~| "This command defines the application that shall be executed to dial a "
+#~| "contact's\n"
+#~| "                 phone number."
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr ""
+#~ "Šī komanda nosaka programmu, ko darbināt lai piezvanītu uz kontakta\n"
+#~ "                 telefona numuru."
+
+#, fuzzy
+#~| msgid ""
+#~| "The following placeholders can be used in the command:\n"
+#~| "   %N: The raw number as stored in the address book.\n"
+#~| "   %n: The normalized number with all non-digit characters removed.\n"
+#~| "      "
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "Komandā var izmantot šādus vietturus:\n"
+#~ "   %N: Numurs, kā tas ir ierakstīts adrešu grāmatā.\n"
+#~ "   %n: Normalizēts numurs, kas sastāv tikai no cipariem.\n"
+#~ "      "
+
+#, fuzzy
+#~| msgid ""
+#~| "Defines which application shall be used to dial the phone number of a "
+#~| "contact. If 'Skype' is selected the Skype application will be started "
+#~| "(if installed on the computer) and the number is dialed. If 'External "
+#~| "Application' is selected, a command with placeholders can be defined."
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "Norāda programmu, ko izmantot kontaktpersonas telefona numura "
+#~ "sazvanīšanai. Ja izvēlēts Skype, tiks palaista Skype programma (ja "
+#~ "instalēta) un sastādīts izvēlētais numurs. Ja izvēlēta 'Ārēja programma', "
+#~ "jānorāda komanda ar vietturiem."
+
+#, fuzzy
+#~| msgid "Phone Command"
+#~ msgid "SMS Command"
+#~ msgstr "Zvanīšanas komanda"
+
+#, fuzzy
+#~| msgid ""
+#~| "This command defines the application that shall be executed to dial a "
+#~| "contact's\n"
+#~| "                 phone number."
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "Šī komanda nosaka programmu, ko darbināt lai piezvanītu uz kontakta\n"
+#~ "                 telefona numuru."
+
+#, fuzzy
+#~| msgid ""
+#~| "The following placeholders can be used in the command:\n"
+#~| "   %N: The raw number as stored in the address book.\n"
+#~| "   %n: The normalized number with all non-digit characters removed.\n"
+#~| "      "
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "Komandā var izmantot šādus vietturus:\n"
+#~ "   %N: Numurs, kā tas ir ierakstīts adrešu grāmatā.\n"
+#~ "   %n: Normalizēts numurs, kas sastāv tikai no cipariem.\n"
+#~ "      "
+
+#, fuzzy
+#~| msgid ""
+#~| "There is no application set which could be executed. Please go to the "
+#~| "settings dialog and configure one."
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "Nav iestatīta izpildāmā programma. Lūdzu atveriet iestatījumu dialogu un "
+#~ "norādiet to."
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to start skype process, check that skype executable is in your "
+#~| "PATH variable."
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Neizdevās palaist Skype procesu, pārbaudiet vai skype izpildfails ir jūsu "
+#~ "PATH mainīgajā."
+
+#, fuzzy
+#~| msgid "Skype Public API (DBus) seems to be disabled."
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "Skype publiskais API (DBus), izskatās, ir atslēgts."
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to start skype process, check that skype executable is in your "
+#~| "PATH variable."
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "Neizdevās palaist Skype procesu, pārbaudiet vai skype izpildfails ir jūsu "
+#~ "PATH mainīgajā."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Neizdevās palaist Skype procesu, pārbaudiet vai skype izpildfails ir jūsu "
+#~ "PATH mainīgajā."
+
+#, fuzzy
+#~| msgid "Skype Public API (DBus) seems to be disabled."
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "Skype publiskais API (DBus), izskatās, ir atslēgts."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "Neizdevās reģistrēties Skype."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "Protokolu nesaderība."
 
 #, fuzzy
 #~| msgid "Add Email"
