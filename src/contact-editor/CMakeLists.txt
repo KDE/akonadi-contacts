@@ -135,7 +135,49 @@ target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
     contactmetadatabase_p.h
     customfields_p.h
 
+    contacteditordialog.cpp
+    contacteditordialog.h
+
+    contacteditor.cpp
+    contacteditor.h
+
+    standardcontactactionmanager.cpp
+    standardcontactactionmanager.h
+
+    contactviewer.cpp
+    contactviewer.h
+
+    contactviewerdialog.h
+    contactviewerdialog.cpp
+
+    contactmetadataakonadi.cpp
+    contactmetadataakonadi_p.h
+
+    contactgroupviewer.cpp
+    contactgroupviewer.h
+
+    textbrowser_p.h
+    textbrowser.cpp
+    grantlee/grantleecontactviewer.h
+    grantlee/grantleecontactviewer.cpp
 )
+
+target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+    job/addemailaddressjob.cpp
+    job/addemaildisplayjob.cpp
+    job/addemailaddressjob.h
+    job/addemaildisplayjob.h
+    job/addcontactjob.h
+    job/addcontactjob.cpp
+    job/openemailaddressjob.cpp
+    job/openemailaddressjob.h
+)
+
+target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+    widgets/selectaddressbookdialog.cpp
+    widgets/selectaddressbookdialog.h
+)
+
 
 ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}ContactEditor HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
         DESCRIPTION "akonadicontact (contact editor)"
@@ -164,6 +206,9 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}ContactEditor
     KF${KF_MAJOR_VERSION}::TextWidgets
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KPim${KF_MAJOR_VERSION}::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiContact
+    KF${KF_MAJOR_VERSION}::Prison
+    KF${KF_MAJOR_VERSION}::XmlGui
     )
 
 set_target_properties(KPim${KF_MAJOR_VERSION}ContactEditor PROPERTIES
@@ -187,18 +232,59 @@ install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 ecm_generate_headers(ContactEditor_CamelCase_HEADERS
     HEADER_NAMES
     ContactEditorPagePlugin
+    ContactEditorDialog
+    ContactEditor
+    ContactViewer
+    StandardContactActionManager
+    ContactViewerDialog
+    ContactGroupViewer
+
     REQUIRED_HEADERS ContactEditor_HEADERS
     PREFIX Akonadi
     )
 
+ecm_generate_headers(ContactEditorGrantlee_CamelCase_HEADERS
+    HEADER_NAMES
+    GrantleeContactViewer
+    REQUIRED_HEADERS ContactEditorGrantlee_HEADERS
+    RELATIVE grantlee
+    PREFIX Akonadi
+)
+
+ecm_generate_headers(ContactEditorWidgets_CamelCase_HEADERS
+    HEADER_NAMES
+    SelectAddressBookDialog
+    REQUIRED_HEADERS ContactEditorWidgets_HEADERS
+    PREFIX Akonadi
+    RELATIVE widgets
+    )
+
+ecm_generate_headers(ContactEditorJob_CamelCase_HEADERS
+    HEADER_NAMES
+    AddEmailAddressJob
+    AddEmailDisplayJob
+    AddContactJob
+    OpenEmailAddressJob
+    REQUIRED_HEADERS ContactEditorJob_HEADERS
+    PREFIX Akonadi
+    RELATIVE job
+    )
+
+
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
+    ${ContactEditorJob_CamelCase_HEADERS}
+    ${ContactEditorWidgets_CamelCase_HEADERS}
+    ${ContactEditorGrantlee_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor/Akonadi COMPONENT Devel
     )
 
 install( FILES
     ${ContactEditor_HEADERS}
     ${ContactEditorWidget_HEADERS}
+    ${ContactEditorJob_HEADERS}
+    ${ContactEditorWidgets_HEADERS}
+    ${ContactEditorGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor/akonadi COMPONENT Devel
     )

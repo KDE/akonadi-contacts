@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 #include <KJob>
 
 #include <memory>
 
-namespace Akonadi
+namespace ContactEditor
 {
 class OpenEmailAddressJobPrivate;
 
@@ -23,7 +23,7 @@ class OpenEmailAddressJobPrivate;
  * exists in Akonadi. If not, it will add a new contact with the email address
  * to Akonadi and then opens the contact editor.
  */
-class AKONADI_CONTACT_EXPORT OpenEmailAddressJob : public KJob
+class CONTACTEDITOR_EXPORT OpenEmailAddressJob : public KJob
 {
     Q_OBJECT
 

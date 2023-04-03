@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 #include <Akonadi/ItemMonitor>
 
@@ -19,6 +19,9 @@
 namespace Akonadi
 {
 class AbstractContactGroupFormatter;
+}
+namespace ContactEditor
+{
 class ContactGroupViewerPrivate;
 
 /**
@@ -43,7 +46,7 @@ class ContactGroupViewerPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactGroupViewer : public QWidget, public Akonadi::ItemMonitor
+class CONTACTEDITOR_EXPORT ContactGroupViewer : public QWidget, public Akonadi::ItemMonitor
 {
     Q_OBJECT
 
@@ -72,7 +75,7 @@ public:
      * @note The contact viewer won't take ownership of the formatter.
      * @since 4.6
      */
-    void setContactGroupFormatter(AbstractContactGroupFormatter *formatter);
+    void setContactGroupFormatter(Akonadi::AbstractContactGroupFormatter *formatter);
 
     /**
      * @since 5.20.41
@@ -99,13 +102,13 @@ private:
     /**
      * This method is called whenever the displayed contact @p group has been changed.
      */
-    AKONADI_CONTACT_NO_EXPORT void itemChanged(const Item &group) override;
+    CONTACTEDITOR_NO_EXPORT void itemChanged(const Akonadi::Item &group) override;
 
     /**
      * This method is called whenever the displayed contact group has been
      * removed from Akonadi.
      */
-    AKONADI_CONTACT_NO_EXPORT void itemRemoved() override;
+    CONTACTEDITOR_NO_EXPORT void itemRemoved() override;
 
 private:
     //@cond PRIVATE

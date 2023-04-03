@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 #include <Akonadi/Item>
 #include <KJob>
 
 #include <memory>
 
-namespace Akonadi
+namespace ContactEditor
 {
 class Item;
 class AddEmailDisplayJobPrivate;
@@ -21,7 +21,7 @@ class AddEmailDisplayJobPrivate;
  * @brief The AddEmailDisplayJob class
  * @author Laurent Montel <montel@kde.org>
  */
-class AKONADI_CONTACT_EXPORT AddEmailDisplayJob : public KJob
+class CONTACTEDITOR_EXPORT AddEmailDisplayJob : public KJob
 {
     Q_OBJECT
 

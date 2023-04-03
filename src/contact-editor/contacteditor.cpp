@@ -28,9 +28,9 @@
 #include <QPointer>
 #include <QVBoxLayout>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
-class Akonadi::AkonadiContactEditorPrivate
+class ContactEditor::AkonadiContactEditorPrivate
 {
 public:
     AkonadiContactEditorPrivate(AkonadiContactEditor::Mode mode,
@@ -64,21 +64,21 @@ public:
     void storeDone(KJob *job);
     void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &);
 
-    void loadContact(const KContacts::Addressee &addr, const ContactMetaDataAkonadi &metaData);
-    void storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData);
+    void loadContact(const KContacts::Addressee &addr, const ContactEditor::ContactMetaDataAkonadi &metaData);
+    void storeContact(KContacts::Addressee &addr, ContactEditor::ContactMetaDataAkonadi &metaData);
     void setupMonitor();
 
     AkonadiContactEditor *const mParent;
     const AkonadiContactEditor::Mode mMode;
     Akonadi::Item mItem;
-    Akonadi::ContactMetaDataAkonadi mContactMetaData;
+    ContactEditor::ContactMetaDataAkonadi mContactMetaData;
     Akonadi::Monitor *mMonitor = nullptr;
     Akonadi::Collection mDefaultCollection;
     ContactEditor::AbstractContactEditorWidget *mEditorWidget = nullptr;
     bool mReadOnly = false;
 };
 
-void Akonadi::AkonadiContactEditorPrivate::itemFetchDone(KJob *job)
+void ContactEditor::AkonadiContactEditorPrivate::itemFetchDone(KJob *job)
 {
     if (job->error() != KJob::NoError) {
         Q_EMIT mParent->error(job->errorString());
@@ -103,7 +103,7 @@ void Akonadi::AkonadiContactEditorPrivate::itemFetchDone(KJob *job)
         // about the modify rights of the item
 
         auto collectionFetchJob = new Akonadi::CollectionFetchJob(mItem.parentCollection(), Akonadi::CollectionFetchJob::Base);
-        mParent->connect(collectionFetchJob, &CollectionFetchJob::result, mParent, [this](KJob *job) {
+        mParent->connect(collectionFetchJob, &Akonadi::CollectionFetchJob::result, mParent, [this](KJob *job) {
             parentCollectionFetchDone(job);
         });
     } else {
@@ -114,7 +114,7 @@ void Akonadi::AkonadiContactEditorPrivate::itemFetchDone(KJob *job)
     }
 }
 
-void Akonadi::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob *job)
+void ContactEditor::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob *job)
 {
     if (job->error()) {
         Q_EMIT mParent->error(job->errorString());
@@ -129,7 +129,7 @@ void Akonadi::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob *job)
 
     const Akonadi::Collection parentCollection = fetchJob->collections().at(0);
     if (parentCollection.isValid()) {
-        mReadOnly = !(parentCollection.rights() & Collection::CanChangeItem);
+        mReadOnly = !(parentCollection.rights() & Akonadi::Collection::CanChangeItem);
     }
 
     const auto addr = mItem.payload<KContacts::Addressee>();
@@ -138,7 +138,7 @@ void Akonadi::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob *job)
     mEditorWidget->setReadOnly(mReadOnly);
 }
 
-void Akonadi::AkonadiContactEditorPrivate::storeDone(KJob *job)
+void ContactEditor::AkonadiContactEditorPrivate::storeDone(KJob *job)
 {
     if (job->error() != KJob::NoError) {
         Q_EMIT mParent->error(job->errorString());
@@ -154,7 +154,7 @@ void Akonadi::AkonadiContactEditorPrivate::storeDone(KJob *job)
     Q_EMIT mParent->finished();
 }
 
-void Akonadi::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &)
+void ContactEditor::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &)
 {
     Q_UNUSED(item)
     QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
@@ -166,10 +166,10 @@ void Akonadi::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item
     if (dlg->exec() == QMessageBox::AcceptRole) {
         auto job = new Akonadi::ItemFetchJob(mItem);
         job->fetchScope().fetchFullPayload();
-        job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
+        job->fetchScope().fetchAttribute<Akonadi::ContactMetaDataAttribute>();
         job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-        mParent->connect(job, &ItemFetchJob::result, mParent, [this](KJob *job) {
+        mParent->connect(job, &Akonadi::ItemFetchJob::result, mParent, [this](KJob *job) {
             itemFetchDone(job);
         });
     } else {
@@ -180,49 +180,49 @@ void Akonadi::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item
     delete dlg;
 }
 
-void Akonadi::AkonadiContactEditorPrivate::loadContact(const KContacts::Addressee &addr, const ContactMetaDataAkonadi &metaData)
+void ContactEditor::AkonadiContactEditorPrivate::loadContact(const KContacts::Addressee &addr, const ContactMetaDataAkonadi &metaData)
 {
     mEditorWidget->loadContact(addr, metaData);
 }
 
-void Akonadi::AkonadiContactEditorPrivate::storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData)
+void ContactEditor::AkonadiContactEditorPrivate::storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData)
 {
     mEditorWidget->storeContact(addr, metaData);
 }
 
-void Akonadi::AkonadiContactEditorPrivate::setupMonitor()
+void ContactEditor::AkonadiContactEditorPrivate::setupMonitor()
 {
     delete mMonitor;
     mMonitor = new Akonadi::Monitor;
     mMonitor->setObjectName(QStringLiteral("ContactEditorMonitor"));
     mMonitor->ignoreSession(Akonadi::Session::defaultSession());
 
-    QObject::connect(mMonitor, &Monitor::itemChanged, mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &set) {
+    QObject::connect(mMonitor, &Akonadi::Monitor::itemChanged, mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &set) {
         itemChanged(item, set);
     });
 }
 
-Akonadi::AkonadiContactEditor::AkonadiContactEditor(Mode mode, QWidget *parent)
+ContactEditor::AkonadiContactEditor::AkonadiContactEditor(Mode mode, QWidget *parent)
     : QWidget(parent)
     , d(new AkonadiContactEditorPrivate(mode, FullMode, nullptr, this))
 {
 }
 
-Akonadi::AkonadiContactEditor::AkonadiContactEditor(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent)
+ContactEditor::AkonadiContactEditor::AkonadiContactEditor(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent)
     : QWidget(parent)
     , d(new AkonadiContactEditorPrivate(mode, FullMode, editorWidget, this))
 {
 }
 
-Akonadi::AkonadiContactEditor::AkonadiContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent)
+ContactEditor::AkonadiContactEditor::AkonadiContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent)
     : QWidget(parent)
     , d(new AkonadiContactEditorPrivate(mode, displayMode, nullptr, this))
 {
 }
 
-Akonadi::AkonadiContactEditor::~AkonadiContactEditor() = default;
+ContactEditor::AkonadiContactEditor::~AkonadiContactEditor() = default;
 
-void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
+void ContactEditor::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
 {
     if (d->mMode == CreateMode) {
         Q_ASSERT_X(false, "ContactEditor::loadContact", "You are calling loadContact in CreateMode!");
@@ -230,10 +230,10 @@ void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
 
     auto job = new Akonadi::ItemFetchJob(item);
     job->fetchScope().fetchFullPayload();
-    job->fetchScope().fetchAttribute<ContactMetaDataAttribute>();
+    job->fetchScope().fetchAttribute<Akonadi::ContactMetaDataAttribute>();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, &ItemFetchJob::result, this, [this](KJob *job) {
+    connect(job, &Akonadi::ItemFetchJob::result, this, [this](KJob *job) {
         d->itemFetchDone(job);
     });
 
@@ -241,14 +241,14 @@ void Akonadi::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
     d->mMonitor->setItemMonitored(item);
 }
 
-KContacts::Addressee Akonadi::AkonadiContactEditor::contact()
+KContacts::Addressee ContactEditor::AkonadiContactEditor::contact()
 {
     KContacts::Addressee addr;
     d->storeContact(addr, d->mContactMetaData);
     return addr;
 }
 
-void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
+void ContactEditor::AkonadiContactEditor::saveContactInAddressBook()
 {
     if (d->mMode == EditMode) {
         if (!d->mItem.isValid() || d->mReadOnly) {
@@ -265,16 +265,16 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mItem.setPayload<KContacts::Addressee>(addr);
 
         auto job = new Akonadi::ItemModifyJob(d->mItem);
-        connect(job, &ItemModifyJob::result, this, [this](KJob *job) {
+        connect(job, &Akonadi::ItemModifyJob::result, this, [this](KJob *job) {
             d->storeDone(job);
         });
     } else if (d->mMode == CreateMode) {
         if (!d->mDefaultCollection.isValid()) {
             const QStringList mimeTypeFilter(KContacts::Addressee::mimeType());
 
-            QPointer<CollectionDialog> dlg = new CollectionDialog(this);
+            QPointer<Akonadi::CollectionDialog> dlg = new Akonadi::CollectionDialog(this);
             dlg->setMimeTypeFilter(mimeTypeFilter);
-            dlg->setAccessRightsFilter(Collection::CanCreateItem);
+            dlg->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
             dlg->setWindowTitle(i18nc("@title:window", "Select Address Book"));
             dlg->setDescription(i18n("Select the address book the new contact shall be saved in:"));
             if (dlg->exec() == QDialog::Accepted) {
@@ -296,23 +296,23 @@ void Akonadi::AkonadiContactEditor::saveContactInAddressBook()
         d->mContactMetaData.store(item);
 
         auto job = new Akonadi::ItemCreateJob(item, d->mDefaultCollection);
-        connect(job, &ItemCreateJob::result, this, [this](KJob *job) {
+        connect(job, &Akonadi::ItemCreateJob::result, this, [this](KJob *job) {
             d->storeDone(job);
         });
     }
 }
 
-void Akonadi::AkonadiContactEditor::setContactTemplate(const KContacts::Addressee &contact)
+void ContactEditor::AkonadiContactEditor::setContactTemplate(const KContacts::Addressee &contact)
 {
     d->loadContact(contact, d->mContactMetaData);
 }
 
-void Akonadi::AkonadiContactEditor::setDefaultAddressBook(const Akonadi::Collection &collection)
+void ContactEditor::AkonadiContactEditor::setDefaultAddressBook(const Akonadi::Collection &collection)
 {
     d->mDefaultCollection = collection;
 }
 
-bool Akonadi::AkonadiContactEditor::hasNoSavedData() const
+bool ContactEditor::AkonadiContactEditor::hasNoSavedData() const
 {
     return d->mEditorWidget->hasNoSavedData();
 }

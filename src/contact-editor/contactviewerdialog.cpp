@@ -25,7 +25,7 @@ namespace
 {
 static const char myContactViewerDialogGroupName[] = "ContactViewer";
 }
-class Akonadi::ContactViewerDialogPrivate
+class ContactEditor::ContactViewerDialogPrivate
 {
 public:
     explicit ContactViewerDialogPrivate(ContactViewerDialog *parent)
@@ -52,8 +52,10 @@ public:
     }
 
     ContactViewerDialog *const q;
-    ContactViewer *mViewer = nullptr;
+    ContactEditor::ContactViewer *mViewer = nullptr;
 };
+
+using namespace ContactEditor;
 
 ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     : QDialog(parent)
@@ -73,7 +75,7 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
 
     auto layout = new QVBoxLayout(mainWidget);
 
-    d->mViewer = new ContactViewer(this);
+    d->mViewer = new ContactEditor::ContactViewer(this);
     layout->addWidget(d->mViewer);
 
     auto actions = new ContactDefaultActions(this);
@@ -94,7 +96,7 @@ Akonadi::Item ContactViewerDialog::contact() const
     return d->mViewer->contact();
 }
 
-ContactViewer *ContactViewerDialog::viewer() const
+ContactEditor::ContactViewer *ContactViewerDialog::viewer() const
 {
     return d->mViewer;
 }

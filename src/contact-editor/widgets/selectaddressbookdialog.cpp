@@ -11,12 +11,12 @@
 #include <KContacts/Addressee>
 #include <KSharedConfig>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 namespace
 {
 static const char mySelectAddressBookDialogGroupName[] = "SelectAddressBookDialog";
 }
-class Akonadi::SelectAddressBookDialogPrivate
+class ContactEditor::SelectAddressBookDialogPrivate
 {
 public:
     SelectAddressBookDialogPrivate(SelectAddressBookDialog *qq)
@@ -59,7 +59,7 @@ void SelectAddressBookDialogPrivate::writeConfig()
 
 SelectAddressBookDialog::SelectAddressBookDialog(QWidget *parent)
     : Akonadi::CollectionDialog(parent)
-    , d(new Akonadi::SelectAddressBookDialogPrivate(this))
+    , d(new ContactEditor::SelectAddressBookDialogPrivate(this))
 {
 }
 

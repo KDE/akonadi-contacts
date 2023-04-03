@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 #include <QWidget>
 
@@ -18,14 +18,14 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace ContactEditor
-{
-class AbstractContactEditorWidget;
-}
 namespace Akonadi
 {
 class Collection;
 class Item;
+}
+namespace ContactEditor
+{
+class AbstractContactEditorWidget;
 class AkonadiContactEditorPrivate;
 
 /**
@@ -69,7 +69,7 @@ class AkonadiContactEditorPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT AkonadiContactEditor : public QWidget
+class CONTACTEDITOR_EXPORT AkonadiContactEditor : public QWidget
 {
     Q_OBJECT
 

@@ -25,14 +25,15 @@
 #include <QVBoxLayout>
 
 using namespace Akonadi;
+using namespace ContactEditor;
 
-class Akonadi::ContactGroupViewerPrivate
+class ContactEditor::ContactGroupViewerPrivate
 {
 public:
     explicit ContactGroupViewerPrivate(ContactGroupViewer *parent)
         : mParent(parent)
     {
-        mBrowser = new TextBrowser;
+        mBrowser = new ContactEditor::TextBrowser;
 
         static QPixmap groupPixmap = QIcon::fromTheme(QStringLiteral("x-mail-distribution-list")).pixmap(QSize(100, 100));
         mBrowser->document()->addResource(QTextDocument::ImageResource, QUrl(QStringLiteral("group_photo")), groupPixmap);
@@ -125,7 +126,7 @@ public:
     QMetaObject::Connection mCollectionFetchJobConnection;
     QMetaObject::Connection mJobConnection;
     ContactGroupViewer *const mParent;
-    TextBrowser *mBrowser = nullptr;
+    ContactEditor::TextBrowser *mBrowser = nullptr;
     QString mCurrentGroupName;
     KContacts::Addressee::List mCurrentContacts;
     QString mCurrentAddressBookName;
@@ -143,7 +144,7 @@ ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
 
-    connect(d->mBrowser, &TextBrowser::anchorClicked, this, [this](const QUrl &url) {
+    connect(d->mBrowser, &ContactEditor::TextBrowser::anchorClicked, this, [this](const QUrl &url) {
         d->slotMailClicked(url);
     });
 

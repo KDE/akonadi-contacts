@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 #include <Akonadi/StandardActionManager>
 
@@ -20,10 +20,12 @@ class QAction;
 class KActionCollection;
 class QItemSelectionModel;
 class QWidget;
-
 namespace Akonadi
 {
 class Item;
+}
+namespace ContactEditor
+{
 class StandardContactActionManagerPrivate;
 
 /**
@@ -32,7 +34,7 @@ class StandardContactActionManagerPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.6
  */
-class AKONADI_CONTACT_EXPORT StandardContactActionManager : public QObject
+class CONTACTEDITOR_EXPORT StandardContactActionManager : public QObject
 {
     Q_OBJECT
 
@@ -41,7 +43,7 @@ public:
      * Describes the supported actions.
      */
     enum Type {
-        CreateContact = StandardActionManager::LastType + 1, ///< Creates a new contact
+        CreateContact = Akonadi::StandardActionManager::LastType + 1, ///< Creates a new contact
         CreateContactGroup, ///< Creates a new contact group
         EditItem, ///< Edits the selected contact resp. contact group
         LastType ///< Marks last action
@@ -89,7 +91,7 @@ public:
      * connected to its default implementation provided by this class.
      * @param type the type of action to create
      */
-    QAction *createAction(StandardActionManager::Type type);
+    QAction *createAction(Akonadi::StandardActionManager::Type type);
 
     /**
      * Convenience method to create all standard actions.
@@ -106,7 +108,7 @@ public:
      * Returns the action of the given type, 0 if it has not been created (yet).
      * @param type the type of action to return
      */
-    QAction *action(StandardActionManager::Type type) const;
+    QAction *action(Akonadi::StandardActionManager::Type type) const;
 
     /**
      * Sets the label of the action @p type to @p text, which is used during
@@ -120,7 +122,7 @@ public:
      *                         ki18np( "Copy Item", "Copy %1 Items" ) );
      * @endcode
      */
-    void setActionText(StandardActionManager::Type type, const KLocalizedString &text);
+    void setActionText(Akonadi::StandardActionManager::Type type, const KLocalizedString &text);
 
     /**
      * Sets whether the default implementation for the given action @p type
@@ -138,7 +140,7 @@ public:
      * @param intercept If @c false, the default implementation will be executed,
      *                  if @c true no action is taken.
      */
-    void interceptAction(StandardActionManager::Type type, bool intercept = true);
+    void interceptAction(Akonadi::StandardActionManager::Type type, bool intercept = true);
 
     /**
      * Returns the list of collections that are currently selected.

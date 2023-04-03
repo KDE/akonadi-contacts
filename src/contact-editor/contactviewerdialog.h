@@ -8,20 +8,20 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 #include <QDialog>
 
 #include <memory>
 
-namespace KContacts
-{
-}
-
 namespace Akonadi
 {
 class Item;
 
+}
+
+namespace ContactEditor
+{
 class ContactViewer;
 class ContactViewerDialogPrivate;
 
@@ -48,7 +48,7 @@ class ContactViewerDialogPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactViewerDialog : public QDialog
+class CONTACTEDITOR_EXPORT ContactViewerDialog : public QDialog
 {
     Q_OBJECT
 

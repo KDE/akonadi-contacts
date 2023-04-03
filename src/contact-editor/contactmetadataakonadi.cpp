@@ -12,7 +12,7 @@
 
 #include <Akonadi/Item>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 
 ContactMetaDataAkonadi::ContactMetaDataAkonadi() = default;
 
@@ -23,14 +23,14 @@ void ContactMetaDataAkonadi::load(const Akonadi::Item &contact)
     if (!contact.hasAttribute("contactmetadata")) {
         return;
     }
-    const auto attribute = contact.attribute<ContactMetaDataAttribute>();
+    const auto attribute = contact.attribute<Akonadi::ContactMetaDataAttribute>();
     const QVariantMap metaData = attribute->metaData();
     loadMetaData(metaData);
 }
 
 void ContactMetaDataAkonadi::store(Akonadi::Item &contact)
 {
-    auto attribute = contact.attribute<ContactMetaDataAttribute>(Item::AddIfMissing);
+    auto attribute = contact.attribute<Akonadi::ContactMetaDataAttribute>(Akonadi::Item::AddIfMissing);
 
     attribute->setMetaData(storeMetaData());
 }

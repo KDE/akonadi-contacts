@@ -5,7 +5,7 @@
 */
 
 #include "grantleecontactviewer.h"
-#include "grantleecontactformatter.h"
+#include <Akonadi/GrantleeContactFormatter>
 #include <KSharedConfig>
 
 #include <GrantleeTheme/GrantleeThemeManager>
@@ -13,7 +13,7 @@
 using namespace KAddressBookGrantlee;
 
 GrantleeContactViewer::GrantleeContactViewer(QWidget *parent)
-    : Akonadi::ContactViewer(parent)
+    : ContactEditor::ContactViewer(parent)
     , mFormatter(new KAddressBookGrantlee::GrantleeContactFormatter)
 {
     setContactFormatter(mFormatter);

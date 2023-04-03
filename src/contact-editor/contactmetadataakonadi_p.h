@@ -12,7 +12,9 @@
 namespace Akonadi
 {
 class Item;
-
+}
+namespace ContactEditor
+{
 /**
  * @short A helper class for storing contact specific settings.
  */

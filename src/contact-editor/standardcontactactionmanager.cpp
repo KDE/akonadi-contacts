@@ -25,8 +25,8 @@
 #include <QPointer>
 
 using namespace Akonadi;
-
-class Akonadi::StandardContactActionManagerPrivate
+using namespace ContactEditor;
+class ContactEditor::StandardContactActionManagerPrivate
 {
 public:
     StandardContactActionManagerPrivate(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
@@ -403,7 +403,8 @@ public:
             return;
         }
 
-        QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::CreateMode, mParentWidget);
+        QPointer<ContactEditor::ContactEditorDialog> dlg =
+            new ContactEditor::ContactEditorDialog(ContactEditor::ContactEditorDialog::CreateMode, mParentWidget);
         dlg->setDefaultAddressBook(selectedCollection());
         dlg->exec();
         delete dlg;
@@ -446,8 +447,9 @@ public:
         }
 
         if (Akonadi::MimeTypeChecker::isWantedItem(item, KContacts::Addressee::mimeType())) {
-            QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
-            QObject::connect(dlg.data(), &ContactEditorDialog::error, mParent, [this](const QString &error) {
+            QPointer<ContactEditor::ContactEditorDialog> dlg =
+                new ContactEditor::ContactEditorDialog(ContactEditor::ContactEditorDialog::EditMode, mParentWidget);
+            QObject::connect(dlg.data(), &ContactEditor::ContactEditorDialog::error, mParent, [this](const QString &error) {
                 slotContactEditorError(error);
             });
             dlg->setContact(item);

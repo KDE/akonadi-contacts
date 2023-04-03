@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 #include "contactviewer.h"
 
 namespace KAddressBookGrantlee
@@ -14,7 +14,7 @@ namespace KAddressBookGrantlee
 class GrantleeContactFormatter;
 
 /** Grantlee-based contact viewer. */
-class AKONADI_CONTACT_EXPORT GrantleeContactViewer : public Akonadi::ContactViewer
+class CONTACTEDITOR_EXPORT GrantleeContactViewer : public ContactEditor::ContactViewer
 {
     Q_OBJECT
 public:
@@ -24,7 +24,7 @@ public:
     void setForceDisableQRCode(bool b);
 
 private:
-    Q_REQUIRED_RESULT AKONADI_CONTACT_NO_EXPORT QString kaddressBookAbsoluteThemePath() const;
+    Q_REQUIRED_RESULT CONTACTEDITOR_NO_EXPORT QString kaddressBookAbsoluteThemePath() const;
     KAddressBookGrantlee::GrantleeContactFormatter *const mFormatter;
 };
 }

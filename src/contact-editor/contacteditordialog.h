@@ -8,21 +8,22 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "contacteditor_export.h"
 
 #include <QDialog>
 
 #include <memory>
 
-namespace ContactEditor
-{
-class AbstractContactEditorWidget;
-}
 namespace Akonadi
 {
-class AkonadiContactEditor;
 class Collection;
 class Item;
+}
+
+namespace ContactEditor
+{
+class AkonadiContactEditor;
+class AbstractContactEditorWidget;
 class ContactEditorDialogPrivate;
 
 /**
@@ -64,7 +65,7 @@ class ContactEditorDialogPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactEditorDialog : public QDialog
+class CONTACTEDITOR_EXPORT ContactEditorDialog : public QDialog
 {
     Q_OBJECT
 
@@ -130,7 +131,7 @@ public:
     /**
      * Returns the ContactEditor that is used by this dialog.
      */
-    Q_REQUIRED_RESULT AkonadiContactEditor *editor() const;
+    Q_REQUIRED_RESULT ContactEditor::AkonadiContactEditor *editor() const;
 
     void reject() override;
 

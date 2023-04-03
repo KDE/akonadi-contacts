@@ -46,10 +46,6 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     job/contactgroupexpandjob.cpp
     job/contactgroupsearchjob.cpp
     job/contactsearchjob.cpp
-    job/addcontactjob.cpp
-    job/addemailaddressjob.cpp
-    job/addemaildisplayjob.cpp
-    job/openemailaddressjob.cpp
 )
 
 target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
@@ -62,7 +58,6 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     grantlee/grantleecontactformatter.cpp
     grantlee/grantleecontactgroupformatter.cpp
     grantlee/grantleeprint.cpp
-    grantlee/grantleecontactviewer.cpp
     )
 
 
@@ -72,19 +67,14 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     collectionfiltermodel.cpp
     contactcompletionmodel.cpp
     contactdefaultactions.cpp
-    contacteditor.cpp
-    contacteditordialog.cpp
     contactgroupeditor.cpp
     contactgroupeditordelegate.cpp
     contactgroupeditordialog.cpp
     contactgroupmodel.cpp
-    contactgroupviewer.cpp
-    contactmetadataakonadi.cpp
     contactparts.cpp
     contactsfilterproxymodel.cpp
     contactstreemodel.cpp
-    contactviewer.cpp
-    contactviewerdialog.cpp
+
     emailaddressselection.cpp
     emailaddressselectiondialog.cpp
     abstractemailaddressselectiondialog.cpp
@@ -92,24 +82,15 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     emailaddressselectionwidget.cpp
     emailaddressrequester.cpp
     emailaddressselectionmodel.cpp
-    textbrowser.cpp
     leafextensionproxymodel.cpp
-    standardcontactactionmanager.cpp
     standardcontactformatter.cpp
     standardcontactgroupformatter.cpp
     waitingoverlay.cpp
-    selectaddressbookdialog.cpp
     emailaddressselectionproxymodel_p.h
     job/contactgroupsearchjob.h
-    job/openemailaddressjob.h
     job/contactsearchjob.h
-    job/addemailaddressjob.h
-    job/addemaildisplayjob.h
-    job/addcontactjob.h
     job/contactgroupexpandjob.h
     contactdefaultactions.h
-    contactviewer.h
-    contacteditor.h
     contactgroupmodel_p.h
     abstractemailaddressselectiondialog.h
     emailaddressselectiondialog.h
@@ -118,19 +99,14 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     emailaddressselectionmodel.h
     grantlee/grantleecontactgroupformatter.h
     grantlee/grantleeprint.h
-    grantlee/grantleecontactviewer.h
     grantlee/contactgrantleewrapper.h
     grantlee/grantleecontactformatter.h
-    standardcontactactionmanager.h
     emailaddressselection.h
     contactgroupeditordelegate_p.h
-    textbrowser_p.h
     recipientspicker/recipientseditormanager.h
     recipientspicker/recipientspickerwidget.h
     akonadicontact_private_export.h
-    contacteditordialog.h
     emailaddressselection_p.h
-    contactgroupviewer.h
     collectionfiltermodel_p.h
     abstractcontactformatter.h
     contactsfilterproxymodel.h
@@ -142,13 +118,10 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     waitingoverlay_p.h
     leafextensionproxymodel_p.h
     emailaddressselectionwidget.h
-    selectaddressbookdialog.h
     contactparts.h
-    contactmetadataakonadi_p.h
     emailaddressrequester.h
     contactgroupeditor.h
     attributes/contactmetadataattribute_p.h
-    contactviewerdialog.h
     )
 
 
@@ -166,7 +139,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
         grantlee/grantleecontactformatter.cpp
         grantlee/grantleecontactgroupformatter.cpp
         grantlee/grantleeprint.cpp
-        grantlee/grantleecontactviewer.cpp PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+        PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
     set_target_properties(KPim${KF_MAJOR_VERSION}AkonadiContact PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KPim${KF_MAJOR_VERSION}AkonadiContact BASE_NAME akonadi-contact)
@@ -193,7 +166,6 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiContact
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::TextWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
-    KPim${KF_MAJOR_VERSION}::ContactEditor
     KF${KF_MAJOR_VERSION}::Prison
     KF${KF_MAJOR_VERSION}::Codecs
     ${MAIN_LIB}
@@ -225,10 +197,6 @@ ecm_generate_headers(AkonadiContactJob_CamelCase_HEADERS
     ContactGroupExpandJob
     ContactGroupSearchJob
     ContactSearchJob
-    AddEmailAddressJob
-    AddEmailDisplayJob
-    OpenEmailAddressJob
-    AddContactJob
     REQUIRED_HEADERS AkonadiContactJob_HEADERS
     PREFIX Akonadi
     RELATIVE job
@@ -249,26 +217,20 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     AbstractContactFormatter
     AbstractContactGroupFormatter
     ContactDefaultActions
-    ContactEditor
-    ContactEditorDialog
     ContactGroupEditor
     ContactGroupEditorDialog
-    ContactGroupViewer
     ContactsFilterProxyModel
     ContactsTreeModel
     ContactParts
-    ContactViewer
-    ContactViewerDialog
+
     EmailAddressSelection
     EmailAddressSelectionDialog
     EmailAddressSelectionWidget
     EmailAddressSelectionModel
     EmailAddressRequester
     AbstractEmailAddressSelectionDialog
-    StandardContactActionManager
     StandardContactFormatter
     StandardContactGroupFormatter
-    SelectAddressBookDialog
 
     REQUIRED_HEADERS AkonadiContact_HEADERS
     PREFIX Akonadi
@@ -280,7 +242,6 @@ ecm_generate_headers(AkonadiContactGrantlee_CamelCase_HEADERS
     GrantleeContactFormatter
     GrantleeContactGroupFormatter
     GrantleePrint
-    GrantleeContactViewer
 
     REQUIRED_HEADERS AkonadiContactGrantlee_HEADERS
     RELATIVE grantlee
@@ -342,40 +303,3 @@ install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContact COMPONENT Devel
 )
-
-##
-# TODO: Backwards compatiblity. Remove in next major version
-##
-set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContact")
-set(AKONADICONTACT_KF5_COMPAT TRUE)
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
-)
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiContactConfig.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-    COMPONENT Devel
-)
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactConfigVersion.cmake"
-    RENAME "KF5AkonadiContactConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-    COMPONENT Devel
-)
-install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiContactTargets
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-    FILE KPim${KF_MAJOR_VERSION}AkonadiContactTargets.cmake
-    NAMESPACE KF5::
-)
-
-if (BUILD_QCH)
-    install(FILES
-        "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiContactQchTargets.cmake"
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-        COMPONENT Devel
-    )
-endif()
-

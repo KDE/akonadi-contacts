@@ -25,12 +25,12 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-using namespace Akonadi;
+using namespace ContactEditor;
 namespace
 {
 static const char myContactEditorDialogDialogGroupName[] = "ContactEditor";
 }
-class Akonadi::ContactEditorDialogPrivate
+class ContactEditor::ContactEditorDialogPrivate
 {
 public:
     ContactEditorDialogPrivate(ContactEditorDialog::Mode mode,
@@ -71,9 +71,9 @@ public:
         if (mode == ContactEditorDialog::CreateMode) {
             auto label = new QLabel(i18n("Add to:"), mainWidget);
 
-            mAddressBookBox = new CollectionComboBox(mainWidget);
+            mAddressBookBox = new Akonadi::CollectionComboBox(mainWidget);
             mAddressBookBox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
-            mAddressBookBox->setAccessRightsFilter(Collection::CanCreateItem);
+            mAddressBookBox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
 
             layout->addWidget(label, 0, 0);
             layout->addWidget(mAddressBookBox, 0, 1);
@@ -127,9 +127,9 @@ public:
     }
 
     ContactEditorDialog *const q;
-    CollectionComboBox *mAddressBookBox = nullptr;
+    Akonadi::CollectionComboBox *mAddressBookBox = nullptr;
     const ContactEditorDialog::Mode mMode;
-    AkonadiContactEditor *mEditor = nullptr;
+    ContactEditor::AkonadiContactEditor *mEditor = nullptr;
 };
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
