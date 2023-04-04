@@ -140,7 +140,7 @@ void ContactEditorWidgetPrivate::loadCustomPages()
     const QStringList pluginDirs = QCoreApplication::libraryPaths();
 
     for (const QString &dir : pluginDirs) {
-        QDirIterator it(dir + QLatin1String("/pim" QT_STRINGIFY(QT_VERSION_MAJOR) "/contacteditor/editorpageplugins"), QDir::Files);
+        QDirIterator it(dir + QLatin1String("/pim6/contacteditor/editorpageplugins"), QDir::Files);
 
         while (it.hasNext()) {
             QPluginLoader loader(it.next());

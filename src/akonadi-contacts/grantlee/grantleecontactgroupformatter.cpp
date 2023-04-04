@@ -10,15 +10,9 @@
 
 #include <GrantleeTheme/GrantleeTheme>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/context.h>
-#include <grantlee/engine.h>
-#include <grantlee/templateloader.h>
-#else
 #include <KTextTemplate/Context>
 #include <KTextTemplate/Engine>
 #include <KTextTemplate/TemplateLoader>
-#endif
 
 #include <Akonadi/ContactGroupExpandJob>
 #include <Akonadi/Item>
@@ -31,17 +25,9 @@ class KAddressBookGrantlee::GrantleeContactGroupFormatterPrivate
 {
 public:
     GrantleeContactGroupFormatterPrivate()
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        : mEngine(new Grantlee::Engine)
-#else
         : mEngine(new KTextTemplate::Engine)
-#endif
     {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
-#else
         mTemplateLoader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>(new KTextTemplate::FileSystemTemplateLoader);
-#endif
     }
 
     ~GrantleeContactGroupFormatterPrivate()
@@ -67,17 +53,10 @@ public:
     }
 
     QVector<QObject *> mObjects;
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::Engine *const mEngine;
-    QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
-    Grantlee::Template mSelfcontainedTemplate;
-    Grantlee::Template mEmbeddableTemplate;
-#else
     KTextTemplate::Engine *const mEngine;
     QSharedPointer<KTextTemplate::FileSystemTemplateLoader> mTemplateLoader;
     KTextTemplate::Template mSelfcontainedTemplate;
     KTextTemplate::Template mEmbeddableTemplate;
-#endif
     QString mErrorMessage;
 };
 
@@ -196,11 +175,7 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     QVariantHash mapping;
     mapping.insert(QStringLiteral("contactGroup"), contactGroupObject);
     mapping.insert(QStringLiteral("colors"), colorsObject);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::Context context(mapping);
-#else
     KTextTemplate::Context context(mapping);
-#endif
 
     if (form == SelfcontainedForm) {
         return d->mSelfcontainedTemplate->render(&context);
