@@ -67,13 +67,8 @@ find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 
-if (QT_MAJOR_VERSION STREQUAL "5")
-    find_package(Grantlee5 ${GRANTLEE_VERSION} CONFIG REQUIRED)
-    set(MAIN_LIB Grantlee5::Templates)
-else()
-    find_package(KF6TextTemplate CONFIG REQUIRED)
-    set(MAIN_LIB KF6::TextTemplate)
-endif()
+find_package(KF6TextTemplate CONFIG REQUIRED)
+set(MAIN_LIB KF6::TextTemplate)
 
 ############### Compilers flags ###############
 
