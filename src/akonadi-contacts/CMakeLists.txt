@@ -159,15 +159,8 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiContact
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::IconThemes
     KF${KF_MAJOR_VERSION}::Completion
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::JobWidgets
-    KF${KF_MAJOR_VERSION}::KIOGui
     KPim${KF_MAJOR_VERSION}::Mime
     KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::TextWidgets
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::Prison
-    KF${KF_MAJOR_VERSION}::Codecs
     ${MAIN_LIB}
     )
 if(TARGET KF${KF_MAJOR_VERSION}::I18nLocaleData)
