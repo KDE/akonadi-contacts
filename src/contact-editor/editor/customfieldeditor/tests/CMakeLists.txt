@@ -14,11 +14,11 @@ add_executable(customfieldeditortest ${customfieldeditor_SRCS})
 
 target_link_libraries(customfieldeditortest
     Qt::Widgets
-    KPim${KF_MAJOR_VERSION}::ContactEditor
-    KF${KF_MAJOR_VERSION}::Contacts
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::Completion
-    KF${KF_MAJOR_VERSION}::IconThemes
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KF${KF_MAJOR_VERSION}::ConfigCore
+    KPim6::ContactEditor
+    KF6::Contacts
+    KF6::I18n
+    KF6::Completion
+    KF6::IconThemes
+    KF6::WidgetsAddons
+    KF6::ConfigCore
     )

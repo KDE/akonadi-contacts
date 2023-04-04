@@ -1,20 +1,10 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
-find_dependency(KPim@KF_MAJOR_VERSION@Akonadi "@AKONADI_VERSION@")
-find_dependency(KF@KF_MAJOR_VERSION@Contacts "@KF_MIN_VERSION@")
-find_dependency(KPim@KF_MAJOR_VERSION@GrantleeTheme "@GRANTLEETHEME_LIB_VERSION@")
+find_dependency(KPim6Akonadi "@AKONADI_VERSION@")
+find_dependency(KF6Contacts "@KF_MIN_VERSION@")
+find_dependency(KPim6GrantleeTheme "@GRANTLEETHEME_LIB_VERSION@")
 
-find_dependency(Qt@QT_MAJOR_VERSION@Widgets "@QT_REQUIRED_VERSION@")
+find_dependency(Qt6Widgets "@QT_REQUIRED_VERSION@")
 
-if (@AKONADICONTACT_KF5_COMPAT@)
-    message(WARNING "\n"
-                    "************* DEPRECATION WARNING *************\n"
-		    "Using find_package(KF5AkonadiContact) and KF5::AkonadiContact targets is deprecated. "
-		    "Please use find_package(KPim@KF_MAJOR_VERSION@AkonadiContact) and KPim@KF_MAJOR_VERSION@::AkonadiContact instead. This backwards "
-                    "compatibility will be removed in the next major version.\n"
-                    "***********************************************\n")
-endif()
-
-
-include("${CMAKE_CURRENT_LIST_DIR}/KPim@KF_MAJOR_VERSION@AkonadiContactTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactTargets.cmake")
 @PACKAGE_INCLUDE_QCHTARGETS@

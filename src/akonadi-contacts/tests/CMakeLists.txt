@@ -8,10 +8,10 @@ macro(add_akonadi_contact_demo _source)
   get_filename_component( _name ${_source} NAME_WE )
   add_executable( ${_name} ${_test})
   target_link_libraries(${_name}
-     KPim${KF_MAJOR_VERSION}::AkonadiContact
-     KF${KF_MAJOR_VERSION}::Completion
-     KF${KF_MAJOR_VERSION}::I18n
-     KF${KF_MAJOR_VERSION}::WidgetsAddons
+     KPim6::AkonadiContact
+     KF6::Completion
+     KF6::I18n
+     KF6::WidgetsAddons
      Qt::Test)
   ecm_mark_as_test(${_name})
 endmacro()

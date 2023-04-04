@@ -1,40 +1,40 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}ContactEditor")
-set(AKONADICONTACTEDITOR_KF5_COMPAT FALSE)
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6ContactEditor")
+set(AKONADICONTACTEDITOR_KF6_COMPAT FALSE)
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KPim${KF_MAJOR_VERSION}ContactEditor_QCH
-        FILE KPim${KF_MAJOR_VERSION}ContactEditorQchTargets.cmake
+        TARGETS KPim6ContactEditor_QCH
+        FILE KPim6ContactEditorQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6ContactEditorQchTargets.cmake\")")
 endif()
 
-add_library(KPim${KF_MAJOR_VERSION}ContactEditor)
-add_library(KPim${KF_MAJOR_VERSION}::ContactEditor ALIAS KPim${KF_MAJOR_VERSION}ContactEditor)
+add_library(KPim6ContactEditor)
+add_library(KPim6::ContactEditor ALIAS KPim6ContactEditor)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorConfigVersion.cmake"
-    SOVERSION 5
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
+    SOVERSION 6
     )
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimContactEditorConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KPim${KF_MAJOR_VERSION}ContactEditorTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}ContactEditorTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
+install(EXPORT KPim6ContactEditorTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6ContactEditorTargets.cmake NAMESPACE KPim6::)
 
-target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+target_sources(KPim6ContactEditor PRIVATE
     editor/customfieldeditor/customfieldswidget.cpp
     editor/customfieldeditor/customfieldeditorwidget.cpp
     editor/customfieldeditor/customfieldslistwidget.cpp
@@ -162,7 +162,7 @@ target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
     grantlee/grantleecontactviewer.cpp
 )
 
-target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+target_sources(KPim6ContactEditor PRIVATE
     job/addemailaddressjob.cpp
     job/addemaildisplayjob.cpp
     job/addemailaddressjob.h
@@ -173,59 +173,59 @@ target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
     job/openemailaddressjob.h
 )
 
-target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+target_sources(KPim6ContactEditor PRIVATE
     widgets/selectaddressbookdialog.cpp
     widgets/selectaddressbookdialog.h
 )
 
 
-ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}ContactEditor HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
+ecm_qt_declare_logging_category(KPim6ContactEditor HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
         DESCRIPTION "akonadicontact (contact editor)"
         EXPORT AKONADICONTACTS
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim${KF_MAJOR_VERSION}ContactEditor PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6ContactEditor PROPERTIES UNITY_BUILD ON)
 endif()
 
-generate_export_header(KPim${KF_MAJOR_VERSION}ContactEditor BASE_NAME contacteditor)
+generate_export_header(KPim6ContactEditor BASE_NAME contacteditor)
 
 
-target_include_directories(KPim${KF_MAJOR_VERSION}ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor>")
-target_include_directories(KPim${KF_MAJOR_VERSION}ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/contact-editor;${Akonadi-Contact_BINARY_DIR}/src/contact-editor>")
+target_include_directories(KPim6ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor>")
+target_include_directories(KPim6ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/contact-editor;${Akonadi-Contact_BINARY_DIR}/src/contact-editor>")
 
-target_link_libraries(KPim${KF_MAJOR_VERSION}ContactEditor
+target_link_libraries(KPim6ContactEditor
     PUBLIC
-    KF${KF_MAJOR_VERSION}::Contacts
+    KF6::Contacts
     Qt::Widgets
     PRIVATE
-    KF${KF_MAJOR_VERSION}::Completion
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::KIOWidgets
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::TextWidgets
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-    KPim${KF_MAJOR_VERSION}::AkonadiContact
-    KF${KF_MAJOR_VERSION}::Prison
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::Codecs
+    KF6::Completion
+    KF6::ConfigCore
+    KF6::KIOWidgets
+    KF6::I18n
+    KF6::TextWidgets
+    KF6::WidgetsAddons
+    KPim6::AkonadiWidgets
+    KPim6::AkonadiContact
+    KF6::Prison
+    KF6::XmlGui
+    KF6::Codecs
     )
 
-set_target_properties(KPim${KF_MAJOR_VERSION}ContactEditor PROPERTIES
+set_target_properties(KPim6ContactEditor PROPERTIES
     VERSION ${AKONADICONTACT_VERSION}
     SOVERSION ${AKONADICONTACT_SOVERSION}
     EXPORT_NAME ContactEditor
     )
 
 install(TARGETS
-    KPim${KF_MAJOR_VERSION}ContactEditor
-    EXPORT KPim${KF_MAJOR_VERSION}ContactEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim6ContactEditor
+    EXPORT KPim6ContactEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 ecm_generate_pri_file(BASE_NAME ContactEditor
-    LIB_NAME KPim${KF_MAJOR_VERSION}ContactEditor
-    DEPS "KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/ContactEditor
+    LIB_NAME KPim6ContactEditor
+    DEPS "KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/ContactEditor
     )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
@@ -277,7 +277,7 @@ install( FILES
     ${ContactEditorJob_CamelCase_HEADERS}
     ${ContactEditorWidgets_CamelCase_HEADERS}
     ${ContactEditorGrantlee_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor/Akonadi COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor/Akonadi COMPONENT Devel
     )
 
 install( FILES
@@ -287,7 +287,7 @@ install( FILES
     ${ContactEditorWidgets_HEADERS}
     ${ContactEditorGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor/akonadi COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor/akonadi COMPONENT Devel
     )
 
 
@@ -306,9 +306,9 @@ install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF}/akonadi
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim${KF_MAJOR_VERSION}ContactEditor_QCH
-        NAME KPim${KF_MAJOR_VERSION}ContactEditor
-        BASE_NAME KPim${KF_MAJOR_VERSION}ContactEditor
+        KPim6ContactEditor_QCH
+        NAME KPim6ContactEditor
+        BASE_NAME KPim6ContactEditor
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -317,9 +317,9 @@ if (BUILD_QCH)
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
-            Qt${QT_MAJOR_VERSION}Core_QCH
-            Qt${QT_MAJOR_VERSION}Gui_QCH
-            Qt${QT_MAJOR_VERSION}Widgets_QCH
+            Qt6Core_QCH
+            Qt6Gui_QCH
+            Qt6Widgets_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
@@ -332,42 +332,42 @@ endif()
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor COMPONENT Devel
 )
 
 ##
 # TODO: Backwards compatiblity. Remove in next major version
 ##
-set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiContactEditor")
-set(AKONADICONTACTEDITOR_KF5_COMPAT TRUE)
+set(CMAKECONFIG_INSTALL_DIR_KF6 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6AkonadiContactEditor")
+set(AKONADICONTACTEDITOR_KF6_COMPAT TRUE)
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimContactEditorConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5ContactEditorConfig.cmake"
-    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
+    "${CMAKE_CURRENT_BINARY_DIR}/KF6ContactEditorConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF6}
 )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5ContactEditorConfig.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF6ContactEditorConfig.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
     COMPONENT Devel
 )
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorConfigVersion.cmake"
-    RENAME "KF5ContactEditorConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
+    RENAME "KF6ContactEditorConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
     COMPONENT Devel
 )
 if (BUILD_QCH)     
     install(FILES
-	    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorQchTargets.cmake"
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+	    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorQchTargets.cmake"
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
         COMPONENT Devel
     )
 endif()
 if (0)
-install(EXPORT KPim${KF_MAJOR_VERSION}ContactEditorTargets
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-    FILE KPim${KF_MAJOR_VERSION}ContactEditorTargets.cmake
-    NAMESPACE KF5::
+install(EXPORT KPim6ContactEditorTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
+    FILE KPim6ContactEditorTargets.cmake
+    NAMESPACE KF6::
 )
 endif()
