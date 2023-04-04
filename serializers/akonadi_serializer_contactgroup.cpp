@@ -66,7 +66,7 @@ static QString toString(const KContacts::Addressee &contact)
 }
 
 template<class T>
-static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
+static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QList<T> &left, const QList<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {

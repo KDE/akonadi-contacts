@@ -121,7 +121,7 @@ public:
         }
 
         // merge local and global custom field descriptions
-        QVector<QVariantMap> customFieldDescriptions;
+        QList<QVariantMap> customFieldDescriptions;
         const CustomField::List globalCustomFields = CustomFieldManager::globalCustomFieldDescriptions();
         customFieldDescriptions.reserve(localCustomFieldDescriptions.count() + globalCustomFields.count());
         for (const QVariant &entry : std::as_const(localCustomFieldDescriptions)) {

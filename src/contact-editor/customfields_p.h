@@ -9,9 +9,9 @@
 #pragma once
 
 #include "contacteditor_export.h"
+#include <QList>
 #include <QString>
 #include <QVariant>
-#include <QVector>
 template<typename T>
 class QList;
 
@@ -34,7 +34,7 @@ class QList;
 class CONTACTEDITOR_EXPORT CustomField
 {
 public:
-    using List = QVector<CustomField>;
+    using List = QList<CustomField>;
 
     enum Type { TextType, NumericType, BooleanType, DateType, TimeType, DateTimeType, UrlType };
 

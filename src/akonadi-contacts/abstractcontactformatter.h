@@ -98,12 +98,12 @@ public:
      *
      * @param descriptions list with field descriptions
      */
-    void setCustomFieldDescriptions(const QVector<QVariantMap> &descriptions);
+    void setCustomFieldDescriptions(const QList<QVariantMap> &descriptions);
 
     /**
      * Returns the custom field descriptions that will be used.
      */
-    Q_REQUIRED_RESULT QVector<QVariantMap> customFieldDescriptions() const;
+    Q_REQUIRED_RESULT QList<QVariantMap> customFieldDescriptions() const;
 
     /**
      * This method must be reimplemented to return the contact formatted as HTML

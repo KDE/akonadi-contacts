@@ -147,7 +147,7 @@ static void compareList(Akonadi::AbstractDifferencesReporter *reporter, const QS
 }
 
 template<class T>
-static void compareVector(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
+static void compareVector(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QList<T> &left, const QList<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {

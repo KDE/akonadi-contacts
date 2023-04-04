@@ -73,7 +73,7 @@ public:
         }
     }
 
-    QVector<QObject *> mObjects;
+    QList<QObject *> mObjects;
     std::unique_ptr<GrantleeTheme::Engine> mEngine;
     QSharedPointer<KTextTemplate::FileSystemTemplateLoader> mTemplateLoader;
     KTextTemplate::Template mSelfcontainedTemplate;

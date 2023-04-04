@@ -11,9 +11,9 @@
 
 #include "akonadi-contact_export.h"
 
+#include <QList>
 #include <QSharedDataPointer>
 #include <QString>
-#include <QVector>
 
 namespace Akonadi
 {
@@ -39,7 +39,7 @@ public:
     /**
      * A list of email address selection objects.
      */
-    using List = QVector<EmailAddressSelection>;
+    using List = QList<EmailAddressSelection>;
 
     /**
      * Creates a new email address selection.

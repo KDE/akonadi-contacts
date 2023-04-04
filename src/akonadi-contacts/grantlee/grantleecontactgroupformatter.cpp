@@ -52,7 +52,7 @@ public:
         }
     }
 
-    QVector<QObject *> mObjects;
+    QList<QObject *> mObjects;
     KTextTemplate::Engine *const mEngine;
     QSharedPointer<KTextTemplate::FileSystemTemplateLoader> mTemplateLoader;
     KTextTemplate::Template mSelfcontainedTemplate;

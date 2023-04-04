@@ -91,12 +91,12 @@ public:
      *
      * @param fields additional fields that will be shown
      */
-    void setAdditionalFields(const QVector<QVariantMap> &fields);
+    void setAdditionalFields(const QList<QVariantMap> &fields);
 
     /**
      * Returns the additional fields that will be shown.
      */
-    Q_REQUIRED_RESULT QVector<QVariantMap> additionalFields() const;
+    Q_REQUIRED_RESULT QList<QVariantMap> additionalFields() const;
 
     /**
      * This method must be reimplemented to return the contact group formatted as HTML
