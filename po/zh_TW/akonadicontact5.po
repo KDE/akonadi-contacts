@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2023-01-07 04:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -20,105 +20,6 @@ msgstr ""
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: akonadi-contacts/contacteditor.cpp:162
-#, kde-format
-msgid ""
-"The contact has been changed by someone else.\n"
-"What should be done?"
-msgstr ""
-"聯絡人已被某人變更。\n"
-"現在打算怎麼辦？"
-
-#: akonadi-contacts/contacteditor.cpp:163
-#: akonadi-contacts/contactgroupeditor.cpp:135
-#, kde-format
-msgid "Take over changes"
-msgstr "接收變更"
-
-#: akonadi-contacts/contacteditor.cpp:164
-#: akonadi-contacts/contactgroupeditor.cpp:136
-#, kde-format
-msgid "Ignore and Overwrite changes"
-msgstr "忽略並覆寫變更"
-
-#: akonadi-contacts/contacteditor.cpp:278
-#: akonadi-contacts/contactgroupeditor.cpp:290
-#: akonadi-contacts/selectaddressbookdialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Select Address Book"
-msgstr "選擇通訊錄"
-
-#: akonadi-contacts/contacteditor.cpp:279
-#, kde-format
-msgid "Select the address book the new contact shall be saved in:"
-msgstr "選擇新聯絡人要儲存到哪個通訊錄："
-
-#: akonadi-contacts/contacteditordialog.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "New Contact"
-msgstr "新增聯絡人"
-
-#: akonadi-contacts/contacteditordialog.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Contact"
-msgstr "編輯聯絡人"
-
-#: akonadi-contacts/contacteditordialog.cpp:72
-#: akonadi-contacts/contactgroupeditordialog.cpp:102
-#, kde-format
-msgid "Add to:"
-msgstr "新增到："
-
-#: akonadi-contacts/contacteditordialog.cpp:181
-#, kde-format
-msgctxt "@info"
-msgid "Location was not saved. Do you want to close editor?"
-msgstr "位置尚未儲存。您確定要關閉編輯器嗎？"
-
-#: akonadi-contacts/contacteditordialog.cpp:182
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:165
-#, kde-format
-msgctxt "@title:window"
-msgid "Confirmation"
-msgstr "確認"
-
-#: akonadi-contacts/contacteditordialog.cpp:183
-#, kde-format
-msgctxt "@action:button"
-msgid "Close Editor"
-msgstr "關閉編輯器"
-
-#: akonadi-contacts/contacteditordialog.cpp:184
-#, kde-format
-msgctxt "@action:button"
-msgid "Do Not Close"
-msgstr "不要關閉"
-
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
-#, kde-format
-msgctxt "@info"
-msgid "Do you really want to cancel?"
-msgstr "您確定要取消嗎？"
-
-#: akonadi-contacts/contacteditordialog.cpp:200
-#: akonadi-contacts/contactgroupeditordialog.cpp:166
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel Editing"
-msgstr "取消編輯"
-
-#: akonadi-contacts/contacteditordialog.cpp:201
-#: akonadi-contacts/contactgroupeditordialog.cpp:167
-#, kde-format
-msgctxt "@action:button"
-msgid "Do Not Cancel"
-msgstr "不要取消"
-
 #: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
 msgid ""
@@ -128,10 +29,30 @@ msgstr ""
 "聯絡人群組已被某人變更。\n"
 "現在打算怎麼辦？"
 
+#: akonadi-contacts/contactgroupeditor.cpp:135
+#: contact-editor/contacteditor.cpp:163
+#, kde-format
+msgid "Take over changes"
+msgstr "接收變更"
+
+#: akonadi-contacts/contactgroupeditor.cpp:136
+#: contact-editor/contacteditor.cpp:164
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "忽略並覆寫變更"
+
 #: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "聯絡人群組名稱不能是空白。"
+
+#: akonadi-contacts/contactgroupeditor.cpp:290
+#: contact-editor/contacteditor.cpp:278
+#: contact-editor/widgets/selectaddressbookdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "選擇通訊錄"
 
 #: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
@@ -170,6 +91,41 @@ msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "編輯聯絡人群組"
 
+#: akonadi-contacts/contactgroupeditordialog.cpp:102
+#: contact-editor/contacteditordialog.cpp:72
+#, kde-format
+msgid "Add to:"
+msgstr "新增到："
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: contact-editor/contacteditordialog.cpp:198
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "您確定要取消嗎？"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
+#: contact-editor/contacteditordialog.cpp:182
+#: contact-editor/contacteditordialog.cpp:199
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "確認"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
+#: contact-editor/contacteditordialog.cpp:200
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "取消編輯"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
+#: contact-editor/contacteditordialog.cpp:201
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "不要取消"
+
 #: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
@@ -191,19 +147,6 @@ msgstr "名稱"
 msgctxt "contact's email address"
 msgid "EMail"
 msgstr "電子郵件"
-
-#: akonadi-contacts/contactgroupviewer.cpp:51
-#, kde-format
-msgctxt "@title:window"
-msgid "Contact Group %1"
-msgstr "聯絡人群組 %1"
-
-#: akonadi-contacts/contactgroupviewer.cpp:65
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts/standardcontactformatter.cpp:186
-#, kde-format
-msgid "Address Book"
-msgstr "通訊錄"
 
 #: akonadi-contacts/contactstreemodel.cpp:212
 #, kde-format
@@ -259,18 +202,6 @@ msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
 msgstr "所有的電子郵件"
 
-#: akonadi-contacts/contactviewer.cpp:68
-#, kde-format
-msgctxt "@title:window"
-msgid "Contact %1"
-msgstr "聯絡人 %1"
-
-#: akonadi-contacts/contactviewerdialog.cpp:62
-#, kde-format
-msgctxt "@title:window"
-msgid "Show Contact"
-msgstr "顯示聯絡人"
-
 #: akonadi-contacts/emailaddressrequester.cpp:80
 #, kde-format
 msgid "Open Address Book"
@@ -297,6 +228,13 @@ msgstr "搜尋："
 #, kde-format
 msgid "Search Contact..."
 msgstr "搜尋聯絡人…"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts/standardcontactformatter.cpp:186
+#: contact-editor/contactgroupviewer.cpp:66
+#, kde-format
+msgid "Address Book"
+msgstr "通訊錄"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
 #: akonadi-contacts/standardcontactformatter.cpp:185
@@ -349,451 +287,6 @@ msgctxt "Boolean value"
 msgid "no"
 msgstr "否"
 
-#: akonadi-contacts/job/addcontactjob.cpp:55
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The vCard's primary email address is already in your address book; however, "
-"you may save the vCard into a file and import it into the address book "
-"manually."
-msgstr ""
-"此 vCard 的主要電子郵件地址已經在您的通訊錄內了。不過，您可以將此 vCard 儲存"
-"到檔案裡再手動將其匯入至通訊錄內。"
-
-#: akonadi-contacts/job/addcontactjob.cpp:111
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The vCard was added to your address book; you can add more information to "
-"this entry by opening the address book."
-msgstr "此 vCard 已新增到您的通訊錄。您可以開啟通訊錄來為此條目添加更多資訊。"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:69
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A contact with the email address <email>%1</email> is already in your "
-"address book."
-msgstr "您的通訊錄裡已經有電子郵件地址是 <email>%1</email> 的聯絡人了。"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:120
-#: akonadi-contacts/job/addemaildisplayjob.cpp:159
-#, kde-format
-msgctxt "@info"
-msgid ""
-"You must create an address book before adding a contact. Do you want to "
-"create an address book?"
-msgstr "您必須先建立通訊錄才能新增聯絡人。您要建立通訊錄嗎？"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:121
-#: akonadi-contacts/job/addemaildisplayjob.cpp:160
-#, kde-format
-msgctxt "@title:window"
-msgid "No Address Book Available"
-msgstr "沒有可用的通訊錄"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:122
-#: akonadi-contacts/job/addemaildisplayjob.cpp:161
-#, kde-format
-msgctxt "@action:button"
-msgid "Create Address Book"
-msgstr "建立通訊錄"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:126
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:191
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Address Book"
-msgstr "新增通訊錄"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:216
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>A contact for \"%1\" was successfully added to your address book.</"
-"para><para>Do you want to edit this new contact now?</para>"
-msgstr ""
-"<para>已成功為「%1」新增聯絡人到您的通訊錄。</para><para>您要現在編輯這個新聯"
-"絡人嗎？</para>"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:224
-#, kde-format
-msgctxt "@action:button"
-msgid "Edit"
-msgstr "編輯"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:225
-#, kde-format
-msgctxt "@action:button"
-msgid "Finish"
-msgstr "完成"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
-#: akonadi-contacts/standardcontactactionmanager.cpp:466
-#, kde-format
-msgid "Contact cannot be stored: %1"
-msgstr "聯絡人無法儲存：%1"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
-#: akonadi-contacts/standardcontactactionmanager.cpp:466
-#, kde-format
-msgid "Failed to store contact"
-msgstr "儲存聯絡人失敗"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:253
-#, kde-format
-msgid "Contact created successfully"
-msgstr "成功建立聯絡人"
-
-#: akonadi-contacts/selectaddressbookdialog.cpp:29
-#, kde-format
-msgctxt "@info"
-msgid "Select the address book where the contact will be saved:"
-msgstr "選擇聯絡人要儲存到哪個通訊錄："
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:95
-#, kde-format
-msgid "Add Address Book Folder..."
-msgstr "新增通訊錄資料夾…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:98
-#, kde-format
-msgid ""
-"Add a new address book folder to the currently selected address book folder."
-msgstr "新增通訊錄資料夾到目前選擇的通訊錄資料夾。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:101
-#, kde-format
-msgctxt "@title:window"
-msgid "New Address Book Folder"
-msgstr "新增通訊錄資料夾"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:105
-#, kde-format
-msgid "Could not create address book folder: %1"
-msgstr "無法建立通訊錄資料夾：%1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:109
-#, kde-format
-msgid "Address book folder creation failed"
-msgstr "通訊錄資料夾建立失敗"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:115
-#, kde-format
-msgid "Copy Address Book Folder"
-msgid_plural "Copy %1 Address Book Folders"
-msgstr[0] "複製 %1 個通訊錄資料夾"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:117
-#, kde-format
-msgid "Copy the selected address book folders to the clipboard."
-msgstr "將選取的通訊錄資料夾複製到剪貼簿。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:121
-#, kde-format
-msgid "Delete Address Book Folder"
-msgid_plural "Delete %1 Address Book Folders"
-msgstr[0] "刪除 %1 個通訊錄資料夾"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:123
-#, kde-format
-msgid "Delete the selected address book folders from the address book."
-msgstr "從通訊錄中刪除選取的資料夾。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:127
-#, kde-format
-msgid ""
-"Do you really want to delete this address book folder and all its sub-"
-"folders?"
-msgid_plural ""
-"Do you really want to delete %1 address book folders and all their sub-"
-"folders?"
-msgstr[0] "您確定要刪除 %1 個通訊錄資料夾與它們所有的子資料夾嗎？"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:131
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete address book folder?"
-msgid_plural "Delete address book folders?"
-msgstr[0] "要刪除通訊錄資料夾嗎？"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:135
-#, kde-format
-msgid "Could not delete address book folder: %1"
-msgstr "無法刪除通訊錄資料夾：%1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:139
-#, kde-format
-msgid "Address book folder deletion failed"
-msgstr "通訊錄資料夾刪除失敗"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:143
-#, kde-format
-msgid "Update Address Book Folder"
-msgid_plural "Update %1 Address Book Folders"
-msgstr[0] "更新 %1 個通訊錄資料夾"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:145
-#, kde-format
-msgid "Update the content of the selected address book folders."
-msgstr "更新選取的通訊錄資料夾裡的聯絡人"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:148
-#, kde-format
-msgid "Cut Address Book Folder"
-msgid_plural "Cut %1 Address Book Folders"
-msgstr[0] "剪下 %1 個通訊錄資料夾"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:150
-#, kde-format
-msgid "Cut the selected address book folders from the address book."
-msgstr "從通訊錄中剪下選取的資料夾。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:153
-#, kde-format
-msgid "Folder Properties..."
-msgstr "資料夾屬性…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:155
-#, kde-format
-msgid ""
-"Open a dialog to edit the properties of the selected address book folder."
-msgstr "開啟對話框編輯選取的通訊錄資料夾屬性。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:158
-#, kde-format
-msgctxt "@title:window"
-msgid "Properties of Address Book Folder %1"
-msgstr "通訊錄資料夾 %1 的內容"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:161
-#: akonadi-contacts/standardcontactactionmanager.cpp:290
-#, kde-format
-msgid "Copy Contact"
-msgid_plural "Copy %1 Contacts"
-msgstr[0] "複製 %1 個聯絡人"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:162
-#, kde-format
-msgid "Copy the selected contacts to the clipboard."
-msgstr "複製選取的聯絡人到剪貼簿中。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:301
-#, kde-format
-msgid "Delete Contact"
-msgid_plural "Delete %1 Contacts"
-msgstr[0] "刪除 %1 個聯絡人"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:166
-#, kde-format
-msgid "Delete the selected contacts from the address book."
-msgstr "從通訊錄中刪除選取的聯絡人。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:169
-#, kde-format
-msgid "Do you really want to delete the selected contact?"
-msgid_plural "Do you really want to delete %1 contacts?"
-msgstr[0] "您確定要刪除這 %1 個聯絡人嗎？"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:173
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Contact?"
-msgid_plural "Delete Contacts?"
-msgstr[0] "要刪除聯絡人嗎？"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:175
-#, kde-format
-msgid "Could not delete contact: %1"
-msgstr "無法刪除聯絡人：%1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:177
-#, kde-format
-msgid "Contact deletion failed"
-msgstr "聯絡人刪除失敗"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:180
-#: akonadi-contacts/standardcontactactionmanager.cpp:304
-#, kde-format
-msgid "Cut Contact"
-msgid_plural "Cut %1 Contacts"
-msgstr[0] "剪下 %1 個聯絡人"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:181
-#, kde-format
-msgid "Cut the selected contacts from the address book."
-msgstr "從通訊錄中剪下選取的聯絡人。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:184
-#, kde-format
-msgid "Add &Address Book..."
-msgstr "新增通訊錄(&A)…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:186
-#, kde-format
-msgid ""
-"Add a new address book<p>You will be presented with a dialog where you can "
-"select the type of the address book that shall be added.</p>"
-msgstr "建立新通訊錄<p>會跳出一個對話框，讓您選擇新增的通訊錄型態。</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:195
-#, kde-format
-msgid "Could not create address book: %1"
-msgstr "無法建立通訊錄：%1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:199
-#, kde-format
-msgid "Address book creation failed"
-msgstr "通訊錄建立失敗"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:203
-#, kde-format
-msgid "&Delete Address Book"
-msgid_plural "&Delete %1 Address Books"
-msgstr[0] "刪除 %1 個通訊錄(&D)"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:205
-#, kde-format
-msgid ""
-"Delete the selected address books<p>The currently selected address books "
-"will be deleted, along with all the contacts and contact groups they contain."
-"</p>"
-msgstr ""
-"刪除選取的通訊錄<p>目前選取的通訊錄，還有它包含的聯絡人與聯絡人群組都會被刪"
-"除。</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:210
-#, kde-format
-msgid "Do you really want to delete this address book?"
-msgid_plural "Do you really want to delete %1 address books?"
-msgstr[0] "您確定要刪除這 %1 個通訊錄嗎？"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:214
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Address Book?"
-msgid_plural "Delete Address Books?"
-msgstr[0] "要刪除通訊錄嗎？"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:219
-#, kde-format
-msgid "Address Book Properties..."
-msgstr "通訊錄屬性…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:221
-#, kde-format
-msgid "Open a dialog to edit properties of the selected address book."
-msgstr "開啟對話框編輯選取的通訊錄屬性。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:224
-#, kde-format
-msgid "Update Address Book"
-msgid_plural "Update %1 Address Books"
-msgstr[0] "更新 %1 個通訊錄"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:227
-#, kde-format
-msgid "Updates the content of all folders of the selected address books."
-msgstr "更新選取的通訊錄內所有資料夾的內容。"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:231
-#, kde-format
-msgid "Could not paste contact: %1"
-msgstr "無法貼上聯絡人：%1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:233
-#, kde-format
-msgid "Paste failed"
-msgstr "貼上失敗"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:294
-#: akonadi-contacts/standardcontactactionmanager.cpp:298
-#, kde-format
-msgid "Copy Contact To"
-msgstr "複製聯絡人到"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:308
-#: akonadi-contacts/standardcontactactionmanager.cpp:312
-#, kde-format
-msgid "Move Contact To"
-msgstr "移動聯絡人到"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:316
-#: akonadi-contacts/standardcontactactionmanager.cpp:553
-#, kde-format
-msgid "Edit Contact..."
-msgstr "編輯聯絡人…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:320
-#, kde-format
-msgid "Copy Group"
-msgid_plural "Copy %1 Groups"
-msgstr[0] "複製 %1 個群組"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:324
-#: akonadi-contacts/standardcontactactionmanager.cpp:328
-#, kde-format
-msgid "Copy Group To"
-msgstr "複製群組到"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:331
-#, kde-format
-msgid "Delete Group"
-msgid_plural "Delete %1 Groups"
-msgstr[0] "刪除 %1 個群組"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:334
-#, kde-format
-msgid "Cut Group"
-msgid_plural "Cut %1 Groups"
-msgstr[0] "剪下 %1 個群組"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:338
-#: akonadi-contacts/standardcontactactionmanager.cpp:342
-#, kde-format
-msgid "Move Group To"
-msgstr "移動群組到"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:346
-#, kde-format
-msgid "Edit Group..."
-msgstr "編輯群組…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:528
-#, kde-format
-msgid "New &Contact..."
-msgstr "新增聯絡人(&C)…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:530
-#, kde-format
-msgid ""
-"Create a new contact<p>You will be presented with a dialog where you can add "
-"data about a person, including addresses and phone numbers.</p>"
-msgstr ""
-"新增聯絡人<p>您可以新增聯絡人的資料，包括電子郵件地址與電話號碼等等。</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:541
-#, kde-format
-msgid "New &Group..."
-msgstr "新增群組(&G)…"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:542
-#, kde-format
-msgid ""
-"Create a new group<p>You will be presented with a dialog where you can add a "
-"new group of contacts.</p>"
-msgstr "建立新群組 <p>會跳出一個對話框，讓您新增聯絡人群組。</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:555
-#, kde-format
-msgid ""
-"Edit the selected contact<p>You will be presented with a dialog where you "
-"can edit the data stored about a person, including addresses and phone "
-"numbers.</p>"
-msgstr "編輯聯絡人<p>您可以修改聯絡人的資料，包括地址與電話號碼等等。</p>"
-
 #: akonadi-contacts/standardcontactformatter.cpp:96
 #, kde-format
 msgid "(One year old)"
@@ -845,40 +338,72 @@ msgstr "部門"
 msgid "IM Address"
 msgstr "即時通訊位址"
 
-#: akonadi-contacts/textbrowser.cpp:61
-#, kde-format
-msgctxt "@action:inmenu Copy the text of a general item"
-msgid "Copy Item"
-msgstr "複製項目"
-
-#: akonadi-contacts/textbrowser.cpp:70
-#, kde-format
-msgctxt "@action:inmenu Copy a displayed email address"
-msgid "Copy Email Address"
-msgstr "複製電子郵件地址"
-
-#: akonadi-contacts/textbrowser.cpp:79
-#, kde-format
-msgctxt "@action:inmenu Copy a link URL"
-msgid "Copy Link URL"
-msgstr "複製連結位址"
-
-#: akonadi-contacts/textbrowser.cpp:106
-#, kde-format
-msgctxt "@action:inmenu Copy a contact photo"
-msgid "Copy Photo"
-msgstr "複製相片"
-
-#: akonadi-contacts/textbrowser.cpp:109
-#, kde-format
-msgctxt "@action:inmenu Copy a QR code image"
-msgid "Copy Code"
-msgstr "複製條碼"
-
 #: akonadi-contacts/waitingoverlay.cpp:35
 #, kde-format
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>等待動作中</b><br/></p>"
+
+#: contact-editor/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"聯絡人已被某人變更。\n"
+"現在打算怎麼辦？"
+
+#: contact-editor/contacteditor.cpp:279
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "選擇新聯絡人要儲存到哪個通訊錄："
+
+#: contact-editor/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "新增聯絡人"
+
+#: contact-editor/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "編輯聯絡人"
+
+#: contact-editor/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr "位置尚未儲存。您確定要關閉編輯器嗎？"
+
+#: contact-editor/contacteditordialog.cpp:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr "關閉編輯器"
+
+#: contact-editor/contacteditordialog.cpp:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr "不要關閉"
+
+#: contact-editor/contactgroupviewer.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "聯絡人群組 %1"
+
+#: contact-editor/contactviewer.cpp:69
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "聯絡人 %1"
+
+#: contact-editor/contactviewerdialog.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "顯示聯絡人"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
 #: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
@@ -1555,6 +1080,481 @@ msgstr "影像 (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "設為偏好"
+
+#: contact-editor/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+"此 vCard 的主要電子郵件地址已經在您的通訊錄內了。不過，您可以將此 vCard 儲存"
+"到檔案裡再手動將其匯入至通訊錄內。"
+
+#: contact-editor/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr "此 vCard 已新增到您的通訊錄。您可以開啟通訊錄來為此條目添加更多資訊。"
+
+#: contact-editor/job/addemailaddressjob.cpp:69
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr "您的通訊錄裡已經有電子郵件地址是 <email>%1</email> 的聯絡人了。"
+
+#: contact-editor/job/addemailaddressjob.cpp:120
+#: contact-editor/job/addemaildisplayjob.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr "您必須先建立通訊錄才能新增聯絡人。您要建立通訊錄嗎？"
+
+#: contact-editor/job/addemailaddressjob.cpp:121
+#: contact-editor/job/addemaildisplayjob.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "沒有可用的通訊錄"
+
+#: contact-editor/job/addemailaddressjob.cpp:122
+#: contact-editor/job/addemaildisplayjob.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "建立通訊錄"
+
+#: contact-editor/job/addemailaddressjob.cpp:126
+#: contact-editor/job/addemaildisplayjob.cpp:165
+#: contact-editor/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "新增通訊錄"
+
+#: contact-editor/job/addemailaddressjob.cpp:216
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+"<para>已成功為「%1」新增聯絡人到您的通訊錄。</para><para>您要現在編輯這個新聯"
+"絡人嗎？</para>"
+
+#: contact-editor/job/addemailaddressjob.cpp:224
+#, kde-format
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "編輯"
+
+#: contact-editor/job/addemailaddressjob.cpp:225
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr "完成"
+
+#: contact-editor/job/addemailaddressjob.cpp:247
+#: contact-editor/standardcontactactionmanager.cpp:468
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "聯絡人無法儲存：%1"
+
+#: contact-editor/job/addemailaddressjob.cpp:247
+#: contact-editor/standardcontactactionmanager.cpp:468
+#, kde-format
+msgid "Failed to store contact"
+msgstr "儲存聯絡人失敗"
+
+#: contact-editor/job/addemailaddressjob.cpp:254
+#, kde-format
+msgid "Contact created successfully"
+msgstr "成功建立聯絡人"
+
+#: contact-editor/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "新增通訊錄資料夾…"
+
+#: contact-editor/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr "新增通訊錄資料夾到目前選擇的通訊錄資料夾。"
+
+#: contact-editor/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "新增通訊錄資料夾"
+
+#: contact-editor/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "無法建立通訊錄資料夾：%1"
+
+#: contact-editor/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "通訊錄資料夾建立失敗"
+
+#: contact-editor/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "複製 %1 個通訊錄資料夾"
+
+#: contact-editor/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr "將選取的通訊錄資料夾複製到剪貼簿。"
+
+#: contact-editor/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "刪除 %1 個通訊錄資料夾"
+
+#: contact-editor/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr "從通訊錄中刪除選取的資料夾。"
+
+#: contact-editor/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] "您確定要刪除 %1 個通訊錄資料夾與它們所有的子資料夾嗎？"
+
+#: contact-editor/standardcontactactionmanager.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "要刪除通訊錄資料夾嗎？"
+
+#: contact-editor/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "無法刪除通訊錄資料夾：%1"
+
+#: contact-editor/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "通訊錄資料夾刪除失敗"
+
+#: contact-editor/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "更新 %1 個通訊錄資料夾"
+
+#: contact-editor/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr "更新選取的通訊錄資料夾裡的聯絡人"
+
+#: contact-editor/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "剪下 %1 個通訊錄資料夾"
+
+#: contact-editor/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr "從通訊錄中剪下選取的資料夾。"
+
+#: contact-editor/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "資料夾屬性…"
+
+#: contact-editor/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr "開啟對話框編輯選取的通訊錄資料夾屬性。"
+
+#: contact-editor/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "通訊錄資料夾 %1 的內容"
+
+#: contact-editor/standardcontactactionmanager.cpp:161
+#: contact-editor/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "複製 %1 個聯絡人"
+
+#: contact-editor/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "複製選取的聯絡人到剪貼簿中。"
+
+#: contact-editor/standardcontactactionmanager.cpp:165
+#: contact-editor/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "刪除 %1 個聯絡人"
+
+#: contact-editor/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "從通訊錄中刪除選取的聯絡人。"
+
+#: contact-editor/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "您確定要刪除這 %1 個聯絡人嗎？"
+
+#: contact-editor/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "要刪除聯絡人嗎？"
+
+#: contact-editor/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "無法刪除聯絡人：%1"
+
+#: contact-editor/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "聯絡人刪除失敗"
+
+#: contact-editor/standardcontactactionmanager.cpp:180
+#: contact-editor/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "剪下 %1 個聯絡人"
+
+#: contact-editor/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "從通訊錄中剪下選取的聯絡人。"
+
+#: contact-editor/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "新增通訊錄(&A)…"
+
+#: contact-editor/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr "建立新通訊錄<p>會跳出一個對話框，讓您選擇新增的通訊錄型態。</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "無法建立通訊錄：%1"
+
+#: contact-editor/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "通訊錄建立失敗"
+
+#: contact-editor/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "刪除 %1 個通訊錄(&D)"
+
+#: contact-editor/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"刪除選取的通訊錄<p>目前選取的通訊錄，還有它包含的聯絡人與聯絡人群組都會被刪"
+"除。</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "您確定要刪除這 %1 個通訊錄嗎？"
+
+#: contact-editor/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "要刪除通訊錄嗎？"
+
+#: contact-editor/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "通訊錄屬性…"
+
+#: contact-editor/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr "開啟對話框編輯選取的通訊錄屬性。"
+
+#: contact-editor/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "更新 %1 個通訊錄"
+
+#: contact-editor/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr "更新選取的通訊錄內所有資料夾的內容。"
+
+#: contact-editor/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "無法貼上聯絡人：%1"
+
+#: contact-editor/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "貼上失敗"
+
+#: contact-editor/standardcontactactionmanager.cpp:294
+#: contact-editor/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "複製聯絡人到"
+
+#: contact-editor/standardcontactactionmanager.cpp:308
+#: contact-editor/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "移動聯絡人到"
+
+#: contact-editor/standardcontactactionmanager.cpp:316
+#: contact-editor/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid "Edit Contact..."
+msgstr "編輯聯絡人…"
+
+#: contact-editor/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "複製 %1 個群組"
+
+#: contact-editor/standardcontactactionmanager.cpp:324
+#: contact-editor/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "複製群組到"
+
+#: contact-editor/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "刪除 %1 個群組"
+
+#: contact-editor/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "剪下 %1 個群組"
+
+#: contact-editor/standardcontactactionmanager.cpp:338
+#: contact-editor/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "移動群組到"
+
+#: contact-editor/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "編輯群組…"
+
+#: contact-editor/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid "New &Contact..."
+msgstr "新增聯絡人(&C)…"
+
+#: contact-editor/standardcontactactionmanager.cpp:532
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"新增聯絡人<p>您可以新增聯絡人的資料，包括電子郵件地址與電話號碼等等。</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:543
+#, kde-format
+msgid "New &Group..."
+msgstr "新增群組(&G)…"
+
+#: contact-editor/standardcontactactionmanager.cpp:544
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr "建立新群組 <p>會跳出一個對話框，讓您新增聯絡人群組。</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:557
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr "編輯聯絡人<p>您可以修改聯絡人的資料，包括地址與電話號碼等等。</p>"
+
+#: contact-editor/textbrowser.cpp:61
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "複製項目"
+
+#: contact-editor/textbrowser.cpp:70
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "複製電子郵件地址"
+
+#: contact-editor/textbrowser.cpp:79
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "複製連結位址"
+
+#: contact-editor/textbrowser.cpp:106
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "複製相片"
+
+#: contact-editor/textbrowser.cpp:109
+#, kde-format
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "複製條碼"
+
+#: contact-editor/widgets/selectaddressbookdialog.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "選擇聯絡人要儲存到哪個通訊錄："
 
 #~ msgid ""
 #~ "Define how a phone number of a contact should be dialed. 'System Default' "

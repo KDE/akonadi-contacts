@@ -14,7 +14,7 @@ target_sources(akonadi_serializer_addressee PRIVATE
 
 
 ecm_qt_declare_logging_category(akonadi_serializer_addressee HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CONTACT_LOG CATEGORY_NAME org.kde.pim.contact_serializer
-        DESCRIPTION "serializer contact (plugin)"
+	DESCRIPTION "akonadi contact (serializer contact plugin)"
         EXPORT AKONADICONTACTS
     )
 

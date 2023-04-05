@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-03-31 08:56+0200\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"PO-Revision-Date: 2023-04-03 08:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -22,105 +22,6 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: akonadi-contacts/contacteditor.cpp:162
-#, kde-format
-msgid ""
-"The contact has been changed by someone else.\n"
-"What should be done?"
-msgstr ""
-"Nekdo drug je spremenil stik.\n"
-"Kaj naj se zgodi?"
-
-#: akonadi-contacts/contacteditor.cpp:163
-#: akonadi-contacts/contactgroupeditor.cpp:135
-#, kde-format
-msgid "Take over changes"
-msgstr "Prevzemi spremembe"
-
-#: akonadi-contacts/contacteditor.cpp:164
-#: akonadi-contacts/contactgroupeditor.cpp:136
-#, kde-format
-msgid "Ignore and Overwrite changes"
-msgstr "Prezri in prepiši spremembe"
-
-#: akonadi-contacts/contacteditor.cpp:278
-#: akonadi-contacts/contactgroupeditor.cpp:290
-#: akonadi-contacts/selectaddressbookdialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Select Address Book"
-msgstr "Izberite imenik"
-
-#: akonadi-contacts/contacteditor.cpp:279
-#, kde-format
-msgid "Select the address book the new contact shall be saved in:"
-msgstr "Izberite imenik, v katerega naj se shrani nov stik:"
-
-#: akonadi-contacts/contacteditordialog.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "New Contact"
-msgstr "Novi stik"
-
-#: akonadi-contacts/contacteditordialog.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Contact"
-msgstr "Uredi stik"
-
-#: akonadi-contacts/contacteditordialog.cpp:72
-#: akonadi-contacts/contactgroupeditordialog.cpp:102
-#, kde-format
-msgid "Add to:"
-msgstr "Dodaj v:"
-
-#: akonadi-contacts/contacteditordialog.cpp:181
-#, kde-format
-msgctxt "@info"
-msgid "Location was not saved. Do you want to close editor?"
-msgstr "Lokacija ni bilashranjena. Ali želite zapreti urejevalnik?"
-
-#: akonadi-contacts/contacteditordialog.cpp:182
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:165
-#, kde-format
-msgctxt "@title:window"
-msgid "Confirmation"
-msgstr "Potrditev"
-
-#: akonadi-contacts/contacteditordialog.cpp:183
-#, kde-format
-msgctxt "@action:button"
-msgid "Close Editor"
-msgstr "Zapri urejevalnik"
-
-#: akonadi-contacts/contacteditordialog.cpp:184
-#, kde-format
-msgctxt "@action:button"
-msgid "Do Not Close"
-msgstr "Ne zapiraj"
-
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
-#, kde-format
-msgctxt "@info"
-msgid "Do you really want to cancel?"
-msgstr "Ali res želite to preklicati?"
-
-#: akonadi-contacts/contacteditordialog.cpp:200
-#: akonadi-contacts/contactgroupeditordialog.cpp:166
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel Editing"
-msgstr "Prekliči urejanje"
-
-#: akonadi-contacts/contacteditordialog.cpp:201
-#: akonadi-contacts/contactgroupeditordialog.cpp:167
-#, kde-format
-msgctxt "@action:button"
-msgid "Do Not Cancel"
-msgstr "Ne preklicuj"
-
 #: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
 msgid ""
@@ -130,10 +31,30 @@ msgstr ""
 "Skupino stikov je spremenil nekdo drug.\n"
 "Kaj želite storiti?"
 
+#: akonadi-contacts/contactgroupeditor.cpp:135
+#: contact-editor/contacteditor.cpp:163
+#, kde-format
+msgid "Take over changes"
+msgstr "Prevzemi spremembe"
+
+#: akonadi-contacts/contactgroupeditor.cpp:136
+#: contact-editor/contacteditor.cpp:164
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "Prezri in prepiši spremembe"
+
 #: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Ime skupine stikov ne sme biti prazno."
+
+#: akonadi-contacts/contactgroupeditor.cpp:290
+#: contact-editor/contacteditor.cpp:278
+#: contact-editor/widgets/selectaddressbookdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Izberite imenik"
 
 #: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
@@ -172,6 +93,41 @@ msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "Uredi skupino stikov"
 
+#: akonadi-contacts/contactgroupeditordialog.cpp:102
+#: contact-editor/contacteditordialog.cpp:72
+#, kde-format
+msgid "Add to:"
+msgstr "Dodaj v:"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: contact-editor/contacteditordialog.cpp:198
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Ali res želite to preklicati?"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
+#: contact-editor/contacteditordialog.cpp:182
+#: contact-editor/contacteditordialog.cpp:199
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "Potrditev"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
+#: contact-editor/contacteditordialog.cpp:200
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Prekliči urejanje"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
+#: contact-editor/contacteditordialog.cpp:201
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Ne preklicuj"
+
 #: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
@@ -193,19 +149,6 @@ msgstr "Ime"
 msgctxt "contact's email address"
 msgid "EMail"
 msgstr "E-pošta"
-
-#: akonadi-contacts/contactgroupviewer.cpp:51
-#, kde-format
-msgctxt "@title:window"
-msgid "Contact Group %1"
-msgstr "Skupina stikov %1"
-
-#: akonadi-contacts/contactgroupviewer.cpp:65
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts/standardcontactformatter.cpp:186
-#, kde-format
-msgid "Address Book"
-msgstr "Imenik"
 
 #: akonadi-contacts/contactstreemodel.cpp:212
 #, kde-format
@@ -261,18 +204,6 @@ msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
 msgstr "Vsi e-naslovi"
 
-#: akonadi-contacts/contactviewer.cpp:68
-#, kde-format
-msgctxt "@title:window"
-msgid "Contact %1"
-msgstr "Stik %1"
-
-#: akonadi-contacts/contactviewerdialog.cpp:62
-#, kde-format
-msgctxt "@title:window"
-msgid "Show Contact"
-msgstr "Pokaži stik"
-
 #: akonadi-contacts/emailaddressrequester.cpp:80
 #, kde-format
 msgid "Open Address Book"
@@ -299,6 +230,13 @@ msgstr "Poišči:"
 #, kde-format
 msgid "Search Contact..."
 msgstr "Išči stik..."
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts/standardcontactformatter.cpp:186
+#: contact-editor/contactgroupviewer.cpp:66
+#, kde-format
+msgid "Address Book"
+msgstr "Imenik"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
 #: akonadi-contacts/standardcontactformatter.cpp:185
@@ -350,514 +288,6 @@ msgstr "da"
 msgctxt "Boolean value"
 msgid "no"
 msgstr "ne"
-
-#: akonadi-contacts/job/addcontactjob.cpp:55
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The vCard's primary email address is already in your address book; however, "
-"you may save the vCard into a file and import it into the address book "
-"manually."
-msgstr ""
-"Primarni e-poštni naslov vCard je že v vašem adresarju; vendar lahko vCard "
-"shranite v datoteko in jo uvozite v adresar tudi ročno."
-
-#: akonadi-contacts/job/addcontactjob.cpp:111
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The vCard was added to your address book; you can add more information to "
-"this entry by opening the address book."
-msgstr ""
-"VCard je bil dodan v vaš adresar; več informacij lahko dodate v ta vnos z "
-"odprtjem adresarja."
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:69
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A contact with the email address <email>%1</email> is already in your "
-"address book."
-msgstr "Stik z e-poštnim naslovom <email>%1</email> je že v vašem adresarju."
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:120
-#: akonadi-contacts/job/addemaildisplayjob.cpp:159
-#, kde-format
-msgctxt "@info"
-msgid ""
-"You must create an address book before adding a contact. Do you want to "
-"create an address book?"
-msgstr "Preden dodate stik, morate ustvariti adresar. Ali ga želite ustvariti?"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:121
-#: akonadi-contacts/job/addemaildisplayjob.cpp:160
-#, kde-format
-msgctxt "@title:window"
-msgid "No Address Book Available"
-msgstr "Nobenega adresarja ni na voljo"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:122
-#: akonadi-contacts/job/addemaildisplayjob.cpp:161
-#, kde-format
-msgctxt "@action:button"
-msgid "Create Address Book"
-msgstr "Ustvari imenik"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:126
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:191
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Address Book"
-msgstr "Dodaj imenik"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:216
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>A contact for \"%1\" was successfully added to your address book.</"
-"para><para>Do you want to edit this new contact now?</para>"
-msgstr ""
-"<para>V vaš adresar je bil uspešno dodan stik \"%1\".</para><para>Ali želite "
-"zdaj urediti ta nov stik?</para>"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:224
-#, kde-format
-msgctxt "@action:button"
-msgid "Edit"
-msgstr "Uredi"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:225
-#, kde-format
-msgctxt "@action:button"
-msgid "Finish"
-msgstr "Končaj"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
-#: akonadi-contacts/standardcontactactionmanager.cpp:466
-#, kde-format
-msgid "Contact cannot be stored: %1"
-msgstr "Stika ni mogoče shraniti: %1"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
-#: akonadi-contacts/standardcontactactionmanager.cpp:466
-#, kde-format
-msgid "Failed to store contact"
-msgstr "Stika ni bilo mogoče shraniti"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:253
-#, kde-format
-msgid "Contact created successfully"
-msgstr "Uspešno ustvarjen stik"
-
-#: akonadi-contacts/selectaddressbookdialog.cpp:29
-#, kde-format
-msgctxt "@info"
-msgid "Select the address book where the contact will be saved:"
-msgstr "Izberite imenik, v katerega bo shranjen stik:"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:95
-#, kde-format
-msgid "Add Address Book Folder..."
-msgstr "Dodaj mapo imenika ..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:98
-#, kde-format
-msgid ""
-"Add a new address book folder to the currently selected address book folder."
-msgstr "V trenutno izbrano mapo imenika doda novo mapo."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:101
-#, kde-format
-msgctxt "@title:window"
-msgid "New Address Book Folder"
-msgstr "Nova mapa imenika"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:105
-#, kde-format
-msgid "Could not create address book folder: %1"
-msgstr "Ni bilo mogoče ustvariti mape imenika: %1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:109
-#, kde-format
-msgid "Address book folder creation failed"
-msgstr "Ustvarjanje mape imenika ni uspelo"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:115
-#, kde-format
-msgid "Copy Address Book Folder"
-msgid_plural "Copy %1 Address Book Folders"
-msgstr[0] "Kopiraj %1 mapo imenika"
-msgstr[1] "Kopiraj %1 mapi imenika"
-msgstr[2] "Kopiraj %1 mape imenika"
-msgstr[3] "Kopiraj %1 map imenika"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:117
-#, kde-format
-msgid "Copy the selected address book folders to the clipboard."
-msgstr "Kopiraj izbrane mape imenika na odložišče."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:121
-#, kde-format
-msgid "Delete Address Book Folder"
-msgid_plural "Delete %1 Address Book Folders"
-msgstr[0] "Izbriši %1 mapo imenika"
-msgstr[1] "Izbriši %1 mapi imenika"
-msgstr[2] "Izbriši %1 mape imenika"
-msgstr[3] "Izbriši %1 map imenika"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:123
-#, kde-format
-msgid "Delete the selected address book folders from the address book."
-msgstr "Izbriši izbrane mape imenika iz imenika."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:127
-#, kde-format
-msgid ""
-"Do you really want to delete this address book folder and all its sub-"
-"folders?"
-msgid_plural ""
-"Do you really want to delete %1 address book folders and all their sub-"
-"folders?"
-msgstr[0] "Ali res želite izbrisati %1 mapo imenika in vse podmape?"
-msgstr[1] "Ali res želite izbrisati %1 mapi imenika in vse podmape?"
-msgstr[2] "Ali res želite izbrisati %1 mape imenika in vse podmape?"
-msgstr[3] "Ali res želite izbrisati %1 map imenika in vse podmape?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:131
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete address book folder?"
-msgid_plural "Delete address book folders?"
-msgstr[0] "Izbrišem mapo imenika?"
-msgstr[1] "Izbrišem mapi imenika?"
-msgstr[2] "Izbrišem mape imenika?"
-msgstr[3] "Izbrišem map imenika?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:135
-#, kde-format
-msgid "Could not delete address book folder: %1"
-msgstr "Ni bilo mogoče izbrisati mape imenika: %1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:139
-#, kde-format
-msgid "Address book folder deletion failed"
-msgstr "Brisanje mape imenika ni uspelo"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:143
-#, kde-format
-msgid "Update Address Book Folder"
-msgid_plural "Update %1 Address Book Folders"
-msgstr[0] "Posodobi %1 mapo imenika"
-msgstr[1] "Posodobi %1 mapi imenika"
-msgstr[2] "Posodobi %1 mape imenika"
-msgstr[3] "Posodobi %1 map imenika"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:145
-#, kde-format
-msgid "Update the content of the selected address book folders."
-msgstr "Posodobi vsebino izbranih map imenika."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:148
-#, kde-format
-msgid "Cut Address Book Folder"
-msgid_plural "Cut %1 Address Book Folders"
-msgstr[0] "Izreži %1 mapo imenika"
-msgstr[1] "Izreži %1 mapi imenika"
-msgstr[2] "Izreži %1 mape imenika"
-msgstr[3] "Izreži %1 map imenika"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:150
-#, kde-format
-msgid "Cut the selected address book folders from the address book."
-msgstr "Izreži izbrane mape imenika iz imenika."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:153
-#, kde-format
-msgid "Folder Properties..."
-msgstr "Lastnosti mape ..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:155
-#, kde-format
-msgid ""
-"Open a dialog to edit the properties of the selected address book folder."
-msgstr "Odpri pogovorno okno za urejanje lastnosti izbrane mape imenika."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:158
-#, kde-format
-msgctxt "@title:window"
-msgid "Properties of Address Book Folder %1"
-msgstr "Lastnosti mape imenika %1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:161
-#: akonadi-contacts/standardcontactactionmanager.cpp:290
-#, kde-format
-msgid "Copy Contact"
-msgid_plural "Copy %1 Contacts"
-msgstr[0] "Kopiraj %1 stik"
-msgstr[1] "Kopiraj %1 stika"
-msgstr[2] "Kopiraj %1 stike"
-msgstr[3] "Kopiraj %1 stikov"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:162
-#, kde-format
-msgid "Copy the selected contacts to the clipboard."
-msgstr "Kopiraj izbrane stike na odložišče."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:301
-#, kde-format
-msgid "Delete Contact"
-msgid_plural "Delete %1 Contacts"
-msgstr[0] "Izbriši %1 stik"
-msgstr[1] "Izbriši %1 stika"
-msgstr[2] "Izbriši %1 stike"
-msgstr[3] "Izbriši %1 stikov"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:166
-#, kde-format
-msgid "Delete the selected contacts from the address book."
-msgstr "Izbriši izbrane stike iz imenika."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:169
-#, kde-format
-msgid "Do you really want to delete the selected contact?"
-msgid_plural "Do you really want to delete %1 contacts?"
-msgstr[0] "Ali res želite izbrisati %1 stik?"
-msgstr[1] "Ali res želite izbrisati %1 stika?"
-msgstr[2] "Ali res želite izbrisati %1 stike?"
-msgstr[3] "Ali res želite izbrisati %1 stikov?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:173
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Contact?"
-msgid_plural "Delete Contacts?"
-msgstr[0] "Izbris stika?"
-msgstr[1] "Izbris stikov?"
-msgstr[2] "Izbris stikov?"
-msgstr[3] "Izbris stikov?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:175
-#, kde-format
-msgid "Could not delete contact: %1"
-msgstr "Stika ni bilo mogoče izbrisati: %1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:177
-#, kde-format
-msgid "Contact deletion failed"
-msgstr "Brisanje stika ni uspelo"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:180
-#: akonadi-contacts/standardcontactactionmanager.cpp:304
-#, kde-format
-msgid "Cut Contact"
-msgid_plural "Cut %1 Contacts"
-msgstr[0] "Izreži %1 stik"
-msgstr[1] "Izreži %1 stika"
-msgstr[2] "Izreži %1 stike"
-msgstr[3] "Izreži %1 stikov"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:181
-#, kde-format
-msgid "Cut the selected contacts from the address book."
-msgstr "Izreži izbrane stike iz imenika."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:184
-#, kde-format
-msgid "Add &Address Book..."
-msgstr "Dod&aj imenik..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:186
-#, kde-format
-msgid ""
-"Add a new address book<p>You will be presented with a dialog where you can "
-"select the type of the address book that shall be added.</p>"
-msgstr ""
-"Dodaj nov imenik<p>Odprlo se bo pogovorno okno, kjer boste lahko izbrali "
-"vrsto dodanega imenika.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:195
-#, kde-format
-msgid "Could not create address book: %1"
-msgstr "Ni bilo mogoče ustvariti imenika: %1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:199
-#, kde-format
-msgid "Address book creation failed"
-msgstr "Ustvarjanje imenika ni uspelo"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:203
-#, kde-format
-msgid "&Delete Address Book"
-msgid_plural "&Delete %1 Address Books"
-msgstr[0] "Izbriši %1 imenik"
-msgstr[1] "Izbriši %1 imenika"
-msgstr[2] "Izbriši %1 imenike"
-msgstr[3] "Izbriši %1 imenikov"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:205
-#, kde-format
-msgid ""
-"Delete the selected address books<p>The currently selected address books "
-"will be deleted, along with all the contacts and contact groups they contain."
-"</p>"
-msgstr ""
-"Izbriši izbrane imenike<p>Trenutno izbrani imeniki bodo izbrisani skupaj s "
-"stiki in skupinami stikov, ki so v njih.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:210
-#, kde-format
-msgid "Do you really want to delete this address book?"
-msgid_plural "Do you really want to delete %1 address books?"
-msgstr[0] "Ali res želite izbrisati %1 imenik?"
-msgstr[1] "Ali res želite izbrisati %1 imenika?"
-msgstr[2] "Ali res želite izbrisati %1 imenike?"
-msgstr[3] "Ali res želite izbrisati %1 imenikov?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:214
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Address Book?"
-msgid_plural "Delete Address Books?"
-msgstr[0] "Izbrišem imenik?"
-msgstr[1] "Izbrišem imenika?"
-msgstr[2] "Izbrišem imenike?"
-msgstr[3] "Izbrišem imenike?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:219
-#, kde-format
-msgid "Address Book Properties..."
-msgstr "Lastnosti imenika ..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:221
-#, kde-format
-msgid "Open a dialog to edit properties of the selected address book."
-msgstr "Odpri pogovorno okno za urejanje lastnosti izbranega imenika."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:224
-#, kde-format
-msgid "Update Address Book"
-msgid_plural "Update %1 Address Books"
-msgstr[0] "Posodobi %1 imenik"
-msgstr[1] "Posodobi %1 imenika"
-msgstr[2] "Posodobi %1 imenike"
-msgstr[3] "Posodobi %1 imenikov"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:227
-#, kde-format
-msgid "Updates the content of all folders of the selected address books."
-msgstr "Posodobi vsebino vseh map izbranih imenikov."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:231
-#, kde-format
-msgid "Could not paste contact: %1"
-msgstr "Stika ni bilo mogoče prilepiti: %1"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:233
-#, kde-format
-msgid "Paste failed"
-msgstr "Lepljenje ni uspelo"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:294
-#: akonadi-contacts/standardcontactactionmanager.cpp:298
-#, kde-format
-msgid "Copy Contact To"
-msgstr "Kopiraj stik v"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:308
-#: akonadi-contacts/standardcontactactionmanager.cpp:312
-#, kde-format
-msgid "Move Contact To"
-msgstr "Premakni stik v"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:316
-#: akonadi-contacts/standardcontactactionmanager.cpp:553
-#, kde-format
-msgid "Edit Contact..."
-msgstr "Uredi stik ..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:320
-#, kde-format
-msgid "Copy Group"
-msgid_plural "Copy %1 Groups"
-msgstr[0] "Kopiraj %1 skupino"
-msgstr[1] "Kopiraj %1 skupini"
-msgstr[2] "Kopiraj %1 skupini"
-msgstr[3] "Kopiraj %1 skupin"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:324
-#: akonadi-contacts/standardcontactactionmanager.cpp:328
-#, kde-format
-msgid "Copy Group To"
-msgstr "Kopiraj skupino v"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:331
-#, kde-format
-msgid "Delete Group"
-msgid_plural "Delete %1 Groups"
-msgstr[0] "Izbriši %1 skupino"
-msgstr[1] "Izbriši %1 skupini"
-msgstr[2] "Izbriši %1 skupine"
-msgstr[3] "Izbriši %1 skupin"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:334
-#, kde-format
-msgid "Cut Group"
-msgid_plural "Cut %1 Groups"
-msgstr[0] "Izreži %1 skupino"
-msgstr[1] "Izreži %1 skupini"
-msgstr[2] "Izreži %1 skupine"
-msgstr[3] "Izreži %1 skupin"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:338
-#: akonadi-contacts/standardcontactactionmanager.cpp:342
-#, kde-format
-msgid "Move Group To"
-msgstr "Premakni skupino v"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:346
-#, kde-format
-msgid "Edit Group..."
-msgstr "Uredi skupino ..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:528
-#, kde-format
-msgid "New &Contact..."
-msgstr "Nov stik..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:530
-#, kde-format
-msgid ""
-"Create a new contact<p>You will be presented with a dialog where you can add "
-"data about a person, including addresses and phone numbers.</p>"
-msgstr ""
-"Ustvari nov stik<p>Odprlo se bo pogovorno okno, kjer boste lahko dodali "
-"podatke o osebi, vključno z naslovi in telefonskimi številkami.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:541
-#, kde-format
-msgid "New &Group..."
-msgstr "Nova skupina..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:542
-#, kde-format
-msgid ""
-"Create a new group<p>You will be presented with a dialog where you can add a "
-"new group of contacts.</p>"
-msgstr ""
-"Ustvari novo skupino<p>Odprlo se bo pogovorno okno, kjer boste lahko dodali "
-"novo skupino stikov.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:555
-#, kde-format
-msgid ""
-"Edit the selected contact<p>You will be presented with a dialog where you "
-"can edit the data stored about a person, including addresses and phone "
-"numbers.</p>"
-msgstr ""
-"Uredi izbrani stik<p>Odprlo se bo pogovorno okno, kjer boste lahko uredili "
-"shranjene podatke o osebi, vključno z naslovi in telefonskimi številkami.</p>"
 
 #: akonadi-contacts/standardcontactformatter.cpp:96
 #, kde-format
@@ -913,40 +343,72 @@ msgstr "Oddelek"
 msgid "IM Address"
 msgstr "Naslov hipnega sporočanja"
 
-#: akonadi-contacts/textbrowser.cpp:61
-#, kde-format
-msgctxt "@action:inmenu Copy the text of a general item"
-msgid "Copy Item"
-msgstr "Kopiraj predmet"
-
-#: akonadi-contacts/textbrowser.cpp:70
-#, kde-format
-msgctxt "@action:inmenu Copy a displayed email address"
-msgid "Copy Email Address"
-msgstr "Kopiraj e-poštni naslov"
-
-#: akonadi-contacts/textbrowser.cpp:79
-#, kde-format
-msgctxt "@action:inmenu Copy a link URL"
-msgid "Copy Link URL"
-msgstr "Kopiraj povezavo URL"
-
-#: akonadi-contacts/textbrowser.cpp:106
-#, kde-format
-msgctxt "@action:inmenu Copy a contact photo"
-msgid "Copy Photo"
-msgstr "Kopiraj fotografijo"
-
-#: akonadi-contacts/textbrowser.cpp:109
-#, kde-format
-msgctxt "@action:inmenu Copy a QR code image"
-msgid "Copy Code"
-msgstr "Kopiraj kodo"
-
 #: akonadi-contacts/waitingoverlay.cpp:35
 #, kde-format
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Čakanje na opravilo</b><br/></p>"
+
+#: contact-editor/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Nekdo drug je spremenil stik.\n"
+"Kaj naj se zgodi?"
+
+#: contact-editor/contacteditor.cpp:279
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Izberite imenik, v katerega naj se shrani nov stik:"
+
+#: contact-editor/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "Novi stik"
+
+#: contact-editor/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "Uredi stik"
+
+#: contact-editor/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr "Lokacija ni bilashranjena. Ali želite zapreti urejevalnik?"
+
+#: contact-editor/contacteditordialog.cpp:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr "Zapri urejevalnik"
+
+#: contact-editor/contacteditordialog.cpp:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr "Ne zapiraj"
+
+#: contact-editor/contactgroupviewer.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "Skupina stikov %1"
+
+#: contact-editor/contactviewer.cpp:69
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "Stik %1"
+
+#: contact-editor/contactviewerdialog.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "Pokaži stik"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
 #: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
@@ -1623,6 +1085,544 @@ msgstr "Slike (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Nastavi kot prednostno"
+
+#: contact-editor/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+"Primarni e-poštni naslov vCard je že v vašem adresarju; vendar lahko vCard "
+"shranite v datoteko in jo uvozite v adresar tudi ročno."
+
+#: contact-editor/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+"VCard je bil dodan v vaš adresar; več informacij lahko dodate v ta vnos z "
+"odprtjem adresarja."
+
+#: contact-editor/job/addemailaddressjob.cpp:69
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr "Stik z e-poštnim naslovom <email>%1</email> je že v vašem adresarju."
+
+#: contact-editor/job/addemailaddressjob.cpp:120
+#: contact-editor/job/addemaildisplayjob.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr "Preden dodate stik, morate ustvariti adresar. Ali ga želite ustvariti?"
+
+#: contact-editor/job/addemailaddressjob.cpp:121
+#: contact-editor/job/addemaildisplayjob.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Nobenega adresarja ni na voljo"
+
+#: contact-editor/job/addemailaddressjob.cpp:122
+#: contact-editor/job/addemaildisplayjob.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Ustvari imenik"
+
+#: contact-editor/job/addemailaddressjob.cpp:126
+#: contact-editor/job/addemaildisplayjob.cpp:165
+#: contact-editor/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Dodaj imenik"
+
+#: contact-editor/job/addemailaddressjob.cpp:216
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+"<para>V vaš adresar je bil uspešno dodan stik \"%1\".</para><para>Ali želite "
+"zdaj urediti ta nov stik?</para>"
+
+#: contact-editor/job/addemailaddressjob.cpp:224
+#, kde-format
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Uredi"
+
+#: contact-editor/job/addemailaddressjob.cpp:225
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr "Končaj"
+
+#: contact-editor/job/addemailaddressjob.cpp:247
+#: contact-editor/standardcontactactionmanager.cpp:468
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "Stika ni mogoče shraniti: %1"
+
+#: contact-editor/job/addemailaddressjob.cpp:247
+#: contact-editor/standardcontactactionmanager.cpp:468
+#, kde-format
+msgid "Failed to store contact"
+msgstr "Stika ni bilo mogoče shraniti"
+
+#: contact-editor/job/addemailaddressjob.cpp:254
+#, kde-format
+msgid "Contact created successfully"
+msgstr "Uspešno ustvarjen stik"
+
+#: contact-editor/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "Dodaj mapo imenika ..."
+
+#: contact-editor/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr "V trenutno izbrano mapo imenika doda novo mapo."
+
+#: contact-editor/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "Nova mapa imenika"
+
+#: contact-editor/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "Ni bilo mogoče ustvariti mape imenika: %1"
+
+#: contact-editor/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "Ustvarjanje mape imenika ni uspelo"
+
+#: contact-editor/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "Kopiraj %1 mapo imenika"
+msgstr[1] "Kopiraj %1 mapi imenika"
+msgstr[2] "Kopiraj %1 mape imenika"
+msgstr[3] "Kopiraj %1 map imenika"
+
+#: contact-editor/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr "Kopiraj izbrane mape imenika na odložišče."
+
+#: contact-editor/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "Izbriši %1 mapo imenika"
+msgstr[1] "Izbriši %1 mapi imenika"
+msgstr[2] "Izbriši %1 mape imenika"
+msgstr[3] "Izbriši %1 map imenika"
+
+#: contact-editor/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr "Izbriši izbrane mape imenika iz imenika."
+
+#: contact-editor/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] "Ali res želite izbrisati %1 mapo imenika in vse podmape?"
+msgstr[1] "Ali res želite izbrisati %1 mapi imenika in vse podmape?"
+msgstr[2] "Ali res želite izbrisati %1 mape imenika in vse podmape?"
+msgstr[3] "Ali res želite izbrisati %1 map imenika in vse podmape?"
+
+#: contact-editor/standardcontactactionmanager.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "Izbrišem mapo imenika?"
+msgstr[1] "Izbrišem mapi imenika?"
+msgstr[2] "Izbrišem mape imenika?"
+msgstr[3] "Izbrišem map imenika?"
+
+#: contact-editor/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "Ni bilo mogoče izbrisati mape imenika: %1"
+
+#: contact-editor/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "Brisanje mape imenika ni uspelo"
+
+#: contact-editor/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "Posodobi %1 mapo imenika"
+msgstr[1] "Posodobi %1 mapi imenika"
+msgstr[2] "Posodobi %1 mape imenika"
+msgstr[3] "Posodobi %1 map imenika"
+
+#: contact-editor/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr "Posodobi vsebino izbranih map imenika."
+
+#: contact-editor/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "Izreži %1 mapo imenika"
+msgstr[1] "Izreži %1 mapi imenika"
+msgstr[2] "Izreži %1 mape imenika"
+msgstr[3] "Izreži %1 map imenika"
+
+#: contact-editor/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr "Izreži izbrane mape imenika iz imenika."
+
+#: contact-editor/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "Lastnosti mape ..."
+
+#: contact-editor/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr "Odpri pogovorno okno za urejanje lastnosti izbrane mape imenika."
+
+#: contact-editor/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "Lastnosti mape imenika %1"
+
+#: contact-editor/standardcontactactionmanager.cpp:161
+#: contact-editor/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "Kopiraj %1 stik"
+msgstr[1] "Kopiraj %1 stika"
+msgstr[2] "Kopiraj %1 stike"
+msgstr[3] "Kopiraj %1 stikov"
+
+#: contact-editor/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "Kopiraj izbrane stike na odložišče."
+
+#: contact-editor/standardcontactactionmanager.cpp:165
+#: contact-editor/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "Izbriši %1 stik"
+msgstr[1] "Izbriši %1 stika"
+msgstr[2] "Izbriši %1 stike"
+msgstr[3] "Izbriši %1 stikov"
+
+#: contact-editor/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "Izbriši izbrane stike iz imenika."
+
+#: contact-editor/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "Ali res želite izbrisati %1 stik?"
+msgstr[1] "Ali res želite izbrisati %1 stika?"
+msgstr[2] "Ali res želite izbrisati %1 stike?"
+msgstr[3] "Ali res želite izbrisati %1 stikov?"
+
+#: contact-editor/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "Izbris stika?"
+msgstr[1] "Izbris stikov?"
+msgstr[2] "Izbris stikov?"
+msgstr[3] "Izbris stikov?"
+
+#: contact-editor/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "Stika ni bilo mogoče izbrisati: %1"
+
+#: contact-editor/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "Brisanje stika ni uspelo"
+
+#: contact-editor/standardcontactactionmanager.cpp:180
+#: contact-editor/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "Izreži %1 stik"
+msgstr[1] "Izreži %1 stika"
+msgstr[2] "Izreži %1 stike"
+msgstr[3] "Izreži %1 stikov"
+
+#: contact-editor/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "Izreži izbrane stike iz imenika."
+
+#: contact-editor/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "Dod&aj imenik..."
+
+#: contact-editor/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr ""
+"Dodaj nov imenik<p>Odprlo se bo pogovorno okno, kjer boste lahko izbrali "
+"vrsto dodanega imenika.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "Ni bilo mogoče ustvariti imenika: %1"
+
+#: contact-editor/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "Ustvarjanje imenika ni uspelo"
+
+#: contact-editor/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "Izbriši %1 imenik"
+msgstr[1] "Izbriši %1 imenika"
+msgstr[2] "Izbriši %1 imenike"
+msgstr[3] "Izbriši %1 imenikov"
+
+#: contact-editor/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"Izbriši izbrane imenike<p>Trenutno izbrani imeniki bodo izbrisani skupaj s "
+"stiki in skupinami stikov, ki so v njih.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "Ali res želite izbrisati %1 imenik?"
+msgstr[1] "Ali res želite izbrisati %1 imenika?"
+msgstr[2] "Ali res želite izbrisati %1 imenike?"
+msgstr[3] "Ali res želite izbrisati %1 imenikov?"
+
+#: contact-editor/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "Izbrišem imenik?"
+msgstr[1] "Izbrišem imenika?"
+msgstr[2] "Izbrišem imenike?"
+msgstr[3] "Izbrišem imenike?"
+
+#: contact-editor/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "Lastnosti imenika ..."
+
+#: contact-editor/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr "Odpri pogovorno okno za urejanje lastnosti izbranega imenika."
+
+#: contact-editor/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "Posodobi %1 imenik"
+msgstr[1] "Posodobi %1 imenika"
+msgstr[2] "Posodobi %1 imenike"
+msgstr[3] "Posodobi %1 imenikov"
+
+#: contact-editor/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr "Posodobi vsebino vseh map izbranih imenikov."
+
+#: contact-editor/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "Stika ni bilo mogoče prilepiti: %1"
+
+#: contact-editor/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "Lepljenje ni uspelo"
+
+#: contact-editor/standardcontactactionmanager.cpp:294
+#: contact-editor/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "Kopiraj stik v"
+
+#: contact-editor/standardcontactactionmanager.cpp:308
+#: contact-editor/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "Premakni stik v"
+
+#: contact-editor/standardcontactactionmanager.cpp:316
+#: contact-editor/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid "Edit Contact..."
+msgstr "Uredi stik ..."
+
+#: contact-editor/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "Kopiraj %1 skupino"
+msgstr[1] "Kopiraj %1 skupini"
+msgstr[2] "Kopiraj %1 skupini"
+msgstr[3] "Kopiraj %1 skupin"
+
+#: contact-editor/standardcontactactionmanager.cpp:324
+#: contact-editor/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "Kopiraj skupino v"
+
+#: contact-editor/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "Izbriši %1 skupino"
+msgstr[1] "Izbriši %1 skupini"
+msgstr[2] "Izbriši %1 skupine"
+msgstr[3] "Izbriši %1 skupin"
+
+#: contact-editor/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "Izreži %1 skupino"
+msgstr[1] "Izreži %1 skupini"
+msgstr[2] "Izreži %1 skupine"
+msgstr[3] "Izreži %1 skupin"
+
+#: contact-editor/standardcontactactionmanager.cpp:338
+#: contact-editor/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "Premakni skupino v"
+
+#: contact-editor/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "Uredi skupino ..."
+
+#: contact-editor/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid "New &Contact..."
+msgstr "Nov stik..."
+
+#: contact-editor/standardcontactactionmanager.cpp:532
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"Ustvari nov stik<p>Odprlo se bo pogovorno okno, kjer boste lahko dodali "
+"podatke o osebi, vključno z naslovi in telefonskimi številkami.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:543
+#, kde-format
+msgid "New &Group..."
+msgstr "Nova skupina..."
+
+#: contact-editor/standardcontactactionmanager.cpp:544
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr ""
+"Ustvari novo skupino<p>Odprlo se bo pogovorno okno, kjer boste lahko dodali "
+"novo skupino stikov.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:557
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr ""
+"Uredi izbrani stik<p>Odprlo se bo pogovorno okno, kjer boste lahko uredili "
+"shranjene podatke o osebi, vključno z naslovi in telefonskimi številkami.</p>"
+
+#: contact-editor/textbrowser.cpp:61
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "Kopiraj predmet"
+
+#: contact-editor/textbrowser.cpp:70
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "Kopiraj e-poštni naslov"
+
+#: contact-editor/textbrowser.cpp:79
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "Kopiraj povezavo URL"
+
+#: contact-editor/textbrowser.cpp:106
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "Kopiraj fotografijo"
+
+#: contact-editor/textbrowser.cpp:109
+#, kde-format
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "Kopiraj kodo"
+
+#: contact-editor/widgets/selectaddressbookdialog.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "Izberite imenik, v katerega bo shranjen stik:"
 
 #~ msgid ""
 #~ "Define how a phone number of a contact should be dialed. 'System Default' "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2014-03-18 00:22+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,110 +19,6 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: akonadi-contacts/contacteditor.cpp:162
-#, kde-format
-msgid ""
-"The contact has been changed by someone else.\n"
-"What should be done?"
-msgstr ""
-"Jichtenseen hett den Kontakt ännert.\n"
-"Wat wullt Du nu doon?"
-
-#: akonadi-contacts/contacteditor.cpp:163
-#: akonadi-contacts/contactgroupeditor.cpp:135
-#, kde-format
-msgid "Take over changes"
-msgstr "Ännern övernehmen"
-
-#: akonadi-contacts/contacteditor.cpp:164
-#: akonadi-contacts/contactgroupeditor.cpp:136
-#, kde-format
-msgid "Ignore and Overwrite changes"
-msgstr "Övergahn un Ännern överschrieven"
-
-#: akonadi-contacts/contacteditor.cpp:278
-#: akonadi-contacts/contactgroupeditor.cpp:290
-#: akonadi-contacts/selectaddressbookdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
-msgctxt "@title:window"
-msgid "Select Address Book"
-msgstr "Adressbook utsöken"
-
-#: akonadi-contacts/contacteditor.cpp:279
-#, kde-format
-msgid "Select the address book the new contact shall be saved in:"
-msgstr "Dat Adressbook utsöken, binnen dat en nieg Kontakt sekert warrt:"
-
-#: akonadi-contacts/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "New Contact"
-msgctxt "@title:window"
-msgid "New Contact"
-msgstr "Nieg Kontakt"
-
-#: akonadi-contacts/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
-msgctxt "@title:window"
-msgid "Edit Contact"
-msgstr "Kontakt bewerken"
-
-#: akonadi-contacts/contacteditordialog.cpp:72
-#: akonadi-contacts/contactgroupeditordialog.cpp:102
-#, kde-format
-msgid "Add to:"
-msgstr "Tofögen na:"
-
-#: akonadi-contacts/contacteditordialog.cpp:181
-#, kde-format
-msgctxt "@info"
-msgid "Location was not saved. Do you want to close editor?"
-msgstr ""
-
-#: akonadi-contacts/contacteditordialog.cpp:182
-#: akonadi-contacts/contacteditordialog.cpp:199
-#: akonadi-contacts/contactgroupeditordialog.cpp:165
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
-msgctxt "@title:window"
-msgid "Confirmation"
-msgstr "Wegdoon beglöven"
-
-#: akonadi-contacts/contacteditordialog.cpp:183
-#, kde-format
-msgctxt "@action:button"
-msgid "Close Editor"
-msgstr ""
-
-#: akonadi-contacts/contacteditordialog.cpp:184
-#, kde-format
-msgctxt "@action:button"
-msgid "Do Not Close"
-msgstr ""
-
-#: akonadi-contacts/contacteditordialog.cpp:198
-#: akonadi-contacts/contactgroupeditordialog.cpp:164
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
-msgctxt "@info"
-msgid "Do you really want to cancel?"
-msgstr "Wullt Du disse Adress redig wegdoon?"
-
-#: akonadi-contacts/contacteditordialog.cpp:200
-#: akonadi-contacts/contactgroupeditordialog.cpp:166
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel Editing"
-msgstr ""
-
-#: akonadi-contacts/contacteditordialog.cpp:201
-#: akonadi-contacts/contactgroupeditordialog.cpp:167
-#, kde-format
-msgctxt "@action:button"
-msgid "Do Not Cancel"
-msgstr ""
-
 #: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
 msgid ""
@@ -132,10 +28,31 @@ msgstr ""
 "Jichtenseen hett den Kontaktkoppel ännert.\n"
 "Wat wullt Du nu doon?"
 
+#: akonadi-contacts/contactgroupeditor.cpp:135
+#: contact-editor/contacteditor.cpp:163
+#, kde-format
+msgid "Take over changes"
+msgstr "Ännern övernehmen"
+
+#: akonadi-contacts/contactgroupeditor.cpp:136
+#: contact-editor/contacteditor.cpp:164
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "Övergahn un Ännern överschrieven"
+
 #: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "De Naam vun den Kontaktkoppel mutt nich leddig wesen."
+
+#: akonadi-contacts/contactgroupeditor.cpp:290
+#: contact-editor/contacteditor.cpp:278
+#: contact-editor/widgets/selectaddressbookdialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Select Address Book"
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Adressbook utsöken"
 
 #: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
@@ -181,6 +98,43 @@ msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "Kontaktkoppel bewerken"
 
+#: akonadi-contacts/contactgroupeditordialog.cpp:102
+#: contact-editor/contacteditordialog.cpp:72
+#, kde-format
+msgid "Add to:"
+msgstr "Tofögen na:"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:164
+#: contact-editor/contacteditordialog.cpp:198
+#, fuzzy, kde-format
+#| msgid "Do you really want to delete this address?"
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Wullt Du disse Adress redig wegdoon?"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:165
+#: contact-editor/contacteditordialog.cpp:182
+#: contact-editor/contacteditordialog.cpp:199
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "Wegdoon beglöven"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:166
+#: contact-editor/contacteditordialog.cpp:200
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr ""
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:167
+#: contact-editor/contacteditordialog.cpp:201
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr ""
+
 #: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
@@ -202,20 +156,6 @@ msgstr "Naam"
 msgctxt "contact's email address"
 msgid "EMail"
 msgstr "Nettpost"
-
-#: akonadi-contacts/contactgroupviewer.cpp:51
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
-msgctxt "@title:window"
-msgid "Contact Group %1"
-msgstr "Kontaktkoppel %1"
-
-#: akonadi-contacts/contactgroupviewer.cpp:65
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts/standardcontactformatter.cpp:186
-#, kde-format
-msgid "Address Book"
-msgstr "Adressbook"
 
 #: akonadi-contacts/contactstreemodel.cpp:212
 #, kde-format
@@ -271,20 +211,6 @@ msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
 msgstr "All Nettpostadressen"
 
-#: akonadi-contacts/contactviewer.cpp:68
-#, fuzzy, kde-format
-#| msgid "Contact %1"
-msgctxt "@title:window"
-msgid "Contact %1"
-msgstr "Kontakt %1"
-
-#: akonadi-contacts/contactviewerdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Show Contact"
-msgctxt "@title:window"
-msgid "Show Contact"
-msgstr "Kontakt wiesen"
-
 #: akonadi-contacts/emailaddressrequester.cpp:80
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
@@ -314,6 +240,13 @@ msgstr "Söken:"
 #| msgid "New &Contact..."
 msgid "Search Contact..."
 msgstr "Nieg &Kontakt..."
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts/standardcontactformatter.cpp:186
+#: contact-editor/contactgroupviewer.cpp:66
+#, kde-format
+msgid "Address Book"
+msgstr "Adressbook"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
 #: akonadi-contacts/standardcontactformatter.cpp:185
@@ -365,487 +298,6 @@ msgstr "Jo"
 msgctxt "Boolean value"
 msgid "no"
 msgstr "Nee"
-
-#: akonadi-contacts/job/addcontactjob.cpp:55
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The vCard's primary email address is already in your address book; however, "
-"you may save the vCard into a file and import it into the address book "
-"manually."
-msgstr ""
-
-#: akonadi-contacts/job/addcontactjob.cpp:111
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The vCard was added to your address book; you can add more information to "
-"this entry by opening the address book."
-msgstr ""
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:69
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A contact with the email address <email>%1</email> is already in your "
-"address book."
-msgstr ""
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:120
-#: akonadi-contacts/job/addemaildisplayjob.cpp:159
-#, kde-format
-msgctxt "@info"
-msgid ""
-"You must create an address book before adding a contact. Do you want to "
-"create an address book?"
-msgstr ""
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:121
-#: akonadi-contacts/job/addemaildisplayjob.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "New Address Book Folder"
-msgctxt "@title:window"
-msgid "No Address Book Available"
-msgstr "Nieg Adressbook-Orner"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:122
-#: akonadi-contacts/job/addemaildisplayjob.cpp:161
-#, fuzzy, kde-format
-#| msgid "Update Address Book"
-#| msgid_plural "Update %1 Address Books"
-msgctxt "@action:button"
-msgid "Create Address Book"
-msgstr "Adressbook opfrischen"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:126
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:191
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Address Book"
-msgstr "Adressbook tofögen"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:216
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>A contact for \"%1\" was successfully added to your address book.</"
-"para><para>Do you want to edit this new contact now?</para>"
-msgstr ""
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:224
-#, fuzzy, kde-format
-#| msgid "Edit..."
-msgctxt "@action:button"
-msgid "Edit"
-msgstr "Bewerken..."
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:225
-#, kde-format
-msgctxt "@action:button"
-msgid "Finish"
-msgstr ""
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
-#: akonadi-contacts/standardcontactactionmanager.cpp:466
-#, kde-format
-msgid "Contact cannot be stored: %1"
-msgstr "De Kontakt lett sik nich sekern: %1"
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:246
-#: akonadi-contacts/standardcontactactionmanager.cpp:466
-#, kde-format
-msgid "Failed to store contact"
-msgstr "Kontakt lett sik nich sekern."
-
-#: akonadi-contacts/job/addemailaddressjob.cpp:253
-#, kde-format
-msgid "Contact created successfully"
-msgstr ""
-
-#: akonadi-contacts/selectaddressbookdialog.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select the address book the new contact shall be saved in:"
-msgctxt "@info"
-msgid "Select the address book where the contact will be saved:"
-msgstr "Dat Adressbook utsöken, binnen dat en nieg Kontakt sekert warrt:"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:95
-#, kde-format
-msgid "Add Address Book Folder..."
-msgstr "Adressbook-Orner..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:98
-#, kde-format
-msgid ""
-"Add a new address book folder to the currently selected address book folder."
-msgstr "Den opstunns utsöchten Adressbookorner en nieg Adressbookorner tofögen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:101
-#, kde-format
-msgctxt "@title:window"
-msgid "New Address Book Folder"
-msgstr "Nieg Adressbook-Orner"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:105
-#, kde-format
-msgid "Could not create address book folder: %1"
-msgstr "Adressbook-Orner \"%1\" lett sik nich opstellen."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:109
-#, kde-format
-msgid "Address book folder creation failed"
-msgstr "Opstellen vun den Adressbook-Orner fehlslaan"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:115
-#, kde-format
-msgid "Copy Address Book Folder"
-msgid_plural "Copy %1 Address Book Folders"
-msgstr[0] "Adressbook-Orner koperen"
-msgstr[1] "%1 Adressbook-Ornern koperen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:117
-#, kde-format
-msgid "Copy the selected address book folders to the clipboard."
-msgstr "De utsöchten Adressbookornern na de Twischenaflaag koperen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:121
-#, kde-format
-msgid "Delete Address Book Folder"
-msgid_plural "Delete %1 Address Book Folders"
-msgstr[0] "Adressbook-Orner wegmaken"
-msgstr[1] "%1 Adressbook-Ornern wegmaken"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:123
-#, kde-format
-msgid "Delete the selected address book folders from the address book."
-msgstr "De utsöchten Adressbookornern ut dat Adressbook wegmaken"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:127
-#, kde-format
-msgid ""
-"Do you really want to delete this address book folder and all its sub-"
-"folders?"
-msgid_plural ""
-"Do you really want to delete %1 address book folders and all their sub-"
-"folders?"
-msgstr[0] ""
-"Wullt Du dissen Adressbook-Orner un all sien Ünnerornern redig wegdoon?"
-msgstr[1] ""
-"Wullt Du disse %1 Adressbook-Ornern un all ehr Ünnerornern redig wegdoon?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete address book folder?"
-#| msgid_plural "Delete address book folders?"
-msgctxt "@title:window"
-msgid "Delete address book folder?"
-msgid_plural "Delete address book folders?"
-msgstr[0] "Adressbook-Orner wegmaken?"
-msgstr[1] "%1 Adressbook-Ornern wegmaken?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:135
-#, kde-format
-msgid "Could not delete address book folder: %1"
-msgstr "Adressbook-Orner \"%1\" lett sik nich wegmaken."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:139
-#, kde-format
-msgid "Address book folder deletion failed"
-msgstr "Wegmaken vun den Adressbook-Orner fehlslaan"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:143
-#, kde-format
-msgid "Update Address Book Folder"
-msgid_plural "Update %1 Address Book Folders"
-msgstr[0] "Adressbook-Orner opfrischen"
-msgstr[1] "%1 Adressbook-Ornern opfrischen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:145
-#, kde-format
-msgid "Update the content of the selected address book folders."
-msgstr "De utsöchten Adressbookornern ehr Inholden opfrischen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:148
-#, kde-format
-msgid "Cut Address Book Folder"
-msgid_plural "Cut %1 Address Book Folders"
-msgstr[0] "Adressbook-Orner knippen"
-msgstr[1] "%1 Adressbook-Ornern knippen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:150
-#, kde-format
-msgid "Cut the selected address book folders from the address book."
-msgstr "De utsöchten Adressbookornern ut dat Adressbook knippen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:153
-#, kde-format
-msgid "Folder Properties..."
-msgstr "Orner-Egenschappen..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:155
-#, kde-format
-msgid ""
-"Open a dialog to edit the properties of the selected address book folder."
-msgstr ""
-"En Dialoog opmaken, mit den sik de Egenschappen vun den utsöchten "
-"Adressbookorner bewerken laat"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:158
-#, kde-format
-msgctxt "@title:window"
-msgid "Properties of Address Book Folder %1"
-msgstr "Egenschappen vun Adressbook-Orner \"%1\""
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:161
-#: akonadi-contacts/standardcontactactionmanager.cpp:290
-#, kde-format
-msgid "Copy Contact"
-msgid_plural "Copy %1 Contacts"
-msgstr[0] "Kontakt koperen"
-msgstr[1] "%1 Kontakten koperen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:162
-#, kde-format
-msgid "Copy the selected contacts to the clipboard."
-msgstr "De utsöchten Kontakten na de Twischenaflaag koperen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:301
-#, kde-format
-msgid "Delete Contact"
-msgid_plural "Delete %1 Contacts"
-msgstr[0] "Kontakt wegmaken"
-msgstr[1] "%1 Kontakten wegmaken"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:166
-#, kde-format
-msgid "Delete the selected contacts from the address book."
-msgstr "De utsöchten Kontakten ut dat Adressbook wegmaken"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:169
-#, kde-format
-msgid "Do you really want to delete the selected contact?"
-msgid_plural "Do you really want to delete %1 contacts?"
-msgstr[0] "Wullt Du den utsöchten Kontakt redig wegmaken?"
-msgstr[1] "Wullt Du de %1 Kontakten redig wegmaken?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:173
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Contact?"
-msgid_plural "Delete Contacts?"
-msgstr[0] "Kontakt wegmaken?"
-msgstr[1] "Kontakten wegmaken?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:175
-#, kde-format
-msgid "Could not delete contact: %1"
-msgstr "Kontakt \"%1\" lett sik nich wegmaken."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:177
-#, kde-format
-msgid "Contact deletion failed"
-msgstr "Wegmaken vun den Kontakt fehlslaan"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:180
-#: akonadi-contacts/standardcontactactionmanager.cpp:304
-#, kde-format
-msgid "Cut Contact"
-msgid_plural "Cut %1 Contacts"
-msgstr[0] "Kontakt knippen"
-msgstr[1] "%1 Kontakten knippen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:181
-#, kde-format
-msgid "Cut the selected contacts from the address book."
-msgstr "De utsöchten Kontakten ut dat Adressbook knippen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:184
-#, kde-format
-msgid "Add &Address Book..."
-msgstr "&Adressbook tofögen..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:186
-#, kde-format
-msgid ""
-"Add a new address book<p>You will be presented with a dialog where you can "
-"select the type of the address book that shall be added.</p>"
-msgstr ""
-"En nieg Adressbook tofögen<p>Binnen en nieg Dialoog kannst Du den Typ "
-"angeven, den dat niege Adressbook hebben schall.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:195
-#, kde-format
-msgid "Could not create address book: %1"
-msgstr "Adressbook \"%1\" lett sik nich opstellen."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:199
-#, kde-format
-msgid "Address book creation failed"
-msgstr "Dat Adressbook lett sik nich opstellen."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:203
-#, kde-format
-msgid "&Delete Address Book"
-msgid_plural "&Delete %1 Address Books"
-msgstr[0] "Adressbook &wegmaken"
-msgstr[1] "%1 Adressböker &wegmaken"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:205
-#, kde-format
-msgid ""
-"Delete the selected address books<p>The currently selected address books "
-"will be deleted, along with all the contacts and contact groups they contain."
-"</p>"
-msgstr ""
-"De utsöchten Adressböker wegmaken<p>De opstunns utsöchten Adressböker un all "
-"Kontakten un Kontaktkoppeln dor binnen warrt wegdaan.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:210
-#, kde-format
-msgid "Do you really want to delete this address book?"
-msgid_plural "Do you really want to delete %1 address books?"
-msgstr[0] "Wullt Du dit Adressbook redig wegdoon?"
-msgstr[1] "Wullt Du disse %1 Adressböker redig wegdoon?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:214
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Address Book?"
-msgid_plural "Delete Address Books?"
-msgstr[0] "Adressbook wegmaken?"
-msgstr[1] "Adressböker wegmaken?"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:219
-#, kde-format
-msgid "Address Book Properties..."
-msgstr "Adressbook-Egenschappen..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:221
-#, kde-format
-msgid "Open a dialog to edit properties of the selected address book."
-msgstr ""
-"En Dialoog opmaken, mit den sik de Egenschappen vun't utsöchte Adressbook "
-"bewerken laat"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:224
-#, kde-format
-msgid "Update Address Book"
-msgid_plural "Update %1 Address Books"
-msgstr[0] "Adressbook opfrischen"
-msgstr[1] "%1 Adressböker opfrischen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:227
-#, kde-format
-msgid "Updates the content of all folders of the selected address books."
-msgstr "Frischt all utsöcht Adressbookornern ehr Inholden op."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:231
-#, kde-format
-msgid "Could not paste contact: %1"
-msgstr "Kontakt \"%1\" lett sik nich infögen."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:233
-#, kde-format
-msgid "Paste failed"
-msgstr "Infögen fehlslaan"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:294
-#: akonadi-contacts/standardcontactactionmanager.cpp:298
-#, kde-format
-msgid "Copy Contact To"
-msgstr "Kontakt koperen na"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:308
-#: akonadi-contacts/standardcontactactionmanager.cpp:312
-#, kde-format
-msgid "Move Contact To"
-msgstr "Kontakt verschuven na"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:316
-#: akonadi-contacts/standardcontactactionmanager.cpp:553
-#, kde-format
-msgid "Edit Contact..."
-msgstr "Kontakt bewerken..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:320
-#, kde-format
-msgid "Copy Group"
-msgid_plural "Copy %1 Groups"
-msgstr[0] "Koppel koperen"
-msgstr[1] "%1 Koppeln koperen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:324
-#: akonadi-contacts/standardcontactactionmanager.cpp:328
-#, kde-format
-msgid "Copy Group To"
-msgstr "Koppel koperen na"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:331
-#, kde-format
-msgid "Delete Group"
-msgid_plural "Delete %1 Groups"
-msgstr[0] "Koppel wegmaken"
-msgstr[1] "%1 Koppeln wegmaken"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:334
-#, kde-format
-msgid "Cut Group"
-msgid_plural "Cut %1 Groups"
-msgstr[0] "Koppel knippen"
-msgstr[1] "%1 Koppeln knippen"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:338
-#: akonadi-contacts/standardcontactactionmanager.cpp:342
-#, kde-format
-msgid "Move Group To"
-msgstr "Koppel verschuven na"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:346
-#, kde-format
-msgid "Edit Group..."
-msgstr "Koppel bewerken..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:528
-#, kde-format
-msgid "New &Contact..."
-msgstr "Nieg &Kontakt..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:530
-#, kde-format
-msgid ""
-"Create a new contact<p>You will be presented with a dialog where you can add "
-"data about a person, including addresses and phone numbers.</p>"
-msgstr ""
-"En nieg Kontakt opstellen<p>Binnen en nieg Dialoog kannst Du Daten to en "
-"Persoon ingeven, a.B. Adressen un Telefoonnummern.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:541
-#, kde-format
-msgid "New &Group..."
-msgstr "Nieg Ko&ppel..."
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:542
-#, kde-format
-msgid ""
-"Create a new group<p>You will be presented with a dialog where you can add a "
-"new group of contacts.</p>"
-msgstr ""
-"En nieg Koppel opstellen<p>Binnen en nieg Dialoog kannst Du en nieg Koppel "
-"vun Kontakten tofögen.</p>"
-
-#: akonadi-contacts/standardcontactactionmanager.cpp:555
-#, kde-format
-msgid ""
-"Edit the selected contact<p>You will be presented with a dialog where you "
-"can edit the data stored about a person, including addresses and phone "
-"numbers.</p>"
-msgstr ""
-"Den utsöchten Kontakt bewerken<p>Binnen en nieg Dialoog kannst Du sekert "
-"Daten to en Persoon bewerken, a.B. Adressen un Telefoonnummern.</p>"
 
 #: akonadi-contacts/standardcontactformatter.cpp:96
 #, kde-format
@@ -899,42 +351,77 @@ msgstr "Afdelen"
 msgid "IM Address"
 msgstr "KN-Adress"
 
-#: akonadi-contacts/textbrowser.cpp:61
-#, kde-format
-msgctxt "@action:inmenu Copy the text of a general item"
-msgid "Copy Item"
-msgstr "Indrag koperen"
-
-#: akonadi-contacts/textbrowser.cpp:70
-#, kde-format
-msgctxt "@action:inmenu Copy a displayed email address"
-msgid "Copy Email Address"
-msgstr "Nettpostadress koperen"
-
-#: akonadi-contacts/textbrowser.cpp:79
-#, kde-format
-msgctxt "@action:inmenu Copy a link URL"
-msgid "Copy Link URL"
-msgstr "Linkadress koperen"
-
-#: akonadi-contacts/textbrowser.cpp:106
-#, kde-format
-msgctxt "@action:inmenu Copy a contact photo"
-msgid "Copy Photo"
-msgstr "Foto koperen"
-
-#: akonadi-contacts/textbrowser.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Copy a QR or Datamatrix image"
-#| msgid "Copy Code"
-msgctxt "@action:inmenu Copy a QR code image"
-msgid "Copy Code"
-msgstr "Kode koperen"
-
 #: akonadi-contacts/waitingoverlay.cpp:35
 #, kde-format
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>An't Töven op en Akschoon</b><br/></p>"
+
+#: contact-editor/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Jichtenseen hett den Kontakt ännert.\n"
+"Wat wullt Du nu doon?"
+
+#: contact-editor/contacteditor.cpp:279
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Dat Adressbook utsöken, binnen dat en nieg Kontakt sekert warrt:"
+
+#: contact-editor/contacteditordialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "New Contact"
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "Nieg Kontakt"
+
+#: contact-editor/contacteditordialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "Edit Contact"
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "Kontakt bewerken"
+
+#: contact-editor/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr ""
+
+#: contact-editor/contacteditordialog.cpp:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr ""
+
+#: contact-editor/contacteditordialog.cpp:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr ""
+
+#: contact-editor/contactgroupviewer.cpp:52
+#, fuzzy, kde-format
+#| msgid "Contact Group %1"
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "Kontaktkoppel %1"
+
+#: contact-editor/contactviewer.cpp:69
+#, fuzzy, kde-format
+#| msgid "Contact %1"
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "Kontakt %1"
+
+#: contact-editor/contactviewerdialog.cpp:64
+#, fuzzy, kde-format
+#| msgid "Show Contact"
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "Kontakt wiesen"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
 #: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
@@ -1673,6 +1160,519 @@ msgstr ""
 #| msgid "Set as Standard"
 msgid "Set as Preferred"
 msgstr "As Standard fastleggen"
+
+#: contact-editor/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+
+#: contact-editor/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+
+#: contact-editor/job/addemailaddressjob.cpp:69
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr ""
+
+#: contact-editor/job/addemailaddressjob.cpp:120
+#: contact-editor/job/addemaildisplayjob.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+
+#: contact-editor/job/addemailaddressjob.cpp:121
+#: contact-editor/job/addemaildisplayjob.cpp:160
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "New Address Book Folder"
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Nieg Adressbook-Orner"
+
+#: contact-editor/job/addemailaddressjob.cpp:122
+#: contact-editor/job/addemaildisplayjob.cpp:161
+#, fuzzy, kde-format
+#| msgid "Update Address Book"
+#| msgid_plural "Update %1 Address Books"
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Adressbook opfrischen"
+
+#: contact-editor/job/addemailaddressjob.cpp:126
+#: contact-editor/job/addemaildisplayjob.cpp:165
+#: contact-editor/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Adressbook tofögen"
+
+#: contact-editor/job/addemailaddressjob.cpp:216
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+
+#: contact-editor/job/addemailaddressjob.cpp:224
+#, fuzzy, kde-format
+#| msgid "Edit..."
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Bewerken..."
+
+#: contact-editor/job/addemailaddressjob.cpp:225
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr ""
+
+#: contact-editor/job/addemailaddressjob.cpp:247
+#: contact-editor/standardcontactactionmanager.cpp:468
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "De Kontakt lett sik nich sekern: %1"
+
+#: contact-editor/job/addemailaddressjob.cpp:247
+#: contact-editor/standardcontactactionmanager.cpp:468
+#, kde-format
+msgid "Failed to store contact"
+msgstr "Kontakt lett sik nich sekern."
+
+#: contact-editor/job/addemailaddressjob.cpp:254
+#, kde-format
+msgid "Contact created successfully"
+msgstr ""
+
+#: contact-editor/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "Adressbook-Orner..."
+
+#: contact-editor/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr "Den opstunns utsöchten Adressbookorner en nieg Adressbookorner tofögen"
+
+#: contact-editor/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "Nieg Adressbook-Orner"
+
+#: contact-editor/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "Adressbook-Orner \"%1\" lett sik nich opstellen."
+
+#: contact-editor/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "Opstellen vun den Adressbook-Orner fehlslaan"
+
+#: contact-editor/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "Adressbook-Orner koperen"
+msgstr[1] "%1 Adressbook-Ornern koperen"
+
+#: contact-editor/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr "De utsöchten Adressbookornern na de Twischenaflaag koperen"
+
+#: contact-editor/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "Adressbook-Orner wegmaken"
+msgstr[1] "%1 Adressbook-Ornern wegmaken"
+
+#: contact-editor/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr "De utsöchten Adressbookornern ut dat Adressbook wegmaken"
+
+#: contact-editor/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] ""
+"Wullt Du dissen Adressbook-Orner un all sien Ünnerornern redig wegdoon?"
+msgstr[1] ""
+"Wullt Du disse %1 Adressbook-Ornern un all ehr Ünnerornern redig wegdoon?"
+
+#: contact-editor/standardcontactactionmanager.cpp:131
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete address book folder?"
+#| msgid_plural "Delete address book folders?"
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "Adressbook-Orner wegmaken?"
+msgstr[1] "%1 Adressbook-Ornern wegmaken?"
+
+#: contact-editor/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "Adressbook-Orner \"%1\" lett sik nich wegmaken."
+
+#: contact-editor/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "Wegmaken vun den Adressbook-Orner fehlslaan"
+
+#: contact-editor/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "Adressbook-Orner opfrischen"
+msgstr[1] "%1 Adressbook-Ornern opfrischen"
+
+#: contact-editor/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr "De utsöchten Adressbookornern ehr Inholden opfrischen"
+
+#: contact-editor/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "Adressbook-Orner knippen"
+msgstr[1] "%1 Adressbook-Ornern knippen"
+
+#: contact-editor/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr "De utsöchten Adressbookornern ut dat Adressbook knippen"
+
+#: contact-editor/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "Orner-Egenschappen..."
+
+#: contact-editor/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr ""
+"En Dialoog opmaken, mit den sik de Egenschappen vun den utsöchten "
+"Adressbookorner bewerken laat"
+
+#: contact-editor/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "Egenschappen vun Adressbook-Orner \"%1\""
+
+#: contact-editor/standardcontactactionmanager.cpp:161
+#: contact-editor/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "Kontakt koperen"
+msgstr[1] "%1 Kontakten koperen"
+
+#: contact-editor/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "De utsöchten Kontakten na de Twischenaflaag koperen"
+
+#: contact-editor/standardcontactactionmanager.cpp:165
+#: contact-editor/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "Kontakt wegmaken"
+msgstr[1] "%1 Kontakten wegmaken"
+
+#: contact-editor/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "De utsöchten Kontakten ut dat Adressbook wegmaken"
+
+#: contact-editor/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "Wullt Du den utsöchten Kontakt redig wegmaken?"
+msgstr[1] "Wullt Du de %1 Kontakten redig wegmaken?"
+
+#: contact-editor/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "Kontakt wegmaken?"
+msgstr[1] "Kontakten wegmaken?"
+
+#: contact-editor/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "Kontakt \"%1\" lett sik nich wegmaken."
+
+#: contact-editor/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "Wegmaken vun den Kontakt fehlslaan"
+
+#: contact-editor/standardcontactactionmanager.cpp:180
+#: contact-editor/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "Kontakt knippen"
+msgstr[1] "%1 Kontakten knippen"
+
+#: contact-editor/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "De utsöchten Kontakten ut dat Adressbook knippen"
+
+#: contact-editor/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "&Adressbook tofögen..."
+
+#: contact-editor/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr ""
+"En nieg Adressbook tofögen<p>Binnen en nieg Dialoog kannst Du den Typ "
+"angeven, den dat niege Adressbook hebben schall.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "Adressbook \"%1\" lett sik nich opstellen."
+
+#: contact-editor/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "Dat Adressbook lett sik nich opstellen."
+
+#: contact-editor/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "Adressbook &wegmaken"
+msgstr[1] "%1 Adressböker &wegmaken"
+
+#: contact-editor/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"De utsöchten Adressböker wegmaken<p>De opstunns utsöchten Adressböker un all "
+"Kontakten un Kontaktkoppeln dor binnen warrt wegdaan.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "Wullt Du dit Adressbook redig wegdoon?"
+msgstr[1] "Wullt Du disse %1 Adressböker redig wegdoon?"
+
+#: contact-editor/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "Adressbook wegmaken?"
+msgstr[1] "Adressböker wegmaken?"
+
+#: contact-editor/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "Adressbook-Egenschappen..."
+
+#: contact-editor/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr ""
+"En Dialoog opmaken, mit den sik de Egenschappen vun't utsöchte Adressbook "
+"bewerken laat"
+
+#: contact-editor/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "Adressbook opfrischen"
+msgstr[1] "%1 Adressböker opfrischen"
+
+#: contact-editor/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr "Frischt all utsöcht Adressbookornern ehr Inholden op."
+
+#: contact-editor/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "Kontakt \"%1\" lett sik nich infögen."
+
+#: contact-editor/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "Infögen fehlslaan"
+
+#: contact-editor/standardcontactactionmanager.cpp:294
+#: contact-editor/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "Kontakt koperen na"
+
+#: contact-editor/standardcontactactionmanager.cpp:308
+#: contact-editor/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "Kontakt verschuven na"
+
+#: contact-editor/standardcontactactionmanager.cpp:316
+#: contact-editor/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid "Edit Contact..."
+msgstr "Kontakt bewerken..."
+
+#: contact-editor/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "Koppel koperen"
+msgstr[1] "%1 Koppeln koperen"
+
+#: contact-editor/standardcontactactionmanager.cpp:324
+#: contact-editor/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "Koppel koperen na"
+
+#: contact-editor/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "Koppel wegmaken"
+msgstr[1] "%1 Koppeln wegmaken"
+
+#: contact-editor/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "Koppel knippen"
+msgstr[1] "%1 Koppeln knippen"
+
+#: contact-editor/standardcontactactionmanager.cpp:338
+#: contact-editor/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "Koppel verschuven na"
+
+#: contact-editor/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "Koppel bewerken..."
+
+#: contact-editor/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid "New &Contact..."
+msgstr "Nieg &Kontakt..."
+
+#: contact-editor/standardcontactactionmanager.cpp:532
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"En nieg Kontakt opstellen<p>Binnen en nieg Dialoog kannst Du Daten to en "
+"Persoon ingeven, a.B. Adressen un Telefoonnummern.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:543
+#, kde-format
+msgid "New &Group..."
+msgstr "Nieg Ko&ppel..."
+
+#: contact-editor/standardcontactactionmanager.cpp:544
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr ""
+"En nieg Koppel opstellen<p>Binnen en nieg Dialoog kannst Du en nieg Koppel "
+"vun Kontakten tofögen.</p>"
+
+#: contact-editor/standardcontactactionmanager.cpp:557
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr ""
+"Den utsöchten Kontakt bewerken<p>Binnen en nieg Dialoog kannst Du sekert "
+"Daten to en Persoon bewerken, a.B. Adressen un Telefoonnummern.</p>"
+
+#: contact-editor/textbrowser.cpp:61
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "Indrag koperen"
+
+#: contact-editor/textbrowser.cpp:70
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "Nettpostadress koperen"
+
+#: contact-editor/textbrowser.cpp:79
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "Linkadress koperen"
+
+#: contact-editor/textbrowser.cpp:106
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "Foto koperen"
+
+#: contact-editor/textbrowser.cpp:109
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Copy a QR or Datamatrix image"
+#| msgid "Copy Code"
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "Kode koperen"
+
+#: contact-editor/widgets/selectaddressbookdialog.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select the address book the new contact shall be saved in:"
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "Dat Adressbook utsöken, binnen dat en nieg Kontakt sekert warrt:"
 
 #~ msgid ""
 #~ "There is no application set which could be executed.\n"
