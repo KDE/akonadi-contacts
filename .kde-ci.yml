@@ -11,14 +11,3 @@ Dependencies:
     'pim/akonadi' : '@same'
     'pim/kmime' : '@same'
     'pim/grantleetheme' : '@same'
-
-- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
-  'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kcontacts' : '@latest-kf6'
-    'frameworks/prison' : '@latest-kf6'
-    'frameworks/kcodecs': '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/kmime' : '@latest-kf6'
-    'pim/grantleetheme' : '@latest-kf6'
-    'libraries/ktexttemplate': '@stable'
