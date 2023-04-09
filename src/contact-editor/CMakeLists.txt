@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6ContactEditor")
-set(AKONADICONTACTEDITOR_KF6_COMPAT FALSE)
 if (BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6ContactEditor_QCH
@@ -334,40 +333,3 @@ install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor COMPONENT Devel
 )
-
-##
-# TODO: Backwards compatiblity. Remove in next major version
-##
-set(CMAKECONFIG_INSTALL_DIR_KF6 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6AkonadiContactEditor")
-set(AKONADICONTACTEDITOR_KF6_COMPAT TRUE)
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimContactEditorConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6ContactEditorConfig.cmake"
-    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF6}
-)
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6ContactEditorConfig.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
-    COMPONENT Devel
-)
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
-    RENAME "KF6ContactEditorConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
-    COMPONENT Devel
-)
-if (BUILD_QCH)     
-    install(FILES
-	    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorQchTargets.cmake"
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
-        COMPONENT Devel
-    )
-endif()
-if (0)
-install(EXPORT KPim6ContactEditorTargets
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
-    FILE KPim6ContactEditorTargets.cmake
-    NAMESPACE KF6::
-)
-endif()

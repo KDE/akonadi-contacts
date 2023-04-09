@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContact")
-set(AKONADICONTACT_KF6_COMPAT FALSE)
 if (BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6AkonadiContact_QCH
