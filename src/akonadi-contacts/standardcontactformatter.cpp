@@ -13,7 +13,6 @@
 #include <KConfigGroup>
 
 #include <KContacts/Addressee>
-#include <kcontacts_version.h>
 
 #include <KLocalizedString>
 #include <KStringHandler>
@@ -151,16 +150,9 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
         formattedAddress.replace(QRegularExpression(QStringLiteral("\n+")), QStringLiteral("<br>"));
 
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 106, 0)
-        const QString url = QStringLiteral("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
-                                .arg(counter)
-                                .arg(i18nc("@info:tooltip", "Show address on map"));
-        counter++;
-#else
         const QString url = QStringLiteral("<a href=\"%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                                 .arg(address.geoUri().toString())
                                 .arg(i18nc("@info:tooltip", "Show address on map"));
-#endif
 
         dynamicPart += rowFmtStr2.arg(KContacts::Address::typeLabel(address.type()), formattedAddress, url);
     }
