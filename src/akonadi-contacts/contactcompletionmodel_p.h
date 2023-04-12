@@ -8,11 +8,12 @@
 
 #pragma once
 
+#include "akonadi-contact_export.h"
 #include <Akonadi/EntityTreeModel>
 
 namespace Akonadi
 {
-class ContactCompletionModel : public EntityTreeModel
+class AKONADI_CONTACT_EXPORT ContactCompletionModel : public EntityTreeModel
 {
     Q_OBJECT
 

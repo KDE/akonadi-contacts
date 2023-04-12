@@ -65,9 +65,7 @@ target_sources(KPim6AkonadiContact PRIVATE
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
     contactcompletionmodel.cpp
-    contactgroupeditor.cpp
-    contactgroupeditordelegate.cpp
-    contactgroupeditordialog.cpp
+    contactdefaultactions.cpp
     contactgroupmodel.cpp
     contactparts.cpp
     contactsfilterproxymodel.cpp
@@ -83,7 +81,6 @@ target_sources(KPim6AkonadiContact PRIVATE
     leafextensionproxymodel.cpp
     standardcontactformatter.cpp
     standardcontactgroupformatter.cpp
-    waitingoverlay.cpp
     emailaddressselectionproxymodel_p.h
     job/contactgroupsearchjob.h
     job/contactsearchjob.h
@@ -99,7 +96,6 @@ target_sources(KPim6AkonadiContact PRIVATE
     grantlee/contactgrantleewrapper.h
     grantlee/grantleecontactformatter.h
     emailaddressselection.h
-    contactgroupeditordelegate_p.h
     recipientspicker/recipientseditormanager.h
     recipientspicker/recipientspickerwidget.h
     akonadicontact_private_export.h
@@ -109,15 +105,11 @@ target_sources(KPim6AkonadiContact PRIVATE
     contactsfilterproxymodel.h
     standardcontactgroupformatter.h
     standardcontactformatter.h
-    contactgroupeditordialog.h
-    contactgroupeditor_p.h
     contactcompletionmodel_p.h
-    waitingoverlay_p.h
     leafextensionproxymodel_p.h
     emailaddressselectionwidget.h
     contactparts.h
     emailaddressrequester.h
-    contactgroupeditor.h
     attributes/contactmetadataattribute_p.h
     )
 
@@ -127,8 +119,6 @@ ecm_qt_declare_logging_category(KPim6AkonadiContact HEADER akonadi_contact_debug
         OLD_CATEGORY_NAMES log_akonadi_contact
         EXPORT AKONADICONTACTS
     )
-
-ki18n_wrap_ui(KPim6AkonadiContact contactgroupeditor.ui)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_source_files_properties(
@@ -203,8 +193,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     HEADER_NAMES
     AbstractContactFormatter
     AbstractContactGroupFormatter
-    ContactGroupEditor
-    ContactGroupEditorDialog
+    ContactDefaultActions
     ContactsFilterProxyModel
     ContactsTreeModel
     ContactParts

@@ -11,13 +11,26 @@ if (BUILD_QCH)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6ContactEditorQchTargets.cmake\")")
 endif()
 
+<<<<<<< HEAD
 add_library(KPim6ContactEditor)
 add_library(KPim6::ContactEditor ALIAS KPim6ContactEditor)
+=======
+
+add_library(KPim${KF_MAJOR_VERSION}ContactEditor)
+add_library(KPim${KF_MAJOR_VERSION}::ContactEditor ALIAS KPim${KF_MAJOR_VERSION}ContactEditor)
+>>>>>>> 183ac5ba (move ContactGroupEditor, ContactGroupEditorDelegate, ContactGroupEditorDialog, WaitingOverlay to akonadi-contacts-widgets)
+
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
+<<<<<<< HEAD
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
     SOVERSION 6
+=======
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorConfigVersion.cmake"
+    SOVERSION 5
+>>>>>>> 183ac5ba (move ContactGroupEditor, ContactGroupEditorDelegate, ContactGroupEditorDialog, WaitingOverlay to akonadi-contacts-widgets)
     )
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimContactEditorConfig.cmake.in"
@@ -159,9 +172,27 @@ target_sources(KPim6ContactEditor PRIVATE
     textbrowser.cpp
     grantlee/grantleecontactviewer.h
     grantlee/grantleecontactviewer.cpp
+
+    # contact group editor
+    contactgroupeditor_p.h
+    contactgroupeditor.cpp
+    contactgroupeditor.h
+    contactgroupeditordialog.cpp
+    contactgroupeditordialog.h
+    contactgroupeditordelegate.cpp
+    contactgroupeditordelegate_p.h
+    
+    waitingoverlay.cpp
+    waitingoverlay_p.h
 )
 
+<<<<<<< HEAD
 target_sources(KPim6ContactEditor PRIVATE
+=======
+ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}ContactEditor contactgroupeditor.ui)
+
+target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+>>>>>>> 183ac5ba (move ContactGroupEditor, ContactGroupEditorDelegate, ContactGroupEditorDialog, WaitingOverlay to akonadi-contacts-widgets)
     job/addemailaddressjob.cpp
     job/addemaildisplayjob.cpp
     job/addemailaddressjob.h
@@ -191,7 +222,7 @@ generate_export_header(KPim6ContactEditor BASE_NAME contacteditor)
 
 
 target_include_directories(KPim6ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor>")
-target_include_directories(KPim6ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/contact-editor;${Akonadi-Contact_BINARY_DIR}/src/contact-editor>")
+target_include_directories(KPim6ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/akonadi-contacts-widgets;${Akonadi-Contact_BINARY_DIR}/src/akonadi-contacts-widgets>")
 
 target_link_libraries(KPim6ContactEditor
     PUBLIC
@@ -238,6 +269,8 @@ ecm_generate_headers(ContactEditor_CamelCase_HEADERS
     StandardContactActionManager
     ContactViewerDialog
     ContactGroupViewer
+    ContactGroupEditor
+    ContactGroupEditorDialog
 
     REQUIRED_HEADERS ContactEditor_HEADERS
     PREFIX Akonadi
@@ -330,6 +363,6 @@ if (BUILD_QCH)
 endif()
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor COMPONENT Devel
+   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor COMPONENT Devel
 )
