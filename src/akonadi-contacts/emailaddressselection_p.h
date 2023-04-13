@@ -9,6 +9,7 @@
 
 #pragma once
 
+#include "akonadi-contact_export.h"
 #include <QSharedData>
 #include <QString>
 
@@ -16,7 +17,7 @@
 
 namespace Akonadi
 {
-class EmailAddressSelectionPrivate : public QSharedData
+class AKONADI_CONTACT_EXPORT EmailAddressSelectionPrivate : public QSharedData
 {
 public:
     EmailAddressSelectionPrivate();

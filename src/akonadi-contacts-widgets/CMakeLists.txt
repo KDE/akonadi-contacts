@@ -184,6 +184,15 @@ target_sources(KPim6ContactEditor PRIVATE
     
     waitingoverlay.cpp
     waitingoverlay_p.h
+    
+    abstractemailaddressselectiondialog.cpp
+    abstractemailaddressselectiondialog.h
+    emailaddressselectiondialog.cpp
+    emailaddressselectiondialog.h
+    emailaddressrequester.cpp
+    emailaddressrequester.h
+    emailaddressselectionwidget.cpp
+    emailaddressselectionwidget.h
 )
 
 <<<<<<< HEAD
@@ -207,6 +216,13 @@ target_sources(KPim6ContactEditor PRIVATE
     widgets/selectaddressbookdialog.cpp
     widgets/selectaddressbookdialog.h
 )
+
+target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+    recipientspicker/recipientseditormanager.cpp
+    recipientspicker/recipientspickerwidget.cpp
+    recipientspicker/recipientseditormanager.h
+    recipientspicker/recipientspickerwidget.h
+    )
 
 
 ecm_qt_declare_logging_category(KPim6ContactEditor HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
@@ -271,9 +287,23 @@ ecm_generate_headers(ContactEditor_CamelCase_HEADERS
     ContactGroupViewer
     ContactGroupEditor
     ContactGroupEditorDialog
+    
+    EmailAddressSelectionDialog
+    AbstractEmailAddressSelectionDialog
+    EmailAddressRequester
+    EmailAddressSelectionWidget
 
     REQUIRED_HEADERS ContactEditor_HEADERS
     PREFIX Akonadi
+    )
+
+ecm_generate_headers(ContactEditorRecipients_CamelCase_HEADERS
+    HEADER_NAMES
+    RecipientsEditorManager
+    RecipientsPickerWidget
+    REQUIRED_HEADERS ContactEditorRecipients_HEADERS
+    PREFIX Akonadi
+    RELATIVE recipientspicker
     )
 
 ecm_generate_headers(ContactEditorGrantlee_CamelCase_HEADERS
@@ -307,6 +337,7 @@ ecm_generate_headers(ContactEditorJob_CamelCase_HEADERS
 install( FILES
     ${ContactEditor_CamelCase_HEADERS}
     ${ContactEditorJob_CamelCase_HEADERS}
+    ${ContactEditorRecipients_CamelCase_HEADERS}
     ${ContactEditorWidgets_CamelCase_HEADERS}
     ${ContactEditorGrantlee_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor/Akonadi COMPONENT Devel
@@ -317,6 +348,7 @@ install( FILES
     ${ContactEditorWidget_HEADERS}
     ${ContactEditorJob_HEADERS}
     ${ContactEditorWidgets_HEADERS}
+    ${ContactEditorRecipients_HEADERS}
     ${ContactEditorGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor/akonadi COMPONENT Devel
@@ -325,6 +357,7 @@ install( FILES
 
 
 if (BUILD_TESTING)
+    add_subdirectory(tests)
     add_subdirectory(editor/addresseditor/autotests/)
     add_subdirectory(editor/generalinfoeditor/autotests/)
     add_subdirectory(editor/generalinfoeditor/tests)
@@ -346,6 +379,7 @@ if (BUILD_QCH)
         SOURCES # using only public headers, to cover only public API
         ${ContactEditor_HEADERS}
         ${ContactEditorWidget_HEADERS}
+        ${ContactEditorRecipients_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS

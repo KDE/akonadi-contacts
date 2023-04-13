@@ -48,11 +48,6 @@ target_sources(KPim6AkonadiContact PRIVATE
 )
 
 target_sources(KPim6AkonadiContact PRIVATE
-    recipientspicker/recipientseditormanager.cpp
-    recipientspicker/recipientspickerwidget.cpp
-    )
-
-target_sources(KPim6AkonadiContact PRIVATE
     grantlee/contactgrantleewrapper.cpp
     grantlee/grantleecontactformatter.cpp
     grantlee/grantleecontactgroupformatter.cpp
@@ -72,11 +67,7 @@ target_sources(KPim6AkonadiContact PRIVATE
     contactstreemodel.cpp
 
     emailaddressselection.cpp
-    emailaddressselectiondialog.cpp
-    abstractemailaddressselectiondialog.cpp
     emailaddressselectionproxymodel.cpp
-    emailaddressselectionwidget.cpp
-    emailaddressrequester.cpp
     emailaddressselectionmodel.cpp
     leafextensionproxymodel.cpp
     standardcontactformatter.cpp
@@ -86,8 +77,6 @@ target_sources(KPim6AkonadiContact PRIVATE
     job/contactsearchjob.h
     job/contactgroupexpandjob.h
     contactgroupmodel_p.h
-    abstractemailaddressselectiondialog.h
-    emailaddressselectiondialog.h
     abstractcontactgroupformatter.h
     contactstreemodel.h
     emailaddressselectionmodel.h
@@ -96,8 +85,6 @@ target_sources(KPim6AkonadiContact PRIVATE
     grantlee/contactgrantleewrapper.h
     grantlee/grantleecontactformatter.h
     emailaddressselection.h
-    recipientspicker/recipientseditormanager.h
-    recipientspicker/recipientspickerwidget.h
     akonadicontact_private_export.h
     emailaddressselection_p.h
     collectionfiltermodel_p.h
@@ -107,9 +94,7 @@ target_sources(KPim6AkonadiContact PRIVATE
     standardcontactformatter.h
     contactcompletionmodel_p.h
     leafextensionproxymodel_p.h
-    emailaddressselectionwidget.h
     contactparts.h
-    emailaddressrequester.h
     attributes/contactmetadataattribute_p.h
     )
 
@@ -179,16 +164,6 @@ ecm_generate_headers(AkonadiContactJob_CamelCase_HEADERS
     RELATIVE job
     )
 
-ecm_generate_headers(AkonadiContactRecipients_CamelCase_HEADERS
-    HEADER_NAMES
-    RecipientsEditorManager
-    RecipientsPickerWidget
-    REQUIRED_HEADERS AkonadiContactRecipients_HEADERS
-    PREFIX Akonadi
-    RELATIVE recipientspicker
-    )
-
-
 ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     HEADER_NAMES
     AbstractContactFormatter
@@ -199,11 +174,7 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     ContactParts
 
     EmailAddressSelection
-    EmailAddressSelectionDialog
-    EmailAddressSelectionWidget
     EmailAddressSelectionModel
-    EmailAddressRequester
-    AbstractEmailAddressSelectionDialog
     StandardContactFormatter
     StandardContactGroupFormatter
 
@@ -226,7 +197,6 @@ ecm_generate_headers(AkonadiContactGrantlee_CamelCase_HEADERS
 install( FILES
     ${AkonadiContact_CamelCase_HEADERS}
     ${AkonadiContactJob_CamelCase_HEADERS}
-    ${AkonadiContactRecipients_CamelCase_HEADERS}
     ${AkonadiContactGrantlee_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContact/Akonadi COMPONENT Devel
     )
@@ -234,7 +204,6 @@ install( FILES
 install( FILES
     ${AkonadiContact_HEADERS}
     ${AkonadiContactJob_HEADERS}
-    ${AkonadiContactRecipients_HEADERS}
     ${AkonadiContactGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContact/akonadi COMPONENT Devel
@@ -256,7 +225,6 @@ if (BUILD_QCH)
         SOURCES # using only public headers, to cover only public API
         ${AkonadiContact_HEADERS}
         ${AkonadiContactJob_HEADERS}
-        ${AkonadiContactRecipients_HEADERS}
         ${AkonadiContactGrantlee_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
