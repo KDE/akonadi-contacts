@@ -159,12 +159,10 @@ target_link_libraries(KPim6AkonadiContact
     KF6::IconThemes
     KF6::Completion
     KF6::I18n
-    ${MAIN_LIB}
+    KF6::TextTemplate
+    KF6::I18nLocaleData
+    KPim6::Mime
     )
-if(TARGET KF6::I18nLocaleData)
-    target_link_libraries(KPim6AkonadiContact PRIVATE KF6::I18nLocaleData)
-endif()
-
 set_target_properties(KPim6AkonadiContact PROPERTIES
     VERSION ${AKONADICONTACT_VERSION}
     SOVERSION ${AKONADICONTACT_SOVERSION}

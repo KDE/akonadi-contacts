@@ -68,7 +68,6 @@ find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KPim6GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF6TextTemplate CONFIG REQUIRED)
-set(MAIN_LIB KF6::TextTemplate)
 
 ############### Compilers flags ###############
 
