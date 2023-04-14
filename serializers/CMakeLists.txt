@@ -42,7 +42,7 @@ target_link_libraries(akonadi_serializer_contactgroup
     KF6::Contacts
     KPim6::AkonadiCore
     KF6::I18n
-    KPim6::AkonadiContact
+    KPim6::AkonadiContactCore
 )
 install(TARGETS akonadi_serializer_contactgroup
     DESTINATION ${KDE_INSTALL_PLUGINDIR}

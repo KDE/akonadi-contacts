@@ -11,26 +11,14 @@ if (BUILD_QCH)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6ContactEditorQchTargets.cmake\")")
 endif()
 
-<<<<<<< HEAD
 add_library(KPim6ContactEditor)
 add_library(KPim6::ContactEditor ALIAS KPim6ContactEditor)
-=======
-
-add_library(KPim${KF_MAJOR_VERSION}ContactEditor)
-add_library(KPim${KF_MAJOR_VERSION}::ContactEditor ALIAS KPim${KF_MAJOR_VERSION}ContactEditor)
->>>>>>> 183ac5ba (move ContactGroupEditor, ContactGroupEditorDelegate, ContactGroupEditorDialog, WaitingOverlay to akonadi-contacts-widgets)
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
-<<<<<<< HEAD
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-editor_version.h"
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
     SOVERSION 6
-=======
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}ContactEditorConfigVersion.cmake"
-    SOVERSION 5
->>>>>>> 183ac5ba (move ContactGroupEditor, ContactGroupEditorDelegate, ContactGroupEditorDialog, WaitingOverlay to akonadi-contacts-widgets)
     )
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimContactEditorConfig.cmake.in"
@@ -195,13 +183,7 @@ target_sources(KPim6ContactEditor PRIVATE
     emailaddressselectionwidget.h
 )
 
-<<<<<<< HEAD
 target_sources(KPim6ContactEditor PRIVATE
-=======
-ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}ContactEditor contactgroupeditor.ui)
-
-target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
->>>>>>> 183ac5ba (move ContactGroupEditor, ContactGroupEditorDelegate, ContactGroupEditorDialog, WaitingOverlay to akonadi-contacts-widgets)
     job/addemailaddressjob.cpp
     job/addemaildisplayjob.cpp
     job/addemailaddressjob.h
@@ -252,7 +234,7 @@ target_link_libraries(KPim6ContactEditor
     KF6::TextWidgets
     KF6::WidgetsAddons
     KPim6::AkonadiWidgets
-    KPim6::AkonadiContact
+    KPim6::AkonadiContactCore
     KF6::Prison
     KF6::XmlGui
     KF6::Codecs

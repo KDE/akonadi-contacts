@@ -10,7 +10,7 @@ macro(add_akonadi_contact_demo _source)
   add_executable( ${_name} ${_test} ${_name}.h)
   add_test(NAME ${_name} COMMAND ${_name} )
   target_link_libraries(${_name}
-     KPim6::AkonadiContact
+     KPim6::AkonadiContactCore
      Qt::Test)
   ecm_mark_as_test(${_name})
 endmacro()
@@ -20,5 +20,5 @@ endmacro()
 add_akonadi_contact_demo(contactmetadataattributetest.cpp)
 
 ecm_add_test(grantleeprinttest.cpp
-    LINK_LIBRARIES KPim6::AkonadiContact Qt::Test KF6::Contacts
+    LINK_LIBRARIES KPim6::AkonadiContactCore Qt::Test KF6::Contacts
 )

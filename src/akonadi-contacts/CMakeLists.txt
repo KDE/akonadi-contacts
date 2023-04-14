@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContact")
+<<<<<<< HEAD
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore")
 if (BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6AkonadiContact_QCH
@@ -11,43 +12,43 @@ if (BUILD_QCH)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactQchTargets.cmake\")")
 endif()
 
-add_library(KPim6AkonadiContact)
-add_library(KPim6::AkonadiContact ALIAS KPim6AkonadiContact)
+add_library(KPim6AkonadiContactCore)
+add_library(KPim6::AkonadiContactCore ALIAS KPim6AkonadiContactCore)
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfigVersion.cmake"
     SOVERSION 6
     )
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactConfig.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactCoreConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KPim6AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactTargets.cmake NAMESPACE KPim6::)
+install(EXPORT KPim6AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactCoreTargets.cmake NAMESPACE KPim6::)
 
 ########### next target ###############
 
-target_sources(KPim6AkonadiContact PRIVATE
+target_sources(KPim6AkonadiContactCore PRIVATE
     attributes/contactmetadataattribute.cpp
     attributes/attributeregistrar.cpp
 )
 
-target_sources(KPim6AkonadiContact PRIVATE
+target_sources(KPim6AkonadiContactCore PRIVATE
     job/contactgroupexpandjob.cpp
     job/contactgroupsearchjob.cpp
     job/contactsearchjob.cpp
 )
 
-target_sources(KPim6AkonadiContact PRIVATE
+target_sources(KPim6AkonadiContactCore PRIVATE
     grantlee/contactgrantleewrapper.cpp
     grantlee/grantleecontactformatter.cpp
     grantlee/grantleecontactgroupformatter.cpp
@@ -55,7 +56,7 @@ target_sources(KPim6AkonadiContact PRIVATE
     )
 
 
-target_sources(KPim6AkonadiContact PRIVATE
+target_sources(KPim6AkonadiContactCore PRIVATE
     abstractcontactformatter.cpp
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
@@ -99,7 +100,7 @@ target_sources(KPim6AkonadiContact PRIVATE
     )
 
 
-ecm_qt_declare_logging_category(KPim6AkonadiContact HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
+ecm_qt_declare_logging_category(KPim6AkonadiContactCore HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact
         DESCRIPTION "akonadicontact (pim lib)"
         OLD_CATEGORY_NAMES log_akonadi_contact
         EXPORT AKONADICONTACTS
@@ -112,15 +113,15 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
         grantlee/grantleecontactgroupformatter.cpp
         grantlee/grantleeprint.cpp
         PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
-    set_target_properties(KPim6AkonadiContact PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6AkonadiContactCore PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim6AkonadiContact BASE_NAME akonadi-contact)
+generate_export_header(KPim6AkonadiContactCore BASE_NAME akonadi-contact)
 
 
-target_include_directories(KPim6AkonadiContact INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContact>")
-target_include_directories(KPim6AkonadiContact PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src>")
+target_include_directories(KPim6AkonadiContactCore INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore>")
+target_include_directories(KPim6AkonadiContactCore PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src;${Akonadi-Contact_BINARY_DIR}/src>")
 
-target_link_libraries(KPim6AkonadiContact
+target_link_libraries(KPim6AkonadiContactCore
     PUBLIC
     KPim6::AkonadiCore
     KF6::Contacts
@@ -136,35 +137,35 @@ target_link_libraries(KPim6AkonadiContact
     KF6::I18nLocaleData
     KPim6::Mime
     )
-set_target_properties(KPim6AkonadiContact PROPERTIES
+set_target_properties(KPim6AkonadiContactCore PROPERTIES
     VERSION ${AKONADICONTACT_VERSION}
     SOVERSION ${AKONADICONTACT_SOVERSION}
-    EXPORT_NAME AkonadiContact
+    EXPORT_NAME AkonadiContactCore
     )
 
 install(TARGETS
-    KPim6AkonadiContact
-    EXPORT KPim6AkonadiContactTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim6AkonadiContactCore
+    EXPORT KPim6AkonadiContactCoreTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-ecm_generate_pri_file(BASE_NAME AkonadiContact
+ecm_generate_pri_file(BASE_NAME AkonadiContactCore
     LIB_NAME KPim6AkonadiContact
     DEPS "AkonadiCore KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/Akonadi/Contact
     )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
-ecm_generate_headers(AkonadiContactJob_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactCoreJob_CamelCase_HEADERS
     HEADER_NAMES
     ContactGroupExpandJob
     ContactGroupSearchJob
     ContactSearchJob
-    REQUIRED_HEADERS AkonadiContactJob_HEADERS
+    REQUIRED_HEADERS AkonadiContactCoreJob_HEADERS
     PREFIX Akonadi
     RELATIVE job
     )
 
-ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactCore_CamelCase_HEADERS
     HEADER_NAMES
     AbstractContactFormatter
     AbstractContactGroupFormatter
@@ -178,35 +179,35 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     StandardContactFormatter
     StandardContactGroupFormatter
 
-    REQUIRED_HEADERS AkonadiContact_HEADERS
+    REQUIRED_HEADERS AkonadiContactCore_HEADERS
     PREFIX Akonadi
     )
 
-ecm_generate_headers(AkonadiContactGrantlee_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactCoreGrantlee_CamelCase_HEADERS
     HEADER_NAMES
     ContactGrantleeWrapper
     GrantleeContactFormatter
     GrantleeContactGroupFormatter
     GrantleePrint
 
-    REQUIRED_HEADERS AkonadiContactGrantlee_HEADERS
+    REQUIRED_HEADERS AkonadiContactCoreGrantlee_HEADERS
     RELATIVE grantlee
     PREFIX Akonadi
 )
 
 install( FILES
-    ${AkonadiContact_CamelCase_HEADERS}
-    ${AkonadiContactJob_CamelCase_HEADERS}
-    ${AkonadiContactGrantlee_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContact/Akonadi COMPONENT Devel
+    ${AkonadiContactCore_CamelCase_HEADERS}
+    ${AkonadiContactCoreJob_CamelCase_HEADERS}
+    ${AkonadiContactCoreGrantlee_CamelCase_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore/Akonadi COMPONENT Devel
     )
 
 install( FILES
-    ${AkonadiContact_HEADERS}
-    ${AkonadiContactJob_HEADERS}
-    ${AkonadiContactGrantlee_HEADERS}
+    ${AkonadiContactCore_HEADERS}
+    ${AkonadiContactCoreJob_HEADERS}
+    ${AkonadiContactCoreGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContact/akonadi COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore/akonadi COMPONENT Devel
     )
 
 
@@ -217,15 +218,15 @@ endif()
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim6AkonadiContact_QCH
-        NAME KPim6AkonadiContact
-        BASE_NAME KPim6AkonadiContact
+        KPim6AkonadiContactCore_QCH
+        NAME KPim6AkonadiContactCore
+        BASE_NAME KPim6AkonadiContactCore
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
-        ${AkonadiContact_HEADERS}
-        ${AkonadiContactJob_HEADERS}
-        ${AkonadiContactGrantlee_HEADERS}
+        ${AkonadiContactCore_HEADERS}
+        ${AkonadiContactCoreJob_HEADERS}
+        ${AkonadiContactCoreGrantlee_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
@@ -244,5 +245,5 @@ endif()
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContact COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore COMPONENT Devel
 )
