@@ -158,15 +158,7 @@ target_link_libraries(KPim6AkonadiContact
     KF6::ConfigCore
     KF6::IconThemes
     KF6::Completion
-    KF6::KIOCore
-    KF6::JobWidgets
-    KF6::KIOGui
-    KPim6::Mime
     KF6::I18n
-    KF6::TextWidgets
-    KF6::XmlGui
-    KF6::Prison
-    KF6::Codecs
     ${MAIN_LIB}
     )
 if(TARGET KF6::I18nLocaleData)
