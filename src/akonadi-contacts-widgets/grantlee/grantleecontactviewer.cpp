@@ -13,7 +13,7 @@
 using namespace KAddressBookGrantlee;
 
 GrantleeContactViewer::GrantleeContactViewer(QWidget *parent)
-    : ContactEditor::ContactViewer(parent)
+    : AkonadiContactWidgets::ContactViewer(parent)
     , mFormatter(new KAddressBookGrantlee::GrantleeContactFormatter)
 {
     setContactFormatter(mFormatter);

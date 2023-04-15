@@ -35,8 +35,9 @@
 
 using namespace Akonadi;
 using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
-class ContactEditor::ContactViewerPrivate
+class AkonadiContactWidgets::ContactViewerPrivate
 {
 public:
     explicit ContactViewerPrivate(ContactViewer *parent)
