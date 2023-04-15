@@ -18,6 +18,7 @@
 #include <QPointer>
 
 using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 class ContactEditor::AddContactJobPrivate
 {
@@ -64,7 +65,7 @@ public:
 
         if (!mCollection.isValid()) {
             // ask user in which address book the new contact shall be stored
-            QPointer<ContactEditor::SelectAddressBookDialog> dlg = new ContactEditor::SelectAddressBookDialog(mParentWidget);
+            QPointer<AkonadiContactWidgets::SelectAddressBookDialog> dlg = new AkonadiContactWidgets::SelectAddressBookDialog(mParentWidget);
 
             bool gotIt = true;
             if (!dlg->exec()) {
