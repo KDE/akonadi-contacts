@@ -22,7 +22,7 @@ add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
 
 target_link_libraries(generalinfoeditortest
     Qt::Widgets
-    KPim6::ContactEditor
+    KPim6::ContactEditorWidgets
     KF6::Contacts
     KF6::I18n
     KF6::Completion
@@ -30,6 +30,5 @@ target_link_libraries(generalinfoeditortest
     KF6::WidgetsAddons
     KF6::KIOCore
     KPim6::AkonadiWidgets
-
     )
 

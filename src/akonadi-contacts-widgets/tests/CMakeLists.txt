@@ -12,7 +12,7 @@ macro(add_akonadi_contact_demo _source)
      KF${KF_MAJOR_VERSION}::Completion
      KF${KF_MAJOR_VERSION}::I18n
      KF${KF_MAJOR_VERSION}::WidgetsAddons
-     KPim${KF_MAJOR_VERSION}::ContactEditor
+     KPim${KF_MAJOR_VERSION}::AkonadiContactWidgets
      Qt::Test)
   ecm_mark_as_test(${_name})
 endmacro()

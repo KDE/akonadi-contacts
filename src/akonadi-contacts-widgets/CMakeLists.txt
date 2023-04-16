@@ -1,40 +1,43 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6ContactEditor")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactWidgets")
+set(AKONADICONTACTEDITOR_KF5_COMPAT FALSE)
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KPim6ContactEditor_QCH
-        FILE KPim6ContactEditorQchTargets.cmake
+        TARGETS KPim6AkonadiContactWidgets_QCH
+        FILE KPim6AkonadiContactWidgetsQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6ContactEditorQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactWidgetsQchTargets.cmake\")")
 endif()
 
-add_library(KPim6ContactEditor)
-add_library(KPim6::ContactEditor ALIAS KPim6ContactEditor)
+
+add_library(KPim6AkonadiContactWidgets)
+add_library(KPim6::AkonadiContactWidgets ALIAS KPim6AkonadiContactWidgets)
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
-    SOVERSION 6
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfigVersion.cmake"
+    SOVERSION 5
     )
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimContactEditorConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfig.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactWidgetsConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ContactEditorConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KPim6ContactEditorTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6ContactEditorTargets.cmake NAMESPACE KPim6::)
 
-target_sources(KPim6ContactEditor PRIVATE
+install(EXPORT KPim6AkonadiContactWidgetsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactWidgetsTargets.cmake NAMESPACE KPim6::)
+
+target_sources(KPim6AkonadiContactWidgets PRIVATE
     editor/customfieldeditor/customfieldswidget.cpp
     editor/customfieldeditor/customfieldeditorwidget.cpp
     editor/customfieldeditor/customfieldslistwidget.cpp
@@ -183,7 +186,7 @@ target_sources(KPim6ContactEditor PRIVATE
     emailaddressselectionwidget.h
 )
 
-target_sources(KPim6ContactEditor PRIVATE
+target_sources(KPim6AkonadiContactWidgets PRIVATE
     job/addemailaddressjob.cpp
     job/addemaildisplayjob.cpp
     job/addemailaddressjob.h
@@ -194,12 +197,12 @@ target_sources(KPim6ContactEditor PRIVATE
     job/openemailaddressjob.h
 )
 
-target_sources(KPim6ContactEditor PRIVATE
+target_sources(KPim6AkonadiContactWidgets PRIVATE
     widgets/selectaddressbookdialog.cpp
     widgets/selectaddressbookdialog.h
 )
 
-target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
+target_sources(KPim6AkonadiContactWidgets PRIVATE
     recipientspicker/recipientseditormanager.cpp
     recipientspicker/recipientspickerwidget.cpp
     recipientspicker/recipientseditormanager.h
@@ -207,22 +210,22 @@ target_sources(KPim${KF_MAJOR_VERSION}ContactEditor PRIVATE
     )
 
 
-ecm_qt_declare_logging_category(KPim6ContactEditor HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
+ecm_qt_declare_logging_category(KPim6AkonadiContactWidgets HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.contacteditor
         DESCRIPTION "akonadicontact (contact editor)"
         EXPORT AKONADICONTACTS
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6ContactEditor PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6AkonadiContactWidgets PROPERTIES UNITY_BUILD ON)
 endif()
 
-generate_export_header(KPim6ContactEditor BASE_NAME contacteditor)
+generate_export_header(KPim6AkonadiContactWidgets BASE_NAME contacteditor)
 
 
-target_include_directories(KPim6ContactEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor>")
-target_include_directories(KPim6ContactEditor PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/akonadi-contacts-widgets;${Akonadi-Contact_BINARY_DIR}/src/akonadi-contacts-widgets>")
+target_include_directories(KPim6AkonadiContactWidgets INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets>")
+target_include_directories(KPim6AkonadiContactWidgets PUBLIC "$<BUILD_INTERFACE:${Akonadi-Contact_SOURCE_DIR}/src/akonadi-contacts-widgets;${Akonadi-Contact_BINARY_DIR}/src/akonadi-contacts-widgets>")
 
-target_link_libraries(KPim6ContactEditor
+target_link_libraries(KPim6AkonadiContactWidgets
     PUBLIC
     KF6::Contacts
     Qt::Widgets
@@ -240,25 +243,25 @@ target_link_libraries(KPim6ContactEditor
     KF6::Codecs
     )
 
-set_target_properties(KPim6ContactEditor PROPERTIES
+set_target_properties(KPim6AkonadiContactWidgets PROPERTIES
     VERSION ${AKONADICONTACT_VERSION}
     SOVERSION ${AKONADICONTACT_SOVERSION}
-    EXPORT_NAME ContactEditor
+    EXPORT_NAME AkonadiContactWidgets
     )
 
 install(TARGETS
-    KPim6ContactEditor
-    EXPORT KPim6ContactEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim6AkonadiContactWidgets
+    EXPORT KPim6AkonadiContactWidgetsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-ecm_generate_pri_file(BASE_NAME ContactEditor
-    LIB_NAME KPim6ContactEditor
-    DEPS "KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/ContactEditor
+ecm_generate_pri_file(BASE_NAME AkonadiContactWidgets
+    LIB_NAME KPim6AkonadiContactWidgets
+    DEPS "KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets
     )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
-ecm_generate_headers(ContactEditor_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactWidgets_CamelCase_HEADERS
     HEADER_NAMES
     ContactEditorPagePlugin
     ContactEditorDialog
@@ -275,65 +278,65 @@ ecm_generate_headers(ContactEditor_CamelCase_HEADERS
     EmailAddressRequester
     EmailAddressSelectionWidget
 
-    REQUIRED_HEADERS ContactEditor_HEADERS
+    REQUIRED_HEADERS AkonadiContactWidgets_HEADERS
     PREFIX Akonadi
     )
 
-ecm_generate_headers(ContactEditorRecipients_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactWidgetsRecipients_CamelCase_HEADERS
     HEADER_NAMES
     RecipientsEditorManager
     RecipientsPickerWidget
-    REQUIRED_HEADERS ContactEditorRecipients_HEADERS
+    REQUIRED_HEADERS AkonadiContactWidgetsRecipients_HEADERS
     PREFIX Akonadi
     RELATIVE recipientspicker
     )
 
-ecm_generate_headers(ContactEditorGrantlee_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactWidgetsGrantlee_CamelCase_HEADERS
     HEADER_NAMES
     GrantleeContactViewer
-    REQUIRED_HEADERS ContactEditorGrantlee_HEADERS
+    REQUIRED_HEADERS AkonadiContactWidgetsGrantlee_HEADERS
     RELATIVE grantlee
     PREFIX Akonadi
 )
 
-ecm_generate_headers(ContactEditorWidgets_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactWidgetsWidgets_CamelCase_HEADERS
     HEADER_NAMES
     SelectAddressBookDialog
-    REQUIRED_HEADERS ContactEditorWidgets_HEADERS
+    REQUIRED_HEADERS AkonadiContactWidgetsWidgets_HEADERS
     PREFIX Akonadi
     RELATIVE widgets
     )
 
-ecm_generate_headers(ContactEditorJob_CamelCase_HEADERS
+ecm_generate_headers(AkonadiContactWidgetsJob_CamelCase_HEADERS
     HEADER_NAMES
     AddEmailAddressJob
     AddEmailDisplayJob
     AddContactJob
     OpenEmailAddressJob
-    REQUIRED_HEADERS ContactEditorJob_HEADERS
+    REQUIRED_HEADERS AkonadiContactWidgetsJob_HEADERS
     PREFIX Akonadi
     RELATIVE job
     )
 
 
 install( FILES
-    ${ContactEditor_CamelCase_HEADERS}
-    ${ContactEditorJob_CamelCase_HEADERS}
-    ${ContactEditorRecipients_CamelCase_HEADERS}
-    ${ContactEditorWidgets_CamelCase_HEADERS}
-    ${ContactEditorGrantlee_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor/Akonadi COMPONENT Devel
+    ${AkonadiContactWidgets_CamelCase_HEADERS}
+    ${AkonadiContactWidgetsJob_CamelCase_HEADERS}
+    ${AkonadiContactWidgetsRecipients_CamelCase_HEADERS}
+    ${AkonadiContactWidgetsWidgets_CamelCase_HEADERS}
+    ${AkonadiContactWidgetsGrantlee_CamelCase_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets/Akonadi COMPONENT Devel
     )
 
 install( FILES
-    ${ContactEditor_HEADERS}
-    ${ContactEditorWidget_HEADERS}
-    ${ContactEditorJob_HEADERS}
-    ${ContactEditorWidgets_HEADERS}
-    ${ContactEditorRecipients_HEADERS}
-    ${ContactEditorGrantlee_HEADERS}
+    ${AkonadiContactWidgets_HEADERS}
+    ${AkonadiContactWidgetsWidget_HEADERS}
+    ${AkonadiContactWidgetsJob_HEADERS}
+    ${AkonadiContactWidgetsWidgets_HEADERS}
+    ${AkonadiContactWidgetsRecipients_HEADERS}
+    ${AkonadiContactWidgetsGrantlee_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/contacteditor_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactEditor/akonadi COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets/akonadi COMPONENT Devel
     )
 
 
@@ -353,15 +356,15 @@ install(FILES editor/data/zone.tab DESTINATION ${KDE_INSTALL_DATADIR_KF}/akonadi
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim6ContactEditor_QCH
-        NAME KPim6ContactEditor
-        BASE_NAME KPim6ContactEditor
+        KPim6AkonadiContactWidgets_QCH
+        NAME KPim6AkonadiContactWidgets
+        BASE_NAME KPim6AkonadiContactWidgets
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
-        ${ContactEditor_HEADERS}
-        ${ContactEditorWidget_HEADERS}
-        ${ContactEditorRecipients_HEADERS}
+        ${AkonadiContactWidgets_HEADERS}
+        ${AkonadiContactWidgetsWidget_HEADERS}
+        ${AkonadiContactWidgetsRecipients_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
@@ -380,5 +383,5 @@ endif()
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiContactEditor COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets COMPONENT Devel
 )

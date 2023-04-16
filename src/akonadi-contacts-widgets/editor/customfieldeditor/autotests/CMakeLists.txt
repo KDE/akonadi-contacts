@@ -5,13 +5,13 @@ set(customfieldswidgettest_SRCS customfieldswidgettest.cpp customfieldswidgettes
 add_executable(customfieldswidgettest ${customfieldswidgettest_SRCS})
 add_test(NAME customfieldswidgettest COMMAND customfieldswidgettest)
 ecm_mark_as_test(customfieldswidgettest)
-target_link_libraries(customfieldswidgettest Qt::Test Qt::Widgets KPim6::ContactEditor KF6::Contacts KF6::I18n KF6::Completion KF6::ConfigCore KF6::WidgetsAddons)
+target_link_libraries(customfieldswidgettest Qt::Test Qt::Widgets KPim6::AkonadiContactWidgets KF6::Contacts KF6::I18n KF6::Completion KF6::ConfigCore KF6::WidgetsAddons)
 
 
 add_executable(customfieldeditorwidgettest customfieldeditorwidgettest.cpp customfieldeditorwidgettest.h ../customfieldeditorwidget.cpp)
 add_test(NAME customfieldeditorwidgettest COMMAND customfieldeditorwidgettest)
 ecm_mark_as_test(customfieldeditorwidgettest)
-target_link_libraries(customfieldeditorwidgettest Qt::Test Qt::Widgets KPim6::ContactEditor KF6::Contacts KF6::I18n KF6::Completion KF6::WidgetsAddons)
+target_link_libraries(customfieldeditorwidgettest Qt::Test Qt::Widgets KPim6::AkonadiContactWidgets KF6::Contacts KF6::I18n KF6::Completion KF6::WidgetsAddons)
 
 add_executable(customfieldslistwidgettest)
 target_sources(customfieldslistwidgettest PRIVATE
@@ -21,4 +21,4 @@ target_sources(customfieldslistwidgettest PRIVATE
 )
 add_test(NAME customfieldslistwidgettest COMMAND customfieldslistwidgettest)
 ecm_mark_as_test(customfieldslistwidgettest)
-target_link_libraries(customfieldslistwidgettest Qt::Test  Qt::Widgets KPim6::ContactEditor KF6::Contacts KF6::I18n KF6::Completion KF6::ConfigCore KF6::WidgetsAddons)
+target_link_libraries(customfieldslistwidgettest Qt::Test  Qt::Widgets KPim6::AkonadiContactWidgets KF6::Contacts KF6::I18n KF6::Completion KF6::ConfigCore KF6::WidgetsAddons)
