@@ -14,7 +14,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class MailWidget;
 class MailWidgetLister : public KWidgetLister

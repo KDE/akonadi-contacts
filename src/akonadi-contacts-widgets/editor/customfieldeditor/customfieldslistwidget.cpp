@@ -17,7 +17,7 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     : QWidget(parent)
@@ -28,7 +28,7 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     mCustomFieldList->setObjectName(QStringLiteral("customfieldlist"));
     mCustomFieldList->setSortingEnabled(true);
     mCustomFieldList->setRootIsDecorated(false);
-    auto customFieldDelegate = new ContactEditor::CustomFieldsListDelegate(mCustomFieldList, this);
+    auto customFieldDelegate = new AkonadiContactWidgets::CustomFieldsListDelegate(mCustomFieldList, this);
     mCustomFieldList->setItemDelegate(customFieldDelegate);
     topLayout->addWidget(mCustomFieldList);
 
@@ -52,7 +52,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
         QString app;
         QString name;
         QString value;
-        ContactEditor::Utils::splitCustomField(custom, app, name, value);
+        AkonadiContactWidgets::Utils::splitCustomField(custom, app, name, value);
 
         // skip all well-known fields that have separated editor widgets
         if (custom.startsWith(QLatin1String("messaging/"))) { // IM addresses

@@ -25,7 +25,7 @@ class ContactEditorWidgetPrivate;
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
-class CONTACTEDITOR_EXPORT ContactEditorWidget : public ContactEditor::AbstractContactEditorWidget
+class CONTACTEDITOR_EXPORT ContactEditorWidget : public AkonadiContactWidgets::AbstractContactEditorWidget
 {
     Q_OBJECT
 public:
@@ -52,13 +52,13 @@ public:
      * Initializes the fields of the contact editor
      * with the values from a @p contact.
      */
-    void loadContact(const KContacts::Addressee &contact, const ContactEditor::ContactMetaDataBase &metaData) override;
+    void loadContact(const KContacts::Addressee &contact, const AkonadiContactWidgets::ContactMetaDataBase &metaData) override;
 
     /**
      * Stores back the fields of the contact editor
      * into the given @p contact.
      */
-    void storeContact(KContacts::Addressee &contact, ContactEditor::ContactMetaDataBase &metaData) const override;
+    void storeContact(KContacts::Addressee &contact, AkonadiContactWidgets::ContactMetaDataBase &metaData) const override;
 
     /**
      * Sets whether the contact in the editor allows

@@ -20,7 +20,7 @@ class Collection;
 class Item;
 }
 
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class AkonadiContactEditor;
 class AbstractContactEditorWidget;
@@ -98,7 +98,7 @@ public:
      * @param editorWidget The contact editor widget that shall be used for editing.
      * @param parent The parent widget of the dialog.
      */
-    ContactEditorDialog(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
+    ContactEditorDialog(Mode mode, AkonadiContactWidgets::AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.
@@ -131,7 +131,7 @@ public:
     /**
      * Returns the ContactEditor that is used by this dialog.
      */
-    Q_REQUIRED_RESULT ContactEditor::AkonadiContactEditor *editor() const;
+    Q_REQUIRED_RESULT AkonadiContactWidgets::AkonadiContactEditor *editor() const;
 
     void reject() override;
 

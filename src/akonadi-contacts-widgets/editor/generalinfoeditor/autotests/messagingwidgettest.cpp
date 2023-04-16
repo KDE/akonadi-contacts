@@ -22,7 +22,7 @@ MessagingWidgetTest::~MessagingWidgetTest() = default;
 
 void MessagingWidgetTest::shouldHaveDefaultValues()
 {
-    ContactEditor::MessagingWidget w;
+    AkonadiContactWidgets::MessagingWidget w;
     auto line = w.findChild<KLineEdit *>(QStringLiteral("messaginglineedit"));
     QVERIFY(line);
 

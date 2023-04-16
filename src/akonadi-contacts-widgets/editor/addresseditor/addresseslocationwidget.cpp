@@ -18,7 +18,7 @@
 #include <QMenu>
 #include <QTreeView>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     : QSplitter(parent)

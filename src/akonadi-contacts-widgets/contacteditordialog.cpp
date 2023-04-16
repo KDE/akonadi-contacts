@@ -25,17 +25,17 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 namespace
 {
 static const char myContactEditorDialogDialogGroupName[] = "ContactEditor";
 }
-class ContactEditor::ContactEditorDialogPrivate
+class AkonadiContactWidgets::ContactEditorDialogPrivate
 {
 public:
     ContactEditorDialogPrivate(ContactEditorDialog::Mode mode,
                                ContactEditorDialog::DisplayMode displaymode,
-                               ContactEditor::AbstractContactEditorWidget *editorWidget,
+                               AkonadiContactWidgets::AbstractContactEditorWidget *editorWidget,
                                ContactEditorDialog *parent)
         : q(parent)
         , mMode(mode)
@@ -129,7 +129,7 @@ public:
     ContactEditorDialog *const q;
     Akonadi::CollectionComboBox *mAddressBookBox = nullptr;
     const ContactEditorDialog::Mode mMode;
-    ContactEditor::AkonadiContactEditor *mEditor = nullptr;
+    AkonadiContactWidgets::AkonadiContactEditor *mEditor = nullptr;
 };
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
@@ -138,7 +138,7 @@ ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
 {
 }
 
-ContactEditorDialog::ContactEditorDialog(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent)
+ContactEditorDialog::ContactEditorDialog(Mode mode, AkonadiContactWidgets::AbstractContactEditorWidget *editorWidget, QWidget *parent)
     : QDialog(parent)
     , d(new ContactEditorDialogPrivate(mode, FullMode, editorWidget, this))
 {

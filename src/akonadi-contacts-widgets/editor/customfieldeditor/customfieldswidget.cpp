@@ -13,12 +13,12 @@
 
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
     : QWidget(parent)
-    , mCustomFieldEditorWidget(new ContactEditor::CustomFieldEditorWidget(this))
-    , mCustomFieldsListWidget(new ContactEditor::CustomFieldsListWidget(this))
+    , mCustomFieldEditorWidget(new AkonadiContactWidgets::CustomFieldEditorWidget(this))
+    , mCustomFieldsListWidget(new AkonadiContactWidgets::CustomFieldsListWidget(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});

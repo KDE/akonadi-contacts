@@ -17,7 +17,7 @@ namespace KContacts
 class Addressee;
 }
 class CategoriesEditWidget;
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class PhoneListWidget;
 class WebListWidget;

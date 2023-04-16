@@ -13,7 +13,7 @@
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 NicknameWidget::NicknameWidget(QWidget *parent)
     : QWidget(parent)

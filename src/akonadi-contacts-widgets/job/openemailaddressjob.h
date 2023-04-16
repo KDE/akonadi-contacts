@@ -12,7 +12,7 @@
 
 #include <memory>
 
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class OpenEmailAddressJobPrivate;
 

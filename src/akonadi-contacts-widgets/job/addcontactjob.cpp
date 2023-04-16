@@ -17,10 +17,9 @@
 
 #include <QPointer>
 
-using namespace ContactEditor;
 using namespace AkonadiContactWidgets;
 
-class ContactEditor::AddContactJobPrivate
+class AkonadiContactWidgets::AddContactJobPrivate
 {
 public:
     AddContactJobPrivate(AddContactJob *qq, const KContacts::Addressee &contact, QWidget *parentWidget)

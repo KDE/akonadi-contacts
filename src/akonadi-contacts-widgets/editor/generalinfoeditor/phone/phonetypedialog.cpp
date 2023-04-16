@@ -15,7 +15,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *parent)
     : QDialog(parent)

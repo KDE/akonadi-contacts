@@ -8,7 +8,7 @@
 
 #include "contacteditorcombobox.h"
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 ContactEditorComboBox::ContactEditorComboBox(QWidget *parent)
     : QComboBox(parent)

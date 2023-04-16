@@ -15,7 +15,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class PhoneWidget;
 class CONTACTEDITOR_TESTS_EXPORT PhoneWidgetLister : public KWidgetLister

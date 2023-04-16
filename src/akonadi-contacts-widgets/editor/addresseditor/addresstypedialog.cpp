@@ -15,7 +15,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *parent)
     : QDialog(parent)

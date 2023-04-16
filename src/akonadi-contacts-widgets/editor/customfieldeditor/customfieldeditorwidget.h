@@ -15,7 +15,7 @@ class KLineEdit;
 class QPushButton;
 class QCheckBox;
 class QComboBox;
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class CustomFieldEditorWidget : public QWidget
 {

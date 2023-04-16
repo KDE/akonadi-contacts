@@ -26,10 +26,9 @@
 
 #include <QPointer>
 
-using namespace ContactEditor;
 using namespace AkonadiContactWidgets;
 
-class ContactEditor::AddEmailAddressJobPrivate
+class AkonadiContactWidgets::AddEmailAddressJobPrivate
 {
 public:
     AddEmailAddressJobPrivate(AddEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
@@ -226,13 +225,13 @@ public:
                                                 KGuiItem(i18nc("@action:button", "Finish"), QStringLiteral("dialog-ok-apply")),
                                                 QStringLiteral("addedtokabc"))
                 == KMessageBox::ButtonCode::PrimaryAction) {
-                QPointer<ContactEditor::ContactEditorDialog> dlg =
-                    new ContactEditor::ContactEditorDialog(ContactEditor::ContactEditorDialog::EditMode, mParentWidget);
+                QPointer<AkonadiContactWidgets::ContactEditorDialog> dlg =
+                    new AkonadiContactWidgets::ContactEditorDialog(AkonadiContactWidgets::ContactEditorDialog::EditMode, mParentWidget);
                 dlg->setContact(mItem);
-                QObject::connect(dlg.data(), &ContactEditor::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
+                QObject::connect(dlg.data(), &AkonadiContactWidgets::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
                     contactStored(item);
                 });
-                QObject::connect(dlg.data(), &ContactEditor::ContactEditorDialog::error, q, [this](const QString &str) {
+                QObject::connect(dlg.data(), &AkonadiContactWidgets::ContactEditorDialog::error, q, [this](const QString &str) {
                     slotContactEditorError(str);
                 });
                 dlg->exec();

@@ -16,7 +16,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class CONTACTEDITOR_TESTS_EXPORT NicknameWidget : public QWidget
 {

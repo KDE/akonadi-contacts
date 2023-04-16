@@ -21,7 +21,7 @@ namespace Akonadi
 {
 class Collection;
 }
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class AddContactJobPrivate;
 

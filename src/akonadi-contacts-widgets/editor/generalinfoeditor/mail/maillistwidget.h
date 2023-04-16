@@ -14,7 +14,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class MailWidgetLister;
 class MailListWidget : public QWidget
@@ -28,6 +28,6 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    ContactEditor::MailWidgetLister *mMailWidgetLister = nullptr;
+    AkonadiContactWidgets::MailWidgetLister *mMailWidgetLister = nullptr;
 };
 }

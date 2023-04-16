@@ -28,14 +28,14 @@
 #include <QPointer>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
-class ContactEditor::AkonadiContactEditorPrivate
+class AkonadiContactWidgets::AkonadiContactEditorPrivate
 {
 public:
     AkonadiContactEditorPrivate(AkonadiContactEditor::Mode mode,
                                 AkonadiContactEditor::DisplayMode displayMode,
-                                ContactEditor::AbstractContactEditorWidget *editorWidget,
+                                AkonadiContactWidgets::AbstractContactEditorWidget *editorWidget,
                                 AkonadiContactEditor *parent)
         : mParent(parent)
         , mMode(mode)
@@ -64,21 +64,21 @@ public:
     void storeDone(KJob *job);
     void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &);
 
-    void loadContact(const KContacts::Addressee &addr, const ContactEditor::ContactMetaDataAkonadi &metaData);
-    void storeContact(KContacts::Addressee &addr, ContactEditor::ContactMetaDataAkonadi &metaData);
+    void loadContact(const KContacts::Addressee &addr, const AkonadiContactWidgets::ContactMetaDataAkonadi &metaData);
+    void storeContact(KContacts::Addressee &addr, AkonadiContactWidgets::ContactMetaDataAkonadi &metaData);
     void setupMonitor();
 
     AkonadiContactEditor *const mParent;
     const AkonadiContactEditor::Mode mMode;
     Akonadi::Item mItem;
-    ContactEditor::ContactMetaDataAkonadi mContactMetaData;
+    AkonadiContactWidgets::ContactMetaDataAkonadi mContactMetaData;
     Akonadi::Monitor *mMonitor = nullptr;
     Akonadi::Collection mDefaultCollection;
-    ContactEditor::AbstractContactEditorWidget *mEditorWidget = nullptr;
+    AkonadiContactWidgets::AbstractContactEditorWidget *mEditorWidget = nullptr;
     bool mReadOnly = false;
 };
 
-void ContactEditor::AkonadiContactEditorPrivate::itemFetchDone(KJob *job)
+void AkonadiContactWidgets::AkonadiContactEditorPrivate::itemFetchDone(KJob *job)
 {
     if (job->error() != KJob::NoError) {
         Q_EMIT mParent->error(job->errorString());
@@ -114,7 +114,7 @@ void ContactEditor::AkonadiContactEditorPrivate::itemFetchDone(KJob *job)
     }
 }
 
-void ContactEditor::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob *job)
+void AkonadiContactWidgets::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob *job)
 {
     if (job->error()) {
         Q_EMIT mParent->error(job->errorString());
@@ -138,7 +138,7 @@ void ContactEditor::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob 
     mEditorWidget->setReadOnly(mReadOnly);
 }
 
-void ContactEditor::AkonadiContactEditorPrivate::storeDone(KJob *job)
+void AkonadiContactWidgets::AkonadiContactEditorPrivate::storeDone(KJob *job)
 {
     if (job->error() != KJob::NoError) {
         Q_EMIT mParent->error(job->errorString());
@@ -154,7 +154,7 @@ void ContactEditor::AkonadiContactEditorPrivate::storeDone(KJob *job)
     Q_EMIT mParent->finished();
 }
 
-void ContactEditor::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &)
+void AkonadiContactWidgets::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &)
 {
     Q_UNUSED(item)
     QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
@@ -180,17 +180,17 @@ void ContactEditor::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item
     delete dlg;
 }
 
-void ContactEditor::AkonadiContactEditorPrivate::loadContact(const KContacts::Addressee &addr, const ContactMetaDataAkonadi &metaData)
+void AkonadiContactWidgets::AkonadiContactEditorPrivate::loadContact(const KContacts::Addressee &addr, const ContactMetaDataAkonadi &metaData)
 {
     mEditorWidget->loadContact(addr, metaData);
 }
 
-void ContactEditor::AkonadiContactEditorPrivate::storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData)
+void AkonadiContactWidgets::AkonadiContactEditorPrivate::storeContact(KContacts::Addressee &addr, ContactMetaDataAkonadi &metaData)
 {
     mEditorWidget->storeContact(addr, metaData);
 }
 
-void ContactEditor::AkonadiContactEditorPrivate::setupMonitor()
+void AkonadiContactWidgets::AkonadiContactEditorPrivate::setupMonitor()
 {
     delete mMonitor;
     mMonitor = new Akonadi::Monitor;
@@ -202,30 +202,30 @@ void ContactEditor::AkonadiContactEditorPrivate::setupMonitor()
     });
 }
 
-ContactEditor::AkonadiContactEditor::AkonadiContactEditor(Mode mode, QWidget *parent)
+AkonadiContactWidgets::AkonadiContactEditor::AkonadiContactEditor(Mode mode, QWidget *parent)
     : QWidget(parent)
     , d(new AkonadiContactEditorPrivate(mode, FullMode, nullptr, this))
 {
 }
 
-ContactEditor::AkonadiContactEditor::AkonadiContactEditor(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent)
+AkonadiContactWidgets::AkonadiContactEditor::AkonadiContactEditor(Mode mode, AkonadiContactWidgets::AbstractContactEditorWidget *editorWidget, QWidget *parent)
     : QWidget(parent)
     , d(new AkonadiContactEditorPrivate(mode, FullMode, editorWidget, this))
 {
 }
 
-ContactEditor::AkonadiContactEditor::AkonadiContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent)
+AkonadiContactWidgets::AkonadiContactEditor::AkonadiContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent)
     : QWidget(parent)
     , d(new AkonadiContactEditorPrivate(mode, displayMode, nullptr, this))
 {
 }
 
-ContactEditor::AkonadiContactEditor::~AkonadiContactEditor() = default;
+AkonadiContactWidgets::AkonadiContactEditor::~AkonadiContactEditor() = default;
 
-void ContactEditor::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
+void AkonadiContactWidgets::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
 {
     if (d->mMode == CreateMode) {
-        Q_ASSERT_X(false, "ContactEditor::loadContact", "You are calling loadContact in CreateMode!");
+        Q_ASSERT_X(false, "AkonadiContactWidgets::loadContact", "You are calling loadContact in CreateMode!");
     }
 
     auto job = new Akonadi::ItemFetchJob(item);
@@ -241,14 +241,14 @@ void ContactEditor::AkonadiContactEditor::loadContact(const Akonadi::Item &item)
     d->mMonitor->setItemMonitored(item);
 }
 
-KContacts::Addressee ContactEditor::AkonadiContactEditor::contact()
+KContacts::Addressee AkonadiContactWidgets::AkonadiContactEditor::contact()
 {
     KContacts::Addressee addr;
     d->storeContact(addr, d->mContactMetaData);
     return addr;
 }
 
-void ContactEditor::AkonadiContactEditor::saveContactInAddressBook()
+void AkonadiContactWidgets::AkonadiContactEditor::saveContactInAddressBook()
 {
     if (d->mMode == EditMode) {
         if (!d->mItem.isValid() || d->mReadOnly) {
@@ -302,17 +302,17 @@ void ContactEditor::AkonadiContactEditor::saveContactInAddressBook()
     }
 }
 
-void ContactEditor::AkonadiContactEditor::setContactTemplate(const KContacts::Addressee &contact)
+void AkonadiContactWidgets::AkonadiContactEditor::setContactTemplate(const KContacts::Addressee &contact)
 {
     d->loadContact(contact, d->mContactMetaData);
 }
 
-void ContactEditor::AkonadiContactEditor::setDefaultAddressBook(const Akonadi::Collection &collection)
+void AkonadiContactWidgets::AkonadiContactEditor::setDefaultAddressBook(const Akonadi::Collection &collection)
 {
     d->mDefaultCollection = collection;
 }
 
-bool ContactEditor::AkonadiContactEditor::hasNoSavedData() const
+bool AkonadiContactWidgets::AkonadiContactEditor::hasNoSavedData() const
 {
     return d->mEditorWidget->hasNoSavedData();
 }

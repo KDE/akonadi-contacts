@@ -12,7 +12,7 @@
 
 #include <Akonadi/Item>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 ContactMetaDataAkonadi::ContactMetaDataAkonadi() = default;
 

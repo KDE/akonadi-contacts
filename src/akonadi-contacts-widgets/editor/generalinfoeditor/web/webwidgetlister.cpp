@@ -11,7 +11,7 @@
 #include "webwidget.h"
 
 #include <KContacts/Addressee>
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 WebWidgetLister::WebWidgetLister(QWidget *parent)
     : KWidgetLister(1, 8, parent)

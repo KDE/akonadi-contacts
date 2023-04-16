@@ -19,7 +19,7 @@
 #include <QRegularExpression>
 #include <QTextBlock>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 TextBrowser::TextBrowser(QWidget *parent)
     : QTextBrowser(parent)

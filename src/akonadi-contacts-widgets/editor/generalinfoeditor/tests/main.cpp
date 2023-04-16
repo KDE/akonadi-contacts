@@ -9,12 +9,12 @@
 
 #include "../generalinfowidget.h"
 #include <QApplication>
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    ContactEditor::GeneralInfoWidget w;
+    AkonadiContactWidgets::GeneralInfoWidget w;
     w.show();
     return app.exec();
 }

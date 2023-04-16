@@ -16,9 +16,9 @@
 #include <KContacts/Addressee>
 #include <QPointer>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
-class ContactEditor::OpenEmailAddressJobPrivate
+class AkonadiContactWidgets::OpenEmailAddressJobPrivate
 {
 public:
     OpenEmailAddressJobPrivate(OpenEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
@@ -43,8 +43,8 @@ public:
         const Akonadi::Item::List contacts = searchJob->items();
         if (!contacts.isEmpty()) {
             // open the editor with the matching item
-            QPointer<ContactEditor::ContactEditorDialog> dlg =
-                new ContactEditor::ContactEditorDialog(ContactEditor::ContactEditorDialog::EditMode, mParentWidget);
+            QPointer<AkonadiContactWidgets::ContactEditorDialog> dlg =
+                new AkonadiContactWidgets::ContactEditorDialog(AkonadiContactWidgets::ContactEditorDialog::EditMode, mParentWidget);
             dlg->setContact(contacts.first());
             dlg->exec();
             delete dlg;
@@ -53,8 +53,8 @@ public:
             return;
         }
 
-        auto createJob = new ContactEditor::AddEmailAddressJob(mCompleteAddress, mParentWidget, q);
-        q->connect(createJob, &ContactEditor::AddEmailAddressJob::result, q, [this](KJob *job) {
+        auto createJob = new AkonadiContactWidgets::AddEmailAddressJob(mCompleteAddress, mParentWidget, q);
+        q->connect(createJob, &AkonadiContactWidgets::AddEmailAddressJob::result, q, [this](KJob *job) {
             slotAddContactDone(job);
         });
         createJob->start();
@@ -69,10 +69,11 @@ public:
             return;
         }
 
-        const ContactEditor::AddEmailAddressJob *createJob = qobject_cast<ContactEditor::AddEmailAddressJob *>(job);
+        const AkonadiContactWidgets::AddEmailAddressJob *createJob = qobject_cast<AkonadiContactWidgets::AddEmailAddressJob *>(job);
 
         // open the editor with the matching item
-        QPointer<ContactEditor::ContactEditorDialog> dlg = new ContactEditor::ContactEditorDialog(ContactEditor::ContactEditorDialog::EditMode, mParentWidget);
+        QPointer<AkonadiContactWidgets::ContactEditorDialog> dlg =
+            new AkonadiContactWidgets::ContactEditorDialog(AkonadiContactWidgets::ContactEditorDialog::EditMode, mParentWidget);
         dlg->setContact(createJob->contact());
         dlg->exec();
         delete dlg;

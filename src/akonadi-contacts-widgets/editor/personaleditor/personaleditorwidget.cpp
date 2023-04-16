@@ -17,7 +17,7 @@
 
 #include <KContacts/Addressee>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)

@@ -13,7 +13,7 @@
 
 class QTreeView;
 
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class AddressModel;
 class AddressLocationWidget;

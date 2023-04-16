@@ -24,10 +24,9 @@
 #include <KMessageBox>
 
 #include <QPointer>
-using namespace ContactEditor;
 using namespace AkonadiContactWidgets;
 
-class ContactEditor::AddEmailDisplayJobPrivate
+class AkonadiContactWidgets::AddEmailDisplayJobPrivate
 {
 public:
     AddEmailDisplayJobPrivate(AddEmailDisplayJob *qq, const QString &emailString, QWidget *parentWidget)

@@ -11,10 +11,10 @@
 #include <KContacts/Email>
 #include <KLocalizedString>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 MailTypeCombobox::MailTypeCombobox(QWidget *parent)
-    : ContactEditor::ContactEditorComboBox(parent)
+    : AkonadiContactWidgets::ContactEditorComboBox(parent)
 {
     addItem(i18n("Select..."), QVariant());
     addItem(i18n("Home"), (int)KContacts::Email::Home);

@@ -16,7 +16,7 @@
 #include <QHBoxLayout>
 #include <QToolButton>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 PhoneWidget::PhoneWidget(QWidget *parent)
     : QWidget(parent)
     , mPhoneNumberEdit(new PreferredLineEditWidget(this))

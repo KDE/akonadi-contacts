@@ -20,7 +20,7 @@ namespace KContacts
 class Impp;
 }
 
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class PreferredLineEditWidget;
 class ContactEditorComboBox;
@@ -38,9 +38,9 @@ public:
     void clearWidget();
     void setReadOnly(bool readOnly);
 Q_SIGNALS:
-    void addWidget(ContactEditor::MessagingWidget *);
-    void removeWidget(ContactEditor::MessagingWidget *);
-    void preferredChanged(ContactEditor::MessagingWidget *);
+    void addWidget(AkonadiContactWidgets::MessagingWidget *);
+    void removeWidget(AkonadiContactWidgets::MessagingWidget *);
+    void preferredChanged(AkonadiContactWidgets::MessagingWidget *);
 
 private:
     void slotAddMessaging();
@@ -49,6 +49,6 @@ private:
     PreferredLineEditWidget *mMessagingEdit = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;
-    ContactEditor::ContactEditorComboBox *mProtocolCombo = nullptr;
+    AkonadiContactWidgets::ContactEditorComboBox *mProtocolCombo = nullptr;
 };
 }

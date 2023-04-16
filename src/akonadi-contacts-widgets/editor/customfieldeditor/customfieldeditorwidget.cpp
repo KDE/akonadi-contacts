@@ -19,7 +19,7 @@
 #include <QUuid>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     : QWidget(parent)

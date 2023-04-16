@@ -13,7 +13,7 @@
 
 #include <KLocalizedString>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
     : QComboBox(parent)

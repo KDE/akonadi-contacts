@@ -14,11 +14,11 @@
 #include <QLabel>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 WebListWidget::WebListWidget(QWidget *parent)
     : QWidget(parent)
-    , mWebWidgetLister(new ContactEditor::WebWidgetLister(this))
+    , mWebWidgetLister(new AkonadiContactWidgets::WebWidgetLister(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});

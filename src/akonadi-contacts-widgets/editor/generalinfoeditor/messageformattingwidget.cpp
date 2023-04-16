@@ -14,7 +14,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QVBoxLayout>
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     : QWidget(parent)
@@ -41,10 +41,10 @@ MessageFormattingWidget::~MessageFormattingWidget() = default;
 
 void MessageFormattingWidget::loadContact(const KContacts::Addressee &contact)
 {
-    const QString mailAllowToRemoteContent = ContactEditor::Utils::loadCustom(contact, QStringLiteral("MailAllowToRemoteContent"));
+    const QString mailAllowToRemoteContent = AkonadiContactWidgets::Utils::loadCustom(contact, QStringLiteral("MailAllowToRemoteContent"));
     mAllowRemoteContent->setChecked(mailAllowToRemoteContent == QLatin1String("TRUE"));
 
-    const QString mailPreferedFormatting = ContactEditor::Utils::loadCustom(contact, QStringLiteral("MailPreferedFormatting"));
+    const QString mailPreferedFormatting = AkonadiContactWidgets::Utils::loadCustom(contact, QStringLiteral("MailPreferedFormatting"));
     if (mailPreferedFormatting.isEmpty()) {
         mMailPreferFormatting->setCurrentIndex(0);
     } else if (mailPreferedFormatting == QLatin1String("TEXT")) {
@@ -67,13 +67,13 @@ void MessageFormattingWidget::storeContact(KContacts::Addressee &contact) const
     } else if (index == 2) {
         mailPreferedFormatting = QStringLiteral("HTML");
     }
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("MailPreferedFormatting"), mailPreferedFormatting);
+    AkonadiContactWidgets::Utils::storeCustom(contact, QStringLiteral("MailPreferedFormatting"), mailPreferedFormatting);
 
     QString mailAllowToRemoteContent;
     if (mAllowRemoteContent->isChecked()) {
         mailAllowToRemoteContent = QStringLiteral("TRUE");
     }
-    ContactEditor::Utils::storeCustom(contact, QStringLiteral("MailAllowToRemoteContent"), mailAllowToRemoteContent);
+    AkonadiContactWidgets::Utils::storeCustom(contact, QStringLiteral("MailAllowToRemoteContent"), mailAllowToRemoteContent);
 }
 
 void MessageFormattingWidget::setReadOnly(bool readOnly)

@@ -12,12 +12,12 @@
 #include "contacteditor_private_export.h"
 #include <KContacts/Addressee>
 #include <editor/widgets/contacteditorcombobox.h>
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 /**
  * @short A combobox to select a phone number type.
  */
-class CONTACTEDITOR_TESTS_EXPORT PhoneComboBoxType : public ContactEditor::ContactEditorComboBox
+class CONTACTEDITOR_TESTS_EXPORT PhoneComboBoxType : public AkonadiContactWidgets::ContactEditorComboBox
 {
     Q_OBJECT
 

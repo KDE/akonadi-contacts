@@ -14,7 +14,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class MessagingWidgetLister;
 class MessagingListWidget : public QWidget
@@ -29,6 +29,6 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    ContactEditor::MessagingWidgetLister *mMessagingWidgetLister = nullptr;
+    AkonadiContactWidgets::MessagingWidgetLister *mMessagingWidgetLister = nullptr;
 };
 }

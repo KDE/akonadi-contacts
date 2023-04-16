@@ -21,7 +21,7 @@
 #include <QStackedWidget>
 #include <QVBoxLayout>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     : QWidget(parent)

@@ -15,7 +15,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class BusinessEditorWidget : public QWidget
 {

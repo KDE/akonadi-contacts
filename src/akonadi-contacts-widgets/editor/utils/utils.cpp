@@ -10,7 +10,7 @@
 
 #include <KContacts/Addressee>
 
-void ContactEditor::Utils::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
+void AkonadiContactWidgets::Utils::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
 {
     const int colon = str.indexOf(QLatin1Char(':'));
     if (colon != -1) {
@@ -25,12 +25,12 @@ void ContactEditor::Utils::splitCustomField(const QString &str, QString &app, QS
     }
 }
 
-QString ContactEditor::Utils::loadCustom(const KContacts::Addressee &contact, const QString &key)
+QString AkonadiContactWidgets::Utils::loadCustom(const KContacts::Addressee &contact, const QString &key)
 {
     return contact.custom(QStringLiteral("KADDRESSBOOK"), key);
 }
 
-void ContactEditor::Utils::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value)
+void AkonadiContactWidgets::Utils::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value)
 {
     if (value.isEmpty()) {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), key);

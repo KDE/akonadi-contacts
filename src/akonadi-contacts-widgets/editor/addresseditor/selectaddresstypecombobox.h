@@ -12,7 +12,7 @@
 #include <KContacts/Address>
 #include <QComboBox>
 
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 /**
  * @short A widget for selecting the type of an address.

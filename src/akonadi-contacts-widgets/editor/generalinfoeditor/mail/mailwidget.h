@@ -13,7 +13,7 @@
 #include <KContacts/Email>
 #include <QWidget>
 class QToolButton;
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class PreferredLineEditWidget;
 class MailTypeCombobox;
@@ -31,9 +31,9 @@ public:
     void setPreferred(bool b);
     void setReadOnly(bool readOnly);
 Q_SIGNALS:
-    void addWidget(ContactEditor::MailWidget *);
-    void removeWidget(ContactEditor::MailWidget *);
-    void preferredChanged(ContactEditor::MailWidget *);
+    void addWidget(AkonadiContactWidgets::MailWidget *);
+    void removeWidget(AkonadiContactWidgets::MailWidget *);
+    void preferredChanged(AkonadiContactWidgets::MailWidget *);
 
 private:
     void slotAddMail();
@@ -42,7 +42,7 @@ private:
     KContacts::Email mEmail;
     QString mOldType;
     PreferredLineEditWidget *mMailEdit = nullptr;
-    ContactEditor::MailTypeCombobox *mMailType = nullptr;
+    AkonadiContactWidgets::MailTypeCombobox *mMailType = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;
 };

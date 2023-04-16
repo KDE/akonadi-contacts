@@ -22,7 +22,7 @@ NicknameWidgetTest::NicknameWidgetTest(QObject *parent)
 
 void NicknameWidgetTest::shouldHaveDefaultValue()
 {
-    ContactEditor::NicknameWidget editor;
+    AkonadiContactWidgets::NicknameWidget editor;
 
     auto topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(topLayout);

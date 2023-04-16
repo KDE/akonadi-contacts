@@ -10,7 +10,7 @@
 
 #include <QStyledItemDelegate>
 
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class AddressDelegate : public QStyledItemDelegate
 {

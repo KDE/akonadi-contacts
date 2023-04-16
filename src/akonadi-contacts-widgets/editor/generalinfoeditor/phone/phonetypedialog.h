@@ -12,7 +12,7 @@
 #include <QDialog>
 class QButtonGroup;
 
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 /**
  * A dialog for editing phone number types.

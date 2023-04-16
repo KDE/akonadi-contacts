@@ -13,7 +13,7 @@
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     : QWidget(parent)

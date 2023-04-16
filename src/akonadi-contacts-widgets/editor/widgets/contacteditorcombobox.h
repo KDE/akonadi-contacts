@@ -10,7 +10,7 @@
 
 #include "contacteditor_private_export.h"
 #include <QComboBox>
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class CONTACTEDITOR_TESTS_EXPORT ContactEditorComboBox : public QComboBox
 {

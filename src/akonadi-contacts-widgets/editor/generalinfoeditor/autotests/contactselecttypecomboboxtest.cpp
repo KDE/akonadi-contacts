@@ -19,7 +19,7 @@ ContactSelectTypeComboboxTest::~ContactSelectTypeComboboxTest() = default;
 
 void ContactSelectTypeComboboxTest::shouldHaveDefaultValue()
 {
-    ContactEditor::MailTypeCombobox w;
+    AkonadiContactWidgets::MailTypeCombobox w;
     QCOMPARE(w.count(), 4);
 }
 

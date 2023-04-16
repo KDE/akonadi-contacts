@@ -13,7 +13,7 @@
 #include <QWidget>
 class QComboBox;
 class QCheckBox;
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class CONTACTEDITOR_TESTS_EXPORT MessageFormattingWidget : public QWidget
 {

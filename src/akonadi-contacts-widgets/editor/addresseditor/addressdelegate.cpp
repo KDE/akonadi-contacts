@@ -12,7 +12,7 @@
 #include <QPainter>
 #include <QTextDocument>
 
-using namespace ContactEditor;
+using namespace AkonadiContactWidgets;
 
 AddressDelegate::AddressDelegate(QObject *parent)
     : QStyledItemDelegate(parent)

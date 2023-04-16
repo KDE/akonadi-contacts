@@ -11,7 +11,7 @@
 #include <KLineEdit>
 #include <QIcon>
 class QAction;
-namespace ContactEditor
+namespace AkonadiContactWidgets
 {
 class PreferredLineEditWidget : public KLineEdit
 {
