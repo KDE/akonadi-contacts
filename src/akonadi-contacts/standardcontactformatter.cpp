@@ -151,6 +151,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
         formattedAddress.replace(QRegularExpression(QStringLiteral("\n+")), QStringLiteral("<br>"));
 
+#ifdef KContacts_VERSION
 #if KContacts_VERSION < QT_VERSION_CHECK(5, 106, 0)
         const QString url = QStringLiteral("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                                 .arg(counter)
@@ -161,7 +162,18 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                                 .arg(address.geoUri().toString())
                                 .arg(i18nc("@info:tooltip", "Show address on map"));
 #endif
-
+#else
+#if KCONTACTS_VERSION < QT_VERSION_CHECK(5, 106, 0)
+        const QString url = QStringLiteral("<a href=\"address:?index=%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
+                                .arg(counter)
+                                .arg(i18nc("@info:tooltip", "Show address on map"));
+        counter++;
+#else
+        const QString url = QStringLiteral("<a href=\"%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
+                                .arg(address.geoUri().toString())
+                                .arg(i18nc("@info:tooltip", "Show address on map"));
+#endif
+#endif
         dynamicPart += rowFmtStr2.arg(KContacts::Address::typeLabel(address.type()), formattedAddress, url);
     }
 
