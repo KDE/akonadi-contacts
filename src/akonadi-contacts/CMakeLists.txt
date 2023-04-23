@@ -15,7 +15,7 @@ add_library(KPim6AkonadiContactCore)
 add_library(KPim6::AkonadiContactCore ALIAS KPim6AkonadiContactCore)
 
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
+ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACTCORE
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfigVersion.cmake"
     SOVERSION 6
