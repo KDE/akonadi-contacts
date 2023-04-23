@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 #include <QObject>
 
 namespace Akonadi
@@ -16,7 +16,7 @@ class EmailAddressSelectionModel;
 
 namespace Akonadi
 {
-class AKONADI_CONTACT_EXPORT RecipientsEditorManager : public QObject
+class AKONADI_CONTACT_CORE_EXPORT RecipientsEditorManager : public QObject
 {
     Q_OBJECT
 public:

@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include "emailaddressselection.h"
 
@@ -53,7 +53,7 @@ class EmailAddressSelectionWidgetPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.5
  */
-class AKONADI_CONTACT_EXPORT EmailAddressSelectionWidget : public QWidget
+class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelectionWidget : public QWidget
 {
     Q_OBJECT
 

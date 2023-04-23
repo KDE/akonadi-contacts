@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include "emailaddressselectionwidget.h"
 
@@ -14,7 +14,7 @@
 #include <QDialog>
 namespace Akonadi
 {
-class AKONADI_CONTACT_EXPORT AbstractEmailAddressSelectionDialog : public QDialog
+class AKONADI_CONTACT_CORE_EXPORT AbstractEmailAddressSelectionDialog : public QDialog
 {
     Q_OBJECT
 public:

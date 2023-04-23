@@ -6,14 +6,14 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 #include <QWidget>
 class QAbstractItemModel;
 class QTreeView;
 namespace Akonadi
 {
 class EmailAddressSelectionWidget;
-class AKONADI_CONTACT_EXPORT RecipientsPickerWidget : public QWidget
+class AKONADI_CONTACT_CORE_EXPORT RecipientsPickerWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include <QWidget>
 
@@ -69,7 +69,7 @@ class ContactGroupEditorPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactGroupEditor : public QWidget
+class AKONADI_CONTACT_CORE_EXPORT ContactGroupEditor : public QWidget
 {
     Q_OBJECT
 

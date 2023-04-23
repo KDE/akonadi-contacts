@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include "abstractcontactformatter.h"
 
@@ -40,7 +40,7 @@ class StandardContactFormatterPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.5
  */
-class AKONADI_CONTACT_EXPORT StandardContactFormatter : public AbstractContactFormatter
+class AKONADI_CONTACT_CORE_EXPORT StandardContactFormatter : public AbstractContactFormatter
 {
 public:
     /**

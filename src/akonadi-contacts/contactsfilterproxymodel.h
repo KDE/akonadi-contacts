@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include <QSortFilterProxyModel>
 
@@ -47,7 +47,7 @@ class ContactsFilterProxyModelPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.5
  */
-class AKONADI_CONTACT_EXPORT ContactsFilterProxyModel : public QSortFilterProxyModel
+class AKONADI_CONTACT_CORE_EXPORT ContactsFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 

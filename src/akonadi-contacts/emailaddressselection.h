@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include <QList>
 #include <QSharedDataPointer>
@@ -33,7 +33,7 @@ class EmailAddressSelectionPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.5
  */
-class AKONADI_CONTACT_EXPORT EmailAddressSelection
+class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelection
 {
 public:
     /**

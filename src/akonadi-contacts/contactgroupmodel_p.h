@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 #include <QAbstractItemModel>
 #include <QSortFilterProxyModel>
 
@@ -20,7 +20,7 @@ namespace Akonadi
 {
 class ContactGroupModelPrivate;
 
-class AKONADI_CONTACT_EXPORT ContactGroupModel : public QAbstractItemModel
+class AKONADI_CONTACT_CORE_EXPORT ContactGroupModel : public QAbstractItemModel
 {
     Q_OBJECT
 
@@ -51,7 +51,7 @@ private:
     std::unique_ptr<ContactGroupModelPrivate> const d;
 };
 
-class AKONADI_CONTACT_EXPORT GroupFilterModel : public QSortFilterProxyModel
+class AKONADI_CONTACT_CORE_EXPORT GroupFilterModel : public QSortFilterProxyModel
 {
 public:
     explicit GroupFilterModel(QObject *parent = nullptr);

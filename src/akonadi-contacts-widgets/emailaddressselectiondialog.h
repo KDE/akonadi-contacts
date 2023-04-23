@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include "abstractemailaddressselectiondialog.h"
 #include "emailaddressselectionwidget.h"
@@ -45,7 +45,7 @@ class EmailAddressSelectionDialogPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.5
  */
-class AKONADI_CONTACT_EXPORT EmailAddressSelectionDialog : public AbstractEmailAddressSelectionDialog
+class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelectionDialog : public AbstractEmailAddressSelectionDialog
 {
     Q_OBJECT
 

@@ -9,14 +9,14 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 #include "leafextensionproxymodel_p.h"
 
 #include "contactstreemodel.h"
 
 namespace Akonadi
 {
-class AKONADI_CONTACT_EXPORT EmailAddressSelectionProxyModel : public Akonadi::LeafExtensionProxyModel
+class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelectionProxyModel : public Akonadi::LeafExtensionProxyModel
 {
     Q_OBJECT
 

@@ -9,7 +9,7 @@
 #pragma once
 
 #include "abstractcontactgroupformatter.h"
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include <memory>
 
@@ -27,7 +27,7 @@ class GrantleeContactGroupFormatterPrivate;
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
-class AKONADI_CONTACT_EXPORT GrantleeContactGroupFormatter : public Akonadi::AbstractContactGroupFormatter
+class AKONADI_CONTACT_CORE_EXPORT GrantleeContactGroupFormatter : public Akonadi::AbstractContactGroupFormatter
 {
 public:
     /**

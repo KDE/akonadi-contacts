@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include <Akonadi/Item>
 #include <Akonadi/ItemSearchJob>
@@ -46,7 +46,7 @@ class ContactGroupSearchJobPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_EXPORT ContactGroupSearchJob : public ItemSearchJob
+class AKONADI_CONTACT_CORE_EXPORT ContactGroupSearchJob : public ItemSearchJob
 {
     Q_OBJECT
 

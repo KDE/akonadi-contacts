@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 #include <QVariant>
 
@@ -34,7 +34,7 @@ class AbstractContactGroupFormatterPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.6
  */
-class AKONADI_CONTACT_EXPORT AbstractContactGroupFormatter
+class AKONADI_CONTACT_CORE_EXPORT AbstractContactGroupFormatter
 {
 public:
     /**

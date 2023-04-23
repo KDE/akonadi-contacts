@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 
 namespace Akonadi
 {
@@ -23,7 +23,7 @@ namespace ContactPart
  * that contains only name and email addresses.
  * @since 4.2
  */
-AKONADI_CONTACT_EXPORT extern const char Lookup[];
+AKONADI_CONTACT_CORE_EXPORT extern const char Lookup[];
 
 /**
  * The part identifier for all the contact data except
@@ -33,6 +33,6 @@ AKONADI_CONTACT_EXPORT extern const char Lookup[];
  *       full contact including images and sounds.
  * @since 4.2
  */
-AKONADI_CONTACT_EXPORT extern const char Standard[];
+AKONADI_CONTACT_CORE_EXPORT extern const char Standard[];
 }
 }

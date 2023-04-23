@@ -1,6 +1,5 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-<<<<<<< HEAD
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore")
 if (BUILD_QCH)
     ecm_install_qch_export(
@@ -115,7 +114,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
         PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
     set_target_properties(KPim6AkonadiContactCore PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim6AkonadiContactCore BASE_NAME akonadi-contact)
+generate_export_header(KPim6AkonadiContactCore BASE_NAME akonadi-contact-core)
 
 
 target_include_directories(KPim6AkonadiContactCore INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore>")
@@ -206,7 +205,7 @@ install( FILES
     ${AkonadiContactCore_HEADERS}
     ${AkonadiContactCoreJob_HEADERS}
     ${AkonadiContactCoreGrantlee_HEADERS}
-    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_export.h
+    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-core_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore/akonadi COMPONENT Devel
     )
 

@@ -8,13 +8,13 @@
 
 #pragma once
 
-#include "akonadi-contact_export.h"
+#include "akonadi-contact-core_export.h"
 #include <QObject>
 
 namespace Akonadi
 {
 class ContactsTreeModel;
-class AKONADI_CONTACT_EXPORT EmailAddressSelectionModel : public QObject
+class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelectionModel : public QObject
 {
     Q_OBJECT
 public:
