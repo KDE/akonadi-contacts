@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-04-24 00:49+0000\n"
 "PO-Revision-Date: 2023-04-03 08:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -232,58 +232,58 @@ msgid "Search Contact..."
 msgstr "Išči stik..."
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts/standardcontactformatter.cpp:186
+#: akonadi-contacts/standardcontactformatter.cpp:198
 #: contact-editor/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "Imenik"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts/standardcontactformatter.cpp:185
+#: akonadi-contacts/standardcontactformatter.cpp:197
 #, kde-format
 msgid "Anniversary"
 msgstr "Obletnica"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts/standardcontactformatter.cpp:180
+#: akonadi-contacts/standardcontactformatter.cpp:192
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Ime pomočnika"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts/standardcontactformatter.cpp:181
+#: akonadi-contacts/standardcontactformatter.cpp:193
 #, kde-format
 msgid "Manager's Name"
 msgstr "Ime upravljavca"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts/standardcontactformatter.cpp:183
+#: akonadi-contacts/standardcontactformatter.cpp:195
 #, kde-format
 msgid "Office"
 msgstr "Pisarna"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts/standardcontactformatter.cpp:179
+#: akonadi-contacts/standardcontactformatter.cpp:191
 #, kde-format
 msgid "Profession"
 msgstr "Poklic"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts/standardcontactformatter.cpp:182
+#: akonadi-contacts/standardcontactformatter.cpp:194
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Ime partnerja"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
-#: akonadi-contacts/standardcontactformatter.cpp:243
+#: akonadi-contacts/standardcontactformatter.cpp:255
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "da"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
-#: akonadi-contacts/standardcontactformatter.cpp:245
+#: akonadi-contacts/standardcontactformatter.cpp:257
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -321,24 +321,26 @@ msgstr "Domača stran"
 msgid "Blog Feed"
 msgstr "Vir bloga"
 
-#: akonadi-contacts/standardcontactformatter.cpp:157
-#: akonadi-contacts/standardcontactformatter.cpp:162
+#: akonadi-contacts/standardcontactformatter.cpp:158
+#: akonadi-contacts/standardcontactformatter.cpp:163
+#: akonadi-contacts/standardcontactformatter.cpp:169
+#: akonadi-contacts/standardcontactformatter.cpp:174
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Pokaži naslov na zemljevidu"
 
-#: akonadi-contacts/standardcontactformatter.cpp:171
+#: akonadi-contacts/standardcontactformatter.cpp:183
 #, kde-format
 msgid "Notes"
 msgstr "Opombe"
 
-#: akonadi-contacts/standardcontactformatter.cpp:178
+#: akonadi-contacts/standardcontactformatter.cpp:190
 #, kde-format
 msgid "Department"
 msgstr "Oddelek"
 
-#: akonadi-contacts/standardcontactformatter.cpp:184
+#: akonadi-contacts/standardcontactformatter.cpp:196
 #, kde-format
 msgid "IM Address"
 msgstr "Naslov hipnega sporočanja"
