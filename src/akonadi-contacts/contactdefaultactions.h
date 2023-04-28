@@ -16,12 +16,6 @@
 
 class QUrl;
 
-namespace KContacts
-{
-class Address;
-class PhoneNumber;
-}
-
 namespace Akonadi
 {
 class ContactDefaultActionsPrivate;
@@ -45,30 +39,6 @@ class ContactDefaultActionsPrivate;
  *
  * ContactDefaultActions *actions = new ContactDefaultActions( this );
  * actions->connectToView( viewer );
- * @endcode
- *
- * If you want to use the full functionality of ContactDefaultActions
- * but customize a single action (e.g. handling sending mail differently)
- * the following can be done:
- *
- * @code
- *
- * using namespace Akonadi;
- *
- * ContactViewer *viewer = new ContactViewer( this );
- * ContactDefaultActions *actions = new ContactDefaultActions( this );
- *
- * // first connect all actions
- * actions->connectToView( viewer );
- *
- * // then remove the signal/slot connection you want to overwrite
- * disconnect( viewer, SIGNAL(emailClicked(QString,QString)),
- *             actions, SLOT(sendEmail(QString,QString)) );
- *
- * // connect to your custom implementation
- * connect( viewer, SIGNAL(emailClicked(QString,QString)),
- *          this, SLOT(handleSpecial(QString,QString)) );
- *
  * @endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
@@ -102,12 +72,6 @@ public Q_SLOTS:
      * Shows the given @p url in the users preferred webbrowser.
      */
     void showUrl(const QUrl &url);
-
-    /**
-     * Shows the @p address of a contact in a webbrowser or application
-     * as configured by the user in the general settings dialog.
-     */
-    void showAddress(const KContacts::Address &address);
 
 private:
     //@cond PRIVATE
