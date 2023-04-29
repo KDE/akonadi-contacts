@@ -91,12 +91,11 @@ public Q_SLOTS:
 Q_SIGNALS:
     /**
      * This signal is emitted whenever the user has clicked on
-     * an email address in the viewer.
+     * a URL in the viewer (e.g. a mailto: link).
      *
-     * @param name The name of the contact.
-     * @param email The plain email address of the contact.
+     * @param url The url that has been clicked.
      */
-    void emailClicked(const QString &name, const QString &email);
+    void urlClicked(const QUrl &url);
 
 private:
     /**

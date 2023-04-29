@@ -74,17 +74,6 @@ public:
         mBrowser->setHtml(mContactGroupFormatter->toHtml());
     }
 
-    void slotMailClicked(const QUrl &email)
-    {
-        QString name;
-        QString address;
-
-        // remove the 'mailto:' and split into name and email address
-        KContacts::Addressee::parseEmailAddress(email.path(), name, address);
-
-        Q_EMIT mParent->emailClicked(name, address);
-    }
-
     void _k_expandResult(KJob *job)
     {
         mExpandJob = nullptr;
@@ -144,9 +133,7 @@ ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
 
-    connect(d->mBrowser, &ContactEditor::TextBrowser::anchorClicked, this, [this](const QUrl &url) {
-        d->slotMailClicked(url);
-    });
+    connect(d->mBrowser, &ContactEditor::TextBrowser::anchorClicked, this, &ContactGroupViewer::urlClicked);
 
     layout->addWidget(d->mBrowser);
 
