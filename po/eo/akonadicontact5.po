@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-24 00:49+0000\n"
-"PO-Revision-Date: 2023-02-10 21:01+0100\n"
+"PO-Revision-Date: 2023-05-03 06:40+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -571,7 +571,7 @@ msgstr "Aldoni la nomon de asistanto"
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
-msgstr "Senpaga/Okupita:"
+msgstr "Libera/Okupita:"
 
 #: contact-editor/editor/businesseditor/freebusyeditwidget.cpp:28
 #, kde-format
@@ -674,7 +674,7 @@ msgstr "Url"
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
-msgstr "Ĉu vi vere volas forigi la elektitan kutiman kampon?"
+msgstr "Ĉu vi vere volas forigi la elektitan propran kampon?"
 
 #: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:215
 #, kde-format

@@ -146,12 +146,14 @@ void NameEditDialog::loadContact(const KContacts::Addressee &contact)
 
 void NameEditDialog::storeContact(KContacts::Addressee &contact) const
 {
-    mDisplayNameEdit->storeContact(contact);
     contact.setPrefix(prefix());
     contact.setGivenName(givenName());
     contact.setAdditionalName(additionalName());
     contact.setFamilyName(familyName());
     contact.setSuffix(suffix());
+
+    mDisplayNameEdit->changeName(contact);
+    mDisplayNameEdit->storeContact(contact);
 }
 
 void NameEditDialog::setDisplayType(DisplayNameEditWidget::DisplayType type)
