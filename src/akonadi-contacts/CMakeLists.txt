@@ -66,7 +66,6 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
     contactcompletionmodel.cpp
-    contactdefaultactions.cpp
     contactgroupeditor.cpp
     contactgroupeditordelegate.cpp
     contactgroupeditordialog.cpp
@@ -90,7 +89,6 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiContact PRIVATE
     job/contactgroupsearchjob.h
     job/contactsearchjob.h
     job/contactgroupexpandjob.h
-    contactdefaultactions.h
     contactgroupmodel_p.h
     abstractemailaddressselectiondialog.h
     emailaddressselectiondialog.h
@@ -209,7 +207,6 @@ ecm_generate_headers(AkonadiContact_CamelCase_HEADERS
     HEADER_NAMES
     AbstractContactFormatter
     AbstractContactGroupFormatter
-    ContactDefaultActions
     ContactGroupEditor
     ContactGroupEditorDialog
     ContactsFilterProxyModel
