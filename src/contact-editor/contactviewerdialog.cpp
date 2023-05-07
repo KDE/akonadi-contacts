@@ -7,7 +7,6 @@
 */
 
 #include "contactviewerdialog.h"
-#include "contactdefaultactions.h"
 #include "contactviewer.h"
 
 #include <Akonadi/Item>
@@ -17,6 +16,7 @@ using namespace Akonadi;
 #include <KLocalizedString>
 
 #include <KConfigGroup>
+#include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -78,8 +78,9 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     d->mViewer = new ContactEditor::ContactViewer(this);
     layout->addWidget(d->mViewer);
 
-    auto actions = new ContactDefaultActions(this);
-    actions->connectToView(d->mViewer);
+    connect(d->mViewer, &ContactEditor::ContactViewer::urlClicked, this, [](const QUrl &url) {
+        QDesktopServices::openUrl(url);
+    });
 
     mainLayout->addWidget(buttonBox);
 
