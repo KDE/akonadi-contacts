@@ -1,17 +1,17 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Xosé <xosecalvo@edu.xunta.es>, 2009.
 # Xosé <xosecalvo@gmail.com>, 2009, 2010, 2011, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-24 00:49+0000\n"
-"PO-Revision-Date: 2019-11-01 12:09+0100\n"
+"PO-Revision-Date: 2023-05-07 09:40+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
@@ -78,22 +78,18 @@ msgstr "Membros do grupo de contacto:"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
 #: akonadi-contacts/contactgroupeditor.ui:66
-#, fuzzy, kde-format
-#| msgctxt "@label Search in a list of contacts"
-#| msgid "Search:"
+#, kde-format
 msgid "Search..."
-msgstr "Buscar:"
+msgstr "Buscar…"
 
 #: akonadi-contacts/contactgroupeditordialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "New Contact Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Novo grupo de contactos"
 
 #: akonadi-contacts/contactgroupeditordialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "Edit Contact Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "Editar o grupo de contactos"
@@ -121,19 +117,17 @@ msgstr "Confirmación"
 
 #: akonadi-contacts/contactgroupeditordialog.cpp:166
 #: contact-editor/contacteditordialog.cpp:200
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr "Cancelar"
+msgstr "Cancelar a edición"
 
 #: akonadi-contacts/contactgroupeditordialog.cpp:167
 #: contact-editor/contacteditordialog.cpp:201
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Cancelar"
+msgstr "Non cancelar a edición"
 
 #: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
@@ -234,10 +228,9 @@ msgid "Search:"
 msgstr "Buscar:"
 
 #: akonadi-contacts/emailaddressselectionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "New &Contact..."
+#, kde-format
 msgid "Search Contact..."
-msgstr "Novo &contacto…"
+msgstr "Buscar un contacto…"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
 #: akonadi-contacts/standardcontactformatter.cpp:198
@@ -373,15 +366,13 @@ msgstr ""
 "Seleccione o caderno de enderezos no que desexa gardar o novo contacto:"
 
 #: contact-editor/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "New Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Novo contacto"
 
 #: contact-editor/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Editar o contacto"
@@ -390,37 +381,34 @@ msgstr "Editar o contacto"
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
-msgstr ""
+msgstr "A localización non se gardou. Quere pechar o editor?"
 
 #: contact-editor/contacteditordialog.cpp:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
-msgstr ""
+msgstr "Pechar o editor"
 
 #: contact-editor/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
-msgstr ""
+msgstr "Non pechar"
 
 #: contact-editor/contactgroupviewer.cpp:52
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
 msgstr "Grupo de contactos %1"
 
 #: contact-editor/contactviewer.cpp:69
-#, fuzzy, kde-format
-#| msgid "Contact %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "Contacto %1"
 
 #: contact-editor/contactviewerdialog.cpp:64
-#, fuzzy, kde-format
-#| msgid "Show Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
 msgstr "Mostrar o contacto"
@@ -843,8 +831,7 @@ msgid "Remove IM"
 msgstr "Retirar a mensaxaría instantánea"
 
 #: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid "Edit Contact Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Name"
 msgstr "Editar o nome do contacto"
@@ -965,8 +952,7 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #: contact-editor/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Phone Number"
 msgstr "Editar o número de teléfono"
@@ -1111,6 +1097,9 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
+"O enderezo de correo electrónico principal da vCard xa está no caderno de "
+"enderezos; porén, podería gardar o vCard nun ficheiro e importalo no caderno "
+"de enderezos manualmente."
 
 #: contact-editor/job/addcontactjob.cpp:111
 #, kde-format
@@ -1119,6 +1108,8 @@ msgid ""
 "The vCard was added to your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
+"Engadiuse a vCard ao caderno de enderezos; pode engadir máis información á "
+"entrada desde o caderno."
 
 #: contact-editor/job/addemailaddressjob.cpp:69
 #, kde-kuit-format
@@ -1127,6 +1118,8 @@ msgid ""
 "A contact with the email address <email>%1</email> is already in your "
 "address book."
 msgstr ""
+"Xa hai un contacto co enderezo de correo <email>%1</email> no caderno de "
+"enderezos."
 
 #: contact-editor/job/addemailaddressjob.cpp:120
 #: contact-editor/job/addemaildisplayjob.cpp:159
@@ -1136,24 +1129,22 @@ msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
 msgstr ""
+"Debe crear un caderno de enderezos para poder engadir un contacto. Quere "
+"crear un caderno de enderezos?"
 
 #: contact-editor/job/addemailaddressjob.cpp:121
 #: contact-editor/job/addemaildisplayjob.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "New Address Book Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "Novo cartafol de caderno de enderezos"
+msgstr "Non hai ningún caderno de enderezos dispoñíbel"
 
 #: contact-editor/job/addemailaddressjob.cpp:122
 #: contact-editor/job/addemaildisplayjob.cpp:161
-#, fuzzy, kde-format
-#| msgid "Update Address Book"
-#| msgid_plural "Update %1 Address Books"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "Actualizar o caderno de enderezos"
+msgstr "Crear un caderno de enderezos"
 
 #: contact-editor/job/addemailaddressjob.cpp:126
 #: contact-editor/job/addemaildisplayjob.cpp:165
@@ -1170,19 +1161,21 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
+"<para>O contacto co enderezo de correo «%1» engadiuse correctamente ao "
+"caderno de enderezos.</para><para>Quere editar agora este novo contacto?</"
+"para>"
 
 #: contact-editor/job/addemailaddressjob.cpp:224
-#, fuzzy, kde-format
-#| msgid "Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Edit"
-msgstr "Editar..."
+msgstr "Editar"
 
 #: contact-editor/job/addemailaddressjob.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Rematar"
 
 #: contact-editor/job/addemailaddressjob.cpp:247
 #: contact-editor/standardcontactactionmanager.cpp:468
@@ -1199,7 +1192,7 @@ msgstr "Non se puido almacenar o contacto"
 #: contact-editor/job/addemailaddressjob.cpp:254
 #, kde-format
 msgid "Contact created successfully"
-msgstr ""
+msgstr "Creouse o contacto"
 
 #: contact-editor/standardcontactactionmanager.cpp:95
 #, kde-format
