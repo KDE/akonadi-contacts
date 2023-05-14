@@ -56,7 +56,7 @@ msgstr "إعدادات إجراءات المتراسل"
 #: kcmakonadicontactactions.cpp:31
 #, kde-format
 msgid "(c) 2009 Tobias Koenig"
-msgstr "‏© ٢٠٠٩ لِ‍ Tobias Koenig"
+msgstr "‏© 2009 لِ‍ Tobias Koenig"
 
 #: kcmakonadicontactactions.cpp:33
 #, kde-format
