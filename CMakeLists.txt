@@ -44,7 +44,6 @@ set(GRANTLEETHEME_LIB_VERSION "5.240.40")
 set(GRANTLEE_VERSION "5.3")
 
 set(QT_REQUIRED_VERSION "6.4.0")
-set(KF_MAJOR_VERSION "6")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 ########### Find packages ###########
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
