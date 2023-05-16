@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:00+0000\n"
-"PO-Revision-Date: 2023-03-07 19:57+0300\n"
+"PO-Revision-Date: 2023-05-15 22:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
 #. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
@@ -217,13 +217,13 @@ msgstr ""
 #: akonadi-contacts/contactgroupeditor.cpp:135
 #, kde-format
 msgid "Take over changes"
-msgstr "Değişiklikleri yönet"
+msgstr "Değişiklikleri Üzerine Al"
 
 #: akonadi-contacts/contacteditor.cpp:164
 #: akonadi-contacts/contactgroupeditor.cpp:136
 #, kde-format
 msgid "Ignore and Overwrite changes"
-msgstr "Gözardı et ve değişikliklerin üzerine yaz"
+msgstr "Değişiklikleri Yok Say ve Üzerine Yaz"
 
 #: akonadi-contacts/contacteditor.cpp:278
 #: akonadi-contacts/contactgroupeditor.cpp:290
@@ -624,13 +624,13 @@ msgstr "Bitir"
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
-msgstr "Kişi kaydedilemiyor: %1"
+msgstr "Kişi depolanamıyor: %1"
 
 #: akonadi-contacts/job/addemailaddressjob.cpp:246
 #: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Failed to store contact"
-msgstr "Kişi kaydetme başarısız"
+msgstr "Kişi depolanamadı"
 
 #: akonadi-contacts/job/addemailaddressjob.cpp:253
 #, kde-format
@@ -1012,8 +1012,9 @@ msgid ""
 "can edit the data stored about a person, including addresses and phone "
 "numbers.</p>"
 msgstr ""
-"Seçili kişiyi düzenle<p>Kişiye ait adresler ve telefon numaraları da dahil "
-"olmak üzere birçok bilgiyi düzenleyebileceğiniz bir pencere açılacak.</p>"
+"Seçili kişiyi düzenle<p>Adresler ve telefon numaraları da dahil olmak üzere, "
+"bir kişi hakkında depolanan verileri düzenleyebileceğiniz bir iletişim "
+"kutusu sunulur.</p>"
 
 #: akonadi-contacts/standardcontactformatter.cpp:94
 #, kde-format
