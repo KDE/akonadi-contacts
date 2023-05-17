@@ -137,7 +137,6 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     }
 
     // Addresses
-    int counter = 0;
     const auto addresses = rawContact.addresses();
     for (const KContacts::Address &address : addresses) {
         QString formattedAddress;
@@ -153,7 +152,6 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         const QString url = QStringLiteral("<a href=\"%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                                 .arg(address.geoUri().toString())
                                 .arg(i18nc("@info:tooltip", "Show address on map"));
-
         dynamicPart += rowFmtStr2.arg(KContacts::Address::typeLabel(address.type()), formattedAddress, url);
     }
 
