@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 00:49+0000\n"
+"POT-Creation-Date: 2023-05-18 00:48+0000\n"
 "PO-Revision-Date: 2022-03-28 18:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -230,58 +230,58 @@ msgid "Search Contact..."
 msgstr "ابحث عن متراسل..."
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts/standardcontactformatter.cpp:198
+#: akonadi-contacts/standardcontactformatter.cpp:177
 #: contact-editor/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "دفتر العناوين"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts/standardcontactformatter.cpp:197
+#: akonadi-contacts/standardcontactformatter.cpp:176
 #, kde-format
 msgid "Anniversary"
 msgstr "السّنويّة"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts/standardcontactformatter.cpp:192
+#: akonadi-contacts/standardcontactformatter.cpp:171
 #, kde-format
 msgid "Assistant's Name"
 msgstr "اسم المساعد"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts/standardcontactformatter.cpp:193
+#: akonadi-contacts/standardcontactformatter.cpp:172
 #, kde-format
 msgid "Manager's Name"
 msgstr "اسم المدير"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts/standardcontactformatter.cpp:195
+#: akonadi-contacts/standardcontactformatter.cpp:174
 #, kde-format
 msgid "Office"
 msgstr "المكتب"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts/standardcontactformatter.cpp:191
+#: akonadi-contacts/standardcontactformatter.cpp:170
 #, kde-format
 msgid "Profession"
 msgstr "المهنة"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts/standardcontactformatter.cpp:194
+#: akonadi-contacts/standardcontactformatter.cpp:173
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "اسم الشّريك"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
-#: akonadi-contacts/standardcontactformatter.cpp:255
+#: akonadi-contacts/standardcontactformatter.cpp:234
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "نعم"
 
 #: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
-#: akonadi-contacts/standardcontactformatter.cpp:257
+#: akonadi-contacts/standardcontactformatter.cpp:236
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -321,26 +321,23 @@ msgstr "الصّفحة الرّئيسيّة"
 msgid "Blog Feed"
 msgstr "تغذية المدوّنة"
 
-#: akonadi-contacts/standardcontactformatter.cpp:158
-#: akonadi-contacts/standardcontactformatter.cpp:163
-#: akonadi-contacts/standardcontactformatter.cpp:169
-#: akonadi-contacts/standardcontactformatter.cpp:174
+#: akonadi-contacts/standardcontactformatter.cpp:155
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "اعرض العنوان على الخريطة"
 
-#: akonadi-contacts/standardcontactformatter.cpp:183
+#: akonadi-contacts/standardcontactformatter.cpp:162
 #, kde-format
 msgid "Notes"
 msgstr "ملاحظات"
 
-#: akonadi-contacts/standardcontactformatter.cpp:190
+#: akonadi-contacts/standardcontactformatter.cpp:169
 #, kde-format
 msgid "Department"
 msgstr "القِسم"
 
-#: akonadi-contacts/standardcontactformatter.cpp:196
+#: akonadi-contacts/standardcontactformatter.cpp:175
 #, kde-format
 msgid "IM Address"
 msgstr "عنوان التّراسل الفوريّ"
