@@ -11,4 +11,4 @@ Dependencies:
     'pim/akonadi' : '@latest-kf6'
     'pim/kmime' : '@latest-kf6'
     'pim/grantleetheme' : '@latest-kf6'
-    'libraries/ktexttemplate': '@stable'
+    'frameworks/ktexttemplate': '@stable'
