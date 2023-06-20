@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:48+0000\n"
-"PO-Revision-Date: 2023-05-07 09:40+0200\n"
+"PO-Revision-Date: 2023-06-19 09:42+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "Cancelar a edición"
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Non cancelar a edición"
+msgstr "Non cancelar"
 
 #: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
@@ -301,7 +301,7 @@ msgstr[1] "(Con %1 anos)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
-msgstr "Enviar unha SMS"
+msgstr "Enviar unha SMS."
 
 #: akonadi-contacts/standardcontactformatter.cpp:116
 #, kde-format
@@ -318,13 +318,13 @@ msgstr "Páxina web"
 #: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:25
 #, kde-format
 msgid "Blog Feed"
-msgstr "Fonte do blogue"
+msgstr "Fonte da bitácora"
 
 #: akonadi-contacts/standardcontactformatter.cpp:155
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
-msgstr "Mostrar o enderezo nun mapa"
+msgstr "Amosar o enderezo nun mapa."
 
 #: akonadi-contacts/standardcontactformatter.cpp:162
 #, kde-format
@@ -408,7 +408,7 @@ msgstr "Contacto %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
-msgstr "Mostrar o contacto"
+msgstr "Amosar o contacto"
 
 #: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
 #: contact-editor/editor/addresseditor/addresslocationwidget.cpp:125
@@ -625,7 +625,7 @@ msgstr "Engadir un campo"
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:28
 #, kde-format
 msgid "Use field for all contacts"
-msgstr "Empregar o campo en todos os contactos"
+msgstr "Usar o campo en todos os contactos"
 
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:32
 #, kde-format
@@ -699,7 +699,7 @@ msgstr "Valor"
 #: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:30
 #, kde-format
 msgid "Add a Blog Feed"
-msgstr "Engadir unha fonte de blogue"
+msgstr "Engadir unha fonte de bitácora"
 
 #: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:45
 #, kde-format
@@ -784,7 +784,7 @@ msgstr "Permitir o contido remoto nas mensaxes con HTML recibidas"
 #: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:26
 #, kde-format
 msgid "Show messages received from this contact as:"
-msgstr "Mostrar as mensaxes que se reciban deste contacto como:"
+msgstr "Amosar as mensaxes que se reciban deste contacto como:"
 
 #: contact-editor/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
