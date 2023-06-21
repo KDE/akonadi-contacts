@@ -74,3 +74,5 @@ void CategoriesEditWidget::storeContact(KContacts::Addressee &contact) const
 
     contact.setCategories(categories);
 }
+
+#include "moc_categorieseditwidget.cpp"

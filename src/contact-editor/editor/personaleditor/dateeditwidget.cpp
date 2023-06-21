@@ -131,3 +131,5 @@ void DateEditWidget::updateView()
         mClearButton->hide();
     }
 }
+
+#include "moc_dateeditwidget.cpp"

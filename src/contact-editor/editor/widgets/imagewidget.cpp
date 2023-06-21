@@ -342,3 +342,5 @@ ImageLoader *ImageWidget::imageLoader()
 
     return mImageLoader;
 }
+
+#include "moc_imagewidget.cpp"

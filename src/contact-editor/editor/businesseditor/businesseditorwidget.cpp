@@ -159,3 +159,5 @@ void BusinessEditorWidget::setReadOnly(bool readOnly)
     // widgets from groupware group
     mFreeBusyWidget->setReadOnly(readOnly);
 }
+
+#include "moc_businesseditorwidget.cpp"

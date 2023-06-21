@@ -97,3 +97,5 @@ void SelectAddressTypeComboBox::otherSelected()
     delete dlg;
     update();
 }
+
+#include "moc_selectaddresstypecombobox.cpp"

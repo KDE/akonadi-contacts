@@ -38,3 +38,5 @@ void MailWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(MailWidgetTest)
+
+#include "moc_mailwidgettest.cpp"

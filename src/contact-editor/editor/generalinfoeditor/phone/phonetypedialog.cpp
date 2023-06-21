@@ -72,3 +72,5 @@ KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
     }
     return type;
 }
+
+#include "moc_phonetypedialog.cpp"

@@ -58,3 +58,5 @@ QVariantList CustomFieldsWidget::localCustomFieldDescriptions() const
 {
     return mCustomFieldsListWidget->localCustomFieldDescriptions();
 }
+
+#include "moc_customfieldswidget.cpp"

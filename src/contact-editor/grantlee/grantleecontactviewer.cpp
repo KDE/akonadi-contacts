@@ -43,3 +43,5 @@ void GrantleeContactViewer::setForceDisableQRCode(bool b)
         updateView();
     }
 }
+
+#include "moc_grantleecontactviewer.cpp"

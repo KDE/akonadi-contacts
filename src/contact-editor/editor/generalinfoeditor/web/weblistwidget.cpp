@@ -48,3 +48,5 @@ void WebListWidget::setReadOnly(bool readOnly)
 {
     mWebWidgetLister->setReadOnly(readOnly);
 }
+
+#include "moc_weblistwidget.cpp"

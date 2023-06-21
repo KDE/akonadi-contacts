@@ -40,3 +40,5 @@ Akonadi::EmailAddressSelectionWidget *RecipientsPickerWidget::emailAddressSelect
 {
     return mView;
 }
+
+#include "moc_recipientspickerwidget.cpp"

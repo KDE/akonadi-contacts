@@ -37,3 +37,5 @@ void PhoneWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(PhoneWidgetTest)
+
+#include "moc_phonewidgettest.cpp"

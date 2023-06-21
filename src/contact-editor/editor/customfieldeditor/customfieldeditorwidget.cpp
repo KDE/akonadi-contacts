@@ -108,3 +108,5 @@ void CustomFieldEditorWidget::slotAddField()
     mFieldName->clear();
     mFieldType->setCurrentIndex(0);
 }
+
+#include "moc_customfieldeditorwidget.cpp"

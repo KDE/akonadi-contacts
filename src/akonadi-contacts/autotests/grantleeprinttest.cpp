@@ -123,3 +123,5 @@ void GrantleePrintTest::shouldDisplayContactInfo()
 }
 
 QTEST_MAIN(GrantleePrintTest)
+
+#include "moc_grantleeprinttest.cpp"

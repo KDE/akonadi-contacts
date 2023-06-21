@@ -120,3 +120,5 @@ void PhoneWidgetLister::updateAddRemoveButton()
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }
+
+#include "moc_phonewidgetlister.cpp"

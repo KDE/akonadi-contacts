@@ -105,3 +105,5 @@ void MailWidget::slotRemoveMail()
 {
     Q_EMIT removeWidget(this);
 }
+
+#include "moc_mailwidget.cpp"

@@ -307,3 +307,5 @@ bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, const QStri
 
     return false;
 }
+
+#include "moc_contactsfilterproxymodel.cpp"

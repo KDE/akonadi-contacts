@@ -89,3 +89,5 @@ KContacts::Addressee::List ContactSearchJob::contacts() const
 
     return contacts;
 }
+
+#include "moc_contactsearchjob.cpp"

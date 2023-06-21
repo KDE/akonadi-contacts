@@ -25,3 +25,5 @@ WebSelectTypeCombobox::WebSelectTypeCombobox(QWidget *parent)
 }
 
 WebSelectTypeCombobox::~WebSelectTypeCombobox() = default;
+
+#include "moc_webselecttypecombobox.cpp"

@@ -135,3 +135,5 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
 }
 
 #endif
+
+#include "moc_textbrowser_p.cpp"

@@ -71,3 +71,5 @@ void CustomFieldEditorWidgetTest::shouldClearEditorWhenPressAdd()
 }
 
 QTEST_MAIN(CustomFieldEditorWidgetTest)
+
+#include "moc_customfieldeditorwidgettest.cpp"

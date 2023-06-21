@@ -117,3 +117,5 @@ bool AddressesLocationWidget::hasNoSavedData() const
 {
     return mAddressLocationWidget->wasChanged();
 }
+
+#include "moc_addresseslocationwidget.cpp"

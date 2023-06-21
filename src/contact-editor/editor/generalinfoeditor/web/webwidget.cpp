@@ -105,3 +105,5 @@ void WebWidget::slotPreferredChanged()
 {
     Q_EMIT preferredChanged(this);
 }
+
+#include "moc_webwidget.cpp"

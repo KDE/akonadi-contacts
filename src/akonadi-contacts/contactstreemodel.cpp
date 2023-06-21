@@ -251,3 +251,5 @@ QVariant ContactsTreeModel::entityHeaderData(int section, Qt::Orientation orient
 
     return EntityTreeModel::entityHeaderData(section, orientation, role, headerGroup);
 }
+
+#include "moc_contactstreemodel.cpp"

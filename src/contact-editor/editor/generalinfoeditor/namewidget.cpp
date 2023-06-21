@@ -108,3 +108,5 @@ void NameWidget::slotOpenNameEditDialog()
 
     delete dlg;
 }
+
+#include "moc_namewidget.cpp"

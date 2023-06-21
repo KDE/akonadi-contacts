@@ -48,3 +48,5 @@ void NicknameWidget::setReadOnly(bool readOnly)
 {
     mNickName->setReadOnly(readOnly);
 }
+
+#include "moc_nicknamewidget.cpp"

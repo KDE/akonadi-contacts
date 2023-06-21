@@ -305,3 +305,5 @@ void AddressLocationWidget::slotCancelModifyAddress()
 {
     reset();
 }
+
+#include "moc_addresslocationwidget.cpp"

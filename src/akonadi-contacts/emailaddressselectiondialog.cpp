@@ -92,3 +92,5 @@ EmailAddressSelectionWidget *EmailAddressSelectionDialog::view() const
 {
     return d->mView->emailAddressSelectionWidget();
 }
+
+#include "moc_emailaddressselectiondialog.cpp"

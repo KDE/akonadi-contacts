@@ -121,3 +121,5 @@ void WebWidgetLister::slotPreferredChanged(WebWidget *w)
         }
     }
 }
+
+#include "moc_webwidgetlister.cpp"

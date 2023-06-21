@@ -51,3 +51,5 @@ void AddressDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     doc.documentLayout()->draw(painter, ctx);
     painter->restore();
 }
+
+#include "moc_addressdelegate.cpp"

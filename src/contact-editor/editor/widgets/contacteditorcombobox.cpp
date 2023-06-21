@@ -22,3 +22,5 @@ QSize ContactEditorComboBox::minimumSizeHint() const
 {
     return {150, QComboBox::minimumSizeHint().height()};
 }
+
+#include "moc_contacteditorcombobox.cpp"

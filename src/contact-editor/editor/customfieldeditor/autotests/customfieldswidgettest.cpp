@@ -31,3 +31,5 @@ void CustomFieldsWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CustomFieldsWidgetTest)
+
+#include "moc_customfieldswidgettest.cpp"

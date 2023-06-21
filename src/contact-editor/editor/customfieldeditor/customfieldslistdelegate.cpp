@@ -221,3 +221,5 @@ void CustomFieldsListDelegate::removeField(int row, QAbstractItemModel *model)
     model->removeRow(row);
     QTimer::singleShot(0, this, &CustomFieldsListDelegate::setFirstColumnAsCurrent);
 }
+
+#include "moc_customfieldslistdelegate.cpp"

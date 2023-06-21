@@ -119,3 +119,5 @@ void MessagingWidget::setReadOnly(bool readOnly)
     mRemoveButton->setEnabled(!readOnly);
     mProtocolCombo->setEnabled(!readOnly);
 }
+
+#include "moc_messagingwidget.cpp"

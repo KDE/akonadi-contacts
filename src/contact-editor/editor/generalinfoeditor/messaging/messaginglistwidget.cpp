@@ -46,3 +46,5 @@ void MessagingListWidget::setReadOnly(bool readOnly)
 {
     mMessagingWidgetLister->setReadOnly(readOnly);
 }
+
+#include "moc_messaginglistwidget.cpp"

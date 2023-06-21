@@ -52,3 +52,5 @@ bool PreferredLineEditWidget::preferred() const
 {
     return mPreferred;
 }
+
+#include "moc_preferredlineeditwidget.cpp"

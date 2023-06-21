@@ -13,3 +13,5 @@ AbstractEmailAddressSelectionDialog::AbstractEmailAddressSelectionDialog(QWidget
 }
 
 AbstractEmailAddressSelectionDialog::~AbstractEmailAddressSelectionDialog() = default;
+
+#include "moc_abstractemailaddressselectiondialog.cpp"

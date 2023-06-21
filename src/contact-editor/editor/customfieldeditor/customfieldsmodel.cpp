@@ -261,3 +261,5 @@ bool CustomFieldsModel::removeRows(int row, int count, const QModelIndex &parent
 
     return true;
 }
+
+#include "moc_customfieldsmodel.cpp"

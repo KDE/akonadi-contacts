@@ -43,3 +43,5 @@ Akonadi::ContactsTreeModel *EmailAddressSelectionModel::model() const
 {
     return mModel;
 }
+
+#include "moc_emailaddressselectionmodel.cpp"

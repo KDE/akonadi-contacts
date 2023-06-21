@@ -313,3 +313,5 @@ QString SerializerPluginAddressee::extractGid(const Item &item) const
     }
     return item.payload<KContacts::Addressee>().uid();
 }
+
+#include "moc_akonadi_serializer_addressee.cpp"

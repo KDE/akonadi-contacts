@@ -118,3 +118,5 @@ void MessagingWidgetLister::updateAddRemoveButton()
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }
+
+#include "moc_messagingwidgetlister.cpp"

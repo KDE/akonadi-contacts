@@ -242,3 +242,5 @@ void DisplayNameEditWidget::setComboBoxEditable(bool value)
 }
 
 #include "displaynameeditwidget.moc"
+
+#include "moc_displaynameeditwidget.cpp"

@@ -141,3 +141,5 @@ void GeneralInfoWidget::setReadOnly(bool readOnly)
     mMessageFormattingWidget->setReadOnly(readOnly);
     mBlogFeedWidget->setReadOnly(readOnly);
 }
+
+#include "moc_generalinfowidget.cpp"

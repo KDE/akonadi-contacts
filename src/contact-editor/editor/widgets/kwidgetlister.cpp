@@ -192,3 +192,5 @@ void KWidgetLister::addWidgetAfterThisWidget(QWidget *currentWidget, QWidget *wi
     Q_EMIT widgetAdded();
     Q_EMIT widgetAdded(widget);
 }
+
+#include "moc_kwidgetlister_p.cpp"

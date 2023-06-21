@@ -37,3 +37,5 @@ void MessagingWidgetTest::shouldHaveDefaultValues()
 }
 
 QTEST_MAIN(MessagingWidgetTest)
+
+#include "moc_messagingwidgettest.cpp"

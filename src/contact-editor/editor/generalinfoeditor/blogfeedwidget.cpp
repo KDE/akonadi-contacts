@@ -48,3 +48,5 @@ void BlogfeedWidget::setReadOnly(bool readOnly)
 {
     mBlogFeed->setReadOnly(readOnly);
 }
+
+#include "moc_blogfeedwidget.cpp"

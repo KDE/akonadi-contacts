@@ -77,3 +77,5 @@ KContacts::Address::Type AddressTypeDialog::type() const
 
     return type;
 }
+
+#include "moc_addresstypedialog.cpp"

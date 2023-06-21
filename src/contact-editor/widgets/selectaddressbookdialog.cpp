@@ -64,3 +64,5 @@ SelectAddressBookDialog::SelectAddressBookDialog(QWidget *parent)
 }
 
 SelectAddressBookDialog::~SelectAddressBookDialog() = default;
+
+#include "moc_selectaddressbookdialog.cpp"

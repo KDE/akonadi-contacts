@@ -81,3 +81,5 @@ void PersonalEditorWidget::setReadOnly(bool readOnly)
     // widgets from family group
     mPartnerWidget->setReadOnly(readOnly);
 }
+
+#include "moc_personaleditorwidget.cpp"

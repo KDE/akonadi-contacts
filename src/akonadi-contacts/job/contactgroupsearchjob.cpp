@@ -85,3 +85,5 @@ KContacts::ContactGroup::List ContactGroupSearchJob::contactGroups() const
 
     return contactGroups;
 }
+
+#include "moc_contactgroupsearchjob.cpp"

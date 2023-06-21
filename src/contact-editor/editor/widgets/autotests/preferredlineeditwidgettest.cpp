@@ -44,3 +44,5 @@ void PreferredLineEditWidgetTest::shouldChangePreferredValue()
 }
 
 QTEST_MAIN(PreferredLineEditWidgetTest)
+
+#include "moc_preferredlineeditwidgettest.cpp"

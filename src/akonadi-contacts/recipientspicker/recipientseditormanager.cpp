@@ -28,3 +28,5 @@ Akonadi::EmailAddressSelectionModel *RecipientsEditorManager::model()
 {
     return mModel;
 }
+
+#include "moc_recipientseditormanager.cpp"

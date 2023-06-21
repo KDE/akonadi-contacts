@@ -47,3 +47,5 @@ void MailListWidget::setReadOnly(bool readOnly)
 {
     mMailWidgetLister->setReadOnly(readOnly);
 }
+
+#include "moc_maillistwidget.cpp"

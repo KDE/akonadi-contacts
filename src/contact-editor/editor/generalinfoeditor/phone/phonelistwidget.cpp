@@ -47,3 +47,5 @@ void PhoneListWidget::setReadOnly(bool readOnly)
 {
     mPhoneWidgetLister->setReadOnly(readOnly);
 }
+
+#include "moc_phonelistwidget.cpp"

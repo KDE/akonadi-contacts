@@ -274,3 +274,5 @@ bool ContactEditorWidget::hasNoSavedData() const
 {
     return d->mAddressesLocationWidget->hasNoSavedData();
 }
+
+#include "moc_contacteditorwidget.cpp"

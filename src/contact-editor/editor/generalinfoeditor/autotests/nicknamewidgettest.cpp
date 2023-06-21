@@ -39,3 +39,5 @@ void NicknameWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(NicknameWidgetTest)
+
+#include "moc_nicknamewidgettest.cpp"

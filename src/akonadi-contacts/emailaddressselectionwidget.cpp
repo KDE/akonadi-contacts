@@ -227,3 +227,5 @@ QTreeView *EmailAddressSelectionWidget::view() const
 }
 
 #include "emailaddressselectionwidget.moc"
+
+#include "moc_emailaddressselectionwidget.cpp"

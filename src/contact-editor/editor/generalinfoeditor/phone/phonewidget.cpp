@@ -110,3 +110,5 @@ void PhoneWidget::setReadOnly(bool readOnly)
     mRemoveButton->setEnabled(!readOnly);
     mPhoneType->setEnabled(!readOnly);
 }
+
+#include "moc_phonewidget.cpp"

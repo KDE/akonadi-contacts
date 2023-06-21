@@ -98,3 +98,5 @@ void PhoneComboBoxType::otherSelected()
     delete dlg;
     update();
 }
+
+#include "moc_phonecomboboxtype.cpp"

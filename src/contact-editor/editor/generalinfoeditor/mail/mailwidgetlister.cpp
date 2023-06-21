@@ -121,3 +121,5 @@ void MailWidgetLister::updateAddRemoveButton()
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }
+
+#include "moc_mailwidgetlister.cpp"

@@ -37,3 +37,5 @@ void MessageFormattingWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(MessageFormattingWidgetTest)
+
+#include "moc_messageformattingwidgettest.cpp"

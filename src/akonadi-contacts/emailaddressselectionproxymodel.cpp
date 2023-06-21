@@ -173,3 +173,5 @@ QVariant EmailAddressSelectionProxyModel::leafData(const QModelIndex &index, int
 
     return {};
 }
+
+#include "moc_emailaddressselectionproxymodel_p.cpp"

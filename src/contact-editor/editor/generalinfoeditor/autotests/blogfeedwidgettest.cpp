@@ -39,3 +39,5 @@ void BlogfeedWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(BlogfeedWidgetTest)
+
+#include "moc_blogfeedwidgettest.cpp"

@@ -106,3 +106,5 @@ void AddressLocationWidgetTest::shouldChangeReadOnlyStatus()
 }
 
 QTEST_MAIN(AddressLocationWidgetTest)
+
+#include "moc_addresslocationwidgettest.cpp"

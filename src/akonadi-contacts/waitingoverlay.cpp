@@ -95,3 +95,5 @@ bool WaitingOverlay::eventFilter(QObject *object, QEvent *event)
 }
 
 //@endcond
+
+#include "moc_waitingoverlay_p.cpp"

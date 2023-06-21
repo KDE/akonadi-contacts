@@ -165,3 +165,5 @@ DisplayNameEditWidget::DisplayType NameEditDialog::displayType() const
 {
     return mDisplayNameEdit->displayType();
 }
+
+#include "moc_nameeditdialog.cpp"

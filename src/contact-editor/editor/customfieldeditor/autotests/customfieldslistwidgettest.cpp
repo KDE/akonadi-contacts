@@ -16,3 +16,5 @@ CustomFielsListWidgetTest::CustomFielsListWidgetTest(QObject *parent)
 CustomFielsListWidgetTest::~CustomFielsListWidgetTest() = default;
 
 QTEST_MAIN(CustomFielsListWidgetTest)
+
+#include "moc_customfieldslistwidgettest.cpp"

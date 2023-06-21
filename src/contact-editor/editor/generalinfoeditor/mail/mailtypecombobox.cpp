@@ -23,3 +23,5 @@ MailTypeCombobox::MailTypeCombobox(QWidget *parent)
 }
 
 MailTypeCombobox::~MailTypeCombobox() = default;
+
+#include "moc_mailtypecombobox.cpp"

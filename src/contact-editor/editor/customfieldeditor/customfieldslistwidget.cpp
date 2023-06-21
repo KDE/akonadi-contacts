@@ -206,3 +206,5 @@ QVariantList CustomFieldsListWidget::localCustomFieldDescriptions() const
 
     return descriptions;
 }
+
+#include "moc_customfieldslistwidget.cpp"

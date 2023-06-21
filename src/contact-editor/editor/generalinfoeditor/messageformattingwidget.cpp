@@ -81,3 +81,5 @@ void MessageFormattingWidget::setReadOnly(bool readOnly)
     mMailPreferFormatting->setEnabled(!readOnly);
     mAllowRemoteContent->setEnabled(!readOnly);
 }
+
+#include "moc_messageformattingwidget.cpp"

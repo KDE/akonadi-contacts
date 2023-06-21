@@ -24,3 +24,5 @@ void ContactSelectTypeComboboxTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ContactSelectTypeComboboxTest)
+
+#include "moc_contactselecttypecomboboxtest.cpp"
