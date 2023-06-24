@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:48+0000\n"
-"PO-Revision-Date: 2023-06-19 09:42+0200\n"
+"PO-Revision-Date: 2023-06-23 20:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -53,13 +53,13 @@ msgstr "O nome do grupo de contactos non pode estar baleiro."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr "Escolla o caderno de enderezos"
+msgstr "Escolla a axenda de enderezos"
 
 #: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr ""
-"Seleccione o caderno de enderezos no que quere gardar o novo grupo de "
+"Seleccione a axenda de enderezos na que quere gardar o novo grupo de "
 "contactos:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
@@ -155,7 +155,7 @@ msgstr "Correo electrónico"
 #, kde-format
 msgctxt "@title:column address books overview"
 msgid "Address Books"
-msgstr "Cadernos de enderezos"
+msgstr "Axenda de enderezos"
 
 #: akonadi-contacts/contactstreemodel.cpp:222
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "Todos os correos electrónicos"
 #: akonadi-contacts/emailaddressrequester.cpp:80
 #, kde-format
 msgid "Open Address Book"
-msgstr "Abrir o caderno de enderezos"
+msgstr "Abrir a axenda de enderezos"
 
 #: akonadi-contacts/emailaddressselectionproxymodel.cpp:23
 #, kde-format
@@ -237,7 +237,7 @@ msgstr "Buscar un contacto…"
 #: contact-editor/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
-msgstr "Caderno de enderezos"
+msgstr "Axenda de enderezos"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
 #: akonadi-contacts/standardcontactformatter.cpp:176
@@ -359,8 +359,7 @@ msgstr ""
 #: contact-editor/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
-msgstr ""
-"Seleccione o caderno de enderezos no que desexa gardar o novo contacto:"
+msgstr "Seleccione a axenda de enderezos na que quere gardar o novo contacto:"
 
 #: contact-editor/contacteditordialog.cpp:45
 #, kde-format
@@ -1094,8 +1093,8 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
-"O enderezo de correo electrónico principal da vCard xa está no caderno de "
-"enderezos; porén, podería gardar o vCard nun ficheiro e importalo no caderno "
+"O enderezo de correo electrónico principal da vCard xa está na axenda de "
+"enderezos; porén, podería gardar o vCard nun ficheiro e importalo na axenda "
 "de enderezos manualmente."
 
 #: contact-editor/job/addcontactjob.cpp:111
@@ -1105,8 +1104,8 @@ msgid ""
 "The vCard was added to your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
-"Engadiuse a vCard ao caderno de enderezos; pode engadir máis información á "
-"entrada desde o caderno."
+"Engadiuse a vCard á axenda de enderezos; pode engadir máis información á "
+"entrada desde a axenda."
 
 #: contact-editor/job/addemailaddressjob.cpp:69
 #, kde-kuit-format
@@ -1115,8 +1114,8 @@ msgid ""
 "A contact with the email address <email>%1</email> is already in your "
 "address book."
 msgstr ""
-"Xa hai un contacto co enderezo de correo <email>%1</email> no caderno de "
-"enderezos."
+"Xa hai un contacto co enderezo de correo electrónico <email>%1</email> na "
+"axenda de enderezos."
 
 #: contact-editor/job/addemailaddressjob.cpp:120
 #: contact-editor/job/addemaildisplayjob.cpp:159
@@ -1126,22 +1125,22 @@ msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
 msgstr ""
-"Debe crear un caderno de enderezos para poder engadir un contacto. Quere "
-"crear un caderno de enderezos?"
+"Para engadir un contacto antes debe crear unha axenda de enderezos. Quere "
+"creala?"
 
 #: contact-editor/job/addemailaddressjob.cpp:121
 #: contact-editor/job/addemaildisplayjob.cpp:160
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "Non hai ningún caderno de enderezos dispoñíbel"
+msgstr "Non hai axenda de enderezos"
 
 #: contact-editor/job/addemailaddressjob.cpp:122
 #: contact-editor/job/addemaildisplayjob.cpp:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "Crear un caderno de enderezos"
+msgstr "Crear unha axenda de enderezos"
 
 #: contact-editor/job/addemailaddressjob.cpp:126
 #: contact-editor/job/addemaildisplayjob.cpp:165
@@ -1149,7 +1148,7 @@ msgstr "Crear un caderno de enderezos"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr "Engadir un caderno de enderezos"
+msgstr "Engadir unha axenda de enderezos"
 
 #: contact-editor/job/addemailaddressjob.cpp:216
 #, kde-kuit-format
@@ -1158,9 +1157,9 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
-"<para>O contacto co enderezo de correo «%1» engadiuse correctamente ao "
-"caderno de enderezos.</para><para>Quere editar agora este novo contacto?</"
-"para>"
+"<para>O contacto co enderezo de correo electrónico «%1» engadiuse "
+"correctamente á axenda de enderezos.</para><para>Quere editar agora este "
+"novo contacto?</para>"
 
 #: contact-editor/job/addemailaddressjob.cpp:224
 #, kde-format
@@ -1194,57 +1193,57 @@ msgstr "Creouse o contacto"
 #: contact-editor/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr "Engadir un cartafol de caderno de enderezos…"
+msgstr "Engadir un cartafol de axenda de enderezos…"
 
 #: contact-editor/standardcontactactionmanager.cpp:98
 #, kde-format
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
 msgstr ""
-"Engadir un cartafol de caderno de enderezos novo ao cartafol de caderno de "
+"Engadir un cartafol de axenda de enderezos nova ao cartafol de axenda de "
 "enderezos seleccionado."
 
 #: contact-editor/standardcontactactionmanager.cpp:101
 #, kde-format
 msgctxt "@title:window"
 msgid "New Address Book Folder"
-msgstr "Novo cartafol de caderno de enderezos"
+msgstr "Novo cartafol de axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:105
 #, kde-format
 msgid "Could not create address book folder: %1"
-msgstr "Non se puido crear o cartafol de caderno de enderezos: %1"
+msgstr "Non se puido crear o cartafol de axenda de enderezos: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:109
 #, kde-format
 msgid "Address book folder creation failed"
-msgstr "Fallou a creación do cartafol de caderno de enderezos"
+msgstr "Fallou a creación do cartafol de axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:115
 #, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
-msgstr[0] "Copiar o cartafol do caderno de enderezos"
-msgstr[1] "Copiar %1 cartafoles de cadernos de enderezos"
+msgstr[0] "Copiar o cartafol da axenda de enderezos"
+msgstr[1] "Copiar %1 cartafoles de axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
 msgstr ""
-"Copiar os cartafoles de caderno de enderezos seleccionados ao portapapeis."
+"Copiar os cartafoles de axenda de enderezos seleccionados no portapapeis."
 
 #: contact-editor/standardcontactactionmanager.cpp:121
 #, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
-msgstr[0] "Eliminar o cartafol do caderno de enderezos"
-msgstr[1] "Eliminar %1 cartafoles de cadernos de enderezos"
+msgstr[0] "Eliminar o cartafol da axenda de enderezos"
+msgstr[1] "Eliminar %1 cartafoles de axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
 msgstr ""
-"Eliminar os cartafoles de caderno de enderezos seleccionados do caderno de "
+"Eliminar os cartafoles de axenda de enderezos seleccionados da axenda de "
 "enderezos."
 
 #: contact-editor/standardcontactactionmanager.cpp:127
@@ -1256,10 +1255,10 @@ msgid_plural ""
 "Do you really want to delete %1 address book folders and all their sub-"
 "folders?"
 msgstr[0] ""
-"Seguro que quere eliminar este caderno de enderezos e todos os seus "
+"Seguro que quere eliminar esta axenda de enderezos e todos os seus "
 "cartafoles?"
 msgstr[1] ""
-"Seguro que quere eliminar estes %1 cadernos de enderezos e todos os seus "
+"Seguro que quere eliminar estas %1 axendas de enderezos e todos os seus "
 "cartafoles?"
 
 #: contact-editor/standardcontactactionmanager.cpp:131
@@ -1267,44 +1266,44 @@ msgstr[1] ""
 msgctxt "@title:window"
 msgid "Delete address book folder?"
 msgid_plural "Delete address book folders?"
-msgstr[0] "Eliminar este cartafol de caderno de enderezos?"
-msgstr[1] "Eliminar estes cartafoles de caderno de enderezos?"
+msgstr[0] "Eliminar este cartafol de axenda de enderezos?"
+msgstr[1] "Eliminar estes cartafoles de axenda de enderezos?"
 
 #: contact-editor/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
-msgstr "Non se puido eliminar o cartafol de caderno de enderezos: %1"
+msgstr "Non se puido eliminar o cartafol de axenda de enderezos: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:139
 #, kde-format
 msgid "Address book folder deletion failed"
-msgstr "Fallou a eliminación do cartafol de caderno de enderezos"
+msgstr "Fallou a eliminación do cartafol de axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:143
 #, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
-msgstr[0] "Actualizar o cartafol do caderno de enderezos"
-msgstr[1] "Actualizar %1 cartafoles de caderno de enderezos"
+msgstr[0] "Actualizar o cartafol da axenda de enderezos"
+msgstr[1] "Actualizar %1 cartafoles de axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update the content of the selected address book folders."
 msgstr ""
-"Actualizar o contido dos cartafoles de caderno de enderezos seleccionados."
+"Actualizar o contido dos cartafoles de axenda de enderezos seleccionados."
 
 #: contact-editor/standardcontactactionmanager.cpp:148
 #, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
-msgstr[0] "Recortar o cartafol do caderno de enderezos"
-msgstr[1] "Recortar %1 cartafoles de cadernos de enderezos"
+msgstr[0] "Recortar o cartafol da axenda de enderezos"
+msgstr[1] "Recortar %1 cartafoles de axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
 msgstr ""
-"Recortar do caderno de enderezos os cartafoles do caderno de enderezos "
+"Recortar da axenda de enderezos os cartafoles de axenda de enderezos "
 "seleccionados."
 
 #: contact-editor/standardcontactactionmanager.cpp:153
@@ -1317,14 +1316,14 @@ msgstr "Propiedades do cartafol…"
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
 msgstr ""
-"Abrir un diálogo para editar as propiedades do cartafol de caderno de "
+"Abrir un diálogo para editar as propiedades do cartafol de axenda de "
 "enderezos seleccionado."
 
 #: contact-editor/standardcontactactionmanager.cpp:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Address Book Folder %1"
-msgstr "Propiedades do cartafol do caderno de enderezos %1"
+msgstr "Propiedades do cartafol de axenda de enderezos %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:161
 #: contact-editor/standardcontactactionmanager.cpp:290
@@ -1350,7 +1349,7 @@ msgstr[1] "Eliminar %1 contactos"
 #: contact-editor/standardcontactactionmanager.cpp:166
 #, kde-format
 msgid "Delete the selected contacts from the address book."
-msgstr "Eliminar do caderno de enderezos os contactos seleccionados."
+msgstr "Eliminar da axenda de enderezos os contactos seleccionados."
 
 #: contact-editor/standardcontactactionmanager.cpp:169
 #, kde-format
@@ -1388,12 +1387,12 @@ msgstr[1] "Recortar %1 contactos"
 #: contact-editor/standardcontactactionmanager.cpp:181
 #, kde-format
 msgid "Cut the selected contacts from the address book."
-msgstr "Recortar do caderno de enderezos os contactos seleccionados."
+msgstr "Recortar da axenda de enderezos os contactos seleccionados."
 
 #: contact-editor/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr "Eng&adir un caderno de enderezos…"
+msgstr "Eng&adir unha axenda de enderezos…"
 
 #: contact-editor/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1401,25 +1400,25 @@ msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
 "select the type of the address book that shall be added.</p>"
 msgstr ""
-"Engadir un caderno de enderezos novo<p>Aparece un diálogo no que se pode "
-"seleccionar o tipo de caderno de enderezos que se desexe engadir.</p>"
+"Engadir unha axenda de enderezos nova<p>Aparece un diálogo no que se pode "
+"seleccionar o tipo de axenda de enderezos que quere engadir.</p>"
 
 #: contact-editor/standardcontactactionmanager.cpp:195
 #, kde-format
 msgid "Could not create address book: %1"
-msgstr "Non se puido crear o caderno de enderezos: %1"
+msgstr "Non se puido crear a axenda de enderezos: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:199
 #, kde-format
 msgid "Address book creation failed"
-msgstr "Fallou a creación do caderno de enderezos"
+msgstr "Fallou a creación da axenda de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:203
 #, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
-msgstr[0] "Elimina&r este caderno de enderezos"
-msgstr[1] "Elimina&r %1 cadernos de enderezos"
+msgstr[0] "Elimina&r esta axenda de enderezos"
+msgstr[1] "Elimina&r as %1 axendas de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:205
 #, kde-format
@@ -1428,50 +1427,50 @@ msgid ""
 "will be deleted, along with all the contacts and contact groups they contain."
 "</p>"
 msgstr ""
-"Eliminar os cadernos de enderezos seleccionados<p>Os cadernos de enderezos "
-"seleccionados eliminaranse, xunto con todos os contactos e grupos de "
+"Eliminar as axendas de enderezos seleccionadas<p>As axendas de enderezos "
+"seleccionadas eliminaranse, xunto con todos os contactos e grupos de "
 "contactos que conteñan.</p>"
 
 #: contact-editor/standardcontactactionmanager.cpp:210
 #, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
-msgstr[0] "Seguro que quere eliminar este caderno de enderezos?"
-msgstr[1] "Seguro que quere eliminar estes %1 cadernos de enderezos?"
+msgstr[0] "Seguro que quere eliminar esta axenda de enderezos?"
+msgstr[1] "Seguro que quere eliminar estas %1 axendas de enderezos?"
 
 #: contact-editor/standardcontactactionmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
 msgid_plural "Delete Address Books?"
-msgstr[0] "Eliminar este caderno de enderezos?"
-msgstr[1] "Seleccionar estes caderno de enderezos?"
+msgstr[0] "Eliminar esta axenda de enderezos?"
+msgstr[1] "Eliminar estas axendas de enderezos?"
 
 #: contact-editor/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
-msgstr "Propiedades do caderno de enderezos…"
+msgstr "Propiedades da axenda de enderezos…"
 
 #: contact-editor/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
 msgstr ""
-"Abrir un diálogo para editar as propiedades do caderno de enderezos "
-"seleccionado."
+"Abrir un diálogo para editar as propiedades da axenda de enderezos "
+"seleccionada."
 
 #: contact-editor/standardcontactactionmanager.cpp:224
 #, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
-msgstr[0] "Actualizar o caderno de enderezos"
-msgstr[1] "Actualizar %1 cadernos de enderezos"
+msgstr[0] "Actualizar a axenda de enderezos"
+msgstr[1] "Actualizar as %1 axendas de enderezos"
 
 #: contact-editor/standardcontactactionmanager.cpp:227
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
 msgstr ""
-"Actualiza o contido de todos os cartafoles dos cadernos de enderezos "
-"seleccionados."
+"Actualiza o contido de todos os cartafoles das axendas de enderezos "
+"seleccionadas."
 
 #: contact-editor/standardcontactactionmanager.cpp:231
 #, kde-format
@@ -1611,7 +1610,7 @@ msgstr "Copiar o código"
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
-msgstr "Seleccionar o caderno de enderezos no que gardar o novo contacto:"
+msgstr "Seleccionar a axenda de enderezos na que gardar o novo contacto:"
 
 #~ msgid ""
 #~ "Define how a phone number of a contact should be dialed. 'System Default' "
