@@ -17,7 +17,7 @@
 #include <QPalette>
 
 //@cond PRIVATE
-
+using namespace AkonadiContactWidgets;
 WaitingOverlay::WaitingOverlay(KJob *job, QWidget *baseWidget, QWidget *parent)
     : QWidget(parent ? parent : baseWidget->window())
     , mBaseWidget(baseWidget)

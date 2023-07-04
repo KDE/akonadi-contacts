@@ -17,6 +17,8 @@ class KJob;
  * @internal
  * Overlay widget to block widgets while a job is running.
  */
+namespace AkonadiContactWidgets
+{
 class WaitingOverlay : public QWidget
 {
     Q_OBJECT
@@ -39,3 +41,4 @@ private:
     QPointer<QWidget> mBaseWidget;
     bool mPreviousState;
 };
+}
