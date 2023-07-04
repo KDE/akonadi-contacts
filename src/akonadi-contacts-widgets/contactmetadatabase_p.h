@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "contacteditor_export.h"
+#include "akonadi-contact-widget_export.h"
 #include <QVariant>
 
 #include <memory>
@@ -20,7 +20,7 @@ class ContactMetaDataBasePrivate;
 /**
  * @short A helper class for storing contact specific settings.
  */
-class CONTACTEDITOR_EXPORT ContactMetaDataBase
+class AKONADI_CONTACT_WIDGET_EXPORT ContactMetaDataBase
 {
 public:
     /**

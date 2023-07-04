@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include "contacteditor_export.h"
+#include "akonadi-contact-widget_export.h"
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
 #ifndef CONTACTEDITOR_TESTS_EXPORT
-#define CONTACTEDITOR_TESTS_EXPORT CONTACTEDITOR_EXPORT
+#define CONTACTEDITOR_TESTS_EXPORT AKONADI_CONTACT_WIDGET_EXPORT
 #endif
 #else /* not compiling tests */
 #define CONTACTEDITOR_TESTS_EXPORT

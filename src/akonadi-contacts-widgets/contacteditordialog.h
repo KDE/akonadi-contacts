@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "contacteditor_export.h"
+#include "akonadi-contact-widget_export.h"
 
 #include <QDialog>
 
@@ -65,7 +65,7 @@ class ContactEditorDialogPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class CONTACTEDITOR_EXPORT ContactEditorDialog : public QDialog
+class AKONADI_CONTACT_WIDGET_EXPORT ContactEditorDialog : public QDialog
 {
     Q_OBJECT
 

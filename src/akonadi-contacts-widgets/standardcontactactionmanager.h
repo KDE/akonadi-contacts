@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "contacteditor_export.h"
+#include "akonadi-contact-widget_export.h"
 
 #include <Akonadi/StandardActionManager>
 
@@ -34,7 +34,7 @@ class StandardContactActionManagerPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.6
  */
-class CONTACTEDITOR_EXPORT StandardContactActionManager : public QObject
+class AKONADI_CONTACT_WIDGET_EXPORT StandardContactActionManager : public QObject
 {
     Q_OBJECT
 

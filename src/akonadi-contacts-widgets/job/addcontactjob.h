@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "contacteditor_export.h"
+#include "akonadi-contact-widget_export.h"
 
 #include <KJob>
 
@@ -31,7 +31,7 @@ class AddContactJobPrivate;
  * The job will check whether a contact with the given email address already
  * exists in Akonadi and adds it if it does not exist yet.
  */
-class CONTACTEDITOR_EXPORT AddContactJob : public KJob
+class AKONADI_CONTACT_WIDGET_EXPORT AddContactJob : public KJob
 {
     Q_OBJECT
 
