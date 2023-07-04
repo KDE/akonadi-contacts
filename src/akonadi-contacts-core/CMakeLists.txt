@@ -3,12 +3,12 @@
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore")
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KPim6AkonadiContact_QCH
-        FILE KPim6AkonadiContactQchTargets.cmake
+        TARGETS KPim6AkonadiContactCore_QCH
+        FILE KPim6AkonadiContactCoreQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactCoreQchTargets.cmake\")")
 endif()
 
 add_library(KPim6AkonadiContactCore)
@@ -16,7 +16,7 @@ add_library(KPim6::AkonadiContactCore ALIAS KPim6AkonadiContactCore)
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACTCORE
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h"
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_core_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfigVersion.cmake"
     SOVERSION 6
     )
@@ -241,6 +241,6 @@ if (BUILD_QCH)
 endif()
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore COMPONENT Devel
+    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_core_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore COMPONENT Devel
 )
