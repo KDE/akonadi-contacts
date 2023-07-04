@@ -78,7 +78,7 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     d->mViewer = new AkonadiContactWidgets::ContactViewer(this);
     layout->addWidget(d->mViewer);
 
-    connect(d->mViewer, &ContactEditor::ContactViewer::urlClicked, this, [](const QUrl &url) {
+    connect(d->mViewer, &AkonadiContactWidgets::ContactViewer::urlClicked, this, [](const QUrl &url) {
         QDesktopServices::openUrl(url);
     });
 

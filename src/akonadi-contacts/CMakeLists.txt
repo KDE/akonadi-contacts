@@ -32,7 +32,7 @@ install(FILES
     COMPONENT Devel
     )
 
-install(EXPORT KPim6AkonadiContactTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactCoreTargets.cmake NAMESPACE KPim6::)
+install(EXPORT KPim6AkonadiContactCoreTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactCoreTargets.cmake NAMESPACE KPim6::)
 
 ########### next target ###############
 
@@ -60,7 +60,6 @@ target_sources(KPim6AkonadiContactCore PRIVATE
     abstractcontactgroupformatter.cpp
     collectionfiltermodel.cpp
     contactcompletionmodel.cpp
-    contactdefaultactions.cpp
     contactgroupmodel.cpp
     contactparts.cpp
     contactsfilterproxymodel.cpp
@@ -168,7 +167,6 @@ ecm_generate_headers(AkonadiContactCore_CamelCase_HEADERS
     HEADER_NAMES
     AbstractContactFormatter
     AbstractContactGroupFormatter
-    ContactDefaultActions
     ContactsFilterProxyModel
     ContactsTreeModel
     ContactParts
