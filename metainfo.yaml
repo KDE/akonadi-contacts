@@ -14,6 +14,8 @@ release: false
 libraries:
  - qmake: AkonadiContactCore
    cmake: "KPim6::AkonadiContactCore"
+ - qmake: AkonadiContactWidgets
+   cmake: "KPim6::AkonadiContactWidgets"
 cmakename: KPim6AkonadiContactCore
 
 public_lib: true
