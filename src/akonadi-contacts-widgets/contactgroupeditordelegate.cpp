@@ -21,7 +21,7 @@
 #include <QSortFilterProxyModel>
 #include <QTimer>
 
-using namespace Akonadi;
+using namespace AkonadiContactWidgets;
 
 /**
  * @short Model that filters out all contacts without email address.
@@ -48,7 +48,7 @@ protected:
     }
 };
 
-ContactLineEdit::ContactLineEdit(bool isReference, ContactCompletionModel::Columns column, QWidget *parent)
+ContactLineEdit::ContactLineEdit(bool isReference, Akonadi::ContactCompletionModel::Columns column, QWidget *parent)
     : QLineEdit(parent)
     , mIsReference(isReference)
 {
@@ -83,7 +83,7 @@ void ContactLineEdit::completed(const QModelIndex &index)
         mItem = index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
         mIsReference = true;
     } else {
-        mItem = Item();
+        mItem = Akonadi::Item();
         mIsReference = false;
     }
 
@@ -96,7 +96,7 @@ void ContactLineEdit::slotTextEdited()
     mIsReference = false;
 }
 
-class Akonadi::ContactGroupEditorDelegatePrivate
+class AkonadiContactWidgets::ContactGroupEditorDelegatePrivate
 {
 public:
     ContactGroupEditorDelegatePrivate()
@@ -121,21 +121,21 @@ ContactGroupEditorDelegate::~ContactGroupEditorDelegate() = default;
 
 QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    const bool isReference = index.data(ContactGroupModel::IsReferenceRole).toBool();
+    const bool isReference = index.data(Akonadi::ContactGroupModel::IsReferenceRole).toBool();
     Q_UNUSED(option)
     if (index.column() == 0) {
-        auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
+        auto edit = new ContactLineEdit(isReference, Akonadi::ContactCompletionModel::NameAndEmailColumn, parent);
         connect(edit, qOverload<QWidget *>(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
 
         return edit;
     } else {
-        if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
+        if (index.data(Akonadi::ContactGroupModel::IsReferenceRole).toBool()) {
             auto comboBox = new KComboBox(parent);
             comboBox->setFrame(false);
             comboBox->setAutoFillBackground(true);
             return comboBox;
         } else {
-            auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
+            auto edit = new ContactLineEdit(isReference, Akonadi::ContactCompletionModel::NameAndEmailColumn, parent);
             connect(edit, qOverload<QWidget *>(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
             return edit;
         }
@@ -144,7 +144,7 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
 
 void ContactGroupEditorDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
+    if (index.data(Akonadi::ContactGroupModel::IsReferenceRole).toBool()) {
         if (index.column() == 0) {
             auto lineEdit = qobject_cast<QLineEdit *>(editor);
             if (!lineEdit) {
@@ -158,7 +158,7 @@ void ContactGroupEditorDelegate::setEditorData(QWidget *editor, const QModelInde
                 return;
             }
 
-            const QStringList emails = index.data(ContactGroupModel::AllEmailsRole).toStringList();
+            const QStringList emails = index.data(Akonadi::ContactGroupModel::AllEmailsRole).toStringList();
             comboBox->clear();
             comboBox->addItems(emails);
             comboBox->setCurrentIndex(comboBox->findText(index.data(Qt::EditRole).toString()));
@@ -175,13 +175,13 @@ void ContactGroupEditorDelegate::setEditorData(QWidget *editor, const QModelInde
 
 void ContactGroupEditorDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    if (index.data(ContactGroupModel::IsReferenceRole).toBool()) {
+    if (index.data(Akonadi::ContactGroupModel::IsReferenceRole).toBool()) {
         if (index.column() == 0) {
             auto lineEdit = static_cast<ContactLineEdit *>(editor);
 
             const bool isReference = lineEdit->isReference();
-            const Item item = lineEdit->completedItem();
-            model->setData(index, isReference, ContactGroupModel::IsReferenceRole);
+            const Akonadi::Item item = lineEdit->completedItem();
+            model->setData(index, isReference, Akonadi::ContactGroupModel::IsReferenceRole);
             if (isReference) {
                 if (item.isValid()) {
                     model->setData(index, item.id(), Qt::EditRole);
@@ -203,8 +203,8 @@ void ContactGroupEditorDelegate::setModelData(QWidget *editor, QAbstractItemMode
         auto lineEdit = static_cast<ContactLineEdit *>(editor);
 
         const bool isReference = lineEdit->isReference();
-        const Item item = lineEdit->completedItem();
-        model->setData(index, isReference, ContactGroupModel::IsReferenceRole);
+        const Akonadi::Item item = lineEdit->completedItem();
+        model->setData(index, isReference, Akonadi::ContactGroupModel::IsReferenceRole);
         if (isReference) {
             if (item.isValid()) {
                 model->setData(index.sibling(index.row(), 0), item.id(), Qt::EditRole);

@@ -31,6 +31,7 @@
 #include <QTimer>
 
 using namespace Akonadi;
+using namespace AkonadiContactWidgets;
 
 ContactGroupEditorPrivate::ContactGroupEditorPrivate(ContactGroupEditor *parent)
     : mParent(parent)

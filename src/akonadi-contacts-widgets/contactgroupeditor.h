@@ -23,6 +23,10 @@ namespace Akonadi
 {
 class Collection;
 class Item;
+}
+
+namespace AkonadiContactWidgets
+{
 class ContactGroupEditorPrivate;
 
 /**

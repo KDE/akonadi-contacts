@@ -20,7 +20,7 @@ MainWidget::MainWidget()
 {
     auto layout = new QGridLayout(this);
 
-    mAddressesWidget = new Akonadi::EmailAddressSelectionWidget;
+    mAddressesWidget = new AkonadiContactWidgets::EmailAddressSelectionWidget;
     layout->addWidget(mAddressesWidget, 0, 0);
 
     mInfo = new QTextBrowser;

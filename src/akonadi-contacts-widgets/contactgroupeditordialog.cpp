@@ -25,13 +25,13 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-using namespace Akonadi;
+using namespace AkonadiContactWidgets;
 
 namespace
 {
 static const char myContactGroupEditorDialogGroupName[] = "ContactGroupEditorDialog";
 }
-class Akonadi::ContactGroupEditorDialogPrivate
+class AkonadiContactWidgets::ContactGroupEditorDialogPrivate
 {
 public:
     ContactGroupEditorDialogPrivate(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
@@ -66,7 +66,7 @@ public:
     }
 
     ContactGroupEditorDialog *const q;
-    CollectionComboBox *mAddressBookBox = nullptr;
+    Akonadi::CollectionComboBox *mAddressBookBox = nullptr;
     ContactGroupEditor *mEditor = nullptr;
     const ContactGroupEditorDialog::Mode mMode;
     QPushButton *okButton = nullptr;
@@ -96,14 +96,16 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     auto layout = new QGridLayout(mainWidget);
     layout->setContentsMargins({});
 
-    d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode, this);
+    d->mEditor = new AkonadiContactWidgets::ContactGroupEditor(mode == CreateMode ? AkonadiContactWidgets::ContactGroupEditor::CreateMode
+                                                                                  : AkonadiContactWidgets::ContactGroupEditor::EditMode,
+                                                               this);
 
     if (mode == CreateMode) {
         auto label = new QLabel(i18n("Add to:"), mainWidget);
 
-        d->mAddressBookBox = new CollectionComboBox(mainWidget);
+        d->mAddressBookBox = new Akonadi::CollectionComboBox(mainWidget);
         d->mAddressBookBox->setMimeTypeFilter(QStringList() << KContacts::ContactGroup::mimeType());
-        d->mAddressBookBox->setAccessRightsFilter(Collection::CanCreateItem);
+        d->mAddressBookBox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
 
         layout->addWidget(label, 0, 0);
         layout->addWidget(d->mAddressBookBox, 0, 1);

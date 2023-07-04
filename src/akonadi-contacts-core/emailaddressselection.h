@@ -70,6 +70,7 @@ public:
      * Returns the name that is associated with the selected email address.
      */
     Q_REQUIRED_RESULT QString name() const;
+    void setName(const QString &name);
 
     /**
      * Returns the address part of the selected email address.
@@ -78,6 +79,7 @@ public:
      *       group is returned here and must be expanded by the caller.
      */
     Q_REQUIRED_RESULT QString email() const;
+    void setEmail(const QString &email);
 
     /**
      * Returns the name and email address together, properly quoted if needed.
@@ -91,6 +93,8 @@ public:
      * Returns the Akonadi item that is associated with the selected email address.
      */
     Q_REQUIRED_RESULT Akonadi::Item item() const;
+
+    void setItem(const Akonadi::Item &item);
 
 private:
     //@cond PRIVATE

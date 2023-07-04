@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    Akonadi::EmailAddressSelectionDialog dlg;
+    AkonadiContactWidgets::EmailAddressSelectionDialog dlg;
     if (dlg.exec()) {
         const auto selectedAddress = dlg.selectedAddresses();
 

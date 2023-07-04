@@ -18,6 +18,9 @@ namespace Akonadi
 {
 class Item;
 class Collection;
+}
+namespace AkonadiContactWidgets
+{
 class ContactGroupEditor;
 class ContactGroupEditorDialogPrivate;
 

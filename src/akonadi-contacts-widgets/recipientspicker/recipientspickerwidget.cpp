@@ -13,15 +13,16 @@
 #include <QHBoxLayout>
 #include <QTreeView>
 
-using namespace Akonadi;
+using namespace AkonadiContactWidgets;
 RecipientsPickerWidget::RecipientsPickerWidget(bool onlyShowEmailWithAddress, QAbstractItemModel *model, QWidget *parent)
     : QWidget(parent)
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
 
-    mView =
-        new Akonadi::EmailAddressSelectionWidget(onlyShowEmailWithAddress, model ? model : Akonadi::RecipientsEditorManager::self()->model()->model(), this);
+    mView = new AkonadiContactWidgets::EmailAddressSelectionWidget(onlyShowEmailWithAddress,
+                                                                   model ? model : AkonadiContactWidgets::RecipientsEditorManager::self()->model()->model(),
+                                                                   this);
     layout->addWidget(mView);
     mView->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mView->view()->setAlternatingRowColors(true);
@@ -36,7 +37,7 @@ QTreeView *RecipientsPickerWidget::view() const
     return mView->view();
 }
 
-Akonadi::EmailAddressSelectionWidget *RecipientsPickerWidget::emailAddressSelectionWidget() const
+AkonadiContactWidgets::EmailAddressSelectionWidget *RecipientsPickerWidget::emailAddressSelectionWidget() const
 {
     return mView;
 }

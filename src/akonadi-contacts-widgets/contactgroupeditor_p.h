@@ -16,12 +16,13 @@
 #include <Akonadi/Item>
 
 class KJob;
-
 namespace Akonadi
 {
 class ContactGroupModel;
 class Monitor;
-
+}
+namespace AkonadiContactWidgets
+{
 class ContactGroupEditorPrivate
 {
 public:
@@ -42,12 +43,12 @@ public:
     void setupMonitor();
 
     ContactGroupEditor::Mode mMode = ContactGroupEditor::Mode::CreateMode;
-    Item mItem;
-    Collection mDefaultCollection;
+    Akonadi::Item mItem;
+    Akonadi::Collection mDefaultCollection;
     Ui::ContactGroupEditor mGui;
     ContactGroupEditor *mParent = nullptr;
-    ContactGroupModel *mGroupModel = nullptr;
-    Monitor *mMonitor = nullptr;
+    Akonadi::ContactGroupModel *mGroupModel = nullptr;
+    Akonadi::Monitor *mMonitor = nullptr;
     bool mReadOnly = false;
 };
 }

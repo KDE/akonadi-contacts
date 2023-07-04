@@ -16,7 +16,7 @@
 
 #include <memory>
 
-namespace Akonadi
+namespace AkonadiContactWidgets
 {
 class EmailAddressSelectionDialogPrivate;
 
@@ -73,12 +73,12 @@ public:
     /**
      * Returns the list of selected email addresses.
      */
-    Q_REQUIRED_RESULT EmailAddressSelection::List selectedAddresses() const override;
+    Q_REQUIRED_RESULT Akonadi::EmailAddressSelection::List selectedAddresses() const override;
 
     /**
      * Returns the email address selection view that is used.
      */
-    Q_REQUIRED_RESULT EmailAddressSelectionWidget *view() const override;
+    Q_REQUIRED_RESULT AkonadiContactWidgets::EmailAddressSelectionWidget *view() const override;
 
 private:
     //@cond PRIVATE

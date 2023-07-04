@@ -58,9 +58,19 @@ QString EmailAddressSelection::name() const
     return d->mName;
 }
 
+void EmailAddressSelection::setName(const QString &name)
+{
+    d->mName = name;
+}
+
 QString EmailAddressSelection::email() const
 {
     return d->mEmailAddress;
+}
+
+void EmailAddressSelection::setEmail(const QString &email)
+{
+    d->mEmailAddress = email;
 }
 
 QString EmailAddressSelection::quotedEmail() const
@@ -81,4 +91,9 @@ QString EmailAddressSelection::quotedEmail() const
 Akonadi::Item EmailAddressSelection::item() const
 {
     return d->mItem;
+}
+
+void EmailAddressSelection::setItem(const Item &item)
+{
+    d->mItem = item;
 }

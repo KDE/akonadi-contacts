@@ -14,7 +14,7 @@
 
 class KLineEdit;
 
-namespace Akonadi
+namespace AkonadiContactWidgets
 {
 class EmailAddressRequesterPrivate;
 

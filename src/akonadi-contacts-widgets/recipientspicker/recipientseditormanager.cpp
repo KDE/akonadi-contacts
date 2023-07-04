@@ -8,7 +8,7 @@
 
 #include "emailaddressselectionmodel.h"
 
-using namespace Akonadi;
+using namespace AkonadiContactWidgets;
 
 RecipientsEditorManager::RecipientsEditorManager(QObject *parent)
     : QObject(parent)

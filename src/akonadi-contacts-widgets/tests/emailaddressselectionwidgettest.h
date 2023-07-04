@@ -25,6 +25,6 @@ private Q_SLOTS:
     void showSelection();
 
 private:
-    Akonadi::EmailAddressSelectionWidget *mAddressesWidget = nullptr;
+    AkonadiContactWidgets::EmailAddressSelectionWidget *mAddressesWidget = nullptr;
     QTextBrowser *mInfo = nullptr;
 };

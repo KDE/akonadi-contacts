@@ -17,14 +17,14 @@
 
 #include <memory>
 
-namespace Akonadi
+namespace AkonadiContactWidgets
 {
 class ContactLineEdit : public QLineEdit
 {
     Q_OBJECT
 
 public:
-    explicit ContactLineEdit(bool isReference, ContactCompletionModel::Columns column, QWidget *parent = nullptr);
+    explicit ContactLineEdit(bool isReference, Akonadi::ContactCompletionModel::Columns column, QWidget *parent = nullptr);
 
     bool isReference() const;
     Akonadi::Item completedItem() const;
@@ -36,7 +36,7 @@ private:
     void completed(const QModelIndex &index);
     void slotTextEdited();
     bool mIsReference;
-    Item mItem;
+    Akonadi::Item mItem;
 };
 
 class ContactGroupEditorDelegatePrivate;

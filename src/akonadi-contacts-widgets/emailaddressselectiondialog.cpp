@@ -18,9 +18,9 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 
-using namespace Akonadi;
+using namespace AkonadiContactWidgets;
 
-class Akonadi::EmailAddressSelectionDialogPrivate
+class AkonadiContactWidgets::EmailAddressSelectionDialogPrivate
 {
 public:
     EmailAddressSelectionDialogPrivate(EmailAddressSelectionDialog *qq, QAbstractItemModel *model)
@@ -83,7 +83,7 @@ EmailAddressSelectionDialog::~EmailAddressSelectionDialog()
     d->writeConfig();
 }
 
-EmailAddressSelection::List EmailAddressSelectionDialog::selectedAddresses() const
+Akonadi::EmailAddressSelection::List EmailAddressSelectionDialog::selectedAddresses() const
 {
     return d->mView->emailAddressSelectionWidget()->selectedAddresses();
 }

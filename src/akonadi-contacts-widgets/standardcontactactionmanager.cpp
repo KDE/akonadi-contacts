@@ -416,7 +416,8 @@ public:
             return;
         }
 
-        QPointer<Akonadi::ContactGroupEditorDialog> dlg = new Akonadi::ContactGroupEditorDialog(Akonadi::ContactGroupEditorDialog::CreateMode, mParentWidget);
+        QPointer<AkonadiContactWidgets::ContactGroupEditorDialog> dlg =
+            new AkonadiContactWidgets::ContactGroupEditorDialog(AkonadiContactWidgets::ContactGroupEditorDialog::CreateMode, mParentWidget);
         dlg->setDefaultAddressBook(selectedCollection());
         dlg->exec();
         delete dlg;
@@ -456,7 +457,8 @@ public:
             dlg->exec();
             delete dlg;
         } else if (Akonadi::MimeTypeChecker::isWantedItem(item, KContacts::ContactGroup::mimeType())) {
-            QPointer<Akonadi::ContactGroupEditorDialog> dlg = new Akonadi::ContactGroupEditorDialog(Akonadi::ContactGroupEditorDialog::EditMode, mParentWidget);
+            QPointer<AkonadiContactWidgets::ContactGroupEditorDialog> dlg =
+                new AkonadiContactWidgets::ContactGroupEditorDialog(AkonadiContactWidgets::ContactGroupEditorDialog::EditMode, mParentWidget);
             dlg->setContactGroup(item);
             dlg->exec();
             delete dlg;

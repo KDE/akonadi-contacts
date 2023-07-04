@@ -33,7 +33,7 @@
 #include <QTimer>
 #include <QVBoxLayout>
 using namespace Akonadi;
-
+using namespace AkonadiContactWidgets;
 /**
  * @internal
  */
@@ -82,7 +82,7 @@ private:
 /**
  * @internal
  */
-class Akonadi::EmailAddressSelectionWidgetPrivate
+class AkonadiContactWidgets::EmailAddressSelectionWidgetPrivate
 {
 public:
     EmailAddressSelectionWidgetPrivate(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)
@@ -200,12 +200,12 @@ EmailAddressSelection::List EmailAddressSelectionWidget::selectedAddresses() con
     const QModelIndexList selectedRows = d->mView->selectionModel()->selectedRows(0);
     for (const QModelIndex &index : selectedRows) {
         EmailAddressSelection selection;
-        selection.d->mName = index.data(EmailAddressSelectionProxyModel::NameRole).toString();
-        selection.d->mEmailAddress = index.data(EmailAddressSelectionProxyModel::EmailAddressRole).toString();
-        selection.d->mItem = index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>();
+        selection.setName(index.data(EmailAddressSelectionProxyModel::NameRole).toString());
+        selection.setEmail(index.data(EmailAddressSelectionProxyModel::EmailAddressRole).toString());
+        selection.setItem(index.data(ContactsTreeModel::ItemRole).value<Akonadi::Item>());
 
         if (d->mShowOnlyContactWithEmail) {
-            if (!selection.d->mEmailAddress.isEmpty()) {
+            if (!selection.email().isEmpty()) {
                 selections << selection;
             }
         } else {
