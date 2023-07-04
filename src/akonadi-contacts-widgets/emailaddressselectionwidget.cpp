@@ -33,7 +33,7 @@
 #include <QTimer>
 #include <QVBoxLayout>
 using namespace Akonadi;
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 /**
  * @internal
  */
@@ -82,7 +82,7 @@ private:
 /**
  * @internal
  */
-class AkonadiContactWidgets::EmailAddressSelectionWidgetPrivate
+class Akonadi::EmailAddressSelectionWidgetPrivate
 {
 public:
     EmailAddressSelectionWidgetPrivate(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)

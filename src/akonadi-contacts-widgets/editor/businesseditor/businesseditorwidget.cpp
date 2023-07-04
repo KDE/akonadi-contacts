@@ -19,7 +19,7 @@
 
 #include <KContacts/Addressee>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     : QWidget(parent)

@@ -17,7 +17,7 @@
 
 #include <memory>
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class ContactLineEdit : public QLineEdit
 {

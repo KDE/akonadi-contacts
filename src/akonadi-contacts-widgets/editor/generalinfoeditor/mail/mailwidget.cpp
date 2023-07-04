@@ -14,11 +14,11 @@
 #include <editor/generalinfoeditor/mail/mailtypecombobox.h>
 #include <editor/widgets/preferredlineeditwidget.h>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 MailWidget::MailWidget(QWidget *parent)
     : QWidget(parent)
     , mMailEdit(new PreferredLineEditWidget(this))
-    , mMailType(new AkonadiContactWidgets::MailTypeCombobox(this))
+    , mMailType(new Akonadi::MailTypeCombobox(this))
     , mAddButton(new QToolButton(this))
     , mRemoveButton(new QToolButton(this))
 {

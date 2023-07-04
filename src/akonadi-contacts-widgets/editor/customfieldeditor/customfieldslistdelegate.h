@@ -11,7 +11,7 @@
 
 #include <QStyledItemDelegate>
 class QAbstractItemView;
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class CustomFieldsListDelegate : public QStyledItemDelegate
 {

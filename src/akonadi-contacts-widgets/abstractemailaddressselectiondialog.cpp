@@ -6,7 +6,7 @@
 
 #include "abstractemailaddressselectiondialog.h"
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 AbstractEmailAddressSelectionDialog::AbstractEmailAddressSelectionDialog(QWidget *parent)
     : QDialog(parent)
 {

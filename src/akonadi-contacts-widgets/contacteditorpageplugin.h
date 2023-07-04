@@ -15,7 +15,7 @@ namespace KContacts
 class Addressee;
 }
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 /**
  * @short The base class for custom ContactEditor page plugins.
@@ -48,4 +48,4 @@ public:
 };
 }
 
-Q_DECLARE_INTERFACE(AkonadiContactWidgets::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")
+Q_DECLARE_INTERFACE(Akonadi::ContactEditorPagePlugin, "org.freedesktop.Akonadi.ContactEditorPagePlugin/1.0")

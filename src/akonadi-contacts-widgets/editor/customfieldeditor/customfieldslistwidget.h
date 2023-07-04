@@ -17,7 +17,7 @@ namespace KContacts
 class Addressee;
 }
 class CustomFieldsModel;
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class CustomFieldsListWidget : public QWidget
 {

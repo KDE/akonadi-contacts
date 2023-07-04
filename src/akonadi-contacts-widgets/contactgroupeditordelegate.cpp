@@ -21,7 +21,7 @@
 #include <QSortFilterProxyModel>
 #include <QTimer>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 /**
  * @short Model that filters out all contacts without email address.
@@ -96,7 +96,7 @@ void ContactLineEdit::slotTextEdited()
     mIsReference = false;
 }
 
-class AkonadiContactWidgets::ContactGroupEditorDelegatePrivate
+class Akonadi::ContactGroupEditorDelegatePrivate
 {
 public:
     ContactGroupEditorDelegatePrivate()

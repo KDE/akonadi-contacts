@@ -11,7 +11,7 @@
 #include "mailwidget.h"
 
 #include <KContacts/Addressee>
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 MailWidgetLister::MailWidgetLister(QWidget *parent)
     : KWidgetLister(1, 8, parent)

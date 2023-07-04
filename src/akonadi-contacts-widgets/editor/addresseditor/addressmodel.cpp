@@ -8,7 +8,7 @@
 
 #include "addressmodel.h"
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 AddressModel::AddressModel(QObject *parent)
     : QAbstractListModel(parent)

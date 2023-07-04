@@ -34,9 +34,9 @@
 #include <QVBoxLayout>
 
 using namespace Akonadi;
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
-class AkonadiContactWidgets::ContactViewerPrivate
+class Akonadi::ContactViewerPrivate
 {
 public:
     explicit ContactViewerPrivate(ContactViewer *parent)
@@ -179,7 +179,7 @@ public:
         }
 
         // load the local meta data of the item
-        AkonadiContactWidgets::ContactMetaDataAkonadi metaData;
+        Akonadi::ContactMetaDataAkonadi metaData;
         metaData.load(mCurrentItem);
 
         updateView(metaData.customFieldDescriptions(), addressBookName);

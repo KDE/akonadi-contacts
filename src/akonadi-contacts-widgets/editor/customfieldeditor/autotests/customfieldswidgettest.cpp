@@ -22,11 +22,11 @@ CustomFieldsWidgetTest::~CustomFieldsWidgetTest() = default;
 
 void CustomFieldsWidgetTest::shouldHaveDefaultValue()
 {
-    AkonadiContactWidgets::CustomFieldsWidget w;
-    auto customFieldEditorWidget = w.findChild<AkonadiContactWidgets::CustomFieldEditorWidget *>(QStringLiteral("customfieldeditorwidget"));
+    Akonadi::CustomFieldsWidget w;
+    auto customFieldEditorWidget = w.findChild<Akonadi::CustomFieldEditorWidget *>(QStringLiteral("customfieldeditorwidget"));
     QVERIFY(customFieldEditorWidget);
 
-    auto customFieldsListWidget = w.findChild<AkonadiContactWidgets::CustomFieldsListWidget *>(QStringLiteral("customfieldslistwidget"));
+    auto customFieldsListWidget = w.findChild<Akonadi::CustomFieldsListWidget *>(QStringLiteral("customfieldslistwidget"));
     QVERIFY(customFieldsListWidget);
 }
 

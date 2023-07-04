@@ -23,7 +23,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QVBoxLayout>
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     : QWidget(parent)

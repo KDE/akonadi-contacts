@@ -15,9 +15,9 @@
 #include <QPushButton>
 #include <QTreeView>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
-class AkonadiContactWidgets::EmailAddressRequesterPrivate
+class Akonadi::EmailAddressRequesterPrivate
 {
 public:
     explicit EmailAddressRequesterPrivate(EmailAddressRequester *qq)
@@ -33,7 +33,7 @@ public:
 
 void EmailAddressRequesterPrivate::slotAddressBook()
 {
-    QPointer<AkonadiContactWidgets::EmailAddressSelectionDialog> dlg = new AkonadiContactWidgets::EmailAddressSelectionDialog(q);
+    QPointer<Akonadi::EmailAddressSelectionDialog> dlg = new Akonadi::EmailAddressSelectionDialog(q);
     dlg->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
     if (!dlg->exec()) {
         delete dlg;

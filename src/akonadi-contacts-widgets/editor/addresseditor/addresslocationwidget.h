@@ -18,7 +18,7 @@ class KLineEdit;
 class QComboBox;
 class QPushButton;
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class SelectAddressTypeComboBox;
 

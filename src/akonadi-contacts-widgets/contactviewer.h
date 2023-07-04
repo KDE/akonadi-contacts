@@ -26,7 +26,7 @@ namespace Akonadi
 {
 class AbstractContactFormatter;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class ContactViewerPrivate;
 

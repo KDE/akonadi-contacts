@@ -22,7 +22,7 @@ BlogfeedWidgetTest::BlogfeedWidgetTest(QObject *parent)
 
 void BlogfeedWidgetTest::shouldHaveDefaultValue()
 {
-    AkonadiContactWidgets::BlogfeedWidget editor;
+    Akonadi::BlogfeedWidget editor;
 
     auto topLayout = editor.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(topLayout);

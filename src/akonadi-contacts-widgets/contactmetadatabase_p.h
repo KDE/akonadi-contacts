@@ -13,7 +13,7 @@
 
 #include <memory>
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class ContactMetaDataBasePrivate;
 

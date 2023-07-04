@@ -24,7 +24,7 @@ class QLineEdit;
 class QAbstractItemModel;
 class QTreeView;
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class EmailAddressSelectionWidgetPrivate;
 

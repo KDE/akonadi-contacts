@@ -10,7 +10,7 @@
 
 #include <memory>
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class SelectAddressBookDialogPrivate;
 /**

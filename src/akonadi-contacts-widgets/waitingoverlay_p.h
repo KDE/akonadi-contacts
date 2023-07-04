@@ -17,7 +17,7 @@ class KJob;
  * @internal
  * Overlay widget to block widgets while a job is running.
  */
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class WaitingOverlay : public QWidget
 {

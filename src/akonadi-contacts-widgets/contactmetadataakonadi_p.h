@@ -13,12 +13,12 @@ namespace Akonadi
 {
 class Item;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 /**
  * @short A helper class for storing contact specific settings.
  */
-class ContactMetaDataAkonadi : public AkonadiContactWidgets::ContactMetaDataBase
+class ContactMetaDataAkonadi : public Akonadi::ContactMetaDataBase
 {
 public:
     /**

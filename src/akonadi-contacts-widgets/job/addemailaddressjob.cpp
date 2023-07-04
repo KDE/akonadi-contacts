@@ -26,9 +26,9 @@
 
 #include <QPointer>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
-class AkonadiContactWidgets::AddEmailAddressJobPrivate
+class Akonadi::AddEmailAddressJobPrivate
 {
 public:
     AddEmailAddressJobPrivate(AddEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
@@ -161,7 +161,7 @@ public:
             addressBook = canCreateItemCollections[0];
         } else {
             // ask user in which address book the new contact shall be stored
-            QPointer<AkonadiContactWidgets::SelectAddressBookDialog> dlg = new AkonadiContactWidgets::SelectAddressBookDialog(mParentWidget);
+            QPointer<Akonadi::SelectAddressBookDialog> dlg = new Akonadi::SelectAddressBookDialog(mParentWidget);
 
             bool gotIt = true;
             if (dlg->exec()) {
@@ -225,13 +225,12 @@ public:
                                                 KGuiItem(i18nc("@action:button", "Finish"), QStringLiteral("dialog-ok-apply")),
                                                 QStringLiteral("addedtokabc"))
                 == KMessageBox::ButtonCode::PrimaryAction) {
-                QPointer<AkonadiContactWidgets::ContactEditorDialog> dlg =
-                    new AkonadiContactWidgets::ContactEditorDialog(AkonadiContactWidgets::ContactEditorDialog::EditMode, mParentWidget);
+                QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
                 dlg->setContact(mItem);
-                QObject::connect(dlg.data(), &AkonadiContactWidgets::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
+                QObject::connect(dlg.data(), &Akonadi::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
                     contactStored(item);
                 });
-                QObject::connect(dlg.data(), &AkonadiContactWidgets::ContactEditorDialog::error, q, [this](const QString &str) {
+                QObject::connect(dlg.data(), &Akonadi::ContactEditorDialog::error, q, [this](const QString &str) {
                     slotContactEditorError(str);
                 });
                 dlg->exec();

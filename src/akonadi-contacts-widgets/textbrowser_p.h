@@ -11,7 +11,7 @@
 
 #include <QTextBrowser>
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 /**
  * A convenience class to remove the 'Copy Link Location' action

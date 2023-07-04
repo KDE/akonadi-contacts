@@ -17,7 +17,7 @@ namespace KContacts
 class Addressee;
 }
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class CustomFieldEditorWidget;
 class CustomFieldsListWidget;
@@ -35,7 +35,7 @@ public:
     Q_REQUIRED_RESULT QVariantList localCustomFieldDescriptions() const;
 
 private:
-    AkonadiContactWidgets::CustomFieldEditorWidget *mCustomFieldEditorWidget = nullptr;
-    AkonadiContactWidgets::CustomFieldsListWidget *mCustomFieldsListWidget = nullptr;
+    Akonadi::CustomFieldEditorWidget *mCustomFieldEditorWidget = nullptr;
+    Akonadi::CustomFieldsListWidget *mCustomFieldsListWidget = nullptr;
 };
 }

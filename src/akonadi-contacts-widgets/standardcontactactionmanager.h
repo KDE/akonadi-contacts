@@ -24,7 +24,7 @@ namespace Akonadi
 {
 class Item;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class StandardContactActionManagerPrivate;
 

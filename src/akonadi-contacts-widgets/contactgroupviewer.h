@@ -20,7 +20,7 @@ namespace Akonadi
 {
 class AbstractContactGroupFormatter;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class ContactGroupViewerPrivate;
 

@@ -18,13 +18,13 @@
 #include <QToolButton>
 #include <QUrl>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 MessagingWidget::MessagingWidget(QWidget *parent)
     : QWidget(parent)
     , mMessagingEdit(new PreferredLineEditWidget(this))
     , mAddButton(new QToolButton(this))
     , mRemoveButton(new QToolButton(this))
-    , mProtocolCombo(new AkonadiContactWidgets::ContactEditorComboBox(this))
+    , mProtocolCombo(new Akonadi::ContactEditorComboBox(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);

@@ -20,7 +20,7 @@ MessageFormattingWidgetTest::MessageFormattingWidgetTest(QObject *parent)
 
 void MessageFormattingWidgetTest::shouldHaveDefaultValue()
 {
-    AkonadiContactWidgets::MessageFormattingWidget w;
+    Akonadi::MessageFormattingWidget w;
 
     auto label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);

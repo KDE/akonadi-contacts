@@ -13,11 +13,11 @@
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 MailListWidget::MailListWidget(QWidget *parent)
     : QWidget(parent)
-    , mMailWidgetLister(new AkonadiContactWidgets::MailWidgetLister(this))
+    , mMailWidgetLister(new Akonadi::MailWidgetLister(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});

@@ -20,7 +20,7 @@ class Item;
 
 }
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class ContactViewer;
 class ContactViewerDialogPrivate;

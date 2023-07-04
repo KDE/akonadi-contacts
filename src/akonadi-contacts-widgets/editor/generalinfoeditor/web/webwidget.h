@@ -13,7 +13,7 @@
 
 #include <KContacts/ResourceLocatorUrl>
 class QToolButton;
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class WebSelectTypeCombobox;
 class PreferredLineEditWidget;
@@ -34,9 +34,9 @@ public:
     void setReadOnly(bool readOnly);
 
 Q_SIGNALS:
-    void addWidget(AkonadiContactWidgets::WebWidget *);
-    void removeWidget(AkonadiContactWidgets::WebWidget *);
-    void preferredChanged(AkonadiContactWidgets::WebWidget *);
+    void addWidget(Akonadi::WebWidget *);
+    void removeWidget(Akonadi::WebWidget *);
+    void preferredChanged(Akonadi::WebWidget *);
 
 private:
     void slotRemoveWeb();
@@ -48,6 +48,6 @@ private:
     PreferredLineEditWidget *mWebSiteEdit = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;
-    AkonadiContactWidgets::WebSelectTypeCombobox *mWebType = nullptr;
+    Akonadi::WebSelectTypeCombobox *mWebType = nullptr;
 };
 }

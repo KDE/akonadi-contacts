@@ -15,7 +15,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class WebWidgetLister;
 class WebListWidget : public QWidget

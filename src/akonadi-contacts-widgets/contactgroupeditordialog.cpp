@@ -25,13 +25,13 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 namespace
 {
 static const char myContactGroupEditorDialogGroupName[] = "ContactGroupEditorDialog";
 }
-class AkonadiContactWidgets::ContactGroupEditorDialogPrivate
+class Akonadi::ContactGroupEditorDialogPrivate
 {
 public:
     ContactGroupEditorDialogPrivate(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
@@ -96,9 +96,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     auto layout = new QGridLayout(mainWidget);
     layout->setContentsMargins({});
 
-    d->mEditor = new AkonadiContactWidgets::ContactGroupEditor(mode == CreateMode ? AkonadiContactWidgets::ContactGroupEditor::CreateMode
-                                                                                  : AkonadiContactWidgets::ContactGroupEditor::EditMode,
-                                                               this);
+    d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode, this);
 
     if (mode == CreateMode) {
         auto label = new QLabel(i18n("Add to:"), mainWidget);

@@ -16,7 +16,7 @@ namespace KContacts
 {
 class PhoneNumber;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class PreferredLineEditWidget;
 class PhoneComboBoxType;
@@ -34,9 +34,9 @@ public:
     void setPreferred(bool b);
     void setReadOnly(bool readOnly);
 Q_SIGNALS:
-    void addWidget(AkonadiContactWidgets::PhoneWidget *);
-    void removeWidget(AkonadiContactWidgets::PhoneWidget *);
-    void preferredChanged(AkonadiContactWidgets::PhoneWidget *);
+    void addWidget(Akonadi::PhoneWidget *);
+    void removeWidget(Akonadi::PhoneWidget *);
+    void preferredChanged(Akonadi::PhoneWidget *);
 
 private:
     void slotAddPhone();

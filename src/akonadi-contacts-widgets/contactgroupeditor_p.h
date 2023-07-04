@@ -21,7 +21,7 @@ namespace Akonadi
 class ContactGroupModel;
 class Monitor;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class ContactGroupEditorPrivate
 {

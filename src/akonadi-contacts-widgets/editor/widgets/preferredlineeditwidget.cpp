@@ -10,7 +10,7 @@
 #include <KLocalizedString>
 #include <QAction>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     : KLineEdit(parent)

@@ -24,9 +24,9 @@
 #include <KMessageBox>
 
 #include <QPointer>
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
-class AkonadiContactWidgets::AddEmailDisplayJobPrivate
+class Akonadi::AddEmailDisplayJobPrivate
 {
 public:
     AddEmailDisplayJobPrivate(AddEmailDisplayJob *qq, const QString &emailString, QWidget *parentWidget)
@@ -200,7 +200,7 @@ public:
             addressBook = canCreateItemCollections[0];
         } else {
             // ask user in which address book the new contact shall be stored
-            QPointer<AkonadiContactWidgets::SelectAddressBookDialog> dlg = new AkonadiContactWidgets::SelectAddressBookDialog(mParentWidget);
+            QPointer<Akonadi::SelectAddressBookDialog> dlg = new Akonadi::SelectAddressBookDialog(mParentWidget);
 
             bool gotIt = true;
             if (dlg->exec()) {

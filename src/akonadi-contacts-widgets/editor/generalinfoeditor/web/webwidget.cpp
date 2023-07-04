@@ -14,14 +14,14 @@
 #include <QToolButton>
 #include <QUrl>
 #include <editor/widgets/preferredlineeditwidget.h>
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 WebWidget::WebWidget(QWidget *parent)
     : QWidget(parent)
     , mWebSiteEdit(new PreferredLineEditWidget(this))
     , mAddButton(new QToolButton(this))
     , mRemoveButton(new QToolButton(this))
-    , mWebType(new AkonadiContactWidgets::WebSelectTypeCombobox(this))
+    , mWebType(new Akonadi::WebSelectTypeCombobox(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);

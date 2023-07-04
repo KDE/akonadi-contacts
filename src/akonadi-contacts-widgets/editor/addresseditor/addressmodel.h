@@ -12,7 +12,7 @@
 
 #include <KContacts/Address>
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class AddressModel : public QAbstractListModel
 {

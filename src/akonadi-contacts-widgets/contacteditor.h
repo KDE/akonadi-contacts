@@ -23,7 +23,7 @@ namespace Akonadi
 class Collection;
 class Item;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class AbstractContactEditorWidget;
 class AkonadiContactEditorPrivate;
@@ -102,7 +102,7 @@ public:
      * @param editorWidget The contact editor widget that shall be used for editing.
      * @param parent The parent widget of the editor.
      */
-    AkonadiContactEditor(Mode mode, AkonadiContactWidgets::AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
+    AkonadiContactEditor(Mode mode, Akonadi::AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
 
     /**
      * Creates a new contact editor dialog with a custom editor widget.

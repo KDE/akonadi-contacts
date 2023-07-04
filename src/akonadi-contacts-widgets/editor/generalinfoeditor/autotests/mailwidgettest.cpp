@@ -23,7 +23,7 @@ MailWidgetTest::~MailWidgetTest() = default;
 
 void MailWidgetTest::shouldHaveDefaultValue()
 {
-    AkonadiContactWidgets::MailWidget w;
+    Akonadi::MailWidget w;
     auto line = w.findChild<QLineEdit *>(QStringLiteral("mailedit"));
     QVERIFY(line);
     QVERIFY(line->text().isEmpty());

@@ -14,7 +14,7 @@ namespace KAddressBookGrantlee
 class GrantleeContactFormatter;
 
 /** Grantlee-based contact viewer. */
-class CONTACTEDITOR_EXPORT GrantleeContactViewer : public AkonadiContactWidgets::ContactViewer
+class CONTACTEDITOR_EXPORT GrantleeContactViewer : public Akonadi::ContactViewer
 {
     Q_OBJECT
 public:

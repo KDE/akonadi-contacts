@@ -23,7 +23,7 @@
 #include <QTimeEdit>
 #include <QTimer>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 CustomFieldsListDelegate::CustomFieldsListDelegate(QAbstractItemView *view, QObject *parent)
     : QStyledItemDelegate(parent)
     , mIcon(QIcon::fromTheme(QStringLiteral("list-remove")))

@@ -12,7 +12,7 @@
 
 #include <KContacts/Addressee>
 #include <QDialog>
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class AKONADI_CONTACT_CORE_EXPORT AbstractEmailAddressSelectionDialog : public QDialog
 {
@@ -29,7 +29,7 @@ public:
     /**
      * Returns the email address selection view that is used.
      */
-    Q_REQUIRED_RESULT virtual AkonadiContactWidgets::EmailAddressSelectionWidget *view() const = 0;
+    Q_REQUIRED_RESULT virtual Akonadi::EmailAddressSelectionWidget *view() const = 0;
 Q_SIGNALS:
     void insertAddresses(const KContacts::Addressee::List &list);
 };

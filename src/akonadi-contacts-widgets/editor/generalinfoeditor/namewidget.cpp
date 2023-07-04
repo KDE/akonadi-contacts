@@ -16,7 +16,7 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 NameWidget::NameWidget(QWidget *parent)
     : QWidget(parent)

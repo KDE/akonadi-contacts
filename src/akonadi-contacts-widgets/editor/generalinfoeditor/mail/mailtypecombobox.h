@@ -11,9 +11,9 @@
 #include "../../widgets/contacteditorcombobox.h"
 #include "contacteditor_private_export.h"
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
-class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public AkonadiContactWidgets::ContactEditorComboBox
+class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public Akonadi::ContactEditorComboBox
 {
     Q_OBJECT
 public:

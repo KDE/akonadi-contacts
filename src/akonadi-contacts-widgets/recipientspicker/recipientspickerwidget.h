@@ -10,7 +10,7 @@
 #include <QWidget>
 class QAbstractItemModel;
 class QTreeView;
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class EmailAddressSelectionWidget;
 class AKONADI_CONTACT_CORE_EXPORT RecipientsPickerWidget : public QWidget
@@ -21,9 +21,9 @@ public:
     ~RecipientsPickerWidget() override;
     Q_REQUIRED_RESULT QTreeView *view() const;
 
-    Q_REQUIRED_RESULT AkonadiContactWidgets::EmailAddressSelectionWidget *emailAddressSelectionWidget() const;
+    Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionWidget *emailAddressSelectionWidget() const;
 
 private:
-    AkonadiContactWidgets::EmailAddressSelectionWidget *mView = nullptr;
+    Akonadi::EmailAddressSelectionWidget *mView = nullptr;
 };
 }

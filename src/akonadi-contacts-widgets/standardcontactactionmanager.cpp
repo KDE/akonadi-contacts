@@ -25,8 +25,8 @@
 #include <QPointer>
 
 using namespace Akonadi;
-using namespace AkonadiContactWidgets;
-class AkonadiContactWidgets::StandardContactActionManagerPrivate
+using namespace Akonadi;
+class Akonadi::StandardContactActionManagerPrivate
 {
 public:
     StandardContactActionManagerPrivate(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
@@ -403,8 +403,7 @@ public:
             return;
         }
 
-        QPointer<AkonadiContactWidgets::ContactEditorDialog> dlg =
-            new AkonadiContactWidgets::ContactEditorDialog(AkonadiContactWidgets::ContactEditorDialog::CreateMode, mParentWidget);
+        QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::CreateMode, mParentWidget);
         dlg->setDefaultAddressBook(selectedCollection());
         dlg->exec();
         delete dlg;
@@ -416,8 +415,7 @@ public:
             return;
         }
 
-        QPointer<AkonadiContactWidgets::ContactGroupEditorDialog> dlg =
-            new AkonadiContactWidgets::ContactGroupEditorDialog(AkonadiContactWidgets::ContactGroupEditorDialog::CreateMode, mParentWidget);
+        QPointer<Akonadi::ContactGroupEditorDialog> dlg = new Akonadi::ContactGroupEditorDialog(Akonadi::ContactGroupEditorDialog::CreateMode, mParentWidget);
         dlg->setDefaultAddressBook(selectedCollection());
         dlg->exec();
         delete dlg;
@@ -448,17 +446,15 @@ public:
         }
 
         if (Akonadi::MimeTypeChecker::isWantedItem(item, KContacts::Addressee::mimeType())) {
-            QPointer<AkonadiContactWidgets::ContactEditorDialog> dlg =
-                new AkonadiContactWidgets::ContactEditorDialog(AkonadiContactWidgets::ContactEditorDialog::EditMode, mParentWidget);
-            QObject::connect(dlg.data(), &AkonadiContactWidgets::ContactEditorDialog::error, mParent, [this](const QString &error) {
+            QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
+            QObject::connect(dlg.data(), &Akonadi::ContactEditorDialog::error, mParent, [this](const QString &error) {
                 slotContactEditorError(error);
             });
             dlg->setContact(item);
             dlg->exec();
             delete dlg;
         } else if (Akonadi::MimeTypeChecker::isWantedItem(item, KContacts::ContactGroup::mimeType())) {
-            QPointer<AkonadiContactWidgets::ContactGroupEditorDialog> dlg =
-                new AkonadiContactWidgets::ContactGroupEditorDialog(AkonadiContactWidgets::ContactGroupEditorDialog::EditMode, mParentWidget);
+            QPointer<Akonadi::ContactGroupEditorDialog> dlg = new Akonadi::ContactGroupEditorDialog(Akonadi::ContactGroupEditorDialog::EditMode, mParentWidget);
             dlg->setContactGroup(item);
             dlg->exec();
             delete dlg;

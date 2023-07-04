@@ -8,9 +8,9 @@
 
 #include "contactmetadatabase_p.h"
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
-class AkonadiContactWidgets::ContactMetaDataBasePrivate
+class Akonadi::ContactMetaDataBasePrivate
 {
 public:
     int mDisplayNameMode = -1;

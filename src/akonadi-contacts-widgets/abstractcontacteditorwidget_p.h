@@ -15,7 +15,7 @@ namespace KContacts
 class Addressee;
 }
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class ContactMetaDataBase;
 
@@ -40,12 +40,12 @@ public:
     /**
      * @param contact loads the given contact into the editor widget
      */
-    virtual void loadContact(const KContacts::Addressee &contact, const AkonadiContactWidgets::ContactMetaDataBase &metaData) = 0;
+    virtual void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaDataBase &metaData) = 0;
 
     /**
      * @param contact store the given contact into the editor widget
      */
-    virtual void storeContact(KContacts::Addressee &contact, AkonadiContactWidgets::ContactMetaDataBase &metaData) const = 0;
+    virtual void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaDataBase &metaData) const = 0;
 
     /**
      * @param readOnly set read-only mode

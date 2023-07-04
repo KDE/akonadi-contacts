@@ -15,7 +15,7 @@ namespace KContacts
 {
 class Addressee;
 }
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class PhoneWidgetLister;
 class CONTACTEDITOR_TESTS_EXPORT PhoneListWidget : public QWidget
@@ -29,6 +29,6 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    AkonadiContactWidgets::PhoneWidgetLister *mPhoneWidgetLister = nullptr;
+    Akonadi::PhoneWidgetLister *mPhoneWidgetLister = nullptr;
 };
 }

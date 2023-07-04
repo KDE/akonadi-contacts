@@ -13,7 +13,7 @@
 
 class QButtonGroup;
 
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 /**
  * Dialog for creating a new address types.

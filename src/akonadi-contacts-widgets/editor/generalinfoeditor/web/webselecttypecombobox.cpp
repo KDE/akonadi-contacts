@@ -12,10 +12,10 @@
 
 #include <KLocalizedString>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 WebSelectTypeCombobox::WebSelectTypeCombobox(QWidget *parent)
-    : AkonadiContactWidgets::ContactEditorComboBox(parent)
+    : Akonadi::ContactEditorComboBox(parent)
 {
     addItem(i18n("Select..."), QString());
     addItem(i18n("Home"), (int)KContacts::ResourceLocatorUrl::Home);

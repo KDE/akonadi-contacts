@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    AkonadiContactWidgets::CustomFieldsWidget w;
+    Akonadi::CustomFieldsWidget w;
     w.show();
     return app.exec();
 }

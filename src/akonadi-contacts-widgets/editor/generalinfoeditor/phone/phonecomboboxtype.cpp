@@ -12,10 +12,10 @@
 #include <KLocalizedString>
 #include <QPointer>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 PhoneComboBoxType::PhoneComboBoxType(QWidget *parent)
-    : AkonadiContactWidgets::ContactEditorComboBox(parent)
+    : Akonadi::ContactEditorComboBox(parent)
 {
     const int nbMax = KContacts::PhoneNumber::typeList().count();
     mTypeList.reserve(nbMax + 1);
@@ -84,7 +84,7 @@ void PhoneComboBoxType::selected(int pos)
 
 void PhoneComboBoxType::otherSelected()
 {
-    QPointer<AkonadiContactWidgets::PhoneTypeDialog> dlg = new AkonadiContactWidgets::PhoneTypeDialog(mType, this);
+    QPointer<Akonadi::PhoneTypeDialog> dlg = new Akonadi::PhoneTypeDialog(mType, this);
     if (dlg->exec()) {
         mType = dlg->type();
         if (!mTypeList.contains(mType)) {

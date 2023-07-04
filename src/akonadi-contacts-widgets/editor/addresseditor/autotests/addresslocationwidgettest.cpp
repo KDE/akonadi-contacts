@@ -17,7 +17,7 @@
 #include <QPushButton>
 #include <QTest>
 
-using namespace AkonadiContactWidgets;
+using namespace Akonadi;
 
 AddressLocationWidgetTest::AddressLocationWidgetTest(QObject *parent)
     : QObject(parent)

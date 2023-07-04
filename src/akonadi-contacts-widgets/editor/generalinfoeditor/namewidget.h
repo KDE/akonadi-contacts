@@ -15,7 +15,7 @@
 #include <KContacts/Addressee>
 class KLineEdit;
 class QToolButton;
-namespace AkonadiContactWidgets
+namespace Akonadi
 {
 class NameWidget : public QWidget
 {
