@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "akonadi-contact-core_export.h"
+#include "akonadi-contact-widgets_export.h"
 
 #include <QWidget>
 
@@ -23,7 +23,7 @@ class EmailAddressRequesterPrivate;
  *
  * @author Marc Mutz <mutz@kde.org>
  */
-class AKONADI_CONTACT_CORE_EXPORT EmailAddressRequester : public QWidget
+class AKONADI_CONTACT_WIDGETS_EXPORT EmailAddressRequester : public QWidget
 {
     Q_OBJECT
 

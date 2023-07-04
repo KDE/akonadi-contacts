@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact-core_export.h"
+#include "akonadi-contact-widgets_export.h"
 
 #include <QDialog>
 
@@ -62,7 +62,7 @@ class ContactGroupEditorDialogPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_CORE_EXPORT ContactGroupEditorDialog : public QDialog
+class AKONADI_CONTACT_WIDGETS_EXPORT ContactGroupEditorDialog : public QDialog
 {
     Q_OBJECT
 
@@ -114,7 +114,7 @@ Q_SIGNALS:
     void contactGroupStored(const Akonadi::Item &group);
 
 private:
-    AKONADI_CONTACT_CORE_NO_EXPORT void slotAccepted();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotAccepted();
 
     //@cond PRIVATE
     std::unique_ptr<ContactGroupEditorDialogPrivate> const d;

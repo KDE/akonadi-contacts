@@ -9,7 +9,7 @@
 #pragma once
 
 #include "abstractcontacteditorwidget_p.h"
-#include "akonadi-contact-widget_export.h"
+#include "akonadi-contact-widgets_export.h"
 
 #include <memory>
 
@@ -25,7 +25,7 @@ class ContactEditorWidgetPrivate;
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
-class AKONADI_CONTACT_WIDGET_EXPORT ContactEditorWidget : public Akonadi::AbstractContactEditorWidget
+class AKONADI_CONTACT_WIDGETS_EXPORT ContactEditorWidget : public Akonadi::AbstractContactEditorWidget
 {
     Q_OBJECT
 public:

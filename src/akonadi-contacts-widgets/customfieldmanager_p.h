@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact-widget_export.h"
+#include "akonadi-contact-widgets_export.h"
 #include "customfields_p.h"
 
 /**
@@ -17,6 +17,6 @@
 class CustomFieldManager
 {
 public:
-    AKONADI_CONTACT_WIDGET_EXPORT static void setGlobalCustomFieldDescriptions(const CustomField::List &customFields);
-    Q_REQUIRED_RESULT AKONADI_CONTACT_WIDGET_EXPORT static CustomField::List globalCustomFieldDescriptions();
+    AKONADI_CONTACT_WIDGETS_EXPORT static void setGlobalCustomFieldDescriptions(const CustomField::List &customFields);
+    Q_REQUIRED_RESULT AKONADI_CONTACT_WIDGETS_EXPORT static CustomField::List globalCustomFieldDescriptions();
 };

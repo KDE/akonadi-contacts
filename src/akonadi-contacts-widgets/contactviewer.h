@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact-widget_export.h"
+#include "akonadi-contact-widgets_export.h"
 
 #include <Akonadi/ItemMonitor>
 
@@ -63,7 +63,7 @@ class ContactViewerPrivate;
  * @author Tobias Koenig <tokoe@kde.org>
  * @since 4.4
  */
-class AKONADI_CONTACT_WIDGET_EXPORT ContactViewer : public QWidget, public Akonadi::ItemMonitor
+class AKONADI_CONTACT_WIDGETS_EXPORT ContactViewer : public QWidget, public Akonadi::ItemMonitor
 {
     Q_OBJECT
 

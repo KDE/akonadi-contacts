@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "akonadi-contact-widget_export.h"
+#include "akonadi-contact-widgets_export.h"
 #include <Akonadi/CollectionDialog>
 
 #include <memory>
@@ -17,7 +17,7 @@ class SelectAddressBookDialogPrivate;
  * @brief The SelectAddressBookDialog class This class allows to select addressbook where saving contacts
  * @since 5.1
  */
-class AKONADI_CONTACT_WIDGET_EXPORT SelectAddressBookDialog : public Akonadi::CollectionDialog
+class AKONADI_CONTACT_WIDGETS_EXPORT SelectAddressBookDialog : public Akonadi::CollectionDialog
 {
     Q_OBJECT
 public:

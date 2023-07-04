@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "akonadi-contact-widget_export.h"
+#include "akonadi-contact-widgets_export.h"
 #include <Akonadi/Item>
 #include <KJob>
 
@@ -21,7 +21,7 @@ class AddEmailDisplayJobPrivate;
  * @brief The AddEmailDisplayJob class
  * @author Laurent Montel <montel@kde.org>
  */
-class AKONADI_CONTACT_WIDGET_EXPORT AddEmailDisplayJob : public KJob
+class AKONADI_CONTACT_WIDGETS_EXPORT AddEmailDisplayJob : public KJob
 {
     Q_OBJECT
 

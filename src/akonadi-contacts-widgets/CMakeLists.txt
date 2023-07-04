@@ -222,7 +222,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6AkonadiContactWidgets PROPERTIES UNITY_BUILD ON)
 endif()
 
-generate_export_header(KPim6AkonadiContactWidgets BASE_NAME akonadi-contact-widget)
+generate_export_header(KPim6AkonadiContactWidgets BASE_NAME akonadi-contact-widgets)
 
 
 target_include_directories(KPim6AkonadiContactWidgets INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets>")
@@ -338,7 +338,7 @@ install( FILES
     ${AkonadiContactWidgetsWidgets_HEADERS}
     ${AkonadiContactWidgetsRecipients_HEADERS}
     ${AkonadiContactWidgetsGrantlee_HEADERS}
-    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-widget_export.h
+    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-widgets_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets/akonadi COMPONENT Devel
     )
 

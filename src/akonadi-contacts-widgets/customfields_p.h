@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "akonadi-contact-widget_export.h"
+#include "akonadi-contact-widgets_export.h"
 #include <QList>
 #include <QString>
 #include <QVariant>
@@ -31,7 +31,7 @@ class QList;
  *
  * The description of a custom field covers the key, title and type.
  */
-class AKONADI_CONTACT_WIDGET_EXPORT CustomField
+class AKONADI_CONTACT_WIDGETS_EXPORT CustomField
 {
 public:
     using List = QList<CustomField>;
