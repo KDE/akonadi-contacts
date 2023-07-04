@@ -232,6 +232,7 @@ target_link_libraries(KPim6AkonadiContactWidgets
     PUBLIC
     KF6::Contacts
     Qt::Widgets
+    KPim6::AkonadiContactCore
     PRIVATE
     KF6::Completion
     KF6::ConfigCore
@@ -240,7 +241,6 @@ target_link_libraries(KPim6AkonadiContactWidgets
     KF6::TextWidgets
     KF6::WidgetsAddons
     KPim6::AkonadiWidgets
-    KPim6::AkonadiContactCore
     KF6::Prison
     KF6::XmlGui
     KF6::Codecs
