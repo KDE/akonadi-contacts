@@ -136,8 +136,8 @@ target_link_libraries(KPim6AkonadiContactCore
     KPim6::Mime
     )
 set_target_properties(KPim6AkonadiContactCore PROPERTIES
-    VERSION ${AKONADICONTACT_VERSION}
-    SOVERSION ${AKONADICONTACT_SOVERSION}
+    VERSION ${AKONADICONTACTCORE_VERSION}
+    SOVERSION ${AKONADICONTACTCORE_SOVERSION}
     EXPORT_NAME AkonadiContactCore
     )
 

@@ -37,6 +37,8 @@ install(FILES
 
 install(EXPORT KPim6AkonadiContactWidgetsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactWidgetsTargets.cmake NAMESPACE KPim6::)
 
+ki18n_wrap_ui(akonadicontacts_widgets_UI_LIB_SRC contactgroupeditor.ui)
+
 target_sources(KPim6AkonadiContactWidgets PRIVATE
     editor/customfieldeditor/customfieldswidget.cpp
     editor/customfieldeditor/customfieldeditorwidget.cpp
@@ -184,6 +186,7 @@ target_sources(KPim6AkonadiContactWidgets PRIVATE
     emailaddressrequester.h
     emailaddressselectionwidget.cpp
     emailaddressselectionwidget.h
+    ${akonadicontacts_widgets_UI_LIB_SRC}
 )
 
 target_sources(KPim6AkonadiContactWidgets PRIVATE
