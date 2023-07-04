@@ -11,7 +11,7 @@
 
 #include "akonadi-contact-widgets_export.h"
 
-#include "emailaddressselection.h"
+#include <Akonadi/EmailAddressSelection>
 
 #include <Akonadi/Item>
 
