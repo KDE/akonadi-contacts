@@ -26,7 +26,7 @@
 
 #include <KConfig>
 #include <KContacts/VCardConverter>
-#include <Prison/Prison>
+#include <Prison/Barcode>
 #include <QGuiApplication>
 #include <QIcon>
 #include <QScreen>
@@ -41,7 +41,7 @@ class Akonadi::ContactViewerPrivate
 public:
     explicit ContactViewerPrivate(ContactViewer *parent)
         : mParent(parent)
-        , mQRCode(Prison::createBarcode(Prison::QRCode))
+        , mQRCode(new Prison::Barcode(Prison::QRCode))
     {
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
@@ -193,7 +193,7 @@ public:
     AbstractContactFormatter *mContactFormatter = nullptr;
     AbstractContactFormatter *mStandardContactFormatter = nullptr;
     CollectionFetchJob *mParentCollectionFetchJob = nullptr;
-    Prison::AbstractBarcode *const mQRCode;
+    Prison::Barcode *const mQRCode;
     bool mShowQRCode = true;
 };
 
