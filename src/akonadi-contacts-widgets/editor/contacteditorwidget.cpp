@@ -12,7 +12,6 @@
 #include "contactmetadatabase_p.h"
 #include "personaleditor/personaleditorwidget.h"
 
-#include <KConfig>
 #include <KLocalizedString>
 #include <KTextEdit>
 #include <QTabWidget>

@@ -19,8 +19,6 @@
 #include <Akonadi/EntityTreeView>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Session>
-#include <KContacts/Addressee>
-#include <KContacts/ContactGroup>
 #include <KLocalizedString>
 #include <contactsfilterproxymodel.h>
 #include <contactstreemodel.h>

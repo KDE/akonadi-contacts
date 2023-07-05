@@ -9,7 +9,6 @@
 
 #include "customfieldeditorwidget.h"
 #include "customfieldsmodel.h"
-#include <KContacts/Addressee>
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <QCheckBox>

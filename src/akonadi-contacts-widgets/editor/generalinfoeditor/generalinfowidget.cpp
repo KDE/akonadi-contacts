@@ -21,7 +21,6 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QHBoxLayout>
-#include <QLabel>
 #include <QVBoxLayout>
 using namespace Akonadi;
 

@@ -10,7 +10,6 @@
 
 #include <KContacts/Addressee>
 #include <KJob>
-#include <QVariant>
 #include <QWidget>
 namespace Akonadi
 {
