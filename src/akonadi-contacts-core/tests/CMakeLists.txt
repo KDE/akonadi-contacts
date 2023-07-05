@@ -9,6 +9,7 @@ macro(add_akonadi_contact_demo _source)
   add_executable( ${_name} ${_test})
   target_link_libraries(${_name}
      KPim6::AkonadiContactCore
+     Qt::Widgets
      Qt::Test)
   ecm_mark_as_test(${_name})
 endmacro()

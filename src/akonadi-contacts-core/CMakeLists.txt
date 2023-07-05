@@ -99,16 +99,12 @@ target_link_libraries(KPim6AkonadiContactCore
     PUBLIC
     KPim6::AkonadiCore
     KF6::Contacts
-    KPim6::AkonadiWidgets
-    Qt::Widgets
     KPim6::GrantleeTheme
     PRIVATE
+    KF6::ColorScheme
     KF6::ConfigCore
     KF6::IconThemes
-    KF6::Completion
     KF6::I18n
-    KF6::TextTemplate
-    KF6::I18nLocaleData
     KPim6::Mime
     )
 set_target_properties(KPim6AkonadiContactCore PROPERTIES
