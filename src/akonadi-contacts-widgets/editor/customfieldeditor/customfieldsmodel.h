@@ -11,7 +11,8 @@
 #include "customfields_p.h"
 
 #include <QAbstractItemModel>
-
+namespace Akonadi
+{
 class CustomFieldsModel : public QAbstractItemModel
 {
     Q_OBJECT
@@ -39,3 +40,4 @@ public:
 private:
     CustomField::List mCustomFields;
 };
+}

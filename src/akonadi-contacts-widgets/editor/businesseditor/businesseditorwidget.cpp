@@ -30,7 +30,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     , mOfficeWidget(new KLineEdit(this))
     , mManagerWidget(new KLineEdit(this))
     , mAssistantWidget(new KLineEdit(this))
-    , mFreeBusyWidget(new FreeBusyEditWidget(this))
+    , mFreeBusyWidget(new Akonadi::FreeBusyEditWidget(this))
     , mLogoWidget(new ImageWidget(ImageWidget::Logo, this))
 {
     auto topLayout = new QHBoxLayout(this);

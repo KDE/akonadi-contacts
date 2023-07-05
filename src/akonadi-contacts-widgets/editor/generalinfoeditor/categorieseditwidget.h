@@ -14,11 +14,11 @@
 namespace Akonadi
 {
 class TagWidget;
-}
 
 /**
  * @short A widget for editing the categories of a contact.
  */
+
 class CategoriesEditWidget : public QWidget
 {
     Q_OBJECT
@@ -36,3 +36,4 @@ private:
     void onMissingTagCreated(KJob *);
     Akonadi::TagWidget *const mTagWidget;
 };
+}

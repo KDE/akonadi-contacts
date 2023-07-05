@@ -20,6 +20,8 @@ class KComboBox;
  * The widget will either use a predefined schema for formatting
  * the name or a custom one.
  */
+namespace Akonadi
+{
 class DisplayNameEditWidget : public QWidget
 {
     Q_OBJECT
@@ -66,3 +68,4 @@ private:
     DisplayType mDisplayType = DisplayType::SimpleName;
     int mAdditionalPopupWidth;
 };
+}

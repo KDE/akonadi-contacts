@@ -15,7 +15,7 @@
 #include <QDialogButtonBox>
 #include <QFormLayout>
 #include <QPushButton>
-
+using namespace Akonadi;
 NameEditDialog::NameEditDialog(QWidget *parent)
     : QDialog(parent)
 {

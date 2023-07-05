@@ -204,7 +204,7 @@ void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const
     d->mNotesWidget->setPlainText(contact.note());
 
     d->mPersonalEditorWidget->loadContact(contact);
-    d->mGeneralInfoWidget->setDisplayType((DisplayNameEditWidget::DisplayType)metaData.displayNameMode());
+    d->mGeneralInfoWidget->setDisplayType((Akonadi::DisplayNameEditWidget::DisplayType)metaData.displayNameMode());
     if (d->mDisplayMode == FullMode) {
         // custom fields group
         d->mCustomFieldsWidget->setLocalCustomFieldDescriptions(metaData.customFieldDescriptions());

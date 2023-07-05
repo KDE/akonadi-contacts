@@ -11,14 +11,14 @@
 
 #include "displaynameeditwidget.h"
 #include <QWidget>
-class ImageWidget;
 namespace KContacts
 {
 class Addressee;
 }
-class CategoriesEditWidget;
 namespace Akonadi
 {
+class ImageWidget;
+class CategoriesEditWidget;
 class PhoneListWidget;
 class WebListWidget;
 class MessagingListWidget;

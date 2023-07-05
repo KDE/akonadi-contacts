@@ -26,10 +26,11 @@
 #include <QMenu>
 #include <QMimeData>
 #include <QUrl>
+using namespace Akonadi;
 /**
  * @short Small helper class to load image from network
  */
-class ImageLoader
+class Akonadi::ImageLoader
 {
 public:
     ImageLoader(QWidget *parent = nullptr);

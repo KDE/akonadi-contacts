@@ -9,14 +9,14 @@
 
 #include <QWidget>
 class KLineEdit;
-class ImageWidget;
-class FreeBusyEditWidget;
 namespace KContacts
 {
 class Addressee;
 }
 namespace Akonadi
 {
+class FreeBusyEditWidget;
+class ImageWidget;
 class BusinessEditorWidget : public QWidget
 {
     Q_OBJECT
@@ -38,7 +38,7 @@ private:
     KLineEdit *mOfficeWidget = nullptr;
     KLineEdit *mManagerWidget = nullptr;
     KLineEdit *mAssistantWidget = nullptr;
-    FreeBusyEditWidget *mFreeBusyWidget = nullptr;
+    Akonadi::FreeBusyEditWidget *mFreeBusyWidget = nullptr;
     ImageWidget *mLogoWidget = nullptr;
 };
 }

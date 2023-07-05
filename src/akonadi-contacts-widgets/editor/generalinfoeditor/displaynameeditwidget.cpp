@@ -16,7 +16,7 @@
 
 #include <KComboBox>
 #include <KLocalizedString>
-
+using namespace Akonadi;
 // Tries to guess the display type that is used for the passed contact
 static DisplayNameEditWidget::DisplayType guessedDisplayType(const KContacts::Addressee &contact)
 {

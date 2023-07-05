@@ -16,7 +16,7 @@
 #include <KUrlRequester>
 #include <QHBoxLayout>
 #include <QStandardPaths>
-
+using namespace Akonadi;
 FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     : QWidget(parent)
     , mURL(new KUrlRequester(this))

@@ -13,7 +13,7 @@
 #include <Akonadi/TagWidget>
 #include <QHBoxLayout>
 #include <akonadi/tagcreatejob.h>
-
+using namespace Akonadi;
 CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
     : QWidget(parent)
     , mTagWidget(new Akonadi::TagWidget(this))

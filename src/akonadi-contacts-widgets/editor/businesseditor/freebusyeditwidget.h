@@ -16,7 +16,8 @@ class Addressee;
 }
 
 class KUrlRequester;
-
+namespace Akonadi
+{
 class FreeBusyEditWidget : public QWidget
 {
     Q_OBJECT
@@ -34,3 +35,4 @@ private:
     KUrlRequester *mURL = nullptr;
     bool mReadOnly = false;
 };
+}

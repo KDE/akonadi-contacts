@@ -14,7 +14,7 @@
 #include <QLocale>
 
 Q_DECLARE_METATYPE(Qt::CheckState)
-
+using namespace Akonadi;
 CustomFieldsModel::CustomFieldsModel(QObject *parent)
     : QAbstractItemModel(parent)
 {

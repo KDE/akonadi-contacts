@@ -17,7 +17,8 @@ namespace KContacts
 {
 class Addressee;
 }
-
+namespace Akonadi
+{
 class ImageLoader;
 
 class ImageWidget : public QPushButton
@@ -63,3 +64,4 @@ private:
     bool mHasImage;
     bool mReadOnly;
 };
+}

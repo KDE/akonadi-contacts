@@ -15,6 +15,8 @@
 
 class KLineEdit;
 class KComboBox;
+namespace Akonadi
+{
 class DisplayNameEditWidget;
 class NameEditDialog : public QDialog
 {
@@ -51,3 +53,4 @@ private:
     KLineEdit *mAdditionalNameEdit = nullptr;
     DisplayNameEditWidget *mDisplayNameEdit = nullptr;
 };
+}
