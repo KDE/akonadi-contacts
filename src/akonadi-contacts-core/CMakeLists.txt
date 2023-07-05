@@ -60,7 +60,6 @@ target_sources(KPim6AkonadiContactCore PRIVATE
     grantlee/contactgrantleewrapper.h
     grantlee/grantleecontactformatter.h
     emailaddressselection.h
-    akonadicontact_private_export.h
     emailaddressselection_p.h
     collectionfiltermodel_p.h
     abstractcontactformatter.h
