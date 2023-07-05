@@ -8,11 +8,11 @@
 
 #pragma once
 
-#include "contacteditor_private_export.h"
+#include "akonadi_contact_widgets_private_export.h"
 #include <QComboBox>
 namespace Akonadi
 {
-class CONTACTEDITOR_TESTS_EXPORT ContactEditorComboBox : public QComboBox
+class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT ContactEditorComboBox : public QComboBox
 {
     Q_OBJECT
 public:

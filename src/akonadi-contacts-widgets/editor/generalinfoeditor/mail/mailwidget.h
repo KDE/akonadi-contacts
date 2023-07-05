@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "contacteditor_private_export.h"
+#include "akonadi_contact_widgets_private_export.h"
 #include <KContacts/Email>
 #include <QWidget>
 class QToolButton;
@@ -17,7 +17,7 @@ namespace Akonadi
 {
 class PreferredLineEditWidget;
 class MailTypeCombobox;
-class CONTACTEDITOR_TESTS_EXPORT MailWidget : public QWidget
+class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT MailWidget : public QWidget
 {
     Q_OBJECT
 public:

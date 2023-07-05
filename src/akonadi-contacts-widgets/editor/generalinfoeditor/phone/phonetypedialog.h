@@ -7,7 +7,7 @@
 */
 #pragma once
 
-#include "contacteditor_private_export.h"
+#include "akonadi_contact_widgets_private_export.h"
 #include <KContacts/PhoneNumber>
 #include <QDialog>
 class QButtonGroup;
@@ -17,7 +17,7 @@ namespace Akonadi
 /**
  * A dialog for editing phone number types.
  */
-class CONTACTEDITOR_TESTS_EXPORT PhoneTypeDialog : public QDialog
+class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT PhoneTypeDialog : public QDialog
 {
     Q_OBJECT
 public:

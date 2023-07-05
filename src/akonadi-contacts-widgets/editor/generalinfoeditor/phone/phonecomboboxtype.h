@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "contacteditor_private_export.h"
+#include "akonadi_contact_widgets_private_export.h"
 #include <KContacts/Addressee>
 #include <editor/widgets/contacteditorcombobox.h>
 namespace Akonadi
@@ -17,7 +17,7 @@ namespace Akonadi
 /**
  * @short A combobox to select a phone number type.
  */
-class CONTACTEDITOR_TESTS_EXPORT PhoneComboBoxType : public Akonadi::ContactEditorComboBox
+class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT PhoneComboBoxType : public Akonadi::ContactEditorComboBox
 {
     Q_OBJECT
 

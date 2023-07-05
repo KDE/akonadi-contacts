@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "contacteditor_private_export.h"
+#include "akonadi_contact_widgets_private_export.h"
 #include <QWidget>
 namespace KContacts
 {
@@ -18,7 +18,7 @@ class Addressee;
 namespace Akonadi
 {
 class PhoneWidgetLister;
-class CONTACTEDITOR_TESTS_EXPORT PhoneListWidget : public QWidget
+class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT PhoneListWidget : public QWidget
 {
     Q_OBJECT
 public:

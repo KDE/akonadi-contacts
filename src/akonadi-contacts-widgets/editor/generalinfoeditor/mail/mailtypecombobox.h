@@ -9,11 +9,11 @@
 #pragma once
 
 #include "../../widgets/contacteditorcombobox.h"
-#include "contacteditor_private_export.h"
+#include "akonadi_contact_widgets_private_export.h"
 
 namespace Akonadi
 {
-class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public Akonadi::ContactEditorComboBox
+class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT MailTypeCombobox : public Akonadi::ContactEditorComboBox
 {
     Q_OBJECT
 public:

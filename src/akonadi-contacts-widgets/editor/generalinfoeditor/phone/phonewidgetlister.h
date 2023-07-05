@@ -10,7 +10,7 @@
 #pragma once
 
 #include "../../widgets/kwidgetlister_p.h"
-#include "contacteditor_private_export.h"
+#include "akonadi_contact_widgets_private_export.h"
 namespace KContacts
 {
 class Addressee;
@@ -18,7 +18,7 @@ class Addressee;
 namespace Akonadi
 {
 class PhoneWidget;
-class CONTACTEDITOR_TESTS_EXPORT PhoneWidgetLister : public KWidgetLister
+class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT PhoneWidgetLister : public KWidgetLister
 {
     Q_OBJECT
 public:

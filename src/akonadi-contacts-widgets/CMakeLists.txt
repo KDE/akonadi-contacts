@@ -133,7 +133,7 @@ target_sources(KPim6AkonadiContactWidgets PRIVATE
     editor/widgets/contacteditorcombobox.h
     editor/businesseditor/freebusyeditwidget.h
     editor/businesseditor/businesseditorwidget.h
-    contacteditor_private_export.h
+    akonadi_contact_widgets_private_export.h
     contacteditorpageplugin.h
     abstractcontacteditorwidget_p.h
     customfieldmanager_p.h
