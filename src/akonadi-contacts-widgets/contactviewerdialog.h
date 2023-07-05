@@ -17,11 +17,6 @@
 namespace Akonadi
 {
 class Item;
-
-}
-
-namespace Akonadi
-{
 class ContactViewer;
 class ContactViewerDialogPrivate;
 

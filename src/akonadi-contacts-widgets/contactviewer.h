@@ -25,9 +25,6 @@ class Addressee;
 namespace Akonadi
 {
 class AbstractContactFormatter;
-}
-namespace Akonadi
-{
 class ContactViewerPrivate;
 
 /**

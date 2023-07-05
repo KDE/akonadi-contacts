@@ -19,9 +19,6 @@
 namespace Akonadi
 {
 class AbstractContactGroupFormatter;
-}
-namespace Akonadi
-{
 class ContactGroupViewerPrivate;
 
 /**

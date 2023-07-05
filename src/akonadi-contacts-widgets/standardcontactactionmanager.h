@@ -23,9 +23,6 @@ class QWidget;
 namespace Akonadi
 {
 class Item;
-}
-namespace Akonadi
-{
 class StandardContactActionManagerPrivate;
 
 /**

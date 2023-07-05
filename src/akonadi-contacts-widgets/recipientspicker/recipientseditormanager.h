@@ -12,10 +12,6 @@
 namespace Akonadi
 {
 class EmailAddressSelectionModel;
-}
-
-namespace Akonadi
-{
 class AKONADI_CONTACT_WIDGETS_EXPORT RecipientsEditorManager : public QObject
 {
     Q_OBJECT

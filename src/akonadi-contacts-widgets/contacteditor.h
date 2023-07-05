@@ -22,9 +22,6 @@ namespace Akonadi
 {
 class Collection;
 class Item;
-}
-namespace Akonadi
-{
 class AbstractContactEditorWidget;
 class AkonadiContactEditorPrivate;
 
