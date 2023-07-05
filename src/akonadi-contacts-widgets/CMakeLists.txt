@@ -333,7 +333,6 @@ install( FILES
 
 install( FILES
     ${AkonadiContactWidgets_HEADERS}
-    ${AkonadiContactWidgetsWidget_HEADERS}
     ${AkonadiContactWidgetsJob_HEADERS}
     ${AkonadiContactWidgetsWidgets_HEADERS}
     ${AkonadiContactWidgetsRecipients_HEADERS}
@@ -366,8 +365,9 @@ if (BUILD_QCH)
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
         ${AkonadiContactWidgets_HEADERS}
-        ${AkonadiContactWidgetsWidget_HEADERS}
         ${AkonadiContactWidgetsRecipients_HEADERS}
+        ${AkonadiContactWidgetsGrantlee_HEADERS}
+        ${AkonadiContactWidgetsJob_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
