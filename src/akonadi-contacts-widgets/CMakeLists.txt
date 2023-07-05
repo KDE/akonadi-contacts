@@ -1,16 +1,6 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactWidgets")
-set(AKONADICONTACTEDITOR_KF5_COMPAT FALSE)
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim6AkonadiContactWidgets_QCH
-        FILE KPim6AkonadiContactWidgetsQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactWidgetsQchTargets.cmake\")")
-endif()
+
 
 
 add_library(KPim6AkonadiContactWidgets)
@@ -22,20 +12,6 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfigVersion.cmake"
     SOVERSION 5
     )
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactWidgetsConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
-
-
-install(EXPORT KPim6AkonadiContactWidgetsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactWidgetsTargets.cmake NAMESPACE KPim6::)
 
 ki18n_wrap_ui(akonadicontacts_widgets_UI_LIB_SRC contactgroupeditor.ui)
 
@@ -383,6 +359,32 @@ if (BUILD_QCH)
         COMPONENT Devel
     )
 endif()
+
+
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactWidgets")
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim6AkonadiContactWidgets_QCH
+        FILE KPim6AkonadiContactWidgetsQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactWidgetsQchTargets.cmake\")")
+endif()
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactWidgetsConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+
+install(EXPORT KPim6AkonadiContactWidgetsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactWidgetsTargets.cmake NAMESPACE KPim6::)
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h

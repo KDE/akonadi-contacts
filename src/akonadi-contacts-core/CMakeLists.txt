@@ -1,18 +1,5 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore")
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim6AkonadiContactCore_QCH
-        FILE KPim6AkonadiContactCoreQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactCoreQchTargets.cmake\")")
-endif()
-
-add_library(KPim6AkonadiContactCore)
-add_library(KPim6::AkonadiContactCore ALIAS KPim6AkonadiContactCore)
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACTCORE
@@ -20,20 +7,9 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACTCORE
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfigVersion.cmake"
     SOVERSION 6
     )
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactCoreConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
 
-install(EXPORT KPim6AkonadiContactCoreTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactCoreTargets.cmake NAMESPACE KPim6::)
-
+add_library(KPim6AkonadiContactCore)
+add_library(KPim6::AkonadiContactCore ALIAS KPim6AkonadiContactCore)
 ########### next target ###############
 
 target_sources(KPim6AkonadiContactCore PRIVATE
@@ -239,6 +215,32 @@ if (BUILD_QCH)
         COMPONENT Devel
     )
 endif()
+
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore")
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim6AkonadiContactCore_QCH
+        FILE KPim6AkonadiContactCoreQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactCoreQchTargets.cmake\")")
+endif()
+
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactCoreConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+install(EXPORT KPim6AkonadiContactCoreTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiContactCoreTargets.cmake NAMESPACE KPim6::)
+
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_core_version.h
