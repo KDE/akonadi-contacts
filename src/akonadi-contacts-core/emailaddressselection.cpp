@@ -33,9 +33,7 @@ EmailAddressSelection::EmailAddressSelection()
 {
 }
 
-EmailAddressSelection::EmailAddressSelection(const EmailAddressSelection &other)
-
-    = default;
+EmailAddressSelection::EmailAddressSelection(const EmailAddressSelection &other) = default;
 
 EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelection &other)
 {
