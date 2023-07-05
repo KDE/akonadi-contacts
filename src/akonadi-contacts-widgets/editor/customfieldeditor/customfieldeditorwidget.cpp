@@ -8,7 +8,6 @@
 */
 
 #include "customfieldeditorwidget.h"
-#include "customfieldsmodel.h"
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <QCheckBox>

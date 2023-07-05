@@ -7,7 +7,6 @@
 */
 
 #include "blogfeedwidget.h"
-#include "../utils/utils.h"
 #include <KContacts/Addressee>
 #include <KLineEdit>
 #include <KLocalizedString>

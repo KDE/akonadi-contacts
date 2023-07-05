@@ -7,7 +7,6 @@
 */
 
 #include "businesseditorwidget.h"
-#include "../utils/utils.h"
 
 #include <KLineEdit>
 #include <KLocalizedString>
