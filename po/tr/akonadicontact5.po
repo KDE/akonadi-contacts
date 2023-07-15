@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:48+0000\n"
-"PO-Revision-Date: 2023-05-15 22:38+0300\n"
+"PO-Revision-Date: 2023-07-12 12:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
 #: akonadi-contacts/contactgroupeditor.cpp:134
@@ -231,7 +231,7 @@ msgstr "Ara:"
 #: akonadi-contacts/emailaddressselectionwidget.cpp:132
 #, kde-format
 msgid "Search Contact..."
-msgstr "Kişi Ara..."
+msgstr "Kişi ara..."
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
 #: akonadi-contacts/standardcontactformatter.cpp:177
@@ -244,7 +244,7 @@ msgstr "Adres Defteri"
 #: akonadi-contacts/standardcontactformatter.cpp:176
 #, kde-format
 msgid "Anniversary"
-msgstr "Yıl Dönümü"
+msgstr "Yıldönümü"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
 #: akonadi-contacts/standardcontactformatter.cpp:171
