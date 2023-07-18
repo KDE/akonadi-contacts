@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.23.42")
+set(PIM_VERSION "5.23.80")
 
 project(Akonadi-Contact VERSION ${PIM_VERSION})
 
@@ -38,9 +38,9 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
-set(KMIMELIB_VERSION "5.23.40")
-set(AKONADI_VERSION "5.23.40")
-set(GRANTLEETHEME_LIB_VERSION "5.23.40")
+set(KMIMELIB_VERSION "5.23.80")
+set(AKONADI_VERSION "5.23.80")
+set(GRANTLEETHEME_LIB_VERSION "5.23.80")
 set(GRANTLEE_VERSION "5.3")
 
 set(QT_REQUIRED_VERSION "5.15.2")
