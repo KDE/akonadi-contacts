@@ -10,7 +10,7 @@ add_library(KPim6::AkonadiContactWidgets ALIAS KPim6AkonadiContactWidgets)
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICONTACT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-contacts-widgets_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactWidgetsConfigVersion.cmake"
-    SOVERSION 5
+    SOVERSION 6
     )
 
 ki18n_wrap_ui(akonadicontacts_widgets_UI_LIB_SRC contactgroupeditor.ui)
