@@ -180,7 +180,7 @@ void AddressLocationWidget::fillCountryCombo()
     const QList<QLocale> localeList = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     countries.reserve(localeList.count());
     for (const QLocale &locale : localeList) {
-        const QString localeStr = QLocale::countryToString(locale.country());
+        const QString localeStr = QLocale::territoryToString(locale.territory());
         if (countries.contains(localeStr)) {
             continue;
         }
@@ -193,7 +193,7 @@ void AddressLocationWidget::fillCountryCombo()
 
     mCountryCombo->addItems(countries);
 
-    const QString currentCountry = QLocale::countryToString(QLocale().country());
+    const QString currentCountry = QLocale::territoryToString(QLocale().territory());
     mCountryCombo->setCurrentIndex(mCountryCombo->findText(currentCountry));
 }
 
@@ -218,7 +218,7 @@ void AddressLocationWidget::setAddress(const KContacts::Address &address)
     mPOBoxEdit->setText(address.postOfficeBox());
     mPreferredCheckBox->setChecked(address.type() & KContacts::Address::Pref);
     if (address.isEmpty()) {
-        mCountryCombo->setItemText(mCountryCombo->currentIndex(), QLocale::countryToString(QLocale().country()));
+        mCountryCombo->setItemText(mCountryCombo->currentIndex(), QLocale::territoryToString(QLocale().territory()));
     } else {
         mCountryCombo->setItemText(mCountryCombo->currentIndex(), mAddress.country());
     }
