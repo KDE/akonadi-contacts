@@ -13,37 +13,12 @@
 #include <Akonadi/EntityTreeModel>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
+#include <TextUtils/ConvertText>
 
 using namespace Akonadi;
 
 static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString, ContactsFilterProxyModel::MatchFilterContactFlag flag);
 static bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, const QString &filterString);
-
-static QString normalize(QStringView str)
-{
-    QString out;
-    out.reserve(str.size());
-    for (const auto c : str) {
-        // case folding
-        const auto n = c.toCaseFolded();
-
-        // if the character has a canonical decomposition use that and skip the
-        // combining diacritic markers following it
-        // see https://en.wikipedia.org/wiki/Unicode_equivalence
-        // see https://en.wikipedia.org/wiki/Combining_character
-        if (n.decompositionTag() == QChar::Canonical) {
-            out.push_back(n.decomposition().at(0));
-        }
-        // handle compatibility compositions such as ligatures
-        // see https://en.wikipedia.org/wiki/Unicode_compatibility_characters
-        else if (n.decompositionTag() == QChar::Compat && n.isLetter() && n.script() == QChar::Script_Latin) {
-            out.append(n.decomposition());
-        } else {
-            out.push_back(n);
-        }
-    }
-    return out;
-}
 
 class Akonadi::ContactsFilterProxyModelPrivate
 {
@@ -89,7 +64,7 @@ bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &pare
     if ((d->mFilter.isEmpty()) && (!(d->flags & ContactsFilterProxyModel::HasEmail))) {
         return true;
     }
-    const QString filterStr = normalize(d->mFilter);
+    const QString filterStr = TextUtils::ConvertText::normalize(d->mFilter);
     const auto item = index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     if (item.hasPayload<KContacts::Addressee>()) {
@@ -199,15 +174,15 @@ static bool addressMatchesFilter(const KContacts::Address &address, const QStrin
 
 static bool contactMatchesFilter(const KContacts::Addressee &contact, const QString &filterString, ContactsFilterProxyModel::MatchFilterContactFlag flag)
 {
-    if (normalize(contact.assembledName()).contains(filterString, Qt::CaseInsensitive)) {
+    if (TextUtils::ConvertText::normalize(contact.assembledName()).contains(filterString, Qt::CaseInsensitive)) {
         return true;
     }
 
-    if (normalize(contact.formattedName()).contains(filterString, Qt::CaseInsensitive)) {
+    if (TextUtils::ConvertText::normalize(contact.formattedName()).contains(filterString, Qt::CaseInsensitive)) {
         return true;
     }
 
-    if (normalize(contact.nickName()).contains(filterString, Qt::CaseInsensitive)) {
+    if (TextUtils::ConvertText::normalize(contact.nickName()).contains(filterString, Qt::CaseInsensitive)) {
         return true;
     }
 
@@ -236,7 +211,7 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
     const QStringList emails = contact.emails();
     count = emails.count();
     for (int i = 0; i < count; ++i) {
-        if (normalize(emails.at(i)).contains(filterString, Qt::CaseInsensitive)) {
+        if (TextUtils::ConvertText::normalize(emails.at(i)).contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
     }
@@ -253,7 +228,7 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
             return true;
         }
 
-        if (normalize(contact.title()).contains(filterString, Qt::CaseInsensitive)) {
+        if (TextUtils::ConvertText::normalize(contact.title()).contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
 
@@ -261,15 +236,15 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
             return true;
         }
 
-        if (normalize(contact.organization()).contains(filterString, Qt::CaseInsensitive)) {
+        if (TextUtils::ConvertText::normalize(contact.organization()).contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
 
-        if (normalize(contact.department()).contains(filterString, Qt::CaseInsensitive)) {
+        if (TextUtils::ConvertText::normalize(contact.department()).contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
 
-        if (normalize(contact.note()).contains(filterString, Qt::CaseInsensitive)) {
+        if (TextUtils::ConvertText::normalize(contact.note()).contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
 
@@ -291,16 +266,16 @@ static bool contactMatchesFilter(const KContacts::Addressee &contact, const QStr
 
 bool contactGroupMatchesFilter(const KContacts::ContactGroup &group, const QString &filterString)
 {
-    if (normalize(group.name()).contains(filterString, Qt::CaseInsensitive)) {
+    if (TextUtils::ConvertText::normalize(group.name()).contains(filterString, Qt::CaseInsensitive)) {
         return true;
     }
 
     const int count = group.dataCount();
     for (int i = 0; i < count; ++i) {
-        if (normalize(group.data(i).name()).contains(filterString, Qt::CaseInsensitive)) {
+        if (TextUtils::ConvertText::normalize(group.data(i).name()).contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
-        if (normalize(group.data(i).email()).contains(filterString, Qt::CaseInsensitive)) {
+        if (TextUtils::ConvertText::normalize(group.data(i).email()).contains(filterString, Qt::CaseInsensitive)) {
             return true;
         }
     }

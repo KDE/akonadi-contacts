@@ -105,6 +105,7 @@ target_link_libraries(KPim6AkonadiContactCore
     KF6::IconThemes
     KF6::I18n
     KPim6::Mime
+    KF6::TextUtils
     )
 set_target_properties(KPim6AkonadiContactCore PROPERTIES
     VERSION ${AKONADICONTACTCORE_VERSION}

@@ -12,3 +12,4 @@ Dependencies:
     'pim/kmime' : '@latest-kf6'
     'pim/grantleetheme' : '@latest-kf6'
     'frameworks/ktexttemplate': '@stable'
+    'libraries/ktextaddons': '@latest-kf6'
