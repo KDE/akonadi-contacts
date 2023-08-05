@@ -41,7 +41,7 @@ class Akonadi::ContactViewerPrivate
 public:
     explicit ContactViewerPrivate(ContactViewer *parent)
         : mParent(parent)
-        , mQRCode(new Prison::Barcode(Prison::QRCode))
+        , mQRCode(Prison::Barcode::create(Prison::QRCode))
     {
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
@@ -53,7 +53,6 @@ public:
     ~ContactViewerPrivate()
     {
         delete mStandardContactFormatter;
-        delete mQRCode;
     }
 
     void updateView(const QVariantList &localCustomFieldDescriptions = QVariantList(), const QString &addressBookName = QString())
@@ -193,7 +192,7 @@ public:
     AbstractContactFormatter *mContactFormatter = nullptr;
     AbstractContactFormatter *mStandardContactFormatter = nullptr;
     CollectionFetchJob *mParentCollectionFetchJob = nullptr;
-    Prison::Barcode *const mQRCode;
+    std::optional<Prison::Barcode> mQRCode;
     bool mShowQRCode = true;
 };
 
