@@ -867,6 +867,7 @@ msgstr "Mostra:"
 msgid "Dr."
 msgstr "Dr."
 
+# skip-rule: punctuation-period-no
 #: contact-editor/editor/generalinfoeditor/nameeditdialog.cpp:58
 #, kde-format
 msgid "Miss"
