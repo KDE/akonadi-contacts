@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:48+0000\n"
-"PO-Revision-Date: 2023-06-23 20:38+0200\n"
+"PO-Revision-Date: 2023-08-05 11:02+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
@@ -339,13 +339,12 @@ msgstr "Departamento"
 #: akonadi-contacts/standardcontactformatter.cpp:175
 #, kde-format
 msgid "IM Address"
-msgstr "Enderezo de mensaxería instantánea"
+msgstr "Enderezo de mensaxaría instantánea"
 
 #: akonadi-contacts/waitingoverlay.cpp:35
 #, kde-format
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
-msgstr ""
-"<p style=\"color: white;\"><b>Estase a agardar pola operación</b><br/></p>"
+msgstr "<p style=\"color: white;\"><b>Agardando pola operación</b><br/></p>"
 
 #: contact-editor/contacteditor.cpp:162
 #, kde-format
@@ -803,7 +802,7 @@ msgstr "HTML"
 #: contact-editor/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, kde-format
 msgid "Messaging"
-msgstr "Mensaxería"
+msgstr "Mensaxaría"
 
 #: contact-editor/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format

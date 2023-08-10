@@ -557,6 +557,7 @@ QAction *StandardContactActionManager::createAction(Type type)
         action->setEnabled(false);
         d->mActions.insert(EditItem, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_contact_item_edit"), action);
+        d->mActionCollection->setDefaultShortcut(action, QKeySequence(Qt::CTRL | Qt::Key_E));
 
         connect(action, &QAction::triggered, this, [this]() {
             d->slotEditItem();
