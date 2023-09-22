@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi_serializer_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:14+0200\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
 "PO-Revision-Date: 2014-08-30 19:03+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,47 +18,47 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: akonadi_serializer_addressee.cpp:182
+#: akonadi_serializer_addressee.cpp:171
 #, kde-format
 msgid "Changed Contact"
 msgstr "Измењени контакт"
 
-#: akonadi_serializer_addressee.cpp:183
+#: akonadi_serializer_addressee.cpp:172
 #, kde-format
 msgid "Conflicting Contact"
 msgstr "Сукобљени контакт"
 
-#: akonadi_serializer_addressee.cpp:293
+#: akonadi_serializer_addressee.cpp:300
 #, kde-format
 msgid "Emails"
 msgstr "Адресе е‑поште"
 
-#: akonadi_serializer_addressee.cpp:294
+#: akonadi_serializer_addressee.cpp:301
 #, kde-format
 msgid "Phone Numbers"
 msgstr "Бројеви телефона"
 
-#: akonadi_serializer_addressee.cpp:295
+#: akonadi_serializer_addressee.cpp:302
 #, kde-format
 msgid "Addresses"
 msgstr "Адресе"
 
-#: akonadi_serializer_contactgroup.cpp:103
+#: akonadi_serializer_contactgroup.cpp:90
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Измењена група контаката"
 
-#: akonadi_serializer_contactgroup.cpp:104
+#: akonadi_serializer_contactgroup.cpp:91
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Сукобљена група контаката"
 
-#: akonadi_serializer_contactgroup.cpp:110
+#: akonadi_serializer_contactgroup.cpp:97
 #, kde-format
 msgid "Name"
 msgstr "Име"
 
-#: akonadi_serializer_contactgroup.cpp:121
+#: akonadi_serializer_contactgroup.cpp:107
 #, kde-format
 msgid "Member"
 msgstr "Члан"
