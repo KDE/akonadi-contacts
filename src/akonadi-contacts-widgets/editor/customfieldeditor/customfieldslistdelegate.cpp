@@ -212,7 +212,7 @@ void CustomFieldsListDelegate::removeField(int row, QAbstractItemModel *model)
 {
     if (KMessageBox::warningContinueCancel(mItemView,
                                            i18nc("Custom Fields", "Do you really want to delete the selected custom field?"),
-                                           i18n("Confirm Delete"),
+                                           i18nc("@title:window", "Confirm Delete"),
                                            KStandardGuiItem::del())
         != KMessageBox::Continue) {
         return;
