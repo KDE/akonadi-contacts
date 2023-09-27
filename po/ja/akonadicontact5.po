@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2014-09-25 00:57-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -688,7 +688,9 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "本当にこのカスタム欄を削除しますか？"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "削除の確認"
 
@@ -1233,6 +1235,7 @@ msgstr "連絡先を保存することができません: %1"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, fuzzy, kde-format
 #| msgid "Failed to store contact"
+msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "連絡先を保存することができませんでした: %1"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabcakonadi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2022-03-27 00:22+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -655,7 +655,9 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "Deseja mesmo apagar o campo personalizado seleccionado?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Confirmar a Remoção"
 
@@ -1172,7 +1174,9 @@ msgstr "Não é possível gravar o contacto: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to store contact"
+msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "Não foi possível gravar o contacto"
 

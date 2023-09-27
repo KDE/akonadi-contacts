@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2010-01-01 14:24+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -713,6 +713,7 @@ msgstr "Vai tiešām vēlaties dzēst šo adresi?"
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
 #, fuzzy, kde-format
 #| msgid "Confirm Remove"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Apstiprināt izņemšanu"
 
@@ -1261,6 +1262,7 @@ msgstr "Šis kontakts vairs nepastāv"
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
+msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr ""
 

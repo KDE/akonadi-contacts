@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2021-09-09 21:50+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -659,7 +659,9 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "Vil du virkelig slette det valgte brugerdefinerede felt?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Bekræft sletning"
 
@@ -1180,7 +1182,9 @@ msgstr "Kontakten kan ikke gemmes: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to store contact"
+msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "Kunne ikke gemme kontakt"
 

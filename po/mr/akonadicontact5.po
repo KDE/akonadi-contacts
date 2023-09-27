@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -677,7 +677,9 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "काढून टाकण्याविषयी खात्री करा"
 
@@ -1211,9 +1213,12 @@ msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Create new tag:"
+msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr ""
+msgstr "नवीन टॅग बनवा:"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
@@ -1876,12 +1881,6 @@ msgstr ""
 #~ msgctxt "@info"
 #~ msgid "Delete tag"
 #~ msgstr "टॅग काढून टाका"
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid "Create new tag:"
-#~ msgid "Failed to create a new tag"
-#~ msgstr "नवीन टॅग बनवा:"
 
 #~ msgctxt "@info"
 #~ msgid ""

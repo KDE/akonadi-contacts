@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -698,7 +698,9 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "តើ​អ្នក​ពិត​ជា​ចង់​លុប​វាល​ផ្ទាល់ខ្លួន​ដែល​បាន​ជ្រើស​​ឬ​ ?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "អះអាង​ការ​​លុប​"
 
@@ -1256,6 +1258,7 @@ msgstr "លែង​មាន​ទំនាក់​ទំនង​ទៀត​
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, fuzzy, kde-format
 #| msgid "Could not paste contact: %1"
+msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "មិន​អាច​បិទភ្ជាប់​​ទំនាក់ទំនង​បាន​ឡើយ​ ៖​​ %1"
 

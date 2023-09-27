@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2013-01-12 06:26+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -693,7 +693,9 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Confirmare ștergere"
 
@@ -1246,9 +1248,12 @@ msgstr "Contactul nu mai există"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Create new tag:"
+msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr ""
+msgstr "Creează marcaj nou:"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
@@ -2104,12 +2109,6 @@ msgstr "Alege cartea de adrese în care se va salva contactul nou:"
 #~ msgctxt "@info"
 #~ msgid "Delete tag"
 #~ msgstr "Șterge marcajul"
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid "Create new tag:"
-#~ msgid "Failed to create a new tag"
-#~ msgstr "Creează marcaj nou:"
 
 #~ msgctxt "@title"
 #~ msgid "Delete tag"

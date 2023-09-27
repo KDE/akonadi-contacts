@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2009-12-24 06:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -705,7 +705,9 @@ msgstr ""
 "scriosadh?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Dearbhaigh an Scriosadh"
 
@@ -1259,9 +1261,12 @@ msgstr "Níl an teagmháil ann níos mó"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Create new tag:"
+msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr ""
+msgstr "Cruthaigh clib nua:"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
@@ -2388,12 +2393,6 @@ msgstr ""
 #~ msgctxt "@info"
 #~ msgid "Delete tag"
 #~ msgstr "Scrios clib"
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid "Create new tag:"
-#~ msgid "Failed to create a new tag"
-#~ msgstr "Cruthaigh clib nua:"
 
 #~ msgctxt "@info"
 #~ msgid ""
