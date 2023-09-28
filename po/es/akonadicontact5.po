@@ -3,7 +3,7 @@
 #
 # Adrián Martínez <sfxgt3@gmail.com>
 # Cristina Yenyxe Gonzalez Garcia <the.blue.valkyrie@gmail.com>, 2009.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2010, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2009, 2010, 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 # Adrián Martínez <sfxgt3@gmail.com>, 2010.
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
 # Javier Vinal <fjvinalgmail.com>, 2011, 2012, 2017.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2022-03-23 21:48+0100\n"
+"PO-Revision-Date: 2023-09-28 01:59+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -652,7 +652,7 @@ msgstr "Fechas"
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "Url"
-msgstr "Url"
+msgstr "URL"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:214
 #, kde-format
@@ -661,8 +661,7 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "¿Seguro qué desea borrar el campo personalizado seleccionado?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Confirmar borrado"
@@ -1051,7 +1050,7 @@ msgstr "Eliminar logo"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
 #, kde-format
 msgid "Change image URL"
-msgstr "Cambiar el URL de la imagen"
+msgstr "Cambiar la URL de la imagen"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
 #, kde-format
@@ -1180,11 +1179,10 @@ msgstr "El contacto no puede almacenarse: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr "Ha fallado al almacenar el contacto"
+msgstr "No se ha podido guardar el contacto"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
@@ -1398,8 +1396,7 @@ msgid ""
 "select the type of the address book that shall be added.</p>"
 msgstr ""
 "Añadir una nueva libreta de direcciones<p>Se le presentará un diálogo donde "
-"usted puede seleccionar el tipo de libreta de direcciones que se debe añadir."
-"</p>"
+"puede seleccionar el tipo de libreta de direcciones que se debe añadir.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
 #, kde-format
@@ -1478,7 +1475,7 @@ msgstr "No se ha podido pegar el contacto: %1"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
 #, kde-format
 msgid "Paste failed"
-msgstr "El pegado ha fallado"
+msgstr "No se ha podido pegar"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
@@ -1547,9 +1544,9 @@ msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
 "data about a person, including addresses and phone numbers.</p>"
 msgstr ""
-"Crear un nuevo contacto<p>Se le presentará un diálogo donde usted puede "
-"añadir datos sobre una persona, incluidas la dirección y los números de "
-"teléfonos.</p>"
+"Crear un nuevo contacto<p>Se le presentará un diálogo donde puede añadir "
+"datos sobre una persona, incluidas la dirección y los números de teléfonos.</"
+"p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
@@ -1562,8 +1559,8 @@ msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
 "new group of contacts.</p>"
 msgstr ""
-"Crear un nuevo grupo<p>Se le presentará un diálogo donde usted puede añadir "
-"un nuevo grupo de contactos.</p>"
+"Crear un nuevo grupo<p>Se le presentará un diálogo donde puede añadir un "
+"nuevo grupo de contactos.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
 #, kde-format
@@ -1572,9 +1569,9 @@ msgid ""
 "can edit the data stored about a person, including addresses and phone "
 "numbers.</p>"
 msgstr ""
-"Editar el contacto seleccionado<p>Se le presentará un diálogo donde usted "
-"puede editar los datos almacenados sobre una persona, incluidos la dirección "
-"y los números de teléfono.</p>"
+"Editar el contacto seleccionado<p>Se le presentará un diálogo donde puede "
+"editar los datos almacenados sobre una persona, incluidos la dirección y los "
+"números de teléfono.</p>"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:57
 #, kde-format
@@ -1592,7 +1589,7 @@ msgstr "Copiar dirección del correo"
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
-msgstr "Copiar URL del enlace"
+msgstr "Copiar la URL del enlace"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:102
 #, kde-format

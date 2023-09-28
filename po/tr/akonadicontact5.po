@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2023-07-12 12:23+0300\n"
+"PO-Revision-Date: 2023-09-27 12:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
@@ -32,7 +32,7 @@ msgstr "<b>%1</b> kişisinin e-posta adresi yok"
 #: akonadi-contacts-core/contactgroupmodel.cpp:241
 #, kde-format
 msgid "Contact does not exist any more"
-msgstr "Kişi artık mevcut değil"
+msgstr "Kişi artık yok"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:395
 #, kde-format
@@ -429,7 +429,7 @@ msgstr "Bölge Ekle"
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
-msgstr "Bu tercih edilen adrestir"
+msgstr "Bu, tercih edilen adrestir"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:113
 #, kde-format
@@ -456,7 +456,7 @@ msgstr "Adres Türünü Düzenle"
 #, kde-format
 msgctxt "street/postal"
 msgid "Address Types"
-msgstr "Adres Tipleri"
+msgstr "Adres Türleri"
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:61
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
@@ -658,8 +658,7 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "Seçili özel alanları silmek istediğinizden emin misiniz?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Silmeyi Onayla"
@@ -1112,7 +1111,7 @@ msgid ""
 "address book."
 msgstr ""
 "<email>%1</email> e-posta adresine iye bir kişi halihazırda adres "
-"defterinizde mevcut."
+"defterinizde var."
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:119
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:159
@@ -1177,11 +1176,10 @@ msgstr "Kişi depolanamıyor: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr "Kişi depolanamadı"
+msgstr "Kişi Depolanamadı"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
