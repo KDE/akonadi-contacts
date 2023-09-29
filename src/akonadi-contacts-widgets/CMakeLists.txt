@@ -233,12 +233,6 @@ install(TARGETS
     EXPORT KPim6AkonadiContactWidgetsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-ecm_generate_pri_file(BASE_NAME AkonadiContactWidgets
-    LIB_NAME KPim6AkonadiContactWidgets
-    DEPS "KContacts AkonadiContactCore" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets
-    )
-
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 ecm_generate_headers(AkonadiContactWidgets_CamelCase_HEADERS
     HEADER_NAMES

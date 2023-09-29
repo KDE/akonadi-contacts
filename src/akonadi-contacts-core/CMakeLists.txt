@@ -118,13 +118,6 @@ install(TARGETS
     EXPORT KPim6AkonadiContactCoreTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-ecm_generate_pri_file(BASE_NAME AkonadiContactCore
-    LIB_NAME KPim6AkonadiContact
-    DEPS "AkonadiCore KContacts" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/Akonadi/Contact
-    )
-
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-
 ecm_generate_headers(AkonadiContactCoreJob_CamelCase_HEADERS
     HEADER_NAMES
     ContactGroupExpandJob
