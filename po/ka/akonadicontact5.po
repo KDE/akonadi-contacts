@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2022-12-13 03:10+0100\n"
+"PO-Revision-Date: 2023-09-28 05:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -652,8 +652,7 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "მართლა გნებავთ ხელით მითითებული ველის წაშლა?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "დაადასტურეთ წაშლა"
@@ -1170,8 +1169,7 @@ msgstr "კონტაქტის შენახვა შეუძლებ�
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "კონტაქტის შენახვის შეცდომა"
