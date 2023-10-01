@@ -4,14 +4,14 @@
 # Xosé <xosecalvo@gmail.com>, 2009, 2010, 2011, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2023-08-05 11:02+0200\n"
+"PO-Revision-Date: 2023-09-30 12:52+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -125,7 +125,7 @@ msgstr "Aniversario"
 #: akonadi-contacts-core/standardcontactformatter.cpp:170
 #, kde-format
 msgid "Assistant's Name"
-msgstr "Nome da secretaria"
+msgstr "Nome da persoa secretaria"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
 #: akonadi-contacts-core/standardcontactformatter.cpp:171
@@ -540,12 +540,12 @@ msgstr "Engadir o nome do xefe."
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
-msgstr "Nome da secretaria:"
+msgstr "Nome da persoa secretaria:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
 #, kde-format
 msgid "Add assistant's name"
-msgstr "Engadir o nome do secretario."
+msgstr "Engadir o nome da persoa secretaria."
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
 #, kde-format
@@ -640,6 +640,7 @@ msgstr "Data"
 msgid "Time"
 msgstr "Hora"
 
+# skip-rule: trasno-date
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "DateTime"
@@ -657,11 +658,10 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "Seguro que quere eliminar este campo personalizado?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
-msgstr "Confirmar a eliminación"
+msgstr "Confirmación da eliminación"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
@@ -996,7 +996,7 @@ msgstr "Nome da parella:"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
 #, kde-format
 msgid "This contact's image cannot be found."
-msgstr "Non se pode atopar a imaxe deste contacto."
+msgstr "Non é posíbel atopar a imaxe deste contacto."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, kde-format
@@ -1173,15 +1173,14 @@ msgstr "Rematar"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
-msgstr "Non se pode almacenar o contacto: %1"
+msgstr "Non é posíbel almacenar o contacto: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr "Non se puido almacenar o contacto"
+msgstr "Non foi posíbel almacenar o contacto"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
@@ -1210,7 +1209,7 @@ msgstr "Novo cartafol de axenda de enderezos"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:105
 #, kde-format
 msgid "Could not create address book folder: %1"
-msgstr "Non se puido crear o cartafol de axenda de enderezos: %1"
+msgstr "Non foi posíbel crear o cartafol de axenda de enderezos: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:109
 #, kde-format
@@ -1270,7 +1269,7 @@ msgstr[1] "Eliminar estes cartafoles de axenda de enderezos?"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
-msgstr "Non se puido eliminar o cartafol de axenda de enderezos: %1"
+msgstr "Non foi posíbel eliminar o cartafol de axenda de enderezos: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
 #, kde-format
@@ -1367,7 +1366,7 @@ msgstr[1] "Eliminar os contactos?"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
 #, kde-format
 msgid "Could not delete contact: %1"
-msgstr "Non se puido eliminar o contacto: %1"
+msgstr "Non foi posíbel eliminar o contacto: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
 #, kde-format
@@ -1404,7 +1403,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
 #, kde-format
 msgid "Could not create address book: %1"
-msgstr "Non se puido crear a axenda de enderezos: %1"
+msgstr "Non foi posíbel crear a axenda de enderezos: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:199
 #, kde-format
@@ -1473,7 +1472,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
 #, kde-format
 msgid "Could not paste contact: %1"
-msgstr "Non se puido pegar o contacto: %1"
+msgstr "Non foi posíbel pegar o contacto: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
 #, kde-format
