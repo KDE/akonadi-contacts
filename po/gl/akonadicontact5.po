@@ -4,14 +4,14 @@
 # Xosé <xosecalvo@gmail.com>, 2009, 2010, 2011, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:48+0000\n"
-"PO-Revision-Date: 2023-08-05 11:02+0200\n"
+"PO-Revision-Date: 2023-09-30 12:52+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "Aniversario"
 #: akonadi-contacts/standardcontactformatter.cpp:171
 #, kde-format
 msgid "Assistant's Name"
-msgstr "Nome da secretaria"
+msgstr "Nome da persoa secretaria"
 
 #: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
 #: akonadi-contacts/standardcontactformatter.cpp:172
@@ -561,12 +561,12 @@ msgstr "Engadir o nome do xefe."
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
-msgstr "Nome da secretaria:"
+msgstr "Nome da persoa secretaria:"
 
 #: contact-editor/editor/businesseditor/businesseditorwidget.cpp:100
 #, kde-format
 msgid "Add assistant's name"
-msgstr "Engadir o nome do secretario."
+msgstr "Engadir o nome da persoa secretaria."
 
 #: contact-editor/editor/businesseditor/businesseditorwidget.cpp:106
 #, kde-format
@@ -661,6 +661,7 @@ msgstr "Data"
 msgid "Time"
 msgstr "Hora"
 
+# skip-rule: trasno-date
 #: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "DateTime"
@@ -1015,7 +1016,7 @@ msgstr "Nome da parella:"
 #: contact-editor/editor/widgets/imagewidget.cpp:77
 #, kde-format
 msgid "This contact's image cannot be found."
-msgstr "Non se pode atopar a imaxe deste contacto."
+msgstr "Non é posíbel atopar a imaxe deste contacto."
 
 #: contact-editor/editor/widgets/imagewidget.cpp:118
 #, kde-format
@@ -1176,13 +1177,13 @@ msgstr "Rematar"
 #: contact-editor/standardcontactactionmanager.cpp:468
 #, kde-format
 msgid "Contact cannot be stored: %1"
-msgstr "Non se pode almacenar o contacto: %1"
+msgstr "Non é posíbel almacenar o contacto: %1"
 
 #: contact-editor/job/addemailaddressjob.cpp:247
 #: contact-editor/standardcontactactionmanager.cpp:468
 #, kde-format
 msgid "Failed to store contact"
-msgstr "Non se puido almacenar o contacto"
+msgstr "Non foi posíbel almacenar o contacto"
 
 #: contact-editor/job/addemailaddressjob.cpp:254
 #, kde-format
@@ -1211,7 +1212,7 @@ msgstr "Novo cartafol de axenda de enderezos"
 #: contact-editor/standardcontactactionmanager.cpp:105
 #, kde-format
 msgid "Could not create address book folder: %1"
-msgstr "Non se puido crear o cartafol de axenda de enderezos: %1"
+msgstr "Non foi posíbel crear o cartafol de axenda de enderezos: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:109
 #, kde-format
@@ -1271,7 +1272,7 @@ msgstr[1] "Eliminar estes cartafoles de axenda de enderezos?"
 #: contact-editor/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
-msgstr "Non se puido eliminar o cartafol de axenda de enderezos: %1"
+msgstr "Non foi posíbel eliminar o cartafol de axenda de enderezos: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:139
 #, kde-format
@@ -1368,7 +1369,7 @@ msgstr[1] "Eliminar os contactos?"
 #: contact-editor/standardcontactactionmanager.cpp:175
 #, kde-format
 msgid "Could not delete contact: %1"
-msgstr "Non se puido eliminar o contacto: %1"
+msgstr "Non foi posíbel eliminar o contacto: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:177
 #, kde-format
@@ -1405,7 +1406,7 @@ msgstr ""
 #: contact-editor/standardcontactactionmanager.cpp:195
 #, kde-format
 msgid "Could not create address book: %1"
-msgstr "Non se puido crear a axenda de enderezos: %1"
+msgstr "Non foi posíbel crear a axenda de enderezos: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:199
 #, kde-format
@@ -1474,7 +1475,7 @@ msgstr ""
 #: contact-editor/standardcontactactionmanager.cpp:231
 #, kde-format
 msgid "Could not paste contact: %1"
-msgstr "Non se puido pegar o contacto: %1"
+msgstr "Non foi posíbel pegar o contacto: %1"
 
 #: contact-editor/standardcontactactionmanager.cpp:233
 #, kde-format
