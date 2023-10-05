@@ -15,8 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
-"2 : 3);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
@@ -167,7 +166,7 @@ msgid "no"
 msgstr "לא"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:95
-#, kde-format
+#, fuzzy, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
 msgstr[0] "(גיל שנה)"
@@ -1208,7 +1207,7 @@ msgid "Address book folder creation failed"
 msgstr "יצירת פנקס הכתובות נכשלה"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:115
-#, kde-format
+#, fuzzy, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
 msgstr[0] "העתקת תיקיית פנקס הכתובות"
@@ -1222,7 +1221,7 @@ msgid "Copy the selected address book folders to the clipboard."
 msgstr "העתקת התיקיות הנבחרות מפנקס הכתובות ללוח הגזירים."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
-#, kde-format
+#, fuzzy, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
 msgstr[0] "מחיקת תיקייה מפנקס הכתובות"
@@ -1236,7 +1235,7 @@ msgid "Delete the selected address book folders from the address book."
 msgstr "מחיקת התיקיות הנבחרות מפנקס הכתובות."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "Do you really want to delete this address book folder and all its sub-"
 "folders?"
@@ -1249,7 +1248,7 @@ msgstr[2] "למחוק %1 תיקיות מפנקס הכתובות ואת כל תת
 msgstr[3] "למחוק %1 תיקיות מפנקס הכתובות ואת כל תת־התיקיות שלהן?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Delete address book folder?"
 msgid_plural "Delete address book folders?"
@@ -1269,7 +1268,7 @@ msgid "Address book folder deletion failed"
 msgstr "מחיקת תיקיית פנקס הכתובות נכשלה"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:143
-#, kde-format
+#, fuzzy, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
 msgstr[0] "עדכון תיקיית פנקס הכתובת"
@@ -1283,7 +1282,7 @@ msgid "Update the content of the selected address book folders."
 msgstr "עדכון תוכן תיקיות פנקס הכתובות הנבחרות."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
 msgstr[0] "גזירת תיקייה מפנקס הכתובות"
@@ -1315,7 +1314,7 @@ msgstr "מאפייני תיקיית פנקס הכתובות %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
-#, kde-format
+#, fuzzy, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
 msgstr[0] "העתקת איש קשר"
@@ -1330,7 +1329,7 @@ msgstr "העתקת אנשי הקשר אל לוח הגזירים."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
-#, kde-format
+#, fuzzy, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
 msgstr[0] "מחיקת איש קשר"
@@ -1344,7 +1343,7 @@ msgid "Delete the selected contacts from the address book."
 msgstr "מחיקת אנשי הקשר הנבחרים מפנקס הכתובות."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to delete the selected contact?"
 msgid_plural "Do you really want to delete %1 contacts?"
 msgstr[0] "למחוק את איש הקשר הנבחר?"
@@ -1353,7 +1352,7 @@ msgstr[2] "למחוק את %1 אנשי הקשר הנבחרים?"
 msgstr[3] "למחוק את %1 אנשי הקשר הנבחרים?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:173
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Delete Contact?"
 msgid_plural "Delete Contacts?"
@@ -1374,7 +1373,7 @@ msgstr "מחיקת איש קשר נכשלה"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
 msgstr[0] "גזירת איש קשר"
@@ -1412,7 +1411,7 @@ msgid "Address book creation failed"
 msgstr "יצירת פנקס כתובות נכשלה"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:203
-#, kde-format
+#, fuzzy, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
 msgstr[0] "מ&חיקת פנקס כתובות"
@@ -1431,7 +1430,7 @@ msgstr ""
 "וקבוצות הקשר שהם מכילים. </p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
 msgstr[0] "למחוק את פנקס הכתובות הזה?"
@@ -1440,7 +1439,7 @@ msgstr[2] "למחוק %1 פנקסי כתובות?"
 msgstr[3] "למחוק %1 פנקסי כתובות?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:214
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
 msgid_plural "Delete Address Books?"
@@ -1460,7 +1459,7 @@ msgid "Open a dialog to edit properties of the selected address book."
 msgstr "פתיחת חלון לעריך מאפייני פנקס הכתובות הנבחר."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
-#, kde-format
+#, fuzzy, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
 msgstr[0] "עדכון פנקס כתובות"
@@ -1502,7 +1501,7 @@ msgid "Edit Contact..."
 msgstr "עריכת איש קשר…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
-#, kde-format
+#, fuzzy, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "העתקת קבוצה"
@@ -1517,7 +1516,7 @@ msgid "Copy Group To"
 msgstr "העתקת קבוצה אל"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
-#, kde-format
+#, fuzzy, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "מחיקת קבוצה"
@@ -1526,7 +1525,7 @@ msgstr[2] "מחיקת %1 קבוצות"
 msgstr[3] "מחיקת %1 קבוצות"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "גזירת קבוצה"
