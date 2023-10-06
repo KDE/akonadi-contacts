@@ -32,7 +32,7 @@ public:
 
     void setReadOnly(bool readOnly);
     void setLocalCustomFieldDescriptions(const QVariantList &descriptions);
-    Q_REQUIRED_RESULT QVariantList localCustomFieldDescriptions() const;
+    [[nodiscard]] QVariantList localCustomFieldDescriptions() const;
 
 private:
     Akonadi::CustomFieldEditorWidget *mCustomFieldEditorWidget = nullptr;

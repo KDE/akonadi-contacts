@@ -64,12 +64,12 @@ public:
     /**
      * Returns whether the selection is valid.
      */
-    Q_REQUIRED_RESULT bool isValid() const;
+    [[nodiscard]] bool isValid() const;
 
     /**
      * Returns the name that is associated with the selected email address.
      */
-    Q_REQUIRED_RESULT QString name() const;
+    [[nodiscard]] QString name() const;
     void setName(const QString &name);
 
     /**
@@ -78,7 +78,7 @@ public:
      * @note If a contact group has been selected, the name of the contact
      *       group is returned here and must be expanded by the caller.
      */
-    Q_REQUIRED_RESULT QString email() const;
+    [[nodiscard]] QString email() const;
     void setEmail(const QString &email);
 
     /**
@@ -87,12 +87,12 @@ public:
      * @note If a contact group has been selected, the name of the contact
      *       group is returned here and must be expanded by the caller.
      */
-    Q_REQUIRED_RESULT QString quotedEmail() const;
+    [[nodiscard]] QString quotedEmail() const;
 
     /**
      * Returns the Akonadi item that is associated with the selected email address.
      */
-    Q_REQUIRED_RESULT Akonadi::Item item() const;
+    [[nodiscard]] Akonadi::Item item() const;
 
     void setItem(const Akonadi::Item &item);
 

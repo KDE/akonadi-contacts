@@ -19,7 +19,7 @@ namespace Akonadi
 namespace Utils
 {
 void splitCustomField(const QString &str, QString &app, QString &name, QString &value);
-Q_REQUIRED_RESULT QString loadCustom(const KContacts::Addressee &contact, const QString &key);
+[[nodiscard]] QString loadCustom(const KContacts::Addressee &contact, const QString &key);
 void storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value);
 }
 }

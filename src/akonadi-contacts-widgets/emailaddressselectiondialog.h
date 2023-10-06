@@ -73,12 +73,12 @@ public:
     /**
      * Returns the list of selected email addresses.
      */
-    Q_REQUIRED_RESULT Akonadi::EmailAddressSelection::List selectedAddresses() const override;
+    [[nodiscard]] Akonadi::EmailAddressSelection::List selectedAddresses() const override;
 
     /**
      * Returns the email address selection view that is used.
      */
-    Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionWidget *view() const override;
+    [[nodiscard]] Akonadi::EmailAddressSelectionWidget *view() const override;
 
 private:
     //@cond PRIVATE

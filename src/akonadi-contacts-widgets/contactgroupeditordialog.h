@@ -99,7 +99,7 @@ public:
     /**
      * Returns the ContactGroupEditor that is used by the dialog.
      */
-    Q_REQUIRED_RESULT ContactGroupEditor *editor() const;
+    [[nodiscard]] ContactGroupEditor *editor() const;
 
     void reject() override;
 Q_SIGNALS:

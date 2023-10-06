@@ -21,7 +21,7 @@ public:
     explicit GrantleePrint(const QString &themePath);
     ~GrantleePrint();
 
-    Q_REQUIRED_RESULT QString contactsToHtml(const KContacts::Addressee::List &contacts);
+    [[nodiscard]] QString contactsToHtml(const KContacts::Addressee::List &contacts);
 
 private:
     AKONADI_CONTACT_CORE_NO_EXPORT void init();

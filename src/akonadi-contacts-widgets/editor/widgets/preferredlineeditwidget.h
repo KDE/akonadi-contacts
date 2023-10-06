@@ -20,7 +20,7 @@ public:
     explicit PreferredLineEditWidget(QWidget *parent = nullptr);
     ~PreferredLineEditWidget() override;
 
-    Q_REQUIRED_RESULT bool preferred() const;
+    [[nodiscard]] bool preferred() const;
 
     void setPreferred(bool preferred);
 

@@ -86,7 +86,7 @@ public:
      */
     void setMatchFilterContactFlag(ContactsFilterProxyModel::MatchFilterContactFlag flag);
 
-    Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
+    [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     /**
      * Sets whether we want virtual collections to be filtered or not.

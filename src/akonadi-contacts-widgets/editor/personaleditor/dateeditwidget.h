@@ -45,7 +45,7 @@ public:
     ~DateEditWidget() override;
 
     void setDate(const QDate &date);
-    Q_REQUIRED_RESULT QDate date() const;
+    [[nodiscard]] QDate date() const;
 
     void setReadOnly(bool readOnly);
 

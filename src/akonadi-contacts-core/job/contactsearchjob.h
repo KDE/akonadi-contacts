@@ -129,7 +129,7 @@ public:
     /**
      * Returns the contacts that matched the search criteria.
      */
-    Q_REQUIRED_RESULT KContacts::Addressee::List contacts() const;
+    [[nodiscard]] KContacts::Addressee::List contacts() const;
 
 private:
     //@cond PRIVATE

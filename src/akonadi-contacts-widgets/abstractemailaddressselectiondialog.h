@@ -24,12 +24,12 @@ public:
     /**
      * Returns the list of selected email addresses.
      */
-    Q_REQUIRED_RESULT virtual Akonadi::EmailAddressSelection::List selectedAddresses() const = 0;
+    [[nodiscard]] virtual Akonadi::EmailAddressSelection::List selectedAddresses() const = 0;
 
     /**
      * Returns the email address selection view that is used.
      */
-    Q_REQUIRED_RESULT virtual Akonadi::EmailAddressSelectionWidget *view() const = 0;
+    [[nodiscard]] virtual Akonadi::EmailAddressSelectionWidget *view() const = 0;
 Q_SIGNALS:
     void insertAddresses(const KContacts::Addressee::List &list);
 };

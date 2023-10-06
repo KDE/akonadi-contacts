@@ -35,7 +35,7 @@ class Akonadi::ImageLoader
 public:
     ImageLoader(QWidget *parent = nullptr);
 
-    Q_REQUIRED_RESULT QImage loadImage(const QUrl &url, bool *ok, bool selectPictureSize = true);
+    [[nodiscard]] QImage loadImage(const QUrl &url, bool *ok, bool selectPictureSize = true);
 
 private:
     QWidget *const mParent;

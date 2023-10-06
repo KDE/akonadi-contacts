@@ -127,7 +127,7 @@ public:
     /**
      * Returns the ContactEditor that is used by this dialog.
      */
-    Q_REQUIRED_RESULT Akonadi::AkonadiContactEditor *editor() const;
+    [[nodiscard]] Akonadi::AkonadiContactEditor *editor() const;
 
     void reject() override;
 

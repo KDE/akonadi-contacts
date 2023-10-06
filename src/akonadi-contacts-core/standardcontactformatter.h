@@ -56,7 +56,7 @@ public:
     /**
      * Returns the contact formatted as HTML.
      */
-    Q_REQUIRED_RESULT QString toHtml(HtmlForm form = SelfcontainedForm) const override;
+    [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
     /*
      * @since 4.9.1
@@ -65,7 +65,7 @@ public:
     /*
      * @since 4.9.1
      */
-    Q_REQUIRED_RESULT bool displayQRCode() const;
+    [[nodiscard]] bool displayQRCode() const;
 
 private:
     //@cond PRIVATE

@@ -29,7 +29,7 @@ public:
     void storeContact(KContacts::Addressee &contact) const;
 
     void setReadOnly(bool readOnly);
-    Q_REQUIRED_RESULT bool hasNoSavedData() const;
+    [[nodiscard]] bool hasNoSavedData() const;
 
 private:
     AddressLocationWidget *const mAddressLocationWidget;

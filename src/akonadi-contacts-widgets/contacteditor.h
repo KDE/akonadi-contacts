@@ -134,8 +134,8 @@ public:
      * @brief ContactEditor::contact
      * @return
      */
-    Q_REQUIRED_RESULT KContacts::Addressee contact();
-    Q_REQUIRED_RESULT bool hasNoSavedData() const;
+    [[nodiscard]] KContacts::Addressee contact();
+    [[nodiscard]] bool hasNoSavedData() const;
 public Q_SLOTS:
     /**
      * Loads the @p contact into the editor.

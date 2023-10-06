@@ -20,7 +20,7 @@ public:
     ~RecipientsEditorManager() override;
 
     static RecipientsEditorManager *self();
-    Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionModel *model();
+    [[nodiscard]] Akonadi::EmailAddressSelectionModel *model();
 
 private:
     Akonadi::EmailAddressSelectionModel *const mModel;

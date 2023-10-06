@@ -25,25 +25,25 @@ public:
     explicit NameEditDialog(QWidget *parent = nullptr);
 
     void setFamilyName(const QString &name);
-    Q_REQUIRED_RESULT QString familyName() const;
+    [[nodiscard]] QString familyName() const;
 
     void setGivenName(const QString &name);
-    Q_REQUIRED_RESULT QString givenName() const;
+    [[nodiscard]] QString givenName() const;
 
     void setPrefix(const QString &prefix);
-    Q_REQUIRED_RESULT QString prefix() const;
+    [[nodiscard]] QString prefix() const;
 
     void setSuffix(const QString &suffix);
-    Q_REQUIRED_RESULT QString suffix() const;
+    [[nodiscard]] QString suffix() const;
 
     void setAdditionalName(const QString &name);
-    Q_REQUIRED_RESULT QString additionalName() const;
+    [[nodiscard]] QString additionalName() const;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
 
     void setDisplayType(DisplayNameEditWidget::DisplayType type);
-    Q_REQUIRED_RESULT DisplayNameEditWidget::DisplayType displayType() const;
+    [[nodiscard]] DisplayNameEditWidget::DisplayType displayType() const;
 
 private:
     KComboBox *mSuffixCombo = nullptr;

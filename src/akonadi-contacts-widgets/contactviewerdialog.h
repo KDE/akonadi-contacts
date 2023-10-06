@@ -63,7 +63,7 @@ public:
     /**
      * Returns the contact that is currently displayed.
      */
-    Q_REQUIRED_RESULT Akonadi::Item contact() const;
+    [[nodiscard]] Akonadi::Item contact() const;
 
     /**
      * Returns the ContactViewer that is used by this dialog.

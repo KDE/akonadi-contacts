@@ -55,7 +55,7 @@ public:
     /**
      * Returns the text of the email address requester.
      */
-    Q_REQUIRED_RESULT QString text() const;
+    [[nodiscard]] QString text() const;
 
     /**
      * Returns the line edit that is used by the email address requester.

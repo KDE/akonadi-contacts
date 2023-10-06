@@ -44,22 +44,22 @@ public:
     ContactGrantleeWrapper(const KContacts::Addressee &addr);
 
 private:
-    Q_REQUIRED_RESULT QString addressBookLabel() const;
-    Q_REQUIRED_RESULT QString anniversaryLabel() const;
-    Q_REQUIRED_RESULT QString assistantLabel() const;
-    Q_REQUIRED_RESULT QString managerLabel() const;
-    Q_REQUIRED_RESULT QString officeLabel() const;
-    Q_REQUIRED_RESULT QString professionLabel() const;
-    Q_REQUIRED_RESULT QString spouseLabel() const;
+    [[nodiscard]] QString addressBookLabel() const;
+    [[nodiscard]] QString anniversaryLabel() const;
+    [[nodiscard]] QString assistantLabel() const;
+    [[nodiscard]] QString managerLabel() const;
+    [[nodiscard]] QString officeLabel() const;
+    [[nodiscard]] QString professionLabel() const;
+    [[nodiscard]] QString spouseLabel() const;
 
-    Q_REQUIRED_RESULT QString addressBookName() const;
-    Q_REQUIRED_RESULT int age() const;
+    [[nodiscard]] QString addressBookName() const;
+    [[nodiscard]] int age() const;
 
-    Q_REQUIRED_RESULT QString photoImgElement() const;
-    Q_REQUIRED_RESULT QString logoImgElement() const;
+    [[nodiscard]] QString photoImgElement() const;
+    [[nodiscard]] QString logoImgElement() const;
 
-    Q_REQUIRED_RESULT QString formattedBirthday() const;
-    Q_REQUIRED_RESULT QString formattedAnniversary() const;
+    [[nodiscard]] QString formattedBirthday() const;
+    [[nodiscard]] QString formattedAnniversary() const;
 };
 
 }

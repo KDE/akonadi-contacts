@@ -89,7 +89,7 @@ public:
     /**
      * Returns the list of selected email addresses.
      */
-    Q_REQUIRED_RESULT Akonadi::EmailAddressSelection::List selectedAddresses() const;
+    [[nodiscard]] Akonadi::EmailAddressSelection::List selectedAddresses() const;
 
     /**
      * Returns the line edit that is used for the search line.

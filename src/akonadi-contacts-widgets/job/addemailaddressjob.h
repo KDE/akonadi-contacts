@@ -51,7 +51,7 @@ public:
     /**
      * Returns the item that represents the new contact.
      */
-    Q_REQUIRED_RESULT Akonadi::Item contact() const;
+    [[nodiscard]] Akonadi::Item contact() const;
 
     void setInteractive(bool b);
 Q_SIGNALS:

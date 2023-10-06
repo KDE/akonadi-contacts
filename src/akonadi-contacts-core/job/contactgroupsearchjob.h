@@ -111,7 +111,7 @@ public:
     /**
      * Returns the contact groups that matched the search criteria.
      */
-    Q_REQUIRED_RESULT KContacts::ContactGroup::List contactGroups() const;
+    [[nodiscard]] KContacts::ContactGroup::List contactGroups() const;
 
 private:
     //@cond PRIVATE

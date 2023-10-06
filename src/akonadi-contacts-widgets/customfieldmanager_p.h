@@ -18,5 +18,5 @@ class CustomFieldManager
 {
 public:
     AKONADI_CONTACT_WIDGETS_EXPORT static void setGlobalCustomFieldDescriptions(const CustomField::List &customFields);
-    Q_REQUIRED_RESULT AKONADI_CONTACT_WIDGETS_EXPORT static CustomField::List globalCustomFieldDescriptions();
+    [[nodiscard]] AKONADI_CONTACT_WIDGETS_EXPORT static CustomField::List globalCustomFieldDescriptions();
 };

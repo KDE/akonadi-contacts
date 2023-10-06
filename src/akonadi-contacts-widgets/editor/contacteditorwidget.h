@@ -66,7 +66,7 @@ public:
      */
     void setReadOnly(bool readOnly) override;
 
-    Q_REQUIRED_RESULT bool hasNoSavedData() const override;
+    [[nodiscard]] bool hasNoSavedData() const override;
 
 private:
     std::unique_ptr<ContactEditorWidgetPrivate> const d;

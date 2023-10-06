@@ -52,7 +52,7 @@ public:
      */
     virtual void setReadOnly(bool readOnly) = 0;
 
-    Q_REQUIRED_RESULT virtual bool hasNoSavedData() const
+    [[nodiscard]] virtual bool hasNoSavedData() const
     {
         return false;
     }

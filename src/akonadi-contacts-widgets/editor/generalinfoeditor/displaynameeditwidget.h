@@ -48,7 +48,7 @@ public:
     void setReadOnly(bool readOnly);
 
     void setDisplayType(DisplayType type);
-    Q_REQUIRED_RESULT DisplayType displayType() const;
+    [[nodiscard]] DisplayType displayType() const;
 
 public Q_SLOTS:
     void changeName(const KContacts::Addressee &contact);

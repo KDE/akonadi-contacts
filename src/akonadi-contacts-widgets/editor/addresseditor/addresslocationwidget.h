@@ -32,7 +32,7 @@ public:
     ~AddressLocationWidget() override;
 
     void setAddress(const KContacts::Address &address);
-    Q_REQUIRED_RESULT KContacts::Address address() const;
+    [[nodiscard]] KContacts::Address address() const;
 
     void slotModifyAddress(const KContacts::Address &address, int currentIndex);
 
@@ -40,7 +40,7 @@ public:
 
     void setReadOnly(bool readOnly);
 
-    Q_REQUIRED_RESULT bool wasChanged() const;
+    [[nodiscard]] bool wasChanged() const;
 Q_SIGNALS:
     void addNewAddress(const KContacts::Address &address);
     void updateAddress(const KContacts::Address &address, int index);

@@ -82,7 +82,7 @@ public:
     /**
      * Returns the list of contacts.
      */
-    Q_REQUIRED_RESULT KContacts::Addressee::List contacts() const;
+    [[nodiscard]] KContacts::Addressee::List contacts() const;
 
     /**
      * Starts the expand job.
