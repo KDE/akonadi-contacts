@@ -1624,39 +1624,3 @@ msgstr "連絡先をコピー"
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
 msgstr "新しい連絡先を保存するアドレス帳を選択:"
-
-#~ msgid ""
-#~ "There is no application set which could be executed.\n"
-#~ "Please go to the settings dialog and configure one."
-#~ msgstr ""
-#~ "実行可能なアプリケーションが設定されていません。設定ダイアログで設定してく"
-#~ "ださい。"
-
-#~ msgid "Dialing a number is not supported"
-#~ msgstr "電話番号の呼び出しはサポートされていません"
-
-#~ msgid "Sending an SMS is not supported"
-#~ msgstr "SMS の送信はサポートされていません"
-
-#~ msgid "Sending an SMS is currently not supported on Ekiga."
-#~ msgstr "Ekiga では SMS の送信はサポートされていません"
-
-#~ msgid "Skype registration failed."
-#~ msgstr "Skype の登録に失敗。"
-
-#~ msgid "Protocol mismatch."
-#~ msgstr "プロトコルの不一致。"
-
-#, fuzzy
-#~| msgid "SMS text"
-#~ msgctxt "@title:window"
-#~ msgid "SMS text"
-#~ msgstr "SMS テキスト"
-
-#~ msgid "%1/%2 (%3 SMS)"
-#~ msgstr "%1/%2 (%3 SMS)"
-
-#, fuzzy
-#~| msgid "Add Email"
-#~ msgid "Add a Country"
-#~ msgstr "メールアドレスを追加"
