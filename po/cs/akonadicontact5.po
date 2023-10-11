@@ -655,11 +655,10 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "Opravdu si přejete smazat vybrané pole?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
-msgstr "Potvrdit odstranění"
+msgstr "Potvrzení smazání"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
@@ -1172,11 +1171,10 @@ msgstr "Kontakt nelze uložit: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr "Kontakt nelze uložit"
+msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
