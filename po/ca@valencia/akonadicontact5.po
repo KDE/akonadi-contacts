@@ -196,7 +196,7 @@ msgstr "Pàgina personal"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
-msgstr "Enllaç al blog"
+msgstr "Enllaç cap al blog"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:154
 #, kde-format
