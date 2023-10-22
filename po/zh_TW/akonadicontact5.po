@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2023-01-07 04:09+0900\n"
+"PO-Revision-Date: 2023-10-21 17:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
@@ -653,8 +653,7 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "您確定要刪除選取的自訂欄位嗎？"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "確認刪除"
@@ -1165,8 +1164,7 @@ msgstr "聯絡人無法儲存：%1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "儲存聯絡人失敗"
