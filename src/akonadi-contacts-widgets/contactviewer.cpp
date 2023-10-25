@@ -69,7 +69,7 @@ public:
             QByteArray imageData;
             QImage image;
             KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.photo().url()), KIO::NoReload);
-            QObject::connect(job, &KIO::TransferJob::data, [&imageData](KIO::Job *, const QByteArray &data) {
+            QObject::connect(job, &KIO::TransferJob::data, job, [&imageData](KIO::Job *, const QByteArray &data) {
                 imageData.append(data);
             });
             if (job->exec()) {
@@ -91,7 +91,7 @@ public:
             QByteArray imageData;
             QImage image;
             KIO::TransferJob *job = KIO::get(QUrl(mCurrentContact.logo().url()), KIO::NoReload);
-            QObject::connect(job, &KIO::TransferJob::data, [&imageData](KIO::Job *, const QByteArray &data) {
+            QObject::connect(job, &KIO::TransferJob::data, job, [&imageData](KIO::Job *, const QByteArray &data) {
                 imageData.append(data);
             });
             if (job->exec()) {

@@ -63,7 +63,7 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
     } else {
         QByteArray imageData;
         KIO::TransferJob *job = KIO::get(url, KIO::NoReload);
-        QObject::connect(job, &KIO::TransferJob::data, [&imageData](KIO::Job *, const QByteArray &data) {
+        QObject::connect(job, &KIO::TransferJob::data, job, [&imageData](KIO::Job *, const QByteArray &data) {
             imageData.append(data);
         });
         if (job->exec()) {
