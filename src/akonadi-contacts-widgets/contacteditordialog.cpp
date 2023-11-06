@@ -111,7 +111,7 @@ public:
     void readConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, myContactEditorDialogDialogGroupName);
+        KConfigGroup group(&config, QLatin1String(myContactEditorDialogDialogGroupName));
         const QSize size = group.readEntry("Size", QSize(800, 500));
         if (size.isValid()) {
             q->resize(size);
@@ -121,7 +121,7 @@ public:
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, myContactEditorDialogDialogGroupName);
+        KConfigGroup group(&config, QLatin1String(myContactEditorDialogDialogGroupName));
         group.writeEntry("Size", q->size());
         group.sync();
     }
