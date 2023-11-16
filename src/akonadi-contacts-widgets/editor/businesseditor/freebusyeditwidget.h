@@ -33,6 +33,5 @@ public:
 
 private:
     KUrlRequester *mURL = nullptr;
-    bool mReadOnly = false;
 };
 }
