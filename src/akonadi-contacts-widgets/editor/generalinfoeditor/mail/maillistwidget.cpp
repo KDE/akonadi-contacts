@@ -24,10 +24,10 @@ MailListWidget::MailListWidget(QWidget *parent)
     topLayout->setSpacing(0);
 
     auto label = new QLabel(i18n("Email"), this);
-    label->setObjectName(QStringLiteral("emaillistlabel"));
+    label->setObjectName(QLatin1StringView("emaillistlabel"));
     topLayout->addWidget(label);
 
-    mMailWidgetLister->setObjectName(QStringLiteral("emailwidgetlister"));
+    mMailWidgetLister->setObjectName(QLatin1StringView("emailwidgetlister"));
     topLayout->addWidget(mMailWidgetLister);
 }
 

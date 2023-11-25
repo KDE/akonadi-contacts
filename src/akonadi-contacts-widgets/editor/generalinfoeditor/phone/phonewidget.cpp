@@ -30,20 +30,20 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 
     mPhoneNumberEdit->setTrapReturnKey(true);
     mPhoneNumberEdit->setPlaceholderText(i18n("Add a Phone Number"));
-    mPhoneNumberEdit->setObjectName(QStringLiteral("phonenumber"));
+    mPhoneNumberEdit->setObjectName(QLatin1StringView("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
     connect(mPhoneNumberEdit, &PreferredLineEditWidget::preferredChanged, this, &PhoneWidget::slotPreferredChanged);
 
-    mPhoneType->setObjectName(QStringLiteral("phonetype"));
+    mPhoneType->setObjectName(QLatin1StringView("phonetype"));
     layout->addWidget(mPhoneType);
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setToolTip(i18n("Add a Phone Number"));
-    mAddButton->setObjectName(QStringLiteral("addbutton"));
+    mAddButton->setObjectName(QLatin1StringView("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &PhoneWidget::slotAddPhone);
     layout->addWidget(mAddButton);
 
-    mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
     mRemoveButton->setToolTip(i18n("Remove Phone Number"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     connect(mRemoveButton, &QToolButton::clicked, this, &PhoneWidget::slotRemovePhone);

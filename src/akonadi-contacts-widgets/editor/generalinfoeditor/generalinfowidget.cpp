@@ -40,7 +40,7 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 
     auto photoLayout = new QVBoxLayout;
     topLayout->addLayout(photoLayout);
-    mPhotoWidget->setObjectName(QStringLiteral("photowidget"));
+    mPhotoWidget->setObjectName(QLatin1StringView("photowidget"));
     photoLayout->addWidget(mPhotoWidget);
     photoLayout->addStretch(1);
 
@@ -50,22 +50,22 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     auto rightLayout = new QVBoxLayout;
     topLayout->addLayout(rightLayout);
 
-    mNameWidget->setObjectName(QStringLiteral("namewidget"));
+    mNameWidget->setObjectName(QLatin1StringView("namewidget"));
     leftLayout->addWidget(mNameWidget);
 
-    mNickNameWidget->setObjectName(QStringLiteral("nicknamewidget"));
+    mNickNameWidget->setObjectName(QLatin1StringView("nicknamewidget"));
     rightLayout->addWidget(mNickNameWidget);
 
-    mPhoneListWidget->setObjectName(QStringLiteral("phonelistwidget"));
+    mPhoneListWidget->setObjectName(QLatin1StringView("phonelistwidget"));
     leftLayout->addWidget(mPhoneListWidget);
 
-    mWebListWidget->setObjectName(QStringLiteral("weblistwidget"));
+    mWebListWidget->setObjectName(QLatin1StringView("weblistwidget"));
     leftLayout->addWidget(mWebListWidget);
 
-    mMessagingListWidget->setObjectName(QStringLiteral("messaginglistwidget"));
+    mMessagingListWidget->setObjectName(QLatin1StringView("messaginglistwidget"));
     rightLayout->addWidget(mMessagingListWidget);
 
-    mMailListWidget->setObjectName(QStringLiteral("maillistwidget"));
+    mMailListWidget->setObjectName(QLatin1StringView("maillistwidget"));
     rightLayout->addWidget(mMailListWidget);
 
     auto categoryWidget = new QWidget(this);
@@ -73,14 +73,14 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     categoryWidgetLayout->setContentsMargins({});
     mCategoriesWidget = new CategoriesEditWidget(parent);
 
-    mCategoriesWidget->setObjectName(QStringLiteral("categories"));
+    mCategoriesWidget->setObjectName(QLatin1StringView("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);
     leftLayout->addWidget(categoryWidget);
 
-    mBlogFeedWidget->setObjectName(QStringLiteral("blogfeed"));
+    mBlogFeedWidget->setObjectName(QLatin1StringView("blogfeed"));
     rightLayout->addWidget(mBlogFeedWidget);
 
-    mMessageFormattingWidget->setObjectName(QStringLiteral("mMessageFormattingWidget"));
+    mMessageFormattingWidget->setObjectName(QLatin1StringView("mMessageFormattingWidget"));
     leftLayout->addWidget(mMessageFormattingWidget);
 
     leftLayout->addStretch(1);

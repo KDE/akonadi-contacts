@@ -32,11 +32,11 @@ MessagingWidget::MessagingWidget(QWidget *parent)
 
     mMessagingEdit->setTrapReturnKey(true);
     mMessagingEdit->setPlaceholderText(i18n("Add an identifier"));
-    mMessagingEdit->setObjectName(QStringLiteral("messaginglineedit"));
+    mMessagingEdit->setObjectName(QLatin1StringView("messaginglineedit"));
     connect(mMessagingEdit, &PreferredLineEditWidget::preferredChanged, this, &MessagingWidget::slotPreferredChanged);
     layout->addWidget(mMessagingEdit);
 
-    mProtocolCombo->setObjectName(QStringLiteral("protocol"));
+    mProtocolCombo->setObjectName(QLatin1StringView("protocol"));
     mProtocolCombo->addItem(i18nc("@item:inlistbox select from a list of IM protocols", "Select..."));
     layout->addWidget(mProtocolCombo);
 
@@ -46,13 +46,13 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     }
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    mAddButton->setObjectName(QStringLiteral("addbutton"));
+    mAddButton->setObjectName(QLatin1StringView("addbutton"));
     mAddButton->setToolTip(i18n("Add an IM"));
     connect(mAddButton, &QToolButton::clicked, this, &MessagingWidget::slotAddMessaging);
     layout->addWidget(mAddButton);
 
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
-    mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
     mRemoveButton->setToolTip(i18n("Remove IM"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MessagingWidget::slotRemoveMessaging);
     layout->addWidget(mRemoveButton);

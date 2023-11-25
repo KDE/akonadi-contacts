@@ -28,21 +28,21 @@ MailWidget::MailWidget(QWidget *parent)
 
     mMailEdit->setTrapReturnKey(true);
     mMailEdit->setPlaceholderText(i18n("Add an Email Account"));
-    mMailEdit->setObjectName(QStringLiteral("mailedit"));
+    mMailEdit->setObjectName(QLatin1StringView("mailedit"));
     layout->addWidget(mMailEdit);
     connect(mMailEdit, &PreferredLineEditWidget::preferredChanged, this, &MailWidget::slotPreferredChanged);
 
-    mMailType->setObjectName(QStringLiteral("mailtype"));
+    mMailType->setObjectName(QLatin1StringView("mailtype"));
     layout->addWidget(mMailType);
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    mAddButton->setObjectName(QStringLiteral("addbutton"));
+    mAddButton->setObjectName(QLatin1StringView("addbutton"));
     mAddButton->setToolTip(i18n("Add an Email"));
     connect(mAddButton, &QToolButton::clicked, this, &MailWidget::slotAddMail);
     layout->addWidget(mAddButton);
 
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
-    mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
     mRemoveButton->setToolTip(i18n("Remove Email"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MailWidget::slotRemoveMail);
     layout->addWidget(mRemoveButton);

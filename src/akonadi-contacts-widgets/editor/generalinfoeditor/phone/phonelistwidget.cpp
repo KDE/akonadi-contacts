@@ -24,10 +24,10 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
     topLayout->setSpacing(0);
 
     auto label = new QLabel(i18n("Phone"), this);
-    label->setObjectName(QStringLiteral("phonelistlabel"));
+    label->setObjectName(QLatin1StringView("phonelistlabel"));
     topLayout->addWidget(label);
 
-    mPhoneWidgetLister->setObjectName(QStringLiteral("phonewidgetlister"));
+    mPhoneWidgetLister->setObjectName(QLatin1StringView("phonewidgetlister"));
     topLayout->addWidget(mPhoneWidgetLister);
 }
 

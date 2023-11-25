@@ -25,7 +25,7 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     , mModel(new CustomFieldsModel(this))
 {
     auto topLayout = new QVBoxLayout(this);
-    mCustomFieldList->setObjectName(QStringLiteral("customfieldlist"));
+    mCustomFieldList->setObjectName(QLatin1StringView("customfieldlist"));
     mCustomFieldList->setSortingEnabled(true);
     mCustomFieldList->setRootIsDecorated(false);
     auto customFieldDelegate = new Akonadi::CustomFieldsListDelegate(mCustomFieldList, this);

@@ -29,20 +29,20 @@ WebWidget::WebWidget(QWidget *parent)
 
     mWebSiteEdit->setTrapReturnKey(true);
     mWebSiteEdit->setPlaceholderText(i18n("Add a Web Site"));
-    mWebSiteEdit->setObjectName(QStringLiteral("website"));
+    mWebSiteEdit->setObjectName(QLatin1StringView("website"));
     layout->addWidget(mWebSiteEdit);
     connect(mWebSiteEdit, &PreferredLineEditWidget::preferredChanged, this, &WebWidget::slotPreferredChanged);
 
-    mWebType->setObjectName(QStringLiteral("webtype"));
+    mWebType->setObjectName(QLatin1StringView("webtype"));
     layout->addWidget(mWebType);
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    mAddButton->setObjectName(QStringLiteral("addbutton"));
+    mAddButton->setObjectName(QLatin1StringView("addbutton"));
     mAddButton->setToolTip(i18n("Add a Web Site"));
     connect(mAddButton, &QToolButton::clicked, this, &WebWidget::slotAddWeb);
     layout->addWidget(mAddButton);
 
-    mRemoveButton->setObjectName(QStringLiteral("removebutton"));
+    mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setToolTip(i18n("Remove Web Site"));
     connect(mRemoveButton, &QToolButton::clicked, this, &WebWidget::slotRemoveWeb);

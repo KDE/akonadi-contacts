@@ -22,10 +22,10 @@ CustomFieldsWidget::CustomFieldsWidget(QWidget *parent)
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
-    mCustomFieldEditorWidget->setObjectName(QStringLiteral("customfieldeditorwidget"));
+    mCustomFieldEditorWidget->setObjectName(QLatin1StringView("customfieldeditorwidget"));
     topLayout->addWidget(mCustomFieldEditorWidget);
 
-    mCustomFieldsListWidget->setObjectName(QStringLiteral("customfieldslistwidget"));
+    mCustomFieldsListWidget->setObjectName(QLatin1StringView("customfieldslistwidget"));
     topLayout->addWidget(mCustomFieldsListWidget);
 
     connect(mCustomFieldEditorWidget, &CustomFieldEditorWidget::addNewField, mCustomFieldsListWidget, &CustomFieldsListWidget::slotAddNewField);

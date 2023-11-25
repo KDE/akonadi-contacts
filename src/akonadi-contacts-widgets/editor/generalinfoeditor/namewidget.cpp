@@ -26,7 +26,7 @@ NameWidget::NameWidget(QWidget *parent)
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
     auto label = new QLabel(i18n("Name"));
-    label->setObjectName(QStringLiteral("namelabel"));
+    label->setObjectName(QLatin1StringView("namelabel"));
     topLayout->addWidget(label);
 
     auto lineLayout = new QHBoxLayout;

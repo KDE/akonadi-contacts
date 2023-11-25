@@ -21,14 +21,14 @@ NicknameWidget::NicknameWidget(QWidget *parent)
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
-    topLayout->setObjectName(QStringLiteral("mainlayout"));
+    topLayout->setObjectName(QLatin1StringView("mainlayout"));
     auto nickNameLabel = new QLabel(i18n("Nickname"), this);
-    nickNameLabel->setObjectName(QStringLiteral("nicknamelabel"));
+    nickNameLabel->setObjectName(QLatin1StringView("nicknamelabel"));
     topLayout->addWidget(nickNameLabel);
 
     mNickName->setTrapReturnKey(true);
     mNickName->setPlaceholderText(i18n("Add a Nickname"));
-    mNickName->setObjectName(QStringLiteral("nickname"));
+    mNickName->setObjectName(QLatin1StringView("nickname"));
     topLayout->addWidget(mNickName);
 }
 

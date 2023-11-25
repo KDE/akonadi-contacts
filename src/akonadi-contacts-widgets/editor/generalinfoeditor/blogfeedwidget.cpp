@@ -20,14 +20,14 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
-    topLayout->setObjectName(QStringLiteral("mainlayout"));
+    topLayout->setObjectName(QLatin1StringView("mainlayout"));
     auto blogFeedLabel = new QLabel(i18n("Blog Feed"), this);
-    blogFeedLabel->setObjectName(QStringLiteral("blogFeedLabel"));
+    blogFeedLabel->setObjectName(QLatin1StringView("blogFeedLabel"));
     topLayout->addWidget(blogFeedLabel);
 
     mBlogFeed->setTrapReturnKey(true);
     mBlogFeed->setPlaceholderText(i18n("Add a Blog Feed"));
-    mBlogFeed->setObjectName(QStringLiteral("blogfeed"));
+    mBlogFeed->setObjectName(QLatin1StringView("blogfeed"));
     topLayout->addWidget(mBlogFeed);
 }
 

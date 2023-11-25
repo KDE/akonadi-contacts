@@ -24,16 +24,16 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
     auto label = new QLabel(i18n("Show messages received from this contact as:"), this);
-    label->setObjectName(QStringLiteral("label"));
+    label->setObjectName(QLatin1StringView("label"));
     topLayout->addWidget(label);
 
-    mMailPreferFormatting->setObjectName(QStringLiteral("mMailPreferFormatting"));
+    mMailPreferFormatting->setObjectName(QLatin1StringView("mMailPreferFormatting"));
     topLayout->addWidget(mMailPreferFormatting);
     label->setBuddy(mMailPreferFormatting);
     const QStringList listFormat{i18n("Default"), i18n("Plain Text"), i18n("HTML")};
     mMailPreferFormatting->addItems(listFormat);
 
-    mAllowRemoteContent->setObjectName(QStringLiteral("mAllowRemoteContent"));
+    mAllowRemoteContent->setObjectName(QLatin1StringView("mAllowRemoteContent"));
     topLayout->addWidget(mAllowRemoteContent);
 }
 

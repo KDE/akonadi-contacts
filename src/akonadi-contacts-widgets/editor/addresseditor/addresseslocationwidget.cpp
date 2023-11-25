@@ -26,7 +26,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     , mAddressesLocationView(new QTreeView(this))
     , mAddressModel(new AddressModel(this))
 {
-    mAddressLocationWidget->setObjectName(QStringLiteral("addresslocationwidget"));
+    mAddressLocationWidget->setObjectName(QLatin1StringView("addresslocationwidget"));
     addWidget(mAddressLocationWidget);
 
     mAddressesLocationView->setRootIsDecorated(false);
@@ -34,7 +34,7 @@ AddressesLocationWidget::AddressesLocationWidget(QWidget *parent)
     mAddressesLocationView->setModel(mAddressModel);
     mAddressesLocationView->setItemDelegate(new AddressDelegate(this));
     mAddressesLocationView->setContextMenuPolicy(Qt::CustomContextMenu);
-    mAddressesLocationView->setObjectName(QStringLiteral("addresseslocationviewer"));
+    mAddressesLocationView->setObjectName(QLatin1StringView("addresseslocationviewer"));
     addWidget(mAddressesLocationView);
 
     connect(mAddressesLocationView->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this](const QItemSelection &selection) {

@@ -25,10 +25,10 @@ WebListWidget::WebListWidget(QWidget *parent)
     topLayout->setSpacing(0);
 
     auto label = new QLabel(i18n("Web"), this);
-    label->setObjectName(QStringLiteral("weblistlabel"));
+    label->setObjectName(QLatin1StringView("weblistlabel"));
     topLayout->addWidget(label);
 
-    mWebWidgetLister->setObjectName(QStringLiteral("webwidgetlister"));
+    mWebWidgetLister->setObjectName(QLatin1StringView("webwidgetlister"));
     topLayout->addWidget(mWebWidgetLister);
 }
 

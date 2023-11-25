@@ -28,28 +28,28 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
 {
     auto topLayout = new QVBoxLayout(this);
     auto label = new QLabel(i18n("Custom Field Title"), this);
-    label->setObjectName(QStringLiteral("labeltitle"));
+    label->setObjectName(QLatin1StringView("labeltitle"));
 
     topLayout->addWidget(label);
 
     auto fieldLayout = new QHBoxLayout;
     topLayout->addLayout(fieldLayout);
     mFieldName->setPlaceholderText(i18n("Add name"));
-    mFieldName->setObjectName(QStringLiteral("fieldname"));
+    mFieldName->setObjectName(QLatin1StringView("fieldname"));
     mFieldName->setTrapReturnKey(true);
     fieldLayout->addWidget(mFieldName);
 
-    mFieldType->setObjectName(QStringLiteral("fieldtype"));
+    mFieldType->setObjectName(QLatin1StringView("fieldtype"));
     fieldLayout->addWidget(mFieldType);
     fillTypes();
 
-    mAddField->setObjectName(QStringLiteral("addfield"));
+    mAddField->setObjectName(QLatin1StringView("addfield"));
     fieldLayout->addWidget(mAddField);
     mAddField->setEnabled(false); // Disable at the beginning
     connect(mAddField, &QPushButton::clicked, this, &CustomFieldEditorWidget::slotAddField);
     connect(mFieldName, &KLineEdit::textChanged, this, &CustomFieldEditorWidget::slotFielNameChanged);
 
-    mUseAllContacts->setObjectName(QStringLiteral("useallcontact"));
+    mUseAllContacts->setObjectName(QLatin1StringView("useallcontact"));
     topLayout->addWidget(mUseAllContacts);
 }
 

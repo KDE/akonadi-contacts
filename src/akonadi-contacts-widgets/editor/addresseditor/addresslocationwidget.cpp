@@ -33,85 +33,85 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     topLayout->addLayout(gridLayout);
 
     mTypeCombo = new SelectAddressTypeComboBox(this);
-    mTypeCombo->setObjectName(QStringLiteral("typeaddress"));
+    mTypeCombo->setObjectName(QLatin1StringView("typeaddress"));
     connect(mTypeCombo, &SelectAddressTypeComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mTypeCombo, 0, 0, 1, 2);
 
     auto label = new QLabel(KContacts::Address::streetLabel(), this);
-    label->setObjectName(QStringLiteral("streetlabel"));
+    label->setObjectName(QLatin1StringView("streetlabel"));
     gridLayout->addWidget(label, 1, 0);
 
     mStreetEdit = new KLineEdit(this);
     mStreetEdit->setPlaceholderText(i18n("Add Street"));
-    mStreetEdit->setObjectName(QStringLiteral("streetlineedit"));
+    mStreetEdit->setObjectName(QLatin1StringView("streetlineedit"));
     mStreetEdit->setTrapReturnKey(true);
     connect(mStreetEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mStreetEdit, 2, 0);
 
     label = new QLabel(KContacts::Address::postOfficeBoxLabel(), this);
-    label->setObjectName(QStringLiteral("postofficeboxlabel"));
+    label->setObjectName(QLatin1StringView("postofficeboxlabel"));
     gridLayout->addWidget(label, 1, 1);
 
     mPOBoxEdit = new KLineEdit(this);
     mPOBoxEdit->setPlaceholderText(i18n("Add Post Office Box"));
-    mPOBoxEdit->setObjectName(QStringLiteral("postofficeboxlineedit"));
+    mPOBoxEdit->setObjectName(QLatin1StringView("postofficeboxlineedit"));
     mPOBoxEdit->setTrapReturnKey(true);
     connect(mPOBoxEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mPOBoxEdit, 2, 1);
 
     label = new QLabel(KContacts::Address::postalCodeLabel(), this);
-    label->setObjectName(QStringLiteral("postalcodelabel"));
+    label->setObjectName(QLatin1StringView("postalcodelabel"));
     gridLayout->addWidget(label, 3, 0);
     mPostalCodeEdit = new KLineEdit(this);
     mPostalCodeEdit->setPlaceholderText(i18n("Add Postal Code"));
-    mPostalCodeEdit->setObjectName(QStringLiteral("postalcodelineedit"));
+    mPostalCodeEdit->setObjectName(QLatin1StringView("postalcodelineedit"));
     mPostalCodeEdit->setTrapReturnKey(true);
     connect(mPostalCodeEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mPostalCodeEdit, 4, 0);
 
     label = new QLabel(KContacts::Address::localityLabel(), this);
-    label->setObjectName(QStringLiteral("localitylabel"));
+    label->setObjectName(QLatin1StringView("localitylabel"));
     gridLayout->addWidget(label, 3, 1);
     mLocalityEdit = new KLineEdit(this);
     mLocalityEdit->setPlaceholderText(i18n("Add Locality"));
-    mLocalityEdit->setObjectName(QStringLiteral("localitylineedit"));
+    mLocalityEdit->setObjectName(QLatin1StringView("localitylineedit"));
     mLocalityEdit->setTrapReturnKey(true);
     connect(mLocalityEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mLocalityEdit, 4, 1);
 
     label = new QLabel(KContacts::Address::regionLabel(), this);
-    label->setObjectName(QStringLiteral("regionlabel"));
+    label->setObjectName(QLatin1StringView("regionlabel"));
     gridLayout->addWidget(label, 5, 0);
     mRegionEdit = new KLineEdit(this);
     mRegionEdit->setPlaceholderText(i18n("Add Region"));
-    mRegionEdit->setObjectName(QStringLiteral("regionlineedit"));
+    mRegionEdit->setObjectName(QLatin1StringView("regionlineedit"));
     mRegionEdit->setTrapReturnKey(true);
     connect(mRegionEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mRegionEdit, 6, 0);
 
     label = new QLabel(KContacts::Address::countryLabel(), this);
-    label->setObjectName(QStringLiteral("countrylabel"));
+    label->setObjectName(QLatin1StringView("countrylabel"));
     gridLayout->addWidget(label, 5, 1);
     mCountryCombo = new QComboBox(this);
-    mCountryCombo->setObjectName(QStringLiteral("countrycombobox"));
+    mCountryCombo->setObjectName(QLatin1StringView("countrycombobox"));
     mCountryCombo->setEditable(false);
     mCountryCombo->setDuplicatesEnabled(false);
     connect(mCountryCombo, &KComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mCountryCombo, 6, 1);
 
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), this);
-    mPreferredCheckBox->setObjectName(QStringLiteral("preferredcheckbox"));
+    mPreferredCheckBox->setObjectName(QLatin1StringView("preferredcheckbox"));
     gridLayout->addWidget(mPreferredCheckBox, 7, 0, 1, 2);
 
     mButtonStack = new QStackedWidget(this);
-    mButtonStack->setObjectName(QStringLiteral("buttonstacked"));
+    mButtonStack->setObjectName(QLatin1StringView("buttonstacked"));
     topLayout->addWidget(mButtonStack);
 
     auto addButtonWidget = new QWidget(this);
     auto addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
     addButtonWidgetLayout->setContentsMargins({});
     mAddAddress = new QPushButton(i18n("Add Address"), this);
-    mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
+    mAddAddress->setObjectName(QLatin1StringView("addbuttonaddress"));
     connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
     addButtonWidgetLayout->addWidget(mAddAddress);
     addButtonWidgetLayout->addStretch(1);
@@ -123,17 +123,17 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mButtonStack->addWidget(modifyButtonWidget);
 
     mRemoveAddress = new QPushButton(i18n("Remove Address"), this);
-    mRemoveAddress->setObjectName(QStringLiteral("removebuttonaddress"));
+    mRemoveAddress->setObjectName(QLatin1StringView("removebuttonaddress"));
     modifyButtonWidgetLayout->addWidget(mRemoveAddress);
     connect(mRemoveAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotRemoveAddress);
 
     mModifyAddress = new QPushButton(i18n("Update Address"), this);
-    mModifyAddress->setObjectName(QStringLiteral("modifybuttonaddress"));
+    mModifyAddress->setObjectName(QLatin1StringView("modifybuttonaddress"));
     modifyButtonWidgetLayout->addWidget(mModifyAddress);
     connect(mModifyAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotUpdateAddress);
 
     mCancelAddress = new QPushButton(i18n("Cancel"), this);
-    mCancelAddress->setObjectName(QStringLiteral("cancelbuttonaddress"));
+    mCancelAddress->setObjectName(QLatin1StringView("cancelbuttonaddress"));
     connect(mCancelAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotCancelModifyAddress);
     modifyButtonWidgetLayout->addWidget(mCancelAddress);
     modifyButtonWidgetLayout->addStretch(1);

@@ -191,7 +191,7 @@ void ContactGroupEditorPrivate::setupMonitor()
 {
     delete mMonitor;
     mMonitor = new Monitor;
-    mMonitor->setObjectName(QStringLiteral("ContactGroupEditorMonitor"));
+    mMonitor->setObjectName(QLatin1StringView("ContactGroupEditorMonitor"));
     mMonitor->ignoreSession(Session::defaultSession());
 
     QObject::connect(mMonitor, &Monitor::itemChanged, mParent, [this](const Akonadi::Item &item, const QSet<QByteArray> &arrays) {
