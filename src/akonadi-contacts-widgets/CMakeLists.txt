@@ -220,6 +220,7 @@ target_link_libraries(KPim6AkonadiContactWidgets
     KF6::Prison
     KF6::XmlGui
     KF6::Codecs
+    KF6::I18nLocaleData
     )
 
 set_target_properties(KPim6AkonadiContactWidgets PROPERTIES

@@ -15,6 +15,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
+#include <KCountry>
 #include <QCheckBox>
 #include <QLabel>
 #include <QPushButton>
@@ -177,19 +178,9 @@ void AddressLocationWidget::setReadOnly(bool readOnly)
 void AddressLocationWidget::fillCountryCombo()
 {
     QStringList countries;
-    const QList<QLocale> localeList = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
-    countries.reserve(localeList.count());
-    for (const QLocale &locale : localeList) {
-        const QString localeStr = QLocale::territoryToString(locale.territory());
-        if (countries.contains(localeStr)) {
-            continue;
-        }
-        countries.append(localeStr);
+    for (const auto &country : KCountry::allCountries()) {
+        countries.append(country.name());
     }
-
-    std::sort(countries.begin(), countries.end(), [](const auto &s1, const auto &s2) {
-        return QString::localeAwareCompare(s1, s2) < 0;
-    });
 
     mCountryCombo->addItems(countries);
 
