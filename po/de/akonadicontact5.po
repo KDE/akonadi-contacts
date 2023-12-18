@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2022-04-14 18:09+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-doc@kde.org>\n"
@@ -387,59 +387,59 @@ msgid "Show Contact"
 msgstr "Kontakt anzeigen"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:125
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, kde-format
 msgid "Remove Address"
 msgstr "Adresse entfernen"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:285
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Möchten Sie diese Adresse wirklich löschen?"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:45
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgid "Add Street"
 msgstr "Straße hinzufügen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:56
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Postfach hinzufügen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:66
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Postleitzahl hinzufügen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:76
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr "Ort hinzufügen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:86
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgid "Add Region"
 msgstr "Region hinzufügen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:102
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Dies ist die bevorzugte Adresse"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:113
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
 #, kde-format
 msgid "Add Address"
 msgstr "Adresse hinzufügen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:130
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, kde-format
 msgid "Update Address"
 msgstr "Adresse aktualisieren"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:135
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
 msgid "Cancel"
 msgstr "Abbrechen"

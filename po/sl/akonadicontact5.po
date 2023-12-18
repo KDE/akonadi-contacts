@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2023-09-27 09:47+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -389,59 +389,59 @@ msgid "Show Contact"
 msgstr "Pokaži stik"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:125
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, kde-format
 msgid "Remove Address"
 msgstr "Odstrani naslov"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:285
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Ali zares želite izbrisati ta naslov?"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:45
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgid "Add Street"
 msgstr "Dodaj ulico"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:56
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Dodaj poštni predal"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:66
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Dodaj poštno številko"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:76
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr "Dodaj ime pošte"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:86
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgid "Add Region"
 msgstr "Dodaj območje"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:102
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "To je prednostni naslov"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:113
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
 #, kde-format
 msgid "Add Address"
 msgstr "Dodaj naslov"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:130
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, kde-format
 msgid "Update Address"
 msgstr "Posodobi naslov"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:135
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"

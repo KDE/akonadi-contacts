@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2014-03-18 00:22+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -399,7 +399,7 @@ msgid "Show Contact"
 msgstr "Kontakt wiesen"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:125
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
@@ -407,62 +407,62 @@ msgid "Remove Address"
 msgstr "Adress"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:285
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"
 #| msgid_plural "Do you really want to delete %1 address books?"
 msgid "Do you really want to delete this address?"
 msgstr "Wullt Du dit Adressbook redig wegdoon?"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:45
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
 msgid "Add Street"
 msgstr "Free/Bunnen:"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:56
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:66
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:76
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:86
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, fuzzy, kde-format
 #| msgid "Profession"
 msgid "Add Region"
 msgstr "Beroop"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:102
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Dit is de vörtrocken Adress"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:113
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add IM Address"
 msgid "Add Address"
 msgstr "KN-Adress tofögen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:130
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
 msgid "Update Address"
 msgstr "Adressbook opfrischen"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:135
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
 msgid "Cancel"
 msgstr ""

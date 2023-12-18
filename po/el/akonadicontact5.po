@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2022-12-29 16:36+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -386,59 +386,59 @@ msgid "Show Contact"
 msgstr "Εμφάνιση επαφής"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:125
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, kde-format
 msgid "Remove Address"
 msgstr "Διαγραφή διεύθυνσης"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:285
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Θέλετε πράγματι να διαγραφεί αυτή η διεύθυνση;"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:45
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgid "Add Street"
 msgstr "Προσθήκη οδού"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:56
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Προσθήκη ταχυδρομικής θυρίδας"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:66
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Προσθήκη ταχ. κωδικού"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:76
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr "Προσθήκη τοπικότητας"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:86
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgid "Add Region"
 msgstr "Προσθήκη περιφέρειας"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:102
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Αυτή είναι η προτιμώμενη διεύθυνση"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:113
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
 #, kde-format
 msgid "Add Address"
 msgstr "Προσθήκη διεύθυνσης"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:130
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, kde-format
 msgid "Update Address"
 msgstr "Ενημέρωση διεύθυνσης"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:135
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2010-09-24 20:39+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -402,7 +402,7 @@ msgid "Show Contact"
 msgstr "संपर्क"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:125
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
@@ -410,60 +410,60 @@ msgid "Remove Address"
 msgstr "पता"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:285
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:45
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
 msgid "Add Street"
 msgstr "पता"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:56
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:66
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:76
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:86
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, fuzzy, kde-format
 #| msgid "Profession"
 msgid "Add Region"
 msgstr "व्यवसाय"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:102
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:113
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
 msgid "Add Address"
 msgstr "पता"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:130
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
 msgid "Update Address"
 msgstr "पता"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:135
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Cancel"
