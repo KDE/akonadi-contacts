@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5-serializer\")
+add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact6-serializer\")
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
