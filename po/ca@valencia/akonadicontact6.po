@@ -1227,7 +1227,8 @@ msgstr[1] "Copia %1 carpetes de la llibreta d'adreces"
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
 msgstr ""
-"Copia les carpetes seleccionades de la llibreta d'adreces al porta-retalls."
+"Copia les carpetes seleccionades de la llibreta d'adreces a dins del porta-"
+"retalls."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
 #, kde-format
@@ -1334,7 +1335,7 @@ msgstr[1] "Copia %1 contactes"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
-msgstr "Copia els contactes seleccionats al porta-retalls."
+msgstr "Copia els contactes seleccionats a dins del porta-retalls."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
