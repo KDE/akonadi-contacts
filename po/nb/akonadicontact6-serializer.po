@@ -1,4 +1,4 @@
-# Translation of akonadicontact5-serializer to Norwegian Bokmål
+# Translation of akonadicontact6-serializer to Norwegian Bokmål
 #
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2010, 2011, 2014.
 msgid ""

@@ -1,4 +1,4 @@
-# Translation of akonadicontact5 to Norwegian Nynorsk
+# Translation of akonadicontact6 to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2010, 2013, 2022.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2010.
