@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2022-03-28 18:49+0400\n"
+"PO-Revision-Date: 2024-01-20 18:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -658,11 +658,10 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "أمتأكّد من حذف الحقل المخصّص المحدّد؟"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
-msgstr "أكّد الحذف"
+msgstr "تأكيد الحذف"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
@@ -1174,8 +1173,7 @@ msgstr "تعذّر تخزين المتراسل: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "فشل تخزين المتراسل"
