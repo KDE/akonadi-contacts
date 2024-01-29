@@ -122,7 +122,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Homepage
     if (rawContact.url().isValid()) {
         QString url = rawContact.url().url().url();
-        if (!url.startsWith(QLatin1StringView("http://")) && !url.startsWith(QLatin1String("https://"))) {
+        if (!url.startsWith(QLatin1StringView("http://")) && !url.startsWith(QLatin1StringView("https://"))) {
             url = QLatin1StringView("http://") + url;
         }
 
@@ -208,10 +208,10 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                 QString value = custom.mid(pos + 1);
 
                 // convert anniversary correctly
-                if (key == QLatin1StringView("Anniversary") || key == QLatin1String("ANNIVERSARY")) {
+                if (key == QLatin1StringView("Anniversary") || key == QLatin1StringView("ANNIVERSARY")) {
                     const QDateTime dateTime = QDateTime::fromString(value, Qt::ISODate);
                     value = QLocale().toString(dateTime.date());
-                } else if (key == QLatin1StringView("BlogFeed") || key == QLatin1String("BLOGFEED")) { // blog is handled separated
+                } else if (key == QLatin1StringView("BlogFeed") || key == QLatin1StringView("BLOGFEED")) { // blog is handled separated
                     continue;
                 } else if (blacklistedKeys.contains(key)) {
                     continue;

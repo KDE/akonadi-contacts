@@ -76,7 +76,7 @@ QVariant AddressModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
         const auto addr = mAddresses.at(index.row());
-        QString str = QLatin1StringView("<b>") + KContacts::Address::typeLabel(addr.type()) + QLatin1String("</b><br/>");
+        QString str = QLatin1StringView("<b>") + KContacts::Address::typeLabel(addr.type()) + QLatin1StringView("</b><br/>");
         const QString label = addr.label();
         if (!label.isEmpty()) {
             str += label.toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1StringView("<br/>"));
