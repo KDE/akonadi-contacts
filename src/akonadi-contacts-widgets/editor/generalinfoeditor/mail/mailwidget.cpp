@@ -8,11 +8,11 @@
 */
 
 #include "mailwidget.h"
+#include "editor/generalinfoeditor/mail/mailtypecombobox.h"
+#include "editor/widgets/preferredlineeditwidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
-#include <editor/generalinfoeditor/mail/mailtypecombobox.h>
-#include <editor/widgets/preferredlineeditwidget.h>
 
 using namespace Akonadi;
 MailWidget::MailWidget(QWidget *parent)

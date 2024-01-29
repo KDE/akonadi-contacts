@@ -10,8 +10,8 @@
 #pragma once
 
 #include "akonadi_contact_widgets_private_export.h"
+#include "editor/widgets/contacteditorcombobox.h"
 #include <KContacts/PhoneNumber>
-#include <editor/widgets/contacteditorcombobox.h>
 namespace Akonadi
 {
 /**

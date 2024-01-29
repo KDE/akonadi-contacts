@@ -8,12 +8,12 @@
 */
 
 #include "webwidget.h"
+#include "editor/widgets/preferredlineeditwidget.h"
 #include "webselecttypecombobox.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
 #include <QUrl>
-#include <editor/widgets/preferredlineeditwidget.h>
 using namespace Akonadi;
 
 WebWidget::WebWidget(QWidget *parent)

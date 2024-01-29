@@ -13,6 +13,8 @@
 #include "emailaddressselectionmodel.h"
 #include "emailaddressselectionproxymodel_p.h"
 
+#include "contactsfilterproxymodel.h"
+#include "contactstreemodel.h"
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/ControlGui>
 #include <Akonadi/EntityDisplayAttribute>
@@ -20,8 +22,6 @@
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Session>
 #include <KLocalizedString>
-#include <contactsfilterproxymodel.h>
-#include <contactstreemodel.h>
 
 #include <QHBoxLayout>
 #include <QHeaderView>

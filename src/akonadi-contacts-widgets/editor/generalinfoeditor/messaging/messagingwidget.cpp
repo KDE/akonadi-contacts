@@ -9,7 +9,7 @@
 
 #include "messagingwidget.h"
 #include "../../widgets/contacteditorcombobox.h"
-#include <editor/widgets/preferredlineeditwidget.h>
+#include "editor/widgets/preferredlineeditwidget.h"
 
 #include <KContacts/Impp>
 
