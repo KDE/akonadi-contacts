@@ -43,7 +43,7 @@ public:
 
 void SelectAddressBookDialogPrivate::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(mySelectAddressBookDialogGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySelectAddressBookDialogGroupName));
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         q->resize(size);
@@ -52,7 +52,7 @@ void SelectAddressBookDialogPrivate::readConfig()
 
 void SelectAddressBookDialogPrivate::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(mySelectAddressBookDialogGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySelectAddressBookDialogGroupName));
     group.writeEntry("Size", q->size());
     group.sync();
 }

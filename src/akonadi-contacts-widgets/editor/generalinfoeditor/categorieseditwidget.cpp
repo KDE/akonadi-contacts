@@ -37,7 +37,7 @@ void CategoriesEditWidget::loadContact(const KContacts::Addressee &contact)
     const QStringList categories = contact.categories();
     tags.reserve(categories.count());
     for (const QString &category : categories) {
-        if (category.startsWith(QLatin1String("akonadi:"))) {
+        if (category.startsWith(QLatin1StringView("akonadi:"))) {
             tags.append(Akonadi::Tag::fromUrl(QUrl(category)));
         } else {
             Akonadi::Tag missingTag = Akonadi::Tag(category);

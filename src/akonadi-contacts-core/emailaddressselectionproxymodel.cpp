@@ -21,24 +21,24 @@ static QString createToolTip(const KContacts::ContactGroup &group)
     QString txt = QStringLiteral("<qt>");
 
     txt += QStringLiteral("<b>%1</b>").arg(i18n("Distribution List %1", group.name()));
-    txt += QLatin1String("<ul>");
+    txt += QLatin1StringView("<ul>");
     const uint groupDataCount(group.dataCount());
     for (uint i = 0; i < groupDataCount; ++i) {
-        txt += QLatin1String("<li>");
+        txt += QLatin1StringView("<li>");
         txt += group.data(i).name() + QLatin1Char(' ');
-        txt += QLatin1String("<em>");
+        txt += QLatin1StringView("<em>");
         txt += group.data(i).email();
-        txt += QLatin1String("</em></li>");
+        txt += QLatin1StringView("</em></li>");
     }
-    txt += QLatin1String("</ul>");
-    txt += QLatin1String("</qt>");
+    txt += QLatin1StringView("</ul>");
+    txt += QLatin1StringView("</qt>");
 
     return txt;
 }
 
 static QString createToolTip(const QString &name, const QString &email)
 {
-    return QStringLiteral("<qt>%1<b>%2</b></qt>").arg(name.isEmpty() ? QString() : name + QLatin1String("<br/>"), email);
+    return QStringLiteral("<qt>%1<b>%2</b></qt>").arg(name.isEmpty() ? QString() : name + QLatin1StringView("<br/>"), email);
 }
 
 EmailAddressSelectionProxyModel::EmailAddressSelectionProxyModel(QObject *parent)

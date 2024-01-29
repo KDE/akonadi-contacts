@@ -55,11 +55,11 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
         Akonadi::Utils::splitCustomField(custom, app, name, value);
 
         // skip all well-known fields that have separated editor widgets
-        if (custom.startsWith(QLatin1String("messaging/"))) { // IM addresses
+        if (custom.startsWith(QLatin1StringView("messaging/"))) { // IM addresses
             continue;
         }
 
-        if (app == QLatin1String("KADDRESSBOOK")) {
+        if (app == QLatin1StringView("KADDRESSBOOK")) {
             static QSet<QString> blacklist;
             if (blacklist.isEmpty()) {
                 blacklist << QStringLiteral("BlogFeed") << QStringLiteral("X-IMAddress") << QStringLiteral("X-Profession") << QStringLiteral("X-Office")
@@ -102,7 +102,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
 
         // if not local and not global it must be external
         if (!isLocalCustomField && !isGlobalCustomField) {
-            if (app == QLatin1String("KADDRESSBOOK")) {
+            if (app == QLatin1StringView("KADDRESSBOOK")) {
                 // however if it starts with our prefix it might be that this is an outdated
                 // global custom field, in this case treat it as local field of type text
                 CustomField customField(name, name, CustomField::TextType, CustomField::LocalScope);

@@ -295,7 +295,7 @@ void ImageWidget::changeImage()
         if (!filter.isEmpty()) {
             filter += QLatin1Char(' ');
         }
-        filter += QLatin1String("*.") + QString::fromLatin1(ba);
+        filter += QLatin1StringView("*.") + QString::fromLatin1(ba);
     }
 
     const QUrl url = QFileDialog::getOpenFileUrl(this, QString(), QUrl(), i18n("Images (%1)", filter));
@@ -318,7 +318,7 @@ void ImageWidget::saveImage()
         if (!filter.isEmpty()) {
             filter += QLatin1Char(' ');
         }
-        filter += QLatin1String("*.") + QString::fromLatin1(ba);
+        filter += QLatin1StringView("*.") + QString::fromLatin1(ba);
     }
 
     const QString fileName = QFileDialog::getSaveFileName(this, QString(), QString(), i18n("Images (%1)", filter));

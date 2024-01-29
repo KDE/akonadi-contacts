@@ -51,7 +51,7 @@ void EmailAddressRequesterPrivate::slotAddressBook()
 
     if (!text.isEmpty()) {
         if (!text.endsWith(QLatin1Char(','))) {
-            text += QLatin1String(", ");
+            text += QLatin1StringView(", ");
         } else {
             text += QLatin1Char(' ');
         }

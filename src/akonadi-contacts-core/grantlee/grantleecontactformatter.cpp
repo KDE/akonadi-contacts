@@ -33,9 +33,9 @@
 using namespace KAddressBookGrantlee;
 
 KTEXTTEMPLATE_BEGIN_LOOKUP(QUrl)
-if (property == QLatin1String("scheme")) {
+if (property == QLatin1StringView("scheme")) {
     return object.scheme();
-} else if (property == QLatin1String("path")) {
+} else if (property == QLatin1StringView("path")) {
     return object.path();
 }
 KTEXTTEMPLATE_END_LOOKUP
@@ -158,7 +158,7 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
 
     const auto customs = rawContact.customs();
     for (QString custom : customs) {
-        if (custom.startsWith(QLatin1String("KADDRESSBOOK-"))) {
+        if (custom.startsWith(QLatin1StringView("KADDRESSBOOK-"))) {
             custom.remove(QStringLiteral("KADDRESSBOOK-X-"));
             custom.remove(QStringLiteral("KADDRESSBOOK-"));
 
@@ -177,22 +177,22 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
                 if (description.value(QStringLiteral("key")).toString() == key) {
                     key = description.value(QStringLiteral("title")).toString();
                     const QString descriptionType = description.value(QStringLiteral("type")).toString();
-                    if (descriptionType == QLatin1String("boolean")) {
-                        if (value == QLatin1String("true")) {
+                    if (descriptionType == QLatin1StringView("boolean")) {
+                        if (value == QLatin1StringView("true")) {
                             value = i18nc("Boolean value", "yes");
                         } else {
                             value = i18nc("Boolean value", "no");
                         }
-                    } else if (descriptionType == QLatin1String("date")) {
+                    } else if (descriptionType == QLatin1StringView("date")) {
                         const QDate date = QDate::fromString(value, Qt::ISODate);
                         value = QLocale().toString(date, QLocale::ShortFormat);
-                    } else if (descriptionType == QLatin1String("time")) {
+                    } else if (descriptionType == QLatin1StringView("time")) {
                         const QTime time = QTime::fromString(value, Qt::ISODate);
                         value = QLocale::system().toString(time, QLocale::ShortFormat);
-                    } else if (descriptionType == QLatin1String("datetime")) {
+                    } else if (descriptionType == QLatin1StringView("datetime")) {
                         const QDateTime dateTime = QDateTime::fromString(value, Qt::ISODate);
                         value = QLocale().toString(dateTime, QLocale::ShortFormat);
-                    } else if (descriptionType == QLatin1String("url")) {
+                    } else if (descriptionType == QLatin1StringView("url")) {
                         value = KStringHandler::tagUrls(value.toHtmlEscaped());
                         addUrl = true;
                     }

@@ -65,7 +65,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
                            "</table>")
                            .arg(QStringLiteral("group_photo"), group.name());
 
-    strGroup += QLatin1String("<table width=\"100%\">");
+    strGroup += QLatin1StringView("<table width=\"100%\">");
 
     for (int i = 0; i < group.dataCount(); ++i) {
         const KContacts::ContactGroup::Data data = group.data(i);
@@ -79,7 +79,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
             contact.setFormattedName(data.name());
             KContacts::Email email(data.email());
             contact.addEmail(email);
-            const QString fullEmail = QLatin1String("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
+            const QString fullEmail = QLatin1StringView("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
                 + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 
             strGroup.append(QStringLiteral("<tr><td align=\"right\" width=\"50%\"><b><font color=\"grey\">%1</font></b></td>"
@@ -95,7 +95,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
                             .arg(map.value(QStringLiteral("title")).toString(), map.value(QStringLiteral("value")).toString()));
     }
 
-    strGroup.append(QLatin1String("</table>\n"));
+    strGroup.append(QLatin1StringView("</table>\n"));
 
     QString document = QStringLiteral("<div align=\"center\">%1</div>").arg(strGroup);
 

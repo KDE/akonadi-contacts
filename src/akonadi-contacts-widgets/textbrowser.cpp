@@ -60,7 +60,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
 
     QString link = anchorAt(event->pos());
     if (!link.isEmpty()) {
-        if (link.startsWith(QLatin1String("mailto:"))) {
+        if (link.startsWith(QLatin1StringView("mailto:"))) {
             mDataToCopy = KCodecs::decodeRFC2047String(QUrl(link).path());
             // Action text matches that used in KMail
             act->setText(i18nc("@action:inmenu Copy a displayed email address", "Copy Email Address"));
@@ -97,10 +97,10 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                     if (!pix.isNull()) {
                         // There may be other images (e.g. contact type icons) that
                         // there is no point in copying.
-                        if (imageName == QLatin1String("contact_photo")) {
+                        if (imageName == QLatin1StringView("contact_photo")) {
                             mDataToCopy = pix;
                             act->setText(i18nc("@action:inmenu Copy a contact photo", "Copy Photo"));
-                        } else if (imageName == QLatin1String("qrcode")) {
+                        } else if (imageName == QLatin1StringView("qrcode")) {
                             mDataToCopy = pix;
                             act->setText(i18nc("@action:inmenu Copy a QR code image", "Copy Code"));
                         }

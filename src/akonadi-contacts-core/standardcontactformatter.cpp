@@ -92,7 +92,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
     if (date.isValid()) {
         dynamicPart += rowFmtStr1.arg(KContacts::Addressee::birthdayLabel(),
-                                      QLocale().toString(date) + QLatin1String("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
+                                      QLocale().toString(date) + QLatin1StringView("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
     }
 
     // Phone Numbers
@@ -122,8 +122,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Homepage
     if (rawContact.url().isValid()) {
         QString url = rawContact.url().url().url();
-        if (!url.startsWith(QLatin1String("http://")) && !url.startsWith(QLatin1String("https://"))) {
-            url = QLatin1String("http://") + url;
+        if (!url.startsWith(QLatin1StringView("http://")) && !url.startsWith(QLatin1String("https://"))) {
+            url = QLatin1StringView("http://") + url;
         }
 
         url = KStringHandler::tagUrls(url.toHtmlEscaped());
@@ -158,7 +158,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Note
     QString notes;
     if (!rawContact.note().isEmpty()) {
-        notes = rowFmtStr1.arg(i18n("Notes"), rawContact.note().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1String("<br>")));
+        notes = rowFmtStr1.arg(i18n("Notes"), rawContact.note().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1StringView("<br>")));
     }
 
     // Custom Data
@@ -199,7 +199,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     if (!rawContact.customs().empty()) {
         const QStringList customs = rawContact.customs();
         for (QString custom : customs) {
-            if (custom.startsWith(QLatin1String("KADDRESSBOOK-"))) {
+            if (custom.startsWith(QLatin1StringView("KADDRESSBOOK-"))) {
                 custom.remove(QStringLiteral("KADDRESSBOOK-X-"));
                 custom.remove(QStringLiteral("KADDRESSBOOK-"));
 
@@ -208,10 +208,10 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                 QString value = custom.mid(pos + 1);
 
                 // convert anniversary correctly
-                if (key == QLatin1String("Anniversary") || key == QLatin1String("ANNIVERSARY")) {
+                if (key == QLatin1StringView("Anniversary") || key == QLatin1String("ANNIVERSARY")) {
                     const QDateTime dateTime = QDateTime::fromString(value, Qt::ISODate);
                     value = QLocale().toString(dateTime.date());
-                } else if (key == QLatin1String("BlogFeed") || key == QLatin1String("BLOGFEED")) { // blog is handled separated
+                } else if (key == QLatin1StringView("BlogFeed") || key == QLatin1String("BLOGFEED")) { // blog is handled separated
                     continue;
                 } else if (blacklistedKeys.contains(key)) {
                     continue;
@@ -228,22 +228,22 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                         if (description.value(QStringLiteral("key")).toString() == key) {
                             key = description.value(QStringLiteral("title")).toString();
                             const QString descriptionType = description.value(QStringLiteral("type")).toString();
-                            if (descriptionType == QLatin1String("boolean")) {
-                                if (value == QLatin1String("true")) {
+                            if (descriptionType == QLatin1StringView("boolean")) {
+                                if (value == QLatin1StringView("true")) {
                                     value = i18nc("Boolean value", "yes");
                                 } else {
                                     value = i18nc("Boolean value", "no");
                                 }
-                            } else if (descriptionType == QLatin1String("date")) {
+                            } else if (descriptionType == QLatin1StringView("date")) {
                                 const QDate date = QDate::fromString(value, Qt::ISODate);
                                 value = QLocale().toString(date, QLocale::ShortFormat);
-                            } else if (descriptionType == QLatin1String("time")) {
+                            } else if (descriptionType == QLatin1StringView("time")) {
                                 const QTime time = QTime::fromString(value, Qt::ISODate);
                                 value = QLocale().toString(time);
-                            } else if (descriptionType == QLatin1String("datetime")) {
+                            } else if (descriptionType == QLatin1StringView("datetime")) {
                                 const QDateTime dateTime = QDateTime::fromString(value, Qt::ISODate);
                                 value = QLocale().toString(dateTime, QLocale::ShortFormat);
-                            } else if (descriptionType == QLatin1String("url")) {
+                            } else if (descriptionType == QLatin1StringView("url")) {
                                 value = KStringHandler::tagUrls(value.toHtmlEscaped());
                                 needToEscape = false;
                             }
@@ -290,7 +290,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     strAddr.append(dynamicPart);
     strAddr.append(notes);
     strAddr.append(customData);
-    strAddr.append(QLatin1String("</table>"));
+    strAddr.append(QLatin1StringView("</table>"));
 
     if (d->displayQRcode) {
         KConfig config(QStringLiteral("akonadi_contactrc"));
@@ -303,7 +303,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         }
     }
 
-    strAddr.append(QLatin1String("</div>\n"));
+    strAddr.append(QLatin1StringView("</div>\n"));
 
     if (form == EmbeddableForm) {
         return strAddr;

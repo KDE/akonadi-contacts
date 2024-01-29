@@ -97,7 +97,7 @@ QVariant CustomFieldsModel::data(const QModelIndex &index, int role) const
     if (role == Qt::CheckStateRole) {
         if (index.column() == 1) {
             if (customField.type() == CustomField::BooleanType) {
-                return customField.value() == QLatin1String("true") ? Qt::Checked : Qt::Unchecked;
+                return customField.value() == QLatin1StringView("true") ? Qt::Checked : Qt::Unchecked;
             }
         }
     }

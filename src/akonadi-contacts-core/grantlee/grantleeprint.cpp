@@ -16,7 +16,7 @@
 #include <QVariant>
 
 KTEXTTEMPLATE_BEGIN_LOOKUP(QUrl)
-if (property == QLatin1String("scheme")) {
+if (property == QLatin1StringView("scheme")) {
     return object.scheme();
 }
 KTEXTTEMPLATE_END_LOOKUP

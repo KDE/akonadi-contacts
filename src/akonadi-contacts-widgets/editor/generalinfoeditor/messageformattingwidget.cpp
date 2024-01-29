@@ -42,14 +42,14 @@ MessageFormattingWidget::~MessageFormattingWidget() = default;
 void MessageFormattingWidget::loadContact(const KContacts::Addressee &contact)
 {
     const QString mailAllowToRemoteContent = Akonadi::Utils::loadCustom(contact, QStringLiteral("MailAllowToRemoteContent"));
-    mAllowRemoteContent->setChecked(mailAllowToRemoteContent == QLatin1String("TRUE"));
+    mAllowRemoteContent->setChecked(mailAllowToRemoteContent == QLatin1StringView("TRUE"));
 
     const QString mailPreferedFormatting = Akonadi::Utils::loadCustom(contact, QStringLiteral("MailPreferedFormatting"));
     if (mailPreferedFormatting.isEmpty()) {
         mMailPreferFormatting->setCurrentIndex(0);
-    } else if (mailPreferedFormatting == QLatin1String("TEXT")) {
+    } else if (mailPreferedFormatting == QLatin1StringView("TEXT")) {
         mMailPreferFormatting->setCurrentIndex(1);
-    } else if (mailPreferedFormatting == QLatin1String("HTML")) {
+    } else if (mailPreferedFormatting == QLatin1StringView("HTML")) {
         mMailPreferFormatting->setCurrentIndex(2);
     } else {
         mMailPreferFormatting->setCurrentIndex(0);
