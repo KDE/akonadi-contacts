@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2023-04-12 12:50+0300\n"
+"PO-Revision-Date: 2023-11-22 18:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -657,11 +657,10 @@ msgid "Do you really want to delete the selected custom field?"
 msgstr "Haluatko varmasti poistaa valitun oman kentän?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
-msgstr "Vahvista poisto"
+msgstr "Vahvista poistaminen"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
@@ -1176,11 +1175,10 @@ msgstr "Yhteystietoa ei voi tallentaa: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Failed to store contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr "Yhteystiedon tallennus epäonnistui"
+msgstr "Yhteystiedon talletus epäonnistui"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
