@@ -150,8 +150,8 @@ public:
     {
         const QUrlQuery query(url);
         const QString urlScheme(url.scheme());
-        if (urlScheme == QLatin1StringView("http") || urlScheme == QLatin1StringView("https") || urlScheme == QLatin1String("tel")
-            || urlScheme == QLatin1StringView("sms") || urlScheme == QLatin1StringView("geo") || urlScheme == QLatin1String("mailto")) {
+        if (urlScheme == QLatin1StringView("http") || urlScheme == QLatin1StringView("https") || urlScheme == QLatin1StringView("tel")
+            || urlScheme == QLatin1StringView("sms") || urlScheme == QLatin1StringView("geo") || urlScheme == QLatin1StringView("mailto")) {
             Q_EMIT mParent->urlClicked(url);
         } else if (urlScheme == QLatin1StringView("address")) {
             const int pos = query.queryItemValue(QStringLiteral("index")).toInt();
