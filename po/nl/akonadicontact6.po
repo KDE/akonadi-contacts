@@ -5,7 +5,7 @@
 # SPDX-FileCopyrightText: 2009, 2010, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 # Rinse de Vries <rinsedevries@kde.nl>, 2010.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012.
-# Freek de Kruijf <f.de.kruijf@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
