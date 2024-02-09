@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2009, 2010.
+# SPDX-FileCopyrightText: 2024 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2010-01-01 14:24+0200\n"
-"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-02-05 23:18+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -24,8 +25,7 @@ msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "Dalībniekam ar vārdu <b>%1</b> trūkst e-pasta adreses"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:241
-#, fuzzy, kde-format
-#| msgid "Contact does not exist anymore"
+#, kde-format
 msgid "Contact does not exist any more"
 msgstr "Šis kontakts vairs nepastāv"
 
@@ -42,86 +42,76 @@ msgid "EMail"
 msgstr "E-pasts"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:212
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:column address books overview"
 msgid "Address Books"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Adrešu grāmatas"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:222
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column name of a person"
 msgid "Name"
 msgstr "Vārds"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:224
-#, fuzzy, kde-format
-#| msgid "Family"
+#, kde-format
 msgctxt "@title:column family name of a person"
 msgid "Family Name"
-msgstr "Ģimene"
+msgstr "Uzvārds"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:226
-#, fuzzy, kde-format
-#| msgid "Reverse Name"
+#, kde-format
 msgctxt "@title:column given name of a person"
 msgid "Given Name"
-msgstr "Apgriezts vārds"
+msgstr "Vārds"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:230
-#, fuzzy, kde-format
-#| msgid "Homepage"
+#, kde-format
 msgctxt "@title:column home address of a person"
 msgid "Home"
-msgstr "Mājas lapa"
+msgstr "Mājas"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:232
 #, kde-format
 msgctxt "@title:column work address of a person"
 msgid "Work"
-msgstr ""
+msgstr "Darba"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:234
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgctxt "@title:column phone numbers of a person"
 msgid "Phone Numbers"
-msgstr "Rediģēt telefona numuru"
+msgstr "Tālruņa numuri"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:236
 #, kde-format
 msgctxt "@title:column the preferred email addresses of a person"
 msgid "Preferred EMail"
-msgstr ""
+msgstr "Primārais e-pasts"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:238
-#, fuzzy, kde-format
-#| msgctxt "contact's email address"
-#| msgid "EMail"
+#, kde-format
 msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
-msgstr "E-pasts"
+msgstr "Visi e-pasti"
 
 #: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:23
 #, kde-format
 msgid "Distribution List %1"
-msgstr ""
+msgstr "Izplatīšanas saraksts %1"
 
 #: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:130
-#, fuzzy, kde-format
-#| msgid "%1 %2"
+#, kde-format
 msgctxt "Name and email address of a contact"
 msgid "%1 <%2>"
-msgstr "%1 %2"
+msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
 #: akonadi-contacts-core/standardcontactformatter.cpp:176
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Address Book"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Adrešu grāmata"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
 #: akonadi-contacts-core/standardcontactformatter.cpp:175
@@ -162,32 +152,31 @@ msgstr "Partnera vārds"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:182
 #: akonadi-contacts-core/standardcontactformatter.cpp:233
-#, fuzzy, kde-format
-#| msgid "Types"
+#, kde-format
 msgctxt "Boolean value"
 msgid "yes"
-msgstr "Tipi"
+msgstr "jā"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
 #: akonadi-contacts-core/standardcontactformatter.cpp:235
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
-msgstr ""
+msgstr "nē"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:95
 #, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "(%1 gadu vecs)"
+msgstr[1] "(%1 gadus vecs)"
+msgstr[2] "(%1 gadu vecs)"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
-msgstr ""
+msgstr "Nosūtīt īsziņu"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:115
 #, kde-format
@@ -204,13 +193,13 @@ msgstr "Mājas lapa"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
-msgstr "Dienasgrāmatas barotne"
+msgstr "Emuāra plūsma"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:154
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
-msgstr ""
+msgstr "Rādīt adresi kartē"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:161
 #, kde-format
@@ -251,11 +240,10 @@ msgstr "Ignorēt un pārrakstīt izmaiņas"
 #: akonadi-contacts-widgets/contacteditor.cpp:278
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:291
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Atlasīt adrešu grāmatu"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:279
 #, kde-format
@@ -263,15 +251,13 @@ msgid "Select the address book the new contact shall be saved in:"
 msgstr "Izvēlieties adrešu grāmatu, kurā saglabāt jauno kontaktu:"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "New Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Jauns kontakts"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Rediģēt kontaktu"
@@ -286,50 +272,48 @@ msgstr "Pievienot:"
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
-msgstr ""
+msgstr "Atrašanās vieta nav saglabāta. Vai vēlaties aizvērt redaktoru?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
 #: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
-#, fuzzy, kde-format
-#| msgid "Confirm Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
-msgstr "Apstiprināt izņemšanu"
+msgstr "Apstiprinājums"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
-msgstr ""
+msgstr "Aizvērt redaktoru"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
-msgstr ""
+msgstr "Neaizvērt"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:198
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
+#, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
-msgstr "Vai tiešām vēlaties dzēst šo adresi?"
+msgstr "Vai tiešām vēlaties atcelt?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:200
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "Atcelt rediģēšanu"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:201
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr ""
+msgstr "Neatcelt"
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:135
 #, kde-format
@@ -348,20 +332,18 @@ msgstr "Kontaktu grupas nosaukums nedrīkst būt tukšs."
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:292
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
-msgstr "Izvēlieties agrešu grāmatu, kurā saglabāt jauno kontaktu:"
+msgstr "Izvēlieties adrešu grāmatu, kurā saglabāt jauno kontaktu:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:29
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label The name of a contact group"
 msgid "Name:"
 msgstr "Vārds:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:59
-#, fuzzy, kde-format
-#| msgid "Contact group members:"
+#, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
 msgstr "Kontaktu grupas dalībnieki:"
@@ -370,83 +352,74 @@ msgstr "Kontaktu grupas dalībnieki:"
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
-msgstr ""
+msgstr "Meklēt..."
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "New Contact Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Jauna kontaktu grupa"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "Edit Contact Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "Rediģēt kontaktu grupu"
 
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:52
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
 msgstr "Kontaktu grupa %1"
 
 #: akonadi-contacts-widgets/contactviewer.cpp:64
-#, fuzzy, kde-format
-#| msgid "Contact %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "Kontakts %1"
 
 #: akonadi-contacts-widgets/contactviewerdialog.cpp:64
-#, fuzzy, kde-format
-#| msgid "Show Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
 msgstr "Rādīt kontaktu"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Addresses"
+#, kde-format
 msgid "Remove Address"
-msgstr "Adreses"
+msgstr "Noņemt adresi"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
+#, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Vai tiešām vēlaties dzēst šo adresi?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Free/Busy:"
+#, kde-format
 msgid "Add Street"
-msgstr "Brīvs/aizņemts:"
+msgstr "Pievienot ielu"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
-msgstr ""
+msgstr "Pievienot pasta kastīti"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
-msgstr ""
+msgstr "Pievienot pasta indeksu"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
-msgstr ""
+msgstr "Pievienot apvidu (pagastu)"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
-#, fuzzy, kde-format
-#| msgid "Profession"
+#, kde-format
 msgid "Add Region"
-msgstr "Profesija"
+msgstr "Pievienot novadu"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
@@ -455,21 +428,19 @@ msgid "This is the preferred address"
 msgstr "Šī ir vēlamā adrese"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, fuzzy, kde-format
-#| msgid "IM Address"
+#, kde-format
 msgid "Add Address"
-msgstr "Ziņapm. adrese"
+msgstr "Pievienot adresi"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Update Address"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Atjaunināt adresi"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:24
 #, kde-format
@@ -491,42 +462,35 @@ msgid "Other..."
 msgstr "Cita..."
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "street/postal"
-#| msgid "Address Types"
+#, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
-msgstr "Adrešu tipi"
+msgstr "Jauns adreses tips"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Organization:"
+#, kde-format
 msgctxt "@label The organization of a contact"
 msgid "Organization:"
 msgstr "Organizācija:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
-#, fuzzy, kde-format
-#| msgid "Organization"
+#, kde-format
 msgid "Add organization's name"
-msgstr "Organizācija"
+msgstr "Pievienot organizācijas nosaukumu"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Profession:"
+#, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
 msgstr "Profesija:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Profession"
+#, kde-format
 msgid "Add profession"
-msgstr "Profesija"
+msgstr "Ierakstiet profesiju"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
 msgstr "Amats:"
@@ -534,24 +498,21 @@ msgstr "Amats:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
 #, kde-format
 msgid "Add the title"
-msgstr ""
+msgstr "Ierakstiet amatu"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
-#, fuzzy, kde-format
-#| msgid "Department:"
+#, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
 msgstr "Nodaļa:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Department"
+#, kde-format
 msgid "Add the department"
-msgstr "Nodaļa"
+msgstr "Ierakstiet nodaļu"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:79
-#, fuzzy, kde-format
-#| msgid "Office:"
+#, kde-format
 msgctxt "@label The office of a contact"
 msgid "Office:"
 msgstr "Birojs:"
@@ -559,182 +520,161 @@ msgstr "Birojs:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
 #, kde-format
 msgid "Add the office"
-msgstr ""
+msgstr "Ierakstiet biroju"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Manager's name:"
+#, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
-msgstr "Menedžera vārds:"
+msgstr "Vadītāja vārds:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Manager's name:"
+#, kde-format
 msgid "Add manager's name"
-msgstr "Menedžera vārds:"
+msgstr "Ierakstiet vadītāja vārdu"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Assistant's name:"
+#, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
-msgstr "Palīga vārds:"
+msgstr "Asistenta vārds:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, fuzzy, kde-format
-#| msgid "Assistant's name:"
+#, kde-format
 msgid "Add assistant's name"
-msgstr "Palīga vārds:"
+msgstr "Pievienojiet asistenta vārdu"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Free/Busy:"
+#, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
-msgstr "Brīvs/aizņemts:"
+msgstr "Aizņemtība:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Free/Busy:"
+#, kde-format
 msgid "Add FreeBusy"
-msgstr "Brīvs/aizņemts:"
+msgstr "Ierakstiet aizņemtības statusu"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
-#, fuzzy, kde-format
-#| msgid "Contact"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Contact"
 msgstr "Kontakts"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:101
-#, fuzzy, kde-format
-#| msgid "Location"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Location"
 msgstr "Atrašanās vieta"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:107
-#, fuzzy, kde-format
-#| msgid "Business"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Business"
-msgstr "Bizness"
+msgstr "Darbs"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:113
-#, fuzzy, kde-format
-#| msgid "Personal"
+#, kde-format
 msgctxt "@title:tab Personal properties of a contact"
 msgid "Personal"
-msgstr "Personīgi"
+msgstr "Personīgā informācija"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Notes"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Notes"
 msgstr "Piezīmes"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Fields"
-msgstr "Pielāgots"
+msgstr "Pielāgotie lauki"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgid "Add Field"
-msgstr "Pievienot e-pastu"
+msgstr "Pievienot lauku"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
 #, kde-format
 msgid "Use field for all contacts"
-msgstr ""
+msgstr "Izmanto šo lauciņu visiem kontaktiem"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgid "Custom Field Title"
-msgstr "Pielāgots"
+msgstr "Pielāgots lauka nosaukums"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
 #, kde-format
 msgid "Add name"
-msgstr ""
+msgstr "Pievienojiet vārdu"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:60
 #, kde-format
 msgid "Text"
-msgstr ""
+msgstr "Teksts"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
 msgid "Numeric"
-msgstr ""
+msgstr "Skaitlisks"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Boolean"
-msgstr ""
+msgstr "Būla"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Dates"
+#, kde-format
 msgid "Date"
-msgstr "Datumi"
+msgstr "Datums"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgid "Time"
-msgstr "Amats:"
+msgstr "Laiks"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Dates"
+#, kde-format
 msgid "DateTime"
-msgstr "Datumi"
+msgstr "Datums, laiks"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:214
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
+#, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
-msgstr "Vai tiešām vēlaties dzēst šo adresi?"
+msgstr "Vai vēlaties dzēst atlasīto pielāgoto lauku?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
-msgstr "Apstiprināt izņemšanu"
+msgstr "Apstiprināt dzēšanu"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "custom field title"
 msgid "Title"
-msgstr "Amats:"
+msgstr "Nosaukums"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:197
 #, kde-format
 msgctxt "custom field value"
 msgid "Value"
-msgstr ""
+msgstr "Vērtība"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgid "Add a Blog Feed"
-msgstr "Dienasgrāmatas barotne"
+msgstr "Pievienojiet emuāra plūsmu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:45
 #, kde-format
@@ -762,16 +702,13 @@ msgid "Organization"
 msgstr "Organizācija"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Pielāgots"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "a contact's email address"
-#| msgid "Email"
+#, kde-format
 msgid "Email"
 msgstr "E-pasts"
 
@@ -779,305 +716,278 @@ msgstr "E-pasts"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
 #, kde-format
 msgid "Select..."
-msgstr ""
+msgstr "Atlasīt..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
-#, fuzzy, kde-format
-#| msgid "Homepage"
+#, kde-format
 msgid "Home"
-msgstr "Mājas lapa"
+msgstr "Mājas"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
 #, kde-format
 msgid "Work"
-msgstr ""
+msgstr "Darbs"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Category of contact info field"
-#| msgid "Other..."
+#, kde-format
 msgid "Other"
-msgstr "Cita..."
+msgstr "Cits"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgid "Add an Email Account"
-msgstr "Pievienot e-pastu"
+msgstr "Pievienojiet e-pasta kontu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgid "Add an Email"
 msgstr "Pievienot e-pastu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Remove logo"
+#, kde-format
 msgid "Remove Email"
-msgstr "Izņemt logo"
+msgstr "Noņemt e-pastu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
 msgid "Allow remote content in received HTML messages"
-msgstr ""
+msgstr "Atļaut attālināto saturu saņemtajos HTML ziņojumos"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
 #, kde-format
 msgid "Show messages received from this contact as:"
-msgstr ""
+msgstr "Parādīt ziņojumus, kas ir saņemti no šī kontakta, kā:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Noklusējums"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
 msgid "Plain Text"
-msgstr ""
+msgstr "Kā vienkāršu tekstu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Messaging:"
+#, kde-format
 msgid "Messaging"
-msgstr "Ziņapmaiņa:"
+msgstr "Ziņapmaiņa"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Nickname:"
+#, kde-format
 msgid "Add an identifier"
-msgstr "Iesauka:"
+msgstr "Pievienot identifikatoru"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
-msgstr ""
+msgstr "Atlasīt..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Nickname:"
+#, kde-format
 msgid "Add an IM"
-msgstr "Iesauka:"
+msgstr "pievienot IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Remove IM"
-msgstr "Izņemt"
+msgstr "Noņemt IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Name"
-msgstr "Rediģēt kontaktu"
+msgstr "Rediģēt kontakta vārdu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:48
 #, kde-format
 msgid "Honorific prefixes:"
-msgstr ""
+msgstr "Uzruna ar priedēkli:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:49
-#, fuzzy, kde-format
-#| msgid "Nickname:"
+#, kde-format
 msgid "Given name:"
-msgstr "Iesauka:"
+msgstr "Vārds:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:50
 #, kde-format
 msgid "Additional names:"
-msgstr ""
+msgstr "Papildu vārdi:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:51
-#, fuzzy, kde-format
-#| msgid "Family"
+#, kde-format
 msgid "Family names:"
-msgstr "Ģimene"
+msgstr "Uzvārdi:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:52
 #, kde-format
 msgid "Honorific suffixes:"
-msgstr ""
+msgstr "Uzruna ar piedēkli:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:53
-#, fuzzy, kde-format
-#| msgid "Display:"
+#, kde-format
 msgid "Display:"
 msgstr "Attēlot:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:57
 #, kde-format
 msgid "Dr."
-msgstr ""
+msgstr "Dr."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:58
 #, kde-format
 msgid "Miss"
-msgstr ""
+msgstr "Jkdze"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:59
 #, kde-format
 msgid "Mr."
-msgstr ""
+msgstr "Kgs"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:60
 #, kde-format
 msgid "Mrs."
-msgstr ""
+msgstr "Kdze"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:61
 #, kde-format
 msgid "Ms."
-msgstr ""
+msgstr "Kdze"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:62
 #, kde-format
 msgid "Prof."
-msgstr ""
+msgstr "Prof."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:67
 #, kde-format
 msgid "I"
-msgstr ""
+msgstr "I"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:68
 #, kde-format
 msgid "II"
-msgstr ""
+msgstr "II"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:69
 #, kde-format
 msgid "III"
-msgstr ""
+msgstr "III"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:70
 #, kde-format
 msgid "Jr."
-msgstr ""
+msgstr "Jaun."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:71
 #, kde-format
 msgid "Sr."
-msgstr ""
+msgstr "Vec."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "contact's name"
-#| msgid "Name"
+#, kde-format
 msgid "Name"
 msgstr "Vārds"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgid "..."
-msgstr "Pievienot..."
+msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
+#, kde-format
 msgid "Edit Contact Name"
-msgstr "Rediģēt kontaktu"
+msgstr "Rediģēt kontakta vārdu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Nickname:"
+#, kde-format
 msgid "Nickname"
-msgstr "Iesauka:"
+msgstr "Iesauka"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Nickname:"
+#, kde-format
 msgid "Add a Nickname"
-msgstr "Iesauka:"
+msgstr "Pievienot iesauku"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Phones"
+#, kde-format
 msgid "Phone"
-msgstr "Telefoni"
+msgstr "Tālrunis"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Phone Number"
-msgstr "Rediģēt telefona numuru"
+msgstr "Rediģēt tālruņa numuru"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgid "Add a Phone Number"
-msgstr "Rediģēt telefona numuru"
+msgstr "Pievienot tālruņa numuru"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgid "Remove Phone Number"
-msgstr "Rediģēt telefona numuru"
+msgstr "Noņemt tālruņa numuru"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
 msgid "Web"
-msgstr ""
+msgstr "Tīmeklis"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
 #, kde-format
 msgid "Profile"
-msgstr ""
+msgstr "Profils"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
-msgstr ""
+msgstr "Pievienot tīmekļa vietni"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
 #, kde-format
 msgid "Remove Web Site"
-msgstr ""
+msgstr "Noņemt tīmekļa vietni"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
 msgid "Click to add date"
-msgstr ""
+msgstr "Spiest, lai pievienotu datumu"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
 #, kde-format
 msgid "Remove"
-msgstr "Izņemt"
+msgstr "Noņemt"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Birthdate:"
+#, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
-msgstr "Dzimšanas dieta:"
+msgstr "Dzimšanas datums:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:35
-#, fuzzy, kde-format
-#| msgid "Anniversary:"
+#, kde-format
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"
 msgstr "Gadadiena:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Partner's name:"
+#, kde-format
 msgctxt "@label The partner's name of a contact"
 msgid "Partner's name:"
-msgstr "Partnera vārds:"
+msgstr "Partnera/-es vārds:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
 #, kde-format
@@ -1087,90 +997,85 @@ msgstr "Neizdevās atrast kontakta attēlu."
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, kde-format
 msgid "The photo of the contact (click to change)"
-msgstr ""
+msgstr "Kontakta attēls (spiediet, lai mainītu)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
 #, kde-format
 msgid "The logo of the company (click to change)"
-msgstr ""
+msgstr "Uzņēmuma logotips (spiediet, lai mainītu)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
 msgid "Change photo..."
-msgstr "Mainīt fotogrāfiju..."
+msgstr "Mainīt attēlu..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
-#, fuzzy, kde-format
-#| msgid "Change..."
+#, kde-format
 msgid "Change URL..."
-msgstr "Mainīt..."
+msgstr "Mainīt URL..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
 #, kde-format
 msgid "Save photo..."
-msgstr "Saglabāt fotogrāfiju..."
+msgstr "Saglabāt attēlu..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
 #, kde-format
 msgid "Remove photo"
-msgstr "Izņemt fotogrāfiju"
+msgstr "Noņemt attēlu"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change logo..."
-msgstr "Mainīt logo..."
+msgstr "Mainīt logotipu..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
 #, kde-format
 msgid "Save logo..."
-msgstr "Saglabāt logo..."
+msgstr "Saglabāt logotipu..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
 #, kde-format
 msgid "Remove logo"
-msgstr "Izņemt logo"
+msgstr "Noņemt logotipu"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
-#, fuzzy, kde-format
-#| msgid "Change logo..."
+#, kde-format
 msgid "Change image URL"
-msgstr "Mainīt logo..."
+msgstr "Mainīt attēla URL"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
 #, kde-format
 msgid "Image URL:"
-msgstr ""
+msgstr "Attēla URL:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
 #, kde-format
 msgid "Images (%1)"
-msgstr ""
+msgstr "Attēli (%1)"
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Set Standard"
+#, kde-format
 msgid "Set as Preferred"
-msgstr "Iesattīt par standarta"
+msgstr "Iestatīt par primāro"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Open Address Book"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Atvērt adrešu grāmatu"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
 #, kde-format
 msgctxt "@label Search in a list of contacts"
 msgid "Search:"
-msgstr ""
+msgstr "Meklēt:"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
-#, fuzzy, kde-format
-#| msgid "New Contact"
+#, kde-format
 msgid "Search Contact..."
-msgstr "Jauns kontakts"
+msgstr "Jauns kontakts..."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
@@ -1180,6 +1085,8 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
+"„vCard“ primārā e-pasta adrese jau ir adrešu grāmatā, tomēr „vCard“ varat "
+"saglabāt datnē un to manuāli importēt adrešu grāmatā."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:111
 #, kde-format
@@ -1188,6 +1095,8 @@ msgid ""
 "The vCard was added to your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
+"Adrešu grāmatai ir pievienota „vCard“. Varat pievienot informāciju šim "
+"ierakstam, atverot adrešu grāmatu."
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:68
 #, kde-kuit-format
@@ -1196,6 +1105,7 @@ msgid ""
 "A contact with the email address <email>%1</email> is already in your "
 "address book."
 msgstr ""
+"Kontakts ar šo e-pasta adresi <email>%1</email> jau ir jūsu adrešu grāmatā."
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:119
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:159
@@ -1205,31 +1115,30 @@ msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
 msgstr ""
+"Pirms kontakta pievienošanas ir jāizveido adrešu grāmata. Vai vēlaties "
+"izveidot adrešu grāmatu?"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:120
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:160
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Nav pieejama adrešu grāmata"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:121
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:161
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Izveidot adrešu grāmatu"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:165
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Pievienot adrešu grāmatu"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:215
 #, kde-kuit-format
@@ -1238,257 +1147,246 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
+"<para>Kontakts „%1“ tika veiksmīgi pievienots adrešu grāmatai.</"
+"para><para>Vai vēlaties rediģēt tikko pievienoto kontaktu?</para>"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
-#, fuzzy, kde-format
-#| msgid "Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Edit"
-msgstr "Rediģēt..."
+msgstr "Rediģēt"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Pabeigt"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Contact does not exist anymore"
+#, kde-format
 msgid "Contact cannot be stored: %1"
-msgstr "Šis kontakts vairs nepastāv"
+msgstr "Kontaktu nevar saglabāt: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr ""
+msgstr "Neizdevās saglabāt kontaktu"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
 msgid "Contact created successfully"
-msgstr ""
+msgstr "Kontakts ir veiksmīgi izveidots"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Add Address Book Folder..."
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Pievienot adrešu grāmatas mapi..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
 msgstr ""
+"Pievienot jaunu adrešu grāmatas mapi pašreiz atlasītajai adrešu grāmatas "
+"mapei."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Address Book Folder"
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Jauna adrešu grāmatas mape"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:105
 #, kde-format
 msgid "Could not create address book folder: %1"
-msgstr ""
+msgstr "Neizdevās izveidot adrešu grāmatas mapi: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:109
 #, kde-format
 msgid "Address book folder creation failed"
-msgstr ""
+msgstr "Adrešu grāmatas mapes izveidošana neizdevās"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:115
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "Kopēt %1 adrešu grāmatas mapi"
+msgstr[1] "Kopēt %1 adrešu grāmatas mapes"
+msgstr[2] "Kopēt %1 adrešu grāmatas mapju"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
-msgstr ""
+msgstr "Kopēt starpliktuvē atlasītās adrešu grāmatas mapes."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "Dzēst %1 adrešu grāmatas mapi"
+msgstr[1] "Dzēst %1 adrešu grāmatas mapes"
+msgstr[2] "Dzēst %1 adrešu grāmatas mapju"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
-msgstr ""
+msgstr "Dzēst atlasītās adrešu grāmatas mapes no adrešu grāmatas."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
+#, kde-format
 msgid ""
 "Do you really want to delete this address book folder and all its sub-"
 "folders?"
 msgid_plural ""
 "Do you really want to delete %1 address book folders and all their sub-"
 "folders?"
-msgstr[0] "Vai tiešām vēlaties dzēst šo adresi?"
-msgstr[1] "Vai tiešām vēlaties dzēst šo adresi?"
-msgstr[2] "Vai tiešām vēlaties dzēst šo adresi?"
+msgstr[0] ""
+"Vai tiešām vēlaties dzēst šo %1 adrešu grāmatas mapi un visas tās apakšmapes?"
+msgstr[1] ""
+"Vai tiešām vēlaties dzēst šīs %1 adrešu grāmatas mapes un visas tās "
+"apakšmapes?"
+msgstr[2] ""
+"Vai tiešām vēlaties dzēst šīs %1 adrešu grāmatas mapes un visas tās "
+"apakšmapes?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete address book folder?"
 msgid_plural "Delete address book folders?"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "Dzēst adrešu grāmatas mapi?"
+msgstr[1] "Dzēst adrešu grāmatas mapes?"
+msgstr[2] "Dzēst adrešu grāmatas mapes?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
-msgstr ""
+msgstr "Neizdevās dzēst adrešu grāmatas mapi: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
 #, kde-format
 msgid "Address book folder deletion failed"
-msgstr ""
+msgstr "Adrešu grāmatas mapes dzēšana neizdevās"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:143
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "Atjaunināt %1 adrešu grāmatas mapi"
+msgstr[1] "Atjaunināt %1 adrešu grāmatas mapes"
+msgstr[2] "Atjaunināt %1 adrešu grāmatas mapju"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update the content of the selected address book folders."
-msgstr ""
+msgstr "Atjaunināt atlasīto adrešu grāmatas mapju saturu."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "Izgriezt %1 adrešu grāmatas mapi"
+msgstr[1] "Izgriezt %1 adrešu grāmatas mapes"
+msgstr[2] "Izgriezt %1 adrešu grāmatas mapju"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
-msgstr ""
+msgstr "No adrešu grāmata izgriezt atlasītās adrešu grāmatas mapes."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
-msgstr ""
+msgstr "Mapes īpašības..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
 #, kde-format
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
-msgstr ""
+msgstr "Atvērt lodziņu, lai rediģētu atlasītās adrešu grāmatas mapes īpašības."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Address Book Folder %1"
-msgstr ""
+msgstr "Adrešu grāmatas mapes „%1“ īpašības"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
-#, fuzzy, kde-format
-#| msgid "Show Contact"
+#, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
-msgstr[0] "Rādīt kontaktu"
-msgstr[1] "Rādīt kontaktu"
-msgstr[2] "Rādīt kontaktu"
+msgstr[0] "Kopēt %1 kontaktu"
+msgstr[1] "Kopēt %1 kontaktus"
+msgstr[2] "Kopēt %1 kontaktu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
-msgstr ""
+msgstr "Kopēt atlasītos kontaktus starpliktuvē."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
-#, fuzzy, kde-format
-#| msgctxt "recent contacts folder"
-#| msgid "Recent Contacts"
+#, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
-msgstr[0] "Nesenie kontakti"
-msgstr[1] "Nesenie kontakti"
-msgstr[2] "Nesenie kontakti"
+msgstr[0] "Dzēst %1 kontaktu"
+msgstr[1] "Dzēst %1 kontaktus"
+msgstr[2] "Dzēst %1 kontaktu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
 #, kde-format
 msgid "Delete the selected contacts from the address book."
-msgstr ""
+msgstr "Dzēst atlasītos kontaktus no adrešu grāmatas."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
+#, kde-format
 msgid "Do you really want to delete the selected contact?"
 msgid_plural "Do you really want to delete %1 contacts?"
-msgstr[0] "Vai tiešām vēlaties dzēst šo adresi?"
-msgstr[1] "Vai tiešām vēlaties dzēst šo adresi?"
-msgstr[2] "Vai tiešām vēlaties dzēst šo adresi?"
+msgstr[0] "Vai tiešām vēlaties dzēst %1 atlasīto kontaktu?"
+msgstr[1] "Vai tiešām vēlaties dzēst %1 atlasītos kontaktus?"
+msgstr[2] "Vai tiešām vēlaties dzēst %1 atlasīto kontaktu?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:173
-#, fuzzy, kde-format
-#| msgctxt "recent contacts folder"
-#| msgid "Recent Contacts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Contact?"
 msgid_plural "Delete Contacts?"
-msgstr[0] "Nesenie kontakti"
-msgstr[1] "Nesenie kontakti"
-msgstr[2] "Nesenie kontakti"
+msgstr[0] "Vai dzēst kontaktu?"
+msgstr[1] "Vai dzēst kontaktus?"
+msgstr[2] "Vai dzēst kontaktus?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
 #, kde-format
 msgid "Could not delete contact: %1"
-msgstr ""
+msgstr "Neizdevās izdzēst kontaktu: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Coordinate Selection"
+#, kde-format
 msgid "Contact deletion failed"
-msgstr "Koorfinātu izvēle"
+msgstr "Kontakta izdzēšana neizdevās"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
+#, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
-msgstr[0] "Rediģēt kontaktu"
-msgstr[1] "Rediģēt kontaktu"
-msgstr[2] "Rediģēt kontaktu"
+msgstr[0] "Izgriezt %1 kontaktu"
+msgstr[1] "Izgriezt %1 kontaktus"
+msgstr[2] "Izgriezt %1 kontaktu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
 #, kde-format
 msgid "Cut the selected contacts from the address book."
-msgstr ""
+msgstr "Izgriezt atlasītos kontaktus no adrešu grāmatas."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Add &Address Book..."
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Pievienot %adrešu grāmatu..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1496,25 +1394,26 @@ msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
 "select the type of the address book that shall be added.</p>"
 msgstr ""
+"Pievienot jaunu adrešu grāmatu<p>Atvērsies logs, kurā varēsiet atlasīt "
+"pievienojamo adrešu grāmatas tipu.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
 #, kde-format
 msgid "Could not create address book: %1"
-msgstr ""
+msgstr "Neizdevās izveidot adrešu grāmatu: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:199
 #, kde-format
 msgid "Address book creation failed"
-msgstr ""
+msgstr "Adrešu grāmatas izveidošana neizdevās"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:203
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "&Dzēst %1 adrešu grāmatu"
+msgstr[1] "&Dzēst %1 adrešu grāmatas"
+msgstr[2] "&Dzēst %1 adrešu grāmatas"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:205
 #, kde-format
@@ -1523,135 +1422,122 @@ msgid ""
 "will be deleted, along with all the contacts and contact groups they contain."
 "</p>"
 msgstr ""
+"Dzēst atlasītās adrešu grāmatas<p>Šobrīd atlasītās adrešu grāmatas tiks "
+"izdzēstas kopā ar visiem kontaktiem un to saturošajām kontaktu grupām.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
+#, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
-msgstr[0] "Vai tiešām vēlaties dzēst šo adresi?"
-msgstr[1] "Vai tiešām vēlaties dzēst šo adresi?"
-msgstr[2] "Vai tiešām vēlaties dzēst šo adresi?"
+msgstr[0] "Vai tiešām vēlaties dzēst šo %1 adrešu grāmatu?"
+msgstr[1] "Vai tiešām vēlaties dzēst šīs %1 adrešu grāmatas?"
+msgstr[2] "Vai tiešām vēlaties dzēst šīs %1 adrešu grāmatas?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:214
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
 msgid_plural "Delete Address Books?"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "Vai dzēst adrešu grāmatu?"
+msgstr[1] "Vai dzēst adrešu grāmatas?"
+msgstr[2] "Vai dzēst adrešu grāmatas?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Address Book Properties..."
-msgstr "Izvēlēties adrešu grāmatu"
+msgstr "Adrešu grāmatas īpašības..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
-msgstr ""
+msgstr "Atvērt lodziņu, lai rediģētu atlasītās adrešu grāmatas īpašības."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
-msgstr[0] "Izvēlēties adrešu grāmatu"
-msgstr[1] "Izvēlēties adrešu grāmatu"
-msgstr[2] "Izvēlēties adrešu grāmatu"
+msgstr[0] "Atjaunināt %1 adrešu grāmatu"
+msgstr[1] "Atjaunināt %1 adrešu grāmatas"
+msgstr[2] "Atjaunināt %1 adrešu grāmatu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:227
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
-msgstr ""
+msgstr "Atjaunina atlasītu adrešu grāmatu mapju saturu."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
 #, kde-format
 msgid "Could not paste contact: %1"
-msgstr ""
+msgstr "Neizdevās ielīmēt kontaktu: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
 #, kde-format
 msgid "Paste failed"
-msgstr ""
+msgstr "Ielīmēšana neizdevās"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
-#, fuzzy, kde-format
-#| msgid "Show Contact"
+#, kde-format
 msgid "Copy Contact To"
-msgstr "Rādīt kontaktu"
+msgstr "Kopēt kontaktu uz"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
-#, fuzzy, kde-format
-#| msgid "New Contact"
+#, kde-format
 msgid "Move Contact To"
-msgstr "Jauns kontakts"
+msgstr "Pārvietot kontaktu uz"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
+#, kde-format
 msgid "Edit Contact..."
-msgstr "Rediģēt kontaktu"
+msgstr "Rediģēt kontaktu..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
+#, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
-msgstr[0] "Kontaktu grupa %1"
-msgstr[1] "Kontaktu grupa %1"
-msgstr[2] "Kontaktu grupa %1"
+msgstr[0] "Kopēt %1 grupu"
+msgstr[1] "Kopēt %1 grupas"
+msgstr[2] "Kopēt %1 grupu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
+#, kde-format
 msgid "Copy Group To"
-msgstr "Kontaktu grupa %1"
+msgstr "Kopēt grupu uz"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
-#, fuzzy, kde-format
-#| msgctxt "street/postal"
-#| msgid "Delete"
+#, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
-msgstr[0] "Dzēst"
-msgstr[1] "Dzēst"
-msgstr[2] "Dzēst"
+msgstr[0] "Dzēst %1 grupu"
+msgstr[1] "Dzēst %1 grupas"
+msgstr[2] "Dzēst %1 grupu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
+#, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
-msgstr[0] "Kontaktu grupa %1"
-msgstr[1] "Kontaktu grupa %1"
-msgstr[2] "Kontaktu grupa %1"
+msgstr[0] "Izgriezt %1 grupu"
+msgstr[1] "Izgriezt %1 grupas"
+msgstr[2] "Izgriezt %1 grupu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
+#, kde-format
 msgid "Move Group To"
-msgstr "Kontaktu grupa %1"
+msgstr "Pārvietot grupu uz"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
-#, fuzzy, kde-format
-#| msgid "Edit..."
+#, kde-format
 msgid "Edit Group..."
-msgstr "Rediģēt..."
+msgstr "Rediģēt grupu..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
-#, fuzzy, kde-format
-#| msgid "New Contact"
+#, kde-format
 msgid "New &Contact..."
-msgstr "Jauns kontakts"
+msgstr "Jauns &kontakts..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
@@ -1659,13 +1545,13 @@ msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
 "data about a person, including addresses and phone numbers.</p>"
 msgstr ""
+"Izveidot jaunu kontaktu<p>Atvērsies lodziņš, kurā varēsiet pievienot ziņas "
+"par personu, tostarp adreses un tālruņa numurus.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
-#, fuzzy, kde-format
-#| msgctxt "street/postal"
-#| msgid "New..."
+#, kde-format
 msgid "New &Group..."
-msgstr "Jauna..."
+msgstr "Jauna &grupa..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
@@ -1673,6 +1559,8 @@ msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
 "new group of contacts.</p>"
 msgstr ""
+"Izveidot jaunu grupu<p>Atvērsies lodziņš, kurā varēsiet pievienot jaunu "
+"kontaktu grupu.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
 #, kde-format
@@ -1681,51 +1569,49 @@ msgid ""
 "can edit the data stored about a person, including addresses and phone "
 "numbers.</p>"
 msgstr ""
+"Rediģēt atlasīto kontaktu<p>Atvērsies lodziņš, kurā varēsiet rediģēt "
+"personas ziņas, tostarp adreses un tālruņa numurus.</p>"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:57
 #, kde-format
 msgctxt "@action:inmenu Copy the text of a general item"
 msgid "Copy Item"
-msgstr ""
+msgstr "Kopēt vienumu"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:66
-#, fuzzy, kde-format
-#| msgid "Edit Email Addresses"
+#, kde-format
 msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
-msgstr "Rediģēt e-pasta adreses"
+msgstr "Kopēt e-pasta adresi"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:75
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
-msgstr ""
+msgstr "Kopēt saites URL"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:102
-#, fuzzy, kde-format
-#| msgid "Show Contact"
+#, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
-msgstr "Rādīt kontaktu"
+msgstr "Kopēt fotogrāfiju"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:105
-#, fuzzy, kde-format
-#| msgid "Show Contact"
+#, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
-msgstr "Rādīt kontaktu"
+msgstr "Kopēt kodu"
 
 #: akonadi-contacts-widgets/waitingoverlay.cpp:35
 #, kde-format
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
-msgstr "<p style=\"color: white;\"><b>Gaida uz darbību</b><br/></p>"
+msgstr "<p style=\"color: white;\"><b>Gaida darbību</b><br/></p>"
 
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select the address book the new contact shall be saved in:"
+#, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
-msgstr "Izvēlieties adrešu grāmatu, kurā saglabāt jauno kontaktu:"
+msgstr "Atlasiet adrešu grāmatu, kurā saglabāt kontaktu:"
 
 #~ msgid "Phone Command"
 #~ msgstr "Zvanīšanas komanda"
