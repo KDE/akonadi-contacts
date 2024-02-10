@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2023-09-27 12:51+0300\n"
+"PO-Revision-Date: 2024-02-09 17:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.01.95\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
@@ -1017,7 +1017,7 @@ msgstr "Fotoğrafı değiştir..."
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
 #, kde-format
 msgid "Change URL..."
-msgstr "URL'yi değiştir..."
+msgstr "URL’yi değiştir..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
 #, kde-format
@@ -1047,12 +1047,12 @@ msgstr "Logoyu sil"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
 #, kde-format
 msgid "Change image URL"
-msgstr "Görsel URL'sini değiştir"
+msgstr "Görsel URL’sini değiştir"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
 #, kde-format
 msgid "Image URL:"
-msgstr "Görsel URL'si:"
+msgstr "Görsel URL’si:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
@@ -1089,8 +1089,8 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
-"vCard'ın birincil e-posta adresi halihazırda adres defterinizde; ancak "
-"vCard'ı bir dosyaya kaydedebilir ve el ile adres defterine içe "
+"vCard’ın birincil e-posta adresi halihazırda adres defterinizde; ancak "
+"vCard’ı bir dosyaya kaydedebilir ve el ile adres defterine içe "
 "aktarabilirsiniz."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:111
@@ -1575,7 +1575,7 @@ msgstr "E-posta Adresini Kopyala"
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
-msgstr "Bağlantı URL'sini Kopyala"
+msgstr "Bağlantı URL’sini Kopyala"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:102
 #, kde-format
