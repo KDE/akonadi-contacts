@@ -42,7 +42,7 @@ public:
     /**
      * Returns the selected phone number type.
      */
-    KContacts::PhoneNumber::Type type() const;
+    [[nodiscard]] KContacts::PhoneNumber::Type type() const;
 
     void resetToDefault();
 

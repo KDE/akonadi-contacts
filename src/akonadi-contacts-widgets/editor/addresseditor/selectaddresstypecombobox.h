@@ -43,7 +43,7 @@ public:
     /**
      * Returns the type that is currently selected.
      */
-    KContacts::Address::Type type() const;
+    [[nodiscard]] KContacts::Address::Type type() const;
 
 private Q_SLOTS:
     void selected(int);

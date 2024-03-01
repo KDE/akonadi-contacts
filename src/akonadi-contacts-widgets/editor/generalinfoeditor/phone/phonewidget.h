@@ -29,7 +29,7 @@ public:
 
     void updateAddRemoveButton(bool addButtonEnabled);
     void loadPhone(const KContacts::PhoneNumber &number);
-    KContacts::PhoneNumber storePhone();
+    [[nodiscard]] KContacts::PhoneNumber storePhone();
     void clearWidget();
     void setPreferred(bool b);
     void setReadOnly(bool readOnly);

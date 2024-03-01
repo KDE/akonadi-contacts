@@ -32,7 +32,7 @@ public:
     /**
      * Returns the selected type.
      */
-    KContacts::PhoneNumber::Type type() const;
+    [[nodiscard]] KContacts::PhoneNumber::Type type() const;
 
 private:
     const KContacts::PhoneNumber::Type mType;

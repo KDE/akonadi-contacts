@@ -32,7 +32,7 @@ public:
     ~MessagingWidget() override;
 
     void updateAddRemoveButton(bool addButtonEnabled);
-    KContacts::Impp imAddress() const;
+    [[nodiscard]] KContacts::Impp imAddress() const;
     void setIMAddress(const KContacts::Impp &address);
     void setPreferred(bool b);
     void clearWidget();

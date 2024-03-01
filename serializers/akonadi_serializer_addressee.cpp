@@ -106,7 +106,7 @@ void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &la
 
 //// DifferencesAlgorithmInterface interface
 
-static bool compareString(const QString &left, const QString &right)
+[[nodiscard]] static bool compareString(const QString &left, const QString &right)
 {
     if (left.isEmpty() && right.isEmpty()) {
         return true;
@@ -115,17 +115,17 @@ static bool compareString(const QString &left, const QString &right)
     }
 }
 
-static QString toString(const KContacts::PhoneNumber &phoneNumber)
+[[nodiscard]] static QString toString(const KContacts::PhoneNumber &phoneNumber)
 {
     return phoneNumber.number();
 }
 
-static QString toString(const KContacts::Address &address)
+[[nodiscard]] static QString toString(const KContacts::Address &address)
 {
     return address.toString();
 }
 
-static QString toString(const QString &value)
+[[nodiscard]] static QString toString(const QString &value)
 {
     return value;
 }

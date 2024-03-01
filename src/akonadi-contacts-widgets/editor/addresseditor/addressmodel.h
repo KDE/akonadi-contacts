@@ -21,7 +21,7 @@ public:
     explicit AddressModel(QObject *parent = nullptr);
     ~AddressModel() override;
 
-    KContacts::Address::List addresses() const;
+    [[nodiscard]] KContacts::Address::List addresses() const;
     void setAddresses(const KContacts::Address::List &addresses);
     void addAddress(const KContacts::Address &address);
     void replaceAddress(const KContacts::Address &address, int row);

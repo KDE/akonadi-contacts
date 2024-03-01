@@ -94,12 +94,12 @@ public:
     /**
      * Returns the line edit that is used for the search line.
      */
-    QLineEdit *searchLineEdit() const;
+    [[nodiscard]] QLineEdit *searchLineEdit() const;
 
     /**
      * Returns the tree view that is used to list the items.
      */
-    QTreeView *view() const;
+    [[nodiscard]] QTreeView *view() const;
 
 Q_SIGNALS:
     /**

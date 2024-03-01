@@ -28,7 +28,7 @@ public:
     void clearWidget();
     void setPreferred(bool b);
 
-    KContacts::ResourceLocatorUrl url();
+    [[nodiscard]] KContacts::ResourceLocatorUrl url();
     void loadWebSite(const KContacts::ResourceLocatorUrl &url);
 
     void setReadOnly(bool readOnly);

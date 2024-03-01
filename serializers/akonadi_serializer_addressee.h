@@ -28,7 +28,7 @@ public:
 
     void compare(Akonadi::AbstractDifferencesReporter *reporter, const Akonadi::Item &leftItem, const Akonadi::Item &rightItem) override;
 
-    QString extractGid(const Item &item) const override;
+    [[nodiscard]] QString extractGid(const Item &item) const override;
 
 private:
     KContacts::VCardConverter m_converter;

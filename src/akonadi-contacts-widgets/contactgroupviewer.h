@@ -63,7 +63,7 @@ public:
     /**
      * Returns the contact group that is currently displayed.
      */
-    Akonadi::Item contactGroup() const;
+    [[nodiscard]] Akonadi::Item contactGroup() const;
 
     /**
      * Sets the contact group @p formatter that should be used for formatting the

@@ -27,7 +27,7 @@ public:
     void clearWidget();
     void updateAddRemoveButton(bool addButtonEnabled);
     void setMail(const KContacts::Email &email);
-    KContacts::Email email();
+    [[nodiscard]] KContacts::Email email();
     void setPreferred(bool b);
     void setReadOnly(bool readOnly);
 Q_SIGNALS:

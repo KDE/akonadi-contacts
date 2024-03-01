@@ -27,7 +27,7 @@ public:
     AddressTypeDialog(KContacts::Address::Type type, QWidget *parent);
     ~AddressTypeDialog() override;
 
-    KContacts::Address::Type type() const;
+    [[nodiscard]] KContacts::Address::Type type() const;
 
 private:
     QButtonGroup *mGroup = nullptr;

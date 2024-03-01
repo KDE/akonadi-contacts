@@ -23,7 +23,7 @@ public:
     ~CustomFieldsModel() override;
 
     void setCustomFields(const CustomField::List &addresses);
-    CustomField::List customFields() const;
+    [[nodiscard]] CustomField::List customFields() const;
 
     QModelIndex index(int row, int col, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &child) const override;
