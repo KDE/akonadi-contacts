@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2023-09-27 12:51+0300\n"
+"PO-Revision-Date: 2024-03-08 18:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.0\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
@@ -92,7 +92,7 @@ msgstr "Telefon Numaraları"
 #, kde-format
 msgctxt "@title:column the preferred email addresses of a person"
 msgid "Preferred EMail"
-msgstr "Tercih Edilen E-Posta"
+msgstr "Tercih Edilen E-posta"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:238
 #, kde-format
@@ -303,7 +303,7 @@ msgstr "Kapatma"
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
-msgstr "Gerçekten iptal etmek istiyor musunuz?"
+msgstr "İptal etmeyi gerçekten istiyor musunuz?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:200
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
@@ -356,7 +356,7 @@ msgstr "Kişi grubu üyeleri:"
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
-msgstr "Ara..."
+msgstr "Ara…"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
@@ -463,7 +463,7 @@ msgstr "Adres Türleri"
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "Other..."
-msgstr "Diğer..."
+msgstr "Diğer…"
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
 #, kde-format
@@ -720,7 +720,7 @@ msgstr "E-posta"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
 #, kde-format
 msgid "Select..."
-msgstr "Seç..."
+msgstr "Seç…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
@@ -794,7 +794,7 @@ msgstr "Tanımlayıcı ekle"
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
-msgstr "Seç..."
+msgstr "Seç…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
@@ -905,7 +905,7 @@ msgstr "Ad"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
@@ -1011,7 +1011,7 @@ msgstr "Şirketin logosu (değiştirmek için tıkla)"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
 msgid "Change photo..."
-msgstr "Fotoğrafı değiştir..."
+msgstr "Fotoğrafı Değiştir…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
@@ -1022,7 +1022,7 @@ msgstr "URL'yi değiştir..."
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
 #, kde-format
 msgid "Save photo..."
-msgstr "Fotoğrafı kaydet..."
+msgstr "Fotoğrafı Kaydet…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
 #, kde-format
@@ -1032,12 +1032,12 @@ msgstr "Fotoğrafı kaldır"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change logo..."
-msgstr "Logoyu değiştir..."
+msgstr "Logoyu Değiştir…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
 #, kde-format
 msgid "Save logo..."
-msgstr "Logoyu kaydet..."
+msgstr "Logoyu Kaydet…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
 #, kde-format
@@ -1079,7 +1079,7 @@ msgstr "Ara:"
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
 #, kde-format
 msgid "Search Contact..."
-msgstr "Kişi ara..."
+msgstr "Kişi ara…"
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
@@ -1153,8 +1153,8 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
-"<para>\"%1\" için bir kişi adres defterinize başarıyla eklendi.</"
-"para><para>Bu yeni kişiyi şimdi düzenlemek istiyor musunuz?</para>"
+"<para>“%1” için bir kişi adres defterinize başarıyla eklendi.</para><para>Bu "
+"yeni kişiyi şimdi düzenlemek istiyor musunuz?</para>"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
 #, kde-format
@@ -1189,7 +1189,7 @@ msgstr "Kişi başarıyla oluşturuldu"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr "Adres Defteri Klasörü Ekle..."
+msgstr "Adres Defteri Klasörü Ekle…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
@@ -1297,7 +1297,7 @@ msgstr "Adres defterinden seçili adres defteri klasörlerini kes."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Klasör Özellikleri..."
+msgstr "Klasör Özellikleri…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
 #, kde-format
@@ -1379,7 +1379,7 @@ msgstr "Seçili kişileri adres defterinden kes."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr "&Adres Defteri Ekle..."
+msgstr "&Adres Defteri Ekle…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1435,7 +1435,7 @@ msgstr[1] "Adres Defterleri Silinsin mi?"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
-msgstr "Adres Defteri Özellikleri..."
+msgstr "Adres Defteri Özellikleri…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
@@ -1480,7 +1480,7 @@ msgstr "Kişiyi Taşı"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
-msgstr "Kişiyi Düzenle..."
+msgstr "Kişiyi Düzenle…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
 #, kde-format
@@ -1518,12 +1518,12 @@ msgstr "Grupları Taşı"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
-msgstr "Grubu Düzenle..."
+msgstr "Grubu Düzenle…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
-msgstr "Yeni &Kişi..."
+msgstr "Yeni &Kişi…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
@@ -1537,7 +1537,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
-msgstr "Yeni &Grup..."
+msgstr "Yeni &Grup…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
