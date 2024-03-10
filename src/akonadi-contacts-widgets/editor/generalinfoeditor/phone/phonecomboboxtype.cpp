@@ -89,7 +89,7 @@ void PhoneComboBoxType::otherSelected()
         mType = dlg->type();
         if (!mTypeList.contains(mType)) {
             if (static_cast<int>(mType) != 0) {
-                mTypeList.insert(mTypeList.at(mTypeList.count() - 1), mType);
+                mTypeList.insert(mTypeList.count() - 1, mType);
             }
         }
     } else {
