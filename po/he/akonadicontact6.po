@@ -3,13 +3,13 @@
 #
 # Diego Iastrubni <elcuco@kde.org>, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2023-10-25 09:47+0300\n"
+"PO-Revision-Date: 2024-03-19 15:07+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -1190,7 +1190,7 @@ msgstr "הוספת תיקייה בפנקס הכתובות…"
 #, kde-format
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
-msgstr "הוסף תיקייה חדשה לתיקייה הנוכחית שנבחרה בפנקס הכתובות."
+msgstr "הוספת תיקייה חדשה לתיקייה שנבחרה בפנקס הכתובות."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
 #, kde-format
@@ -1616,7 +1616,7 @@ msgstr "העתקת קוד"
 #: akonadi-contacts-widgets/waitingoverlay.cpp:35
 #, kde-format
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
-msgstr "<p style=\"color: white;\"><b>ממתין לפעולה</b><br/></p>"
+msgstr "<p style=\"color: white;\"><b>בהמתנה לפעולה</b><br/></p>"
 
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:29
 #, kde-format
