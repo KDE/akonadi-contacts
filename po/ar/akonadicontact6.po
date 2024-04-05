@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2024-01-20 18:48+0400\n"
+"PO-Revision-Date: 2024-04-04 11:52+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -552,12 +552,12 @@ msgstr "أضف اسم المساعد"
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
-msgstr "متفرّغ/مشغول:"
+msgstr "متوفر/مشغول:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
 #, kde-format
 msgid "Add FreeBusy"
-msgstr "أضف متفرّغ/مشغول"
+msgstr "أضف متوفر/مشغول"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
 #, kde-format
