@@ -82,7 +82,7 @@ endif()
 
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.1.0)
+ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.2.0)
 
 
 if(BUILD_TESTING)
