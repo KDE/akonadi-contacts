@@ -283,7 +283,7 @@ msgstr "No s'ha guardat la ubicació. Voleu tancar l'editor?"
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr "Confirmeu"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:183
 #, kde-format
@@ -356,7 +356,7 @@ msgstr "Membres del grup de contactes:"
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
-msgstr "Busca..."
+msgstr "Busca…"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
@@ -463,7 +463,7 @@ msgstr "Tipus d'adreça"
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "Other..."
-msgstr "Altres..."
+msgstr "Altres…"
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
 #, kde-format
@@ -720,7 +720,7 @@ msgstr "Correu electrònic"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
 #, kde-format
 msgid "Select..."
-msgstr "Selecciona..."
+msgstr "Selecciona…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
@@ -794,7 +794,7 @@ msgstr "Afig un identificador"
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
-msgstr "Selecciona..."
+msgstr "Selecciona…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
@@ -906,7 +906,7 @@ msgstr "Nom"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
@@ -1012,18 +1012,18 @@ msgstr "El logotip de la companyia (cliqueu per a canviar-lo)"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
 msgid "Change photo..."
-msgstr "Canvia la fotografia..."
+msgstr "Canvia la fotografia…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
 #, kde-format
 msgid "Change URL..."
-msgstr "Canvia l'URL..."
+msgstr "Canvia l'URL…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
 #, kde-format
 msgid "Save photo..."
-msgstr "Guarda la fotografia..."
+msgstr "Guarda la fotografia…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
 #, kde-format
@@ -1033,12 +1033,12 @@ msgstr "Elimina la fotografia"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change logo..."
-msgstr "Canvia el logotip..."
+msgstr "Canvia el logotip…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
 #, kde-format
 msgid "Save logo..."
-msgstr "Guarda el logotip..."
+msgstr "Guarda el logotip…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
 #, kde-format
@@ -1080,7 +1080,7 @@ msgstr "Busca:"
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
 #, kde-format
 msgid "Search Contact..."
-msgstr "Busca un contacte..."
+msgstr "Busca un contacte…"
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
@@ -1190,7 +1190,7 @@ msgstr "El contacte s'ha creat correctament"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr "Afig una carpeta de la llibreta d'adreces..."
+msgstr "Afig una carpeta de la llibreta d'adreces…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
@@ -1308,7 +1308,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Propietats de la carpeta..."
+msgstr "Propietats de la carpeta…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
 #, kde-format
@@ -1391,7 +1391,7 @@ msgstr "Retalla els contactes seleccionats de la llibreta d'adreces."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr "Afig una llibreta d'&adreces..."
+msgstr "Afig una llibreta d'&adreces…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1448,7 +1448,7 @@ msgstr[1] "Voleu suprimir les llibretes d'adreces?"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
-msgstr "Propietats de la llibreta d'adreces..."
+msgstr "Propietats de la llibreta d'adreces…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
@@ -1497,7 +1497,7 @@ msgstr "Mou el contacte a"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
-msgstr "Edita el contacte..."
+msgstr "Edita el contacte…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
 #, kde-format
@@ -1535,12 +1535,12 @@ msgstr "Mou el grup a"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
-msgstr "Edita el grup..."
+msgstr "Edita el grup…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
-msgstr "&Contacte nou..."
+msgstr "&Contacte nou…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
@@ -1554,7 +1554,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
-msgstr "&Grup nou..."
+msgstr "&Grup nou…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
