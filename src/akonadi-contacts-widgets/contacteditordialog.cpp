@@ -194,14 +194,18 @@ void ContactEditorDialog::accept()
 
 void ContactEditorDialog::reject()
 {
-    const int answer = KMessageBox::questionTwoActions(this,
-                                                       i18nc("@info", "Do you really want to cancel?"),
-                                                       i18nc("@title:window", "Confirmation"),
-                                                       KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                                       KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")));
+    if (d->mEditor->hasNoSavedData()) {
+        const int answer = KMessageBox::questionTwoActions(this,
+                                                           i18nc("@info", "Do you really want to cancel?"),
+                                                           i18nc("@title:window", "Confirmation"),
+                                                           KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                                           KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")));
 
-    if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-        QDialog::reject(); // Discard current changes
+        if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+            QDialog::reject(); // Discard current changes
+        }
+    } else {
+        QDialog::reject();
     }
 }
 
