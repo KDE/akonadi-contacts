@@ -145,6 +145,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     topLayout->addStretch(1);
     fillCountryCombo();
     switchMode();
+    mWasChanged = false;
 }
 
 AddressLocationWidget::~AddressLocationWidget() = default;
