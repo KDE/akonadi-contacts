@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-14 00:38+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -278,7 +278,7 @@ msgid "Location was not saved. Do you want to close editor?"
 msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
-#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
 #, fuzzy, kde-format
 #| msgid "Confirm Delete"
@@ -298,7 +298,7 @@ msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr ""
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:198
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
@@ -306,7 +306,7 @@ msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "តើ​អ្នក​ពិត​ជា​ចង់​លុប​អាសយដ្ឋាន​នេះ​ឬ​ ?​"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contacteditordialog.cpp:201
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
@@ -315,7 +315,7 @@ msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "បោះ​បង់​"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:201
+#: akonadi-contacts-widgets/contacteditordialog.cpp:202
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
@@ -409,7 +409,7 @@ msgid "Remove Address"
 msgstr "អាសយដ្ឋាន​​"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"
 #| msgid_plural "Do you really want to delete %1 address books?"
