@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-14 02:28+0000\n"
 "PO-Revision-Date: 2024-02-05 22:04+0200\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -276,7 +276,7 @@ msgid "Location was not saved. Do you want to close editor?"
 msgstr "Η τοποθεσία δεν έχει αποθηκευθεί. Θέλετε να κλείσετε τον επεξεργαστή;"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
-#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@title:window"
@@ -295,21 +295,21 @@ msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "Να μην κλείσει"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:198
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Θέλετε πράγματι να το ακυρώσετε;"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contacteditordialog.cpp:201
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Ακύρωση επεξεργασίας"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:201
+#: akonadi-contacts-widgets/contacteditordialog.cpp:202
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
@@ -393,7 +393,7 @@ msgid "Remove Address"
 msgstr "Διαγραφή διεύθυνσης"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Θέλετε πράγματι να διαγραφεί αυτή η διεύθυνση;"

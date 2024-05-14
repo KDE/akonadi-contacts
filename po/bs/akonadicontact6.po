@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-14 02:28+0000\n"
 "PO-Revision-Date: 2014-01-31 20:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -279,7 +279,7 @@ msgid "Location was not saved. Do you want to close editor?"
 msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
-#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
 #, fuzzy, kde-format
 #| msgid "Confirm Delete"
@@ -299,7 +299,7 @@ msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr ""
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:198
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
@@ -307,7 +307,7 @@ msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Da li zaista želite obrisati ovu adresu?"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contacteditordialog.cpp:201
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
@@ -316,7 +316,7 @@ msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Otkaži"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:201
+#: akonadi-contacts-widgets/contacteditordialog.cpp:202
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
@@ -410,7 +410,7 @@ msgid "Remove Address"
 msgstr "Adresa"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"
 #| msgid_plural "Do you really want to delete %1 address books?"

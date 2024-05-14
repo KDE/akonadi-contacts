@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-14 02:28+0000\n"
 "PO-Revision-Date: 2023-09-27 08:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -277,7 +277,7 @@ msgid "Location was not saved. Do you want to close editor?"
 msgstr "Запис місця не збережено. Хочете закрити вікно редактора попри це?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
-#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@title:window"
@@ -296,21 +296,21 @@ msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "Не закривати"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:198
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Ви дійсно хочете скасувати дію?"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contacteditordialog.cpp:201
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Скасувати редагування"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:201
+#: akonadi-contacts-widgets/contacteditordialog.cpp:202
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
@@ -393,7 +393,7 @@ msgid "Remove Address"
 msgstr "Вилучити адресу"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:276
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Ви справді бажаєте вилучити цю адресу?"
