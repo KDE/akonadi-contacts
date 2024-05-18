@@ -133,8 +133,8 @@ void ContactGroupEditorPrivate::itemChanged(const Item &item, const QSet<QByteAr
     QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
 
     dlg->setInformativeText(i18n("The contact group has been changed by someone else.\nWhat should be done?"));
-    dlg->addButton(i18n("Take over changes"), QMessageBox::AcceptRole);
-    dlg->addButton(i18n("Ignore and Overwrite changes"), QMessageBox::RejectRole);
+    dlg->addButton(i18nc("@action:button", "Take over changes"), QMessageBox::AcceptRole);
+    dlg->addButton(i18nc("@action:button", "Ignore and Overwrite changes"), QMessageBox::RejectRole);
 
     if (dlg->exec() == QMessageBox::AcceptRole) {
         auto job = new ItemFetchJob(mItem);
