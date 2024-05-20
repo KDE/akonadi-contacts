@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-19 00:38+0000\n"
-"PO-Revision-Date: 2024-05-13 22:08+0200\n"
+"PO-Revision-Date: 2024-05-19 09:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -224,16 +224,14 @@ msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Приемане на промените"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Игнориране и презаписване на промените"

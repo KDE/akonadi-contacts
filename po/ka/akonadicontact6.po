@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-19 00:38+0000\n"
-"PO-Revision-Date: 2023-09-28 05:29+0200\n"
+"PO-Revision-Date: 2024-05-19 05:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -225,19 +225,17 @@ msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "ცვლილებების ხელში აღება"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "იგნორირება და ცვლილებების თავზე გადაწერა"
+msgstr "გამოტოვება და ცვლილებების თავზე გადაწერა"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:278
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:291
