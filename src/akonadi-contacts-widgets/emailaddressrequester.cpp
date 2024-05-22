@@ -77,7 +77,7 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     auto button = new QPushButton(this);
     button->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
     button->setFixedHeight(d->mLineEdit->sizeHint().height());
-    button->setToolTip(i18n("Open Address Book"));
+    button->setToolTip(i18nc("@info:tooltip", "Open Address Book"));
     layout->addWidget(button);
 
     connect(button, &QPushButton::clicked, this, [this]() {

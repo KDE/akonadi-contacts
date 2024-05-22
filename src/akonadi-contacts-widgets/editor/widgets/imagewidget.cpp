@@ -116,9 +116,9 @@ ImageWidget::ImageWidget(Type type, QWidget *parent)
     connect(this, &ImageWidget::clicked, this, &ImageWidget::changeImage);
 
     if (mType == Photo) {
-        setToolTip(i18n("The photo of the contact (click to change)"));
+        setToolTip(i18nc("@info:tooltip", "The photo of the contact (click to change)"));
     } else {
-        setToolTip(i18n("The logo of the company (click to change)"));
+        setToolTip(i18nc("@info:tooltip", "The logo of the company (click to change)"));
     }
 
     updateView();

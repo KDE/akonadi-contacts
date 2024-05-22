@@ -37,13 +37,13 @@ MailWidget::MailWidget(QWidget *parent)
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QLatin1StringView("addbutton"));
-    mAddButton->setToolTip(i18n("Add an Email"));
+    mAddButton->setToolTip(i18nc("@info:tooltip", "Add an Email"));
     connect(mAddButton, &QToolButton::clicked, this, &MailWidget::slotAddMail);
     layout->addWidget(mAddButton);
 
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
-    mRemoveButton->setToolTip(i18n("Remove Email"));
+    mRemoveButton->setToolTip(i18nc("@info:tooltip", "Remove Email"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MailWidget::slotRemoveMail);
     layout->addWidget(mRemoveButton);
 }

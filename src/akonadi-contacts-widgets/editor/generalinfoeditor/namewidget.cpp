@@ -39,7 +39,7 @@ NameWidget::NameWidget(QWidget *parent)
     setFocusPolicy(Qt::StrongFocus);
 
     mButtonEdit->setText(i18n("..."));
-    mButtonEdit->setToolTip(i18n("Edit Contact Name"));
+    mButtonEdit->setToolTip(i18nc("@info:tooltip", "Edit Contact Name"));
     lineLayout->addWidget(mButtonEdit);
 
     connect(mNameEdit, &QLineEdit::textChanged, this, &NameWidget::slotTextChanged);

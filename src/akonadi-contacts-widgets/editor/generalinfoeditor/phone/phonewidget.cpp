@@ -38,13 +38,13 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     layout->addWidget(mPhoneType);
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    mAddButton->setToolTip(i18n("Add a Phone Number"));
+    mAddButton->setToolTip(i18nc("@info:tooltip", "Add a Phone Number"));
     mAddButton->setObjectName(QLatin1StringView("addbutton"));
     connect(mAddButton, &QToolButton::clicked, this, &PhoneWidget::slotAddPhone);
     layout->addWidget(mAddButton);
 
     mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
-    mRemoveButton->setToolTip(i18n("Remove Phone Number"));
+    mRemoveButton->setToolTip(i18nc("@info:tooltip", "Remove Phone Number"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     connect(mRemoveButton, &QToolButton::clicked, this, &PhoneWidget::slotRemovePhone);
     layout->addWidget(mRemoveButton);

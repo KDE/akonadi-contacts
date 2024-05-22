@@ -19,7 +19,7 @@ PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     mIconDisabled = QIcon::fromTheme(QStringLiteral("rating-unrated"));
     mPreferredAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferredAction->setObjectName(QLatin1StringView("preferredaction"));
-    mPreferredAction->setToolTip(i18n("Set as Preferred"));
+    mPreferredAction->setToolTip(i18nc("@info:tooltip", "Set as Preferred"));
     connect(mPreferredAction, &QAction::triggered, this, &PreferredLineEditWidget::slotPreferredStatusChanged);
 }
 

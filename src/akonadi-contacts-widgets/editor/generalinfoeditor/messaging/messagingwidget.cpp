@@ -47,13 +47,13 @@ MessagingWidget::MessagingWidget(QWidget *parent)
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QLatin1StringView("addbutton"));
-    mAddButton->setToolTip(i18n("Add an IM"));
+    mAddButton->setToolTip(i18nc("@info:tooltip", "Add an IM"));
     connect(mAddButton, &QToolButton::clicked, this, &MessagingWidget::slotAddMessaging);
     layout->addWidget(mAddButton);
 
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
-    mRemoveButton->setToolTip(i18n("Remove IM"));
+    mRemoveButton->setToolTip(i18nc("@info:tooltip", "Remove IM"));
     connect(mRemoveButton, &QToolButton::clicked, this, &MessagingWidget::slotRemoveMessaging);
     layout->addWidget(mRemoveButton);
 }

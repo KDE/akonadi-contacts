@@ -38,13 +38,13 @@ WebWidget::WebWidget(QWidget *parent)
 
     mAddButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mAddButton->setObjectName(QLatin1StringView("addbutton"));
-    mAddButton->setToolTip(i18n("Add a Web Site"));
+    mAddButton->setToolTip(i18nc("@info:tooltip", "Add a Web Site"));
     connect(mAddButton, &QToolButton::clicked, this, &WebWidget::slotAddWeb);
     layout->addWidget(mAddButton);
 
     mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
-    mRemoveButton->setToolTip(i18n("Remove Web Site"));
+    mRemoveButton->setToolTip(i18nc("@info:tooltip", "Remove Web Site"));
     connect(mRemoveButton, &QToolButton::clicked, this, &WebWidget::slotRemoveWeb);
     layout->addWidget(mRemoveButton);
 }
