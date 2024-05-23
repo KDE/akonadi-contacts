@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-20 21:44+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-doc@kde.org>\n"
@@ -748,12 +748,16 @@ msgid "Add an Email Account"
 msgstr "Einen E-Mail-Zugang hinzufügen"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an Email"
+msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "E-Mail-Adresse hinzufügen"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Email"
+msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "E-Mail-Adresse entfernen"
 
@@ -800,12 +804,16 @@ msgid "Select..."
 msgstr "Auswählen ..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an IM"
+msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr "Einen Instant-Messenger hinzufügen"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove IM"
+msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "IM entfernen"
 
@@ -911,7 +919,9 @@ msgid "..."
 msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Contact Name"
+msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr "Kontaktnamen bearbeiten"
 
@@ -937,13 +947,21 @@ msgid "Edit Phone Number"
 msgstr "Telefonnummer bearbeiten"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgid "Add a Phone Number"
 msgstr "Eine Telefonnummer hinzufügen"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Add a Phone Number"
+msgctxt "@info:tooltip"
+msgid "Add a Phone Number"
+msgstr "Eine Telefonnummer hinzufügen"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Phone Number"
+msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr "Telefonnummer entfernen"
 
@@ -958,13 +976,21 @@ msgid "Profile"
 msgstr "Profil"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr "Eine Webseite hinzufügen"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Add a Web Site"
+msgctxt "@info:tooltip"
+msgid "Add a Web Site"
+msgstr "Eine Webseite hinzufügen"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Web Site"
+msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr "Webseite entfernen"
 
@@ -1002,12 +1028,16 @@ msgid "This contact's image cannot be found."
 msgstr "Das Bild dieses Kontakts kann nicht gefunden werden."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The photo of the contact (click to change)"
+msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "Das Foto des Kontakts (Klicken zum Ändern)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The logo of the company (click to change)"
+msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "Das Logo der Firma (Klicken zum Ändern)"
 
@@ -1064,12 +1094,16 @@ msgid "Images (%1)"
 msgstr "Bilder (%1)"
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set as Preferred"
+msgctxt "@info:tooltip"
 msgid "Set as Preferred"
 msgstr "Als Bevorzugt festlegen"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Address Book"
+msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "Adressbuch öffnen"
 

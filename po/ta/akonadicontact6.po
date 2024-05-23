@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 21:50+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -738,11 +738,13 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr ""
 
@@ -789,11 +791,13 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr ""
 
@@ -900,6 +904,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr ""
 
@@ -925,13 +930,19 @@ msgid "Edit Phone Number"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#, kde-format
+msgid "Add a Phone Number"
+msgstr ""
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr ""
 
@@ -946,13 +957,19 @@ msgid "Profile"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
+#, kde-format
+msgid "Add a Web Site"
+msgstr ""
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Add a Web Site"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr ""
 
@@ -991,11 +1008,13 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr ""
 
@@ -1053,11 +1072,13 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Set as Preferred"
 msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr ""
 

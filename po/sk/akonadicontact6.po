@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-12 19:14+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -744,12 +744,16 @@ msgid "Add an Email Account"
 msgstr "Pridať e-mailový účet"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an Email"
+msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "Pridať e-mail"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Email"
+msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "Odstrániť e-mail"
 
@@ -795,12 +799,16 @@ msgid "Select..."
 msgstr "Vybrať..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an IM"
+msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr "Pridať IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove IM"
+msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "Odstrániť IM"
 
@@ -906,7 +914,9 @@ msgid "..."
 msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Contact Name"
+msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr "Zmeniť názov kontaktu"
 
@@ -932,13 +942,21 @@ msgid "Edit Phone Number"
 msgstr "Upraviť telefónne číslo"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgid "Add a Phone Number"
 msgstr "Pridať telefónne číslo"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Add a Phone Number"
+msgctxt "@info:tooltip"
+msgid "Add a Phone Number"
+msgstr "Pridať telefónne číslo"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Phone Number"
+msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr "Odstrániť telefónne číslo"
 
@@ -953,13 +971,21 @@ msgid "Profile"
 msgstr "Profil"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr "Pridať webovú stránku"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Add a Web Site"
+msgctxt "@info:tooltip"
+msgid "Add a Web Site"
+msgstr "Pridať webovú stránku"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Web Site"
+msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr "Odstrániť webovú stránku"
 
@@ -997,12 +1023,16 @@ msgid "This contact's image cannot be found."
 msgstr "Obrázok tohto obrázku nie je možné nájsť."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The photo of the contact (click to change)"
+msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "Fotka kontaktu (kliknite na zmenu)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The logo of the company (click to change)"
+msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "Logo spoločnosti (kliknite na zmenu)"
 
@@ -1059,12 +1089,16 @@ msgid "Images (%1)"
 msgstr "Obrázky (%1)"
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set as Preferred"
+msgctxt "@info:tooltip"
 msgid "Set as Preferred"
 msgstr "Nastaviť ako preferované"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Address Book"
+msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "Otvoriť adresár"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2021-09-09 21:50+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -752,12 +752,16 @@ msgid "Add an Email Account"
 msgstr "Tilføj e-mailkonto"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an Email"
+msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "Tilføj e-mail"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Email"
+msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "Fjern e-mail"
 
@@ -803,12 +807,16 @@ msgid "Select..."
 msgstr "Vælg..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an IM"
+msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr "Tilføj IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove IM"
+msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "Fjern IM"
 
@@ -914,7 +922,9 @@ msgid "..."
 msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Contact Name"
+msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr "Redigér kontaktnavn"
 
@@ -940,13 +950,21 @@ msgid "Edit Phone Number"
 msgstr "Redigér telefonnummer"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgid "Add a Phone Number"
 msgstr "Tilføj telefonnummer"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Add a Phone Number"
+msgctxt "@info:tooltip"
+msgid "Add a Phone Number"
+msgstr "Tilføj telefonnummer"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Phone Number"
+msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr "Fjern telefonnummer"
 
@@ -961,13 +979,21 @@ msgid "Profile"
 msgstr "Profil"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgid "Add a Web Site"
 msgstr "Tilføj en hjemmeside"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Add a Web Site"
+msgctxt "@info:tooltip"
+msgid "Add a Web Site"
+msgstr "Tilføj en hjemmeside"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Web Site"
+msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr "Fjern hjemmeside"
 
@@ -1005,12 +1031,16 @@ msgid "This contact's image cannot be found."
 msgstr "Kontaktens billede kan ikke findes."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The photo of the contact (click to change)"
+msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "Kontaktens billede (klik for at skifte)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The logo of the company (click to change)"
+msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "Virksomhedens logo (klik for at skifte)"
 
@@ -1067,12 +1097,16 @@ msgid "Images (%1)"
 msgstr "Billeder (%1)"
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set as Preferred"
+msgctxt "@info:tooltip"
 msgid "Set as Preferred"
 msgstr "Angiv som foretrukken"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Address Book"
+msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "Åbn adressebog"
 

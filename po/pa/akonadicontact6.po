@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2011-01-01 12:08+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -791,12 +791,14 @@ msgstr "ਈਮੇਲ ਸ਼ਾਮਲ"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, fuzzy, kde-format
 #| msgid "Add Email"
+msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "ਈਮੇਲ ਸ਼ਾਮਲ"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
 #, fuzzy, kde-format
 #| msgid "Remove logo"
+msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "ਲੋਗੋ ਹਟਾਓ"
 
@@ -849,12 +851,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@label The nickname of a contact"
 #| msgid "Nickname:"
+msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr "ਛੋਟਾ ਨਾਂ:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
 #, fuzzy, kde-format
 #| msgid "Remove"
+msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "ਹਟਾਓ"
 
@@ -967,6 +971,7 @@ msgstr "..."
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, fuzzy, kde-format
 #| msgid "Edit Contact"
+msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr "ਸੰਪਰਕ ਸੋਧ"
 
@@ -999,9 +1004,15 @@ msgid "Edit Phone Number"
 msgstr "ਫੋਨ ਨੰਬਰ ਸੋਧ"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#, fuzzy, kde-format
+#| msgid "Edit Phone Number"
+msgid "Add a Phone Number"
+msgstr "ਫੋਨ ਨੰਬਰ ਸੋਧ"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, fuzzy, kde-format
 #| msgid "Edit Phone Number"
+msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
 msgstr "ਫੋਨ ਨੰਬਰ ਸੋਧ"
 
@@ -1009,6 +1020,7 @@ msgstr "ਫੋਨ ਨੰਬਰ ਸੋਧ"
 #, fuzzy, kde-format
 #| msgctxt "@title:column phone numbers of a person"
 #| msgid "Phone Numbers"
+msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr "ਫੋਨ ਨੰਬਰ"
 
@@ -1024,13 +1036,19 @@ msgid "Profile"
 msgstr "ਪ੍ਰੋ."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
+#, kde-format
+msgid "Add a Web Site"
+msgstr ""
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Add a Web Site"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr ""
 
@@ -1071,11 +1089,13 @@ msgstr "ਇਹ ਸੰਪਰਕ ਲਈ ਚਿੱਤਰ ਨਹੀਂ ਲੱਭਿ�
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr ""
 
@@ -1137,12 +1157,14 @@ msgstr ""
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
 #, fuzzy, kde-format
 #| msgid "Set as Standard"
+msgctxt "@info:tooltip"
 msgid "Set as Preferred"
 msgstr "ਸਟੈਂਡਰਡ ਸੈੱਟ ਕਰੋ"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
+msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "ਐਡਰੈੱਸ ਬੁੱਕ ਚੁਣੋ"
 
