@@ -1,23 +1,24 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2018.
 # SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2018.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-04-04 11:52+0400\n"
+"PO-Revision-Date: 2024-05-25 17:09+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
+"Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -231,16 +232,14 @@ msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "خُذ بالتّغييرات"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "تجاهل التّغييرات واكتب فوقها"
@@ -750,15 +749,13 @@ msgid "Add an Email Account"
 msgstr "أضف حساب بريد إلكترونيّ"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Add an Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "أضف بريدًا إلكترونيًّا"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Remove Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "أزِل البريد الإلكترونيّ"
@@ -805,15 +802,13 @@ msgid "Select..."
 msgstr "اختر..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Add an IM"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr "أضف تراسلًا فوريًّا"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
-#, fuzzy, kde-format
-#| msgid "Remove IM"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "أزِل التّراسل الفوريّ"
@@ -921,8 +916,7 @@ msgid "..."
 msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit Contact Name"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr "حرّر اسم المتراسل"
@@ -954,15 +948,13 @@ msgid "Add a Phone Number"
 msgstr "أضف رقم هاتف"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add a Phone Number"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
 msgstr "أضف رقم هاتف"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Remove Phone Number"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr "أزِل رقم الهاتف"
@@ -983,15 +975,13 @@ msgid "Add a Web Site"
 msgstr "أضف موقع وبّ"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add a Web Site"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Web Site"
 msgstr "أضف موقع وبّ"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Remove Web Site"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr "أزل موقع الوبّ"
@@ -1030,15 +1020,13 @@ msgid "This contact's image cannot be found."
 msgstr "تعذّر العثور على صورة المتراسل هذا."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "The photo of the contact (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "صورة المتراسل (انقر للتّغيير)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "The logo of the company (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "شعار الشّركة (انقر للتّغيير)"
@@ -1096,15 +1084,13 @@ msgid "Images (%1)"
 msgstr "الصّور (%1)"
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Set as Preferred"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set as Preferred"
 msgstr "اضبط كالمفضّل"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
-#, fuzzy, kde-format
-#| msgid "Open Address Book"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "افتح دفتر العناوين"
