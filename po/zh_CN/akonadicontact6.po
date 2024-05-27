@@ -740,12 +740,12 @@ msgstr "添加电子邮件账户"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgid "Add an Email"
-msgstr "添加电子邮件"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
 #, kde-format
 msgid "Remove Email"
-msgstr "移除电子邮件"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
@@ -791,12 +791,12 @@ msgstr "选择..."
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
 msgid "Add an IM"
-msgstr "添加即时通讯"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
 #, kde-format
 msgid "Remove IM"
-msgstr "删除 IM"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
 #, kde-format
@@ -934,7 +934,7 @@ msgstr "添加电话号码"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
 #, kde-format
 msgid "Remove Phone Number"
-msgstr "移除电话号码"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
@@ -955,7 +955,7 @@ msgstr "添加网站"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
 #, kde-format
 msgid "Remove Web Site"
-msgstr "移除网站"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
@@ -993,12 +993,12 @@ msgstr "无法找到联系人图像。"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, kde-format
 msgid "The photo of the contact (click to change)"
-msgstr "联系人的照片(点击以更改)"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
 #, kde-format
 msgid "The logo of the company (click to change)"
-msgstr "公司的徽标(点击以更改)"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
@@ -1055,12 +1055,12 @@ msgstr "图像 (%1)"
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
 #, kde-format
 msgid "Set as Preferred"
-msgstr "设为偏好"
+msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
 #, kde-format
 msgid "Open Address Book"
-msgstr "打开地址簿"
+msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
 #, kde-format
