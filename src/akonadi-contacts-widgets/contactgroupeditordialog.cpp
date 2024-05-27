@@ -99,7 +99,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode, this);
 
     if (mode == CreateMode) {
-        auto label = new QLabel(i18n("Add to:"), mainWidget);
+        auto label = new QLabel(i18nc("@label:textbox", "Add to:"), mainWidget);
 
         d->mAddressBookBox = new Akonadi::CollectionComboBox(mainWidget);
         d->mAddressBookBox->setMimeTypeFilter(QStringList() << KContacts::ContactGroup::mimeType());

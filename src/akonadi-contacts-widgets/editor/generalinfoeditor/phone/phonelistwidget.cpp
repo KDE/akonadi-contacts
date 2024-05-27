@@ -23,7 +23,7 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
     topLayout->setContentsMargins({});
     topLayout->setSpacing(0);
 
-    auto label = new QLabel(i18n("Phone"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Phone"), this);
     label->setObjectName(QLatin1StringView("phonelistlabel"));
     topLayout->addWidget(label);
 

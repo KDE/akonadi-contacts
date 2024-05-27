@@ -21,7 +21,7 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
     topLayout->setObjectName(QLatin1StringView("mainlayout"));
-    auto blogFeedLabel = new QLabel(i18n("Blog Feed"), this);
+    auto blogFeedLabel = new QLabel(i18nc("@label:textbox", "Blog Feed"), this);
     blogFeedLabel->setObjectName(QLatin1StringView("blogFeedLabel"));
     topLayout->addWidget(blogFeedLabel);
 

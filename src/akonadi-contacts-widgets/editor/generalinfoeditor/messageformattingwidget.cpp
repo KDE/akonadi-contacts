@@ -23,7 +23,7 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
-    auto label = new QLabel(i18n("Show messages received from this contact as:"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Show messages received from this contact as:"), this);
     label->setObjectName(QLatin1StringView("label"));
     topLayout->addWidget(label);
 

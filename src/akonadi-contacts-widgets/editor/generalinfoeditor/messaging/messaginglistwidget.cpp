@@ -23,7 +23,7 @@ MessagingListWidget::MessagingListWidget(QWidget *parent)
     topLayout->setContentsMargins({});
     topLayout->setSpacing(0);
 
-    auto label = new QLabel(i18n("Messaging"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Messaging"), this);
     label->setObjectName(QLatin1StringView("messaginglistlabel"));
     topLayout->addWidget(label);
     mMessagingWidgetLister->setObjectName(QLatin1StringView("messagingwidgetlister"));

@@ -69,7 +69,7 @@ public:
         }
 
         if (mode == ContactEditorDialog::CreateMode) {
-            auto label = new QLabel(i18n("Add to:"), mainWidget);
+            auto label = new QLabel(i18nc("@label:textbox", "Add to:"), mainWidget);
 
             mAddressBookBox = new Akonadi::CollectionComboBox(mainWidget);
             mAddressBookBox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());

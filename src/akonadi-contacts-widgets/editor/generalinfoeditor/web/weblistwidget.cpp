@@ -24,7 +24,7 @@ WebListWidget::WebListWidget(QWidget *parent)
     topLayout->setContentsMargins({});
     topLayout->setSpacing(0);
 
-    auto label = new QLabel(i18n("Web"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Web"), this);
     label->setObjectName(QLatin1StringView("weblistlabel"));
     topLayout->addWidget(label);
 

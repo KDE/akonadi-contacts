@@ -27,7 +27,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     , mFieldType(new QComboBox(this))
 {
     auto topLayout = new QVBoxLayout(this);
-    auto label = new QLabel(i18n("Custom Field Title"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Custom Field Title"), this);
     label->setObjectName(QLatin1StringView("labeltitle"));
 
     topLayout->addWidget(label);

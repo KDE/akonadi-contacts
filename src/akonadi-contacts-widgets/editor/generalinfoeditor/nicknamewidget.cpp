@@ -22,7 +22,7 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
     topLayout->setObjectName(QLatin1StringView("mainlayout"));
-    auto nickNameLabel = new QLabel(i18n("Nickname"), this);
+    auto nickNameLabel = new QLabel(i18nc("@label:textbox", "Nickname"), this);
     nickNameLabel->setObjectName(QLatin1StringView("nicknamelabel"));
     topLayout->addWidget(nickNameLabel);
 
