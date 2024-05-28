@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-05-23 17:11+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -194,7 +194,6 @@ msgid "Homepage"
 msgstr "Página personal"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:136
-#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
 msgstr "Fuente de blog"
@@ -271,7 +270,9 @@ msgstr "Editar contacto"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to:"
+msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "Añadir a:"
 
@@ -611,7 +612,9 @@ msgid "Use field for all contacts"
 msgstr "Usar campo para todos los contactos"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Field Title"
+msgctxt "@label:textbox"
 msgid "Custom Field Title"
 msgstr "Título del campo personalizado"
 
@@ -680,6 +683,13 @@ msgctxt "custom field value"
 msgid "Value"
 msgstr "Valor"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, fuzzy, kde-format
+#| msgid "Blog Feed"
+msgctxt "@label:textbox"
+msgid "Blog Feed"
+msgstr "Fuente de blog"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
 msgid "Add a Blog Feed"
@@ -717,7 +727,9 @@ msgid "Custom"
 msgstr "Personalizado"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email"
+msgctxt "@label:textbox"
 msgid "Email"
 msgstr "Correo"
 
@@ -768,7 +780,9 @@ msgid "Allow remote content in received HTML messages"
 msgstr "Permitir contenido remoto en los mensajes HTML recibidos"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show messages received from this contact as:"
+msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr "Mostrar los mensajes recibidos desde este contacto como:"
 
@@ -788,7 +802,9 @@ msgid "HTML"
 msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Messaging"
+msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr "Mensajería"
 
@@ -907,7 +923,9 @@ msgid "Sr."
 msgstr "Sr."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nombre"
 
@@ -923,7 +941,9 @@ msgid "Edit Contact Name"
 msgstr "Editar nombre de contacto"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Nickname"
+msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "Apodo"
 
@@ -933,7 +953,9 @@ msgid "Add a Nickname"
 msgstr "Añadir un apodo"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Phone"
+msgctxt "@label:textbox"
 msgid "Phone"
 msgstr "Teléfono"
 
@@ -961,7 +983,9 @@ msgid "Remove Phone Number"
 msgstr "Eliminar número de teléfono"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Web"
+msgctxt "@label:textbox"
 msgid "Web"
 msgstr "Web"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -187,7 +187,6 @@ msgid "Homepage"
 msgstr "मुख्यपान"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:136
-#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
 msgstr ""
@@ -265,6 +264,7 @@ msgstr "संपर्क"
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
 #, fuzzy, kde-format
+msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "\"%1\" ला जोडा."
 
@@ -626,6 +626,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Custom Field Title"
 msgstr ""
 
@@ -697,6 +698,12 @@ msgctxt "custom field value"
 msgid "Value"
 msgstr "मूल्य"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Blog Feed"
+msgstr ""
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
 msgid "Add a Blog Feed"
@@ -737,6 +744,7 @@ msgstr "ऐच्छिक"
 #, fuzzy, kde-format
 #| msgctxt "a contact's email address"
 #| msgid "Email"
+msgctxt "@label:textbox"
 msgid "Email"
 msgstr "इमेल"
 
@@ -793,6 +801,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr ""
 
@@ -813,6 +822,7 @@ msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr ""
 
@@ -939,6 +949,7 @@ msgstr "Sr."
 #, fuzzy, kde-format
 #| msgctxt "contact's name"
 #| msgid "Name"
+msgctxt "@label:textbox"
 msgid "Name"
 msgstr "नाव"
 
@@ -959,6 +970,7 @@ msgstr "संपर्क"
 #, fuzzy, kde-format
 #| msgctxt "@label The nickname of a contact"
 #| msgid "Nickname:"
+msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "टोपणनाव :"
 
@@ -971,6 +983,7 @@ msgstr "टॅग जोडा"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Phone"
 msgstr ""
 
@@ -1007,6 +1020,7 @@ msgstr "टॅग जोडा"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Web"
 msgstr ""
 

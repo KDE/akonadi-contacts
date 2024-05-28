@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-05-24 16:21+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -188,7 +188,6 @@ msgid "Homepage"
 msgstr "Homepage"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:136
-#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
 msgstr "ბლოგის ლენტა"
@@ -264,7 +263,9 @@ msgstr "კოტაქტის ჩასწორება"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to:"
+msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "დაემატება:"
 
@@ -602,7 +603,9 @@ msgid "Use field for all contacts"
 msgstr "ველის ყველა კონტაქტისთვის გამოყენება"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Field Title"
+msgctxt "@label:textbox"
 msgid "Custom Field Title"
 msgstr "ხელით მითითებული ველის სათაური"
 
@@ -671,6 +674,13 @@ msgctxt "custom field value"
 msgid "Value"
 msgstr "მნიშვნელობა"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, fuzzy, kde-format
+#| msgid "Blog Feed"
+msgctxt "@label:textbox"
+msgid "Blog Feed"
+msgstr "ბლოგის ლენტა"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
 msgid "Add a Blog Feed"
@@ -708,7 +718,9 @@ msgid "Custom"
 msgstr "ხელით მითითება"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email"
+msgctxt "@label:textbox"
 msgid "Email"
 msgstr "ელ-ფოსტა"
 
@@ -759,7 +771,9 @@ msgid "Allow remote content in received HTML messages"
 msgstr "მიღებულ შემცველობაში HTML-ის ჩვენება"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show messages received from this contact as:"
+msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr "ამ კონტაქტისგან მოსული შეტყობინებების ჩვენება, როგორც:"
 
@@ -779,7 +793,9 @@ msgid "HTML"
 msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Messaging"
+msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr "შეტყობინებები"
 
@@ -898,7 +914,9 @@ msgid "Sr."
 msgstr "უფრ."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@label:textbox"
 msgid "Name"
 msgstr "სახელი"
 
@@ -914,7 +932,9 @@ msgid "Edit Contact Name"
 msgstr "კონტაქტის სახელის ჩასწორება"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Nickname"
+msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "მეტსახელი"
 
@@ -924,7 +944,9 @@ msgid "Add a Nickname"
 msgstr "მეტსახელის დამატება"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Phone"
+msgctxt "@label:textbox"
 msgid "Phone"
 msgstr "ტელეფონი"
 
@@ -952,7 +974,9 @@ msgid "Remove Phone Number"
 msgstr "ტელეფონის ნომრის წაშლა"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Web"
+msgctxt "@label:textbox"
 msgid "Web"
 msgstr "ვები"
 

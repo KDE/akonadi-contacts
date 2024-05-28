@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2013-10-13 02:08+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -186,7 +186,6 @@ msgid "Homepage"
 msgstr "Мекен парағы"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:136
-#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
 msgstr "Блог ақпары"
@@ -267,7 +266,9 @@ msgstr "Контактты өзгерту"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to:"
+msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "Мынаған қосу:"
 
@@ -646,6 +647,7 @@ msgstr "Өріс бүкіл контакттарда болсын"
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "Custom Fields"
+msgctxt "@label:textbox"
 msgid "Custom Field Title"
 msgstr "Қосымша өрістер"
 
@@ -716,6 +718,13 @@ msgctxt "custom field value"
 msgid "Value"
 msgstr "Мәні"
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, fuzzy, kde-format
+#| msgid "Blog Feed"
+msgctxt "@label:textbox"
+msgid "Blog Feed"
+msgstr "Блог ақпары"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, fuzzy, kde-format
 #| msgid "Blog Feed"
@@ -757,6 +766,7 @@ msgstr "Өзге"
 #, fuzzy, kde-format
 #| msgctxt "a contact's email address"
 #| msgid "Email"
+msgctxt "@label:textbox"
 msgid "Email"
 msgstr "Эл.поштасы"
 
@@ -818,7 +828,9 @@ msgid "Allow remote content in received HTML messages"
 msgstr "Қабылданған HTML-де қашықтағы деректерді рұқсат ету"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show messages received from this contact as:"
+msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr "Бұл контакттан келген хаттарды былай көрсету:"
 
@@ -841,6 +853,7 @@ msgstr "HTML"
 #, fuzzy, kde-format
 #| msgctxt "@label The instant messaging address of a contact"
 #| msgid "Messaging:"
+msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr "Хабарласу адресі:"
 
@@ -968,6 +981,7 @@ msgstr "Sr."
 #, fuzzy, kde-format
 #| msgctxt "contact's name"
 #| msgid "Name"
+msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Атауы"
 
@@ -987,6 +1001,7 @@ msgstr "Контакт атауын өзгерту"
 #, fuzzy, kde-format
 #| msgctxt "@label The nickname of a contact"
 #| msgid "Nickname:"
+msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "Бүркеншік аты:"
 
@@ -1000,6 +1015,7 @@ msgstr "Әкесінің (қосымша) аты:"
 #, fuzzy, kde-format
 #| msgctxt "@title:group"
 #| msgid "Phones"
+msgctxt "@label:textbox"
 msgid "Phone"
 msgstr "Телефондар"
 
@@ -1033,6 +1049,7 @@ msgstr "Телефондары"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Web"
 msgstr ""
 
