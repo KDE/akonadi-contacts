@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-23 13:57+0300\n"
+"PO-Revision-Date: 2024-05-28 16:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -269,11 +269,10 @@ msgstr "Kişiyi Düzenle"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Add to:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
-msgstr "Buraya ekle:"
+msgstr "Şuraya ekle:"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:181
 #, kde-format
@@ -609,11 +608,10 @@ msgid "Use field for all contacts"
 msgstr "Tüm kişiler için alanı kullan"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Custom Field Title"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
-msgstr "Özel Alan Başlığı"
+msgstr "Özel alan başlığı"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
@@ -681,11 +679,10 @@ msgid "Value"
 msgstr "Değer"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
-msgstr "Ağ Günlüğü Beslemesi"
+msgstr "Blog beslemesi"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
@@ -724,8 +721,7 @@ msgid "Custom"
 msgstr "Özel"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email"
 msgstr "E-posta"
@@ -777,8 +773,7 @@ msgid "Allow remote content in received HTML messages"
 msgstr "Alınan HTML iletilerindeki uzak içeriğe izin ver"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Show messages received from this contact as:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr "Bu kişiden alınan iletileri şu şekilde göster:"
@@ -799,8 +794,7 @@ msgid "HTML"
 msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Messaging"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr "İletileşme"
@@ -920,8 +914,7 @@ msgid "Sr."
 msgstr "Sr."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Ad"
@@ -938,8 +931,7 @@ msgid "Edit Contact Name"
 msgstr "Kişi adını düzenle"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Nickname"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "Takma ad"
@@ -950,8 +942,7 @@ msgid "Add a Nickname"
 msgstr "Bir Takma Ad Ekle"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Phone"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Phone"
 msgstr "Telefon"
@@ -980,8 +971,7 @@ msgid "Remove Phone Number"
 msgstr "Telefon numarasını kaldır"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Web"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Web"
 msgstr "Web"

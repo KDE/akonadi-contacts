@@ -261,11 +261,10 @@ msgstr "编辑联系人"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Add to:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
-msgstr "添加到："
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:181
 #, kde-format
@@ -601,11 +600,10 @@ msgid "Use field for all contacts"
 msgstr "全部联系人使用字段"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Custom Field Title"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
-msgstr "自定义字段标题"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
@@ -673,11 +671,10 @@ msgid "Value"
 msgstr "值"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
-msgstr "博客订阅"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
@@ -716,11 +713,10 @@ msgid "Custom"
 msgstr "自定义"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email"
-msgstr "电子邮件"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
@@ -769,11 +765,10 @@ msgid "Allow remote content in received HTML messages"
 msgstr "允许收到的 HTML 信件的远程内容。"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Show messages received from this contact as:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
-msgstr "显示接收自此联系人的信件为："
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
@@ -791,11 +786,10 @@ msgid "HTML"
 msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Messaging"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Messaging"
-msgstr "发消息"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format
@@ -912,11 +906,10 @@ msgid "Sr."
 msgstr "老"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
-msgstr "姓名"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
 #, kde-format
@@ -930,11 +923,10 @@ msgid "Edit Contact Name"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Nickname"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
-msgstr "昵称"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, kde-format
@@ -942,11 +934,10 @@ msgid "Add a Nickname"
 msgstr "添加昵称"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Phone"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Phone"
-msgstr "电话"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
 #, kde-format
@@ -972,11 +963,10 @@ msgid "Remove Phone Number"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Web"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Web"
-msgstr "网站"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
 #, kde-format

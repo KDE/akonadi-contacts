@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-23 06:21+0300\n"
+"PO-Revision-Date: 2024-05-28 09:21+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -267,8 +267,7 @@ msgstr "Зміна параметрів контакту"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Add to:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "Додати до:"
@@ -607,8 +606,7 @@ msgid "Use field for all contacts"
 msgstr "Використовувати поле для всіх контактів"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Custom Field Title"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
 msgstr "Заголовок нетипового поля"
@@ -679,8 +677,7 @@ msgid "Value"
 msgstr "Значення"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
 msgstr "Подача блогу"
@@ -722,8 +719,7 @@ msgid "Custom"
 msgstr "Нетиповий"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email"
 msgstr "Ел. пошта"
@@ -775,8 +771,7 @@ msgid "Allow remote content in received HTML messages"
 msgstr "Дозволити використання сторонніх даних у отриманих повідомленнях HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Show messages received from this contact as:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr "Показувати повідомлення, отримані від цього контакту як:"
@@ -797,8 +792,7 @@ msgid "HTML"
 msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Messaging"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr "Обмін повідомленнями"
@@ -918,8 +912,7 @@ msgid "Sr."
 msgstr "ст."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Ім’я"
@@ -936,8 +929,7 @@ msgid "Edit Contact Name"
 msgstr "Змінити ім’я контакту"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Nickname"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "Псевдонім"
@@ -948,8 +940,7 @@ msgid "Add a Nickname"
 msgstr "Додати псевдонім"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Phone"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Phone"
 msgstr "Телефон"
@@ -978,8 +969,7 @@ msgid "Remove Phone Number"
 msgstr "Вилучити телефонний номер"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Web"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Web"
 msgstr "Інтернет"
