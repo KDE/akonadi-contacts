@@ -266,11 +266,10 @@ msgstr "Upravit kontakt"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Add to:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
-msgstr "Přidat k:"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:181
 #, kde-format
@@ -606,11 +605,10 @@ msgid "Use field for all contacts"
 msgstr "Použít pole pro všechny kontakty"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Custom Field Title"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
-msgstr "Přidat vlastní titulek pole"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
@@ -678,11 +676,10 @@ msgid "Value"
 msgstr "Hodnota"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
-msgstr "Kanál blogu"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
@@ -721,11 +718,10 @@ msgid "Custom"
 msgstr "Vlastní"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email"
-msgstr "E-mail"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
@@ -757,18 +753,16 @@ msgid "Add an Email Account"
 msgstr "Přidat e-mailový účet"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Add an Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an Email"
-msgstr "Přidat e-mail"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Remove Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Email"
-msgstr "Odstranit e-mail"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
@@ -776,11 +770,10 @@ msgid "Allow remote content in received HTML messages"
 msgstr "Povolit vzdálený obsah v přijatých zprávách HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Show messages received from this contact as:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
-msgstr "Zobrazit zprávy přijaté od tohoto kontaktu jako:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
@@ -798,11 +791,10 @@ msgid "HTML"
 msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Messaging"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Messaging"
-msgstr "Zprávy"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format
@@ -816,18 +808,16 @@ msgid "Select..."
 msgstr "Vybrat..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Add an IM"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an IM"
-msgstr "Přidat IM"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
-#, fuzzy, kde-format
-#| msgid "Remove IM"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove IM"
-msgstr "Odstranit IM"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
 #, kde-format
@@ -921,11 +911,10 @@ msgid "Sr."
 msgstr "St."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
-msgstr "Jméno"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
 #, kde-format
@@ -933,18 +922,16 @@ msgid "..."
 msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit Contact Name"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
-msgstr "Upravit jméno kontaktu"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Nickname"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
-msgstr "Přezdívka"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, kde-format
@@ -952,11 +939,10 @@ msgid "Add a Nickname"
 msgstr "Přidat přezdívku"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Phone"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
 #, kde-format
@@ -970,25 +956,22 @@ msgid "Add a Phone Number"
 msgstr "Přidat telefonní číslo"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add a Phone Number"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
-msgstr "Přidat telefonní číslo"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Remove Phone Number"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
-msgstr "Odstranit telefonní číslo"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Web"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Web"
-msgstr "Web"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
 #, kde-format
@@ -1001,18 +984,16 @@ msgid "Add a Web Site"
 msgstr "Přidat webovou stránku"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add a Web Site"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Web Site"
-msgstr "Přidat webovou stránku"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Remove Web Site"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Web Site"
-msgstr "Odstranit webovou stránku"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
@@ -1048,18 +1029,16 @@ msgid "This contact's image cannot be found."
 msgstr "Obrázek kontaktu nelze najít."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "The photo of the contact (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
-msgstr "Foto kontaktu (kliknutím změníte)"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "The logo of the company (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
-msgstr "Logo společnosti (kliknutím změníte)"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
@@ -1114,18 +1093,16 @@ msgid "Images (%1)"
 msgstr "Obrázky (%1)"
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Set as Preferred"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set as Preferred"
-msgstr "Nastavit jako preferovaný"
+msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
-#, fuzzy, kde-format
-#| msgid "Open Address Book"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Open Address Book"
-msgstr "Otevřít Knihu adres"
+msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
 #, kde-format
