@@ -22,7 +22,7 @@ using namespace Akonadi;
 CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     : QWidget(parent)
     , mFieldName(new KLineEdit(this))
-    , mAddField(new QPushButton(i18n("Add Field"), this))
+    , mAddField(new QPushButton(i18nc("@action:button", "Add Field"), this))
     , mUseAllContacts(new QCheckBox(i18n("Use field for all contacts")))
     , mFieldType(new QComboBox(this))
 {

@@ -111,7 +111,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     auto addButtonWidget = new QWidget(this);
     auto addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
     addButtonWidgetLayout->setContentsMargins({});
-    mAddAddress = new QPushButton(i18n("Add Address"), this);
+    mAddAddress = new QPushButton(i18nc("@action:button", "Add Address"), this);
     mAddAddress->setObjectName(QLatin1StringView("addbuttonaddress"));
     connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
     addButtonWidgetLayout->addWidget(mAddAddress);
@@ -123,17 +123,17 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     modifyButtonWidgetLayout->setContentsMargins({});
     mButtonStack->addWidget(modifyButtonWidget);
 
-    mRemoveAddress = new QPushButton(i18n("Remove Address"), this);
+    mRemoveAddress = new QPushButton(i18nc("@action:button", "Remove Address"), this);
     mRemoveAddress->setObjectName(QLatin1StringView("removebuttonaddress"));
     modifyButtonWidgetLayout->addWidget(mRemoveAddress);
     connect(mRemoveAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotRemoveAddress);
 
-    mModifyAddress = new QPushButton(i18n("Update Address"), this);
+    mModifyAddress = new QPushButton(i18nc("@action:button", "Update Address"), this);
     mModifyAddress->setObjectName(QLatin1StringView("modifybuttonaddress"));
     modifyButtonWidgetLayout->addWidget(mModifyAddress);
     connect(mModifyAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotUpdateAddress);
 
-    mCancelAddress = new QPushButton(i18n("Cancel"), this);
+    mCancelAddress = new QPushButton(i18nc("@action:button", "Cancel"), this);
     mCancelAddress->setObjectName(QLatin1StringView("cancelbuttonaddress"));
     connect(mCancelAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotCancelModifyAddress);
     modifyButtonWidgetLayout->addWidget(mCancelAddress);
