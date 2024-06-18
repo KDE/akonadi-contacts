@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2014-09-25 00:57-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -399,7 +399,6 @@ msgid "Show Contact"
 msgstr "連絡先を表示"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
 #| msgid "IM Address"
 msgid "Remove Address"
@@ -451,18 +450,28 @@ msgstr "この住所を優先する"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Address Book"
+msgctxt "@action:button"
 msgid "Add Address"
 msgstr "アドレス帳を追加"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, fuzzy, kde-format
+#| msgid "IM Address"
+msgctxt "@action:button"
+msgid "Remove Address"
+msgstr "IM アドレス"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
+msgctxt "@action:button"
 msgid "Update Address"
 msgstr "アドレス帳を更新"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
@@ -629,6 +638,7 @@ msgstr "カスタム"
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
 #, fuzzy, kde-format
 #| msgid "Add Email"
+msgctxt "@action:button"
 msgid "Add Field"
 msgstr "メールアドレスを追加"
 

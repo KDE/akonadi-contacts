@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -393,7 +393,6 @@ msgid "Show Contact"
 msgstr "नवीन संपर्क"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
@@ -441,13 +440,23 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
+msgctxt "@action:button"
 msgid "Add Address"
+msgstr "पत्ता"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, fuzzy, kde-format
+#| msgctxt "instant messaging address"
+#| msgid "Address"
+msgctxt "@action:button"
+msgid "Remove Address"
 msgstr "पत्ता"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
+msgctxt "@action:button"
 msgid "Update Address"
 msgstr "पत्ता"
 
@@ -455,6 +464,7 @@ msgstr "पत्ता"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "रद्द करा"
 
@@ -616,6 +626,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
 #, kde-format
+msgctxt "@action:button"
 msgid "Add Field"
 msgstr ""
 

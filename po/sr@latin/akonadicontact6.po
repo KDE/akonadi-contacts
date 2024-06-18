@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -428,7 +428,6 @@ msgstr "Prikaz kontakta"
 
 # >> @item:intext
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
 #| msgid "IM Address"
 msgid "Remove Address"
@@ -480,18 +479,29 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Address Book"
+msgctxt "@action:button"
 msgid "Add Address"
 msgstr "Dodavanje adresara"
+
+# >> @item:intext
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, fuzzy, kde-format
+#| msgid "IM Address"
+msgctxt "@action:button"
+msgid "Remove Address"
+msgstr "IM adresa"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
+msgctxt "@action:button"
 msgid "Update Address"
 msgstr "Ažuriraj %1 adresar"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
@@ -651,7 +661,9 @@ msgid "Custom Fields"
 msgstr "Posebna polja"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Field"
+msgctxt "@action:button"
 msgid "Add Field"
 msgstr "Dodaj polje"
 

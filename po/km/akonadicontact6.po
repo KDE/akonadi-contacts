@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -406,7 +406,6 @@ msgid "Show Contact"
 msgstr "បង្ហាញ​​ទំនាក់ទំនង​"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
@@ -459,13 +458,23 @@ msgstr "នេះ​ជា​អាសយដ្ឋាន​ដែល​ជា​
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add IM Address"
+msgctxt "@action:button"
 msgid "Add Address"
 msgstr "បន្ថែម​អាសយដ្ឋាន IM"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, fuzzy, kde-format
+#| msgctxt "instant messaging address"
+#| msgid "Address"
+msgctxt "@action:button"
+msgid "Remove Address"
+msgstr "អាសយដ្ឋាន​​"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
+msgctxt "@action:button"
 msgid "Update Address"
 msgstr "ធ្វើ​បច្ចុប្បន្ន​សៀវភៅ​អាសយដ្ឋាន​​ %1​​"
 
@@ -473,6 +482,7 @@ msgstr "ធ្វើ​បច្ចុប្បន្ន​សៀវភៅ​អ
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "បោះ​បង់​"
 
@@ -639,6 +649,7 @@ msgstr "វាល​ផ្ទាល់​ខ្លួន​"
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
 #, fuzzy, kde-format
 #| msgid "Add Email"
+msgctxt "@action:button"
 msgid "Add Field"
 msgstr "បន្ថែម​អ៊ីមែល​"
 

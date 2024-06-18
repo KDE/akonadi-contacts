@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -383,7 +383,6 @@ msgid "Show Contact"
 msgstr "显示联系人"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, kde-format
 msgid "Remove Address"
 msgstr "移除地址"
@@ -426,17 +425,30 @@ msgid "This is the preferred address"
 msgstr "这是首选地址"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Address"
+msgctxt "@action:button"
 msgid "Add Address"
 msgstr "添加地址"
 
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, fuzzy, kde-format
+#| msgid "Remove Address"
+msgctxt "@action:button"
+msgid "Remove Address"
+msgstr "移除地址"
+
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Update Address"
+msgctxt "@action:button"
 msgid "Update Address"
 msgstr "更新地址"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
@@ -590,7 +602,9 @@ msgid "Custom Fields"
 msgstr "自定义字段"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Field"
+msgctxt "@action:button"
 msgid "Add Field"
 msgstr "添加字段"
 
