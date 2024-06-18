@@ -211,7 +211,6 @@ target_link_libraries(KPim6AkonadiContactWidgets
     KPim6::AkonadiContactCore
     PRIVATE
     KF6::Completion
-    KF6::ConfigCore
     KF6::KIOWidgets
     KF6::I18n
     KF6::TextWidgets
