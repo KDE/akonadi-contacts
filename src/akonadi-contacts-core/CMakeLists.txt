@@ -101,7 +101,6 @@ target_link_libraries(KPim6AkonadiContactCore
     KPim6::GrantleeTheme
     PRIVATE
     KF6::ColorScheme
-    KF6::ConfigCore
     KF6::IconThemes
     KF6::I18n
     KPim6::Mime
