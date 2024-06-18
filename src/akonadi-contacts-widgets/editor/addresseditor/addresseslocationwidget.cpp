@@ -11,7 +11,6 @@
 #include "addressdelegate.h"
 #include "addresslocationwidget.h"
 #include "addressmodel.h"
-#include "contacteditor_debug.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>
