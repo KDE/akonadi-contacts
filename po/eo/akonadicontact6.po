@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:39+0000\n"
+"POT-Creation-Date: 2024-06-19 00:39+0000\n"
 "PO-Revision-Date: 2024-05-29 22:04+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -385,12 +385,12 @@ msgctxt "@title:window"
 msgid "Show Contact"
 msgstr "Montri Kontakton"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, kde-format
 msgid "Remove Address"
 msgstr "Forigi Adreso"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, kde-format
 msgid "Do you really want to delete this address?"

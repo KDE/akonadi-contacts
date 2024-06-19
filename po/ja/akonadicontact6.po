@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:39+0000\n"
+"POT-Creation-Date: 2024-06-19 00:39+0000\n"
 "PO-Revision-Date: 2014-09-25 00:57-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -398,13 +398,13 @@ msgctxt "@title:window"
 msgid "Show Contact"
 msgstr "連絡先を表示"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, fuzzy, kde-format
 #| msgid "IM Address"
 msgid "Remove Address"
 msgstr "IM アドレス"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"

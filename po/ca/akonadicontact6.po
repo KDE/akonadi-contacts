@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:39+0000\n"
-"PO-Revision-Date: 2024-05-28 13:02+0200\n"
+"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"PO-Revision-Date: 2024-06-18 16:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -390,12 +390,12 @@ msgctxt "@title:window"
 msgid "Show Contact"
 msgstr "Mostra el contacte"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, kde-format
 msgid "Remove Address"
 msgstr "Elimina l'adreça"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, kde-format
 msgid "Do you really want to delete this address?"
@@ -433,29 +433,25 @@ msgid "This is the preferred address"
 msgstr "Aquesta és l'adreça preferida"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, fuzzy, kde-format
-#| msgid "Add Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
 msgstr "Afegeix una adreça"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Remove Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
 msgstr "Elimina l'adreça"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Update Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
 msgstr "Actualitza l'adreça"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancel·la"
@@ -610,8 +606,7 @@ msgid "Custom Fields"
 msgstr "Camps personalitzats"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Add Field"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Field"
 msgstr "Afegeix un camp"

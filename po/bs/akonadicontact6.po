@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:39+0000\n"
+"POT-Creation-Date: 2024-06-19 00:39+0000\n"
 "PO-Revision-Date: 2014-01-31 20:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -406,14 +406,14 @@ msgctxt "@title:window"
 msgid "Show Contact"
 msgstr "Prikaži kontakt"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, fuzzy, kde-format
 #| msgctxt "instant messaging address"
 #| msgid "Address"
 msgid "Remove Address"
 msgstr "Adresa"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"

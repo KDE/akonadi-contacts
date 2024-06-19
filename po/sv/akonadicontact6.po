@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:39+0000\n"
-"PO-Revision-Date: 2024-06-16 17:47+0200\n"
+"PO-Revision-Date: 2024-06-18 17:01+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -427,28 +427,28 @@ msgid "This is the preferred address"
 msgstr "Det här är adressen som föredras"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Add Address"
 msgctxt "@action:button"
 msgid "Add Address"
 msgstr "Lägg till adress"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Remove Address"
 msgctxt "@action:button"
 msgid "Remove Address"
 msgstr "Ta bort adress"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Update Address"
 msgctxt "@action:button"
 msgid "Update Address"
 msgstr "Uppdatera adress"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
@@ -604,7 +604,7 @@ msgid "Custom Fields"
 msgstr "Egna fält"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Add Field"
 msgctxt "@action:button"
 msgid "Add Field"
@@ -2384,3 +2384,4 @@ msgstr "Välj adressbok där kontakten ska sparas:"
 
 #~ msgid "Enter member in format: name <email>"
 #~ msgstr "Skriv in medlem på formatet: namn <e-postadress>"
+
