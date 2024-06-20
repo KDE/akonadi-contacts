@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:39+0000\n"
-"PO-Revision-Date: 2024-05-29 22:04+0200\n"
+"PO-Revision-Date: 2024-06-19 22:33+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -388,7 +388,7 @@ msgstr "Montri Kontakton"
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, kde-format
 msgid "Remove Address"
-msgstr "Forigi Adreso"
+msgstr "Forigi Adreson"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
@@ -428,29 +428,25 @@ msgid "This is the preferred address"
 msgstr "Tiu estas la preferata adreso"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, fuzzy, kde-format
-#| msgid "Add Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
-msgstr "Aldoni Adreso"
+msgstr "Aldoni Adreson"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Remove Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
 msgstr "Forigi Adreso"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Update Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
 msgstr "Ĝisdatigi Adreson"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Rezigni"
@@ -605,8 +601,7 @@ msgid "Custom Fields"
 msgstr "Propraj Kampoj"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Add Field"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Field"
 msgstr "Aldoni Kampon"

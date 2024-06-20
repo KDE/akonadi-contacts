@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:39+0000\n"
-"PO-Revision-Date: 2024-05-28 09:18+0300\n"
+"PO-Revision-Date: 2024-06-18 08:12+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -433,29 +433,25 @@ msgid "This is the preferred address"
 msgstr "זו הכתובת המועדפת"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, fuzzy, kde-format
-#| msgid "Add Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
 msgstr "הוספת כתובת"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Remove Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
 msgstr "הסרת כתובת"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Update Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
 msgstr "עדכון כתובת"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ביטול"
@@ -610,8 +606,7 @@ msgid "Custom Fields"
 msgstr "שדות מותאמים אישית"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Add Field"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Field"
 msgstr "הוספת שדה"
