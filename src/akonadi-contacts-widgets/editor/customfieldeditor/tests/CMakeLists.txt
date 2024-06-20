@@ -8,7 +8,7 @@ set(customfieldeditor_SRCS
     ../customfieldslistdelegate.cpp
     ../../utils/utils.cpp
     main.cpp
-    )
+)
 
 add_executable(customfieldeditortest ${customfieldeditor_SRCS})
 
@@ -21,4 +21,4 @@ target_link_libraries(customfieldeditortest
     KF6::IconThemes
     KF6::WidgetsAddons
     KF6::ConfigCore
-    )
+)

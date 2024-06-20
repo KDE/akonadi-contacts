@@ -27,7 +27,7 @@ set(contactselecttypecomboboxtest_SRCS contactselecttypecomboboxtest.cpp contact
 add_executable(contactselecttypecomboboxtest ${contactselecttypecomboboxtest_SRCS})
 add_test(NAME contactselecttypecomboboxtest COMMAND contactselecttypecomboboxtest)
 ecm_mark_as_test(contactselecttypecomboboxtest)
-target_link_libraries(contactselecttypecomboboxtest Qt::Test  Qt::Widgets KPim6::AkonadiContactWidgets KF6::I18n )
+target_link_libraries(contactselecttypecomboboxtest Qt::Test  Qt::Widgets KPim6::AkonadiContactWidgets KF6::I18n)
 
 
 set(nicknamewidgettest_SRCS nicknamewidgettest.cpp nicknamewidgettest.h)
@@ -47,4 +47,4 @@ set(messageformattingwidgettest_SRCS messageformattingwidgettest.cpp messageform
 add_executable(messageformattingwidgettest ${messageformattingwidgettest_SRCS})
 add_test(NAME messageformattingwidgettest COMMAND messageformattingwidgettest)
 ecm_mark_as_test(messageformattingwidgettest)
-target_link_libraries(messageformattingwidgettest Qt::Test  Qt::Widgets KPim6::AkonadiContactWidgets KF6::I18n )
+target_link_libraries(messageformattingwidgettest Qt::Test  Qt::Widgets KPim6::AkonadiContactWidgets KF6::I18n)

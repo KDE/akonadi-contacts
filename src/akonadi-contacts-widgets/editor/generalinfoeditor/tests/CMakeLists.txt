@@ -16,7 +16,7 @@ set(generalinfoeditor_SRCS
     ../nameeditdialog.cpp
     ../../widgets/preferredlineeditwidget.cpp
     ../displaynameeditwidget.cpp
-    )
+)
 
 add_executable(generalinfoeditortest ${generalinfoeditor_SRCS})
 
@@ -30,5 +30,5 @@ target_link_libraries(generalinfoeditortest
     KF6::WidgetsAddons
     KF6::KIOCore
     KPim6::AkonadiWidgets
-    )
+)
 

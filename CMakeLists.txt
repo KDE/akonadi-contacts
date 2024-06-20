@@ -71,7 +71,7 @@ find_package(KF6TextUtils ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
 ############### Compilers flags ###############
 
-if (MSVC)
+if(MSVC)
     # This sets the __cplusplus macro to a real value based on the version of C++ specified by
     # the /std switch. Without it MSVC keeps reporting C++98, so feature detection doesn't work.
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Zc:__cplusplus")
@@ -90,7 +90,7 @@ endif()
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 
@@ -101,7 +101,7 @@ ecm_qt_install_logging_categories(
         EXPORT AKONADICONTACTS
         FILE akonadi-contacts.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-        )
+)
 
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)

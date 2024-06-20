@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact6-serializer\")
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
@@ -16,7 +16,7 @@ target_sources(akonadi_serializer_addressee PRIVATE
 ecm_qt_declare_logging_category(akonadi_serializer_addressee HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CONTACT_LOG CATEGORY_NAME org.kde.pim.contact_serializer
 	DESCRIPTION "akonadi contact (serializer contact plugin)"
         EXPORT AKONADICONTACTS
-    )
+)
 
 
 target_link_libraries(akonadi_serializer_addressee
