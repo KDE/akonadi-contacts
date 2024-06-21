@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:39+0000\n"
-"PO-Revision-Date: 2024-06-16 19:11+0530\n"
+"PO-Revision-Date: 2024-06-20 21:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: akonadi-contacts-core/contactgroupmodel.cpp:241
 #, kde-format
 msgid "Contact does not exist any more"
-msgstr ""
+msgstr "இத்தொடர்பு இருப்பில் இல்லை"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:395
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "மின்னஞ்சல்"
 #, kde-format
 msgctxt "@title:column address books overview"
 msgid "Address Books"
-msgstr ""
+msgstr "முகவரிப்புத்தகங்கள்"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:222
 #, kde-format
@@ -102,14 +102,14 @@ msgstr ""
 #, kde-format
 msgctxt "Name and email address of a contact"
 msgid "%1 <%2>"
-msgstr ""
+msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
 #: akonadi-contacts-core/standardcontactformatter.cpp:176
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
-msgstr ""
+msgstr "முகவரிபுத்தகம்"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
 #: akonadi-contacts-core/standardcontactformatter.cpp:175
@@ -121,46 +121,46 @@ msgstr ""
 #: akonadi-contacts-core/standardcontactformatter.cpp:170
 #, kde-format
 msgid "Assistant's Name"
-msgstr ""
+msgstr "உதவியாளரின் பெயர்"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
 #: akonadi-contacts-core/standardcontactformatter.cpp:171
 #, kde-format
 msgid "Manager's Name"
-msgstr ""
+msgstr "மேலாளரின் பெயர்"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
 #: akonadi-contacts-core/standardcontactformatter.cpp:173
 #, kde-format
 msgid "Office"
-msgstr ""
+msgstr "அலுவலகம்"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
 #: akonadi-contacts-core/standardcontactformatter.cpp:169
 #, kde-format
 msgid "Profession"
-msgstr ""
+msgstr "பணி"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
 #: akonadi-contacts-core/standardcontactformatter.cpp:172
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
-msgstr ""
+msgstr "துணைவர்"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:182
 #: akonadi-contacts-core/standardcontactformatter.cpp:233
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
-msgstr ""
+msgstr "ஆம்"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
 #: akonadi-contacts-core/standardcontactformatter.cpp:235
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
-msgstr ""
+msgstr "இல்லை"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:95
 #, kde-format
@@ -173,39 +173,39 @@ msgstr[1] ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
-msgstr ""
+msgstr "SMS அனுப்பு"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:115
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
-msgstr ""
+msgstr "மின்னஞ்சல்"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:130
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "முகப்புப்பக்கம்"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:136
 #, kde-format
 msgid "Blog Feed"
-msgstr ""
+msgstr "வலைப்பதிவு தொகுப்பு"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:154
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
-msgstr ""
+msgstr "முகவரியை நிலப்படத்தில் காட்டு"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:161
 #, kde-format
 msgid "Notes"
-msgstr ""
+msgstr "குறிப்புகள்"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:168
 #, kde-format
 msgid "Department"
-msgstr ""
+msgstr "பிரிவு"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:174
 #, kde-format
@@ -218,20 +218,22 @@ msgid ""
 "The contact has been changed by someone else.\n"
 "What should be done?"
 msgstr ""
+"இந்த தொடர்பு இன்னொருவரால் மாற்றப்பட்டுள்ளது.\n"
+"என்ன செய்ய வேண்டும்?"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr ""
+msgstr "மாற்றங்களை ஏற்றுகொள்"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr ""
+msgstr "மாற்றங்களை பொருட்படுத்தாமல் மேலெழுது"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:278
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:291
@@ -239,37 +241,37 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr ""
+msgstr "முகவரிப்புத்தகத்தை தேர்ந்தெடுத்தல்"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
-msgstr ""
+msgstr "புதிய தொடர்பை சேமிக்க வேண்டிய முகவரிப்புத்தக அடைவை தேர்ந்தெடுக்கவும்:"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
-msgstr ""
+msgstr "புதிய தொடர்பு"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
-msgstr ""
+msgstr "தொடர்பை திருத்து"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
-msgstr ""
+msgstr "இதில் சேர்:"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
-msgstr ""
+msgstr "இருப்பிடம் சேமிக்கப்படவில்லை. உறுதியாக திருத்தியை மூட வேண்டுமா?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
 #: akonadi-contacts-widgets/contacteditordialog.cpp:200
@@ -277,40 +279,40 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
-msgstr ""
+msgstr "உறுதிப்படுத்துக"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
-msgstr ""
+msgstr "திருத்தியை மூடு"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
-msgstr ""
+msgstr "மூட வேண்டாம்"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
-msgstr ""
+msgstr "உறுதியாக ரத்து செய்ய வேண்டுமா?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:201
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "திருத்துவதை ரத்து செய்"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:202
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr ""
+msgstr "ரத்து செய்யாதே"
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:135
 #, kde-format
@@ -318,6 +320,8 @@ msgid ""
 "The contact group has been changed by someone else.\n"
 "What should be done?"
 msgstr ""
+"இந்த தொடர்புக்குழு இன்னொருவரால் மாற்றப்பட்டுள்ளது.\n"
+"என்ன செய்ய வேண்டும்?"
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:176
 #, kde-format
