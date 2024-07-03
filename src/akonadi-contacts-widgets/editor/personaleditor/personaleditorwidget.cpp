@@ -41,7 +41,7 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The partner's name of a contact", "Partner's name:"));
     mainLayout->addWidget(label, 0, 2);
 
-    mPartnerWidget->setPlaceholderText(i18n("Add name"));
+    mPartnerWidget->setPlaceholderText(i18nc("@info:placeholder", "Add name"));
     mPartnerWidget->setTrapReturnKey(true);
     label->setBuddy(mPartnerWidget);
     mainLayout->addWidget(mPartnerWidget, 1, 2);

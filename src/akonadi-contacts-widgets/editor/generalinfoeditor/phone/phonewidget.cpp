@@ -29,7 +29,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     layout->setContentsMargins({});
 
     mPhoneNumberEdit->setTrapReturnKey(true);
-    mPhoneNumberEdit->setPlaceholderText(i18n("Add a Phone Number"));
+    mPhoneNumberEdit->setPlaceholderText(i18nc("@info:placeholder", "Add a Phone Number"));
     mPhoneNumberEdit->setObjectName(QLatin1StringView("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
     connect(mPhoneNumberEdit, &PreferredLineEditWidget::preferredChanged, this, &PhoneWidget::slotPreferredChanged);

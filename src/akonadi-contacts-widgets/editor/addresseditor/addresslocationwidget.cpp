@@ -43,7 +43,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     gridLayout->addWidget(label, 1, 0);
 
     mStreetEdit = new KLineEdit(this);
-    mStreetEdit->setPlaceholderText(i18n("Add Street"));
+    mStreetEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Street"));
     mStreetEdit->setObjectName(QLatin1StringView("streetlineedit"));
     mStreetEdit->setTrapReturnKey(true);
     connect(mStreetEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
@@ -54,7 +54,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     gridLayout->addWidget(label, 1, 1);
 
     mPOBoxEdit = new KLineEdit(this);
-    mPOBoxEdit->setPlaceholderText(i18n("Add Post Office Box"));
+    mPOBoxEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Post Office Box"));
     mPOBoxEdit->setObjectName(QLatin1StringView("postofficeboxlineedit"));
     mPOBoxEdit->setTrapReturnKey(true);
     connect(mPOBoxEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
@@ -64,7 +64,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QLatin1StringView("postalcodelabel"));
     gridLayout->addWidget(label, 3, 0);
     mPostalCodeEdit = new KLineEdit(this);
-    mPostalCodeEdit->setPlaceholderText(i18n("Add Postal Code"));
+    mPostalCodeEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Postal Code"));
     mPostalCodeEdit->setObjectName(QLatin1StringView("postalcodelineedit"));
     mPostalCodeEdit->setTrapReturnKey(true);
     connect(mPostalCodeEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
@@ -74,7 +74,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QLatin1StringView("localitylabel"));
     gridLayout->addWidget(label, 3, 1);
     mLocalityEdit = new KLineEdit(this);
-    mLocalityEdit->setPlaceholderText(i18n("Add Locality"));
+    mLocalityEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Locality"));
     mLocalityEdit->setObjectName(QLatin1StringView("localitylineedit"));
     mLocalityEdit->setTrapReturnKey(true);
     connect(mLocalityEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
@@ -84,7 +84,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QLatin1StringView("regionlabel"));
     gridLayout->addWidget(label, 5, 0);
     mRegionEdit = new KLineEdit(this);
-    mRegionEdit->setPlaceholderText(i18n("Add Region"));
+    mRegionEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Region"));
     mRegionEdit->setObjectName(QLatin1StringView("regionlineedit"));
     mRegionEdit->setTrapReturnKey(true);
     connect(mRegionEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);

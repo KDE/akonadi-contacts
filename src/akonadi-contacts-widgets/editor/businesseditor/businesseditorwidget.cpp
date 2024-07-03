@@ -48,14 +48,14 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     generalLayout->addWidget(label, 0, 0);
 
     mOrganizationWidget->setTrapReturnKey(true);
-    mOrganizationWidget->setPlaceholderText(i18n("Add organization's name"));
+    mOrganizationWidget->setPlaceholderText(i18nc("@info:placeholder", "Add organization's name"));
     label->setBuddy(mOrganizationWidget);
     generalLayout->addWidget(mOrganizationWidget, 1, 0);
 
     label = new QLabel(i18nc("@label The profession of a contact", "Profession:"), this);
     generalLayout->addWidget(label, 0, 1);
 
-    mProfessionWidget->setPlaceholderText(i18n("Add profession"));
+    mProfessionWidget->setPlaceholderText(i18nc("@info:placeholder", "Add profession"));
     mProfessionWidget->setTrapReturnKey(true);
     label->setBuddy(mProfessionWidget);
     generalLayout->addWidget(mProfessionWidget, 1, 1);
@@ -63,7 +63,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The title of a contact", "Title:"), this);
     generalLayout->addWidget(label, 3, 0);
 
-    mTitleWidget->setPlaceholderText(i18n("Add the title"));
+    mTitleWidget->setPlaceholderText(i18nc("@info:placeholder", "Add the title"));
     mTitleWidget->setTrapReturnKey(true);
     label->setBuddy(mTitleWidget);
     generalLayout->addWidget(mTitleWidget, 4, 0);
@@ -71,7 +71,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The department of a contact", "Department:"), this);
     generalLayout->addWidget(label, 3, 1);
 
-    mDepartmentWidget->setPlaceholderText(i18n("Add the department"));
+    mDepartmentWidget->setPlaceholderText(i18nc("@info:placeholder", "Add the department"));
     mDepartmentWidget->setTrapReturnKey(true);
     label->setBuddy(mDepartmentWidget);
     generalLayout->addWidget(mDepartmentWidget, 4, 1);
@@ -80,7 +80,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     generalLayout->addWidget(label, 5, 0);
 
     mOfficeWidget->setTrapReturnKey(true);
-    mOfficeWidget->setPlaceholderText(i18n("Add the office"));
+    mOfficeWidget->setPlaceholderText(i18nc("@info:placeholder", "Add the office"));
 
     label->setBuddy(mOfficeWidget);
     generalLayout->addWidget(mOfficeWidget, 6, 0);
@@ -88,7 +88,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The manager's name of a contact", "Manager's name:"), this);
     generalLayout->addWidget(label, 5, 1);
 
-    mManagerWidget->setPlaceholderText(i18n("Add manager's name"));
+    mManagerWidget->setPlaceholderText(i18nc("@info:placeholder", "Add manager's name"));
     mManagerWidget->setTrapReturnKey(true);
     label->setBuddy(mManagerWidget);
     generalLayout->addWidget(mManagerWidget, 6, 1);
@@ -96,7 +96,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label = new QLabel(i18nc("@label The assistant's name of a contact", "Assistant's name:"), this);
     generalLayout->addWidget(label, 7, 0);
 
-    mAssistantWidget->setPlaceholderText(i18n("Add assistant's name"));
+    mAssistantWidget->setPlaceholderText(i18nc("@info:placeholder", "Add assistant's name"));
     mAssistantWidget->setTrapReturnKey(true);
     label->setBuddy(mAssistantWidget);
     generalLayout->addWidget(mAssistantWidget, 8, 0);

@@ -27,7 +27,7 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     topLayout->addWidget(nickNameLabel);
 
     mNickName->setTrapReturnKey(true);
-    mNickName->setPlaceholderText(i18n("Add a Nickname"));
+    mNickName->setPlaceholderText(i18nc("@info:placeholder", "Add a Nickname"));
     mNickName->setObjectName(QLatin1StringView("nickname"));
     topLayout->addWidget(mNickName);
 }

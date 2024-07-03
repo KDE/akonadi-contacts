@@ -28,7 +28,7 @@ WebWidget::WebWidget(QWidget *parent)
     layout->setContentsMargins({});
 
     mWebSiteEdit->setTrapReturnKey(true);
-    mWebSiteEdit->setPlaceholderText(i18n("Add a Web Site"));
+    mWebSiteEdit->setPlaceholderText(i18nc("@info:placeholder", "Add a Web Site"));
     mWebSiteEdit->setObjectName(QLatin1StringView("website"));
     layout->addWidget(mWebSiteEdit);
     connect(mWebSiteEdit, &PreferredLineEditWidget::preferredChanged, this, &WebWidget::slotPreferredChanged);

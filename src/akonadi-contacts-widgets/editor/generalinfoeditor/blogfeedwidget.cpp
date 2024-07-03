@@ -26,7 +26,7 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     topLayout->addWidget(blogFeedLabel);
 
     mBlogFeed->setTrapReturnKey(true);
-    mBlogFeed->setPlaceholderText(i18n("Add a Blog Feed"));
+    mBlogFeed->setPlaceholderText(i18nc("@info:placeholder", "Add a Blog Feed"));
     mBlogFeed->setObjectName(QLatin1StringView("blogfeed"));
     topLayout->addWidget(mBlogFeed);
 }

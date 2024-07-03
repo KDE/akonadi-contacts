@@ -20,7 +20,7 @@
 DateView::DateView(QWidget *parent)
     : QLineEdit(parent)
 {
-    setPlaceholderText(i18n("Click to add date"));
+    setPlaceholderText(i18nc("@info:placeholder", "Click to add date"));
     setReadOnly(true);
 }
 

@@ -127,7 +127,7 @@ void EmailAddressSelectionWidgetPrivate::init()
 
     auto label = new QLabel(i18nc("@label Search in a list of contacts", "Search:"));
     mSearchLine = new SearchLineEdit(mView);
-    mSearchLine->setPlaceholderText(i18n("Search Contact..."));
+    mSearchLine->setPlaceholderText(i18nc("@info:placeholder", "Search Contact..."));
     label->setBuddy(mSearchLine);
     searchLayout->addWidget(label);
     searchLayout->addWidget(mSearchLine);

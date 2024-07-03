@@ -31,7 +31,7 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->setContentsMargins({});
 
     mMessagingEdit->setTrapReturnKey(true);
-    mMessagingEdit->setPlaceholderText(i18n("Add an identifier"));
+    mMessagingEdit->setPlaceholderText(i18nc("@info:placeholder", "Add an identifier"));
     mMessagingEdit->setObjectName(QLatin1StringView("messaginglineedit"));
     connect(mMessagingEdit, &PreferredLineEditWidget::preferredChanged, this, &MessagingWidget::slotPreferredChanged);
     layout->addWidget(mMessagingEdit);

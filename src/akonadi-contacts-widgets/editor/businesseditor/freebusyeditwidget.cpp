@@ -25,7 +25,7 @@ FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     layout->setContentsMargins({});
 
     mURL->lineEdit()->setTrapReturnKey(true);
-    mURL->lineEdit()->setPlaceholderText(i18n("Add FreeBusy"));
+    mURL->lineEdit()->setPlaceholderText(i18nc("@info:placeholder", "Add FreeBusy"));
     layout->addWidget(mURL);
     setFocusProxy(mURL);
     setFocusPolicy(Qt::StrongFocus);

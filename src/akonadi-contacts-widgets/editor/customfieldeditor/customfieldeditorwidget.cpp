@@ -34,7 +34,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
 
     auto fieldLayout = new QHBoxLayout;
     topLayout->addLayout(fieldLayout);
-    mFieldName->setPlaceholderText(i18n("Add name"));
+    mFieldName->setPlaceholderText(i18nc("@info:placeholder", "Add name"));
     mFieldName->setObjectName(QLatin1StringView("fieldname"));
     mFieldName->setTrapReturnKey(true);
     fieldLayout->addWidget(mFieldName);
