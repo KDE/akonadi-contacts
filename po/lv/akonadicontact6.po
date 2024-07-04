@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-05-28 09:53+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -398,27 +398,37 @@ msgid "Do you really want to delete this address?"
 msgstr "Vai tiešām vēlaties dzēst šo adresi?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Street"
+msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "Pievienot ielu"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Post Office Box"
+msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr "Pievienot pasta kastīti"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Postal Code"
+msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr "Pievienot pasta indeksu"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Locality"
+msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr "Pievienot apvidu (pagastu)"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Region"
+msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "Pievienot novadu"
 
@@ -488,7 +498,9 @@ msgid "Organization:"
 msgstr "Organizācija:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add organization's name"
+msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Pievienot organizācijas nosaukumu"
 
@@ -499,7 +511,9 @@ msgid "Profession:"
 msgstr "Profesija:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add profession"
+msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Ierakstiet profesiju"
 
@@ -510,7 +524,9 @@ msgid "Title:"
 msgstr "Amats:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add the title"
+msgctxt "@info:placeholder"
 msgid "Add the title"
 msgstr "Ierakstiet amatu"
 
@@ -521,7 +537,9 @@ msgid "Department:"
 msgstr "Nodaļa:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add the department"
+msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "Ierakstiet nodaļu"
 
@@ -532,7 +550,9 @@ msgid "Office:"
 msgstr "Birojs:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add the office"
+msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr "Ierakstiet biroju"
 
@@ -543,7 +563,9 @@ msgid "Manager's name:"
 msgstr "Vadītāja vārds:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add manager's name"
+msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "Ierakstiet vadītāja vārdu"
 
@@ -554,7 +576,9 @@ msgid "Assistant's name:"
 msgstr "Asistenta vārds:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add assistant's name"
+msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "Pievienojiet asistenta vārdu"
 
@@ -565,7 +589,9 @@ msgid "Free/Busy:"
 msgstr "Aizņemtība:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add FreeBusy"
+msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "Ierakstiet aizņemtības statusu"
 
@@ -625,7 +651,9 @@ msgstr "Pielāgots lauka nosaukums"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add name"
+msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "Pievienojiet vārdu"
 
@@ -695,7 +723,9 @@ msgid "Blog Feed"
 msgstr "Emuāra plūsma"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Blog Feed"
+msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "Pievienojiet emuāra plūsmu"
 
@@ -761,7 +791,9 @@ msgid "Other"
 msgstr "Cits"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an Email Account"
+msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Pievienojiet e-pasta kontu"
 
@@ -810,7 +842,9 @@ msgid "Messaging"
 msgstr "Ziņapmaiņa"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an identifier"
+msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "Pievienot identifikatoru"
 
@@ -947,7 +981,9 @@ msgid "Nickname"
 msgstr "Iesauka"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Nickname"
+msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "Pievienot iesauku"
 
@@ -964,7 +1000,9 @@ msgid "Edit Phone Number"
 msgstr "Rediģēt tālruņa numuru"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Phone Number"
+msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Pievienot tālruņa numuru"
 
@@ -992,7 +1030,9 @@ msgid "Profile"
 msgstr "Profils"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Web Site"
+msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr "Pievienot tīmekļa vietni"
 
@@ -1009,7 +1049,9 @@ msgid "Remove Web Site"
 msgstr "Noņemt tīmekļa vietni"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to add date"
+msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr "Spiest, lai pievienotu datumu"
 
@@ -1124,7 +1166,9 @@ msgid "Search:"
 msgstr "Meklēt:"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search Contact..."
+msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "Jauns kontakts..."
 

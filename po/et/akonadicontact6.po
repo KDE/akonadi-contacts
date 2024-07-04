@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2020-09-28 01:54+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -408,27 +408,37 @@ msgid "Do you really want to delete this address?"
 msgstr "Kas tõesti kustutada see aadress?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Street"
+msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "Lisa tänav"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Post Office Box"
+msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr "Lisa postkast"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Postal Code"
+msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr "Lisa postiindeks"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Locality"
+msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr "Lisa asukoht"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Region"
+msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "Lisa maakond/piirkond"
 
@@ -498,7 +508,9 @@ msgid "Organization:"
 msgstr "Organisatsioon:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add organization's name"
+msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Lisa organisatsiooni nimi"
 
@@ -509,7 +521,9 @@ msgid "Profession:"
 msgstr "Elukutse:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add profession"
+msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Lisa elukutse"
 
@@ -520,7 +534,9 @@ msgid "Title:"
 msgstr "Tiitel:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add the title"
+msgctxt "@info:placeholder"
 msgid "Add the title"
 msgstr "Lisa tiitel"
 
@@ -531,7 +547,9 @@ msgid "Department:"
 msgstr "Osakond:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add the department"
+msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "Lisa osakond"
 
@@ -542,7 +560,9 @@ msgid "Office:"
 msgstr "Ettevõte:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add the office"
+msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr "Lisa ettevõte"
 
@@ -553,7 +573,9 @@ msgid "Manager's name:"
 msgstr "Juhi nimi:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add manager's name"
+msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "Lisa juhi nimi"
 
@@ -564,7 +586,9 @@ msgid "Assistant's name:"
 msgstr "Assistendi nimi:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add assistant's name"
+msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "Lisa assistendi nimi"
 
@@ -575,7 +599,9 @@ msgid "Free/Busy:"
 msgstr "Vaba/hõivatud:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add FreeBusy"
+msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "Lisa vaba/hõivatud"
 
@@ -636,7 +662,9 @@ msgstr "Kohandatud välja nimi"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add name"
+msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "Lisa nimi"
 
@@ -708,7 +736,9 @@ msgid "Blog Feed"
 msgstr "Veebipäeviku voog"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Blog Feed"
+msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "Blogi lisamine"
 
@@ -775,7 +805,9 @@ msgid "Other"
 msgstr "Muu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an Email Account"
+msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Lisa e-posti konto"
 
@@ -828,7 +860,9 @@ msgid "Messaging"
 msgstr "Kiirsuhtlus"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add an identifier"
+msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "Lisa identifikaator"
 
@@ -970,7 +1004,9 @@ msgid "Nickname"
 msgstr "Hüüdnimi"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Nickname"
+msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "Lisa hüüdnimi"
 
@@ -988,7 +1024,9 @@ msgid "Edit Phone Number"
 msgstr "Telefoninumbri muutmine"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Phone Number"
+msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Lisa telefoninumber"
 
@@ -1019,7 +1057,9 @@ msgid "Profile"
 msgstr "Profiil"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add a Web Site"
+msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr "Lisa veebileht"
 
@@ -1038,7 +1078,9 @@ msgid "Remove Web Site"
 msgstr "Eemalda veebileht"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to add date"
+msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr "Klõpsa kuupäeva lisamiseks"
 
@@ -1159,6 +1201,7 @@ msgstr "Otsing:"
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
 #, fuzzy, kde-format
 #| msgid "New &Contact..."
+msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "Uus &kontakt..."
 

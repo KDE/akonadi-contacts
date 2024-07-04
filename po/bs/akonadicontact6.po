@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2014-01-31 20:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -425,27 +425,32 @@ msgstr "Želite li zaista da obrišete %1 adresar?"
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "Slobodno/zauzeto:"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, fuzzy, kde-format
 #| msgid "Profession"
+msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "Zanimanje"
 
@@ -523,6 +528,7 @@ msgstr "Organizacija:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Dodatna imena:"
 
@@ -535,6 +541,7 @@ msgstr "Zanimanje:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Profession"
+msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Zanimanje"
 
@@ -545,9 +552,11 @@ msgid "Title:"
 msgstr "Pozicija:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Department"
+msgctxt "@info:placeholder"
 msgid "Add the title"
-msgstr ""
+msgstr "Odjeljenje"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
 #, kde-format
@@ -558,6 +567,7 @@ msgstr "Odjel:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
 #, fuzzy, kde-format
 #| msgid "Department"
+msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "Odjeljenje"
 
@@ -569,6 +579,7 @@ msgstr "Ured:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr ""
 
@@ -582,6 +593,7 @@ msgstr "Ime menadžera:"
 #, fuzzy, kde-format
 #| msgctxt "@label The manager's name of a contact"
 #| msgid "Manager's name:"
+msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "Ime menadžera:"
 
@@ -595,6 +607,7 @@ msgstr "Ime pomoćnika:"
 #, fuzzy, kde-format
 #| msgctxt "@label The assistant's name of a contact"
 #| msgid "Assistant's name:"
+msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "Ime pomoćnika:"
 
@@ -608,6 +621,7 @@ msgstr "Slobodno/zauzeto:"
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "Slobodno/zauzeto:"
 
@@ -671,6 +685,7 @@ msgstr "Posebna polja"
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "Dodatna imena:"
 
@@ -744,6 +759,7 @@ msgstr "Dovod blogova"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, fuzzy, kde-format
 #| msgid "Blog Feed"
+msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "Dovod blogova"
 
@@ -821,6 +837,7 @@ msgstr "Ostalo..."
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Add Email"
+msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Dodaj e-mail"
 
@@ -876,6 +893,7 @@ msgstr "Glasništvo:"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "Dodatna imena:"
 
@@ -1024,6 +1042,7 @@ msgstr "Nadimak:"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "Dodatna imena:"
 
@@ -1045,6 +1064,7 @@ msgstr "Izmijeni broj telefona"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "Edit Phone Number"
+msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Izmijeni broj telefona"
 
@@ -1077,6 +1097,7 @@ msgstr "Prof."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr ""
 
@@ -1094,6 +1115,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr ""
 
@@ -1218,6 +1240,7 @@ msgstr "Pretraga:"
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
 #, fuzzy, kde-format
 #| msgid "New &Contact..."
+msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "Novi &kontakt..."
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2014-09-25 00:57-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -416,27 +416,32 @@ msgstr "このアドレス帳を本当に削除しますか？"
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "フリー/ビジー:"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, fuzzy, kde-format
 #| msgid "Profession"
+msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "職業"
 
@@ -511,6 +516,7 @@ msgstr "組織:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "付加的な名前:"
 
@@ -523,6 +529,7 @@ msgstr "職業:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Profession"
+msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "職業"
 
@@ -533,9 +540,11 @@ msgid "Title:"
 msgstr "肩書:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Department"
+msgctxt "@info:placeholder"
 msgid "Add the title"
-msgstr ""
+msgstr "部署"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
 #, kde-format
@@ -546,6 +555,7 @@ msgstr "部署:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
 #, fuzzy, kde-format
 #| msgid "Department"
+msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "部署"
 
@@ -557,6 +567,7 @@ msgstr "オフィス:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr ""
 
@@ -570,6 +581,7 @@ msgstr "マネージャの名前:"
 #, fuzzy, kde-format
 #| msgctxt "@label The manager's name of a contact"
 #| msgid "Manager's name:"
+msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "マネージャの名前:"
 
@@ -583,6 +595,7 @@ msgstr "アシスタントの名前:"
 #, fuzzy, kde-format
 #| msgctxt "@label The assistant's name of a contact"
 #| msgid "Assistant's name:"
+msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "アシスタントの名前:"
 
@@ -596,6 +609,7 @@ msgstr "フリー/ビジー:"
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "フリー/ビジー:"
 
@@ -659,6 +673,7 @@ msgstr "カスタム"
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "付加的な名前:"
 
@@ -732,6 +747,7 @@ msgstr "ブログフィード"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, fuzzy, kde-format
 #| msgid "Blog Feed"
+msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "ブログフィード"
 
@@ -807,6 +823,7 @@ msgstr "その他..."
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Add Email"
+msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "メールアドレスを追加"
 
@@ -861,6 +878,7 @@ msgstr "メッセージング:"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "付加的な名前:"
 
@@ -1006,6 +1024,7 @@ msgstr "ニックネーム:"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "付加的な名前:"
 
@@ -1027,6 +1046,7 @@ msgstr "電話番号を編集"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "Edit Phone Number"
+msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "電話番号を編集"
 
@@ -1059,6 +1079,7 @@ msgstr "Prof."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr ""
 
@@ -1076,6 +1097,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr ""
 
@@ -1198,6 +1220,7 @@ msgstr "検索:"
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
 #, fuzzy, kde-format
 #| msgid "New &Contact..."
+msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "新しい連絡先..."
 

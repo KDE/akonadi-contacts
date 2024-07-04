@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -414,27 +414,32 @@ msgstr "بۇ ئادرېسنى ئۆچۈرەمسىز؟"
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "بىكار/ئالدىراش:"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, fuzzy, kde-format
 #| msgid "Profession"
+msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "كەسىپ"
 
@@ -513,6 +518,7 @@ msgstr "تەشكىل:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "قوشۇمچە ئاتلار:"
 
@@ -525,6 +531,7 @@ msgstr "كەسپى:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Profession"
+msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "كەسىپ"
 
@@ -535,9 +542,11 @@ msgid "Title:"
 msgstr "ماۋزۇ:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Department"
+msgctxt "@info:placeholder"
 msgid "Add the title"
-msgstr ""
+msgstr "تارماق"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
 #, kde-format
@@ -548,6 +557,7 @@ msgstr "بۆلۈم:"
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
 #, fuzzy, kde-format
 #| msgid "Department"
+msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "تارماق"
 
@@ -559,6 +569,7 @@ msgstr "ئىشخانا:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr ""
 
@@ -572,6 +583,7 @@ msgstr "باشقۇرغۇچىنىڭ ئاتى:"
 #, fuzzy, kde-format
 #| msgctxt "@label The manager's name of a contact"
 #| msgid "Manager's name:"
+msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "باشقۇرغۇچىنىڭ ئاتى:"
 
@@ -585,6 +597,7 @@ msgstr "ياردەمچىنىڭ ئاتى:"
 #, fuzzy, kde-format
 #| msgctxt "@label The assistant's name of a contact"
 #| msgid "Assistant's name:"
+msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "ياردەمچىنىڭ ئاتى:"
 
@@ -598,6 +611,7 @@ msgstr "بىكار/ئالدىراش:"
 #, fuzzy, kde-format
 #| msgctxt "@label The free/busy information of a contact"
 #| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "بىكار/ئالدىراش:"
 
@@ -660,6 +674,7 @@ msgstr "ئۆزى بەلگىلەش بۆلىكى"
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "قوشۇمچە ئاتلار:"
 
@@ -731,6 +746,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr ""
 
@@ -806,9 +822,11 @@ msgid "Other"
 msgstr "باشقا…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Email"
+msgctxt "@info:placeholder"
 msgid "Add an Email Account"
-msgstr ""
+msgstr "ئېلخەت تەھرىرلەش"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, fuzzy, kde-format
@@ -860,6 +878,7 @@ msgstr "ئۇچۇرلار"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "قوشۇمچە ئاتلار:"
 
@@ -1008,6 +1027,7 @@ msgstr "تەخەللۇس:"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Additional names:"
+msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "قوشۇمچە ئاتلار:"
 
@@ -1029,6 +1049,7 @@ msgstr "تېلېاون نومۇرىنى تەھرىرلەش"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "Edit Phone Number"
+msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "تېلېاون نومۇرىنى تەھرىرلەش"
 
@@ -1061,6 +1082,7 @@ msgstr "Prof."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr ""
 
@@ -1078,6 +1100,7 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr ""
 
@@ -1203,6 +1226,7 @@ msgstr "ئىزدە:"
 #, fuzzy, kde-format
 #| msgctxt "@label Search in a list of contacts"
 #| msgid "Search:"
+msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "ئىزدە:"
 
