@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 05:50+0200\n"
+"PO-Revision-Date: 2024-07-04 04:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -396,36 +396,31 @@ msgid "Do you really want to delete this address?"
 msgstr "მართლა გნებავთ ამ მისამართის წაშლა?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Street"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "ქუჩის დამატება"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
-#, fuzzy, kde-format
-#| msgid "Add Post Office Box"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr "საფოსტო ყუთის დამატება"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Add Postal Code"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr "საფოსტო კოდის დამატება"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
-#, fuzzy, kde-format
-#| msgid "Add Locality"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr "მდებარეობის დამატება"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
-#, fuzzy, kde-format
-#| msgid "Add Region"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "რეგიონის დამატება"
@@ -492,8 +487,7 @@ msgid "Organization:"
 msgstr "ორგანიზაცია:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
-#, fuzzy, kde-format
-#| msgid "Add organization's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "ორგანიზაციის სახელის დამატება"
@@ -505,8 +499,7 @@ msgid "Profession:"
 msgstr "პროფესია:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Add profession"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "პროფესიის დამატება"
@@ -518,8 +511,7 @@ msgid "Title:"
 msgstr "სათაური:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Add the title"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
 msgstr "სათაურის დამატება"
@@ -531,8 +523,7 @@ msgid "Department:"
 msgstr "დეპარტამენტი:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Add the department"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "დეპარტამენტის დამატება"
@@ -544,8 +535,7 @@ msgid "Office:"
 msgstr "ოფისი:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
-#, fuzzy, kde-format
-#| msgid "Add the office"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr "ოფისის დამატება"
@@ -557,8 +547,7 @@ msgid "Manager's name:"
 msgstr "მმართველის სახელი:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Add manager's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "მმართველის სახელის დამატება"
@@ -570,8 +559,7 @@ msgid "Assistant's name:"
 msgstr "დამხმარის სახელი:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, fuzzy, kde-format
-#| msgid "Add assistant's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "დამხმარის სახელის დამატება"
@@ -583,8 +571,7 @@ msgid "Free/Busy:"
 msgstr "თავისუფალი/დაკავებული:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Add FreeBusy"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "თავისუფალი/დაკავებულის დამატება"
@@ -644,8 +631,7 @@ msgstr "მომხმარებლის ველის სათაურ�
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "სახელის დამატება"
@@ -716,8 +702,7 @@ msgid "Blog Feed"
 msgstr "ბლოგის ლენტა"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Add a Blog Feed"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "ბლოგის ლენტის დამატება"
@@ -784,11 +769,10 @@ msgid "Other"
 msgstr "სხვები"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add an Email Account"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
-msgstr "ელფოსტი ანგარიშის დამატება"
+msgstr "ელფოსტის ანგარიშის დამატება"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
@@ -835,8 +819,7 @@ msgid "Messaging"
 msgstr "შეტყობინებები"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Add an identifier"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "იდენტიფიკატორის დამატება"
@@ -974,8 +957,7 @@ msgid "Nickname"
 msgstr "მეტსახელი"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add a Nickname"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "მეტსახელის დამატება"
@@ -993,8 +975,7 @@ msgid "Edit Phone Number"
 msgstr "ტელეფონის ნომრის ჩასწორება"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Add a Phone Number"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "ტელეფონის ნომრის დამატება"
@@ -1023,8 +1004,7 @@ msgid "Profile"
 msgstr "პროფილი"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Add a Web Site"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr "ვებსაიტის დამატება"
@@ -1042,8 +1022,7 @@ msgid "Remove Web Site"
 msgstr "ვებსაიტის წაშლა"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Click to add date"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr "წკაპი თარიღის დასამატებლად"
@@ -1159,8 +1138,7 @@ msgid "Search:"
 msgstr "ძიება:"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
-#, fuzzy, kde-format
-#| msgid "Search Contact..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "კონტაქტის ძებნა..."

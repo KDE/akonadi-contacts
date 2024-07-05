@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 16:05+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2024-07-04 14:28+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -399,36 +399,31 @@ msgid "Do you really want to delete this address?"
 msgstr "Opravdu si přejete smazat tuto adresu?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Street"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "Přidat ulici"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
-#, fuzzy, kde-format
-#| msgid "Add Post Office Box"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr "Přidat poštovní schránku"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Add Postal Code"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr "Přidat PSČ"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
-#, fuzzy, kde-format
-#| msgid "Add Locality"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr "Přidat místo"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
-#, fuzzy, kde-format
-#| msgid "Add Region"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "Přidat oblast"
@@ -495,8 +490,7 @@ msgid "Organization:"
 msgstr "Organizace:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
-#, fuzzy, kde-format
-#| msgid "Add organization's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Přidat název organizace"
@@ -508,8 +502,7 @@ msgid "Profession:"
 msgstr "Profese:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Add profession"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Přidat profesi"
@@ -521,8 +514,7 @@ msgid "Title:"
 msgstr "Titul:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Add the title"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
 msgstr "Přidat titul"
@@ -534,8 +526,7 @@ msgid "Department:"
 msgstr "Oddělení:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Add the department"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "Přidat oddělení"
@@ -547,8 +538,7 @@ msgid "Office:"
 msgstr "Kancelář:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
-#, fuzzy, kde-format
-#| msgid "Add the office"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr "Přidat kancelář"
@@ -560,8 +550,7 @@ msgid "Manager's name:"
 msgstr "Jméno manažera:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Add manager's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "Přidat jméno manažera"
@@ -573,8 +562,7 @@ msgid "Assistant's name:"
 msgstr "Jméno asistenta:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, fuzzy, kde-format
-#| msgid "Add assistant's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "Přidat jméno asistenta"
@@ -586,12 +574,10 @@ msgid "Free/Busy:"
 msgstr "Zaneprázdněnost:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "@label The free/busy information of a contact"
-#| msgid "Free/Busy:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
-msgstr "Zaneprázdněnost:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
 #, kde-format
@@ -648,8 +634,7 @@ msgstr "Přidat vlastní titulek pole"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "Přidat jméno"
@@ -720,8 +705,7 @@ msgid "Blog Feed"
 msgstr "Kanál blogu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Add a Blog Feed"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "Přidat kanál blogu"
@@ -788,8 +772,7 @@ msgid "Other"
 msgstr "Jiné"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add an Email Account"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Přidat e-mailový účet"
@@ -839,8 +822,7 @@ msgid "Messaging"
 msgstr "Zprávy"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Add an identifier"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "Přidat identifikátor"
@@ -978,8 +960,7 @@ msgid "Nickname"
 msgstr "Přezdívka"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add a Nickname"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "Přidat přezdívku"
@@ -997,8 +978,7 @@ msgid "Edit Phone Number"
 msgstr "Upravit telefonní číslo"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Add a Phone Number"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Přidat telefonní číslo"
@@ -1027,8 +1007,7 @@ msgid "Profile"
 msgstr "Profil"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Add a Web Site"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr "Přidat webovou stránku"
@@ -1046,8 +1025,7 @@ msgid "Remove Web Site"
 msgstr "Odstranit webovou stránku"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Click to add date"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr "Klikněte pro přidání data"
@@ -1163,8 +1141,7 @@ msgid "Search:"
 msgstr "Hledat:"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
-#, fuzzy, kde-format
-#| msgid "Search Contact..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "Hledat kontakt..."
@@ -1636,7 +1613,7 @@ msgstr "Nová sk&upina..."
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
 "new group of contacts.</p>"
-msgstr ""
+msgstr "Vytvořit novou skupinu"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
 #, kde-format

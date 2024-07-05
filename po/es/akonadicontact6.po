@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 03:31+0200\n"
+"PO-Revision-Date: 2024-07-05 01:09+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -405,36 +405,31 @@ msgid "Do you really want to delete this address?"
 msgstr "¿Seguro que desea borrar esta dirección?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Street"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "Añadir calle"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
-#, fuzzy, kde-format
-#| msgid "Add Post Office Box"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr "Añadir apartado de correos"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Add Postal Code"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr "Añadir código postal"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
-#, fuzzy, kde-format
-#| msgid "Add Locality"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr "Añadir localidad"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
-#, fuzzy, kde-format
-#| msgid "Add Region"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "Añadir región"
@@ -501,8 +496,7 @@ msgid "Organization:"
 msgstr "Organización:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
-#, fuzzy, kde-format
-#| msgid "Add organization's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Añadir nombre de la organización"
@@ -514,8 +508,7 @@ msgid "Profession:"
 msgstr "Profesión:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Add profession"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Añadir profesión"
@@ -527,8 +520,7 @@ msgid "Title:"
 msgstr "Título:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Add the title"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
 msgstr "Añadir el título"
@@ -540,8 +532,7 @@ msgid "Department:"
 msgstr "Departamento:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Add the department"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "Añadir el departamento"
@@ -553,8 +544,7 @@ msgid "Office:"
 msgstr "Despacho:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
-#, fuzzy, kde-format
-#| msgid "Add the office"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr "Añadir el despacho"
@@ -566,8 +556,7 @@ msgid "Manager's name:"
 msgstr "Nombre del encargado:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Add manager's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "Añadir nombre del encargado"
@@ -579,8 +568,7 @@ msgid "Assistant's name:"
 msgstr "Nombre del asistente:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, fuzzy, kde-format
-#| msgid "Add assistant's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "Añadir nombre del asistente"
@@ -592,8 +580,7 @@ msgid "Free/Busy:"
 msgstr "Disponibilidad:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Add FreeBusy"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "Añadir disponibilidad"
@@ -653,8 +640,7 @@ msgstr "Título del campo personalizado"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "Añadir nombre"
@@ -725,8 +711,7 @@ msgid "Blog Feed"
 msgstr "Fuente de blog"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Add a Blog Feed"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "Añadir una fuente de blog"
@@ -793,8 +778,7 @@ msgid "Other"
 msgstr "Otro"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add an Email Account"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Añadir una cuenta de correo"
@@ -844,8 +828,7 @@ msgid "Messaging"
 msgstr "Mensajería"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Add an identifier"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "Añadir un identificador"
@@ -983,8 +966,7 @@ msgid "Nickname"
 msgstr "Apodo"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add a Nickname"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "Añadir un apodo"
@@ -1002,8 +984,7 @@ msgid "Edit Phone Number"
 msgstr "Editar número de teléfono"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Add a Phone Number"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Añadir un número de teléfono"
@@ -1032,8 +1013,7 @@ msgid "Profile"
 msgstr "Perfil"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Add a Web Site"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr "Añadir un sitio web"
@@ -1051,8 +1031,7 @@ msgid "Remove Web Site"
 msgstr "Eliminar sitio web"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Click to add date"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr "Pulse para añadir la fecha"
@@ -1168,8 +1147,7 @@ msgid "Search:"
 msgstr "Buscar:"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
-#, fuzzy, kde-format
-#| msgid "Search Contact..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "Buscar contacto..."
