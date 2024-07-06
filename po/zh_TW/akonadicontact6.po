@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 02:28+0000\n"
-"PO-Revision-Date: 2024-02-27 06:51+0900\n"
+"PO-Revision-Date: 2024-07-05 16:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -192,7 +192,7 @@ msgstr "首頁"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
-msgstr "部落格 Feed"
+msgstr "部落格訂閱來源"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:154
 #, kde-format
