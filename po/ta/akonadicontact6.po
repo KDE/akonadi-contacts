@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-20 21:41+0530\n"
+"PO-Revision-Date: 2024-07-06 21:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -338,73 +338,73 @@ msgstr ""
 #, kde-format
 msgctxt "@label The name of a contact group"
 msgid "Name:"
-msgstr ""
+msgstr "பெயர்:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:59
 #, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
-msgstr ""
+msgstr "தொடர்புக்குழுவின் உறுப்பினர்கள்:"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
-msgstr ""
+msgstr "தேடு..."
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
-msgstr ""
+msgstr "புதிய தொடர்புக்குழு"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
-msgstr ""
+msgstr "தொடர்புக்குழுவை திருத்து"
 
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
-msgstr ""
+msgstr "தொடர்புக்குழு %1"
 
 #: akonadi-contacts-widgets/contactviewer.cpp:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
-msgstr ""
+msgstr "தொடர்பு %1"
 
 #: akonadi-contacts-widgets/contactviewerdialog.cpp:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
-msgstr ""
+msgstr "தொடர்புப் பார்வை"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, kde-format
 msgid "Remove Address"
-msgstr ""
+msgstr "முகவரியை நீக்கு"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, kde-format
 msgid "Do you really want to delete this address?"
-msgstr ""
+msgstr "உறுதியாக இந்த முகவரியை நீக்க வேண்டுமா?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
-msgstr ""
+msgstr "தெருவை சேர்க்கவும்"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
-msgstr ""
+msgstr "அஞ்சல் பெட்டியை சேர்க்கவும்"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
@@ -416,19 +416,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
-msgstr ""
+msgstr "வட்டாரத்தை சேர்க்கவும்"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
-msgstr ""
+msgstr "மண்டலத்தை சேர்க்கவும்"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
-msgstr ""
+msgstr "இது முதன்மையான முகவரியாகும்"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
 #, kde-format
