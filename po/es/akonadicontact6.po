@@ -8,12 +8,13 @@
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
 # Javier Vinal <fjvinalgmail.com>, 2011, 2012, 2017.
 # Javier Viñal <fjvinal@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019.
+# Eloy Cuadra <ecuadra@eloihr.net>, %Y.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 02:28+0000\n"
-"PO-Revision-Date: 2024-07-05 01:09+0200\n"
+"PO-Revision-Date: 2024-07-17 13:48+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,12 +23,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
-msgstr "El miembro llamado <b>%1</b> no tiene dirección de correo"
+msgstr "El miembro llamado <b>%1</b> no tiene dirección de correo electrónico"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:241
 #, kde-format
@@ -44,7 +45,7 @@ msgstr "Nombre"
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
-msgstr "Correo-e"
+msgstr "Correo electrónico"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:212
 #, kde-format
@@ -74,13 +75,13 @@ msgstr "Apodo"
 #, kde-format
 msgctxt "@title:column home address of a person"
 msgid "Home"
-msgstr "Página web"
+msgstr "Casa"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:232
 #, kde-format
 msgctxt "@title:column work address of a person"
 msgid "Work"
-msgstr "Ocupación"
+msgstr "Trabajo"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:234
 #, kde-format
@@ -92,13 +93,13 @@ msgstr "Números de teléfono"
 #, kde-format
 msgctxt "@title:column the preferred email addresses of a person"
 msgid "Preferred EMail"
-msgstr "Correo-e preferido"
+msgstr "Correo electrónico preferido"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:238
 #, kde-format
 msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
-msgstr "Todos los correos"
+msgstr "Todos los correos electrónicos"
 
 #: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:23
 #, kde-format
@@ -186,7 +187,7 @@ msgstr "Enviar SMS"
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
-msgstr "Correo-e"
+msgstr "Correo electrónico"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:130
 #, kde-format
@@ -717,7 +718,7 @@ msgstr "Personalizado"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, kde-format
 msgid "Email"
-msgstr "Correo"
+msgstr "Correo electrónico"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
@@ -746,17 +747,17 @@ msgstr "Otro"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, kde-format
 msgid "Add an Email Account"
-msgstr "Añadir una cuenta de correo"
+msgstr "Añadir una cuenta de correo electrónico"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgid "Add an Email"
-msgstr "Añadir un correo"
+msgstr "Añadir un correo electrónico"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
 #, kde-format
 msgid "Remove Email"
-msgstr "Eliminar correo"
+msgstr "Eliminar correo electrónico"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
@@ -913,7 +914,7 @@ msgstr "..."
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
 msgid "Edit Contact Name"
-msgstr "Editar nombre de contacto"
+msgstr "Editar nombre del contacto"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, kde-format
@@ -1583,7 +1584,7 @@ msgstr "Copiar elemento"
 #, kde-format
 msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
-msgstr "Copiar dirección del correo"
+msgstr "Copiar dirección de correo electrónico"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:75
 #, kde-format
