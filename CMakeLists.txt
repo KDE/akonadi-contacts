@@ -7,7 +7,7 @@ project(Akonadi-Contact VERSION ${PIM_VERSION})
 
 # ECM setup
 
-set(KF_MIN_VERSION "6.3.0")
+set(KF_MIN_VERSION "6.4.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -43,7 +43,7 @@ set(AKONADI_VERSION "6.1.80")
 set(GRANTLEETHEME_LIB_VERSION "6.1.80")
 set(KTEXTADDONS_MIN_VERSION "1.5.4")
 
-set(QT_REQUIRED_VERSION "6.6.0")
+set(QT_REQUIRED_VERSION "6.7.0")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 ########### Find packages ###########
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
