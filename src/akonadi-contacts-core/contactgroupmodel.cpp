@@ -12,8 +12,7 @@
 #include <Akonadi/ItemFetchScope>
 #include <KContacts/Addressee>
 
-#include <KIconEngine>
-#include <KIconLoader>
+#include <KIconUtils>
 #include <KLocalizedString>
 #include <QIcon>
 
@@ -277,7 +276,7 @@ QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
         }
 
         if (member.isReference) {
-            return QIcon(new KIconEngine(QStringLiteral("x-office-contact"), KIconLoader::global(), QStringList() << QStringLiteral("emblem-symbolic-link")));
+            return KIconUtils::addOverlays(QStringLiteral("x-office-contact"), {QStringLiteral("emblem-symbolic-link")});
         } else {
             return QIcon::fromTheme(QStringLiteral("x-office-contact"));
         }

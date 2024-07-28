@@ -46,6 +46,7 @@ set(KTEXTADDONS_MIN_VERSION "1.5.4")
 set(QT_REQUIRED_VERSION "6.7.0")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 ########### Find packages ###########
+find_package(KF6GuiAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6CoreAddons ${KF_MIN_VERSION} CONFIG REQUIRED)

@@ -102,6 +102,7 @@ target_link_libraries(KPim6AkonadiContactCore
     PRIVATE
     KF6::ColorScheme
     KF6::IconThemes
+    KF6::GuiAddons
     KF6::I18n
     KPim6::Mime
     KF6::TextUtils
