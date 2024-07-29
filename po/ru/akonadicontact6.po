@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-29 00:40+0000\n"
 "PO-Revision-Date: 2024-01-27 18:06+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -25,24 +25,24 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:194
+#: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr ""
 "У контакта из группы с именем <b>%1</b> отсутствует адрес электронной почты"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:241
+#: akonadi-contacts-core/contactgroupmodel.cpp:240
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "Контакт больше не существует"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:395
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "Имя"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:397
+#: akonadi-contacts-core/contactgroupmodel.cpp:396
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"

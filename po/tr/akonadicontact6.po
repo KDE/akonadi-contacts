@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-29 00:40+0000\n"
 "PO-Revision-Date: 2024-07-04 13:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -24,23 +24,23 @@ msgstr ""
 "X-Generator: Lokalize 24.07.70\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:194
+#: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "<b>%1</b> kişisinin e-posta adresi yok"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:241
+#: akonadi-contacts-core/contactgroupmodel.cpp:240
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "Kişi artık yok"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:395
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "Ad"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:397
+#: akonadi-contacts-core/contactgroupmodel.cpp:396
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"

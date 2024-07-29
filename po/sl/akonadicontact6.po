@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-29 00:40+0000\n"
 "PO-Revision-Date: 2024-07-04 10:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -22,23 +22,23 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:194
+#: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "Članu z imenom <b>%1</b> manjka e-poštni naslov"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:241
+#: akonadi-contacts-core/contactgroupmodel.cpp:240
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "Stik ne obstaja več"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:395
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "Ime"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:397
+#: akonadi-contacts-core/contactgroupmodel.cpp:396
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
