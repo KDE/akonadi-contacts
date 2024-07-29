@@ -19,7 +19,7 @@ using namespace Akonadi;
 MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     : QWidget(parent)
     , mMailPreferFormatting(new QComboBox(this))
-    , mAllowRemoteContent(new QCheckBox(i18n("Allow remote content in received HTML messages"), this))
+    , mAllowRemoteContent(new QCheckBox(i18nc("@option:check", "Allow remote content in received HTML messages"), this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
