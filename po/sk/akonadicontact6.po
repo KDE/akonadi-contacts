@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2023-10-12 19:14+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -640,7 +640,9 @@ msgid "Add Field"
 msgstr "Pridať pole"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use field for all contacts"
+msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "Použiť pole pre všetky kontakty"
 
@@ -816,7 +818,9 @@ msgid "Remove Email"
 msgstr "Odstrániť e-mail"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow remote content in received HTML messages"
+msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
 msgstr "Povoliť vzdialený obsah v prijatých HTML správach"
 

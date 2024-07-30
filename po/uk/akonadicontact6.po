@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-07-04 21:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -623,7 +623,9 @@ msgid "Add Field"
 msgstr "Додати поле"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use field for all contacts"
+msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "Використовувати поле для всіх контактів"
 
@@ -791,7 +793,9 @@ msgid "Remove Email"
 msgstr "Вилучити адресу ел. пошти"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow remote content in received HTML messages"
+msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
 msgstr "Дозволити використання сторонніх даних у отриманих повідомленнях HTML"
 

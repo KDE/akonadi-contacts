@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2023-02-17 01:07+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -639,7 +639,9 @@ msgid "Add Field"
 msgstr "Sahə əlavə etmək"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use field for all contacts"
+msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "Sahəni bütün əlaqələr üçün istifadə etmək"
 
@@ -816,7 +818,9 @@ msgid "Remove Email"
 msgstr "E-Poçtu silmək"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow remote content in received HTML messages"
+msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
 msgstr "HTML formatında alınan ismarıclarda URL keçidlərinə icazə vermək"
 

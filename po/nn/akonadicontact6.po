@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2022-02-06 11:59+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -633,7 +633,9 @@ msgid "Add Field"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use field for all contacts"
+msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "Bruk feltet på alle kontaktane"
 
@@ -810,6 +812,7 @@ msgstr "Fjern logo"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
+msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
 msgstr ""
 

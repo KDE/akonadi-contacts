@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 16:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -620,7 +620,9 @@ msgid "Add Field"
 msgstr "新增欄位"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use field for all contacts"
+msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "對所有聯絡人使用此欄位"
 
@@ -788,7 +790,9 @@ msgid "Remove Email"
 msgstr "移除電子郵件"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow remote content in received HTML messages"
+msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
 msgstr "允許接收 HTML 遠端內容"
 
