@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 14:45+0200\n"
+"PO-Revision-Date: 2024-07-30 17:28+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
@@ -624,11 +624,10 @@ msgid "Add Field"
 msgstr "Engadir un campo"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Use field for all contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use field for all contacts"
-msgstr "Usar o campo en todos os contactos"
+msgstr "Usar o campo en todos os contactos."
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
 #, kde-format
@@ -795,11 +794,10 @@ msgid "Remove Email"
 msgstr "Retirar o correo electrónico."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Allow remote content in received HTML messages"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
-msgstr "Permitir o contido remoto nas mensaxes con HTML recibidas"
+msgstr "Permitir o contido remoto nas mensaxes con HTML recibidas."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
 #, kde-format

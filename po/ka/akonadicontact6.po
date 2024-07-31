@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 04:55+0200\n"
+"PO-Revision-Date: 2024-07-30 08:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -619,8 +619,7 @@ msgid "Add Field"
 msgstr "ველის დამატება"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Use field for all contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "ველის ყველა კონტაქტისთვის გამოყენება"
@@ -789,11 +788,10 @@ msgid "Remove Email"
 msgstr "ელფოსტის წაშლა"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Allow remote content in received HTML messages"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
-msgstr "მიღებულ შემცველობაში HTML-ის ჩვენება"
+msgstr "დაშორებული შემცველობის დაშვება მიღებულ HTML შეტყობინებებში"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
 #, kde-format
