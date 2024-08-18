@@ -1,20 +1,19 @@
 # Translation of akonadicontact6 to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2010, 2013, 2022.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2022-02-06 11:59+0100\n"
+"PO-Revision-Date: 2024-08-17 17:30+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -99,20 +98,20 @@ msgstr "Alle e-postadresser"
 #: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:23
 #, kde-format
 msgid "Distribution List %1"
-msgstr ""
+msgstr "Distribusjonsliste %1"
 
 #: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:130
 #, kde-format
 msgctxt "Name and email address of a contact"
 msgid "%1 <%2>"
-msgstr ""
+msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
 #: akonadi-contacts-core/standardcontactformatter.cpp:176
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
-msgstr ""
+msgstr "Adressebok"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
 #: akonadi-contacts-core/standardcontactformatter.cpp:175
@@ -156,14 +155,14 @@ msgstr "Namn på partnar"
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
-msgstr ""
+msgstr "ja"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
 #: akonadi-contacts-core/standardcontactformatter.cpp:235
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
-msgstr ""
+msgstr "nei"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:95
 #, kde-format
@@ -176,7 +175,7 @@ msgstr[1] "(%1 år gammal)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
-msgstr ""
+msgstr "Send SMS"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:115
 #, kde-format
@@ -198,7 +197,7 @@ msgstr "Bloggkjelde"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
-msgstr ""
+msgstr "Vis adresse på kart"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:161
 #, kde-format
@@ -226,16 +225,14 @@ msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Ta over endringane"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignorer, og skriv over endringane"
@@ -246,7 +243,7 @@ msgstr "Ignorer, og skriv over endringane"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr ""
+msgstr "Vel adressebok"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:279
 #, kde-format
@@ -257,18 +254,17 @@ msgstr "Vel kva adressebok du vil lagra den nye kontakten i:"
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
-msgstr ""
+msgstr "Ny kontakt"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
-msgstr ""
+msgstr "Rediger kontakt"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Add to:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "Legg til i:"
@@ -285,13 +281,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
-msgstr ""
+msgstr "Stadfesting"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
-msgstr ""
+msgstr "Avslutt redigering"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:184
 #, kde-format
@@ -363,85 +359,84 @@ msgstr "Søk …"
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
-msgstr ""
+msgstr "Ny kontaktgruppe"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
-msgstr ""
+msgstr "Rediger kontaktgruppe"
 
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
-msgstr ""
+msgstr "Kontaktgruppe %1"
 
 #: akonadi-contacts-widgets/contactviewer.cpp:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
-msgstr ""
+msgstr "Kontakt %1"
 
 #: akonadi-contacts-widgets/contactviewerdialog.cpp:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
-msgstr ""
+msgstr "Vis kontakt"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, kde-format
 msgid "Remove Address"
-msgstr ""
+msgstr "Fjern adresse"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, kde-format
 msgid "Do you really want to delete this address?"
-msgstr ""
+msgstr "Er du sikker på at du vil sletta denne adressa?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
-msgstr ""
+msgstr "Skriv inn gate-/vegnamn"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
-msgstr ""
+msgstr "Skriv inn postboks"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
-msgstr ""
+msgstr "Skriv inn postnummer"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
-msgstr ""
+msgstr "Skriv inn poststad"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
-msgstr ""
+msgstr "Skriv inn område/region"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
-msgstr ""
+msgstr "Dette er den føretrekte adressa"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, fuzzy, kde-format
-#| msgid "IM Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
-msgstr "Lynmeldingsadresse"
+msgstr "Legg til adresse"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
@@ -530,14 +525,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
-msgstr ""
+msgstr "Avdeling:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Department"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
-msgstr "Avdeling"
+msgstr "Skriv inn avdeling"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:79
 #, kde-format
@@ -555,33 +549,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
-msgstr ""
+msgstr "Namn på sjef:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Manager's Name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
-msgstr "Namn på sjef"
+msgstr "Skriv inn namn på sjef"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:96
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
-msgstr ""
+msgstr "Namn på assistent:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, fuzzy, kde-format
-#| msgid "Assistant's Name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
-msgstr "Namn på assistent"
+msgstr "Skriv inn namn på assistent"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
-msgstr ""
+msgstr "Ledig/oppteken:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
 #, fuzzy, kde-format
@@ -594,37 +586,37 @@ msgstr "Lynmeldingsadresse"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:101
 #, kde-format
 msgctxt "@title:tab"
 msgid "Location"
-msgstr ""
+msgstr "Adresse"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:107
 #, kde-format
 msgctxt "@title:tab"
 msgid "Business"
-msgstr ""
+msgstr "Firma"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:113
 #, kde-format
 msgctxt "@title:tab Personal properties of a contact"
 msgid "Personal"
-msgstr ""
+msgstr "Personleg"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:121
 #, kde-format
 msgctxt "@title:tab"
 msgid "Notes"
-msgstr ""
+msgstr "Notat"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:131
 #, kde-format
 msgctxt "@title:tab"
 msgid "Custom Fields"
-msgstr ""
+msgstr "Eigendefinerte felt"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
 #, kde-format
@@ -1069,19 +1061,19 @@ msgstr "Fjern"
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
-msgstr ""
+msgstr "Fødselsdato:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:35
 #, kde-format
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"
-msgstr ""
+msgstr "Bryllaupsdag:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:41
 #, kde-format
 msgctxt "@label The partner's name of a contact"
 msgid "Partner's name:"
-msgstr ""
+msgstr "Namn på partnar:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
 #, kde-format
@@ -1234,7 +1226,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr ""
+msgstr "Legg til adressebok"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:215
 #, kde-kuit-format
@@ -1277,7 +1269,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr ""
+msgstr "Legg til adressebokmappe …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
@@ -1462,7 +1454,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr ""
+msgstr "Legg til &adressebok …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
