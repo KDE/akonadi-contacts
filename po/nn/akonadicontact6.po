@@ -440,14 +440,12 @@ msgstr "Legg til adresse"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, fuzzy, kde-format
-#| msgid "IM Address"
 msgctxt "@action:button"
 msgid "Remove Address"
 msgstr "Lynmeldingsadresse"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, fuzzy, kde-format
-#| msgid "IM Address"
 msgctxt "@action:button"
 msgid "Update Address"
 msgstr "Lynmeldingsadresse"
@@ -491,7 +489,6 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
 #, fuzzy, kde-format
-#| msgid "Additional names:"
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Andre namn:"
@@ -504,7 +501,6 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
 #, fuzzy, kde-format
-#| msgid "Profession"
 msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Yrke"
@@ -577,7 +573,6 @@ msgstr "Ledig/oppteken:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
 #, fuzzy, kde-format
-#| msgid "IM Address"
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "Lynmeldingsadresse"
@@ -626,7 +621,6 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
 #, fuzzy, kde-format
-#| msgid "Use field for all contacts"
 msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "Bruk feltet på alle kontaktane"
@@ -640,7 +634,6 @@ msgstr ""
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
 #, fuzzy, kde-format
-#| msgid "Add name"
 msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "Legg til namn"
@@ -688,7 +681,6 @@ msgstr "Er du sikker på at du vil sletta det valde feltet?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
 #, fuzzy, kde-format
-#| msgid "Confirm Delete"
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Stadfest sletting"
@@ -707,14 +699,12 @@ msgstr "Verdi"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, fuzzy, kde-format
-#| msgid "Blog Feed"
 msgctxt "@label:textbox"
 msgid "Blog Feed"
 msgstr "Bloggkjelde"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, fuzzy, kde-format
-#| msgid "Blog Feed"
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "Bloggkjelde"
@@ -752,7 +742,6 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
 #, fuzzy, kde-format
-#| msgid "Email"
 msgctxt "@label:textbox"
 msgid "Email"
 msgstr "E-post"
@@ -783,21 +772,18 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, fuzzy, kde-format
-#| msgid "Add name"
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Legg til namn"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, fuzzy, kde-format
-#| msgid "Add name"
 msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "Legg til namn"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
 #, fuzzy, kde-format
-#| msgid "Remove logo"
 msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "Fjern logo"
@@ -855,7 +841,6 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
 #, fuzzy, kde-format
-#| msgid "Remove"
 msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "Fjern"
@@ -953,7 +938,6 @@ msgstr "sr."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
 #, fuzzy, kde-format
-#| msgid "Name"
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Namn"
@@ -965,21 +949,18 @@ msgstr " …"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, fuzzy, kde-format
-#| msgid "Edit Contact Name"
 msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr "Rediger kontaktnamn"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, fuzzy, kde-format
-#| msgid "Nickname"
 msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "Kallenamn"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, fuzzy, kde-format
-#| msgid "Add name"
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "Legg til namn"
@@ -998,24 +979,18 @@ msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
 #, fuzzy, kde-format
-#| msgctxt "@title:column phone numbers of a person"
-#| msgid "Phone Numbers"
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Telefonnummer"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, fuzzy, kde-format
-#| msgctxt "@title:column phone numbers of a person"
-#| msgid "Phone Numbers"
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
 msgstr "Telefonnummer"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
 #, fuzzy, kde-format
-#| msgctxt "@title:column phone numbers of a person"
-#| msgid "Phone Numbers"
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr "Telefonnummer"
@@ -1085,14 +1060,12 @@ msgstr "Fann ikkje noko bilete av kontakten."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, fuzzy, kde-format
-#| msgid "The photo of the contact (click to change)"
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "Bilete av kontakten (trykk for å endra)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
 #, fuzzy, kde-format
-#| msgid "The logo of the company (click to change)"
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "Logoen til firmaet (trykk for å endra)"
@@ -1157,7 +1130,6 @@ msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
 #, fuzzy, kde-format
-#| msgid "Open Address Book"
 msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "Opna adresseboka"
@@ -1170,7 +1142,6 @@ msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "Søk …"
