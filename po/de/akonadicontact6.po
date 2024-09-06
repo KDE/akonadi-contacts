@@ -6,7 +6,7 @@
 # Intevation GmbH, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: akonadicontact\n"
+"Project-Id-Version: akonadicontact6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-20 19:33+0200\n"
