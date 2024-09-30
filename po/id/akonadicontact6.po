@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-09-27 08:20+0700\n"
+"PO-Revision-Date: 2024-09-29 19:26+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -218,20 +218,22 @@ msgid ""
 "The contact has been changed by someone else.\n"
 "What should be done?"
 msgstr ""
+"Kontak sedang diubah oleh seseorang.\n"
+"Apakah yang harus dilakukan?"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr ""
+msgstr "Ambil alih perubahan"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr ""
+msgstr "Abaikan dan Timpa perubahan"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:278
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:291
@@ -239,18 +241,18 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr ""
+msgstr "Pilih Buku Alamat"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
-msgstr ""
+msgstr "Pilih buku alamat kontak baru yang harus disimpan di dalam:"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
-msgstr ""
+msgstr "Kontak Baru"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
 #, kde-format
@@ -269,7 +271,7 @@ msgstr "Tambah ke:"
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
-msgstr ""
+msgstr "Lokasi belum disimpan. Apakah Anda ingin menutup editor?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
 #: akonadi-contacts-widgets/contacteditordialog.cpp:200
@@ -283,13 +285,13 @@ msgstr "Konfirmasi"
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
-msgstr ""
+msgstr "Tutup Editor"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
-msgstr ""
+msgstr "Jangan Tutup"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
@@ -303,14 +305,14 @@ msgstr "Apakah Anda benar-benar ingin membatalkan?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "Batal Mengedit"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:202
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr ""
+msgstr "Jangan Batal"
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:135
 #, kde-format
@@ -318,16 +320,18 @@ msgid ""
 "The contact group has been changed by someone else.\n"
 "What should be done?"
 msgstr ""
+"Kelompok kontak sedang diubah oleh seseorang.\n"
+"Apakah yang harus dilakukan?"
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:176
 #, kde-format
 msgid "The name of the contact group must not be empty."
-msgstr ""
+msgstr "Nama pada kelompok kontak harusnya jangan kosong."
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:292
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
-msgstr ""
+msgstr "Pilih buku alamat kelompok kontak baru yang seharusnya disimpan di:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:29
@@ -341,7 +345,7 @@ msgstr "Nama:"
 #, kde-format
 msgctxt "@label"
 msgid "Contact group members:"
-msgstr ""
+msgstr "Anggota kelompok kontak:"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
@@ -353,19 +357,19 @@ msgstr "Cari..."
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
-msgstr ""
+msgstr "Kelompok Kontak Baru"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
-msgstr ""
+msgstr "Edit Kelompok Kontak"
 
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
-msgstr ""
+msgstr "Kelompok Kontak %1"
 
 #: akonadi-contacts-widgets/contactviewer.cpp:64
 #, kde-format
@@ -377,72 +381,72 @@ msgstr "Kontak %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
-msgstr ""
+msgstr "Tampilkan Kontak"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
 #, kde-format
 msgid "Remove Address"
-msgstr ""
+msgstr "Hapus Alamat"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
 #, kde-format
 msgid "Do you really want to delete this address?"
-msgstr ""
+msgstr "Apakah Anda sungguh ingin menghapus alamat ini?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
-msgstr ""
+msgstr "Tambahkan Jalan"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
-msgstr ""
+msgstr "Tambahkan Kotak Kantor Pos"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
-msgstr ""
+msgstr "Tambahkan Kode Pos"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
-msgstr ""
+msgstr "Tambahkan Lokalitas"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
-msgstr ""
+msgstr "Tambahkan Wilayah"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
-msgstr ""
+msgstr "Ini adalah alamat yang diutamakan"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
-msgstr ""
+msgstr "Tambahkan Alamat"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
-msgstr ""
+msgstr "Hapus Alamat"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
-msgstr ""
+msgstr "Perbarui Alamat"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
@@ -454,13 +458,13 @@ msgstr "Batal"
 #, kde-format
 msgctxt "street/postal"
 msgid "Edit Address Type"
-msgstr ""
+msgstr "Edit Jenis Alamat"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:38
 #, kde-format
 msgctxt "street/postal"
 msgid "Address Types"
-msgstr ""
+msgstr "Jenis Alamat"
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:61
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
@@ -473,7 +477,7 @@ msgstr "Lainnya..."
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
-msgstr ""
+msgstr "Jenis Alamat Baru"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:47
 #, kde-format
@@ -485,31 +489,31 @@ msgstr "Organisasi:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
-msgstr ""
+msgstr "Tambahkan nama organisasi"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:55
 #, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
-msgstr "Pekerjaan:"
+msgstr "Peofesi:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
-msgstr ""
+msgstr "Tambahkan profesi"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:63
 #, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
-msgstr "Judul:"
+msgstr "Titel:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
-msgstr ""
+msgstr "Tambahkan titel"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
 #, kde-format
@@ -521,7 +525,7 @@ msgstr "Departemen:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
-msgstr ""
+msgstr "Tambahkan departemen"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:79
 #, kde-format
@@ -533,31 +537,31 @@ msgstr "Kantor:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the office"
-msgstr ""
+msgstr "Tambahkan kantor"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:88
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
-msgstr "Nama pengelola:"
+msgstr "Nama manajer:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
-msgstr ""
+msgstr "Tambahkan nama manajer"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:96
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
-msgstr ""
+msgstr "Nama asisten:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
-msgstr ""
+msgstr "Tambahkan nama asisten"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
 #, kde-format
@@ -569,7 +573,7 @@ msgstr "Senggang/Sibuk:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
-msgstr ""
+msgstr "Tambahkan Kesibukan"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
 #, kde-format
@@ -587,7 +591,7 @@ msgstr "Lokasi"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Business"
-msgstr ""
+msgstr "Bisnis"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:113
 #, kde-format
@@ -605,31 +609,31 @@ msgstr "Catatan"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Custom Fields"
-msgstr ""
+msgstr "Bidang Kustom"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Field"
-msgstr ""
+msgstr "Tambahkan Bidang"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
 #, kde-format
 msgid "Use field for all contacts"
-msgstr ""
+msgstr "Gunakan bidang untuk semua kontak"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
-msgstr ""
+msgstr "Titel Bidang Kustom"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
-msgstr ""
+msgstr "Tambahkan nama"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:60
 #, kde-format
@@ -670,7 +674,7 @@ msgstr "Url"
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
-msgstr ""
+msgstr "Apakah Anda benar-benar ingin menghapus bidang kustom yang dipilih?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
 #, kde-format
@@ -682,7 +686,7 @@ msgstr "Penegasan Hapus"
 #, kde-format
 msgctxt "custom field title"
 msgid "Title"
-msgstr "Judul"
+msgstr "Titel"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:197
 #, kde-format
@@ -694,13 +698,13 @@ msgstr "Nilai"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
-msgstr "Umpan Blog"
+msgstr "Feed Blog"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
-msgstr ""
+msgstr "Tambahkan sebuah Feed Blog"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:45
 #, kde-format
@@ -715,12 +719,12 @@ msgstr "Nama Lengkap"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:47
 #, kde-format
 msgid "Reverse Name with Comma"
-msgstr ""
+msgstr "Nama Belakang dengan Koma"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:48
 #, kde-format
 msgid "Reverse Name"
-msgstr ""
+msgstr "Nama Belakang"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:49
 #, kde-format
@@ -767,13 +771,13 @@ msgstr "Lainnya"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
-msgstr ""
+msgstr "Tambahkan Akun Email"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an Email"
-msgstr ""
+msgstr "Tambahkan Email"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
 #, kde-format
@@ -784,13 +788,13 @@ msgstr "Hapus Email"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
 msgid "Allow remote content in received HTML messages"
-msgstr ""
+msgstr "Izinkan konten jarak jauh di pesan HTML yang diterima"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
-msgstr ""
+msgstr "Tampilkan pesan yang diterima dari kontak ini sebagai:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
@@ -817,7 +821,7 @@ msgstr "Perpesanan"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
-msgstr ""
+msgstr "Tambahkan pengenal"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
@@ -829,19 +833,19 @@ msgstr "Pilih..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an IM"
-msgstr ""
+msgstr "Tambahkan IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove IM"
-msgstr ""
+msgstr "Hapus IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Name"
-msgstr ""
+msgstr "Edit Nama Kontak"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:48
 #, kde-format
@@ -861,7 +865,7 @@ msgstr "Nama-nama tambahan:"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:51
 #, kde-format
 msgid "Family names:"
-msgstr ""
+msgstr "Nama keluarga:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:52
 #, kde-format
@@ -871,7 +875,7 @@ msgstr ""
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:53
 #, kde-format
 msgid "Display:"
-msgstr ""
+msgstr "Display:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:57
 #, kde-format
@@ -937,25 +941,25 @@ msgstr "Nama"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
 #, kde-format
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
-msgstr ""
+msgstr "Edit Nama Kontak"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
-msgstr "Nama panggilan"
+msgstr "Nama Panggilan"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
-msgstr ""
+msgstr "Tambahkan Nama Panggilan"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, kde-format
@@ -967,25 +971,25 @@ msgstr "Telepon"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Phone Number"
-msgstr ""
+msgstr "Edit Nomor Telepon"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
-msgstr ""
+msgstr "Tambahkan Nomor Telepon"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
-msgstr ""
+msgstr "Tambahkan Nomor Telepon"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
-msgstr ""
+msgstr "Hapus Nomor Telepon"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
@@ -1002,25 +1006,25 @@ msgstr "Profil"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Web Site"
-msgstr ""
+msgstr "Tambahkan Situs Web"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Web Site"
-msgstr ""
+msgstr "Tambahkan Situs Web"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Web Site"
-msgstr ""
+msgstr "Hapus Situs Web"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
-msgstr ""
+msgstr "Klik untuk menambahkan tanggal"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
 #, kde-format
@@ -1031,7 +1035,7 @@ msgstr "Hapus"
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
-msgstr ""
+msgstr "Tanggal lahir:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:35
 #, kde-format
@@ -1048,65 +1052,65 @@ msgstr "Nama pasangan:"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
 #, kde-format
 msgid "This contact's image cannot be found."
-msgstr ""
+msgstr "Gambar kontak ini tidak bisa ditemukan."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
-msgstr ""
+msgstr "Fotonya kontak (klik untuk mengubah)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
-msgstr ""
+msgstr "Logonya perusahaan (klik untuk mengubah)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
 msgid "Change photo..."
-msgstr ""
+msgstr "Ubah foto..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
 #, kde-format
 msgid "Change URL..."
-msgstr ""
+msgstr "Ubah URL..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
 #, kde-format
 msgid "Save photo..."
-msgstr ""
+msgstr "Simpan foto..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
 #, kde-format
 msgid "Remove photo"
-msgstr ""
+msgstr "Hapus foto"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change logo..."
-msgstr ""
+msgstr "Ubah logo..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
 #, kde-format
 msgid "Save logo..."
-msgstr ""
+msgstr "Simpan logo..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
 #, kde-format
 msgid "Remove logo"
-msgstr ""
+msgstr "Hapus logo"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
 #, kde-format
 msgid "Change image URL"
-msgstr ""
+msgstr "Ubah URL gambar"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
 #, kde-format
 msgid "Image URL:"
-msgstr ""
+msgstr "URL gambar:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
@@ -1118,13 +1122,13 @@ msgstr "Gambar (%1)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set as Preferred"
-msgstr ""
+msgstr "Atur sebagai Utama"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Open Address Book"
-msgstr ""
+msgstr "Buka Buku Alamat"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
 #, kde-format
@@ -1136,7 +1140,7 @@ msgstr "Cari:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
-msgstr ""
+msgstr "Cari Kontak..."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
@@ -1146,6 +1150,9 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
+"Alamat email primer vCard sudah ada di buku alamat Anda; namun, Anda mungkin "
+"menyimpan vCard kedalam sebuah file dan mengimpornya kedalam buku alamat "
+"secara manual."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:111
 #, kde-format
@@ -1154,6 +1161,8 @@ msgid ""
 "The vCard was added to your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
+"vCard telah ditambahkan ke buku alamat Anda; Anda bisa menambahkan informasi "
+"selebihnya ke entri ini dengan membuka buku alamat."
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:68
 #, kde-kuit-format
@@ -1162,6 +1171,8 @@ msgid ""
 "A contact with the email address <email>%1</email> is already in your "
 "address book."
 msgstr ""
+"Sebuah kontak dengan alamat email <email>%1</email> sudah ada di buku alamat "
+"Anda."
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:119
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:159
@@ -1171,20 +1182,22 @@ msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
 msgstr ""
+"Anda harus membuat buku alamat sebelum menambahkan kontak. Apakah Anda ingin "
+"membuat buku alamat?"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:120
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:160
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr ""
+msgstr "Tidak Ada Buku Alamat yang Tersedia"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:121
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr ""
+msgstr "Buat Buku Alamat"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:165
@@ -1192,7 +1205,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr ""
+msgstr "Tambahkan Buku Alamat"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:215
 #, kde-kuit-format
@@ -1201,6 +1214,8 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
+"<para>Sebuah kontak untuk \"%1\" telah berhasil ditambahkan ke buku alamat "
+"Anda.</para><para>Apakah Anda ingin mengedit kontak baru ini sekarang?</para>"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
 #, kde-format
@@ -1218,70 +1233,71 @@ msgstr "Selesai"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
-msgstr ""
+msgstr "Kontak tidak bisa disimpan: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr ""
+msgstr "Gagal menyimpan kontak"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
 #, kde-format
 msgid "Contact created successfully"
-msgstr ""
+msgstr "Kontak berhasil dibuat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr ""
+msgstr "Tambahkan Folder Buku Alamat..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
 msgstr ""
+"Tambahkan folder buku alamat baru ke folder buku alamat yang dipilih saat ini"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
 #, kde-format
 msgctxt "@title:window"
 msgid "New Address Book Folder"
-msgstr ""
+msgstr "Folder Buku Alamat Baru"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:105
 #, kde-format
 msgid "Could not create address book folder: %1"
-msgstr ""
+msgstr "Tidak bisa membuat folder buku alamat: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:109
 #, kde-format
 msgid "Address book folder creation failed"
-msgstr ""
+msgstr "Gagal membuat folder buku alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:115
 #, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Salin Folder Buku Alamat"
+msgstr[1] "Salin %1 Folder Buku Alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
-msgstr ""
+msgstr "Salin folder buku alamat yang dipilih ke papan klip."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
 #, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hapus Folder Buku Alamat"
+msgstr[1] "Hapus %1 Folder Buku Alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
-msgstr ""
+msgstr "Hapus folder buku alamat yang dipilih dari buku alamat."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
 #, kde-format
@@ -1292,49 +1308,53 @@ msgid_plural ""
 "Do you really want to delete %1 address book folders and all their sub-"
 "folders?"
 msgstr[0] ""
+"Apakah Anda benar-benar ingin menghapus folder buku alamat ini dan semua "
+"subfoldernya?"
 msgstr[1] ""
+"Apakah Anda benar-benar ingin menghapus %1 folder buku alamat dan semua "
+"subfoldernya?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete address book folder?"
 msgid_plural "Delete address book folders?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hapus folder buku alamat?"
+msgstr[1] "Hapus folder-folder buku alamat?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
-msgstr ""
+msgstr "Tidak bisa menghapus folder buku alamat: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
 #, kde-format
 msgid "Address book folder deletion failed"
-msgstr ""
+msgstr "Gagal menghapus folder buku alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:143
 #, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Perbarui Folder Buku Alamat"
+msgstr[1] "Perbarui %1 Folder Buku Alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update the content of the selected address book folders."
-msgstr ""
+msgstr "Perbarui konten folder-folder buku alamat yang dipilih."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
 #, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Pindahkan Folder Bulu Alamat"
+msgstr[1] "Pindahkan %1 Folder Bulu Alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
-msgstr ""
+msgstr "Pindahkan folder-folder buku alamat yang dipilih dari buku alamat."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
@@ -1345,82 +1365,82 @@ msgstr "Properti Kalender..."
 #, kde-format
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
-msgstr ""
+msgstr "Buka dialog untuk mengedit properti folder buku alamat yang dipilih."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Address Book Folder %1"
-msgstr ""
+msgstr "Properti Folder Buku Alamat %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Salin Kontak"
+msgstr[1] "Salin %1 Kontak"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
-msgstr ""
+msgstr "Salin kontak yang dipilih ke papan klip."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hapus Kontak"
+msgstr[1] "Hapus %1 Kontak"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
 #, kde-format
 msgid "Delete the selected contacts from the address book."
-msgstr ""
+msgstr "Hapus kontak yang dipilih dari buku alamat."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
 #, kde-format
 msgid "Do you really want to delete the selected contact?"
 msgid_plural "Do you really want to delete %1 contacts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Apakah Anda benar-benar ingin menghapus kontak yang dipilih?"
+msgstr[1] "Apakah Anda benar-benar ingin menghapus %1 kontak?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Contact?"
 msgid_plural "Delete Contacts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hapus Kontak?"
+msgstr[1] "Hapus Kontak-kontak?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
 #, kde-format
 msgid "Could not delete contact: %1"
-msgstr ""
+msgstr "Tidak bisa menghapus kontak: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
 #, kde-format
 msgid "Contact deletion failed"
-msgstr ""
+msgstr "Gagal menghapus kontak"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Pindahkan Kontak"
+msgstr[1] "Pindahkan %1 Kontak"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
 #, kde-format
 msgid "Cut the selected contacts from the address book."
-msgstr ""
+msgstr "Pindahkan kontak yang dipilih dari buku alamat."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr ""
+msgstr "Tambahkan Buku &Alamat..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1428,23 +1448,25 @@ msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
 "select the type of the address book that shall be added.</p>"
 msgstr ""
+"Tambahkan buku alamat baru<p>Anda akan disuguhkan dengan dialog dimana Anda "
+"bisa memilih jenis buku alamat yang harus ditambahkan.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
 #, kde-format
 msgid "Could not create address book: %1"
-msgstr ""
+msgstr "Tidak bisa membuat buku alamat: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:199
 #, kde-format
 msgid "Address book creation failed"
-msgstr ""
+msgstr "Gagal membuat buku alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:203
 #, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "&Hapus Buku Alamat"
+msgstr[1] "&Hapus %1 Buku Alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:205
 #, kde-format
@@ -1453,48 +1475,50 @@ msgid ""
 "will be deleted, along with all the contacts and contact groups they contain."
 "</p>"
 msgstr ""
+"Hapus buku alamat yang dipilih<p>Buku alamat yang dipilih saat ini akan "
+"dihapus, beserta dengan semua kontak dan seisi kelompok alamat.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
 #, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Apakah Anda benar-benar ingin menghapus buku alamat ini?"
+msgstr[1] "Apakah Anda benar-benar ingin menghapus %1 buku alamat tersebut?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
 msgid_plural "Delete Address Books?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hapus Buku Alamat?"
+msgstr[1] "Hapus Buku-buku Alamat?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
-msgstr ""
+msgstr "Properti Buku Alamat..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
-msgstr ""
+msgstr "Buka dialog untuk mengedit properti buku alamat yang dipilih."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
 #, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Perbarui Buku Alamat"
+msgstr[1] "Perbarui %1 Buku Alamat"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:227
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
-msgstr ""
+msgstr "Memperbarui konten semua folder buku alamat yang dipilih."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
 #, kde-format
 msgid "Could not paste contact: %1"
-msgstr ""
+msgstr "Tidak bisa menempel kontak: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
 #, kde-format
@@ -1505,13 +1529,13 @@ msgstr "Gagal tempel"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
 #, kde-format
 msgid "Copy Contact To"
-msgstr ""
+msgstr "Salin Kontak Ke"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
 #, kde-format
 msgid "Move Contact To"
-msgstr ""
+msgstr "Pindah Kontak Ke"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
@@ -1523,14 +1547,14 @@ msgstr "Edit Kontak…"
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Salin Kelompok"
+msgstr[1] "Salin %1 Kelompok"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
 #, kde-format
 msgid "Copy Group To"
-msgstr ""
+msgstr "Salin Kelompok Ke"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
 #, kde-format
@@ -1543,24 +1567,24 @@ msgstr[1] "Hapus %1 Kelompok"
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Pindahkan Kelompok"
+msgstr[1] "Pindahkan %1 Kelompok"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
 #, kde-format
 msgid "Move Group To"
-msgstr ""
+msgstr "Pindah Kelompok Ke"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
-msgstr ""
+msgstr "Edit Kelompok..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
-msgstr ""
+msgstr "&Kontak Baru..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
@@ -1568,11 +1592,13 @@ msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
 "data about a person, including addresses and phone numbers.</p>"
 msgstr ""
+"Buat kontak baru<p>Anda akan disuguhkan dengan dialog dimana Anda bisa "
+"menambahkan tentang data pribadi, termasuk nomor telepon dan alamat.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
-msgstr "&Grup Baru..."
+msgstr "&Kelompok Baru..."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
@@ -1580,6 +1606,8 @@ msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
 "new group of contacts.</p>"
 msgstr ""
+"Buat kelompok baru<p>Anda akan disuguhkan dengan dialog dimana Anda bisa "
+"menambahkan kontak kelompok baru.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
 #, kde-format
@@ -1588,6 +1616,9 @@ msgid ""
 "can edit the data stored about a person, including addresses and phone "
 "numbers.</p>"
 msgstr ""
+"Edit kontak yang dipilih<p>Anda akan disuguhkan dengan dialog dimana Anda "
+"bisa mengedit data yang disimpan tentang data pribadi, termasuk nomor "
+"telepon dan alamat.</p>"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:57
 #, kde-format
@@ -1605,27 +1636,27 @@ msgstr "Salin Alamat Email"
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
-msgstr "Salin Tautan URL"
+msgstr "Salin URL Tautan"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:102
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
-msgstr ""
+msgstr "Salin Foto"
 
 #: akonadi-contacts-widgets/textbrowser.cpp:105
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
-msgstr ""
+msgstr "Salin Kode"
 
 #: akonadi-contacts-widgets/waitingoverlay.cpp:35
 #, kde-format
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
-msgstr ""
+msgstr "<p style=\"color: white;\"><b>Menunggu operasi</b><br/></p>"
 
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
-msgstr ""
+msgstr "Pilih buku alamat di mana kontak akan disimpan:"
