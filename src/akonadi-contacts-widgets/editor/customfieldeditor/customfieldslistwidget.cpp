@@ -33,7 +33,6 @@ CustomFieldsListWidget::CustomFieldsListWidget(QWidget *parent)
     topLayout->addWidget(mCustomFieldList);
 
     auto proxyModel = new QSortFilterProxyModel(this);
-    proxyModel->setDynamicSortFilter(true);
     proxyModel->setSourceModel(mModel);
     mCustomFieldList->setModel(proxyModel);
     mCustomFieldList->setColumnHidden(2, true); // hide the 'key' column

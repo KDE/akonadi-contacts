@@ -40,7 +40,6 @@ ContactsFilterProxyModel::ContactsFilterProxyModel(QObject *parent)
 {
     // contact names should be sorted correctly
     setSortLocaleAware(true);
-    setDynamicSortFilter(true);
 }
 
 ContactsFilterProxyModel::~ContactsFilterProxyModel() = default;
