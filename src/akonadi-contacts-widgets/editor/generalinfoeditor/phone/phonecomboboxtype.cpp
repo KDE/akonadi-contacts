@@ -39,7 +39,7 @@ void PhoneComboBoxType::setType(KContacts::PhoneNumber::Type type)
 {
     if (static_cast<int>(type) != 0) {
         if (!mTypeList.contains(type)) {
-            mTypeList.insert(mTypeList.at(mTypeList.count() - 1), type);
+            mTypeList.insert(mTypeList.count() - 1, type);
         }
     }
     mType = type;
