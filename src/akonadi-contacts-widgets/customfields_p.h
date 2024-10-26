@@ -36,7 +36,15 @@ class AKONADI_CONTACT_WIDGETS_EXPORT CustomField
 public:
     using List = QList<CustomField>;
 
-    enum Type { TextType, NumericType, BooleanType, DateType, TimeType, DateTimeType, UrlType };
+    enum Type {
+        TextType,
+        NumericType,
+        BooleanType,
+        DateType,
+        TimeType,
+        DateTimeType,
+        UrlType
+    };
 
     enum Scope {
         LocalScope, ///< Field has been defined by user for one contact

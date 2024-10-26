@@ -39,7 +39,11 @@ class DateEditWidget : public QWidget
     Q_OBJECT
 
 public:
-    enum Type { General, Birthday, Anniversary };
+    enum Type {
+        General,
+        Birthday,
+        Anniversary
+    };
 
     explicit DateEditWidget(Type type = General, QWidget *parent = nullptr);
     ~DateEditWidget() override;

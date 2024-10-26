@@ -26,7 +26,10 @@ class AddressLocationWidget : public QWidget
 {
     Q_OBJECT
 public:
-    enum Mode { CreateAddress = 0, ModifyAddress };
+    enum Mode {
+        CreateAddress = 0,
+        ModifyAddress
+    };
 
     explicit AddressLocationWidget(QWidget *parent = nullptr);
     ~AddressLocationWidget() override;

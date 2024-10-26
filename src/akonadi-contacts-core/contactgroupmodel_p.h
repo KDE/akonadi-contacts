@@ -25,7 +25,10 @@ class AKONADI_CONTACT_CORE_EXPORT ContactGroupModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    enum Role { IsReferenceRole = Qt::UserRole, AllEmailsRole };
+    enum Role {
+        IsReferenceRole = Qt::UserRole,
+        AllEmailsRole
+    };
 
     explicit ContactGroupModel(QObject *parent = nullptr);
     ~ContactGroupModel() override;
