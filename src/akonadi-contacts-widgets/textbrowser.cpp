@@ -8,7 +8,7 @@
 #include "textbrowser_p.h"
 #include <KCodecs>
 #include <KLocalizedString>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <QAction>
 #include <QUrl>
 
@@ -48,7 +48,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
 #ifndef QT_NO_CLIPBOARD
     QMenu popup;
 
-    QAction *act = KStandardAction::copy(this, &TextBrowser::copy, this);
+    QAction *act = KStandardActions::copy(this, &TextBrowser::copy, this);
     act->setEnabled(!textCursor().selectedText().isEmpty());
     act->setShortcut(QKeySequence());
     popup.addAction(act);
