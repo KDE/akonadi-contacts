@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/akonadi-contacts/akonadicontact6-"
+"X-Crowdin-File: /kf6-stable/messages/akonadi-contacts/akonadicontact6-"
 "serializer.pot\n"
-"X-Crowdin-File-ID: 48994\n"
+"X-Crowdin-File-ID: 50506\n"
 
 #: akonadi_serializer_addressee.cpp:171
 #, kde-format
