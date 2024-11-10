@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-07 09:36+0200\n"
+"PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
@@ -1215,7 +1215,7 @@ msgid ""
 "<para>A contact for \"%1\" was successfully added to your address book.</"
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
-"<para> Контакт за \"%1\" бе добавен успешно към адресната ви книга. </para> "
+"<para> Контакт за „%1“ бе добавен успешно към адресната ви книга. </para> "
 "<para> Искате ли да редактирате този нов контакт сега? </para>"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
