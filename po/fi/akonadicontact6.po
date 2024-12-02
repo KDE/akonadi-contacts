@@ -1,7 +1,7 @@
 # Copyright © 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdepimlibs package.
 # Jiri Grönroos <jiri.gronroos+kde@iki.fi>, 2012.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2012, 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2010, 2012, 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014, 2015, 2016.
 #
 # KDE Finnish translation sprint participants:
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2023-11-22 18:42+0200\n"
+"PO-Revision-Date: 2024-10-16 18:20+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,8 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:16+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
@@ -229,19 +228,17 @@ msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "Ottaa muutokset käyttöön"
+msgstr "Ota muutokset käyttöön"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "Ohittaa ja korvata muutokset"
+msgstr "Sivuuta ja korvaa muutokset"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:278
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:291
@@ -270,8 +267,7 @@ msgstr "Yhteystiedon muokkaus"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Add to:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "Lisää osoitekirjaan:"
@@ -404,36 +400,31 @@ msgid "Do you really want to delete this address?"
 msgstr "Haluatko varmasti poistaa tämän osoitteen?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Street"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "Lisää katuosoite"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
-#, fuzzy, kde-format
-#| msgid "Add Post Office Box"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr "Lisää postilaatikko"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Add Postal Code"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr "Lisää postinumero"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
-#, fuzzy, kde-format
-#| msgid "Add Locality"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr "Lisää paikkakunta"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
-#, fuzzy, kde-format
-#| msgid "Add Region"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "Lisää alue"
@@ -445,29 +436,25 @@ msgid "This is the preferred address"
 msgstr "Tämä on ensisijainen osoite"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
-#, fuzzy, kde-format
-#| msgid "Add Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
 msgstr "Lisää osoite"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Remove Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
 msgstr "Poista osoite"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Update Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
 msgstr "Päivitä osoite"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Peru"
@@ -504,8 +491,7 @@ msgid "Organization:"
 msgstr "Organisaatio:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
-#, fuzzy, kde-format
-#| msgid "Add organization's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Lisää organisaation nimi"
@@ -517,8 +503,7 @@ msgid "Profession:"
 msgstr "Ammatti:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Add profession"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Lisää ammatti"
@@ -530,8 +515,7 @@ msgid "Title:"
 msgstr "Titteli:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Add the title"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
 msgstr "Lisää titteli"
@@ -543,8 +527,7 @@ msgid "Department:"
 msgstr "Osasto:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Add the department"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "Lisää osasto"
@@ -556,8 +539,7 @@ msgid "Office:"
 msgstr "Toimisto:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
-#, fuzzy, kde-format
-#| msgid "Add the office"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr "Lisää toimisto"
@@ -569,8 +551,7 @@ msgid "Manager's name:"
 msgstr "Johtajan nimi:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Add manager's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "Lisää johtajan nimi"
@@ -582,8 +563,7 @@ msgid "Assistant's name:"
 msgstr "Avustajan nimi:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
-#, fuzzy, kde-format
-#| msgid "Add assistant's name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "Lisää avustajan nimi"
@@ -595,8 +575,7 @@ msgid "Free/Busy:"
 msgstr "Varaustilanne:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Add FreeBusy"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
 msgstr "Lisää varaustilanne"
@@ -638,30 +617,26 @@ msgid "Custom Fields"
 msgstr "Omat kentät"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Add Field"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Field"
 msgstr "Lisää kenttä"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Use field for all contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use field for all contacts"
 msgstr "Käytä kenttää kaikkiin yhteystietoihin"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Custom Field Title"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
 msgstr "Oman kentän otsikko"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add name"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
 msgstr "Lisää nimi"
@@ -726,15 +701,13 @@ msgid "Value"
 msgstr "Arvo"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
 msgstr "Blogisyöte"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Add a Blog Feed"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
 msgstr "Lisää blogisyöte"
@@ -771,8 +744,7 @@ msgid "Custom"
 msgstr "Mukautettu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email"
 msgstr "Sähköposti"
@@ -802,36 +774,31 @@ msgid "Other"
 msgstr "Muu"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add an Email Account"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Lisää sähköpostitili"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Add an Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "Lisää sähköposti"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Remove Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "Poista sähköposti"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Allow remote content in received HTML messages"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
-msgstr "Salli etäsisältö vastaanotetuissa HTML-viesteissä"
+msgstr "Salli vastaanotetuissa HTML-viesteissä etäsisältö"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Show messages received from this contact as:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr "Näytä tältä käyttäjältä saadut viestit:"
@@ -852,16 +819,14 @@ msgid "HTML"
 msgstr "HTML:nä"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Messaging"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr "Pikaviestimet"
 
 # Aiheuttaako ongelmia, että sekä identifier että tag ovat tunnisteita?
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Add an identifier"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "Lisää tunniste"
@@ -873,15 +838,13 @@ msgid "Select..."
 msgstr "Valitse…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Add an IM"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr "Lisää pikaviestin"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
-#, fuzzy, kde-format
-#| msgid "Remove IM"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "Poista pikaviestin"
@@ -978,8 +941,7 @@ msgid "Sr."
 msgstr "vanh."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nimi"
@@ -990,29 +952,25 @@ msgid "..."
 msgstr "…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit Contact Name"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
 msgstr "Muokkaa yhteystiedon nimeä"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Nickname"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
 msgstr "Lempinimi"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Add a Nickname"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
 msgstr "Lisää lempinimi"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Phone"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Phone"
 msgstr "Puhelin"
@@ -1024,29 +982,25 @@ msgid "Edit Phone Number"
 msgstr "Muokkaa puhelinnumeroa"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Add a Phone Number"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Lisää puhelinnumero"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add a Phone Number"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
 msgstr "Lisää puhelinnumero"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Remove Phone Number"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
 msgstr "Poista puhelinnumero"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Web"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Web"
 msgstr "Verkko"
@@ -1057,29 +1011,25 @@ msgid "Profile"
 msgstr "Profiili"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Add a Web Site"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr "Lisää verkkosivusto"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add a Web Site"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Web Site"
 msgstr "Lisää verkkosivusto"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Remove Web Site"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr "Poista verkkosivusto"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Click to add date"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr "Lisää päiväys napsauttamalla"
@@ -1113,15 +1063,13 @@ msgid "This contact's image cannot be found."
 msgstr "Yhteystiedon kuvaa ei löydy."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "The photo of the contact (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "Yhteystiedon valokuva (muuta napsauttamalla)"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "The logo of the company (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "Yhtiön logo (muuta napsauttamalla)"
@@ -1179,15 +1127,13 @@ msgid "Images (%1)"
 msgstr "Kuvat (%1)"
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Set as Preferred"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set as Preferred"
 msgstr "Aseta ensisijaiseksi"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
-#, fuzzy, kde-format
-#| msgid "Open Address Book"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "Avaa osoitekirja"
@@ -1199,8 +1145,7 @@ msgid "Search:"
 msgstr "Etsi:"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
-#, fuzzy, kde-format
-#| msgid "Search Contact..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
 msgstr "Etsi yhteystietoa…"
