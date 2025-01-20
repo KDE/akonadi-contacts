@@ -225,14 +225,14 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr ""
+msgstr "应用更改"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr ""
+msgstr "忽略并覆盖更改"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:278
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:291
@@ -264,7 +264,7 @@ msgstr "编辑联系人"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
-msgstr ""
+msgstr "添加到："
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:181
 #, kde-format
@@ -397,31 +397,31 @@ msgstr "您确实想要删除此地址吗？"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
-msgstr ""
+msgstr "添加街道"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
-msgstr ""
+msgstr "添加邮政信箱号"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
-msgstr ""
+msgstr "添加邮政编码"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
-msgstr ""
+msgstr "添加位置"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
-msgstr ""
+msgstr "添加地区"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
 #, kde-format
@@ -433,25 +433,25 @@ msgstr "这是首选地址"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
-msgstr ""
+msgstr "添加地址"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
-msgstr ""
+msgstr "移除地址"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
-msgstr ""
+msgstr "更新地址"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:24
 #, kde-format
@@ -488,7 +488,7 @@ msgstr "组织："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
-msgstr ""
+msgstr "添加组织名"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:55
 #, kde-format
@@ -500,7 +500,7 @@ msgstr "职业："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
-msgstr ""
+msgstr "添加职业"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:63
 #, kde-format
@@ -512,7 +512,7 @@ msgstr "头衔："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
-msgstr ""
+msgstr "添加头衔"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
 #, kde-format
@@ -524,7 +524,7 @@ msgstr "部门："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
-msgstr ""
+msgstr "添加部门"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:79
 #, kde-format
@@ -536,7 +536,7 @@ msgstr "办公室："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the office"
-msgstr ""
+msgstr "添加办公室"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:88
 #, kde-format
@@ -548,7 +548,7 @@ msgstr "经理姓名："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
-msgstr ""
+msgstr "添加经理姓名"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:96
 #, kde-format
@@ -560,7 +560,7 @@ msgstr "助手姓名："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
-msgstr ""
+msgstr "添加助手姓名"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
 #, kde-format
@@ -572,7 +572,7 @@ msgstr "空闲/忙碌："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
-msgstr ""
+msgstr "添加空闲/忙碌"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
 #, kde-format
@@ -614,26 +614,26 @@ msgstr "自定义字段"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Field"
-msgstr ""
+msgstr "添加字段"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
 #, kde-format
 msgctxt "@option:check"
 msgid "Use field for all contacts"
-msgstr ""
+msgstr "对所有联系人使用此字段"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
-msgstr ""
+msgstr "自定义字段标题"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
-msgstr ""
+msgstr "添加名称"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:60
 #, kde-format
@@ -698,13 +698,13 @@ msgstr "值"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
-msgstr ""
+msgstr "博客源"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
-msgstr ""
+msgstr "添加博客订阅"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:45
 #, kde-format
@@ -741,7 +741,7 @@ msgstr "自定义"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email"
-msgstr ""
+msgstr "电子邮件"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
@@ -771,31 +771,31 @@ msgstr "其他"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
-msgstr ""
+msgstr "添加电子邮件账户"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an Email"
-msgstr ""
+msgstr "添加电子邮件"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Email"
-msgstr ""
+msgstr "移除电子邮件"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
-msgstr ""
+msgstr "允许收到的 HTML 信件的远程内容。"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
-msgstr ""
+msgstr "显示接收自此联系人的信件为："
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
@@ -816,13 +816,13 @@ msgstr "HTML"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Messaging"
-msgstr ""
+msgstr "消息"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
-msgstr ""
+msgstr "添加身份标识"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
 #, kde-format
@@ -834,13 +834,13 @@ msgstr "选择..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an IM"
-msgstr ""
+msgstr "添加 IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove IM"
-msgstr ""
+msgstr "删除 IM"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
 #, kde-format
@@ -937,7 +937,7 @@ msgstr "老"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
 #, kde-format
@@ -948,25 +948,25 @@ msgstr "..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
-msgstr ""
+msgstr "编辑联系人姓名"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
-msgstr ""
+msgstr "昵称"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
-msgstr ""
+msgstr "添加昵称"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Phone"
-msgstr ""
+msgstr "电话"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
 #, kde-format
@@ -978,25 +978,25 @@ msgstr "编辑电话号码"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
-msgstr ""
+msgstr "添加电话号码"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
-msgstr ""
+msgstr "添加电话号码"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
-msgstr ""
+msgstr "移除手机号码"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Web"
-msgstr ""
+msgstr "网站"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
 #, kde-format
@@ -1007,25 +1007,25 @@ msgstr "用户资料"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Web Site"
-msgstr ""
+msgstr "添加网站"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Web Site"
-msgstr ""
+msgstr "添加网站"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Web Site"
-msgstr ""
+msgstr "移除网站"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
-msgstr ""
+msgstr "点击添加日期"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
 #, kde-format
@@ -1059,13 +1059,13 @@ msgstr "无法找到联系人图像。"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
-msgstr ""
+msgstr "联系人的照片 (点击以更改) "
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
-msgstr ""
+msgstr "公司的徽标 (点击以更改) "
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
@@ -1123,13 +1123,13 @@ msgstr "图像 (%1)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set as Preferred"
-msgstr ""
+msgstr "设为首选项"
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:80
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Open Address Book"
-msgstr ""
+msgstr "打开地址簿"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
 #, kde-format
@@ -1141,7 +1141,7 @@ msgstr "搜索："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
-msgstr ""
+msgstr "搜索联系人..."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
