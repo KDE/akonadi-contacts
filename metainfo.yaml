@@ -12,11 +12,9 @@ portingAid: false
 deprecated: false
 release: false
 libraries:
- - cmake: "KPim6::AkonadiContactCore"
- - cmake: "KPim6::AkonadiContactWidgets"
+    - cmake: "KPim6::AkonadiContactCore"
+    - cmake: "KPim6::AkonadiContactWidgets"
 cmakename: KPim6AkonadiContactCore
 
 public_lib: true
 group: kdepim
-platforms:
-    - name: Linux
