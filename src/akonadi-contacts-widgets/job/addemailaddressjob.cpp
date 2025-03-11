@@ -7,8 +7,11 @@
 
 #include "addemailaddressjob.h"
 #include "widgets/selectaddressbookdialog.h"
+#include <Akonadi/AgentConfigurationDialog>
 #include <Akonadi/AgentFilterProxyModel>
+#include <Akonadi/AgentInstance>
 #include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentManager>
 #include <Akonadi/AgentType>
 #include <Akonadi/AgentTypeDialog>
 #include <Akonadi/Collection>
@@ -132,10 +135,22 @@ public:
 
                     if (agentType.isValid()) {
                         auto job = new Akonadi::AgentInstanceCreateJob(agentType, q);
-                        q->connect(job, &Akonadi::AgentInstanceCreateJob::result, q, [this](KJob *job) {
-                            slotResourceCreationDone(job);
+                        q->connect(job, &Akonadi::AgentInstanceCreateJob::result, q, [this, job](KJob *) {
+                            if (job->error()) {
+                                slotResourceCreationDone(job);
+                                return;
+                            }
+                            auto configureDialog = new Akonadi::AgentConfigurationDialog(job->instance(), mParentWidget);
+                            configureDialog->setAttribute(Qt::WA_DeleteOnClose);
+                            q->connect(configureDialog, &QDialog::rejected, q, [this, instance = job->instance()] {
+                                Akonadi::AgentManager::self()->removeInstance(instance);
+                                q->emitResult();
+                            });
+                            q->connect(configureDialog, &QDialog::accepted, q, [this] {
+                                createContact();
+                            });
+                            configureDialog->show();
                         });
-                        job->configure(mParentWidget);
                         job->start();
                         delete dlg;
                         return;
