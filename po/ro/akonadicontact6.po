@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-03-13 00:42+0000\n"
 "PO-Revision-Date: 2013-01-12 06:26+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1257,7 +1257,7 @@ msgid ""
 "this entry by opening the address book."
 msgstr ""
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:68
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1265,8 +1265,8 @@ msgid ""
 "address book."
 msgstr ""
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:119
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:159
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1274,8 +1274,8 @@ msgid ""
 "create an address book?"
 msgstr ""
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:120
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:160
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "New Address Book Folder"
@@ -1283,8 +1283,8 @@ msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Dosar nou în cartea de adrese"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:121
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:161
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
 #, fuzzy, kde-format
 #| msgid "Update Address Book"
 #| msgid_plural "Update %1 Address Books"
@@ -1292,15 +1292,15 @@ msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Actualizează cartea de adrese"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Adaugă carte de adrese"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:215
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:230
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1308,27 +1308,27 @@ msgid ""
 "para><para>Do you want to edit this new contact now?</para>"
 msgstr ""
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
 #, fuzzy, kde-format
 #| msgid "Edit..."
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Editează..."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:224
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, fuzzy, kde-format
 #| msgid "Contact does not exist any more"
 msgid "Contact cannot be stored: %1"
 msgstr "Contactul nu mai există"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, fuzzy, kde-format
 #| msgctxt "@label"
@@ -1337,7 +1337,7 @@ msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "Creează marcaj nou:"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
 #, kde-format
 msgid "Contact created successfully"
 msgstr ""

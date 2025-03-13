@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-03-13 00:42+0000\n"
 "PO-Revision-Date: 2024-07-30 21:06+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1167,7 +1167,7 @@ msgstr ""
 "La vCard estis aldonita al via adresaro; vi povas aldoni pliajn informojn al "
 "ĉi tiu eniro malfermante la adresaron."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:68
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1176,8 +1176,8 @@ msgid ""
 msgstr ""
 "Kontakto kun la retadreso <email>%1</email> jam estas en via adreslibro."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:119
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:159
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1187,29 +1187,29 @@ msgstr ""
 "Vi devas krei adreslibron antaŭ ol aldoni kontakton. Ĉu vi volas krei "
 "adreslibron?"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:120
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:160
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Neniu Adreslibro Disponebla"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:121
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:161
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Krei Adreslibron"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Aldoni Adreslibron"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:215
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:230
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1219,32 +1219,32 @@ msgstr ""
 "<para>Kontakto por \"%1\" estis sukcese aldonita al via adreslibro.</"
 "para><para>Ĉu vi volas redakti ĉi tiun novan kontakton nun?</para>"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Redakti"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:224
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Fini"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Kontakto ne povas esti konservita: %1"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "Malsukcesis konservi kontakton"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Kontakto kreita sukcese"
