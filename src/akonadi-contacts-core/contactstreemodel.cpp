@@ -41,6 +41,13 @@ ContactsTreeModel::ContactsTreeModel(Monitor *monitor, QObject *parent)
 
 ContactsTreeModel::~ContactsTreeModel() = default;
 
+QHash<int, QByteArray> ContactsTreeModel::roleNames() const
+{
+    auto roles = EntityTreeModel::roleNames();
+    roles[AddresseeRole] = "addressee";
+    return roles;
+}
+
 void ContactsTreeModel::setColumns(const Columns &columns)
 {
     beginResetModel();
@@ -67,7 +74,9 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
 
         const auto contact = item.payload<KContacts::Addressee>();
 
-        if (role == Qt::DecorationRole) {
+        if (role == AddresseeRole) {
+            return QVariant::fromValue(contact);
+        } else if (role == Qt::DecorationRole) {
             if (column == 0) {
                 const KContacts::Picture picture = contact.photo();
                 if (picture.isIntern()) {
@@ -143,6 +152,11 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
             }
         }
     } else if (item.mimeType() == KContacts::ContactGroup::mimeType()) {
+        if (role == AddresseeRole) {
+            // expose empty addressee so that required properties in QML are not broken
+            return QVariant::fromValue(KContacts::Addressee());
+        }
+
         if (!item.hasPayload<KContacts::ContactGroup>()) {
             // Pass modeltest
             if (role == Qt::DisplayRole) {

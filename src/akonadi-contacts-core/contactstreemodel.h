@@ -150,6 +150,7 @@ public:
      */
     enum Roles {
         DateRole = EntityTreeModel::UserRole + 1, ///< The QDate object for the current index.
+        AddresseeRole,
         UserRole = DateRole + 42
     };
 
@@ -182,6 +183,8 @@ public:
     [[nodiscard]] QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const override;
     [[nodiscard]] int entityColumnCount(HeaderGroup headerGroup) const override;
     //@endcond
+
+    QHash<int, QByteArray> roleNames() const override;
 
 private:
     //@cond PRIVATE
