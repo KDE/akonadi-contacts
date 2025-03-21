@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-13 00:42+0000\n"
+"POT-Creation-Date: 2025-03-21 00:42+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -42,55 +42,55 @@ msgctxt "contact's email address"
 msgid "EMail"
 msgstr "អ៊ីមែល​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:212
+#: akonadi-contacts-core/contactstreemodel.cpp:226
 #, kde-format
 msgctxt "@title:column address books overview"
 msgid "Address Books"
 msgstr "ជ្រើស​សៀវ​ភៅ​អាសយដ្ឋាន​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:222
+#: akonadi-contacts-core/contactstreemodel.cpp:236
 #, kde-format
 msgctxt "@title:column name of a person"
 msgid "Name"
 msgstr "ឈ្មោះ​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:224
+#: akonadi-contacts-core/contactstreemodel.cpp:238
 #, kde-format
 msgctxt "@title:column family name of a person"
 msgid "Family Name"
 msgstr "នាម​ត្រកូល​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:226
+#: akonadi-contacts-core/contactstreemodel.cpp:240
 #, kde-format
 msgctxt "@title:column given name of a person"
 msgid "Given Name"
 msgstr "នាម​ខ្លួន​​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:230
+#: akonadi-contacts-core/contactstreemodel.cpp:244
 #, kde-format
 msgctxt "@title:column home address of a person"
 msgid "Home"
 msgstr "ផ្ទះ​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:232
+#: akonadi-contacts-core/contactstreemodel.cpp:246
 #, kde-format
 msgctxt "@title:column work address of a person"
 msgid "Work"
 msgstr "កិច្ច​ការ​​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:234
+#: akonadi-contacts-core/contactstreemodel.cpp:248
 #, kde-format
 msgctxt "@title:column phone numbers of a person"
 msgid "Phone Numbers"
 msgstr "លេខទូរស័​ព្ទ​​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:236
+#: akonadi-contacts-core/contactstreemodel.cpp:250
 #, kde-format
 msgctxt "@title:column the preferred email addresses of a person"
 msgid "Preferred EMail"
 msgstr "អ៊ីមែល​ដែល​ជា​ចំណូល​ចិត្ត​"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:238
+#: akonadi-contacts-core/contactstreemodel.cpp:252
 #, kde-format
 msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
