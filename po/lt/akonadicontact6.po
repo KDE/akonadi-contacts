@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-03-22 02:31+0000\n"
 "PO-Revision-Date: 2024-08-13 23:53+0300\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -43,55 +43,55 @@ msgctxt "contact's email address"
 msgid "EMail"
 msgstr "El. paštas"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:212
+#: akonadi-contacts-core/contactstreemodel.cpp:226
 #, kde-format
 msgctxt "@title:column address books overview"
 msgid "Address Books"
 msgstr "Adresų knygos"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:222
+#: akonadi-contacts-core/contactstreemodel.cpp:236
 #, kde-format
 msgctxt "@title:column name of a person"
 msgid "Name"
 msgstr "Vardas"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:224
+#: akonadi-contacts-core/contactstreemodel.cpp:238
 #, kde-format
 msgctxt "@title:column family name of a person"
 msgid "Family Name"
 msgstr "Pavardė"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:226
+#: akonadi-contacts-core/contactstreemodel.cpp:240
 #, kde-format
 msgctxt "@title:column given name of a person"
 msgid "Given Name"
 msgstr "Vardas"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:230
+#: akonadi-contacts-core/contactstreemodel.cpp:244
 #, kde-format
 msgctxt "@title:column home address of a person"
 msgid "Home"
 msgstr "Namų"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:232
+#: akonadi-contacts-core/contactstreemodel.cpp:246
 #, kde-format
 msgctxt "@title:column work address of a person"
 msgid "Work"
 msgstr "Darbo"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:234
+#: akonadi-contacts-core/contactstreemodel.cpp:248
 #, kde-format
 msgctxt "@title:column phone numbers of a person"
 msgid "Phone Numbers"
 msgstr "Telefono numeriai"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:236
+#: akonadi-contacts-core/contactstreemodel.cpp:250
 #, kde-format
 msgctxt "@title:column the preferred email addresses of a person"
 msgid "Preferred EMail"
 msgstr "Pageidaujamas el. paštas"
 
-#: akonadi-contacts-core/contactstreemodel.cpp:238
+#: akonadi-contacts-core/contactstreemodel.cpp:252
 #, kde-format
 msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
