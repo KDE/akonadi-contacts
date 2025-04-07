@@ -1,0 +1,1662 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the akonadi-contacts package.
+#
+# SPDX-FileCopyrightText: 2025 Gummi <gudmundure@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-contacts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-21 00:42+0000\n"
+"PO-Revision-Date: 2025-04-06 12:20+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:193
+#, kde-format
+msgid "The member with name <b>%1</b> is missing an email address"
+msgstr "Það vantar netfang fyrir meðliminn sem heitir <b>%1</b>"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:240
+#, kde-format
+msgid "Contact does not exist any more"
+msgstr "Tengiliður er ekki lengur til"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
+#, kde-format
+msgctxt "contact's name"
+msgid "Name"
+msgstr "Nafn"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:396
+#, kde-format
+msgctxt "contact's email address"
+msgid "EMail"
+msgstr "Netfang"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:226
+#, kde-format
+msgctxt "@title:column address books overview"
+msgid "Address Books"
+msgstr "Tengiliðaskrár"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:236
+#, kde-format
+msgctxt "@title:column name of a person"
+msgid "Name"
+msgstr "Nafn"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:238
+#, kde-format
+msgctxt "@title:column family name of a person"
+msgid "Family Name"
+msgstr "Ættarnafn/föðurnafn"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:240
+#, kde-format
+msgctxt "@title:column given name of a person"
+msgid "Given Name"
+msgstr "Eiginnafn"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:244
+#, kde-format
+msgctxt "@title:column home address of a person"
+msgid "Home"
+msgstr "Heimili"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:246
+#, kde-format
+msgctxt "@title:column work address of a person"
+msgid "Work"
+msgstr "Vinna"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:248
+#, kde-format
+msgctxt "@title:column phone numbers of a person"
+msgid "Phone Numbers"
+msgstr "Símanúmer"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:250
+#, kde-format
+msgctxt "@title:column the preferred email addresses of a person"
+msgid "Preferred EMail"
+msgstr "Sjálfgefið netfang"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:252
+#, kde-format
+msgctxt "@title:column all email addresses of a person"
+msgid "All EMails"
+msgstr "Öll netföng"
+
+#: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:23
+#, kde-format
+msgid "Distribution List %1"
+msgstr "Póstlisti %1"
+
+#: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:130
+#, kde-format
+msgctxt "Name and email address of a contact"
+msgid "%1 <%2>"
+msgstr "%1 <%2>"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts-core/standardcontactformatter.cpp:176
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:66
+#, kde-format
+msgid "Address Book"
+msgstr "Tengiliðaskrá"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
+#: akonadi-contacts-core/standardcontactformatter.cpp:175
+#, kde-format
+msgid "Anniversary"
+msgstr "Afmæli"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
+#: akonadi-contacts-core/standardcontactformatter.cpp:170
+#, kde-format
+msgid "Assistant's Name"
+msgstr "Nafn aðstoðarmanneskju"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
+#: akonadi-contacts-core/standardcontactformatter.cpp:171
+#, kde-format
+msgid "Manager's Name"
+msgstr "Nafn yfirmanns"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
+#: akonadi-contacts-core/standardcontactformatter.cpp:173
+#, kde-format
+msgid "Office"
+msgstr "Skrifstofa"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
+#: akonadi-contacts-core/standardcontactformatter.cpp:169
+#, kde-format
+msgid "Profession"
+msgstr "Starfsheiti"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
+#: akonadi-contacts-core/standardcontactformatter.cpp:172
+#, kde-format
+msgctxt "Wife/Husband/..."
+msgid "Partner's Name"
+msgstr "Nafn maka"
+
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:182
+#: akonadi-contacts-core/standardcontactformatter.cpp:233
+#, kde-format
+msgctxt "Boolean value"
+msgid "yes"
+msgstr "já"
+
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:235
+#, kde-format
+msgctxt "Boolean value"
+msgid "no"
+msgstr "nei"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:95
+#, kde-format
+msgid "(One year old)"
+msgid_plural "(%1 years old)"
+msgstr[0] "(eins árs)"
+msgstr[1] "(%1 ára)"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:106
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Send SMS"
+msgstr "Senda SMS"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:115
+#, kde-format
+msgctxt "a contact's email address"
+msgid "Email"
+msgstr "Netfang"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:130
+#, kde-format
+msgid "Homepage"
+msgstr "Heimasíða"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:136
+#, kde-format
+msgid "Blog Feed"
+msgstr "Bloggstraumur"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:154
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Show address on map"
+msgstr "Sýna póstfang á korti"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:161
+#, kde-format
+msgid "Notes"
+msgstr "Athugasemdir"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:168
+#, kde-format
+msgid "Department"
+msgstr "Deild"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:174
+#, kde-format
+msgid "IM Address"
+msgstr "Spjallvistfang"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Einhver annar breytti tengiliðnum.\n"
+"Hvað á að gera?"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:163
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
+#, kde-format
+msgctxt "@action:button"
+msgid "Take over changes"
+msgstr "Taka yfir breytingarnar"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:164
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
+#, kde-format
+msgctxt "@action:button"
+msgid "Ignore and Overwrite changes"
+msgstr "Hunsa og skrifa yfir breytingarnar"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:278
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:291
+#: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Velja tengiliðaskrá"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:279
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Veldu tengiliðaskrána þar sem vista á nýja tengiliðinn:"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "Nýr tengiliður"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "Breyta tengilið"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:72
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Add to:"
+msgstr "Bæta við:"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr "Staðsetning var ekki vistuð. Viltu loka ritlinum?"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:182
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "Staðfesting"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr "Loka ritli"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr "Ekki loka"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Viltu örugglega hætta við?"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:201
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Hætta við að breyta"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:202
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Ekki hætta við"
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
+#, kde-format
+msgid ""
+"The contact group has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Einhver annar breytti tengiliðahópnum.\n"
+"Hvað á að gera?"
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:176
+#, kde-format
+msgid "The name of the contact group must not be empty."
+msgstr "Heiti tengiliðahópsins má ekki vera autt."
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:292
+#, kde-format
+msgid "Select the address book the new contact group shall be saved in:"
+msgstr "Veldu tengiliðaskrána þar sem vista á nýja tengiliðahópinn:"
+
+#. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:29
+#, kde-format
+msgctxt "@label The name of a contact group"
+msgid "Name:"
+msgstr "Heiti:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:59
+#, kde-format
+msgctxt "@label"
+msgid "Contact group members:"
+msgstr "Meðlimir tengiliðahóps:"
+
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:66
+#, kde-format
+msgid "Search..."
+msgstr "Leita..."
+
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact Group"
+msgstr "Nýr tengiliðahópur"
+
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Group"
+msgstr "Breyta tengiliðahópi"
+
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "Tengiliðahópur %1"
+
+#: akonadi-contacts-widgets/contactviewer.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "Tengiliður %1"
+
+#: akonadi-contacts-widgets/contactviewerdialog.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "Sýna tengilið"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
+#, kde-format
+msgid "Remove Address"
+msgstr "Fjarlægja póstfang"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
+#, kde-format
+msgid "Do you really want to delete this address?"
+msgstr "Viltu örugglega eyða þessu póstfangi?"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Street"
+msgstr "Bæta við götuheiti"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Post Office Box"
+msgstr "Bæta við pósthólfi"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Postal Code"
+msgstr "Bæta við póstnúmeri"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Locality"
+msgstr "Bæta við sveitarfélagi"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Region"
+msgstr "Bæta við héraði"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
+#, kde-format
+msgctxt "street/postal"
+msgid "This is the preferred address"
+msgstr "Þetta er sjálfgefið póstfang"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Address"
+msgstr "Bæta við póstfangi"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Address"
+msgstr "Fjarlægja póstfang"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
+#, kde-format
+msgctxt "@action:button"
+msgid "Update Address"
+msgstr "Uppfæra póstfang"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:24
+#, kde-format
+msgctxt "street/postal"
+msgid "Edit Address Type"
+msgstr "Breyta gerð póstfangs"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:38
+#, kde-format
+msgctxt "street/postal"
+msgid "Address Types"
+msgstr "Gerðir póstfangs"
+
+#: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:61
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "Other..."
+msgstr "Annað..."
+
+#: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "New Address Type"
+msgstr "Ný póstfangsgerð"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:47
+#, kde-format
+msgctxt "@label The organization of a contact"
+msgid "Organization:"
+msgstr "Fyrirtæki/stofnun:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add organization's name"
+msgstr "Bæta við heiti fyrirtækis/stofnuna"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:55
+#, kde-format
+msgctxt "@label The profession of a contact"
+msgid "Profession:"
+msgstr "Starfsheiti:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add profession"
+msgstr "Bæta við starfsheiti"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:63
+#, kde-format
+msgctxt "@label The title of a contact"
+msgid "Title:"
+msgstr "Starfstitill:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add the title"
+msgstr "Bæta við starfstitli"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
+#, kde-format
+msgctxt "@label The department of a contact"
+msgid "Department:"
+msgstr "Deild:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add the department"
+msgstr "Bæta við deild"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:79
+#, kde-format
+msgctxt "@label The office of a contact"
+msgid "Office:"
+msgstr "Skrifstofa:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add the office"
+msgstr "Bæta við skrifstofu"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:88
+#, kde-format
+msgctxt "@label The manager's name of a contact"
+msgid "Manager's name:"
+msgstr "Nafn yfirmanns:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add manager's name"
+msgstr "Bæta við nafni yfirmanns"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:96
+#, kde-format
+msgctxt "@label The assistant's name of a contact"
+msgid "Assistant's name:"
+msgstr "Nafn aðstoðarmanneskju:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add assistant's name"
+msgstr "Bæta við nafni aðstoðarmanneskju"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
+#, kde-format
+msgctxt "@label The free/busy information of a contact"
+msgid "Free/Busy:"
+msgstr "Viðverustaða:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add FreeBusy"
+msgstr "Bæta við viðverustöðu"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
+#, kde-format
+msgctxt "@title:tab"
+msgid "Contact"
+msgstr "Tengiliður"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:101
+#, kde-format
+msgctxt "@title:tab"
+msgid "Location"
+msgstr "Staðsetning"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:107
+#, kde-format
+msgctxt "@title:tab"
+msgid "Business"
+msgstr "Vinna"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:113
+#, kde-format
+msgctxt "@title:tab Personal properties of a contact"
+msgid "Personal"
+msgstr "Persónuupplýsingar"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:121
+#, kde-format
+msgctxt "@title:tab"
+msgid "Notes"
+msgstr "Til minnis"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:131
+#, kde-format
+msgctxt "@title:tab"
+msgid "Custom Fields"
+msgstr "Sérsniðnir reitir"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Field"
+msgstr "Bæta við reit"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
+#, kde-format
+msgctxt "@option:check"
+msgid "Use field for all contacts"
+msgstr "Nota reit fyrir alla tengiliði"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Custom Field Title"
+msgstr "Heiti sérsniðins reits"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add name"
+msgstr "Bæta við heiti"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:60
+#, kde-format
+msgid "Text"
+msgstr "Texti"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#, kde-format
+msgid "Numeric"
+msgstr "Tala"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#, kde-format
+msgid "Boolean"
+msgstr "Boole-gildi"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#, kde-format
+msgid "Date"
+msgstr "Dagsetning"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#, kde-format
+msgid "Time"
+msgstr "Tími"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#, kde-format
+msgid "DateTime"
+msgstr "Dagsetning/tími"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#, kde-format
+msgid "Url"
+msgstr "Slóð"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:214
+#, kde-format
+msgctxt "Custom Fields"
+msgid "Do you really want to delete the selected custom field?"
+msgstr "Viltu örugglega eyða valda sérsniðna reitnum?"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Delete"
+msgstr "Staðfesta eyðingu"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
+#, kde-format
+msgctxt "custom field title"
+msgid "Title"
+msgstr "Titill"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:197
+#, kde-format
+msgctxt "custom field value"
+msgid "Value"
+msgstr "Gildi"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Blog Feed"
+msgstr "Bloggstraumur"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Blog Feed"
+msgstr "Bæta við bloggstraumi"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:45
+#, kde-format
+msgid "Short Name"
+msgstr "Skammstöfun"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:46
+#, kde-format
+msgid "Full Name"
+msgstr "Fullt nafn"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:47
+#, kde-format
+msgid "Reverse Name with Comma"
+msgstr "Öfug röð með kommu"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:48
+#, kde-format
+msgid "Reverse Name"
+msgstr "Öfug röð"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:49
+#, kde-format
+msgid "Organization"
+msgstr "Fyrirtæki/stofnun"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:50
+#, kde-format
+msgctxt "@item:inlistbox A custom name format"
+msgid "Custom"
+msgstr "Sérsniðið"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Email"
+msgstr "Netfang"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
+#, kde-format
+msgid "Select..."
+msgstr "Velja..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, kde-format
+msgid "Home"
+msgstr "Heimili"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, kde-format
+msgid "Work"
+msgstr "Vinna"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, kde-format
+msgid "Other"
+msgstr "Annað"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add an Email Account"
+msgstr "Bæta við tölvupóstreikningi"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an Email"
+msgstr "Bæta við netfangi"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove Email"
+msgstr "Fjarlægja netfang"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
+#, kde-format
+msgctxt "@option:check"
+msgid "Allow remote content in received HTML messages"
+msgstr "Leyfa ytra efni í HTML-skeytum sem berast"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Show messages received from this contact as:"
+msgstr "Sýna skeyti sem þessi tengiliður sendir sem:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr "sjálfgefið"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "hreinan texta"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Messaging"
+msgstr "Spjallforrit"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add an identifier"
+msgstr "Bæta við auðkenni"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
+#, kde-format
+msgctxt "@item:inlistbox select from a list of IM protocols"
+msgid "Select..."
+msgstr "Velja..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an IM"
+msgstr "Bæta við spjallforriti"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove IM"
+msgstr "Fjarlægja spjallforrit"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Name"
+msgstr "Breyta nafni tengiliðar"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:48
+#, kde-format
+msgid "Honorific prefixes:"
+msgstr "Titlar á undan:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:49
+#, kde-format
+msgid "Given name:"
+msgstr "Eiginnafn:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:50
+#, kde-format
+msgid "Additional names:"
+msgstr "Önnur nöfn:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:51
+#, kde-format
+msgid "Family names:"
+msgstr "Ættarnöfn:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:52
+#, kde-format
+msgid "Honorific suffixes:"
+msgstr "Titlar á eftir:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:53
+#, kde-format
+msgid "Display:"
+msgstr "Birta:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:57
+#, kde-format
+msgid "Dr."
+msgstr "Dr."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:58
+#, kde-format
+msgid "Miss"
+msgstr "Ungfrú"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:59
+#, kde-format
+msgid "Mr."
+msgstr "Hr."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:60
+#, kde-format
+msgid "Mrs."
+msgstr "Frú"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:61
+#, kde-format
+msgid "Ms."
+msgstr "Frk."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:62
+#, kde-format
+msgid "Prof."
+msgstr "Próf."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:67
+#, kde-format
+msgid "I"
+msgstr "I."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:68
+#, kde-format
+msgid "II"
+msgstr "II."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:69
+#, kde-format
+msgid "III"
+msgstr "III."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:70
+#, kde-format
+msgid "Jr."
+msgstr "yngri"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:71
+#, kde-format
+msgid "Sr."
+msgstr "eldri"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Name"
+msgstr "Nafn"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Edit Contact Name"
+msgstr "Breyta nafni tengiliðar"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Nickname"
+msgstr "Gælunafn"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Nickname"
+msgstr "Bæta við gælunafni"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Phone"
+msgstr "Sími"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Phone Number"
+msgstr "Breyta símanúmeri"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Phone Number"
+msgstr "Bæta við símanúmeri"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add a Phone Number"
+msgstr "Bæta við símanúmeri"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove Phone Number"
+msgstr "Fjarlægja símanúmer"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Web"
+msgstr "Vefsíða"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, kde-format
+msgid "Profile"
+msgstr "Notandasíða"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Web Site"
+msgstr "Bæta við vefsíðu"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add a Web Site"
+msgstr "Bæta við vefsíðu"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove Web Site"
+msgstr "Fjarlægja vefsíðu"
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Click to add date"
+msgstr "Smelltu til að bæta við dagsetningu"
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
+#, kde-format
+msgid "Remove"
+msgstr "Fjarlægja"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:29
+#, kde-format
+msgctxt "@label The birthdate of a contact"
+msgid "Birthdate:"
+msgstr "Fæðingardagur:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:35
+#, kde-format
+msgctxt "@label The wedding anniversary of a contact"
+msgid "Anniversary:"
+msgstr "Brúðkaupsafmæli:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:41
+#, kde-format
+msgctxt "@label The partner's name of a contact"
+msgid "Partner's name:"
+msgstr "Nafn maka:"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
+#, kde-format
+msgid "This contact's image cannot be found."
+msgstr "Mynd af þessum tengilið fannst ekki."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "The photo of the contact (click to change)"
+msgstr "Myndin af tengiliðnum (smelltu til að breyta)"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "The logo of the company (click to change)"
+msgstr "Lógó fyrirtækisins (smelltu til að breyta)"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
+#, kde-format
+msgid "Change photo..."
+msgstr "Skipta um mynd..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
+#, kde-format
+msgid "Change URL..."
+msgstr "Breyta slóð..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
+#, kde-format
+msgid "Save photo..."
+msgstr "Vista mynd..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
+#, kde-format
+msgid "Remove photo"
+msgstr "Fjarlægja mynd"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
+#, kde-format
+msgid "Change logo..."
+msgstr "Skipta um lógó..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
+#, kde-format
+msgid "Save logo..."
+msgstr "Vista lógó..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
+#, kde-format
+msgid "Remove logo"
+msgstr "Fjarlægja lógó"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#, kde-format
+msgid "Change image URL"
+msgstr "Breyta slóð myndar"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#, kde-format
+msgid "Image URL:"
+msgstr "Slóð myndar:"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
+#, kde-format
+msgid "Images (%1)"
+msgstr "Myndir (%1)"
+
+#: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set as Preferred"
+msgstr "Velja sem sjálfgefið"
+
+#: akonadi-contacts-widgets/emailaddressrequester.cpp:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Open Address Book"
+msgstr "Opna tengiliðaskrá"
+
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
+#, kde-format
+msgctxt "@label Search in a list of contacts"
+msgid "Search:"
+msgstr "Leita:"
+
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search Contact..."
+msgstr "Leita að tengilið..."
+
+#: akonadi-contacts-widgets/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+"Aðalnetfangið á vCard-spjaldinu er nú þegar í tengiliðaskránni þinni. Þú "
+"getur hins vegar vistað vCard-spjaldið í skrá og flutt hana inn handvirkt "
+"inn í tengiliðaskrána."
+
+#: akonadi-contacts-widgets/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+"vCard-spjaldinu var bætt við tengiliðaskrána þína. Þú getur bætt meiri "
+"upplýsingum við þessa færslu með því að opna tengiliðaskrána."
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr ""
+"Tengiliður með netfangið <email>%1</email> er nú þegar til staðar í "
+"tengiliðaskránni þinni."
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+"Þú þarft að búa til tengiliðaskrá til að þú getir bætt við tengilið. Viltu "
+"búa til tengiliðaskrá?"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Engin tengiliðaskrá fannst"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Búa til tengiliðaskrá"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Bæta við tengiliðaskrá"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:230
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+"<para>Tengiliðnum fyrir \"%1\" var bætt við tengiliðaskrána þína.</"
+"para><para>Viltu breyta þessum tengilið núna?</para>"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
+#, kde-format
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Breyta"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr "Ljúka"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "Ekki tókst að vista tengiliðinn: %1"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to store contact"
+msgstr "Mistókst að vista tengilið"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
+#, kde-format
+msgid "Contact created successfully"
+msgstr "Tókst að búa til tengilið"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "Bæta við tengiliðamöppu"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr "Bæta við nýrri tengiliðamöppu í tengiliðamöppunni sem er valin."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "Ný tengiliðamappa"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "Gat ekki búið til tengiliðamöppu: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "Mistókst að búa til tengiliðamöppu"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "Afrita tengiliðamöppu"
+msgstr[1] "Afrita %1 tengiliðamöppur"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr "Afrita völdu tengiliðamöppurnar á klippispjaldið."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "Eyða tengiliðamöppu"
+msgstr[1] "Eyða %1 tengiliðamöppum"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr "Eyða völdu tengiliðamöppunum úr tengiliðaskránni."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] ""
+"Viltu örugglega eyða þessari tengiliðamöppu og öllum undirmöppum hennar?"
+msgstr[1] "Viltu örugglega eyða %1 tengiliðamöppu og öllum undirmöppum þeirra?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "Eyða tengiliðamöppu?"
+msgstr[1] "Eyða tengiliðamöppum?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "Gat ekki eytt tengiliðamöppu: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "Mistókst að eyða tengiliðamöppu"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "Uppfæra tengiliðamöppu"
+msgstr[1] "Uppfæra %1 tengiliðamöppur"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr "Uppfæra innihald völdu tengiliðamappanna."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "Klippa tengiliðamöppu"
+msgstr[1] "Klippa %1 tengiliðamöppur"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr "Klippa völdu tengiliðamöppurnar úr tengiliðaskránni."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "Eiginleikar möppu..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr ""
+"Opna svarglugga til að breyta eiginleikum völdu tengiliðaskrármöppunnar."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "Eiginleikar tengiliðamöppu %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "Afrita tengilið"
+msgstr[1] "Afrita %1 tengiliði"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "Afrita völdu tengiliðina á klippispjaldið."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "Eyða tengilið"
+msgstr[1] "Eyða %1 tengiliðum"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "Eyða völdu tengiliðunum úr tengiliðaskránni."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "Viltu örugglega eyða völdu tengiliðunum?"
+msgstr[1] "Viltu örugglega eyða %1 tengiliðum?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "Eyða tengilið?"
+msgstr[1] "Eyða tengiliðum?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "Gat ekki eytt tengilið: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "Mistókst að eyða tengilið"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "Klippa tengilið"
+msgstr[1] "Klippa %1 tengiliði"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "Klippa völdu tengiliðina úr tengiliðaskránni."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "Bæta við &tengiliðaskrá..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr ""
+"Bæta við nýrri tengiliðaskrá<p>Það birtist svargluggi þar sem þú getur valið "
+"hvers konar tengiliðaskrá á að bæta við.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "Gat ekki búið til tengiliðaskrá: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "Mistókst að búa til tengiliðaskrá"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "&Eyða tengiliðaskrá"
+msgstr[1] "&Eyða %1 tengiliðaskrám"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"Eyða völdu tengiliðaskránum<p>Tengiliðaskránum sem er búið að velja verður "
+"eytt, ásamt öllum tengiliðum og tengiliðahópum sem þær innihalda.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "Viltu örugglega eyða þessari tengiliðaskrá?"
+msgstr[1] "Viltu örugglega eyða %1 tengiliðaskrám?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "Eyða tengiliðaskrá?"
+msgstr[1] "Eyða tengiliðaskrám?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "Eiginleikar tengiliðaskrár..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr ""
+"Opnaðu svarglugga til að breyta eiginleikum fyrir tengiliðaskrárnar sem eru "
+"valdar."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "Uppfæra tengiliðaskrá"
+msgstr[1] "Uppfæra %1 tengiliðaskrár"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr "Uppfærir innihald í öllum möppum í tengiliðaskránum sem eru valdar."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "Gat ekki límt tengilið: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "Mistókst að líma"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "Afrita tengilið í"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "Færa tengilið í"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#, kde-format
+msgid "Edit Contact..."
+msgstr "Breyta tengilið..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "Afrita hóp"
+msgstr[1] "Afrita %1 hópa"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "Afrita hóp í"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "Eyða hópi"
+msgstr[1] "Eyða %1 hópum"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "Klippa hóp"
+msgstr[1] "Klippa %1 hópa"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "Færa hóp í"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "Breyta hópi..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#, kde-format
+msgid "New &Contact..."
+msgstr "Nýr ten&giliður..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"Búa til nýjan tengilið<p>Það opnast svargluggi þar sem þú getur  bætt við "
+"upplýsingum um manneskju, þ.m.t. póstföng og símanúmer.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#, kde-format
+msgid "New &Group..."
+msgstr "Nýr &hópur..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr ""
+"Búa til nýjan hóp<p>Það opnast svargluggi þar sem þú getur bætt við nýjum "
+"hópi af tengiliðum.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr ""
+"Breyta völdum tengilið<p>Það opnast svargluggi þar sem þú getur breytt "
+"upplýsingunum um manneskju, þ.m.t. póstföng og símanúmer.</p>"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:57
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "Afrita atriði"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:66
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "Afrita netfang"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:75
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "Afrita slóð tengils"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:102
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "Afrita ljósmynd"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:105
+#, kde-format
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "Afrita kóða"
+
+#: akonadi-contacts-widgets/waitingoverlay.cpp:35
+#, kde-format
+msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
+msgstr "<p style=\"color: white;\"><b>Bíð eftir aðgerð</b><br/></p>"
+
+#: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "Veldu tengiliðaskrána þar sem á að vista tengiliðinn:"
