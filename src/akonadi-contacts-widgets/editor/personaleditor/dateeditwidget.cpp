@@ -43,7 +43,7 @@ void DateView::emitSignal()
 
 DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     : QWidget(parent)
-    , mReadOnly(false)
+
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});

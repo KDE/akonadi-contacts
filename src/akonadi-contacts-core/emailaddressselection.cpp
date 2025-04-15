@@ -16,7 +16,7 @@
 using namespace Akonadi;
 
 EmailAddressSelectionPrivate::EmailAddressSelectionPrivate()
-    : QSharedData()
+
 {
 }
 
