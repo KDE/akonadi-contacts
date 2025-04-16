@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-21 00:42+0000\n"
+"POT-Creation-Date: 2025-04-16 00:42+0000\n"
 "PO-Revision-Date: 2024-07-30 08:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1063,66 +1063,66 @@ msgstr "Ime partnerja:"
 msgid "This contact's image cannot be found."
 msgstr "Slike tega stika ni mogoče najti."
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "Fotografija stika (kliknite za spremembo)"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:120
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "Logotip podjetja (kliknite za spremembo)"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:236
 #, kde-format
 msgid "Change photo..."
 msgstr "Spremeni fotografijo …"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change URL..."
 msgstr "Spremeni URL …"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:241
 #, kde-format
 msgid "Save photo..."
 msgstr "Shrani fotografijo …"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:244
 #, kde-format
 msgid "Remove photo"
 msgstr "Odstrani fotografijo"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:249
 #, kde-format
 msgid "Change logo..."
 msgstr "Spremeni logotip …"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:254
 #, kde-format
 msgid "Save logo..."
 msgstr "Shrani logotip …"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:257
 #, kde-format
 msgid "Remove logo"
 msgstr "Odstrani logotip"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:271
 #, kde-format
 msgid "Change image URL"
 msgstr "Spremeni URL slike"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:271
 #, kde-format
 msgid "Image URL:"
 msgstr "URL slike:"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:300
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:323
 #, kde-format
 msgid "Images (%1)"
 msgstr "Slike (%1)"

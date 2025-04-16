@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-21 00:42+0000\n"
+"POT-Creation-Date: 2025-04-16 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1055,66 +1055,66 @@ msgstr "伙伴姓名："
 msgid "This contact's image cannot be found."
 msgstr "无法找到联系人图像。"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "联系人的照片 (点击以更改) "
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:120
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
 msgstr "公司的徽标 (点击以更改) "
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:236
 #, kde-format
 msgid "Change photo..."
 msgstr "更改照片..."
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change URL..."
 msgstr "更改 URL..."
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:241
 #, kde-format
 msgid "Save photo..."
 msgstr "保存照片..."
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:244
 #, kde-format
 msgid "Remove photo"
 msgstr "删除照片"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:249
 #, kde-format
 msgid "Change logo..."
 msgstr "更改徽标..."
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:254
 #, kde-format
 msgid "Save logo..."
 msgstr "保存徽标..."
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:257
 #, kde-format
 msgid "Remove logo"
 msgstr "删除徽标"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:271
 #, kde-format
 msgid "Change image URL"
 msgstr "更改图像 URL"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:271
 #, kde-format
 msgid "Image URL:"
 msgstr "图像 URL："
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:300
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:323
 #, kde-format
 msgid "Images (%1)"
 msgstr "图像 (%1)"
