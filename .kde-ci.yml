@@ -8,6 +8,7 @@ Dependencies:
     'frameworks/kcontacts': '@latest-kf6'
     'frameworks/prison': '@latest-kf6'
     'frameworks/kcodecs': '@latest-kf6'
+    'frameworks/kcolorscheme': '@latest-kf6'
     'pim/akonadi': '@same'
     'pim/kmime': '@same'
     'pim/grantleetheme': '@same'

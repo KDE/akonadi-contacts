@@ -72,7 +72,7 @@ find_package(KF6WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Prison ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Codecs ${KF_MIN_VERSION} CONFIG REQUIRED)
-
+find_package(KF6ColorScheme ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
