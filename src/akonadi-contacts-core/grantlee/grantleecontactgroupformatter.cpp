@@ -17,7 +17,8 @@
 #include <Akonadi/ContactGroupExpandJob>
 #include <Akonadi/Item>
 
-#include <KColorScheme>
+#include <QGuiApplication>
+#include <QPalette>
 
 using namespace KAddressBookGrantlee;
 
@@ -166,11 +167,11 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     contactGroupObject.insert(QStringLiteral("additionalFields"), fields);
 
     QVariantHash colorsObject;
-    colorsObject.insert(QStringLiteral("linkColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("linkColor"), qApp->palette().text().color().name());
 
-    colorsObject.insert(QStringLiteral("textColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("textColor"), qApp->palette().text().color().name());
 
-    colorsObject.insert(QStringLiteral("backgroundColor"), KColorScheme(QPalette::Active, KColorScheme::View).background().color().name());
+    colorsObject.insert(QStringLiteral("backgroundColor"), qApp->palette().base().color().name());
 
     QVariantHash mapping;
     mapping.insert(QStringLiteral("contactGroup"), contactGroupObject);

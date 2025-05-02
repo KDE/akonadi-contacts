@@ -20,14 +20,15 @@
 
 #include <Akonadi/Item>
 
-#include <KColorScheme>
-
+#include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KStringHandler>
 
+#include <QGuiApplication>
 #include <QLocale>
 #include <QMetaProperty>
+#include <QPalette>
 #include <QSet>
 
 using namespace KAddressBookGrantlee;
@@ -213,11 +214,11 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
 
     QVariantHash colorsObject;
 
-    colorsObject.insert(QStringLiteral("linkColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("linkColor"), qApp->palette().text().color().name());
 
-    colorsObject.insert(QStringLiteral("textColor"), KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name());
+    colorsObject.insert(QStringLiteral("textColor"), qApp->palette().text().color().name());
 
-    colorsObject.insert(QStringLiteral("backgroundColor"), KColorScheme(QPalette::Active, KColorScheme::View).background().color().name());
+    colorsObject.insert(QStringLiteral("backgroundColor"), qApp->palette().base().color().name());
 
     QVariantHash mapping;
     mapping.insert(QStringLiteral("contact"), QVariant::fromValue(ContactGrantleeWrapper(rawContact)));

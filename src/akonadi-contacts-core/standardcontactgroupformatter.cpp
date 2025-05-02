@@ -10,8 +10,11 @@
 
 #include "job/contactgroupexpandjob.h"
 #include <Akonadi/Item>
-#include <KColorScheme>
 #include <KContacts/Addressee>
+
+#include <QGuiApplication>
+#include <QPalette>
+
 using namespace Akonadi;
 
 class Akonadi::StandardContactGroupFormatterPrivate
@@ -114,9 +117,7 @@ QString StandardContactGroupFormatter::toHtml(HtmlForm form) const
                    "%3" // contact group part
                    "</body>"
                    "</html>")
-                   .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name(),
-                        KColorScheme(QPalette::Active, KColorScheme::View).background().color().name(),
-                        document);
+                   .arg(qApp->palette().text().color().name(), qApp->palette().base().color().name(), document);
 
     return document;
 }

@@ -9,15 +9,17 @@
 #include "standardcontactformatter.h"
 
 #include <Akonadi/Item>
-#include <KColorScheme>
 #include <KConfigGroup>
 
 #include <KContacts/Addressee>
 
+#include <KConfig>
 #include <KLocalizedString>
 #include <KStringHandler>
 
+#include <QGuiApplication>
 #include <QLocale>
+#include <QPalette>
 #include <QRegularExpression>
 #include <QSet>
 
@@ -320,9 +322,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                                  "%3" // contact part
                                  "</body>"
                                  "</html>")
-                                 .arg(KColorScheme(QPalette::Active, KColorScheme::View).foreground().color().name(),
-                                      KColorScheme(QPalette::Active, KColorScheme::View).background().color().name(),
-                                      strAddr);
+                                 .arg(qApp->palette().text().color().name(), qApp->palette().base().color().name(), strAddr);
 
     return document;
 }
