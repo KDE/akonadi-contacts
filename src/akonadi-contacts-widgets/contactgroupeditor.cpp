@@ -8,7 +8,6 @@
 
 #include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
-#include <KStatefulBrush>
 
 #include "contactgroupeditordelegate_p.h"
 #include "contactgroupmodel_p.h"
@@ -335,9 +334,8 @@ void ContactGroupEditor::groupNameIsValid(bool isValid)
 #ifndef QT_NO_STYLE_STYLESHEET
     QString styleSheet;
     if (!isValid) {
-        const KColorScheme::BackgroundRole bgColorScheme(KColorScheme::NegativeBackground);
-        KStatefulBrush bgBrush(KColorScheme::View, bgColorScheme);
-        styleSheet = QStringLiteral("QLineEdit{ background-color:%1 }").arg(bgBrush.brush(palette()).color().name());
+        KColorScheme scheme(palette().currentColorGroup(), KColorScheme::View);
+        styleSheet = QStringLiteral("QLineEdit{ background-color:%1 }").arg(scheme.background(KColorScheme::NegativeBackground).color().name());
     }
     d->mGui.groupName->setStyleSheet(styleSheet);
 #endif
