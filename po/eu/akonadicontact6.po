@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-16 00:42+0000\n"
+"POT-Creation-Date: 2025-05-03 00:42+0000\n"
 "PO-Revision-Date: 2024-08-03 11:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -108,109 +108,109 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:176
+#: akonadi-contacts-core/standardcontactformatter.cpp:178
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "Helbide-liburua"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:175
+#: akonadi-contacts-core/standardcontactformatter.cpp:177
 #, kde-format
 msgid "Anniversary"
 msgstr "Urteurrena"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:170
+#: akonadi-contacts-core/standardcontactformatter.cpp:172
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Laguntzailearen izena"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:171
+#: akonadi-contacts-core/standardcontactformatter.cpp:173
 #, kde-format
 msgid "Manager's Name"
 msgstr "Kudeatzailearen izena"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:173
+#: akonadi-contacts-core/standardcontactformatter.cpp:175
 #, kde-format
 msgid "Office"
 msgstr "Bulegoa"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:169
+#: akonadi-contacts-core/standardcontactformatter.cpp:171
 #, kde-format
 msgid "Profession"
 msgstr "Lanbidea"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:172
+#: akonadi-contacts-core/standardcontactformatter.cpp:174
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Bikotekidearen izena"
 
-#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:182
-#: akonadi-contacts-core/standardcontactformatter.cpp:233
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
+#: akonadi-contacts-core/standardcontactformatter.cpp:235
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "yes"
 
-#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
-#: akonadi-contacts-core/standardcontactformatter.cpp:235
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
+#: akonadi-contacts-core/standardcontactformatter.cpp:237
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
 msgstr "no"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:95
+#: akonadi-contacts-core/standardcontactformatter.cpp:97
 #, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
 msgstr[0] "(urtebetekoa)"
 msgstr[1] "(%1 urtekoa)"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:106
+#: akonadi-contacts-core/standardcontactformatter.cpp:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
 msgstr "Bidali SMS"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:115
+#: akonadi-contacts-core/standardcontactformatter.cpp:117
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
 msgstr "E-posta"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:130
+#: akonadi-contacts-core/standardcontactformatter.cpp:132
 #, kde-format
 msgid "Homepage"
 msgstr "Orri nagusia"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:136
+#: akonadi-contacts-core/standardcontactformatter.cpp:138
 #, kde-format
 msgid "Blog Feed"
 msgstr "Blog-jarioa"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:154
+#: akonadi-contacts-core/standardcontactformatter.cpp:156
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Erakutsi helbidea mapan"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:161
+#: akonadi-contacts-core/standardcontactformatter.cpp:163
 #, kde-format
 msgid "Notes"
 msgstr "Oharrak"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:168
+#: akonadi-contacts-core/standardcontactformatter.cpp:170
 #, kde-format
 msgid "Department"
 msgstr "Saila"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:174
+#: akonadi-contacts-core/standardcontactformatter.cpp:176
 #, kde-format
 msgid "IM Address"
 msgstr "Bat-bateko mezularitza Helbidea"
@@ -225,21 +225,21 @@ msgstr ""
 "Zer egin behar da?"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Hartu aldaketak"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ez ikusi eta aldaketak gainidatzi"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:278
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:291
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:290
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
@@ -317,7 +317,7 @@ msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Ez utzi bertan behera"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:134
 #, kde-format
 msgid ""
 "The contact group has been changed by someone else.\n"
@@ -326,12 +326,12 @@ msgstr ""
 "Beste norbaitek kontaktu-taldea aldatu du.\n"
 "Zer egin behar da?"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:176
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Kontaktu-taldearen izena ezin da hutsik egon."
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:292
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Hautatu kontaktu-talde berria gordeko den helbide-liburua:"
