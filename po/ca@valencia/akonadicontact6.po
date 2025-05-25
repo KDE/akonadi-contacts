@@ -1035,7 +1035,7 @@ msgstr "Elimina un lloc web"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
-msgstr "Feu clic per a afegir la data"
+msgstr "Cliqueu per a afegir la data"
 
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
 #, kde-format
@@ -1163,7 +1163,7 @@ msgid ""
 msgstr ""
 "L'adreça de correu electrònic primària de la vCard ja es troba en la "
 "llibreta d'adreces, així i tot, encara podeu guardar la vCard en un fitxer i "
-"importar-la a dins de la llibreta d'adreces de forma manual."
+"importar-la cap a dins de la llibreta d'adreces de forma manual."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:111
 #, kde-format
