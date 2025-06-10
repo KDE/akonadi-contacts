@@ -30,10 +30,10 @@ void PhoneWidgetLister::loadContact(const KContacts::Addressee &contact)
     } else {
         setNumberOfShownWidgetsTo(phoneNumbers.count());
         const QList<QWidget *> widgetList = widgets();
-        auto wIt = widgetList.constBegin();
+        auto with = widgetList.constBegin();
         auto wEnd = widgetList.constEnd();
-        for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-            auto w = qobject_cast<PhoneWidget *>(*wIt);
+        for (int i = 0; with != wEnd; ++with, ++i) {
+            auto w = qobject_cast<PhoneWidget *>(*with);
             w->loadPhone(phoneNumbers.at(i));
         }
     }

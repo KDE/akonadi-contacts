@@ -30,10 +30,10 @@ void MessagingWidgetLister::loadContact(const KContacts::Addressee &contact)
     } else {
         setNumberOfShownWidgetsTo(imaddresses.count());
         const QList<QWidget *> widgetList = widgets();
-        auto wIt = widgetList.constBegin();
+        auto with = widgetList.constBegin();
         auto wEnd = widgetList.constEnd();
-        for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-            auto w = qobject_cast<MessagingWidget *>(*wIt);
+        for (int i = 0; with != wEnd; ++with, ++i) {
+            auto w = qobject_cast<MessagingWidget *>(*with);
             w->setIMAddress(imaddresses.at(i));
         }
     }
@@ -111,10 +111,10 @@ void MessagingWidgetLister::updateAddRemoveButton()
     } else {
         addButtonEnabled = true;
     }
-    QList<QWidget *>::ConstIterator wIt = widgetList.constBegin();
+    QList<QWidget *>::ConstIterator with = widgetList.constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
-    for (; wIt != wEnd; ++wIt) {
-        auto w = qobject_cast<MessagingWidget *>(*wIt);
+    for (; with != wEnd; ++with) {
+        auto w = qobject_cast<MessagingWidget *>(*with);
         w->updateAddRemoveButton(addButtonEnabled);
     }
 }

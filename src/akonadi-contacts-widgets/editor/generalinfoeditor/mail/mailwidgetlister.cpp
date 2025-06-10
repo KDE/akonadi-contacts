@@ -30,10 +30,10 @@ void MailWidgetLister::loadContact(const KContacts::Addressee &contact)
     } else {
         setNumberOfShownWidgetsTo(mailList.count());
         const QList<QWidget *> widgetList = widgets();
-        auto wIt = widgetList.constBegin();
+        auto with = widgetList.constBegin();
         auto wEnd = widgetList.constEnd();
-        for (int i = 0; wIt != wEnd; ++wIt, ++i) {
-            auto w = qobject_cast<MailWidget *>(*wIt);
+        for (int i = 0; with != wEnd; ++with, ++i) {
+            auto w = qobject_cast<MailWidget *>(*with);
             w->setMail(mailList.at(i));
         }
     }
