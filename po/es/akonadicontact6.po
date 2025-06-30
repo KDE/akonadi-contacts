@@ -1,17 +1,17 @@
-# Translation of akonadicontact.po to Spanish
-# Copyright (C) 2009-2025 Free Software Foundation, Inc.
+# Spanish translations for akonadicontact6.po package.
+# Copyright (C) 2009-2025 This file is copyright:
+# This file is distributed under the same license as the akonadi-contacts package.
 #
-# SPDX-FileCopyrightText: 2009 Cristina Yenyxe Gonzalez Garcia <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2009, 2011 Cristina Yenyxe Gonzalez Garcia <the.blue.valkyrie@gmail.com>
 # SPDX-FileCopyrightText: 2009, 2010, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2010 Adrián Martínez <sfxgt3@gmail.com>
-# SPDX-FileCopyrightText: 2010, 2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Javier Viñal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: akonadicontact\n"
+"Project-Id-Version: akonadicontact6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 02:31+0000\n"
-"PO-Revision-Date: 2025-02-02 23:51+0100\n"
+"PO-Revision-Date: 2025-06-29 13:55+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -358,7 +358,7 @@ msgstr "Miembros del grupo de contactos:"
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
@@ -478,7 +478,7 @@ msgstr "Tipos de direcciones"
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "Other..."
-msgstr "Otro..."
+msgstr "Otro…"
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
 #, kde-format
@@ -755,7 +755,7 @@ msgstr "Correo electrónico"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
 #, kde-format
 msgid "Select..."
-msgstr "Seleccionar..."
+msgstr "Seleccionar…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
@@ -836,7 +836,7 @@ msgstr "Añadir un identificador"
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
-msgstr "Seleccionar..."
+msgstr "Seleccionar…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
@@ -950,7 +950,7 @@ msgstr "Nombre"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
@@ -1078,18 +1078,18 @@ msgstr "El logotipo de la compañía (haga clic para cambiar)"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #, kde-format
 msgid "Change photo..."
-msgstr "Cambiar foto..."
+msgstr "Cambiar foto…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
 #, kde-format
 msgid "Change URL..."
-msgstr "Cambiar URL..."
+msgstr "Cambiar URL…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
 #, kde-format
 msgid "Save photo..."
-msgstr "Guardar foto..."
+msgstr "Guardar foto…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
 #, kde-format
@@ -1099,12 +1099,12 @@ msgstr "Eliminar foto"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change logo..."
-msgstr "Cambiar logo..."
+msgstr "Cambiar logo…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
 #, kde-format
 msgid "Save logo..."
-msgstr "Guardar logo..."
+msgstr "Guardar logo…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
 #, kde-format
@@ -1149,7 +1149,7 @@ msgstr "Buscar:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
-msgstr "Buscar contacto..."
+msgstr "Buscar contacto…"
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
@@ -1259,7 +1259,7 @@ msgstr "Contacto creado con éxito"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr "Añadir carpeta de libreta de direcciones..."
+msgstr "Añadir carpeta de libreta de direcciones…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
@@ -1371,7 +1371,7 @@ msgstr "Corta las carpetas seleccionadas de la libreta de direcciones."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Propiedades de la carpeta..."
+msgstr "Propiedades de la carpeta…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
 #, kde-format
@@ -1454,7 +1454,7 @@ msgstr "Cortar los contactos seleccionados de la libreta de direcciones."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr "&Añadir libreta de direcciones..."
+msgstr "&Añadir libreta de direcciones…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1511,7 +1511,7 @@ msgstr[1] "¿Borrar libretas de direcciones?"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
-msgstr "Propiedades de la libreta de direcciones..."
+msgstr "Propiedades de la libreta de direcciones…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
@@ -1560,7 +1560,7 @@ msgstr "Mover contacto a"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
-msgstr "Editar contacto..."
+msgstr "Editar contacto…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
 #, kde-format
@@ -1598,12 +1598,12 @@ msgstr "Mover grupo a"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
-msgstr "Editar grupo..."
+msgstr "Editar grupo…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
-msgstr "Nuevo &contacto..."
+msgstr "Nuevo &contacto…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
@@ -1618,7 +1618,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
-msgstr "Nuevo &grupo..."
+msgstr "Nuevo &grupo…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
