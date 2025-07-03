@@ -2,7 +2,10 @@
 # SPDX-License-Identifier: BSD-3-Clause
 include(ECMMarkAsTest)
 
-set(phonewidgettest_SRCS phonewidgettest.cpp phonewidgettest.h)
+set(phonewidgettest_SRCS
+    phonewidgettest.cpp
+    phonewidgettest.h
+)
 add_executable(phonewidgettest ${phonewidgettest_SRCS})
 add_test(NAME phonewidgettest COMMAND phonewidgettest)
 ecm_mark_as_test(phonewidgettest)
@@ -15,7 +18,10 @@ target_link_libraries(
     KF6::Completion
 )
 
-set(mailwidgettest_SRCS mailwidgettest.cpp mailwidgettest.h)
+set(mailwidgettest_SRCS
+    mailwidgettest.cpp
+    mailwidgettest.h
+)
 add_executable(mailwidgettest ${mailwidgettest_SRCS})
 add_test(NAME mailwidgettest COMMAND mailwidgettest)
 ecm_mark_as_test(mailwidgettest)
@@ -50,14 +56,8 @@ set(contactselecttypecomboboxtest_SRCS
     contactselecttypecomboboxtest.cpp
     contactselecttypecomboboxtest.h
 )
-add_executable(
-    contactselecttypecomboboxtest
-    ${contactselecttypecomboboxtest_SRCS}
-)
-add_test(
-    NAME contactselecttypecomboboxtest
-    COMMAND contactselecttypecomboboxtest
-)
+add_executable(contactselecttypecomboboxtest ${contactselecttypecomboboxtest_SRCS})
+add_test(NAME contactselecttypecomboboxtest COMMAND contactselecttypecomboboxtest)
 ecm_mark_as_test(contactselecttypecomboboxtest)
 target_link_libraries(
     contactselecttypecomboboxtest
@@ -67,7 +67,10 @@ target_link_libraries(
     KF6::I18n
 )
 
-set(nicknamewidgettest_SRCS nicknamewidgettest.cpp nicknamewidgettest.h)
+set(nicknamewidgettest_SRCS
+    nicknamewidgettest.cpp
+    nicknamewidgettest.h
+)
 add_executable(nicknamewidgettest ${nicknamewidgettest_SRCS})
 add_test(NAME nicknamewidgettest COMMAND nicknamewidgettest)
 ecm_mark_as_test(nicknamewidgettest)
@@ -80,7 +83,10 @@ target_link_libraries(
     KF6::Completion
 )
 
-set(blogfeedwidgettest_SRCS blogfeedwidgettest.cpp blogfeedwidgettest.h)
+set(blogfeedwidgettest_SRCS
+    blogfeedwidgettest.cpp
+    blogfeedwidgettest.h
+)
 add_executable(blogfeedwidgettest ${blogfeedwidgettest_SRCS})
 add_test(NAME blogfeedwidgettest COMMAND blogfeedwidgettest)
 ecm_mark_as_test(blogfeedwidgettest)

@@ -59,11 +59,7 @@ ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
 include(ECMAddQch)
 
-option(
-    BUILD_QCH
-    "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
-    OFF
-)
+option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(
     QCH
     ${BUILD_QCH}
@@ -77,7 +73,14 @@ set(GRANTLEETHEME_LIB_VERSION "6.4.40")
 set(KTEXTADDONS_MIN_VERSION "1.6.0")
 
 set(QT_REQUIRED_VERSION "6.8.0")
-find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
+find_package(
+    Qt6
+    ${QT_REQUIRED_VERSION}
+    CONFIG
+    REQUIRED
+        Widgets
+        Test
+)
 ########### Find packages ###########
 find_package(KF6GuiAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -119,11 +122,7 @@ ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.15.0)
 if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
 endif()
-option(
-    USE_UNITY_CMAKE_SUPPORT
-    "Use UNITY cmake support (speedup compile time)"
-    OFF
-)
+option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if(USE_UNITY_CMAKE_SUPPORT)

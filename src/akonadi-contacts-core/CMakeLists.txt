@@ -89,9 +89,16 @@ if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
         grantlee/grantleecontactformatter.cpp
         grantlee/grantleecontactgroupformatter.cpp
         grantlee/grantleeprint.cpp
-        PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON
+        PROPERTIES
+            SKIP_UNITY_BUILD_INCLUSION
+                ON
     )
-    set_target_properties(KPim6AkonadiContactCore PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6AkonadiContactCore
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 generate_export_header(KPim6AkonadiContactCore BASE_NAME akonadi-contact-core)
 
@@ -108,7 +115,10 @@ target_include_directories(
 
 target_link_libraries(
     KPim6AkonadiContactCore
-    PUBLIC KPim6::AkonadiCore KF6::Contacts KPim6::GrantleeTheme
+    PUBLIC
+        KPim6::AkonadiCore
+        KF6::Contacts
+        KPim6::GrantleeTheme
     PRIVATE
         KF6::ConfigCore
         KF6::IconThemes
@@ -120,16 +130,15 @@ target_link_libraries(
 set_target_properties(
     KPim6AkonadiContactCore
     PROPERTIES
-        VERSION ${AKONADICONTACTCORE_VERSION}
-        SOVERSION ${AKONADICONTACTCORE_SOVERSION}
-        EXPORT_NAME AkonadiContactCore
+        VERSION
+            ${AKONADICONTACTCORE_VERSION}
+        SOVERSION
+            ${AKONADICONTACTCORE_SOVERSION}
+        EXPORT_NAME
+            AkonadiContactCore
 )
 
-install(
-    TARGETS KPim6AkonadiContactCore
-    EXPORT KPim6AkonadiContactCoreTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6AkonadiContactCore EXPORT KPim6AkonadiContactCoreTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(AkonadiContactCoreJob_CamelCase_HEADERS
     HEADER_NAMES
@@ -221,9 +230,7 @@ if(BUILD_QCH)
     )
 endif()
 
-set(CMAKECONFIG_INSTALL_DIR
-    "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore"
-)
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore")
 if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6AkonadiContactCore_QCH
@@ -231,9 +238,7 @@ if(BUILD_QCH)
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS
-        "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactCoreQchTargets.cmake\")"
-    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactCoreQchTargets.cmake\")")
 endif()
 
 configure_package_config_file(
@@ -257,7 +262,8 @@ install(
 )
 
 install(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_core_version.h
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact_core_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore
     COMPONENT Devel
 )
