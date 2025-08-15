@@ -1161,7 +1161,7 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
-"عنوان البريد الإلكتروني الأساسي لـ vCard موجود بالفعل في دفتر عناوينك؛ ومع "
+"عنوان البريد الإلكتروني الأساسي لـ vCard موجود فعلًا في دفتر عناوينك؛ ومع "
 "ذلك، يمكنك حفظ vCard في ملف واستيراده إلى دفتر العناوين يدويًا."
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:111
@@ -1181,7 +1181,7 @@ msgid ""
 "A contact with the email address <email>%1</email> is already in your "
 "address book."
 msgstr ""
-"متراسل بنفس العنوان البريدي <email>%1</email> موجود بالفعل في دفتر العناوين."
+"متراسل بنفس العنوان البريدي <email>%1</email> موجود فعلًا في دفتر العناوين."
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
