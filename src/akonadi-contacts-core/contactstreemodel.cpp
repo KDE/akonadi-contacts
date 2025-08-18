@@ -129,7 +129,6 @@ QVariant ContactsTreeModel::entityData(const Item &item, int column, int role) c
                 }
 
                 return values.join(QLatin1Char('\n'));
-                break;
             }
             case PreferredEmail:
                 return contact.preferredEmail();

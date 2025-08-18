@@ -29,7 +29,7 @@ using namespace Akonadi;
 class ContactsWithEmailFilterModel : public QSortFilterProxyModel
 {
 public:
-    ContactsWithEmailFilterModel(QObject *parent)
+    explicit ContactsWithEmailFilterModel(QObject *parent)
         : QSortFilterProxyModel(parent)
     {
         // contact names should be sorted correctly

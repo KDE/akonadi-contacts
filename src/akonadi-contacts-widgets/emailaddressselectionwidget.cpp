@@ -39,7 +39,7 @@ class SearchLineEdit : public QLineEdit
 {
     Q_OBJECT
 public:
-    SearchLineEdit(QWidget *receiver, QWidget *parent = nullptr)
+    explicit SearchLineEdit(QWidget *receiver, QWidget *parent = nullptr)
         : QLineEdit(parent)
         , mReceiver(receiver)
     {

@@ -90,11 +90,9 @@ QVariant ContactCompletionModel::entityData(const Item &item, int column, int ro
             }
 
             return QStringLiteral("%1 <%2>").arg(name, email);
-            break;
         }
         case EmailColumn:
             return contact.preferredEmail();
-            break;
         }
     }
 
