@@ -16,16 +16,15 @@
 using namespace Akonadi;
 
 EmailAddressSelectionPrivate::EmailAddressSelectionPrivate()
-
 {
 }
 
 EmailAddressSelectionPrivate::EmailAddressSelectionPrivate(const EmailAddressSelectionPrivate &other)
     : QSharedData(other)
+    , mName(other.mName)
+    , mEmailAddress(other.mEmailAddress)
+    , mItem(other.mItem)
 {
-    mName = other.mName;
-    mEmailAddress = other.mEmailAddress;
-    mItem = other.mItem;
 }
 
 EmailAddressSelection::EmailAddressSelection()
