@@ -20,13 +20,13 @@ using namespace Akonadi;
 // Tries to guess the display type that is used for the passed contact
 static DisplayNameEditWidget::DisplayType guessedDisplayType(const KContacts::Addressee &contact)
 {
-    if (contact.formattedName() == (contact.givenName() + QLatin1Char(' ') + contact.familyName())) {
+    if (contact.formattedName() == (contact.givenName() + u' ' + contact.familyName())) {
         return DisplayNameEditWidget::SimpleName;
     } else if (contact.formattedName() == contact.assembledName()) {
         return DisplayNameEditWidget::FullName;
     } else if (contact.formattedName() == (contact.familyName() + QLatin1StringView(", ") + contact.givenName())) {
         return DisplayNameEditWidget::ReverseNameWithComma;
-    } else if (contact.formattedName() == (contact.familyName() + QLatin1Char(' ') + contact.givenName())) {
+    } else if (contact.formattedName() == (contact.familyName() + u' ' + contact.givenName())) {
         return DisplayNameEditWidget::ReverseName;
     } else if (contact.formattedName() == contact.organization()) {
         return DisplayNameEditWidget::Organization;
@@ -208,7 +208,7 @@ bool DisplayNameEditWidget::eventFilter(QObject *object, QEvent *event)
 void DisplayNameEditWidget::updateView()
 {
     // SimpleName:
-    mView->setItemText(0, mContact.givenName() + QLatin1Char(' ') + mContact.familyName());
+    mView->setItemText(0, mContact.givenName() + u' ' + mContact.familyName());
 
     // FullName:
     mView->setItemText(1, mContact.assembledName());
@@ -217,7 +217,7 @@ void DisplayNameEditWidget::updateView()
     mView->setItemText(2, mContact.familyName() + QStringLiteral(", ") + mContact.givenName());
 
     // ReverseName:
-    mView->setItemText(3, mContact.familyName() + QLatin1Char(' ') + mContact.givenName());
+    mView->setItemText(3, mContact.familyName() + u' ' + mContact.givenName());
 
     // Organization:
     mView->setItemText(4, mContact.organization());

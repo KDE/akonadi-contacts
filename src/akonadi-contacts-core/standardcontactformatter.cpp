@@ -100,7 +100,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Phone Numbers
     const auto phoneNumbers = rawContact.phoneNumbers();
     for (const KContacts::PhoneNumber &number : phoneNumbers) {
-        QString dispLabel = number.typeLabel().replace(QLatin1Char(' '), QStringLiteral("&nbsp;"));
+        QString dispLabel = number.typeLabel().replace(u' ', QStringLiteral("&nbsp;"));
         QString dispValue = QStringLiteral("<a href=\"tel:%1\">%2</a>").arg(number.normalizedNumber()).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
             QString dispIcon = QStringLiteral("<a href=\"sms:%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
@@ -160,7 +160,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Note
     QString notes;
     if (!rawContact.note().isEmpty()) {
-        notes = rowFmtStr1.arg(i18n("Notes"), rawContact.note().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1StringView("<br>")));
+        notes = rowFmtStr1.arg(i18n("Notes"), rawContact.note().toHtmlEscaped().replace(u'\n', QLatin1StringView("<br>")));
     }
 
     // Custom Data
@@ -205,7 +205,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
                 custom.remove(QStringLiteral("KADDRESSBOOK-X-"));
                 custom.remove(QStringLiteral("KADDRESSBOOK-"));
 
-                int pos = custom.indexOf(QLatin1Char(':'));
+                int pos = custom.indexOf(u':');
                 QString key = custom.left(pos);
                 QString value = custom.mid(pos + 1);
 

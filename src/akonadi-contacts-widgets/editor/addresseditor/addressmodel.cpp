@@ -79,9 +79,9 @@ QVariant AddressModel::data(const QModelIndex &index, int role) const
         QString str = QLatin1StringView("<b>") + KContacts::Address::typeLabel(addr.type()) + QLatin1StringView("</b><br/>");
         const QString label = addr.label();
         if (!label.isEmpty()) {
-            str += label.toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1StringView("<br/>"));
+            str += label.toHtmlEscaped().replace(u'\n', QLatin1StringView("<br/>"));
         } else {
-            str += addr.formatted(KContacts::AddressFormatStyle::Postal).trimmed().toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1StringView("<br/>"));
+            str += addr.formatted(KContacts::AddressFormatStyle::Postal).trimmed().toHtmlEscaped().replace(u'\n', QLatin1StringView("<br/>"));
         }
         return str;
     }

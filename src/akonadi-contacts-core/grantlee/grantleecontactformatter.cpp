@@ -163,7 +163,7 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
             custom.remove(QStringLiteral("KADDRESSBOOK-X-"));
             custom.remove(QStringLiteral("KADDRESSBOOK-"));
 
-            int pos = custom.indexOf(QLatin1Char(':'));
+            int pos = custom.indexOf(u':');
             QString key = custom.left(pos);
             QString value = custom.mid(pos + 1);
 

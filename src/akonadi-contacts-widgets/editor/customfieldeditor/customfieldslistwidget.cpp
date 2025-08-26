@@ -110,7 +110,7 @@ void CustomFieldsListWidget::loadContact(const KContacts::Addressee &contact)
                 mLocalCustomFields << customField;
             } else {
                 // it is really an external custom field
-                const QString key = app + QLatin1Char('-') + name;
+                const QString key = app + u'-' + name;
                 CustomField customField(key, key, CustomField::TextType, CustomField::ExternalScope);
                 customField.setValue(value);
 

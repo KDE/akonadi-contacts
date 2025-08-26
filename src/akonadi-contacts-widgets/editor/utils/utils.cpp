@@ -12,12 +12,12 @@
 
 void Akonadi::Utils::splitCustomField(const QString &str, QString &app, QString &name, QString &value)
 {
-    const int colon = str.indexOf(QLatin1Char(':'));
+    const int colon = str.indexOf(u':');
     if (colon != -1) {
         const QString tmp = str.left(colon);
         value = str.mid(colon + 1);
 
-        const int dash = tmp.indexOf(QLatin1Char('-'));
+        const int dash = tmp.indexOf(u'-');
         if (dash != -1) {
             app = tmp.left(dash);
             name = tmp.mid(dash + 1);

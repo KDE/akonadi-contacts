@@ -42,7 +42,7 @@ public:
 
     void slotGroupNameChanged(const QString &name)
     {
-        bool isValid = !(name.contains(QLatin1Char('@')) || name.contains(QLatin1Char('.')));
+        bool isValid = !(name.contains(QLatin1Char('@')) || name.contains(u'.'));
         okButton->setEnabled(!name.trimmed().isEmpty() && isValid);
         mEditor->groupNameIsValid(isValid);
     }

@@ -19,7 +19,7 @@ void CustomFieldManager::setGlobalCustomFieldDescriptions(const CustomField::Lis
     group.deleteGroup();
     for (const CustomField &field : customFields) {
         const QString key = field.key();
-        const QString value = CustomField::typeToString(field.type()) + QLatin1Char(':') + field.title();
+        const QString value = CustomField::typeToString(field.type()) + u':' + field.title();
 
         group.writeEntry(key, value);
     }
@@ -40,7 +40,7 @@ CustomField::List CustomFieldManager::globalCustomFieldDescriptions()
         field.setScope(CustomField::GlobalScope);
 
         const QString value = group.readEntry(key, QString());
-        const int pos = value.indexOf(QLatin1Char(':'));
+        const int pos = value.indexOf(u':');
         if (pos != -1) {
             field.setType(CustomField::stringToType(value.left(pos - 1)));
             field.setTitle(value.mid(pos + 1));

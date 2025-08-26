@@ -116,7 +116,7 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                 // For an item which was formatted with line breaks (as <br>
                 // in HTML), the returned text contains the character 0x2028
                 // (Unicode line separator).  Convert any of these back to newlines.
-                text.replace(QChar(0x2028), QLatin1Char('\n'));
+                text.replace(QChar(0x2028), u'\n');
 
                 mDataToCopy = text;
             }

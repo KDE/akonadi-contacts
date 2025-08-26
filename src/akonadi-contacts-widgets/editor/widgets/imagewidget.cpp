@@ -292,7 +292,7 @@ void ImageWidget::changeImage()
     QString filter;
     for (const QByteArray &ba : supportedImage) {
         if (!filter.isEmpty()) {
-            filter += QLatin1Char(' ');
+            filter += u' ';
         }
         filter += QLatin1StringView("*.") + QString::fromLatin1(ba);
     }
@@ -315,7 +315,7 @@ void ImageWidget::saveImage()
     QString filter;
     for (const QByteArray &ba : supportedImage) {
         if (!filter.isEmpty()) {
-            filter += QLatin1Char(' ');
+            filter += u' ';
         }
         filter += QLatin1StringView("*.") + QString::fromLatin1(ba);
     }

@@ -50,14 +50,14 @@ void EmailAddressRequesterPrivate::slotAddressBook()
     QString text = mLineEdit->text().trimmed();
 
     if (!text.isEmpty()) {
-        if (!text.endsWith(QLatin1Char(','))) {
+        if (!text.endsWith(u',')) {
             text += QLatin1StringView(", ");
         } else {
-            text += QLatin1Char(' ');
+            text += u' ';
         }
     }
 
-    mLineEdit->setText(text + addressList.join(QLatin1Char(',')));
+    mLineEdit->setText(text + addressList.join(u','));
     delete dlg;
 }
 

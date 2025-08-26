@@ -25,7 +25,7 @@ static QString createToolTip(const KContacts::ContactGroup &group)
     const uint groupDataCount(group.dataCount());
     for (uint i = 0; i < groupDataCount; ++i) {
         txt += QLatin1StringView("<li>");
-        txt += group.data(i).name() + QLatin1Char(' ');
+        txt += group.data(i).name() + u' ';
         txt += QLatin1StringView("<em>");
         txt += group.data(i).email();
         txt += QLatin1StringView("</em></li>");

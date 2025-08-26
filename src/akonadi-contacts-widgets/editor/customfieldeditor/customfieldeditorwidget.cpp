@@ -90,8 +90,8 @@ void CustomFieldEditorWidget::slotAddField()
     // Since the key only allows [A-Za-z0-9\-]*, we have to remove the curly
     // braces as well.
     QString key = QUuid::createUuid().toString();
-    key.remove(QLatin1Char('{'));
-    key.remove(QLatin1Char('}'));
+    key.remove(u'{');
+    key.remove(u'}');
 
     field.setKey(key);
     field.setTitle(mFieldName->text());

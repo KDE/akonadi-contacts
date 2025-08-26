@@ -140,7 +140,7 @@ ContactGroupExpandJob::~ContactGroupExpandJob() = default;
 
 void ContactGroupExpandJob::start()
 {
-    if (!d->mName.isEmpty() && !d->mName.contains(QLatin1Char('@'))) {
+    if (!d->mName.isEmpty() && !d->mName.contains(u'@')) {
         // we have to search the contact group first
         auto searchJob = new ContactGroupSearchJob(this);
         searchJob->setQuery(ContactGroupSearchJob::Name, d->mName);
