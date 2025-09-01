@@ -248,12 +248,12 @@ msgstr "Ignora i sobreescriu els canvis"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr "Seleccioneu la llibreta d'adreces"
+msgstr "Trieu la llibreta d'adreces"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
-msgstr "Seleccioneu la llibreta d'adreces on es guardarà el nou contacte:"
+msgstr "Trieu la llibreta d'adreces on es guardarà el contacte nou:"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
 #, kde-format
@@ -338,8 +338,7 @@ msgstr "El nom del grup de contactes no pot estar buit."
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
-msgstr ""
-"Seleccioneu la llibreta d'adreces on es guardarà el grup de contactes nou:"
+msgstr "Trieu la llibreta d'adreces on es guardarà el grup de contactes nou:"
 
 #. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:29
@@ -756,7 +755,7 @@ msgstr "Correu electrònic"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
 #, kde-format
 msgid "Select..."
-msgstr "Selecciona…"
+msgstr "Tria…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
@@ -837,7 +836,7 @@ msgstr "Afig un identificador"
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
-msgstr "Selecciona…"
+msgstr "Tria…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
 #, kde-format
@@ -1687,4 +1686,4 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
-msgstr "Seleccioneu la llibreta d'adreces on es guardarà el nou contacte:"
+msgstr "Trieu la llibreta d'adreces on es guardarà el contacte nou:"
