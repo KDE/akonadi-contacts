@@ -11,7 +11,7 @@
 #include "emailaddressselection_p.h"
 
 #include <KContacts/ContactGroup>
-#include <KMime/HeaderParsing>
+#include <KMime/Types>
 
 using namespace Akonadi;
 
