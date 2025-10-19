@@ -46,8 +46,15 @@ ContactsFilterProxyModel::~ContactsFilterProxyModel() = default;
 
 void ContactsFilterProxyModel::setFilterString(const QString &filter)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+#endif
     d->mFilter = filter;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateFilter();
+#endif
 }
 
 bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &parent) const
@@ -120,8 +127,15 @@ void ContactsFilterProxyModel::setFilterFlags(ContactsFilterProxyModel::FilterFl
 void ContactsFilterProxyModel::setExcludeVirtualCollections(bool exclude)
 {
     if (exclude != d->mExcludeVirtualCollections) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         d->mExcludeVirtualCollections = exclude;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 

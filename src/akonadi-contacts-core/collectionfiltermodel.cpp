@@ -18,14 +18,28 @@ CollectionFilterModel::CollectionFilterModel(QObject *parent)
 
 void CollectionFilterModel::addContentMimeTypeFilter(const QString &mimeType)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+#endif
     mContentMimeTypes.insert(mimeType);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateFilter();
+#endif
 }
 
 void CollectionFilterModel::setRightsFilter(Akonadi::Collection::Rights rights)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+#endif
     mRights = rights;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateFilter();
+#endif
 }
 
 bool CollectionFilterModel::filterAcceptsRow(int row, const QModelIndex &parent) const
