@@ -100,12 +100,12 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // Phone Numbers
     const auto phoneNumbers = rawContact.phoneNumbers();
     for (const KContacts::PhoneNumber &number : phoneNumbers) {
-        QString dispLabel = number.typeLabel().replace(u' ', QStringLiteral("&nbsp;"));
-        QString dispValue = QStringLiteral("<a href=\"tel:%1\">%2</a>").arg(number.normalizedNumber()).arg(number.number().toHtmlEscaped());
+        const QString dispLabel = number.typeLabel().replace(u' ', QStringLiteral("&nbsp;"));
+        const QString dispValue = QStringLiteral("<a href=\"tel:%1\">%2</a>").arg(number.normalizedNumber()).arg(number.number().toHtmlEscaped());
         if (number.type() & KContacts::PhoneNumber::Cell) {
-            QString dispIcon = QStringLiteral("<a href=\"sms:%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
-                                   .arg(number.normalizedNumber())
-                                   .arg(i18nc("@info:tooltip", "Send SMS"));
+            const QString dispIcon = QStringLiteral("<a href=\"sms:%1\" title=\"%2\"><img src=\"sms_icon\" align=\"top\"/>")
+                                         .arg(number.normalizedNumber())
+                                         .arg(i18nc("@info:tooltip", "Send SMS"));
             dynamicPart += rowFmtStr2.arg(dispLabel, dispValue, dispIcon);
         } else {
             dynamicPart += rowFmtStr1.arg(dispLabel, dispValue);
