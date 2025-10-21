@@ -202,11 +202,16 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         notes = rowFmtStr1.arg(i18n("Notes"), rawContact.note().toHtmlEscaped().replace(u'\n', QLatin1StringView("<br>")));
     }
 
+    // Department
+    QString department;
+    if (!rawContact.department().isEmpty()) {
+        notes = rowFmtStr1.arg(i18n("Department"), rawContact.department().toHtmlEscaped().replace(u'\n', QLatin1StringView("<br>")));
+    }
+
     // Custom Data
     QString customData;
     static QMap<QString, QString> titleMap;
     if (titleMap.isEmpty()) {
-        titleMap.insert(QStringLiteral("Department"), i18n("Department"));
         titleMap.insert(QStringLiteral("Profession"), i18n("Profession"));
         titleMap.insert(QStringLiteral("AssistantsName"), i18n("Assistant's Name"));
         titleMap.insert(QStringLiteral("ManagersName"), i18n("Manager's Name"));
@@ -330,6 +335,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
 
     strAddr.append(dynamicPart);
     strAddr.append(notes);
+    strAddr.append(department);
     strAddr.append(customData);
     strAddr.append(QLatin1StringView("</table>"));
 
