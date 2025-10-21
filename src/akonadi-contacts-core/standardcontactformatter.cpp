@@ -139,6 +139,9 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         }
         url = KStringHandler::tagUrls(url.toHtmlEscaped());
         QString typeName;
+#if KI18N_VERSION >= QT_VERSION_CHECK(6, 20, 0)
+        typeName = resourceLocator.resourceLabel();
+#else
         switch (resourceLocator.type()) {
         case KContacts::ResourceLocatorUrl::Home:
             typeName = i18n("Home");
@@ -153,6 +156,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
             typeName = i18n("Other");
             break;
         }
+#endif
         dynamicPart += rowFmtStr1.arg(typeName, url);
     }
 
