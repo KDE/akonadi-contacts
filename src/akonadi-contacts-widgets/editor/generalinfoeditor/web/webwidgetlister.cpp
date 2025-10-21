@@ -24,7 +24,7 @@ WebWidgetLister::~WebWidgetLister() = default;
 
 void WebWidgetLister::loadContact(const KContacts::Addressee &contact)
 {
-    KContacts::ResourceLocatorUrl::List resourceLocatorList = contact.extraUrlList();
+    const KContacts::ResourceLocatorUrl::List resourceLocatorList = contact.extraUrlList();
     if (resourceLocatorList.isEmpty()) {
         setNumberOfShownWidgetsTo(1);
     } else {
