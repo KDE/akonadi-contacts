@@ -131,6 +131,30 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         url = KStringHandler::tagUrls(url.toHtmlEscaped());
         dynamicPart += rowFmtStr1.arg(i18n("Homepage"), url);
     }
+    const KContacts::ResourceLocatorUrl::List resourceLocatorList = rawContact.extraUrlList();
+    for (const auto &resourceLocator : resourceLocatorList) {
+        QString url = resourceLocator.url().url();
+        if (!url.startsWith(QLatin1StringView("http://")) && !url.startsWith(QLatin1StringView("https://"))) {
+            url = QLatin1StringView("http://") + url;
+        }
+        url = KStringHandler::tagUrls(url.toHtmlEscaped());
+        QString typeName;
+        switch (resourceLocator.type()) {
+        case KContacts::ResourceLocatorUrl::Home:
+            typeName = i18n("Home");
+            break;
+        case KContacts::ResourceLocatorUrl::Work:
+            typeName = i18n("Work");
+            break;
+        case KContacts::ResourceLocatorUrl::Profile:
+            typeName = i18n("Profile");
+            break;
+        case KContacts::ResourceLocatorUrl::Other:
+            typeName = i18n("Other");
+            break;
+        }
+        dynamicPart += rowFmtStr1.arg(typeName, url);
+    }
 
     // Blog Feed
     const QString blog = rawContact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
