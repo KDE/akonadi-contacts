@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-19 00:42+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2024-07-31 09:01+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -117,58 +117,58 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:178
+#: akonadi-contacts-core/standardcontactformatter.cpp:222
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "Carnet d'adresses"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:177
+#: akonadi-contacts-core/standardcontactformatter.cpp:221
 #, kde-format
 msgid "Anniversary"
 msgstr "Anniversaire"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:172
+#: akonadi-contacts-core/standardcontactformatter.cpp:216
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Nom de l'assistant"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:173
+#: akonadi-contacts-core/standardcontactformatter.cpp:217
 #, kde-format
 msgid "Manager's Name"
 msgstr "Nom du responsable"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:175
+#: akonadi-contacts-core/standardcontactformatter.cpp:219
 #, kde-format
 msgid "Office"
 msgstr "Bureau"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:171
+#: akonadi-contacts-core/standardcontactformatter.cpp:215
 #, kde-format
 msgid "Profession"
 msgstr "Profession"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:174
+#: akonadi-contacts-core/standardcontactformatter.cpp:218
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Nom de l'associé "
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:235
+#: akonadi-contacts-core/standardcontactformatter.cpp:279
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "oui"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:237
+#: akonadi-contacts-core/standardcontactformatter.cpp:281
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -198,28 +198,55 @@ msgstr "Adresse de courrier électronique"
 msgid "Homepage"
 msgstr "Page personnelle"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:138
+#: akonadi-contacts-core/standardcontactformatter.cpp:147
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, kde-format
+msgid "Home"
+msgstr "Domicile"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:150
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, kde-format
+msgid "Work"
+msgstr "Travail"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:153
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, kde-format
+msgid "Profile"
+msgstr "Profil"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:156
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, kde-format
+msgid "Other"
+msgstr "Autre"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:166
 #, kde-format
 msgid "Blog Feed"
 msgstr "Flux de blogue"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:156
+#: akonadi-contacts-core/standardcontactformatter.cpp:184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Afficher une adresse sur la carte"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:163
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "Notes"
 msgstr "Remarques"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:170
+#: akonadi-contacts-core/standardcontactformatter.cpp:208
 #, kde-format
 msgid "Department"
 msgstr "Service"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:176
+#: akonadi-contacts-core/standardcontactformatter.cpp:220
 #, kde-format
 msgid "IM Address"
 msgstr "Adresse de messagerie instantanée"
@@ -767,24 +794,6 @@ msgstr "Courriel"
 msgid "Select..."
 msgstr "Sélectionner..."
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
-#, kde-format
-msgid "Home"
-msgstr "Domicile"
-
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
-#, kde-format
-msgid "Work"
-msgstr "Travail"
-
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
-#, kde-format
-msgid "Other"
-msgstr "Autre"
-
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, kde-format
 msgctxt "@info:placeholder"
@@ -1016,11 +1025,6 @@ msgstr "Supprimer un numéro de téléphone"
 msgctxt "@label:textbox"
 msgid "Web"
 msgstr "Internet"
-
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
-#, kde-format
-msgid "Profile"
-msgstr "Profil"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
 #, kde-format

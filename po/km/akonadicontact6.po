@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-19 00:42+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2012-07-11 10:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -108,58 +108,58 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:178
+#: akonadi-contacts-core/standardcontactformatter.cpp:222
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "សៀវភៅ​អាសយដ្ឋាន​"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:177
+#: akonadi-contacts-core/standardcontactformatter.cpp:221
 #, kde-format
 msgid "Anniversary"
 msgstr "ខួប​ប្រចាំ​ឆ្នាំ​​"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:172
+#: akonadi-contacts-core/standardcontactformatter.cpp:216
 #, kde-format
 msgid "Assistant's Name"
 msgstr "ឈ្មោះ​របស់​អ្នកជំនួយការ​​​"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:173
+#: akonadi-contacts-core/standardcontactformatter.cpp:217
 #, kde-format
 msgid "Manager's Name"
 msgstr "ឈ្មោះ​របស់​អ្នក​គ្រប់​គ្រង​"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:175
+#: akonadi-contacts-core/standardcontactformatter.cpp:219
 #, kde-format
 msgid "Office"
 msgstr "ការិយាល័យ​"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:171
+#: akonadi-contacts-core/standardcontactformatter.cpp:215
 #, kde-format
 msgid "Profession"
 msgstr "អាជីព"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:174
+#: akonadi-contacts-core/standardcontactformatter.cpp:218
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "ឈ្មោះ​របស់​ដៃ​គូរ​"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:235
+#: akonadi-contacts-core/standardcontactformatter.cpp:279
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "បាទ/​ចាស​"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:237
+#: akonadi-contacts-core/standardcontactformatter.cpp:281
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -188,29 +188,63 @@ msgstr "អ៊ីមែល​"
 msgid "Homepage"
 msgstr "គេហ​​ទំព័រ​"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:138
+#: akonadi-contacts-core/standardcontactformatter.cpp:147
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, fuzzy, kde-format
+#| msgctxt "@title:column home address of a person"
+#| msgid "Home"
+msgid "Home"
+msgstr "ផ្ទះ​"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:150
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, fuzzy, kde-format
+#| msgctxt "@title:column work address of a person"
+#| msgid "Work"
+msgid "Work"
+msgstr "កិច្ច​ការ​​"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:153
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, fuzzy, kde-format
+#| msgid "Prof."
+msgid "Profile"
+msgstr "សាស្ត្រាចារ្យ​​"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:156
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Category of contact info field"
+#| msgid "Other..."
+msgid "Other"
+msgstr "ផ្សេង​​ទៀត...​"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:166
 #, kde-format
 msgid "Blog Feed"
 msgstr "មតិ​ព័ត៌មាន​កំណត់​ហេតុ​បណ្តាញ​"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:156
+#: akonadi-contacts-core/standardcontactformatter.cpp:184
 #, fuzzy, kde-format
 #| msgid "Show address on map"
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "បង្ហាញ​អាសយដ្ឋាន​នៅ​លើ​ផែនទី"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:163
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "Notes"
 msgstr "ចំណាំ​"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:170
+#: akonadi-contacts-core/standardcontactformatter.cpp:208
 #, kde-format
 msgid "Department"
 msgstr "នាយក​ដ្ឋាន​"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:176
+#: akonadi-contacts-core/standardcontactformatter.cpp:220
 #, kde-format
 msgid "IM Address"
 msgstr "អាសយដ្ឋាន​របស់​ IM "
@@ -811,30 +845,6 @@ msgstr "អ៊ីមែល​"
 msgid "Select..."
 msgstr "ជ្រើស..."
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:column home address of a person"
-#| msgid "Home"
-msgid "Home"
-msgstr "ផ្ទះ​"
-
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:column work address of a person"
-#| msgid "Work"
-msgid "Work"
-msgstr "កិច្ច​ការ​​"
-
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Category of contact info field"
-#| msgid "Other..."
-msgid "Other"
-msgstr "ផ្សេង​​ទៀត...​"
-
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Add Email"
@@ -1090,12 +1100,6 @@ msgstr "លេខទូរស័​ព្ទ​​"
 msgctxt "@label:textbox"
 msgid "Web"
 msgstr ""
-
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
-#, fuzzy, kde-format
-#| msgid "Prof."
-msgid "Profile"
-msgstr "សាស្ត្រាចារ្យ​​"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
 #, kde-format
