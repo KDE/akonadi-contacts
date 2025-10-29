@@ -81,11 +81,9 @@ QModelIndex LeafExtensionProxyModel::index(int row, int column, const QModelInde
         const QModelIndex sourceIndex = sourceModel()->index(row, column, sourceParent);
         if (!sourceIndex.isValid()) {
             qint64 key = -1;
-            QMapIterator<qint64, QModelIndex> it(d->mParentIndexes);
-            while (it.hasNext()) {
-                it.next();
-                if (it.value() == parent) {
-                    key = it.key();
+            for (const auto &[keyindex, value] : d->mParentIndexes.asKeyValueRange()) {
+                if (value == parent) {
+                    key = keyindex;
                     break;
                 }
             }
