@@ -421,7 +421,7 @@ msgstr "Ajouter une rue"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
-msgstr "Ajouter une boîte postale"
+msgstr "Ajouter une boite postale"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
@@ -1393,7 +1393,7 @@ msgstr "Propriétés du dossier..."
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
 msgstr ""
-"Ouvrez une boîte de dialogue pour modifier les propriétés du dossier de "
+"Ouvrez une boite de dialogue pour modifier les propriétés du dossier de "
 "carnets d'adresses sélectionné."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
@@ -1477,7 +1477,7 @@ msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
 "select the type of the address book that shall be added.</p>"
 msgstr ""
-"Ajoutez un nouveau carnet d'adresses<p>Une boîte de dialogue apparaît, dans "
+"Ajoutez un nouveau carnet d'adresses<p>Une boite de dialogue apparait, dans "
 "laquelle vous pouvez choisir le type du carnet d'adresses à ajouter.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
@@ -1532,7 +1532,7 @@ msgstr "Propriétés du carnet d'adresses..."
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
 msgstr ""
-"Ouvrez une boîte de dialogue pour modifier les propriétés du carnet "
+"Ouvrez une boite de dialogue pour modifier les propriétés du carnet "
 "d'adresses sélectionné."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
@@ -1626,7 +1626,7 @@ msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
 "data about a person, including addresses and phone numbers.</p>"
 msgstr ""
-"Créez un nouveau contact<p>Une boîte de dialogue apparaît, dans laquelle "
+"Créez un nouveau contact<p>Une boite de dialogue apparait, dans laquelle "
 "vous pouvez ajouter des données à propos d'une personne, y compris des "
 "adresses et des numéros de téléphone.</p>"
 
@@ -1641,7 +1641,7 @@ msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
 "new group of contacts.</p>"
 msgstr ""
-"Créez un nouveau groupe<p>Une boîte de dialogue apparaît, dans laquelle vous "
+"Créez un nouveau groupe<p>Une boite de dialogue apparait, dans laquelle vous "
 "pouvez ajouter un nouveau groupe de contacts.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
@@ -1651,7 +1651,7 @@ msgid ""
 "can edit the data stored about a person, including addresses and phone "
 "numbers.</p>"
 msgstr ""
-"Modifiez le contact sélectionné<p>Une boîte de dialogue apparaît, dans "
+"Modifiez le contact sélectionné<p>Une boite de dialogue apparait, dans "
 "laquelle vous pouvez modifier les données enregistrées à propos d'une "
 "personne, y compris des adresses et des numéros de téléphone.</p>"
 
