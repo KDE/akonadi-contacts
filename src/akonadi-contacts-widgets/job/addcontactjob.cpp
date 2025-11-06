@@ -87,8 +87,8 @@ public:
             item.setPayload<KContacts::Addressee>(mContact);
 
             // save the new item in akonadi storage
-            auto job = new Akonadi::ItemCreateJob(item, mCollection);
-            q->connect(job, &Akonadi::ItemCreateJob::result, q, [this](KJob *job) {
+            auto createJob = new Akonadi::ItemCreateJob(item, mCollection);
+            q->connect(createJob, &Akonadi::ItemCreateJob::result, q, [this](KJob *job) {
                 slotAddContactDone(job);
             });
         } else {

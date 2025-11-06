@@ -134,15 +134,15 @@ public:
                     const Akonadi::AgentType agentType = dlg->agentType();
 
                     if (agentType.isValid()) {
-                        auto job = new Akonadi::AgentInstanceCreateJob(agentType, q);
-                        q->connect(job, &Akonadi::AgentInstanceCreateJob::result, q, [this, job](KJob *) {
-                            if (job->error()) {
-                                slotResourceCreationDone(job);
+                        auto createJob = new Akonadi::AgentInstanceCreateJob(agentType, q);
+                        q->connect(createJob, &Akonadi::AgentInstanceCreateJob::result, q, [this, createJob](KJob *) {
+                            if (createJob->error()) {
+                                slotResourceCreationDone(createJob);
                                 return;
                             }
-                            auto configureDialog = new Akonadi::AgentConfigurationDialog(job->instance(), mParentWidget);
+                            auto configureDialog = new Akonadi::AgentConfigurationDialog(createJob->instance(), mParentWidget);
                             configureDialog->setAttribute(Qt::WA_DeleteOnClose);
-                            q->connect(configureDialog, &QDialog::rejected, q, [this, instance = job->instance()] {
+                            q->connect(configureDialog, &QDialog::rejected, q, [this, instance = createJob->instance()] {
                                 Akonadi::AgentManager::self()->removeInstance(instance);
                                 q->emitResult();
                             });
@@ -151,7 +151,7 @@ public:
                             });
                             configureDialog->show();
                         });
-                        job->start();
+                        createJob->start();
                         delete dlg;
                         return;
                     } else { // if agent is not valid => return error and finish job
