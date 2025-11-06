@@ -45,6 +45,7 @@ WebWidget::WebWidget(QWidget *parent)
     mRemoveButton->setObjectName(QLatin1StringView("removebutton"));
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setToolTip(i18nc("@info:tooltip", "Remove Web Site"));
+    mRemoveButton->setEnabled(false);
     connect(mRemoveButton, &QToolButton::clicked, this, &WebWidget::slotRemoveWeb);
     layout->addWidget(mRemoveButton);
 }
@@ -57,9 +58,10 @@ void WebWidget::clearWidget()
     mWebType->setCurrentIndex(0);
 }
 
-void WebWidget::updateAddRemoveButton(bool addButtonEnabled)
+void WebWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);
+    mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
 void WebWidget::slotAddWeb()

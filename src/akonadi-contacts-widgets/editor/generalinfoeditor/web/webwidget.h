@@ -23,7 +23,7 @@ class WebWidget : public QWidget
 public:
     explicit WebWidget(QWidget *parent = nullptr);
     ~WebWidget() override;
-    void updateAddRemoveButton(bool addButtonEnabled);
+    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
 
     void clearWidget();
     void setPreferred(bool b);

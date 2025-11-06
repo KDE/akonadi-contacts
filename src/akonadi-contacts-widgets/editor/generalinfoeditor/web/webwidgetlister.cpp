@@ -60,6 +60,7 @@ void WebWidgetLister::setReadOnly(bool readOnly)
         auto w = qobject_cast<WebWidget *>(widget);
         w->setReadOnly(readOnly);
     }
+    updateAddRemoveButton();
 }
 
 QWidget *WebWidgetLister::createWidget(QWidget *parent)
@@ -97,6 +98,7 @@ void WebWidgetLister::updateAddRemoveButton()
     QList<QWidget *> widgetList = widgets();
     const int numberOfWidget(widgetList.count());
     bool addButtonEnabled = false;
+    bool removeButtonEnabled = numberOfWidget > 1;
     if (numberOfWidget <= widgetsMinimum()) {
         addButtonEnabled = true;
     } else if (numberOfWidget >= widgetsMaximum()) {
@@ -108,7 +110,7 @@ void WebWidgetLister::updateAddRemoveButton()
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
     for (; with != wEnd; ++with) {
         auto w = qobject_cast<WebWidget *>(*with);
-        w->updateAddRemoveButton(addButtonEnabled);
+        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
     }
 }
 
