@@ -60,6 +60,7 @@ void PhoneWidgetLister::setReadOnly(bool readOnly)
         auto w = qobject_cast<PhoneWidget *>(widget);
         w->setReadOnly(readOnly);
     }
+    updateAddRemoveButton();
 }
 
 QWidget *PhoneWidgetLister::createWidget(QWidget *parent)
@@ -114,10 +115,10 @@ void PhoneWidgetLister::updateAddRemoveButton()
     } else {
         addButtonEnabled = true;
     }
-
+    const bool removeButtonEnabled = numberOfWidget > 1;
     for (QWidget *widget : widgetList) {
         auto w = qobject_cast<PhoneWidget *>(widget);
-        w->updateAddRemoveButton(addButtonEnabled);
+        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
     }
 }
 

@@ -27,7 +27,7 @@ public:
     explicit PhoneWidget(QWidget *parent = nullptr);
     ~PhoneWidget() override;
 
-    void updateAddRemoveButton(bool addButtonEnabled);
+    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
     void loadPhone(const KContacts::PhoneNumber &number);
     [[nodiscard]] KContacts::PhoneNumber storePhone();
     void clearWidget();

@@ -52,9 +52,10 @@ PhoneWidget::PhoneWidget(QWidget *parent)
 
 PhoneWidget::~PhoneWidget() = default;
 
-void PhoneWidget::updateAddRemoveButton(bool addButtonEnabled)
+void PhoneWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);
+    mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
 KContacts::PhoneNumber PhoneWidget::storePhone()

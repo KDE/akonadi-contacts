@@ -61,6 +61,7 @@ void MailWidgetLister::setReadOnly(bool readOnly)
         auto w = qobject_cast<MailWidget *>(widget);
         w->setReadOnly(readOnly);
     }
+    updateAddRemoveButton();
 }
 
 QWidget *MailWidgetLister::createWidget(QWidget *parent)
@@ -115,10 +116,10 @@ void MailWidgetLister::updateAddRemoveButton()
     } else {
         addButtonEnabled = true;
     }
-
+    const bool removeButtonEnabled = numberOfWidget > 1;
     for (QWidget *widget : widgetList) {
         auto w = qobject_cast<MailWidget *>(widget);
-        w->updateAddRemoveButton(addButtonEnabled);
+        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
     }
 }
 

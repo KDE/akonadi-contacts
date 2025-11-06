@@ -62,9 +62,10 @@ void MailWidget::clearWidget()
     mMailType->setCurrentIndex(0);
 }
 
-void MailWidget::updateAddRemoveButton(bool addButtonEnabled)
+void MailWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);
+    mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
 void MailWidget::setMail(const KContacts::Email &email)

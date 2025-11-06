@@ -25,7 +25,7 @@ public:
     ~MailWidget() override;
 
     void clearWidget();
-    void updateAddRemoveButton(bool addButtonEnabled);
+    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
     void setMail(const KContacts::Email &email);
     [[nodiscard]] KContacts::Email email();
     void setPreferred(bool b);

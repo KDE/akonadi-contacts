@@ -91,9 +91,10 @@ KContacts::Impp MessagingWidget::imAddress() const
     return addr;
 }
 
-void MessagingWidget::updateAddRemoveButton(bool addButtonEnabled)
+void MessagingWidget::updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled)
 {
     mAddButton->setEnabled(addButtonEnabled);
+    mRemoveButton->setEnabled(removeButtonEnabled);
 }
 
 void MessagingWidget::slotAddMessaging()

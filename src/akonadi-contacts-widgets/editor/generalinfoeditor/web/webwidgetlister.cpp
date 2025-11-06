@@ -98,7 +98,7 @@ void WebWidgetLister::updateAddRemoveButton()
     QList<QWidget *> widgetList = widgets();
     const int numberOfWidget(widgetList.count());
     bool addButtonEnabled = false;
-    bool removeButtonEnabled = numberOfWidget > 1;
+    const bool removeButtonEnabled = numberOfWidget > 1;
     if (numberOfWidget <= widgetsMinimum()) {
         addButtonEnabled = true;
     } else if (numberOfWidget >= widgetsMaximum()) {

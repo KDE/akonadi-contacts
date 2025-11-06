@@ -31,7 +31,7 @@ public:
     explicit MessagingWidget(QWidget *parent = nullptr);
     ~MessagingWidget() override;
 
-    void updateAddRemoveButton(bool addButtonEnabled);
+    void updateAddRemoveButton(bool addButtonEnabled, bool removeButtonEnabled);
     [[nodiscard]] KContacts::Impp imAddress() const;
     void setIMAddress(const KContacts::Impp &address);
     void setPreferred(bool b);

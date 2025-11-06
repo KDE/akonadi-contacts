@@ -57,6 +57,7 @@ void MessagingWidgetLister::setReadOnly(bool readOnly)
         auto w = qobject_cast<MessagingWidget *>(widget);
         w->setReadOnly(readOnly);
     }
+    updateAddRemoveButton();
 }
 
 QWidget *MessagingWidgetLister::createWidget(QWidget *parent)
@@ -111,11 +112,12 @@ void MessagingWidgetLister::updateAddRemoveButton()
     } else {
         addButtonEnabled = true;
     }
+    const bool removeButtonEnabled = numberOfWidget > 1;
     QList<QWidget *>::ConstIterator with = widgetList.constBegin();
     QList<QWidget *>::ConstIterator wEnd = widgetList.constEnd();
     for (; with != wEnd; ++with) {
         auto w = qobject_cast<MessagingWidget *>(*with);
-        w->updateAddRemoveButton(addButtonEnabled);
+        w->updateAddRemoveButton(addButtonEnabled, removeButtonEnabled);
     }
 }
 
