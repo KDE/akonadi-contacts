@@ -41,9 +41,9 @@ class Akonadi::ContactViewerPrivate
 public:
     explicit ContactViewerPrivate(ContactViewer *parent)
         : mParent(parent)
+        , mStandardContactFormatter(new StandardContactFormatter)
         , mQRCode(Prison::Barcode::create(Prison::QRCode))
     {
-        mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
