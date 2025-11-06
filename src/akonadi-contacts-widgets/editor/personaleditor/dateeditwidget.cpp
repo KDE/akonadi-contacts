@@ -16,7 +16,7 @@
 #include <QHBoxLayout>
 #include <QLocale>
 #include <QToolButton>
-
+using namespace Qt::Literals::StringLiterals;
 DateView::DateView(QWidget *parent)
     : QLineEdit(parent)
 {
@@ -31,7 +31,7 @@ void DateView::contextMenuEvent(QContextMenuEvent *event)
     }
 
     QMenu menu;
-    menu.addAction(i18n("Remove"), this, &DateView::emitSignal);
+    menu.addAction(QIcon::fromTheme(u"delete"_s), i18n("Remove"), this, &DateView::emitSignal);
 
     menu.exec(event->globalPos());
 }
@@ -48,10 +48,11 @@ DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
 
-    mView = new DateView;
+    mView = new DateView(this);
     layout->addWidget(mView);
 
-    mClearButton = new QToolButton;
+    mClearButton = new QToolButton(this);
+    mClearButton->setToolTip(i18nc("@info:tooltip", "Clear"));
     if (layoutDirection() == Qt::LeftToRight) {
         mClearButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-locationbar-rtl")));
     } else {
@@ -59,7 +60,7 @@ DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     }
     layout->addWidget(mClearButton);
 
-    mSelectButton = new QToolButton;
+    mSelectButton = new QToolButton(this);
     mSelectButton->setPopupMode(QToolButton::InstantPopup);
     switch (type) {
     case General:
