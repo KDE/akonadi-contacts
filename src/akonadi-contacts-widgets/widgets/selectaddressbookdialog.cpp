@@ -19,7 +19,7 @@ static const char mySelectAddressBookDialogGroupName[] = "SelectAddressBookDialo
 class Akonadi::SelectAddressBookDialogPrivate
 {
 public:
-    SelectAddressBookDialogPrivate(SelectAddressBookDialog *qq)
+    explicit SelectAddressBookDialogPrivate(SelectAddressBookDialog *qq)
         : q(qq)
     {
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
