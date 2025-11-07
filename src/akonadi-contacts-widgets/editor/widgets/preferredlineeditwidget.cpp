@@ -14,9 +14,9 @@ using namespace Akonadi;
 
 PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
     : KLineEdit(parent)
+    , mIconEnabled(QIcon::fromTheme(QStringLiteral("rating")))
+    , mIconDisabled(QIcon::fromTheme(QStringLiteral("rating-unrated")))
 {
-    mIconEnabled = QIcon::fromTheme(QStringLiteral("rating"));
-    mIconDisabled = QIcon::fromTheme(QStringLiteral("rating-unrated"));
     mPreferredAction = addAction(mIconDisabled, QLineEdit::TrailingPosition);
     mPreferredAction->setObjectName(QLatin1StringView("preferredaction"));
     mPreferredAction->setToolTip(i18nc("@info:tooltip", "Set as Preferred"));

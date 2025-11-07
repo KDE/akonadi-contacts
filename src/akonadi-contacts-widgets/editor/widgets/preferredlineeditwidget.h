@@ -31,8 +31,8 @@ private:
     void slotPreferredStatusChanged();
     void updatePreferredIcon();
     bool mPreferred = false;
-    QIcon mIconEnabled;
-    QIcon mIconDisabled;
+    const QIcon mIconEnabled;
+    const QIcon mIconDisabled;
     QAction *mPreferredAction = nullptr;
 };
 }
