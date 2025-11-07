@@ -188,7 +188,6 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     // impps
     const auto impps = rawContact.imppList();
     for (const KContacts::Impp &impp : impps) {
-        QString formattedImpp;
         const QString url = QStringLiteral("<a href=\"%1\" title=\"%2\"><img src=\"%3\"/></a>")
                                 .arg(impp.address().toString())
                                 .arg(impp.address().toString())

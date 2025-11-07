@@ -93,10 +93,10 @@ QModelIndex LeafExtensionProxyModel::index(int row, int column, const QModelInde
                 d->mParentIndexes.insert(key, parent);
             }
 
-            const QModelIndex index = createIndex(row, column, static_cast<quint32>(key));
-            d->mOwnIndexes.insert(index);
+            const QModelIndex newIndex = createIndex(row, column, static_cast<quint32>(key));
+            d->mOwnIndexes.insert(newIndex);
 
-            return index;
+            return newIndex;
         }
     }
 

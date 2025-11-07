@@ -154,10 +154,10 @@ void ContactGroupModel::loadContactGroup(const KContacts::ContactGroup &contactG
     d->mGroup = contactGroup;
 
     for (int i = 0; i < d->mGroup.dataCount(); ++i) {
-        const KContacts::ContactGroup::Data data = d->mGroup.data(i);
+        const KContacts::ContactGroup::Data contactGroupData = d->mGroup.data(i);
         GroupMember member;
         member.isReference = false;
-        member.data = data;
+        member.data = contactGroupData;
 
         d->mMembers.append(member);
     }

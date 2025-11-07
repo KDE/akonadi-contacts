@@ -33,7 +33,7 @@ using namespace Akonadi;
 class Akonadi::ImageLoader
 {
 public:
-    ImageLoader(QWidget *parent = nullptr);
+    explicit ImageLoader(QWidget *parent = nullptr);
 
     [[nodiscard]] QImage loadImage(const QUrl &url, bool *ok, bool selectPictureSize = true);
 
