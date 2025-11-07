@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:44+0000\n"
+"POT-Creation-Date: 2025-11-07 00:43+0000\n"
 "PO-Revision-Date: 2025-04-06 12:20+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -1036,6 +1036,12 @@ msgstr "Smelltu til að bæta við dagsetningu"
 #, kde-format
 msgid "Remove"
 msgstr "Fjarlægja"
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format

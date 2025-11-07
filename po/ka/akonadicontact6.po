@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:44+0000\n"
+"POT-Creation-Date: 2025-11-07 00:43+0000\n"
 "PO-Revision-Date: 2024-07-30 08:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1037,6 +1037,12 @@ msgstr "წკაპი თარიღის დასამატებლა�
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format

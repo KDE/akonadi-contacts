@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:44+0000\n"
+"POT-Creation-Date: 2025-11-07 00:43+0000\n"
 "PO-Revision-Date: 2014-09-25 00:57-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1111,6 +1111,12 @@ msgstr ""
 #, kde-format
 msgid "Remove"
 msgstr "削除"
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:29
 #, kde-format
