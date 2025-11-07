@@ -39,7 +39,7 @@ class DisplayNameDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    DisplayNameDelegate(QAbstractItemView *view, QObject *parent = nullptr)
+    explicit DisplayNameDelegate(QAbstractItemView *view, QObject *parent = nullptr)
         : QStyledItemDelegate(parent)
     {
         mDescriptions.append(i18n("Short Name"));
