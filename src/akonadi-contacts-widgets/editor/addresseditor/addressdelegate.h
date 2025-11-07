@@ -18,7 +18,7 @@ class AddressDelegate : public QStyledItemDelegate
 public:
     explicit AddressDelegate(QObject *parent = nullptr);
 
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    [[nodiscard]] QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 };
 

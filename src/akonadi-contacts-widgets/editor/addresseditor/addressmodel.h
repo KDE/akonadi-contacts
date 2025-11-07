@@ -28,7 +28,7 @@ public:
     void removeAddress(int row);
 
     int rowCount(const QModelIndex &parent) const override;
-    QVariant data(const QModelIndex &index, int role) const override;
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
 
 private:
     KContacts::Address::List mAddresses;
