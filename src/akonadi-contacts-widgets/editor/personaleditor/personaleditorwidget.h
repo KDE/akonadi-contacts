@@ -29,8 +29,8 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    DateEditWidget *mBirthdateWidget = nullptr;
-    DateEditWidget *mAnniversaryWidget = nullptr;
-    KLineEdit *mPartnerWidget = nullptr;
+    DateEditWidget *const mBirthdateWidget;
+    DateEditWidget *const mAnniversaryWidget;
+    KLineEdit *const mPartnerWidget;
 };
 }
