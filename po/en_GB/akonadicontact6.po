@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-07 00:43+0000\n"
+"POT-Creation-Date: 2025-11-08 00:42+0000\n"
 "PO-Revision-Date: 2024-08-03 13:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -105,58 +105,58 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:222
+#: akonadi-contacts-core/standardcontactformatter.cpp:221
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "Address Book"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:221
+#: akonadi-contacts-core/standardcontactformatter.cpp:220
 #, kde-format
 msgid "Anniversary"
 msgstr "Anniversary"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:216
+#: akonadi-contacts-core/standardcontactformatter.cpp:215
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Assistant's Name"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:217
+#: akonadi-contacts-core/standardcontactformatter.cpp:216
 #, kde-format
 msgid "Manager's Name"
 msgstr "Manager's Name"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:219
+#: akonadi-contacts-core/standardcontactformatter.cpp:218
 #, kde-format
 msgid "Office"
 msgstr "Office"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:215
+#: akonadi-contacts-core/standardcontactformatter.cpp:214
 #, kde-format
 msgid "Profession"
 msgstr "Profession"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:218
+#: akonadi-contacts-core/standardcontactformatter.cpp:217
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Partner's Name"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:279
+#: akonadi-contacts-core/standardcontactformatter.cpp:278
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "yes"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:281
+#: akonadi-contacts-core/standardcontactformatter.cpp:280
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -224,17 +224,17 @@ msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Show address on map"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:202
+#: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
 msgid "Notes"
 msgstr "Notes"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:208
+#: akonadi-contacts-core/standardcontactformatter.cpp:207
 #, kde-format
 msgid "Department"
 msgstr "Department"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:220
+#: akonadi-contacts-core/standardcontactformatter.cpp:219
 #, kde-format
 msgid "IM Address"
 msgstr "IM Address"
