@@ -9,8 +9,9 @@
 #include "nameeditdialog.h"
 
 #include <KComboBox>
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
+#include <QLineEdit>
 
 #include <QDialogButtonBox>
 #include <QFormLayout>
@@ -30,14 +31,14 @@ NameEditDialog::NameEditDialog(QWidget *parent)
     mPrefixCombo->setDuplicatesEnabled(false);
     mPrefixCombo->setEditable(true);
 
-    mGivenNameEdit = new KLineEdit(this);
-    mGivenNameEdit->setTrapReturnKey(true);
+    mGivenNameEdit = new QLineEdit(this);
+    KLineEditEventHandler::catchReturnKey(mGivenNameEdit);
 
-    mAdditionalNameEdit = new KLineEdit(this);
-    mAdditionalNameEdit->setTrapReturnKey(true);
+    mAdditionalNameEdit = new QLineEdit(this);
+    KLineEditEventHandler::catchReturnKey(mAdditionalNameEdit);
 
-    mFamilyNameEdit = new KLineEdit(this);
-    mFamilyNameEdit->setTrapReturnKey(true);
+    mFamilyNameEdit = new QLineEdit(this);
+    KLineEditEventHandler::catchReturnKey(mFamilyNameEdit);
 
     mSuffixCombo = new KComboBox(this);
     mSuffixCombo->setDuplicatesEnabled(false);

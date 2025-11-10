@@ -13,7 +13,7 @@
 #include <QTest>
 #include <QVBoxLayout>
 
-#include <KLineEdit>
+#include <QLineEdit>
 
 NicknameWidgetTest::NicknameWidgetTest(QObject *parent)
     : QObject(parent)
@@ -32,9 +32,8 @@ void NicknameWidgetTest::shouldHaveDefaultValue()
     QVERIFY(nickNameLabel);
     QVERIFY(!nickNameLabel->text().isEmpty());
 
-    auto mNickName = editor.findChild<KLineEdit *>(QStringLiteral("nickname"));
+    auto mNickName = editor.findChild<QLineEdit *>(QStringLiteral("nickname"));
     QVERIFY(mNickName);
-    QVERIFY(mNickName->trapReturnKey());
     QVERIFY(!mNickName->placeholderText().isEmpty());
 }
 

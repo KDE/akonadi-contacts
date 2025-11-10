@@ -9,15 +9,16 @@
 
 #include "nicknamewidget.h"
 #include <KContacts/Addressee>
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QLabel>
+#include <QLineEdit>
 #include <QVBoxLayout>
 using namespace Akonadi;
 
 NicknameWidget::NicknameWidget(QWidget *parent)
     : QWidget(parent)
-    , mNickName(new KLineEdit(this))
+    , mNickName(new QLineEdit(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -26,7 +27,7 @@ NicknameWidget::NicknameWidget(QWidget *parent)
     nickNameLabel->setObjectName(QLatin1StringView("nicknamelabel"));
     topLayout->addWidget(nickNameLabel);
 
-    mNickName->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mNickName);
     mNickName->setPlaceholderText(i18nc("@info:placeholder", "Add a Nickname"));
     mNickName->setObjectName(QLatin1StringView("nickname"));
     topLayout->addWidget(mNickName);

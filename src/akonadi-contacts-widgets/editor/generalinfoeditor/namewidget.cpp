@@ -9,10 +9,11 @@
 
 #include "namewidget.h"
 #include "nameeditdialog.h"
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QLabel>
 #include <QLineEdit>
+#include <QPointer>
 #include <QToolButton>
 #include <QVBoxLayout>
 
@@ -20,7 +21,7 @@ using namespace Akonadi;
 
 NameWidget::NameWidget(QWidget *parent)
     : QWidget(parent)
-    , mNameEdit(new KLineEdit(this))
+    , mNameEdit(new QLineEdit(this))
     , mButtonEdit(new QToolButton(this))
 {
     auto topLayout = new QVBoxLayout(this);
@@ -33,7 +34,7 @@ NameWidget::NameWidget(QWidget *parent)
     lineLayout->setContentsMargins({});
     topLayout->addLayout(lineLayout);
 
-    mNameEdit->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mNameEdit);
     lineLayout->addWidget(mNameEdit);
     setFocusProxy(mNameEdit);
     setFocusPolicy(Qt::StrongFocus);
