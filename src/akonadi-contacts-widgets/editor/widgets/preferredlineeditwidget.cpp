@@ -13,7 +13,7 @@
 using namespace Akonadi;
 
 PreferredLineEditWidget::PreferredLineEditWidget(QWidget *parent)
-    : KLineEdit(parent)
+    : QLineEdit(parent)
     , mIconEnabled(QIcon::fromTheme(QStringLiteral("rating")))
     , mIconDisabled(QIcon::fromTheme(QStringLiteral("rating-unrated")))
 {

@@ -10,6 +10,7 @@
 #include "mailwidget.h"
 #include "editor/generalinfoeditor/mail/mailtypecombobox.h"
 #include "editor/widgets/preferredlineeditwidget.h"
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
@@ -26,7 +27,7 @@ MailWidget::MailWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setContentsMargins({});
 
-    mMailEdit->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mMailEdit);
     mMailEdit->setPlaceholderText(i18nc("@info:placeholder", "Add an Email Account"));
     mMailEdit->setObjectName(QLatin1StringView("mailedit"));
     layout->addWidget(mMailEdit);

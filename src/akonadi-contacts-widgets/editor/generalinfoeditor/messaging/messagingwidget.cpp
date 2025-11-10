@@ -13,6 +13,7 @@
 
 #include <KContacts/Impp>
 
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
@@ -30,7 +31,7 @@ MessagingWidget::MessagingWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setContentsMargins({});
 
-    mMessagingEdit->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mMessagingEdit);
     mMessagingEdit->setPlaceholderText(i18nc("@info:placeholder", "Add an identifier"));
     mMessagingEdit->setObjectName(QLatin1StringView("messaginglineedit"));
     connect(mMessagingEdit, &PreferredLineEditWidget::preferredChanged, this, &MessagingWidget::slotPreferredChanged);

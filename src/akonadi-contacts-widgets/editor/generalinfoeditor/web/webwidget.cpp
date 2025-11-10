@@ -10,6 +10,7 @@
 #include "webwidget.h"
 #include "editor/widgets/preferredlineeditwidget.h"
 #include "webselecttypecombobox.h"
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QToolButton>
@@ -27,7 +28,8 @@ WebWidget::WebWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setContentsMargins({});
 
-    mWebSiteEdit->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mWebSiteEdit);
+
     mWebSiteEdit->setPlaceholderText(i18nc("@info:placeholder", "Add a Web Site"));
     mWebSiteEdit->setObjectName(QLatin1StringView("website"));
     layout->addWidget(mWebSiteEdit);

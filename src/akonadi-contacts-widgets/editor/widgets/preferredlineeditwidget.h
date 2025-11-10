@@ -8,12 +8,12 @@
 
 #pragma once
 
-#include <KLineEdit>
 #include <QIcon>
+#include <QLineEdit>
 class QAction;
 namespace Akonadi
 {
-class PreferredLineEditWidget : public KLineEdit
+class PreferredLineEditWidget : public QLineEdit
 {
     Q_OBJECT
 public:
