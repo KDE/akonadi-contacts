@@ -10,7 +10,7 @@
 
 #include <QWidget>
 class DateEditWidget;
-class KLineEdit;
+class QLineEdit;
 namespace KContacts
 {
 class Addressee;
@@ -31,6 +31,6 @@ public:
 private:
     DateEditWidget *const mBirthdateWidget;
     DateEditWidget *const mAnniversaryWidget;
-    KLineEdit *const mPartnerWidget;
+    QLineEdit *const mPartnerWidget;
 };
 }
