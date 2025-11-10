@@ -11,6 +11,7 @@
 #include "editor/widgets/preferredlineeditwidget.h"
 #include "phonecomboboxtype.h"
 
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 
 #include <QHBoxLayout>
@@ -28,7 +29,7 @@ PhoneWidget::PhoneWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->setContentsMargins({});
 
-    mPhoneNumberEdit->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mPhoneNumberEdit);
     mPhoneNumberEdit->setPlaceholderText(i18nc("@info:placeholder", "Add a Phone Number"));
     mPhoneNumberEdit->setObjectName(QLatin1StringView("phonenumber"));
     layout->addWidget(mPhoneNumberEdit);
