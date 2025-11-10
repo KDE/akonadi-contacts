@@ -8,15 +8,16 @@
 
 #include "blogfeedwidget.h"
 #include <KContacts/Addressee>
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QLabel>
+#include <QLineEdit>
 #include <QVBoxLayout>
 using namespace Akonadi;
 
 BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     : QWidget(parent)
-    , mBlogFeed(new KLineEdit(this))
+    , mBlogFeed(new QLineEdit(this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins({});
@@ -25,7 +26,7 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     blogFeedLabel->setObjectName(QLatin1StringView("blogFeedLabel"));
     topLayout->addWidget(blogFeedLabel);
 
-    mBlogFeed->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mBlogFeed);
     mBlogFeed->setPlaceholderText(i18nc("@info:placeholder", "Add a Blog Feed"));
     mBlogFeed->setObjectName(QLatin1StringView("blogfeed"));
     topLayout->addWidget(mBlogFeed);

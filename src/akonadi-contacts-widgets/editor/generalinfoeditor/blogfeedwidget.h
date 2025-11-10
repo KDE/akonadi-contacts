@@ -10,7 +10,7 @@
 
 #include "akonadi_contact_widgets_private_export.h"
 #include <QWidget>
-class KLineEdit;
+class QLineEdit;
 namespace KContacts
 {
 class Addressee;
@@ -28,6 +28,6 @@ public:
     void setReadOnly(bool readOnly);
 
 private:
-    KLineEdit *mBlogFeed = nullptr;
+    QLineEdit *const mBlogFeed;
 };
 }
