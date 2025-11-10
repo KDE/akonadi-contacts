@@ -13,7 +13,7 @@
 #include <QTest>
 #include <QVBoxLayout>
 
-#include <KLineEdit>
+#include <QLineEdit>
 
 BlogfeedWidgetTest::BlogfeedWidgetTest(QObject *parent)
     : QObject(parent)
@@ -32,9 +32,8 @@ void BlogfeedWidgetTest::shouldHaveDefaultValue()
     QVERIFY(blogFeedLabel);
     QVERIFY(!blogFeedLabel->text().isEmpty());
 
-    auto mBlogFeed = editor.findChild<KLineEdit *>(QStringLiteral("blogfeed"));
+    auto mBlogFeed = editor.findChild<QLineEdit *>(QStringLiteral("blogfeed"));
     QVERIFY(mBlogFeed);
-    QVERIFY(mBlogFeed->trapReturnKey());
     QVERIFY(!mBlogFeed->placeholderText().isEmpty());
 }
 
