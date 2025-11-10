@@ -8,10 +8,11 @@
 
 #include "personaleditorwidget.h"
 
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QGridLayout>
 #include <QLabel>
+#include <QLineEdit>
 
 #include "dateeditwidget.h"
 
@@ -23,7 +24,7 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)
     , mBirthdateWidget(new DateEditWidget(DateEditWidget::Birthday, this))
     , mAnniversaryWidget(new DateEditWidget(DateEditWidget::Anniversary, this))
-    , mPartnerWidget(new KLineEdit(this))
+    , mPartnerWidget(new QLineEdit(this))
 {
     auto mainLayout = new QGridLayout(this);
     auto label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
@@ -42,7 +43,8 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     mainLayout->addWidget(label, 0, 2);
 
     mPartnerWidget->setPlaceholderText(i18nc("@info:placeholder", "Add name"));
-    mPartnerWidget->setTrapReturnKey(true);
+    mPartnerWidget->setClearButtonEnabled(true);
+    KLineEditEventHandler::catchReturnKey(mPartnerWidget);
     label->setBuddy(mPartnerWidget);
     mainLayout->addWidget(mPartnerWidget, 1, 2);
     mainLayout->setColumnStretch(1, 1);
