@@ -8,7 +8,7 @@
 #pragma once
 
 #include <QWidget>
-class KLineEdit;
+class QLineEdit;
 namespace KContacts
 {
 class Addressee;
@@ -31,13 +31,13 @@ Q_SIGNALS:
     void organizationChanged(const QString &text);
 
 private:
-    KLineEdit *const mOrganizationWidget;
-    KLineEdit *const mProfessionWidget;
-    KLineEdit *const mTitleWidget;
-    KLineEdit *const mDepartmentWidget;
-    KLineEdit *const mOfficeWidget;
-    KLineEdit *const mManagerWidget;
-    KLineEdit *const mAssistantWidget;
+    QLineEdit *const mOrganizationWidget;
+    QLineEdit *const mProfessionWidget;
+    QLineEdit *const mTitleWidget;
+    QLineEdit *const mDepartmentWidget;
+    QLineEdit *const mOfficeWidget;
+    QLineEdit *const mManagerWidget;
+    QLineEdit *const mAssistantWidget;
     Akonadi::FreeBusyEditWidget *const mFreeBusyWidget;
     ImageWidget *const mLogoWidget;
 };

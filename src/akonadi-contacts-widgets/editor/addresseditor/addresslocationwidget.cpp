@@ -11,9 +11,10 @@
 #include "selectaddresstypecombobox.h"
 
 #include <KComboBox>
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QLineEdit>
 
 #include <KCountry>
 #include <QCheckBox>
@@ -42,52 +43,52 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     label->setObjectName(QLatin1StringView("streetlabel"));
     gridLayout->addWidget(label, 1, 0);
 
-    mStreetEdit = new KLineEdit(this);
+    mStreetEdit = new QLineEdit(this);
     mStreetEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Street"));
     mStreetEdit->setObjectName(QLatin1StringView("streetlineedit"));
-    mStreetEdit->setTrapReturnKey(true);
-    connect(mStreetEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
+    KLineEditEventHandler::catchReturnKey(mStreetEdit);
+    connect(mStreetEdit, &QLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mStreetEdit, 2, 0);
 
     label = new QLabel(KContacts::Address::postOfficeBoxLabel(), this);
     label->setObjectName(QLatin1StringView("postofficeboxlabel"));
     gridLayout->addWidget(label, 1, 1);
 
-    mPOBoxEdit = new KLineEdit(this);
+    mPOBoxEdit = new QLineEdit(this);
     mPOBoxEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Post Office Box"));
     mPOBoxEdit->setObjectName(QLatin1StringView("postofficeboxlineedit"));
-    mPOBoxEdit->setTrapReturnKey(true);
-    connect(mPOBoxEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
+    KLineEditEventHandler::catchReturnKey(mPOBoxEdit);
+    connect(mPOBoxEdit, &QLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mPOBoxEdit, 2, 1);
 
     label = new QLabel(KContacts::Address::postalCodeLabel(), this);
     label->setObjectName(QLatin1StringView("postalcodelabel"));
     gridLayout->addWidget(label, 3, 0);
-    mPostalCodeEdit = new KLineEdit(this);
+    mPostalCodeEdit = new QLineEdit(this);
     mPostalCodeEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Postal Code"));
     mPostalCodeEdit->setObjectName(QLatin1StringView("postalcodelineedit"));
-    mPostalCodeEdit->setTrapReturnKey(true);
-    connect(mPostalCodeEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
+    KLineEditEventHandler::catchReturnKey(mPostalCodeEdit);
+    connect(mPostalCodeEdit, &QLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mPostalCodeEdit, 4, 0);
 
     label = new QLabel(KContacts::Address::localityLabel(), this);
     label->setObjectName(QLatin1StringView("localitylabel"));
     gridLayout->addWidget(label, 3, 1);
-    mLocalityEdit = new KLineEdit(this);
+    mLocalityEdit = new QLineEdit(this);
     mLocalityEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Locality"));
     mLocalityEdit->setObjectName(QLatin1StringView("localitylineedit"));
-    mLocalityEdit->setTrapReturnKey(true);
-    connect(mLocalityEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
+    KLineEditEventHandler::catchReturnKey(mLocalityEdit);
+    connect(mLocalityEdit, &QLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mLocalityEdit, 4, 1);
 
     label = new QLabel(KContacts::Address::regionLabel(), this);
     label->setObjectName(QLatin1StringView("regionlabel"));
     gridLayout->addWidget(label, 5, 0);
-    mRegionEdit = new KLineEdit(this);
+    mRegionEdit = new QLineEdit(this);
     mRegionEdit->setPlaceholderText(i18nc("@info:placeholder", "Add Region"));
     mRegionEdit->setObjectName(QLatin1StringView("regionlineedit"));
-    mRegionEdit->setTrapReturnKey(true);
-    connect(mRegionEdit, &KLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
+    KLineEditEventHandler::catchReturnKey(mRegionEdit);
+    connect(mRegionEdit, &QLineEdit::editingFinished, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mRegionEdit, 6, 0);
 
     label = new QLabel(KContacts::Address::countryLabel(), this);

@@ -5,11 +5,12 @@
 */
 
 #include "emailaddressrequester.h"
-
 #include "emailaddressselectiondialog.h"
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QIcon>
+#include <QLineEdit>
+#include <QPointer>
 
 #include <QHBoxLayout>
 #include <QPushButton>
@@ -28,7 +29,7 @@ public:
     void slotAddressBook();
 
     EmailAddressRequester *const q;
-    KLineEdit *mLineEdit = nullptr;
+    QLineEdit *mLineEdit = nullptr;
 };
 
 void EmailAddressRequesterPrivate::slotAddressBook()
@@ -69,9 +70,10 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     layout->setSpacing(4);
     layout->setContentsMargins({});
 
-    d->mLineEdit = new KLineEdit(this);
+    d->mLineEdit = new QLineEdit(this);
     d->mLineEdit->setClearButtonEnabled(true);
-    d->mLineEdit->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(d->mLineEdit);
+
     layout->addWidget(d->mLineEdit, 1);
 
     auto button = new QPushButton(this);
@@ -83,7 +85,7 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     connect(button, &QPushButton::clicked, this, [this]() {
         d->slotAddressBook();
     });
-    connect(d->mLineEdit, &KLineEdit::textChanged, this, &EmailAddressRequester::textChanged);
+    connect(d->mLineEdit, &QLineEdit::textChanged, this, &EmailAddressRequester::textChanged);
 }
 
 EmailAddressRequester::~EmailAddressRequester() = default;
@@ -103,7 +105,7 @@ QString EmailAddressRequester::text() const
     return d->mLineEdit->text();
 }
 
-KLineEdit *EmailAddressRequester::lineEdit() const
+QLineEdit *EmailAddressRequester::lineEdit() const
 {
     return d->mLineEdit;
 }

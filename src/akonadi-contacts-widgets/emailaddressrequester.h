@@ -12,7 +12,7 @@
 
 #include <memory>
 
-class KLineEdit;
+class QLineEdit;
 
 namespace Akonadi
 {
@@ -60,7 +60,7 @@ public:
     /**
      * Returns the line edit that is used by the email address requester.
      */
-    KLineEdit *lineEdit() const;
+    QLineEdit *lineEdit() const;
 
 Q_SIGNALS:
     /**
