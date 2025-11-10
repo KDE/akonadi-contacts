@@ -11,7 +11,7 @@
 
 #include "customfields_p.h"
 #include <QWidget>
-class KLineEdit;
+class QLineEdit;
 class QPushButton;
 class QCheckBox;
 class QComboBox;
@@ -32,9 +32,9 @@ private:
     void slotAddField();
     void slotFielNameChanged(const QString &text);
     void fillTypes();
-    KLineEdit *mFieldName = nullptr;
-    QPushButton *mAddField = nullptr;
-    QCheckBox *mUseAllContacts = nullptr;
-    QComboBox *mFieldType = nullptr;
+    QLineEdit *const mFieldName;
+    QPushButton *const mAddField;
+    QCheckBox *const mUseAllContacts;
+    QComboBox *const mFieldType;
 };
 }

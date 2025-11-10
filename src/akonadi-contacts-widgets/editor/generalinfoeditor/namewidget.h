@@ -13,7 +13,7 @@
 #include <QWidget>
 
 #include <KContacts/Addressee>
-class KLineEdit;
+class QLineEdit;
 class QToolButton;
 namespace Akonadi
 {
@@ -39,7 +39,7 @@ private:
     void slotOpenNameEditDialog();
     DisplayNameEditWidget::DisplayType mDisplayType;
     KContacts::Addressee mContact;
-    KLineEdit *mNameEdit = nullptr;
-    QToolButton *mButtonEdit = nullptr;
+    QLineEdit *const mNameEdit;
+    QToolButton *const mButtonEdit;
 };
 }

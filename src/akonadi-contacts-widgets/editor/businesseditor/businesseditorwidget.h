@@ -31,14 +31,14 @@ Q_SIGNALS:
     void organizationChanged(const QString &text);
 
 private:
-    KLineEdit *mOrganizationWidget = nullptr;
-    KLineEdit *mProfessionWidget = nullptr;
-    KLineEdit *mTitleWidget = nullptr;
-    KLineEdit *mDepartmentWidget = nullptr;
-    KLineEdit *mOfficeWidget = nullptr;
-    KLineEdit *mManagerWidget = nullptr;
-    KLineEdit *mAssistantWidget = nullptr;
-    Akonadi::FreeBusyEditWidget *mFreeBusyWidget = nullptr;
-    ImageWidget *mLogoWidget = nullptr;
+    KLineEdit *const mOrganizationWidget;
+    KLineEdit *const mProfessionWidget;
+    KLineEdit *const mTitleWidget;
+    KLineEdit *const mDepartmentWidget;
+    KLineEdit *const mOfficeWidget;
+    KLineEdit *const mManagerWidget;
+    KLineEdit *const mAssistantWidget;
+    Akonadi::FreeBusyEditWidget *const mFreeBusyWidget;
+    ImageWidget *const mLogoWidget;
 };
 }

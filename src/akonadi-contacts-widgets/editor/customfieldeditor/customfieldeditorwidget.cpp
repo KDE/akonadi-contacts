@@ -8,11 +8,12 @@
 */
 
 #include "customfieldeditorwidget.h"
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QUuid>
 #include <QVBoxLayout>
@@ -21,7 +22,7 @@ using namespace Akonadi;
 
 CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     : QWidget(parent)
-    , mFieldName(new KLineEdit(this))
+    , mFieldName(new QLineEdit(this))
     , mAddField(new QPushButton(i18nc("@action:button", "Add Field"), this))
     , mUseAllContacts(new QCheckBox(i18nc("@option:check", "Use field for all contacts")))
     , mFieldType(new QComboBox(this))
@@ -36,7 +37,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     topLayout->addLayout(fieldLayout);
     mFieldName->setPlaceholderText(i18nc("@info:placeholder", "Add name"));
     mFieldName->setObjectName(QLatin1StringView("fieldname"));
-    mFieldName->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mFieldName);
     fieldLayout->addWidget(mFieldName);
 
     mFieldType->setObjectName(QLatin1StringView("fieldtype"));
@@ -47,7 +48,7 @@ CustomFieldEditorWidget::CustomFieldEditorWidget(QWidget *parent)
     fieldLayout->addWidget(mAddField);
     mAddField->setEnabled(false); // Disable at the beginning
     connect(mAddField, &QPushButton::clicked, this, &CustomFieldEditorWidget::slotAddField);
-    connect(mFieldName, &KLineEdit::textChanged, this, &CustomFieldEditorWidget::slotFielNameChanged);
+    connect(mFieldName, &QLineEdit::textChanged, this, &CustomFieldEditorWidget::slotFielNameChanged);
 
     mUseAllContacts->setObjectName(QLatin1StringView("useallcontact"));
     topLayout->addWidget(mUseAllContacts);

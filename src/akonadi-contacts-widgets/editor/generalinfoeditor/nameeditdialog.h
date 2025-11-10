@@ -13,7 +13,7 @@
 
 #include <KContacts/Addressee>
 
-class KLineEdit;
+class QLineEdit;
 class KComboBox;
 namespace Akonadi
 {
@@ -48,9 +48,9 @@ public:
 private:
     KComboBox *mSuffixCombo = nullptr;
     KComboBox *mPrefixCombo = nullptr;
-    KLineEdit *mFamilyNameEdit = nullptr;
-    KLineEdit *mGivenNameEdit = nullptr;
-    KLineEdit *mAdditionalNameEdit = nullptr;
+    QLineEdit *mFamilyNameEdit = nullptr;
+    QLineEdit *mGivenNameEdit = nullptr;
+    QLineEdit *mAdditionalNameEdit = nullptr;
     DisplayNameEditWidget *mDisplayNameEdit = nullptr;
 };
 }
