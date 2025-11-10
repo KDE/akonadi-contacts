@@ -14,7 +14,7 @@
 
 class QStackedWidget;
 class QCheckBox;
-class KLineEdit;
+class QLineEdit;
 class QComboBox;
 class QPushButton;
 
@@ -61,11 +61,11 @@ private:
     void reset();
     KContacts::Address mAddress;
     QCheckBox *mPreferredCheckBox = nullptr;
-    KLineEdit *mPOBoxEdit = nullptr;
-    KLineEdit *mLocalityEdit = nullptr;
-    KLineEdit *mRegionEdit = nullptr;
-    KLineEdit *mPostalCodeEdit = nullptr;
-    KLineEdit *mStreetEdit = nullptr;
+    QLineEdit *mPOBoxEdit = nullptr;
+    QLineEdit *mLocalityEdit = nullptr;
+    QLineEdit *mRegionEdit = nullptr;
+    QLineEdit *mPostalCodeEdit = nullptr;
+    QLineEdit *mStreetEdit = nullptr;
     QComboBox *mCountryCombo = nullptr;
     QPushButton *mAddAddress = nullptr;
     QPushButton *mRemoveAddress = nullptr;

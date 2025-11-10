@@ -8,10 +8,11 @@
 
 #include "businesseditorwidget.h"
 
-#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QGridLayout>
 #include <QLabel>
+#include <QLineEdit>
 
 #include "../widgets/imagewidget.h"
 #include "freebusyeditwidget.h"
@@ -22,13 +23,13 @@ using namespace Akonadi;
 
 BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     : QWidget(parent)
-    , mOrganizationWidget(new KLineEdit(this))
-    , mProfessionWidget(new KLineEdit(this))
-    , mTitleWidget(new KLineEdit(this))
-    , mDepartmentWidget(new KLineEdit(this))
-    , mOfficeWidget(new KLineEdit(this))
-    , mManagerWidget(new KLineEdit(this))
-    , mAssistantWidget(new KLineEdit(this))
+    , mOrganizationWidget(new QLineEdit(this))
+    , mProfessionWidget(new QLineEdit(this))
+    , mTitleWidget(new QLineEdit(this))
+    , mDepartmentWidget(new QLineEdit(this))
+    , mOfficeWidget(new QLineEdit(this))
+    , mManagerWidget(new QLineEdit(this))
+    , mAssistantWidget(new QLineEdit(this))
     , mFreeBusyWidget(new Akonadi::FreeBusyEditWidget(this))
     , mLogoWidget(new ImageWidget(ImageWidget::Logo, this))
 {
@@ -47,7 +48,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     auto label = new QLabel(i18nc("@label The organization of a contact", "Organization:"), this);
     generalLayout->addWidget(label, 0, 0);
 
-    mOrganizationWidget->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mOrganizationWidget);
     mOrganizationWidget->setPlaceholderText(i18nc("@info:placeholder", "Add organization's name"));
     label->setBuddy(mOrganizationWidget);
     generalLayout->addWidget(mOrganizationWidget, 1, 0);
@@ -56,7 +57,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     generalLayout->addWidget(label, 0, 1);
 
     mProfessionWidget->setPlaceholderText(i18nc("@info:placeholder", "Add profession"));
-    mProfessionWidget->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mProfessionWidget);
     label->setBuddy(mProfessionWidget);
     generalLayout->addWidget(mProfessionWidget, 1, 1);
 
@@ -64,7 +65,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     generalLayout->addWidget(label, 3, 0);
 
     mTitleWidget->setPlaceholderText(i18nc("@info:placeholder", "Add the title"));
-    mTitleWidget->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mTitleWidget);
     label->setBuddy(mTitleWidget);
     generalLayout->addWidget(mTitleWidget, 4, 0);
 
@@ -72,14 +73,14 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     generalLayout->addWidget(label, 3, 1);
 
     mDepartmentWidget->setPlaceholderText(i18nc("@info:placeholder", "Add the department"));
-    mDepartmentWidget->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mDepartmentWidget);
     label->setBuddy(mDepartmentWidget);
     generalLayout->addWidget(mDepartmentWidget, 4, 1);
 
     label = new QLabel(i18nc("@label The office of a contact", "Office:"), this);
     generalLayout->addWidget(label, 5, 0);
 
-    mOfficeWidget->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mOfficeWidget);
     mOfficeWidget->setPlaceholderText(i18nc("@info:placeholder", "Add the office"));
 
     label->setBuddy(mOfficeWidget);
@@ -89,7 +90,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     generalLayout->addWidget(label, 5, 1);
 
     mManagerWidget->setPlaceholderText(i18nc("@info:placeholder", "Add manager's name"));
-    mManagerWidget->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mManagerWidget);
     label->setBuddy(mManagerWidget);
     generalLayout->addWidget(mManagerWidget, 6, 1);
 
@@ -97,7 +98,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     generalLayout->addWidget(label, 7, 0);
 
     mAssistantWidget->setPlaceholderText(i18nc("@info:placeholder", "Add assistant's name"));
-    mAssistantWidget->setTrapReturnKey(true);
+    KLineEditEventHandler::catchReturnKey(mAssistantWidget);
     label->setBuddy(mAssistantWidget);
     generalLayout->addWidget(mAssistantWidget, 8, 0);
 
@@ -108,7 +109,7 @@ BusinessEditorWidget::BusinessEditorWidget(QWidget *parent)
     label->setBuddy(mFreeBusyWidget);
     generalLayout->addWidget(mFreeBusyWidget, 8, 1);
     generalLayout->setRowStretch(9, 1);
-    connect(mOrganizationWidget, &KLineEdit::textChanged, this, &BusinessEditorWidget::organizationChanged);
+    connect(mOrganizationWidget, &QLineEdit::textChanged, this, &BusinessEditorWidget::organizationChanged);
 }
 
 BusinessEditorWidget::~BusinessEditorWidget() = default;

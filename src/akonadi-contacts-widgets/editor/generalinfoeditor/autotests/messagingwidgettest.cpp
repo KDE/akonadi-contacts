@@ -8,8 +8,8 @@
 
 #include "messagingwidgettest.h"
 #include "../messaging/messagingwidget.h"
-#include <KLineEdit>
 #include <QComboBox>
+#include <QLineEdit>
 #include <QTest>
 #include <QToolButton>
 
@@ -23,7 +23,7 @@ MessagingWidgetTest::~MessagingWidgetTest() = default;
 void MessagingWidgetTest::shouldHaveDefaultValues()
 {
     Akonadi::MessagingWidget w;
-    auto line = w.findChild<KLineEdit *>(QStringLiteral("messaginglineedit"));
+    auto line = w.findChild<QLineEdit *>(QStringLiteral("messaginglineedit"));
     QVERIFY(line);
 
     auto protocolCombo = w.findChild<QComboBox *>(QStringLiteral("protocol"));

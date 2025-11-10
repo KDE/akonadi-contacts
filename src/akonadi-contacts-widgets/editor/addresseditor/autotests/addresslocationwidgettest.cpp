@@ -10,10 +10,10 @@
 #include "addresslocationwidgettest.h"
 #include "../addresslocationwidget.h"
 #include "../selectaddresstypecombobox.h"
-#include <KLineEdit>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QTest>
 
@@ -35,27 +35,27 @@ void AddressLocationWidgetTest::shouldHaveDefaultValue()
 
     auto streetlabel = w.findChild<QLabel *>(QStringLiteral("streetlabel"));
     QVERIFY(streetlabel);
-    auto mStreetEdit = w.findChild<KLineEdit *>(QStringLiteral("streetlineedit"));
+    auto mStreetEdit = w.findChild<QLineEdit *>(QStringLiteral("streetlineedit"));
     QVERIFY(mStreetEdit);
 
     auto postofficeboxlabel = w.findChild<QLabel *>(QStringLiteral("postofficeboxlabel"));
     QVERIFY(postofficeboxlabel);
-    auto postofficeboxlineedit = w.findChild<KLineEdit *>(QStringLiteral("postofficeboxlineedit"));
+    auto postofficeboxlineedit = w.findChild<QLineEdit *>(QStringLiteral("postofficeboxlineedit"));
     QVERIFY(postofficeboxlineedit);
 
     auto localitylabel = w.findChild<QLabel *>(QStringLiteral("localitylabel"));
     QVERIFY(localitylabel);
-    auto localitylineedit = w.findChild<KLineEdit *>(QStringLiteral("localitylineedit"));
+    auto localitylineedit = w.findChild<QLineEdit *>(QStringLiteral("localitylineedit"));
     QVERIFY(localitylineedit);
 
     auto regionlabel = w.findChild<QLabel *>(QStringLiteral("regionlabel"));
     QVERIFY(regionlabel);
-    auto regionlineedit = w.findChild<KLineEdit *>(QStringLiteral("regionlineedit"));
+    auto regionlineedit = w.findChild<QLineEdit *>(QStringLiteral("regionlineedit"));
     QVERIFY(regionlineedit);
 
     auto postalcodelabel = w.findChild<QLabel *>(QStringLiteral("postalcodelabel"));
     QVERIFY(postalcodelabel);
-    auto postalcodelineedit = w.findChild<KLineEdit *>(QStringLiteral("postalcodelineedit"));
+    auto postalcodelineedit = w.findChild<QLineEdit *>(QStringLiteral("postalcodelineedit"));
     QVERIFY(postalcodelineedit);
 
     auto countrylabel = w.findChild<QLabel *>(QStringLiteral("countrylabel"));
@@ -83,15 +83,15 @@ void AddressLocationWidgetTest::shouldChangeReadOnlyStatus()
     w.setReadOnly(true);
     auto typeAddress = w.findChild<SelectAddressTypeComboBox *>(QStringLiteral("typeaddress"));
     QCOMPARE(typeAddress->isEnabled(), false);
-    auto mStreetEdit = w.findChild<KLineEdit *>(QStringLiteral("streetlineedit"));
+    auto mStreetEdit = w.findChild<QLineEdit *>(QStringLiteral("streetlineedit"));
     QCOMPARE(mStreetEdit->isReadOnly(), true);
-    auto postofficeboxlineedit = w.findChild<KLineEdit *>(QStringLiteral("postofficeboxlineedit"));
+    auto postofficeboxlineedit = w.findChild<QLineEdit *>(QStringLiteral("postofficeboxlineedit"));
     QCOMPARE(postofficeboxlineedit->isReadOnly(), true);
-    auto localitylineedit = w.findChild<KLineEdit *>(QStringLiteral("localitylineedit"));
+    auto localitylineedit = w.findChild<QLineEdit *>(QStringLiteral("localitylineedit"));
     QCOMPARE(localitylineedit->isReadOnly(), true);
-    auto regionlineedit = w.findChild<KLineEdit *>(QStringLiteral("regionlineedit"));
+    auto regionlineedit = w.findChild<QLineEdit *>(QStringLiteral("regionlineedit"));
     QCOMPARE(regionlineedit->isReadOnly(), true);
-    auto postalcodelineedit = w.findChild<KLineEdit *>(QStringLiteral("postalcodelineedit"));
+    auto postalcodelineedit = w.findChild<QLineEdit *>(QStringLiteral("postalcodelineedit"));
     QCOMPARE(postalcodelineedit->isReadOnly(), true);
     auto countrycombobox = w.findChild<QComboBox *>(QStringLiteral("countrycombobox"));
     QCOMPARE(countrycombobox->isEnabled(), false);
