@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2009, 2010.
-# SPDX-FileCopyrightText: 2024 Toms Trasūns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-11 00:42+0000\n"
-"PO-Revision-Date: 2024-08-20 18:27+0300\n"
+"PO-Revision-Date: 2025-11-11 18:30+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
@@ -1044,7 +1044,7 @@ msgstr "Noņemt"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear"
-msgstr ""
+msgstr "Notīrīt"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:30
 #, kde-format
