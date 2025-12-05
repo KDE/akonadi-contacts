@@ -48,7 +48,7 @@ QAbstractItemModel *ContactCompletionModel::self()
 ContactCompletionModel::ContactCompletionModel(Monitor *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent)
 {
-    setCollectionFetchStrategy(InvisibleCollectionFetch);
+    setCollectionFetchStrategy(FetchCollectionsMerged);
 }
 
 ContactCompletionModel::~ContactCompletionModel() = default;
