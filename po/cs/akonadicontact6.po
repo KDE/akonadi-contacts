@@ -1045,7 +1045,7 @@ msgstr "Odstranit"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear"
-msgstr ""
+msgstr "Vyprázdnit"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:30
 #, kde-format
