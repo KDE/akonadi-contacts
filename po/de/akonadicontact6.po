@@ -1,23 +1,24 @@
-# SPDX-FileCopyrightText: 2010, 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# SPDX-FileCopyrightText: 2009, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
-# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2016, 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2016, 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2009, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
-# Intevation GmbH, 2010.
+# SPDX-FileCopyrightText: 2010, 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
+# SPDX-FileCopyrightText: 2010 Intevation GmbH
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:40+0000\n"
-"PO-Revision-Date: 2024-08-20 19:33+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2025-12-21 23:22+0100\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
@@ -383,7 +384,7 @@ msgstr "Mitglieder der Kontaktgruppe:"
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
-msgstr "Suchen ..."
+msgstr "Suchen …"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
@@ -503,7 +504,7 @@ msgstr "Adressarten"
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "Other..."
-msgstr "Weitere ..."
+msgstr "Weitere …"
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
 #, kde-format
@@ -780,7 +781,7 @@ msgstr "E-Mail"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
 #, kde-format
 msgid "Select..."
-msgstr "Auswählen ..."
+msgstr "Auswählen …"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:31
 #, kde-format
@@ -844,7 +845,7 @@ msgstr "Eine Benutzerkennung hinzufügen"
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
-msgstr "Auswählen ..."
+msgstr "Auswählen …"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:51
 #, kde-format
@@ -955,10 +956,11 @@ msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Name"
 
+# es geht um „EditButton“: https://invent.kde.org/pim/akonadi-contacts/-/blob/master/src/akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp?ref_type=heads#L43
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:43
 #, kde-format
@@ -1043,11 +1045,12 @@ msgstr "Klicken, um Datum hinzuzufügen"
 msgid "Remove"
 msgstr "Entfernen"
 
+# es geht um „ClearButton“: https://invent.kde.org/pim/akonadi-contacts/-/blob/master/src/akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp?ref_type=heads#L55
 #: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear"
-msgstr ""
+msgstr "Leeren"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:30
 #, kde-format
@@ -1087,33 +1090,33 @@ msgstr "Das Logo der Firma (Klicken zum Ändern)"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:236
 #, kde-format
 msgid "Change photo..."
-msgstr "Photo ändern ..."
+msgstr "Foto ändern …"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change URL..."
-msgstr "Adresse (URL) ändern ..."
+msgstr "Adresse (URL) ändern …"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:241
 #, kde-format
 msgid "Save photo..."
-msgstr "Photo speichern ..."
+msgstr "Foto speichern …"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:244
 #, kde-format
 msgid "Remove photo"
-msgstr "Photo entfernen"
+msgstr "Foto entfernen"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:249
 #, kde-format
 msgid "Change logo..."
-msgstr "Logo ändern ..."
+msgstr "Logo ändern …"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:254
 #, kde-format
 msgid "Save logo..."
-msgstr "Logo speichern ..."
+msgstr "Logo speichern …"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:257
 #, kde-format
@@ -1158,7 +1161,7 @@ msgstr "Suchen:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
-msgstr "Kontakt suchen …"
+msgstr "Kontakt suchen …"
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
@@ -1268,7 +1271,7 @@ msgstr "Der Kontakt wurde erfolgreich erstellt"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr "Adressbuchordner hinzufügen ..."
+msgstr "Adressbuchordner hinzufügen …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
@@ -1376,7 +1379,7 @@ msgstr "Die ausgewählten Adressbuchordner aus dem Adressbuch ausschneiden."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Ordner-Eigenschaften ..."
+msgstr "Ordnereigenschaften …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
 #, kde-format
@@ -1459,7 +1462,7 @@ msgstr "Die ausgewählten Kontakte aus dem Adressbuch ausschneiden."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr "Adressbuch hinzufügen ..."
+msgstr "Adressbuch &hinzufügen …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1563,7 +1566,7 @@ msgstr "Kontakt verschieben nach"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
-msgstr "Kontakt bearbeiten ..."
+msgstr "Kontakt bearbeiten …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
 #, kde-format
@@ -1601,12 +1604,12 @@ msgstr "Gruppe verschieben nach"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
-msgstr "Gruppe bearbeiten ..."
+msgstr "Gruppe bearbeiten …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
-msgstr "Neuer &Kontakt ..."
+msgstr "Neuer &Kontakt …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
@@ -1621,7 +1624,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
-msgstr "Neue &Gruppe ..."
+msgstr "Neue &Gruppe …"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
