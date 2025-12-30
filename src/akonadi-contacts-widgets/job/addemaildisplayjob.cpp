@@ -64,7 +64,7 @@ public:
 
     void modifyContact()
     {
-        Akonadi::Item item = contact;
+        Akonadi::Item item = currentContact;
         if (item.hasPayload<KContacts::Addressee>()) {
             auto address = item.payload<KContacts::Addressee>();
             address.insertCustom(QStringLiteral("KADDRESSBOOK"),
@@ -275,7 +275,7 @@ public:
     }
 
     AddEmailDisplayJob *const q;
-    Akonadi::Item contact;
+    Akonadi::Item currentContact;
     Akonadi::Item::Id messageId;
     const QString mCompleteAddress;
     QString mEmail;
@@ -305,7 +305,7 @@ void AddEmailDisplayJob::setRemoteContent(bool b)
 
 void AddEmailDisplayJob::setContact(const Akonadi::Item &contact)
 {
-    d->contact = contact;
+    d->currentContact = contact;
 }
 
 void AddEmailDisplayJob::setMessageId(Akonadi::Item::Id id)
@@ -315,7 +315,7 @@ void AddEmailDisplayJob::setMessageId(Akonadi::Item::Id id)
 
 void AddEmailDisplayJob::start()
 {
-    if (d->contact.isValid()) {
+    if (d->currentContact.isValid()) {
         d->modifyContact();
     } else {
         d->searchContact();

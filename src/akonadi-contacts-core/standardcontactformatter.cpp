@@ -89,12 +89,12 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
     QString dynamicPart;
 
     // Birthday
-    const QDate date = rawContact.birthday().date();
-    const int years = contactAge(date);
+    const QDate birthDayDate = rawContact.birthday().date();
+    const int years = contactAge(birthDayDate);
 
-    if (date.isValid()) {
+    if (birthDayDate.isValid()) {
         dynamicPart += rowFmtStr1.arg(KContacts::Addressee::birthdayLabel(),
-                                      QLocale().toString(date) + QLatin1StringView("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
+                                      QLocale().toString(birthDayDate) + QLatin1StringView("&nbsp;&nbsp;") + i18np("(One year old)", "(%1 years old)", years));
     }
 
     // Phone Numbers

@@ -118,9 +118,9 @@ public:
         do {
             foundEmpty = false;
             for (int i = 0, total = mMembers.count(); i < total; ++i) {
-                const GroupMember &member = mMembers[i];
-                if (!member.isReference && !(i == mMembers.count() - 1)) {
-                    if (member.data.name().isEmpty() && member.data.email().isEmpty()) {
+                const GroupMember &groupMember = mMembers[i];
+                if (!groupMember.isReference && !(i == mMembers.count() - 1)) {
+                    if (groupMember.data.name().isEmpty() && groupMember.data.email().isEmpty()) {
                         mParent->beginRemoveRows(QModelIndex(), i, i);
                         mMembers.remove(i);
                         mParent->endRemoveRows();
