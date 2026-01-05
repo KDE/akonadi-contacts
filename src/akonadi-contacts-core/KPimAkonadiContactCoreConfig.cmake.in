@@ -7,4 +7,3 @@ find_dependency(KPim6GrantleeTheme "@GRANTLEETHEME_LIB_VERSION@")
 find_dependency(Qt6Widgets "@QT_REQUIRED_VERSION@")
 
 include("${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactCoreTargets.cmake")
-@PACKAGE_INCLUDE_QCHTARGETS@

@@ -203,44 +203,7 @@ if(BUILD_TESTING)
     add_subdirectory(tests)
 endif()
 
-if(BUILD_QCH)
-    ecm_add_qch(
-        KPim6AkonadiContactCore_QCH
-        NAME KPim6AkonadiContactCore
-        BASE_NAME KPim6AkonadiContactCore
-        VERSION ${PIM_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-        ${AkonadiContactCore_HEADERS}
-        ${AkonadiContactCoreJob_HEADERS}
-        ${AkonadiContactCoreGrantlee_HEADERS}
-        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
-        LINK_QCHS
-            Qt6Core_QCH
-            Qt6Gui_QCH
-            Qt6Widgets_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            AKONADI_CONTACT_CORE_EXPORT
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
-
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiContactCore")
-if(BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim6AkonadiContactCore_QCH
-        FILE KPim6AkonadiContactCoreQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiContactCoreQchTargets.cmake\")")
-endif()
-
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiContactCoreConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiContactCoreConfig.cmake"

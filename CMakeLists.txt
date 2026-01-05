@@ -82,14 +82,7 @@ file(
 )
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
-include(ECMAddQch)
-
-option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
-add_feature_info(
-    QCH
-    ${BUILD_QCH}
-    "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
-)
+include(ECMGenerateQDoc)
 
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
 set(KMIMELIB_VERSION "6.6.40")
