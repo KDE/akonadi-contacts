@@ -9,6 +9,7 @@
 
 #pragma once
 
+#include "akonadi-contact-core_export.h"
 #include <QSortFilterProxyModel>
 
 #include <memory>
@@ -17,7 +18,7 @@ namespace Akonadi
 {
 class LeafExtensionProxyModelPrivate;
 
-class LeafExtensionProxyModel : public QSortFilterProxyModel
+class AKONADI_CONTACT_CORE_EXPORT LeafExtensionProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
