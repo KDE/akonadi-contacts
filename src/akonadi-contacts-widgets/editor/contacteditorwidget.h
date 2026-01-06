@@ -20,8 +20,8 @@ class Addressee;
 
 class ContactEditorWidgetPrivate;
 
-/**
- * @short A widget for editing a contact.
+/*!
+ * \brief A widget for editing a contact.
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
@@ -34,33 +34,33 @@ public:
         VCardMode ///< Show just pages with elements stored in vcard.
     };
 
-    /**
+    /*!
      * Creates a new contact editor widget.
      *
-     * @param parent The parent widget.
+     * \a parent The parent widget.
      */
     explicit ContactEditorWidget(QWidget *parent = nullptr);
 
     ContactEditorWidget(DisplayMode displayMode, QWidget *parent);
 
-    /**
+    /*!
      * Destroys the contact editor widget.
      */
     ~ContactEditorWidget() override;
 
-    /**
+    /*!
      * Initializes the fields of the contact editor
-     * with the values from a @p contact.
+     * with the values from a \a contact.
      */
     void loadContact(const KContacts::Addressee &contact, const Akonadi::ContactMetaDataBase &metaData) override;
 
-    /**
+    /*!
      * Stores back the fields of the contact editor
-     * into the given @p contact.
+     * into the given \a contact.
      */
     void storeContact(KContacts::Addressee &contact, Akonadi::ContactMetaDataBase &metaData) const override;
 
-    /**
+    /*!
      * Sets whether the contact in the editor allows
      * the user to edit the contact or not.
      */

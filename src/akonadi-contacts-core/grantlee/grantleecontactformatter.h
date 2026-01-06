@@ -22,20 +22,20 @@ namespace KAddressBookGrantlee
 {
 class GrantleeContactFormatterPrivate;
 
-/**
- * @short A class that formats a contact as HTML code.
+/*!
+ * \brief A class that formats a contact as HTML code.
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
 class AKONADI_CONTACT_CORE_EXPORT GrantleeContactFormatter : public Akonadi::AbstractContactFormatter
 {
 public:
-    /**
+    /*!
      * Creates a new grantlee contact formatter.
      */
     explicit GrantleeContactFormatter();
 
-    /**
+    /*!
      * Destroys the grantlee contact formatter.
      */
     ~GrantleeContactFormatter() override;
@@ -47,19 +47,17 @@ public:
     void setForceDisableQRCode(bool b);
     [[nodiscard]] bool forceDisableQRCode() const;
 
-    /**
+    /*!
      * Returns the contact formatted as HTML
      */
     [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
     void setShowQRCode(bool b);
 
-    /** Translation domain for the Grantlee localizer. */
+    /*! Translation domain for the Grantlee localizer. */
     void setApplicationDomain(const QByteArray &domain);
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<GrantleeContactFormatterPrivate> const d;
-    //@endcond
 };
 }

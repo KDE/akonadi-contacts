@@ -28,8 +28,8 @@ namespace Akonadi
 {
 class EmailAddressSelectionWidgetPrivate;
 
-/**
- * @short A widget to select email addresses from Akonadi.
+/*!
+ * \brief A widget to select email addresses from Akonadi.
  *
  * This widget allows the user to select an name and email address from
  * the Akonadi storage.
@@ -38,7 +38,7 @@ class EmailAddressSelectionWidgetPrivate;
  *
  * Example:
  *
- * @code
+ * \code
  *
  * Akonadi::EmailAddressSelectionWidget *widget = new Akonadi::EmailAddressSelectionWidget( this );
  * widget->view()->setSelectionMode( QAbstractItemView::MultiSelection );
@@ -48,68 +48,66 @@ class EmailAddressSelectionWidgetPrivate;
  *   qCDebug(AKONADICONTACT_LOG) << "Name:" << selection.name() << "Email:" << selection.email();
  * }
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.5
+ * \since 4.5
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT EmailAddressSelectionWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a new email address selection widget.
      *
-     * @param parent The parent widget.
+     * \a parent The parent widget.
      */
     explicit EmailAddressSelectionWidget(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a new email address selection widget.
      *
-     * @param model A custom, ContactsTreeModel based model to use.
-     * @param parent The parent widget.
+     * \a model A custom, ContactsTreeModel based model to use.
+     * \a parent The parent widget.
      */
     explicit EmailAddressSelectionWidget(QAbstractItemModel *model, QWidget *parent = nullptr);
 
-    /**
-     * @brief Creates a new email address selection widget.
-     * @param showOnlyContactWithEmail Allow to specify if you want to see only contact with email (by default yes in other constructor)
-     * @param model A custom ContactsTreeModel based model to use.
-     * @param parent The parent widget.
+    /*!
+     * \brief Creates a new email address selection widget.
+     * \a showOnlyContactWithEmail Allow to specify if you want to see only contact with email (by default yes in other constructor)
+     * \a model A custom ContactsTreeModel based model to use.
+     * \a parent The parent widget.
      */
     explicit EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model = nullptr, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the email address selection widget.
      */
     ~EmailAddressSelectionWidget() override;
 
-    /**
+    /*!
      * Returns the list of selected email addresses.
      */
     [[nodiscard]] Akonadi::EmailAddressSelection::List selectedAddresses() const;
 
-    /**
+    /*!
      * Returns the line edit that is used for the search line.
      */
     [[nodiscard]] QLineEdit *searchLineEdit() const;
 
-    /**
+    /*!
      * Returns the tree view that is used to list the items.
      */
     [[nodiscard]] QTreeView *view() const;
 
 Q_SIGNALS:
-    /**
-     * @since 4.10.1
+    /*!
+     * \since 4.10.1
      */
     void doubleClicked();
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<EmailAddressSelectionWidgetPrivate> const d;
-    //@endcond
 };
 }

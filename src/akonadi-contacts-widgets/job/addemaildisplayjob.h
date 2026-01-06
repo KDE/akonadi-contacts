@@ -17,8 +17,8 @@ namespace Akonadi
 class Item;
 class AddEmailDisplayJobPrivate;
 
-/**
- * @brief The AddEmailDisplayJob class
+/*!
+ * \brief The AddEmailDisplayJob class
  * @author Laurent Montel <montel@kde.org>
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT AddEmailDisplayJob : public KJob
@@ -40,9 +40,7 @@ Q_SIGNALS:
     void contactUpdated(const Akonadi::Item &contact, Akonadi::Item::Id id, bool showAsHTML, bool remoteContent);
 
 private:
-    //@cond PRIVATE
     friend class AddEmailDisplayJobPrivate;
     std::unique_ptr<AddEmailDisplayJobPrivate> const d;
-    //@endcond
 };
 }

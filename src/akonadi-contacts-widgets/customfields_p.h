@@ -15,8 +15,8 @@
 template<typename T>
 class QList;
 
-/**
- * @short A class that represents non-standard contact fields.
+/*!
+ * \brief A class that represents non-standard contact fields.
  *
  * There exists three scopes of fields. To the local scope belong all
  * custom fields that are defined by the user and that exists only for one

@@ -11,8 +11,8 @@
 #include "akonadi-contact-widgets_export.h"
 #include "customfields_p.h"
 
-/**
- * @short A class that manages the descriptions of all custom fields with global scope.
+/*!
+ * \brief A class that manages the descriptions of all custom fields with global scope.
  */
 class CustomFieldManager
 {

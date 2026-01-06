@@ -20,8 +20,8 @@ namespace Akonadi
 {
 class EmailAddressSelectionDialogPrivate;
 
-/**
- * @short A dialog to select email addresses from Akonadi.
+/*!
+ * \brief A dialog to select email addresses from Akonadi.
  *
  * This dialog allows the user to select an name and email address from
  * the Akonadi storage.
@@ -30,7 +30,7 @@ class EmailAddressSelectionDialogPrivate;
  *
  * Example:
  *
- * @code
+ * \code
  *
  * Akonadi::EmailAddressSelectionDialog dlg( this );
  * if ( dlg.exec() ) {
@@ -40,49 +40,47 @@ class EmailAddressSelectionDialogPrivate;
  *   }
  * }
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.5
+ * \since 4.5
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT EmailAddressSelectionDialog : public AbstractEmailAddressSelectionDialog
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a new email address selection dialog.
      *
-     * @param parent The parent widget.
+     * \a parent The parent widget.
      */
     explicit EmailAddressSelectionDialog(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a new email address selection dialog.
      *
-     * @param model A custom, ContactsTreeModel based model to use.
-     * @param parent The parent widget.
+     * \a model A custom, ContactsTreeModel based model to use.
+     * \a parent The parent widget.
      */
     explicit EmailAddressSelectionDialog(QAbstractItemModel *model, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the email address selection dialog.
      */
     ~EmailAddressSelectionDialog() override;
 
-    /**
+    /*!
      * Returns the list of selected email addresses.
      */
     [[nodiscard]] Akonadi::EmailAddressSelection::List selectedAddresses() const override;
 
-    /**
+    /*!
      * Returns the email address selection view that is used.
      */
     [[nodiscard]] Akonadi::EmailAddressSelectionWidget *view() const override;
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<EmailAddressSelectionDialogPrivate> const d;
-    //@endcond
 };
 }

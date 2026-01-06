@@ -20,30 +20,30 @@ namespace Akonadi
 {
 class ContactMetaDataAttributePrivate;
 
-/**
- * @short Attribute to store contact specific meta data.
+/*!
+ * \brief Attribute to store contact specific meta data.
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
 class AKONADI_CONTACT_CORE_EXPORT ContactMetaDataAttribute : public Akonadi::Attribute
 {
 public:
-    /**
+    /*!
      * Creates a new contact meta data attribute.
      */
     ContactMetaDataAttribute();
 
-    /**
+    /*!
      * Destroys the contact meta data attribute.
      */
     ~ContactMetaDataAttribute() override;
 
-    /**
-     * Sets the meta @p data.
+    /*!
+     * Sets the meta \a data.
      */
     void setMetaData(const QVariantMap &data);
 
-    /**
+    /*!
      * Returns the meta data.
      */
     [[nodiscard]] QVariantMap metaData() const;
@@ -54,8 +54,6 @@ public:
     void deserialize(const QByteArray &data) override;
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<ContactMetaDataAttributePrivate> const d;
-    //@endcond
 };
 }

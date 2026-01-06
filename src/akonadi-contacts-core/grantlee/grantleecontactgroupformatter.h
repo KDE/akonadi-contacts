@@ -22,15 +22,15 @@ namespace KAddressBookGrantlee
 {
 class GrantleeContactGroupFormatterPrivate;
 
-/**
- * @short A class that formats a contact group as HTML code.
+/*!
+ * \brief A class that formats a contact group as HTML code.
  *
  * @author Tobias Koenig <tokoe@kde.org>
  */
 class AKONADI_CONTACT_CORE_EXPORT GrantleeContactGroupFormatter : public Akonadi::AbstractContactGroupFormatter
 {
 public:
-    /**
+    /*!
      * Creates a new grantlee contact group formatter.
      */
     explicit GrantleeContactGroupFormatter();
@@ -38,19 +38,17 @@ public:
     void setGrantleeTheme(const GrantleeTheme::Theme &theme);
     void setAbsoluteThemePath(const QString &path);
 
-    /**
+    /*!
      * Destroys the grantlee contact group formatter.
      */
     ~GrantleeContactGroupFormatter() override;
 
-    /**
+    /*!
      * Returns the contact group formatted as HTML
      */
     [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<GrantleeContactGroupFormatterPrivate> const d;
-    //@endcond
 };
 }

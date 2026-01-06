@@ -17,47 +17,47 @@ namespace Akonadi
 {
 class ContactMetaDataBasePrivate;
 
-/**
- * @short A helper class for storing contact specific settings.
+/*!
+ * \brief A helper class for storing contact specific settings.
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT ContactMetaDataBase
 {
 public:
-    /**
+    /*!
      * Creates a contact meta data object.
      */
     ContactMetaDataBase();
 
-    /**
+    /*!
      * Destroys the contact meta data object.
      */
     ~ContactMetaDataBase();
 
-    /**
-     * Loads the meta data for the given @p contact.
+    /*!
+     * Loads the meta data for the given \a contact.
      */
     void loadMetaData(const QVariantMap &metaData);
 
-    /**
-     * Stores the meta data to the given @p contact.
+    /*!
+     * Stores the meta data to the given \a contact.
      */
     [[nodiscard]] QVariantMap storeMetaData() const;
 
-    /**
+    /*!
      * Sets the mode that is used for the display
      * name of that contact.
      */
     void setDisplayNameMode(int mode);
 
-    /**
+    /*!
      * Returns the mode that is used for the display
      * name of that contact.
      */
     [[nodiscard]] int displayNameMode() const;
 
-    /**
-     * Sets the @p descriptions of the custom fields of that contact.
-     * @param descriptions the descriptions to set
+    /*!
+     * Sets the \a descriptions of the custom fields of that contact.
+     * \a descriptions the descriptions to set
      * The description list contains a QVariantMap for each custom field
      * with the following keys:
      *   - key   (string) The identifier of the field
@@ -73,16 +73,14 @@ public:
      */
     void setCustomFieldDescriptions(const QVariantList &descriptions);
 
-    /**
+    /*!
      * Returns the descriptions of the custom fields of the contact.
      */
     [[nodiscard]] QVariantList customFieldDescriptions() const;
 
 private:
-    //@cond PRIVATE
     Q_DISABLE_COPY(ContactMetaDataBase)
 
     std::unique_ptr<ContactMetaDataBasePrivate> const d;
-    //@endcond
 };
 }

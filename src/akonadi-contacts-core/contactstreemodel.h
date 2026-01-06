@@ -19,15 +19,15 @@ namespace Akonadi
 {
 class ContactsTreeModelPrivate;
 
-/**
- * @short A model for contacts and contact groups as available in Akonadi.
+/*!
+ * \brief A model for contacts and contact groups as available in Akonadi.
  *
  * This class provides a model for displaying the contacts and
  * contact groups which are available from Akonadi.
  *
  * Example:
  *
- * @code
+ * \code
  *
  * // use a separated session for this model
  * Akonadi::Session *session = new Akonadi::Session( "MySession" );
@@ -60,92 +60,92 @@ class ContactsTreeModelPrivate;
  * Akonadi::EntityTreeView *view = new Akonadi::EntityTreeView;
  * view->setModel( model );
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.5
+ * \since 4.5
  */
 class AKONADI_CONTACT_CORE_EXPORT ContactsTreeModel : public EntityTreeModel
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Describes the columns that can be shown by the model.
      */
     enum Column {
-        /**
+        /*!
          * Shows the formatted name or, if empty, the assembled name.
          */
         FullName,
 
-        /**
+        /*!
          * Shows the family name.
          */
         FamilyName,
 
-        /**
+        /*!
          * Shows the given name.
          */
         GivenName,
 
-        /**
+        /*!
          * Shows the birthday.
          */
         Birthday,
 
-        /**
+        /*!
          * Shows the formatted home address.
          */
         HomeAddress,
 
-        /**
+        /*!
          * Shows the formatted business address.
          */
         BusinessAddress,
 
-        /**
+        /*!
          * Shows the phone numbers.
          */
         PhoneNumbers,
 
-        /**
+        /*!
          * Shows the preferred email address.
          */
         PreferredEmail,
 
-        /**
+        /*!
          * Shows all email address.
          */
         AllEmails,
 
-        /**
+        /*!
          * Shows organization name.
          */
         Organization,
 
-        /**
+        /*!
          * Shows the role of a contact.
          */
         Role,
 
-        /**
+        /*!
          * Shows homepage url.
          */
         Homepage,
 
-        /**
+        /*!
          * Shows the note.
          */
         Note
     };
 
-    /**
+    /*!
      * Describes a list of columns of the contacts tree model.
      */
     using Columns = QList<Column>;
 
-    /**
+    /*!
      * Describes the role for contacts and contact groups.
      */
     enum Roles {
@@ -154,41 +154,37 @@ public:
         UserRole = DateRole + 42
     };
 
-    /**
+    /*!
      * Creates a new contacts tree model.
      *
-     * @param monitor The Monitor whose entities should be represented in the model.
-     * @param parent The parent object.
+     * \a monitor The Monitor whose entities should be represented in the model.
+     * \a parent The parent object.
      */
     explicit ContactsTreeModel(Monitor *monitor, QObject *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the contacts tree model.
      */
     ~ContactsTreeModel() override;
 
-    /**
-     * Sets the @p columns that the model should show.
+    /*!
+     * Sets the \a columns that the model should show.
      */
     void setColumns(const Columns &columns);
 
-    /**
+    /*!
      * Returns the columns that the model currently shows.
      */
     [[nodiscard]] Columns columns() const;
 
-    //@cond PRIVATE
     [[nodiscard]] QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const override;
     [[nodiscard]] int entityColumnCount(HeaderGroup headerGroup) const override;
-    //@endcond
 
     QHash<int, QByteArray> roleNames() const override;
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<ContactsTreeModelPrivate> const d;
-    //@endcond
 };
 }

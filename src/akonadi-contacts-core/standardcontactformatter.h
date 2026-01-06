@@ -18,12 +18,12 @@ namespace Akonadi
 {
 class StandardContactFormatterPrivate;
 
-/**
- * @short A class that formats a contact as HTML code.
+/*!
+ * \brief A class that formats a contact as HTML code.
  *
  * Examples:
  *
- * @code
+ * \code
  *
  * using namespace Akonadi;
  *
@@ -35,41 +35,39 @@ class StandardContactFormatterPrivate;
  * QTextBrowser *view = new QTextBrowser;
  * view->setHtml( formatter.toHtml() );
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.5
+ * \since 4.5
  */
 class AKONADI_CONTACT_CORE_EXPORT StandardContactFormatter : public AbstractContactFormatter
 {
 public:
-    /**
+    /*!
      * Creates a new standard contact formatter.
      */
     StandardContactFormatter();
 
-    /**
+    /*!
      * Destroys the standard contact formatter.
      */
     ~StandardContactFormatter() override;
 
-    /**
+    /*!
      * Returns the contact formatted as HTML.
      */
     [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
     /*
-     * @since 4.9.1
+     * \since 4.9.1
      */
     void setDisplayQRCode(bool show);
     /*
-     * @since 4.9.1
+     * \since 4.9.1
      */
     [[nodiscard]] bool displayQRCode() const;
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<StandardContactFormatterPrivate> const d;
-    //@endcond
 };
 }

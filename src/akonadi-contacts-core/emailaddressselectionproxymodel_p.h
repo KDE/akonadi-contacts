@@ -32,19 +32,19 @@ public:
     [[nodiscard]] QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const override;
 
 protected:
-    /**
-     * This method is called to retrieve the row count for the given leaf @p index.
+    /*!
+     * This method is called to retrieve the row count for the given leaf \a index.
      */
     int leafRowCount(const QModelIndex &index) const override;
 
-    /**
-     * This method is called to retrieve the column count for the given leaf @p index.
+    /*!
+     * This method is called to retrieve the column count for the given leaf \a index.
      */
     int leafColumnCount(const QModelIndex &index) const override;
 
-    /**
-     * This method is called to retrieve the data of the child of the given leaf @p index
-     * at @p row and @p column with the given @p role.
+    /*!
+     * This method is called to retrieve the data of the child of the given leaf \a index
+     * at \a row and \a column with the given \a role.
      */
     QVariant leafData(const QModelIndex &index, int row, int column, int role = Qt::DisplayRole) const override;
 

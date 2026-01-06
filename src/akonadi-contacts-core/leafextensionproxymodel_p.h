@@ -41,28 +41,26 @@ public:
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
 protected:
-    /**
-     * This method is called to retrieve the row count for the given leaf @p index.
+    /*!
+     * This method is called to retrieve the row count for the given leaf \a index.
      */
     virtual int leafRowCount(const QModelIndex &index) const = 0;
 
-    /**
-     * This method is called to retrieve the column count for the given leaf @p index.
+    /*!
+     * This method is called to retrieve the column count for the given leaf \a index.
      */
     virtual int leafColumnCount(const QModelIndex &index) const = 0;
 
-    /**
-     * This method is called to retrieve the data of the child of the given leaf @p index
-     * at @p row and @p column with the given @p role.
+    /*!
+     * This method is called to retrieve the data of the child of the given leaf \a index
+     * at \a row and \a column with the given \a role.
      */
     virtual QVariant leafData(const QModelIndex &index, int row, int column, int role = Qt::DisplayRole) const = 0;
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<LeafExtensionProxyModelPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void sourceRowsInserted(const QModelIndex &, int, int))
     Q_PRIVATE_SLOT(d, void sourceRowsRemoved(const QModelIndex &, int, int))
-    //@endcond
 };
 }

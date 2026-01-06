@@ -18,8 +18,8 @@ namespace Akonadi
 {
 class ContactsFilterProxyModelPrivate;
 
-/**
- * @short A proxy model for \a ContactsTreeModel models.
+/*!
+ * \brief A proxy model for \a ContactsTreeModel models.
  *
  * This class provides a filter proxy model for a ContactsTreeModel.
  * The list of shown contacts or contact groups can be limited by
@@ -28,7 +28,7 @@ class ContactsFilterProxyModelPrivate;
  *
  * Example:
  *
- * @code
+ * \code
  *
  * Akonadi::ContactsTreeModel *model = new Akonadi::ContactsTreeModel( ... );
  *
@@ -42,10 +42,10 @@ class ContactsFilterProxyModelPrivate;
  * connect( filterEdit, SIGNAL(textChanged(QString)),
  *          filter, SLOT(setFilterString(QString)) );
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.5
+ * \since 4.5
  */
 class AKONADI_CONTACT_CORE_EXPORT ContactsFilterProxyModel : public QSortFilterProxyModel
 {
@@ -61,63 +61,59 @@ public:
     };
     Q_DECLARE_FLAGS(FilterFlags, FilterFlag)
 
-    /**
+    /*!
      * Creates a new contacts filter proxy model.
      *
-     * @param parent The parent object.
+     * \a parent The parent object.
      */
     explicit ContactsFilterProxyModel(QObject *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the contacts filter proxy model.
      */
     ~ContactsFilterProxyModel() override;
 
-    /**
-     * Sets the filter @p flags. By default
+    /*!
+     * Sets the filter \a flags. By default
      * ContactsFilterProxyModel::FilterString is set.
-     * @param flags the filter flags to set
-     * @since 4.8
+     * \a flags the filter flags to set
+     * \since 4.8
      */
     void setFilterFlags(ContactsFilterProxyModel::FilterFlags flags);
 
-    /**
-     * @brief setMatchFilterContactFlag
-     * @param flag
-     * @since 5.8.0
+    /*!
+     * \brief setMatchFilterContactFlag
+     * \a flag
+     * \since 5.8.0
      *
      */
     void setMatchFilterContactFlag(ContactsFilterProxyModel::MatchFilterContactFlag flag);
 
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    /**
+    /*!
      * Sets whether we want virtual collections to be filtered or not.
      * By default, virtual collections are accepted.
      *
-     * @param exclude If true, virtual collections aren't accepted.
+     * \a exclude If true, virtual collections aren't accepted.
      *
-     * @since 4.8
+     * \since 4.8
      */
     void setExcludeVirtualCollections(bool exclude);
 
 public Q_SLOTS:
-    /**
-     * Sets the @p filter that is used to filter for matching contacts
+    /*!
+     * Sets the \a filter that is used to filter for matching contacts
      * and contact groups.
      */
     void setFilterString(const QString &filter);
 
 protected:
-    //@cond PRIVATE
     bool filterAcceptsRow(int row, const QModelIndex &parent) const override;
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
-    //@endcond
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<ContactsFilterProxyModelPrivate> const d;
-    //@endcond
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ContactsFilterProxyModel::FilterFlags)

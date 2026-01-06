@@ -13,9 +13,9 @@
 namespace Akonadi
 {
 class SelectAddressBookDialogPrivate;
-/**
- * @brief The SelectAddressBookDialog class This class allows to select addressbook where saving contacts
- * @since 5.1
+/*!
+ * \brief The SelectAddressBookDialog class This class allows to select addressbook where saving contacts
+ * \since 5.1
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT SelectAddressBookDialog : public Akonadi::CollectionDialog
 {

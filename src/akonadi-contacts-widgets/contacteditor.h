@@ -25,15 +25,15 @@ class Item;
 class AbstractContactEditorWidget;
 class AkonadiContactEditorPrivate;
 
-/**
- * @short An widget to edit contacts in Akonadi.
+/*!
+ * \brief An widget to edit contacts in Akonadi.
  *
  * This widget provides a way to create a new contact or edit
  * an existing contact in Akonadi.
  *
  * Example for creating a new contact:
  *
- * @code
+ * \code
  *
  * using namespace Akonadi;
  *
@@ -46,11 +46,11 @@ class AkonadiContactEditorPrivate;
  *   return;
  * }
  *
- * @endcode
+ * \endcode
  *
  * Example for editing an existing contact:
  *
- * @code
+ * \code
  *
  * const Akonadi::Item contact = ...;
  *
@@ -61,17 +61,17 @@ class AkonadiContactEditorPrivate;
  *
  * editor->saveContactInAddressBook();
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.4
+ * \since 4.4
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT AkonadiContactEditor : public QWidget
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Describes the mode of the editor.
      */
     enum Mode {
@@ -84,94 +84,92 @@ public:
         VCardMode ///< Show just pages with elements stored in vcard.
     };
 
-    /**
+    /*!
      * Creates a new contact editor with the standard editor widget.
      *
-     * @param mode The mode of the editor.
-     * @param parent The parent widget of the editor.
+     * \a mode The mode of the editor.
+     * \a parent The parent widget of the editor.
      */
     explicit AkonadiContactEditor(Mode mode, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a new contact editor with a custom editor widget.
      *
-     * @param mode The mode of the editor.
-     * @param editorWidget The contact editor widget that shall be used for editing.
-     * @param parent The parent widget of the editor.
+     * \a mode The mode of the editor.
+     * \a editorWidget The contact editor widget that shall be used for editing.
+     * \a parent The parent widget of the editor.
      */
     AkonadiContactEditor(Mode mode, Akonadi::AbstractContactEditorWidget *editorWidget, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a new contact editor dialog with a custom editor widget.
      *
-     * @param mode The mode of the dialog.
-     * @param displayMode mode for displaying the editor
-     * @param parent The parent widget of the dialog.
-     * @since 4.10
+     * \a mode The mode of the dialog.
+     * \a displayMode mode for displaying the editor
+     * \a parent The parent widget of the dialog.
+     * \since 4.10
      */
     AkonadiContactEditor(Mode mode, DisplayMode displayMode, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the contact editor.
      */
     ~AkonadiContactEditor() override;
 
-    /**
-     * Sets a @p contact that is used as template in create mode.
+    /*!
+     * Sets a \a contact that is used as template in create mode.
      * The fields of the editor will be prefilled with the content of the contact.
-     * @param contact the contact to use as template content
+     * \a contact the contact to use as template content
      */
     void setContactTemplate(const KContacts::Addressee &contact);
 
-    /**
-     * Sets the @p addressbook which shall be used to store new
+    /*!
+     * Sets the \a addressbook which shall be used to store new
      * contacts.
      */
     void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
-    /**
-     * @since 4.10
-     * @brief ContactEditor::contact
-     * @return
+    /*!
+     * \since 4.10
+     * \brief ContactEditor::contact
+     * Returns
      */
     [[nodiscard]] KContacts::Addressee contact();
     [[nodiscard]] bool hasNoSavedData() const;
 public Q_SLOTS:
-    /**
-     * Loads the @p contact into the editor.
+    /*!
+     * Loads the \a contact into the editor.
      */
     void loadContact(const Akonadi::Item &contact);
 
-    /**
+    /*!
      * Save the contact from the editor back to the storage. And return error.
      * Need to connect to finished() signal, to keep time to Q_EMIT signal.
-     * @since 4.11
+     * \since 4.11
      */
     void saveContactInAddressBook();
 
 Q_SIGNALS:
-    /**
-     * This signal is emitted when the @p contact has been saved back
+    /*!
+     * This signal is emitted when the \a contact has been saved back
      * to the storage.
      */
     void contactStored(const Akonadi::Item &contact);
 
-    /**
+    /*!
      * This signal is emitted when an error occurred during the save.
-     * @param errorMsg The error message.
-     * @since 4.11
+     * \a errorMsg The error message.
+     * \since 4.11
      */
     void error(const QString &errorMsg);
 
-    /**
-     * @brief finished
-     * @since 4.11
+    /*!
+     * \brief finished
+     * \since 4.11
      */
     void finished();
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<AkonadiContactEditorPrivate> const d;
-    //@endcond
 };
 }

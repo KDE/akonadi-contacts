@@ -18,8 +18,8 @@ namespace Akonadi
 {
 class EmailAddressRequesterPrivate;
 
-/**
- * @short A widget to input one or more email addresses.
+/*!
+ * \brief A widget to input one or more email addresses.
  *
  * @author Marc Mutz <mutz@kde.org>
  */
@@ -30,48 +30,46 @@ class AKONADI_CONTACT_WIDGETS_EXPORT EmailAddressRequester : public QWidget
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged USER true)
 
 public:
-    /**
+    /*!
      * Creates a new email address requester.
      *
-     * @param parent The parent widget.
+     * \a parent The parent widget.
      */
     explicit EmailAddressRequester(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the email address requester.
      */
     ~EmailAddressRequester() override;
 
-    /**
+    /*!
      * Clears the text of the email address requester.
      */
     void clear();
 
-    /**
-     * Sets the @p text of the email address requester.
+    /*!
+     * Sets the \a text of the email address requester.
      */
     void setText(const QString &text);
 
-    /**
+    /*!
      * Returns the text of the email address requester.
      */
     [[nodiscard]] QString text() const;
 
-    /**
+    /*!
      * Returns the line edit that is used by the email address requester.
      */
     QLineEdit *lineEdit() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted whenever the text of the email address requester
      * has been changed.
      */
     void textChanged();
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<EmailAddressRequesterPrivate> const d;
-    //@endcond
 };
 }

@@ -18,12 +18,12 @@ namespace Akonadi
 {
 class StandardContactGroupFormatterPrivate;
 
-/**
- * @short A class that formats a contact group as HTML code.
+/*!
+ * \brief A class that formats a contact group as HTML code.
  *
  * Examples:
  *
- * @code
+ * \code
  *
  * using namespace Akonadi;
  *
@@ -35,32 +35,30 @@ class StandardContactGroupFormatterPrivate;
  * QTextBrowser *view = new QTextBrowser;
  * view->setHtml( formatter.toHtml() );
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.6
+ * \since 4.6
  */
 class AKONADI_CONTACT_CORE_EXPORT StandardContactGroupFormatter : public AbstractContactGroupFormatter
 {
 public:
-    /**
+    /*!
      * Creates a new standard contact group formatter.
      */
     StandardContactGroupFormatter();
 
-    /**
+    /*!
      * Destroys the standard contact group formatter.
      */
     ~StandardContactGroupFormatter() override;
 
-    /**
+    /*!
      * Returns the contact group formatted as HTML.
      */
     [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<StandardContactGroupFormatterPrivate> const d;
-    //@endcond
 };
 }

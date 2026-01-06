@@ -21,15 +21,15 @@ class Collection;
 class ContactGroupEditor;
 class ContactGroupEditorDialogPrivate;
 
-/**
- * @short A dialog for creating or editing a contact group in Akonadi.
+/*!
+ * \brief A dialog for creating or editing a contact group in Akonadi.
  *
  * This dialog provides a way to create a new contact group or edit
  * an existing contact group in Akonadi.
  *
  * Example for creating a new contact group:
  *
- * @code
+ * \code
  *
  * using namespace Akonadi;
  *
@@ -38,11 +38,11 @@ class ContactGroupEditorDialogPrivate;
  *          this, SLOT(contactGroupStored(Akonadi::Item)) );
  * dlg->show();
  *
- * @endcode
+ * \endcode
  *
  * Example for editing an existing contact group:
  *
- * @code
+ * \code
  *
  * using namespace Akonadi;
  *
@@ -54,17 +54,17 @@ class ContactGroupEditorDialogPrivate;
  * dlg->setContactGroup( contactGroup );
  * dlg->show();
  *
- * @endcode
+ * \endcode
  *
  * @author Tobias Koenig <tokoe@kde.org>
- * @since 4.4
+ * \since 4.4
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT ContactGroupEditorDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Describes the mode of the contact group editor.
      */
     enum Mode {
@@ -72,49 +72,47 @@ public:
         EditMode ///< Edits an existing contact group
     };
 
-    /**
+    /*!
      * Creates a new contact group editor dialog.
      *
-     * @param mode The mode of the dialog.
-     * @param parent The parent widget of the dialog.
+     * \a mode The mode of the dialog.
+     * \a parent The parent widget of the dialog.
      */
     explicit ContactGroupEditorDialog(Mode mode, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the contact group editor dialog.
      */
     ~ContactGroupEditorDialog() override;
 
-    /**
-     * Sets the contact @p group to edit when in EditMode.
+    /*!
+     * Sets the contact \a group to edit when in EditMode.
      */
     void setContactGroup(const Akonadi::Item &group);
 
-    /**
-     * Sets the @p addressbook that shall be selected as default
+    /*!
+     * Sets the \a addressbook that shall be selected as default
      * for storage in create mode.
      */
     void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
-    /**
+    /*!
      * Returns the ContactGroupEditor that is used by the dialog.
      */
     [[nodiscard]] ContactGroupEditor *editor() const;
 
     void reject() override;
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted whenever a contact group was updated or stored.
      *
-     * @param group The contact group.
+     * \a group The contact group.
      */
     void contactGroupStored(const Akonadi::Item &group);
 
 private:
     AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotAccepted();
 
-    //@cond PRIVATE
     std::unique_ptr<ContactGroupEditorDialogPrivate> const d;
-    //@endcond
 };
 }

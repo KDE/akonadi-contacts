@@ -21,12 +21,12 @@ public:
     explicit AbstractEmailAddressSelectionDialog(QWidget *parent = nullptr);
     ~AbstractEmailAddressSelectionDialog() override;
 
-    /**
+    /*!
      * Returns the list of selected email addresses.
      */
     [[nodiscard]] virtual Akonadi::EmailAddressSelection::List selectedAddresses() const = 0;
 
-    /**
+    /*!
      * Returns the email address selection view that is used.
      */
     [[nodiscard]] virtual Akonadi::EmailAddressSelectionWidget *view() const = 0;
