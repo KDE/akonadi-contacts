@@ -75,6 +75,7 @@ target_sources(
         leafextensionproxymodel_p.h
         contactparts.h
         attributes/contactmetadataattribute_p.h
+        akonadi_contact_core_private_export.h
 )
 
 ecm_qt_declare_logging_category(KPim6AkonadiContactCore HEADER akonadi_contact_debug.h IDENTIFIER AKONADICONTACT_LOG CATEGORY_NAME org.kde.pim.akonadicontact

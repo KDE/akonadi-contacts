@@ -20,7 +20,7 @@ namespace Akonadi
 {
 class ContactMetaDataAttributePrivate;
 
-/*!
+/**
  * \brief Attribute to store contact specific meta data.
  *
  * \author Tobias Koenig <tokoe@kde.org>
