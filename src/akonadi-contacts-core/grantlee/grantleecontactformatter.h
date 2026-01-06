@@ -25,7 +25,7 @@ class GrantleeContactFormatterPrivate;
 /*!
  * \brief A class that formats a contact as HTML code.
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  */
 class AKONADI_CONTACT_CORE_EXPORT GrantleeContactFormatter : public Akonadi::AbstractContactFormatter
 {

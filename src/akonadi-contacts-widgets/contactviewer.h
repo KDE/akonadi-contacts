@@ -57,7 +57,7 @@ class ContactViewerPrivate;
  *
  * \endcode
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.4
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT ContactViewer : public QWidget, public Akonadi::ItemMonitor

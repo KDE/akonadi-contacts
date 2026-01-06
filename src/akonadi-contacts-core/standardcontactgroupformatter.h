@@ -37,7 +37,7 @@ class StandardContactGroupFormatterPrivate;
  *
  * \endcode
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.6
  */
 class AKONADI_CONTACT_CORE_EXPORT StandardContactGroupFormatter : public AbstractContactGroupFormatter

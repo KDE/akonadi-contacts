@@ -33,7 +33,7 @@ class KWidgetListerPrivate;
   implementation as necessary. Instantiate an object of the class and
   put it in your dialog.
 
-  @author Marc Mutz <Marc@Mutz.com>
+  \author Marc Mutz <Marc@Mutz.com>
   @see KMSearchPatternEdit::WidgetLister KMFilterActionEdit::WidgetLister
 
 */

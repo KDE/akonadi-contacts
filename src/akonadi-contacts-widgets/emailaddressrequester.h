@@ -21,7 +21,7 @@ class EmailAddressRequesterPrivate;
 /*!
  * \brief A widget to input one or more email addresses.
  *
- * @author Marc Mutz <mutz@kde.org>
+ * \author Marc Mutz <mutz@kde.org>
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT EmailAddressRequester : public QWidget
 {

@@ -42,7 +42,7 @@ class EmailAddressSelectionDialogPrivate;
  *
  * \endcode
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.5
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT EmailAddressSelectionDialog : public AbstractEmailAddressSelectionDialog

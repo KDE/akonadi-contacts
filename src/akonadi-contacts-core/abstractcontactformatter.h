@@ -31,7 +31,7 @@ class AbstractContactFormatterPrivate;
  * item with a contact payload or a contact itself as HTML.
  *
  * \sa StandardContactFormatter
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.5
  */
 class AKONADI_CONTACT_CORE_EXPORT AbstractContactFormatter

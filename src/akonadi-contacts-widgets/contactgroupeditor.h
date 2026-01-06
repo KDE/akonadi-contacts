@@ -66,7 +66,7 @@ class ContactGroupEditorPrivate;
  *
  * \endcode
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.4
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT ContactGroupEditor : public QWidget

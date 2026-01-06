@@ -23,7 +23,7 @@ class ContactMetaDataAttributePrivate;
 /*!
  * \brief Attribute to store contact specific meta data.
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  */
 class AKONADI_CONTACT_CORE_EXPORT ContactMetaDataAttribute : public Akonadi::Attribute
 {

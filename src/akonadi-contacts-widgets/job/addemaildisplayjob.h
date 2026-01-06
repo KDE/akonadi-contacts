@@ -19,7 +19,7 @@ class AddEmailDisplayJobPrivate;
 
 /*!
  * \brief The AddEmailDisplayJob class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT AddEmailDisplayJob : public KJob
 {

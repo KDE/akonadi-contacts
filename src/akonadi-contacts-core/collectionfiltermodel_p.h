@@ -20,7 +20,7 @@
  * It works on a flat list of collections, so a EntityTreeModel
  * has to be adapted by using Akonadi::DescendantsProxyModel.
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  */
 class CollectionFilterModel : public QSortFilterProxyModel
 {

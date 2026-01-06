@@ -28,7 +28,7 @@ class StandardContactActionManagerPrivate;
 /*!
  * \brief Manages contact specific actions for collection and item views.
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.6
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT StandardContactActionManager : public QObject

@@ -30,7 +30,7 @@ class EmailAddressSelectionPrivate;
  * email address and access to the Akonadi item that is associated with
  * this address.
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.5
  */
 class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelection

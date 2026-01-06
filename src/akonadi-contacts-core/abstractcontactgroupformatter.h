@@ -31,7 +31,7 @@ class AbstractContactGroupFormatterPrivate;
  * item with a contact group payload or a contact group itself as HTML.
  *
  * \sa StandardContactGroupFormatter
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.6
  */
 class AKONADI_CONTACT_CORE_EXPORT AbstractContactGroupFormatter

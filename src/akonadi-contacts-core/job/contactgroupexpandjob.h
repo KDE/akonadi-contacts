@@ -48,7 +48,7 @@ class ContactGroupExpandJobPrivate;
  *
  * \endcode
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.4
  */
 class AKONADI_CONTACT_CORE_EXPORT ContactGroupExpandJob : public KJob

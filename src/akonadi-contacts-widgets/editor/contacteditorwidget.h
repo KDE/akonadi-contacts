@@ -23,7 +23,7 @@ class ContactEditorWidgetPrivate;
 /*!
  * \brief A widget for editing a contact.
  *
- * @author Tobias Koenig <tokoe@kde.org>
+ * \author Tobias Koenig <tokoe@kde.org>
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT ContactEditorWidget : public Akonadi::AbstractContactEditorWidget
 {
