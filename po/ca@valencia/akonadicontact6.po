@@ -1559,7 +1559,7 @@ msgstr "No s'ha pogut apegar el contacte: %1"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
 #, kde-format
 msgid "Paste failed"
-msgstr "No s'ha pogut apegar"
+msgstr "Ha fallat mentre s'apegava"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
