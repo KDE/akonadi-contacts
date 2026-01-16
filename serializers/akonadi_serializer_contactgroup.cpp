@@ -46,7 +46,9 @@ void SerializerPluginContactGroup::serialize(const Item &item, const QByteArray 
         return;
     }
 
-    KContacts::ContactGroupTool::convertToXml(item.payload<KContacts::ContactGroup>(), &data);
+    if (!KContacts::ContactGroupTool::convertToXml(item.payload<KContacts::ContactGroup>(), &data)) {
+        qWarning() << "Impossible to convert contact group";
+    }
 }
 
 //// DifferencesAlgorithmInterface interface
