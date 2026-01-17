@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-01-17 00:44+0000\n"
 "PO-Revision-Date: 2024-09-27 08:08+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -42,22 +42,22 @@ msgstr "Nomor Telepon"
 msgid "Addresses"
 msgstr "Alamat"
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:92
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Kelompok Kontak yang Diubah"
 
-#: akonadi_serializer_contactgroup.cpp:91
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Kelompok Kontak yang Konflik"
 
-#: akonadi_serializer_contactgroup.cpp:97
+#: akonadi_serializer_contactgroup.cpp:99
 #, kde-format
 msgid "Name"
 msgstr "Nama"
 
-#: akonadi_serializer_contactgroup.cpp:107
+#: akonadi_serializer_contactgroup.cpp:109
 #, kde-format
 msgid "Member"
 msgstr "Anggota"

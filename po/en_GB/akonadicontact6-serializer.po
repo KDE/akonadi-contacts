@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-01-17 00:44+0000\n"
 "PO-Revision-Date: 2014-08-22 14:45+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -43,22 +43,22 @@ msgstr "Phone Numbers"
 msgid "Addresses"
 msgstr "Addresses"
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:92
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Changed Contact Group"
 
-#: akonadi_serializer_contactgroup.cpp:91
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Conflicting Contact Group"
 
-#: akonadi_serializer_contactgroup.cpp:97
+#: akonadi_serializer_contactgroup.cpp:99
 #, kde-format
 msgid "Name"
 msgstr "Name"
 
-#: akonadi_serializer_contactgroup.cpp:107
+#: akonadi_serializer_contactgroup.cpp:109
 #, kde-format
 msgid "Member"
 msgstr "Member"

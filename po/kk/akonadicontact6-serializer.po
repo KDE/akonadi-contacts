@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-01-17 00:44+0000\n"
 "PO-Revision-Date: 2013-04-25 03:55+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -43,22 +43,22 @@ msgstr "Тел. нөмірлер"
 msgid "Addresses"
 msgstr "Адрестер"
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:92
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Өзгертілгендер контакт тобы"
 
-#: akonadi_serializer_contactgroup.cpp:91
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Қайшылығы бар контакт тобы"
 
-#: akonadi_serializer_contactgroup.cpp:97
+#: akonadi_serializer_contactgroup.cpp:99
 #, kde-format
 msgid "Name"
 msgstr "Аты"
 
-#: akonadi_serializer_contactgroup.cpp:107
+#: akonadi_serializer_contactgroup.cpp:109
 #, kde-format
 msgid "Member"
 msgstr "Мүшесі"

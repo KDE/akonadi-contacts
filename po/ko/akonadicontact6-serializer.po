@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-01-17 00:44+0000\n"
 "PO-Revision-Date: 2014-08-30 23:21+0900\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -42,22 +42,22 @@ msgstr "전화번호"
 msgid "Addresses"
 msgstr "주소"
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:92
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "변경된 연락처 그룹"
 
-#: akonadi_serializer_contactgroup.cpp:91
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "충돌하는 연락처 그룹"
 
-#: akonadi_serializer_contactgroup.cpp:97
+#: akonadi_serializer_contactgroup.cpp:99
 #, kde-format
 msgid "Name"
 msgstr "이름"
 
-#: akonadi_serializer_contactgroup.cpp:107
+#: akonadi_serializer_contactgroup.cpp:109
 #, kde-format
 msgid "Member"
 msgstr "구성원"

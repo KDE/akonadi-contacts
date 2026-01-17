@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop files\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-01-17 00:44+0000\n"
 "PO-Revision-Date: 2023-02-10 21:01+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -43,22 +43,22 @@ msgstr "Telefonnumeroj"
 msgid "Addresses"
 msgstr "Adresoj"
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:92
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Ŝanĝita Kontakta Grupo"
 
-#: akonadi_serializer_contactgroup.cpp:91
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Konflikta Kontakta Grupo"
 
-#: akonadi_serializer_contactgroup.cpp:97
+#: akonadi_serializer_contactgroup.cpp:99
 #, kde-format
 msgid "Name"
 msgstr "Nomo"
 
-#: akonadi_serializer_contactgroup.cpp:107
+#: akonadi_serializer_contactgroup.cpp:109
 #, kde-format
 msgid "Member"
 msgstr "Membro"
