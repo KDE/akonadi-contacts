@@ -20,7 +20,10 @@ namespace Akonadi
 class ContactsTreeModelPrivate;
 
 /*!
+ * \class Akonadi::ContactsTreeModel
  * \brief A model for contacts and contact groups as available in Akonadi.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/ContactsTreeModel
  *
  * This class provides a model for displaying the contacts and
  * contact groups which are available from Akonadi.

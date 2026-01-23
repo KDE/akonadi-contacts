@@ -21,7 +21,10 @@ namespace Akonadi
 class EmailAddressSelectionDialogPrivate;
 
 /*!
+ * \class Akonadi::EmailAddressSelectionDialog
  * \brief A dialog to select email addresses from Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/EmailAddressSelectionDialog
  *
  * This dialog allows the user to select an name and email address from
  * the Akonadi storage.

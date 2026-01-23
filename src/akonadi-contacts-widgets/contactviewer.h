@@ -28,7 +28,10 @@ class AbstractContactFormatter;
 class ContactViewerPrivate;
 
 /*!
+ * \class Akonadi::ContactViewer
  * \brief A viewer component for contacts in Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/ContactViewer
  *
  * This widgets provides a way to show a contact from the
  * Akonadi storage or a raw contact object.

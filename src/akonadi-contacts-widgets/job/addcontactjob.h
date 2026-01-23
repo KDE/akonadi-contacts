@@ -26,7 +26,10 @@ namespace Akonadi
 class AddContactJobPrivate;
 
 /*!
+ * \class Akonadi::AddContactJob
  * \brief A job to add a new contact to Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/AddContactJob
  *
  * The job will check whether a contact with the given email address already
  * exists in Akonadi and adds it if it does not exist yet.

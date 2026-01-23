@@ -13,6 +13,12 @@ class QTreeView;
 namespace Akonadi
 {
 class EmailAddressSelectionWidget;
+/*!
+ * \class Akonadi::RecipientsPickerWidget
+ * \brief A widget for picking email recipients from contacts.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/RecipientsPickerWidget
+ */
 class AKONADI_CONTACT_WIDGETS_EXPORT RecipientsPickerWidget : public QWidget
 {
     Q_OBJECT

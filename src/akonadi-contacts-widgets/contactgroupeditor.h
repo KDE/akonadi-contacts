@@ -26,7 +26,10 @@ class Item;
 class ContactGroupEditorPrivate;
 
 /*!
+ * \class Akonadi::ContactGroupEditor
  * \brief An widget to edit contact groups in Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/ContactGroupEditor
  *
  * This widget provides a way to create a new contact group or edit
  * an existing contact group in Akonadi.

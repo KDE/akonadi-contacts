@@ -17,11 +17,14 @@ class Addressee;
 
 namespace Akonadi
 {
-/**
- * @short The base class for custom ContactEditor page plugins.
+/*!
+ * \class Akonadi::ContactEditorPagePlugin
+ * \brief The base class for custom ContactEditor page plugins.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/ContactEditorPagePlugin
  *
  * \author Tobias Koenig <tokoe@kde.org>
- * @since 4.4
+ * \since 4.4
  */
 class ContactEditorPagePlugin : public QWidget
 {

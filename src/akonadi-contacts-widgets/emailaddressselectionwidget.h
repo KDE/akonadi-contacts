@@ -29,7 +29,10 @@ namespace Akonadi
 class EmailAddressSelectionWidgetPrivate;
 
 /*!
+ * \class Akonadi::EmailAddressSelectionWidget
  * \brief A widget to select email addresses from Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/EmailAddressSelectionWidget
  *
  * This widget allows the user to select an name and email address from
  * the Akonadi storage.

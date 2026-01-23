@@ -21,7 +21,10 @@ namespace Akonadi
 class ContactGroupExpandJobPrivate;
 
 /*!
+ * \class Akonadi::ContactGroupExpandJob
  * \brief Job that expands a ContactGroup to a list of contacts.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/ContactGroupExpandJob
  *
  * This job takes a KContacts::ContactGroup object or a name of a contact group and
  * expands it to a list of KContacts::Addressee objects by creating temporary KContacts::Addressee objects

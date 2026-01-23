@@ -25,7 +25,10 @@ class Item;
 class AbstractContactGroupFormatterPrivate;
 
 /*!
+ * \class Akonadi::AbstractContactGroupFormatter
  * \brief The interface for all contact group formatters.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/AbstractContactGroupFormatter
  *
  * This is the interface that can be used to format an Akonadi
  * item with a contact group payload or a contact group itself as HTML.

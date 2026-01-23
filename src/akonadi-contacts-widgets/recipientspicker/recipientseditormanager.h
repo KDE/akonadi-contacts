@@ -12,6 +12,12 @@
 namespace Akonadi
 {
 class EmailAddressSelectionModel;
+/*!
+ * \class Akonadi::RecipientsEditorManager
+ * \brief Manager for recipients editor model.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/RecipientsEditorManager
+ */
 class AKONADI_CONTACT_WIDGETS_EXPORT RecipientsEditorManager : public QObject
 {
     Q_OBJECT

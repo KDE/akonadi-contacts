@@ -23,7 +23,10 @@ class AbstractContactEditorWidget;
 class ContactEditorDialogPrivate;
 
 /*!
- * \brief A dialog for creating or editing a contact in Akonadi.
+ * \class Akonadi::ContactEditorDialog
+ * \brief A dialog for editing a contact in Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/ContactEditorDialog
  *
  * This dialog provides a way to create a new contact or edit
  * an existing contact in Akonadi.

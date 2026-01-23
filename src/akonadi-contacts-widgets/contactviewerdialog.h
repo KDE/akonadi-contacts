@@ -21,7 +21,10 @@ class ContactViewer;
 class ContactViewerDialogPrivate;
 
 /*!
+ * \class Akonadi::ContactViewerDialog
  * \brief A dialog for displaying a contact in Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/ContactViewerDialog
  *
  * This dialog provides a way to show a contact from the
  * Akonadi storage.

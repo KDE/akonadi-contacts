@@ -21,7 +21,10 @@ class Item;
 class EmailAddressSelectionPrivate;
 
 /*!
+ * \class Akonadi::EmailAddressSelection
  * \brief An selection of an email address and corresponding name.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/EmailAddressSelection
  *
  * This class encapsulates the selection of an email address and name
  * as it is returned by EmailAddressSelectionWidget or EmailAddressSelectionDialog.

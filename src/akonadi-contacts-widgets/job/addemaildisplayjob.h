@@ -18,7 +18,10 @@ class Item;
 class AddEmailDisplayJobPrivate;
 
 /*!
+ * \class Akonadi::AddEmailDisplayJob
  * \brief The AddEmailDisplayJob class
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/AddEmailDisplayJob
  * \author Laurent Montel <montel@kde.org>
  */
 class AKONADI_CONTACT_WIDGETS_EXPORT AddEmailDisplayJob : public KJob

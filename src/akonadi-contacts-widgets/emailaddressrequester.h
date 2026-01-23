@@ -19,7 +19,10 @@ namespace Akonadi
 class EmailAddressRequesterPrivate;
 
 /*!
+ * \class Akonadi::EmailAddressRequester
  * \brief A widget to input one or more email addresses.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/EmailAddressRequester
  *
  * \author Marc Mutz <mutz@kde.org>
  */

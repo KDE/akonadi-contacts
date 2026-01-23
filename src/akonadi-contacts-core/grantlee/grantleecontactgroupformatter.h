@@ -23,7 +23,10 @@ namespace KAddressBookGrantlee
 class GrantleeContactGroupFormatterPrivate;
 
 /*!
+ * \class KAddressBookGrantlee::GrantleeContactGroupFormatter
  * \brief A class that formats a contact group as HTML code.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/GrantleeContactGroupFormatter
  *
  * \author Tobias Koenig <tokoe@kde.org>
  */

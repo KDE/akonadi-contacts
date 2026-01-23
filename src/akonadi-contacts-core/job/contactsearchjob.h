@@ -20,7 +20,10 @@ namespace Akonadi
 class ContactSearchJobPrivate;
 
 /*!
+ * \class Akonadi::ContactSearchJob
  * \brief Job that searches for contacts in the Akonadi storage.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/ContactSearchJob
  *
  * This job searches for contacts that match given search criteria and returns
  * the list of contacts.

@@ -18,7 +18,10 @@ class Item;
 class AddEmailAddressJobPrivate;
 
 /*!
+ * \class Akonadi::AddEmailAddressJob
  * \brief A job to add a new contact with a given email address to Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/AddEmailAddressJob
  *
  * The job will check whether a contact with the given email address already
  * exists in Akonadi and inform the user about it, if it does not exist yet,

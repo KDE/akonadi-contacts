@@ -19,7 +19,10 @@ namespace Akonadi
 class ContactsFilterProxyModelPrivate;
 
 /*!
+ * \class Akonadi::ContactsFilterProxyModel
  * \brief A proxy model for \a ContactsTreeModel models.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/ContactsFilterProxyModel
  *
  * This class provides a filter proxy model for a ContactsTreeModel.
  * The list of shown contacts or contact groups can be limited by

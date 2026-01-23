@@ -26,7 +26,10 @@ class Item;
 class StandardContactActionManagerPrivate;
 
 /*!
+ * \class Akonadi::StandardContactActionManager
  * \brief Manages contact specific actions for collection and item views.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/StandardContactActionManager
  *
  * \author Tobias Koenig <tokoe@kde.org>
  * \since 4.6

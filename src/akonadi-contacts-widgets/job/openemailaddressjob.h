@@ -17,7 +17,10 @@ namespace Akonadi
 class OpenEmailAddressJobPrivate;
 
 /*!
+ * \class Akonadi::OpenEmailAddressJob
  * \brief A job to open the contact editor for a contact with a given email address.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/OpenEmailAddressJob
  *
  * The job will check whether a contact with the given email address already
  * exists in Akonadi. If not, it will add a new contact with the email address

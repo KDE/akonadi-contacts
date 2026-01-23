@@ -22,7 +22,10 @@ class ContactGroupEditor;
 class ContactGroupEditorDialogPrivate;
 
 /*!
+ * \class Akonadi::ContactGroupEditorDialog
  * \brief A dialog for creating or editing a contact group in Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/ContactGroupEditorDialog
  *
  * This dialog provides a way to create a new contact group or edit
  * an existing contact group in Akonadi.

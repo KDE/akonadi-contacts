@@ -25,7 +25,10 @@ class Item;
 class AbstractContactFormatterPrivate;
 
 /*!
+ * \class Akonadi::AbstractContactFormatter
  * \brief The interface for all contact formatters.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/AbstractContactFormatter
  *
  * This is the interface that can be used to format an Akonadi
  * item with a contact payload or a contact itself as HTML.

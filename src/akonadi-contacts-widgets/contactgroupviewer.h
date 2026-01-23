@@ -22,7 +22,10 @@ class AbstractContactGroupFormatter;
 class ContactGroupViewerPrivate;
 
 /*!
+ * \class Akonadi::ContactGroupViewer
  * \brief A viewer component for contact groups in Akonadi.
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/ContactGroupViewer
  *
  * This widgets provides a way to show a contact group from the
  * Akonadi storage.

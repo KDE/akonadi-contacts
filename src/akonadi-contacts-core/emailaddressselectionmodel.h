@@ -14,6 +14,13 @@
 namespace Akonadi
 {
 class ContactsTreeModel;
+
+/*!
+ * \class Akonadi::EmailAddressSelectionModel
+ * \brief Model for selecting email addresses.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/EmailAddressSelectionModel
+ */
 class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelectionModel : public QObject
 {
     Q_OBJECT

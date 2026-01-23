@@ -21,7 +21,10 @@ namespace Akonadi
 class ContactGroupSearchJobPrivate;
 
 /*!
+ * \class Akonadi::ContactGroupSearchJob
  * \brief Job that searches for contact groups in the Akonadi storage.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/ContactGroupSearchJob
  *
  * This job searches for contact groups that match given search criteria and returns
  * the list of contact groups.

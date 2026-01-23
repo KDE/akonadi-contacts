@@ -13,7 +13,12 @@
 
 namespace KAddressBookGrantlee
 {
-/*! Grantlee-based contact printing. */
+/*!
+ * \class KAddressBookGrantlee::GrantleePrint
+ * \brief Grantlee-based contact printing.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/GrantleePrint
+ */
 class AKONADI_CONTACT_CORE_EXPORT GrantleePrint : public GrantleeTheme::GenericFormatter
 {
 public:

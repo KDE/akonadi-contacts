@@ -19,7 +19,10 @@ namespace Akonadi
 class StandardContactFormatterPrivate;
 
 /*!
+ * \class Akonadi::StandardContactFormatter
  * \brief A class that formats a contact as HTML code.
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/StandardContactFormatter
  *
  * Examples:
  *
