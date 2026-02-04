@@ -1,0 +1,9 @@
+/*!
+    \module AkonadiContactCore
+    \title AkonadiContact Core C++ Classes
+    \ingroup modules
+    \cmakepackage KPim6
+    \cmakecomponent AkonadiContactCore
+
+    \brief AkonadiContactCore provides API to akonadi contacts.
+*/

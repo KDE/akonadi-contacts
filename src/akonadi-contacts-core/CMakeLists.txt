@@ -231,3 +231,4 @@ install(
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore
     COMPONENT Devel
 )
+ecm_generate_qdoc(KPim6AkonadiContactCore akonadi-contacts-core.qdocconf)

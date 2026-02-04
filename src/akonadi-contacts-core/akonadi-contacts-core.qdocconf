@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = AkonadiContactCore
+description = AkonadiContactCore provides API to akonadi contacts.
+
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "AkonadiContactCore"
+
+qhp.projects            = akonadicontactcore
+
+qhp.akonadicontactcore.file                = akonadicontactcore.qhp
+qhp.akonadicontactcore.namespace           = org.kde.akonadicontactcore.$QT_VERSION_TAG
+qhp.akonadicontactcore.virtualFolder       = akonadicontactcore
+qhp.akonadicontactcore.indexTitle          = akonadicontactcore
+qhp.akonadicontactcore.indexRoot           =
+
+qhp.akonadicontactcore.subprojects         = classes
+qhp.akonadicontactcore.subprojects.classes.title = C++ Classes
+qhp.akonadicontactcore.subprojects.classes.indexTitle = AkonadiContact Core C++ Classes
+qhp.akonadicontactcore.subprojects.classes.selectors = class fake:headerfile
+qhp.akonadicontactcore.subprojects.classes.sortPages = true
+
+tagfile = akonadicontactcore.tags
