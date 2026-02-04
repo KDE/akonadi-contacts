@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = AkonadiContactWidgets
+description = AkonadiContactWidgets provides API to akonadi contacts widgets.
+
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "AkonadiContactWidgets"
+
+qhp.projects            = akonadicontactwidgets
+
+qhp.akonadicontactwidgets.file                = akonadicontactwidgets.qhp
+qhp.akonadicontactwidgets.namespace           = org.kde.akonadicontactwidgets.$QT_VERSION_TAG
+qhp.akonadicontactwidgets.virtualFolder       = akonadicontactwidgets
+qhp.akonadicontactwidgets.indexTitle          = akonadicontactwidgets
+qhp.akonadicontactwidgets.indexRoot           =
+
+qhp.akonadicontactwidgets.subprojects         = classes
+qhp.akonadicontactwidgets.subprojects.classes.title = C++ Classes
+qhp.akonadicontactwidgets.subprojects.classes.indexTitle = AkonadiContact Widgets C++ Classes
+qhp.akonadicontactwidgets.subprojects.classes.selectors = class fake:headerfile
+qhp.akonadicontactwidgets.subprojects.classes.sortPages = true
+
+tagfile = akonadicontactwidgets.tags

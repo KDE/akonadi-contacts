@@ -362,3 +362,4 @@ install(
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets
     COMPONENT Devel
 )
+ecm_generate_qdoc(KPim6AkonadiContactWidgets akonadi-contacts-widgets.qdocconf)

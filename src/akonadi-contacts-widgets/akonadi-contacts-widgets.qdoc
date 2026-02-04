@@ -1,0 +1,9 @@
+/*!
+    \module AkonadiContactWidgets
+    \title AkonadiContact Widgets C++ Classes
+    \ingroup modules
+    \cmakepackage KPim6
+    \cmakecomponent AkonadiContactWidgets
+
+    \brief AkonadiContactWidgets provides API to akonadi contacts widgets.
+*/
