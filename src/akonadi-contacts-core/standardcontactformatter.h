@@ -61,11 +61,11 @@ public:
      */
     [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
-    /*
+    /*!
      * \since 4.9.1
      */
     void setDisplayQRCode(bool show);
-    /*
+    /*!
      * \since 4.9.1
      */
     [[nodiscard]] bool displayQRCode() const;

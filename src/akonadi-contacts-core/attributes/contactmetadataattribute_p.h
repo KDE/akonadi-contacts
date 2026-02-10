@@ -48,9 +48,17 @@ public:
      */
     [[nodiscard]] QVariantMap metaData() const;
 
+    /*!
+     */
     [[nodiscard]] QByteArray type() const override;
+    /*!
+     */
     Attribute *clone() const override;
+    /*!
+     */
     [[nodiscard]] QByteArray serialized() const override;
+    /*!
+     */
     void deserialize(const QByteArray &data) override;
 
 private:

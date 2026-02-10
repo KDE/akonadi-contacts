@@ -43,11 +43,19 @@ public:
      */
     ~GrantleeContactFormatter() override;
 
+    /*!
+     */
     void setAbsoluteThemePath(const QString &path);
 
+    /*!
+     */
     void setGrantleeTheme(const GrantleeTheme::Theme &theme);
 
+    /*!
+     */
     void setForceDisableQRCode(bool b);
+    /*!
+     */
     [[nodiscard]] bool forceDisableQRCode() const;
 
     /*!
@@ -55,6 +63,8 @@ public:
      */
     [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
+    /*!
+     */
     void setShowQRCode(bool b);
 
     /*! Translation domain for the Grantlee localizer. */

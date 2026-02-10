@@ -38,7 +38,11 @@ public:
      */
     explicit GrantleeContactGroupFormatter();
 
+    /*!
+     */
     void setGrantleeTheme(const GrantleeTheme::Theme &theme);
+    /*!
+     */
     void setAbsoluteThemePath(const QString &path);
 
     /*!

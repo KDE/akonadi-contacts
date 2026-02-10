@@ -97,6 +97,8 @@ public:
      */
     [[nodiscard]] Akonadi::Item item() const;
 
+    /*!
+     */
     void setItem(const Akonadi::Item &item);
 
 private:

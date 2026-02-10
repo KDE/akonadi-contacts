@@ -92,6 +92,8 @@ public:
      */
     void setMatchFilterContactFlag(ContactsFilterProxyModel::MatchFilterContactFlag flag);
 
+    /*!
+     */
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     /*!
