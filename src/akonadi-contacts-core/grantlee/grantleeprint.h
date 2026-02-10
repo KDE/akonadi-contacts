@@ -22,10 +22,19 @@ namespace KAddressBookGrantlee
 class AKONADI_CONTACT_CORE_EXPORT GrantleePrint : public GrantleeTheme::GenericFormatter
 {
 public:
+    /*!
+     */
     GrantleePrint();
+    /*!
+     */
+
     explicit GrantleePrint(const QString &themePath);
+    /*!
+     */
     ~GrantleePrint();
 
+    /*!
+     */
     [[nodiscard]] QString contactsToHtml(const KContacts::Addressee::List &contacts);
 
 private:
