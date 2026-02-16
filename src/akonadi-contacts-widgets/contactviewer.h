@@ -98,21 +98,34 @@ public:
     /*!
      * Sets the contact \a formatter that should be used for formatting the
      * contact. If formatter is \\ 0, the standard formatter will be used.
-     * \a formatter the contact formatter to set
-     * \note The contact viewer won't take ownership of the formatter.
      *
+     * \a formatter the contact formatter to set.
+     * \note The contact viewer won't take ownership of the formatter.
      * \since 4.6
      */
     void setContactFormatter(Akonadi::AbstractContactFormatter *formatter);
+
     /*!
+     * Updates the view to show the current contact.
+     *
      * \since 5.1
      */
     void updateView();
 
     /*!
+     * Sets whether the QR code should be shown for this contact.
+     *
+     * \a b Whether to show the QR code.
      * \since 5.2
      */
     void setShowQRCode(bool b);
+
+    /*!
+     * Returns whether the QR code is shown for this contact.
+     *
+     * \returns True if the QR code is shown, false otherwise.
+     * \since 5.2
+     */
     [[nodiscard]] bool showQRCode() const;
 public Q_SLOTS:
     /*!

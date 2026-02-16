@@ -26,7 +26,16 @@ public:
         EmailAddressRole
     };
 
+    /*!
+     * Creates a new email address selection proxy model.
+     *
+     * \a parent The parent object.
+     */
     explicit EmailAddressSelectionProxyModel(QObject *parent = nullptr);
+
+    /*!
+     * Destroys the email address selection proxy model.
+     */
     ~EmailAddressSelectionProxyModel() override;
 
     [[nodiscard]] QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const override;

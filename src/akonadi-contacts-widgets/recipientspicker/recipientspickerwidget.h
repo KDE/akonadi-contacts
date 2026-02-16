@@ -23,10 +23,28 @@ class AKONADI_CONTACT_WIDGETS_EXPORT RecipientsPickerWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     * Creates a new recipients picker widget.
+     *
+     * \a onlyShowEmailWithAddress Whether to show only contacts with email addresses.
+     * \a model A custom model for the widget, or nullptr to use the default.
+     * \a parent The parent widget.
+     */
     explicit RecipientsPickerWidget(bool onlyShowEmailWithAddress, QAbstractItemModel *model, QWidget *parent = nullptr);
+
+    /*!
+     * Destroys the recipients picker widget.
+     */
     ~RecipientsPickerWidget() override;
+
+    /*!
+     * Returns the tree view used by this widget.
+     */
     [[nodiscard]] QTreeView *view() const;
 
+    /*!
+     * Returns the email address selection widget used by this widget.
+     */
     [[nodiscard]] Akonadi::EmailAddressSelectionWidget *emailAddressSelectionWidget() const;
 
 private:

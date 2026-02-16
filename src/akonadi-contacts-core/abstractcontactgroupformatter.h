@@ -104,6 +104,9 @@ public:
     /*!
      * This method must be reimplemented to return the contact group formatted as HTML
      * according to the requested \a form.
+     *
+     * \a form The form in which the HTML should be rendered (SelfcontainedForm or EmbeddableForm).
+     * \returns The contact group formatted as HTML.
      */
     virtual QString toHtml(HtmlForm form = SelfcontainedForm) const = 0;
 

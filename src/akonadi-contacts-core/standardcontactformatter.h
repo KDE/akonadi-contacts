@@ -62,10 +62,17 @@ public:
     [[nodiscard]] QString toHtml(HtmlForm form = SelfcontainedForm) const override;
 
     /*!
+     * Sets whether the QR code should be displayed for this contact.
+     *
+     * \a show Whether to display the QR code.
      * \since 4.9.1
      */
     void setDisplayQRCode(bool show);
+
     /*!
+     * Returns whether the QR code should be displayed for this contact.
+     *
+     * \returns True if the QR code should be displayed, false otherwise.
      * \since 4.9.1
      */
     [[nodiscard]] bool displayQRCode() const;

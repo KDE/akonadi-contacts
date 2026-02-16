@@ -49,15 +49,30 @@ public:
     [[nodiscard]] QVariantMap metaData() const;
 
     /*!
+     * Returns the type of this attribute.
+     *
+     * \returns The type identifier for this attribute.
      */
     [[nodiscard]] QByteArray type() const override;
+
     /*!
+     * Creates a clone of this attribute.
+     *
+     * \returns A new instance of ContactMetaDataAttribute with the same data.
      */
     Attribute *clone() const override;
+
     /*!
+     * Returns the serialized representation of this attribute.
+     *
+     * \returns The serialized data.
      */
     [[nodiscard]] QByteArray serialized() const override;
+
     /*!
+     * Restores the attribute from its serialized \a data representation.
+     *
+     * \a data The serialized data to restore from.
      */
     void deserialize(const QByteArray &data) override;
 

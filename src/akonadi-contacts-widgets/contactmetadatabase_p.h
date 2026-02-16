@@ -34,30 +34,36 @@ public:
     ~ContactMetaDataBase();
 
     /*!
-     * Loads the meta data for the given \a contact.
+     * Loads the meta data from the given \a metaData map.
+     *
+     * \a metaData The map containing the meta data to load.
      */
     void loadMetaData(const QVariantMap &metaData);
 
     /*!
-     * Stores the meta data to the given \a contact.
+     * Stores the meta data to a variant map.
+     *
+     * \returns A QVariantMap containing the stored meta data.
      */
     [[nodiscard]] QVariantMap storeMetaData() const;
 
     /*!
-     * Sets the mode that is used for the display
-     * name of that contact.
+     * Sets the display name mode for the contact.
+     *
+     * \a mode The display name mode to set.
      */
     void setDisplayNameMode(int mode);
 
     /*!
-     * Returns the mode that is used for the display
-     * name of that contact.
+     * Returns the display name mode for the contact.
+     *
+     * \returns The display name mode.
      */
     [[nodiscard]] int displayNameMode() const;
 
     /*!
-     * Sets the \a descriptions of the custom fields of that contact.
-     * \a descriptions the descriptions to set
+     * Sets the descriptions of the custom fields for this contact.
+     *
      * The description list contains a QVariantMap for each custom field
      * with the following keys:
      *   - key   (string) The identifier of the field
@@ -70,11 +76,15 @@ public:
      *       - date
      *       - time
      *       - datetime
+     *
+     * \a descriptions The list of custom field descriptions to set.
      */
     void setCustomFieldDescriptions(const QVariantList &descriptions);
 
     /*!
-     * Returns the descriptions of the custom fields of the contact.
+     * Returns the descriptions of the custom fields for this contact.
+     *
+     * \returns A list of custom field descriptions.
      */
     [[nodiscard]] QVariantList customFieldDescriptions() const;
 

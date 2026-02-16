@@ -133,12 +133,20 @@ public:
     void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
     /*!
+     * Returns the currently edited contact.
+     *
+     * \returns The contact object as edited in the editor.
      * \since 4.10
-     * \brief ContactEditor::contact
-     * Returns
      */
     [[nodiscard]] KContacts::Addressee contact();
+
+    /*!
+     * Returns whether there is unsaved data in the editor.
+     *
+     * \returns True if the editor has no saved data, false otherwise.
+     */
     [[nodiscard]] bool hasNoSavedData() const;
+
 public Q_SLOTS:
     /*!
      * Loads the \a contact into the editor.
@@ -146,8 +154,9 @@ public Q_SLOTS:
     void loadContact(const Akonadi::Item &contact);
 
     /*!
-     * Save the contact from the editor back to the storage. And return error.
-     * Need to connect to finished() signal, to keep time to Q_EMIT signal.
+     * Saves the contact from the editor back to the storage.
+     * Connect to the finished() signal to know when the save operation is complete.
+     *
      * \since 4.11
      */
     void saveContactInAddressBook();
@@ -161,13 +170,15 @@ Q_SIGNALS:
 
     /*!
      * This signal is emitted when an error occurred during the save.
+     *
      * \a errorMsg The error message.
      * \since 4.11
      */
     void error(const QString &errorMsg);
 
     /*!
-     * \brief finished
+     * This signal is emitted when the save operation has finished.
+     *
      * \since 4.11
      */
     void finished();

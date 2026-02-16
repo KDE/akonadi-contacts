@@ -22,10 +22,28 @@ class AKONADI_CONTACT_WIDGETS_EXPORT RecipientsEditorManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * Creates a new recipients editor manager.
+     *
+     * \a parent The parent object.
+     */
     explicit RecipientsEditorManager(QObject *parent = nullptr);
+
+    /*!
+     * Destroys the recipients editor manager.
+     */
     ~RecipientsEditorManager() override;
 
+    /*!
+     * Returns the singleton instance of the recipients editor manager.
+     */
     static RecipientsEditorManager *self();
+
+    /*!
+     * Returns the email address selection model.
+     *
+     * \returns The model for email address selection.
+     */
     [[nodiscard]] Akonadi::EmailAddressSelectionModel *model();
 
 private:

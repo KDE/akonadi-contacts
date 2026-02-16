@@ -98,6 +98,7 @@ public:
     [[nodiscard]] Akonadi::Item item() const;
 
     /*!
+     * Sets the Akonadi \a item that is associated with the selected email address.
      */
     void setItem(const Akonadi::Item &item);
 

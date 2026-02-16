@@ -23,19 +23,28 @@ class AKONADI_CONTACT_CORE_EXPORT LeafExtensionProxyModel : public QSortFilterPr
     Q_OBJECT
 
 public:
+    /*!
+     * Creates a new leaf extension proxy model.
+     *
+     * \a parent The parent object.
+     */
     explicit LeafExtensionProxyModel(QObject *parent = nullptr);
+
+    /*!
+     * Destroys the leaf extension proxy model.
+     */
     ~LeafExtensionProxyModel() override;
 
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
-    QModelIndex parent(const QModelIndex &index) const override;
-    int rowCount(const QModelIndex &index) const override;
-    int columnCount(const QModelIndex &index) const override;
+    [[nodiscard]] QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+    [[nodiscard]] QModelIndex parent(const QModelIndex &index) const override;
+    [[nodiscard]] int rowCount(const QModelIndex &index) const override;
+    [[nodiscard]] int columnCount(const QModelIndex &index) const override;
 
-    QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const override;
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    [[nodiscard]] QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
     bool setData(const QModelIndex &index, const QVariant &data, int role = Qt::EditRole) override;
-    bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
-    QModelIndex buddy(const QModelIndex &index) const override;
+    [[nodiscard]] bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
+    [[nodiscard]] QModelIndex buddy(const QModelIndex &index) const override;
     void fetchMore(const QModelIndex &index) override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;

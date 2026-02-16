@@ -70,6 +70,11 @@ public:
      */
     void start() override;
 
+    /*!
+     * Sets whether a message box should be shown for the result.
+     *
+     * \a b Whether to show a message box.
+     */
     void showMessageBox(bool b);
 
 private:

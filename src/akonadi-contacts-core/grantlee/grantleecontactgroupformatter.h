@@ -39,9 +39,16 @@ public:
     explicit GrantleeContactGroupFormatter();
 
     /*!
+     * Sets the Grantlee \a theme to be used for formatting the contact group.
+     *
+     * \a theme The Grantlee theme to apply.
      */
     void setGrantleeTheme(const GrantleeTheme::Theme &theme);
+
     /*!
+     * Sets the absolute path to the Grantlee theme.
+     *
+     * \a path The absolute path to the theme directory.
      */
     void setAbsoluteThemePath(const QString &path);
 

@@ -24,7 +24,16 @@ class AKONADI_CONTACT_WIDGETS_EXPORT SelectAddressBookDialog : public Akonadi::C
 {
     Q_OBJECT
 public:
+    /*!
+     * Creates a new select address book dialog.
+     *
+     * \a parent The parent widget.
+     */
     explicit SelectAddressBookDialog(QWidget *parent = nullptr);
+
+    /*!
+     * Destroys the select address book dialog.
+     */
     ~SelectAddressBookDialog() override;
 
 private:

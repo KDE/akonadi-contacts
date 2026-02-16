@@ -62,6 +62,8 @@ public:
 
     /*!
      * Returns the line edit that is used by the email address requester.
+     *
+     * \returns The QLineEdit widget.
      */
     QLineEdit *lineEdit() const;
 

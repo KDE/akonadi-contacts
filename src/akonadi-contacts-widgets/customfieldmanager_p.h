@@ -17,6 +17,17 @@
 class CustomFieldManager
 {
 public:
+    /*!
+     * Sets the global custom field descriptions.
+     *
+     * \a customFields The list of custom field descriptions to set globally.
+     */
     AKONADI_CONTACT_WIDGETS_EXPORT static void setGlobalCustomFieldDescriptions(const CustomField::List &customFields);
+
+    /*!
+     * Returns the global custom field descriptions.
+     *
+     * \returns The list of custom field descriptions.
+     */
     [[nodiscard]] AKONADI_CONTACT_WIDGETS_EXPORT static CustomField::List globalCustomFieldDescriptions();
 };

@@ -180,11 +180,54 @@ public:
      */
     [[nodiscard]] Columns columns() const;
 
+    /*!
+     * Returns the data for the given contact item.
+     *
+     * \a item The contact item.
+     * \a column The column index.
+     * \a role The data role.
+     *
+     * \returns The variant data for the item.
+     */
     [[nodiscard]] QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const override;
+
+    /*!
+     * Returns the data for the given collection.
+     *
+     * \a collection The collection.
+     * \a column The column index.
+     * \a role The data role.
+     *
+     * \returns The variant data for the collection.
+     */
     [[nodiscard]] QVariant entityData(const Collection &collection, int column, int role = Qt::DisplayRole) const override;
+
+    /*!
+     * Returns the header data for the given section.
+     *
+     * \a section The section index.
+     * \a orientation The orientation (horizontal or vertical).
+     * \a role The data role.
+     * \a headerGroup The header group.
+     *
+     * \returns The variant data for the header.
+     */
     [[nodiscard]] QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const override;
+
+    /*!
+     * Returns the number of columns for the given header group.
+     *
+     * \a headerGroup The header group.
+     *
+     * \returns The number of columns.
+     */
     [[nodiscard]] int entityColumnCount(HeaderGroup headerGroup) const override;
 
+    /*!
+     * Returns the role names for the model.
+     *
+     * \returns A hash map of role IDs to role names.
+     */
     QHash<int, QByteArray> roleNames() const override;
 
 private:

@@ -26,14 +26,20 @@ class AKONADI_CONTACT_CORE_EXPORT EmailAddressSelectionModel : public QObject
     Q_OBJECT
 public:
     /*!
-     * \brief EmailAddressSelectionModel
-     * \param parent
+     * \brief Constructs a new email address selection model.
+     * \param parent The parent object.
      */
     explicit EmailAddressSelectionModel(QObject *parent = nullptr);
+
     /*!
+     * Destroys the email address selection model.
      */
     ~EmailAddressSelectionModel() override;
+
     /*!
+     * Returns the underlying contacts tree model.
+     *
+     * \returns The contacts tree model used for email address selection.
      */
     [[nodiscard]] Akonadi::ContactsTreeModel *model() const;
 

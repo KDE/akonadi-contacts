@@ -70,8 +70,10 @@ public:
 
     /*!
      * Returns the ContactViewer that is used by this dialog.
+     *
+     * \returns The contact viewer widget.
      */
-    ContactViewer *viewer() const;
+    [[nodiscard]] ContactViewer *viewer() const;
 
 public Q_SLOTS:
     /*!
