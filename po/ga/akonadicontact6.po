@@ -192,36 +192,29 @@ msgstr "Leathanach Baile"
 #: akonadi-contacts-core/standardcontactformatter.cpp:147
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:column home address of a person"
-#| msgid "Home"
+#, kde-format
 msgid "Home"
-msgstr "Baile"
+msgstr ""
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:150
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:column work address of a person"
-#| msgid "Work"
+#, kde-format
 msgid "Work"
-msgstr "Obair"
+msgstr ""
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:153
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
-#, fuzzy, kde-format
-#| msgid "Prof."
+#, kde-format
 msgid "Profile"
-msgstr "An tOll."
+msgstr ""
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:156
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Category of contact info field"
-#| msgid "Other..."
+#, kde-format
 msgid "Other"
-msgstr "Eile..."
+msgstr ""
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:166
 #, kde-format
@@ -229,11 +222,10 @@ msgid "Blog Feed"
 msgstr "Fotha Blag"
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:184
-#, fuzzy, kde-format
-#| msgid "Show address on map"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
-msgstr "Taispeáin seoladh ar léarscáil"
+msgstr ""
 
 #: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
@@ -261,28 +253,25 @@ msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:163
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:135
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "Coinnigh na hathruithe"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:164
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:136
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "Ná bac leis na hathruithe agus forscríobh"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:278
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:290
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr "Roghnaigh Leabhar Seoltaí"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditor.cpp:279
 #, kde-format
@@ -291,26 +280,23 @@ msgstr ""
 "Roghnaigh an leabhar seoltaí ar mian leat an teagmháil nua a shábháil ann:"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "New Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
-msgstr "Teagmháil Nua"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:45
-#, fuzzy, kde-format
-#| msgid "Edit Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
-msgstr "Cuir Teagmháil in Eagar"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:72
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Add to:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
-msgstr "Cuir le:"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:181
 #, kde-format
@@ -321,11 +307,10 @@ msgstr ""
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
 #: akonadi-contacts-widgets/contacteditordialog.cpp:200
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
-msgstr "Dearbhaigh an Scriosadh"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:183
 #, kde-format
@@ -341,29 +326,24 @@ msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:199
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address?"
+#, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
-msgstr "An bhfuil tú cinnte gur mhaith leat an seoladh seo a scriosadh?"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:201
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr "Cealaigh"
+msgstr ""
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:202
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Cealaigh"
+msgstr ""
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:134
 #, kde-format
@@ -402,70 +382,56 @@ msgstr "Baill den ghrúpa teagmhálacha:"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
-#, fuzzy, kde-format
-#| msgctxt "@label Search in a list of contacts"
-#| msgid "Search:"
+#, kde-format
 msgid "Search..."
-msgstr "Cuardaigh:"
+msgstr ""
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "New Contact Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
-msgstr "Grúpa Nua Teagmhálacha"
+msgstr ""
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "Edit Contact Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
-msgstr "Cuir Grúpa Teagmhálacha in Eagar"
+msgstr ""
 
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:52
-#, fuzzy, kde-format
-#| msgid "Contact Group %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
-msgstr "Grúpa Teagmhálacha %1"
+msgstr ""
 
 #: akonadi-contacts-widgets/contactviewer.cpp:64
-#, fuzzy, kde-format
-#| msgid "Contact %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
-msgstr "Teagmháil %1"
+msgstr ""
 
 #: akonadi-contacts-widgets/contactviewerdialog.cpp:64
-#, fuzzy, kde-format
-#| msgid "Show Contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
-msgstr "Taispeáin Teagmháil"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "instant messaging address"
-#| msgid "Address"
+#, kde-format
 msgid "Remove Address"
-msgstr "Seoladh"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:278
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this address book?"
-#| msgid_plural "Do you really want to delete %1 address books?"
+#, kde-format
 msgid "Do you really want to delete this address?"
 msgstr ""
-"An bhfuil tú cinnte gur mhaith leat an leabhar seoltaí seo a scriosadh?"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@label The free/busy information of a contact"
-#| msgid "Free/Busy:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
-msgstr "Saor/Gafa:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:58
 #, kde-format
@@ -486,11 +452,10 @@ msgid "Add Locality"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Profession"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
-msgstr "Gairm"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:104
 #, kde-format
@@ -499,36 +464,28 @@ msgid "This is the preferred address"
 msgstr "Is é seo an seoladh de rogha"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add IM Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
-msgstr "Cuir Seoladh IM Leis"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "instant messaging address"
-#| msgid "Address"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
-msgstr "Seoladh"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Update Address Book"
-#| msgid_plural "Update %1 Address Books"
+#, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
-msgstr "Nuashonraigh Leabhar Seoltaí"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:137
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "Cealaigh"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:24
 #, kde-format
@@ -550,12 +507,10 @@ msgid "Other..."
 msgstr "Eile..."
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "street/postal"
-#| msgid "Address Types"
+#, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
-msgstr "Cineálacha Seolta"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:48
 #, kde-format
@@ -564,11 +519,10 @@ msgid "Organization:"
 msgstr "Eagras:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Additional names:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
-msgstr "Ainmneacha eile:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:56
 #, kde-format
@@ -577,11 +531,10 @@ msgid "Profession:"
 msgstr "Gairm:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Profession"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
-msgstr "Gairm"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:64
 #, kde-format
@@ -590,11 +543,10 @@ msgid "Title:"
 msgstr "Teideal:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Department"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
-msgstr "Roinn"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:72
 #, kde-format
@@ -603,11 +555,10 @@ msgid "Department:"
 msgstr "Roinn:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:75
-#, fuzzy, kde-format
-#| msgid "Department"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
-msgstr "Roinn"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:80
 #, kde-format
@@ -628,12 +579,10 @@ msgid "Manager's name:"
 msgstr "Ainm a b(h)ainisteora:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@label The manager's name of a contact"
-#| msgid "Manager's name:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
-msgstr "Ainm a b(h)ainisteora:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:97
 #, kde-format
@@ -642,12 +591,10 @@ msgid "Assistant's name:"
 msgstr "Ainm a c(h)úntóra:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:100
-#, fuzzy, kde-format
-#| msgctxt "@label The assistant's name of a contact"
-#| msgid "Assistant's name:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
-msgstr "Ainm a c(h)úntóra:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:106
 #, kde-format
@@ -656,12 +603,10 @@ msgid "Free/Busy:"
 msgstr "Saor/Gafa:"
 
 #: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "@label The free/busy information of a contact"
-#| msgid "Free/Busy:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
-msgstr "Saor/Gafa:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
 #, kde-format
@@ -700,34 +645,29 @@ msgid "Custom Fields"
 msgstr "Réimsí Saincheaptha"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Field"
-msgstr "Cuir Seoladh Ríomhphoist Leis"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Use field for all contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use field for all contacts"
-msgstr "Úsáid an réimse le haghaidh gach teagmháil"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Custom Fields"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Custom Field Title"
-msgstr "Réimsí Saincheaptha"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:38
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:45
-#, fuzzy, kde-format
-#| msgid "Additional names:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
-msgstr "Ainmneacha eile:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
@@ -773,11 +713,10 @@ msgstr ""
 "scriosadh?"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
-#, fuzzy, kde-format
-#| msgid "Confirm Delete"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
-msgstr "Dearbhaigh an Scriosadh"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
@@ -792,18 +731,16 @@ msgid "Value"
 msgstr "Luach"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Blog Feed"
-msgstr "Fotha Blag"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Blog Feed"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Blog Feed"
-msgstr "Fotha Blag"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:45
 #, kde-format
@@ -837,41 +774,34 @@ msgid "Custom"
 msgstr "Saincheaptha"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "a contact's email address"
-#| msgid "Email"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email"
-msgstr "Ríomhphost"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox select from a list of IM protocols"
-#| msgid "Select..."
+#, kde-format
 msgid "Select..."
-msgstr "Roghnaigh..."
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
-msgstr "Cuir Seoladh Ríomhphoist Leis"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an Email"
-msgstr "Cuir Seoladh Ríomhphoist Leis"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Remove logo"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Email"
-msgstr "Bain an lógó"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
 #, kde-format
@@ -901,19 +831,16 @@ msgid "HTML"
 msgstr "HTML"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@label The instant messaging address of a contact"
-#| msgid "Messaging:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Messaging"
-msgstr "Cur Teachtaireachtaí:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:35
-#, fuzzy, kde-format
-#| msgid "Additional names:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
-msgstr "Ainmneacha eile:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:41
 #, kde-format
@@ -922,25 +849,22 @@ msgid "Select..."
 msgstr "Roghnaigh..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:51
-#, fuzzy, kde-format
-#| msgid "Additional names:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an IM"
-msgstr "Ainmneacha eile:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:57
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove IM"
-msgstr "Bain"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:23
-#, fuzzy, kde-format
-#| msgid "Edit Contact Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Name"
-msgstr "Cuir Ainm na Teagmhála in Eagar"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:49
 #, kde-format
@@ -968,11 +892,9 @@ msgid "Honorific suffixes:"
 msgstr "Iarmhíreanna ómóis:"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@label The display name of a contact"
-#| msgid "Display:"
+#, kde-format
 msgid "Display:"
-msgstr "Ainm Taispeána:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:58
 #, kde-format
@@ -1030,12 +952,10 @@ msgid "Sr."
 msgstr "Mór"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:29
-#, fuzzy, kde-format
-#| msgctxt "contact's name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
-msgstr "Ainm"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
@@ -1043,63 +963,52 @@ msgid "..."
 msgstr "..."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:43
-#, fuzzy, kde-format
-#| msgid "Edit Contact Name"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit Contact Name"
-msgstr "Cuir Ainm na Teagmhála in Eagar"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@label The nickname of a contact"
-#| msgid "Nickname:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Nickname"
-msgstr "Leasainm:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Additional names:"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Nickname"
-msgstr "Ainmneacha eile:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Phones"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Phone"
-msgstr "Fóin"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Phone Number"
-msgstr "Cuir Uimhir Theileafóin in Eagar"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:33
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
-msgstr "Cuir Uimhir Theileafóin in Eagar"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit Phone Number"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
-msgstr "Cuir Uimhir Theileafóin in Eagar"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@title:column phone numbers of a person"
-#| msgid "Phone Numbers"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
-msgstr "Uimhreacha Teileafóin"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
 #, kde-format
@@ -1149,12 +1058,10 @@ msgid "Birthdate:"
 msgstr "Lá Breithe:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@label The anniversary of a contact"
-#| msgid "Anniversary:"
+#, kde-format
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"
-msgstr "Cothrom Lae an Phósta:"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:42
 #, kde-format
@@ -1168,18 +1075,16 @@ msgid "This contact's image cannot be found."
 msgstr "Ní féidir íomhá na teagmhála seo a aimsiú."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "The photo of the contact (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
-msgstr "Grianghraf den teagmháil (cliceáil le hathrú)"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "The logo of the company (click to change)"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "The logo of the company (click to change)"
-msgstr "Lógó an chomhlachta (cliceáil le hathrú)"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:236
 #, kde-format
@@ -1188,10 +1093,9 @@ msgstr "Athraigh an grianghraf..."
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
-#, fuzzy, kde-format
-#| msgid "Change..."
+#, kde-format
 msgid "Change URL..."
-msgstr "Athraigh..."
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:241
 #, kde-format
@@ -1219,11 +1123,9 @@ msgid "Remove logo"
 msgstr "Bain an lógó"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Tags"
+#, kde-format
 msgid "Change image URL"
-msgstr "Athraigh Clibeanna"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:271
 #, kde-format
@@ -1237,19 +1139,16 @@ msgid "Images (%1)"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Set as Standard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set as Preferred"
-msgstr "Socraigh mar Chaighdeán"
+msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressrequester.cpp:82
-#, fuzzy, kde-format
-#| msgid "Update Address Book"
-#| msgid_plural "Update %1 Address Books"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Open Address Book"
-msgstr "Nuashonraigh Leabhar Seoltaí"
+msgstr ""
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
 #, kde-format
@@ -1258,11 +1157,10 @@ msgid "Search:"
 msgstr "Cuardaigh:"
 
 #: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
-#, fuzzy, kde-format
-#| msgid "New &Contact..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
-msgstr "&Teagmháil Nua..."
+msgstr ""
 
 #: akonadi-contacts-widgets/job/addcontactjob.cpp:55
 #, kde-format
@@ -1300,20 +1198,17 @@ msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
-#, fuzzy, kde-format
-#| msgid "Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "Leabhar Seoltaí"
+msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
-#, fuzzy, kde-format
-#| msgid "Update Address Book"
-#| msgid_plural "Update %1 Address Books"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "Nuashonraigh Leabhar Seoltaí"
+msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
@@ -1332,11 +1227,10 @@ msgid ""
 msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
-#, fuzzy, kde-format
-#| msgid "Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Edit"
-msgstr "Eagar..."
+msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
 #, kde-format
@@ -1346,19 +1240,16 @@ msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgid "Contact does not exist any more"
+#, kde-format
 msgid "Contact cannot be stored: %1"
-msgstr "Níl an teagmháil ann níos mó"
+msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Create new tag:"
+#, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
-msgstr "Cruthaigh clib nua:"
+msgstr ""
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
 #, kde-format
@@ -1398,9 +1289,6 @@ msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
 #, kde-format
@@ -1413,9 +1301,6 @@ msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
 #, kde-format
@@ -1432,9 +1317,6 @@ msgid_plural ""
 "folders?"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
 #, kde-format
@@ -1443,9 +1325,6 @@ msgid "Delete address book folder?"
 msgid_plural "Delete address book folders?"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
 #, kde-format
@@ -1463,9 +1342,6 @@ msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
 #, kde-format
@@ -1478,9 +1354,6 @@ msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
 #, kde-format
@@ -1579,9 +1452,6 @@ msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
 #, kde-format
@@ -1803,11 +1673,10 @@ msgid "Copy Item"
 msgstr ""
 
 #: akonadi-contacts-widgets/textbrowser.cpp:66
-#, fuzzy, kde-format
-#| msgid "Copy e-mail address"
+#, kde-format
 msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
-msgstr "Cóipeáil an seoladh ríomhphoist"
+msgstr ""
 
 #: akonadi-contacts-widgets/textbrowser.cpp:75
 #, kde-format
@@ -1816,19 +1685,16 @@ msgid "Copy Link URL"
 msgstr ""
 
 #: akonadi-contacts-widgets/textbrowser.cpp:102
-#, fuzzy, kde-format
-#| msgid "Copy Contact To"
+#, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
-msgstr "Cóipeáil Teagmháil Go"
+msgstr ""
 
 #: akonadi-contacts-widgets/textbrowser.cpp:105
-#, fuzzy, kde-format
-#| msgid "Copy Contact"
-#| msgid_plural "Copy %1 Contacts"
+#, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
-msgstr "Cóipeáil Teagmháil"
+msgstr ""
 
 #: akonadi-contacts-widgets/waitingoverlay.cpp:35
 #, kde-format
@@ -1836,686 +1702,7 @@ msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Ag feitheamh le hoibríocht</b><br/></p>"
 
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select the address book the new contact shall be saved in:"
+#, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
 msgstr ""
-"Roghnaigh an leabhar seoltaí ar mian leat an teagmháil nua a shábháil ann:"
-
-#~ msgid "Phone Command"
-#~ msgstr "Ordú Teileafóin"
-
-#~ msgid ""
-#~ "This command defines the application that shall be executed to dial a "
-#~ "contact's phone number."
-#~ msgstr ""
-#~ "Sainmhíníonn an t-ordú seo an feidhmchlár a úsáidfear chun uimhir "
-#~ "theileafóin na teagmhála a dhiailiú."
-
-#~ msgid ""
-#~ "The following placeholders can be used in the command:\n"
-#~ "   %N: The raw number as stored in the address book.\n"
-#~ "   %n: The normalized number with all non-digit characters removed."
-#~ msgstr ""
-#~ "Is féidir na hionadchoinneálaithe seo a leanas a úsáid san ordú:\n"
-#~ "   %N: An uimhir amh as an leabhar seoltaí.\n"
-#~ "   %n: An uimhir normalaithe le gach neamhdhigit bainte amach."
-
-#, fuzzy
-#~| msgid ""
-#~| "Defines which application shall be used to send an SMS to the phone "
-#~| "number of a contact. If 'Skype' is selected the Skype application will "
-#~| "be started (if installed on the computer) and the SMS is sent via Skype. "
-#~| "If 'External Application' is selected, a command with placeholders can "
-#~| "be defined."
-#~ msgid ""
-#~ "Defines which application shall be used to send an SMS to the phone "
-#~ "number of a contact. If 'System Default' is selected the default handler "
-#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
-#~ "otherwise the selected application will be used to send the SMS message "
-#~ "(if installed on the computer). If 'External Application' is selected, a "
-#~ "command with placeholders can be defined."
-#~ msgstr ""
-#~ "Socraíonn sé seo an feidhmchlár a úsáidfear chun SMS a sheoladh chuig "
-#~ "uimhir theileafóin na teagmhála. Má roghnaíonn tú 'Skype', tosófar Skype "
-#~ "(má tá sé suiteáilte ar an ríomhaire) agus seolfar an SMS trí Skype.  Má "
-#~ "roghnaíonn tú 'Feidhmchlár Seachtrach', is féidir ordú a shainmhíniú ina "
-#~ "bhfuil ionadchoinneálaithe."
-
-#~ msgid "SMS Command"
-#~ msgstr "Ordú SMS"
-
-#~ msgid ""
-#~ "This command defines the application that shall be executed to send an "
-#~ "SMS to a contact's phone number."
-#~ msgstr ""
-#~ "Sainmhíníonn an t-ordú seo an feidhmchlár a úsáidfear chun SMS a sheoladh "
-#~ "chuig uimhir theileafóin na teagmhála."
-
-#~ msgid ""
-#~ "The following placeholders can be used in the command:\n"
-#~ "   %N: The raw number as stored in the address book.\n"
-#~ "   %n: The normalized number with all non-digit characters removed.\n"
-#~ "   %t: The text"
-#~ msgstr ""
-#~ "Is féidir na hionadchoinneálaithe seo a leanas a úsáid san ordú:\n"
-#~ "   %N: An uimhir amh as an leabhar seoltaí.\n"
-#~ "   %n: An uimhir normalaithe le gach neamhdhigit bainte amach.\n"
-#~ "   %t: An téacs"
-
-#, fuzzy
-#~| msgid ""
-#~| "There is no application set which could be executed. Please go to the "
-#~| "settings dialog and configure one."
-#~ msgid ""
-#~ "There is no application set which could be executed.\n"
-#~ "Please go to the settings dialog and configure one."
-#~ msgstr ""
-#~ "Níl aon fheidhmchlár socraithe a d'fhéadfaí a rith. Féach ar na socruithe "
-#~ "agus cumraigh feidhmchlár."
-
-#, fuzzy
-#~| msgid ""
-#~| "Unable to start skype process, check that skype executable is in your "
-#~| "PATH variable."
-#~ msgid ""
-#~ "Unable to start ekiga process, check that ekiga executable is in your "
-#~ "PATH variable."
-#~ msgstr ""
-#~ "Ní féidir próiseas skype a thosú, bí cinnte go bhfuil an clár inrite "
-#~ "skype i do PATH."
-
-#, fuzzy
-#~| msgid "Skype Public API (D-Bus) seems to be disabled."
-#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
-#~ msgstr "Dealraíonn sé go bhfuil an API poibí Skype (D-Bus) díchumasaithe."
-
-#, fuzzy
-#~| msgid ""
-#~| "Unable to start skype process, check that skype executable is in your "
-#~| "PATH variable."
-#~ msgid ""
-#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
-#~ "kde executable is in your PATH variable."
-#~ msgstr ""
-#~ "Ní féidir próiseas skype a thosú, bí cinnte go bhfuil an clár inrite "
-#~ "skype i do PATH."
-
-#~ msgid ""
-#~ "Unable to start skype process, check that skype executable is in your "
-#~ "PATH variable."
-#~ msgstr ""
-#~ "Ní féidir próiseas skype a thosú, bí cinnte go bhfuil an clár inrite "
-#~ "skype i do PATH."
-
-#~ msgid "Skype Public API (D-Bus) seems to be disabled."
-#~ msgstr "Dealraíonn sé go bhfuil an API poibí Skype (D-Bus) díchumasaithe."
-
-#~ msgid "Skype registration failed."
-#~ msgstr "Theip ar chlárú Skype."
-
-#~ msgid "Protocol mismatch."
-#~ msgstr "Mí-oiriúint prótacal."
-
-#, fuzzy
-#~| msgctxt "@title:window"
-#~| msgid "Add Tags"
-#~ msgid "Tags"
-#~ msgstr "Cuir Clibeanna Leis"
-
-#, fuzzy
-#~| msgid "Add Email"
-#~ msgid "Add a Country"
-#~ msgstr "Cuir Seoladh Ríomhphoist Leis"
-
-#~ msgctxt "@option today"
-#~ msgid "&Today"
-#~ msgstr "&Inniu"
-
-#~ msgctxt "@option tomorrow"
-#~ msgid "To&morrow"
-#~ msgstr "A&márach"
-
-#~ msgctxt "@option next week"
-#~ msgid "Next &Week"
-#~ msgstr "An t&Seachtain Seo Chugainn"
-
-#~ msgctxt "@option next month"
-#~ msgid "Next M&onth"
-#~ msgstr "An Mhí Se&o Chugainn"
-
-#~ msgctxt "@option do not specify a date"
-#~ msgid "No Date"
-#~ msgstr "Gan Dáta"
-
-#~ msgid ""
-#~ "Defines which application shall be used to show the postal address of a "
-#~ "contact on a map. If 'Web Browser' is selected, an URL can be defined "
-#~ "with placeholders for the single address parts. If 'External Application' "
-#~ "is selected, a command with placeholders can be defined."
-#~ msgstr ""
-#~ "Socraíonn sé seo an feidhmchlár a úsáidfear chun seoladh poist na "
-#~ "teagmhála a thaispeáint ar mhapa. Má roghnaíonn tú 'Brabhsálaí Gréasáin', "
-#~ "is féidir URL a shainmhíniú ina bhfuil ionadchoinneálaithe don seoladh. "
-#~ "Má roghnaíonn tú 'Feidhmchlár Seachtrach', is féidir ordú a shainmhíniú "
-#~ "ina bhfuil ionadchoinneálaithe."
-
-#~ msgid ""
-#~ "This URL defines the website that shall be used to show a contact's "
-#~ "postal address."
-#~ msgstr ""
-#~ "Sainmhíníonn an URL seo an suíomh Gréasáin a úsáidfear chun seoladh na "
-#~ "teagmhála a thaispeáint."
-
-#~ msgid ""
-#~ "The following placeholders can be used in the URL:\n"
-#~ "   %s: Street\n"
-#~ "   %r: Region\n"
-#~ "   %l: Location\n"
-#~ "   %z: Zip Code\n"
-#~ "   %c: Country ISO Code"
-#~ msgstr ""
-#~ "Is féidir na hionadchoinneálaithe seo a leanas a úsáid san URL:\n"
-#~ "   %s: Sráid\n"
-#~ "   %r: Réigiún\n"
-#~ "   %l: Suíomh\n"
-#~ "   %z: Cód Poist\n"
-#~ "   %c: Cód ISO na tíre"
-
-#~ msgid "Address Command"
-#~ msgstr "Ordú an tSeolta"
-
-#~ msgid ""
-#~ "This command defines the application that shall be executed to show a "
-#~ "contact's postal address."
-#~ msgstr ""
-#~ "Sainmhíníonn an t-ordú seo an feidhmchlár a úsáidfear chun seoladh poist "
-#~ "na teagmhála a thaispeáint."
-
-#~ msgid ""
-#~ "The following placeholders can be used in the command:\n"
-#~ "   %s: Street\n"
-#~ "   %r: Region\n"
-#~ "   %l: Location\n"
-#~ "   %z: Zip Code\n"
-#~ "   %c: Country ISO Code"
-#~ msgstr ""
-#~ "Is féidir na hionadchoinneálaithe seo a leanas a úsáid san ordú:\n"
-#~ "   %s: Sráid\n"
-#~ "   %r: Réigiún\n"
-#~ "   %l: Suíomh\n"
-#~ "   %z: Cód Poist\n"
-#~ "   %c: Cód ISO na Tíre"
-
-#, fuzzy
-#~| msgid "Show Contact Group"
-#~ msgctxt "@title:window"
-#~ msgid "Show Contact Group"
-#~ msgstr "Taispeáin Grúpa Teagmhálacha"
-
-#~ msgid "Select Address Book"
-#~ msgstr "Roghnaigh Leabhar Seoltaí"
-
-#, fuzzy
-#~| msgid "SMS Command"
-#~ msgid "KdeConnect SMS Command"
-#~ msgstr "Ordú SMS"
-
-#~ msgid ""
-#~ "Defines which application shall be used to dial the phone number of a "
-#~ "contact. If 'Skype' is selected the Skype application will be started (if "
-#~ "installed on the computer) and the number is dialed. If 'External "
-#~ "Application' is selected, a command with placeholders can be defined."
-#~ msgstr ""
-#~ "Socraíonn sé seo an feidhmchlár a úsáidfear chun glaoch a chur ar uimhir "
-#~ "theileafóin na teagmhála. Má roghnaíonn tú 'Skype', tosófar Skype (má tá "
-#~ "sé suiteáilte ar an ríomhaire) agus diaileofar an uimhir.  Má roghnaíonn "
-#~ "tú 'Feidhmchlár Seachtrach', is féidir ordú a shainmhíniú ina bhfuil "
-#~ "ionadchoinneálaithe."
-
-#, fuzzy
-#~| msgid "Phone Command"
-#~ msgid "kdeconnect Command"
-#~ msgstr "Ordú Teileafóin"
-
-#, fuzzy
-#~| msgid "Add to:"
-#~ msgid "Add IM"
-#~ msgstr "Cuir le:"
-
-#, fuzzy
-#~| msgctxt "street/postal"
-#~| msgid "Edit Address"
-#~ msgid "Edit Address"
-#~ msgstr "Cuir Seoladh in Eagar"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Kevin Scannell"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kscanne@gmail.com"
-
-#, fuzzy
-#~| msgctxt "instant messaging address"
-#~| msgid "Address"
-#~ msgid "Show Address"
-#~ msgstr "Seoladh"
-
-#, fuzzy
-#~| msgid "SMS Command"
-#~ msgid "Command:"
-#~ msgstr "Ordú SMS"
-
-#, fuzzy
-#~| msgid "Edit Phone Number"
-#~ msgid "Dial Phone Number"
-#~ msgstr "Cuir Uimhir Theileafóin in Eagar"
-
-#, fuzzy
-#~| msgctxt "@title:group"
-#~| msgid "Phones"
-#~ msgid "SflPhone"
-#~ msgstr "Fóin"
-
-#~ msgid "Select preferred email address"
-#~ msgstr "Roghnaigh an seoladh ríomhphoist is fearr leat"
-
-#, fuzzy
-#~| msgid "Edit Custom Field"
-#~ msgid "Title Custom Type"
-#~ msgstr "Cuir Réimse Saincheaptha in Eagar"
-
-#~ msgid "This is the preferred phone number"
-#~ msgstr "Seo é an uimhir fhóin de rogha"
-
-#~ msgid "Types"
-#~ msgstr "Cineálacha"
-
-#~ msgid "Edit Email Addresses"
-#~ msgstr "Cuir Seoltaí Ríomhphoist in Eagar"
-
-#~ msgid "Add..."
-#~ msgstr "Cuir Leis..."
-
-#~ msgid "New Email:"
-#~ msgstr "Seoladh Nua Ríomhphoist:"
-
-#~ msgid "Edit Email"
-#~ msgstr "Cuir Seoladh Ríomhphoist in Eagar"
-
-#~ msgctxt "@label:textbox Inputfield for an email address"
-#~ msgid "Email:"
-#~ msgstr "Ríomhphost:"
-
-#~ msgid ""
-#~ "<qt>Are you sure that you want to remove the email address <b>%1</b>?</qt>"
-#~ msgstr ""
-#~ "<qt>An bhfuil tú cinnte go dteastaíonn uait an seoladh ríomhphoist <b>%1</"
-#~ "b> a bhaint?</qt>"
-
-#~ msgid "Confirm Remove"
-#~ msgstr "Deimhnigh an Bhaint"
-
-#~ msgid "&Delete"
-#~ msgstr "&Scrios"
-
-#~ msgctxt "@title:group Name related properties of a contact"
-#~ msgid "Name"
-#~ msgstr "Ainm"
-
-#~ msgctxt "@title:group"
-#~ msgid "Internet"
-#~ msgstr "Idirlíon"
-
-#~ msgctxt "@title:group"
-#~ msgid "Phones"
-#~ msgstr "Fóin"
-
-#~ msgctxt "@label The name of a contact"
-#~ msgid "Name:"
-#~ msgstr "Ainm:"
-
-#~ msgctxt "@label The nickname of a contact"
-#~ msgid "Nickname:"
-#~ msgstr "Leasainm:"
-
-#~ msgctxt "@label The email address of a contact"
-#~ msgid "Email:"
-#~ msgstr "Ríomhphost:"
-
-#~ msgctxt "@label The homepage URL of a contact"
-#~ msgid "Homepage:"
-#~ msgstr "Leathanach Baile:"
-
-#~ msgctxt "@label The blog URL of a contact"
-#~ msgid "Blog:"
-#~ msgstr "Blag:"
-
-#~ msgctxt "@label The instant messaging address of a contact"
-#~ msgid "Messaging:"
-#~ msgstr "Cur Teachtaireachtaí:"
-
-#~ msgctxt "@label The categories of a contact"
-#~ msgid "Categories:"
-#~ msgstr "Catagóirí:"
-
-#, fuzzy
-#~| msgctxt "@label The instant messaging address of a contact"
-#~| msgid "Messaging:"
-#~ msgid "Messages"
-#~ msgstr "Cur Teachtaireachtaí:"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Instant Messaging Addresses"
-#~ msgstr "Cuir Seoltaí TM in Eagar"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add..."
-#~ msgstr "Cuir Leis..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Edit..."
-#~ msgstr "Eagar..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Remove"
-#~ msgstr "Bain"
-
-#~ msgctxt "@action:button"
-#~ msgid "Set as Standard"
-#~ msgstr "Socraigh mar Chaighdeán"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add IM Address"
-#~ msgstr "Cuir Seoladh IM Leis"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit IM Address"
-#~ msgstr "Cuir Seoladh IM in Eagar"
-
-#~ msgctxt "@info Instant messaging"
-#~ msgid ""
-#~ "Do you really want to delete the selected <resource>%1</resource> address?"
-#~ msgstr ""
-#~ "An bhfuil tú cinnte gur mhaith leat an seoladh roghnaithe <resource>%1</"
-#~ "resource> a scriosadh?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Confirm Delete Resource"
-#~ msgstr "Dearbhaigh an Scriosadh"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Protocol:"
-#~ msgstr "Prótacal:"
-
-#~ msgctxt "@label:textbox IM address"
-#~ msgid "Address:"
-#~ msgstr "Seoladh:"
-
-#~ msgctxt "instant messaging protocol"
-#~ msgid "Protocol"
-#~ msgstr "Prótacal"
-
-#~ msgctxt "instant messaging address"
-#~ msgid "Address"
-#~ msgstr "Seoladh"
-
-#~ msgid "Add"
-#~ msgstr "Cuir Leis"
-
-#~ msgid "Edit Custom Field"
-#~ msgstr "Cuir Réimse Saincheaptha in Eagar"
-
-#~ msgctxt "The title of a custom field"
-#~ msgid "Title"
-#~ msgstr "Teideal"
-
-#~ msgctxt "The type of a custom field"
-#~ msgid "Type"
-#~ msgstr "Cineál"
-
-#~ msgid "Key"
-#~ msgstr "Eochair"
-
-#, fuzzy
-#~| msgctxt "@label Opens the advanced dialog"
-#~| msgid "Advanced"
-#~ msgid "Advanced"
-#~ msgstr "Casta"
-
-#~ msgctxt "recent contacts folder"
-#~ msgid "Recent Contacts"
-#~ msgstr "Teagmhálacha Is Déanaí"
-
-#~ msgid ""
-#~ "Id of the resource containing the default recent contacts collection."
-#~ msgstr ""
-#~ "Aitheantas na hacmhainne ina bhfuil an bailiúchán réamhshocraithe de "
-#~ "theagmhálacha le déanaí."
-
-#~ msgid ""
-#~ "Id of the contacts resource containing the recent contacts collection."
-#~ msgstr ""
-#~ "Aitheantas na hacmhainne teagmhálacha ina bhfuil an bailiúchán de "
-#~ "theagmhálacha le déanaí."
-
-#, fuzzy
-#~| msgctxt "street/postal"
-#~| msgid "Address Types"
-#~ msgctxt "@label:listbox type of address"
-#~ msgid "Address type:"
-#~ msgstr "Cineálacha Seolta"
-
-#, fuzzy
-#~| msgctxt "street/postal"
-#~| msgid "New..."
-#~ msgctxt "@action:button street/postal"
-#~ msgid "New..."
-#~ msgstr "Nua..."
-
-#, fuzzy
-#~| msgid "Edit..."
-#~ msgctxt "@action:button street/postal"
-#~ msgid "Edit..."
-#~ msgstr "Eagar..."
-
-#, fuzzy
-#~| msgctxt "street/postal"
-#~| msgid "Delete"
-#~ msgctxt "@action:button street/postal"
-#~ msgid "Delete"
-#~ msgstr "Scrios"
-
-#~ msgctxt "street/postal"
-#~ msgid "Edit Address"
-#~ msgstr "Cuir Seoladh in Eagar"
-
-#~ msgctxt "<streetLabel>:"
-#~ msgid "%1:"
-#~ msgstr "%1:"
-
-#~ msgctxt "<postOfficeBoxLabel>:"
-#~ msgid "%1:"
-#~ msgstr "%1:"
-
-#~ msgctxt "<localityLabel>:"
-#~ msgid "%1:"
-#~ msgstr "%1:"
-
-#~ msgctxt "<regionLabel>:"
-#~ msgid "%1:"
-#~ msgstr "%1:"
-
-#~ msgctxt "<postalCodeLabel>:"
-#~ msgid "%1:"
-#~ msgstr "%1:"
-
-#~ msgctxt "<countryLabel>:"
-#~ msgid "%1:"
-#~ msgstr "%1:"
-
-#~ msgid "Edit Label..."
-#~ msgstr "Cuir Lipéad in Eagar..."
-
-#~ msgctxt "@label The pronunciation of a contact's name"
-#~ msgid "Pronunciation:"
-#~ msgstr "Fuaimniú:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Addresses"
-#~ msgstr "Seoltaí"
-
-#~ msgctxt "@title:group"
-#~ msgid "Coordinates"
-#~ msgstr "Comhordanáidí"
-
-#~ msgctxt "@label"
-#~ msgid "Latitude:"
-#~ msgstr "Domhanleithead:"
-
-#~ msgctxt "@label"
-#~ msgid "Longitude:"
-#~ msgstr "Domhanfhad:"
-
-#~ msgctxt "@label Change the coordinates"
-#~ msgid "Change..."
-#~ msgstr "Athraigh..."
-
-#~ msgctxt "@label Coordinates are not available"
-#~ msgid "n/a"
-#~ msgstr "n/a/f"
-
-#~ msgctxt "@label The formatted coordinates"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#~ msgctxt "@title:window"
-#~ msgid "Coordinate Selection"
-#~ msgstr "Roghnú Comhordanáidí"
-
-#~ msgctxt "@title:group Decimal representation of coordinates"
-#~ msgid "Decimal"
-#~ msgstr "Deachúil"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Latitude:"
-#~ msgstr "Domhanleithead:"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Longitude:"
-#~ msgstr "Domhanfhad:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Sexagesimal"
-#~ msgstr "Seascadúil"
-
-#~ msgctxt "@item:inlistbox Latitude direction"
-#~ msgid "North"
-#~ msgstr "Tuaisceart"
-
-#~ msgctxt "@item:inlistbox Latitude direction"
-#~ msgid "South"
-#~ msgstr "Deisceart"
-
-#~ msgctxt "@item:inlistbox Longtitude direction"
-#~ msgid "East"
-#~ msgstr "Oirthear"
-
-#~ msgctxt "@item:inlistbox Longtitude direction"
-#~ msgid "West"
-#~ msgstr "Iarthar"
-
-#~ msgctxt "@item:inlistbox Undefined location"
-#~ msgid "Undefined"
-#~ msgstr "Neamhshainithe"
-
-#~ msgid "This contact's sound cannot be found."
-#~ msgstr "Ní féidir fuaim na teagmhála seo a aimsiú."
-
-#~ msgid "Click to play pronunciation"
-#~ msgstr "Cliceáil chun an fuaimniú a sheinm"
-
-#~ msgid "No pronunciation available"
-#~ msgstr "Níl fuaimniú ar fáil"
-
-#~ msgid "Play"
-#~ msgstr "Seinn"
-
-#~ msgid "Change..."
-#~ msgstr "Athraigh..."
-
-#~ msgid "Save..."
-#~ msgstr "Sábháil..."
-
-#~ msgctxt "@title:group General properties of a contact"
-#~ msgid "General"
-#~ msgstr "Ginearálta"
-
-#~ msgctxt "@title:group"
-#~ msgid "Groupware"
-#~ msgstr "Grúpearraí"
-
-#~ msgctxt "@title:group Date related properties of a contact"
-#~ msgid "Dates"
-#~ msgstr "Dátaí"
-
-#~ msgctxt "@title:group Family related properties of a contact"
-#~ msgid "Family"
-#~ msgstr "Clann"
-
-#, fuzzy
-#~| msgid "Change..."
-#~ msgid "Change url..."
-#~ msgstr "Athraigh..."
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Configure which tags should be applied."
-#~ msgstr "Cumraigh na clibeanna ba mhaith leat cur i bhfeidhm."
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid "Create new tag:"
-#~ msgctxt "@label"
-#~ msgid "Create new tag"
-#~ msgstr "Cruthaigh clib nua:"
-
-#~ msgctxt "@info"
-#~ msgid "Delete tag"
-#~ msgstr "Scrios clib"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Should the tag <resource>%1</resource> really be deleted for all files?"
-#~ msgstr ""
-#~ "An bhfuil tú cinnte gur mhaith leat clib <resource>%1</resource> a "
-#~ "scriosadh ó gach comhad?"
-
-#~ msgctxt "@title"
-#~ msgid "Delete tag"
-#~ msgstr "Scrios clib"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete"
-#~ msgstr "Scrios"
-
-#~ msgctxt "street/postal"
-#~ msgid "Edit..."
-#~ msgstr "Eagar..."
-
-#~ msgid "Unknown"
-#~ msgstr "Anaithnid"
-
-#~ msgid "Set Standard"
-#~ msgstr "Socraigh mar Chaighdeán"
-
-#~ msgid "The member with email address <b>%1</b> is missing a name"
-#~ msgstr ""
-#~ "Ainm ar iarraidh ar an mball a bhfuil seoladh ríomhphoist <b>%1</b> aige"
-
-#~| msgid "Name"
-#~ msgctxt "@title:group"
-#~ msgid "Name"
-#~ msgstr "Ainm"
