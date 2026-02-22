@@ -175,17 +175,15 @@ void ContactEditorWidgetPrivate::storeCustom(KContacts::Addressee &contact, cons
     }
 }
 
-ContactEditorWidget::ContactEditorWidget(QWidget *parent)
+ContactEditorWidget::ContactEditorWidget([[maybe_unused]] QWidget *parent)
     : d(new ContactEditorWidgetPrivate(FullMode, this))
 {
-    Q_UNUSED(parent)
     d->initGui();
 }
 
-ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displayMode, QWidget *parent)
+ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displayMode, [[maybe_unused]] QWidget *parent)
     : d(new ContactEditorWidgetPrivate(displayMode, this))
 {
-    Q_UNUSED(parent)
     d->initGui();
 }
 

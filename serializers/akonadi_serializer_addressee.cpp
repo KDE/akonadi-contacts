@@ -26,10 +26,8 @@ using namespace Akonadi;
 #define CONTACTPART_STANDARD "CONTACT_STANDARD"
 #define CONTACTPART_LOOKUP "CONTACT_LOOKUP"
 
-bool SerializerPluginAddressee::deserialize(Item &item, const QByteArray &label, QIODevice &data, int version)
+bool SerializerPluginAddressee::deserialize(Item &item, const QByteArray &label, QIODevice &data, [[maybe_unused]] int version)
 {
-    Q_UNUSED(version)
-
     KContacts::Addressee addr;
     if (label == Item::FullPayload) {
         addr = m_converter.parseVCard(data.readAll());
@@ -64,10 +62,8 @@ bool SerializerPluginAddressee::deserialize(Item &item, const QByteArray &label,
     return true;
 }
 
-void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &label, QIODevice &data, int &version)
+void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &label, QIODevice &data, [[maybe_unused]] int &version)
 {
-    Q_UNUSED(version)
-
     if (label != Item::FullPayload && label != CONTACTPART_STANDARD && label != CONTACTPART_LOOKUP) {
         return;
     }

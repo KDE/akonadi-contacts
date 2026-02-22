@@ -206,15 +206,13 @@ QString ContactGroupModel::lastErrorMessage() const
     return d->mLastErrorMessage;
 }
 
-QModelIndex ContactGroupModel::index(int row, int col, const QModelIndex &index) const
+QModelIndex ContactGroupModel::index(int row, int col, [[maybe_unused]] const QModelIndex &index) const
 {
-    Q_UNUSED(index)
     return createIndex(row, col);
 }
 
-QModelIndex ContactGroupModel::parent(const QModelIndex &index) const
+QModelIndex ContactGroupModel::parent([[maybe_unused]] const QModelIndex &index) const
 {
-    Q_UNUSED(index)
     return {};
 }
 

@@ -119,10 +119,9 @@ ContactGroupEditorDelegate::ContactGroupEditorDelegate(QAbstractItemView *view, 
 
 ContactGroupEditorDelegate::~ContactGroupEditorDelegate() = default;
 
-QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, [[maybe_unused]] const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     const bool isReference = index.data(Akonadi::ContactGroupModel::IsReferenceRole).toBool();
-    Q_UNUSED(option)
     if (index.column() == 0) {
         auto edit = new ContactLineEdit(isReference, Akonadi::ContactCompletionModel::NameAndEmailColumn, parent);
         connect(edit, qOverload<QWidget *>(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
@@ -231,10 +230,8 @@ void ContactGroupEditorDelegate::paint(QPainter *painter, const QStyleOptionView
     }
 }
 
-QSize ContactGroupEditorDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
+QSize ContactGroupEditorDelegate::sizeHint([[maybe_unused]] const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(option)
-
     QSize hint = QStyledItemDelegate::sizeHint(option, index);
     hint.setHeight(qMax(hint.height(), d->mButtonSize.height()));
 

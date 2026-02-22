@@ -36,15 +36,13 @@ CustomField::List CustomFieldsModel::customFields() const
     return mCustomFields;
 }
 
-QModelIndex CustomFieldsModel::index(int row, int column, const QModelIndex &parent) const
+QModelIndex CustomFieldsModel::index(int row, int column, [[maybe_unused]] const QModelIndex &parent) const
 {
-    Q_UNUSED(parent)
     return createIndex(row, column);
 }
 
-QModelIndex CustomFieldsModel::parent(const QModelIndex &child) const
+QModelIndex CustomFieldsModel::parent([[maybe_unused]] const QModelIndex &child) const
 {
-    Q_UNUSED(child)
     return {};
 }
 

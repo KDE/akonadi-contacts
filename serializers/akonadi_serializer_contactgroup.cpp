@@ -20,11 +20,8 @@ using namespace Akonadi;
 
 //// ItemSerializerPlugin interface
 
-bool SerializerPluginContactGroup::deserialize(Item &item, const QByteArray &label, QIODevice &data, int version)
+bool SerializerPluginContactGroup::deserialize(Item &item, [[maybe_unused]] const QByteArray &label, QIODevice &data, [[maybe_unused]] int version)
 {
-    Q_UNUSED(label)
-    Q_UNUSED(version)
-
     KContacts::ContactGroup contactGroup;
 
     if (!KContacts::ContactGroupTool::convertFromXml(&data, contactGroup)) {
@@ -37,11 +34,8 @@ bool SerializerPluginContactGroup::deserialize(Item &item, const QByteArray &lab
     return true;
 }
 
-void SerializerPluginContactGroup::serialize(const Item &item, const QByteArray &label, QIODevice &data, int &version)
+void SerializerPluginContactGroup::serialize(const Item &item, [[maybe_unused]] const QByteArray &label, QIODevice &data, [[maybe_unused]] int &version)
 {
-    Q_UNUSED(label)
-    Q_UNUSED(version)
-
     if (!item.hasPayload<KContacts::ContactGroup>()) {
         return;
     }
