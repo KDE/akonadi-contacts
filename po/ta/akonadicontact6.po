@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-02-23 00:45+0000\n"
 "PO-Revision-Date: 2025-11-30 15:27+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -22,18 +22,18 @@ msgstr ""
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "<b>%1</b> என்பவரின் மின்னஞ்சல் முகவரியை காணவில்லை"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:240
+#: akonadi-contacts-core/contactgroupmodel.cpp:238
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "இத்தொடர்பு இருப்பில் இல்லை"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:394
+#: akonadi-contacts-core/contactgroupmodel.cpp:392
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "பெயர்"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:396
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
@@ -239,7 +239,7 @@ msgstr "பிரிவு"
 msgid "IM Address"
 msgstr ""
 
-#: akonadi-contacts-widgets/contacteditor.cpp:162
+#: akonadi-contacts-widgets/contacteditor.cpp:161
 #, kde-format
 msgid ""
 "The contact has been changed by someone else.\n"
@@ -248,29 +248,29 @@ msgstr ""
 "இந்த தொடர்பு இன்னொருவரால் மாற்றப்பட்டுள்ளது.\n"
 "என்ன செய்ய வேண்டும்?"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:163
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
+#: akonadi-contacts-widgets/contacteditor.cpp:162
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "மாற்றங்களை ஏற்றுகொள்"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:164
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
+#: akonadi-contacts-widgets/contacteditor.cpp:163
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "மாற்றங்களை பொருட்படுத்தாமல் மேலெழுது"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:278
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:290
+#: akonadi-contacts-widgets/contacteditor.cpp:277
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:289
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "முகவரிப்புத்தகத்தை தேர்ந்தெடுத்தல்"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:279
+#: akonadi-contacts-widgets/contacteditor.cpp:278
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "புதிய தொடர்பை சேமிக்க வேண்டிய முகவரிப்புத்தக அடைவை தேர்ந்தெடுக்கவும்:"
@@ -341,7 +341,7 @@ msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "ரத்து செய்யாதே"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:134
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:133
 #, kde-format
 msgid ""
 "The contact group has been changed by someone else.\n"
@@ -350,12 +350,12 @@ msgstr ""
 "இந்த தொடர்புக்குழு இன்னொருவரால் மாற்றப்பட்டுள்ளது.\n"
 "என்ன செய்ய வேண்டும்?"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:175
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:174
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr ""
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:291
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:290
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr ""
@@ -702,25 +702,25 @@ msgstr ""
 msgid "Url"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:214
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:212
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:213
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:193
 #, kde-format
 msgctxt "custom field title"
 msgid "Title"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:197
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
 msgctxt "custom field value"
 msgid "Value"

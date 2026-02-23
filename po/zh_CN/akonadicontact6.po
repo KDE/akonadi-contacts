@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-02-23 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -22,18 +22,18 @@ msgstr ""
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "姓名为 <b>%1</b> 的成员缺少电子邮件地址"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:240
+#: akonadi-contacts-core/contactgroupmodel.cpp:238
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "联系人不存在"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:394
+#: akonadi-contacts-core/contactgroupmodel.cpp:392
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "姓名"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:396
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
@@ -238,7 +238,7 @@ msgstr "部门"
 msgid "IM Address"
 msgstr "IM 地址"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:162
+#: akonadi-contacts-widgets/contacteditor.cpp:161
 #, kde-format
 msgid ""
 "The contact has been changed by someone else.\n"
@@ -247,29 +247,29 @@ msgstr ""
 "联系人已被其他人更改。\n"
 "需要做什么吗？"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:163
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
+#: akonadi-contacts-widgets/contacteditor.cpp:162
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "应用更改"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:164
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
+#: akonadi-contacts-widgets/contacteditor.cpp:163
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "忽略并覆盖更改"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:278
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:290
+#: akonadi-contacts-widgets/contacteditor.cpp:277
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:289
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "选择地址簿"
 
-#: akonadi-contacts-widgets/contacteditor.cpp:279
+#: akonadi-contacts-widgets/contacteditor.cpp:278
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "选择要存放新联系人的地址簿："
@@ -340,7 +340,7 @@ msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "不要取消"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:134
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:133
 #, kde-format
 msgid ""
 "The contact group has been changed by someone else.\n"
@@ -349,12 +349,12 @@ msgstr ""
 "联系人组已被其他人更改。\n"
 "需要做什么吗？"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:175
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:174
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "联系人组的名称不能为空。"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:291
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:290
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "选择要存放新联系人组的地址簿："
@@ -697,25 +697,25 @@ msgstr "日期时间"
 msgid "Url"
 msgstr "Url"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:214
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:212
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr "您确实想要删除选中的自定义字段吗？"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:213
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "确认删除"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:193
 #, kde-format
 msgctxt "custom field title"
 msgid "Title"
 msgstr "职称"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:197
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
 msgctxt "custom field value"
 msgid "Value"

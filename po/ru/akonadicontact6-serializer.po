@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:44+0000\n"
+"POT-Creation-Date: 2026-02-23 00:45+0000\n"
 "PO-Revision-Date: 2015-09-04 04:25+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -23,47 +23,47 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: akonadi_serializer_addressee.cpp:171
+#: akonadi_serializer_addressee.cpp:167
 #, kde-format
 msgid "Changed Contact"
 msgstr "Изменённый контакт"
 
-#: akonadi_serializer_addressee.cpp:172
+#: akonadi_serializer_addressee.cpp:168
 #, kde-format
 msgid "Conflicting Contact"
 msgstr "Конфликтующий контакт"
 
-#: akonadi_serializer_addressee.cpp:300
+#: akonadi_serializer_addressee.cpp:296
 #, kde-format
 msgid "Emails"
 msgstr "Адреса электронной почты"
 
-#: akonadi_serializer_addressee.cpp:301
+#: akonadi_serializer_addressee.cpp:297
 #, kde-format
 msgid "Phone Numbers"
 msgstr "Телефонные номера"
 
-#: akonadi_serializer_addressee.cpp:302
+#: akonadi_serializer_addressee.cpp:298
 #, kde-format
 msgid "Addresses"
 msgstr "Адреса"
 
-#: akonadi_serializer_contactgroup.cpp:92
+#: akonadi_serializer_contactgroup.cpp:86
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Изменённая группа контактов"
 
-#: akonadi_serializer_contactgroup.cpp:93
+#: akonadi_serializer_contactgroup.cpp:87
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Конфликтующая группа контактов"
 
-#: akonadi_serializer_contactgroup.cpp:99
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Name"
 msgstr "Имя"
 
-#: akonadi_serializer_contactgroup.cpp:109
+#: akonadi_serializer_contactgroup.cpp:103
 #, kde-format
 msgid "Member"
 msgstr "Участник"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:44+0000\n"
+"POT-Creation-Date: 2026-02-23 00:45+0000\n"
 "PO-Revision-Date: 2016-01-14 23:34+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -17,47 +17,47 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: akonadi_serializer_addressee.cpp:171
+#: akonadi_serializer_addressee.cpp:167
 #, kde-format
 msgid "Changed Contact"
 msgstr "Muudetud kontakt"
 
-#: akonadi_serializer_addressee.cpp:172
+#: akonadi_serializer_addressee.cpp:168
 #, kde-format
 msgid "Conflicting Contact"
 msgstr "Konfliktis kontakt"
 
-#: akonadi_serializer_addressee.cpp:300
+#: akonadi_serializer_addressee.cpp:296
 #, kde-format
 msgid "Emails"
 msgstr "E-kirjad"
 
-#: akonadi_serializer_addressee.cpp:301
+#: akonadi_serializer_addressee.cpp:297
 #, kde-format
 msgid "Phone Numbers"
 msgstr "Telefoninumbrid"
 
-#: akonadi_serializer_addressee.cpp:302
+#: akonadi_serializer_addressee.cpp:298
 #, kde-format
 msgid "Addresses"
 msgstr "Aadressid"
 
-#: akonadi_serializer_contactgroup.cpp:92
+#: akonadi_serializer_contactgroup.cpp:86
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Muudetud kontaktirühm"
 
-#: akonadi_serializer_contactgroup.cpp:93
+#: akonadi_serializer_contactgroup.cpp:87
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Konfliktis kontaktirühm"
 
-#: akonadi_serializer_contactgroup.cpp:99
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Name"
 msgstr "Nimi"
 
-#: akonadi_serializer_contactgroup.cpp:109
+#: akonadi_serializer_contactgroup.cpp:103
 #, kde-format
 msgid "Member"
 msgstr "Liige"

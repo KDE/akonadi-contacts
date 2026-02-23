@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi_serializer_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:44+0000\n"
+"POT-Creation-Date: 2026-02-23 00:45+0000\n"
 "PO-Revision-Date: 2011-12-11 22:03+0200\n"
 "Last-Translator: Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-doc@kde.org>\n"
@@ -21,47 +21,47 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: akonadi_serializer_addressee.cpp:171
+#: akonadi_serializer_addressee.cpp:167
 #, kde-format
 msgid "Changed Contact"
 msgstr "Pakeistas adresatas"
 
-#: akonadi_serializer_addressee.cpp:172
+#: akonadi_serializer_addressee.cpp:168
 #, kde-format
 msgid "Conflicting Contact"
 msgstr "Prieštaringas adresatas"
 
-#: akonadi_serializer_addressee.cpp:300
+#: akonadi_serializer_addressee.cpp:296
 #, kde-format
 msgid "Emails"
 msgstr "El. laiškai"
 
-#: akonadi_serializer_addressee.cpp:301
+#: akonadi_serializer_addressee.cpp:297
 #, kde-format
 msgid "Phone Numbers"
 msgstr "Telefonų numeriai"
 
-#: akonadi_serializer_addressee.cpp:302
+#: akonadi_serializer_addressee.cpp:298
 #, kde-format
 msgid "Addresses"
 msgstr "Adresai"
 
-#: akonadi_serializer_contactgroup.cpp:92
+#: akonadi_serializer_contactgroup.cpp:86
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Pakeista adresato grupė"
 
-#: akonadi_serializer_contactgroup.cpp:93
+#: akonadi_serializer_contactgroup.cpp:87
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Prieštaringa adresatų grupė"
 
-#: akonadi_serializer_contactgroup.cpp:99
+#: akonadi_serializer_contactgroup.cpp:93
 #, kde-format
 msgid "Name"
 msgstr "Pavadinimas"
 
-#: akonadi_serializer_contactgroup.cpp:109
+#: akonadi_serializer_contactgroup.cpp:103
 #, kde-format
 msgid "Member"
 msgstr "Narys"
