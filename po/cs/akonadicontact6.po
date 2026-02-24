@@ -23,7 +23,7 @@ msgstr ""
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
-msgstr ""
+msgstr "Členovi se jménem <b>%1</b> chybí e-mailová adresa."
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:240
 #, kde-format
