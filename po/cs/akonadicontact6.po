@@ -1,24 +1,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-23 00:45+0000\n"
-"PO-Revision-Date: 2024-08-06 11:18+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-02-27 13:16+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
@@ -40,7 +41,7 @@ msgstr "Jméno"
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
-msgstr "E-Mail"
+msgstr "E-mail"
 
 #: akonadi-contacts-core/contactstreemodel.cpp:225
 #, kde-format
@@ -604,7 +605,7 @@ msgstr "Zaneprázdněnost:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add FreeBusy"
-msgstr ""
+msgstr "Přidat info o zaneprázdněnosti"
 
 #: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
 #, kde-format
@@ -1270,7 +1271,7 @@ msgstr "Přidat složku knih adres..."
 #, kde-format
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
-msgstr ""
+msgstr "Přidat novou složku knihy adres do aktuálně vybrané složky."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
 #, kde-format
@@ -1299,7 +1300,7 @@ msgstr[2] "Kopírovat %1 složek knihy adres"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
-msgstr ""
+msgstr "Zkopírovat vybrané složky knihy adres do schránky."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
 #, kde-format
@@ -1312,7 +1313,7 @@ msgstr[2] "Smazat %1 složky knihy adres"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
-msgstr ""
+msgstr "Smazat vybrané složky z knihy adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
 #, kde-format
@@ -1323,7 +1324,11 @@ msgid_plural ""
 "Do you really want to delete %1 address book folders and all their sub-"
 "folders?"
 msgstr[0] ""
+"Opravdu chcete smazat tuto složku adresáře a všechny její podsložky?"
 msgstr[1] ""
+"Opravdu chcete odstranit %1 složky adresáře a všechny jejich podsložky?"
+msgstr[2] ""
+"Opravdu chcete odstranit %1 složek adresáře a všechny jejich podsložky?"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
 #, kde-format
@@ -1337,7 +1342,7 @@ msgstr[2] "Smazat složky knihy adres?"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
-msgstr ""
+msgstr "Nelze odstranit složku knihy adres: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
 #, kde-format
@@ -1348,25 +1353,27 @@ msgstr "Smazání složky knihy adres selhalo"
 #, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Aktualizovat knihu adres"
+msgstr[1] "Aktualizovat %1 knihy adres"
+msgstr[2] "Aktualizovat %1 knih adres"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update the content of the selected address book folders."
-msgstr ""
+msgstr "Aktualizovat obsah vybraných složek knihy adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
 #, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Vyjmout složku z knihy adres"
+msgstr[1] "Vyjmout %1 složky z knihy adres"
+msgstr[2] "Vyjmout %1 složek z knihy adres"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
-msgstr ""
+msgstr "Vyjmout vybrané složky z knihy adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
@@ -1378,6 +1385,7 @@ msgstr "Vlastnosti složky..."
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
 msgstr ""
+"Otevře dialogové okno pro úpravu vlastností vybrané složky knihy adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
 #, kde-format
@@ -1397,7 +1405,7 @@ msgstr[2] "Kopírovat %1 kontakty"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
-msgstr ""
+msgstr "Zkopírovat vybrané kontakty do schránky."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
@@ -1411,7 +1419,7 @@ msgstr[2] "Smazat %1 kontaktů"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
 #, kde-format
 msgid "Delete the selected contacts from the address book."
-msgstr ""
+msgstr "Smazat vybrané kontakty z knihy adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
 #, kde-format
@@ -1452,7 +1460,7 @@ msgstr[2] "Vyjmout %1 kontaktů"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
 #, kde-format
 msgid "Cut the selected contacts from the address book."
-msgstr ""
+msgstr "Vyjmout vybrané kontakty z knihy adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
@@ -1465,6 +1473,8 @@ msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
 "select the type of the address book that shall be added.</p>"
 msgstr ""
+"Přidání nové knihy adres<p>Zobrazí se dialogové okno, ve kterém můžete "
+"vybrat typ knihy adres, kterou chcete přidat.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
 #, kde-format
@@ -1491,6 +1501,8 @@ msgid ""
 "will be deleted, along with all the contacts and contact groups they contain."
 "</p>"
 msgstr ""
+"Odstranit vybrané knihy adres<p>Aktuálně vybrané knihy adres budou "
+"odstraněny spolu se všemi kontakty a skupinami kontaktů, které obsahují.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
 #, kde-format
@@ -1517,7 +1529,7 @@ msgstr "Vlastnosti knihy adres..."
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
-msgstr ""
+msgstr "Otevře dialogové okno pro úpravu vlastností vybrané knihy adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
 #, kde-format
@@ -1530,7 +1542,7 @@ msgstr[2] "Aktualizovat %1 složek knihy adres"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:227
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
-msgstr ""
+msgstr "Aktualizovat obsah všech složek vybraných knih adres."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
 #, kde-format
