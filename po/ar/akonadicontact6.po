@@ -950,7 +950,7 @@ msgstr "الابن"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:72
 #, kde-format
 msgid "Sr."
-msgstr "الأبّ"
+msgstr "الأب"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:29
 #, kde-format
