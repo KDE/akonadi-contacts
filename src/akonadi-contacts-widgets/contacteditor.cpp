@@ -127,6 +127,10 @@ void Akonadi::AkonadiContactEditorPrivate::parentCollectionFetchDone(KJob *job)
         return;
     }
 
+    if (fetchJob->collections().isEmpty()) {
+        return;
+    }
+
     const Akonadi::Collection parentCollection = fetchJob->collections().at(0);
     if (parentCollection.isValid()) {
         mReadOnly = !(parentCollection.rights() & Akonadi::Collection::CanChangeItem);
