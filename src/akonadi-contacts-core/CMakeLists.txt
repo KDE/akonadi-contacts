@@ -125,7 +125,7 @@ target_link_libraries(
         KF6::IconThemes
         KF6::GuiAddons
         KF6::I18n
-        KPim6::Mime
+        KF6::Mime
         KF6::TextUtils
 )
 set_target_properties(

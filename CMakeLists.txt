@@ -136,8 +136,12 @@ find_package(KF6Prison ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Codecs ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6ColorScheme ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Mime ${KF_MIN_VERSION} CONFIG)
+if(NOT TARGET KF6::Mime)
+    find_package(KPim6Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
+    add_library(KF6::Mime ALIAS KPim6::Mime)
+endif()
 
-find_package(KPim6Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
