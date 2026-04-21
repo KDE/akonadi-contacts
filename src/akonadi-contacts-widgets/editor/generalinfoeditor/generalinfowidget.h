@@ -10,7 +10,6 @@
 #pragma once
 
 #include "displaynameeditwidget.h"
-#include <QWidget>
 namespace KContacts
 {
 class Addressee;

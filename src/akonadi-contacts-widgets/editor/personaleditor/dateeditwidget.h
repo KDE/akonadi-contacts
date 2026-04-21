@@ -10,7 +10,6 @@
 
 #include <QDate>
 #include <QLineEdit>
-#include <QWidget>
 
 class KDatePickerPopup;
 
