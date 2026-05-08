@@ -98,7 +98,7 @@ public:
                 ->setWhatsThis(i18n("Add a new address book folder to the currently selected address book folder."));
             mGenericManager->setContextText(StandardActionManager::CreateCollection,
                                             StandardActionManager::DialogTitle,
-                                            i18nc("@title:window", "New Address Book Folder"));
+                                            ki18nc("@title:window", "New Address Book Folder"));
 
             mGenericManager->setContextText(StandardActionManager::CreateCollection,
                                             StandardActionManager::ErrorMessageText,
@@ -106,7 +106,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::CreateCollection,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18n("Address book folder creation failed"));
+                                            ki18n("Address book folder creation failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setProperty("ContentMimeTypes", QStringList() << QStringLiteral("application/x-vnd.kde.contactgroup") << QStringLiteral("text/directory"));
 
@@ -136,7 +136,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteCollections,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18n("Address book folder deletion failed"));
+                                            ki18n("Address book folder deletion failed"));
             break;
         case Akonadi::StandardActionManager::SynchronizeCollections:
             mGenericManager->setActionText(Akonadi::StandardActionManager::SynchronizeCollections,
@@ -174,7 +174,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageText, ki18n("Could not delete contact: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageTitle, i18n("Contact deletion failed"));
+            mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageTitle, ki18n("Contact deletion failed"));
             break;
         case Akonadi::StandardActionManager::CutItems:
             mGenericManager->setActionText(Akonadi::StandardActionManager::CutItems, ki18np("Cut Contact", "Cut %1 Contacts"));
@@ -188,7 +188,7 @@ public:
                                     "the type of the address book that shall be added.</p>"));
             mGenericManager->setContextText(StandardActionManager::CreateResource,
                                             StandardActionManager::DialogTitle,
-                                            i18nc("@title:window", "Add Address Book"));
+                                            ki18nc("@title:window", "Add Address Book"));
 
             mGenericManager->setContextText(StandardActionManager::CreateResource,
                                             StandardActionManager::ErrorMessageText,
@@ -196,7 +196,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::CreateResource,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18n("Address book creation failed"));
+                                            ki18n("Address book creation failed"));
             break;
         case Akonadi::StandardActionManager::DeleteResources:
 
@@ -230,7 +230,7 @@ public:
         case StandardActionManager::Paste:
             mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageText, ki18n("Could not paste contact: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageTitle, i18n("Paste failed"));
+            mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageTitle, ki18n("Paste failed"));
             break;
         default:
             break;
