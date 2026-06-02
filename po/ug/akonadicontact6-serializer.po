@@ -8,39 +8,40 @@ msgstr ""
 "Project-Id-Version: akonadi_serializer_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-23 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-28 16:55-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: akonadi_serializer_addressee.cpp:167
 #, kde-format
 msgid "Changed Contact"
-msgstr ""
+msgstr "ئۆزگەرگەن ئالاقەداش"
 
 #: akonadi_serializer_addressee.cpp:168
 #, kde-format
 msgid "Conflicting Contact"
-msgstr ""
+msgstr "توقۇنۇشقان ئالاقەداش"
 
 #: akonadi_serializer_addressee.cpp:296
 #, kde-format
 msgid "Emails"
-msgstr "ئېلخەتلەر"
+msgstr "ئېلخەت"
 
 #: akonadi_serializer_addressee.cpp:297
 #, kde-format
 msgid "Phone Numbers"
-msgstr "تېلېفون نومۇرلىرى"
+msgstr "تېلېفون نومۇرى"
 
 #: akonadi_serializer_addressee.cpp:298
 #, kde-format
 msgid "Addresses"
-msgstr "ئادرېسلار"
+msgstr "ئادرېس"
 
 #: akonadi_serializer_contactgroup.cpp:86
 #, kde-format
@@ -191,84 +192,72 @@ msgstr "ئەزا"
 #~ msgid "Log file"
 #~ msgstr "كاتىپ ھۆججەت"
 
-#, fuzzy
 #~| msgctxt "@label A shell command"
 #~| msgid "Command"
 #~ msgctxt "@info Alarm type"
 #~ msgid "Command"
 #~ msgstr "بۇيرۇق"
 
-#, fuzzy
 #~| msgctxt "@info/plain Alarm type"
 #~| msgid "Email"
 #~ msgctxt "@info Alarm type"
 #~ msgid "Email"
 #~ msgstr "ئېلخەت"
 
-#, fuzzy
 #~| msgctxt "@info/plain Alarm type"
 #~| msgid "Audio"
 #~ msgctxt "@info Alarm type"
 #~ msgid "Audio"
 #~ msgstr "ئۈن"
 
-#, fuzzy
 #~| msgctxt "@info/plain Alarm type"
 #~| msgid "Active"
 #~ msgctxt "@info Alarm type"
 #~ msgid "Active"
 #~ msgstr "ئاكتىپ"
 
-#, fuzzy
 #~| msgctxt "@info/plain Alarm type"
 #~| msgid "Archived"
 #~ msgctxt "@info Alarm type"
 #~ msgid "Archived"
 #~ msgstr "ئارخىپلانغان"
 
-#, fuzzy
 #~| msgctxt "@info/plain Alarm type"
 #~| msgid "Template"
 #~ msgctxt "@info Alarm type"
 #~ msgid "Template"
 #~ msgstr "قېلىپ"
 
-#, fuzzy
 #~| msgctxt "@info/plain"
 #~| msgid "%1"
 #~ msgctxt "@info"
 #~ msgid "%1"
 #~ msgstr "%1"
 
-#, fuzzy
 #~| msgctxt "@info/plain Using default font"
 #~| msgid "Default"
 #~ msgctxt "@info Using default font"
 #~ msgid "Default"
 #~ msgstr "كۆڭۈلدىكى"
 
-#, fuzzy
 #~| msgctxt "@label Whether the alarm has a reminder"
 #~| msgid "Reminder"
 #~ msgctxt "@info"
 #~ msgid "Reminder"
 #~ msgstr "ئەسكەرتكۈچ"
 
-#, fuzzy
 #~| msgctxt "@info/plain"
 #~| msgid "Speak"
 #~ msgctxt "@info"
 #~ msgid "Speak"
 #~ msgstr "سۆزلەش"
 
-#, fuzzy
 #~| msgctxt "@info/plain"
 #~| msgid "Beep"
 #~ msgctxt "@info"
 #~ msgid "Beep"
 #~ msgstr "قوڭغۇراق ئاۋازى"
 
-#, fuzzy
 #~| msgctxt "@info/plain"
 #~| msgid "1 Second"
 #~| msgid_plural "%1 Seconds"
@@ -277,19 +266,16 @@ msgstr "ئەزا"
 #~ msgid_plural "%1 Seconds"
 #~ msgstr[0] "%1 سېكۇنت"
 
-#, fuzzy
 #~| msgid "Yes"
 #~ msgctxt "@info General purpose status indication: yes or no"
 #~ msgid "Yes"
 #~ msgstr "ھەئە"
 
-#, fuzzy
 #~| msgid "No"
 #~ msgctxt "@info General purpose status indication: yes or no"
 #~ msgid "No"
 #~ msgstr "ياق"
 
-#, fuzzy
 #~| msgctxt "@info/plain"
 #~| msgid "1 Minute"
 #~| msgid_plural "%1 Minutes"
@@ -298,7 +284,6 @@ msgstr "ئەزا"
 #~ msgid_plural "%1 Minutes"
 #~ msgstr[0] "%1 مىنۇت"
 
-#, fuzzy
 #~| msgctxt "@info/plain"
 #~| msgid "1 Hour"
 #~| msgid_plural "%1 Hours"
@@ -307,7 +292,6 @@ msgstr "ئەزا"
 #~ msgid_plural "%1 Hours"
 #~ msgstr[0] "%1 سائەت"
 
-#, fuzzy
 #~| msgctxt "@info/plain"
 #~| msgid "1 Day"
 #~| msgid_plural "%1 Days"
