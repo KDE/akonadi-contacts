@@ -92,7 +92,6 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 include(ECMCheckOutboundLicense)
-set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 file(
     GLOB_RECURSE ALL_SOURCE_FILES
     src/*.cpp
