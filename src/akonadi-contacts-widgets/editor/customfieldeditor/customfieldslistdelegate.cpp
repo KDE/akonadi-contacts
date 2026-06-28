@@ -189,9 +189,7 @@ bool CustomFieldsListDelegate::editorEvent(QEvent *event, QAbstractItemModel *mo
     if (index.column() == 1) {
         if (event->type() == QEvent::MouseButtonRelease) {
             const QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
-            QRect buttonRect = mItemView->visualRect(index);
-            buttonRect.setLeft(buttonRect.right() - mButtonSize.width());
-
+            const QRect buttonRect = mItemView->visualRect(index);
             if (buttonRect.contains(mouseEvent->pos())) {
                 removeField(index.row(), model);
                 return true;
