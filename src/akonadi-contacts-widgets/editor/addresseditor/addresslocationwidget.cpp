@@ -183,6 +183,9 @@ void AddressLocationWidget::fillCountryCombo()
     for (const auto &country : KCountry::allCountries()) {
         countries.append(country.name());
     }
+    std::sort(countries.begin(), countries.end(), [](const QString &left, const QString &right) {
+        return left.localeAwareCompare(right) < 0;
+    });
 
     mCountryCombo->addItems(countries);
 
