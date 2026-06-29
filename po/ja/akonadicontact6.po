@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-04 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 00:46+0000\n"
 "PO-Revision-Date: 2014-09-25 00:57-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -439,7 +439,7 @@ msgid "Remove Address"
 msgstr "IM アドレス"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:278
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:281
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address book?"
 #| msgid_plural "Do you really want to delete %1 address books?"
@@ -747,13 +747,13 @@ msgstr "日時"
 msgid "Url"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:212
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:210
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr "本当にこのカスタム欄を削除しますか？"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:213
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:211
 #, fuzzy, kde-format
 #| msgid "Confirm Delete"
 msgctxt "@title:window"

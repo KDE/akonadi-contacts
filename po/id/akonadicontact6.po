@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-04 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 00:46+0000\n"
 "PO-Revision-Date: 2024-09-29 19:26+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -416,7 +416,7 @@ msgid "Remove Address"
 msgstr "Hapus Alamat"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:278
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:281
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Apakah Anda sungguh ingin menghapus alamat ini?"
@@ -698,13 +698,13 @@ msgstr "WaktuTanggal"
 msgid "Url"
 msgstr "Url"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:212
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:210
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr "Apakah Anda benar-benar ingin menghapus bidang kustom yang dipilih?"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:213
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:211
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"

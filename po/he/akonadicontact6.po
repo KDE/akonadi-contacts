@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-04 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 00:46+0000\n"
 "PO-Revision-Date: 2025-11-07 08:38+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -423,7 +423,7 @@ msgid "Remove Address"
 msgstr "הסרת כתובת"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:278
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:281
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "למחוק את הכתובת הזאת?"
@@ -705,13 +705,13 @@ msgstr "תאריך ושעה"
 msgid "Url"
 msgstr "כתובת"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:212
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:210
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr "למחוק את השדה המותאם אישית?"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:213
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:211
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete"

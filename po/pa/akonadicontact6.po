@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-04 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 00:46+0000\n"
 "PO-Revision-Date: 2011-01-01 12:08+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -437,7 +437,7 @@ msgid "Remove Address"
 msgstr "ਐਡਰੈੱਸ"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:278
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:281
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
 msgid "Do you really want to delete this address?"
@@ -747,14 +747,14 @@ msgstr "ਮਿਤੀਸਮਾਂ"
 msgid "Url"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:212
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:210
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete this address?"
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr "ਕੀ ਤੁਸੀਂ ਇਹ ਐਡਰੈੱਸ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:213
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:211
 #, fuzzy, kde-format
 #| msgid "Confirm Delete"
 msgctxt "@title:window"
