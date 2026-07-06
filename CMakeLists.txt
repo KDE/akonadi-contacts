@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.7.40")
+set(PIM_VERSION "6.8.40")
 
 project(Akonadi-Contact VERSION ${PIM_VERSION})
 
@@ -107,7 +107,7 @@ set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
 set(KMIMELIB_VERSION "6.7.40")
 set(AKONADI_VERSION "6.7.40")
 set(GRANTLEETHEME_LIB_VERSION "6.7.40")
-set(KTEXTADDONS_MIN_VERSION "2.0.2")
+set(KTEXTADDONS_MIN_VERSION "2.1.0")
 
 set(QT_REQUIRED_VERSION "6.9.0")
 find_package(
