@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/akonadi-contacts/akonadicontact6.pot\n"
-"X-Crowdin-File-ID: 49002\n"
+"X-Crowdin-File: /kf6-stable/messages/akonadi-contacts/akonadicontact6.pot\n"
+"X-Crowdin-File-ID: 51118\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
