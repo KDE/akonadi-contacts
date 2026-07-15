@@ -139,24 +139,7 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         }
         url = KStringHandler::tagUrls(url.toHtmlEscaped());
         QString typeName;
-#if KI18N_VERSION >= QT_VERSION_CHECK(6, 20, 0)
         typeName = resourceLocator.resourceLabel();
-#else
-        switch (resourceLocator.type()) {
-        case KContacts::ResourceLocatorUrl::Home:
-            typeName = i18n("Home");
-            break;
-        case KContacts::ResourceLocatorUrl::Work:
-            typeName = i18n("Work");
-            break;
-        case KContacts::ResourceLocatorUrl::Profile:
-            typeName = i18n("Profile");
-            break;
-        case KContacts::ResourceLocatorUrl::Other:
-            typeName = i18n("Other");
-            break;
-        }
-#endif
         dynamicPart += rowFmtStr1.arg(typeName, url);
     }
 
