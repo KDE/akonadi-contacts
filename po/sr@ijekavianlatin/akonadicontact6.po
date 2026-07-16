@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:44+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -111,7 +111,7 @@ msgstr "%1 <%2>"
 
 # >> @item:intext
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:221
+#: akonadi-contacts-core/standardcontactformatter.cpp:204
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
@@ -119,56 +119,56 @@ msgstr "adresar"
 
 # >> @item:intext
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:220
+#: akonadi-contacts-core/standardcontactformatter.cpp:203
 #, kde-format
 msgid "Anniversary"
 msgstr "godišnjica"
 
 # >> @item:intext
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:215
+#: akonadi-contacts-core/standardcontactformatter.cpp:198
 #, kde-format
 msgid "Assistant's Name"
 msgstr "ime pomoćnika"
 
 # >> @item:intext
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:216
+#: akonadi-contacts-core/standardcontactformatter.cpp:199
 #, kde-format
 msgid "Manager's Name"
 msgstr "ime menadžera"
 
 # >> @item:intext
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:218
+#: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
 msgid "Office"
 msgstr "kancelarija"
 
 # >> @item:intext
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:214
+#: akonadi-contacts-core/standardcontactformatter.cpp:197
 #, kde-format
 msgid "Profession"
 msgstr "struka"
 
 # >> @item:intext
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:217
+#: akonadi-contacts-core/standardcontactformatter.cpp:200
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "ime supružnika"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:278
+#: akonadi-contacts-core/standardcontactformatter.cpp:261
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "da"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:280
+#: akonadi-contacts-core/standardcontactformatter.cpp:263
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -202,60 +202,32 @@ msgstr "e‑pošta"
 msgid "Homepage"
 msgstr "domaća stranica"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:147
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
-#, kde-format
-msgid "Home"
-msgstr "Kuća"
-
-#: akonadi-contacts-core/standardcontactformatter.cpp:150
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
-#, kde-format
-msgid "Work"
-msgstr "Posao"
-
-#: akonadi-contacts-core/standardcontactformatter.cpp:153
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
-#, fuzzy, kde-format
-#| msgid "Prof."
-msgid "Profile"
-msgstr "prof."
-
-#: akonadi-contacts-core/standardcontactformatter.cpp:156
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
-#, kde-format
-msgid "Other"
-msgstr "Drugo"
-
 # >> @item:intext
-#: akonadi-contacts-core/standardcontactformatter.cpp:166
+#: akonadi-contacts-core/standardcontactformatter.cpp:149
 #, kde-format
 msgid "Blog Feed"
 msgstr "dovod bloga"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:167
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Pokaži adresu na karti"
 
 # >> @item:intext
-#: akonadi-contacts-core/standardcontactformatter.cpp:201
+#: akonadi-contacts-core/standardcontactformatter.cpp:184
 #, kde-format
 msgid "Notes"
 msgstr "bilješke"
 
 # >> @item:intext
-#: akonadi-contacts-core/standardcontactformatter.cpp:207
+#: akonadi-contacts-core/standardcontactformatter.cpp:190
 #, kde-format
 msgid "Department"
 msgstr "odjeljenje"
 
 # >> @item:intext
-#: akonadi-contacts-core/standardcontactformatter.cpp:219
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "IM Address"
 msgstr "IM adresa"
@@ -872,6 +844,24 @@ msgstr "E‑pošta"
 msgid "Select..."
 msgstr "Izaberi..."
 
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, kde-format
+msgid "Home"
+msgstr "Kuća"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, kde-format
+msgid "Work"
+msgstr "Posao"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, kde-format
+msgid "Other"
+msgstr "Drugo"
+
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:31
 #, fuzzy, kde-format
 #| msgid "Add an Email Account"
@@ -1128,6 +1118,12 @@ msgstr "Ukloni telefonski broj"
 msgctxt "@label:textbox"
 msgid "Web"
 msgstr "Veb"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, fuzzy, kde-format
+#| msgid "Prof."
+msgid "Profile"
+msgstr "prof."
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:33
 #, fuzzy, kde-format
