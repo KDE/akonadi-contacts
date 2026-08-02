@@ -133,7 +133,7 @@ find_package(KF6Prison ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Codecs ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6ColorScheme ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF6Mime ${KF_MIN_VERSION} CONFIG)
+find_package(KF6Mime ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 
