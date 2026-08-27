@@ -4,11 +4,11 @@
 Dependencies:
  - 'on': ['Linux', 'FreeBSD', 'Windows']
    'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kcontacts': '@latest-kf6'
-    'frameworks/prison': '@latest-kf6'
-    'frameworks/kcodecs': '@latest-kf6'
-    'frameworks/kcolorscheme': '@latest-kf6'
+    'frameworks/extra-cmake-modules': 'Frameworks/6.24'
+    'frameworks/kcontacts': 'Frameworks/6.24'
+    'frameworks/prison': 'Frameworks/6.24'
+    'frameworks/kcodecs': 'Frameworks/6.24'
+    'frameworks/kcolorscheme': 'Frameworks/6.24'
     'pim/akonadi': '@same'
     'pim/kmime': '@same'
     'pim/grantleetheme': '@same'
