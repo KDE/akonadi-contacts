@@ -49,7 +49,8 @@ void ContactsFilterProxyModel::setFilterString(const QString &filter)
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
     beginFilterChange();
 #endif
-    d->mFilter = filter;
+    // call TextUtils::ConvertText::normalize once. Not in all line in filterAcceptsRow
+    d->mFilter = filter.isEmpty() ? filter : TextUtils::ConvertText::normalize(filter);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
     endFilterChange(QSortFilterProxyModel::Direction::Rows);
 #else
@@ -70,7 +71,6 @@ bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &pare
     if ((d->mFilter.isEmpty()) && (!(d->flags & ContactsFilterProxyModel::HasEmail))) {
         return true;
     }
-    const QString filterStr = TextUtils::ConvertText::normalize(d->mFilter);
     const auto item = index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     if (item.hasPayload<KContacts::Addressee>()) {
@@ -81,13 +81,13 @@ bool ContactsFilterProxyModel::filterAcceptsRow(int row, const QModelIndex &pare
             }
         }
         if (!d->mFilter.isEmpty()) {
-            return contactMatchesFilter(contact, filterStr, d->matchFilterFlag);
+            return contactMatchesFilter(contact, d->mFilter, d->matchFilterFlag);
         }
     } else {
         if (!d->mFilter.isEmpty()) {
             if (item.hasPayload<KContacts::ContactGroup>()) {
                 const auto group = item.payload<KContacts::ContactGroup>();
-                return contactGroupMatchesFilter(group, filterStr);
+                return contactGroupMatchesFilter(group, d->mFilter);
             }
         }
     }
