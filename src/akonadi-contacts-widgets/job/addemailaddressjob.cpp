@@ -107,6 +107,7 @@ public:
         Akonadi::Collection::List canCreateItemCollections;
 
         const Akonadi::Collection::List lstColls = addressBookJob->collections();
+        canCreateItemCollections.reserve(lstColls.count());
         for (const Akonadi::Collection &collection : lstColls) {
             if (Akonadi::Collection::CanCreateItem & collection.rights()) {
                 canCreateItemCollections.append(collection);

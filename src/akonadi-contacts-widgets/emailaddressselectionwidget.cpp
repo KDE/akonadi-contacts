@@ -31,7 +31,7 @@
 #include <QTimer>
 #include <QVBoxLayout>
 using namespace Akonadi;
-using namespace Akonadi;
+
 /**
  * @internal
  */
@@ -196,6 +196,7 @@ EmailAddressSelection::List EmailAddressSelectionWidget::selectedAddresses() con
     }
 
     const QModelIndexList selectedRows = d->mView->selectionModel()->selectedRows(0);
+    selections.reserve(selectedRows.count());
     for (const QModelIndex &index : selectedRows) {
         EmailAddressSelection selection;
         selection.setName(index.data(EmailAddressSelectionProxyModel::NameRole).toString());
