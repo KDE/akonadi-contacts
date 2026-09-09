@@ -160,7 +160,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
             formattedAddress = address.label().toHtmlEscaped();
         }
 
-        formattedAddress.replace(QRegularExpression(QStringLiteral("\n+")), QStringLiteral("<br>"));
+        static const QRegularExpression reg(QStringLiteral("\n+"));
+        formattedAddress.replace(reg, QStringLiteral("<br>"));
 
         const QString url = QStringLiteral("<a href=\"%1\" title=\"%2\"><img src=\"map_icon\" alt=\"%2\"/></a>")
                                 .arg(address.geoUri().toString())

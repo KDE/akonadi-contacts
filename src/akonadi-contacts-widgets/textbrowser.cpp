@@ -69,7 +69,8 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
             // no point in copying these.  Internal links are always in the
             // form "protocol:?argument", whereas valid external links should
             // be in the form starting with "protocol://".
-            if (!link.contains(QRegularExpression(QStringLiteral("^\\w+:\\?")))) {
+            const static QRegularExpression reg(QStringLiteral("^\\w+:\\?"));
+            if (!link.contains(reg)) {
                 mDataToCopy = link;
                 // Action text matches that used in Konqueror
                 act->setText(i18nc("@action:inmenu Copy a link URL", "Copy Link URL"));
