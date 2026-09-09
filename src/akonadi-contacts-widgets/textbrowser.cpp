@@ -48,13 +48,13 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
 #ifndef QT_NO_CLIPBOARD
     QMenu popup;
 
-    QAction *act = KStandardActions::copy(this, &TextBrowser::copy, this);
+    QAction *act = KStandardActions::copy(this, &TextBrowser::copy, &popup);
     act->setEnabled(!textCursor().selectedText().isEmpty());
     act->setShortcut(QKeySequence());
     popup.addAction(act);
 
     // Create a new action to correspond with what is under the click
-    act = new QAction(i18nc("@action:inmenu Copy the text of a general item", "Copy Item"), this);
+    act = new QAction(i18nc("@action:inmenu Copy the text of a general item", "Copy Item"), &popup);
 
     mDataToCopy.clear(); // nothing found to copy yet
 
