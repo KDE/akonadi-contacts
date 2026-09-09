@@ -280,9 +280,10 @@ public:
     {
         int itemCount = 0;
         if (mItemSelectionModel) {
-            itemCount = mItemSelectionModel->selectedRows().count();
+            const auto selectedRows = mItemSelectionModel->selectedRows();
+            itemCount = selectedRows.count();
             if (itemCount == 1) {
-                const QModelIndex index = mItemSelectionModel->selectedRows().first();
+                const QModelIndex index = selectedRows.first();
                 if (index.isValid()) {
                     const QString mimeType = index.data(EntityTreeModel::MimeTypeRole).toString();
                     if (mimeType == KContacts::Addressee::mimeType()) {

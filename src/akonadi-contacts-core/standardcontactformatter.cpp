@@ -225,8 +225,8 @@ QString StandardContactFormatter::toHtml(HtmlForm form) const
         blacklistedKeys.insert(QStringLiteral("MAILALLOWTOREMOTECONTENT"));
     }
 
-    if (!rawContact.customs().empty()) {
-        const QStringList customs = rawContact.customs();
+    const QStringList customs = rawContact.customs();
+    if (!customs.empty()) {
         for (QString custom : customs) {
             if (custom.startsWith(QLatin1StringView("KADDRESSBOOK-"))) {
                 custom.remove(QStringLiteral("KADDRESSBOOK-X-"));

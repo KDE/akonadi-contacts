@@ -151,8 +151,11 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
 
     // Additional fields
     QVariantList fields;
-    for (int i = 0; i < additionalFields().size(); ++i) {
-        const QVariantMap field = additionalFields().at(i);
+    const auto addFields = additionalFields();
+    const int fieldsCount = addFields.size();
+    fields.reserve(fieldsCount);
+    for (int i = 0; i < fieldsCount; ++i) {
+        const QVariantMap &field = addFields.at(i);
         QVariantHash fieldObject;
         setHashField(fieldObject, QStringLiteral("key"), field.value(QStringLiteral("key")).toString());
 
