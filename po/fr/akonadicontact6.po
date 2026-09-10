@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-09-10 00:47+0000\n"
 "PO-Revision-Date: 2026-03-20 18:21+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -117,58 +117,58 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:204
+#: akonadi-contacts-core/standardcontactformatter.cpp:205
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "Carnet d'adresses"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:203
+#: akonadi-contacts-core/standardcontactformatter.cpp:204
 #, kde-format
 msgid "Anniversary"
 msgstr "Anniversaire"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:198
+#: akonadi-contacts-core/standardcontactformatter.cpp:199
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Nom de l'assistant"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:199
+#: akonadi-contacts-core/standardcontactformatter.cpp:200
 #, kde-format
 msgid "Manager's Name"
 msgstr "Nom du responsable"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:201
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "Office"
 msgstr "Bureau"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:197
+#: akonadi-contacts-core/standardcontactformatter.cpp:198
 #, kde-format
 msgid "Profession"
 msgstr "Profession"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:200
+#: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Nom de l'associé "
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:261
+#: akonadi-contacts-core/standardcontactformatter.cpp:262
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "oui"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:263
+#: akonadi-contacts-core/standardcontactformatter.cpp:264
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -203,23 +203,23 @@ msgstr "Page personnelle"
 msgid "Blog Feed"
 msgstr "Flux de blogue"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:167
+#: akonadi-contacts-core/standardcontactformatter.cpp:168
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Afficher une adresse sur la carte"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:185
 #, kde-format
 msgid "Notes"
 msgstr "Remarques"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:190
+#: akonadi-contacts-core/standardcontactformatter.cpp:191
 #, kde-format
 msgid "Department"
 msgstr "Service"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:202
+#: akonadi-contacts-core/standardcontactformatter.cpp:203
 #, kde-format
 msgid "IM Address"
 msgstr "Adresse de messagerie instantanée"
@@ -1201,7 +1201,7 @@ msgstr ""
 "Un contact avec l'adresse de courrier électronique <b>%1</b> existe déjà "
 "dans votre carnet d'adresses."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
 #, kde-format
 msgctxt "@info"
@@ -1212,21 +1212,21 @@ msgstr ""
 "Vous devez créer un carnet d'adresses avant d'ajouter un contact. Voulez-"
 "vous vraiment créer un carnet d'adresses ?"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Aucun carnet d'adresses disponible"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Créer un carnet d'adresses"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:129
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
 #, kde-format
@@ -1234,7 +1234,7 @@ msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Ajouter un carnet d'adresses"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:230
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1244,32 +1244,32 @@ msgstr ""
 "<para>Un contact pour « %1 » a été ajouté avec succès dans votre carnet "
 "d'adresses.</para><para>Voulez-vous le modifier maintenant ?</para>"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Modifier"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Terminer"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Impossible d'enregistrer le contact : %1"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "Impossible d'enregistrer le contact"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:268
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Le contact a été créé avec succès."
@@ -1409,7 +1409,7 @@ msgid "Properties of Address Book Folder %1"
 msgstr "Propriétés du dossier de carnets d'adresses %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:291
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
@@ -1422,7 +1422,7 @@ msgid "Copy the selected contacts to the clipboard."
 msgstr "Copiez les contacts sélectionnés dans le presse-papier."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:302
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
@@ -1460,7 +1460,7 @@ msgid "Contact deletion failed"
 msgstr "La suppression du contact a échoué"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:305
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
@@ -1565,68 +1565,68 @@ msgstr "Impossible de coller le contact : %1"
 msgid "Paste failed"
 msgstr "Le collage a échoué"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:295
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:299
 #, kde-format
 msgid "Copy Contact To"
 msgstr "Copier le contact dans"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:309
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:313
 #, kde-format
 msgid "Move Contact To"
 msgstr "Déplacer le contact dans"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:317
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:554
 #, kde-format
 msgid "Edit Contact..."
 msgstr "Modifier un contact..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:321
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "Copier un groupe"
 msgstr[1] "Copier %1 groupes"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:325
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:329
 #, kde-format
 msgid "Copy Group To"
 msgstr "Copier un groupe dans"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:332
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "Supprimer un groupe"
 msgstr[1] "Supprimer %1 groupes"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:335
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "Couper un groupe"
 msgstr[1] "Couper %1 groupes"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:339
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:343
 #, kde-format
 msgid "Move Group To"
 msgstr "Déplacer un groupe dans"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:347
 #, kde-format
 msgid "Edit Group..."
 msgstr "Modifier un groupe..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:529
 #, kde-format
 msgid "New &Contact..."
 msgstr "Nouveau &contact..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:531
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1636,12 +1636,12 @@ msgstr ""
 "vous pouvez ajouter des données à propos d'une personne, y compris des "
 "adresses et des numéros de téléphone.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
 msgid "New &Group..."
 msgstr "Nouveau &groupe..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:543
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1650,7 +1650,7 @@ msgstr ""
 "Créez un nouveau groupe<p>Une boite de dialogue apparait, dans laquelle vous "
 "pouvez ajouter un nouveau groupe de contacts.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:556
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
@@ -1673,19 +1673,19 @@ msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr "Copier l'adresse de courrier électronique"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:75
+#: akonadi-contacts-widgets/textbrowser.cpp:76
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr "Copier l'adresse du lien"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:102
+#: akonadi-contacts-widgets/textbrowser.cpp:103
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr "Copier la photo"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:105
+#: akonadi-contacts-widgets/textbrowser.cpp:106
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"

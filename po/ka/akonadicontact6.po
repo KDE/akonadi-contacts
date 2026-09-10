@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-09-10 00:47+0000\n"
 "PO-Revision-Date: 2025-11-07 06:03+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -106,58 +106,58 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:204
+#: akonadi-contacts-core/standardcontactformatter.cpp:205
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "მისამართების წიგნი"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:203
+#: akonadi-contacts-core/standardcontactformatter.cpp:204
 #, kde-format
 msgid "Anniversary"
 msgstr "დღეობა"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:198
+#: akonadi-contacts-core/standardcontactformatter.cpp:199
 #, kde-format
 msgid "Assistant's Name"
 msgstr "დამხმარის სახელი"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:199
+#: akonadi-contacts-core/standardcontactformatter.cpp:200
 #, kde-format
 msgid "Manager's Name"
 msgstr "მმართველის სახელი"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:201
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "Office"
 msgstr "ოფისი"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:197
+#: akonadi-contacts-core/standardcontactformatter.cpp:198
 #, kde-format
 msgid "Profession"
 msgstr "პროფესია"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:200
+#: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "პარტნიორის სახელი"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:261
+#: akonadi-contacts-core/standardcontactformatter.cpp:262
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "დიახ"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:263
+#: akonadi-contacts-core/standardcontactformatter.cpp:264
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -192,23 +192,23 @@ msgstr "Homepage"
 msgid "Blog Feed"
 msgstr "ბლოგის ლენტა"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:167
+#: akonadi-contacts-core/standardcontactformatter.cpp:168
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "რუკაზე მისამართების ჩვენება"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:185
 #, kde-format
 msgid "Notes"
 msgstr "შენიშვნები"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:190
+#: akonadi-contacts-core/standardcontactformatter.cpp:191
 #, kde-format
 msgid "Department"
 msgstr "დეპარტამენტი"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:202
+#: akonadi-contacts-core/standardcontactformatter.cpp:203
 #, kde-format
 msgid "IM Address"
 msgstr "IM მისამართი"
@@ -1183,7 +1183,7 @@ msgstr ""
 "კონტაქტი ელფოსტის მისამართით <email>%1</email> თქვენს მისამართების წიგნაკში "
 "უკვე არსებობს."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
 #, kde-format
 msgctxt "@info"
@@ -1193,21 +1193,21 @@ msgid ""
 msgstr ""
 "კონტაქტის დამატებამდე საჭიროა მისამართების წიგნის შექმნა. გნებავთ შექმნათ ის?"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "მისამართების წიგნის გარეშე"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "მისამართების წიგნის შექმნა"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:129
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
 #, kde-format
@@ -1215,7 +1215,7 @@ msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "მისამართების წიგნის დამატება"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:230
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1225,32 +1225,32 @@ msgstr ""
 "<para>კონტაქტი \"%1\"-სთვის თქვენს მისამართების წიგნში წარმატებით ჩაემატა</"
 "para><para>გნებავთ ჩაასწოროთ ახალი კონტაქტი?</para>"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "ჩასწორება"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "დასრულება"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "კონტაქტის შენახვა შეუძლებელია: %1"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "კონტაქტის შენახვის შეცდომა"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:268
 #, kde-format
 msgid "Contact created successfully"
 msgstr "კონტაქტი წარმატებით შეიქმნა"
@@ -1384,7 +1384,7 @@ msgid "Properties of Address Book Folder %1"
 msgstr "მისამართების წიგნის საქაღალდის თვისებები: %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:291
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
@@ -1397,7 +1397,7 @@ msgid "Copy the selected contacts to the clipboard."
 msgstr "მონიშნული კონტაქტების ბუფერში კოპირება."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:302
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
@@ -1435,7 +1435,7 @@ msgid "Contact deletion failed"
 msgstr "კონტაქტის წაშლის შეცდომა"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:305
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
@@ -1535,68 +1535,68 @@ msgstr "კონტაქტის ჩასმის შეცდომა: %1
 msgid "Paste failed"
 msgstr "ჩასმის შეცდომა"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:295
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:299
 #, kde-format
 msgid "Copy Contact To"
 msgstr "კონტაქტის კოპირება"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:309
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:313
 #, kde-format
 msgid "Move Contact To"
 msgstr "კონტაქტის გადატანა"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:317
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:554
 #, kde-format
 msgid "Edit Contact..."
 msgstr "კოტაქტის ჩასწორება..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:321
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "ჯგუფის კოპირება"
 msgstr[1] "%1 ჯგუფის კოპირება"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:325
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:329
 #, kde-format
 msgid "Copy Group To"
 msgstr "ჯგუფის კოპირება"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:332
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "ჯგუფის წაშლა"
 msgstr[1] "%1 ჯგუფის წაშლა"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:335
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "ჯგუფის ამოჭრა"
 msgstr[1] "%1 ჯგუფის ამოჭრა"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:339
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:343
 #, kde-format
 msgid "Move Group To"
 msgstr "ჯგუფის გადაადგილება"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:347
 #, kde-format
 msgid "Edit Group..."
 msgstr "ჯგუფის ამოჭრა..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:529
 #, kde-format
 msgid "New &Contact..."
 msgstr "ახალი &კონტაქტი..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:531
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1605,12 +1605,12 @@ msgstr ""
 "ახალი კონტაქტის შექმნა<p> წარმოგიდგენთ ფანჯარას, სადაც პიროვნების შესახებ "
 "ინფორმაციის შეყვანას შეძლებთ.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
 msgid "New &Group..."
 msgstr "ახალი &ჯგუფი..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:543
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1619,7 +1619,7 @@ msgstr ""
 "ახალი ჯგუფის შექმნა<p>წარმოგიდგენთ ფანჯარას, სადაც კონტაქტების ახალი ჯგუფის "
 "დამატება შეგიძლიათ.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:556
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
@@ -1642,19 +1642,19 @@ msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr "ელფოსტის მისამართის კოპირება"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:75
+#: akonadi-contacts-widgets/textbrowser.cpp:76
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr "ბმულის URL-ის კოპირება"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:102
+#: akonadi-contacts-widgets/textbrowser.cpp:103
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr "ფოტოს კოპირება"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:105
+#: akonadi-contacts-widgets/textbrowser.cpp:106
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"

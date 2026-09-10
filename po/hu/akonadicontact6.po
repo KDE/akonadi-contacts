@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-09-10 00:47+0000\n"
 "PO-Revision-Date: 2025-11-07 21:00+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -107,58 +107,58 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:204
+#: akonadi-contacts-core/standardcontactformatter.cpp:205
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "Címjegyzék"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:203
+#: akonadi-contacts-core/standardcontactformatter.cpp:204
 #, kde-format
 msgid "Anniversary"
 msgstr "Évforduló"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:198
+#: akonadi-contacts-core/standardcontactformatter.cpp:199
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Asszisztens neve"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:199
+#: akonadi-contacts-core/standardcontactformatter.cpp:200
 #, kde-format
 msgid "Manager's Name"
 msgstr "Menedzser neve"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:201
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "Office"
 msgstr "Iroda"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:197
+#: akonadi-contacts-core/standardcontactformatter.cpp:198
 #, kde-format
 msgid "Profession"
 msgstr "Foglalkozás"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:200
+#: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Partner neve"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:261
+#: akonadi-contacts-core/standardcontactformatter.cpp:262
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "igen"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:263
+#: akonadi-contacts-core/standardcontactformatter.cpp:264
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -193,23 +193,23 @@ msgstr "Honlap"
 msgid "Blog Feed"
 msgstr "Hírcsatorna"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:167
+#: akonadi-contacts-core/standardcontactformatter.cpp:168
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Cím megjelenítése a térképen"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:185
 #, kde-format
 msgid "Notes"
 msgstr "Megjegyzések"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:190
+#: akonadi-contacts-core/standardcontactformatter.cpp:191
 #, kde-format
 msgid "Department"
 msgstr "Osztály"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:202
+#: akonadi-contacts-core/standardcontactformatter.cpp:203
 #, kde-format
 msgid "IM Address"
 msgstr "Azonnali üzenetküldési cím"
@@ -1184,7 +1184,7 @@ msgstr ""
 "Már szerepel névjegy ezzel az e-mail címmel (<email>%1</email>) a "
 "címjegyzékben."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
 #, kde-format
 msgctxt "@info"
@@ -1195,21 +1195,21 @@ msgstr ""
 "Létre kell hoznia egy címjegyzéket névjegyek felvétele előtt. Szeretne "
 "létrehozni most egyet?"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Nincs elérhető címjegyzék"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Címjegyzék létrehozása"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:129
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
 #, kde-format
@@ -1217,7 +1217,7 @@ msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Címjegyzék hozzáadása"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:230
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1227,32 +1227,32 @@ msgstr ""
 "<para>A(z) „%1” névjegy sikeresen létrejött a címjegyzékben.</"
 "para><para>Szeretné szerkeszteni az új névjegyet?</para>"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Szerkesztés"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Befejezés"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "A névjegy nem tárolható: %1"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "Nem sikerült eltárolni a névjegyet"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:268
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Névjegy létrehozva"
@@ -1384,7 +1384,7 @@ msgid "Properties of Address Book Folder %1"
 msgstr "A(z) %1 címjegyzékmappa tulajdonságai"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:291
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
@@ -1397,7 +1397,7 @@ msgid "Copy the selected contacts to the clipboard."
 msgstr "A kijelölt névjegyek másolása a vágólapra."
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:302
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
@@ -1435,7 +1435,7 @@ msgid "Contact deletion failed"
 msgstr "A névjegy törlése nem sikerült"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:305
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
@@ -1537,68 +1537,68 @@ msgstr "A névjegy nem illeszthető be: %1"
 msgid "Paste failed"
 msgstr "Sikertelen beillesztés"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:295
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:299
 #, kde-format
 msgid "Copy Contact To"
 msgstr "Névjegy másolása ide"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:309
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:313
 #, kde-format
 msgid "Move Contact To"
 msgstr "Névjegy mozgatása ide"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:317
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:554
 #, kde-format
 msgid "Edit Contact..."
 msgstr "Névjegy szerkesztése…"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:321
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "Csoport másolása"
 msgstr[1] "%1 csoport másolása"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:325
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:329
 #, kde-format
 msgid "Copy Group To"
 msgstr "Csoport másolása ide"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:332
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "Csoport törlése"
 msgstr[1] "%1 csoport törlése"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:335
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "Csoport kivágása"
 msgstr[1] "%1 csoport kivágása"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:339
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:343
 #, kde-format
 msgid "Move Group To"
 msgstr "Csoport mozgatása ide"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:347
 #, kde-format
 msgid "Edit Group..."
 msgstr "Csoport szerkesztése…"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:529
 #, kde-format
 msgid "New &Contact..."
 msgstr "Új &névjegy…"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:531
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1607,12 +1607,12 @@ msgstr ""
 "Új névjegy létrehozása<p>Megjelenik egy párbeszédablak, amiben megadhat "
 "adatokat egy személyről, beleértve a címeket és telefonszámokat.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
 msgid "New &Group..."
 msgstr "Új &csoport…"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:543
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1621,7 +1621,7 @@ msgstr ""
 "Új csoport létrehozása<p>Megjelenik egy párbeszédablak, ahol hozzáadhat egy "
 "új névjegycsoportot.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:556
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
@@ -1644,19 +1644,19 @@ msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr "E-mail cím másolása"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:75
+#: akonadi-contacts-widgets/textbrowser.cpp:76
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr "Hivatkozás URL másolása"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:102
+#: akonadi-contacts-widgets/textbrowser.cpp:103
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr "Fénykép másolása"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:105
+#: akonadi-contacts-widgets/textbrowser.cpp:106
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"

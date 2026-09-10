@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-09-10 00:47+0000\n"
 "PO-Revision-Date: 2024-12-20 21:51+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -107,58 +107,58 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:204
+#: akonadi-contacts-core/standardcontactformatter.cpp:205
 #: akonadi-contacts-widgets/contactgroupviewer.cpp:66
 #, kde-format
 msgid "Address Book"
 msgstr "पता पुस्तिका"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:203
+#: akonadi-contacts-core/standardcontactformatter.cpp:204
 #, kde-format
 msgid "Anniversary"
 msgstr "वार्षिकी"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:198
+#: akonadi-contacts-core/standardcontactformatter.cpp:199
 #, kde-format
 msgid "Assistant's Name"
 msgstr "सहायक का नाम"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:199
+#: akonadi-contacts-core/standardcontactformatter.cpp:200
 #, kde-format
 msgid "Manager's Name"
 msgstr "प्रबन्धकस्य नाम"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:201
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "Office"
 msgstr "कार्यालयं"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:197
+#: akonadi-contacts-core/standardcontactformatter.cpp:198
 #, kde-format
 msgid "Profession"
 msgstr "व्यवसाय"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:200
+#: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "भागीदारस्य नाम"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:261
+#: akonadi-contacts-core/standardcontactformatter.cpp:262
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "आम्‌"
 
 #: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:263
+#: akonadi-contacts-core/standardcontactformatter.cpp:264
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -193,23 +193,23 @@ msgstr "मुखपृष्ठ"
 msgid "Blog Feed"
 msgstr "ब्लॉग फीड"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:167
+#: akonadi-contacts-core/standardcontactformatter.cpp:168
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "नक्शे पता दर्शयतु"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:185
 #, kde-format
 msgid "Notes"
 msgstr "टिप्पणियाँ"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:190
+#: akonadi-contacts-core/standardcontactformatter.cpp:191
 #, kde-format
 msgid "Department"
 msgstr "विभागः"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:202
+#: akonadi-contacts-core/standardcontactformatter.cpp:203
 #, kde-format
 msgid "IM Address"
 msgstr "IM पता"
@@ -1184,7 +1184,7 @@ msgid ""
 msgstr ""
 "<email>%1</email> इति ईमेल-सङ्केतेन सह सम्पर्कः भवतः पतापुस्तिकायां पूर्वमेव अस्ति ।"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:122
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
 #, kde-format
 msgctxt "@info"
@@ -1194,21 +1194,21 @@ msgid ""
 msgstr ""
 "सम्पर्कं योजयितुं पूर्वं भवद्भिः पतापुस्तकं निर्मातव्यम् । किं भवन्तः पतापुस्तकं निर्मातुम् इच्छन्ति ?"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "पतापुस्तिका उपलब्धा नास्ति"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "पतापुस्तिका रचयन्तु"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:128
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:129
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
 #, kde-format
@@ -1216,7 +1216,7 @@ msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "पतापुस्तकं योजयतु"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:230
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1226,32 +1226,32 @@ msgstr ""
 "<para>\"%1\" इत्यस्य सम्पर्कः भवतः पतापुस्तके सफलतया योजितः ।</para><para>किं भवान् "
 "इदानीं एतत् नूतनं सम्पर्कं सम्पादयितुम् इच्छति?</para>"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:238
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "सम्पादन"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "समापन"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "सम्पर्कः संग्रहीतुं न शक्यते: %1"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:260
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "सम्पर्कस्य संग्रहणं कर्तुं असफलः"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:267
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:268
 #, kde-format
 msgid "Contact created successfully"
 msgstr "सम्पर्क सफलतया निर्मित"
@@ -1378,7 +1378,7 @@ msgid "Properties of Address Book Folder %1"
 msgstr "पतापुस्तिकापुटस्य गुणाः %1"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:291
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
@@ -1391,7 +1391,7 @@ msgid "Copy the selected contacts to the clipboard."
 msgstr "चयनितसम्पर्कं क्लिप्बोर्ड् प्रति प्रतिलिख्यताम् ।"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:302
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
@@ -1429,7 +1429,7 @@ msgid "Contact deletion failed"
 msgstr "सम्पर्कविलोपनं विफलम्"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:305
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
@@ -1529,68 +1529,68 @@ msgstr "सम्पर्कं चिनोतु न शक्तम्: %1"
 msgid "Paste failed"
 msgstr "पेस्ट् असफलम् अभवत्"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:295
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:299
 #, kde-format
 msgid "Copy Contact To"
 msgstr "Copy Contact To"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:309
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:313
 #, kde-format
 msgid "Move Contact To"
 msgstr "Move Contact To"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:317
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:554
 #, kde-format
 msgid "Edit Contact..."
 msgstr "सम्पादयतु सम्पर्क..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:321
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "प्रतिलिपि समूह"
 msgstr[1] "%1 समूहाः प्रतिलिख्यताम्"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:325
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:329
 #, kde-format
 msgid "Copy Group To"
 msgstr "समूहं प्रति प्रतिलिख्यताम्"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:332
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "समूहं विलोपयन्तु"
 msgstr[1] "%1 समूहान् विलोपयन्तु"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:335
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "कट ग्रुप"
 msgstr[1] "%1 समूहान् कटयतु"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:339
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:343
 #, kde-format
 msgid "Move Group To"
 msgstr "समूहं प्रति चालयन्तु"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:347
 #, kde-format
 msgid "Edit Group..."
 msgstr "सम्पादन समूह..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:529
 #, kde-format
 msgid "New &Contact..."
 msgstr "नवीन &संपर्क..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:531
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1599,12 +1599,12 @@ msgstr ""
 "नूतनं सम्पर्कं रचयन्तु<p> भवद्भ्यः एकः संवादः प्रस्तुतः भविष्यति यत्र भवन्तः कस्यचित् व्यक्तिस्य "
 "विषये दत्तांशं योजयितुं शक्नुवन्ति, यत्र पताः, दूरभाषसङ्ख्याः च सन्ति ।</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
 msgid "New &Group..."
 msgstr "नवीन &समूह..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:543
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1613,7 +1613,7 @@ msgstr ""
 "नूतनं समूहं रचयन्तु<p> भवन्तः एकं संवादं प्रस्तुतं भविष्यन्ति यत्र भवन्तः नूतनं सम्पर्कसमूहं योजयितुं "
 "शक्नुवन्ति ।</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:556
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
@@ -1635,19 +1635,19 @@ msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr "ईमेल पता प्रतिलिपि कुर्वन्तु"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:75
+#: akonadi-contacts-widgets/textbrowser.cpp:76
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr "लिङ्क URL प्रतिलिपि कुर्वन्तु"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:102
+#: akonadi-contacts-widgets/textbrowser.cpp:103
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr "प्रतिलिपि फोटो"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:105
+#: akonadi-contacts-widgets/textbrowser.cpp:106
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
