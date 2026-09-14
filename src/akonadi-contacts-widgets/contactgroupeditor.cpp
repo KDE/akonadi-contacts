@@ -249,7 +249,7 @@ void ContactGroupEditor::loadContactGroup(const Akonadi::Item &item)
     job->fetchScope().fetchFullPayload();
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
 
-    connect(job, &ItemModifyJob::result, this, [this](KJob *job) {
+    connect(job, &ItemFetchJob::result, this, [this](KJob *job) {
         d->itemFetchDone(job);
     });
 
