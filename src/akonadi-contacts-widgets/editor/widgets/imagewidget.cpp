@@ -50,11 +50,10 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
 {
     QImage image;
 
+    (*ok) = false;
     if (url.isEmpty()) {
         return image;
     }
-
-    (*ok) = false;
 
     if (url.isLocalFile()) {
         if (image.load(url.toLocalFile())) {
