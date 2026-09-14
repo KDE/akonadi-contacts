@@ -112,7 +112,8 @@ void TextBrowser::contextMenuEvent(QContextMenuEvent *event)
                 // telephone number.  See
                 // kdepim/kaddressbook/grantlee/grantleecontactformatter.cpp and
                 // kdepimlibs/akonadi/contact/standardcontactformatter.cpp
-                text.remove(QRegularExpression(QStringLiteral("\\s*\\(SMS\\)$")));
+                static const QRegularExpression reg(QStringLiteral("\\s*\\(SMS\\)$"));
+                text.remove(reg);
 
                 // For an item which was formatted with line breaks (as <br>
                 // in HTML), the returned text contains the character 0x2028
