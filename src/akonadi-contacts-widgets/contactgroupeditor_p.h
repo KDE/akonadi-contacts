@@ -33,7 +33,6 @@ public:
     void parentCollectionFetchDone(KJob *job);
     void storeDone(KJob *job);
     void itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &notUsed);
-    void memberChanged();
     void setReadOnly(bool);
 
     void adaptHeaderSizes();
