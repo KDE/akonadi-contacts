@@ -192,6 +192,7 @@ void ImageWidget::dropEvent(QDropEvent *event)
         mPicture.setData(qvariant_cast<QImage>(mimeData->imageData()));
         mHasImage = true;
         updateView();
+        return;
     }
 
     const QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(mimeData);
