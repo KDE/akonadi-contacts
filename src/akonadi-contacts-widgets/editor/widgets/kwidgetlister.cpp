@@ -165,6 +165,9 @@ void KWidgetLister::removeWidget(QWidget *widget)
     }
 
     const int index = d->mWidgetList.indexOf(widget);
+    if (index < 0) {
+        return;
+    }
     QWidget *w = d->mWidgetList.takeAt(index);
     w->deleteLater();
     w = nullptr;
