@@ -64,8 +64,9 @@ KContacts::PhoneNumber::Type PhoneTypeDialog::type() const
 {
     KContacts::PhoneNumber::Type type = {};
 
-    for (int i = 0; i < mGroup->buttons().count(); ++i) {
-        auto box = qobject_cast<QCheckBox *>(mGroup->buttons().at(i));
+    const auto buttons = mGroup->buttons();
+    for (int i = 0; i < buttons.count(); ++i) {
+        auto box = qobject_cast<QCheckBox *>(buttons.at(i));
         if (box && box->isChecked()) {
             type |= mTypeList[i];
         }
