@@ -32,12 +32,9 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     auto page = new QWidget(this);
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
-    auto layout = new QVBoxLayout(page);
-    layout->setContentsMargins({});
 
     auto box = new QGroupBox(i18nc("street/postal", "Address Types"), page);
     mainLayout->addWidget(box);
-    layout->addWidget(box);
     mGroup = new QButtonGroup(box);
     mGroup->setExclusive(false);
 
