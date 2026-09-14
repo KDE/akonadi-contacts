@@ -24,11 +24,9 @@ CustomFieldsModel::~CustomFieldsModel() = default;
 
 void CustomFieldsModel::setCustomFields(const CustomField::List &customFields)
 {
-    Q_EMIT layoutAboutToBeChanged();
-
+    beginResetModel();
     mCustomFields = customFields;
-
-    Q_EMIT layoutChanged();
+    endResetModel();
 }
 
 CustomField::List CustomFieldsModel::customFields() const
