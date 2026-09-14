@@ -34,7 +34,6 @@
 #include <QVBoxLayout>
 
 using namespace Akonadi;
-using namespace Akonadi;
 
 class Akonadi::ContactViewerPrivate
 {

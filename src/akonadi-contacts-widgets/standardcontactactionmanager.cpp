@@ -25,7 +25,6 @@
 #include <QPointer>
 
 using namespace Akonadi;
-using namespace Akonadi;
 class Akonadi::StandardContactActionManagerPrivate
 {
 public:
