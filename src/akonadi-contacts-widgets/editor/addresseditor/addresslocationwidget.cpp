@@ -171,6 +171,7 @@ void AddressLocationWidget::setReadOnly(bool readOnly)
     mStreetEdit->setReadOnly(readOnly);
     mCountryCombo->setEnabled(!readOnly);
     mTypeCombo->setEnabled(!readOnly);
+    mRemoveAddress->setEnabled(!readOnly);
 
     mAddAddress->setEnabled(!readOnly);
     mModifyAddress->setEnabled(!readOnly);
