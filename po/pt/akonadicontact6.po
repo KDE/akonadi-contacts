@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabcakonadi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:47+0000\n"
+"POT-Creation-Date: 2026-09-15 00:44+0000\n"
 "PO-Revision-Date: 2022-03-27 00:22+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -106,7 +106,7 @@ msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
 #: akonadi-contacts-core/standardcontactformatter.cpp:205
-#: akonadi-contacts-widgets/contactgroupviewer.cpp:66
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:65
 #, kde-format
 msgid "Address Book"
 msgstr "Livro de Endereços"
@@ -223,7 +223,7 @@ msgstr ""
 "O que deseja fazer?"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:166
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:138
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
 #, fuzzy, kde-format
 #| msgid "Take over changes"
 msgctxt "@action:button"
@@ -231,7 +231,7 @@ msgid "Take over changes"
 msgstr "Sobrepor as alterações"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:167
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:139
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:138
 #, fuzzy, kde-format
 #| msgid "Ignore and Overwrite changes"
 msgctxt "@action:button"
@@ -239,7 +239,7 @@ msgid "Ignore and Overwrite changes"
 msgstr "Ignorar e sobrepor as alterações"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:281
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:293
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:292
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
@@ -319,7 +319,7 @@ msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Não Cancelar"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
 #, kde-format
 msgid ""
 "The contact group has been changed by someone else.\n"
@@ -328,12 +328,12 @@ msgstr ""
 "O grupo de contactos foi alterado por terceiros.\n"
 "O que deseja fazer?"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:178
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:177
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "O nome do grupo de contactos não deverá estar em branco."
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:294
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:293
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr ""
@@ -372,13 +372,13 @@ msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "Editar o Grupo de Contactos"
 
-#: akonadi-contacts-widgets/contactgroupviewer.cpp:52
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:51
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
 msgstr "Grupo de Contactos %1"
 
-#: akonadi-contacts-widgets/contactviewer.cpp:64
+#: akonadi-contacts-widgets/contactviewer.cpp:63
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
@@ -396,7 +396,7 @@ msgid "Remove Address"
 msgstr "Remover o Endereço"
 
 #: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:281
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:282
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Deseja mesmo apagar este endereço?"
@@ -476,7 +476,7 @@ msgctxt "street/postal"
 msgid "Edit Address Type"
 msgstr "Editar o Tipo de Endereço"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:38
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:36
 #, kde-format
 msgctxt "street/postal"
 msgid "Address Types"
@@ -712,13 +712,13 @@ msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Confirmar a Remoção"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:193
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:191
 #, kde-format
 msgctxt "custom field title"
 msgid "Title"
 msgstr "Título"
 
-#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:193
 #, kde-format
 msgctxt "custom field value"
 msgid "Value"
@@ -1111,19 +1111,19 @@ msgctxt "@label The partner's name of a contact"
 msgid "Partner's name:"
 msgstr "Nome do parceiro:"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:77
 #, kde-format
 msgid "This contact's image cannot be found."
 msgstr "Não foi possível encontrar a imagem deste contacto."
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:118
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:117
 #, fuzzy, kde-format
 #| msgid "The photo of the contact (click to change)"
 msgctxt "@info:tooltip"
 msgid "The photo of the contact (click to change)"
 msgstr "A fotografia do contacto (carregue para alterar)"
 
-#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:120
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
 #, fuzzy, kde-format
 #| msgid "The logo of the company (click to change)"
 msgctxt "@info:tooltip"
@@ -1268,7 +1268,7 @@ msgstr "Criar o Livro de Endereços"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:129
 #: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:190
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
@@ -1297,13 +1297,13 @@ msgid "Finish"
 msgstr "Terminar"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Não é possível gravar o contacto: %1"
 
 #: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:467
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
 #, fuzzy, kde-format
 #| msgid "Failed to store contact"
 msgctxt "@title:window"
@@ -1315,12 +1315,12 @@ msgstr "Não foi possível gravar o contacto"
 msgid "Contact created successfully"
 msgstr "O contacto foi criado com sucesso"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:94
 #, kde-format
 msgid "Add Address Book Folder..."
 msgstr "Adicionar uma Pasta ao Livro de Endereços..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:97
 #, kde-format
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
@@ -1328,50 +1328,50 @@ msgstr ""
 "Adicionar uma nova sub-pasta na pasta seleccionada de momento no livro de "
 "endereços."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:100
 #, kde-format
 msgctxt "@title:window"
 msgid "New Address Book Folder"
 msgstr "Nova Pasta do Livro de Endereços"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:105
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:104
 #, kde-format
 msgid "Could not create address book folder: %1"
 msgstr "Não foi possível criar a pasta do livro de endereços: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:109
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:108
 #, kde-format
 msgid "Address book folder creation failed"
 msgstr "A criação da pasta do livro de endereços foi mal-sucedida"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:115
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:114
 #, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
 msgstr[0] "Copiar a Pasta do Livro de Endereços"
 msgstr[1] "Copiar as %1 Pastas do Livro de Endereços"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:116
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
 msgstr ""
 "Copia as pastas do livro de endereços seleccionadas para a área de "
 "transferência."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:120
 #, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
 msgstr[0] "Apagar a Pasta do Livro de Endereços"
 msgstr[1] "Apagar as %1 Pastas do Livro de Endereços"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:122
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
 msgstr ""
 "Apaga as pastas do livro de endereços seleccionadas do livro de endereços."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:126
 #, kde-format
 msgid ""
 "Do you really want to delete this address book folder and all its sub-"
@@ -1386,7 +1386,7 @@ msgstr[1] ""
 "Deseja mesmo apagar as %1 pastas do livro de endereços e todas as suas sub-"
 "pastas?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete address book folder?"
@@ -1394,47 +1394,47 @@ msgid_plural "Delete address book folders?"
 msgstr[0] "Apagar a pasta do livro de endereços?"
 msgstr[1] "Apagar as pastas do livro de endereços?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:134
 #, kde-format
 msgid "Could not delete address book folder: %1"
 msgstr "Não foi possível apagar a pasta do livro de endereços: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:138
 #, kde-format
 msgid "Address book folder deletion failed"
 msgstr "A remoção da pasta do livro de endereços foi mal-sucedida"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:143
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:142
 #, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
 msgstr[0] "Actualizar a Pasta do Livro de Endereços"
 msgstr[1] "Actualizar as %1 Pastas do Livro de Endereços"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:144
 #, kde-format
 msgid "Update the content of the selected address book folders."
 msgstr "Actualizar o conteúdo da pasta dos livros de endereços seleccionados."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:147
 #, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
 msgstr[0] "Cortar a Pasta do Livro de Endereços"
 msgstr[1] "Cortar as %1 Pastas do Livro de Endereços"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:149
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
 msgstr ""
 "Cortar as pastas do livro de endereços seleccionadas do livro de endereços."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:152
 #, kde-format
 msgid "Folder Properties..."
 msgstr "Propriedades da Pasta..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:154
 #, kde-format
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
@@ -1442,46 +1442,46 @@ msgstr ""
 "Abre uma janela para editar as propriedades da pasta do livro de endereços "
 "seleccionada."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:157
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Address Book Folder %1"
 msgstr "Propriedades da Pasta do Livro de Endereços %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:291
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:160
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
 msgstr[0] "Copiar o Contacto"
 msgstr[1] "Copiar os %1 Contactos"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
 msgstr "Copia os contactos seleccionados para a área de transferência."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:302
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:164
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
 msgstr[0] "Apagar o Contacto"
 msgstr[1] "Apagar os %1 Contactos"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
 #, kde-format
 msgid "Delete the selected contacts from the address book."
 msgstr "Apagar os contactos seleccionados do livro de endereços."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:168
 #, kde-format
 msgid "Do you really want to delete the selected contact?"
 msgid_plural "Do you really want to delete %1 contacts?"
 msgstr[0] "Deseja mesmo apagar o contacto seleccionado?"
 msgstr[1] "Deseja mesmo apagar os %1 contactos?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:173
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:172
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Contact?"
@@ -1489,35 +1489,35 @@ msgid_plural "Delete Contacts?"
 msgstr[0] "Apagar o Contacto?"
 msgstr[1] "Apagar os Contactos?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:174
 #, kde-format
 msgid "Could not delete contact: %1"
 msgstr "Não foi possível apagar o contacto: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:176
 #, kde-format
 msgid "Contact deletion failed"
 msgstr "A remoção do contacto foi mal-sucedida"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:305
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:179
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
 msgstr[0] "Cortar o Contacto"
 msgstr[1] "Cortar os %1 Contactos"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
 #, kde-format
 msgid "Cut the selected contacts from the address book."
 msgstr "Cortar os contactos seleccionados do livro de endereços."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:183
 #, kde-format
 msgid "Add &Address Book..."
 msgstr "&Adicionar um Livro de Endereços..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:185
 #, kde-format
 msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
@@ -1526,24 +1526,24 @@ msgstr ""
 "Adicionar um novo livro de endereços<p>Ser-lhe-á apresentada uma janela onde "
 "poderá seleccionar o tipo de livro de endereços que será adicionado.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:194
 #, kde-format
 msgid "Could not create address book: %1"
 msgstr "Não foi possível criar um livro de endereços: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:199
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:198
 #, kde-format
 msgid "Address book creation failed"
 msgstr "A criação do livro de endereços foi mal-sucedida"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:203
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:202
 #, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
 msgstr[0] "Apa&gar o Livro de Endereços"
 msgstr[1] "Apa&gar os %1 Livros de Endereços"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:205
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:204
 #, kde-format
 msgid ""
 "Delete the selected address books<p>The currently selected address books "
@@ -1554,14 +1554,14 @@ msgstr ""
 "removidos, em conjunto com todos os contactos e grupos de contactos que "
 "contêm.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:209
 #, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
 msgstr[0] "Deseja mesmo apagar este livro de endereços?"
 msgstr[1] "Deseja mesmo apagar os %1 livros de endereços?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:214
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:213
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
@@ -1569,104 +1569,104 @@ msgid_plural "Delete Address Books?"
 msgstr[0] "Apagar o Livro de Endereços?"
 msgstr[1] "Apagar os Livros de Endereços?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:218
 #, kde-format
 msgid "Address Book Properties..."
 msgstr "Propriedades do Livro de Endereços..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:220
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
 msgstr ""
 "Abre uma janela para editar as propriedades do livro de endereços "
 "seleccionado."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:223
 #, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
 msgstr[0] "Actualizar o Livro de Endereços"
 msgstr[1] "Actualizar os %1 Livros de Endereços"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:227
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:226
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
 msgstr ""
 "Actualizar o conteúdo de todas as pastas dos livros de endereços "
 "seleccionados."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:230
 #, kde-format
 msgid "Could not paste contact: %1"
 msgstr "Não foi possível colar o contacto: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:232
 #, kde-format
 msgid "Paste failed"
 msgstr "A colagem falhou"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:295
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:299
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
 #, kde-format
 msgid "Copy Contact To"
 msgstr "Copiar o Contacto Para"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:309
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:313
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
 #, kde-format
 msgid "Move Contact To"
 msgstr "Mover o Contacto Para"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:317
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:554
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
 msgstr "Editar o Contacto..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:321
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "Copiar o Grupo"
 msgstr[1] "Copiar os %1 Grupos"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:325
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:329
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
 #, kde-format
 msgid "Copy Group To"
 msgstr "Copiar o Grupo Para"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:332
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "Apagar o Grupo"
 msgstr[1] "Apagar os %1 Grupos"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:335
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "Cortar o Grupo"
 msgstr[1] "Cortar os %1 Grupos"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:339
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:343
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
 #, kde-format
 msgid "Move Group To"
 msgstr "Mover o Grupo Para"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:347
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
 msgstr "Editar o Grupo..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:529
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
 msgstr "Novo &Contacto..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:531
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1676,12 +1676,12 @@ msgstr ""
 "adicionar os dados acerca de uma pessoa, incluindo os endereços e números de "
 "telefone.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
 msgstr "Novo &Grupo..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:543
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1690,7 +1690,7 @@ msgstr ""
 "Criar um novo grupo<p>Ser-lhe-á apresentada uma janela onde poderá adicionar "
 "um grupo de contactos novo.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:556
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
