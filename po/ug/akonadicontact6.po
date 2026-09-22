@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-15 00:44+0000\n"
-"PO-Revision-Date: 2026-05-28 16:55-0400\n"
+"PO-Revision-Date: 2026-09-22 18:02+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -807,7 +807,7 @@ msgstr "ساپ تېكىست"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
 #, kde-format
 msgid "HTML"
-msgstr "HTML"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
 #, kde-format
@@ -908,17 +908,17 @@ msgstr "دوكتور"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:68
 #, kde-format
 msgid "I"
-msgstr "I"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:69
 #, kde-format
 msgid "II"
-msgstr "II"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:70
 #, kde-format
 msgid "III"
-msgstr "III"
+msgstr ""
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:71
 #, kde-format
