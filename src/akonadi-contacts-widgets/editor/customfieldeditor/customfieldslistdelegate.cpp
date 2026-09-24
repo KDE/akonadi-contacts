@@ -172,7 +172,7 @@ void CustomFieldsListDelegate::paint(QPainter *painter, const QStyleOptionViewIt
     }
 }
 
-QSize CustomFieldsListDelegate::sizeHint([[maybe_unused]] const QStyleOptionViewItem &option, const QModelIndex &index) const
+QSize CustomFieldsListDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     QSize hint = QStyledItemDelegate::sizeHint(option, index);
     hint.setHeight(qMax(hint.height(), mButtonSize.height()));

@@ -129,7 +129,7 @@ void ContactGroupEditorPrivate::storeDone(KJob *job)
     }
 }
 
-void ContactGroupEditorPrivate::itemChanged([[maybe_unused]] const Item &item, const QSet<QByteArray> &)
+void ContactGroupEditorPrivate::itemChanged(const Item &item, const QSet<QByteArray> &)
 {
     QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
 

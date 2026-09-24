@@ -158,7 +158,7 @@ void Akonadi::AkonadiContactEditorPrivate::storeDone(KJob *job)
     Q_EMIT mParent->finished();
 }
 
-void Akonadi::AkonadiContactEditorPrivate::itemChanged([[maybe_unused]] const Akonadi::Item &item, const QSet<QByteArray> &)
+void Akonadi::AkonadiContactEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &)
 {
     QPointer<QMessageBox> dlg = new QMessageBox(mParent); // krazy:exclude=qclasses
 

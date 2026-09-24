@@ -230,7 +230,7 @@ void ContactGroupEditorDelegate::paint(QPainter *painter, const QStyleOptionView
     }
 }
 
-QSize ContactGroupEditorDelegate::sizeHint([[maybe_unused]] const QStyleOptionViewItem &option, const QModelIndex &index) const
+QSize ContactGroupEditorDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     QSize hint = QStyledItemDelegate::sizeHint(option, index);
     hint.setHeight(qMax(hint.height(), d->mButtonSize.height()));
