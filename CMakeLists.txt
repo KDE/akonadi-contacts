@@ -15,7 +15,7 @@ endif()
 
 # ECM setup
 
-set(KF_MIN_VERSION "6.28.0")
+set(KF_MIN_VERSION "6.29.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
