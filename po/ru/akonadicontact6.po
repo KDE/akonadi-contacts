@@ -105,7 +105,7 @@ msgstr "Все адреса эл. почты"
 #: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:23
 #, kde-format
 msgid "Distribution List %1"
-msgstr "Список получателей %1"
+msgstr "Список распространения %1"
 
 #: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:130
 #, kde-format
@@ -309,7 +309,7 @@ msgstr "Добавить в:"
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
-msgstr "Расположение не сохранено. Закрыть редактор?"
+msgstr "Адрес не сохранён. Закрыть редактор?"
 
 #: akonadi-contacts-widgets/contacteditordialog.cpp:182
 #: akonadi-contacts-widgets/contacteditordialog.cpp:200
@@ -364,7 +364,7 @@ msgstr ""
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:178
 #, kde-format
 msgid "The name of the contact group must not be empty."
-msgstr "Имя контакта не может быть пустым."
+msgstr "Название группы контактов не может быть пустым."
 
 #: akonadi-contacts-widgets/contactgroupeditor.cpp:294
 #, kde-format
@@ -390,7 +390,7 @@ msgstr "Содержимое группы контактов:"
 #: akonadi-contacts-widgets/contactgroupeditor.ui:66
 #, kde-format
 msgid "Search..."
-msgstr "Поиск..."
+msgstr "Поиск…"
 
 #: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
 #, kde-format
@@ -510,7 +510,7 @@ msgstr "Типы адресов"
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "Other..."
-msgstr "Другой..."
+msgstr "Другой…"
 
 #: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
 #, kde-format
@@ -787,7 +787,7 @@ msgstr "Адреса электронной почты"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
 #, kde-format
 msgid "Select..."
-msgstr "Выбрать..."
+msgstr "Выбрать…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:31
 #, kde-format
@@ -850,7 +850,7 @@ msgstr "Введите идентификатор"
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
-msgstr "Выберите..."
+msgstr "Выберите…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:51
 #, kde-format
@@ -964,7 +964,7 @@ msgstr "Имя"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:43
 #, kde-format
@@ -1094,18 +1094,18 @@ msgstr "Логотип организации (щёлкните для изме�
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:236
 #, kde-format
 msgid "Change photo..."
-msgstr "Изменить фотографию..."
+msgstr "Изменить фотографию…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
 #, kde-format
 msgid "Change URL..."
-msgstr "Изменить адрес..."
+msgstr "Изменить адрес…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:241
 #, kde-format
 msgid "Save photo..."
-msgstr "Сохранить фотографию..."
+msgstr "Сохранить фотографию…"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:244
 #, kde-format
@@ -1116,13 +1116,13 @@ msgstr "Удалить фотографию"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:249
 #, kde-format
 msgid "Change logo..."
-msgstr "Изменить логотип..."
+msgstr "Изменить логотип…"
 
 # Другой вариант -- "эмблема". --aspotashev
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:254
 #, kde-format
 msgid "Save logo..."
-msgstr "Сохранить логотип..."
+msgstr "Сохранить логотип…"
 
 # Другой вариант -- "эмблема". --aspotashev
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:257
@@ -1138,7 +1138,7 @@ msgstr "Изменение адреса изображения"
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:271
 #, kde-format
 msgid "Image URL:"
-msgstr "Адрес URL изображения:"
+msgstr "URL изображения:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:300
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:323
@@ -1178,7 +1178,7 @@ msgid ""
 "you may save the vCard into a file and import it into the address book "
 "manually."
 msgstr ""
-"Основной адрес электронной почты визитки VCard уже есть в адресной книге. "
+"Основной адрес электронной почты визитки vCard уже есть в адресной книге. "
 "Однако можно сохранить визитку в файле и импортировать её в адресную книгу "
 "вручную."
 
@@ -1277,7 +1277,7 @@ msgstr "Запись контакта успешно создана"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
 #, kde-format
 msgid "Add Address Book Folder..."
-msgstr "Добавить папку в адресную книгу..."
+msgstr "Добавить папку в адресную книгу…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
 #, kde-format
@@ -1381,8 +1381,8 @@ msgstr "Обновить содержимое выбранных папок ад
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
 msgstr[0] "Вырезать %1 папку адресной книги"
-msgstr[1] "Вырезать %1 папки адресные книги"
-msgstr[2] "Вырезать %1 папок адресных книг"
+msgstr[1] "Вырезать %1 папки адресной книги"
+msgstr[2] "Вырезать %1 папок адресной книги"
 msgstr[3] "Вырезать папку адресной книги"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
@@ -1393,7 +1393,7 @@ msgstr "Вырезать выбранные папки из адресной к�
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Свойства папки..."
+msgstr "Свойства папки…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
 #, kde-format
@@ -1484,7 +1484,7 @@ msgstr "Вырезать выбранные контакты из адресно
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
-msgstr "Добавить &адресную книгу..."
+msgstr "Добавить &адресную книгу…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
@@ -1522,7 +1522,7 @@ msgid ""
 "</p>"
 msgstr ""
 "Удалить адресные книги<p>Выбранные адресные книги будут удалены вместе со "
-"всеми контактами и группами контактов в ней.</p>"
+"всеми контактами и группами контактов в них.</p>"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
 #, kde-format
@@ -1546,7 +1546,7 @@ msgstr[3] "Удаление адресной книги"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
-msgstr "Свойства адресной книги..."
+msgstr "Свойства адресной книги…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
@@ -1593,7 +1593,7 @@ msgstr "Переместить контакт в"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
-msgstr "Изменить контакт..."
+msgstr "Изменить контакт…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
 #, kde-format
@@ -1637,12 +1637,12 @@ msgstr "Переместить группу в"
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
-msgstr "Изменить группу..."
+msgstr "Изменить группу…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
-msgstr "Создать &контакт..."
+msgstr "Создать &контакт…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
 #, kde-format
@@ -1656,7 +1656,7 @@ msgstr ""
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
-msgstr "Создать &группу контактов..."
+msgstr "Создать &группу контактов…"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
 #, kde-format
@@ -1705,7 +1705,7 @@ msgstr "Копировать фотографию"
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
-msgstr "Копировать штрихкод"
+msgstr "Копировать QR-код"
 
 #: akonadi-contacts-widgets/waitingoverlay.cpp:35
 #, kde-format
