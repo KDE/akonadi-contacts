@@ -26,15 +26,15 @@ using namespace Akonadi;
 
 GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     : QWidget(parent)
-    , mPhoneListWidget(new PhoneListWidget(this))
-    , mWebListWidget(new WebListWidget(this))
-    , mMessagingListWidget(new MessagingListWidget(this))
-    , mMailListWidget(new MailListWidget(this))
-    , mPhotoWidget(new ImageWidget(ImageWidget::Photo, this))
     , mNameWidget(new NameWidget(this))
     , mNickNameWidget(new NicknameWidget(this))
+    , mPhoneListWidget(new PhoneListWidget(this))
+    , mMessagingListWidget(new MessagingListWidget(this))
+    , mWebListWidget(new WebListWidget(this))
+    , mMailListWidget(new MailListWidget(this))
     , mBlogFeedWidget(new BlogfeedWidget(this))
     , mMessageFormattingWidget(new MessageFormattingWidget(this))
+    , mPhotoWidget(new ImageWidget(ImageWidget::Photo, this))
 {
     auto topLayout = new QHBoxLayout(this);
 

@@ -42,15 +42,15 @@ public:
     [[nodiscard]] DisplayNameEditWidget::DisplayType displayType() const;
 
 private:
-    PhoneListWidget *mPhoneListWidget = nullptr;
-    WebListWidget *mWebListWidget = nullptr;
-    MessagingListWidget *mMessagingListWidget = nullptr;
-    MailListWidget *mMailListWidget = nullptr;
-    ImageWidget *mPhotoWidget = nullptr;
     NameWidget *mNameWidget = nullptr;
     NicknameWidget *mNickNameWidget = nullptr;
+    PhoneListWidget *mPhoneListWidget = nullptr;
+    MessagingListWidget *mMessagingListWidget = nullptr;
+    WebListWidget *mWebListWidget = nullptr;
+    MailListWidget *mMailListWidget = nullptr;
     BlogfeedWidget *mBlogFeedWidget = nullptr;
-    CategoriesEditWidget *mCategoriesWidget = nullptr;
     MessageFormattingWidget *mMessageFormattingWidget = nullptr;
+    CategoriesEditWidget *mCategoriesWidget = nullptr;
+    ImageWidget *mPhotoWidget = nullptr;
 };
 }
