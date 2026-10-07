@@ -10,7 +10,7 @@ Dependencies:
     'frameworks/kcodecs': 'Frameworks/6.24'
     'frameworks/kcolorscheme': 'Frameworks/6.24'
     'pim/akonadi': '@same'
-    'pim/kmime': '@same'
+    'frameworks/kmime': '@same'
     'pim/grantleetheme': '@same'
     'frameworks/ktexttemplate': '@stable'
     'libraries/ktextaddons': '@latest-kf6'
