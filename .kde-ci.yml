@@ -12,7 +12,7 @@ Dependencies:
     'pim/akonadi': '@same'
     'frameworks/kmime': '@same'
     'pim/grantleetheme': '@same'
-    'frameworks/ktexttemplate': '@stable'
+    'frameworks/ktexttemplate': 'Frameworks/6.24'
     'libraries/ktextaddons': '1.9'
 
 Options:
