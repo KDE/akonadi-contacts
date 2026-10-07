@@ -184,6 +184,7 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(serializers)
+add_subdirectory(contact-plugin)
 
 ecm_qt_install_logging_categories(
         EXPORT AKONADICONTACTS
