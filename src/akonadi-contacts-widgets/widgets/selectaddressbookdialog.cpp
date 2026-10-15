@@ -14,7 +14,7 @@
 using namespace Akonadi;
 namespace
 {
-static const char mySelectAddressBookDialogGroupName[] = "SelectAddressBookDialog";
+const char mySelectAddressBookDialogGroupName[] = "SelectAddressBookDialog";
 }
 class Akonadi::SelectAddressBookDialogPrivate
 {

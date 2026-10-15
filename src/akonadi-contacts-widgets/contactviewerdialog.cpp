@@ -23,7 +23,7 @@ using namespace Akonadi;
 
 namespace
 {
-static const char myContactViewerDialogGroupName[] = "ContactViewer";
+const char myContactViewerDialogGroupName[] = "ContactViewer";
 }
 class Akonadi::ContactViewerDialogPrivate
 {

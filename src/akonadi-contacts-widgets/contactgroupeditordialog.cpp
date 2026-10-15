@@ -29,7 +29,7 @@ using namespace Akonadi;
 
 namespace
 {
-static const char myContactGroupEditorDialogGroupName[] = "ContactGroupEditorDialog";
+const char myContactGroupEditorDialogGroupName[] = "ContactGroupEditorDialog";
 }
 class Akonadi::ContactGroupEditorDialogPrivate
 {
