@@ -9,6 +9,7 @@
 
 #include "leafextensionproxymodel_p.h"
 
+#include <QMap>
 #include <QSet>
 
 using namespace Akonadi;

@@ -9,10 +9,13 @@
 #pragma once
 
 #include "akonadi_contact_widgets_private_export.h"
-#include <KContacts/Addressee>
 #include <QWidget>
 class QComboBox;
 class QCheckBox;
+namespace KContacts
+{
+class Addressee;
+}
 namespace Akonadi
 {
 class AKONADI_CONTACT_WIDGETS_TESTS_EXPORT MessageFormattingWidget : public QWidget

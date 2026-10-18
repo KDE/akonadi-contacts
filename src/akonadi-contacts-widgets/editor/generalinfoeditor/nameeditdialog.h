@@ -11,13 +11,10 @@
 #include "displaynameeditwidget.h"
 #include <QDialog>
 
-#include <KContacts/Addressee>
-
 class QLineEdit;
 class KComboBox;
 namespace Akonadi
 {
-class DisplayNameEditWidget;
 class NameEditDialog : public QDialog
 {
     Q_OBJECT

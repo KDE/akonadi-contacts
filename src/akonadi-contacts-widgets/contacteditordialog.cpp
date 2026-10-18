@@ -10,7 +10,6 @@
 
 #include "contacteditor.h"
 #include <Akonadi/CollectionComboBox>
-#include <Akonadi/Item>
 
 #include <KContacts/Addressee>
 
@@ -22,7 +21,6 @@
 #include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QLabel>
-#include <QPushButton>
 #include <QVBoxLayout>
 
 using namespace Akonadi;

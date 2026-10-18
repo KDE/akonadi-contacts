@@ -8,11 +8,11 @@
 
 #include "categorieseditwidget.h"
 
-#include <Akonadi/Item>
 #include <Akonadi/Tag>
+#include <Akonadi/TagCreateJob>
 #include <Akonadi/TagWidget>
+#include <KContacts/Addressee>
 #include <QHBoxLayout>
-#include <akonadi/tagcreatejob.h>
 using namespace Akonadi;
 CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
     : QWidget(parent)

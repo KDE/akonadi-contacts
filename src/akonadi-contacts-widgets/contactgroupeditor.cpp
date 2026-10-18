@@ -27,6 +27,7 @@
 #include <KMessageBox>
 
 #include <QMessageBox>
+#include <QPointer>
 #include <QTimer>
 
 using namespace Akonadi;

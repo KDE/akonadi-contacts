@@ -12,6 +12,7 @@
 
 #include <memory>
 
+class QWidget;
 namespace KContacts
 {
 class Addressee;
@@ -20,9 +21,6 @@ class Addressee;
 namespace Akonadi
 {
 class Collection;
-}
-namespace Akonadi
-{
 class AddContactJobPrivate;
 
 /*!

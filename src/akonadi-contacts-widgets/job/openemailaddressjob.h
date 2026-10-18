@@ -12,6 +12,7 @@
 
 #include <memory>
 
+class QWidget;
 namespace Akonadi
 {
 class OpenEmailAddressJobPrivate;

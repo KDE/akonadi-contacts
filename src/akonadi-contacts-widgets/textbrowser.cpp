@@ -12,10 +12,11 @@
 #include <QAction>
 #include <QUrl>
 
-#include <QApplication>
 #include <QClipboard>
 #include <QContextMenuEvent>
+#include <QGuiApplication>
 #include <QMenu>
+#include <QPixmap>
 #include <QRegularExpression>
 #include <QTextBlock>
 
@@ -30,7 +31,7 @@ TextBrowser::TextBrowser(QWidget *parent)
 void TextBrowser::slotCopyData()
 {
 #ifndef QT_NO_CLIPBOARD
-    QClipboard *clip = QApplication::clipboard();
+    QClipboard *clip = QGuiApplication::clipboard();
     // put the data into the mouse selection and the clipboard
     if (mDataToCopy.userType() == QMetaType::QPixmap) {
         clip->setPixmap(mDataToCopy.value<QPixmap>(), QClipboard::Clipboard);

@@ -12,6 +12,7 @@
 #include "addresslocationwidget.h"
 #include "addressmodel.h"
 
+#include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QMenu>

@@ -12,7 +12,6 @@
 #include <KTextTemplate/MetaType>
 #include <KTextTemplate/TemplateLoader>
 
-#include <QMetaProperty>
 #include <QVariant>
 
 KTEXTTEMPLATE_BEGIN_LOOKUP(QUrl)

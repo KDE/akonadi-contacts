@@ -8,6 +8,7 @@
 
 #include "messageformattingwidget.h"
 #include "editor/utils/utils.h"
+#include <KContacts/Addressee>
 #include <KLocalizedString>
 
 #include <QCheckBox>

@@ -12,8 +12,6 @@
 #include <QList>
 #include <QString>
 #include <QVariant>
-template<typename T>
-class QList;
 
 /*!
  * \brief A class that represents non-standard contact fields.

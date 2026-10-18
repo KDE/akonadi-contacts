@@ -10,10 +10,6 @@
 #pragma once
 
 #include "displaynameeditwidget.h"
-namespace KContacts
-{
-class Addressee;
-}
 namespace Akonadi
 {
 class ImageWidget;

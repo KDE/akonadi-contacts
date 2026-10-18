@@ -8,9 +8,12 @@
 
 #pragma once
 
-#include <KContacts/Addressee>
-#include <KJob>
 #include <QWidget>
+class KJob;
+namespace KContacts
+{
+class Addressee;
+}
 namespace Akonadi
 {
 class TagWidget;

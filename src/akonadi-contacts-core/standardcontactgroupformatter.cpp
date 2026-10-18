@@ -14,6 +14,7 @@
 
 #include <QGuiApplication>
 #include <QPalette>
+#include <QUrl>
 
 using namespace Akonadi;
 

@@ -20,9 +20,12 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QAction>
+#include <QHash>
+#include <QIcon>
 
 #include <QItemSelectionModel>
 #include <QPointer>
+#include <QSet>
 
 using namespace Akonadi;
 class Akonadi::StandardContactActionManagerPrivate

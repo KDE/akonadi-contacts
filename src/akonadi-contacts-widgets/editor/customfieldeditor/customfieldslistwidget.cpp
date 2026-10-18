@@ -12,6 +12,7 @@
 
 #include "customfieldmanager_p.h"
 #include "customfieldslistdelegate.h"
+#include "customfieldsmodel.h"
 #include <KContacts/Addressee>
 #include <QSortFilterProxyModel>
 #include <QTreeView>

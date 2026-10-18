@@ -8,6 +8,7 @@
 
 #include "messageformattingwidgettest.h"
 #include "../messageformattingwidget.h"
+#include <KContacts/Addressee>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>

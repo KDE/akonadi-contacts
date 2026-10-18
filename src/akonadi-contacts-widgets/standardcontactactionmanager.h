@@ -10,19 +10,19 @@
 
 #include "akonadi-contact-widgets_export.h"
 
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 #include <Akonadi/StandardActionManager>
-
-#include <QObject>
 
 #include <memory>
 
 class QAction;
 class KActionCollection;
+class KLocalizedString;
 class QItemSelectionModel;
 class QWidget;
 namespace Akonadi
 {
-class Item;
 class StandardContactActionManagerPrivate;
 
 /*!

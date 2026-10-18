@@ -8,10 +8,13 @@
 */
 
 #pragma once
-#include <KContacts/Addressee>
 #include <QSplitter>
 
 class QTreeView;
+namespace KContacts
+{
+class Addressee;
+}
 
 namespace Akonadi
 {

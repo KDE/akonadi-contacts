@@ -8,13 +8,14 @@
 
 #include "dateeditwidget.h"
 
-#include <KDatePicker>
 #include <KDatePickerPopup>
 
 #include <KLocalizedString>
 #include <QContextMenuEvent>
 #include <QHBoxLayout>
+#include <QIcon>
 #include <QLocale>
+#include <QMenu>
 #include <QToolButton>
 using namespace Qt::Literals::StringLiterals;
 DateView::DateView(QWidget *parent)

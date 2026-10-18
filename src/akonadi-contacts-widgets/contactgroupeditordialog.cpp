@@ -8,10 +8,8 @@
 
 #include "contactgroupeditordialog.h"
 
-#include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
 #include <Akonadi/CollectionComboBox>
-#include <Akonadi/Item>
 #include <KContacts/ContactGroup>
 #include <KLocalizedString>
 

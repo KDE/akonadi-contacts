@@ -9,18 +9,13 @@
 
 #include "emailaddressselectionwidget.h"
 
-#include "emailaddressselection_p.h"
 #include "emailaddressselectionmodel.h"
 #include "emailaddressselectionproxymodel_p.h"
 
 #include "contactsfilterproxymodel.h"
 #include "contactstreemodel.h"
-#include <Akonadi/ChangeRecorder>
 #include <Akonadi/ControlGui>
-#include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/EntityTreeView>
-#include <Akonadi/ItemFetchScope>
-#include <Akonadi/Session>
 #include <KLocalizedString>
 
 #include <QHBoxLayout>

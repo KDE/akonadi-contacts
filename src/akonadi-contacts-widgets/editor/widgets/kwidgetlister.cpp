@@ -12,7 +12,6 @@
 
 #include <QHBoxLayout>
 
-#include <QPushButton>
 #include <QVBoxLayout>
 
 #include <cassert>

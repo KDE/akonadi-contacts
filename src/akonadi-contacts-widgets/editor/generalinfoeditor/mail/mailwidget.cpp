@@ -13,6 +13,7 @@
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QHBoxLayout>
+#include <QIcon>
 #include <QToolButton>
 
 using namespace Akonadi;

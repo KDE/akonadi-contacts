@@ -11,7 +11,6 @@
 #include "job/contactgroupsearchjob.h"
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
-#include <Akonadi/ItemSearchJob>
 using namespace Akonadi;
 
 class Akonadi::ContactGroupExpandJobPrivate

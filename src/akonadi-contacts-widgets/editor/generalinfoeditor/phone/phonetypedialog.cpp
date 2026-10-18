@@ -12,6 +12,7 @@
 #include <QButtonGroup>
 #include <QCheckBox>
 #include <QDialogButtonBox>
+#include <QGridLayout>
 #include <QPushButton>
 #include <QVBoxLayout>
 

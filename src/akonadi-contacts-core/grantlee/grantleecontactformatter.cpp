@@ -27,7 +27,6 @@
 
 #include <QGuiApplication>
 #include <QLocale>
-#include <QMetaProperty>
 #include <QPalette>
 #include <QSet>
 

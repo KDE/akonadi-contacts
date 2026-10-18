@@ -18,8 +18,6 @@
 #include "nicknamewidget.h"
 #include "phone/phonelistwidget.h"
 #include "web/weblistwidget.h"
-#include <KLocalizedString>
-#include <KPluginFactory>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 using namespace Akonadi;

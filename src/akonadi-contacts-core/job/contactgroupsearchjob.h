@@ -10,7 +10,6 @@
 
 #include "akonadi-contact-core_export.h"
 
-#include <Akonadi/Item>
 #include <Akonadi/ItemSearchJob>
 #include <KContacts/ContactGroup>
 

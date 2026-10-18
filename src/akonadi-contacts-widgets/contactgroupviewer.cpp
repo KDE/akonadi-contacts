@@ -13,7 +13,6 @@
 #include "textbrowser_p.h"
 
 #include <Akonadi/CollectionFetchJob>
-#include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/Item>
 #include <Akonadi/ItemFetchScope>
 #include <KContacts/Addressee>

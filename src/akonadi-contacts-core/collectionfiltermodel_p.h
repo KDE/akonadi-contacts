@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include <QSet>
 #include <QSortFilterProxyModel>
 
 #include <Akonadi/Collection>

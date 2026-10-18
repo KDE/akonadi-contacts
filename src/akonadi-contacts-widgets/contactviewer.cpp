@@ -16,13 +16,12 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionFetchJob>
-#include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/Item>
 #include <Akonadi/ItemFetchScope>
 #include <KConfigGroup>
 #include <KContacts/Addressee>
+#include <KIO/TransferJob>
 #include <KLocalizedString>
-#include <kio/transferjob.h>
 
 #include <KConfig>
 #include <KContacts/VCardConverter>

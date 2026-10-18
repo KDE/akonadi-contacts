@@ -6,7 +6,6 @@
 
 #include "grantleecontactviewer.h"
 #include <Akonadi/GrantleeContactFormatter>
-#include <KSharedConfig>
 
 #include <GrantleeTheme/GrantleeThemeManager>
 

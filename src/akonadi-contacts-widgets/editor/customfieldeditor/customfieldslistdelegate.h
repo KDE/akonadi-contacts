@@ -9,6 +9,7 @@
 
 #pragma once
 
+#include <QIcon>
 #include <QStyledItemDelegate>
 class QAbstractItemView;
 namespace Akonadi

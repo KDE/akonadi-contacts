@@ -14,7 +14,6 @@
 #include <Akonadi/AgentType>
 #include <Akonadi/AgentTypeDialog>
 #include <Akonadi/Collection>
-#include <Akonadi/CollectionDialog>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ContactEditorDialog>
@@ -22,7 +21,9 @@
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemModifyJob>
 
+#include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
+#include <KContacts/Email>
 #include <KLocalizedString>
 #include <KMessageBox>
 

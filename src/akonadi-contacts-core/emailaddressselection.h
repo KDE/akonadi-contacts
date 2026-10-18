@@ -103,8 +103,6 @@ public:
     void setItem(const Akonadi::Item &item);
 
 private:
-    friend class EmailAddressSelectionWidget;
-
     QSharedDataPointer<EmailAddressSelectionPrivate> d;
 };
 }

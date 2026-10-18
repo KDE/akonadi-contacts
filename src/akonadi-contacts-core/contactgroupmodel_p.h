@@ -9,12 +9,14 @@
 #pragma once
 
 #include "akonadi-contact-core_export.h"
-#include <QAbstractItemModel>
 #include <QSortFilterProxyModel>
 
-#include <KContacts/ContactGroup>
-
 #include <memory>
+
+namespace KContacts
+{
+class ContactGroup;
+}
 
 namespace Akonadi
 {

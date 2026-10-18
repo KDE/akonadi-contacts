@@ -19,9 +19,11 @@
 
 #include <QGuiApplication>
 #include <QLocale>
+#include <QMap>
 #include <QPalette>
 #include <QRegularExpression>
 #include <QSet>
+#include <QUrl>
 
 using namespace Akonadi;
 

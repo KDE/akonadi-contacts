@@ -10,6 +10,7 @@
 #pragma once
 
 #include <QTextBrowser>
+#include <QVariant>
 
 namespace Akonadi
 {

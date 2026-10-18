@@ -10,7 +10,6 @@
 #include "addresslocationwidget.h"
 #include "selectaddresstypecombobox.h"
 
-#include <KComboBox>
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -18,6 +17,8 @@
 
 #include <KCountry>
 #include <QCheckBox>
+#include <QComboBox>
+#include <QGridLayout>
 #include <QLabel>
 #include <QPushButton>
 #include <QStackedWidget>
@@ -98,7 +99,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     mCountryCombo->setObjectName(QLatin1StringView("countrycombobox"));
     mCountryCombo->setEditable(false);
     mCountryCombo->setDuplicatesEnabled(false);
-    connect(mCountryCombo, &KComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
+    connect(mCountryCombo, &QComboBox::textHighlighted, this, &AddressLocationWidget::slotChanged);
     gridLayout->addWidget(mCountryCombo, 6, 1);
 
     mPreferredCheckBox = new QCheckBox(i18nc("street/postal", "This is the preferred address"), this);

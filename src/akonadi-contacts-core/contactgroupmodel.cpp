@@ -11,6 +11,7 @@
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include <KIconUtils>
 #include <KLocalizedString>

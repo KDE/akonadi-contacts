@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "customfieldsmodel.h"
+#include "customfields_p.h"
 #include <QWidget>
 class QTreeView;
 namespace KContacts

@@ -12,9 +12,9 @@
 
 #include <memory>
 
+class QWidget;
 namespace Akonadi
 {
-class Item;
 class AddEmailAddressJobPrivate;
 
 /*!

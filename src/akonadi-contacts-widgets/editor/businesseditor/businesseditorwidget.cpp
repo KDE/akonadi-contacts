@@ -11,8 +11,10 @@
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QGridLayout>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
+#include <QVBoxLayout>
 
 #include "../widgets/imagewidget.h"
 #include "freebusyeditwidget.h"
