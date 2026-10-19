@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-15 00:44+0000\n"
+"POT-Creation-Date: 2026-10-19 00:47+0000\n"
 "PO-Revision-Date: 2025-11-07 14:10+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.08.3\n"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:193
+#: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "Il membro con nome <b>%1</b> non ha un indirizzo di posta elettronica"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:238
+#: akonadi-contacts-core/contactgroupmodel.cpp:239
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "Il contatto non esiste più"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:392
+#: akonadi-contacts-core/contactgroupmodel.cpp:393
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "Nome"
 
-#: akonadi-contacts-core/contactgroupmodel.cpp:394
+#: akonadi-contacts-core/contactgroupmodel.cpp:395
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
@@ -107,109 +107,109 @@ msgid "%1 <%2>"
 msgstr "%1 <%2>"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
-#: akonadi-contacts-core/standardcontactformatter.cpp:205
-#: akonadi-contacts-widgets/contactgroupviewer.cpp:65
+#: akonadi-contacts-core/standardcontactformatter.cpp:207
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:64
 #, kde-format
 msgid "Address Book"
 msgstr "Rubrica degli indirizzi"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
-#: akonadi-contacts-core/standardcontactformatter.cpp:204
+#: akonadi-contacts-core/standardcontactformatter.cpp:206
 #, kde-format
 msgid "Anniversary"
 msgstr "Anniversario"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
-#: akonadi-contacts-core/standardcontactformatter.cpp:199
+#: akonadi-contacts-core/standardcontactformatter.cpp:201
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Nome assistente"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
-#: akonadi-contacts-core/standardcontactformatter.cpp:200
+#: akonadi-contacts-core/standardcontactformatter.cpp:202
 #, kde-format
 msgid "Manager's Name"
 msgstr "Nome manager"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
-#: akonadi-contacts-core/standardcontactformatter.cpp:202
+#: akonadi-contacts-core/standardcontactformatter.cpp:204
 #, kde-format
 msgid "Office"
 msgstr "Ufficio"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
-#: akonadi-contacts-core/standardcontactformatter.cpp:198
+#: akonadi-contacts-core/standardcontactformatter.cpp:200
 #, kde-format
 msgid "Profession"
 msgstr "Professione"
 
 #: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
-#: akonadi-contacts-core/standardcontactformatter.cpp:201
+#: akonadi-contacts-core/standardcontactformatter.cpp:203
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Nome partner"
 
-#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:183
-#: akonadi-contacts-core/standardcontactformatter.cpp:262
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:182
+#: akonadi-contacts-core/standardcontactformatter.cpp:264
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "sì"
 
-#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:185
-#: akonadi-contacts-core/standardcontactformatter.cpp:264
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:266
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
 msgstr "no"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:97
+#: akonadi-contacts-core/standardcontactformatter.cpp:99
 #, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
 msgstr[0] "(un anno)"
 msgstr[1] "(%1 anni)"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:108
+#: akonadi-contacts-core/standardcontactformatter.cpp:110
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
 msgstr "Invia SMS"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:117
+#: akonadi-contacts-core/standardcontactformatter.cpp:119
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
 msgstr "Posta elettronica"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:132
+#: akonadi-contacts-core/standardcontactformatter.cpp:134
 #, kde-format
 msgid "Homepage"
 msgstr "Homepage"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:149
+#: akonadi-contacts-core/standardcontactformatter.cpp:151
 #, kde-format
 msgid "Blog Feed"
 msgstr "Fonte blog"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:168
+#: akonadi-contacts-core/standardcontactformatter.cpp:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Mostra indirizzo sulla mappa"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:185
+#: akonadi-contacts-core/standardcontactformatter.cpp:187
 #, kde-format
 msgid "Notes"
 msgstr "Note"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:191
+#: akonadi-contacts-core/standardcontactformatter.cpp:193
 #, kde-format
 msgid "Department"
 msgstr "Reparto"
 
-#: akonadi-contacts-core/standardcontactformatter.cpp:203
+#: akonadi-contacts-core/standardcontactformatter.cpp:205
 #, kde-format
 msgid "IM Address"
 msgstr "Indirizzo MI"
@@ -224,21 +224,21 @@ msgstr ""
 "Cosa bisogna fare?"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:166
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:138
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Prendi in carico le modifiche"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:167
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:138
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:139
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignora e sovrascrivi le modifiche"
 
 #: akonadi-contacts-widgets/contacteditor.cpp:281
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:292
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:293
 #: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
@@ -250,73 +250,73 @@ msgstr "Seleziona rubrica"
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Seleziona la rubrica dove salvare il nuovo contatto:"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#: akonadi-contacts-widgets/contacteditordialog.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Nuovo contatto"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#: akonadi-contacts-widgets/contacteditordialog.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Modifica contatto"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:72
-#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
+#: akonadi-contacts-widgets/contacteditordialog.cpp:70
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:100
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Add to:"
 msgstr "Aggiungi a:"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:181
+#: akonadi-contacts-widgets/contacteditordialog.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "La posizione non è stata salvata. Vuoi chiudere l'editor?"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:182
-#: akonadi-contacts-widgets/contacteditordialog.cpp:200
-#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
+#: akonadi-contacts-widgets/contacteditordialog.cpp:180
+#: akonadi-contacts-widgets/contacteditordialog.cpp:198
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Conferma"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:183
+#: akonadi-contacts-widgets/contacteditordialog.cpp:181
 #, kde-format
 msgctxt "@action:button"
 msgid "Close Editor"
 msgstr "Chiudi editor"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:184
+#: akonadi-contacts-widgets/contacteditordialog.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Close"
 msgstr "Non chiudere"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:199
-#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
+#: akonadi-contacts-widgets/contacteditordialog.cpp:197
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:162
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Vuoi davvero annullare?"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:201
-#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Annulla la modifica"
 
-#: akonadi-contacts-widgets/contacteditordialog.cpp:202
-#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Non annulla"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
 #, kde-format
 msgid ""
 "The contact group has been changed by someone else.\n"
@@ -325,12 +325,12 @@ msgstr ""
 "Il gruppo di contatti è stato modificato da qualcun altro.\n"
 "Cosa bisogna fare?"
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:177
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:178
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Il nome del gruppo di contatti non deve essere vuoto."
 
-#: akonadi-contacts-widgets/contactgroupeditor.cpp:293
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:294
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Seleziona la rubrica dove salvare il nuovo gruppo di contatti:"
@@ -355,25 +355,25 @@ msgstr "Membri del gruppo di contatti:"
 msgid "Search..."
 msgstr "Cerca..."
 
-#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Nuovo gruppo di contatti"
 
-#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "Modifica gruppo di contatti"
 
-#: akonadi-contacts-widgets/contactgroupviewer.cpp:51
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:50
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
 msgstr "Gruppo di contatti %1"
 
-#: akonadi-contacts-widgets/contactviewer.cpp:63
+#: akonadi-contacts-widgets/contactviewer.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
@@ -385,84 +385,84 @@ msgctxt "@title:window"
 msgid "Show Contact"
 msgstr "Mostra contatto"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:64
 #, kde-format
 msgid "Remove Address"
 msgstr "Rimuovi indirizzo"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:282
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:68
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:283
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Vuoi davvero eliminare questo indirizzo?"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:47
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:48
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Street"
 msgstr "Aggiungere strada"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:58
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:59
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Post Office Box"
 msgstr "Aggiungi casella postale"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:68
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Postal Code"
 msgstr "Aggiungi CAP"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:78
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:79
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Locality"
 msgstr "Aggiungi località"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:88
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:89
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add Region"
 msgstr "Aggiungi regione"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:104
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:105
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Questo è l'indirizzo preferito"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:115
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:116
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Address"
 msgstr "Aggiungi indirizzo"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:127
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:128
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Address"
 msgstr "Rimuovi indirizzo"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:132
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:133
 #, kde-format
 msgctxt "@action:button"
 msgid "Update Address"
 msgstr "Aggiorna indirizzo"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:137
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:138
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:24
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:25
 #, kde-format
 msgctxt "street/postal"
 msgid "Edit Address Type"
 msgstr "Modifica tipo indirizzo"
 
-#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:36
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:37
 #, kde-format
 msgctxt "street/postal"
 msgid "Address Types"
@@ -481,91 +481,91 @@ msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
 msgstr "Nuovo tipo di indirizzo"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:48
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:50
 #, kde-format
 msgctxt "@label The organization of a contact"
 msgid "Organization:"
 msgstr "Organizzazione:"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:52
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:54
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add organization's name"
 msgstr "Aggiungi il nome dell'organizzazione"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:56
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
 #, kde-format
 msgctxt "@label The profession of a contact"
 msgid "Profession:"
 msgstr "Professione:"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:59
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:61
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add profession"
 msgstr "Aggiungi la professione"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:64
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
 #, kde-format
 msgctxt "@label The title of a contact"
 msgid "Title:"
 msgstr "Titolo:"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:67
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the title"
 msgstr "Aggiungi il titolo"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:72
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
 #, kde-format
 msgctxt "@label The department of a contact"
 msgid "Department:"
 msgstr "Reparto:"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:75
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:77
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the department"
 msgstr "Aggiungi il reparto"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:80
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:82
 #, kde-format
 msgctxt "@label The office of a contact"
 msgid "Office:"
 msgstr "Ufficio:"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:84
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:86
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add the office"
 msgstr "Aggiungi l'ufficio"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:89
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
 #, kde-format
 msgctxt "@label The manager's name of a contact"
 msgid "Manager's name:"
 msgstr "Nome del dirigente:"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:92
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:94
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add manager's name"
 msgstr "Aggiungi il nome del dirigente"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:97
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
 #, kde-format
 msgctxt "@label The assistant's name of a contact"
 msgid "Assistant's name:"
 msgstr "Nome dell'assistente:"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:100
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:102
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add assistant's name"
 msgstr "Aggiungi il nome dell'assistente"
 
-#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:106
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:108
 #, kde-format
 msgctxt "@label The free/busy information of a contact"
 msgid "Free/Busy:"
@@ -770,47 +770,47 @@ msgstr "Lavoro"
 msgid "Other"
 msgstr "Altro"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:31
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:32
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an Email Account"
 msgstr "Aggiungi un account di posta elettronica"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:41
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:42
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an Email"
 msgstr "Aggiungi un indirizzo di posta elettronica"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:47
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Email"
 msgstr "Rimuovi indirizzo di posta elettronica"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:23
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow remote content in received HTML messages"
 msgstr "Consenti contenuti remoti nei messaggi HTML ricevuti"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Show messages received from this contact as:"
 msgstr "Mostra i messaggi ricevuti da questo contatto come:"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:34
 #, kde-format
 msgid "Default"
 msgstr "Predefinito"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:34
 #, kde-format
 msgid "Plain Text"
 msgstr "Testo semplice"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:34
 #, kde-format
 msgid "HTML"
 msgstr "HTML"
@@ -821,117 +821,117 @@ msgctxt "@label:textbox"
 msgid "Messaging"
 msgstr "Messaggistica"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:35
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:36
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add an identifier"
 msgstr "Aggiungi un identificatore"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:41
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:42
 #, kde-format
 msgctxt "@item:inlistbox select from a list of IM protocols"
 msgid "Select..."
 msgstr "Seleziona..."
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:51
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an IM"
 msgstr "Aggiungi un IM"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:57
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove IM"
 msgstr "Rimuovi IM"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:23
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Contact Name"
 msgstr "Modifica nome del contatto"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:49
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:50
 #, kde-format
 msgid "Honorific prefixes:"
 msgstr "Prefissi onorifici:"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:50
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:51
 #, kde-format
 msgid "Given name:"
 msgstr "Nome:"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:51
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:52
 #, kde-format
 msgid "Additional names:"
 msgstr "Nomi aggiuntivi:"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:52
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:53
 #, kde-format
 msgid "Family names:"
 msgstr "Cognomi:"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:53
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:54
 #, kde-format
 msgid "Honorific suffixes:"
 msgstr "Suffissi onorifici:"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:54
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:55
 #, kde-format
 msgid "Display:"
 msgstr "Visualizzato:"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:58
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:59
 #, kde-format
 msgid "Dr."
 msgstr "Dott."
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:59
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:60
 #, kde-format
 msgid "Miss"
 msgstr "Sig.rina"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:60
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:61
 #, kde-format
 msgid "Mr."
 msgstr "Sig."
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:61
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:62
 #, kde-format
 msgid "Mrs."
 msgstr "Sig.ra"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:62
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:63
 #, kde-format
 msgid "Ms."
 msgstr "Sig.ra"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:63
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:64
 #, kde-format
 msgid "Prof."
 msgstr "Prof."
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:68
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:69
 #, kde-format
 msgid "I"
 msgstr "I"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:69
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:70
 #, kde-format
 msgid "II"
 msgstr "II"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:70
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:71
 #, kde-format
 msgid "III"
 msgstr "III"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:71
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:72
 #, kde-format
 msgid "Jr."
 msgstr "Jr."
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:72
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:73
 #, kde-format
 msgid "Sr."
 msgstr "Sr."
@@ -971,25 +971,25 @@ msgctxt "@label:textbox"
 msgid "Phone"
 msgstr "Telefono"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Phone Number"
 msgstr "Modifica numero di telefono"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:33
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Phone Number"
 msgstr "Aggiungi un numero di telefono"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:42
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Phone Number"
 msgstr "Aggiungi un numero di telefono"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:48
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:49
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Phone Number"
@@ -1006,36 +1006,36 @@ msgstr "Web"
 msgid "Profile"
 msgstr "Profilo"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:33
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a Web Site"
 msgstr "Aggiungi un sito web"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:43
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:44
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a Web Site"
 msgstr "Aggiungi un sito web"
 
-#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:49
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Web Site"
 msgstr "Rimuovi sito web"
 
-#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:24
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add date"
 msgstr "Clic per aggiungere la data"
 
-#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:35
 #, kde-format
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:55
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:56
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear"
@@ -1140,13 +1140,13 @@ msgctxt "@info:tooltip"
 msgid "Open Address Book"
 msgstr "Apri la rubrica"
 
-#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:123
 #, kde-format
 msgctxt "@label Search in a list of contacts"
 msgid "Search:"
 msgstr "Cerca:"
 
-#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:125
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search Contact..."
@@ -1174,7 +1174,7 @@ msgstr ""
 "La vCard è stata aggiunta alla rubrica; puoi aggiungere ulteriori "
 "informazioni per questa voce aprendo la rubrica."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:71
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:72
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1184,8 +1184,8 @@ msgstr ""
 "Un contatto con indirizzo di posta elettronica <email>%1</email> è già "
 "presente nella tua rubrica."
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:123
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:162
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1195,29 +1195,29 @@ msgstr ""
 "Devi creare una rubrica prima di aggiungere un contatto. Vuoi creare una "
 "rubrica?"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:124
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:163
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Nessuna rubrica disponibile"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:164
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:126
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:165
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Crea rubrica"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:129
-#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:168
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:190
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:130
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:169
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Aggiungi rubrica degli indirizzi"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:231
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1227,88 +1227,88 @@ msgstr ""
 "<para>Un contatto avente indirizzo «%1» è stato aggiunto correttamente alla "
 "tua rubrica.</para><para>Vuoi modificare subito questo nuovo contatto?</para>"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:239
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit"
 msgstr "Modifica"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:240
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:241
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Fine"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:262
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:469
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Il contatto non può essere memorizzato:  %1"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:261
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:262
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:469
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to store contact"
 msgstr "Impossibile memorizzare il contatto"
 
-#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:268
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:269
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Contatto creato correttamente"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:94
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:97
 #, kde-format
 msgid "Add Address Book Folder..."
 msgstr "Aggiungi cartella della rubrica..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:97
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:100
 #, kde-format
 msgid ""
 "Add a new address book folder to the currently selected address book folder."
 msgstr "Aggiungi una nuova cartella della rubrica nella cartella selezionata."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:100
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:103
 #, kde-format
 msgctxt "@title:window"
 msgid "New Address Book Folder"
 msgstr "Nuova cartella della rubrica"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:104
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:107
 #, kde-format
 msgid "Could not create address book folder: %1"
 msgstr "Impossibile creare la cartella della rubrica degli indirizzi: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:108
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:111
 #, kde-format
 msgid "Address book folder creation failed"
 msgstr "La creazione della cartella della rubrica non è riuscita"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:114
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
 msgstr[0] "Copia cartella della rubrica"
 msgstr[1] "Copia %1 cartelle degli indirizzi"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:116
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:119
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
 msgstr "Copia le cartelle selezionate della rubrica negli appunti."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:120
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
 msgstr[0] "Elimina cartella della rubrica"
 msgstr[1] "Elimina %1 cartelle della rubrica"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:122
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:125
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
 msgstr "Elimina le cartelle selezionate dalla rubrica degli indirizzi."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:126
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:129
 #, kde-format
 msgid ""
 "Do you really want to delete this address book folder and all its sub-"
@@ -1323,7 +1323,7 @@ msgstr[1] ""
 "Vuoi davvero eliminare queste %1 cartelle della rubrica degli indirizzi e "
 "tutte le relative sottocartelle?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:130
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete address book folder?"
@@ -1331,47 +1331,47 @@ msgid_plural "Delete address book folders?"
 msgstr[0] "Eliminare cartella della rubrica?"
 msgstr[1] "Eliminare cartelle della rubrica?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:134
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:137
 #, kde-format
 msgid "Could not delete address book folder: %1"
 msgstr "Impossibile eliminare la cartella della rubrica degli indirizzi: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:138
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:141
 #, kde-format
 msgid "Address book folder deletion failed"
 msgstr ""
 "L'eliminazione della cartella della rubrica degli indirizzi non è riuscita"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:142
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
 msgstr[0] "Aggiorna cartella della rubrica"
 msgstr[1] "Aggiorna %1 cartelle della rubrica"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:144
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:147
 #, kde-format
 msgid "Update the content of the selected address book folders."
 msgstr "Aggiorna il contenuto delle cartelle selezionata della rubrica."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:147
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
 msgstr[0] "Taglia cartella della rubrica"
 msgstr[1] "Taglia %1 cartelle della rubrica"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:149
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:152
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
 msgstr "Taglia le cartelle selezionate dalla rubrica degli indirizzi."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:152
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
 #, kde-format
 msgid "Folder Properties..."
 msgstr "Proprietà della cartella..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:154
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:157
 #, kde-format
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
@@ -1379,46 +1379,46 @@ msgstr ""
 "Apri la finestra di dialogo per modificare le proprietà della cartella "
 "selezionata della rubrica."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:157
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:160
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Address Book Folder %1"
 msgstr "Proprietà della cartella %1 della rubrica degli indirizzi"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:160
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:163
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:293
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
 msgstr[0] "Copia contatto"
 msgstr[1] "Copia %1 contatti"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:164
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
 msgstr "Copia i contatti selezionati negli appunti."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:164
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:167
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
 msgstr[0] "Elimina contatto"
 msgstr[1] "Elimina %1 contatti"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:168
 #, kde-format
 msgid "Delete the selected contacts from the address book."
 msgstr "Elimina i contatti selezionati dalla rubrica degli indirizzi."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:168
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:171
 #, kde-format
 msgid "Do you really want to delete the selected contact?"
 msgid_plural "Do you really want to delete %1 contacts?"
 msgstr[0] "Vuoi davvero eliminare il contatto selezionato?"
 msgstr[1] "Vuoi davvero eliminare i %1 contatti selezionati?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:172
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Contact?"
@@ -1426,35 +1426,35 @@ msgid_plural "Delete Contacts?"
 msgstr[0] "Eliminare contatto?"
 msgstr[1] "Eliminare i contatti?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:174
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
 #, kde-format
 msgid "Could not delete contact: %1"
 msgstr "Impossibile eliminare il contatto: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:176
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:179
 #, kde-format
 msgid "Contact deletion failed"
 msgstr "Eliminazione del contatto non riuscita"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:179
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:182
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:307
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
 msgstr[0] "Taglia contatto"
 msgstr[1] "Taglia %1 contatti"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:183
 #, kde-format
 msgid "Cut the selected contacts from the address book."
 msgstr "Taglia i contatti selezionati dalla rubrica degli indirizzi."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:183
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
 #, kde-format
 msgid "Add &Address Book..."
 msgstr "Aggiungi rubric&a degli indirizzi..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:185
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:188
 #, kde-format
 msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
@@ -1464,24 +1464,24 @@ msgstr ""
 "dialogo dalla quale potrai selezionare il tipo di rubrica che verrà aggiunta."
 "</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:194
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:197
 #, kde-format
 msgid "Could not create address book: %1"
 msgstr "Impossibile creare la rubrica degli indirizzi: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:198
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:201
 #, kde-format
 msgid "Address book creation failed"
 msgstr "La creazione della rubrica degli indirizzi non è riuscita"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:202
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:205
 #, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
 msgstr[0] "&Elimina rubrica degli indirizzi"
 msgstr[1] "&Elimina %1 rubriche degli indirizzi"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:204
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:207
 #, kde-format
 msgid ""
 "Delete the selected address books<p>The currently selected address books "
@@ -1492,14 +1492,14 @@ msgstr ""
 "indirizzi selezionate saranno eliminate, e così tutti i contatti e i gruppi "
 "che esse contengono.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:209
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:212
 #, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
 msgstr[0] "Vuoi davvero eliminare questa rubrica degli indirizzi?"
 msgstr[1] "Vuoi davvero eliminare queste %1 rubriche degli indirizzi?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:213
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:216
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
@@ -1507,104 +1507,104 @@ msgid_plural "Delete Address Books?"
 msgstr[0] "Eliminare rubrica?"
 msgstr[1] "Eliminare le rubriche?"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:218
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Address Book Properties..."
 msgstr "Proprietà della rubrica..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:220
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:223
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
 msgstr ""
 "Apri una finestra di dialogo per modificare le proprietà della rubrica degli "
 "indirizzi selezionata."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:223
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:226
 #, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
 msgstr[0] "Aggiorna rubrica degli indirizzi"
 msgstr[1] "Aggiorna %1 rubriche degli indirizzi"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:226
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:229
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
 msgstr ""
 "Aggiorna il contenuto di tutte le cartelle delle rubriche degli indirizzi "
 "selezionate."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:230
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
 #, kde-format
 msgid "Could not paste contact: %1"
 msgstr "Impossibile incollare il contatto: %1"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:232
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:235
 #, kde-format
 msgid "Paste failed"
 msgstr "Impossibile incollare"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:297
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
 #, kde-format
 msgid "Copy Contact To"
 msgstr "Copia contatto in"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:311
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:315
 #, kde-format
 msgid "Move Contact To"
 msgstr "Sposta contatto in"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:319
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:556
 #, kde-format
 msgid "Edit Contact..."
 msgstr "Modifica contatto..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:323
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "Copia gruppo"
 msgstr[1] "Copia %1 gruppi"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:327
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
 #, kde-format
 msgid "Copy Group To"
 msgstr "Copia gruppo in"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "Elimina gruppo"
 msgstr[1] "Elimina %1 gruppi"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:337
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "Taglia gruppo"
 msgstr[1] "Taglia %1 gruppi"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:341
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:345
 #, kde-format
 msgid "Move Group To"
 msgstr "Sposta gruppo in"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:349
 #, kde-format
 msgid "Edit Group..."
 msgstr "Modifica gruppo..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:531
 #, kde-format
 msgid "New &Contact..."
 msgstr "Nuovo &contatto..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:533
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1614,12 +1614,12 @@ msgstr ""
 "aggiungere tutti i dati su una persona, includi gli indirizzi e i numeri di "
 "telefono.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:544
 #, kde-format
 msgid "New &Group..."
 msgstr "Nuovo &gruppo..."
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:545
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1628,7 +1628,7 @@ msgstr ""
 "Crea un nuovo gruppo<p>Si aprirà una finestra di dialogo dove potrai "
 "aggiungere un nuovo gruppo di contatti.</p>"
 
-#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:558
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
@@ -1639,31 +1639,31 @@ msgstr ""
 "potrai modificare tutti i dati su una persona, inclusi gli indirizzi ed i "
 "numeri di telefono.</p>"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:57
+#: akonadi-contacts-widgets/textbrowser.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Copy the text of a general item"
 msgid "Copy Item"
 msgstr "Copia elemento"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:66
+#: akonadi-contacts-widgets/textbrowser.cpp:67
 #, kde-format
 msgctxt "@action:inmenu Copy a displayed email address"
 msgid "Copy Email Address"
 msgstr "Copia indirizzo di posta elettronica"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:76
+#: akonadi-contacts-widgets/textbrowser.cpp:77
 #, kde-format
 msgctxt "@action:inmenu Copy a link URL"
 msgid "Copy Link URL"
 msgstr "Copia URL del collegamento"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:103
+#: akonadi-contacts-widgets/textbrowser.cpp:104
 #, kde-format
 msgctxt "@action:inmenu Copy a contact photo"
 msgid "Copy Photo"
 msgstr "Copia foto"
 
-#: akonadi-contacts-widgets/textbrowser.cpp:106
+#: akonadi-contacts-widgets/textbrowser.cpp:107
 #, kde-format
 msgctxt "@action:inmenu Copy a QR code image"
 msgid "Copy Code"
