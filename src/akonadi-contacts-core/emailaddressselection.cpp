@@ -15,17 +15,9 @@
 
 using namespace Akonadi;
 
-EmailAddressSelectionPrivate::EmailAddressSelectionPrivate()
-{
-}
+EmailAddressSelectionPrivate::EmailAddressSelectionPrivate() = default;
 
-EmailAddressSelectionPrivate::EmailAddressSelectionPrivate(const EmailAddressSelectionPrivate &other)
-    : QSharedData(other)
-    , mName(other.mName)
-    , mEmailAddress(other.mEmailAddress)
-    , mItem(other.mItem)
-{
-}
+EmailAddressSelectionPrivate::EmailAddressSelectionPrivate(const EmailAddressSelectionPrivate &other) = default;
 
 EmailAddressSelection::EmailAddressSelection()
     : d(new EmailAddressSelectionPrivate)
@@ -34,14 +26,7 @@ EmailAddressSelection::EmailAddressSelection()
 
 EmailAddressSelection::EmailAddressSelection(const EmailAddressSelection &other) = default;
 
-EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelection &other)
-{
-    if (this != &other) {
-        d = other.d;
-    }
-
-    return *this;
-}
+EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelection &other) = default;
 
 EmailAddressSelection::~EmailAddressSelection() = default;
 
