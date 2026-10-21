@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the akonadi-contacts package.
 #
 # SPDX-FileCopyrightText: 2009, 2011 Cristina Yenyxe Gonzalez Garcia <the.blue.valkyrie@gmail.com>
-# SPDX-FileCopyrightText: 2009, 2010, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2009-2010, 2019-2026 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2010 Adrián Martínez <sfxgt3@gmail.com>
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Javier Viñal <fjvinal@gmail.com>
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: akonadicontact6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:46+0000\n"
-"PO-Revision-Date: 2025-11-08 00:57+0100\n"
+"PO-Revision-Date: 2026-10-20 12:30+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:193
 #, kde-format
@@ -1415,8 +1415,8 @@ msgstr "Copia los contactos seleccionados al portapapeles."
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
-msgstr[0] "Borra contacto"
-msgstr[1] "Borra %1 contactos"
+msgstr[0] "Borrar contacto"
+msgstr[1] "Borrar %1 contactos"
 
 #: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
 #, kde-format
