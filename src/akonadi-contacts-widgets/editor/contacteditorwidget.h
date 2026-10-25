@@ -25,7 +25,7 @@ class ContactEditorWidgetPrivate;
  *
  * \author Tobias Koenig <tokoe@kde.org>
  */
-class AKONADI_CONTACT_WIDGETS_EXPORT ContactEditorWidget : public Akonadi::AbstractContactEditorWidget
+class ContactEditorWidget : public Akonadi::AbstractContactEditorWidget
 {
     Q_OBJECT
 public:
