@@ -39,9 +39,9 @@ Q_SIGNALS:
     void preferredChanged(Akonadi::PhoneWidget *);
 
 private:
-    void slotAddPhone();
-    void slotRemovePhone();
-    void slotPreferredChanged();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotAddPhone();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotRemovePhone();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotPreferredChanged();
     PreferredLineEditWidget *mPhoneNumberEdit = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;

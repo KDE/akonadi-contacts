@@ -33,10 +33,10 @@ protected:
     QWidget *createWidget(QWidget *) override;
 
 private:
-    void slotAddWidget(PhoneWidget *w);
-    void slotRemoveWidget(PhoneWidget *w);
-    void slotPreferredChanged(PhoneWidget *w);
-    void reconnectWidget(PhoneWidget *w);
-    void updateAddRemoveButton();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotAddWidget(PhoneWidget *w);
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotRemoveWidget(PhoneWidget *w);
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotPreferredChanged(PhoneWidget *w);
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void reconnectWidget(PhoneWidget *w);
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void updateAddRemoveButton();
 };
 }

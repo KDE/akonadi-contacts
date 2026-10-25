@@ -36,9 +36,9 @@ Q_SIGNALS:
     void preferredChanged(Akonadi::MailWidget *);
 
 private:
-    void slotAddMail();
-    void slotRemoveMail();
-    void slotPreferredChanged();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotAddMail();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotRemoveMail();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotPreferredChanged();
     KContacts::Email mEmail;
     QString mOldType;
     PreferredLineEditWidget *mMailEdit = nullptr;

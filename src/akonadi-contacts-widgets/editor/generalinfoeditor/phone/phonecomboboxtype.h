@@ -47,9 +47,9 @@ public:
     void resetToDefault();
 
 private:
-    void selected(int);
-    void otherSelected();
-    void update();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void selected(int);
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void otherSelected();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void update();
     KContacts::PhoneNumber::Type mType = KContacts::PhoneNumber::Home;
     int mLastSelected = 0;
     QList<int> mTypeList;

@@ -43,9 +43,9 @@ Q_SIGNALS:
     void preferredChanged(Akonadi::MessagingWidget *);
 
 private:
-    void slotAddMessaging();
-    void slotRemoveMessaging();
-    void slotPreferredChanged();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotAddMessaging();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotRemoveMessaging();
+    AKONADI_CONTACT_WIDGETS_NO_EXPORT void slotPreferredChanged();
     PreferredLineEditWidget *mMessagingEdit = nullptr;
     QToolButton *mAddButton = nullptr;
     QToolButton *mRemoveButton = nullptr;
