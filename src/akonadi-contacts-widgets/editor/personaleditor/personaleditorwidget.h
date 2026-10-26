@@ -30,7 +30,10 @@ public:
 
 private:
     DateEditWidget *const mBirthdateWidget;
+    DateEditWidget *const mDeathdateWidget;
     DateEditWidget *const mAnniversaryWidget;
     QLineEdit *const mPartnerWidget;
+    QLineEdit *const mBirthPlaceWidget;
+    QLineEdit *const mDeathPlaceWidget;
 };
 }

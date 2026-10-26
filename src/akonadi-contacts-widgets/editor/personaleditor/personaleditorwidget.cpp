@@ -23,8 +23,11 @@ using namespace Akonadi;
 PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     : QWidget(parent)
     , mBirthdateWidget(new DateEditWidget(DateEditWidget::Birthday, this))
+    , mDeathdateWidget(new DateEditWidget(DateEditWidget::Birthday, this))
     , mAnniversaryWidget(new DateEditWidget(DateEditWidget::Anniversary, this))
     , mPartnerWidget(new QLineEdit(this))
+    , mBirthPlaceWidget(new QLineEdit(this))
+    , mDeathPlaceWidget(new QLineEdit(this))
 {
     auto mainLayout = new QGridLayout(this);
     auto label = new QLabel(i18nc("@label The birthdate of a contact", "Birthdate:"));
@@ -33,11 +36,35 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     label->setBuddy(mBirthdateWidget);
     mainLayout->addWidget(mBirthdateWidget, 1, 0);
 
-    label = new QLabel(i18nc("@label The wedding anniversary of a contact", "Anniversary:"));
-    mainLayout->addWidget(label, 0, 1);
+    label = new QLabel(i18nc("@label The deathdate of a contact", "Deathdate:"));
+    mainLayout->addWidget(label, 2, 0);
 
-    label->setBuddy(mAnniversaryWidget);
-    mainLayout->addWidget(mAnniversaryWidget, 1, 1);
+    label->setBuddy(mDeathdateWidget);
+    mainLayout->addWidget(mDeathdateWidget, 3, 0);
+
+    mBirthPlaceWidget->setClearButtonEnabled(true);
+    KLineEditEventHandler::catchReturnKey(mBirthPlaceWidget);
+    mDeathPlaceWidget->setClearButtonEnabled(true);
+    KLineEditEventHandler::catchReturnKey(mDeathPlaceWidget);
+
+    /*
+     // TODO implement birthplace
+    label = new QLabel(i18nc("@label The birthplace of a contact", "Birthplace:"));
+    mainLayout->addWidget(label, 0, 1);
+    */
+
+    label->setBuddy(mBirthPlaceWidget);
+    mainLayout->addWidget(mBirthPlaceWidget, 1, 1);
+    mBirthPlaceWidget->setVisible(false);
+
+    /*
+    label = new QLabel(i18nc("@label The deathplace of a contact", "Deathplace:"));
+    mainLayout->addWidget(label, 2, 1);
+
+    */
+    label->setBuddy(mDeathPlaceWidget);
+    mainLayout->addWidget(mDeathPlaceWidget, 3, 1);
+    mDeathPlaceWidget->setVisible(false);
 
     label = new QLabel(i18nc("@label The partner's name of a contact", "Partner's name:"));
     mainLayout->addWidget(label, 0, 2);
@@ -47,11 +74,18 @@ PersonalEditorWidget::PersonalEditorWidget(QWidget *parent)
     KLineEditEventHandler::catchReturnKey(mPartnerWidget);
     label->setBuddy(mPartnerWidget);
     mainLayout->addWidget(mPartnerWidget, 1, 2);
+
+    label = new QLabel(i18nc("@label The wedding anniversary of a contact", "Anniversary:"));
+    mainLayout->addWidget(label, 2, 2);
+
+    label->setBuddy(mAnniversaryWidget);
+    mainLayout->addWidget(mAnniversaryWidget, 3, 2);
+
     mainLayout->setColumnStretch(1, 1);
     mainLayout->setColumnStretch(0, 1);
     mainLayout->setColumnStretch(2, 1);
 
-    mainLayout->setRowStretch(2, 1);
+    mainLayout->setRowStretch(4, 1);
 }
 
 PersonalEditorWidget::~PersonalEditorWidget() = default;
@@ -60,6 +94,9 @@ void PersonalEditorWidget::loadContact(const KContacts::Addressee &contact)
 {
     mBirthdateWidget->setDate(contact.birthday().date());
     mAnniversaryWidget->setDate(contact.anniversary());
+    mDeathdateWidget->setDate(contact.deathDate().date());
+
+    // TODO add place death/birth
 
     // family group
     mPartnerWidget->setText(contact.spousesName());
@@ -69,6 +106,9 @@ void PersonalEditorWidget::storeContact(KContacts::Addressee &contact)
 {
     contact.setBirthday(mBirthdateWidget->date());
     contact.setAnniversary(mAnniversaryWidget->date());
+    contact.setDeathDate(QDateTime(mDeathdateWidget->date(), QTime()));
+
+    // TODO add place death/birth
 
     // family group
     contact.setSpousesName(mPartnerWidget->text().trimmed());
@@ -79,6 +119,9 @@ void PersonalEditorWidget::setReadOnly(bool readOnly)
     // widgets from dates group
     mBirthdateWidget->setReadOnly(readOnly);
     mAnniversaryWidget->setReadOnly(readOnly);
+    mDeathdateWidget->setReadOnly(readOnly);
+    mBirthPlaceWidget->setReadOnly(readOnly);
+    mDeathPlaceWidget->setReadOnly(readOnly);
 
     // widgets from family group
     mPartnerWidget->setReadOnly(readOnly);
