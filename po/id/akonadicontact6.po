@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
+"POT-Creation-Date: 2026-10-27 01:00+0000\n"
 "PO-Revision-Date: 2024-09-29 19:26+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -630,7 +630,7 @@ msgid "Custom Field Title"
 msgstr "Titel Bidang Kustom"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:38
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:45
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:72
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add name"
@@ -1039,23 +1039,31 @@ msgctxt "@info:tooltip"
 msgid "Clear"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:30
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:33
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr "Tanggal lahir:"
 
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:36
-#, kde-format
-msgctxt "@label The wedding anniversary of a contact"
-msgid "Anniversary:"
-msgstr "Tanggal hari jadi:"
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "@label The birthdate of a contact"
+#| msgid "Birthdate:"
+msgctxt "@label The deathdate of a contact"
+msgid "Deathdate:"
+msgstr "Tanggal lahir:"
 
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:42
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:69
 #, kde-format
 msgctxt "@label The partner's name of a contact"
 msgid "Partner's name:"
 msgstr "Nama pasangan:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:78
+#, kde-format
+msgctxt "@label The wedding anniversary of a contact"
+msgid "Anniversary:"
+msgstr "Tanggal hari jadi:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:77
 #, kde-format

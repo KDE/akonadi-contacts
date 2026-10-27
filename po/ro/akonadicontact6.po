@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
+"POT-Creation-Date: 2026-10-27 01:00+0000\n"
 "PO-Revision-Date: 2013-01-12 06:26+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -679,7 +679,7 @@ msgid "Custom Field Title"
 msgstr ""
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:38
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:45
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:72
 #, fuzzy, kde-format
 #| msgid "Additional names:"
 msgctxt "@info:placeholder"
@@ -1127,25 +1127,31 @@ msgctxt "@info:tooltip"
 msgid "Clear"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:30
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:33
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:36
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:39
+#, kde-format
+msgctxt "@label The deathdate of a contact"
+msgid "Deathdate:"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:69
+#, kde-format
+msgctxt "@label The partner's name of a contact"
+msgid "Partner's name:"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "@label The anniversary of a contact"
 #| msgid "Anniversary:"
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"
 msgstr "Aniversare:"
-
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:42
-#, kde-format
-msgctxt "@label The partner's name of a contact"
-msgid "Partner's name:"
-msgstr ""
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:77
 #, kde-format

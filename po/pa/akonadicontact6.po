@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
+"POT-Creation-Date: 2026-10-27 01:00+0000\n"
 "PO-Revision-Date: 2011-01-01 12:08+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -670,7 +670,7 @@ msgid "Custom Field Title"
 msgstr "ਕਸਟਮ ਖੇਤਰ"
 
 #: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:38
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:45
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:72
 #, fuzzy, kde-format
 #| msgctxt "@label The nickname of a contact"
 #| msgid "Nickname:"
@@ -1121,25 +1121,33 @@ msgctxt "@info:tooltip"
 msgid "Clear"
 msgstr ""
 
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:30
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:33
 #, kde-format
 msgctxt "@label The birthdate of a contact"
 msgid "Birthdate:"
 msgstr "ਜਨਮਦਿਨ:"
 
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:36
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "@label The birthdate of a contact"
+#| msgid "Birthdate:"
+msgctxt "@label The deathdate of a contact"
+msgid "Deathdate:"
+msgstr "ਜਨਮਦਿਨ:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:69
+#, kde-format
+msgctxt "@label The partner's name of a contact"
+msgid "Partner's name:"
+msgstr "ਸਹਿਯੋਗੀ ਦਾ ਨਾਂ:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "@label The anniversary of a contact"
 #| msgid "Anniversary:"
 msgctxt "@label The wedding anniversary of a contact"
 msgid "Anniversary:"
 msgstr "ਵਰ੍ਹੇ ਗੰਢ:"
-
-#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:42
-#, kde-format
-msgctxt "@label The partner's name of a contact"
-msgid "Partner's name:"
-msgstr "ਸਹਿਯੋਗੀ ਦਾ ਨਾਂ:"
 
 #: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:77
 #, kde-format
