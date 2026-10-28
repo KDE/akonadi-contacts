@@ -97,7 +97,7 @@ void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &la
         addr.setEmails(temp.emails());
     }
 
-    data.write(m_converter.createVCard(addr));
+    data.write(m_converter.createVCard(addr, KContacts::VCardConverter::v4_0));
 }
 
 //// DifferencesAlgorithmInterface interface
