@@ -4,22 +4,22 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2018, 2019, 2020, 2021, 2022, 2023.
-# SPDX-FileCopyrightText: 2010, 2012, 2025 Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2012, 2025-2026 Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>
 # Aracele Torres <araceletorres@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-27 01:00+0000\n"
-"PO-Revision-Date: 2025-11-07 08:31-0300\n"
+"PO-Revision-Date: 2026-10-27 10:22-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -1051,12 +1051,10 @@ msgid "Birthdate:"
 msgstr "Data de nascimento:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label The birthdate of a contact"
-#| msgid "Birthdate:"
+#, kde-format
 msgctxt "@label The deathdate of a contact"
 msgid "Deathdate:"
-msgstr "Data de nascimento:"
+msgstr "Data de morte:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:69
 #, kde-format
