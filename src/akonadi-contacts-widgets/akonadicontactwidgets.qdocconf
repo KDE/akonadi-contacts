@@ -21,7 +21,7 @@ qhp.projects            = akonadicontactwidgets
 qhp.akonadicontactwidgets.file                = akonadicontactwidgets.qhp
 qhp.akonadicontactwidgets.namespace           = org.kde.akonadicontactwidgets.$QT_VERSION_TAG
 qhp.akonadicontactwidgets.virtualFolder       = akonadicontactwidgets
-qhp.akonadicontactwidgets.indexTitle          = akonadicontactwidgets
+qhp.akonadicontactwidgets.indexTitle          = AkonadiContactWidgets
 qhp.akonadicontactwidgets.indexRoot           =
 
 qhp.akonadicontactwidgets.subprojects         = classes
