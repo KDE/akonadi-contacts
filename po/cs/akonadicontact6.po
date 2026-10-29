@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-27 01:00+0000\n"
-"PO-Revision-Date: 2026-05-21 23:50+0200\n"
+"PO-Revision-Date: 2026-10-28 23:01+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
 #, kde-format
@@ -1051,12 +1051,10 @@ msgid "Birthdate:"
 msgstr "Datum narození:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label The birthdate of a contact"
-#| msgid "Birthdate:"
+#, kde-format
 msgctxt "@label The deathdate of a contact"
 msgid "Deathdate:"
-msgstr "Datum narození:"
+msgstr "Datum úmrtí:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:69
 #, kde-format
