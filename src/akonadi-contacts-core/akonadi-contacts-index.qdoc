@@ -10,7 +10,7 @@
 
     \section2 Building with CMake
 
-    \include {module-use.qdocinc} {building with cmake} {KPim6} {Mbox} {KPim6::AkonadiContactCore}
+    \include {module-use.qdocinc} {building with cmake} {KPim6} {AkonadiContactCore} {KPim6::AkonadiContactCore}
 
     \section1 API Reference
 

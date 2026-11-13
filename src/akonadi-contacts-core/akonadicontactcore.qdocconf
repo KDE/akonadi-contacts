@@ -9,10 +9,15 @@ documentationinheaders = true
 headerdirs += .
 sourcedirs += .
 
+excludedirs += \
+    autotests \
+    tests
+
 outputformats = HTML
 
 depends += \
-    qtcore
+    qtcore \
+    akonadicontactwidgets
 
 navigation.landingpage = "AkonadiContactCore"
 

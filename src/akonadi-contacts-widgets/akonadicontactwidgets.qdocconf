@@ -9,6 +9,15 @@ documentationinheaders = true
 headerdirs += .
 sourcedirs += .
 
+excludedirs += \
+    editor/addresseditor/autotests \
+    editor/customfieldeditor/autotests \
+    editor/customfieldeditor/tests \
+    editor/generalinfoeditor/autotests \
+    editor/generalinfoeditor/tests \
+    editor/widgets/autotests \
+    tests
+
 outputformats = HTML
 
 depends += \
