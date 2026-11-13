@@ -143,7 +143,5 @@ private:
     friend class ContactGroupEditorDialog;
 
     std::unique_ptr<ContactGroupEditorPrivate> const d;
-
-    Q_DISABLE_COPY(ContactGroupEditor)
 };
 }
