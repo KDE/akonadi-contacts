@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = AkonadiContactWidgets
+moduleheader = akonadicontactwidgets_qdocmoduleheader.h
 description = AkonadiContactWidgets provides API to akonadi contacts widgets.
 
 

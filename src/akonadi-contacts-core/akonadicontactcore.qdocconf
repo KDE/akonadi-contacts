@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = AkonadiContactCore
+moduleheader = akonadicontactcore_qdocmoduleheader.h
 description = AkonadiContactCore provides API to akonadi contacts.
 
 
