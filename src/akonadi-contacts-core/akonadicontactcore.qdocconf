@@ -11,6 +11,7 @@ headerdirs += .
 sourcedirs += .
 
 excludedirs += \
+    attributes \
     autotests \
     tests
 

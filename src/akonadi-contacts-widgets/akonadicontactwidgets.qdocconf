@@ -7,7 +7,29 @@ description = AkonadiContactWidgets provides API to akonadi contacts widgets.
 
 documentationinheaders = true
 
-headerdirs += .
+headers += \
+    abstractemailaddressselectiondialog.h \
+    akonadicontactwidgets_qdocmoduleheader.h \
+    contacteditor.h \
+    contacteditordialog.h \
+    contacteditorpageplugin.h \
+    contactgroupeditor.h \
+    contactgroupeditordialog.h \
+    contactgroupviewer.h \
+    contactviewer.h \
+    contactviewerdialog.h \
+    emailaddressrequester.h \
+    emailaddressselectiondialog.h \
+    emailaddressselectionwidget.h \
+    grantlee/grantleecontactviewer.h \
+    job/addcontactjob.h \
+    job/addemailaddressjob.h \
+    job/addemaildisplayjob.h \
+    job/openemailaddressjob.h \
+    recipientspicker/recipientseditormanager.h \
+    recipientspicker/recipientspickerwidget.h \
+    standardcontactactionmanager.h \
+    widgets/selectaddressbookdialog.h
 sourcedirs += .
 
 excludedirs += \
