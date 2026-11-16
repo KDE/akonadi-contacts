@@ -189,11 +189,15 @@ install(
     COMPONENT Devel
 )
 
+set(AKONADICONTACTCORE_FILES
+    ${AkonadiContactCore_HEADERS}
+    ${AkonadiContactCoreJob_HEADERS}
+    ${AkonadiContactCoreGrantlee_HEADERS}
+)
+
 install(
     FILES
-        ${AkonadiContactCore_HEADERS}
-        ${AkonadiContactCoreJob_HEADERS}
-        ${AkonadiContactCoreGrantlee_HEADERS}
+        ${AKONADICONTACTCORE_FILES}
         ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-core_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactCore/akonadi
     COMPONENT Devel

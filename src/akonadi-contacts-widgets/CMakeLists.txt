@@ -310,13 +310,17 @@ install(
     COMPONENT Devel
 )
 
+set(AKONADICONTACTWIDGETS_FILES
+    ${AkonadiContactWidgets_HEADERS}
+    ${AkonadiContactWidgetsJob_HEADERS}
+    ${AkonadiContactWidgetsWidgets_HEADERS}
+    ${AkonadiContactWidgetsRecipients_HEADERS}
+    ${AkonadiContactWidgetsGrantlee_HEADERS}
+)
+
 install(
     FILES
-        ${AkonadiContactWidgets_HEADERS}
-        ${AkonadiContactWidgetsJob_HEADERS}
-        ${AkonadiContactWidgetsWidgets_HEADERS}
-        ${AkonadiContactWidgetsRecipients_HEADERS}
-        ${AkonadiContactWidgetsGrantlee_HEADERS}
+        ${AKONADICONTACTWIDGETS_FILES}
         ${CMAKE_CURRENT_BINARY_DIR}/akonadi-contact-widgets_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiContactWidgets/akonadi
     COMPONENT Devel
