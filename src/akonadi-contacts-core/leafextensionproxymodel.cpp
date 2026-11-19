@@ -34,13 +34,11 @@ public:
 void LeafExtensionProxyModelPrivate::sourceRowsInserted(const QModelIndex &parentIndex, int start, int end)
 {
     // iterate over all of our stored parent indexes
-    QMutableMapIterator<qint64, QModelIndex> it(mParentIndexes);
-    while (it.hasNext()) {
-        it.next();
+    for (auto it = mParentIndexes.begin(), itEnd = mParentIndexes.end(); it != itEnd; ++it) {
         if (it.value().parent() == parentIndex) {
             if (it.value().row() >= start) {
                 const QModelIndex newIndex = q->QSortFilterProxyModel::index(it.value().row() + (end - start) + 1, it.value().column(), parentIndex);
-                it.setValue(newIndex);
+                it.value() = newIndex;
             }
         }
     }
@@ -49,17 +47,17 @@ void LeafExtensionProxyModelPrivate::sourceRowsInserted(const QModelIndex &paren
 void LeafExtensionProxyModelPrivate::sourceRowsRemoved(const QModelIndex &parentIndex, int start, int end)
 {
     // iterate over all of our stored parent indexes
-    QMutableMapIterator<qint64, QModelIndex> it(mParentIndexes);
-    while (it.hasNext()) {
-        it.next();
+    for (auto it = mParentIndexes.begin(); it != mParentIndexes.end();) {
         if (it.value().parent() == parentIndex) {
             if (it.value().row() >= start && it.value().row() <= end) {
-                it.remove();
+                it = mParentIndexes.erase(it);
+                continue;
             } else if (it.value().row() > end) {
                 const QModelIndex newIndex = q->index(it.value().row() - (end - start) - 1, it.value().column(), parentIndex);
-                it.setValue(newIndex);
+                it.value() = newIndex;
             }
         }
+        ++it;
     }
 }
 
