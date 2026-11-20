@@ -10,6 +10,7 @@
 
 #include "akonadi-contact-core_export.h"
 
+#include <QMap>
 #include <QVariant>
 
 #include <memory>
