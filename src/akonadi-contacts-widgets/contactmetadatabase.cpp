@@ -7,6 +7,9 @@
 */
 
 #include "contactmetadatabase_p.h"
+#include <QList>
+#include <QMap>
+#include <QVariant>
 
 using namespace Akonadi;
 

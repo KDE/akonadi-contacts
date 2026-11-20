@@ -7,6 +7,7 @@
 */
 
 #include "customfields_p.h"
+#include <QVariantMap>
 
 CustomField::CustomField()
     : mType(TextType)

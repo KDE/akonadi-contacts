@@ -11,6 +11,7 @@
 #include "attributes/contactmetadataattribute_p.h"
 
 #include <Akonadi/Item>
+#include <QVariantMap>
 
 using namespace Akonadi;
 
