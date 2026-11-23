@@ -1045,12 +1045,10 @@ msgid "Birthdate:"
 msgstr "生日："
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label The birthdate of a contact"
-#| msgid "Birthdate:"
+#, kde-format
 msgctxt "@label The deathdate of a contact"
 msgid "Deathdate:"
-msgstr "生日："
+msgstr "死亡日期："
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:69
 #, kde-format
