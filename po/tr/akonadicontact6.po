@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-27 01:00+0000\n"
-"PO-Revision-Date: 2026-11-03 21:13+0300\n"
+"PO-Revision-Date: 2026-11-23 17:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
 #: akonadi-contacts-core/contactgroupmodel.cpp:194
@@ -808,7 +808,7 @@ msgstr "Bu kişiden alınan iletileri şu şekilde göster:"
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:34
 #, kde-format
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
 #: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:34
 #, kde-format
