@@ -111,6 +111,8 @@ public:
      */
     void setDefaultAddressBook(const Akonadi::Collection &addressbook);
 
+    /*!
+     */
     void groupNameIsValid(bool isValid);
 
 public Q_SLOTS:

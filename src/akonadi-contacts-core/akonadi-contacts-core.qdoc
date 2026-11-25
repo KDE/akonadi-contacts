@@ -7,3 +7,9 @@
 
     \brief AkonadiContactCore provides API to akonadi contacts.
 */
+
+/*!
+    \namespace KAddressBookGrantlee
+    \inmodule AkonadiContactCore
+    \brief The KAddressBookGrantlee namespace contains the classes of the AkonadiContactCore module.
+*/

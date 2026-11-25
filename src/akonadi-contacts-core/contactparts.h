@@ -11,6 +11,9 @@
 namespace Akonadi
 {
 /*!
+ * \namespace Akonadi::ContactPart
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/ContactParts
  * \brief Contains predefined part identifiers.
  *
  * This namespace contains identifiers of item parts that are used for

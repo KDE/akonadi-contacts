@@ -10,7 +10,10 @@
 
 namespace KAddressBookGrantlee
 {
-/**
+/*!
+ * \class KAddressBookGrantlee::ContactGrantleeWrapper
+ * \inmodule AkonadiContactCore
+ * \inheaderfile Akonadi/ContactGrantleeWrapper
  * Additional properties for the KContacts::Addressee Grantlee model.
  */
 class ContactGrantleeWrapper : public KContacts::Addressee
@@ -40,7 +43,11 @@ class ContactGrantleeWrapper : public KContacts::Addressee
     Q_PROPERTY(QString formattedAnniversary READ formattedAnniversary)
 
 public:
+    /*!
+     */
     ContactGrantleeWrapper();
+    /*!
+     */
     ContactGrantleeWrapper(const KContacts::Addressee &addr);
 
 private:

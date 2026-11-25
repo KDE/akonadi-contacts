@@ -29,23 +29,23 @@ namespace Akonadi
 class ContactEditorPagePlugin : public QWidget
 {
 public:
-    /**
+    /*!
      * Returns the i18n'd page title.
      */
     virtual QString title() const = 0;
 
-    /**
-     * This method is called to fill the editor widget with the data from @p contact.
+    /*!
+     * This method is called to fill the editor widget with the data from \a contact.
      */
     virtual void loadContact(const KContacts::Addressee &contact) = 0;
 
-    /**
-     * This method is called to store the data from the editor widget into @p contact.
+    /*!
+     * This method is called to store the data from the editor widget into \a contact.
      */
     virtual void storeContact(KContacts::Addressee &contact) const = 0;
 
-    /**
-     * This method is called to set the editor widget @p readOnly.
+    /*!
+     * This method is called to set the editor widget \a readOnly.
      */
     virtual void setReadOnly(bool readOnly) = 0;
 };

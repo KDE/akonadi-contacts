@@ -73,6 +73,8 @@ public:
      * Returns the name that is associated with the selected email address.
      */
     [[nodiscard]] QString name() const;
+    /*!
+     */
     void setName(const QString &name);
 
     /*!
@@ -82,6 +84,8 @@ public:
      *       group is returned here and must be expanded by the caller.
      */
     [[nodiscard]] QString email() const;
+    /*!
+     */
     void setEmail(const QString &email);
 
     /*!

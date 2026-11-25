@@ -55,10 +55,14 @@ class AKONADI_CONTACT_CORE_EXPORT ContactsFilterProxyModel : public QSortFilterP
     Q_OBJECT
 
 public:
+    /*!
+     */
     enum MatchFilterContactFlag {
         All = 0,
         OnlyNameAndEmailsAddresses = 1
     };
+    /*!
+     */
     enum FilterFlag {
         HasEmail = 0x01 /// Filters out contacts without any email address set.
     };
@@ -114,7 +118,11 @@ public Q_SLOTS:
     void setFilterString(const QString &filter);
 
 protected:
+    /*!
+     */
     bool filterAcceptsRow(int row, const QModelIndex &parent) const override;
+    /*!
+     */
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
 private:

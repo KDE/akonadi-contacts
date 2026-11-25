@@ -14,6 +14,11 @@
 #include <QDialog>
 namespace Akonadi
 {
+/*!
+ * \class Akonadi::AbstractEmailAddressSelectionDialog
+ * \inmodule AkonadiContactWidgets
+ * \inheaderfile Akonadi/AbstractEmailAddressSelectionDialog
+ */
 class AKONADI_CONTACT_WIDGETS_EXPORT AbstractEmailAddressSelectionDialog : public QDialog
 {
     Q_OBJECT

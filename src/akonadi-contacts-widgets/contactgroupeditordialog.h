@@ -104,6 +104,8 @@ public:
      */
     [[nodiscard]] ContactGroupEditor *editor() const;
 
+    /*!
+     */
     void reject() override;
 Q_SIGNALS:
     /*!

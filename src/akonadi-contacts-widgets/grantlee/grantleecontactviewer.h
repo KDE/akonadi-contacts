@@ -23,9 +23,15 @@ class AKONADI_CONTACT_WIDGETS_EXPORT GrantleeContactViewer : public Akonadi::Con
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit GrantleeContactViewer(QWidget *parent = nullptr);
+    /*!
+     */
     ~GrantleeContactViewer() override;
 
+    /*!
+     */
     void setForceDisableQRCode(bool b);
 
 private:

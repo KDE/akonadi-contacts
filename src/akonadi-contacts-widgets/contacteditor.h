@@ -82,6 +82,8 @@ public:
         EditMode ///< Edits an existing contact
     };
 
+    /*!
+     */
     enum DisplayMode {
         FullMode, ///< Show all pages
         VCardMode ///< Show just pages with elements stored in vcard.

@@ -56,8 +56,12 @@ public:
      */
     [[nodiscard]] Akonadi::Item contact() const;
 
+    /*!
+     */
     void setInteractive(bool b);
 Q_SIGNALS:
+    /*!
+     */
     void successMessage(const QString &message);
 
 private:
