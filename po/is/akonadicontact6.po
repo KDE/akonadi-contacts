@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the akonadi-contacts package.
 #
 # SPDX-FileCopyrightText: 2025 Gummi <gudmundure@gmail.com>
-# SPDX-FileCopyrightText: 2025 Sveinn í Felli <sv1@fellsnet.is>
+# SPDX-FileCopyrightText: 2025, 2026 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-27 01:00+0000\n"
-"PO-Revision-Date: 2025-11-13 14:49+0000\n"
+"PO-Revision-Date: 2026-11-27 09:45+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -1047,12 +1047,10 @@ msgid "Birthdate:"
 msgstr "Fæðingardagur:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label The birthdate of a contact"
-#| msgid "Birthdate:"
+#, kde-format
 msgctxt "@label The deathdate of a contact"
 msgid "Deathdate:"
-msgstr "Fæðingardagur:"
+msgstr "Dánardægur:"
 
 #: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:69
 #, kde-format
